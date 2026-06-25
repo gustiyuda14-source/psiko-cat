@@ -143,11 +143,30 @@ export default function EngineKecerdasan({
             {/* Card header */}
             <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-800">
               <span className="text-sm font-semibold text-zinc-300">Soal Nomor {idx + 1}</span>
-              <span className="text-xs text-zinc-500 bg-zinc-800 px-3 py-1 rounded-full">Pilihan Ganda</span>
+              <span className="text-xs text-zinc-500 bg-zinc-800 px-3 py-1 rounded-full">
+                {payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
+              </span>
             </div>
 
             {/* Question content */}
             <div className="px-6 py-5 space-y-5">
+              {payload?.instruksi && (
+                <div className="text-sm font-semibold text-blue-400 bg-blue-900/10 border border-blue-900/30 p-3 rounded-xl">
+                  {payload.instruksi}
+                  {payload?.is_multi_select && (
+                    <span className="block mt-1 text-xs text-blue-300 font-normal">
+                      Anda dapat memilih lebih dari satu jawaban.
+                    </span>
+                  )}
+                </div>
+              )}
+
+              {payload?.sub_text && (
+                <div className="text-sm italic leading-relaxed text-zinc-300 border-l-2 border-zinc-700 pl-4 py-1">
+                  {payload.sub_text}
+                </div>
+              )}
+
               {payload?.question_text && (
                 <p className="text-base leading-relaxed text-zinc-100">{payload.question_text}</p>
               )}
@@ -161,26 +180,47 @@ export default function EngineKecerdasan({
 
               {/* Choices */}
               <div className="space-y-2.5 pt-1">
-                {payload?.choices?.map((c) => (
-                  <button
-                    key={c.key}
-                    onClick={() => engine.handleAnswer(q.id, c.key)}
-                    className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-150 ${
-                      picked === c.key
-                        ? "border-blue-500 bg-blue-600/15 shadow-sm shadow-blue-500/20"
-                        : "border-zinc-700/50 hover:border-zinc-600 hover:bg-zinc-800/60"
-                    }`}
-                  >
-                    <span className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold transition-colors ${
-                      picked === c.key
-                        ? "bg-blue-600 text-white"
-                        : "bg-zinc-800 text-zinc-400 border border-zinc-700"
-                    }`}>
-                      {c.key}
-                    </span>
-                    <span className="text-sm text-zinc-200 leading-relaxed">{c.text}</span>
-                  </button>
-                ))}
+                {payload?.choices?.map((c) => {
+                  const isSelected = payload?.is_multi_select 
+                    ? picked?.includes(c.key) 
+                    : picked === c.key;
+
+                  const handleSelect = () => {
+                    if (payload?.is_multi_select) {
+                      let current = picked || "";
+                      if (current.includes(c.key)) {
+                        current = current.replace(c.key, "");
+                      } else {
+                        current += c.key;
+                      }
+                      current = current.split('').sort().join('');
+                      engine.handleAnswer(q.id, current);
+                    } else {
+                      engine.handleAnswer(q.id, c.key);
+                    }
+                  };
+
+                  return (
+                    <button
+                      key={c.key}
+                      onClick={handleSelect}
+                      className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-150 ${
+                        isSelected
+                          ? "border-blue-500 bg-blue-600/15 shadow-sm shadow-blue-500/20"
+                          : "border-zinc-700/50 hover:border-zinc-600 hover:bg-zinc-800/60"
+                      }`}
+                    >
+                      <span className={`flex h-9 w-9 shrink-0 items-center justify-center ${payload?.is_multi_select ? 'rounded-md' : 'rounded-full'} text-sm font-bold transition-colors ${
+                        isSelected
+                          ? "bg-blue-600 text-white"
+                          : "bg-zinc-800 text-zinc-400 border border-zinc-700"
+                      }`}>
+                        {c.key}
+                      </span>
+                      <span className="text-sm text-zinc-200 leading-relaxed">{c.text}</span>
+                    </button>
+                  );
+                })}
               </div>
             </div>
           </div>

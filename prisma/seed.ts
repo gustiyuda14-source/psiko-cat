@@ -79,89 +79,38 @@ async function seedKecermatan() {
 // Akan diganti dengan bank soal lengkap dari psiko-kecerdasan-cat repo
 // ─────────────────────────────────────────────────────────────────────────────
 
-const KECERDASAN_SAMPLE = [
-  {
-    q: "Jika 3x + 7 = 22, maka nilai x adalah...",
-    choices: ["3", "4", "5", "6", "7"],
-    ans: "C",
-  },
-  {
-    q: "Kata yang berlawanan makna dengan 'MAJU' adalah...",
-    choices: ["Progres", "Mundur", "Berkembang", "Meningkat", "Berjalan"],
-    ans: "B",
-  },
-  {
-    q: "Deret angka: 2, 4, 8, 16, 32, __ Nilai berikutnya adalah...",
-    choices: ["48", "56", "60", "64", "68"],
-    ans: "D",
-  },
-  {
-    q: "Analogi: PANAS : API = DINGIN : ...",
-    choices: ["Hujan", "Salju", "Angin", "Air", "Es"],
-    ans: "E",
-  },
-  {
-    q: "Jika hari ini Selasa, maka 100 hari lagi adalah hari...",
-    choices: ["Sabtu", "Minggu", "Senin", "Selasa", "Rabu"],
-    ans: "C",
-  },
-  {
-    q: "Sebuah persegi memiliki keliling 48 cm. Luas persegi tersebut adalah...",
-    choices: ["96 cm²", "108 cm²", "120 cm²", "144 cm²", "160 cm²"],
-    ans: "D",
-  },
-  {
-    q: "Silogisme: Semua polisi adalah abdi negara. Budi adalah polisi. Maka...",
-    choices: [
-      "Budi bukan abdi negara",
-      "Budi adalah abdi negara",
-      "Semua abdi negara adalah polisi",
-      "Budi mungkin abdi negara",
-      "Tidak bisa disimpulkan",
-    ],
-    ans: "B",
-  },
-  {
-    q: "Urutan yang benar dari terkecil: 3/4, 5/8, 7/12, 2/3",
-    choices: ["3/4, 2/3, 5/8, 7/12", "5/8, 7/12, 2/3, 3/4", "7/12, 5/8, 2/3, 3/4", "2/3, 3/4, 5/8, 7/12", "5/8, 2/3, 7/12, 3/4"],
-    ans: "B",
-  },
-  {
-    q: "Jika KUCING = 74, maka ANJING = ...",
-    choices: ["62", "64", "66", "68", "70"],
-    ans: "C",
-  },
-  {
-    q: "Dari 40 peserta, 60% lulus. Berapa peserta yang tidak lulus?",
-    choices: ["14", "16", "18", "20", "24"],
-    ans: "B",
-  },
-];
+import bankSoalKecerdasan from "../soal.json";
 
 async function seedKecerdasan() {
-  console.log("  Seeding Kecerdasan (10 soal sample)...");
+  console.log("  Seeding Kecerdasan (Data asli dari soal.json)...");
 
-  const rows = KECERDASAN_SAMPLE.map((item, idx) => ({
-    type: QuestionType.KECERDASAN,
-    sequence_number: idx + 1,
-    column_index: null,
-    options_payload: {
-      question_text: item.q,
-      svg_content: null,
-      choices: item.choices.map((text, i) => ({
-        key: ["A", "B", "C", "D", "E"][i],
-        text,
-      })),
-    },
-    scoring_rule: {
-      type: "dichotomous",
-      correct_key: item.ans,
-    },
-    is_active: true,
-  }));
+  const rows = bankSoalKecerdasan.soal.map((item: any, idx: number) => {
+    // Map object "pilihan": {"a":"...", "b":"..."} to array of {key, text}
+    const choicesArray = Object.entries(item.pilihan || {}).map(([k, v]) => ({
+      key: k.toUpperCase(),
+      text: v
+    }));
+
+    return {
+      type: QuestionType.KECERDASAN,
+      sequence_number: item.id || idx + 1,
+      column_index: null,
+      options_payload: {
+        instruksi: item.instruksi || "",
+        question_text: item.soal || "",
+        svg_content: item.gambar || null,
+        choices: choicesArray,
+      },
+      scoring_rule: {
+        // As per previous convention
+        correct_key: item.kunci?.[0]?.toUpperCase() || "A",
+      },
+      is_active: true,
+    };
+  });
 
   await prisma.question.createMany({ data: rows, skipDuplicates: true });
-  console.log(`  ✅ ${rows.length} soal Kecerdasan seeded (sample)`);
+  console.log(`  ✅ ${rows.length} soal Kecerdasan seeded dari soal.json`);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────

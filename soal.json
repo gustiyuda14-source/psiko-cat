@@ -1,0 +1,1828 @@
+{
+  "metadata": {
+    "judul": "Tes Psikologi Kecerdasan",
+    "total_soal": 100,
+    "aspek": [
+      "verbal",
+      "logis",
+      "analitis",
+      "praktis"
+    ],
+    "dibuat": "2026-05-11",
+    "tipe_soal": {
+      "sinonim": "Pilih DUA kata bermakna SAMA",
+      "antonim": "Pilih DUA kata bermakna BERLAWANAN",
+      "analogi": "Pilih DUA kata yang hubungannya SAMA dengan pasangan kata soal",
+      "ganjil": "Pilih SATU kata yang paling BERBEDA dari yang lain",
+      "pola_gambar": "Pilih SATU gambar untuk melengkapi pola",
+      "susun_gambar": "Urutkan potongan gambar menjadi gambar utuh",
+      "silogisme": "Pilih SATU kesimpulan paling tepat",
+      "deret": "Pilih DUA jawaban untuk melengkapi deret",
+      "wacana": "Baca wacana, pilih SATU jawaban paling tepat",
+      "hitung": "Pilih SATU jawaban perhitungan yang benar"
+    }
+  },
+  "soal": [
+    {
+      "id": 1,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Elok",
+        "b": "Pencar",
+        "c": "Indah",
+        "d": "Silau",
+        "e": "Terang"
+      },
+      "kunci": [
+        "a",
+        "c"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 2,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Diskon",
+        "b": "Pembayaran",
+        "c": "Keuntungan",
+        "d": "Potongan",
+        "e": "Keuangan"
+      },
+      "kunci": [
+        "a",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 3,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Abadi",
+        "b": "Mati",
+        "c": "Alam",
+        "d": "Gaib",
+        "e": "Kekal"
+      },
+      "kunci": [
+        "a",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 4,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Tema",
+        "b": "Narasi",
+        "c": "Puisi",
+        "d": "Cerita",
+        "e": "Argumen"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 5,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Nilai",
+        "b": "Kaidah",
+        "c": "Paradigma",
+        "d": "Kebiasaan",
+        "e": "Peraturan"
+      },
+      "kunci": [
+        "b",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 6,
+      "aspek": "verbal",
+      "tipe": "sinonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang sama.",
+      "pilihan": {
+        "a": "Bias",
+        "b": "Penyimpangan",
+        "c": "Non deskripsi",
+        "d": "Perkiraan",
+        "e": "Penyalahgunaan"
+      },
+      "kunci": [
+        "a",
+        "b"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 7,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Meninggalkan",
+        "b": "Mengabaikan",
+        "c": "Merusak",
+        "d": "Membina",
+        "e": "Membangun"
+      },
+      "kunci": [
+        "c",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 8,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Teknologi",
+        "b": "Purba",
+        "c": "Zaman",
+        "d": "Modern",
+        "e": "Global"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 9,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Jamak",
+        "b": "Unggul",
+        "c": "Jumlah",
+        "d": "Sedikit",
+        "e": "Tunggal"
+      },
+      "kunci": [
+        "a",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 10,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Langsung",
+        "b": "Berhenti",
+        "c": "Hambatan",
+        "d": "Tunda",
+        "e": "Gagal"
+      },
+      "kunci": [
+        "a",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 11,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Cocok",
+        "b": "Cakap",
+        "c": "Harmoni",
+        "d": "Kacau",
+        "e": "Indah"
+      },
+      "kunci": [
+        "c",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 12,
+      "aspek": "verbal",
+      "tipe": "antonim",
+      "instruksi": "Pilihlah dua kata yang memiliki makna yang berlawanan.",
+      "pilihan": {
+        "a": "Teguran",
+        "b": "Pujian",
+        "c": "Kritikan",
+        "d": "Tuduhan",
+        "e": "Celaan"
+      },
+      "kunci": [
+        "b",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 13,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Telur : Ayam = ….. : ……",
+      "pilihan": {
+        "a": "Tunas",
+        "b": "Pohon",
+        "c": "Beranak",
+        "d": "Burung",
+        "e": "Cangkok"
+      },
+      "kunci": [
+        "a",
+        "b"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 14,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Bulan : ….. = ….. : Siang",
+      "pilihan": {
+        "a": "Bintang",
+        "b": "Gelap",
+        "c": "Malam",
+        "d": "Matahari",
+        "e": "Terang"
+      },
+      "kunci": [
+        "c",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 15,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Januari : Desember = ….. : …..",
+      "pilihan": {
+        "a": "Awal",
+        "b": "Kemarin",
+        "c": "Akhir",
+        "d": "Besok",
+        "e": "Lusa"
+      },
+      "kunci": [
+        "a",
+        "c"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 16,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Doktor : Disertasi = ….. : …..",
+      "pilihan": {
+        "a": "Sarjana",
+        "b": "Sekolah",
+        "c": "Tugas",
+        "d": "Praktikum",
+        "e": "Skripsi"
+      },
+      "kunci": [
+        "a",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 17,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Bait : Puisi = ….. : …..",
+      "pilihan": {
+        "a": "Sampul",
+        "b": "Ruang",
+        "c": "Rumah",
+        "d": "Judul",
+        "e": "Buku"
+      },
+      "kunci": [
+        "b",
+        "c"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 18,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Psikologi : Ilmu = ….. : …..",
+      "pilihan": {
+        "a": "Hutan",
+        "b": "Beringin",
+        "c": "Raga",
+        "d": "Pohon",
+        "e": "Jiwa"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 19,
+      "aspek": "verbal",
+      "tipe": "analogi",
+      "instruksi": "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
+      "soal": "Umur : …... = Kertas : …..",
+      "pilihan": {
+        "a": "Uang",
+        "b": "Tahun",
+        "c": "Buku",
+        "d": "Lembar",
+        "e": "Usia"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 20,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Mendengar",
+        "b": "Mencium",
+        "c": "Melihat",
+        "d": "Berkata",
+        "e": "Merasa"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 21,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Mengapa",
+        "b": "Dimana",
+        "c": "Manakala",
+        "d": "Siapa",
+        "e": "Kapan"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 22,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Air",
+        "b": "Embun",
+        "c": "Uap",
+        "d": "Udara",
+        "e": "Kabut"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 23,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Singkong",
+        "b": "Timun",
+        "c": "Talas",
+        "d": "Wortel",
+        "e": "Kentang"
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 24,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Rajin",
+        "b": "Malas",
+        "c": "Belajar",
+        "d": "Pintar",
+        "e": "Baik"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 25,
+      "aspek": "verbal",
+      "tipe": "ganjil",
+      "instruksi": "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
+      "pilihan": {
+        "a": "Membawa",
+        "b": "Menenteng",
+        "c": "Memanggul",
+        "d": "Memikul",
+        "e": "Menjinjing"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 26,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "d"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-tri\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-10\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"10\" cy=\"-55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"55\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-cir\" class=\"solid\" /><use href=\"#in-pen\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-30\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"30\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-30\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"30\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-30\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"30\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-30\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"30\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Terapkan empat aturan dari matriks pertama: Topologi Terbalik (bangun luar ditukar bangun dalam), Inversi Soliditas (solid menjadi outline dan sebaliknya), Rotasi 90° searah jarum jam, dan penambahan satelit 1 buah dengan rotasi pergerakan 90°.<br>Menerapkannya ke matriks ketiga, Opsi E gagal menukar topologi. Opsi A gagal inversi warna. Opsi B kekurangan satelit. Opsi C tidak merotasi segilima. Maka jawaban benar adalah Opsi D."
+    },
+    {
+      "id": 27,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar untuk melengkapi deret di bawah ini.",
+      "kunci": [
+        "c"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-10\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"10\" cy=\"-55\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"-55\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Deret spasial ini memiliki tiga pola transformasi: Segitiga berputar 90° searah jarum jam, warna berinversi bergantian (solid -> outline -> solid), dan jumlah titik satelit bertambah satu di posisi tetap (atas).<br>Frame keempat haruslah Segitiga outline menghadap kiri (rotasi 270°) dengan 4 titik. Opsi A salah karena solid. Opsi B salah karena satelit kurang. Opsi D dan E salah rotasi. Jawaban tepat adalah C."
+    },
+    {
+      "id": 28,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "b"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-hex\" class=\"solid\" /><use href=\"#in-dia\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-dia\" class=\"outline-transparent\" /><use href=\"#in-hex\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"solid\" /><use href=\"#in-sq\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"outline-transparent\" /><use href=\"#in-dia\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Analogi ini melibatkan Topologi Terbalik dan Inversi Soliditas. Posisi satelit berputar 90° sementara posisi dan orientasi bangun utama tetap diam (tidak berotasi).<br>Menerapkannya ke matriks ketiga: Lingkaran menjadi di luar (outline) dan Persegi menjadi di dalam (solid), serta satelit berotasi dari sumbu vertikal ke horizontal. Opsi A salah inversi. Opsi C salah rotasi satelit. Opsi D gagal menukar topologi. Opsi E memutar bangun utama (persegi miring). Jawaban tepat adalah B."
+    },
+    {
+      "id": 29,
+      "aspek": "logis",
+      "tipe": "susun_gambar",
+      "ganda": false,
+      "instruksi": "Urutkanlah potongan gambar berikut menjadi gambar yang utuh (sebuah persegi).",
+      "kunci": [
+        "c"
+      ],
+      "pilihan": {
+        "a": "1-3-2-4",
+        "b": "3-1-4-2",
+        "c": "1-2-3-4",
+        "d": "4-3-2-1",
+        "e": "2-4-1-3"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.solid { fill: black; stroke: white; stroke-width: 2; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; }</style><g transform=\"translate(170, 150)\"><polygon points=\"-40,-40 40,-40 0,0\" class=\"solid\" /><text y=\"60\" class=\"text-label\">1</text></g><g transform=\"translate(340, 150)\"><polygon points=\"40,-40 40,40 0,0\" class=\"solid\" /><text y=\"60\" class=\"text-label\">2</text></g><g transform=\"translate(510, 150)\"><polygon points=\"40,40 -40,40 0,0\" class=\"solid\" /><text y=\"60\" class=\"text-label\">3</text></g><g transform=\"translate(680, 150)\"><polygon points=\"-40,40 -40,-40 0,0\" class=\"solid\" /><text y=\"60\" class=\"text-label\">4</text></g></svg>",
+      "pembahasan": "Keempat belahan potongan merupakan segitiga siku-siku yang sama kaki, yang berasal dari perpotongan diagonal sebuah persegi.<br>Untuk membentuk persegi tersebut, potongan (1) sebagai sisi atas harus disandingkan dengan potongan (2) di kanan, (3) di bawah, dan (4) di kiri. Kombinasi yang membentuk bangun secara memutar searah jarum jam dan tepat adalah urutan 1-2-3-4."
+    },
+    {
+      "id": 30,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "e"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-10\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"10\" cy=\"-55\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-hex\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-30\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"30\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-hex\" class=\"solid\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-tri\" class=\"solid\" /><use href=\"#in-hex\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-hex\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"solid\" /><use href=\"#in-hex\" class=\"solid\" /></g><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"solid\" /><use href=\"#in-hex\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Pola analogi ini memakai Topologi Terbalik (tukar posisi luar/dalam), Rotasi 180° untuk bangun utama, perubahan keseluruhan dari Outline ke Solid, serta rotasi satelit 180° diikuti pengurangan 1 kuantitas satelit.<br>Terapkan pada matriks ketiga: Segienam (luar) menjadi ke dalam, Segitiga (dalam) menjadi ke luar. Keduanya berotasi 180° dan berwarna solid. Satelit di kanan (5 buah) pindah ke kiri (rotasi 180°) dan berkurang 1 menjadi 4 buah. Opsi A gagal topologi. Opsi B gagal rotasi. Opsi C gagal inversi warna. Opsi D salah hitungan satelit. Maka jawaban yang paling presisi adalah E."
+    },
+    {
+      "id": 31,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar untuk melengkapi deret di bawah ini.",
+      "kunci": [
+        "a"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(45)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g></g><text x=\"450\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(135)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(135)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(135)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"solid\" /></g><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Pola deret kontinu ini berfokus pada dua aspek: Pertama, Rotasi Persegi terluar sebesar 45° secara berurutan pada setiap langkah (sehingga ia akan terlihat berbentuk belah ketupat di langkah genap). Kedua, Inversi Warna Bolak-balik pada bangun luar dan bangun dalam secara sinkron tanpa jeda.<br>Frame keempat mewajibkan persegi berputar 135° dari posisi awal dan warnanya menjadi solid di luar dengan outline di dalam. Opsi B gagal menginversi warna. Opsi C gagal merotasi bangun. Opsi D merotasi terlalu jauh (180°). Opsi E menjadikan keduanya solid hitam yang menyalahi aturan keterbacaan berlapis. Jawaban A tepat mengakomodir rotasi sudut dan warna."
+    },
+    {
+      "id": 32,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "c"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-dia\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-dia\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Aturan transformasi analogi ini sangat minimalis: Merotasi seluruh kesatuan objek sebesar 90° searah jarum jam, kemudian menginversi warnanya dari solid hitam menjadi sekadar outline tanpa melakukan penambahan satelit (Konservasi Absolut).<br>Saat diterapkan pada matriks ketiga (Segilima solid dengan satelit di kiri), segilima tersebut harus menghadap kanan (rotasi 90°) menjadi putih, dan satelitnya bergeser ke area atas (rotasi 90° dari kiri). Opsi A gagal inversi warna. Opsi B gagal rotasi bangun. Opsi D dan E memposisikan satelit ke arah yang salah. Jawaban paling akurat adalah C."
+    },
+    {
+      "id": 33,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar untuk melengkapi deret di bawah ini.",
+      "kunci": [
+        "d"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-10\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"10\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"-55\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"solid\" /><use href=\"#in-tri\" class=\"outline\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(270)\"><use href=\"#out-tri\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Deret konstan ini menerapkan rotasi mutlak 90° searah jarum jam di setiap iterasi ke semua bangunnya tanpa menukar urutan atau menginversi wujud dasarnya (luar selalu outline, dalam selalu solid). Satelit juga selalu berotasi 90° ke arah yang sama namun dengan jumlah yang konstan bertambah 1.<br>Untuk melengkapi frame keempat, bangun segitiga ganda tersebut harus berorientasi ke kiri (rotasi 270°) dan letak satelit berpindah ke kanan dengan jumlah genap 4 buah. Opsi A jumlah satelit tidak bertambah. Opsi B salah karena melakukan inversi soliditas. Opsi C salah derajat rotasi. Opsi E salah mengubah bangun dalam menjadi outline. Pilihan ideal adalah D."
+    },
+    {
+      "id": 34,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "a"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"solid\" /><use href=\"#in-hex\" class=\"outline\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-hex\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-10\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"10\" cy=\"55\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-pen\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"-55\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"solid\" /><use href=\"#in-sq\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-22\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"-7\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"8\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"23\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-15\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /><circle class=\"solid\" cx=\"15\" cy=\"55\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Matriks analogi ini tidak memutar bangun utamanya sama sekali (Rotasi 0°), melainkan hanya menerapkan Topologi Terbalik (tukar posisi luar/dalam) dan Inversi (solid/outline bertukar). Sedangkan untuk satelit: ia memantul lurus dari poros atas ke bawah (rotasi 180°) seraya bertambah satu buah kuantitasnya.<br>Dengan memakai logika tersebut ke matriks ketiga: Bangun luar berubah menjadi Segilima (outline), sedangkan bagian dalamnya menjadi Persegi (solid). Satelit memantul dari atas ke bawah dan berjumlah 4 titik. Opsi B salah memutar bangun utamanya. Opsi C salah tidak menerapkan inversi. Opsi D gagal menukar topologi luar/dalam. Opsi E kekurangan satelit. Opsi A paling tepat dan konsisten."
+    },
+    {
+      "id": 35,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar untuk melengkapi deret di bawah ini.",
+      "kunci": [
+        "e"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-10\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"10\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-sq\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-22\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"-7\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"8\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"23\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Deret dinamis ini mengaplikasikan osilasi Topologi Terbalik yang berulang pada setiap frame genap dan ganjil (sehingga susunan luar dan dalam senantiasa bertukar-tukar posisi bolak-balik tanpa ada rotasi sedikitpun). Satelitnya konstan bertambah 1 di tempat yang sama (kiri).<br>Frame keempat wajib menjadi cerminan frame kedua, yakni Persegi kembali merangkul Segilima, dan dengan penambahan satelit menjadi 4 di sebelah kiri. Opsi A secara keliru memberi sentuhan solid hitam. Opsi B urung menukar bangun luar/dalam. Opsi C satelitnya tidak bertambah. Opsi D berotasi tidak perlu. Oleh sebab itu, E memenuhi selengkapnya."
+    },
+    {
+      "id": 36,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "b"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(45)\"><use href=\"#out-sq\" class=\"solid\" /><use href=\"#in-cir\" class=\"outline\" /></g></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-hex\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-hex\" class=\"solid\" /><use href=\"#in-tri\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-hex\" class=\"solid\" /><use href=\"#in-tri\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(45)\"><use href=\"#out-hex\" class=\"solid\" /><use href=\"#in-tri\" class=\"solid\" /></g><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-tri\" class=\"solid\" /><use href=\"#in-hex\" class=\"outline\" /></g><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-hex\" class=\"outline-transparent\" /><use href=\"#in-tri\" class=\"solid\" /></g><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Matriks analogi ini berlandaskan pada rotasi sudut sebesar setengah irisan geometrisnya (seperti memutar persegi sejauh 45° menjadikannya bentuk wajik) dan pertukaran warna dari outline ke solid bolak-balik (Inversi Total) tanpa pertukaran tempat bangunnya.<br>Jika diterapkan pada Segienam (sudut 30° hingga 90°), memutar Segienam sejauh 90° akan mengubah titik runcing atapnya (vertikal) ke samping (horizontal). Inversi warnanya haruslah luarnya solid dan dalamnya outline putih. Opsi A tidak berputar. Opsi C salah karena inner shape juga dicolor solid. Opsi D malah menukar posisi topologinya. Opsi E salah pewarnaan. Jawaban presisinya adalah B karena Segienam tampak tidur (rotasi 90°) beserta pewarnaan terbalik yang akurat."
+    },
+    {
+      "id": 37,
+      "aspek": "logis",
+      "tipe": "pola_gambar",
+      "ganda": false,
+      "instruksi": "Pilihlah satu gambar analogi untuk melengkapi pola di bawah ini.",
+      "kunci": [
+        "d"
+      ],
+      "pilihan": {
+        "a": "a",
+        "b": "b",
+        "c": "c",
+        "d": "d",
+        "e": "e"
+      },
+      "gambar": "<svg viewBox=\"0 0 850 450\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><style>.box { fill: none; stroke: #333; stroke-width: 4; } .solid { fill: black; stroke: none; } .outline { fill: white; stroke: black; stroke-width: 4; stroke-linejoin: round; } .outline-transparent { fill: none; stroke: black; stroke-width: 4; stroke-linejoin: round; } .text-label { font-family: sans-serif; font-size: 24px; font-weight: bold; text-anchor: middle; } .text-symbol { font-family: sans-serif; font-size: 50px; font-weight: bold; text-anchor: middle; }</style><defs><rect id=\"out-sq\" x=\"-35\" y=\"-35\" width=\"70\" height=\"70\" /><rect id=\"in-sq\" x=\"-20\" y=\"-20\" width=\"40\" height=\"40\" /><polygon id=\"out-tri\" points=\"0,-45 35,30 -35,30\" /><polygon id=\"in-tri\" points=\"0,-25 20,15 -20,15\" /><polygon id=\"out-pen\" points=\"0,-45 45,-15 28,40 -28,40 -45,-15\" /><polygon id=\"in-pen\" points=\"0,-25 25,-8 15,22 -15,22 -25,-8\" /><circle id=\"out-cir\" cx=\"0\" cy=\"0\" r=\"40\" /><circle id=\"in-cir\" cx=\"0\" cy=\"0\" r=\"22\" /><polygon id=\"out-hex\" points=\"0,-40 35,-20 35,20 0,40 -35,20 -35,-20\" /><polygon id=\"in-hex\" points=\"0,-22 19,-11 19,11 0,22 -19,11 -19,-11\" /><polygon id=\"out-dia\" points=\"0,-45 35,0 0,45 -35,0\" /><polygon id=\"in-dia\" points=\"0,-25 20,0 0,25 -20,0\" /></defs><g transform=\"translate(150, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-cir\" class=\"solid\" /><use href=\"#in-sq\" class=\"outline\" /></g><circle class=\"solid\" cx=\"0\" cy=\"-55\" r=\"4\" /></g><text x=\"250\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(350, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-sq\" class=\"outline-transparent\" /><use href=\"#in-cir\" class=\"solid\" /></g><circle class=\"solid\" cx=\"0\" cy=\"55\" r=\"4\" /></g><text x=\"450\" y=\"115\" class=\"text-symbol\">::</text><g transform=\"translate(550, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(0)\"><use href=\"#out-pen\" class=\"solid\" /><use href=\"#in-dia\" class=\"outline\" /></g><circle class=\"solid\" cx=\"-55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"-55\" cy=\"15\" r=\"4\" /></g><text x=\"650\" y=\"115\" class=\"text-symbol\">→</text><g transform=\"translate(750, 100)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><text y=\"15\" class=\"text-symbol\">?</text></g><g transform=\"translate(85, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-dia\" class=\"solid\" /><use href=\"#in-pen\" class=\"outline\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">A</text></g><g transform=\"translate(255, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(90)\"><use href=\"#out-dia\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">B</text></g><g transform=\"translate(425, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-pen\" class=\"outline-transparent\" /><use href=\"#in-dia\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">C</text></g><g transform=\"translate(595, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-dia\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"solid\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">D</text></g><g transform=\"translate(765, 300)\"><rect class=\"box\" x=\"-60\" y=\"-60\" width=\"120\" height=\"120\" rx=\"10\" /><g transform=\"rotate(180)\"><use href=\"#out-dia\" class=\"outline-transparent\" /><use href=\"#in-pen\" class=\"outline-transparent\" /></g><circle class=\"solid\" cx=\"55\" cy=\"-15\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"0\" r=\"4\" /><circle class=\"solid\" cx=\"55\" cy=\"15\" r=\"4\" /><text y=\"90\" class=\"text-label\">E</text></g></svg>",
+      "pembahasan": "Aturan analogi ini menggabungkan Topologi Terbalik, Inversi Warna, dan Rotasi Absolut sebesar 180° untuk semua elemen secara merata tanpa mengubah kuantitasnya (titik di atas berotasi menjadi di bawah).<br>Ketika kita kenakan transformasi ini pada Segilima dan Belah Ketupat dengan satelit di sebelah kiri: Maka Topologi akan bertukar (Belah Ketupat berada di luar sebagai outline), bangun di dalam menjadi solid, posisi Segilima akan tertukar arah (akibat rotasi 180° ujung lancipnya menghadap ke bawah), dan titik satelit berpindah rotasi ke arah kanan seutuhnya tanpa penambahan jumlah (tetap 3 buah). Opsi A salah gagal inversi warna. Opsi B salah gagal rotasi belah ketupat dan segilima sejauh 180°. Opsi C urung menukar topologinya. Opsi E tidak memberikan isian solid pada bangun dalam. Opsi D secara elegan memfasilitasi semua persyaratan tersebut."
+    },
+    {
+      "id": 38,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Jika Banner rajin masuk kerja, maka Banner akan mendapatkan bonus dari pimpinan.\nBanner tidak mendapatkan bonus dari pimpinan.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Banner rajin masuk kerja dan tidak dapat bonus.",
+        "b": "Banner tidak rajin masuk kerja dan mendapatkan bonus.",
+        "c": "Banner rajin masuk kerja.",
+        "d": "Banner tidak rajin masuk kerja.",
+        "e": "Banner kadang-kadang tidak dapat bonus."
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 39,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Semua anak kecil suka orang yang memberikan permen.\nLoki tidak pernah membelikan adiknya permen tetapi sering membelikannya balon.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Loki sayang kepada adiknya.",
+        "b": "Loki tidak disukai adiknya.",
+        "c": "Loki tidak suka permen.",
+        "d": "Adik Loki suka balon.",
+        "e": "Adik Loki tidak suka permen dan balon."
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 40,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Peserta seleksi mengikuti tes tertulis dan wawancara.\nSayangnya, Danvers dinyatakan tidak lulus seleksi.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Danvers bukan peserta seleksi yang mengikuti tes tertulis dan wawancara.",
+        "b": "Danvers tidak mengikuti tes tertulis dan wawancara.",
+        "c": "Danvers tidak ikut seleksi.",
+        "d": "Danvers telah mengikuti tes tertulis dan wawancara.",
+        "e": "Danvers tidak ikut tes tertulis."
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 41,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Semua anggota Polri pandai menembak dan lihai berkendara.\nMeskipun Loki kurang lihai dalam berkendara, namun ia pandai menembak.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Loki seorang anggota Polri yang kurang lihai berkendara.",
+        "b": "Loki bukan anggota Polri meski pandai menembak.",
+        "c": "Loki seorang anggota Polri yang pandai menembak.",
+        "d": "Loki bukan anggota Polri yang teladan.",
+        "e": "Loki bukan anggota Polri yang lihai dalam berkendara."
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 42,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Sebagian diplomat menguasai lebih dari satu bahasa.\nSemua yang menguasai lebih dari satu bahasa pandai berbicara.\nKesimpulan dari kalimat di atas adalah …..",
+      "pilihan": {
+        "a": "Yang menguasai beberapa bahasa adalah diplomat.",
+        "b": "Sebagian yang pandai bicara adalah diplomat.",
+        "c": "Semua diplomat pandai berbicara.",
+        "d": "Semua yang pandai berbicara adalah diplomat.",
+        "e": "Sebagian diplomat menguasai satu bahasa."
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 43,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Sebagian vokalis band membuat lirik lagunya sendiri.\nBarton adalah seorang vokalis band.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Barton sangat mahir membuat lirik lagu.",
+        "b": "Barton tidak membuat lirik lagunya sendiri.",
+        "c": "Barton mungkin membuat lirik lagunya sendiri.",
+        "d": "Barton pasti membuat lirik lagunya sendiri.",
+        "e": "Membuat lirik lagu bukan keahlian Barton."
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 44,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Jika semua harta benda Barton terbawa banjir, maka ia menderita.\nBarton tidak terlalu menderita.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Semua harta benda Barton tidak terbawa banjir.",
+        "b": "Ada harta benda Barton yang tidak terkena banjir.",
+        "c": "Semua harta benda Barton terkena banjir.",
+        "d": "Tidak ada banjir.",
+        "e": "Ada harta benda Barton yang tidak terbawa banjir."
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 45,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Beberapa naskah drama diletakkan di rak.\nSemua naskah drama sudah tidak digunakan lagi.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Semua naskah drama yang sudah tidak digunakan lagi diletakkan di lemari.",
+        "b": "Beberapa naskah drama diletakkan di rak dan sudah tidak digunakan lagi.",
+        "c": "Semua naskah drama diletakkan di rak dan sudah tidak digunakan lagi.",
+        "d": "Tidak ada naskah drama yang diletakkan di rak dan sudah tidak digunakan lagi.",
+        "e": "Beberapa naskah drama sudah tidak digunakan lagi diletakkan di lemari."
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 46,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Setiap anggota grup bola basket adalah anggota grup bola voli.\nSetiap anggota grup bola voli adalah anggota grup bola pingpong.\nKesimpulan dari kalimat di atas adalah …..",
+      "pilihan": {
+        "a": "Tidak mungkin ada anggota grup basket yang bukan anggota grup bola pingpong.",
+        "b": "Mungkin ada anggota grup bola basket yang bukan anggota grup bola pingpong.",
+        "c": "Tidak mungkin ada anggota grup bola pingpong yang merupakan anggota grup bola basket.",
+        "d": "Tidak mungkin ada anggota grup bola pingpong yang merupakan anggota grup bola voli.",
+        "e": "Mungkin ada anggota grup bola pingpong yang bukan anggota grup bola basket."
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 47,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Tidak ada pengguna internet yang gagap teknologi.\nSebagian dari pengguna internet memiliki telepon canggih.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Semua orang memiliki telepon canggih tidak gagap teknologi.",
+        "b": "Sebagian orang yang memiliki telepon canggih gagap teknologi.",
+        "c": "Sebagian orang yang memiliki telepon canggih tidak gagap teknologi.",
+        "d": "Semua pengguna internet yang gagap teknologi tidak memiliki telepon canggih.",
+        "e": "Sebagian orang yang tidak memiliki telepon canggih gagap teknologi."
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 48,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Seluruh perwira baru wajib mengikuti latihan tempur.\nSebagian perwira baru mengunjungi asrama.\nKesimpulan dari kalimat di atas adalah …..",
+      "pilihan": {
+        "a": "Sebagian perwira baru yang tidak mengunjungi asrama tidak mengikuti latihan tempur.",
+        "b": "Seluruh perwira baru yang mengikuti latihan tempur tidak mengunjungi asrama.",
+        "c": "Sebagian perwira baru yang tidak mengikuti latihan tempur mengunjungi asrama.",
+        "d": "Perwira baru yang mengunjungi asrama mengikuti latihan tempur.",
+        "e": "Perwira baru yang tidak mengunjungi asrama tidak mengikuti latihan tempur."
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 49,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Semua delegasi dalam pertemuan internasional mampu berkomunikasi dengan baik.\nSebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi.\nKesimpulan dari kalimat di atas adalah …..",
+      "pilihan": {
+        "a": "Semua delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi.",
+        "b": "Sebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi dan tidak mampu berkomunikasi dengan baik.",
+        "c": "Semua delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi dan tidak mampu berkomunikasi dengan baik.",
+        "d": "Sebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tidak tinggi dan mampu berkomunikasi dengan baik.",
+        "e": "Sebagian delegasi dalam pertemuan internasional yang memiliki kemampuan komunikasi tidak baik juga memiliki rasa percaya diri tinggi."
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 50,
+      "aspek": "logis",
+      "tipe": "silogisme",
+      "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+      "soal": "Banyak buku pelajaran SMP di Yogyakarta menggunakan Bahasa Indonesia.\nStark membeli buku sejarah untuk SMP di Yogyakarta.\nKesimpulan yang paling tepat adalah …..",
+      "pilihan": {
+        "a": "Pasti Stark membeli buku sejarah menggunakan Bahasa Indonesia.",
+        "b": "Mungkin Stark membeli buku sejarah menggunakan Bahasa Indonesia.",
+        "c": "Stark hanya membeli buku yang berbahasa Indonesia.",
+        "d": "Stark tidak mungkin membeli buku sejarah selain yang menggunakan Bahasa Indonesia.",
+        "e": "Buku sejarah Stark berbahasa Indonesia."
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 51,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "H31J | P25R | T22V | X19Z | B16D | F13H | J10L | … | R4T",
+      "pilihan": {
+        "a": "L26N",
+        "b": "N7P",
+        "c": "N7B",
+        "d": "L28N",
+        "e": "M7P"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 52,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: 11A | 13B | 15C | … | 19E | 21F | 23G | 25H | 27I | 29J\nBaris 2: N48 | O45 | P42 | … | R36 | S33 | T30 | U37 | V34 | W31",
+      "pilihan": {
+        "a": "Q39",
+        "b": "16D",
+        "c": "17D",
+        "d": "Q41",
+        "e": "Q37"
+      },
+      "kunci": [
+        "a",
+        "c"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 53,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: 6 | 8 | 4 | 10 | 2 | 12 | X | 14 | -2 | 16\nBaris 2: 9 | 11 | 7 | Y | 5 | 15 | 3 | 17 | 1 | 19",
+      "pilihan": {
+        "a": "0",
+        "b": "13",
+        "c": "5",
+        "d": "10",
+        "e": "17"
+      },
+      "kunci": [
+        "a",
+        "b"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 54,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: BC | EF | HI | KL | NO | QR | TU | WX | ZA | …\nBaris 2: ZY | WV | TS | QP | NM | KJ | HG | ED | BA | …",
+      "pilihan": {
+        "a": "DC",
+        "b": "CD",
+        "c": "WV",
+        "d": "AB",
+        "e": "YX"
+      },
+      "kunci": [
+        "b",
+        "e"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 55,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Segitiga: H(kecil) | M(besar) | R(kecil) | …(besar) | B(kecil) | G(besar) | L(kecil) | …(besar)",
+      "pilihan": {
+        "a": "W",
+        "b": "S",
+        "c": "N",
+        "d": "Q",
+        "e": "T"
+      },
+      "kunci": [
+        "a",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 56,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: 1+4² | 2+3² | 3+2² | 6+1² | 9 | 10-1² | … | 14-3² | 17-4² | 18-5²\nBaris 2: 2N | 3M | 6L | 8K | 11J | 14I | … | 21G | 24F | 29E",
+      "pilihan": {
+        "a": "11-2²",
+        "b": "18H",
+        "c": "19O",
+        "d": "17H",
+        "e": "11+2²"
+      },
+      "kunci": [
+        "a",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 57,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: G | H | K | P | Q | … | Y | … | E\nBaris 2: E | F | I | N | … | R | … | X | A",
+      "pilihan": {
+        "a": "P, W",
+        "b": "T, Z",
+        "c": "T, U",
+        "d": "O, W",
+        "e": "S, U"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 58,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Berlian atas: ST | WX | AB | … | IJ | MN | QR\nBerlian bawah: JK | NO | RS | UW | ZA | … | HI",
+      "pilihan": {
+        "a": "EF",
+        "b": "FE",
+        "c": "FD",
+        "d": "DE",
+        "e": "ED"
+      },
+      "kunci": [
+        "a",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 59,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: B11 | 14D | F17 | 20H | J23 | 26L | … | 32P\nBaris 2: 112U | S99 | 96Q | O93 | 90M | K87 | … | G81",
+      "pilihan": {
+        "a": "N29",
+        "b": "M29",
+        "c": "84I",
+        "d": "N26",
+        "e": "TM73"
+      },
+      "kunci": [
+        "a",
+        "c"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 60,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: 0,5AH | 2,5BI | 12,5CJ | … | 312,5EL | 1562,5FM | 7812,5GN\nBaris 2: JQ9125 | KR1825 | LS365 | … | NU14,6 | OV2,92 | PW0,584",
+      "pilihan": {
+        "a": "20,5CD",
+        "b": "12,3NS",
+        "c": "62,5DK",
+        "d": "MT73",
+        "e": "TM73"
+      },
+      "kunci": [
+        "c",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 61,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: L | M | P | R | S | V | … | … | B | D\nBaris 2: D | F | H | … | K | … | N | P | R | S",
+      "pilihan": {
+        "a": "X, Z",
+        "b": "I, N",
+        "c": "X, Y",
+        "d": "I, M",
+        "e": "W, Y"
+      },
+      "kunci": [
+        "c",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 62,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Berlian atas: DE | FG | HI | JK | LM | NO | …\nBerlian bawah: TS | RQ | PO | NM | … | JI | HG",
+      "pilihan": {
+        "a": "KL",
+        "b": "QP",
+        "c": "LK",
+        "d": "PQ",
+        "e": "KP"
+      },
+      "kunci": [
+        "c",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 63,
+      "aspek": "analitis",
+      "tipe": "deret",
+      "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+      "soal": "Baris 1: -1 | -5 | … | -8 | -7 | -11 | -10 | -14 | -13 | -17\nBaris 2: B1 | F2 | … | I4 | H5 | L6 | K7 | O8 | N9 | R10",
+      "pilihan": {
+        "a": "G3",
+        "b": "E3",
+        "c": "-6",
+        "d": "-4",
+        "e": "D3"
+      },
+      "kunci": [
+        "b",
+        "d"
+      ],
+      "ganda": true
+    },
+    {
+      "id": 64,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Pak Amir memiliki 4 orang anak yaitu Mary, Anton, Kevin, dan Anne.\n• Anak perempuan dan anak laki-laki memiliki urutan kelahiran bergantian.\n• Anton berusia 23 tahun.\n• Anne lebih tua 4 tahun dari Anton.\n• Saat ini Mary sedang menempuh Pendidikan SMA.\n• Kevin anak pertama.",
+      "instruksi": "Urutan anak Pak Amir dari sulung sampai bungsu adalah ini yang tepat adalah .....",
+      "pilihan": {
+        "a": "Kevin, Anne, Anton, Mary",
+        "b": "Kevin, Anton, Anne, Marry",
+        "c": "Kevin, Mary, Anne, Anton",
+        "d": "Kevin, Mary, Anton, Anne",
+        "e": "Kevin, Anton, Mary, Anne"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 65,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Pak Amir memiliki 4 orang anak yaitu Mary, Anton, Kevin, dan Anne.\n• Anak perempuan dan anak laki-laki memiliki urutan kelahiran bergantian.\n• Anton berusia 23 tahun.\n• Anne lebih tua 4 tahun dari Anton.\n• Saat ini Mary sedang menempuh Pendidikan SMA.\n• Kevin anak pertama.",
+      "instruksi": "Dari pernyataan diatas, apabila selisih usia Kevin dan Anton adalah 2 kali selisih antara usia Anne dan Anton, berapa usia Kevin saat ini?",
+      "pilihan": {
+        "a": "15 tahun",
+        "b": "27 tahun",
+        "c": "19 tahun",
+        "d": "20 tahun",
+        "e": "31 tahun"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 66,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Seorang Raja minyak dari Abu Dhabi ingin membeli Kapal. Kondisi kapal:\n• Kapal Pesiar lebih besar dari Kapal Samudra, namun lebih boros dari Kapal Feri.\n• Kapal Feri keluaran terbaru dan lebih canggih dari Kapal Pesiar.\n• Kapal Samudra lebih mahal dari Kapal Feri.\n• Kapal Cruise lebih murah dari Kapal Samudra, namun tidak lebih boros dari Kapal Feri.\n• Kapal Feri lebih kecil dari Kapal Cruise.\n• Kapal Cruise lebih besar dari Kapal Pesiar dan tidak lebih canggih dari Kapal Pesiar.",
+      "instruksi": "Kapal manakah yang tidak memiliki keuntungan jika dibeli oleh Raja minyak?",
+      "pilihan": {
+        "a": "Kapal Samudra",
+        "b": "Kapal Cruise",
+        "c": "Kapal Cruise & Samudra",
+        "d": "Kapal Feri",
+        "e": "Kapal Pesiar"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 67,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Seorang Raja minyak dari Abu Dhabi ingin membeli Kapal. Kondisi kapal:\n• Kapal Pesiar lebih besar dari Kapal Samudra, namun lebih boros dari Kapal Feri.\n• Kapal Feri keluaran terbaru dan lebih canggih dari Kapal Pesiar.\n• Kapal Samudra lebih mahal dari Kapal Feri.\n• Kapal Cruise lebih murah dari Kapal Samudra, namun tidak lebih boros dari Kapal Feri.\n• Kapal Feri lebih kecil dari Kapal Cruise.\n• Kapal Cruise lebih besar dari Kapal Pesiar dan tidak lebih canggih dari Kapal Pesiar.",
+      "instruksi": "Kapal manakah yang paling canggih?",
+      "pilihan": {
+        "a": "Kapal Samudra & Pesiar",
+        "b": "Kapal Samudra",
+        "c": "Kapal Pesiar",
+        "d": "Kapal Cruise",
+        "e": "Kapal Feri"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 68,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Seorang Raja minyak dari Abu Dhabi ingin membeli Kapal. Kondisi kapal:\n• Kapal Pesiar lebih besar dari Kapal Samudra, namun lebih boros dari Kapal Feri.\n• Kapal Feri keluaran terbaru dan lebih canggih dari Kapal Pesiar.\n• Kapal Samudra lebih mahal dari Kapal Feri.\n• Kapal Cruise lebih murah dari Kapal Samudra, namun tidak lebih boros dari Kapal Feri.\n• Kapal Feri lebih kecil dari Kapal Cruise.\n• Kapal Cruise lebih besar dari Kapal Pesiar dan tidak lebih canggih dari Kapal Pesiar.",
+      "instruksi": "Pernyataan berikut ini adalah benar, kecuali …..",
+      "pilihan": {
+        "a": "Kapal Pesiar lebih canggih daripada Kapal Cruise.",
+        "b": "Kapal Cruise lebih hemat daripada Kapal Feri.",
+        "c": "Kapal Samudra lebih kecil daripada Kapal Pesiar.",
+        "d": "Kapal Samudra lebih kuno daripada Kapal Feri.",
+        "e": "Kapal Feri lebih besar daripada Kapal Cruise."
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 69,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Seorang Raja minyak dari Abu Dhabi ingin membeli Kapal. Kondisi kapal:\n• Kapal Pesiar lebih besar dari Kapal Samudra, namun lebih boros dari Kapal Feri.\n• Kapal Feri keluaran terbaru dan lebih canggih dari Kapal Pesiar.\n• Kapal Samudra lebih mahal dari Kapal Feri.\n• Kapal Cruise lebih murah dari Kapal Samudra, namun tidak lebih boros dari Kapal Feri.\n• Kapal Feri lebih kecil dari Kapal Cruise.\n• Kapal Cruise lebih besar dari Kapal Pesiar dan tidak lebih canggih dari Kapal Pesiar.",
+      "instruksi": "Kapal manakah yang paling banyak memiliki keunggulan dan menjadi pilihan Raja minyak?",
+      "pilihan": {
+        "a": "Kapal Cruise",
+        "b": "Kapal Samudra",
+        "c": "Kapal Pesiar",
+        "d": "Kapal Feri",
+        "e": "Kapal Samudra & Feri"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 70,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "instruksi": "Deri dan Benjo tidak pernah mendapat giliran membersihkan kelas bersama-sama, kecuali pada hari .....",
+      "pilihan": {
+        "a": "Senin",
+        "b": "Selasa",
+        "c": "Rabu",
+        "d": "Kamis",
+        "e": "Jum'at"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 71,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "instruksi": "Azel dan Deri mendapat giliran bekerja sama membersihkan kelas pada hari .....",
+      "pilihan": {
+        "a": "Selasa dan Kamis",
+        "b": "Senin dan Selasa",
+        "c": "Senin dan Kamis",
+        "d": "Rabu dan Jum'at",
+        "e": "Selasa dan Jum'at"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 72,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "instruksi": "Siswa yang membersihkan kelas pada hari Selasa adalah .....",
+      "pilihan": {
+        "a": "Deri, Enzi dan Azel",
+        "b": "Benjo, Azel dan Deri",
+        "c": "Enzi, Azel dan Benjo",
+        "d": "Enzi, Clara, dan Deri",
+        "e": "Azel, Deri dan Benjo"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 73,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Lomba balap karung: Aline, Bianca, Clarita, Divia, dan Emillie.\n• Clarita berhasil mendahului Bianca tiba di garis finish.\n• Aline tiba di garis finish setelah Clarita.\n• Bianca tidak mampu mengimbangi kecepatan Aline.",
+      "instruksi": "Dari pernyataan di atas, apabila Emmelie tiba di garis finish tepat setelah Clarita, siapakah peserta yang memenangkan perlombaan balap karung?",
+      "pilihan": {
+        "a": "Emillie",
+        "b": "Bianca",
+        "c": "Aline",
+        "d": "Clarita",
+        "e": "Divia"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 74,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Lima remaja (Azel, Benjo, Clara, Deri, Enzi) memiliki orang tua:\n• Ayah Azel seumur dengan ayah Benjo; ibu Azel seumur dengan ibu Clara.\n• Ayah Benjo 2 tahun lebih tua dari ayah Clara; ibu Benjo 2 tahun lebih muda dari ibu Deri.\n• Ayah Clara 5 tahun lebih muda dari ayah Deri; ibu Clara 2 tahun lebih tua dari ibu Enzi.\n• Ayah Enzi 5 tahun lebih muda dari ayah Azel; ibu Enzi 6 tahun lebih muda dari ibu Benjo.",
+      "instruksi": "Selisih umur antara ayah Deri dan ayah Enzi adalah .....",
+      "pilihan": {
+        "a": "3 tahun",
+        "b": "5 tahun",
+        "c": "6 tahun",
+        "d": "7 tahun",
+        "e": "8 tahun"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 75,
+      "aspek": "analitis",
+      "tipe": "wacana",
+      "wacana": "Lima remaja (Azel, Benjo, Clara, Deri, Enzi) memiliki orang tua:\n• Ayah Azel seumur dengan ayah Benjo; ibu Azel seumur dengan ibu Clara.\n• Ayah Benjo 2 tahun lebih tua dari ayah Clara; ibu Benjo 2 tahun lebih muda dari ibu Deri.\n• Ayah Clara 5 tahun lebih muda dari ayah Deri; ibu Clara 2 tahun lebih tua dari ibu Enzi.\n• Ayah Enzi 5 tahun lebih muda dari ayah Azel; ibu Enzi 6 tahun lebih muda dari ibu Benjo.",
+      "instruksi": "Berapa tahunkah selisih umur antara ibu Azel dengan Ibu Deri?",
+      "pilihan": {
+        "a": "2 tahun",
+        "b": "3 tahun",
+        "c": "4 tahun",
+        "d": "5 tahun",
+        "e": "6 tahun"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 76,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Thor mempunyai tiga lembar uang sepuluh ribuan, 4 lembar uang lima ribuan, dan lima lembar uang dua puluh ribuan. Jika ia akan membeli pulsa seharga Rp 55.000,00 berapa sisa uang Thor?",
+      "pilihan": {
+        "a": "Rp 75.000,00",
+        "b": "Rp 80.000,00",
+        "c": "Rp 85.000,00",
+        "d": "Rp 90.000,00",
+        "e": "Rp 95.000,00"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 77,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Seorang turis menyelam hingga 68 m di bawah permukaan laut. Kemudian turis itu naik setinggi 25 m. Berada pada posisi berapakah turis itu dari permukaan air laut?",
+      "pilihan": {
+        "a": "30 m",
+        "b": "43 m",
+        "c": "38 m",
+        "d": "33 m",
+        "e": "53 m"
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 78,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Seorang pemborong dapat menyelesaikan sebuah rumah dalam waktu 1 bulan dengan 6 orang tenaga. Bila pemborong ingin menyelesaikan dalam 15 hari, berapa tenaga yang dibutuhkan?",
+      "pilihan": {
+        "a": "8 orang",
+        "b": "9 orang",
+        "c": "10 orang",
+        "d": "11 orang",
+        "e": "12 orang"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 79,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Rumah Romanoff berjarak 3,5 km di sebelah utara sekolah. Rumah Loki berjarak 4,25 km di sebelah selatan sekolah. Dengan skala 0,5 cm untuk 0,25 km, berapa cm untuk menggambarkan jarak dari rumah Romanoff ke rumah Loki?",
+      "pilihan": {
+        "a": "11 cm",
+        "b": "12,5 cm",
+        "c": "13 cm",
+        "d": "15,5 cm",
+        "e": "16,5 cm"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 80,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Pada permulaan pertandingan catur, badai hujan mendekati arena dengan kecepatan 45 km/jam. Ronde ke enam selesai ketika hujan mulai turun. Jika satu ronde membutuhkan waktu 50 menit, berapa jauh jarak badai hujan saat pertandingan dimulai?",
+      "pilihan": {
+        "a": "120 km",
+        "b": "135 km",
+        "c": "180 km",
+        "d": "225 km",
+        "e": "245 km"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 81,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Pada sebuah komunitas olahraga, terdapat 22 orang senang renang, 28 orang senang baseball, 20 orang senang keduanya. Berapa banyak orang yang ada di komunitas tersebut?",
+      "pilihan": {
+        "a": "30 orang",
+        "b": "40 orang",
+        "c": "50 orang",
+        "d": "60 orang",
+        "e": "70 orang"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 82,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Romanoff bekerja 8 jam/hari, 5 hari/minggu dengan bayaran Rp 10.000/jam. Bulan ini ia menerima gaji Rp 1.780.000. Berapakah jumlah jam lembur dalam sebulan jika bayaran Rp 15.000/jam lembur?",
+      "pilihan": {
+        "a": "8 jam",
+        "b": "12 jam",
+        "c": "14 jam",
+        "d": "15 jam",
+        "e": "17 jam"
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 83,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Dalam suatu kompetisi lompat jauh, Lexi dapat melompat sejauh 1,89 m dan Bernard melompat sejauh 12,6 dm. Berapa perbedaan jarak lompatan antara keduanya?",
+      "pilihan": {
+        "a": "6 dm",
+        "b": "0,53 m",
+        "c": "0,63 m",
+        "d": "1,764 m",
+        "e": "10,71 dm"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 84,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Rogers memiliki uang Rp 7.000.000. Sebanyak 4/7-nya untuk uang kuliah. Sebanyak 15% dari sisanya untuk buku dan Rp 180.000 untuk baju. Sisa uang Rogers adalah …..",
+      "pilihan": {
+        "a": "Rp 1.950.000,00",
+        "b": "Rp 2.275.000,00",
+        "c": "Rp 2.370.000,00",
+        "d": "Rp 2.550.000,00",
+        "e": "Rp 2.800.000,00"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 85,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Beberapa tahun yang lalu Romanoff berusia tiga kali lebih tua daripada anaknya. Pada waktu itu usia Romanoff adalah 30 tahun. Bila sekarang usia Romanoff dua kali lebih tua dari anaknya maka berapa usia Romanoff?",
+      "pilihan": {
+        "a": "30 tahun",
+        "b": "20 tahun",
+        "c": "60 tahun",
+        "d": "40 tahun",
+        "e": "50 tahun"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 86,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Danvers berangkat ke kantor naik sepeda. Jarak antara kantor dan rumahnya 3,5 km. Apabila diameter roda sepeda Danvers 70 cm, maka berapa banyak putaran roda sepeda Danvers?",
+      "pilihan": {
+        "a": "3500 kali",
+        "b": "4500 kali",
+        "c": "5500 kali",
+        "d": "4000 kali",
+        "e": "5000 kali"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 87,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Kota Gotham memiliki 350.000 penduduk yang bertambah 15.000/tahun. Kota Manhattan memiliki 1.050.000 penduduk yang berkurang 20.000/tahun. Berapa tahun lagi kedua kota tersebut menjadi sama?",
+      "pilihan": {
+        "a": "12 tahun",
+        "b": "14 tahun",
+        "c": "16 tahun",
+        "d": "18 tahun",
+        "e": "20 tahun"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 88,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "Untuk membuat 35 patung pak Rogers membutuhkan waktu 5 hari, sedangkan pak Danvers membutuhkan waktu 7 hari. Apabila mereka bekerja secara bergantian berapa hari yang dibutuhkan untuk membuat 60 patung?",
+      "pilihan": {
+        "a": "8 hari",
+        "b": "8,5 hari",
+        "c": "9 hari",
+        "d": "12 hari",
+        "e": "10 hari"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 89,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "2 + 2 × 2 – 2 = …..",
+      "pilihan": {
+        "a": "0",
+        "b": "8",
+        "c": "6",
+        "d": "2",
+        "e": "4"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 90,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "(15 + 40)² = …..",
+      "pilihan": {
+        "a": "3005",
+        "b": "3052",
+        "c": "3225",
+        "d": "3025",
+        "e": "3045"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 91,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "241 × 37 – 379 + 789 = …..",
+      "pilihan": {
+        "a": "9327",
+        "b": "9328",
+        "c": "9527",
+        "d": "9237",
+        "e": "9238"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 92,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "1548 : 6 + 47 × 13 – 839 = …..",
+      "pilihan": {
+        "a": "30",
+        "b": "32",
+        "c": "34",
+        "d": "38",
+        "e": "36"
+      },
+      "kunci": [
+        "a"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 93,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "420 : 0,3 + 8 × 9 = …..",
+      "pilihan": {
+        "a": "16762",
+        "b": "12672",
+        "c": "1427",
+        "d": "1742",
+        "e": "1472"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 94,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "(–0,65) + 117 : 9 – 3 = …..",
+      "pilihan": {
+        "a": "10,35",
+        "b": "9,65",
+        "c": "9,35",
+        "d": "10,65",
+        "e": "11,35"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 95,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "17 × 18 – 14 × 19 – 18 : 6 = …..",
+      "pilihan": {
+        "a": "5545",
+        "b": "37",
+        "c": "924,6",
+        "d": "47",
+        "e": "38"
+      },
+      "kunci": [
+        "b"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 96,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "1389 – 890 × 2 – 421 + 34 = …..",
+      "pilihan": {
+        "a": "780",
+        "b": "-780",
+        "c": "778",
+        "d": "-778",
+        "e": "760"
+      },
+      "kunci": [
+        "d"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 97,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "72 × 8 – 78 – 102 : 3 = …..",
+      "pilihan": {
+        "a": "576",
+        "b": "498",
+        "c": "396",
+        "d": "132",
+        "e": "464"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 98,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "19 adalah berapa persen dari 380?",
+      "pilihan": {
+        "a": "0,5%",
+        "b": "0,15%",
+        "c": "0,05%",
+        "d": "5,5%",
+        "e": "5%"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 99,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "8 × 8 × 8 – 7 + 7 + 7 = …..",
+      "pilihan": {
+        "a": "481",
+        "b": "489",
+        "c": "499",
+        "d": "508",
+        "e": "519"
+      },
+      "kunci": [
+        "e"
+      ],
+      "ganda": false
+    },
+    {
+      "id": 100,
+      "aspek": "praktis",
+      "tipe": "hitung",
+      "instruksi": "(21² / 441) + (√196 – 14) = …..",
+      "pilihan": {
+        "a": "2",
+        "b": "3",
+        "c": "1",
+        "d": "5",
+        "e": "6"
+      },
+      "kunci": [
+        "c"
+      ],
+      "ganda": false
+    }
+  ]
+}
