@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import LogoutButton from "@/app/components/LogoutButton";
 
 function formatDate(iso: string | null) {
   if (!iso) return "-";
@@ -11,18 +12,6 @@ function formatDate(iso: string | null) {
   });
 }
 
-function LogoutButton() {
-  return (
-    <form method="POST" action="/api/auth/logout">
-      <button
-        type="submit"
-        className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors px-3 py-1.5 rounded-lg border border-zinc-800 hover:border-zinc-600"
-      >
-        Keluar
-      </button>
-    </form>
-  );
-}
 
 export default async function AdminPage() {
   const session = await getSession();

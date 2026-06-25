@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import LogoutButton from "@/app/components/LogoutButton";
 
 function napColor(score: number | null, passed: boolean | null) {
   if (score == null) return "text-zinc-400";
@@ -46,18 +47,7 @@ export default async function DashboardPage() {
             <h1 className="text-2xl font-bold">Halo, {session.name}</h1>
             <p className="text-sm text-zinc-500 mt-0.5">@{session.username}</p>
           </div>
-          <form action="/api/auth/logout" method="POST">
-            <button
-              type="submit"
-              onClick={async () => {
-                await fetch("/api/auth/logout", { method: "POST" });
-                window.location.href = "/login";
-              }}
-              className="text-xs text-zinc-500 hover:text-zinc-300 transition-colors px-3 py-1.5 rounded-lg border border-zinc-800 hover:border-zinc-600"
-            >
-              Keluar
-            </button>
-          </form>
+          <LogoutButton />
         </div>
 
         {/* Stats */}
