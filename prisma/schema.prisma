@@ -1,0 +1,207 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../app/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ─────────────────────────────────────────────
+// ENUMS
+// ─────────────────────────────────────────────
+
+enum QuestionType {
+  KECERDASAN
+  KEPRIBADIAN
+  KECERMATAN
+}
+
+enum ModuleType {
+  KECERDASAN
+  KEPRIBADIAN
+  KECERMATAN
+}
+
+enum SessionStatus {
+  PENDING
+  IN_PROGRESS
+  PAUSED
+  COMPLETED
+  DISQUALIFIED
+}
+
+enum ModuleStatus {
+  NOT_STARTED
+  IN_PROGRESS
+  COMPLETED
+  TIMED_OUT
+}
+
+enum AntiCheatEventType {
+  TAB_SWITCH
+  WINDOW_BLUR
+  FULLSCREEN_EXIT
+  RIGHT_CLICK
+  COPY_ATTEMPT
+  DEVTOOLS_OPEN
+  FOCUS_RETURN
+}
+
+// ─────────────────────────────────────────────
+// MODELS
+// ─────────────────────────────────────────────
+
+model User {
+  id            String        @id @default(cuid())
+  name          String
+  email         String        @unique
+  phone         String?
+  created_at    DateTime      @default(now())
+  updated_at    DateTime      @updatedAt
+
+  test_sessions TestSession[]
+
+  @@map("users")
+}
+
+model TestSession {
+  id                       String        @id @default(cuid())
+  user_id                  String
+  status                   SessionStatus @default(PENDING)
+
+  // Hasil NAP — hanya terisi setelah status COMPLETED
+  nap_score                Float?
+  kecerdasan_contribution  Float?        // max 60 pts
+  kepribadian_contribution Float?        // max 20 pts
+  kecermatan_contribution  Float?        // max 20 pts
+  is_passed                Boolean?
+  disqualified_reason      String?       // e.g. "Kecermatan KS (score=38)"
+
+  started_at               DateTime?
+  completed_at             DateTime?
+  created_at               DateTime      @default(now())
+  updated_at               DateTime      @updatedAt
+
+  user              User            @relation(fields: [user_id], references: [id])
+  module_sessions   ModuleSession[]
+  anti_cheat_events AntiCheatEvent[]
+
+  @@index([user_id])
+  @@index([status])
+  @@map("test_sessions")
+}
+
+model ModuleSession {
+  id                 String       @id @default(cuid())
+  test_session_id    String
+  module_type        ModuleType
+  status             ModuleStatus @default(NOT_STARTED)
+  sequence_order     Int          // 1=Kecerdasan, 2=Kepribadian, 3=Kecermatan
+
+  // Hasil scoring — hanya terisi setelah COMPLETED
+  raw_score          Float?       // Nilai Murni skala 0-100
+  nap_contribution   Float?       // Kontribusi ke NAP
+  is_disqualifying   Boolean?     // true jika raw_score <= 40
+
+  // Indeks khusus Kecermatan (null untuk modul lain)
+  ke_index           Float?       // Kecepatan: (total_klik/500)×100
+  kt_index           Float?       // Ketelitian: (benar/klik)×100
+  kh_index           Float?       // Ketahanan: konversi SD → 0-100
+
+  time_limit_seconds Int          // 5400 / 3600 / 600
+  started_at         DateTime?
+  completed_at       DateTime?
+
+  // SESSION RECOVERY — di-PATCH tiap 30 detik via /api/session/[id]/sync
+  // Shape: { current_question_index, current_column_index, column_remaining_ms, snapshot_at }
+  recovery_snapshot  Json?        @db.JsonB
+
+  created_at         DateTime     @default(now())
+  updated_at         DateTime     @updatedAt
+
+  test_session    TestSession     @relation(fields: [test_session_id], references: [id])
+  answers         Answer[]
+  kecermatan_logs KecermatanLog[]
+
+  @@unique([test_session_id, module_type])
+  @@index([test_session_id])
+  @@map("module_sessions")
+}
+
+model Question {
+  id              String       @id @default(cuid())
+  type            QuestionType
+  sequence_number Int          // urutan dalam modul (1-100 atau 1-500)
+  column_index    Int?         // khusus Kecermatan: lajur ke-1 s.d. 10
+
+  // Aman dikirim ke client: teks soal, pilihan, SVG content (Kecerdasan Spasial)
+  options_payload Json         @db.JsonB
+
+  // SERVER-SIDE ONLY — kunci jawaban & bobot. TIDAK PERNAH di-select untuk response client
+  scoring_rule    Json         @db.JsonB
+
+  is_active       Boolean      @default(true)
+  created_at      DateTime     @default(now())
+  updated_at      DateTime     @updatedAt
+
+  answers         Answer[]
+  kecermatan_logs KecermatanLog[]
+
+  @@index([type, sequence_number])
+  @@index([type, column_index])
+  @@map("questions")
+}
+
+model Answer {
+  id                String        @id @default(cuid())
+  module_session_id String
+  question_id       String
+  selected_key      String        // "A" | "B" | "C" | "D" | "E"
+  column_index      Int?          // denormalisasi dari Question — efisiensi kalkulasi Kt
+
+  answered_at       DateTime      @default(now())
+
+  module_session    ModuleSession @relation(fields: [module_session_id], references: [id])
+  question          Question      @relation(fields: [question_id], references: [id])
+
+  @@unique([module_session_id, question_id])
+  @@index([module_session_id])
+  @@index([module_session_id, column_index])
+  @@map("answers")
+}
+
+model KecermatanLog {
+  // BigInt autoincrement PK: hindari UUID B-tree fragmentation pada insert volume tinggi
+  id                BigInt        @id @default(autoincrement())
+  module_session_id String
+  question_id       String
+  column_index      Int           // 1-10
+  clicked_at_ms     BigInt        // Unix epoch ms dari Date.now() client
+  response_value    String        // opsi yang diklik: "A"-"E"
+
+  // null selama tes aktif; diisi saat server scoring (POST /calculate)
+  is_correct        Boolean?
+
+  module_session    ModuleSession @relation(fields: [module_session_id], references: [id])
+  question          Question      @relation(fields: [question_id], references: [id])
+
+  // Composite index untuk kalkulasi Kh (SD): COUNT(*) GROUP BY column_index
+  @@index([module_session_id, column_index])
+  @@index([module_session_id])
+  @@map("kecermatan_logs")
+}
+
+model AntiCheatEvent {
+  id              BigInt             @id @default(autoincrement())
+  test_session_id String
+  event_type      AntiCheatEventType
+  occurred_at_ms  BigInt             // Unix epoch ms
+  metadata        Json?              @db.JsonB
+
+  test_session    TestSession        @relation(fields: [test_session_id], references: [id])
+
+  @@index([test_session_id])
+  @@index([test_session_id, event_type])
+  @@map("anti_cheat_events")
+}
