@@ -162,6 +162,13 @@ export default function EngineKepribadian({
 
             {/* Statement */}
             <div className="px-6 py-8">
+              {payload?.aspect && (
+                <div className="flex justify-center mb-4">
+                  <span className="inline-block rounded-full border border-purple-700/50 bg-purple-900/30 px-3 py-1 text-xs font-medium text-purple-300">
+                    {payload.aspect}
+                  </span>
+                </div>
+              )}
               <p className="text-lg leading-relaxed text-zinc-100 text-center font-medium">
                 {payload?.statement}
               </p>

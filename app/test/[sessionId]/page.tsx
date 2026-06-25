@@ -5,9 +5,9 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
 const MODULE_META = {
-  KECERDASAN:  { label: "Sub-Tes Kecerdasan",  desc: "100 soal · 90 menit · kognitif & spasial", href: "kecerdasan",  order: 1 },
-  KECERMATAN:  { label: "Sub-Tes Kecermatan",   desc: "500 soal · 10 menit · 10 lajur simbol",   href: "kecermatan",  order: 2 },
-  KEPRIBADIAN: { label: "Sub-Tes Kepribadian",  desc: "100 pernyataan · 60 menit · skala Likert", href: "kepribadian", order: 3 },
+  KECERDASAN:  { label: "Sub-Tes Kecerdasan",  icon: "🧠", desc: "100 soal · 90 menit · kognitif & spasial", href: "kecerdasan",  order: 1 },
+  KECERMATAN:  { label: "Sub-Tes Kecermatan",  icon: "🎯", desc: "500 soal · 10 menit · 10 lajur simbol",   href: "kecermatan",  order: 2 },
+  KEPRIBADIAN: { label: "Sub-Tes Kepribadian", icon: "💡", desc: "100 pernyataan · 60 menit · skala Likert", href: "kepribadian", order: 3 },
 } as const;
 
 function statusBadge(s: ModuleStatus) {
@@ -50,6 +50,10 @@ export default async function SessionOverviewPage({
     (m) => m.status === "COMPLETED" || m.status === "TIMED_OUT"
   );
 
+  const doneCount = moduleSessions.filter(
+    (m) => m.status === "COMPLETED" || m.status === "TIMED_OUT"
+  ).length;
+
   const getButtonState = (moduleType: string, seqOrder: number) => {
     const m = moduleSessions.find((ms) => ms.module_type === moduleType);
     if (!m) return { disabled: true, label: "Tidak Tersedia" };
@@ -73,6 +77,20 @@ export default async function SessionOverviewPage({
           </p>
         </div>
 
+        {/* Progress overview */}
+        <div className="rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4 space-y-2">
+          <div className="flex items-center justify-between text-xs text-zinc-500">
+            <span>Progress Tes</span>
+            <span className="font-mono">{doneCount} / {moduleSessions.length} selesai</span>
+          </div>
+          <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-emerald-500 rounded-full transition-all duration-500"
+              style={{ width: `${(doneCount / moduleSessions.length) * 100}%` }}
+            />
+          </div>
+        </div>
+
         <div className="space-y-3">
           {moduleSessions.map((ms) => {
             const meta = MODULE_META[ms.module_type as keyof typeof MODULE_META];
@@ -82,12 +100,15 @@ export default async function SessionOverviewPage({
                 key={ms.id}
                 className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4"
               >
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold">{meta.label}</span>
-                    {statusBadge(ms.status)}
+                <div className="flex items-center gap-4">
+                  <span className="text-2xl shrink-0">{meta.icon}</span>
+                  <div className="space-y-1">
+                    <div className="flex items-center gap-2">
+                      <span className="font-semibold">{meta.label}</span>
+                      {statusBadge(ms.status)}
+                    </div>
+                    <p className="text-xs text-zinc-500">{meta.desc}</p>
                   </div>
-                  <p className="text-xs text-zinc-500">{meta.desc}</p>
                 </div>
                 {btn.disabled ? (
                   <span className="text-sm text-zinc-500">{btn.label}</span>

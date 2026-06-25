@@ -16,6 +16,9 @@ export type SafeQuestion = Omit<QuestionModel, "scoring_rule">;
 // ─────────────────────────────────────────────────────────────────────────────
 
 export type KecerdasanOptionsPayload = {
+  instruksi?: string;
+  sub_text?: string | null;
+  is_multi_select?: boolean;
   question_text: string;
   svg_content: string | null; // null untuk soal non-spasial
   choices: Array<{ key: "A" | "B" | "C" | "D" | "E"; text: string }>;
