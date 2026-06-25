@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import prisma from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
 function round1(n: number | null) {
   return n == null ? "-" : n.toFixed(1);
@@ -34,28 +34,27 @@ export default async function ResultPage({
   const { sessionId } = await params;
   const { calculate } = await searchParams;
 
-  // Trigger scoring if coming from overview with ?calculate=1
   if (calculate === "1") {
     try {
-      await fetch(
-        `${process.env.NEXTAUTH_URL ?? "http://localhost:3000"}/api/sessions/${sessionId}/calculate`,
-        { method: "POST", cache: "no-store" }
-      );
+      const baseUrl = process.env.VERCEL_URL
+        ? `https://${process.env.VERCEL_URL}`
+        : "http://localhost:3000";
+      await fetch(`${baseUrl}/api/sessions/${sessionId}/calculate`, {
+        method: "POST",
+        cache: "no-store",
+      });
     } catch {}
     redirect(`/test/${sessionId}/result`);
   }
 
-  const session = await prisma.testSession.findUnique({
-    where: { id: sessionId },
-    include: {
-      user: { select: { name: true, email: true } },
-      module_sessions: { orderBy: { sequence_order: "asc" } },
-    },
-  });
+  const { data: session } = await supabaseAdmin
+    .from("test_sessions")
+    .select("id, status, nap_score, kecerdasan_contribution, kepribadian_contribution, kecermatan_contribution, is_passed, disqualified_reason, users(name, email), module_sessions(*)")
+    .eq("id", sessionId)
+    .single();
 
   if (!session) notFound();
 
-  // Not yet scored — send back
   if (session.status !== "COMPLETED" && session.status !== "DISQUALIFIED") {
     redirect(`/test/${sessionId}`);
   }
@@ -63,14 +62,22 @@ export default async function ResultPage({
   const passed = session.is_passed === true;
   const disqualified = session.status === "DISQUALIFIED";
 
-  const ks = session.module_sessions.find((m) => m.module_type === "KECERDASAN");
-  const kp = session.module_sessions.find((m) => m.module_type === "KEPRIBADIAN");
-  const kc = session.module_sessions.find((m) => m.module_type === "KECERMATAN");
+  const moduleSessions = session.module_sessions as Array<{
+    module_type: string;
+    nap_contribution: number | null;
+    ke_index: number | null;
+    kt_index: number | null;
+    kh_index: number | null;
+  }>;
+
+  const user = session.users as unknown as { name: string; email: string } | null;
+  const ks = moduleSessions.find((m) => m.module_type === "KECERDASAN");
+  const kp = moduleSessions.find((m) => m.module_type === "KEPRIBADIAN");
+  const kc = moduleSessions.find((m) => m.module_type === "KECERMATAN");
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
       <div className="max-w-lg mx-auto space-y-8">
-        {/* Result badge */}
         <div className={`rounded-xl border p-6 text-center space-y-2 ${
           disqualified
             ? "border-red-700 bg-red-950/30"
@@ -82,20 +89,18 @@ export default async function ResultPage({
           <h1 className="text-2xl font-bold">
             {disqualified ? "Gugur Mutlak" : passed ? "Lulus" : "Tidak Lulus"}
           </h1>
-          <p className="text-zinc-400 text-sm">{session.user.name} · {session.user.email}</p>
+          <p className="text-zinc-400 text-sm">{user?.name} · {user?.email}</p>
           {session.disqualified_reason && (
             <p className="text-red-400 text-xs">{session.disqualified_reason}</p>
           )}
         </div>
 
-        {/* NAP Score */}
         <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 space-y-2">
           <p className="text-xs text-zinc-500 uppercase tracking-wider">Nilai Akhir Psikotes (NAP)</p>
           <p className="text-5xl font-bold">{round1(session.nap_score)}</p>
           <p className="text-xs text-zinc-500">Lulus minimal 61 poin</p>
         </div>
 
-        {/* Module breakdown */}
         <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 space-y-4">
           <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider">Rincian Nilai</h2>
           <ScoreRow label="Kecerdasan (max 60)" value={ks?.nap_contribution ?? null} max={60} />

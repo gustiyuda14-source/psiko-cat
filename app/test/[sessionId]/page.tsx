@@ -1,6 +1,6 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import prisma from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
@@ -25,13 +25,11 @@ export default async function SessionOverviewPage({
 }) {
   const { sessionId } = await params;
 
-  const session = await prisma.testSession.findUnique({
-    where: { id: sessionId },
-    include: {
-      user: { select: { name: true, email: true } },
-      module_sessions: { orderBy: { sequence_order: "asc" } },
-    },
-  });
+  const { data: session } = await supabaseAdmin
+    .from("test_sessions")
+    .select("id, status, users(name, email), module_sessions(*)")
+    .eq("id", sessionId)
+    .single();
 
   if (!session) notFound();
 
@@ -39,18 +37,25 @@ export default async function SessionOverviewPage({
     redirect(`/test/${sessionId}/result`);
   }
 
-  const allDone = session.module_sessions.every(
+  const moduleSessions = (session.module_sessions as Array<{
+    id: string;
+    module_type: string;
+    status: ModuleStatus;
+    sequence_order: number;
+  }>).sort((a, b) => a.sequence_order - b.sequence_order);
+
+  const user = session.users as unknown as { name: string; email: string } | null;
+
+  const allDone = moduleSessions.every(
     (m) => m.status === "COMPLETED" || m.status === "TIMED_OUT"
   );
 
-  // Determine which module is unlocked next (sequential)
   const getButtonState = (moduleType: string, seqOrder: number) => {
-    const m = session.module_sessions.find((ms) => ms.module_type === moduleType);
+    const m = moduleSessions.find((ms) => ms.module_type === moduleType);
     if (!m) return { disabled: true, label: "Tidak Tersedia" };
     if (m.status === "COMPLETED" || m.status === "TIMED_OUT") return { disabled: true, label: "Selesai ✓" };
     if (m.status === "IN_PROGRESS") return { disabled: false, label: "Lanjutkan →" };
-    // NOT_STARTED — only allow if previous module is done
-    const prev = session.module_sessions.find((ms) => ms.sequence_order === seqOrder - 1);
+    const prev = moduleSessions.find((ms) => ms.sequence_order === seqOrder - 1);
     if (seqOrder === 1 || prev?.status === "COMPLETED" || prev?.status === "TIMED_OUT") {
       return { disabled: false, label: "Mulai" };
     }
@@ -60,18 +65,16 @@ export default async function SessionOverviewPage({
   return (
     <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
       <div className="max-w-2xl mx-auto space-y-8">
-        {/* Header */}
         <div>
           <h1 className="text-2xl font-bold">Psiko CAT</h1>
           <p className="text-zinc-400 text-sm mt-1">
-            Peserta: <span className="text-white">{session.user.name}</span>
-            <span className="text-zinc-600 ml-2">({session.user.email})</span>
+            Peserta: <span className="text-white">{user?.name}</span>
+            <span className="text-zinc-600 ml-2">({user?.email})</span>
           </p>
         </div>
 
-        {/* Module cards */}
         <div className="space-y-3">
-          {session.module_sessions.map((ms) => {
+          {moduleSessions.map((ms) => {
             const meta = MODULE_META[ms.module_type as keyof typeof MODULE_META];
             const btn = getButtonState(ms.module_type, ms.sequence_order);
             return (
@@ -82,7 +85,7 @@ export default async function SessionOverviewPage({
                 <div className="space-y-1">
                   <div className="flex items-center gap-2">
                     <span className="font-semibold">{meta.label}</span>
-                    {statusBadge(ms.status as ModuleStatus)}
+                    {statusBadge(ms.status)}
                   </div>
                   <p className="text-xs text-zinc-500">{meta.desc}</p>
                 </div>
@@ -101,7 +104,6 @@ export default async function SessionOverviewPage({
           })}
         </div>
 
-        {/* Calculate CTA */}
         {allDone && (
           <form action={`/test/${sessionId}/result`} method="GET">
             <input type="hidden" name="calculate" value="1" />

@@ -1,5 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import prisma from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 import KecermatanClient from "./KecermatanClient";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
 
@@ -10,17 +10,12 @@ export default async function KecermatanPage({
 }) {
   const { sessionId } = await params;
 
-  const ms = await prisma.moduleSession.findFirst({
-    where: { test_session_id: sessionId, module_type: "KECERMATAN" },
-    select: {
-      id: true,
-      status: true,
-      started_at: true,
-      recovery_snapshot: true,
-      sequence_order: true,
-      test_session_id: true,
-    },
-  });
+  const { data: ms } = await supabaseAdmin
+    .from("module_sessions")
+    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id")
+    .eq("test_session_id", sessionId)
+    .eq("module_type", "KECERMATAN")
+    .maybeSingle();
 
   if (!ms) notFound();
 
@@ -29,35 +24,30 @@ export default async function KecermatanPage({
   }
 
   if (ms.sequence_order > 1) {
-    const prev = await prisma.moduleSession.findFirst({
-      where: { test_session_id: sessionId, sequence_order: ms.sequence_order - 1 },
-      select: { status: true },
-    });
+    const { data: prev } = await supabaseAdmin
+      .from("module_sessions")
+      .select("status")
+      .eq("test_session_id", sessionId)
+      .eq("sequence_order", ms.sequence_order - 1)
+      .maybeSingle();
     if (prev && prev.status !== "COMPLETED" && prev.status !== "TIMED_OUT") {
       redirect(`/test/${sessionId}`);
     }
   }
 
-  const questions = await prisma.question.findMany({
-    where: { type: "KECERMATAN", is_active: true },
-    orderBy: [{ column_index: "asc" }, { sequence_number: "asc" }],
-    select: {
-      id: true,
-      type: true,
-      sequence_number: true,
-      column_index: true,
-      options_payload: true,
-      is_active: true,
-      created_at: true,
-      updated_at: true,
-    },
-  });
+  const { data: questions } = await supabaseAdmin
+    .from("questions")
+    .select("id, type, sequence_number, column_index, options_payload, is_active, created_at, updated_at")
+    .eq("type", "KECERMATAN")
+    .eq("is_active", true)
+    .order("column_index", { ascending: true })
+    .order("sequence_number", { ascending: true });
 
   const snapshot = (ms.recovery_snapshot ?? null) as RecoverySnapshot | null;
 
   return (
     <KecermatanClient
-      questions={questions}
+      questions={questions ?? []}
       moduleSessionId={ms.id}
       sessionId={sessionId}
       snapshot={snapshot}

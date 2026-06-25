@@ -136,7 +136,7 @@ export default function EngineKecermatan({
   }, []);
 
   useEffect(() => {
-    if (store.status !== "running") return;
+    if (store.status !== "running" || process.env.NODE_ENV === "development") return;
     const guard = (e: BeforeUnloadEvent) => { e.preventDefault(); };
     window.addEventListener("beforeunload", guard);
     return () => window.removeEventListener("beforeunload", guard);
