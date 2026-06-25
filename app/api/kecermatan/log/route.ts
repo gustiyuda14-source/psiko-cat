@@ -1,24 +1,5 @@
-/**
- * POST /api/kecermatan/log
- * High-throughput batch insert KecermatanLog.
- * Client buffer klik di Zustand, flush ke sini tiap 10-20 klik atau saat pindah kolom.
- *
- * Body: {
- *   module_session_id: string,
- *   logs: Array<{
- *     question_id: string,
- *     column_index: number,      // 1-10
- *     clicked_at_ms: number,     // Date.now() dari client
- *     response_value: string,    // "A"|"B"|"C"|"D"|"E"
- *   }>
- * }
- *
- * PENTING: is_correct di-set null saat insert (diisi saat calculate).
- * Ini mencegah answer key ter-expose via response API ini.
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
 type LogEntry = {
   question_id: string;
@@ -40,13 +21,14 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "module_session_id dan logs wajib" }, { status: 400 });
     }
 
-    // Validasi module session aktif
-    const moduleSession = await prisma.moduleSession.findFirst({
-      where: { id: module_session_id, module_type: "KECERMATAN" },
-      select: { id: true, status: true },
-    });
+    const { data: moduleSession, error: msError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id, status")
+      .eq("id", module_session_id)
+      .eq("module_type", "KECERMATAN")
+      .single();
 
-    if (!moduleSession) {
+    if (msError || !moduleSession) {
       return NextResponse.json({ error: "Kecermatan module session tidak ditemukan" }, { status: 404 });
     }
 
@@ -54,18 +36,23 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Module sudah selesai" }, { status: 409 });
     }
 
-    const data = logs.map((log) => ({
-      module_session_id,
-      question_id: log.question_id,
-      column_index: log.column_index,
-      clicked_at_ms: BigInt(log.clicked_at_ms),
-      response_value: log.response_value,
-      is_correct: null, // diisi saat scoring
-    }));
+    const { data, error: insertError } = await supabaseAdmin
+      .from("kecermatan_logs")
+      .insert(
+        logs.map((log) => ({
+          module_session_id,
+          question_id: log.question_id,
+          column_index: log.column_index,
+          clicked_at_ms: log.clicked_at_ms,
+          response_value: log.response_value,
+          is_correct: null,
+        }))
+      )
+      .select("id");
 
-    const result = await prisma.kecermatanLog.createMany({ data });
+    if (insertError) throw insertError;
 
-    return NextResponse.json({ inserted: result.count });
+    return NextResponse.json({ inserted: data?.length ?? 0 });
 
   } catch (err) {
     console.error("[POST /api/kecermatan/log]", err);

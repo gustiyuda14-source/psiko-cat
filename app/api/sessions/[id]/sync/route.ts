@@ -1,19 +1,5 @@
-/**
- * PATCH /api/sessions/[id]/sync
- * Heartbeat endpoint — client memanggil ini tiap 30 detik saat tes aktif.
- * Menyimpan recovery_snapshot ke ModuleSession agar sesi bisa di-resume.
- *
- * Body: {
- *   module_session_id: string,
- *   current_question_index: number,
- *   current_column_index: number | null,  // Kecermatan only
- *   column_remaining_ms: number | null,   // Kecermatan only
- * }
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
-import { SessionStatus, ModuleStatus } from "@/app/generated/prisma/client";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
 
 type SyncBody = {
@@ -30,19 +16,20 @@ export async function PATCH(
   try {
     const { id: session_id } = await params;
     const body = await req.json() as SyncBody;
-
     const { module_session_id, current_question_index, current_column_index, column_remaining_ms } = body;
 
     if (!module_session_id || current_question_index === undefined) {
       return NextResponse.json({ error: "module_session_id dan current_question_index wajib" }, { status: 400 });
     }
 
-    // Verifikasi module session milik session ini
-    const moduleSession = await prisma.moduleSession.findFirst({
-      where: { id: module_session_id, test_session_id: session_id },
-    });
+    const { data: moduleSession, error: msError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id, started_at")
+      .eq("id", module_session_id)
+      .eq("test_session_id", session_id)
+      .single();
 
-    if (!moduleSession) {
+    if (msError || !moduleSession) {
       return NextResponse.json({ error: "Module session tidak ditemukan" }, { status: 404 });
     }
 
@@ -53,21 +40,23 @@ export async function PATCH(
       snapshot_at: Date.now(),
     };
 
-    // Update snapshot + pastikan status session IN_PROGRESS
-    await prisma.$transaction([
-      prisma.moduleSession.update({
-        where: { id: module_session_id },
-        data: {
-          recovery_snapshot: snapshot,
-          status: ModuleStatus.IN_PROGRESS,
-          started_at: moduleSession.started_at ?? new Date(),
-        },
-      }),
-      prisma.testSession.update({
-        where: { id: session_id },
-        data: { status: SessionStatus.IN_PROGRESS },
-      }),
-    ]);
+    const { error: msUpdateError } = await supabaseAdmin
+      .from("module_sessions")
+      .update({
+        recovery_snapshot: snapshot,
+        status: "IN_PROGRESS",
+        started_at: moduleSession.started_at ?? new Date().toISOString(),
+      })
+      .eq("id", module_session_id);
+
+    if (msUpdateError) throw msUpdateError;
+
+    const { error: tsUpdateError } = await supabaseAdmin
+      .from("test_sessions")
+      .update({ status: "IN_PROGRESS" })
+      .eq("id", session_id);
+
+    if (tsUpdateError) throw tsUpdateError;
 
     return NextResponse.json({ synced_at: snapshot.snapshot_at });
 
@@ -77,11 +66,6 @@ export async function PATCH(
   }
 }
 
-/**
- * GET /api/sessions/[id]/sync
- * Session resume — client panggil ini saat load halaman ujian.
- * Mengembalikan recovery_snapshot untuk restore state Zustand.
- */
 export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ id: string }> }
@@ -89,29 +73,26 @@ export async function GET(
   try {
     const { id: session_id } = await params;
 
-    const testSession = await prisma.testSession.findUnique({
-      where: { id: session_id },
-      select: {
-        id: true,
-        status: true,
-        user_id: true,
-        module_sessions: {
-          orderBy: { sequence_order: "asc" },
-          select: {
-            id: true,
-            module_type: true,
-            sequence_order: true,
-            status: true,
-            time_limit_seconds: true,
-            recovery_snapshot: true,
-            started_at: true,
-          },
-        },
-      },
-    });
+    const { data: testSession, error } = await supabaseAdmin
+      .from("test_sessions")
+      .select(`
+        id, status, user_id,
+        module_sessions (
+          id, module_type, sequence_order, status, time_limit_seconds, recovery_snapshot, started_at
+        )
+      `)
+      .eq("id", session_id)
+      .single();
 
-    if (!testSession) {
+    if (error || !testSession) {
       return NextResponse.json({ error: "Session tidak ditemukan" }, { status: 404 });
+    }
+
+    // Sort module_sessions by sequence_order (PostgREST join doesn't guarantee order)
+    if (Array.isArray(testSession.module_sessions)) {
+      (testSession.module_sessions as { sequence_order: number }[]).sort(
+        (a, b) => a.sequence_order - b.sequence_order
+      );
     }
 
     return NextResponse.json(testSession);

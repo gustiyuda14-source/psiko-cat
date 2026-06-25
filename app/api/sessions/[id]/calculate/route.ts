@@ -1,21 +1,5 @@
-/**
- * POST /api/sessions/[id]/calculate
- * Server-side scoring endpoint — dipanggil saat semua modul selesai.
- * Melakukan:
- *  1. Fetch semua jawaban + scoring_rule (hanya di sisi server)
- *  2. Hitung Kecerdasan (dikotomis)
- *  3. Hitung Kepribadian (Likert weighted sum)
- *  4. Hitung Kecermatan (Ke/Kt/Kh via SD formula)
- *  5. Hitung NAP final + klausul gugur mutlak
- *  6. Simpan semua hasil ke DB
- *  7. Return hasil (tanpa kunci jawaban)
- *
- * KEAMANAN: scoring_rule TIDAK pernah dikembalikan ke client.
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
-import { SessionStatus, ModuleStatus } from "@/app/generated/prisma/client";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 import { calculateKecerdasan } from "@/lib/scoring/kecerdasan";
 import { calculateKepribadian } from "@/lib/scoring/kepribadian";
 import { calculateKecermatan, type KecermatanColumnStats } from "@/lib/scoring/kecermatan";
@@ -33,81 +17,82 @@ export async function POST(
   try {
     const { id: session_id } = await params;
 
-    // ── 1. Load session + semua module sessions
-    const testSession = await prisma.testSession.findUnique({
-      where: { id: session_id },
-      include: {
-        module_sessions: {
-          orderBy: { sequence_order: "asc" },
-        },
-      },
-    });
+    // 1. Load session + module sessions
+    const { data: testSession, error: tsError } = await supabaseAdmin
+      .from("test_sessions")
+      .select("id, status, module_sessions(*)")
+      .eq("id", session_id)
+      .single();
 
-    if (!testSession) {
+    if (tsError || !testSession) {
       return NextResponse.json({ error: "Session tidak ditemukan" }, { status: 404 });
     }
 
-    if (testSession.status === SessionStatus.COMPLETED || testSession.status === SessionStatus.DISQUALIFIED) {
+    if (testSession.status === "COMPLETED" || testSession.status === "DISQUALIFIED") {
       return NextResponse.json({ error: "Session sudah dihitung" }, { status: 409 });
     }
 
+    const moduleSessions = (
+      testSession.module_sessions as Array<{ id: string; module_type: string; sequence_order: number }>
+    ).sort((a, b) => a.sequence_order - b.sequence_order);
+
     const results: Record<string, unknown> = {};
 
-    // ── 2. Scoring per modul
-    for (const ms of testSession.module_sessions) {
+    // 2. Score per module
+    for (const ms of moduleSessions) {
       if (ms.module_type === "KECERDASAN") {
         const score = await scoreKecerdasan(ms.id);
         results.kecerdasan = score;
-
-        await prisma.moduleSession.update({
-          where: { id: ms.id },
-          data: {
+        const { error } = await supabaseAdmin
+          .from("module_sessions")
+          .update({
             raw_score: score.raw_score,
             nap_contribution: score.nap_contribution,
             is_disqualifying: score.is_disqualifying,
-            status: ModuleStatus.COMPLETED,
-            completed_at: new Date(),
-          },
-        });
+            status: "COMPLETED",
+            completed_at: new Date().toISOString(),
+          })
+          .eq("id", ms.id);
+        if (error) throw error;
       }
 
       if (ms.module_type === "KEPRIBADIAN") {
         const score = await scoreKepribadian(ms.id);
         results.kepribadian = score;
-
-        await prisma.moduleSession.update({
-          where: { id: ms.id },
-          data: {
+        const { error } = await supabaseAdmin
+          .from("module_sessions")
+          .update({
             raw_score: score.raw_score,
             nap_contribution: score.nap_contribution,
             is_disqualifying: score.is_disqualifying,
-            status: ModuleStatus.COMPLETED,
-            completed_at: new Date(),
-          },
-        });
+            status: "COMPLETED",
+            completed_at: new Date().toISOString(),
+          })
+          .eq("id", ms.id);
+        if (error) throw error;
       }
 
       if (ms.module_type === "KECERMATAN") {
         const score = await scoreKecermatan(ms.id);
         results.kecermatan = score;
-
-        await prisma.moduleSession.update({
-          where: { id: ms.id },
-          data: {
+        const { error } = await supabaseAdmin
+          .from("module_sessions")
+          .update({
             raw_score: score.raw_score,
             nap_contribution: score.nap_contribution,
             is_disqualifying: score.is_disqualifying,
             ke_index: score.ke_index,
             kt_index: score.kt_index,
             kh_index: score.kh_index,
-            status: ModuleStatus.COMPLETED,
-            completed_at: new Date(),
-          },
-        });
+            status: "COMPLETED",
+            completed_at: new Date().toISOString(),
+          })
+          .eq("id", ms.id);
+        if (error) throw error;
       }
     }
 
-    // ── 3. Hitung NAP final
+    // 3. Calculate NAP
     const kecerdasan = results.kecerdasan as Awaited<ReturnType<typeof scoreKecerdasan>>;
     const kepribadian = results.kepribadian as Awaited<ReturnType<typeof scoreKepribadian>>;
     const kecermatan = results.kecermatan as Awaited<ReturnType<typeof scoreKecermatan>>;
@@ -121,22 +106,23 @@ export async function POST(
       kecermatan_raw: kecermatan.raw_score,
     });
 
-    // ── 4. Simpan hasil ke TestSession
-    await prisma.testSession.update({
-      where: { id: session_id },
-      data: {
+    // 4. Save results to TestSession
+    const { error: updateError } = await supabaseAdmin
+      .from("test_sessions")
+      .update({
         nap_score: nap.nap_score,
         kecerdasan_contribution: kecerdasan.nap_contribution,
         kepribadian_contribution: kepribadian.nap_contribution,
         kecermatan_contribution: kecermatan.nap_contribution,
         is_passed: nap.is_passed,
         disqualified_reason: nap.disqualified_reason,
-        status: nap.status === "COMPLETED" ? SessionStatus.COMPLETED : SessionStatus.DISQUALIFIED,
-        completed_at: new Date(),
-      },
-    });
+        status: nap.status === "COMPLETED" ? "COMPLETED" : "DISQUALIFIED",
+        completed_at: new Date().toISOString(),
+      })
+      .eq("id", session_id);
 
-    // ── 5. Return hasil (tanpa kunci jawaban)
+    if (updateError) throw updateError;
+
     return NextResponse.json({
       session_id,
       nap_score: nap.nap_score,
@@ -174,82 +160,80 @@ export async function POST(
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// SCORING HELPERS — akses scoring_rule di sisi server saja
-// ─────────────────────────────────────────────────────────────────────────────
-
 async function scoreKecerdasan(module_session_id: string) {
-  const answers = await prisma.answer.findMany({
-    where: { module_session_id },
-    select: { question_id: true, selected_key: true },
-  });
+  const { data: answers } = await supabaseAdmin
+    .from("answers")
+    .select("question_id, selected_key")
+    .eq("module_session_id", module_session_id);
 
-  const questions = await prisma.question.findMany({
-    where: { id: { in: answers.map((a) => a.question_id) } },
-    select: { id: true, scoring_rule: true },
-  });
+  const questionIds = (answers ?? []).map((a) => a.question_id);
+  const { data: questions } = await supabaseAdmin
+    .from("questions")
+    .select("id, scoring_rule")
+    .in("id", questionIds);
 
-  const answerMap = new Map(answers.map((a) => [a.question_id, a.selected_key]));
+  const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
   const ruleMap = new Map(
-    questions.map((q) => [q.id, q.scoring_rule as KecerdasanScoringRule])
+    (questions ?? []).map((q) => [q.id, q.scoring_rule as KecerdasanScoringRule])
   );
 
   return calculateKecerdasan(answerMap, ruleMap);
 }
 
 async function scoreKepribadian(module_session_id: string) {
-  const answers = await prisma.answer.findMany({
-    where: { module_session_id },
-    select: { question_id: true, selected_key: true },
-  });
+  const { data: answers } = await supabaseAdmin
+    .from("answers")
+    .select("question_id, selected_key")
+    .eq("module_session_id", module_session_id);
 
-  const questions = await prisma.question.findMany({
-    where: { id: { in: answers.map((a) => a.question_id) } },
-    select: { id: true, scoring_rule: true },
-  });
+  const questionIds = (answers ?? []).map((a) => a.question_id);
+  const { data: questions } = await supabaseAdmin
+    .from("questions")
+    .select("id, scoring_rule")
+    .in("id", questionIds);
 
-  const answerMap = new Map(answers.map((a) => [a.question_id, a.selected_key]));
+  const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
   const ruleMap = new Map(
-    questions.map((q) => [q.id, q.scoring_rule as KepribadianScoringRule])
+    (questions ?? []).map((q) => [q.id, q.scoring_rule as KepribadianScoringRule])
   );
 
   return calculateKepribadian(answerMap, ruleMap);
 }
 
 async function scoreKecermatan(module_session_id: string) {
-  // Ambil semua log + scoring rules dalam sekali query
-  const logs = await prisma.kecermatanLog.findMany({
-    where: { module_session_id },
-    select: {
-      id: true,
-      column_index: true,
-      response_value: true,
-      question: { select: { scoring_rule: true } },
-    },
-  });
+  const { data: logs } = await supabaseAdmin
+    .from("kecermatan_logs")
+    .select("id, column_index, response_value, question:questions(scoring_rule)")
+    .eq("module_session_id", module_session_id);
 
-  // Update is_correct pada setiap log
-  const updateOps = logs.map((log) => {
-    const rule = log.question.scoring_rule as KecermatanScoringRule;
-    const is_correct = log.response_value === rule.correct_choice;
-    return prisma.kecermatanLog.update({
-      where: { id: log.id },
-      data: { is_correct },
-    });
-  });
-  await prisma.$transaction(updateOps);
+  type LogRow = {
+    id: string;
+    column_index: number;
+    response_value: string;
+    question: { scoring_rule: KecermatanScoringRule };
+  };
 
-  // Hitung statistik per kolom (1-10)
+  const safeLogs = (logs ?? []) as unknown as LogRow[];
+
+  // Update is_correct on each log
+  for (const log of safeLogs) {
+    const is_correct = log.response_value === log.question.scoring_rule.correct_choice;
+    await supabaseAdmin
+      .from("kecermatan_logs")
+      .update({ is_correct })
+      .eq("id", log.id);
+  }
+
+  // Calculate per-column stats
   const columnMap = new Map<number, { total_klik: number; total_benar: number }>();
   for (let i = 1; i <= 10; i++) {
     columnMap.set(i, { total_klik: 0, total_benar: 0 });
   }
 
-  for (const log of logs) {
-    const rule = log.question.scoring_rule as KecermatanScoringRule;
+  for (const log of safeLogs) {
     const col = columnMap.get(log.column_index) ?? { total_klik: 0, total_benar: 0 };
     col.total_klik++;
-    if (log.response_value === rule.correct_choice) col.total_benar++;
+    if (log.response_value === log.question.scoring_rule.correct_choice) col.total_benar++;
     columnMap.set(log.column_index, col);
   }
 

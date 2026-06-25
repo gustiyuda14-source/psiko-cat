@@ -1,20 +1,10 @@
-/**
- * POST /api/sessions
- * Inisialisasi sesi tes baru untuk user.
- * Membuat 1 TestSession + 3 ModuleSession (Kecerdasan → Kepribadian → Kecermatan).
- *
- * Body: { user_id: string }
- * Returns: { session_id, module_sessions: [{ id, module_type, sequence_order }] }
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
-import { ModuleType, SessionStatus, ModuleStatus } from "@/app/generated/prisma/client";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
-const MODULE_ORDER: { type: ModuleType; time_limit_seconds: number }[] = [
-  { type: ModuleType.KECERDASAN,  time_limit_seconds: 5400 }, // 90 menit
-  { type: ModuleType.KEPRIBADIAN, time_limit_seconds: 3600 }, // 60 menit
-  { type: ModuleType.KECERMATAN,  time_limit_seconds: 600  }, // 10 menit
+const MODULE_ORDER = [
+  { type: "KECERDASAN",  time_limit_seconds: 5400 },
+  { type: "KEPRIBADIAN", time_limit_seconds: 3600 },
+  { type: "KECERMATAN",  time_limit_seconds: 600  },
 ];
 
 export async function POST(req: NextRequest) {
@@ -26,44 +16,56 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "user_id wajib diisi" }, { status: 400 });
     }
 
-    // Cek apakah user ada
-    const user = await prisma.user.findUnique({ where: { id: user_id } });
-    if (!user) {
+    // Check user exists
+    const { data: user, error: userError } = await supabaseAdmin
+      .from("users")
+      .select("id")
+      .eq("id", user_id)
+      .single();
+
+    if (userError || !user) {
       return NextResponse.json({ error: "User tidak ditemukan" }, { status: 404 });
     }
 
-    // Buat TestSession + 3 ModuleSession dalam satu transaksi
-    const session = await prisma.$transaction(async (tx) => {
-      const testSession = await tx.testSession.create({
-        data: {
-          user_id,
-          status: SessionStatus.PENDING,
-        },
-      });
+    // Create test session
+    const { data: testSession, error: sessionError } = await supabaseAdmin
+      .from("test_sessions")
+      .insert({ user_id, status: "PENDING" })
+      .select("id, status")
+      .single();
 
-      const moduleSessionsData = MODULE_ORDER.map((m, idx) => ({
-        test_session_id: testSession.id,
-        module_type: m.type,
-        sequence_order: idx + 1,
-        status: ModuleStatus.NOT_STARTED,
-        time_limit_seconds: m.time_limit_seconds,
-      }));
+    if (sessionError || !testSession) {
+      throw sessionError ?? new Error("Failed to create test session");
+    }
 
-      await tx.moduleSession.createMany({ data: moduleSessionsData });
+    // Create module sessions
+    const { error: modulesError } = await supabaseAdmin
+      .from("module_sessions")
+      .insert(
+        MODULE_ORDER.map((m, idx) => ({
+          test_session_id: testSession.id,
+          module_type: m.type,
+          sequence_order: idx + 1,
+          status: "NOT_STARTED",
+          time_limit_seconds: m.time_limit_seconds,
+        }))
+      );
 
-      const moduleSessions = await tx.moduleSession.findMany({
-        where: { test_session_id: testSession.id },
-        orderBy: { sequence_order: "asc" },
-        select: { id: true, module_type: true, sequence_order: true, time_limit_seconds: true },
-      });
+    if (modulesError) throw modulesError;
 
-      return { testSession, moduleSessions };
-    });
+    // Fetch module sessions ordered
+    const { data: moduleSessions, error: fetchError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id, module_type, sequence_order, time_limit_seconds")
+      .eq("test_session_id", testSession.id)
+      .order("sequence_order", { ascending: true });
+
+    if (fetchError) throw fetchError;
 
     return NextResponse.json({
-      session_id: session.testSession.id,
-      status: session.testSession.status,
-      module_sessions: session.moduleSessions,
+      session_id: testSession.id,
+      status: testSession.status,
+      module_sessions: moduleSessions,
     }, { status: 201 });
 
   } catch (err) {

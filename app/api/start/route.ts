@@ -1,19 +1,10 @@
-/**
- * POST /api/start
- * Satu langkah: cari atau buat User, lalu buat TestSession baru.
- *
- * Body: { name: string, email: string, phone?: string }
- * Returns: { session_id, user_id }
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
-import { SessionStatus, ModuleStatus, ModuleType } from "@/app/generated/prisma/client";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
-const MODULES: { type: ModuleType; time_limit_seconds: number }[] = [
-  { type: ModuleType.KECERDASAN, time_limit_seconds: 5400 },
-  { type: ModuleType.KECERMATAN, time_limit_seconds: 600 },
-  { type: ModuleType.KEPRIBADIAN, time_limit_seconds: 3600 },
+const MODULES = [
+  { type: "KECERDASAN", time_limit_seconds: 5400 },
+  { type: "KECERMATAN", time_limit_seconds: 600 },
+  { type: "KEPRIBADIAN", time_limit_seconds: 3600 },
 ];
 
 export async function POST(req: NextRequest) {
@@ -25,35 +16,51 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "name dan email wajib diisi" }, { status: 400 });
     }
 
-    const { testSession, moduleSessions } = await prisma.$transaction(async (tx) => {
-      const user = await tx.user.upsert({
-        where: { email },
-        update: { name, phone: phone ?? null },
-        create: { name, email, phone: phone ?? null },
-      });
+    // Upsert user by email
+    const { data: user, error: userError } = await supabaseAdmin
+      .from("users")
+      .upsert({ name, email, phone: phone ?? null }, { onConflict: "email" })
+      .select("id")
+      .single();
 
-      const testSession = await tx.testSession.create({
-        data: { user_id: user.id, status: SessionStatus.PENDING },
-      });
+    if (userError || !user) {
+      throw userError ?? new Error("Failed to upsert user");
+    }
 
-      await tx.moduleSession.createMany({
-        data: MODULES.map((m, i) => ({
+    // Create test session
+    const { data: testSession, error: sessionError } = await supabaseAdmin
+      .from("test_sessions")
+      .insert({ user_id: user.id, status: "PENDING" })
+      .select("id")
+      .single();
+
+    if (sessionError || !testSession) {
+      throw sessionError ?? new Error("Failed to create test session");
+    }
+
+    // Create module sessions
+    const { error: modulesError } = await supabaseAdmin
+      .from("module_sessions")
+      .insert(
+        MODULES.map((m, i) => ({
           test_session_id: testSession.id,
           module_type: m.type,
           sequence_order: i + 1,
-          status: ModuleStatus.NOT_STARTED,
+          status: "NOT_STARTED",
           time_limit_seconds: m.time_limit_seconds,
-        })),
-      });
+        }))
+      );
 
-      const moduleSessions = await tx.moduleSession.findMany({
-        where: { test_session_id: testSession.id },
-        orderBy: { sequence_order: "asc" },
-        select: { id: true, module_type: true, sequence_order: true },
-      });
+    if (modulesError) throw modulesError;
 
-      return { testSession, user, moduleSessions };
-    });
+    // Fetch created module sessions ordered
+    const { data: moduleSessions, error: fetchError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id, module_type, sequence_order")
+      .eq("test_session_id", testSession.id)
+      .order("sequence_order", { ascending: true });
+
+    if (fetchError) throw fetchError;
 
     return NextResponse.json(
       { session_id: testSession.id, module_sessions: moduleSessions },

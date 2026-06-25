@@ -1,22 +1,5 @@
-/**
- * POST /api/sessions/[id]/modules/[moduleId]/answers
- * Batch save jawaban user. Dipanggil tiap kali user submit jawaban
- * (individual untuk Kecerdasan/Kepribadian, batch untuk Kecermatan).
- *
- * Body: {
- *   answers: Array<{
- *     question_id: string,
- *     selected_key: "A"|"B"|"C"|"D"|"E",
- *     column_index?: number,  // Kecermatan only
- *   }>
- * }
- *
- * Catatan: TIDAK ada scoring di sini. Jawaban disimpan mentah.
- * Scoring hanya terjadi di POST /api/sessions/[id]/calculate.
- */
-
 import { NextRequest, NextResponse } from "next/server";
-import prisma from "@/lib/db";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
 type AnswerInput = {
   question_id: string;
@@ -36,13 +19,14 @@ export async function POST(
       return NextResponse.json({ error: "answers array wajib diisi" }, { status: 400 });
     }
 
-    // Verifikasi module session
-    const moduleSession = await prisma.moduleSession.findFirst({
-      where: { id: module_session_id, test_session_id: session_id },
-      select: { id: true, status: true },
-    });
+    const { data: moduleSession, error: msError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id, status")
+      .eq("id", module_session_id)
+      .eq("test_session_id", session_id)
+      .single();
 
-    if (!moduleSession) {
+    if (msError || !moduleSession) {
       return NextResponse.json({ error: "Module session tidak ditemukan" }, { status: 404 });
     }
 
@@ -50,26 +34,20 @@ export async function POST(
       return NextResponse.json({ error: "Module sudah selesai, tidak bisa menambah jawaban" }, { status: 409 });
     }
 
-    // Upsert: jika sudah ada (module_session_id + question_id unique), update selected_key
-    await prisma.$transaction(
-      body.answers.map((a) =>
-        prisma.answer.upsert({
-          where: {
-            module_session_id_question_id: {
-              module_session_id,
-              question_id: a.question_id,
-            },
-          },
-          update: { selected_key: a.selected_key, answered_at: new Date() },
-          create: {
-            module_session_id,
-            question_id: a.question_id,
-            selected_key: a.selected_key,
-            column_index: a.column_index ?? null,
-          },
-        })
-      )
-    );
+    const { error: upsertError } = await supabaseAdmin
+      .from("answers")
+      .upsert(
+        body.answers.map((a) => ({
+          module_session_id,
+          question_id: a.question_id,
+          selected_key: a.selected_key,
+          column_index: a.column_index ?? null,
+          answered_at: new Date().toISOString(),
+        })),
+        { onConflict: "module_session_id,question_id" }
+      );
+
+    if (upsertError) throw upsertError;
 
     return NextResponse.json({ saved: body.answers.length });
 
@@ -79,12 +57,6 @@ export async function POST(
   }
 }
 
-/**
- * GET /api/sessions/[id]/modules/[moduleId]/answers
- * Ambil semua jawaban yang sudah tersimpan untuk module session ini.
- * Dipakai saat resume session untuk restore state Zustand.
- * Hanya mengembalikan selected_key (tidak ada scoring info).
- */
 export async function GET(
   _req: NextRequest,
   { params }: { params: Promise<{ id: string; moduleId: string }> }
@@ -92,25 +64,24 @@ export async function GET(
   try {
     const { id: session_id, moduleId: module_session_id } = await params;
 
-    const moduleSession = await prisma.moduleSession.findFirst({
-      where: { id: module_session_id, test_session_id: session_id },
-      select: { id: true },
-    });
+    const { data: moduleSession, error: msError } = await supabaseAdmin
+      .from("module_sessions")
+      .select("id")
+      .eq("id", module_session_id)
+      .eq("test_session_id", session_id)
+      .single();
 
-    if (!moduleSession) {
+    if (msError || !moduleSession) {
       return NextResponse.json({ error: "Module session tidak ditemukan" }, { status: 404 });
     }
 
-    const answers = await prisma.answer.findMany({
-      where: { module_session_id },
-      select: {
-        question_id: true,
-        selected_key: true,
-        column_index: true,
-        answered_at: true,
-      },
-      orderBy: { answered_at: "asc" },
-    });
+    const { data: answers, error: answersError } = await supabaseAdmin
+      .from("answers")
+      .select("question_id, selected_key, column_index, answered_at")
+      .eq("module_session_id", module_session_id)
+      .order("answered_at", { ascending: true });
+
+    if (answersError) throw answersError;
 
     return NextResponse.json({ answers });
 
