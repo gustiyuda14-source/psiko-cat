@@ -88,7 +88,7 @@ async function seedKecerdasan() {
     // Map object "pilihan": {"a":"...", "b":"..."} to array of {key, text}
     const choicesArray = Object.entries(item.pilihan || {}).map(([k, v]) => ({
       key: k.toUpperCase(),
-      text: v
+      text: String(v)
     }));
 
     return {
