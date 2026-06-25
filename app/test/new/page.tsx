@@ -1,101 +1,45 @@
-"use client";
+import { redirect } from "next/navigation";
+import { getSession } from "@/lib/auth";
+import { supabaseAdmin } from "@/lib/supabase-admin";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+const MODULES = [
+  { type: "KECERDASAN",  time_limit_seconds: 5400, sequence_order: 1 },
+  { type: "KECERMATAN",  time_limit_seconds: 600,  sequence_order: 2 },
+  { type: "KEPRIBADIAN", time_limit_seconds: 3600, sequence_order: 3 },
+];
 
-export default function NewTestPage() {
-  const router = useRouter();
-  const [form, setForm] = useState({ name: "", email: "", phone: "" });
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+// Server component: buat test session langsung, redirect ke halaman overview
+export default async function NewTestPage() {
+  const session = await getSession();
+  if (!session) redirect("/login");
 
-  async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setError("");
-    setLoading(true);
-    try {
-      const res = await fetch("/api/start", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-      const data = await res.json();
-      if (!res.ok) { setError(data.error ?? "Terjadi kesalahan"); return; }
-      router.push(`/test/${data.session_id}`);
-    } catch {
-      setError("Gagal terhubung ke server.");
-    } finally {
-      setLoading(false);
-    }
-  }
+  const { data: user } = await supabaseAdmin
+    .from("users")
+    .select("id")
+    .eq("username", session.username)
+    .single();
 
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-950 px-4">
-      <div className="w-full max-w-md space-y-8">
-        <div className="text-center">
-          <h1 className="text-3xl font-bold text-white">Psiko CAT</h1>
-          <p className="mt-2 text-sm text-zinc-400">
-            Sistem Psikotes Terintegrasi — POLRI / IPDN
-          </p>
-        </div>
+  if (!user) redirect("/login");
 
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-xl bg-zinc-900 border border-zinc-800 p-8">
-          <h2 className="text-lg font-semibold text-white">Data Peserta</h2>
+  const { data: testSession, error: sessionError } = await supabaseAdmin
+    .from("test_sessions")
+    .insert({ user_id: user.id, status: "PENDING" })
+    .select("id")
+    .single();
 
-          {error && (
-            <div className="rounded-lg bg-red-900/40 border border-red-700 px-4 py-2 text-sm text-red-300">
-              {error}
-            </div>
-          )}
+  if (sessionError || !testSession) redirect("/dashboard");
 
-          <div className="space-y-1">
-            <label className="text-xs text-zinc-400">Nama Lengkap *</label>
-            <input
-              required
-              type="text"
-              value={form.name}
-              onChange={(e) => setForm({ ...form, name: e.target.value })}
-              placeholder="Masukkan nama lengkap"
-              className="w-full rounded-lg bg-zinc-800 border border-zinc-700 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
-            />
-          </div>
+  await supabaseAdmin
+    .from("module_sessions")
+    .insert(
+      MODULES.map((m) => ({
+        test_session_id: testSession.id,
+        module_type: m.type,
+        sequence_order: m.sequence_order,
+        status: "NOT_STARTED",
+        time_limit_seconds: m.time_limit_seconds,
+      }))
+    );
 
-          <div className="space-y-1">
-            <label className="text-xs text-zinc-400">Email *</label>
-            <input
-              required
-              type="email"
-              value={form.email}
-              onChange={(e) => setForm({ ...form, email: e.target.value })}
-              placeholder="nama@email.com"
-              className="w-full rounded-lg bg-zinc-800 border border-zinc-700 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
-            />
-          </div>
-
-          <div className="space-y-1">
-            <label className="text-xs text-zinc-400">No. Telepon</label>
-            <input
-              type="tel"
-              value={form.phone}
-              onChange={(e) => setForm({ ...form, phone: e.target.value })}
-              placeholder="08xx xxxx xxxx"
-              className="w-full rounded-lg bg-zinc-800 border border-zinc-700 px-4 py-2.5 text-sm text-white placeholder-zinc-500 focus:border-blue-500 focus:outline-none"
-            />
-          </div>
-
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full rounded-lg bg-blue-600 py-3 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-50 transition-colors"
-          >
-            {loading ? "Mempersiapkan..." : "Mulai Tes →"}
-          </button>
-        </form>
-
-        <p className="text-center text-xs text-zinc-600">
-          Pastikan koneksi internet stabil sebelum memulai.
-        </p>
-      </div>
-    </div>
-  );
+  redirect(`/test/${testSession.id}`);
 }

@@ -113,10 +113,10 @@ export default async function ResultPage({
         </div>
 
         <Link
-          href="/test/new"
+          href="/dashboard"
           className="block w-full rounded-xl border border-zinc-700 py-3 text-center text-sm font-semibold text-zinc-300 hover:bg-zinc-800 transition-colors"
         >
-          Mulai Tes Baru
+          ← Kembali ke Dashboard
         </Link>
       </div>
     </div>
