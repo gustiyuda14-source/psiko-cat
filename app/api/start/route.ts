@@ -59,8 +59,12 @@ export async function POST(req: NextRequest) {
       { session_id: testSession.id, module_sessions: moduleSessions },
       { status: 201 }
     );
-  } catch (err) {
-    console.error("[POST /api/start]", err);
-    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  } catch (err: unknown) {
+    const e = err as { message?: string; code?: string; meta?: unknown };
+    console.error("[POST /api/start]", { code: e?.code, message: e?.message, meta: e?.meta });
+    return NextResponse.json(
+      { error: "Internal server error", code: e?.code, detail: e?.message },
+      { status: 500 }
+    );
   }
 }
