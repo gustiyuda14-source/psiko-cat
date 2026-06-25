@@ -24,13 +24,18 @@ export async function PATCH(
 
     const { data: moduleSession, error: msError } = await supabaseAdmin
       .from("module_sessions")
-      .select("id, started_at")
+      .select("id, started_at, status")
       .eq("id", module_session_id)
       .eq("test_session_id", session_id)
       .single();
 
     if (msError || !moduleSession) {
       return NextResponse.json({ error: "Module session tidak ditemukan" }, { status: 404 });
+    }
+
+    // Never overwrite terminal states — sync heartbeat can race with complete endpoint
+    if (moduleSession.status === "COMPLETED" || moduleSession.status === "TIMED_OUT") {
+      return NextResponse.json({ synced_at: Date.now() });
     }
 
     const snapshot: RecoverySnapshot = {
