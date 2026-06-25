@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import { runSessionCalculate } from "@/lib/scoring/runner";
 
 function round1(n: number | null) {
   return n == null ? "-" : n.toFixed(1);
@@ -36,14 +37,10 @@ export default async function ResultPage({
 
   if (calculate === "1") {
     try {
-      const baseUrl = process.env.VERCEL_URL
-        ? `https://${process.env.VERCEL_URL}`
-        : "http://localhost:3000";
-      await fetch(`${baseUrl}/api/sessions/${sessionId}/calculate`, {
-        method: "POST",
-        cache: "no-store",
-      });
-    } catch {}
+      await runSessionCalculate(sessionId);
+    } catch (e) {
+      console.error("[result page calculate]", e);
+    }
     redirect(`/test/${sessionId}/result`);
   }
 
