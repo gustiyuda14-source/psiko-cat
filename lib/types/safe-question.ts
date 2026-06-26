@@ -26,6 +26,7 @@ export type KecerdasanOptionsPayload = {
 
 export type KepribadianOptionsPayload = {
   statement: string;
+  aspect?: string;
   choices: Array<{ key: "A" | "B" | "C" | "D" | "E"; text: string }>;
 };
 
