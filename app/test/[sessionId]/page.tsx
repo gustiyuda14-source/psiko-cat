@@ -138,9 +138,20 @@ export default async function SessionOverviewPage({
         )}
 
         {!allDone && (
-          <p className="text-center text-xs text-zinc-600">
-            Selesaikan ketiga sub-tes secara berurutan untuk menghitung nilai NAP.
-          </p>
+          <div className="space-y-3">
+            <p className="text-center text-xs text-zinc-600">
+              Selesaikan ketiga sub-tes secara berurutan untuk menghitung nilai NAP.
+            </p>
+            <form action={`/test/${sessionId}/result`} method="GET">
+              <input type="hidden" name="calculate" value="1" />
+              <button
+                type="submit"
+                className="w-full rounded-xl border border-amber-700/40 py-2.5 text-xs font-semibold text-amber-500 hover:bg-amber-950/20 transition-colors"
+              >
+                Paksa Submit &amp; Hitung Sekarang →
+              </button>
+            </form>
+          </div>
         )}
       </div>
     </div>
