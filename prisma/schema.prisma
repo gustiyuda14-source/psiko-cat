@@ -57,11 +57,19 @@ model User {
   name          String
   email         String        @unique
   phone         String?
+
+  // Auth fields — managed by seed-students.ts, NOT Supabase Auth
+  username      String?       @unique
+  password_hash String?
+  role          String        @default("peserta")
+  gender        String?
+
   created_at    DateTime      @default(now())
   updated_at    DateTime      @updatedAt
 
   test_sessions TestSession[]
 
+  @@index([username])
   @@map("users")
 }
 
