@@ -35,6 +35,9 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
       });
       const data = (await res.json()) as { is_correct: boolean; correct_key: string };
       setAnswers((prev) => ({ ...prev, [q.id]: { selected: key, ...data } }));
+      if (idx < sorted.length - 1) {
+        setTimeout(() => setIdx((i) => i + 1), 500);
+      }
     } finally {
       setChecking(false);
     }
@@ -162,20 +165,13 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
             )}
           </div>
 
-          <div className="px-6 pb-6 flex justify-between gap-3">
+          <div className="px-6 pb-6">
             <button
               onClick={() => setIdx((i) => Math.max(0, i - 1))}
               disabled={idx === 0}
-              className="flex-1 py-3 border-2 border-navy/20 text-navy rounded-xl text-sm font-bold disabled:opacity-30 hover:bg-cream transition-colors"
+              className="w-full py-3 border-2 border-navy/20 text-navy rounded-xl text-sm font-bold disabled:opacity-30 hover:bg-cream transition-colors"
             >
               ← Sebelumnya
-            </button>
-            <button
-              onClick={() => setIdx((i) => Math.min(sorted.length - 1, i + 1))}
-              disabled={idx >= sorted.length - 1}
-              className="flex-1 py-3 border-2 border-navy/20 text-navy rounded-xl text-sm font-bold disabled:opacity-30 hover:bg-cream transition-colors"
-            >
-              Selanjutnya →
             </button>
           </div>
         </div>
