@@ -82,6 +82,29 @@ export default async function DashboardPage() {
           <span className="text-blue-400 text-xl">→</span>
         </Link>
 
+        {/* Real Exam standalone per-modul */}
+        <div className="space-y-2">
+          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
+            Real Exam per Modul
+          </h2>
+          <div className="grid grid-cols-1 gap-2">
+            {[
+              { slug: "kecerdasan", label: "Real Exam Kecerdasan" },
+              { slug: "kecermatan", label: "Real Exam Kecermatan" },
+              { slug: "kepribadian", label: "Real Exam Kepribadian" },
+            ].map((m) => (
+              <Link
+                key={m.slug}
+                href={`/test/new/${m.slug}`}
+                className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-3 hover:bg-zinc-800 transition-colors"
+              >
+                <p className="text-sm font-medium text-zinc-200">{m.label}</p>
+                <span className="text-zinc-500 text-lg">→</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+
         {/* History */}
         <div className="space-y-3">
           <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
