@@ -511,7 +511,13 @@ export default function EngineKecermatan({
             {/* Finish button */}
             <div className="px-6 pb-6">
               <button
-                onClick={() => advanceRef.current()}
+                onClick={() => {
+                  const isLastCol = currentColIdx >= TOTAL_COLS - 1;
+                  const msg = isLastCol
+                    ? "Yakin ingin menyelesaikan Sub-Tes Kecermatan sekarang? Soal yang belum dijawab di lajur ini dihitung tidak dijawab."
+                    : `Yakin ingin melewati sisa soal di Lajur ${ROMAN[currentColIdx]} dan lanjut ke lajur berikutnya? Soal yang belum dijawab dihitung tidak dijawab.`;
+                  if (window.confirm(msg)) advanceRef.current();
+                }}
                 className="w-full py-3.5 border-2 border-red-500 text-red-600 rounded-xl text-sm font-bold hover:bg-red-50 transition-colors tracking-wider uppercase"
               >
                 Selesaikan Ujian Sekarang &amp; Lanjut

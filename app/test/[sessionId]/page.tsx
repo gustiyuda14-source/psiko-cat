@@ -1,6 +1,7 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import ConfirmSubmitButton from "@/app/components/ConfirmSubmitButton";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
@@ -128,12 +129,12 @@ export default async function SessionOverviewPage({
         {allDone && (
           <form action={`/test/${sessionId}/result`} method="GET">
             <input type="hidden" name="calculate" value="1" />
-            <button
-              type="submit"
+            <ConfirmSubmitButton
+              message="Yakin ingin mengumpulkan dan menghitung nilai NAP sekarang? Setelah ini tidak bisa kembali mengerjakan."
               className="w-full rounded-xl bg-emerald-600 py-3.5 text-base font-bold hover:bg-emerald-500 transition-colors"
             >
               Hitung Nilai NAP →
-            </button>
+            </ConfirmSubmitButton>
           </form>
         )}
 
@@ -144,12 +145,12 @@ export default async function SessionOverviewPage({
             </p>
             <form action={`/test/${sessionId}/result`} method="GET">
               <input type="hidden" name="calculate" value="1" />
-              <button
-                type="submit"
+              <ConfirmSubmitButton
+                message="Masih ada sub-tes yang belum selesai. Soal yang belum dikerjakan akan dihitung tidak dijawab dan tidak bisa diulang. Yakin lanjut?"
                 className="w-full rounded-xl border border-amber-700/40 py-2.5 text-xs font-semibold text-amber-500 hover:bg-amber-950/20 transition-colors"
               >
                 Paksa Submit &amp; Hitung Sekarang →
-              </button>
+              </ConfirmSubmitButton>
             </form>
           </div>
         )}

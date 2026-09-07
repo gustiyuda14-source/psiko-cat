@@ -56,7 +56,17 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
       <header className="bg-navy text-white">
         <div className="max-w-2xl mx-auto px-4 py-3 flex items-center justify-between">
           <div>
-            <Link href="/dashboard" className="text-xs text-cream-dark/70 hover:text-white">← Dashboard</Link>
+            <Link
+              href="/dashboard"
+              onClick={(e) => {
+                if (answeredCount > 0 && !window.confirm("Keluar dari latihan? Progres tidak disimpan.")) {
+                  e.preventDefault();
+                }
+              }}
+              className="text-xs text-cream-dark/70 hover:text-white"
+            >
+              ← Dashboard
+            </Link>
             <p className="text-xs text-cream-dark/70 font-medium tracking-wider uppercase mt-1">
               Latihan Kecermatan (Training)
             </p>

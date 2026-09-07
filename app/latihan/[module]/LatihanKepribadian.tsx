@@ -34,7 +34,17 @@ export default function LatihanKepribadian({ questions }: { questions: SafeQuest
       <header className="sticky top-0 z-30 bg-navy/95 backdrop-blur border-b border-navy-light">
         <div className="max-w-3xl mx-auto px-6 py-3 flex items-center justify-between">
           <div>
-            <Link href="/dashboard" className="text-xs text-cream-dark/60 hover:text-cream">← Dashboard</Link>
+            <Link
+              href="/dashboard"
+              onClick={(e) => {
+                if (answeredCount > 0 && !window.confirm("Keluar dari latihan? Progres tidak disimpan.")) {
+                  e.preventDefault();
+                }
+              }}
+              className="text-xs text-cream-dark/60 hover:text-cream"
+            >
+              ← Dashboard
+            </Link>
             <p className="text-[11px] text-cream-dark/60 uppercase tracking-widest font-semibold mt-1">
               Latihan Kepribadian
             </p>
