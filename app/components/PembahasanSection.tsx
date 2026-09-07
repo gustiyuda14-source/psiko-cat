@@ -6,6 +6,8 @@ import type {
   KepribadianOptionsPayload,
 } from "@/lib/types/safe-question";
 
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+
 export type KecerdasanReviewItem = {
   question_id: string;
   sequence_number: number;
@@ -30,10 +32,28 @@ export type KecermatanSummary = {
   raw_score: number | null;
 };
 
+export type KecermatanDetailItem = {
+  question_id: string;
+  sequence_number: number;
+  shown: string[];
+  selected_key: string;
+  selected_symbol: string;
+  correct_key: string;
+  correct_symbol: string;
+};
+
+export type KecermatanColumnGroup = {
+  column_index: number; // 1-10
+  total: number;
+  correct: number;
+  wrong: KecermatanDetailItem[];
+};
+
 type Props = {
   kecerdasan: KecerdasanReviewItem[];
   kepribadian: KepribadianReviewItem[];
   kecermatan: KecermatanSummary | null;
+  kecermatanDetail: KecermatanColumnGroup[];
 };
 
 function ChevronIcon({ open }: { open: boolean }) {
@@ -188,7 +208,7 @@ function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
                 <span className="text-xs text-zinc-600 shrink-0">#{item.sequence_number}</span>
                 {item.selected_key ? (
                   <span className="text-[10px] font-semibold bg-blue-700/40 text-blue-300 px-2 py-0.5 rounded-full text-right">
-                    {item.selected_key} · {choiceText}
+                    {item.selected_key}{choiceText ? ` · ${choiceText}` : ""}
                   </span>
                 ) : (
                   <span className="text-[10px] text-zinc-600">Dilewati</span>
@@ -203,8 +223,11 @@ function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
   );
 }
 
+function r1(v: number | null) {
+  return v == null ? "-" : v.toFixed(1);
+}
+
 function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
-  const r1 = (v: number | null) => (v == null ? "-" : v.toFixed(1));
 
   return (
     <div className="space-y-4">
@@ -235,7 +258,58 @@ function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
   );
 }
 
-export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan }: Props) {
+function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGroup[] }) {
+  const totalWrong = groups.reduce((s, g) => s + g.wrong.length, 0);
+
+  if (!groups.length) {
+    return <p className="text-sm text-zinc-500">Belum ada jawaban tersimpan.</p>;
+  }
+
+  if (totalWrong === 0) {
+    return <p className="text-sm text-emerald-400">✓ Semua jawaban yang tercatat benar.</p>;
+  }
+
+  return (
+    <div className="space-y-2">
+      {groups.map((g) => (
+        <SubSesiDropdown
+          key={g.column_index}
+          label={`Lajur ${ROMAN[g.column_index - 1]}`}
+          summary={g.wrong.length === 0 ? `${g.correct}/${g.total} benar` : `${g.correct}/${g.total} benar · ${g.wrong.length} salah`}
+        >
+          {g.wrong.length === 0 ? (
+            <p className="text-sm text-emerald-400">✓ Semua benar di lajur ini.</p>
+          ) : (
+            <div className="space-y-3 max-h-[500px] overflow-y-auto pr-1">
+              {g.wrong.map((item) => (
+                <div key={item.question_id} className="rounded-xl border border-red-800/60 bg-red-950/15 p-4 space-y-2.5 text-sm">
+                  <span className="text-xs font-semibold text-zinc-400">Soal {item.sequence_number}</span>
+                  <div className="grid grid-cols-4 gap-2">
+                    {item.shown.map((sym, i) => (
+                      <div key={i} className="flex items-center justify-center h-10 bg-zinc-800 rounded-lg text-lg">
+                        {sym}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-4 text-xs pt-1 border-t border-zinc-700/40">
+                    <span className="text-zinc-500">
+                      Kamu pilih: <span className="font-bold text-red-400">{item.selected_key} ({item.selected_symbol})</span>
+                    </span>
+                    <span className="text-zinc-500">
+                      Kunci: <span className="font-bold text-emerald-400">{item.correct_key} ({item.correct_symbol})</span>
+                    </span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+        </SubSesiDropdown>
+      ))}
+    </div>
+  );
+}
+
+export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan, kecermatanDetail }: Props) {
   const ksCorrect = kecerdasan.filter((i) => i.is_correct).length;
   const kpAnswered = kepribadian.filter((i) => i.selected_key).length;
 
@@ -271,12 +345,18 @@ export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan 
         label="Kecermatan"
         summary={
           kecermatan
-            ? `Ke ${(kecermatan.ke_index ?? 0).toFixed(1)} · Kt ${(kecermatan.kt_index ?? 0).toFixed(1)}`
+            ? `Ke ${r1(kecermatan.ke_index)} · Kt ${r1(kecermatan.kt_index)}`
             : "Tidak ada data"
         }
       >
         {kecermatan ? (
-          <KecermatanReview summary={kecermatan} />
+          <div className="space-y-4">
+            <KecermatanReview summary={kecermatan} />
+            <div className="space-y-2 pt-1">
+              <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Pembahasan per Lajur</p>
+              <KecermatanDetailReview groups={kecermatanDetail} />
+            </div>
+          </div>
         ) : (
           <p className="text-sm text-zinc-500">Data kecermatan belum tersedia.</p>
         )}

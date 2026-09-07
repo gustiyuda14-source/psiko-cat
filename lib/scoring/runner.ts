@@ -174,9 +174,12 @@ export async function runSessionCalculate(session_id: string): Promise<RunCalcul
     }
   }
 
-  const kecerdasan = results.kecerdasan as Awaited<ReturnType<typeof scoreKecerdasan>>;
-  const kepribadian = results.kepribadian as Awaited<ReturnType<typeof scoreKepribadian>>;
-  const kecermatan = results.kecermatan as Awaited<ReturnType<typeof scoreKecermatan>>;
+  // Sesi standalone (Fase 2, Real Exam 1 modul) hanya punya satu module_session --
+  // modul yang tidak diikutkan dianggap kontribusi 0 & tidak menggugurkan (bukan "gagal", tapi "tidak diambil").
+  const NOT_TAKEN = { nap_contribution: 0, raw_score: 100, is_disqualifying: false };
+  const kecerdasan = (results.kecerdasan as Awaited<ReturnType<typeof scoreKecerdasan>> | undefined) ?? NOT_TAKEN;
+  const kepribadian = (results.kepribadian as Awaited<ReturnType<typeof scoreKepribadian>> | undefined) ?? NOT_TAKEN;
+  const kecermatan = (results.kecermatan as Awaited<ReturnType<typeof scoreKecermatan>> | undefined) ?? NOT_TAKEN;
 
   const nap = calculateNAP({
     kecerdasan_contribution: kecerdasan.nap_contribution,

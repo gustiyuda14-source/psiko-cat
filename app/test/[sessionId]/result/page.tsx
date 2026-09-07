@@ -6,12 +6,17 @@ import PembahasanSection, {
   type KecerdasanReviewItem,
   type KepribadianReviewItem,
   type KecermatanSummary,
+  type KecermatanColumnGroup,
+  type KecermatanDetailItem,
 } from "@/app/components/PembahasanSection";
 import type {
   KecerdasanOptionsPayload,
   KepribadianOptionsPayload,
   KecerdasanScoringRule,
+  KecermatanOptionsPayload,
 } from "@/lib/types/safe-question";
+
+const KECERMATAN_KEYS = ["A", "B", "C", "D", "E"] as const;
 
 function round1(n: number | null) {
   return n == null ? "-" : n.toFixed(1);
@@ -109,6 +114,64 @@ async function fetchKepribadianReview(moduleSessionId: string): Promise<Kepribad
     .filter(Boolean) as KepribadianReviewItem[];
 }
 
+// Kunci jawaban benar untuk Kecermatan diturunkan dari options_payload saja (shown vs symbol_map),
+// TIDAK pernah menyentuh scoring_rule — aman karena shown selalu berisi 4 dari 5 simbol,
+// simbol yang "hilang" dari shown itulah jawaban benarnya (lihat generator di Fase 6).
+async function fetchKecermatanDetailReview(moduleSessionId: string): Promise<KecermatanColumnGroup[]> {
+  const { data: logs } = await supabaseAdmin
+    .from("kecermatan_logs")
+    .select("question_id, column_index, response_value, is_correct")
+    .eq("module_session_id", moduleSessionId);
+
+  if (!logs?.length) return [];
+
+  const wrongLogs = logs.filter((l) => l.is_correct === false);
+  const questionIds = [...new Set(wrongLogs.map((l) => l.question_id))];
+
+  const { data: questions } = questionIds.length
+    ? await supabaseAdmin
+        .from("questions")
+        .select("id, sequence_number, options_payload")
+        .in("id", questionIds)
+    : { data: [] as { id: string; sequence_number: number; options_payload: unknown }[] };
+
+  const qMap = new Map((questions ?? []).map((q) => [q.id, q]));
+
+  const groups = new Map<number, { total: number; correct: number; wrong: KecermatanDetailItem[] }>();
+  for (const log of logs) {
+    if (!groups.has(log.column_index)) groups.set(log.column_index, { total: 0, correct: 0, wrong: [] });
+    const g = groups.get(log.column_index)!;
+    g.total++;
+    if (log.is_correct) g.correct++;
+  }
+
+  for (const log of wrongLogs) {
+    const q = qMap.get(log.question_id);
+    if (!q) continue;
+    const payload = q.options_payload as unknown as KecermatanOptionsPayload;
+    const correctKey = KECERMATAN_KEYS.find((k) => !payload.shown.includes(payload.symbol_map[k])) ?? "?";
+    const g = groups.get(log.column_index)!;
+    g.wrong.push({
+      question_id: log.question_id,
+      sequence_number: q.sequence_number as number,
+      shown: payload.shown,
+      selected_key: log.response_value,
+      selected_symbol: payload.symbol_map[log.response_value as keyof typeof payload.symbol_map] ?? "?",
+      correct_key: correctKey,
+      correct_symbol: correctKey === "?" ? "?" : payload.symbol_map[correctKey as keyof typeof payload.symbol_map],
+    });
+  }
+
+  return Array.from(groups.entries())
+    .map(([column_index, g]) => ({
+      column_index,
+      total: g.total,
+      correct: g.correct,
+      wrong: g.wrong.sort((a, b) => a.sequence_number - b.sequence_number),
+    }))
+    .sort((a, b) => a.column_index - b.column_index);
+}
+
 export default async function ResultPage({
   params,
   searchParams,
@@ -153,9 +216,10 @@ export default async function ResultPage({
   const kc = moduleSessions.find((m) => m.module_type === "KECERMATAN");
 
   // Fetch pembahasan data in parallel
-  const [kecerdasanItems, kepribadianItems] = await Promise.all([
+  const [kecerdasanItems, kepribadianItems, kecermatanDetail] = await Promise.all([
     ks ? fetchKecerdasanReview(ks.id) : Promise.resolve([] as KecerdasanReviewItem[]),
     kp ? fetchKepribadianReview(kp.id) : Promise.resolve([] as KepribadianReviewItem[]),
+    kc ? fetchKecermatanDetailReview(kc.id) : Promise.resolve([] as KecermatanColumnGroup[]),
   ]);
 
   const kecermatanSummary: KecermatanSummary | null = kc
@@ -220,6 +284,7 @@ export default async function ResultPage({
           kecerdasan={kecerdasanItems}
           kepribadian={kepribadianItems}
           kecermatan={kecermatanSummary}
+          kecermatanDetail={kecermatanDetail}
         />
 
         <Link
