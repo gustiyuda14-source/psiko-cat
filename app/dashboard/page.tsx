@@ -3,6 +3,7 @@ import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import LogoutButton from "@/app/components/LogoutButton";
+import { WeeklyFrequencyChart, NapTrendChart } from "./ActivityCharts";
 
 export default async function DashboardPage() {
   const session = await getSession();
@@ -52,6 +53,14 @@ export default async function DashboardPage() {
               <p className="text-2xl font-bold text-blue-400">{bestScore?.toFixed(1) ?? "-"}</p>
               <p className="text-xs text-zinc-500 mt-1">Skor Terbaik</p>
             </div>
+          </div>
+        )}
+
+        {/* Frekuensi & tren — attempt resmi (Real Exam / Tryout), latihan tidak dihitung */}
+        {sessions && sessions.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <WeeklyFrequencyChart sessions={sessions} />
+            <NapTrendChart sessions={completedSessions} />
           </div>
         )}
 
