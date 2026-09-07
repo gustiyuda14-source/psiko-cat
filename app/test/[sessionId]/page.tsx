@@ -115,7 +115,7 @@ export default async function SessionOverviewPage({
                 ) : (
                   <Link
                     href={`/test/${sessionId}/${meta.href}`}
-                    className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500 transition-colors"
+                    className="rounded-lg bg-blue-600 text-zinc-950 px-4 py-2 text-sm font-semibold hover:bg-blue-500 transition-colors"
                   >
                     {btn.label}
                   </Link>

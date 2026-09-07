@@ -306,7 +306,7 @@ export default function EngineKecermatan({
       )}
 
       {/* ── Top navbar (dark navy) ──────────────────────────────────────────── */}
-      <header className="bg-[#1e2d4a] text-white">
+      <header className="bg-navy text-white">
         <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
           <div>
             <p className="text-xs text-slate-400 font-medium tracking-wider uppercase">Psiko CAT</p>
@@ -364,7 +364,7 @@ export default function EngineKecermatan({
         <main className="max-w-2xl mx-auto px-4 py-8">
           <div className="bg-white rounded-2xl overflow-hidden shadow-sm border border-slate-200">
             {/* Intro header (dark navy) */}
-            <div className="bg-[#1e2d4a] px-8 py-8 text-white">
+            <div className="bg-navy px-8 py-8 text-white">
               <p className="text-xs text-amber-400 font-semibold uppercase tracking-wider mb-1">
                 KOLOM {ROMAN[nextColIdx]} DARI {ROMAN[TOTAL_COLS - 1]}
               </p>
@@ -380,7 +380,7 @@ export default function EngineKecermatan({
                 </p>
                 <table className="w-full border-collapse rounded-xl overflow-hidden border border-slate-200">
                   <thead>
-                    <tr className="bg-[#1e2d4a] text-white">
+                    <tr className="bg-navy text-white">
                       {(["A", "B", "C", "D", "E"] as const).map((k) => (
                         <th key={k} className="py-3 text-center text-sm font-bold border-r border-white/10 last:border-r-0">
                           {k}
@@ -451,7 +451,7 @@ export default function EngineKecermatan({
                 </p>
                 <table className="w-full border-collapse rounded-xl overflow-hidden border border-slate-200">
                   <thead>
-                    <tr className="bg-[#1e2d4a] text-white">
+                    <tr className="bg-navy text-white">
                       {(["A", "B", "C", "D", "E"] as const).map((k) => (
                         <th key={k} className="py-2.5 text-center text-sm font-bold border-r border-white/10 last:border-r-0">
                           {k}
@@ -495,10 +495,10 @@ export default function EngineKecermatan({
                       disabled={!!picked}
                       className={`flex items-center justify-center h-14 rounded-xl text-base font-bold transition-all ${
                         picked === ch
-                          ? "bg-[#1e2d4a] text-white shadow-md"
+                          ? "bg-navy text-white shadow-md"
                           : picked
                           ? "bg-slate-100 text-slate-400 cursor-not-allowed"
-                          : "bg-white border-2 border-slate-200 text-slate-700 hover:border-[#1e2d4a] hover:text-[#1e2d4a] hover:bg-slate-50 cursor-pointer"
+                          : "bg-white border-2 border-slate-200 text-slate-700 hover:border-navy hover:text-navy hover:bg-slate-50 cursor-pointer"
                       }`}
                     >
                       {ch}
