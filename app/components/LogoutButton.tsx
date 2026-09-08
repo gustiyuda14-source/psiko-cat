@@ -15,7 +15,7 @@ export default function LogoutButton({ className }: { className?: string }) {
       onClick={handleLogout}
       className={
         className ??
-        "text-xs text-zinc-500 hover:text-zinc-300 transition-colors px-3 py-1.5 rounded-lg border border-zinc-800 hover:border-zinc-600"
+        "text-xs text-muted-foreground hover:text-primary transition-colors px-3 py-1.5 rounded-lg border border-border hover:border-primary/40"
       }
     >
       Keluar
