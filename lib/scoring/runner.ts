@@ -6,7 +6,7 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 import { calculateKecerdasan } from "./kecerdasan";
 import { calculateKepribadian } from "./kepribadian";
 import { calculateKecermatan, type KecermatanColumnStats } from "./kecermatan";
-import { calculateNAP } from "./nap";
+import { calculateNAP, calculateSingleModuleResult } from "./nap";
 import type {
   KecerdasanScoringRule,
   KepribadianScoringRule,
@@ -106,6 +106,7 @@ export type RunCalculateResult = {
   is_passed: boolean;
   status: "COMPLETED" | "DISQUALIFIED";
   disqualified_reason: string | null;
+  predikat: string | null;
 };
 
 export async function runSessionCalculate(session_id: string, force = false): Promise<RunCalculateResult | null> {
@@ -187,14 +188,28 @@ export async function runSessionCalculate(session_id: string, force = false): Pr
   const kepribadian = (results.kepribadian as Awaited<ReturnType<typeof scoreKepribadian>> | undefined) ?? NOT_TAKEN;
   const kecermatan = (results.kecermatan as Awaited<ReturnType<typeof scoreKecermatan>> | undefined) ?? NOT_TAKEN;
 
-  const nap = calculateNAP({
-    kecerdasan_contribution: kecerdasan.nap_contribution,
-    kepribadian_contribution: kepribadian.nap_contribution,
-    kecermatan_contribution: kecermatan.nap_contribution,
-    kecerdasan_raw: kecerdasan.raw_score,
-    kepribadian_raw: kepribadian.raw_score,
-    kecermatan_raw: kecermatan.raw_score,
-  });
+  const standaloneRawScore = moduleSessions.length === 1
+    ? ({
+        KECERDASAN: kecerdasan.raw_score,
+        KEPRIBADIAN: kepribadian.raw_score,
+        KECERMATAN: kecermatan.raw_score,
+      } as Record<string, number>)[moduleSessions[0].module_type]
+    : null;
+
+  if (moduleSessions.length === 1 && standaloneRawScore == null) {
+    throw new Error(`Unsupported standalone module: ${moduleSessions[0].module_type}`);
+  }
+
+  const nap = standaloneRawScore == null
+    ? calculateNAP({
+        kecerdasan_contribution: kecerdasan.nap_contribution,
+        kepribadian_contribution: kepribadian.nap_contribution,
+        kecermatan_contribution: kecermatan.nap_contribution,
+        kecerdasan_raw: kecerdasan.raw_score,
+        kepribadian_raw: kepribadian.raw_score,
+        kecermatan_raw: kecermatan.raw_score,
+      })
+    : calculateSingleModuleResult(standaloneRawScore);
 
   const { error: updateError } = await supabaseAdmin
     .from("test_sessions")
@@ -217,5 +232,6 @@ export async function runSessionCalculate(session_id: string, force = false): Pr
     is_passed: nap.is_passed,
     status: nap.status,
     disqualified_reason: nap.disqualified_reason,
+    predikat: nap.predikat,
   };
 }

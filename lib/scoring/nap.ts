@@ -23,6 +23,7 @@ export type NAPResult = {
   is_passed: boolean;
   disqualified_reason: string | null;
   status: "COMPLETED" | "DISQUALIFIED";
+  predikat: string | null;
 };
 
 export function calculateNAP(modules: ModuleContributions): NAPResult {
@@ -38,6 +39,7 @@ export function calculateNAP(modules: ModuleContributions): NAPResult {
       is_passed: false,
       disqualified_reason: `Kecerdasan Kurang Sekali (raw_score=${modules.kecerdasan_raw.toFixed(1)})`,
       status: "DISQUALIFIED",
+      predikat: null,
     };
   }
   if (modules.kepribadian_raw <= 40) {
@@ -46,6 +48,7 @@ export function calculateNAP(modules: ModuleContributions): NAPResult {
       is_passed: false,
       disqualified_reason: `Kepribadian Kurang Sekali (raw_score=${modules.kepribadian_raw.toFixed(1)})`,
       status: "DISQUALIFIED",
+      predikat: null,
     };
   }
   if (modules.kecermatan_raw <= 40) {
@@ -54,6 +57,7 @@ export function calculateNAP(modules: ModuleContributions): NAPResult {
       is_passed: false,
       disqualified_reason: `Kecermatan Kurang Sekali (raw_score=${modules.kecermatan_raw.toFixed(1)})`,
       status: "DISQUALIFIED",
+      predikat: null,
     };
   }
 
@@ -64,6 +68,7 @@ export function calculateNAP(modules: ModuleContributions): NAPResult {
       is_passed: false,
       disqualified_reason: `NAP di bawah passing grade (${nap_score.toFixed(1)} < 61)`,
       status: "DISQUALIFIED",
+      predikat: null,
     };
   }
 
@@ -72,6 +77,7 @@ export function calculateNAP(modules: ModuleContributions): NAPResult {
     is_passed: true,
     disqualified_reason: null,
     status: "COMPLETED",
+    predikat: null,
   };
 }
 
@@ -81,4 +87,17 @@ export function getNAPPredikat(nap_score: number): string {
   if (nap_score >= 61) return "Cukup";
   if (nap_score >= 41) return "Kurang";
   return "Kurang Sekali";
+}
+
+export function calculateSingleModuleResult(raw_score: number): NAPResult {
+  const predikat = getNAPPredikat(raw_score);
+  const is_passed = raw_score > 40;
+
+  return {
+    nap_score: raw_score,
+    is_passed,
+    disqualified_reason: is_passed ? null : `Predikat ${predikat} (raw_score=${raw_score.toFixed(1)})`,
+    status: is_passed ? "COMPLETED" : "DISQUALIFIED",
+    predikat,
+  };
 }
