@@ -39,12 +39,24 @@ function PackageCard({
 }
 
 export default async function SimulasiPage() {
-  const { data: questionRows } = await supabaseAdmin.from("questions").select("type").eq("is_active", true);
+  // Kecermatan sekarang punya banyak paket bank soal (masing-masing 500 soal, 1 dipilih
+  // random per sesi/latihan) — hitung dari satu paket referensi, bukan total semua paket,
+  // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
+  const [{ data: nonKecermatanRows }, { count: kecermatanCount }] = await Promise.all([
+    supabaseAdmin.from("questions").select("type").eq("is_active", true).neq("type", "KECERMATAN"),
+    supabaseAdmin
+      .from("questions")
+      .select("id", { count: "exact", head: true })
+      .eq("type", "KECERMATAN")
+      .eq("is_active", true)
+      .eq("package_number", 7),
+  ]);
 
-  const countByType = (questionRows ?? []).reduce<Record<string, number>>((acc, row) => {
+  const countByType = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
     acc[row.type] = (acc[row.type] ?? 0) + 1;
     return acc;
   }, {});
+  countByType["KECERMATAN"] = kecermatanCount ?? 0;
 
   const totalQuestions = MODULE_ORDER.reduce((sum, type) => sum + (countByType[type] ?? 0), 0);
   const totalMinutes = MODULE_ORDER.reduce((sum, type) => sum + MODULE_CONFIG[type].time_limit_seconds, 0) / 60;
