@@ -2,14 +2,12 @@ import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import ConfirmSubmitButton from "@/app/components/ConfirmSubmitButton";
+import { MODULE_CONFIG, type ModuleType } from "@/lib/test-session";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
-const MODULE_META = {
-  KECERDASAN:  { label: "Sub-Tes Kecerdasan",  icon: "🧠", desc: "100 soal · 90 menit · kognitif & spasial", href: "kecerdasan",  order: 1 },
-  KECERMATAN:  { label: "Sub-Tes Kecermatan",  icon: "🎯", desc: "500 soal · 10 menit · 10 lajur simbol",   href: "kecermatan",  order: 2 },
-  KEPRIBADIAN: { label: "Sub-Tes Kepribadian", icon: "💡", desc: "100 pernyataan · 60 menit · skala Likert", href: "kepribadian", order: 3 },
-} as const;
+const QUESTION_COUNT: Record<ModuleType, number> = { KECERDASAN: 100, KECERMATAN: 500, KEPRIBADIAN: 100 };
+const QUESTION_NOUN: Record<ModuleType, string> = { KECERDASAN: "soal", KECERMATAN: "soal", KEPRIBADIAN: "pernyataan" };
 
 function statusBadge(s: ModuleStatus) {
   if (s === "COMPLETED" || s === "TIMED_OUT")
@@ -94,28 +92,27 @@ export default async function SessionOverviewPage({
 
         <div className="space-y-3">
           {moduleSessions.map((ms) => {
-            const meta = MODULE_META[ms.module_type as keyof typeof MODULE_META];
+            const moduleType = ms.module_type as ModuleType;
+            const meta = MODULE_CONFIG[moduleType];
+            const desc = `${QUESTION_COUNT[moduleType]} ${QUESTION_NOUN[moduleType]} · ${meta.time_limit_seconds / 60} menit · ${meta.shortDesc}`;
             const btn = getButtonState(ms.module_type, ms.sequence_order);
             return (
               <div
                 key={ms.id}
                 className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4"
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-2xl shrink-0">{meta.icon}</span>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold">{meta.label}</span>
-                      {statusBadge(ms.status)}
-                    </div>
-                    <p className="text-xs text-zinc-500">{meta.desc}</p>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold">{meta.label}</span>
+                    {statusBadge(ms.status)}
                   </div>
+                  <p className="text-xs text-zinc-500">{desc}</p>
                 </div>
                 {btn.disabled ? (
                   <span className="text-sm text-zinc-500">{btn.label}</span>
                 ) : (
                   <Link
-                    href={`/test/${sessionId}/${meta.href}`}
+                    href={`/test/${sessionId}/${meta.slug}`}
                     className="rounded-lg bg-blue-600 text-zinc-950 px-4 py-2 text-sm font-semibold hover:bg-blue-500 transition-colors"
                   >
                     {btn.label}

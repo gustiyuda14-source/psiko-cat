@@ -3,14 +3,21 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 
 export type ModuleType = "KECERDASAN" | "KECERMATAN" | "KEPRIBADIAN";
 
-export const MODULE_CONFIG: Record<ModuleType, { slug: string; time_limit_seconds: number }> = {
-  KECERDASAN: { slug: "kecerdasan", time_limit_seconds: 5400 },
-  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600 },
-  KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600 },
+export type ModuleConfigEntry = {
+  slug: string;
+  time_limit_seconds: number;
+  label: string;
+  shortDesc: string;
+};
+
+export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
+  KECERDASAN: { slug: "kecerdasan", time_limit_seconds: 5400, label: "Kecerdasan", shortDesc: "kognitif & spasial" },
+  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Kecermatan", shortDesc: "10 lajur simbol" },
+  KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert" },
 };
 
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
-  (Object.entries(MODULE_CONFIG) as [ModuleType, { slug: string; time_limit_seconds: number }][]).map(
+  (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(
     ([type, cfg]) => [cfg.slug, type]
   )
 );
