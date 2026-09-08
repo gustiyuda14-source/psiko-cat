@@ -125,6 +125,11 @@ model ModuleSession {
   // Shape: { current_question_index, current_column_index, column_remaining_ms, snapshot_at }
   recovery_snapshot  Json?        @db.JsonB
 
+  // Paket bank soal Kecermatan yang dipilih random saat sesi dibuat — dipertahankan
+  // sepanjang sesi (termasuk resume) supaya simbol soal tidak berganti di tengah jalan.
+  // Null untuk ModuleSession non-Kecermatan.
+  kecermatan_package_number Int?
+
   created_at         DateTime     @default(now())
   updated_at         DateTime     @updatedAt
 
@@ -142,6 +147,7 @@ model Question {
   type            QuestionType
   sequence_number Int          // urutan dalam modul (1-100 atau 1-500)
   column_index    Int?         // khusus Kecermatan: lajur ke-1 s.d. 10
+  package_number  Int?         // khusus Kecermatan: paket bank soal (banyak paket, 1 dipilih random per sesi/latihan). Null untuk modul lain.
 
   // Aman dikirim ke client: teks soal, pilihan, SVG content (Kecerdasan Spasial)
   options_payload Json         @db.JsonB
@@ -158,6 +164,7 @@ model Question {
 
   @@index([type, sequence_number])
   @@index([type, column_index])
+  @@index([type, package_number, column_index])
   @@map("questions")
 }
 
