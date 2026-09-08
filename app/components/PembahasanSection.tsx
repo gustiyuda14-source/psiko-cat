@@ -236,7 +236,7 @@ function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
   );
 }
 
-function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGroup[] }) {
+export function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGroup[] }) {
   const totalWrong = groups.reduce((s, g) => s + g.wrong.length, 0);
 
   if (!groups.length) {
