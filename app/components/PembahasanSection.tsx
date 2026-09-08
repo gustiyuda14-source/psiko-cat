@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import type {
   KecerdasanOptionsPayload,
   KepribadianOptionsPayload,
@@ -56,20 +53,6 @@ type Props = {
   kecermatanDetail: KecermatanColumnGroup[];
 };
 
-function ChevronIcon({ open }: { open: boolean }) {
-  return (
-    <svg
-      className={`w-4 h-4 transition-transform duration-200 shrink-0 ${open ? "rotate-180" : ""}`}
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
-      strokeWidth={2}
-    >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-    </svg>
-  );
-}
-
 function SubSesiDropdown({
   label,
   summary,
@@ -79,31 +62,26 @@ function SubSesiDropdown({
   summary?: string;
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900 overflow-hidden">
-      <button
-        onClick={() => setOpen((o) => !o)}
-        className="w-full flex items-center justify-between px-5 py-4 text-left hover:bg-zinc-800/50 transition-colors"
-      >
-        <div className="flex items-center gap-3 min-w-0">
-          <span className="font-semibold text-sm">{label}</span>
-          {summary && <span className="text-xs text-zinc-500 truncate">{summary}</span>}
-        </div>
-        <ChevronIcon open={open} />
-      </button>
-      {open && (
-        <div className="border-t border-zinc-800 px-5 py-4">
-          {children}
-        </div>
-      )}
-    </div>
+    <details className="rounded-xl border border-border bg-card overflow-hidden">
+      {/* display stays default (list-item) so the browser keeps its native marker;
+          the flex row lives on the inner span instead of on <summary> itself */}
+      <summary className="cursor-pointer px-5 py-4 hover:bg-primary/5 transition-colors">
+        <span className="inline-flex items-center gap-3 min-w-0 align-middle">
+          <span className="font-semibold text-sm text-foreground">{label}</span>
+          {summary && <span className="text-xs text-muted-foreground truncate">{summary}</span>}
+        </span>
+      </summary>
+      <div className="border-t border-border px-5 py-4">
+        {children}
+      </div>
+    </details>
   );
 }
 
 function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
   if (!items.length) {
-    return <p className="text-sm text-zinc-500">Tidak ada jawaban tersimpan.</p>;
+    return <p className="text-sm text-muted-foreground">Tidak ada jawaban tersimpan.</p>;
   }
 
   const sorted = [...items].sort((a, b) => a.sequence_number - b.sequence_number);
@@ -112,7 +90,7 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
 
   return (
     <div className="space-y-3">
-      <p className="text-xs text-zinc-500 pb-2 border-b border-zinc-800">
+      <p className="text-xs text-muted-foreground pb-2 border-b border-border">
         {correct}/{sorted.length} benar ({pct}%)
       </p>
       <div className="space-y-3 max-h-[600px] overflow-y-auto pr-1">
@@ -121,21 +99,21 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
             key={item.question_id}
             className={`rounded-xl border p-4 space-y-2 text-sm ${
               item.selected_key === null
-                ? "border-zinc-700 bg-zinc-800/30"
+                ? "border-border bg-card"
                 : item.is_correct
-                ? "border-emerald-800/60 bg-emerald-950/20"
-                : "border-red-800/60 bg-red-950/15"
+                ? "border-success bg-success-soft"
+                : "border-destructive/60 bg-destructive/10"
             }`}
           >
             <div className="flex items-center justify-between gap-2">
-              <span className="text-xs font-semibold text-zinc-400">Soal {item.sequence_number}</span>
+              <span className="text-xs font-semibold text-muted-foreground">Soal {item.sequence_number}</span>
               <span
                 className={`text-[10px] font-bold px-2 py-0.5 rounded-full shrink-0 ${
                   item.selected_key === null
-                    ? "bg-zinc-700 text-zinc-400"
+                    ? "bg-border text-muted-foreground"
                     : item.is_correct
-                    ? "bg-emerald-700/50 text-emerald-300"
-                    : "bg-red-700/50 text-red-300"
+                    ? "bg-success text-white"
+                    : "bg-destructive text-white"
                 }`}
               >
                 {item.selected_key === null ? "Dilewati" : item.is_correct ? "Benar ✓" : "Salah ✗"}
@@ -143,10 +121,10 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
             </div>
 
             {item.payload.instruksi && (
-              <p className="text-xs text-blue-400 italic">{item.payload.instruksi}</p>
+              <p className="text-xs text-primary italic">{item.payload.instruksi}</p>
             )}
             {item.payload.question_text && (
-              <p className="text-zinc-200 text-sm leading-relaxed">{item.payload.question_text}</p>
+              <p className="text-foreground text-sm leading-relaxed">{item.payload.question_text}</p>
             )}
             {item.payload.svg_content && (
               <div
@@ -155,24 +133,24 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
               />
             )}
 
-            <div className="flex items-center gap-4 text-xs pt-1 border-t border-zinc-700/40">
-              <span className="text-zinc-500">
+            <div className="flex items-center gap-4 text-xs pt-1 border-t border-border">
+              <span className="text-muted-foreground">
                 Jawaban:{" "}
                 <span
                   className={`font-bold ${
                     !item.selected_key
-                      ? "text-zinc-600"
+                      ? "text-muted-foreground"
                       : item.is_correct
-                      ? "text-emerald-400"
-                      : "text-red-400"
+                      ? "text-success"
+                      : "text-destructive"
                   }`}
                 >
                   {item.selected_key ?? "—"}
                 </span>
               </span>
               {!item.is_correct && (
-                <span className="text-zinc-500">
-                  Kunci: <span className="font-bold text-emerald-400">{item.correct_key}</span>
+                <span className="text-muted-foreground">
+                  Kunci: <span className="font-bold text-success">{item.correct_key}</span>
                 </span>
               )}
             </div>
@@ -185,7 +163,7 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
 
 function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
   if (!items.length) {
-    return <p className="text-sm text-zinc-500">Tidak ada jawaban tersimpan.</p>;
+    return <p className="text-sm text-muted-foreground">Tidak ada jawaban tersimpan.</p>;
   }
 
   const sorted = [...items].sort((a, b) => a.sequence_number - b.sequence_number);
@@ -193,7 +171,7 @@ function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
 
   return (
     <div className="space-y-3">
-      <p className="text-xs text-zinc-500 pb-2 border-b border-zinc-800">
+      <p className="text-xs text-muted-foreground pb-2 border-b border-border">
         {answered}/{sorted.length} pernyataan dijawab
       </p>
       <div className="space-y-2 max-h-[600px] overflow-y-auto pr-1">
@@ -202,19 +180,19 @@ function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
           return (
             <div
               key={item.question_id}
-              className="rounded-xl border border-zinc-700/60 bg-zinc-800/30 p-3.5 space-y-1.5 text-sm"
+              className="rounded-xl border border-border bg-card p-3.5 space-y-1.5 text-sm"
             >
               <div className="flex items-center justify-between gap-2">
-                <span className="text-xs text-zinc-600 shrink-0">#{item.sequence_number}</span>
+                <span className="text-xs text-muted-foreground shrink-0">#{item.sequence_number}</span>
                 {item.selected_key ? (
-                  <span className="text-[10px] font-semibold bg-blue-700/40 text-blue-300 px-2 py-0.5 rounded-full text-right">
+                  <span className="text-[10px] font-semibold bg-primary/10 text-primary px-2 py-0.5 rounded-full text-right">
                     {item.selected_key}{choiceText ? ` · ${choiceText}` : ""}
                   </span>
                 ) : (
-                  <span className="text-[10px] text-zinc-600">Dilewati</span>
+                  <span className="text-[10px] text-muted-foreground">Dilewati</span>
                 )}
               </div>
-              <p className="text-zinc-200 leading-relaxed">{item.payload.statement}</p>
+              <p className="text-foreground leading-relaxed">{item.payload.statement}</p>
             </div>
           );
         })}
@@ -237,21 +215,21 @@ function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
           { label: "Kt (Ketelitian)", val: summary.kt_index, desc: "benar / klik × 100" },
           { label: "Kh (Ketahanan)", val: summary.kh_index, desc: "konsistensi antar lajur" },
         ].map((s) => (
-          <div key={s.label} className="rounded-xl border border-zinc-700 bg-zinc-800/50 p-4 space-y-1">
-            <p className="text-2xl font-bold font-mono">{r1(s.val)}</p>
-            <p className="text-xs font-semibold text-zinc-300">{s.label}</p>
-            <p className="text-[10px] text-zinc-600">{s.desc}</p>
+          <div key={s.label} className="rounded-xl border border-border bg-card p-4 space-y-1">
+            <p className="text-2xl font-bold font-mono text-foreground">{r1(s.val)}</p>
+            <p className="text-xs font-semibold text-foreground">{s.label}</p>
+            <p className="text-[10px] text-muted-foreground">{s.desc}</p>
           </div>
         ))}
       </div>
-      <div className="rounded-xl border border-zinc-800 px-4 py-3 text-sm space-y-1.5">
-        <div className="flex justify-between text-zinc-400">
+      <div className="rounded-xl border border-border px-4 py-3 text-sm space-y-1.5">
+        <div className="flex justify-between text-muted-foreground">
           <span>Skor Murni</span>
-          <span className="font-mono font-semibold text-zinc-200">{r1(summary.raw_score)}</span>
+          <span className="font-mono font-semibold text-foreground">{r1(summary.raw_score)}</span>
         </div>
-        <div className="flex justify-between text-zinc-400">
+        <div className="flex justify-between text-muted-foreground">
           <span>Kontribusi NAP</span>
-          <span className="font-mono font-semibold text-zinc-200">{r1(summary.nap_contribution)} / 20</span>
+          <span className="font-mono font-semibold text-foreground">{r1(summary.nap_contribution)} / 20</span>
         </div>
       </div>
     </div>
@@ -262,11 +240,11 @@ function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGroup[] })
   const totalWrong = groups.reduce((s, g) => s + g.wrong.length, 0);
 
   if (!groups.length) {
-    return <p className="text-sm text-zinc-500">Belum ada jawaban tersimpan.</p>;
+    return <p className="text-sm text-muted-foreground">Belum ada jawaban tersimpan.</p>;
   }
 
   if (totalWrong === 0) {
-    return <p className="text-sm text-emerald-400">✓ Semua jawaban yang tercatat benar.</p>;
+    return <p className="text-sm text-success">✓ Semua jawaban yang tercatat benar.</p>;
   }
 
   return (
@@ -278,25 +256,25 @@ function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGroup[] })
           summary={g.wrong.length === 0 ? `${g.correct}/${g.total} benar` : `${g.correct}/${g.total} benar · ${g.wrong.length} salah`}
         >
           {g.wrong.length === 0 ? (
-            <p className="text-sm text-emerald-400">✓ Semua benar di lajur ini.</p>
+            <p className="text-sm text-success">✓ Semua benar di lajur ini.</p>
           ) : (
             <div className="space-y-3 max-h-[500px] overflow-y-auto pr-1">
               {g.wrong.map((item) => (
-                <div key={item.question_id} className="rounded-xl border border-red-800/60 bg-red-950/15 p-4 space-y-2.5 text-sm">
-                  <span className="text-xs font-semibold text-zinc-400">Soal {item.sequence_number}</span>
+                <div key={item.question_id} className="rounded-xl border border-destructive/60 bg-destructive/10 p-4 space-y-2.5 text-sm">
+                  <span className="text-xs font-semibold text-muted-foreground">Soal {item.sequence_number}</span>
                   <div className="grid grid-cols-4 gap-2">
                     {item.shown.map((sym, i) => (
-                      <div key={i} className="flex items-center justify-center h-10 bg-zinc-800 rounded-lg text-lg">
+                      <div key={i} className="flex items-center justify-center h-10 bg-border rounded-lg text-lg">
                         {sym}
                       </div>
                     ))}
                   </div>
-                  <div className="flex items-center gap-4 text-xs pt-1 border-t border-zinc-700/40">
-                    <span className="text-zinc-500">
-                      Kamu pilih: <span className="font-bold text-red-400">{item.selected_key} ({item.selected_symbol})</span>
+                  <div className="flex items-center gap-4 text-xs pt-1 border-t border-border">
+                    <span className="text-muted-foreground">
+                      Kamu pilih: <span className="font-bold text-destructive">{item.selected_key} ({item.selected_symbol})</span>
                     </span>
-                    <span className="text-zinc-500">
-                      Kunci: <span className="font-bold text-emerald-400">{item.correct_key} ({item.correct_symbol})</span>
+                    <span className="text-muted-foreground">
+                      Kunci: <span className="font-bold text-success">{item.correct_key} ({item.correct_symbol})</span>
                     </span>
                   </div>
                 </div>
@@ -315,7 +293,7 @@ export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan,
 
   return (
     <div className="space-y-3">
-      <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider pt-2">
+      <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider pt-2">
         Pembahasan Sesi
       </h2>
 
@@ -353,12 +331,12 @@ export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan,
           <div className="space-y-4">
             <KecermatanReview summary={kecermatan} />
             <div className="space-y-2 pt-1">
-              <p className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Pembahasan per Lajur</p>
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider">Pembahasan per Lajur</p>
               <KecermatanDetailReview groups={kecermatanDetail} />
             </div>
           </div>
         ) : (
-          <p className="text-sm text-zinc-500">Data kecermatan belum tersedia.</p>
+          <p className="text-sm text-muted-foreground">Data kecermatan belum tersedia.</p>
         )}
       </SubSesiDropdown>
     </div>
