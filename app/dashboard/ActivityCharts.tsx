@@ -40,10 +40,10 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
   const chartW = buckets.length * barW + (buckets.length - 1) * gap;
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 space-y-2">
+    <div className="rounded-xl border border-border bg-card p-4 space-y-2">
       <div className="flex items-center justify-between">
-        <p className="text-xs font-semibold text-zinc-400">Frekuensi Tes Resmi</p>
-        <p className="text-xs text-zinc-500">{total} · 8 minggu terakhir</p>
+        <p className="text-xs font-semibold text-muted-foreground">Frekuensi Tes Resmi</p>
+        <p className="text-xs text-muted-foreground">{total} · 8 minggu terakhir</p>
       </div>
       <svg viewBox={`0 0 ${chartW} ${chartH}`} width="100%" height={chartH} preserveAspectRatio="none">
         {buckets.map((b, i) => {
@@ -57,7 +57,7 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
               width={barW}
               height={h}
               rx={4}
-              className={isCurrent ? "fill-gold" : "fill-zinc-700"}
+              className={isCurrent ? "fill-accent" : "fill-primary/15"}
             />
           );
         })}
@@ -79,9 +79,9 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
 
   if (points.length === 0) {
     return (
-      <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4">
-        <p className="text-xs font-semibold text-zinc-400 mb-1">Tren Skor NAP</p>
-        <p className="text-xs text-zinc-600">Belum ada tes selesai.</p>
+      <div className="rounded-xl border border-border bg-card p-4">
+        <p className="text-xs font-semibold text-muted-foreground mb-1">Tren Skor NAP</p>
+        <p className="text-xs text-muted-foreground">Belum ada tes selesai.</p>
       </div>
     );
   }
@@ -106,14 +106,14 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
   const last = points[points.length - 1];
 
   return (
-    <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 space-y-2">
+    <div className="rounded-xl border border-border bg-card p-4 space-y-2">
       <div className="flex items-center justify-between">
-        <p className="text-xs font-semibold text-zinc-400">Tren Skor NAP</p>
-        <p className="text-xs text-zinc-500">{points.length} sesi selesai</p>
+        <p className="text-xs font-semibold text-muted-foreground">Tren Skor NAP</p>
+        <p className="text-xs text-muted-foreground">{points.length} sesi selesai</p>
       </div>
       <svg viewBox={`0 0 ${chartW} ${chartH}`} width="100%" height={chartH}>
         {points.length > 1 && (
-          <path d={path} fill="none" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="stroke-gold-light/50" />
+          <path d={path} fill="none" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="stroke-primary/40" />
         )}
         {points.map((p, i) => {
           const isLast = i === points.length - 1;
@@ -123,7 +123,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
               cx={xFor(i)}
               cy={yFor(p.nap_score!)}
               r={isLast ? 4 : 2.5}
-              className={isLast ? "fill-gold" : "fill-zinc-600"}
+              className={isLast ? "fill-accent" : "fill-primary/15"}
             />
           );
         })}
@@ -131,7 +131,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
           x={Math.min(xFor(points.length - 1), chartW - 20)}
           y={Math.max(yFor(last.nap_score!) - 8, 10)}
           textAnchor="end"
-          className="fill-zinc-300 text-[9px] font-mono font-semibold"
+          className="fill-foreground text-[9px] font-mono font-semibold"
         >
           {last.nap_score!.toFixed(1)}
         </text>

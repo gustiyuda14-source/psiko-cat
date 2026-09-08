@@ -2,13 +2,18 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import LogoutButton from "@/app/components/LogoutButton";
 import { WeeklyFrequencyChart, NapTrendChart } from "./ActivityCharts";
+
+function greeting(hour: number): string {
+  if (hour < 11) return "Selamat pagi";
+  if (hour < 15) return "Selamat siang";
+  if (hour < 19) return "Selamat sore";
+  return "Selamat malam";
+}
 
 export default async function DashboardPage() {
   const session = await getSession();
   if (!session) redirect("/login");
-  if (session.role === "admin") redirect("/admin");
 
   const { data: sessions } = await supabaseAdmin
     .from("test_sessions")
@@ -24,104 +29,53 @@ export default async function DashboardPage() {
     : null;
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
-      <div className="max-w-2xl mx-auto space-y-8">
+    <div className="space-y-6 p-6">
+      {/* Hero */}
+      <div className="relative overflow-hidden rounded-[2rem] bg-[#0b2442] px-7 py-8 text-white shadow-[0_24px_60px_-26px_rgba(12,35,66,0.72)]">
+        <div className="pointer-events-none absolute -right-10 -top-10 size-48 rounded-full bg-accent/20 blur-3xl" />
+        <p className="relative inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs">
+          {greeting(new Date().getHours())}
+        </p>
+        <h1 className="relative mt-4 text-2xl font-semibold">{session.name}</h1>
+        <p className="relative mt-1 text-sm text-slate-300">@{session.username}</p>
+        <Link
+          href="/dashboard/simulasi"
+          className="relative mt-6 inline-flex min-h-11 items-center rounded-xl bg-accent px-5 text-sm font-bold text-primary shadow-[0_12px_24px_-12px_rgba(217,152,63,0.9)] transition-all duration-200 hover:-translate-y-0.5"
+        >
+          Mulai Simulasi
+        </Link>
+      </div>
 
-        {/* Header */}
-        <div className="flex items-start justify-between">
-          <div>
-            <h1 className="text-2xl font-bold">Halo, {session.name}</h1>
-            <p className="text-sm text-zinc-500 mt-0.5">@{session.username}</p>
-          </div>
-          <LogoutButton />
+      {/* Stat tiles */}
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+        <div className="rounded-2xl border border-border/80 bg-card p-5 shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
+          <p className="text-2xl font-bold text-foreground">{completedSessions.length}</p>
+          <p className="mt-1 text-xs text-muted-foreground">Total Tes</p>
         </div>
+        <div className="rounded-2xl border border-border/80 bg-card p-5 shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
+          <p className="text-2xl font-bold text-success">
+            {completedSessions.filter((s) => s.is_passed).length}
+          </p>
+          <p className="mt-1 text-xs text-muted-foreground">Lulus</p>
+        </div>
+        <div className="rounded-2xl border border-border/80 bg-card p-5 shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
+          <p className="text-2xl font-bold text-primary">{bestScore?.toFixed(1) ?? "-"}</p>
+          <p className="mt-1 text-xs text-muted-foreground">Skor Terbaik</p>
+        </div>
+      </div>
 
-        {/* Stats */}
-        {completedSessions.length > 0 && (
-          <div className="grid grid-cols-3 gap-3">
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
-              <p className="text-2xl font-bold text-white">{completedSessions.length}</p>
-              <p className="text-xs text-zinc-500 mt-1">Total Tes</p>
-            </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
-              <p className="text-2xl font-bold text-emerald-400">
-                {completedSessions.filter((s) => s.is_passed).length}
-              </p>
-              <p className="text-xs text-zinc-500 mt-1">Lulus</p>
-            </div>
-            <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
-              <p className="text-2xl font-bold text-blue-400">{bestScore?.toFixed(1) ?? "-"}</p>
-              <p className="text-xs text-zinc-500 mt-1">Skor Terbaik</p>
-            </div>
-          </div>
-        )}
-
-        {/* Frekuensi & tren — attempt resmi (Real Exam / Tryout), latihan tidak dihitung */}
-        {sessions && sessions.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      {/* Ringkasan aktivitas */}
+      {sessions && sessions.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+            Ringkasan Aktivitas
+          </h2>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <WeeklyFrequencyChart sessions={sessions} />
             <NapTrendChart sessions={completedSessions} />
           </div>
-        )}
-
-        {/* Start new test */}
-        <Link
-          href="/test/new"
-          className="flex items-center justify-between rounded-xl border border-blue-700/50 bg-blue-600/10 px-6 py-4 hover:bg-blue-600/20 transition-colors"
-        >
-          <div>
-            <p className="font-semibold text-blue-300">Mulai Tes Baru</p>
-            <p className="text-xs text-zinc-500 mt-0.5">Kecerdasan · Kecermatan · Kepribadian</p>
-          </div>
-          <span className="text-blue-400 text-xl">→</span>
-        </Link>
-
-        {/* Real Exam standalone per-modul */}
-        <div className="space-y-2">
-          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
-            Real Exam per Modul
-          </h2>
-          <div className="grid grid-cols-1 gap-2">
-            {[
-              { slug: "kecerdasan", label: "Real Exam Kecerdasan" },
-              { slug: "kecermatan", label: "Real Exam Kecermatan" },
-              { slug: "kepribadian", label: "Real Exam Kepribadian" },
-            ].map((m) => (
-              <Link
-                key={m.slug}
-                href={`/test/new/${m.slug}`}
-                className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-3 hover:bg-zinc-800 transition-colors"
-              >
-                <p className="text-sm font-medium text-zinc-200">{m.label}</p>
-                <span className="text-zinc-500 text-lg">→</span>
-              </Link>
-            ))}
-          </div>
         </div>
-
-        {/* Latihan / Training — tanpa waktu, tidak disimpan */}
-        <div className="space-y-2">
-          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">
-            Latihan / Training
-          </h2>
-          <div className="grid grid-cols-1 gap-2">
-            {[
-              { slug: "kecerdasan", label: "Latihan Kecerdasan" },
-              { slug: "kecermatan", label: "Latihan Kecermatan (Training)" },
-              { slug: "kepribadian", label: "Latihan Kepribadian" },
-            ].map((m) => (
-              <Link
-                key={m.slug}
-                href={`/latihan/${m.slug}`}
-                className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-3 hover:bg-zinc-800 transition-colors"
-              >
-                <p className="text-sm font-medium text-zinc-200">{m.label}</p>
-                <span className="text-zinc-500 text-lg">→</span>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 }

@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Cormorant_Garamond } from "next/font/google";
+import { Source_Sans_3, Lexend } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const sourceSans = Source_Sans_3({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
-  weight: ["400", "600", "700"],
+const lexend = Lexend({
+  variable: "--font-heading",
   subsets: ["latin"],
 });
 
@@ -26,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${sourceSans.variable} ${lexend.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
