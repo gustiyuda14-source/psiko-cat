@@ -46,8 +46,10 @@
   --red-light: #E74C3C;
   --border-v3: #D8D0C4;
 
-  --background: #ffffff;
+  --background: #f3f6fa;
   --foreground: #10213b;
+  --surface-subtle: #eef3f8;
+  --shadow-card: 0 16px 40px -30px rgba(16, 45, 82, 0.55);
 }
 
 @theme inline {
@@ -66,6 +68,7 @@
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-ring: var(--ring);
+  --color-surface-subtle: var(--surface-subtle);
 
   --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -178,9 +181,66 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.5;
 }
 
 /* Opt-in heading font (Lexend) — apply explicitly per element, not forced onto h1/h2 globally */
 .font-heading {
   font-family: var(--font-heading), system-ui, sans-serif;
+}
+
+button,
+a,
+summary {
+  touch-action: manipulation;
+}
+
+:where(a, button, input, summary):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--ring) 70%, white);
+  outline-offset: 3px;
+}
+
+.app-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 1.5rem;
+}
+
+.surface-card {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+
+.interactive-card {
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.interactive-card:hover {
+  border-color: color-mix(in srgb, var(--primary) 24%, var(--border));
+  box-shadow: 0 20px 44px -30px rgba(16, 45, 82, 0.7);
+  transform: translateY(-2px);
+}
+
+.interactive-card:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 639px) {
+  .app-page {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

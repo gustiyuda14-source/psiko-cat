@@ -16,7 +16,7 @@ export default function LatihanGate({
 }) {
   const [started, setStarted] = useState(false);
   const meta = MODULE_CONFIG[moduleType];
-  const label = moduleType === "KECERMATAN" ? `Latihan ${meta.label} (Training)` : `Latihan ${meta.label}`;
+  const label = `Paket Latihan 1 - ${meta.label}`;
 
   if (started) {
     if (moduleType === "KECERDASAN") return <LatihanKecerdasan questions={questions} />;
@@ -28,7 +28,7 @@ export default function LatihanGate({
     <div className="rounded-xl border border-border bg-card px-6 py-5 space-y-4">
       <div className="space-y-1">
         <div className="flex items-center gap-2">
-          <span className="font-semibold text-lg text-foreground">{label}</span>
+          <span className="font-semibold text-lg uppercase tracking-wide text-foreground">{label}</span>
           <span className="rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">
             Tanpa Batas Waktu
           </span>

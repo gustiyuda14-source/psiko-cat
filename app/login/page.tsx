@@ -37,19 +37,17 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#0b2442] px-4 py-10">
+    <div className="flex min-h-[100dvh] items-center justify-center bg-primary px-4 py-10">
       <div className="w-full max-w-sm space-y-8">
         <div className="text-center text-white">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-accent text-primary">
-            <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
+          <div className="mx-auto mb-4 flex size-14 items-center justify-center rounded-2xl bg-accent font-heading text-xl font-bold text-primary" aria-hidden="true">
+            P
           </div>
           <h1 className="font-heading text-3xl font-bold">Psiko CAT</h1>
           <p className="mt-1 text-sm text-white/60">Sistem Psikotes Terintegrasi</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-white/10 bg-card p-8 shadow-[0_24px_60px_-26px_rgba(12,35,66,0.72)]">
+        <form onSubmit={handleSubmit} className="surface-card space-y-5 p-6 sm:p-8">
           {error && (
             <div className="rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm text-destructive">
               {error}
@@ -57,35 +55,37 @@ export default function LoginPage() {
           )}
 
           <div className="space-y-1.5">
-            <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Username</label>
+            <label htmlFor="username" className="text-sm font-semibold text-foreground">Username</label>
             <input
+              id="username"
               required
               type="text"
               autoComplete="username"
               value={form.username}
               onChange={(e) => setForm({ ...form, username: e.target.value })}
               placeholder="contoh: salfa"
-              className="min-h-11 w-full rounded-xl border border-border bg-card px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40"
+              className="min-h-12 w-full rounded-xl border border-border bg-card px-4 py-3 text-base placeholder:text-muted-foreground focus:border-ring focus:outline-none"
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-medium uppercase tracking-wider text-muted-foreground">Password</label>
+            <label htmlFor="password" className="text-sm font-semibold text-foreground">Password</label>
             <input
+              id="password"
               required
               type="password"
               autoComplete="current-password"
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               placeholder="••••••••"
-              className="min-h-11 w-full rounded-xl border border-border bg-card px-4 py-3 text-sm placeholder:text-muted-foreground focus:border-ring focus:outline-none focus:ring-2 focus:ring-ring/40"
+              className="min-h-12 w-full rounded-xl border border-border bg-card px-4 py-3 text-base placeholder:text-muted-foreground focus:border-ring focus:outline-none"
             />
           </div>
 
           <button
             type="submit"
             disabled={loading}
-            className="mt-2 min-h-12 w-full rounded-xl bg-accent py-3 text-sm font-semibold text-primary transition-all duration-200 hover:-translate-y-0.5 hover:bg-accent/90 disabled:opacity-50"
+            className="mt-2 min-h-12 w-full rounded-xl bg-accent py-3 text-sm font-bold text-primary transition-colors duration-200 hover:bg-accent/90 disabled:cursor-wait disabled:opacity-50"
           >
             {loading ? "Masuk..." : "Masuk →"}
           </button>

@@ -13,7 +13,7 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Ajiks Akademi — Psiko CAT",
+  title: "Ajiks Akademi - Psiko CAT",
   description: "Sistem Psikotes Terintegrasi D'Ajiks Akademi",
 };
 

@@ -8,6 +8,7 @@ import type {
 import { useEffect, useState } from "react";
 import { useKecerdasanStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
+import { ExamHeader, OfflineNotice, QuestionNavigator } from "@/app/components/ExamChrome";
 
 type Props = {
   questions: SafeQuestion[];
@@ -18,12 +19,6 @@ type Props = {
   initialSnapshot?: RecoverySnapshot | null;
   onComplete?: () => void;
 };
-
-function fmt(total: number): string {
-  const m = Math.floor(total / 60);
-  const s = total % 60;
-  return `${m}:${s.toString().padStart(2, "0")}`;
-}
 
 export default function EngineKecerdasan({
   questions,
@@ -59,7 +54,7 @@ export default function EngineKecerdasan({
 
   if (!mounted) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-[100dvh] items-center justify-center bg-background">
         <div className="text-sm text-muted-foreground">Memuat...</div>
       </div>
     );
@@ -67,8 +62,8 @@ export default function EngineKecerdasan({
 
   if (state.status === "completed") {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background text-foreground">
-        <div className="text-5xl">✓</div>
+      <div className="flex min-h-[100dvh] flex-col items-center justify-center gap-4 bg-background px-4 text-center text-foreground">
+        <div className="flex size-14 items-center justify-center rounded-full bg-success-soft text-2xl font-bold text-success" aria-hidden="true">✓</div>
         <h2 className="text-2xl font-semibold">Sub-Tes Kecerdasan Selesai</h2>
         <p className="text-sm text-muted-foreground">Jawaban Anda telah tersimpan. Mengalihkan...</p>
       </div>
@@ -80,26 +75,16 @@ export default function EngineKecerdasan({
   const payload = q?.options_payload as unknown as KecerdasanOptionsPayload;
   const picked = q ? state.answers[q.id] : undefined;
   const answeredCount = Object.keys(state.answers).length;
-  const lowTime = secondsLeft <= 300;
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Offline overlay */}
-      {isOffline && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="max-w-xs space-y-3 rounded-2xl border border-destructive/30 bg-card p-8 text-center">
-            <div className="text-4xl">📡</div>
-            <h2 className="text-lg font-semibold text-destructive">Koneksi Terputus</h2>
-            <p className="text-sm text-muted-foreground">Timer tetap berjalan. Jawaban tersimpan otomatis saat online kembali.</p>
-          </div>
-        </div>
-      )}
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      {isOffline && <OfflineNotice />}
 
       {/* Resume modal */}
       {showResume && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80">
-          <div className="max-w-sm space-y-5 rounded-2xl border border-border bg-card p-8 text-foreground">
-            <h2 className="text-xl font-semibold">Lanjutkan Sesi?</h2>
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="resume-title">
+          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
+            <h2 id="resume-title" className="text-xl font-semibold">Lanjutkan Sesi?</h2>
             <p className="text-sm text-muted-foreground">Sesi sebelumnya terdeteksi pada soal nomor {resumeIndex + 1}.</p>
             <div className="flex gap-3">
               <button onClick={engine.doResume}
@@ -117,12 +102,9 @@ export default function EngineKecerdasan({
 
       {/* Confirm submit modal */}
       {showConfirm && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80">
-          <div className="w-full max-w-sm space-y-5 rounded-2xl border border-border bg-card p-8 text-foreground">
-            <div className="flex items-center gap-3">
-              <span className="text-2xl">⚠️</span>
-              <h2 className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
-            </div>
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="submit-title">
+          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
+            <h2 id="submit-title" className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
             <div className="space-y-1 rounded-xl bg-accent-soft px-4 py-3 text-sm text-foreground">
               <p>Kamu baru menjawab <span className="font-bold">{answeredCount}</span> dari <span className="font-bold">{sorted.length}</span> soal.</p>
               {answeredCount < sorted.length && (
@@ -148,34 +130,32 @@ export default function EngineKecerdasan({
         </div>
       )}
 
-      {/* Sticky header */}
-      <header className="sticky top-0 z-30 border-b border-primary/10 bg-primary text-primary-foreground backdrop-blur">
-        <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
-          <div>
-            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/60">Sub-Tes Kecerdasan</p>
-            <p className="mt-0.5 text-sm text-white/80">
-              Soal <span className="font-bold text-primary-foreground">{idx + 1}</span>
-              <span className="text-white/60"> / {sorted.length}</span>
-              <span className="ml-3 text-xs text-white/60">{answeredCount} terjawab</span>
-            </p>
-          </div>
-          <div className={`flex items-center gap-2 font-mono tabular-nums font-bold text-2xl ${lowTime ? "animate-pulse text-accent" : "text-primary-foreground"}`}>
-            <svg className="w-5 h-5 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-            </svg>
-            {fmt(secondsLeft)}
-          </div>
-        </div>
-      </header>
+      <ExamHeader
+        title="Sub-Tes Kecerdasan"
+        itemLabel="Soal"
+        current={idx + 1}
+        total={sorted.length}
+        answered={answeredCount}
+        secondsLeft={secondsLeft}
+      />
 
       {/* Page body: question + sidebar */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex gap-5 items-start">
+      <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-6">
+        <QuestionNavigator
+          typeLabel={payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
+          itemLabel="Soal"
+          questionIds={sorted.map((question) => question.id)}
+          answers={state.answers}
+          currentIndex={idx}
+          onGoTo={(index) => store.getState().goTo(index)}
+          onSubmit={() => setShowConfirm(true)}
+        />
 
         {/* ── Left: Question card ── */}
         <main className="flex-1 min-w-0 space-y-4">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+          <div className="surface-card overflow-hidden">
             {/* Card header */}
-            <div className="flex items-center justify-between border-b border-border px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-4 sm:px-6">
               <span className="text-sm font-semibold">Soal Nomor {idx + 1}</span>
               <span className="rounded-full bg-primary/7 px-3 py-1 text-xs text-muted-foreground">
                 {payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
@@ -183,7 +163,7 @@ export default function EngineKecerdasan({
             </div>
 
             {/* Question content */}
-            <div className="px-6 py-5 space-y-5">
+            <div className="space-y-5 px-4 py-5 sm:px-6">
               {payload?.instruksi && (
                 <div className="rounded-xl border border-primary/20 bg-primary/7 p-3 text-sm font-semibold text-foreground">
                   {payload.instruksi}
@@ -238,7 +218,7 @@ export default function EngineKecerdasan({
                     <button
                       key={c.key}
                       onClick={handleSelect}
-                      className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-150 ${
+                      className={`flex min-h-12 w-full items-center gap-3 rounded-xl border px-3 py-3 text-left transition-colors duration-150 sm:gap-4 sm:px-4 ${
                         isSelected
                           ? "border-primary bg-primary/7"
                           : "border-border hover:border-primary/40 hover:bg-primary/7"
@@ -260,98 +240,24 @@ export default function EngineKecerdasan({
           </div>
 
           {/* Prev / Next buttons */}
-          <div className="flex justify-between">
+          <div className="flex gap-3 sm:justify-between">
             <button
               onClick={() => store.getState().prev()}
               disabled={idx === 0}
-              className="min-h-11 rounded-xl border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:opacity-30"
+              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
             >
               ← Sebelumnya
             </button>
             <button
               onClick={() => store.getState().next()}
               disabled={idx >= sorted.length - 1}
-              className="min-h-11 rounded-xl border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:opacity-30"
+              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
             >
               Selanjutnya →
             </button>
           </div>
         </main>
 
-        {/* ── Right: Sticky sidebar ── */}
-        <aside className="w-72 shrink-0 sticky top-20 space-y-4">
-          {/* Tipe soal */}
-          <div className="rounded-2xl border border-border bg-card p-4">
-            <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Tipe Soal</p>
-            <div className="inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/7 px-3 py-1.5 text-xs font-semibold text-primary">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
-              Kognitif &amp; Spasial
-            </div>
-          </div>
-
-          {/* Daftar soal */}
-          <div className="rounded-2xl border border-border bg-card p-4">
-            <div className="flex items-center justify-between mb-3">
-              <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Daftar Soal</p>
-              <span className="font-mono text-xs text-muted-foreground">{answeredCount}/{sorted.length}</span>
-            </div>
-
-            {/* Progress bar */}
-            <div className="mb-3 h-1 overflow-hidden rounded-full bg-primary/7">
-              <div
-                className="h-full rounded-full bg-success transition-all duration-300"
-                style={{ width: `${(answeredCount / sorted.length) * 100}%` }}
-              />
-            </div>
-
-            <div className="flex flex-wrap gap-1.5 max-h-60 overflow-y-auto pr-1">
-              {sorted.map((sq, i) => {
-                const answered = state.answers[sq.id];
-                const current = i === idx;
-                return (
-                  <button
-                    key={sq.id}
-                    onClick={() => store.getState().goTo(i)}
-                    title={`Soal ${i + 1}${answered ? ` — Pilihan ${answered}` : ""}`}
-                    className={`relative flex flex-col items-center justify-center h-9 w-9 rounded-lg text-[10px] font-bold transition-all ${
-                      current
-                        ? "bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-1 ring-offset-card"
-                        : answered
-                        ? "bg-success text-white hover:bg-success/90"
-                        : "border border-border bg-card text-muted-foreground hover:bg-primary/7"
-                    }`}
-                  >
-                    <span className="leading-none">{i + 1}</span>
-                    {answered && (
-                      <span className="leading-none text-[7px] opacity-80 mt-0.5">{answered}</span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Legend */}
-            <div className="mt-3 flex items-center gap-3 border-t border-border pt-3">
-              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                <span className="h-2.5 w-2.5 rounded bg-success"></span>Dijawab
-              </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                <span className="h-2.5 w-2.5 rounded border border-border bg-card"></span>Belum
-              </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
-                <span className="h-2.5 w-2.5 rounded bg-primary"></span>Aktif
-              </div>
-            </div>
-          </div>
-
-          {/* Submit */}
-          <button
-            onClick={() => setShowConfirm(true)}
-            className="min-h-12 w-full rounded-xl bg-success py-3.5 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-success/90"
-          >
-            Selesai &amp; Kumpulkan
-          </button>
-        </aside>
       </div>
     </div>
   );

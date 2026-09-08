@@ -7,6 +7,7 @@ import type {
   RecoverySnapshot,
 } from "@/lib/types/safe-question";
 import { useKecermatanStore, COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
+import { OfflineNotice } from "@/app/components/ExamChrome";
 
 const FLUSH_THRESHOLD = 20;
 const HEARTBEAT_MS = 30_000;
@@ -254,7 +255,7 @@ export default function EngineKecermatan({
 
   if (!mounted) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-background">
+      <div className="flex min-h-[100dvh] items-center justify-center bg-background">
         <div className="text-sm text-muted-foreground">Memuat...</div>
       </div>
     );
@@ -262,8 +263,8 @@ export default function EngineKecermatan({
 
   if (status === "completed") {
     return (
-      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background text-foreground">
-        <div className="text-5xl">✓</div>
+      <div className="flex min-h-[100dvh] flex-col items-center justify-center gap-4 bg-background px-4 text-center text-foreground">
+        <div className="flex size-14 items-center justify-center rounded-full bg-success-soft text-2xl font-bold text-success" aria-hidden="true">✓</div>
         <h2 className="text-2xl font-semibold">Sub-Tes Kecermatan Selesai</h2>
         <p className="text-sm text-muted-foreground">Seluruh 10 lajur telah diselesaikan.</p>
       </div>
@@ -273,23 +274,14 @@ export default function EngineKecermatan({
   // ── Render ───────────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Offline overlay */}
-      {isOffline && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="max-w-xs space-y-3 rounded-2xl border border-destructive/30 bg-card p-8 text-center">
-            <div className="text-4xl">📡</div>
-            <h2 className="text-lg font-semibold text-destructive">Koneksi Terputus</h2>
-            <p className="text-sm text-muted-foreground">Timer tetap berjalan.</p>
-          </div>
-        </div>
-      )}
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      {isOffline && <OfflineNotice />}
 
       {/* Resume modal */}
       {showResume && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/40">
-          <div className="mx-4 w-full max-w-sm space-y-5 rounded-2xl border border-border bg-card p-8 text-foreground">
-            <h2 className="text-xl font-semibold">Lanjutkan Sesi?</h2>
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="resume-kecermatan-title">
+          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
+            <h2 id="resume-kecermatan-title" className="text-xl font-semibold">Lanjutkan Sesi?</h2>
             <p className="text-sm text-muted-foreground">
               Sesi sebelumnya terdeteksi di Lajur {resumeCol + 1}, sisa {Math.ceil(resumeMs / 1000)} detik.
             </p>
@@ -308,27 +300,32 @@ export default function EngineKecermatan({
       )}
 
       {/* ── Top navbar ───────────────────────────────────────────────────────── */}
-      <header className="bg-primary text-primary-foreground">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-white/60">Psiko CAT</p>
-            <p className="text-sm font-semibold">Psiko Kecermatan</p>
+      <header className="sticky top-0 z-30 bg-primary text-primary-foreground shadow-[0_10px_30px_-24px_rgba(7,24,46,0.9)]">
+        <div className="mx-auto flex min-h-[68px] max-w-4xl items-center justify-between gap-4 px-4 py-3">
+          <div className="min-w-0">
+            <p className="truncate text-sm font-semibold sm:text-base">Sub-Tes Kecermatan</p>
+            <p className="truncate text-xs text-white/70">Peserta: {participantName}</p>
           </div>
-          <p className="text-sm text-white/80">
-            Peserta: <span className="font-semibold text-primary-foreground">{participantName}</span>
-          </p>
+          <div className="shrink-0 text-right">
+            <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/65">
+              {showColIntro ? "Kolom dimulai" : "Sisa kolom"}
+            </p>
+            <p className={`font-mono text-xl font-bold tabular-nums ${lowTime && !showColIntro ? "text-accent" : "text-primary-foreground"}`}>
+              {showColIntro ? `${introSeconds} dtk` : `${secondsLeft} dtk`}
+            </p>
+          </div>
         </div>
 
         {/* Column tabs row */}
         <div className="border-t border-white/10">
-          <div className="max-w-4xl mx-auto px-4 flex items-center gap-1 py-1.5">
+          <div className="mx-auto grid max-w-4xl grid-cols-10 gap-1 px-3 py-2 sm:px-4">
             {ROMAN.map((r, i) => {
               const isPast = i < (showColIntro ? nextColIdx : currentColIdx);
               const isActive = i === activeTabIdx;
               return (
                 <div
                   key={i}
-                  className={`px-3 py-1.5 rounded text-xs font-bold transition-colors ${
+                  className={`flex min-w-0 items-center justify-center rounded-md py-1.5 text-[10px] font-bold transition-colors sm:text-xs ${
                     isActive
                       ? "bg-accent text-primary"
                       : isPast
@@ -340,22 +337,17 @@ export default function EngineKecermatan({
                 </div>
               );
             })}
-            {showColIntro && introSeconds > 0 && (
-              <span className="ml-auto text-xs text-white/60">
-                pindah dalam <span className="font-semibold text-accent">{introSeconds}d</span>
-              </span>
-            )}
           </div>
         </div>
 
         {/* Timer bar */}
         {!showColIntro && (
-          <div className="h-1 bg-white/10">
+          <div className="h-1 overflow-hidden bg-white/10" role="progressbar" aria-label="Sisa waktu kolom" aria-valuenow={Math.round(timerPct)} aria-valuemin={0} aria-valuemax={100}>
             <div
-              className={`h-full transition-all duration-100 ${
+              className={`h-full origin-left transition-transform duration-100 ${
                 lowTime ? "bg-destructive" : secondsLeft <= 20 ? "bg-accent" : "bg-success"
               }`}
-              style={{ width: `${timerPct}%` }}
+              style={{ transform: `scaleX(${timerPct / 100})` }}
             />
           </div>
         )}
@@ -363,18 +355,18 @@ export default function EngineKecermatan({
 
       {/* ── Column intro screen ─────────────────────────────────────────────── */}
       {showColIntro && (
-        <main className="max-w-2xl mx-auto px-4 py-8">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+        <main className="mx-auto max-w-2xl px-4 py-4 sm:py-8">
+          <div className="surface-card overflow-hidden">
             {/* Intro header */}
-            <div className="bg-primary px-8 py-8 text-primary-foreground">
+            <div className="bg-primary px-5 py-6 text-primary-foreground sm:px-8 sm:py-8">
               <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-accent">
                 KOLOM {ROMAN[nextColIdx]} DARI {ROMAN[TOTAL_COLS - 1]}
               </p>
               <h2 className="font-heading text-3xl font-bold">Kolom {ROMAN[nextColIdx]}</h2>
-              <p className="mt-1 text-sm text-white/60">Pelajari tabel kunci — akan selalu tampil saat tes</p>
+              <p className="mt-1 text-sm text-white/70">Pelajari tabel kunci. Tabel tetap tampil selama tes.</p>
             </div>
 
-            <div className="px-8 py-6 space-y-6">
+            <div className="space-y-6 px-5 py-6 sm:px-8">
               {/* Key table */}
               <div>
                 <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -403,7 +395,7 @@ export default function EngineKecermatan({
               </div>
 
               {/* Instructions */}
-              <div className="rounded-r-xl border-l-4 border-accent bg-accent-soft px-5 py-4 text-sm leading-relaxed text-foreground">
+              <div className="rounded-xl border border-accent/30 bg-accent-soft px-5 py-4 text-sm leading-relaxed text-foreground">
                 <strong>Total: 50 butir</strong> per kolom<br />
                 Pilih simbol yang <strong>tidak ada</strong> pada baris soal. Jawab soal terakhir lalu kolom berikutnya dimulai otomatis.
               </div>
@@ -422,10 +414,10 @@ export default function EngineKecermatan({
 
       {/* ── Question view ───────────────────────────────────────────────────── */}
       {!showColIntro && currentQ && (
-        <main className="max-w-2xl mx-auto px-4 py-8">
-          <div className="overflow-hidden rounded-2xl border border-border bg-card">
+        <main className="mx-auto max-w-2xl px-4 py-4 sm:py-8">
+          <div className="surface-card overflow-hidden">
             {/* Question card header */}
-            <div className="flex items-center justify-between border-b border-border px-6 py-4">
+            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border px-4 py-4 sm:px-6">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
                   SOAL {currentRowIdx + 1}/50
@@ -445,7 +437,7 @@ export default function EngineKecermatan({
               </div>
             </div>
 
-            <div className="px-6 py-5 space-y-6">
+            <div className="space-y-6 px-4 py-5 sm:px-6">
               {/* PETUNJUK SOAL — key table */}
               <div>
                 <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
@@ -511,7 +503,7 @@ export default function EngineKecermatan({
             </div>
 
             {/* Finish button */}
-            <div className="px-6 pb-6">
+            <div className="px-4 pb-5 sm:px-6 sm:pb-6">
               <button
                 onClick={() => {
                   const isLastCol = currentColIdx >= TOTAL_COLS - 1;
@@ -520,9 +512,9 @@ export default function EngineKecermatan({
                     : `Yakin ingin melewati sisa soal di Lajur ${ROMAN[currentColIdx]} dan lanjut ke lajur berikutnya? Soal yang belum dijawab dihitung tidak dijawab.`;
                   if (window.confirm(msg)) advanceRef.current();
                 }}
-                className="min-h-12 w-full rounded-xl border-2 border-destructive px-5 py-3.5 text-sm font-bold uppercase tracking-wider text-destructive transition-all duration-200 hover:-translate-y-0.5 hover:bg-destructive/10"
+                className="min-h-12 w-full rounded-xl border border-destructive/50 px-5 py-3.5 text-sm font-bold text-destructive transition-colors hover:bg-destructive/10"
               >
-                Selesaikan Ujian Sekarang &amp; Lanjut
+                {currentColIdx >= TOTAL_COLS - 1 ? "Selesaikan Sub-Tes" : "Lewati Sisa Lajur"}
               </button>
             </div>
           </div>

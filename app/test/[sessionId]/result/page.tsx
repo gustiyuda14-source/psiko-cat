@@ -126,7 +126,7 @@ export default async function ResultPage({
               : "border-accent bg-accent-soft"
           }`}
         >
-          <div className="text-4xl">{disqualified ? "✗" : passed ? "✓" : "—"}</div>
+          <div className="text-4xl">{disqualified ? "✗" : passed ? "✓" : "-"}</div>
           <h1 className="text-2xl font-bold">
             {disqualified ? "Gugur Mutlak" : passed ? "Lulus" : "Tidak Lulus"}
           </h1>

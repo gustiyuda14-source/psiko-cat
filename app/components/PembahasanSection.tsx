@@ -145,7 +145,7 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
                       : "text-destructive"
                   }`}
                 >
-                  {item.selected_key ?? "—"}
+                  {item.selected_key ?? "-"}
                 </span>
               </span>
               {!item.is_correct && (

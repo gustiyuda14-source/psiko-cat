@@ -40,7 +40,7 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
   const chartW = buckets.length * barW + (buckets.length - 1) * gap;
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 space-y-2">
+    <div className="surface-card space-y-2 p-4">
       <div className="flex items-center justify-between">
         <p className="text-xs font-semibold text-muted-foreground">Frekuensi Tes Resmi</p>
         <p className="text-xs text-muted-foreground">{total} · 8 minggu terakhir</p>
@@ -79,7 +79,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
 
   if (points.length === 0) {
     return (
-      <div className="rounded-xl border border-border bg-card p-4">
+      <div className="surface-card p-4">
         <p className="text-xs font-semibold text-muted-foreground mb-1">Tren Skor NAP</p>
         <p className="text-xs text-muted-foreground">Belum ada tes selesai.</p>
       </div>
@@ -106,7 +106,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
   const last = points[points.length - 1];
 
   return (
-    <div className="rounded-xl border border-border bg-card p-4 space-y-2">
+    <div className="surface-card space-y-2 p-4">
       <div className="flex items-center justify-between">
         <p className="text-xs font-semibold text-muted-foreground">Tren Skor NAP</p>
         <p className="text-xs text-muted-foreground">{points.length} sesi selesai</p>

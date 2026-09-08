@@ -150,7 +150,7 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
 
           {fb && (
             <p className={`text-sm font-semibold ${fb.is_correct ? "text-success" : "text-destructive"}`}>
-              {fb.is_correct ? "✓ Benar" : `✗ Salah — kunci: ${fb.correct_key}`}
+              {fb.is_correct ? "✓ Benar" : `✗ Salah. Kunci: ${fb.correct_key}`}
             </p>
           )}
         </div>
