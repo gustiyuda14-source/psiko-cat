@@ -33,7 +33,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
     <div className="flex h-full flex-col bg-[#0b2442] text-white">
       <div className="px-6 py-6">
         <p className="text-lg font-semibold">Psiko CAT</p>
-        <p className="text-xs text-slate-400">Ruang Latihan Psikotes</p>
+        <p className="text-xs text-white/60">Ruang Latihan Psikotes</p>
       </div>
 
       <nav className="flex-1 space-y-1 px-4">
@@ -45,7 +45,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
               href={item.href}
               onClick={() => setOpen(false)}
               className={`block rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
-                active ? "bg-white text-primary" : "text-slate-300 hover:bg-white/10"
+                active ? "bg-white text-primary" : "text-white/70 hover:bg-white/10"
               }`}
             >
               {item.label}
@@ -61,11 +61,11 @@ export default function Sidebar({ name, username }: { name: string; username: st
           </span>
           <div className="min-w-0">
             <p className="truncate text-sm font-medium">{name}</p>
-            <p className="truncate text-xs text-slate-400">@{username}</p>
+            <p className="truncate text-xs text-white/60">@{username}</p>
           </div>
         </div>
-        <LogoutButton className="w-full rounded-lg border border-white/15 px-3 py-1.5 text-xs text-slate-300 transition-colors hover:border-white/30 hover:text-white" />
-        <p className="text-[11px] text-slate-500">Didukung oleh D Ajiks Corporation</p>
+        <LogoutButton className="w-full rounded-lg border border-white/15 px-3 py-1.5 text-xs text-white/70 transition-colors hover:border-white/30 hover:text-white" />
+        <p className="text-[11px] text-white/50">Didukung oleh D Ajiks Corporation</p>
       </div>
     </div>
   );

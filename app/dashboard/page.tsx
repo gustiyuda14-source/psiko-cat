@@ -1,4 +1,3 @@
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
@@ -12,8 +11,7 @@ function greeting(hour: number): string {
 }
 
 export default async function DashboardPage() {
-  const session = await getSession();
-  if (!session) redirect("/login");
+  const session = (await getSession())!;
 
   const { data: sessions } = await supabaseAdmin
     .from("test_sessions")
@@ -37,7 +35,7 @@ export default async function DashboardPage() {
           {greeting(new Date().getHours())}
         </p>
         <h1 className="relative mt-4 text-2xl font-semibold">{session.name}</h1>
-        <p className="relative mt-1 text-sm text-slate-300">@{session.username}</p>
+        <p className="relative mt-1 text-sm text-white/70">@{session.username}</p>
         <Link
           href="/dashboard/simulasi"
           className="relative mt-6 inline-flex min-h-11 items-center rounded-xl bg-accent px-5 text-sm font-bold text-primary shadow-[0_12px_24px_-12px_rgba(217,152,63,0.9)] transition-all duration-200 hover:-translate-y-0.5"
