@@ -1,7 +1,5 @@
 import Link from "next/link";
-import { MODULE_CONFIG, type ModuleType } from "@/lib/test-session";
-
-const MODULE_ORDER: ModuleType[] = ["KECERDASAN", "KECERMATAN", "KEPRIBADIAN"];
+import { MODULE_CONFIG, MODULE_ORDER } from "@/lib/test-session";
 
 export default function LatihanIndexPage() {
   return (

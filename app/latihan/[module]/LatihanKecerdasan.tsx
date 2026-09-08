@@ -62,7 +62,7 @@ export default function LatihanKecerdasan({ questions }: { questions: SafeQuesti
 
         <div className="px-6 py-5 space-y-5">
           {payload?.instruksi && (
-            <div className="text-sm font-semibold text-accent bg-accent/10 border border-accent/30 p-3 rounded-xl">
+            <div className="text-sm font-semibold text-primary bg-accent/10 border border-accent/30 p-3 rounded-xl">
               {payload.instruksi}
             </div>
           )}

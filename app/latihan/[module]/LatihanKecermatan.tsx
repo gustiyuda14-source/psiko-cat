@@ -56,7 +56,7 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
         </div>
         <div className="text-right text-xs text-muted-foreground">
           <p>{answeredCount} dicoba</p>
-          <p className="text-accent font-semibold">{correctCount} benar</p>
+          <p className="text-success font-semibold">{correctCount} benar</p>
         </div>
       </div>
 

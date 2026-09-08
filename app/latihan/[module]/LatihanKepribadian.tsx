@@ -43,7 +43,7 @@ export default function LatihanKepribadian({ questions }: { questions: SafeQuest
         <div className="px-6 py-8">
           {payload?.aspect && (
             <div className="flex justify-center mb-4">
-              <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-medium text-accent">
+              <span className="inline-block rounded-full border border-accent/40 bg-accent/10 px-3 py-1 text-xs font-medium text-primary">
                 {payload.aspect}
               </span>
             </div>

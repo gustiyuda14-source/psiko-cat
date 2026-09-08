@@ -4,11 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
+import { MODULE_CONFIG, MODULE_ORDER } from "@/lib/test-session";
 
 const NAV_ITEMS = [
   { label: "Beranda", href: "/dashboard" },
   { label: "Simulasi", href: "/dashboard/simulasi" },
-  { label: "Latihan", href: "/dashboard/latihan" },
   { label: "Review Soal", href: "/dashboard/review" },
 ];
 
@@ -28,6 +28,8 @@ function initials(name: string): string {
 export default function Sidebar({ name, username }: { name: string; username: string }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const latihanActive = pathname.startsWith("/dashboard/latihan");
+  const [latihanOpen, setLatihanOpen] = useState(latihanActive);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -70,7 +72,61 @@ export default function Sidebar({ name, username }: { name: string; username: st
       </div>
 
       <nav className="flex-1 space-y-1 px-4 py-5" aria-label="Menu utama">
-        {NAV_ITEMS.map((item) => {
+        {NAV_ITEMS.slice(0, 2).map((item) => {
+          const active = isActive(pathname, item.href);
+          return (
+            <Link
+              key={item.href}
+              href={item.href}
+              onClick={() => setOpen(false)}
+              aria-current={active ? "page" : undefined}
+              className={`flex min-h-11 items-center rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
+                active ? "bg-white text-primary shadow-sm" : "text-white/75 hover:bg-white/10 hover:text-white"
+              }`}
+            >
+              {item.label}
+            </Link>
+          );
+        })}
+
+        <button
+          type="button"
+          onClick={() => setLatihanOpen((o) => !o)}
+          aria-expanded={latihanOpen}
+          aria-controls="latihan-submenu"
+          className={`flex min-h-11 w-full items-center justify-between rounded-xl px-4 py-2.5 text-sm font-medium transition-colors ${
+            latihanActive ? "bg-white text-primary shadow-sm" : "text-white/75 hover:bg-white/10 hover:text-white"
+          }`}
+        >
+          Latihan
+          <span aria-hidden="true" className={`text-xs transition-transform duration-200 ${latihanOpen ? "rotate-180" : ""}`}>▾</span>
+        </button>
+        {latihanOpen && (
+          <div id="latihan-submenu" className="space-y-1 py-1 pl-3">
+            {MODULE_ORDER.map((type) => {
+              const meta = MODULE_CONFIG[type];
+              const href = `/dashboard/latihan/${meta.slug}`;
+              const active = isActive(pathname, href);
+              return (
+                <Link
+                  key={type}
+                  href={href}
+                  onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
+                  className={`flex min-h-10 items-center rounded-lg border-l-2 px-3 py-2 text-sm transition-colors ${
+                    active
+                      ? "border-accent bg-white/10 font-medium text-white"
+                      : "border-white/15 text-white/65 hover:border-white/40 hover:bg-white/5 hover:text-white"
+                  }`}
+                >
+                  {meta.label}
+                </Link>
+              );
+            })}
+          </div>
+        )}
+
+        {NAV_ITEMS.slice(2).map((item) => {
           const active = isActive(pathname, item.href);
           return (
             <Link
@@ -110,7 +166,9 @@ export default function Sidebar({ name, username }: { name: string; username: st
       <div className="flex min-h-16 items-center justify-between border-b border-border bg-card px-4 shadow-[0_8px_24px_-22px_rgba(16,33,59,0.7)] lg:hidden">
         <div>
           <p className="font-heading text-sm font-semibold text-foreground">Psiko CAT</p>
-          <p className="text-[11px] text-muted-foreground">{NAV_ITEMS.find((item) => isActive(pathname, item.href))?.label}</p>
+          <p className="text-[11px] text-muted-foreground">
+            {latihanActive ? "Latihan" : NAV_ITEMS.find((item) => isActive(pathname, item.href))?.label}
+          </p>
         </div>
         <button
           ref={menuButtonRef}

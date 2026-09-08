@@ -16,6 +16,8 @@ export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
   KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert" },
 };
 
+export const MODULE_ORDER: ModuleType[] = ["KECERDASAN", "KECERMATAN", "KEPRIBADIAN"];
+
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
   (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(
     ([type, cfg]) => [cfg.slug, type]
