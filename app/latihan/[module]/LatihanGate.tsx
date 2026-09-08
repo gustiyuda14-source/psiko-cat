@@ -10,13 +10,15 @@ import LatihanKecermatan from "./LatihanKecermatan";
 export default function LatihanGate({
   moduleType,
   questions,
+  packageLabel = "1",
 }: {
   moduleType: ModuleType;
   questions: SafeQuestion[];
+  packageLabel?: string;
 }) {
   const [started, setStarted] = useState(false);
   const meta = MODULE_CONFIG[moduleType];
-  const label = `Paket Latihan 1 - ${meta.label}`;
+  const label = `Paket Latihan ${packageLabel} - ${meta.label}`;
 
   if (started) {
     if (moduleType === "KECERDASAN") return <LatihanKecerdasan questions={questions} />;

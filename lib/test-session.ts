@@ -20,6 +20,15 @@ export const MODULE_ORDER: ModuleType[] = ["KECERDASAN", "KECERMATAN", "KEPRIBAD
 
 export const KECERMATAN_PACKAGES = [3, 4, 5, 6, 7, 8];
 
+export const KECERMATAN_PACKAGE_LABELS: Record<number, string> = {
+  3: "Paket 3",
+  4: "Paket 4",
+  5: "Paket 5",
+  6: "Paket 6",
+  7: "Paket 7",
+  8: "Paket 8",
+};
+
 export function pickRandomKecermatanPackage(): number {
   return KECERMATAN_PACKAGES[Math.floor(Math.random() * KECERMATAN_PACKAGES.length)];
 }
