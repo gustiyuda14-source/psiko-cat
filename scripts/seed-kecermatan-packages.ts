@@ -26,6 +26,17 @@ type BankSoal = {
 };
 
 async function seedPackage(pkg: number) {
+  const { count, error: countError } = await supabase
+    .from("questions")
+    .select("id", { count: "exact", head: true })
+    .eq("type", "KECERMATAN")
+    .eq("package_number", pkg);
+  if (countError) throw countError;
+  if (count && count > 0) {
+    console.log(`Paket ${pkg}: sudah ada ${count} baris di DB, dilewati (jalankan ulang tidak akan menduplikasi).`);
+    return;
+  }
+
   const filePath = path.join(__dirname, `../prisma/data/bank_soal_p${pkg}.json`);
   const bank: BankSoal = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
 import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";
@@ -52,6 +52,16 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
   const [checking, setChecking] = useState(false);
   const [finished, setFinished] = useState(false);
   const [transition, setTransition] = useState<{ nextCol: number; secondsLeft: number } | null>(null);
+  const advanceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  function clearPendingAdvance() {
+    if (advanceTimer.current) {
+      clearTimeout(advanceTimer.current);
+      advanceTimer.current = null;
+    }
+  }
+
+  useEffect(() => clearPendingAdvance, []);
 
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KecermatanOptionsPayload;
@@ -78,10 +88,14 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
   function jumpToColumn(colNum: number) {
     if (transition || finished) return;
     const target = sorted.findIndex((s) => s.column_index === colNum);
-    if (target >= 0) setIdx(target);
+    if (target >= 0) {
+      clearPendingAdvance();
+      setIdx(target);
+    }
   }
 
   function resetPractice() {
+    clearPendingAdvance();
     setIdx(0);
     setAnswers({});
     setFinished(false);
@@ -104,12 +118,16 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
       const nextQuestion = sorted[idx + 1];
       const isLastInColumn = !isLastOverall && nextQuestion && nextQuestion.column_index !== q.column_index;
 
+      clearPendingAdvance();
       if (isLastOverall) {
-        setTimeout(() => setFinished(true), 500);
+        advanceTimer.current = setTimeout(() => setFinished(true), 500);
       } else if (isLastInColumn) {
-        setTimeout(() => setTransition({ nextCol: nextQuestion.column_index ?? colIdx + 2, secondsLeft: COLUMN_TRANSITION_SECONDS }), 500);
+        advanceTimer.current = setTimeout(
+          () => setTransition({ nextCol: nextQuestion.column_index ?? colIdx + 2, secondsLeft: COLUMN_TRANSITION_SECONDS }),
+          500
+        );
       } else {
-        setTimeout(() => setIdx((i) => i + 1), 500);
+        advanceTimer.current = setTimeout(() => setIdx((i) => i + 1), 500);
       }
     } finally {
       setChecking(false);
@@ -278,7 +296,10 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
 
             <div className="px-6 pb-6 flex gap-3">
               <button
-                onClick={() => setIdx((i) => Math.max(0, i - 1))}
+                onClick={() => {
+                  clearPendingAdvance();
+                  setIdx((i) => Math.max(0, i - 1));
+                }}
                 disabled={idx === 0}
                 className="flex-1 py-3 border-2 border-border text-foreground rounded-xl text-sm font-bold disabled:opacity-30 hover:bg-background transition-colors"
               >

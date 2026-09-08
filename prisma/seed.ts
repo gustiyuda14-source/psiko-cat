@@ -6,6 +6,16 @@
  *  - 10 soal Kepribadian sample (placeholder — akan diganti bank soal lengkap di Step 4)
  *
  * Jalankan: npx prisma db seed
+ *
+ * PERINGATAN (2026-09): koneksi Prisma TCP langsung ke project ini sudah tidak
+ * berfungsi (lihat memory/project-psiko-cat-db-fix.md) — script ini praktis tidak
+ * bisa jalan lagi sampai itu diperbaiki. JANGAN jalankan tanpa memeriksa dulu:
+ * DELETE-all di bawah menghapus SEMUA baris questions, lalu skrip ini cuma
+ * menyisakan 10 Kecerdasan + 10 Kepribadian PLACEHOLDER dan 1 paket Kecermatan
+ * (500 baris) — data produksi asli (100 Kecerdasan, 100 Kepribadian, 5 paket
+ * Kecermatan lain) TIDAK ikut ke-reseed di sini. Seeder yang benar-benar dipakai
+ * sekarang: scripts/seed-kecerdasan.ts, scripts/seed-kepribadian-v2.ts,
+ * scripts/seed-kecermatan-packages.ts (semua lewat supabase-js HTTP, bukan Prisma).
  */
 
 import { QuestionType } from "../app/generated/prisma/client";
@@ -38,6 +48,7 @@ async function seedKecermatan() {
     type: QuestionType;
     sequence_number: number;
     column_index: number;
+    package_number: number;
     options_payload: object;
     scoring_rule: object;
     is_active: boolean;
@@ -53,6 +64,7 @@ async function seedKecermatan() {
         type: QuestionType.KECERMATAN,
         sequence_number: sequence++,
         column_index: kolom.nomor,
+        package_number: 7,
         // Client-safe: tabel simbol + 4 simbol yang tampil
         options_payload: {
           symbol_map: symbolMap,
