@@ -59,18 +59,18 @@ export default function EngineKecerdasan({
 
   if (!mounted) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-zinc-950">
-        <div className="text-zinc-500 text-sm">Memuat...</div>
+      <div className="flex min-h-screen items-center justify-center bg-background">
+        <div className="text-sm text-muted-foreground">Memuat...</div>
       </div>
     );
   }
 
   if (state.status === "completed") {
     return (
-      <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-950 text-white gap-4">
+      <div className="flex min-h-screen flex-col items-center justify-center gap-4 bg-background text-foreground">
         <div className="text-5xl">✓</div>
         <h2 className="text-2xl font-semibold">Sub-Tes Kecerdasan Selesai</h2>
-        <p className="text-zinc-400 text-sm">Jawaban Anda telah tersimpan. Mengalihkan...</p>
+        <p className="text-sm text-muted-foreground">Jawaban Anda telah tersimpan. Mengalihkan...</p>
       </div>
     );
   }
@@ -83,14 +83,14 @@ export default function EngineKecerdasan({
   const lowTime = secondsLeft <= 300;
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Offline overlay */}
       {isOffline && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-          <div className="bg-zinc-900 border border-red-700 rounded-2xl p-8 max-w-xs text-center space-y-3">
+          <div className="max-w-xs space-y-3 rounded-2xl border border-destructive/30 bg-card p-8 text-center">
             <div className="text-4xl">📡</div>
-            <h2 className="text-lg font-semibold text-red-400">Koneksi Terputus</h2>
-            <p className="text-zinc-400 text-sm">Timer tetap berjalan. Jawaban tersimpan otomatis saat online kembali.</p>
+            <h2 className="text-lg font-semibold text-destructive">Koneksi Terputus</h2>
+            <p className="text-sm text-muted-foreground">Timer tetap berjalan. Jawaban tersimpan otomatis saat online kembali.</p>
           </div>
         </div>
       )}
@@ -98,16 +98,16 @@ export default function EngineKecerdasan({
       {/* Resume modal */}
       {showResume && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80">
-          <div className="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 max-w-sm space-y-5">
+          <div className="max-w-sm space-y-5 rounded-2xl border border-border bg-card p-8 text-foreground">
             <h2 className="text-xl font-semibold">Lanjutkan Sesi?</h2>
-            <p className="text-zinc-400 text-sm">Sesi sebelumnya terdeteksi pada soal nomor {resumeIndex + 1}.</p>
+            <p className="text-sm text-muted-foreground">Sesi sebelumnya terdeteksi pada soal nomor {resumeIndex + 1}.</p>
             <div className="flex gap-3">
               <button onClick={engine.doResume}
-                className="flex-1 bg-blue-600 text-zinc-950 hover:bg-blue-500 rounded-xl py-2.5 text-sm font-semibold transition-colors">
+                className="min-h-11 flex-1 rounded-xl bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
                 Lanjutkan
               </button>
               <button onClick={engine.doFreshStart}
-                className="flex-1 bg-zinc-700 hover:bg-zinc-600 rounded-xl py-2.5 text-sm font-semibold transition-colors">
+                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7">
                 Mulai Ulang
               </button>
             </div>
@@ -118,28 +118,28 @@ export default function EngineKecerdasan({
       {/* Confirm submit modal */}
       {showConfirm && (
         <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80">
-          <div className="bg-zinc-900 border border-yellow-600/70 rounded-2xl p-8 max-w-sm w-full space-y-5">
+          <div className="w-full max-w-sm space-y-5 rounded-2xl border border-border bg-card p-8 text-foreground">
             <div className="flex items-center gap-3">
               <span className="text-2xl">⚠️</span>
               <h2 className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
             </div>
-            <div className="bg-zinc-800/60 rounded-xl px-4 py-3 text-sm text-zinc-300 space-y-1">
-              <p>Kamu baru menjawab <span className="text-white font-bold">{answeredCount}</span> dari <span className="text-white font-bold">{sorted.length}</span> soal.</p>
+            <div className="space-y-1 rounded-xl bg-accent-soft px-4 py-3 text-sm text-foreground">
+              <p>Kamu baru menjawab <span className="font-bold">{answeredCount}</span> dari <span className="font-bold">{sorted.length}</span> soal.</p>
               {answeredCount < sorted.length && (
-                <p className="text-yellow-400 text-xs">Soal yang belum dijawab akan dihitung tidak dijawab.</p>
+                <p className="text-xs text-foreground">Soal yang belum dijawab akan dihitung tidak dijawab.</p>
               )}
             </div>
-            <p className="text-zinc-500 text-xs">Setelah dikumpulkan, kamu tidak bisa kembali mengerjakan sub-tes ini.</p>
+            <p className="text-xs text-muted-foreground">Setelah dikumpulkan, kamu tidak bisa kembali mengerjakan sub-tes ini.</p>
             <div className="flex gap-3 pt-1">
               <button
                 onClick={() => setShowConfirm(false)}
-                className="flex-1 bg-zinc-700 hover:bg-zinc-600 rounded-xl py-2.5 text-sm font-semibold transition-colors"
+                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7"
               >
                 Batal
               </button>
               <button
                 onClick={() => { setShowConfirm(false); engine.finish(); }}
-                className="flex-1 bg-yellow-600 hover:bg-yellow-500 rounded-xl py-2.5 text-sm font-semibold transition-colors text-zinc-950"
+                className="min-h-11 flex-1 rounded-xl bg-accent py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent/90"
               >
                 Ya, Kumpulkan
               </button>
@@ -149,17 +149,17 @@ export default function EngineKecerdasan({
       )}
 
       {/* Sticky header */}
-      <header className="sticky top-0 z-30 bg-zinc-900/95 backdrop-blur border-b border-zinc-800">
+      <header className="sticky top-0 z-30 border-b border-primary/10 bg-primary text-primary-foreground backdrop-blur">
         <div className="max-w-7xl mx-auto px-6 py-3 flex items-center justify-between">
           <div>
-            <p className="text-[11px] text-zinc-500 uppercase tracking-widest font-semibold">Sub-Tes Kecerdasan</p>
-            <p className="text-sm text-zinc-300 mt-0.5">
-              Soal <span className="text-white font-bold">{idx + 1}</span>
-              <span className="text-zinc-600"> / {sorted.length}</span>
-              <span className="text-zinc-600 ml-3 text-xs">{answeredCount} terjawab</span>
+            <p className="text-[11px] font-semibold uppercase tracking-widest text-white/60">Sub-Tes Kecerdasan</p>
+            <p className="mt-0.5 text-sm text-white/80">
+              Soal <span className="font-bold text-primary-foreground">{idx + 1}</span>
+              <span className="text-white/60"> / {sorted.length}</span>
+              <span className="ml-3 text-xs text-white/60">{answeredCount} terjawab</span>
             </p>
           </div>
-          <div className={`flex items-center gap-2 font-mono font-bold text-2xl ${lowTime ? "text-red-400 animate-pulse" : "text-white"}`}>
+          <div className={`flex items-center gap-2 font-mono tabular-nums font-bold text-2xl ${lowTime ? "animate-pulse text-accent" : "text-primary-foreground"}`}>
             <svg className="w-5 h-5 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
             </svg>
@@ -173,11 +173,11 @@ export default function EngineKecerdasan({
 
         {/* ── Left: Question card ── */}
         <main className="flex-1 min-w-0 space-y-4">
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl overflow-hidden">
+          <div className="overflow-hidden rounded-2xl border border-border bg-card">
             {/* Card header */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-800">
-              <span className="text-sm font-semibold text-zinc-300">Soal Nomor {idx + 1}</span>
-              <span className="text-xs text-zinc-500 bg-zinc-800 px-3 py-1 rounded-full">
+            <div className="flex items-center justify-between border-b border-border px-6 py-4">
+              <span className="text-sm font-semibold">Soal Nomor {idx + 1}</span>
+              <span className="rounded-full bg-primary/7 px-3 py-1 text-xs text-muted-foreground">
                 {payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
               </span>
             </div>
@@ -185,10 +185,10 @@ export default function EngineKecerdasan({
             {/* Question content */}
             <div className="px-6 py-5 space-y-5">
               {payload?.instruksi && (
-                <div className="text-sm font-semibold text-blue-400 bg-blue-900/10 border border-blue-900/30 p-3 rounded-xl">
+                <div className="rounded-xl border border-primary/20 bg-primary/7 p-3 text-sm font-semibold text-foreground">
                   {payload.instruksi}
                   {payload?.is_multi_select && (
-                    <span className="block mt-1 text-xs text-blue-300 font-normal">
+                    <span className="mt-1 block text-xs font-normal text-muted-foreground">
                       Anda dapat memilih lebih dari satu jawaban.
                     </span>
                   )}
@@ -196,13 +196,13 @@ export default function EngineKecerdasan({
               )}
 
               {payload?.sub_text && (
-                <div className="text-sm italic leading-relaxed text-zinc-300 border-l-2 border-zinc-700 pl-4 py-1">
+                <div className="border-l-2 border-primary/20 py-1 pl-4 text-sm italic leading-relaxed text-muted-foreground">
                   {payload.sub_text}
                 </div>
               )}
 
               {payload?.question_text && (
-                <p className="text-base leading-relaxed text-zinc-100">{payload.question_text}</p>
+                <p className="text-base leading-relaxed">{payload.question_text}</p>
               )}
 
               {payload?.svg_content && (
@@ -240,18 +240,18 @@ export default function EngineKecerdasan({
                       onClick={handleSelect}
                       className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-150 ${
                         isSelected
-                          ? "border-blue-500 bg-blue-600/15 shadow-sm shadow-blue-500/20"
-                          : "border-zinc-700/50 hover:border-zinc-600 hover:bg-zinc-800/60"
+                          ? "border-primary bg-primary/7"
+                          : "border-border hover:border-primary/40 hover:bg-primary/7"
                       }`}
                     >
                       <span className={`flex h-9 w-9 shrink-0 items-center justify-center ${payload?.is_multi_select ? 'rounded-md' : 'rounded-full'} text-sm font-bold transition-colors ${
                         isSelected
-                          ? "bg-blue-600 text-zinc-950"
-                          : "bg-zinc-800 text-zinc-400 border border-zinc-700"
+                          ? "bg-primary text-primary-foreground"
+                          : "border border-border bg-primary/7 text-muted-foreground"
                       }`}>
                         {c.key}
                       </span>
-                      <span className="text-sm text-zinc-200 leading-relaxed">{c.text}</span>
+                      <span className="text-sm leading-relaxed">{c.text}</span>
                     </button>
                   );
                 })}
@@ -264,14 +264,14 @@ export default function EngineKecerdasan({
             <button
               onClick={() => store.getState().prev()}
               disabled={idx === 0}
-              className="flex items-center gap-2 rounded-xl border border-zinc-700 px-5 py-2.5 text-sm font-medium text-zinc-300 disabled:opacity-30 hover:bg-zinc-800 hover:border-zinc-600 transition-colors"
+              className="min-h-11 rounded-xl border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:opacity-30"
             >
               ← Sebelumnya
             </button>
             <button
               onClick={() => store.getState().next()}
               disabled={idx >= sorted.length - 1}
-              className="flex items-center gap-2 rounded-xl border border-zinc-700 px-5 py-2.5 text-sm font-medium text-zinc-300 disabled:opacity-30 hover:bg-zinc-800 hover:border-zinc-600 transition-colors"
+              className="min-h-11 rounded-xl border border-border px-5 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:opacity-30"
             >
               Selanjutnya →
             </button>
@@ -281,25 +281,25 @@ export default function EngineKecerdasan({
         {/* ── Right: Sticky sidebar ── */}
         <aside className="w-72 shrink-0 sticky top-20 space-y-4">
           {/* Tipe soal */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
-            <p className="text-[11px] text-zinc-500 uppercase tracking-widest font-semibold mb-2">Tipe Soal</p>
-            <div className="inline-flex items-center gap-2 bg-blue-900/30 border border-blue-800/50 text-blue-300 text-xs font-semibold px-3 py-1.5 rounded-lg">
-              <span className="h-1.5 w-1.5 rounded-full bg-blue-400"></span>
+          <div className="rounded-2xl border border-border bg-card p-4">
+            <p className="mb-2 text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Tipe Soal</p>
+            <div className="inline-flex items-center gap-2 rounded-lg border border-primary/20 bg-primary/7 px-3 py-1.5 text-xs font-semibold text-primary">
+              <span className="h-1.5 w-1.5 rounded-full bg-primary"></span>
               Kognitif &amp; Spasial
             </div>
           </div>
 
           {/* Daftar soal */}
-          <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-4">
+          <div className="rounded-2xl border border-border bg-card p-4">
             <div className="flex items-center justify-between mb-3">
-              <p className="text-[11px] text-zinc-500 uppercase tracking-widest font-semibold">Daftar Soal</p>
-              <span className="text-xs text-zinc-500 font-mono">{answeredCount}/{sorted.length}</span>
+              <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">Daftar Soal</p>
+              <span className="font-mono text-xs text-muted-foreground">{answeredCount}/{sorted.length}</span>
             </div>
 
             {/* Progress bar */}
-            <div className="h-1 bg-zinc-800 rounded-full overflow-hidden mb-3">
+            <div className="mb-3 h-1 overflow-hidden rounded-full bg-primary/7">
               <div
-                className="h-full bg-emerald-500 rounded-full transition-all duration-300"
+                className="h-full rounded-full bg-success transition-all duration-300"
                 style={{ width: `${(answeredCount / sorted.length) * 100}%` }}
               />
             </div>
@@ -315,10 +315,10 @@ export default function EngineKecerdasan({
                     title={`Soal ${i + 1}${answered ? ` — Pilihan ${answered}` : ""}`}
                     className={`relative flex flex-col items-center justify-center h-9 w-9 rounded-lg text-[10px] font-bold transition-all ${
                       current
-                        ? "ring-2 ring-blue-400 ring-offset-1 ring-offset-zinc-900 bg-blue-600 text-zinc-950"
+                        ? "bg-primary text-primary-foreground ring-2 ring-primary/30 ring-offset-1 ring-offset-card"
                         : answered
-                        ? "bg-emerald-700 text-white hover:bg-emerald-600"
-                        : "bg-zinc-800 text-zinc-500 hover:bg-zinc-700 border border-zinc-700"
+                        ? "bg-success text-white hover:bg-success/90"
+                        : "border border-border bg-card text-muted-foreground hover:bg-primary/7"
                     }`}
                   >
                     <span className="leading-none">{i + 1}</span>
@@ -331,15 +331,15 @@ export default function EngineKecerdasan({
             </div>
 
             {/* Legend */}
-            <div className="flex items-center gap-3 mt-3 pt-3 border-t border-zinc-800">
-              <div className="flex items-center gap-1.5 text-[10px] text-zinc-500">
-                <span className="h-2.5 w-2.5 rounded bg-emerald-700"></span>Dijawab
+            <div className="mt-3 flex items-center gap-3 border-t border-border pt-3">
+              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                <span className="h-2.5 w-2.5 rounded bg-success"></span>Dijawab
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-zinc-500">
-                <span className="h-2.5 w-2.5 rounded bg-zinc-800 border border-zinc-700"></span>Belum
+              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                <span className="h-2.5 w-2.5 rounded border border-border bg-card"></span>Belum
               </div>
-              <div className="flex items-center gap-1.5 text-[10px] text-zinc-500">
-                <span className="h-2.5 w-2.5 rounded bg-blue-600"></span>Aktif
+              <div className="flex items-center gap-1.5 text-[10px] text-muted-foreground">
+                <span className="h-2.5 w-2.5 rounded bg-primary"></span>Aktif
               </div>
             </div>
           </div>
@@ -347,7 +347,7 @@ export default function EngineKecerdasan({
           {/* Submit */}
           <button
             onClick={() => setShowConfirm(true)}
-            className="w-full rounded-2xl bg-emerald-600 py-3.5 text-sm font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-950/50"
+            className="min-h-12 w-full rounded-xl bg-success py-3.5 text-sm font-bold text-white transition-all duration-200 hover:-translate-y-0.5 hover:bg-success/90"
           >
             Selesai &amp; Kumpulkan
           </button>

@@ -44,12 +44,19 @@ export default async function KecermatanPage({
     .order("sequence_number", { ascending: true });
 
   const snapshot = (ms.recovery_snapshot ?? null) as RecoverySnapshot | null;
+  const { data: testSession } = await supabaseAdmin
+    .from("test_sessions")
+    .select("users(name)")
+    .eq("id", sessionId)
+    .maybeSingle();
+  const participant = testSession?.users as unknown as { name: string } | null;
 
   return (
     <KecermatanClient
       questions={questions ?? []}
       moduleSessionId={ms.id}
       sessionId={sessionId}
+      participantName={participant?.name ?? "Peserta"}
       snapshot={snapshot}
     />
   );

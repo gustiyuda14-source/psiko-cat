@@ -53,37 +53,37 @@ export default async function AdminPage() {
   );
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
-      <div className="max-w-4xl mx-auto space-y-8">
+    <div className="min-h-screen bg-background px-4 py-10 text-foreground">
+      <div className="mx-auto max-w-4xl space-y-8">
 
         {/* Header */}
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-2xl font-bold">Dashboard Admin</h1>
-            <p className="text-sm text-zinc-500 mt-0.5">D&apos;Ajiks Akademi · Psiko CAT</p>
+            <h1 className="font-heading text-3xl font-bold">Dashboard Admin</h1>
+            <p className="mt-0.5 text-sm text-muted-foreground">D&apos;Ajiks Akademi · Psiko CAT</p>
           </div>
           <LogoutButton />
         </div>
 
         {/* Stats */}
         <div className="grid grid-cols-3 gap-3">
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
+          <div className="rounded-2xl border border-border bg-card p-4 text-center shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
             <p className="text-3xl font-bold">{totalPeserta}</p>
-            <p className="text-xs text-zinc-500 mt-1">Total Peserta</p>
+            <p className="mt-1 text-xs text-muted-foreground">Total Peserta</p>
           </div>
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
-            <p className="text-3xl font-bold text-blue-400">{totalTes}</p>
-            <p className="text-xs text-zinc-500 mt-1">Total Attempt</p>
+          <div className="rounded-2xl border border-border bg-card p-4 text-center shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
+            <p className="text-3xl font-bold text-primary">{totalTes}</p>
+            <p className="mt-1 text-xs text-muted-foreground">Total Attempt</p>
           </div>
-          <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-4 text-center">
-            <p className="text-3xl font-bold text-emerald-400">{totalLulus}</p>
-            <p className="text-xs text-zinc-500 mt-1">Total Lulus</p>
+          <div className="rounded-2xl border border-border bg-card p-4 text-center shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
+            <p className="text-3xl font-bold text-success">{totalLulus}</p>
+            <p className="mt-1 text-xs text-muted-foreground">Total Lulus</p>
           </div>
         </div>
 
         {/* Peserta table */}
         <div className="space-y-3">
-          <h2 className="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Daftar Peserta</h2>
+          <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Daftar Peserta</h2>
 
           {peserta.map((u) => {
             const sessions = (u.test_sessions ?? []).sort(
@@ -100,21 +100,21 @@ export default async function AdminPage() {
             const latestLulus = completed.filter((s) => s.is_passed).length;
 
             return (
-              <div key={u.id} className="rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4">
+              <div key={u.id} className="rounded-2xl border border-border bg-card px-5 py-4 shadow-[0_10px_28px_-20px_rgba(16,33,59,0.35)]">
                 <div className="flex items-start justify-between">
                   <div>
                     <div className="flex items-center gap-2">
                       <span className="font-semibold">{u.name}</span>
-                      <span className="text-xs text-zinc-600">@{u.username}</span>
-                      <span className="text-xs text-zinc-700 border border-zinc-800 rounded px-1.5 py-0.5">
+                      <span className="text-xs text-muted-foreground">@{u.username}</span>
+                      <span className="rounded border border-border px-1.5 py-0.5 text-xs text-muted-foreground">
                         {u.gender === "L" ? "Laki-laki" : "Perempuan"}
                       </span>
                     </div>
-                    <div className="mt-1 flex items-center gap-3 text-xs text-zinc-500">
+                    <div className="mt-1 flex items-center gap-3 text-xs text-muted-foreground">
                       <span>{sessions.length} attempt</span>
                       <span>{latestLulus} lulus</span>
                       {best?.nap_score != null && (
-                        <span className={best.is_passed ? "text-emerald-400" : "text-red-400"}>
+                        <span className={best.is_passed ? "text-success" : "text-destructive"}>
                           Terbaik: {best.nap_score.toFixed(1)}
                         </span>
                       )}
@@ -124,7 +124,7 @@ export default async function AdminPage() {
                     {best && (
                       <Link
                         href={`/test/${best.id}/result`}
-                        className="text-xs text-zinc-400 hover:text-white transition-colors"
+                        className="text-xs text-primary transition-colors hover:text-primary/70"
                       >
                         Lihat hasil terbaik →
                       </Link>
@@ -134,27 +134,27 @@ export default async function AdminPage() {
 
                 {/* History per peserta */}
                 {sessions.length > 0 && (
-                  <div className="mt-3 space-y-1.5 border-t border-zinc-800 pt-3">
+                  <div className="mt-3 space-y-1.5 border-t border-border pt-3">
                     {sessions.map((s) => {
                       const done = s.status === "COMPLETED" || s.status === "DISQUALIFIED";
                       return (
                         <div key={s.id} className="flex items-center justify-between text-xs">
-                          <span className="text-zinc-600">{formatDate(s.completed_at ?? s.created_at)}</span>
+                          <span className="text-muted-foreground">{formatDate(s.completed_at ?? s.created_at)}</span>
                           <div className="flex items-center gap-3">
                             {done ? (
                               <>
-                                <span className={s.is_passed ? "text-emerald-400" : "text-red-400"}>
+                                <span className={s.is_passed ? "text-success" : "text-destructive"}>
                                   {s.is_passed ? "Lulus" : s.status === "DISQUALIFIED" ? "Gugur" : "Tidak Lulus"}
                                 </span>
-                                <span className="font-mono text-zinc-300">
+                                <span className="font-mono text-foreground">
                                   {s.nap_score?.toFixed(1) ?? "-"}
                                 </span>
-                                <Link href={`/test/${s.id}/result`} className="text-zinc-500 hover:text-zinc-300">
+                                <Link href={`/test/${s.id}/result`} className="text-muted-foreground hover:text-primary">
                                   Detail →
                                 </Link>
                               </>
                             ) : (
-                              <span className="text-blue-400">{s.status}</span>
+                              <span className="text-primary">{s.status}</span>
                             )}
                           </div>
                         </div>
