@@ -5,7 +5,7 @@ import type {
   KepribadianOptionsPayload,
   RecoverySnapshot,
 } from "@/lib/types/safe-question";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useKepribadianStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
 
@@ -48,6 +48,7 @@ export default function EngineKepribadian({
   });
 
   const { mounted, isOffline, showResume, resumeIndex, secondsLeft, state, store } = engine;
+  const [showConfirm, setShowConfirm] = useState(false);
 
   useEffect(() => {
     if (state.status === "completed") {
@@ -109,12 +110,45 @@ export default function EngineKepribadian({
             <p className="text-zinc-400 text-sm">Sesi sebelumnya terdeteksi pada pernyataan nomor {resumeIndex + 1}.</p>
             <div className="flex gap-3">
               <button onClick={engine.doResume}
-                className="flex-1 bg-blue-600 hover:bg-blue-500 rounded-xl py-2.5 text-sm font-semibold transition-colors">
+                className="flex-1 bg-blue-600 text-zinc-950 hover:bg-blue-500 rounded-xl py-2.5 text-sm font-semibold transition-colors">
                 Lanjutkan
               </button>
               <button onClick={engine.doFreshStart}
                 className="flex-1 bg-zinc-700 hover:bg-zinc-600 rounded-xl py-2.5 text-sm font-semibold transition-colors">
                 Mulai Ulang
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Confirm submit modal */}
+      {showConfirm && (
+        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/80">
+          <div className="bg-zinc-900 border border-yellow-600/70 rounded-2xl p-8 max-w-sm w-full space-y-5">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl">⚠️</span>
+              <h2 className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
+            </div>
+            <div className="bg-zinc-800/60 rounded-xl px-4 py-3 text-sm text-zinc-300 space-y-1">
+              <p>Kamu baru menjawab <span className="text-white font-bold">{answeredCount}</span> dari <span className="text-white font-bold">{sorted.length}</span> pernyataan.</p>
+              {answeredCount < sorted.length && (
+                <p className="text-yellow-400 text-xs">Pernyataan yang belum dijawab akan dihitung tidak dijawab.</p>
+              )}
+            </div>
+            <p className="text-zinc-500 text-xs">Setelah dikumpulkan, kamu tidak bisa kembali mengerjakan sub-tes ini.</p>
+            <div className="flex gap-3 pt-1">
+              <button
+                onClick={() => setShowConfirm(false)}
+                className="flex-1 bg-zinc-700 hover:bg-zinc-600 rounded-xl py-2.5 text-sm font-semibold transition-colors"
+              >
+                Batal
+              </button>
+              <button
+                onClick={() => { setShowConfirm(false); engine.finish(); }}
+                className="flex-1 bg-yellow-600 hover:bg-yellow-500 rounded-xl py-2.5 text-sm font-semibold transition-colors text-zinc-950"
+              >
+                Ya, Kumpulkan
               </button>
             </div>
           </div>
@@ -252,7 +286,7 @@ export default function EngineKepribadian({
                     title={`Pernyataan ${i + 1}${answered ? ` — ${answered}` : ""}`}
                     className={`relative flex flex-col items-center justify-center h-9 w-9 rounded-lg text-[10px] font-bold transition-all ${
                       current
-                        ? "ring-2 ring-blue-400 ring-offset-1 ring-offset-zinc-900 bg-blue-600 text-white"
+                        ? "ring-2 ring-blue-400 ring-offset-1 ring-offset-zinc-900 bg-blue-600 text-zinc-950"
                         : answered
                         ? "bg-emerald-700 text-white hover:bg-emerald-600"
                         : "bg-zinc-800 text-zinc-500 hover:bg-zinc-700 border border-zinc-700"
@@ -282,7 +316,7 @@ export default function EngineKepribadian({
 
           {/* Submit */}
           <button
-            onClick={engine.finish}
+            onClick={() => setShowConfirm(true)}
             className="w-full rounded-2xl bg-emerald-600 py-3.5 text-sm font-bold hover:bg-emerald-500 transition-colors shadow-lg shadow-emerald-950/50"
           >
             Selesai &amp; Kumpulkan

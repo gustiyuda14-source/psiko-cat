@@ -68,12 +68,18 @@ async function scoreKecermatan(module_session_id: string) {
 
   const safeLogs = (logs ?? []) as unknown as LogRow[];
 
-  for (const log of safeLogs) {
-    const is_correct = log.response_value === log.question.scoring_rule.correct_choice;
-    await supabaseAdmin
-      .from("kecermatan_logs")
-      .update({ is_correct })
-      .eq("id", log.id);
+  // Batch updates in parallel chunks to avoid N+1 serial queries
+  const updates = safeLogs.map((log) => ({
+    id: log.id,
+    is_correct: log.response_value === log.question.scoring_rule.correct_choice,
+  }));
+  for (let i = 0; i < updates.length; i += 50) {
+    const chunk = updates.slice(i, i + 50);
+    await Promise.all(
+      chunk.map(({ id, is_correct }) =>
+        supabaseAdmin.from("kecermatan_logs").update({ is_correct }).eq("id", id)
+      )
+    );
   }
 
   const columnMap = new Map<number, { total_klik: number; total_benar: number }>();
@@ -102,7 +108,7 @@ export type RunCalculateResult = {
   disqualified_reason: string | null;
 };
 
-export async function runSessionCalculate(session_id: string): Promise<RunCalculateResult | null> {
+export async function runSessionCalculate(session_id: string, force = false): Promise<RunCalculateResult | null> {
   const { data: testSession, error: tsError } = await supabaseAdmin
     .from("test_sessions")
     .select("id, status, module_sessions(*)")
@@ -111,7 +117,7 @@ export async function runSessionCalculate(session_id: string): Promise<RunCalcul
 
   if (tsError || !testSession) return null;
 
-  if (testSession.status === "COMPLETED" || testSession.status === "DISQUALIFIED") {
+  if (!force && (testSession.status === "COMPLETED" || testSession.status === "DISQUALIFIED")) {
     return null;
   }
 

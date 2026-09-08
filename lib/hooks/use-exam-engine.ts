@@ -95,8 +95,12 @@ export function useExamEngine({
   }, [store]);
 
   const finish = useCallback(async () => {
-    await flushRef.current();
-    // Mark module as COMPLETED in DB
+    // Retry flush up to 3x to ensure all buffered answers reach the server
+    for (let attempt = 0; attempt < 3; attempt++) {
+      await flushRef.current();
+      if (answersBuffer.current.length === 0) break;
+      await new Promise((r) => setTimeout(r, 500));
+    }
     try {
       await fetch(
         `/api/sessions/${sidRef.current}/modules/${msidRef.current}/complete`,
