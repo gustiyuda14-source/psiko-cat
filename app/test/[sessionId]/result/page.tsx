@@ -2,21 +2,17 @@ import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { runSessionCalculate } from "@/lib/scoring/runner";
+import {
+  fetchKecerdasanReview,
+  fetchKepribadianReview,
+  fetchKecermatanDetailReview,
+} from "@/lib/review";
 import PembahasanSection, {
   type KecerdasanReviewItem,
   type KepribadianReviewItem,
   type KecermatanSummary,
   type KecermatanColumnGroup,
-  type KecermatanDetailItem,
 } from "@/app/components/PembahasanSection";
-import type {
-  KecerdasanOptionsPayload,
-  KepribadianOptionsPayload,
-  KecerdasanScoringRule,
-  KecermatanOptionsPayload,
-} from "@/lib/types/safe-question";
-
-const KECERMATAN_KEYS = ["A", "B", "C", "D", "E"] as const;
 
 function round1(n: number | null) {
   return n == null ? "-" : n.toFixed(1);
@@ -27,15 +23,15 @@ function ScoreRow({ label, value, max }: { label: string; value: number | null; 
   return (
     <div className="space-y-1">
       <div className="flex justify-between text-sm">
-        <span className="text-zinc-300">{label}</span>
+        <span className="text-muted-foreground">{label}</span>
         <span className="font-mono font-semibold">
           {round1(value)}
-          <span className="text-zinc-500 text-xs">/{max}</span>
+          <span className="text-muted-foreground text-xs">/{max}</span>
         </span>
       </div>
-      <div className="h-2 bg-zinc-800 rounded-full overflow-hidden">
+      <div className="h-2 bg-border rounded-full overflow-hidden">
         <div
-          className="h-full rounded-full bg-blue-500 transition-all"
+          className="h-full rounded-full bg-primary transition-all"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -52,125 +48,6 @@ type ModuleSessionRow = {
   kt_index: number | null;
   kh_index: number | null;
 };
-
-async function fetchKecerdasanReview(moduleSessionId: string): Promise<KecerdasanReviewItem[]> {
-  const { data: answers } = await supabaseAdmin
-    .from("answers")
-    .select("question_id, selected_key")
-    .eq("module_session_id", moduleSessionId);
-
-  if (!answers?.length) return [];
-
-  const { data: questions } = await supabaseAdmin
-    .from("questions")
-    .select("id, sequence_number, options_payload, scoring_rule")
-    .in("id", answers.map((a) => a.question_id));
-
-  const qMap = new Map((questions ?? []).map((q) => [q.id, q]));
-
-  return answers
-    .map((a) => {
-      const q = qMap.get(a.question_id);
-      if (!q) return null;
-      const rule = q.scoring_rule as unknown as KecerdasanScoringRule;
-      return {
-        question_id: a.question_id,
-        sequence_number: q.sequence_number as number,
-        selected_key: a.selected_key,
-        correct_key: rule.correct_key,
-        is_correct: a.selected_key === rule.correct_key,
-        payload: q.options_payload as unknown as KecerdasanOptionsPayload,
-      };
-    })
-    .filter(Boolean) as KecerdasanReviewItem[];
-}
-
-async function fetchKepribadianReview(moduleSessionId: string): Promise<KepribadianReviewItem[]> {
-  const { data: answers } = await supabaseAdmin
-    .from("answers")
-    .select("question_id, selected_key")
-    .eq("module_session_id", moduleSessionId);
-
-  if (!answers?.length) return [];
-
-  const { data: questions } = await supabaseAdmin
-    .from("questions")
-    .select("id, sequence_number, options_payload")
-    .in("id", answers.map((a) => a.question_id));
-
-  const qMap = new Map((questions ?? []).map((q) => [q.id, q]));
-
-  return answers
-    .map((a) => {
-      const q = qMap.get(a.question_id);
-      if (!q) return null;
-      return {
-        question_id: a.question_id,
-        sequence_number: q.sequence_number as number,
-        selected_key: a.selected_key,
-        payload: q.options_payload as unknown as KepribadianOptionsPayload,
-      };
-    })
-    .filter(Boolean) as KepribadianReviewItem[];
-}
-
-// Kunci jawaban benar untuk Kecermatan diturunkan dari options_payload saja (shown vs symbol_map),
-// TIDAK pernah menyentuh scoring_rule — aman karena shown selalu berisi 4 dari 5 simbol,
-// simbol yang "hilang" dari shown itulah jawaban benarnya (lihat generator di Fase 6).
-async function fetchKecermatanDetailReview(moduleSessionId: string): Promise<KecermatanColumnGroup[]> {
-  const { data: logs } = await supabaseAdmin
-    .from("kecermatan_logs")
-    .select("question_id, column_index, response_value, is_correct")
-    .eq("module_session_id", moduleSessionId);
-
-  if (!logs?.length) return [];
-
-  const wrongLogs = logs.filter((l) => l.is_correct === false);
-  const questionIds = [...new Set(wrongLogs.map((l) => l.question_id))];
-
-  const { data: questions } = questionIds.length
-    ? await supabaseAdmin
-        .from("questions")
-        .select("id, sequence_number, options_payload")
-        .in("id", questionIds)
-    : { data: [] as { id: string; sequence_number: number; options_payload: unknown }[] };
-
-  const qMap = new Map((questions ?? []).map((q) => [q.id, q]));
-
-  const groups = new Map<number, { total: number; correct: number; wrong: KecermatanDetailItem[] }>();
-  for (const log of logs) {
-    if (!groups.has(log.column_index)) groups.set(log.column_index, { total: 0, correct: 0, wrong: [] });
-    const g = groups.get(log.column_index)!;
-    g.total++;
-    if (log.is_correct) g.correct++;
-  }
-
-  for (const log of wrongLogs) {
-    const q = qMap.get(log.question_id);
-    if (!q) continue;
-    const payload = q.options_payload as unknown as KecermatanOptionsPayload;
-    const correctKey = KECERMATAN_KEYS.find((k) => !payload.shown.includes(payload.symbol_map[k])) ?? "?";
-    const g = groups.get(log.column_index)!;
-    g.wrong.push({
-      question_id: log.question_id,
-      sequence_number: q.sequence_number as number,
-      shown: payload.shown,
-      selected_key: log.response_value,
-      selected_symbol: payload.symbol_map[log.response_value as keyof typeof payload.symbol_map] ?? "?",
-      correct_key: correctKey,
-      correct_symbol: correctKey === "?" ? "?" : payload.symbol_map[correctKey as keyof typeof payload.symbol_map],
-    });
-  }
-
-  return Array.from(groups.entries())
-    .map(([column_index, g]) => ({
-      column_index,
-      total: g.total,
-      correct: g.correct,
-      wrong: g.wrong.sort((a, b) => a.sequence_number - b.sequence_number),
-    }))
-    .sort((a, b) => a.column_index - b.column_index);
-}
 
 export default async function ResultPage({
   params,
@@ -233,45 +110,45 @@ export default async function ResultPage({
     : null;
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
+    <div className="min-h-screen bg-background text-foreground px-4 py-10">
       <div className="max-w-lg mx-auto space-y-8">
         {/* Status card */}
         <div
           className={`rounded-xl border p-6 text-center space-y-2 ${
             disqualified
-              ? "border-red-700 bg-red-950/30"
+              ? "border-destructive bg-destructive/10"
               : passed
-              ? "border-emerald-700 bg-emerald-950/30"
-              : "border-yellow-700 bg-yellow-950/20"
+              ? "border-success bg-success-soft"
+              : "border-accent bg-accent-soft"
           }`}
         >
           <div className="text-4xl">{disqualified ? "✗" : passed ? "✓" : "—"}</div>
           <h1 className="text-2xl font-bold">
             {disqualified ? "Gugur Mutlak" : passed ? "Lulus" : "Tidak Lulus"}
           </h1>
-          <p className="text-zinc-400 text-sm">
+          <p className="text-muted-foreground text-sm">
             {user?.name} · {user?.email}
           </p>
           {session.disqualified_reason && (
-            <p className="text-red-400 text-xs">{session.disqualified_reason}</p>
+            <p className="text-destructive text-xs">{session.disqualified_reason}</p>
           )}
         </div>
 
         {/* NAP score */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 space-y-2">
-          <p className="text-xs text-zinc-500 uppercase tracking-wider">Nilai Akhir Psikotes (NAP)</p>
-          <p className="text-5xl font-bold">{round1(session.nap_score)}</p>
-          <p className="text-xs text-zinc-500">Lulus minimal 61 poin</p>
+        <div className="rounded-xl border border-border bg-card p-6 space-y-2">
+          <p className="text-xs text-muted-foreground uppercase tracking-wider">Nilai Akhir Psikotes (NAP)</p>
+          <p className="text-5xl font-bold text-foreground">{round1(session.nap_score)}</p>
+          <p className="text-xs text-muted-foreground">Lulus minimal 61 poin</p>
         </div>
 
         {/* Rincian nilai */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900 p-6 space-y-4">
-          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider">Rincian Nilai</h2>
+        <div className="rounded-xl border border-border bg-card p-6 space-y-4">
+          <h2 className="text-sm font-semibold text-foreground uppercase tracking-wider">Rincian Nilai</h2>
           <ScoreRow label="Kecerdasan (max 60)" value={ks?.nap_contribution ?? null} max={60} />
           <ScoreRow label="Kepribadian (max 20)" value={kp?.nap_contribution ?? null} max={20} />
           <ScoreRow label="Kecermatan (max 20)" value={kc?.nap_contribution ?? null} max={20} />
           {kc && (
-            <div className="pt-2 text-xs text-zinc-500 space-y-1 border-t border-zinc-800">
+            <div className="pt-2 text-xs text-muted-foreground space-y-1 border-t border-border">
               <p>Ke (Kecepatan): {round1(kc.ke_index)}</p>
               <p>Kt (Ketelitian): {round1(kc.kt_index)}</p>
               <p>Kh (Ketahanan): {round1(kc.kh_index)}</p>
@@ -287,12 +164,20 @@ export default async function ResultPage({
           kecermatanDetail={kecermatanDetail}
         />
 
-        <Link
-          href="/dashboard"
-          className="block w-full rounded-xl border border-zinc-700 py-3 text-center text-sm font-semibold text-zinc-300 hover:bg-zinc-800 transition-colors"
-        >
-          ← Kembali ke Dashboard
-        </Link>
+        <div className="grid grid-cols-2 gap-3">
+          <Link
+            href="/dashboard"
+            className="block w-full rounded-xl border border-border text-foreground py-3 text-center text-sm font-semibold hover:bg-primary/5 transition-colors"
+          >
+            ← Kembali ke Dashboard
+          </Link>
+          <Link
+            href={`/dashboard/review?sesi=${sessionId}`}
+            className="block w-full rounded-xl border border-border text-foreground py-3 text-center text-sm font-semibold hover:bg-primary/5 transition-colors"
+          >
+            Buka di Review Soal
+          </Link>
+        </div>
       </div>
     </div>
   );
