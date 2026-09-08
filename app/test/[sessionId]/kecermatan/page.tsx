@@ -12,7 +12,7 @@ export default async function KecermatanPage({
 
   const { data: ms } = await supabaseAdmin
     .from("module_sessions")
-    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id")
+    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id, kecermatan_package_number")
     .eq("test_session_id", sessionId)
     .eq("module_type", "KECERMATAN")
     .maybeSingle();
@@ -37,9 +37,10 @@ export default async function KecermatanPage({
 
   const { data: questions } = await supabaseAdmin
     .from("questions")
-    .select("id, type, sequence_number, column_index, options_payload, is_active, created_at, updated_at")
+    .select("id, type, sequence_number, column_index, package_number, options_payload, is_active, created_at, updated_at")
     .eq("type", "KECERMATAN")
     .eq("is_active", true)
+    .eq("package_number", ms.kecermatan_package_number ?? 7)
     .order("column_index", { ascending: true })
     .order("sequence_number", { ascending: true });
 

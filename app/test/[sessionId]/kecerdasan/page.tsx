@@ -37,7 +37,7 @@ export default async function KecerdasanPage({
 
   const { data: questions } = await supabaseAdmin
     .from("questions")
-    .select("id, type, sequence_number, column_index, options_payload, is_active, created_at, updated_at")
+    .select("id, type, sequence_number, column_index, package_number, options_payload, is_active, created_at, updated_at")
     .eq("type", "KECERDASAN")
     .eq("is_active", true)
     .order("sequence_number", { ascending: true });

@@ -18,6 +18,12 @@ export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
 
 export const MODULE_ORDER: ModuleType[] = ["KECERDASAN", "KECERMATAN", "KEPRIBADIAN"];
 
+export const KECERMATAN_PACKAGES = [3, 4, 5, 6, 7, 8];
+
+export function pickRandomKecermatanPackage(): number {
+  return KECERMATAN_PACKAGES[Math.floor(Math.random() * KECERMATAN_PACKAGES.length)];
+}
+
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
   (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(
     ([type, cfg]) => [cfg.slug, type]
@@ -35,6 +41,8 @@ export async function createTestSessionAndRedirect(userId: string, moduleTypes: 
 
   if (sessionError || !testSession) redirect("/dashboard");
 
+  const kecermatanPackage = moduleTypes.includes("KECERMATAN") ? pickRandomKecermatanPackage() : null;
+
   await supabaseAdmin.from("module_sessions").insert(
     moduleTypes.map((type, i) => ({
       test_session_id: testSession.id,
@@ -42,6 +50,7 @@ export async function createTestSessionAndRedirect(userId: string, moduleTypes: 
       sequence_order: i + 1,
       status: "NOT_STARTED",
       time_limit_seconds: MODULE_CONFIG[type].time_limit_seconds,
+      kecermatan_package_number: type === "KECERMATAN" ? kecermatanPackage : null,
     }))
   );
 
