@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { runSessionCalculate } from "@/lib/scoring/runner";
+import { getNAPPredikat } from "@/lib/scoring/nap";
 import {
   fetchKecerdasanReview,
   fetchKepribadianReview,
@@ -88,6 +89,9 @@ export default async function ResultPage({
   const moduleSessions = session.module_sessions as unknown as ModuleSessionRow[];
   const user = session.users as unknown as { name: string; email: string } | null;
 
+  const isStandalone = moduleSessions.length === 1;
+  const predikat = isStandalone && session.nap_score != null ? getNAPPredikat(session.nap_score) : null;
+
   const ks = moduleSessions.find((m) => m.module_type === "KECERDASAN");
   const kp = moduleSessions.find((m) => m.module_type === "KEPRIBADIAN");
   const kc = moduleSessions.find((m) => m.module_type === "KECERMATAN");
@@ -138,7 +142,12 @@ export default async function ResultPage({
         <div className="rounded-xl border border-border bg-card p-6 space-y-2">
           <p className="text-xs text-muted-foreground uppercase tracking-wider">Nilai Akhir Psikotes (NAP)</p>
           <p className="text-5xl font-bold text-foreground">{round1(session.nap_score)}</p>
-          <p className="text-xs text-muted-foreground">Lulus minimal 61 poin</p>
+          {predikat && (
+            <p className="text-sm font-semibold text-foreground">Predikat: {predikat}</p>
+          )}
+          <p className="text-xs text-muted-foreground">
+            {isStandalone ? "Lulus jika skor > 40" : "Lulus minimal 61 poin"}
+          </p>
         </div>
 
         {/* Rincian nilai */}
