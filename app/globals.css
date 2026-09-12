@@ -499,7 +499,11 @@ summary,
      atas — trik padding-box/border-box, tanpa elemen tambahan. */
   background:
     radial-gradient(115% 85% at 12% 0%, rgb(93 140 201 / 0.30), transparent 58%) padding-box,
-    linear-gradient(155deg, #0b2442 0%, #102d52 52%, #17395f 100%) padding-box,
+    /* Digeser naik satu tingkat: stop terendah (#16335a) sekarang lebih terang
+       dari --surface-page (#0b2442), mengikuti pola elevation yang sama dengan
+       --surface-card. Sebelum rebrand, kontras kartu-vs-page datang dari page
+       yang terang; sekarang harus datang dari kartu yang lebih terang. */
+    linear-gradient(155deg, #16335a 0%, #1d3f6b 52%, #24507f 100%) padding-box,
     var(--pc-rim-grad) border-box;
   color: white;
   text-align: left;
