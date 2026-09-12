@@ -55,6 +55,23 @@ export function calculateKecermatan(
   const TOTAL_SOAL = 500;
   const TOTAL_LAJUR = 10;
 
+  const columns = new Set(columnStats.map((column) => column.column_index));
+  const invalid = columnStats.some(
+    (column) =>
+      !Number.isInteger(column.column_index) ||
+      column.column_index < 1 ||
+      column.column_index > TOTAL_LAJUR ||
+      !Number.isInteger(column.total_klik) ||
+      !Number.isInteger(column.total_benar) ||
+      column.total_klik < 0 ||
+      column.total_klik > 50 ||
+      column.total_benar < 0 ||
+      column.total_benar > column.total_klik
+  );
+  if (columnStats.length !== TOTAL_LAJUR || columns.size !== TOTAL_LAJUR || invalid) {
+    throw new RangeError("Statistik Kecermatan harus memuat 10 kolom unik dengan nilai 0–50 yang valid");
+  }
+
   const total_klik = columnStats.reduce((sum, c) => sum + c.total_klik, 0);
   const total_benar = columnStats.reduce((sum, c) => sum + c.total_benar, 0);
 

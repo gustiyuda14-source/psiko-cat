@@ -1,59 +1,132 @@
 "use client";
 
-import { useState } from "react";
-import type { SafeQuestion } from "@/lib/types/safe-question";
-import { MODULE_CONFIG, type ModuleType } from "@/lib/test-session";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
+import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
+import { Badge, EmptyState, PageHeader } from "@/app/components/ui";
+import { KecermatanKeyStrip } from "@/app/components/KecermatanKeyStrip";
+import { Button } from "@/app/components/ui-client";
+import { ArrowRight, ChevronLeft } from "@/app/components/icons";
 import LatihanKecerdasan from "./LatihanKecerdasan";
 import LatihanKepribadian from "./LatihanKepribadian";
 import LatihanKecermatan from "./LatihanKecermatan";
 
+const MODE_NOTE: Record<ModuleType, string> = {
+  KECERDASAN: "Jawaban langsung dikoreksi setiap butir, lengkap dengan kunci yang benar.",
+  KECERMATAN: "Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai.",
+  KEPRIBADIAN:
+    "Tidak ada jawaban benar atau salah — pilihan langsung membawa ke pernyataan berikutnya.",
+};
+
+/*
+  Wrapper halaman ada di sini, bukan di masing-masing route.
+
+  Sebelumnya dua route latihan me-render komponen ini apa adanya ke dalam <main>
+  yang tidak punya padding, jadi kartunya menempel ke tepi viewport dan halaman
+  latihan tidak punya judul sama sekali. Karena kedua route memakai gate yang
+  sama, perbaikannya cukup di satu tempat ini.
+*/
 export default function LatihanGate({
   moduleType,
   questions,
-  packageLabel = "1",
+  packageLabel,
 }: {
   moduleType: ModuleType;
   questions: SafeQuestion[];
   packageLabel?: string;
 }) {
-  const [started, setStarted] = useState(false);
-  const meta = MODULE_CONFIG[moduleType];
-  const label = `Paket Latihan ${packageLabel} - ${meta.label}`;
+  // Halaman sesi sengaja tidak punya sidebar, jadi satu-satunya jalan keluar harus
+  // ada di sini. Kecermatan balik ke pemilih paket (tempat user tadi memilih),
+  // modul lain balik ke daftar latihan.
+  const exitHref =
+    moduleType === "KECERMATAN" ? "/dashboard/latihan/kecermatan" : "/dashboard/latihan";
 
-  if (started) {
-    if (moduleType === "KECERDASAN") return <LatihanKecerdasan questions={questions} />;
-    if (moduleType === "KEPRIBADIAN") return <LatihanKepribadian questions={questions} />;
-    return <LatihanKecermatan questions={questions} />;
-  }
+  const [started, setStarted] = useState(false);
+  const practiceRef = useRef<HTMLDivElement>(null);
+  const meta = MODULE_CONFIG[moduleType];
+  const noun = moduleType === "KEPRIBADIAN" ? "pernyataan" : "butir";
+  const firstQuestion = moduleType === "KECERMATAN"
+    ? [...questions].sort((a, b) => (a.column_index ?? 0) - (b.column_index ?? 0) || a.sequence_number - b.sequence_number)[0]
+    : undefined;
+  const firstSymbols = firstQuestion?.options_payload as unknown as KecermatanOptionsPayload | undefined;
+
+  useEffect(() => {
+    if (started) practiceRef.current?.scrollIntoView({ block: "start" });
+  }, [started]);
 
   return (
-    <div className="rounded-xl border border-border bg-card px-6 py-5 space-y-4">
-      <div className="space-y-1">
-        <div className="flex items-center gap-2">
-          <span className="font-semibold text-lg uppercase tracking-wide text-foreground">{label}</span>
-          <span className="rounded-full border border-border px-2 py-0.5 text-xs text-muted-foreground">
-            Tanpa Batas Waktu
-          </span>
+    <div className="app-page space-y-5">
+      <PageHeader
+        title={`Latihan ${meta.label}`}
+        description={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${meta.shortDesc}`}
+        actions={
+          <>
+            <Badge tone="neutral">Tanpa batas waktu</Badge>
+            <Link
+              href={exitHref}
+              className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-white/25 px-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/12"
+            >
+              <ChevronLeft className="size-4" />
+              Keluar latihan
+            </Link>
+          </>
+        }
+      />
+
+      {started ? (
+        <div ref={practiceRef}>
+          {moduleType === "KECERDASAN" ? (
+            <LatihanKecerdasan questions={questions} />
+          ) : moduleType === "KEPRIBADIAN" ? (
+            <LatihanKepribadian questions={questions} />
+          ) : (
+            <LatihanKecermatan questions={questions} />
+          )}
         </div>
-        <p className="text-xs text-muted-foreground">
-          {questions.length} soal tersedia · {meta.shortDesc}
-        </p>
-      </div>
+      ) : questions.length === 0 ? (
+        <EmptyState
+          title="Bank soal belum terisi"
+          description={`Belum ada ${noun} aktif untuk sub-tes ${meta.label}. Hubungi admin bila ini tidak seharusnya.`}
+        />
+      ) : (
+        <div className="surface-card mx-auto max-w-2xl space-y-5 px-5 py-6 sm:px-7 sm:py-7">
+          <p className="text-sm leading-relaxed text-muted-foreground">
+            Mode latihan tidak dihitung sebagai tes resmi dan tidak disimpan ke riwayat.{" "}
+            {MODE_NOTE[moduleType]}
+          </p>
 
-      <p className="text-xs text-muted-foreground leading-relaxed">
-        Mode latihan tidak dihitung sebagai tes resmi dan tidak disimpan ke riwayat.
-        {moduleType === "KECERDASAN" && " Jawaban langsung dikoreksi setiap soal."}
-        {moduleType === "KECERMATAN" && " Jawaban langsung dikoreksi, soal berikutnya tampil otomatis."}
-        {moduleType === "KEPRIBADIAN" && " Tidak ada jawaban benar/salah, langsung lanjut ke pernyataan berikutnya."}
-      </p>
+          <dl className="inset-panel grid grid-cols-2 gap-4 px-5 py-4 sm:grid-cols-3">
+            <div>
+              <dt className="text-xs text-muted-foreground">Tersedia</dt>
+              <dd className="tnum font-heading text-lg text-foreground">
+                {questions.length} {noun}
+              </dd>
+            </div>
+            <div>
+              <dt className="text-xs text-muted-foreground">Batas waktu</dt>
+              <dd className="font-heading text-lg text-foreground">Tidak ada</dd>
+            </div>
+            <div>
+              <dt className="text-xs text-muted-foreground">Masuk riwayat</dt>
+              <dd className="font-heading text-lg text-foreground">Tidak</dd>
+            </div>
+          </dl>
 
-      <button
-        onClick={() => setStarted(true)}
-        disabled={questions.length === 0}
-        className="w-full rounded-xl bg-accent text-primary py-3 text-sm font-bold transition-all duration-200 hover:-translate-y-0.5 disabled:opacity-40 disabled:hover:translate-y-0"
-      >
-        {questions.length === 0 ? "Belum Ada Soal" : "Mulai Latihan"}
-      </button>
+          {firstSymbols?.symbol_map && (
+            <section className="space-y-3" aria-label="Preview simbol kolom pertama">
+              <h2 className="text-sm font-semibold text-foreground">Simbol yang akan tampil · Kolom I</h2>
+              <KecermatanKeyStrip symbolMap={firstSymbols.symbol_map} />
+              <p className="text-xs text-muted-foreground">Cari simbol yang tidak muncul pada butir soal, lalu pilih huruf pasangannya. Kunci simbol berganti setiap kolom.</p>
+            </section>
+          )}
+
+          <Button variant="accent" size="lg" block onClick={() => setStarted(true)}>
+            Mulai latihan
+            <ArrowRight className="size-4" />
+          </Button>
+        </div>
+      )}
     </div>
   );
 }

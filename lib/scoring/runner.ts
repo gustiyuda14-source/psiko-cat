@@ -14,16 +14,17 @@ import type {
 } from "@/lib/types/safe-question";
 
 async function scoreKecerdasan(module_session_id: string) {
-  const { data: answers } = await supabaseAdmin
+  const { data: answers, error: answerError } = await supabaseAdmin
     .from("answers")
     .select("question_id, selected_key")
     .eq("module_session_id", module_session_id);
 
   const questionIds = (answers ?? []).map((a) => a.question_id);
-  const { data: questions } = await supabaseAdmin
-    .from("questions")
-    .select("id, scoring_rule")
-    .in("id", questionIds);
+  if (answerError) throw answerError;
+  const { data: questions, error: questionError } = questionIds.length
+    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds)
+    : { data: [], error: null };
+  if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
   const ruleMap = new Map(
@@ -34,16 +35,17 @@ async function scoreKecerdasan(module_session_id: string) {
 }
 
 async function scoreKepribadian(module_session_id: string) {
-  const { data: answers } = await supabaseAdmin
+  const { data: answers, error: answerError } = await supabaseAdmin
     .from("answers")
     .select("question_id, selected_key")
     .eq("module_session_id", module_session_id);
 
   const questionIds = (answers ?? []).map((a) => a.question_id);
-  const { data: questions } = await supabaseAdmin
-    .from("questions")
-    .select("id, scoring_rule")
-    .in("id", questionIds);
+  if (answerError) throw answerError;
+  const { data: questions, error: questionError } = questionIds.length
+    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds)
+    : { data: [], error: null };
+  if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
   const ruleMap = new Map(
@@ -54,33 +56,24 @@ async function scoreKepribadian(module_session_id: string) {
 }
 
 async function scoreKecermatan(module_session_id: string) {
-  const { data: logs } = await supabaseAdmin
+  const { data: logs, error: logError } = await supabaseAdmin
     .from("kecermatan_logs")
-    .select("id, column_index, response_value, question:questions(scoring_rule)")
-    .eq("module_session_id", module_session_id);
+    .select("id, question_id, column_index, clicked_at_ms, response_value, question:questions(scoring_rule)")
+    .eq("module_session_id", module_session_id)
+    .order("clicked_at_ms", { ascending: true });
+  if (logError) throw logError;
 
   type LogRow = {
     id: string;
+    question_id: string;
     column_index: number;
     response_value: string;
     question: { scoring_rule: KecermatanScoringRule };
   };
 
-  const safeLogs = (logs ?? []) as unknown as LogRow[];
-
-  // Batch updates in parallel chunks to avoid N+1 serial queries
-  const updates = safeLogs.map((log) => ({
-    id: log.id,
-    is_correct: log.response_value === log.question.scoring_rule.correct_choice,
-  }));
-  for (let i = 0; i < updates.length; i += 50) {
-    const chunk = updates.slice(i, i + 50);
-    await Promise.all(
-      chunk.map(({ id, is_correct }) =>
-        supabaseAdmin.from("kecermatan_logs").update({ is_correct }).eq("id", id)
-      )
-    );
-  }
+  const safeLogs = [...new Map(
+    ((logs ?? []) as unknown as LogRow[]).map((log) => [log.question_id, log])
+  ).values()];
 
   const columnMap = new Map<number, { total_klik: number; total_benar: number }>();
   for (let i = 1; i <= 10; i++) {
@@ -116,7 +109,8 @@ export async function runSessionCalculate(session_id: string, force = false): Pr
     .eq("id", session_id)
     .single();
 
-  if (tsError || !testSession) return null;
+  if (tsError) throw tsError;
+  if (!testSession) return null;
 
   if (!force && (testSession.status === "COMPLETED" || testSession.status === "DISQUALIFIED")) {
     return null;

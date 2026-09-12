@@ -5,10 +5,23 @@ import type {
   KecerdasanOptionsPayload,
   RecoverySnapshot,
 } from "@/lib/types/safe-question";
-import { useEffect, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useKecerdasanStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
-import { ExamHeader, OfflineNotice, QuestionNavigator } from "@/app/components/ExamChrome";
+import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+import {
+  ExamCompleted,
+  ExamHeader,
+  ExamLoading,
+  OfflineNotice,
+  QuestionNavigator,
+  ResumeDialog,
+  SaveErrorNotice,
+  SubmitDialog,
+} from "@/app/components/ExamChrome";
+import { Badge } from "@/app/components/ui";
+import { Button } from "@/app/components/ui-client";
+import { Check, ChevronLeft, ChevronRight } from "@/app/components/icons";
 
 type Props = {
   questions: SafeQuestion[];
@@ -29,7 +42,10 @@ export default function EngineKecerdasan({
   initialSnapshot,
   onComplete,
 }: Props) {
-  const sorted = [...questions].sort((a, b) => a.sequence_number - b.sequence_number);
+  const sorted = useMemo(
+    () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
+    [questions]
+  );
 
   const engine = useExamEngine({
     store: useKecerdasanStore,
@@ -45,90 +61,81 @@ export default function EngineKecerdasan({
   const { mounted, isOffline, showResume, resumeIndex, secondsLeft, state, store } = engine;
   const [showConfirm, setShowConfirm] = useState(false);
 
-  useEffect(() => {
-    if (state.status === "completed") {
-      const t = setTimeout(() => onComplete?.(), 1500);
-      return () => clearTimeout(t);
-    }
-  }, [state.status, onComplete]);
+  const idx = Math.min(state.currentIndex, sorted.length - 1);
+  const q = sorted[idx];
+  const payload = q?.options_payload as unknown as KecerdasanOptionsPayload | undefined;
+  const picked = q ? state.answers[q.id] : undefined;
+  const answeredCount = Object.keys(state.answers).length;
+  const multi = Boolean(payload?.is_multi_select);
 
-  if (!mounted) {
-    return (
-      <div className="flex min-h-[100dvh] items-center justify-center bg-background">
-        <div className="text-sm text-muted-foreground">Memuat...</div>
-      </div>
-    );
-  }
+  /*
+    Multi-select disimpan sebagai string kunci yang digabung dan diurutkan
+    ("ACD"), jadi memilih berarti toggle satu huruf di dalam string itu.
+    Logika ini dipakai bersama oleh klik dan keyboard — kalau dipisah, dua jalur
+    input akan menyimpang.
+  */
+  const choose = useCallback(
+    (key: string) => {
+      if (!q) return;
+      if (!multi) {
+        engine.handleAnswer(q.id, key);
+        return;
+      }
+      const current = picked ?? "";
+      if (!current.includes(key) && current.length >= 2) return;
+      const next = current.includes(key)
+        ? current.replace(key, "")
+        : (current + key).split("").sort().join("");
+      if (!next) return;
+      engine.handleAnswer(q.id, next);
+    },
+    [engine, q, multi, picked]
+  );
+
+  const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
+
+  useExamKeyboard({
+    enabled: mounted && !showResume && !showConfirm && state.status === "running",
+    choiceKeys,
+    onChoose: choose,
+    onPrev: () => store.getState().prev(),
+    onNext: () => store.getState().next(sorted.length - 1),
+  });
+
+  if (!mounted) return <ExamLoading />;
 
   if (state.status === "completed") {
     return (
-      <div className="flex min-h-[100dvh] flex-col items-center justify-center gap-4 bg-background px-4 text-center text-foreground">
-        <div className="flex size-14 items-center justify-center rounded-full bg-success-soft text-2xl font-bold text-success" aria-hidden="true">✓</div>
-        <h2 className="text-2xl font-semibold">Sub-Tes Kecerdasan Selesai</h2>
-        <p className="text-sm text-muted-foreground">Jawaban Anda telah tersimpan. Mengalihkan...</p>
-      </div>
+      <ExamCompleted
+        title="Sub-Tes Kecerdasan selesai"
+        note="Jawaban sudah tersimpan di server. Mengalihkan ke sub-tes berikutnya."
+      />
     );
   }
-
-  const idx = Math.min(state.currentIndex, sorted.length - 1);
-  const q = sorted[idx];
-  const payload = q?.options_payload as unknown as KecerdasanOptionsPayload;
-  const picked = q ? state.answers[q.id] : undefined;
-  const answeredCount = Object.keys(state.answers).length;
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
       {isOffline && <OfflineNotice />}
 
-      {/* Resume modal */}
-      {showResume && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="resume-title">
-          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
-            <h2 id="resume-title" className="text-xl font-semibold">Lanjutkan Sesi?</h2>
-            <p className="text-sm text-muted-foreground">Sesi sebelumnya terdeteksi pada soal nomor {resumeIndex + 1}.</p>
-            <div className="flex gap-3">
-              <button onClick={engine.doResume}
-                className="min-h-11 flex-1 rounded-xl bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
-                Lanjutkan
-              </button>
-              <button onClick={engine.doFreshStart}
-                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7">
-                Mulai Ulang
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ResumeDialog
+        open={showResume}
+        itemLabel="Soal"
+        resumeIndex={resumeIndex}
+        onResume={engine.doResume}
+        onFreshStart={engine.doFreshStart}
+      />
 
-      {/* Confirm submit modal */}
-      {showConfirm && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="submit-title">
-          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
-            <h2 id="submit-title" className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
-            <div className="space-y-1 rounded-xl bg-accent-soft px-4 py-3 text-sm text-foreground">
-              <p>Kamu baru menjawab <span className="font-bold">{answeredCount}</span> dari <span className="font-bold">{sorted.length}</span> soal.</p>
-              {answeredCount < sorted.length && (
-                <p className="text-xs text-foreground">Soal yang belum dijawab akan dihitung tidak dijawab.</p>
-              )}
-            </div>
-            <p className="text-xs text-muted-foreground">Setelah dikumpulkan, kamu tidak bisa kembali mengerjakan sub-tes ini.</p>
-            <div className="flex gap-3 pt-1">
-              <button
-                onClick={() => setShowConfirm(false)}
-                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7"
-              >
-                Batal
-              </button>
-              <button
-                onClick={() => { setShowConfirm(false); engine.finish(); }}
-                className="min-h-11 flex-1 rounded-xl bg-accent py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent/90"
-              >
-                Ya, Kumpulkan
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <SubmitDialog
+        open={showConfirm}
+        itemLabel="Soal"
+        answered={answeredCount}
+        total={sorted.length}
+        onClose={() => setShowConfirm(false)}
+        onConfirm={() => {
+          setShowConfirm(false);
+          engine.finish();
+        }}
+      />
 
       <ExamHeader
         title="Sub-Tes Kecerdasan"
@@ -137,127 +144,119 @@ export default function EngineKecerdasan({
         total={sorted.length}
         answered={answeredCount}
         secondsLeft={secondsLeft}
+        saveState={engine.saveState}
+        pendingCount={engine.pendingCount}
       />
+      {engine.saveError && (
+        <SaveErrorNotice message={engine.saveError} onRetry={() => void engine.flushAnswers()} />
+      )}
 
-      {/* Page body: question + sidebar */}
       <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-6">
         <QuestionNavigator
-          typeLabel={payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
           itemLabel="Soal"
           questionIds={sorted.map((question) => question.id)}
           answers={state.answers}
           currentIndex={idx}
+          secondsLeft={secondsLeft}
           onGoTo={(index) => store.getState().goTo(index)}
           onSubmit={() => setShowConfirm(true)}
         />
 
-        {/* ── Left: Question card ── */}
-        <main className="flex-1 min-w-0 space-y-4">
-          <div className="surface-card overflow-hidden">
-            {/* Card header */}
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-4 sm:px-6">
-              <span className="text-sm font-semibold">Soal Nomor {idx + 1}</span>
-              <span className="rounded-full bg-primary/7 px-3 py-1 text-xs text-muted-foreground">
-                {payload?.is_multi_select ? "Pilihan Ganda Kompleks" : "Pilihan Ganda"}
-              </span>
+        <main className="min-w-0 flex-1 space-y-4">
+          {/* key memaksa remount saat soal berganti: satu momen gerak yang
+              menandai "ini konten baru", bukan animasi hias di tiap elemen. */}
+          <article key={q?.id} data-active-question tabIndex={-1} className="surface-card enter-rise overflow-hidden">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3 sm:px-6">
+              <h2 className="tnum text-sm font-semibold text-foreground">Soal {idx + 1}</h2>
+              <Badge tone={multi ? "accent" : "neutral"}>
+                {multi ? "Boleh lebih dari satu jawaban" : "Satu jawaban"}
+              </Badge>
             </div>
 
-            {/* Question content */}
-            <div className="space-y-5 px-4 py-5 sm:px-6">
+            <div className="space-y-5 px-4 py-5 sm:px-6 sm:py-6">
               {payload?.instruksi && (
-                <div className="rounded-xl border border-primary/20 bg-primary/7 p-3 text-sm font-semibold text-foreground">
-                  {payload.instruksi}
-                  {payload?.is_multi_select && (
-                    <span className="mt-1 block text-xs font-normal text-muted-foreground">
-                      Anda dapat memilih lebih dari satu jawaban.
-                    </span>
-                  )}
-                </div>
+                <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
               )}
 
               {payload?.sub_text && (
-                <div className="border-l-2 border-primary/20 py-1 pl-4 text-sm italic leading-relaxed text-muted-foreground">
+                <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
                   {payload.sub_text}
                 </div>
               )}
 
               {payload?.question_text && (
-                <p className="text-base leading-relaxed">{payload.question_text}</p>
+                <p className="max-w-[68ch] text-base leading-relaxed text-foreground">
+                  {payload.question_text}
+                </p>
               )}
 
               {payload?.svg_content && (
                 <div
-                  className="bg-white rounded-xl p-4 flex justify-center overflow-x-auto"
+                  className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
                   dangerouslySetInnerHTML={{ __html: payload.svg_content }}
                 />
               )}
 
-              {/* Choices */}
-              <div className="space-y-2.5 pt-1">
+              <div className="space-y-2 pt-1">
                 {payload?.choices?.map((c) => {
-                  const isSelected = payload?.is_multi_select 
-                    ? picked?.includes(c.key) 
-                    : picked === c.key;
-
-                  const handleSelect = () => {
-                    if (payload?.is_multi_select) {
-                      let current = picked || "";
-                      if (current.includes(c.key)) {
-                        current = current.replace(c.key, "");
-                      } else {
-                        current += c.key;
-                      }
-                      current = current.split('').sort().join('');
-                      engine.handleAnswer(q.id, current);
-                    } else {
-                      engine.handleAnswer(q.id, c.key);
-                    }
-                  };
-
+                  const isSelected = multi ? Boolean(picked?.includes(c.key)) : picked === c.key;
                   return (
                     <button
                       key={c.key}
-                      onClick={handleSelect}
-                      className={`flex min-h-12 w-full items-center gap-3 rounded-xl border px-3 py-3 text-left transition-colors duration-150 sm:gap-4 sm:px-4 ${
+                      type="button"
+                      onClick={() => choose(c.key)}
+                      aria-pressed={isSelected}
+                      className={`flex min-h-12 w-full items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-[background-color,border-color,box-shadow] duration-150 ease-out sm:gap-4 sm:px-4 ${
                         isSelected
-                          ? "border-primary bg-primary/7"
-                          : "border-border hover:border-primary/40 hover:bg-primary/7"
+                          ? "border-primary bg-primary/6 shadow-e1"
+                          : "border-border hover:border-border-strong hover:bg-surface-inset"
                       }`}
                     >
-                      <span className={`flex h-9 w-9 shrink-0 items-center justify-center ${payload?.is_multi_select ? 'rounded-md' : 'rounded-full'} text-sm font-bold transition-colors ${
-                        isSelected
-                          ? "bg-primary text-primary-foreground"
-                          : "border border-border bg-primary/7 text-muted-foreground"
-                      }`}>
-                        {c.key}
+                      <span
+                        className={`flex size-9 shrink-0 items-center justify-center text-sm font-bold transition-colors duration-150 ${
+                          multi ? "rounded-[6px]" : "rounded-full"
+                        } ${
+                          isSelected
+                            ? "bg-primary text-primary-foreground"
+                            : "border border-border-strong/45 bg-surface-inset text-muted-foreground"
+                        }`}
+                      >
+                        {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
                       </span>
-                      <span className="text-sm leading-relaxed">{c.text}</span>
+                      <span className="text-sm leading-relaxed text-foreground">{c.text}</span>
                     </button>
                   );
                 })}
               </div>
             </div>
-          </div>
+          </article>
 
-          {/* Prev / Next buttons */}
-          <div className="flex gap-3 sm:justify-between">
-            <button
+          {/* Maju adalah aksi yang dominan: peserta hampir selalu bergerak ke
+              depan, jadi Sebelumnya turun ke sekunder. Sebelumnya keduanya
+              identik dan tidak memandu apa pun. */}
+          <nav className="flex gap-3" aria-label="Navigasi soal">
+            <Button
+              variant="secondary"
+              size="lg"
               onClick={() => store.getState().prev()}
               disabled={idx === 0}
-              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
+              className="flex-1 sm:flex-none"
             >
-              ← Sebelumnya
-            </button>
-            <button
-              onClick={() => store.getState().next()}
+              <ChevronLeft className="size-4" />
+              Sebelumnya
+            </Button>
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() => store.getState().next(sorted.length - 1)}
               disabled={idx >= sorted.length - 1}
-              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
+              className="flex-1 sm:ml-auto sm:min-w-40 sm:flex-none"
             >
-              Selanjutnya →
-            </button>
-          </div>
+              Soal berikutnya
+              <ChevronRight className="size-4" />
+            </Button>
+          </nav>
         </main>
-
       </div>
     </div>
   );

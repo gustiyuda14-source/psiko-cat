@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { runSessionCalculate } from "@/lib/scoring/runner";
+import { getSessionAccess } from "@/lib/session-access";
 
 export async function POST(
   _req: NextRequest,
@@ -8,6 +9,10 @@ export async function POST(
 ) {
   try {
     const { id: session_id } = await params;
+    const access = await getSessionAccess(session_id, false);
+    if (!access.ok) {
+      return NextResponse.json({ error: access.message }, { status: access.status });
+    }
 
     const { data: testSession, error: tsError } = await supabaseAdmin
       .from("test_sessions")

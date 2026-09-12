@@ -96,7 +96,7 @@ import bankSoalKecerdasan from "../soal.json";
 async function seedKecerdasan() {
   console.log("  Seeding Kecerdasan (Data asli dari soal.json)...");
 
-  const rows = bankSoalKecerdasan.soal.map((item: any, idx: number) => {
+  const rows = bankSoalKecerdasan.soal.map((item, idx: number) => {
     // Map object "pilihan": {"a":"...", "b":"..."} to array of {key, text}
     const choicesArray = Object.entries(item.pilihan || {}).map(([k, v]) => ({
       key: k.toUpperCase(),

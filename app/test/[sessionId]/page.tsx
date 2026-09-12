@@ -2,19 +2,37 @@ import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import ConfirmSubmitButton from "@/app/components/ConfirmSubmitButton";
-import { MODULE_CONFIG, type ModuleType } from "@/lib/test-session";
+import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
+import { Badge, Meter, PageHeader, buttonStyles } from "@/app/components/ui";
+import { ArrowRight, Check } from "@/app/components/icons";
+import { getSessionAccess } from "@/lib/session-access";
+import { runSessionCalculate } from "@/lib/scoring/runner";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
 const QUESTION_COUNT: Record<ModuleType, number> = { KECERDASAN: 100, KECERMATAN: 500, KEPRIBADIAN: 100 };
-const QUESTION_NOUN: Record<ModuleType, string> = { KECERDASAN: "soal", KECERMATAN: "soal", KEPRIBADIAN: "pernyataan" };
+const QUESTION_NOUN: Record<ModuleType, string> = { KECERDASAN: "butir", KECERMATAN: "butir", KEPRIBADIAN: "pernyataan" };
 
 function statusBadge(s: ModuleStatus) {
   if (s === "COMPLETED" || s === "TIMED_OUT")
-    return <span className="rounded-full border border-success/30 bg-success-soft px-2 py-0.5 text-xs text-success">Selesai</span>;
-  if (s === "IN_PROGRESS")
-    return <span className="rounded-full border border-primary/20 bg-primary/7 px-2 py-0.5 text-xs text-primary">Berlangsung</span>;
-  return <span className="rounded-full border border-border bg-primary/7 px-2 py-0.5 text-xs text-muted-foreground">Belum Dimulai</span>;
+    return (
+      <Badge tone="success">
+        <Check className="size-3.5" strokeWidth={3} />
+        Selesai
+      </Badge>
+    );
+  if (s === "IN_PROGRESS") return <Badge tone="info">Berlangsung</Badge>;
+  return <Badge tone="neutral">Belum dimulai</Badge>;
+}
+
+async function calculateSession(formData: FormData) {
+  "use server";
+  const sessionId = formData.get("sessionId");
+  if (typeof sessionId !== "string") return;
+  const access = await getSessionAccess(sessionId);
+  if (!access.ok) return;
+  await runSessionCalculate(sessionId);
+  redirect(`/test/${sessionId}/result`);
 }
 
 export default async function SessionOverviewPage({
@@ -23,6 +41,8 @@ export default async function SessionOverviewPage({
   params: Promise<{ sessionId: string }>;
 }) {
   const { sessionId } = await params;
+  const access = await getSessionAccess(sessionId);
+  if (!access.ok) notFound();
 
   const { data: session } = await supabaseAdmin
     .from("test_sessions")
@@ -55,9 +75,9 @@ export default async function SessionOverviewPage({
 
   const getButtonState = (moduleType: string, seqOrder: number) => {
     const m = moduleSessions.find((ms) => ms.module_type === moduleType);
-    if (!m) return { disabled: true, label: "Tidak Tersedia" };
+    if (!m) return { disabled: true, label: "Tidak tersedia" };
     if (m.status === "COMPLETED" || m.status === "TIMED_OUT") return { disabled: true, label: "Selesai" };
-    if (m.status === "IN_PROGRESS") return { disabled: false, label: "Lanjutkan →" };
+    if (m.status === "IN_PROGRESS") return { disabled: false, label: "Lanjutkan" };
     const prev = moduleSessions.find((ms) => ms.sequence_order === seqOrder - 1);
     if (seqOrder === 1 || prev?.status === "COMPLETED" || prev?.status === "TIMED_OUT") {
       return { disabled: false, label: "Mulai" };
@@ -66,88 +86,112 @@ export default async function SessionOverviewPage({
   };
 
   return (
-    <div className="min-h-[100dvh] bg-background px-4 py-6 text-foreground sm:py-10">
-      <div className="mx-auto max-w-2xl space-y-8">
-        <div>
-          <p className="text-sm font-semibold text-primary">Psiko CAT</p>
-          <h1 className="mt-1 font-heading text-3xl font-bold">Sesi Ujian</h1>
-          <p className="mt-1 text-sm text-muted-foreground">
-            Peserta: <span className="text-foreground">{user?.name}</span>
-            <span className="ml-2">({user?.email})</span>
-          </p>
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      <div className="mx-auto w-full max-w-2xl px-4 py-6 sm:px-6 sm:py-10">
+        <PageHeader title="Sesi ujian" description={`Psiko CAT · ${user?.name ?? ""}${user?.email ? ` · ${user.email}` : ""}`} />
+
+        <div className="surface-card mt-6 space-y-2.5 px-5 py-4">
+          <div className="flex items-baseline justify-between text-sm">
+            <span className="font-medium text-foreground">Kemajuan sesi</span>
+            <span className="tnum text-muted-foreground">
+              {doneCount} dari {moduleSessions.length} sub-tes selesai
+            </span>
+          </div>
+          <Meter
+            value={doneCount}
+            max={moduleSessions.length}
+            tone={allDone ? "success" : "primary"}
+            label={`${doneCount} dari ${moduleSessions.length} sub-tes selesai`}
+          />
         </div>
 
-        {/* Progress overview */}
-        <div className="surface-card space-y-2 px-5 py-4">
-          <div className="flex items-center justify-between text-xs text-muted-foreground">
-            <span>Progress Tes</span>
-            <span className="font-mono">{doneCount} / {moduleSessions.length} selesai</span>
-          </div>
-          <div className="h-1.5 overflow-hidden rounded-full bg-primary/7">
-            <div
-              className="h-full origin-left rounded-full bg-success transition-transform duration-300"
-              style={{ transform: `scaleX(${doneCount / moduleSessions.length})` }}
-            />
-          </div>
-        </div>
-
-        <nav className="space-y-3" aria-label="Urutan sub-tes">
+        {/* Daftar bernomor: sub-tes memang harus dikerjakan berurutan, jadi
+            nomor di sini menyampaikan urutan yang mengikat, bukan hiasan. */}
+        <ol className="surface-card mt-4 divide-y divide-border overflow-hidden">
           {moduleSessions.map((ms) => {
             const moduleType = ms.module_type as ModuleType;
             const meta = MODULE_CONFIG[moduleType];
-            const desc = `${QUESTION_COUNT[moduleType]} ${QUESTION_NOUN[moduleType]} · ${meta.time_limit_seconds / 60} menit · ${meta.shortDesc}`;
             const btn = getButtonState(ms.module_type, ms.sequence_order);
+            const done = ms.status === "COMPLETED" || ms.status === "TIMED_OUT";
+
             return (
-              <div
+              <li
                 key={ms.id}
-                className="surface-card flex min-h-28 flex-col items-stretch justify-between gap-4 px-5 py-4 sm:flex-row sm:items-center"
+                className="flex flex-wrap items-center gap-x-4 gap-y-3 px-5 py-4 sm:flex-nowrap"
               >
-                <div className="space-y-1">
-                  <div className="flex items-center gap-2">
-                    <span className="font-semibold">{meta.label}</span>
+                <span
+                  className={`tnum flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                    done
+                      ? "bg-success text-white"
+                      : btn.disabled
+                        ? "bg-surface-inset text-faint-foreground"
+                        : "bg-primary text-primary-foreground"
+                  }`}
+                  aria-hidden="true"
+                >
+                  {done ? <Check className="size-4" strokeWidth={3} /> : ms.sequence_order}
+                </span>
+
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-medium text-foreground">{meta.label}</span>
                     {statusBadge(ms.status)}
                   </div>
-                  <p className="text-xs text-muted-foreground">{desc}</p>
+                  <p className="tnum mt-0.5 text-xs text-muted-foreground">
+                    {QUESTION_COUNT[moduleType]} {QUESTION_NOUN[moduleType]} ·{" "}
+                    {meta.time_limit_seconds / 60} menit ·{" "}
+                    <span className="font-sans">{meta.shortDesc}</span>
+                  </p>
                 </div>
+
                 {btn.disabled ? (
-                  <span className="text-sm text-muted-foreground">{btn.label}</span>
+                  <span className="shrink-0 text-sm text-muted-foreground">{btn.label}</span>
                 ) : (
                   <Link
                     href={`/test/${sessionId}/${meta.slug}`}
-                    className="inline-flex min-h-12 shrink-0 items-center justify-center rounded-xl bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-colors duration-200 hover:bg-primary/90"
+                    className={buttonStyles({
+                      variant: "primary",
+                      size: "md",
+                      className: "shrink-0",
+                    })}
                   >
                     {btn.label}
+                    <ArrowRight className="size-4" />
                   </Link>
                 )}
-              </div>
+              </li>
             );
           })}
-        </nav>
+        </ol>
 
-        {allDone && (
-          <form action={`/test/${sessionId}/result`} method="GET">
-            <input type="hidden" name="calculate" value="1" />
+        {allDone ? (
+          <form action={calculateSession} className="mt-6">
+            <input type="hidden" name="sessionId" value={sessionId} />
             <ConfirmSubmitButton
-              message="Yakin ingin mengumpulkan dan menghitung nilai NAP sekarang? Setelah ini tidak bisa kembali mengerjakan."
-              className="min-h-12 w-full rounded-xl bg-success py-3.5 text-base font-bold text-white transition-colors duration-200 hover:bg-success/90"
+              title="Hitung nilai NAP sekarang?"
+              confirmLabel="Ya, hitung nilai"
+              message="Ketiga sub-tes sudah selesai. Setelah nilai dihitung, sesi ini terkunci dan tidak bisa dikerjakan ulang."
+              className={buttonStyles({ variant: "accent", size: "lg", block: true })}
             >
-              Hitung Nilai NAP →
+              Hitung nilai NAP
+              <ArrowRight className="size-4" />
             </ConfirmSubmitButton>
           </form>
-        )}
-
-        {!allDone && (
-          <div className="space-y-3">
+        ) : (
+          <div className="mt-6 space-y-3">
             <p className="text-center text-xs text-muted-foreground">
               Selesaikan ketiga sub-tes secara berurutan untuk menghitung nilai NAP.
             </p>
-            <form action={`/test/${sessionId}/result`} method="GET">
-              <input type="hidden" name="calculate" value="1" />
+            <form action={calculateSession}>
+              <input type="hidden" name="sessionId" value={sessionId} />
               <ConfirmSubmitButton
-                message="Masih ada sub-tes yang belum selesai. Soal yang belum dikerjakan akan dihitung tidak dijawab dan tidak bisa diulang. Yakin lanjut?"
-                className="min-h-12 w-full rounded-xl border border-destructive/30 bg-destructive/10 px-4 py-2.5 text-sm font-semibold text-destructive transition-colors hover:bg-destructive/15"
+                title="Paksa hitung nilai sekarang?"
+                confirmLabel="Ya, paksa hitung"
+                tone="danger"
+                message="Masih ada sub-tes yang belum selesai. Butir yang belum dikerjakan dihitung sebagai tidak dijawab, dan sesi ini tidak bisa dibuka lagi setelahnya."
+                className={buttonStyles({ variant: "danger", size: "md", block: true })}
               >
-                Paksa Submit &amp; Hitung Sekarang →
+                Paksa submit dan hitung sekarang
               </ConfirmSubmitButton>
             </form>
           </div>

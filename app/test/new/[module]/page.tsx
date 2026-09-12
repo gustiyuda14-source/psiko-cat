@@ -1,6 +1,5 @@
 import { notFound, redirect } from "next/navigation";
-import { getSession } from "@/lib/auth";
-import { createTestSessionAndRedirect, SLUG_TO_MODULE } from "@/lib/test-session";
+import { SLUG_TO_MODULE } from "@/lib/test-config";
 
 // Server component: buat test session standalone (1 modul), redirect ke overview
 export default async function NewSingleModuleTestPage({
@@ -12,8 +11,5 @@ export default async function NewSingleModuleTestPage({
   const moduleType = SLUG_TO_MODULE[slug];
   if (!moduleType) notFound();
 
-  const session = await getSession();
-  if (!session) redirect("/login");
-
-  await createTestSessionAndRedirect(session.sub, [moduleType]);
+  redirect("/dashboard/simulasi");
 }

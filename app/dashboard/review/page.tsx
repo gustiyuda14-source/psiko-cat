@@ -12,6 +12,8 @@ import PembahasanSection, {
   type KecermatanSummary,
   type KecermatanColumnGroup,
 } from "@/app/components/PembahasanSection";
+import { Badge, EmptyState, PageHeader, buttonStyles } from "@/app/components/ui";
+import { ArrowRight } from "@/app/components/icons";
 
 type ModuleSessionRow = {
   id: string;
@@ -30,14 +32,25 @@ type SessionListRow = {
   status: string;
   completed_at: string | null;
   created_at: string;
+  module_sessions: Array<{ module_type: string }>;
 };
 
+function sessionKind(s: SessionListRow) {
+  return s.module_sessions.length === 1 ? "Sub-tes" : "NAP";
+}
+
 function round1(n: number | null) {
-  return n == null ? "-" : n.toFixed(1);
+  return n == null ? "—" : n.toFixed(1);
 }
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" });
+}
+
+function outcome(s: SessionListRow) {
+  if (s.status === "DISQUALIFIED") return { label: "Gugur", tone: "danger" as const };
+  if (s.is_passed) return { label: "Lulus", tone: "success" as const };
+  return { label: "Tidak Lulus", tone: "accent" as const };
 }
 
 export default async function ReviewPage({
@@ -50,7 +63,7 @@ export default async function ReviewPage({
 
   const { data: rows } = await supabaseAdmin
     .from("test_sessions")
-    .select("id, nap_score, is_passed, status, completed_at, created_at")
+    .select("id, nap_score, is_passed, status, completed_at, created_at, module_sessions(module_type)")
     .eq("user_id", session.sub)
     .in("status", ["COMPLETED", "DISQUALIFIED"])
     .order("created_at", { ascending: false });
@@ -59,14 +72,21 @@ export default async function ReviewPage({
 
   if (!sessions.length) {
     return (
-      <div className="app-page space-y-4">
-        <h1 className="font-heading text-2xl font-semibold text-foreground">Ruang Review</h1>
-        <div className="surface-card p-6 text-center">
-          <p className="text-sm text-muted-foreground">Belum ada sesi yang selesai.</p>
-          <Link href="/dashboard/simulasi" className="mt-3 inline-block text-sm font-semibold text-primary">
-            Mulai Simulasi →
-          </Link>
-        </div>
+      <div className="app-page space-y-6">
+        <PageHeader
+          title="Ruang Review"
+          description="Pembahasan lengkap tiap sesi resmi yang sudah selesai, per sub-tes dan per butir."
+        />
+        <EmptyState
+          title="Belum ada sesi selesai"
+          description="Pembahasan muncul di sini setelah satu sesi simulasi resmi selesai dihitung. Latihan tidak masuk ke ruang ini."
+          action={
+            <Link href="/dashboard/simulasi" className={buttonStyles({ variant: "primary" })}>
+              Mulai simulasi
+              <ArrowRight className="size-4" />
+            </Link>
+          }
+        />
       </div>
     );
   }
@@ -74,6 +94,7 @@ export default async function ReviewPage({
   // Sesi hanya boleh dipilih dari daftar sesi milik user ini sendiri (sudah difilter user_id di atas).
   // ?sesi= yang tidak cocok (bukan milik user, atau belum selesai) diam-diam jatuh ke sesi terbaru.
   const selected = (sesi && sessions.find((s) => s.id === sesi)) || sessions[0];
+  const selectedOutcome = outcome(selected);
 
   const { data: detail } = await supabaseAdmin
     .from("test_sessions")
@@ -103,28 +124,24 @@ export default async function ReviewPage({
     : null;
 
   return (
-    <div className="app-page grid gap-6 lg:grid-cols-[minmax(0,1fr)_16rem]">
+    <div className="app-page grid gap-6 lg:grid-cols-[minmax(0,1fr)_15rem]">
       <div className="order-2 space-y-6 lg:order-1">
-        <div className="surface-card p-5">
-          <h1 className="font-heading text-2xl font-semibold text-foreground">Ruang Review</h1>
-          <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
-            <span className="text-muted-foreground">
+        <div className="hero-panel on-nav bg-primary">
+          <h1 className="font-heading text-2xl text-white sm:text-3xl">Ruang Review</h1>
+          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <span className="text-white/75">
               {formatDate(selected.completed_at ?? selected.created_at)}
             </span>
-            <span className="font-mono font-semibold text-foreground">
-              NAP {round1(selected.nap_score)}
+            <span className="tnum font-semibold text-white">
+              {sessionKind(selected)} {round1(selected.nap_score)}
             </span>
-            <span
-              className={`rounded-full px-2.5 py-0.5 text-xs font-bold ${
-                selected.status === "DISQUALIFIED"
-                  ? "bg-destructive text-white"
-                  : selected.is_passed
-                  ? "bg-success text-white"
-                  : "bg-accent text-primary"
-              }`}
+            <Badge tone={selectedOutcome.tone}>{selectedOutcome.label}</Badge>
+            <Link
+              href={`/test/${selected.id}/result`}
+              className="inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-accent underline-offset-4"
             >
-              {selected.status === "DISQUALIFIED" ? "Gugur" : selected.is_passed ? "Lulus" : "Tidak Lulus"}
-            </span>
+              Lihat halaman hasil
+            </Link>
           </div>
         </div>
 
@@ -136,26 +153,48 @@ export default async function ReviewPage({
         />
       </div>
 
-      <nav className="order-1 space-y-2 lg:order-2 lg:sticky lg:top-6 lg:self-start" aria-label="Pilih sesi selesai">
-        <h2 className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-          Sesi Selesai
-        </h2>
-        <div className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">{sessions.map((s) => {
-          const active = s.id === selected.id;
-          return (
-            <Link
-              key={s.id}
-              href={`/dashboard/review?sesi=${s.id}`}
-              aria-current={active ? "page" : undefined}
-              className={`block min-w-40 shrink-0 rounded-xl border bg-card px-4 py-3 text-sm transition-colors lg:min-w-0 ${
-                active ? "border-primary/30 bg-primary/7" : "border-border hover:bg-primary/5"
-              }`}
-            >
-              <p className="font-medium text-foreground">{formatDate(s.completed_at ?? s.created_at)}</p>
-              <p className="text-xs text-muted-foreground">NAP {round1(s.nap_score)}</p>
-            </Link>
-          );
-        })}</div>
+      <nav
+        className="order-1 space-y-2 lg:order-2 lg:sticky lg:top-6 lg:self-start"
+        aria-label="Pilih sesi selesai"
+      >
+        <h2 className="text-sm font-semibold text-foreground">Sesi selesai</h2>
+        <ul className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">
+          {sessions.map((s) => {
+            const active = s.id === selected.id;
+            const o = outcome(s);
+            return (
+              <li key={s.id} className="min-w-44 shrink-0 lg:min-w-0">
+                <Link
+                  href={`/dashboard/review?sesi=${s.id}`}
+                  aria-current={active ? "page" : undefined}
+                  className={`block rounded-md border px-4 py-3 transition-colors duration-200 ${
+                    active
+                      ? "border-primary/45 bg-primary/6"
+                      : "border-border bg-card hover:border-border-strong hover:bg-surface-inset"
+                  }`}
+                >
+                  <p className="text-sm font-medium text-foreground">
+                    {formatDate(s.completed_at ?? s.created_at)}
+                  </p>
+                  <p className="tnum mt-1 flex items-center gap-2 text-xs text-muted-foreground">
+                    {sessionKind(s)} {round1(s.nap_score)}
+                    <span
+                      className={`font-semibold ${
+                        o.tone === "success"
+                          ? "text-success"
+                          : o.tone === "danger"
+                            ? "text-destructive"
+                            : "text-accent-ink"
+                      }`}
+                    >
+                      {o.label}
+                    </span>
+                  </p>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
       </nav>
     </div>
   );

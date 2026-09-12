@@ -45,7 +45,8 @@ export type KecermatanOptionsPayload = {
 
 export type KecerdasanScoringRule = {
   type: "dichotomous";
-  correct_key: "A" | "B" | "C" | "D" | "E";
+  // Sebagian butir meminta dua pilihan dan menyimpan kunci kanonis seperti "AC".
+  correct_key: string;
 };
 
 export type KepribadianScoringRule = {

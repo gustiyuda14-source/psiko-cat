@@ -1,43 +1,42 @@
-import Link from "next/link";
-import { KECERMATAN_PACKAGES, KECERMATAN_PACKAGE_LABELS } from "@/lib/test-session";
+import { KECERMATAN_PACKAGES, KECERMATAN_PACKAGE_LABELS } from "@/lib/test-config";
+import { PageHeader } from "@/app/components/ui";
+import { supabaseAdmin } from "@/lib/supabase-admin";
+import { KECERMATAN_KEYS } from "@/lib/kecermatan-symbols";
+import { KecermatanPackageCarousel } from "@/app/components/KecermatanPackageCarousel";
 
-// Rute statis ini menang atas app/dashboard/latihan/[module]/page.tsx untuk slug
-// "kecermatan" secara spesifik (Kecerdasan/Kepribadian tetap lewat [module]) — Kecermatan
-// punya banyak paket bank soal, jadi user memilih paket dulu di sini sebelum latihan mulai.
-export default function LatihanKecermatanPackagesPage() {
+// Kecermatan punya banyak paket bank soal, jadi user memilih paket dulu di sini sebelum
+// latihan mulai. Pemilih paket SENGAJA tinggal di dalam app/dashboard (masih ada sidebar)
+// karena dia permukaan menjelajah, bukan sesi; sesinya sendiri di app/latihan/kecermatan/[package]
+// yang di luar shell. Lihat latihanHref() di lib/test-session.ts.
+export default async function LatihanKecermatanPackagesPage() {
+  const previews = await Promise.all(KECERMATAN_PACKAGES.map((pkg) =>
+    supabaseAdmin.from("questions")
+      .select("options_payload", { count: "exact" })
+      .eq("type", "KECERMATAN").eq("is_active", true).eq("package_number", pkg)
+      .order("column_index", { ascending: true })
+      .order("sequence_number", { ascending: true }).limit(1)
+  ));
+  const packages = KECERMATAN_PACKAGES.map((pkg, index) => {
+    const symbolMap = previews[index].data?.[0]?.options_payload?.symbol_map as
+      | Record<string, string>
+      | undefined;
+
+    return {
+      id: pkg,
+      label: KECERMATAN_PACKAGE_LABELS[pkg],
+      questionCount: previews[index].count,
+      symbols: KECERMATAN_KEYS.map((key) => symbolMap?.[key] ?? "—"),
+    };
+  });
+
   return (
     <div className="app-page space-y-6">
-      <div>
-        <h1 className="font-heading text-2xl font-semibold text-foreground">Latihan Kecermatan</h1>
-        <p className="mt-1 text-sm text-muted-foreground">
-          Pilih paket bank soal — tiap paket 500 soal, 10 lajur simbol, tanpa batas waktu.
-        </p>
-      </div>
+      <PageHeader
+        title="Latihan Kecermatan"
+        description="Pilih paket untuk berlatih dalam 10 kolom. Lihat simbol kolom pertama di bawah; kunci simbol berganti saat berpindah kolom."
+      />
 
-      <div className="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-        {KECERMATAN_PACKAGES.map((pkg) => (
-          <Link
-            key={pkg}
-            href={`/dashboard/latihan/kecermatan/${pkg}`}
-            className="surface-card interactive-card group flex min-h-48 flex-col overflow-hidden"
-          >
-            <div className="h-1 bg-accent" />
-            <div className="flex flex-1 flex-col gap-4 p-5">
-              <span className="inline-flex rounded-lg bg-primary/7 px-2.5 py-1 text-xs font-semibold text-primary">
-                500 soal
-              </span>
-              <div className="flex-1">
-                <p className="font-semibold text-foreground">{KECERMATAN_PACKAGE_LABELS[pkg]}</p>
-                <p className="mt-1 text-sm leading-relaxed text-muted-foreground">10 lajur simbol</p>
-              </div>
-              <p className="flex items-center text-sm font-semibold text-primary">
-                Mulai
-                <span className="ml-1 transition-transform duration-200 group-hover:translate-x-1">→</span>
-              </p>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <KecermatanPackageCarousel packages={packages} />
     </div>
   );
 }

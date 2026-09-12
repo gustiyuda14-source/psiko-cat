@@ -1,111 +1,183 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-question";
+import { Badge, Meter } from "@/app/components/ui";
+import { Button } from "@/app/components/ui-client";
+import { Check, ChevronLeft, ChevronRight, Close } from "@/app/components/icons";
+import { QuestionNavigator } from "@/app/components/ExamChrome";
+import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 
 type Feedback = { selected: string; is_correct: boolean; correct_key: string };
 
 export default function LatihanKecerdasan({ questions }: { questions: SafeQuestion[] }) {
-  const sorted = [...questions].sort((a, b) => a.sequence_number - b.sequence_number);
+  const sorted = useMemo(
+    () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
+    [questions]
+  );
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Feedback>>({});
+  const [drafts, setDrafts] = useState<Record<string, string>>({});
   const [checking, setChecking] = useState(false);
+  const [checkError, setCheckError] = useState<string | null>(null);
 
   const q = sorted[idx];
-  const payload = q?.options_payload as unknown as KecerdasanOptionsPayload;
+  const payload = q?.options_payload as unknown as KecerdasanOptionsPayload | undefined;
   const fb = q ? answers[q.id] : undefined;
-  const answeredCount = Object.keys(answers).length;
+  const attempted = Object.keys(answers).length;
   const correctCount = Object.values(answers).filter((a) => a.is_correct).length;
 
-  async function pick(key: string) {
-    if (fb || checking) return;
-    setChecking(true);
-    try {
-      const res = await fetch("/api/practice/check", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question_id: q.id, selected_key: key }),
-      });
-      const data = (await res.json()) as { is_correct: boolean; correct_key: string };
-      setAnswers((prev) => ({ ...prev, [q.id]: { selected: key, ...data } }));
-    } finally {
-      setChecking(false);
-    }
-  }
+  const checkAnswer = useCallback(
+    async (selected: string) => {
+      if (!q || answers[q.id] || checking || !selected) return;
+      setChecking(true);
+      setCheckError(null);
+      try {
+        const res = await fetch("/api/practice/check", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question_id: q.id, selected_key: selected }),
+        });
+        if (!res.ok) throw new Error("Jawaban belum dapat diperiksa. Coba lagi.");
+        const data = (await res.json()) as { is_correct: boolean; correct_key: string };
+        setAnswers((prev) => ({ ...prev, [q.id]: { selected, ...data } }));
+      } catch (error) {
+        setCheckError(error instanceof Error ? error.message : "Jawaban belum dapat diperiksa. Coba lagi.");
+      } finally {
+        setChecking(false);
+      }
+    },
+    [q, answers, checking]
+  );
 
-  if (!q) {
-    return <p className="text-sm text-muted-foreground">Belum ada soal latihan Kecerdasan.</p>;
-  }
+  const multi = Boolean(payload?.is_multi_select);
+  const draft = q ? drafts[q.id] ?? "" : "";
+  const pick = useCallback(
+    (key: string) => {
+      if (!q || answers[q.id] || checking) return;
+      if (!multi) {
+        void checkAnswer(key);
+        return;
+      }
+      setDrafts((current) => {
+        const selected = current[q.id] ?? "";
+        if (!selected.includes(key) && selected.length >= 2) return current;
+        const next = selected.includes(key)
+          ? selected.replace(key, "")
+          : (selected + key).split("").sort().join("");
+        return { ...current, [q.id]: next };
+      });
+    },
+    [answers, checkAnswer, checking, multi, q]
+  );
+
+  const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
+
+  useExamKeyboard({
+    enabled: Boolean(q),
+    choiceKeys,
+    onChoose: pick,
+    onPrev: () => setIdx((i) => Math.max(0, i - 1)),
+    onNext: () => setIdx((i) => Math.min(sorted.length - 1, i + 1)),
+  });
+
+  if (!q) return null;
 
   return (
-    <div className="max-w-3xl mx-auto space-y-4">
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-[11px] text-muted-foreground uppercase tracking-widest font-semibold">
-            Latihan Kecerdasan
+    <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 lg:flex-row lg:items-start lg:gap-6">
+      <QuestionNavigator
+        itemLabel="Butir"
+        questionIds={sorted.map((question) => question.id)}
+        answers={answers}
+        currentIndex={idx}
+        onGoTo={setIdx}
+      />
+
+      <main className="min-w-0 flex-1 space-y-4">
+      <div className="surface-card flex flex-wrap items-center justify-between gap-4 px-5 py-3.5">
+        <p className="tnum text-sm text-foreground">
+          Butir <span className="font-semibold">{idx + 1}</span>
+          <span className="text-muted-foreground"> dari {sorted.length}</span>
+        </p>
+        <div className="flex items-center gap-4">
+          <p className="tnum text-xs text-muted-foreground">
+            {correctCount} benar dari {attempted} dicoba
           </p>
-          <p className="text-sm mt-0.5 text-foreground">
-            Soal <span className="font-bold">{idx + 1}</span>
-            <span className="text-muted-foreground"> / {sorted.length}</span>
-          </p>
-        </div>
-        <div className="text-right text-xs text-muted-foreground">
-          <p>{answeredCount} dicoba</p>
-          <p className="text-success font-semibold">{correctCount} benar</p>
+          <Meter
+            value={attempted}
+            max={sorted.length}
+            tone="primary"
+            className="w-24"
+            label={`${attempted} dari ${sorted.length} butir dicoba`}
+          />
         </div>
       </div>
 
-      <div className="bg-card border border-border rounded-2xl overflow-hidden">
-        <div className="px-6 py-4 border-b border-border">
-          <span className="text-sm font-semibold text-foreground">Soal Nomor {idx + 1}</span>
+      <article key={q.id} data-active-question tabIndex={-1} className="surface-card enter-rise overflow-hidden">
+        <div className="flex items-center justify-between gap-2 border-b border-border px-4 py-3 sm:px-6">
+          <h2 className="tnum text-sm font-semibold text-foreground">Butir {idx + 1}</h2>
+          {fb && (
+            <Badge tone={fb.is_correct ? "success" : "danger"}>
+              {fb.is_correct ? <Check className="size-3.5" strokeWidth={3} /> : <Close className="size-3.5" strokeWidth={3} />}
+              {fb.is_correct ? "Benar" : `Kunci ${fb.correct_key}`}
+            </Badge>
+          )}
+          {!fb && multi && <Badge tone="accent">Pilih dua jawaban</Badge>}
         </div>
 
-        <div className="px-6 py-5 space-y-5">
+        <div className="space-y-5 px-4 py-5 sm:px-6 sm:py-6">
           {payload?.instruksi && (
-            <div className="text-sm font-semibold text-primary bg-accent/10 border border-accent/30 p-3 rounded-xl">
-              {payload.instruksi}
-            </div>
+            <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
           )}
           {payload?.sub_text && (
-            <div className="text-sm italic leading-relaxed text-muted-foreground border-l-2 border-border pl-4 py-1">
+            <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
               {payload.sub_text}
             </div>
           )}
           {payload?.question_text && (
-            <p className="text-base leading-relaxed text-foreground">{payload.question_text}</p>
+            <p className="max-w-[68ch] text-base leading-relaxed text-foreground">
+              {payload.question_text}
+            </p>
           )}
           {payload?.svg_content && (
             <div
-              className="bg-background rounded-xl p-4 flex justify-center overflow-x-auto"
+              className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
               dangerouslySetInnerHTML={{ __html: payload.svg_content }}
             />
           )}
 
-          <div className="space-y-2.5 pt-1">
+          <div className="space-y-2 pt-1">
             {payload?.choices?.map((c) => {
-              const isPicked = fb?.selected === c.key;
-              const isCorrectKey = fb && c.key === fb.correct_key;
-              let cls = "border-border hover:border-border hover:bg-border/40";
+              const isPicked = fb ? fb.selected.includes(c.key) : draft.includes(c.key);
+              const isKey = Boolean(fb?.correct_key.includes(c.key));
+
+              // Setelah dijawab, kunci ditandai hijau dan pilihan salah merah;
+              // sisanya diredupkan supaya mata langsung ke perbandingan itu.
+              let shell = "border-border hover:border-border-strong hover:bg-surface-inset";
+              let marker = "border border-border-strong/45 bg-surface-inset text-muted-foreground";
               if (fb) {
-                if (isCorrectKey) cls = "border-success bg-success/15";
-                else if (isPicked) cls = "border-destructive bg-destructive/15";
-                else cls = "border-border opacity-50";
+                if (isKey) {
+                  shell = "border-success bg-success-soft";
+                  marker = "bg-success text-white";
+                } else if (isPicked) {
+                  shell = "border-destructive bg-destructive-soft";
+                  marker = "bg-destructive text-white";
+                } else {
+                  shell = "border-border opacity-55";
+                }
               }
+
               return (
                 <button
                   key={c.key}
+                  type="button"
                   onClick={() => pick(c.key)}
-                  disabled={!!fb || checking}
-                  className={`w-full flex items-center gap-4 rounded-xl border px-4 py-3.5 text-left transition-all duration-150 ${cls}`}
+                  disabled={Boolean(fb) || checking}
+                  aria-pressed={isPicked}
+                  className={`flex min-h-12 w-full items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-[background-color,border-color] duration-150 ease-out disabled:cursor-default sm:gap-4 sm:px-4 ${shell}`}
                 >
                   <span
-                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
-                      fb && isCorrectKey
-                        ? "bg-success text-white"
-                        : fb && isPicked
-                        ? "bg-destructive text-white"
-                        : "bg-border text-muted-foreground"
-                    }`}
+                    className={`flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-bold ${marker}`}
                   >
                     {c.key}
                   </span>
@@ -115,30 +187,47 @@ export default function LatihanKecerdasan({ questions }: { questions: SafeQuesti
             })}
           </div>
 
-          {fb && (
-            <p className={`text-sm font-semibold ${fb.is_correct ? "text-success" : "text-destructive"}`}>
-              {fb.is_correct ? "✓ Benar" : `✗ Salah. Kunci: ${fb.correct_key}`}
+          {!fb && multi && (
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() => void checkAnswer(draft)}
+              disabled={draft.length !== 2 || checking}
+            >
+              {checking ? "Memeriksa..." : `Periksa pilihan (${draft.length}/2)`}
+            </Button>
+          )}
+          {checkError && (
+            <p role="alert" className="text-sm text-destructive">
+              {checkError}
             </p>
           )}
         </div>
-      </div>
+      </article>
 
-      <div className="flex justify-between">
-        <button
+      <nav className="flex gap-3" aria-label="Navigasi butir latihan">
+        <Button
+          variant="secondary"
+          size="lg"
           onClick={() => setIdx((i) => Math.max(0, i - 1))}
           disabled={idx === 0}
-          className="rounded-xl border border-border px-5 py-2.5 text-sm font-medium disabled:opacity-30 hover:bg-border/40 transition-colors"
+          className="flex-1 sm:flex-none"
         >
-          ← Sebelumnya
-        </button>
-        <button
+          <ChevronLeft className="size-4" />
+          Sebelumnya
+        </Button>
+        <Button
+          variant="primary"
+          size="lg"
           onClick={() => setIdx((i) => Math.min(sorted.length - 1, i + 1))}
           disabled={idx >= sorted.length - 1}
-          className="rounded-xl border border-border px-5 py-2.5 text-sm font-medium disabled:opacity-30 hover:bg-border/40 transition-colors"
+          className="flex-1 sm:ml-auto sm:min-w-40 sm:flex-none"
         >
-          Selanjutnya →
-        </button>
-      </div>
+          Butir berikutnya
+          <ChevronRight className="size-4" />
+        </Button>
+      </nav>
+      </main>
     </div>
   );
 }

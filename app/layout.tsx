@@ -1,20 +1,31 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Lexend } from "next/font/google";
 import "./globals.css";
 
+// Nama variabel diberi sufiks -src supaya @theme inline di globals.css bisa
+// memetakannya ke --font-sans / --font-display tanpa referensi melingkar
+// (next/font menaruh variabelnya di elemen <html>, yang juga :root).
 const sourceSans = Source_Sans_3({
-  variable: "--font-sans",
+  variable: "--font-sans-src",
   subsets: ["latin"],
+  display: "swap",
 });
 
+// Lexend adalah variable font — weight sengaja tidak dikunci supaya seluruh
+// sumbu wght tersedia (next/font: weight hanya wajib untuk font non-variable).
 const lexend = Lexend({
-  variable: "--font-heading",
+  variable: "--font-display-src",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Ajiks Akademi - Psiko CAT",
+  title: "Psiko CAT — Ajiks Akademi",
   description: "Sistem Psikotes Terintegrasi D'Ajiks Akademi",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0b2442",
 };
 
 export default function RootLayout({
@@ -27,7 +38,7 @@ export default function RootLayout({
       lang="id"
       className={`${sourceSans.variable} ${lexend.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }

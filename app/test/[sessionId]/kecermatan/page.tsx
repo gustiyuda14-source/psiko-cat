@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import KecermatanClient from "./KecermatanClient";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
+import { getSessionAccess } from "@/lib/session-access";
 
 export default async function KecermatanPage({
   params,
@@ -9,6 +10,8 @@ export default async function KecermatanPage({
   params: Promise<{ sessionId: string }>;
 }) {
   const { sessionId } = await params;
+  const access = await getSessionAccess(sessionId, false);
+  if (!access.ok) notFound();
 
   const { data: ms } = await supabaseAdmin
     .from("module_sessions")

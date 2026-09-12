@@ -3,9 +3,11 @@ import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
 const COOKIE_NAME = "psiko_session";
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET ?? "fallback-dev-secret-change-in-prod"
-);
+function getJwtSecret(): Uint8Array {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) throw new Error("JWT_SECRET wajib diatur");
+  return new TextEncoder().encode(secret);
+}
 
 export type SessionPayload = {
   sub: string;       // user id
@@ -19,12 +21,12 @@ export async function createSessionToken(payload: SessionPayload): Promise<strin
     .setProtectedHeader({ alg: "HS256" })
     .setIssuedAt()
     .setExpirationTime("7d")
-    .sign(JWT_SECRET);
+    .sign(getJwtSecret());
 }
 
 export async function verifySessionToken(token: string): Promise<SessionPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, JWT_SECRET);
+    const { payload } = await jwtVerify(token, getJwtSecret());
     return payload as unknown as SessionPayload;
   } catch {
     return null;

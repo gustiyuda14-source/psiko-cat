@@ -21,7 +21,7 @@ function toUsername(name: string): string {
   return name.toLowerCase().trim().replace(/\s+/g, ".");
 }
 
-function generatePassword(username: string): string {
+function generatePassword(): string {
   const chars = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
   let pwd = "";
   for (let i = 0; i < 6; i++) {
@@ -78,7 +78,7 @@ async function main() {
   // Upsert peserta
   for (const s of STUDENTS) {
     const username = toUsername(s.name);
-    const password = generatePassword(username);
+    const password = generatePassword();
     const hash = await bcrypt.hash(password, 12);
 
     const { error } = await supabase

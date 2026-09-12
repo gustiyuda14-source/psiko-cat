@@ -1,10 +1,11 @@
 import { notFound } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { KECERMATAN_PACKAGES } from "@/lib/test-session";
+import { KECERMATAN_PACKAGES, KECERMATAN_PACKAGE_LABELS } from "@/lib/test-config";
 import type { SafeQuestion } from "@/lib/types/safe-question";
 import LatihanGate from "@/app/latihan/[module]/LatihanGate";
 
-// Auth sudah dijamin oleh app/dashboard/layout.tsx — tidak perlu getSession() di sini.
+// Auth dijamin proxy.ts, sama seperti ../../[module]/page.tsx. Di luar app/dashboard
+// supaya sidebar tidak ikut ter-render saat latihan berjalan.
 export default async function LatihanKecermatanPackagePage({
   params,
 }: {
@@ -25,5 +26,5 @@ export default async function LatihanKecermatanPackagePage({
 
   const safeQuestions = (questions ?? []) as unknown as SafeQuestion[];
 
-  return <LatihanGate moduleType="KECERMATAN" questions={safeQuestions} packageLabel={String(pkg)} />;
+  return <LatihanGate moduleType="KECERMATAN" questions={safeQuestions} packageLabel={KECERMATAN_PACKAGE_LABELS[pkg]} />;
 }

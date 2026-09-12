@@ -5,10 +5,23 @@ import type {
   KepribadianOptionsPayload,
   RecoverySnapshot,
 } from "@/lib/types/safe-question";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useKepribadianStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
-import { ExamHeader, OfflineNotice, QuestionNavigator } from "@/app/components/ExamChrome";
+import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+import {
+  ExamCompleted,
+  ExamHeader,
+  ExamLoading,
+  OfflineNotice,
+  QuestionNavigator,
+  ResumeDialog,
+  SaveErrorNotice,
+  SubmitDialog,
+} from "@/app/components/ExamChrome";
+import { Badge } from "@/app/components/ui";
+import { Button } from "@/app/components/ui-client";
+import { ChevronLeft, ChevronRight } from "@/app/components/icons";
 
 type Props = {
   questions: SafeQuestion[];
@@ -29,7 +42,10 @@ export default function EngineKepribadian({
   initialSnapshot,
   onComplete,
 }: Props) {
-  const sorted = [...questions].sort((a, b) => a.sequence_number - b.sequence_number);
+  const sorted = useMemo(
+    () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
+    [questions]
+  );
 
   const engine = useExamEngine({
     store: useKepribadianStore,
@@ -45,97 +61,87 @@ export default function EngineKepribadian({
   const { mounted, isOffline, showResume, resumeIndex, secondsLeft, state, store } = engine;
   const [showConfirm, setShowConfirm] = useState(false);
 
-  useEffect(() => {
-    if (state.status === "completed") {
-      const t = setTimeout(() => onComplete?.(), 1500);
-      return () => clearTimeout(t);
-    }
-  }, [state.status, onComplete]);
+  const idx = Math.min(state.currentIndex, sorted.length - 1);
+  const q = sorted[idx];
+  const payload = q?.options_payload as unknown as KepribadianOptionsPayload | undefined;
+  const picked = q ? state.answers[q.id] : undefined;
+  const answeredCount = Object.keys(state.answers).length;
+  const advanceTimer = useRef<number | null>(null);
 
-  if (!mounted) {
-    return (
-      <div className="flex min-h-[100dvh] items-center justify-center bg-background">
-        <div className="text-sm text-muted-foreground">Memuat...</div>
-      </div>
-    );
-  }
+  useEffect(
+    () => () => {
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+    },
+    []
+  );
+
+  // Auto-advance dipertahankan: skala Likert tidak punya jawaban benar/salah,
+  // jadi peserta tidak perlu menimbang ulang sebelum lanjut.
+  const choose = useCallback(
+    (key: string) => {
+      if (!q) return;
+      engine.handleAnswer(q.id, key);
+      if (idx < sorted.length - 1) {
+        if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+        advanceTimer.current = window.setTimeout(
+          () => store.getState().next(sorted.length - 1),
+          200
+        );
+      }
+    },
+    [engine, q, idx, sorted.length, store]
+  );
+
+  const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
+
+  useExamKeyboard({
+    enabled: mounted && !showResume && !showConfirm && state.status === "running",
+    choiceKeys,
+    onChoose: choose,
+    onPrev: () => {
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+      store.getState().prev();
+    },
+    onNext: () => {
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+      store.getState().next(sorted.length - 1);
+    },
+  });
+
+  if (!mounted) return <ExamLoading label="Menyiapkan pernyataan" />;
 
   if (state.status === "completed") {
     return (
-      <div className="flex min-h-[100dvh] flex-col items-center justify-center gap-4 bg-background px-4 text-center text-foreground">
-        <div className="flex size-14 items-center justify-center rounded-full bg-success-soft text-2xl font-bold text-success" aria-hidden="true">✓</div>
-        <h2 className="text-2xl font-semibold">Sub-Tes Kepribadian Selesai</h2>
-        <p className="text-sm text-muted-foreground">Jawaban Anda telah tersimpan. Mengalihkan...</p>
-      </div>
+      <ExamCompleted
+        title="Sub-Tes Kepribadian selesai"
+        note="Jawaban sudah tersimpan di server. Mengalihkan ke sub-tes berikutnya."
+      />
     );
-  }
-
-  const idx = Math.min(state.currentIndex, sorted.length - 1);
-  const q = sorted[idx];
-  const payload = q?.options_payload as unknown as KepribadianOptionsPayload;
-  const picked = q ? state.answers[q.id] : undefined;
-  const answeredCount = Object.keys(state.answers).length;
-
-  function pick(key: string) {
-    engine.handleAnswer(q.id, key);
-    if (idx < sorted.length - 1) {
-      setTimeout(() => store.getState().next(), 200);
-    }
   }
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
       {isOffline && <OfflineNotice />}
 
-      {/* Resume modal */}
-      {showResume && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="resume-title">
-          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
-            <h2 id="resume-title" className="text-xl font-semibold">Lanjutkan Sesi?</h2>
-            <p className="text-sm text-muted-foreground">Sesi sebelumnya terdeteksi pada pernyataan nomor {resumeIndex + 1}.</p>
-            <div className="flex gap-3">
-              <button onClick={engine.doResume}
-                className="min-h-11 flex-1 rounded-xl bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
-                Lanjutkan
-              </button>
-              <button onClick={engine.doFreshStart}
-                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7">
-                Mulai Ulang
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <ResumeDialog
+        open={showResume}
+        itemLabel="Pernyataan"
+        resumeIndex={resumeIndex}
+        onResume={engine.doResume}
+        onFreshStart={engine.doFreshStart}
+      />
 
-      {/* Confirm submit modal */}
-      {showConfirm && (
-        <div className="fixed inset-0 z-40 flex items-center justify-center bg-black/60 p-4" role="dialog" aria-modal="true" aria-labelledby="submit-title">
-          <div className="surface-card w-full max-w-sm space-y-5 p-6 text-foreground sm:p-8">
-            <h2 id="submit-title" className="text-xl font-semibold">Yakin Ingin Mengumpulkan?</h2>
-            <div className="space-y-1 rounded-xl bg-accent-soft px-4 py-3 text-sm text-foreground">
-              <p>Kamu baru menjawab <span className="font-bold">{answeredCount}</span> dari <span className="font-bold">{sorted.length}</span> pernyataan.</p>
-              {answeredCount < sorted.length && (
-                <p className="text-xs text-foreground">Pernyataan yang belum dijawab akan dihitung tidak dijawab.</p>
-              )}
-            </div>
-            <p className="text-xs text-muted-foreground">Setelah dikumpulkan, kamu tidak bisa kembali mengerjakan sub-tes ini.</p>
-            <div className="flex gap-3 pt-1">
-              <button
-                onClick={() => setShowConfirm(false)}
-                className="min-h-11 flex-1 rounded-xl border border-border bg-card py-2.5 text-sm font-semibold transition-colors hover:bg-primary/7"
-              >
-                Batal
-              </button>
-              <button
-                onClick={() => { setShowConfirm(false); engine.finish(); }}
-                className="min-h-11 flex-1 rounded-xl bg-accent py-2.5 text-sm font-semibold text-primary transition-colors hover:bg-accent/90"
-              >
-                Ya, Kumpulkan
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <SubmitDialog
+        open={showConfirm}
+        itemLabel="Pernyataan"
+        answered={answeredCount}
+        total={sorted.length}
+        onClose={() => setShowConfirm(false)}
+        onConfirm={() => {
+          setShowConfirm(false);
+          engine.finish();
+        }}
+      />
 
       <ExamHeader
         title="Sub-Tes Kepribadian"
@@ -144,85 +150,105 @@ export default function EngineKepribadian({
         total={sorted.length}
         answered={answeredCount}
         secondsLeft={secondsLeft}
+        saveState={engine.saveState}
+        pendingCount={engine.pendingCount}
       />
+      {engine.saveError && (
+        <SaveErrorNotice message={engine.saveError} onRetry={() => void engine.flushAnswers()} />
+      )}
 
-      {/* Page body */}
       <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-6">
         <QuestionNavigator
-          typeLabel="Skala Kepribadian"
           itemLabel="Pernyataan"
           questionIds={sorted.map((question) => question.id)}
           answers={state.answers}
           currentIndex={idx}
-          onGoTo={(index) => store.getState().goTo(index)}
+          secondsLeft={secondsLeft}
+          onGoTo={(index) => {
+            if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+            store.getState().goTo(index);
+          }}
           onSubmit={() => setShowConfirm(true)}
         />
 
-        {/* ── Left: Statement card ── */}
-        <main className="flex-1 min-w-0 space-y-4">
-          <div className="surface-card overflow-hidden">
-            {/* Card header */}
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-4 sm:px-6">
-              <span className="text-sm font-semibold">Pernyataan {idx + 1}</span>
-              <span className="rounded-full bg-primary/7 px-3 py-1 text-xs text-muted-foreground">Skala Likert</span>
+        <main className="min-w-0 flex-1 space-y-4">
+          <article key={q?.id} data-active-question tabIndex={-1} className="surface-card enter-rise overflow-hidden">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3 sm:px-6">
+              <h2 className="tnum text-sm font-semibold text-foreground">Pernyataan {idx + 1}</h2>
+              {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
             </div>
 
-            {/* Statement */}
-            <div className="px-4 py-7 sm:px-6 sm:py-8">
-              {payload?.aspect && (
-                <div className="flex justify-center mb-4">
-                  <span className="inline-block rounded-full border border-primary/20 bg-primary/7 px-3 py-1 text-xs font-medium text-primary">
-                    {payload.aspect}
-                  </span>
-                </div>
-              )}
-              <p className="text-center text-lg font-medium leading-relaxed">
+            {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,
+                jadi ukurannya naik dan lebar barisnya dikunci ke ukuran nyaman
+                baca alih-alih memenuhi kartu. */}
+            <div className="px-4 py-8 sm:px-6 sm:py-10">
+              <p className="mx-auto max-w-[46ch] text-center text-lg font-medium leading-relaxed text-foreground sm:text-xl">
                 {payload?.statement}
               </p>
             </div>
 
-            {/* Likert choices */}
-            <div className="space-y-2.5 px-4 pb-5 sm:px-6 sm:pb-6">
-              {payload?.choices?.map((c) => (
-                <button
-                  key={c.key}
-                  onClick={() => pick(c.key)}
-                  className={`flex min-h-12 w-full items-center gap-3 rounded-xl border px-3 py-3 text-left transition-colors duration-150 sm:gap-4 sm:px-4 ${
-                    picked === c.key
-                      ? "border-primary bg-primary/7"
-                      : "border-border hover:border-primary/40 hover:bg-primary/7"
-                  }`}
-                >
-                  <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full border-2 transition-colors ${
-                    picked === c.key ? "border-primary bg-primary" : "border-border"
-                  }`}>
-                    {picked === c.key && <span className="h-2 w-2 rounded-full bg-white" />}
-                  </span>
-                  <span className="text-sm font-medium">{c.text}</span>
-                </button>
-              ))}
-            </div>
-          </div>
+            <fieldset className="space-y-2 px-4 pb-5 sm:px-6 sm:pb-6">
+              <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
+              {payload?.choices?.map((c) => {
+                const isSelected = picked === c.key;
+                return (
+                  <button
+                    key={c.key}
+                    type="button"
+                    onClick={() => choose(c.key)}
+                    aria-pressed={isSelected}
+                    className={`flex min-h-12 w-full items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-[background-color,border-color,box-shadow] duration-150 ease-out sm:gap-4 sm:px-4 ${
+                      isSelected
+                        ? "border-primary bg-primary/6 shadow-e1"
+                        : "border-border hover:border-border-strong hover:bg-surface-inset"
+                    }`}
+                  >
+                    <span
+                      className={`flex size-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-150 ${
+                        isSelected ? "border-primary bg-primary" : "border-border-strong/60"
+                      }`}
+                    >
+                      {isSelected && <span className="size-1.5 rounded-full bg-white" />}
+                    </span>
+                    <span className="flex-1 text-sm font-medium text-foreground">{c.text}</span>
+                    <kbd className="hidden font-mono text-xs text-faint-foreground sm:block">
+                      {c.key}
+                    </kbd>
+                  </button>
+                );
+              })}
+            </fieldset>
+          </article>
 
-          {/* Prev / Next */}
-          <div className="flex gap-3 sm:justify-between">
-            <button
-              onClick={() => store.getState().prev()}
+          <nav className="flex gap-3" aria-label="Navigasi pernyataan">
+            <Button
+              variant="secondary"
+              size="lg"
+              onClick={() => {
+                if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+                store.getState().prev();
+              }}
               disabled={idx === 0}
-              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
+              className="flex-1 sm:flex-none"
             >
-              ← Sebelumnya
-            </button>
-            <button
-              onClick={() => store.getState().next()}
+              <ChevronLeft className="size-4" />
+              Sebelumnya
+            </Button>
+            <Button
+              variant="primary"
+              size="lg"
+              onClick={() => {
+                if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+                store.getState().next(sorted.length - 1);
+              }}
               disabled={idx >= sorted.length - 1}
-              className="min-h-12 flex-1 rounded-xl border border-border bg-card px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:border-primary/40 hover:bg-primary/7 disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none sm:px-5"
+              className="flex-1 sm:ml-auto sm:min-w-40 sm:flex-none"
             >
-              Selanjutnya →
-            </button>
-          </div>
+              Pernyataan berikutnya
+              <ChevronRight className="size-4" />
+            </Button>
+          </nav>
         </main>
-
       </div>
     </div>
   );
