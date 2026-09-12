@@ -12,7 +12,7 @@ export default async function DashboardLayout({
   if (session.role === "admin") redirect("/admin");
 
   return (
-    <div className="flex min-h-[100dvh] flex-col bg-background lg:h-[100dvh] lg:flex-row">
+    <div className="ornate flex min-h-[100dvh] flex-col bg-background lg:h-[100dvh] lg:flex-row">
       <Sidebar name={session.name} username={session.username} />
       <main className="min-h-0 flex-1 overflow-y-auto">{children}</main>
     </div>

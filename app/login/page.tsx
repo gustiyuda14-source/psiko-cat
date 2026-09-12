@@ -42,7 +42,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-[100dvh] items-center justify-center bg-primary bg-surface-nav-deep px-4 py-10 sm:px-8">
+    <div className="ornate flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
       <div className="hero-panel grid w-full max-w-4xl gap-8 bg-primary sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div className="relative text-white">
           <span

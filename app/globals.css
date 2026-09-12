@@ -157,6 +157,77 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────────
+   Identitas ornate D'Ajiks Akademi — SCOPED, bukan global
+   ─────────────────────────────────────────────────────────────────────────────
+   :root di atas SENGAJA tidak disentuh. Permukaan tempat peserta mengerjakan
+   soal (app/test/*, app/latihan/*) tidak pernah berada di dalam elemen
+   ber-class .ornate, jadi mereka tetap resolve ke token light di atas tanpa
+   satu pun filenya diubah.
+
+   KONSEKUENSI: token yang TIDAK ditulis di sini akan mewarisi nilai LIGHT-nya,
+   bukan hilang. Itu sebabnya token "soft" dan --accent-ink wajib ada di bawah:
+   Badge tone="accent" memakai pasangan bg-accent-soft + text-accent-ink, dan
+   --accent-ink light (#8a5a12) di atas wash gold-di-atas-navy cuma 1.80:1.
+
+   Kontras dihitung, bukan ditebak (WCAG relative luminance, sRGB; angka
+   "soft" adalah komposit alpha-blend wash 15% di atas --surface-card):
+     --foreground        #f4ede0  11.52:1 di card, 13.41:1 di page
+     --muted-foreground  #a8bedb   7.06:1 di card
+     --accent            #d9983f  5.44:1 di card (sebagai teks/ikon)
+     --accent-ink        #f0c078  6.33:1 di atas --accent-soft
+     --success           #3ed6a0  7.24:1 di card, 5.28:1 di atas --success-soft
+     --destructive       #fd948d  6.26:1 di card, 4.86:1 di atas --destructive-soft
+   ───────────────────────────────────────────────────────────────────────────── */
+.ornate {
+  color-scheme: dark;
+
+  /* Surface ladder — navy yang tadinya cuma dipakai sidebar/hero sekarang
+     jadi permukaan halaman. Card lebih TERANG dari page (konvensi elevation
+     dark-mode), kebalikan dari light theme. */
+  --surface-page: #0b2442;
+  --surface-card: #14304f;
+  --surface-inset: #0f2846;
+
+  /* --surface-nav (#0b2442) dan --surface-nav-deep (#081b34) sengaja TIDAK
+     ditulis di sini. Ini satu-satunya kasus di mana mewarisi nilai light
+     justru yang benar: keduanya sudah navy di :root karena memang dibuat
+     untuk sidebar dan hero. */
+
+  --foreground: #f4ede0;         /* cream hangat, bukan putih pekat */
+  --muted-foreground: #a8bedb;
+  --faint-foreground: #7d90b3;
+
+  --border: #24354f;
+  --border-strong: rgb(217 152 63 / 0.4);   /* gold-tinted, bukan abu netral */
+
+  /* --primary SENGAJA tidak di-override. .hero-panel memakainya sebagai stop
+     tengah gradien navy-nya; kalau ini jadi gold, ada garis emas menyilang di
+     tengah setiap hero banner dan teks putih di atasnya gagal kontras.
+     Gold tetap hidup di --accent, dua token yang memang sudah terpisah. */
+
+  --accent-soft: rgb(217 152 63 / 0.15);
+  --accent-ink: #f0c078;         /* dibalik arahnya dari light: diterangkan,
+                                    bukan digelapkan. Nilainya sama dengan
+                                    --ring-on-nav yang sudah ada. */
+
+  --success: #3ed6a0;
+  --success-soft: rgb(62 214 160 / 0.15);
+  --destructive: #fd948d;
+  --destructive-soft: rgb(253 148 141 / 0.15);
+  --ring: #d9983f;
+
+  /* --ring-on-nav tidak di-override: nilai light-nya (#f0c078) memang sudah
+     dirancang untuk permukaan navy. */
+
+  /* Shadow ditarik dari hitam, bukan navy. Di permukaan gelap, shadow
+     bertarik-navy praktis tak terlihat. Offset + blur dipertahankan. */
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.30), 0 1px 3px -1px rgb(0 0 0 / 0.36);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.28), 0 6px 14px -6px rgb(0 0 0 / 0.45);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.30), 0 14px 30px -10px rgb(0 0 0 / 0.50);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.32), 0 30px 60px -20px rgb(0 0 0 / 0.60);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
    Base
    ───────────────────────────────────────────────────────────────────────────── */
 

@@ -58,7 +58,7 @@ export default async function AdminPage() {
   );
 
   return (
-    <div className="min-h-[100dvh] bg-background text-foreground">
+    <div className="ornate min-h-[100dvh] bg-background text-foreground">
       <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
         <PageHeader title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={<LogoutButton />} />
 
