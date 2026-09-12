@@ -227,6 +227,39 @@
   --elev-4: 0 10px 20px rgb(0 0 0 / 0.32), 0 30px 60px -20px rgb(0 0 0 / 0.60);
 }
 
+/* CTA gold: dua stop, bukan flat — echo highlight logam di logo. Scoped ke
+   .ornate supaya tombol accent di permukaan light (halaman soal) tidak ikut.
+   Teks tetap navy di atas gold, sesuai disiplin warna yang sudah ada. */
+.ornate .btn-accent-metal {
+  background-image: linear-gradient(160deg, #e8b45c 0%, #d9983f 55%, #c4842c 100%);
+}
+
+.ornate .btn-accent-metal:hover {
+  background-image: linear-gradient(160deg, #f0c078 0%, #e0a24a 55%, #cc8d33 100%);
+}
+
+/* Echo garis tipis kiri-kanan "AKADEMI" di logo. Dipakai sebagai pembatas
+   SECTION, bukan per-baris daftar — hairline di tiap baris tabel adalah pola
+   yang sudah ditolak di disiplin desain repo ini. */
+.ornate .rule-ornate {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent-ink);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ornate .rule-ornate::before,
+.ornate .rule-ornate::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgb(217 152 63 / 0.5), transparent);
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Base
    ───────────────────────────────────────────────────────────────────────────── */

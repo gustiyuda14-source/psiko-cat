@@ -26,8 +26,10 @@ const VARIANT: Record<Variant, string> = {
   primary:
     "bg-primary text-primary-foreground shadow-e1 hover:bg-primary-hover active:bg-primary-active",
   // CTA bermuatan merek. Gold hanya sebagai background dengan teks navy.
+  // btn-accent-metal menambahkan gradient logam, tapi HANYA di dalam .ornate —
+  // di permukaan light, bg-accent yang flat tetap yang berlaku.
   accent:
-    "bg-accent text-primary shadow-e2 hover:bg-accent-strong active:bg-accent-strong",
+    "btn-accent-metal bg-accent text-primary shadow-e2 hover:bg-accent-strong active:bg-accent-strong",
   // Aksi pendamping. Border cukup kuat untuk lolos 3:1 sebagai batas kontrol.
   secondary:
     "border border-border-strong/55 bg-card text-foreground shadow-e1 hover:border-border-strong hover:bg-surface-inset active:bg-surface-inset",
