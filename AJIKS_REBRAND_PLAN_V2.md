@@ -53,35 +53,50 @@ Draf pertama plan ini mau ganti `:root` langsung jadi dark, global. **Dibatalkan
   --primary-foreground: #ffffff; /* tidak diubah — teks putih di atas navy */
   --accent: #d9983f;             /* tidak diubah — gold, dipakai terpisah dari --primary di seluruh app */
   --accent-strong: #c4842c;      /* tidak diubah */
-  --accent-soft: rgb(217 152 63 / 0.15);  /* diubah dari wash krem #fff4df (buat page terang) ke wash gold tembus pandang */
-  /* --accent-ink DIHAPUS — lihat catatan di bawah blok ini */
+  --accent-soft: rgb(217 152 63 / 0.15);  /* dari wash krem #fff4df (buat page terang) ke wash gold tembus pandang */
+  --accent-ink: #f0c078;         /* DIBALIK arahnya: di light ini gold yang DIGELAPKAN (#8a5a12) buat page terang;
+                                    di dark harus gold yang DITERANGKAN. Nilainya bukan warna baru — sama dengan
+                                    --ring-on-nav yang sudah ada (gold-on-navy yang sudah dipakai sistem). */
 
-  --success: #34c795;     /* 6.23:1 vs --surface-card, 7.25:1 vs --surface-page */
-  --destructive: #f5726c; /* 4.79:1 vs --surface-card, 5.58:1 vs --surface-page */
+  --success: #3ed6a0;            /* 7.24:1 di card, 5.28:1 di atas --success-soft-nya sendiri */
+  --success-soft: rgb(62 214 160 / 0.15);
+  --destructive: #fd948d;        /* 6.26:1 di card, 4.86:1 di atas --destructive-soft-nya sendiri */
+  --destructive-soft: rgb(253 148 141 / 0.15);
   --ring: #d9983f;
+  /* --ring-on-nav SENGAJA tidak di-override — nilai light-nya (#f0c078) memang sudah dirancang
+     untuk permukaan navy, jadi inherit itu benar. */
+
+  /* Shadow ditarik dari hitam, bukan navy. Di atas permukaan gelap, shadow bertarik-navy
+     (rgb(16 45 82 / …) seperti di :root) nyaris tidak terlihat. Offset + blur lembut
+     dipertahankan — bukan halo tanpa offset. */
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.30), 0 1px 3px -1px rgb(0 0 0 / 0.36);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.28), 0 6px 14px -6px rgb(0 0 0 / 0.45);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.30), 0 14px 30px -10px rgb(0 0 0 / 0.50);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.32), 0 30px 60px -20px rgb(0 0 0 / 0.60);
 }
 ```
+
+**Kenapa token "soft" dan `--accent-ink` WAJIB di-override, tidak boleh dibiarkan:** karena `:root` tidak disentuh, token apa pun yang TIDAK ditulis di `.ornate` akan **inherit nilai light**-nya, bukan hilang. Dicek: `Badge tone="accent"` (`app/components/ui.tsx`) pakai `bg-accent-soft text-accent-ink`. Kalau `--accent-ink` dibiarkan inherit `#8a5a12`, hasilnya gold gelap di atas wash gold-di-atas-navy = **1.80:1**, gagal total. Hal yang sama untuk `--success-soft` (`#ecfdf5`) dan `--destructive-soft` (`#fdeeee`) — nilai light-nya nyaris putih, jadi blok terang menyala di tengah tema gelap. Draf sebelumnya melewatkan ini karena cuma mengaudit warna Tailwind mentah, belum mengaudit token mana yang dipakai sebagai PASANGAN bg+teks.
 
 Catatan yang tidak muat sebagai komentar CSS satu baris di atas:
 
 - **`--primary` TIDAK diubah jadi gold.** `.hero-panel` (`app/globals.css`, komponen ini milik "Astra"/kerja Codex — lihat bagian Konflik di bawah) makai `var(--primary)` sebagai stop tengah gradiennya (`linear-gradient(115deg, var(--surface-nav-deep), var(--primary) 75%, #234969)`), dipakai di SEMUA halaman ornate. Draf pertama plan ini salah menulis `--primary` jadi gold (asumsi keliru bahwa nama itu bebas dipakai ulang) — itu bakal bikin garis emas nyilang tengah tiap hero banner + teks putih di atasnya gagal kontras. Dibatalkan: navy tetap navy, cuma jadi permukaan yang lebih penuh (bukan cuma sidebar/hero seperti sekarang).
 - **`--accent` TIDAK digabung ke `--primary`.** Sudah dipakai terpisah di seluruh app (`buttonStyles` variant `"accent"` vs `"primary"`, 4+ pemakaian di wilayah ornate) — draf pertama salah mau menyatukan jadi satu hue, dibatalkan.
-- **`--accent-ink` (`#8a5a12` di token light) dihapus, tidak ada penggantinya.** Token itu gold yang DIGELAPKAN supaya kebaca sebagai teks di atas PAGE TERANG (komentar asli di `globals.css`: "#d9983f cuma 2.47:1"). Di dark theme, gold `#d9983f` polos sebagai teks di atas navy sudah 5.44-6.33:1 (lihat tabel di bawah) — tidak butuh digelapkan lagi, jadi token terpisah ini gugur begitu saja.
+- **`--accent-ink` dibalik arahnya, bukan dihapus.** Di light dia gold DIGELAPKAN (`#8a5a12`) supaya kebaca di page terang (komentar asli `globals.css`: "#d9983f cuma 2.47:1"). Di dark perannya sama — ink untuk wash `--accent-soft` — tapi arahnya harus DITERANGKAN: `#f0c078`. Nilai itu bukan warna baru, sama dengan `--ring-on-nav` yang sudah ada di `:root`.
 
-Kontras sudah dihitung (formula WCAG relative-luminance standar, sRGB) terhadap kedua permukaan yang realistis dipakai (card `#14304f` dan page `#0b2442`), bukan ditebak:
+Kontras dihitung (formula WCAG relative-luminance standar, sRGB) terhadap permukaan yang realistis dipakai, termasuk **komposit di atas wash "soft"** — bukan cuma di atas card/page polos, karena pasangan `bg-*-soft` + `text-*` itu pola nyata di `Badge` (`app/components/ui.tsx`) dan `ExamChrome`:
 
-| Token | vs `--surface-card` | vs `--surface-page` |
+| Pasangan | Kontras | Permukaan |
 |---|---|---|
-| `--foreground` `#f4ede0` | 11.52:1 | 13.41:1 |
-| `--muted-foreground` `#a8bedb` | 7.06:1 | 8.22:1 |
-| `--accent` `#d9983f` (dipakai sbg teks/ikon gold, bukan cuma bg tombol) | 5.44:1 | 6.33:1 |
-| `--primary-foreground` `#ffffff` vs bg `--primary` `#102d52` (tidak diubah, cek ulang) | 13.82:1 | — |
-| `--success` `#34c795` | 6.23:1 | 7.25:1 |
-| `--destructive` `#f5726c` | 4.79:1 | 5.58:1 |
+| `--foreground` `#f4ede0` | 11.52:1 / 13.41:1 | card / page |
+| `--muted-foreground` `#a8bedb` | 7.06:1 / 8.22:1 | card / page |
+| `--accent` `#d9983f` sbg teks/ikon | 5.44:1 / 6.33:1 | card / page |
+| `--primary-foreground` `#ffffff` di atas `--primary` `#102d52` | 13.82:1 | tombol primary |
+| `--accent-ink` `#f0c078` di atas `--accent-soft` | 6.33:1 | Badge tone="accent" |
+| `--success` `#3ed6a0` | 7.24:1 / 5.28:1 | card / di atas `--success-soft` |
+| `--destructive` `#fd948d` | 6.26:1 / 4.86:1 | card / di atas `--destructive-soft` |
 
-Semua ≥ 4.5:1 (AA teks body). Nilai ini dipindah ke komentar `app/globals.css` pas implementasi, pola sama seperti dokumentasi kontras yang sudah ada di situ untuk token light.
-
-`--elev-*` (shadow): base warnanya ditarik dari hitam (`rgb(0 0 0 / …)`) bukan navy (`rgb(16 45 82 / …)` seperti sekarang) — di atas permukaan gelap, shadow bertarik-navy nyaris tak kelihatan.
+Semua ≥ 4.5:1 (AA teks body). Angka komposit dihitung dengan alpha-blend wash 15% di atas `--surface-card`. Nilai-nilai ini dipindah ke komentar `app/globals.css` pas implementasi, pola sama seperti dokumentasi kontras yang sudah ada untuk token light.
 
 `viewport.themeColor` di `app/layout.tsx` (`#0b2442`) TIDAK perlu diubah — sudah cocok sama page-bg baru.
 
