@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/app/components/ui-client";
 import { AlertTriangle, ArrowRight } from "@/app/components/icons";
@@ -45,12 +46,14 @@ export default function LoginPage() {
     <div className="ornate flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
       <div className="hero-panel grid w-full max-w-4xl gap-8 bg-primary sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div className="relative text-white">
-          <span
-            className="flex size-12 items-center justify-center rounded-lg bg-accent font-heading text-base font-bold text-primary"
-            aria-hidden="true"
-          >
-            PC
-          </span>
+          <Image
+            src="/brand/dajiks-lockup.png"
+            alt="D'Ajiks Akademi"
+            width={1024}
+            height={768}
+            className="h-auto w-52 max-w-full object-contain"
+            priority
+          />
           <h1 className="font-heading mt-5 text-3xl sm:text-4xl">Psiko CAT</h1>
           <p className="mt-3 text-base text-white/75">Sistem Psikotes Terintegrasi</p>
           <p className="mt-6 max-w-[32ch] text-sm text-white/75">Satu ruang untuk latihan, simulasi, dan perkembangan hasil psikotes Anda.</p>

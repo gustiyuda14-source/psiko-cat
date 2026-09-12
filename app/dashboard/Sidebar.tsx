@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
@@ -110,12 +111,14 @@ export default function Sidebar({ name, username }: { name: string; username: st
     <div className="on-nav flex h-full flex-col bg-surface-nav text-white">
       <div className="flex min-h-16 items-center justify-between gap-3 border-b border-white/10 px-5">
         <div className="flex min-w-0 items-center gap-3">
-          <span
-            className="flex size-9 shrink-0 items-center justify-center rounded-md bg-accent font-heading text-sm font-bold text-primary"
-            aria-hidden="true"
-          >
-            PC
-          </span>
+          <Image
+            src="/brand/dajiks-emblem.png"
+            alt=""
+            width={512}
+            height={512}
+            className="size-9 shrink-0 object-contain"
+            priority
+          />
           <div className="min-w-0">
             <p className="truncate font-heading text-sm">Psiko CAT</p>
             <p className="truncate text-xs text-white/60">Ajiks Akademi</p>
