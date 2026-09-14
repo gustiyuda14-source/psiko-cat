@@ -17,18 +17,25 @@ type SymbolRow = {
 
 // Sebelumnya: N query paralel buat count tiap paket + N query lagi buat
 // section rows (sampai ~40 round-trip Supabase per load halaman picker).
-// Sekarang: 2 query total, IN (package_number) sekaligus, count dihitung di
-// JS. COLUMN_STARTS[0] == 1 jadi baris kolom 1 (dipakai buat preview simbol)
-// sudah ikut kebawa di query section, gak perlu query preview terpisah.
+// Sempat dicoba 1 query count gabungan (.in package_number, tanpa
+// count:"exact") tapi itu BUG: PostgREST default max-rows 1000, sementara
+// total baris across package bisa 2500-3000 (5-6 paket x 500) — kepotong
+// diam-diam, paket yang gak kebagian 1000 baris pertama kebaca 0 butir.
+// Count HARUS pakai head:true (aggregate COUNT di server, gak kena limit
+// baris) — makanya tetap N query kecil di sini, tapi tanpa payload apapun
+// jadi tetap jauh lebih ringan dari versi awal yang narik options_payload di
+// tiap query count. Section/symbol tetap 1 query gabungan (aman, dibatasi
+// COLUMN_STARTS, maks ~10 baris/paket).
 export async function buildKecermatanPackages(
   packageNumbers: number[],
   labels: Record<number, string>
 ): Promise<PackageOption[]> {
-  const [{ data: countRows }, { data: symbolRows }] = await Promise.all([
-    supabaseAdmin.from("questions")
-      .select("package_number")
-      .eq("type", "KECERMATAN").eq("is_active", true)
-      .in("package_number", packageNumbers),
+  const [counts, { data: symbolRows }] = await Promise.all([
+    Promise.all(packageNumbers.map((pkg) =>
+      supabaseAdmin.from("questions")
+        .select("id", { count: "exact", head: true })
+        .eq("type", "KECERMATAN").eq("is_active", true).eq("package_number", pkg)
+    )),
     supabaseAdmin.from("questions")
       .select("package_number, column_index, sequence_number, options_payload")
       .eq("type", "KECERMATAN").eq("is_active", true)
@@ -36,10 +43,7 @@ export async function buildKecermatanPackages(
       .in("sequence_number", COLUMN_STARTS),
   ]);
 
-  const counts = new Map<number, number>();
-  for (const row of (countRows ?? []) as { package_number: number }[]) {
-    counts.set(row.package_number, (counts.get(row.package_number) ?? 0) + 1);
-  }
+  const countByPkg = new Map(packageNumbers.map((pkg, i) => [pkg, counts[i].count ?? 0]));
 
   const rowsByPackage = new Map<number, SymbolRow[]>();
   for (const row of (symbolRows ?? []) as SymbolRow[]) {
@@ -49,7 +53,7 @@ export async function buildKecermatanPackages(
   }
 
   return packageNumbers.map((pkg) => {
-    const count = counts.get(pkg) ?? 0;
+    const count = countByPkg.get(pkg) ?? 0;
     const rows = (rowsByPackage.get(pkg) ?? []).sort((a, b) => a.column_index - b.column_index);
     const symbolMap = rows.find((row) => row.column_index === 1)?.options_payload.symbol_map;
 
