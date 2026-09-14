@@ -81,8 +81,8 @@ export function isTerminalModule(status: ModuleAccessRow["status"]): boolean {
 
 export function isModuleExpired(moduleSession: ModuleAccessRow, now = Date.now()): boolean {
   if (!moduleSession.started_at) return false;
-  // ponytail: grace tetap 5 dtk; Kecermatan 60 dtk untuk 10 layar intro.
-  // Pindahkan ke kebijakan berversi ketika aturan offline/toleransi resmi ditetapkan.
+  // Kebijakan resmi (dikonfirmasi 2026-09-14): 5 dtk modul umum, 60 dtk
+  // Kecermatan untuk 10 layar intro. Bukan angka sementara.
   const graceSeconds = moduleSession.module_type === "KECERMATAN" ? 60 : 5;
   return (
     now >
