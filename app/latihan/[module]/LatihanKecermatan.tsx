@@ -1,18 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useCallback, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
 import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";
 import { KecermatanKeyStrip, KECERMATAN_KEYS } from "@/app/components/KecermatanKeyStrip";
 import { buttonStyles, Meter } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { Repeat } from "@/app/components/icons";
+import { Repeat, Timer } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
+import { COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+const INTRO_SECONDS = 5;
 type Feedback = { selected: string; is_correct: boolean; correct_key: string };
 
 function buildLocalGroups(
@@ -49,7 +51,15 @@ function buildLocalGroups(
     .sort((a, b) => a.column_index - b.column_index);
 }
 
-export default function LatihanKecermatan({ questions }: { questions: SafeQuestion[] }) {
+export default function LatihanKecermatan({
+  questions,
+  timedMode = false,
+}: {
+  questions: SafeQuestion[];
+  /** Ya di modal "Aktifkan timer per kolom?" — kunci navigasi sekuensial,
+      60 detik/kolom, jeda 5 detik tiap ganti kolom. Default bebas navigasi. */
+  timedMode?: boolean;
+}) {
   const sorted = useMemo(
     () =>
       [...questions].sort(
@@ -64,6 +74,16 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
   const [finished, setFinished] = useState(false);
   const [showFinish, setShowFinish] = useState(false);
 
+  // Timer per kolom — cuma aktif kalau timedMode. Pola deadline-based sama
+  // persis EngineKecermatan.tsx (wall-clock, tahan tab-throttling), tapi
+  // murni lokal: tidak nyentuh module_sessions/kecermatan_logs sama sekali.
+  const [remainingMs, setRemainingMs] = useState(COLUMN_DURATION_MS);
+  const [showColIntro, setShowColIntro] = useState(false);
+  const [introSeconds, setIntroSeconds] = useState(INTRO_SECONDS);
+  const [showSkip, setShowSkip] = useState(false);
+  const pendingIdxRef = useRef<number | null>(null);
+  const nextColRef = useRef<number | null>(null);
+
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KecermatanOptionsPayload | undefined;
   const shown = Array.isArray(payload?.shown) ? payload.shown.filter((symbol) => typeof symbol === "string") : [];
@@ -74,8 +94,36 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
   const colIdx = (q?.column_index ?? 1) - 1;
   const rowInCol = q ? sorted.slice(0, idx).filter((s) => s.column_index === q.column_index).length : 0;
 
+  // Pindah kolom: kalau kolom terakhir, langsung selesai (sama seperti alur
+  // finish yang sudah ada — TIDAK memanggil endpoint real-exam manapun).
+  // Kalau bukan, tampilkan jeda 5 detik dulu (niru showColIntro EngineKecermatan)
+  // baru lompat ke butir pertama kolom berikutnya.
+  const advanceColumn = useCallback(() => {
+    const currentCol = q?.column_index ?? 1;
+    if (currentCol >= 10) {
+      setFinished(true);
+      return;
+    }
+    const nextStart = sorted.findIndex((s) => s.column_index === currentCol + 1);
+    if (nextStart < 0) {
+      setFinished(true);
+      return;
+    }
+    pendingIdxRef.current = nextStart;
+    nextColRef.current = currentCol + 1;
+    setShowColIntro(true);
+    setIntroSeconds(INTRO_SECONDS);
+  }, [q, sorted]);
+
+  // Ref supaya interval timer selalu manggil versi terbaru advanceColumn
+  // tanpa perlu masuk dependency array-nya (identitasnya berubah tiap render).
+  const advanceColumnRef = useRef(advanceColumn);
+  useEffect(() => {
+    advanceColumnRef.current = advanceColumn;
+  }, [advanceColumn]);
+
   function jumpToColumn(colNum: number) {
-    if (finished) return;
+    if (finished || timedMode) return;
     const target = sorted.findIndex((s) => s.column_index === colNum);
     if (target >= 0) {
       setError("");
@@ -85,15 +133,19 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
 
   function resetPractice() {
     answeredIds.current.clear();
+    pendingIdxRef.current = null;
+    nextColRef.current = null;
     setError("");
     setIdx(0);
     setAnswers({});
     setFinished(false);
+    setShowColIntro(false);
+    setRemainingMs(COLUMN_DURATION_MS);
   }
 
   const pick = useCallback(
     (key: string) => {
-      if (!q || finished || showFinish || answeredIds.current.has(q.id)) return;
+      if (!q || finished || showFinish || showColIntro || answeredIds.current.has(q.id)) return;
       if (!KECERMATAN_KEYS.some((choice) => choice === key)) return;
       const correctKey = getMissingSymbolKey(q.options_payload as unknown as KecermatanOptionsPayload);
       if (!correctKey) {
@@ -106,17 +158,66 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
         [q.id]: { selected: key, is_correct: key === correctKey, correct_key: correctKey },
       }));
       setError("");
-      if (idx >= sorted.length - 1) setFinished(true);
+      if (idx >= sorted.length - 1) {
+        setFinished(true);
+        return;
+      }
+      const next = sorted[idx + 1];
+      const crossesColumn = next.column_index !== q.column_index;
+      if (timedMode && crossesColumn) advanceColumn();
       else setIdx(idx + 1);
     },
-    [q, finished, showFinish, idx, sorted.length]
+    [q, finished, showFinish, showColIntro, idx, sorted, timedMode, advanceColumn]
   );
 
   useExamKeyboard({
-    enabled: Boolean(q) && !finished && !showFinish,
+    enabled: Boolean(q) && !finished && !showFinish && !showColIntro,
     choiceKeys: KECERMATAN_KEYS as unknown as string[],
     onChoose: pick,
   });
+
+  // Jeda antar-kolom, 1 detik x 5 — persis pola EngineKecermatan.tsx.
+  useEffect(() => {
+    if (!showColIntro) return;
+    let remaining = INTRO_SECONDS;
+    const interval = setInterval(() => {
+      remaining -= 1;
+      if (remaining <= 0) {
+        clearInterval(interval);
+        setShowColIntro(false);
+        if (pendingIdxRef.current !== null) {
+          setIdx(pendingIdxRef.current);
+          pendingIdxRef.current = null;
+        }
+      } else {
+        setIntroSeconds(remaining);
+      }
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [showColIntro]);
+
+  // Timer 60 detik/kolom, deadline-based (wall-clock) — pola sama persis
+  // EngineKecermatan.tsx:294-315, tanpa store/DB apapun.
+  //
+  // Sengaja BUKAN bergantung ke `q` (soal aktif) — itu ganti tiap butir
+  // dijawab dalam kolom yang sama, jadi kalau ikut jadi dependency, timer
+  // ke-reset ke 60 lagi tiap klik jawaban. Cuma boleh reset pas kolom-nya
+  // ganti (`colIdx`), gak peduli lagi di butir keberapa di kolom itu.
+  useEffect(() => {
+    if (!timedMode || finished || showColIntro || sorted.length === 0) return;
+    const deadline = Date.now() + COLUMN_DURATION_MS;
+    const tick = () => {
+      const remaining = Math.max(0, deadline - Date.now());
+      setRemainingMs(remaining);
+      if (remaining <= 0) {
+        clearInterval(interval);
+        advanceColumnRef.current();
+      }
+    };
+    tick();
+    const interval = setInterval(tick, 250);
+    return () => clearInterval(interval);
+  }, [timedMode, colIdx, showColIntro, finished, sorted.length]);
 
   if (!q) return null;
 
@@ -162,6 +263,18 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
     );
   }
 
+  if (showColIntro) {
+    return (
+      <div className="mx-auto max-w-md">
+        <div className="surface-card space-y-2 px-6 py-12 text-center">
+          <p className="text-sm text-muted-foreground">Kolom {ROMAN[(nextColRef.current ?? 1) - 1]}</p>
+          <p className="tnum font-heading text-6xl text-foreground">{introSeconds}</p>
+          <p className="text-sm text-muted-foreground">Kolom berikutnya akan dimulai…</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-auto max-w-2xl space-y-4">
       <ConfirmDialog
@@ -181,37 +294,73 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
         </p>
       </ConfirmDialog>
 
+      {timedMode && (
+        <ConfirmDialog
+          open={showSkip}
+          onClose={() => setShowSkip(false)}
+          onConfirm={() => {
+            setShowSkip(false);
+            advanceColumn();
+          }}
+          title="Lewati sisa kolom ini?"
+          confirmLabel="Ya, lewati"
+          tone="danger"
+        >
+          <p className="text-muted-foreground">
+            Butir yang belum dijawab di kolom ini dianggap tidak dijawab, sama seperti waktu habis.
+          </p>
+        </ConfirmDialog>
+      )}
+
       <div className="surface-card flex flex-wrap items-center justify-between gap-4 px-5 py-3.5">
         <p className="tnum text-sm text-foreground">
           Kolom <span className="font-semibold">{ROMAN[colIdx]}</span>
           <span className="text-muted-foreground"> · butir {rowInCol + 1}</span>
         </p>
-        <p className="tnum text-xs text-muted-foreground">
-          {answeredCount} dari {sorted.length} terjawab
-        </p>
+        <div className="flex items-center gap-3">
+          {timedMode && (
+            <span
+              className={`tnum inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-bold ${
+                remainingMs <= 10_000 ? "bg-destructive-soft text-destructive" : "bg-accent-soft text-accent-ink"
+              }`}
+            >
+              <Timer className="size-3.5" />
+              {Math.ceil(remainingMs / 1000)}d
+            </span>
+          )}
+          <p className="tnum text-xs text-muted-foreground">
+            {answeredCount} dari {sorted.length} terjawab
+          </p>
+        </div>
       </div>
 
-      {/* Di mode latihan kolom benar-benar bisa dilompati, jadi deretan ini
-          memang kontrol — beda dengan indikator sepuluh segmen di mode ujian
-          yang tidak bisa diklik. */}
+      {/* Mode bebas: kolom benar-benar bisa dilompati, deretan ini kontrol.
+          Mode timer: dikunci sekuensial, cuma indikator (samain sama strip
+          10-segmen non-interaktif di EngineKecermatan). */}
       <div
         className="surface-card grid grid-cols-5 gap-1 p-1.5 sm:grid-cols-10"
-        role="group"
-        aria-label="Pilih kolom, 10 kolom tersedia"
+        role={timedMode ? "img" : "group"}
+        aria-label={timedMode ? "Progres kolom" : "Pilih kolom, 10 kolom tersedia"}
       >
         {ROMAN.map((r, i) => {
           const active = i === colIdx;
+          const done = i < colIdx;
           return (
             <button
               key={i}
               type="button"
-              aria-pressed={active}
+              tabIndex={timedMode ? -1 : 0}
+              aria-pressed={timedMode ? undefined : active}
               aria-label={`Kolom ${i + 1}${active ? ", sedang dibuka" : ""}`}
-              onClick={() => jumpToColumn(i + 1)}
+              onClick={timedMode ? undefined : () => jumpToColumn(i + 1)}
               className={`min-h-11 rounded-md px-2 text-xs font-bold transition-colors duration-150 ${
+                timedMode ? "cursor-default" : ""
+              } ${
                 active
                   ? "bg-primary text-primary-foreground"
-                  : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
+                  : timedMode && done
+                    ? "bg-success/20 text-success"
+                    : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
               }`}
             >
               {r}
@@ -266,24 +415,31 @@ export default function LatihanKecermatan({ questions }: { questions: SafeQuesti
             </div>
 
             <div className="flex flex-wrap gap-3 border-t border-border px-4 py-3 sm:px-6">
-              <Button
-                variant="secondary"
-                onClick={() => {
-                  setError("");
-                  setIdx((i) => Math.max(0, i - 1));
-                }}
-                disabled={idx === 0}
-                className="flex-1"
-              >
-                Butir sebelumnya
-              </Button>
-              {(fb || error) && (
+              {!timedMode && (
+                <Button
+                  variant="secondary"
+                  onClick={() => {
+                    setError("");
+                    setIdx((i) => Math.max(0, i - 1));
+                  }}
+                  disabled={idx === 0}
+                  className="flex-1"
+                >
+                  Butir sebelumnya
+                </Button>
+              )}
+              {!timedMode && (fb || error) && (
                 <Button variant="secondary" onClick={() => {
                   setError("");
                   if (idx >= sorted.length - 1) setFinished(true);
                   else setIdx(idx + 1);
                 }} className="flex-1">
                   Butir berikutnya
+                </Button>
+              )}
+              {timedMode && (
+                <Button variant="secondary" onClick={() => setShowSkip(true)} className="flex-1">
+                  Lewati sisa Kolom
                 </Button>
               )}
               <Button variant="danger" onClick={() => setShowFinish(true)} className="flex-1">
