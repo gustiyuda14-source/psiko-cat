@@ -27,7 +27,8 @@ export default async function AdminPage() {
     .select(`
       id, name, username, gender,
       test_sessions (
-        id, status, nap_score, is_passed, completed_at, created_at
+        id, status, nap_score, is_passed, completed_at, created_at,
+        module_sessions ( module_type, ke_index, kh_index )
       )
     `)
     .eq("role", "peserta")
@@ -45,10 +46,25 @@ export default async function AdminPage() {
       is_passed: boolean | null;
       completed_at: string | null;
       created_at: string;
+      module_sessions: Array<{
+        module_type: string;
+        ke_index: number | null;
+        kh_index: number | null;
+      }>;
     }>;
   };
 
   const peserta = (users ?? []) as unknown as UserRow[];
+
+  // F09 (AUDIT_CAT_2026-09-12.md): formula Kh bisa tetap 100 walau responsnya
+  // dikit banget, selama sebarannya rata antar 10 lajur (SD≈0). Norma resmi
+  // belum diputuskan, jadi formula dibiarkan — ini cuma penanda buat admin
+  // supaya sesi dengan pola itu dicek manual, bukan diambil begitu saja.
+  function needsKecermatanReview(testSession: UserRow["test_sessions"][number]) {
+    return testSession.module_sessions.some(
+      (m) => m.module_type === "KECERMATAN" && (m.ke_index ?? 100) < 30 && (m.kh_index ?? 0) >= 90
+    );
+  }
 
   const totalPeserta = peserta.length;
   const totalTes = peserta.reduce((s, u) => s + (u.test_sessions?.length ?? 0), 0);
@@ -147,6 +163,9 @@ export default async function AdminPage() {
                                   <span className="tnum font-semibold text-foreground">
                                     {s.nap_score?.toFixed(1) ?? "—"}
                                   </span>
+                                  {needsKecermatanReview(s) && (
+                                    <Badge tone="accent">Cek manual: Kecermatan</Badge>
+                                  )}
                                   <Link
                                     href={`/test/${s.id}/result`}
                                     className="flex items-center gap-0.5 text-xs font-semibold text-primary hover:underline"
