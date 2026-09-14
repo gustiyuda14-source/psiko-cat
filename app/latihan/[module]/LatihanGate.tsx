@@ -12,9 +12,14 @@ import LatihanKecerdasan from "./LatihanKecerdasan";
 import LatihanKepribadian from "./LatihanKepribadian";
 import LatihanKecermatan from "./LatihanKecermatan";
 
+// F11 (AUDIT_CAT_2026-09-12.md): latihan dan ujian resmi masih memakai bank
+// soal yang sama. Sampai ada bank latihan terpisah, posisikan hasil latihan
+// sebagai simulasi pola soal, bukan jaminan soal ujian resmi identik.
+const BANK_NOTE = "Latihan ini simulasi pola soal, bukan jaminan soal ujian resmi akan sama persis.";
+
 const MODE_NOTE: Record<ModuleType, string> = {
-  KECERDASAN: "Jawaban langsung dikoreksi setiap butir, lengkap dengan kunci yang benar.",
-  KECERMATAN: "Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai.",
+  KECERDASAN: `Jawaban langsung dikoreksi setiap butir, lengkap dengan kunci yang benar. ${BANK_NOTE}`,
+  KECERMATAN: `Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai. ${BANK_NOTE}`,
   KEPRIBADIAN:
     "Tidak ada jawaban benar atau salah — pilihan langsung membawa ke pernyataan berikutnya.",
 };
