@@ -121,57 +121,57 @@ export async function runSessionCalculate(session_id: string, force = false): Pr
   ).sort((a, b) => a.sequence_order - b.sequence_order);
 
   const results: Record<string, unknown> = {};
+  const moduleUpdates: Array<{
+    id: string;
+    raw_score: number;
+    nap_contribution: number;
+    is_disqualifying: boolean;
+    ke_index: number | null;
+    kt_index: number | null;
+    kh_index: number | null;
+  }> = [];
 
   for (const ms of moduleSessions) {
     if (ms.module_type === "KECERDASAN") {
       const score = await scoreKecerdasan(ms.id);
       results.kecerdasan = score;
-      const { error } = await supabaseAdmin
-        .from("module_sessions")
-        .update({
-          raw_score: score.raw_score,
-          nap_contribution: score.nap_contribution,
-          is_disqualifying: score.is_disqualifying,
-          status: "COMPLETED",
-          completed_at: new Date().toISOString(),
-        })
-        .eq("id", ms.id);
-      if (error) throw error;
+      moduleUpdates.push({
+        id: ms.id,
+        raw_score: score.raw_score,
+        nap_contribution: score.nap_contribution,
+        is_disqualifying: score.is_disqualifying,
+        ke_index: null,
+        kt_index: null,
+        kh_index: null,
+      });
     }
 
     if (ms.module_type === "KEPRIBADIAN") {
       const score = await scoreKepribadian(ms.id);
       results.kepribadian = score;
-      const { error } = await supabaseAdmin
-        .from("module_sessions")
-        .update({
-          raw_score: score.raw_score,
-          nap_contribution: score.nap_contribution,
-          is_disqualifying: score.is_disqualifying,
-          status: "COMPLETED",
-          completed_at: new Date().toISOString(),
-        })
-        .eq("id", ms.id);
-      if (error) throw error;
+      moduleUpdates.push({
+        id: ms.id,
+        raw_score: score.raw_score,
+        nap_contribution: score.nap_contribution,
+        is_disqualifying: score.is_disqualifying,
+        ke_index: null,
+        kt_index: null,
+        kh_index: null,
+      });
     }
 
     if (ms.module_type === "KECERMATAN") {
       const score = await scoreKecermatan(ms.id);
       results.kecermatan = score;
-      const { error } = await supabaseAdmin
-        .from("module_sessions")
-        .update({
-          raw_score: score.raw_score,
-          nap_contribution: score.nap_contribution,
-          is_disqualifying: score.is_disqualifying,
-          ke_index: score.ke_index,
-          kt_index: score.kt_index,
-          kh_index: score.kh_index,
-          status: "COMPLETED",
-          completed_at: new Date().toISOString(),
-        })
-        .eq("id", ms.id);
-      if (error) throw error;
+      moduleUpdates.push({
+        id: ms.id,
+        raw_score: score.raw_score,
+        nap_contribution: score.nap_contribution,
+        is_disqualifying: score.is_disqualifying,
+        ke_index: score.ke_index,
+        kt_index: score.kt_index,
+        kh_index: score.kh_index,
+      });
     }
   }
 
@@ -205,21 +205,25 @@ export async function runSessionCalculate(session_id: string, force = false): Pr
       })
     : calculateSingleModuleResult(standaloneRawScore);
 
-  const { error: updateError } = await supabaseAdmin
-    .from("test_sessions")
-    .update({
-      nap_score: nap.nap_score,
-      kecerdasan_contribution: kecerdasan.nap_contribution,
-      kepribadian_contribution: kepribadian.nap_contribution,
-      kecermatan_contribution: kecermatan.nap_contribution,
-      is_passed: nap.is_passed,
-      disqualified_reason: nap.disqualified_reason,
-      status: nap.status === "COMPLETED" ? "COMPLETED" : "DISQUALIFIED",
-      completed_at: new Date().toISOString(),
-    })
-    .eq("id", session_id);
+  // Single RPC: locks the session row, re-checks the terminal-status guard
+  // under that lock, then writes every module_session and the test_session
+  // in one transaction. Closes F08 — no more partial writes on mid-loop
+  // failure, and no more two-concurrent-calculate race on the status check.
+  const { data: finalized, error: rpcError } = await supabaseAdmin.rpc("finalize_test_session", {
+    p_session_id: session_id,
+    p_force: force,
+    p_module_updates: moduleUpdates,
+    p_nap_score: nap.nap_score,
+    p_kecerdasan_contribution: kecerdasan.nap_contribution,
+    p_kepribadian_contribution: kepribadian.nap_contribution,
+    p_kecermatan_contribution: kecermatan.nap_contribution,
+    p_is_passed: nap.is_passed,
+    p_disqualified_reason: nap.disqualified_reason,
+    p_status: nap.status === "COMPLETED" ? "COMPLETED" : "DISQUALIFIED",
+  });
 
-  if (updateError) throw updateError;
+  if (rpcError) throw rpcError;
+  if (!finalized) return null;
 
   return {
     nap_score: nap.nap_score,
