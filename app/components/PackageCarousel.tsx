@@ -46,6 +46,7 @@ export function PackageCarousel({
 }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [showDetail, setShowDetail] = useState(false);
+  const [timedMode, setTimedMode] = useState(false);
   const active = packages[activeIndex];
 
   if (!active) return null;
@@ -230,13 +231,48 @@ export function PackageCarousel({
             ))}
           </ul>
 
+          <div className="inset-panel mt-5 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+            <div>
+              <p className="text-sm font-semibold text-foreground">Aktifkan timer per kolom?</p>
+              <p className="mt-0.5 text-xs text-muted-foreground">
+                {timedMode
+                  ? "60 detik per kolom, urutan terkunci — persis mode ujian."
+                  : "Tanpa batas waktu, bebas pindah kolom kapan saja."}
+              </p>
+            </div>
+            <div role="radiogroup" aria-label="Aktifkan timer per kolom" className="inline-flex gap-1 rounded-md border border-border bg-card p-1">
+              <button
+                type="button"
+                role="radio"
+                aria-checked={!timedMode}
+                onClick={() => setTimedMode(false)}
+                className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
+                  !timedMode ? "bg-accent text-primary-foreground" : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
+                }`}
+              >
+                Tidak
+              </button>
+              <button
+                type="button"
+                role="radio"
+                aria-checked={timedMode}
+                onClick={() => setTimedMode(true)}
+                className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
+                  timedMode ? "bg-accent text-primary-foreground" : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
+                }`}
+              >
+                Ya
+              </button>
+            </div>
+          </div>
+
           <Link
-            href={`${hrefBase}/${active.id}?autostart=1`}
+            href={`${hrefBase}/${active.id}?autostart=1${timedMode ? "&timed=1" : ""}`}
             className={buttonStyles({
               variant: "accent",
               size: "lg",
               block: true,
-              className: "btn-pulse-cta mt-6 justify-center rounded-full",
+              className: "btn-pulse-cta mt-4 justify-center rounded-full",
             })}
           >
             Mulai Paket

@@ -52,7 +52,11 @@ export default function LatihanGate({
   // Datang dari modal detail paket (PackageCarousel) lewat link ?autostart=1:
   // langsung hitung mundur, skip kartu "belum dimulai" — infonya sudah kelihatan
   // di modal, nampilin lagi di sini cuma nambah satu klik yang gak perlu.
-  const autoStart = useSearchParams().get("autostart") === "1";
+  const searchParams = useSearchParams();
+  const autoStart = searchParams.get("autostart") === "1";
+  // Cuma dipakai LatihanKecermatan (lihat komponen itu) — modul lain gak
+  // punya konsep kolom, prop-nya diabaikan.
+  const timedMode = searchParams.get("timed") === "1";
   const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
   const practiceRef = useRef<HTMLDivElement>(null);
@@ -83,7 +87,7 @@ export default function LatihanGate({
         description={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${meta.shortDesc}`}
         actions={
           <>
-            <Badge tone="neutral">Tanpa batas waktu</Badge>
+            <Badge tone="neutral">{timedMode ? "60 detik/kolom" : "Tanpa batas waktu"}</Badge>
             <Link
               href={exitHref}
               className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-white/25 px-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/12"
@@ -102,7 +106,7 @@ export default function LatihanGate({
           ) : moduleType === "KEPRIBADIAN" ? (
             <LatihanKepribadian questions={questions} />
           ) : (
-            <LatihanKecermatan questions={questions} />
+            <LatihanKecermatan questions={questions} timedMode={timedMode} />
           )}
         </div>
       ) : countdown !== null ? (
