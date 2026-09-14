@@ -47,8 +47,8 @@ function SummaryCell({
   }[tone];
 
   return (
-    <div className="flex-1 px-5 py-4 sm:px-6 sm:py-5">
-      <p className="text-xs font-medium text-muted-foreground">{label}</p>
+    <div className={`flex-1 px-5 py-4 sm:px-6 sm:py-5 ${tone === "primary" ? "shadow-glow" : ""}`}>
+      <p className="eyebrow">{label}</p>
       <p className={`tnum mt-1.5 font-heading text-3xl ${toneClass}`}>{value}</p>
       {caption && <p className="mt-1 text-xs text-muted-foreground">{caption}</p>}
       {children}
@@ -82,7 +82,7 @@ export default async function DashboardPage() {
 
   return (
     <div className="app-page space-y-6">
-      <section className="hero-panel on-nav grid gap-8 bg-primary lg:grid-cols-[1.5fr_1fr] lg:items-center">
+      <section className="hero-panel on-nav grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-center">
         <div className="relative">
           <p className="text-sm text-white/70">{greeting(new Date().getHours())},</p>
           <h1 className="font-heading mt-2 text-3xl sm:text-4xl">{session.name}</h1>
@@ -93,7 +93,7 @@ export default async function DashboardPage() {
           </p>
           <Link
             href="/dashboard/simulasi"
-            className={buttonStyles({ variant: "accent", size: "lg", className: "mt-6" })}
+            className={buttonStyles({ variant: "accent", size: "lg", className: "mt-6 rounded-full" })}
           >
             Mulai simulasi
             <ArrowRight className="size-4" />
@@ -158,7 +158,7 @@ export default async function DashboardPage() {
           </div>
 
           <section className="space-y-3">
-            <h2 className="text-sm font-semibold text-foreground">Ringkasan aktivitas</h2>
+            <h2 className="rule-ornate">Ringkasan aktivitas</h2>
             <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
               <WeeklyFrequencyChart sessions={allSessions} />
               <NapTrendChart sessions={fullSessions} />

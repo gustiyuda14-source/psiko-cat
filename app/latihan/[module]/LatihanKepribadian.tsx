@@ -6,6 +6,7 @@ import { Badge, Meter } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { Check, ChevronLeft, ChevronRight } from "@/app/components/icons";
 import { QuestionNavigator } from "@/app/components/ExamChrome";
+import { KepribadianReview, type KepribadianReviewItem } from "@/app/components/PembahasanSection";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 
 export default function LatihanKepribadian({ questions }: { questions: SafeQuestion[] }) {
@@ -58,24 +59,29 @@ export default function LatihanKepribadian({ questions }: { questions: SafeQuest
   if (!q) return null;
 
   if (finished) {
+    const items: KepribadianReviewItem[] = sorted.map((question) => ({
+      question_id: question.id,
+      sequence_number: question.sequence_number,
+      selected_key: answers[question.id] ?? null,
+      payload: question.options_payload as unknown as KepribadianOptionsPayload,
+    }));
+
     return (
-      <section className="surface-card mx-auto max-w-lg space-y-4 px-6 py-8 text-center sm:px-8">
-        <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-success-soft text-success">
-          <Check className="size-7" strokeWidth={2.5} />
-        </span>
-        <div>
-          <h2 className="font-heading text-2xl text-foreground">Latihan selesai</h2>
+      <section className="surface-card mx-auto max-w-3xl space-y-5 px-6 py-8 sm:px-8">
+        <div className="text-center">
+          <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-success-soft text-success">
+            <Check className="size-7" strokeWidth={2.5} />
+          </span>
+          <h2 className="font-heading mt-3 text-2xl text-foreground">Latihan selesai</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Anda telah menjawab <span className="tnum font-semibold text-foreground">{answeredCount}</span> dari{" "}
-            <span className="tnum font-semibold text-foreground">{sorted.length}</span> pernyataan.
+            Jawaban latihan hanya tersimpan selama halaman ini terbuka.
           </p>
         </div>
-        <p className="text-xs text-muted-foreground">
-          Jawaban latihan hanya tersimpan selama halaman ini terbuka.
-        </p>
+        <KepribadianReview items={items} />
         <Button
           variant="primary"
           size="lg"
+          block
           onClick={() => {
             setAnswers({});
             setIdx(0);

@@ -24,7 +24,7 @@ export type Size = "sm" | "md" | "lg";
 const VARIANT: Record<Variant, string> = {
   // Aksi utama di permukaan terang.
   primary:
-    "bg-primary text-primary-foreground shadow-e1 hover:bg-primary-hover active:bg-primary-active",
+    "btn-primary bg-primary text-primary-foreground shadow-e1 hover:bg-primary-hover active:bg-primary-active",
   // CTA bermuatan merek. Gold hanya sebagai background dengan teks navy.
   // btn-accent-metal menambahkan gradient logam, tapi HANYA di dalam .ornate —
   // di permukaan light, bg-accent yang flat tetap yang berlaku.
@@ -32,7 +32,7 @@ const VARIANT: Record<Variant, string> = {
     "btn-accent-metal bg-accent text-primary shadow-e2 hover:bg-accent-strong active:bg-accent-strong",
   // Aksi pendamping. Border cukup kuat untuk lolos 3:1 sebagai batas kontrol.
   secondary:
-    "border border-border-strong/55 bg-card text-foreground shadow-e1 hover:border-border-strong hover:bg-surface-inset active:bg-surface-inset",
+    "btn-secondary border border-border-strong/55 bg-card text-foreground shadow-e1 hover:border-border-strong hover:bg-surface-inset active:bg-surface-inset",
   ghost: "text-muted-foreground hover:bg-surface-inset hover:text-foreground",
   danger:
     "border border-destructive/45 bg-card text-destructive hover:border-destructive hover:bg-destructive-soft",
@@ -78,7 +78,7 @@ type Tone = "neutral" | "info" | "success" | "danger" | "accent";
 
 const TONE: Record<Tone, string> = {
   neutral: "border-border bg-surface-inset text-muted-foreground",
-  info: "border-primary/20 bg-primary/8 text-primary",
+  info: "badge-info border-primary/20 bg-primary/8 text-primary",
   success: "border-success/25 bg-success-soft text-success",
   danger: "border-destructive/25 bg-destructive-soft text-destructive",
   accent: "border-accent/35 bg-accent-soft text-accent-ink",
@@ -95,7 +95,7 @@ export function Badge({
 }) {
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${TONE[tone]} ${className}`}
+      className={`badge-base inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${TONE[tone]} ${className}`}
     >
       {children}
     </span>
@@ -116,7 +116,7 @@ export function PageHeader({
   actions?: React.ReactNode;
 }) {
   return (
-    <header className="hero-panel on-nav flex flex-wrap items-end justify-between gap-5 bg-primary">
+    <header className="hero-panel on-nav flex flex-wrap items-end justify-between gap-5">
       <div className="relative min-w-0 flex-1 basis-72">
         <h1 className="font-heading text-2xl text-white sm:text-3xl">{title}</h1>
         {description && (
@@ -199,7 +199,7 @@ export function Meter({
 
   return (
     <div
-      className={`h-1.5 overflow-hidden rounded-full bg-surface-inset ${className}`}
+      className={`meter-track h-1.5 overflow-hidden rounded-full bg-surface-inset ${className}`}
       role="progressbar"
       aria-label={label}
       aria-valuemin={0}

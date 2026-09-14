@@ -157,7 +157,7 @@ function KecerdasanItem({ item }: { item: KecerdasanReviewItem }) {
   );
 }
 
-function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
+export function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
   if (!items.length) {
     return <p className="text-sm text-muted-foreground">Tidak ada jawaban tersimpan.</p>;
   }
@@ -208,7 +208,7 @@ function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
   );
 }
 
-function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
+export function KepribadianReview({ items }: { items: KepribadianReviewItem[] }) {
   if (!items.length) {
     return <p className="text-sm text-muted-foreground">Tidak ada jawaban tersimpan.</p>;
   }

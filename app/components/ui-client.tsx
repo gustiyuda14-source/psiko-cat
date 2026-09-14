@@ -80,7 +80,7 @@ export function Dialog({
       onClick={(e) => {
         if (dismissible && e.target === ref.current) onClose();
       }}
-      className={`m-auto w-full max-w-[min(30rem,calc(100vw-2rem))] border-0 bg-transparent p-0 backdrop:bg-[#08192f]/60 ${className}`}
+      className={`m-auto w-full max-w-[min(30rem,calc(100vw-2rem))] border-0 bg-transparent p-0 backdrop:bg-[var(--surface-nav-deep)]/60 ${className}`}
     >
       <div className="surface-panel enter-rise p-6 text-left sm:p-7">{children}</div>
     </dialog>

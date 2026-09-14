@@ -126,7 +126,7 @@ export default async function ReviewPage({
   return (
     <div className="app-page grid gap-6 lg:grid-cols-[minmax(0,1fr)_15rem]">
       <div className="order-2 space-y-6 lg:order-1">
-        <div className="hero-panel on-nav bg-primary">
+        <div className="hero-panel on-nav">
           <h1 className="font-heading text-2xl text-white sm:text-3xl">Ruang Review</h1>
           <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
             <span className="text-white/75">
@@ -157,7 +157,7 @@ export default async function ReviewPage({
         className="order-1 space-y-2 lg:order-2 lg:sticky lg:top-6 lg:self-start"
         aria-label="Pilih sesi selesai"
       >
-        <h2 className="text-sm font-semibold text-foreground">Sesi selesai</h2>
+        <h2 className="rule-ornate">Sesi selesai</h2>
         <ul className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">
           {sessions.map((s) => {
             const active = s.id === selected.id;

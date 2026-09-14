@@ -51,11 +51,11 @@ export async function POST(req: NextRequest) {
 
     const { question_id, selected_key } = (await req.json()) as {
       question_id: string;
-      selected_key: string;
+      selected_key: string | null;
     };
 
-    if (!question_id || !selected_key) {
-      return NextResponse.json({ error: "question_id dan selected_key wajib" }, { status: 400 });
+    if (!question_id) {
+      return NextResponse.json({ error: "question_id wajib" }, { status: 400 });
     }
 
     const { data: question, error } = await supabaseAdmin
@@ -82,6 +82,11 @@ export async function POST(req: NextRequest) {
     if (question.type === "KECERDASAN") {
       const rule = question.scoring_rule as unknown as KecerdasanScoringRule;
       const payload = question.options_payload as unknown as KecerdasanOptionsPayload;
+      // selected_key kosong = butir dilewati: tetap balikin kunci buat pembahasan,
+      // tapi jangan lewat normalizeSelection (itu buat validasi jawaban beneran).
+      if (!selected_key) {
+        return NextResponse.json({ is_correct: false, correct_key: rule.correct_key });
+      }
       const normalized = normalizeSelection(
         selected_key,
         (payload.choices ?? []).map((choice) => choice.key),
@@ -94,6 +99,9 @@ export async function POST(req: NextRequest) {
     if (question.type === "KECERMATAN") {
       const rule = question.scoring_rule as unknown as KecermatanScoringRule;
       const payload = question.options_payload as unknown as KecermatanOptionsPayload;
+      if (!selected_key) {
+        return NextResponse.json({ is_correct: false, correct_key: rule.correct_choice });
+      }
       const normalized = normalizeSelection(selected_key, payload.choices ?? [], 1);
       if (!normalized) return NextResponse.json({ error: "Pilihan tidak valid" }, { status: 400 });
       return NextResponse.json({ is_correct: normalized === rule.correct_choice, correct_key: rule.correct_choice });

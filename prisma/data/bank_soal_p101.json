@@ -1,0 +1,5138 @@
+{
+  "nomor": 101,
+  "nama": "Draf Paket Angka-Huruf 1",
+  "kategori": "ANGKA_HURUF",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "A2",
+        "B": "5B",
+        "C": "C8",
+        "D": "3D",
+        "E": "E6"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "A2",
+            "5B",
+            "3D",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "3D",
+            "C8",
+            "5B",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "C8",
+            "3D",
+            "A2",
+            "5B"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "A2",
+            "5B",
+            "C8",
+            "E6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "3D"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "3D",
+            "E6",
+            "A2",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "A2",
+            "E6",
+            "C8",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "A2",
+            "5B",
+            "3D",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "3D",
+            "C8",
+            "5B",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "C8",
+            "E6",
+            "A2",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "5B"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "5B",
+            "C8",
+            "3D",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "3D"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "3D",
+            "E6",
+            "A2",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "5B",
+            "E6",
+            "3D",
+            "C8"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "A2",
+            "5B",
+            "C8",
+            "3D"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "3D",
+            "C8",
+            "A2",
+            "E6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "C8",
+            "E6",
+            "A2",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "5B"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "A2",
+            "C8",
+            "3D",
+            "E6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "E6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "3D",
+            "E6",
+            "A2",
+            "5B"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "5B",
+            "E6",
+            "3D",
+            "C8"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "A2",
+            "5B",
+            "C8",
+            "3D"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "3D",
+            "5B",
+            "A2",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "3D",
+            "E6",
+            "5B",
+            "C8"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "A2",
+            "3D",
+            "C8",
+            "5B"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "A2",
+            "C8",
+            "3D",
+            "E6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "E6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "C8",
+            "3D",
+            "A2",
+            "5B"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "A2",
+            "5B",
+            "C8",
+            "E6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "3D",
+            "5B",
+            "A2",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "3D",
+            "E6",
+            "5B",
+            "C8"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "A2",
+            "E6",
+            "C8",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "A2",
+            "5B",
+            "3D",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "3D",
+            "C8",
+            "5B",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "C8",
+            "3D",
+            "A2",
+            "5B"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "5B",
+            "C8",
+            "3D",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "3D"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "3D",
+            "E6",
+            "A2",
+            "C8"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "A2",
+            "E6",
+            "C8",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "A2",
+            "5B",
+            "3D",
+            "E6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "3D",
+            "C8",
+            "A2",
+            "E6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "C8",
+            "E6",
+            "A2",
+            "5B"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "A2",
+            "E6",
+            "3D",
+            "5B"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "5B",
+            "C8",
+            "3D",
+            "E6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "C8",
+            "5B",
+            "A2",
+            "3D"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "simbol": {
+        "A": "9F",
+        "B": "G4",
+        "C": "7H",
+        "D": "J2",
+        "E": "5K"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "G4",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "9F",
+            "G4",
+            "7H",
+            "J2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "J2",
+            "7H",
+            "9F",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "7H",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "9F",
+            "5K",
+            "J2",
+            "G4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "9F",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "7H",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "J2",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "G4",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "9F",
+            "G4",
+            "7H",
+            "J2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "J2",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "J2",
+            "5K",
+            "G4",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "9F",
+            "J2",
+            "7H",
+            "G4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "9F",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "7H",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "7H",
+            "J2",
+            "9F",
+            "G4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "9F",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "9F",
+            "G4",
+            "7H",
+            "5K"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "J2",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "J2",
+            "5K",
+            "G4",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "9F",
+            "5K",
+            "7H",
+            "G4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "9F",
+            "G4",
+            "J2",
+            "5K"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "J2",
+            "7H",
+            "G4",
+            "5K"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "7H",
+            "J2",
+            "9F",
+            "G4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "9F",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "G4",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "7H",
+            "G4",
+            "9F",
+            "J2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "J2",
+            "5K",
+            "9F",
+            "7H"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "9F",
+            "5K",
+            "7H",
+            "G4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "9F",
+            "G4",
+            "J2",
+            "5K"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "J2",
+            "7H",
+            "9F",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "7H",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "9F",
+            "5K",
+            "J2",
+            "G4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "G4",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "7H",
+            "G4",
+            "9F",
+            "J2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "J2",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "G4",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "9F",
+            "G4",
+            "7H",
+            "J2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "J2",
+            "7H",
+            "9F",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "7H",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "9F",
+            "J2",
+            "7H",
+            "G4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "9F",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "7H",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "J2",
+            "5K",
+            "9F",
+            "G4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "G4",
+            "5K",
+            "J2",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "9F",
+            "G4",
+            "7H",
+            "5K"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "J2",
+            "G4",
+            "9F",
+            "5K"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "J2",
+            "5K",
+            "G4",
+            "7H"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "9F",
+            "J2",
+            "7H",
+            "G4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "9F",
+            "7H",
+            "J2",
+            "5K"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "simbol": {
+        "A": "M8",
+        "B": "3N",
+        "C": "P6",
+        "D": "9Q",
+        "E": "R4"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "P6",
+            "9Q",
+            "M8",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "M8",
+            "R4",
+            "9Q",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "M8",
+            "3N",
+            "P6",
+            "R4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "9Q",
+            "3N",
+            "M8",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "9Q",
+            "R4",
+            "3N",
+            "P6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "M8",
+            "R4",
+            "P6",
+            "3N"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "M8",
+            "3N",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "9Q",
+            "P6",
+            "3N",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "P6",
+            "9Q",
+            "M8",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "M8",
+            "R4",
+            "9Q",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "3N",
+            "P6",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "P6",
+            "3N",
+            "M8",
+            "9Q"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "9Q",
+            "R4",
+            "M8",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "M8",
+            "R4",
+            "P6",
+            "3N"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "M8",
+            "3N",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "9Q",
+            "P6",
+            "M8",
+            "R4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "P6",
+            "R4",
+            "M8",
+            "3N"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "M8",
+            "R4",
+            "9Q",
+            "3N"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "3N",
+            "P6",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "P6",
+            "3N",
+            "M8",
+            "9Q"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "9Q",
+            "R4",
+            "M8",
+            "3N"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "3N",
+            "R4",
+            "9Q",
+            "P6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "M8",
+            "3N",
+            "P6",
+            "9Q"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "9Q",
+            "P6",
+            "M8",
+            "R4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "P6",
+            "R4",
+            "M8",
+            "3N"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "M8",
+            "9Q",
+            "P6",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "M8",
+            "P6",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "P6",
+            "3N",
+            "M8",
+            "R4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "9Q",
+            "R4",
+            "M8",
+            "3N"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "3N",
+            "R4",
+            "9Q",
+            "P6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "M8",
+            "3N",
+            "P6",
+            "R4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "9Q",
+            "3N",
+            "M8",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "9Q",
+            "R4",
+            "3N",
+            "P6"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "M8",
+            "9Q",
+            "P6",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "M8",
+            "P6",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "9Q",
+            "P6",
+            "3N",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "P6",
+            "9Q",
+            "M8",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "M8",
+            "R4",
+            "9Q",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "M8",
+            "3N",
+            "P6",
+            "R4"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "9Q",
+            "3N",
+            "M8",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "9Q",
+            "R4",
+            "M8",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "M8",
+            "R4",
+            "P6",
+            "3N"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "M8",
+            "3N",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "9Q",
+            "P6",
+            "3N",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "P6",
+            "9Q",
+            "M8",
+            "3N"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "M8",
+            "R4",
+            "9Q",
+            "3N"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "3N",
+            "P6",
+            "9Q",
+            "R4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "P6",
+            "3N",
+            "M8",
+            "9Q"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "9Q",
+            "R4",
+            "M8",
+            "P6"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "M8",
+            "R4",
+            "P6",
+            "3N"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "simbol": {
+        "A": "7S",
+        "B": "T2",
+        "C": "5U",
+        "D": "V8",
+        "E": "3W"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "V8",
+            "5U",
+            "7S",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "5U",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "7S",
+            "3W",
+            "V8",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "T2",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "5U",
+            "T2",
+            "7S",
+            "V8"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "T2",
+            "3W",
+            "V8",
+            "5U"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "7S",
+            "T2",
+            "5U",
+            "V8"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "V8",
+            "5U",
+            "7S",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "5U",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "7S",
+            "V8",
+            "5U",
+            "T2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "7S",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "5U",
+            "T2",
+            "7S",
+            "3W"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "T2",
+            "3W",
+            "V8",
+            "5U"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "7S",
+            "T2",
+            "5U",
+            "3W"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "V8",
+            "T2",
+            "7S",
+            "3W"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "V8",
+            "3W",
+            "T2",
+            "5U"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "7S",
+            "V8",
+            "5U",
+            "T2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "7S",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "V8",
+            "5U",
+            "T2",
+            "3W"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "5U",
+            "V8",
+            "7S",
+            "T2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "7S",
+            "3W",
+            "V8",
+            "5U"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "7S",
+            "T2",
+            "5U",
+            "3W"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "V8",
+            "T2",
+            "7S",
+            "3W"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "5U"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "7S",
+            "3W",
+            "5U",
+            "T2"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "7S",
+            "T2",
+            "V8",
+            "3W"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "V8",
+            "5U",
+            "T2",
+            "3W"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "5U",
+            "V8",
+            "7S",
+            "T2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "7S",
+            "3W",
+            "V8",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "T2",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "5U",
+            "T2",
+            "7S",
+            "V8"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "5U"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "7S",
+            "3W",
+            "5U",
+            "T2"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "7S",
+            "T2",
+            "5U",
+            "V8"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "V8",
+            "5U",
+            "7S",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "5U",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "7S",
+            "3W",
+            "V8",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "T2",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "5U",
+            "T2",
+            "7S",
+            "3W"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "T2",
+            "3W",
+            "V8",
+            "5U"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "7S",
+            "T2",
+            "5U",
+            "V8"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "V8",
+            "5U",
+            "7S",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "V8",
+            "3W",
+            "T2",
+            "5U"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "7S",
+            "V8",
+            "5U",
+            "T2"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "7S",
+            "5U",
+            "V8",
+            "3W"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "5U",
+            "T2",
+            "7S",
+            "3W"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "V8",
+            "3W",
+            "7S",
+            "T2"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "simbol": {
+        "A": "X6",
+        "B": "9Y",
+        "C": "Z4",
+        "D": "8A",
+        "E": "B3"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "8A",
+            "9Y",
+            "X6",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "8A",
+            "B3",
+            "9Y",
+            "Z4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "X6",
+            "8A",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "X6",
+            "Z4",
+            "8A",
+            "B3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "8A",
+            "Z4",
+            "9Y",
+            "B3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "Z4",
+            "8A",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "X6",
+            "B3",
+            "8A",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "8A",
+            "9Y",
+            "X6",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "8A",
+            "B3",
+            "X6",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "X6",
+            "B3",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "X6",
+            "9Y",
+            "8A",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "8A",
+            "Z4",
+            "9Y",
+            "B3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "Z4",
+            "8A",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "X6",
+            "B3",
+            "8A",
+            "9Y"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "9Y",
+            "Z4",
+            "8A",
+            "B3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "Z4",
+            "9Y",
+            "X6",
+            "8A"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "8A",
+            "B3",
+            "X6",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "X6",
+            "B3",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "8A"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "8A",
+            "Z4",
+            "X6",
+            "B3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "Z4",
+            "B3",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "X6",
+            "B3",
+            "8A",
+            "9Y"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "9Y",
+            "Z4",
+            "8A",
+            "B3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "Z4",
+            "9Y",
+            "X6",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "8A",
+            "B3",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "9Y",
+            "B3",
+            "8A",
+            "Z4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "8A"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "8A",
+            "Z4",
+            "X6",
+            "B3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "8A",
+            "B3",
+            "9Y",
+            "Z4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "X6",
+            "8A",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "X6",
+            "Z4",
+            "8A",
+            "B3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "Z4",
+            "9Y",
+            "X6",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "8A",
+            "B3",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "X6",
+            "B3",
+            "8A",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "8A",
+            "9Y",
+            "X6",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "8A",
+            "B3",
+            "9Y",
+            "Z4"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "X6",
+            "8A",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "X6",
+            "9Y",
+            "8A",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "8A",
+            "Z4",
+            "9Y",
+            "B3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "Z4",
+            "8A",
+            "X6",
+            "9Y"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "X6",
+            "B3",
+            "8A",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "X6",
+            "9Y",
+            "Z4",
+            "B3"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "Z4",
+            "9Y",
+            "X6",
+            "8A"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "8A",
+            "B3",
+            "X6",
+            "Z4"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "X6",
+            "B3",
+            "Z4",
+            "9Y"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "X6",
+            "9Y",
+            "8A",
+            "B3"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "8A",
+            "Z4",
+            "9Y",
+            "B3"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "simbol": {
+        "A": "6C",
+        "B": "D9",
+        "C": "4E",
+        "D": "F7",
+        "E": "2G"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "D9",
+            "4E",
+            "F7",
+            "2G"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "4E"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "6C",
+            "2G",
+            "4E",
+            "D9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "F7",
+            "4E",
+            "6C",
+            "2G"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "4E",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "D9",
+            "4E",
+            "F7",
+            "2G"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "2G"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "D9",
+            "2G",
+            "F7",
+            "4E"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "F7",
+            "4E",
+            "6C",
+            "2G"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "F7",
+            "2G",
+            "D9",
+            "4E"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "6C",
+            "F7",
+            "4E",
+            "D9"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "6C",
+            "4E",
+            "F7",
+            "2G"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "2G"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "4E"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "2G"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "F7",
+            "D9",
+            "6C",
+            "2G"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "F7",
+            "2G",
+            "D9",
+            "4E"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "6C",
+            "F7",
+            "4E",
+            "D9"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "6C",
+            "D9",
+            "F7",
+            "2G"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "F7",
+            "4E",
+            "D9",
+            "2G"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "4E",
+            "F7",
+            "6C",
+            "D9"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "4E"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "2G"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "4E"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "6C",
+            "2G",
+            "4E",
+            "D9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "6C",
+            "D9",
+            "F7",
+            "2G"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "F7",
+            "4E",
+            "D9",
+            "2G"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "4E",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "D9",
+            "4E",
+            "F7",
+            "2G"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "4E"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "D9",
+            "2G",
+            "F7",
+            "4E"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "F7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "F7",
+            "4E",
+            "6C",
+            "2G"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "4E",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "6C",
+            "2G",
+            "F7",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "6C",
+            "4E",
+            "F7",
+            "2G"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "4E",
+            "D9",
+            "6C",
+            "2G"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "F7",
+            "2G",
+            "6C",
+            "D9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "D9",
+            "2G",
+            "F7",
+            "4E"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "6C",
+            "D9",
+            "4E",
+            "F7"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "simbol": {
+        "A": "H5",
+        "B": "8J",
+        "C": "K3",
+        "D": "6M",
+        "E": "N9"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "6M",
+            "N9",
+            "8J",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "H5",
+            "6M",
+            "K3",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "H5",
+            "K3",
+            "6M",
+            "N9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "K3",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "6M",
+            "N9",
+            "H5",
+            "8J"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "H5",
+            "8J",
+            "K3",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "6M",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "6M",
+            "N9",
+            "8J",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "H5",
+            "6M",
+            "K3",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "H5",
+            "8J",
+            "6M",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "6M",
+            "K3",
+            "8J",
+            "N9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "K3",
+            "6M",
+            "H5",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "H5",
+            "8J",
+            "K3",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "K3",
+            "8J",
+            "H5",
+            "6M"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "6M",
+            "N9",
+            "H5",
+            "K3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "H5",
+            "N9",
+            "K3",
+            "8J"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "H5",
+            "8J",
+            "6M",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "6M",
+            "K3",
+            "8J",
+            "N9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "K3",
+            "N9",
+            "H5",
+            "8J"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "8J"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "8J",
+            "K3",
+            "6M",
+            "N9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "K3",
+            "8J",
+            "H5",
+            "6M"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "6M",
+            "N9",
+            "H5",
+            "K3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "8J",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "H5",
+            "8J",
+            "K3",
+            "6M"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "6M",
+            "K3",
+            "H5",
+            "N9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "K3",
+            "N9",
+            "H5",
+            "8J"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "8J"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "H5",
+            "K3",
+            "6M",
+            "N9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "K3",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "6M",
+            "N9",
+            "H5",
+            "8J"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "8J",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "H5",
+            "8J",
+            "K3",
+            "6M"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "6M",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "6M",
+            "N9",
+            "8J",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "H5",
+            "6M",
+            "K3",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "H5",
+            "K3",
+            "6M",
+            "N9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "K3",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "K3",
+            "6M",
+            "H5",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "H5",
+            "8J",
+            "K3",
+            "N9"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "6M",
+            "8J",
+            "H5",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "6M",
+            "N9",
+            "8J",
+            "K3"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "H5",
+            "N9",
+            "K3",
+            "8J"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "H5",
+            "8J",
+            "6M",
+            "N9"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "6M",
+            "K3",
+            "8J",
+            "N9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "K3",
+            "6M",
+            "H5",
+            "8J"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "H5",
+            "N9",
+            "6M",
+            "K3"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "simbol": {
+        "A": "4P",
+        "B": "Q7",
+        "C": "2R",
+        "D": "S5",
+        "E": "8T"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "S5",
+            "8T",
+            "4P",
+            "2R"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "4P",
+            "8T",
+            "2R",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "4P",
+            "Q7",
+            "S5",
+            "8T"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "S5",
+            "2R",
+            "Q7",
+            "8T"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "2R",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "4P",
+            "8T",
+            "S5",
+            "Q7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "Q7",
+            "2R",
+            "S5",
+            "8T"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "S5",
+            "8T",
+            "4P",
+            "2R"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "Q7",
+            "8T",
+            "S5",
+            "2R"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "4P",
+            "Q7",
+            "2R",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "S5",
+            "2R",
+            "4P",
+            "8T"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "2R",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "4P",
+            "8T",
+            "S5",
+            "Q7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "4P",
+            "2R",
+            "S5",
+            "8T"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "8T"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "S5",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "Q7",
+            "8T",
+            "S5",
+            "2R"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "4P",
+            "Q7",
+            "2R",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "S5",
+            "Q7",
+            "4P",
+            "8T"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "S5",
+            "8T",
+            "Q7",
+            "2R"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "4P",
+            "S5",
+            "2R",
+            "Q7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "4P",
+            "2R",
+            "S5",
+            "8T"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "8T"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "2R",
+            "S5",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "4P",
+            "8T",
+            "S5",
+            "2R"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "4P",
+            "Q7",
+            "2R",
+            "8T"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "S5",
+            "Q7",
+            "4P",
+            "8T"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "S5",
+            "8T",
+            "Q7",
+            "2R"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "4P",
+            "8T",
+            "2R",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "4P",
+            "Q7",
+            "S5",
+            "8T"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "S5",
+            "2R",
+            "Q7",
+            "8T"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "2R",
+            "S5",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "4P",
+            "8T",
+            "S5",
+            "2R"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "Q7",
+            "2R",
+            "S5",
+            "8T"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "S5",
+            "8T",
+            "4P",
+            "2R"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "4P",
+            "8T",
+            "2R",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "4P",
+            "Q7",
+            "S5",
+            "8T"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "S5",
+            "2R",
+            "4P",
+            "8T"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "2R",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "4P",
+            "8T",
+            "S5",
+            "Q7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "Q7",
+            "2R",
+            "S5",
+            "8T"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "2R",
+            "Q7",
+            "4P",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "S5",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "Q7",
+            "8T",
+            "S5",
+            "2R"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "4P",
+            "Q7",
+            "2R",
+            "S5"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "S5",
+            "2R",
+            "4P",
+            "8T"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "2R",
+            "8T",
+            "4P",
+            "Q7"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "simbol": {
+        "A": "U3",
+        "B": "6V",
+        "C": "W9",
+        "D": "4X",
+        "E": "Y7"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "U3",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "W9",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "4X",
+            "Y7",
+            "U3",
+            "6V"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "6V",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "U3",
+            "6V",
+            "W9",
+            "4X"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "4X",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "4X",
+            "Y7",
+            "6V",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "U3",
+            "4X",
+            "W9",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "U3",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "W9",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "W9",
+            "4X",
+            "U3",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "U3",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "U3",
+            "6V",
+            "W9",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "4X",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "4X",
+            "Y7",
+            "6V",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "U3",
+            "Y7",
+            "W9",
+            "6V"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "U3",
+            "6V",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "4X",
+            "W9",
+            "6V",
+            "Y7"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "W9",
+            "4X",
+            "U3",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "U3",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "6V",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "W9",
+            "6V",
+            "U3",
+            "4X"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "4X",
+            "Y7",
+            "U3",
+            "W9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "U3",
+            "Y7",
+            "W9",
+            "6V"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "U3",
+            "6V",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "4X",
+            "W9",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "W9",
+            "Y7",
+            "U3",
+            "6V"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "U3",
+            "Y7",
+            "4X",
+            "6V"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "6V",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "W9",
+            "6V",
+            "U3",
+            "4X"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "4X",
+            "Y7",
+            "U3",
+            "6V"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "6V",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "U3",
+            "6V",
+            "W9",
+            "4X"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "4X",
+            "W9",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "W9",
+            "Y7",
+            "U3",
+            "6V"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "U3",
+            "4X",
+            "W9",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "U3",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "W9",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "4X",
+            "Y7",
+            "U3",
+            "6V"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "6V",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "U3",
+            "6V",
+            "W9",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "4X",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "4X",
+            "Y7",
+            "6V",
+            "W9"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "U3",
+            "4X",
+            "W9",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "U3",
+            "W9",
+            "4X",
+            "Y7"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "4X",
+            "W9",
+            "6V",
+            "Y7"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "W9",
+            "4X",
+            "U3",
+            "6V"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "U3",
+            "Y7",
+            "4X",
+            "W9"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "U3",
+            "6V",
+            "W9",
+            "Y7"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "4X",
+            "6V",
+            "U3",
+            "Y7"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "simbol": {
+        "A": "2Z",
+        "B": "A6",
+        "C": "9B",
+        "D": "C4",
+        "E": "7D"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "2Z",
+            "7D",
+            "9B",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "2Z",
+            "A6",
+            "C4",
+            "7D"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "C4",
+            "9B",
+            "A6",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "9B",
+            "C4",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "2Z",
+            "7D",
+            "C4",
+            "9B"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "A6",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "9B",
+            "A6",
+            "2Z",
+            "C4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "C4",
+            "7D",
+            "2Z",
+            "9B"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "2Z",
+            "7D",
+            "9B",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "2Z",
+            "A6",
+            "C4",
+            "7D"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "C4",
+            "9B",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "9B",
+            "7D",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "2Z",
+            "7D",
+            "C4",
+            "A6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "A6",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "9B",
+            "A6",
+            "2Z",
+            "C4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "C4",
+            "7D",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "A6",
+            "7D",
+            "C4",
+            "9B"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "2Z",
+            "A6",
+            "9B",
+            "C4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "C4",
+            "9B",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "9B",
+            "7D",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "2Z",
+            "C4",
+            "9B",
+            "A6"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "2Z",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "9B",
+            "A6",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "C4",
+            "7D",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "A6",
+            "7D",
+            "C4",
+            "9B"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "2Z",
+            "A6",
+            "9B",
+            "7D"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "C4",
+            "A6",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "C4",
+            "7D",
+            "A6",
+            "9B"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "2Z",
+            "C4",
+            "9B",
+            "A6"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "2Z",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "C4",
+            "9B",
+            "A6",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "9B",
+            "C4",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "2Z",
+            "7D",
+            "C4",
+            "9B"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "2Z",
+            "A6",
+            "9B",
+            "7D"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "C4",
+            "A6",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "C4",
+            "7D",
+            "2Z",
+            "9B"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "2Z",
+            "7D",
+            "9B",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "2Z",
+            "A6",
+            "C4",
+            "7D"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "C4",
+            "9B",
+            "A6",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "9B",
+            "C4",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "2Z",
+            "7D",
+            "C4",
+            "A6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "A6",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "9B",
+            "A6",
+            "2Z",
+            "C4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "C4",
+            "7D",
+            "2Z",
+            "9B"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "2Z",
+            "7D",
+            "9B",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "2Z",
+            "A6",
+            "9B",
+            "C4"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "C4",
+            "9B",
+            "2Z",
+            "7D"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "9B",
+            "7D",
+            "2Z",
+            "A6"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "2Z",
+            "7D",
+            "C4",
+            "A6"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "A6",
+            "9B",
+            "C4",
+            "7D"
+          ],
+          "kunci": "A"
+        }
+      ]
+    }
+  ]
+}

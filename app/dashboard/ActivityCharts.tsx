@@ -46,11 +46,9 @@ function ChartFrame({
   Dua grafik di halaman ini masing-masing satu seri, jadi tidak ada legenda —
   judulnya sudah menamai serinya.
 
-  Gold dipakai untuk menandai periode berjalan. Kontras gold terhadap permukaan
-  putih hanya 2.4:1, di bawah 3:1, jadi mark emas tidak pernah berdiri sendiri:
-  selalu diberi stroke gold gelap, label angka yang terlihat, dan padanan
-  tabelnya di sr-only. Warna di sini menegaskan, bukan menjadi satu-satunya
-  pembawa informasi.
+  Gold menandai periode berjalan. Periode lampau memakai cream transparan agar
+  tetap berbeda saat primary dan accent sama-sama gold. Label serta padanan
+  sr-only memastikan warna bukan satu-satunya pembawa informasi.
 */
 
 export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
@@ -107,7 +105,7 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
               width={barW}
               height={h}
               rx={3}
-              className={isCurrent ? "fill-accent stroke-accent-strong" : "fill-primary/16"}
+              className={isCurrent ? "fill-accent stroke-accent-strong" : "fill-foreground/14"}
               strokeWidth={isCurrent ? 1 : 0}
             >
               <title>
@@ -191,7 +189,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
           y2={thresholdY}
           strokeWidth={1}
           strokeDasharray="3 4"
-          className="stroke-border-strong/70"
+          className="stroke-border-strong"
         />
 
         {points.length > 1 && (
@@ -217,7 +215,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
               className={
                 isLast
                   ? "fill-accent stroke-accent-strong"
-                  : "fill-primary/25 stroke-card"
+                  : "fill-foreground/25 stroke-card"
               }
             >
               <title>

@@ -5,6 +5,7 @@ import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config"
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { Badge, PageHeader, buttonStyles } from "@/app/components/ui";
 import { ArrowRight, ChevronRight } from "@/app/components/icons";
+import { SparkleIcon, SparkleParticles } from "@/app/components/CtaSparkle";
 
 function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString("id-ID", {
@@ -117,59 +118,69 @@ export default async function SimulasiPage() {
             </p>
             <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2">
               <div>
-                <dt className="text-xs text-muted-foreground">Total butir</dt>
+                <dt className="eyebrow">Total butir</dt>
                 <dd className="tnum font-heading text-lg text-foreground">{totalQuestions}</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted-foreground">Durasi</dt>
+                <dt className="eyebrow">Durasi</dt>
                 <dd className="tnum font-heading text-lg text-foreground">{totalMinutes} menit</dd>
               </div>
               <div>
-                <dt className="text-xs text-muted-foreground">Sub-tes</dt>
+                <dt className="eyebrow">Sub-tes</dt>
                 <dd className="font-heading text-lg text-foreground">3</dd>
               </div>
             </dl>
           </div>
           <form action={startSession} className="shrink-0">
             <input type="hidden" name="module" value="ALL" />
-            <button
-              type="submit"
-              className={buttonStyles({ variant: "accent", size: "lg" })}
-            >
-              Mulai tryout lengkap
-              <ArrowRight className="size-4" />
-            </button>
+            <span className="cta-sparkle-wrap inline-block">
+              <button
+                type="submit"
+                className={buttonStyles({
+                  variant: "accent",
+                  size: "lg",
+                  className: "rounded-full hover:scale-[1.02] hover:shadow-glow active:scale-100",
+                })}
+              >
+                <SparkleIcon />
+                Mulai tryout lengkap
+                <ArrowRight className="size-4" />
+              </button>
+              <SparkleParticles />
+            </span>
           </form>
         </div>
       </section>
 
       <section className="space-y-3">
-        <h2 className="text-sm font-semibold text-foreground">Atau kerjakan satu sub-tes saja</h2>
+        <h2 className="rule-ornate">Atau kerjakan satu sub-tes saja</h2>
         <ul className="grid gap-4 md:grid-cols-3">
           {MODULE_ORDER.map((type) => {
             const meta = MODULE_CONFIG[type];
             return (
               <li
                 key={type}
-                className="module-card"
+                className="module-card package-hover-card"
               >
-                <div className="min-w-0">
-                  <p className="font-heading text-lg text-foreground">{meta.label}</p>
-                  <p className="tnum mt-0.5 text-xs text-muted-foreground">
-                    {countByType[type] ?? 0} butir · {meta.time_limit_seconds / 60} menit ·{" "}
-                    <span className="font-sans">{meta.shortDesc}</span>
-                  </p>
+                <div className="package-hover-card__inner">
+                  <div className="min-w-0">
+                    <p className="font-heading text-lg text-foreground">{meta.label}</p>
+                    <p className="tnum mt-0.5 text-xs text-muted-foreground">
+                      {countByType[type] ?? 0} butir · {meta.time_limit_seconds / 60} menit ·{" "}
+                      <span className="font-sans">{meta.shortDesc}</span>
+                    </p>
+                  </div>
+                  <form action={startSession} className="mt-auto w-full">
+                    <input type="hidden" name="module" value={type} />
+                    <button
+                      type="submit"
+                      className={buttonStyles({ variant: "secondary", size: "md", className: "w-full justify-between" })}
+                    >
+                      Mulai
+                      <ChevronRight className="size-4" />
+                    </button>
+                  </form>
                 </div>
-                <form action={startSession} className="mt-auto">
-                  <input type="hidden" name="module" value={type} />
-                  <button
-                    type="submit"
-                    className={buttonStyles({ variant: "secondary", size: "md", className: "w-full justify-between" })}
-                  >
-                    Mulai
-                    <ChevronRight className="size-4" />
-                  </button>
-                </form>
               </li>
             );
           })}

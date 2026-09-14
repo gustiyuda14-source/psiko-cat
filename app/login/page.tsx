@@ -7,7 +7,7 @@ import { Button } from "@/app/components/ui-client";
 import { AlertTriangle, ArrowRight } from "@/app/components/icons";
 
 const FIELD_CLASS =
-  "min-h-12 w-full rounded-md border border-border-strong/55 bg-card px-3.5 text-base text-foreground placeholder:text-faint-foreground transition-colors duration-200 hover:border-border-strong focus:border-primary";
+  "min-h-12 w-full rounded-md border border-border-strong bg-card px-3.5 text-base text-foreground placeholder:text-faint-foreground transition-colors duration-200 hover:border-border-strong focus:border-primary";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -43,8 +43,8 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="ornate flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
-      <div className="hero-panel grid w-full max-w-4xl gap-8 bg-primary sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+    <div className="ornate hud-grid flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
+      <div className="hero-panel grid w-full max-w-4xl gap-8 sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div className="relative text-white">
           <Image
             src="/brand/dajiks-lockup.png"
@@ -109,7 +109,7 @@ export default function LoginPage() {
             />
           </div>
 
-          <Button type="submit" variant="accent" size="lg" block disabled={loading}>
+          <Button type="submit" variant="accent" size="lg" block disabled={loading} className="rounded-full">
             {loading ? "Memeriksa..." : "Masuk"}
             {!loading && <ArrowRight className="size-4" />}
           </Button>

@@ -1,0 +1,45 @@
+{
+  "nomor": 0,
+  "nama": "Draf Kecermatan Angka-Huruf — 5 Soal",
+  "total_soal": 5,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "A7",
+        "B": "3B",
+        "C": "C9",
+        "D": "5D",
+        "E": "E2"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": ["3B", "C9", "5D", "E2"],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": ["E2", "A7", "5D", "C9"],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": ["5D", "3B", "E2", "A7"],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": ["C9", "A7", "E2", "3B"],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": ["3B", "5D", "C9", "A7"],
+          "kunci": "E"
+        }
+      ]
+    }
+  ]
+}

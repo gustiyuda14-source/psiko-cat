@@ -85,14 +85,14 @@ export default async function AdminPage() {
             { label: "Total lulus", value: totalLulus, tone: "text-success" },
           ].map((s) => (
             <div key={s.label} className="flex-1 px-5 py-4">
-              <dt className="text-xs font-medium text-muted-foreground">{s.label}</dt>
+              <dt className="eyebrow">{s.label}</dt>
               <dd className={`tnum font-heading mt-1 text-3xl ${s.tone}`}>{s.value}</dd>
             </div>
           ))}
         </dl>
 
         <section className="mt-6 space-y-2">
-          <h2 className="text-sm font-semibold text-foreground">Daftar peserta</h2>
+          <h2 className="rule-ornate">Daftar peserta</h2>
 
           {peserta.length === 0 ? (
             <EmptyState

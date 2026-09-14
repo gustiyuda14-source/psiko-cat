@@ -44,20 +44,19 @@ function initials(name: string): string {
     .join("");
 }
 
-/*
-  State terpilih dipertahankan sebagai pil putih solid di atas navy — itu sinyal
-  paling kuat dan paling tidak ambigu di permukaan gelap. Yang diperbaiki cuma
-  eksekusinya: pil sekarang inset dari tepi panel, radiusnya ikut skala kontrol,
-  dan ikon mewarisi warna teks sehingga tidak ada dua sumber warna dalam satu
-  baris.
-*/
+/* State aktif memakai gold wash, hairline, dan glow kecil tanpa mengubah alur nav. */
 function navItemClass(active: boolean): string {
   return [
     "flex min-h-11 items-center gap-3 rounded-md px-3 text-sm font-medium",
     "transition-[background-color,color] duration-200 ease-out",
     active
-      ? "bg-white text-primary shadow-e1"
-      : "text-white/78 hover:bg-white/10 hover:text-white",
+      ? [
+          "relative bg-accent/12 font-semibold text-accent-ink",
+          "before:absolute before:bottom-1.5 before:left-0 before:top-1.5",
+          "before:w-[3px] before:rounded-full before:bg-accent",
+          "shadow-[0_0_18px_-6px_rgb(217_152_63/0.55)]",
+        ].join(" ")
+      : "text-foreground/70 hover:bg-accent/6 hover:text-foreground",
   ].join(" ");
 }
 
@@ -139,6 +138,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
       </div>
 
       <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4" aria-label="Menu utama">
+        <p className="eyebrow px-3 pb-1">Utama</p>
         {PRIMARY_NAV.map((item) => {
           const active = isActive(pathname, item.href);
           const Icon = item.icon;
@@ -199,8 +199,8 @@ export default function Sidebar({ name, username }: { name: string; username: st
                     aria-current={active ? "page" : undefined}
                     className={`flex min-h-10 items-center rounded-md px-3 text-sm transition-colors duration-200 ${
                       active
-                        ? "bg-white/14 font-semibold text-white"
-                        : "text-white/65 hover:bg-white/8 hover:text-white"
+                        ? "bg-accent/10 font-semibold text-accent-ink"
+                        : "text-foreground/65 hover:bg-accent/8 hover:text-foreground"
                     }`}
                   >
                     {meta.label}
@@ -211,6 +211,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
           </ul>
         )}
 
+        <p className="eyebrow px-3 pb-1 pt-4">Riwayat</p>
         {SECONDARY_NAV.map((item) => {
           const active = isActive(pathname, item.href);
           const Icon = item.icon;
@@ -278,7 +279,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
         <>
           <button
             type="button"
-            className="fixed inset-0 z-40 cursor-default bg-[#08192f]/55 lg:hidden"
+            className="fixed inset-0 z-40 cursor-default bg-black/70 lg:hidden"
             onClick={() => {
               setOpen(false);
               menuButtonRef.current?.focus();

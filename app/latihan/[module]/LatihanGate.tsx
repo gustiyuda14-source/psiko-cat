@@ -2,12 +2,14 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
 import { Badge, EmptyState, PageHeader } from "@/app/components/ui";
 import { KecermatanKeyStrip } from "@/app/components/KecermatanKeyStrip";
 import { Button } from "@/app/components/ui-client";
 import { ArrowRight, ChevronLeft } from "@/app/components/icons";
+import { SparkleIcon, SparkleParticles } from "@/app/components/CtaSparkle";
 import LatihanKecerdasan from "./LatihanKecerdasan";
 import LatihanKepribadian from "./LatihanKepribadian";
 import LatihanKecermatan from "./LatihanKecermatan";
@@ -18,7 +20,7 @@ import LatihanKecermatan from "./LatihanKecermatan";
 const BANK_NOTE = "Latihan ini simulasi pola soal, bukan jaminan soal ujian resmi akan sama persis.";
 
 const MODE_NOTE: Record<ModuleType, string> = {
-  KECERDASAN: `Jawaban langsung dikoreksi setiap butir, lengkap dengan kunci yang benar. ${BANK_NOTE}`,
+  KECERDASAN: `Sama seperti simulasi: jawab semua butir dulu, baru kumpulkan untuk melihat kunci dan pembahasan lengkap. ${BANK_NOTE}`,
   KECERMATAN: `Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai. ${BANK_NOTE}`,
   KEPRIBADIAN:
     "Tidak ada jawaban benar atau salah — pilihan langsung membawa ke pernyataan berikutnya.",
@@ -47,7 +49,12 @@ export default function LatihanGate({
   const exitHref =
     moduleType === "KECERMATAN" ? "/dashboard/latihan/kecermatan" : "/dashboard/latihan";
 
+  // Datang dari modal detail paket (PackageCarousel) lewat link ?autostart=1:
+  // langsung hitung mundur, skip kartu "belum dimulai" — infonya sudah kelihatan
+  // di modal, nampilin lagi di sini cuma nambah satu klik yang gak perlu.
+  const autoStart = useSearchParams().get("autostart") === "1";
   const [started, setStarted] = useState(false);
+  const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
   const practiceRef = useRef<HTMLDivElement>(null);
   const meta = MODULE_CONFIG[moduleType];
   const noun = moduleType === "KEPRIBADIAN" ? "pernyataan" : "butir";
@@ -59,6 +66,15 @@ export default function LatihanGate({
   useEffect(() => {
     if (started) practiceRef.current?.scrollIntoView({ block: "start" });
   }, [started]);
+
+  useEffect(() => {
+    if (countdown === null) return;
+    const t = setTimeout(() => {
+      if (countdown <= 1) setStarted(true);
+      else setCountdown(countdown - 1);
+    }, 1000);
+    return () => clearTimeout(t);
+  }, [countdown]);
 
   return (
     <div className="app-page space-y-5">
@@ -88,6 +104,25 @@ export default function LatihanGate({
           ) : (
             <LatihanKecermatan questions={questions} />
           )}
+        </div>
+      ) : countdown !== null ? (
+        <div className="surface-card mx-auto max-w-md space-y-4 px-6 py-12 text-center">
+          <p className="text-sm text-muted-foreground">
+            {packageLabel ? `${packageLabel} · ` : ""}
+            {questions.length} {noun}
+          </p>
+          <div className="dots-loader" aria-hidden="true">
+            {Array.from({ length: 5 }, (_, i) => (
+              <span key={i} className="dots-loader__circle">
+                <span className="dots-loader__dot" />
+                <span className="dots-loader__outline" />
+              </span>
+            ))}
+          </div>
+          <p className="tnum font-heading text-6xl text-foreground">{countdown}</p>
+          <p role="status" className="text-sm text-muted-foreground">
+            Latihan dimulai sebentar lagi…
+          </p>
         </div>
       ) : questions.length === 0 ? (
         <EmptyState
@@ -126,10 +161,20 @@ export default function LatihanGate({
             </section>
           )}
 
-          <Button variant="accent" size="lg" block onClick={() => setStarted(true)}>
-            Mulai latihan
-            <ArrowRight className="size-4" />
-          </Button>
+          <span className="cta-sparkle-wrap block w-full">
+            <Button
+              variant="accent"
+              size="lg"
+              block
+              onClick={() => setStarted(true)}
+              className="hover:scale-[1.02] hover:shadow-glow active:scale-100"
+            >
+              <SparkleIcon />
+              Mulai latihan
+              <ArrowRight className="size-4" />
+            </Button>
+            <SparkleParticles />
+          </span>
         </div>
       )}
     </div>
