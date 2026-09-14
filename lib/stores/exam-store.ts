@@ -29,8 +29,9 @@ export type ExamState = {
     fresh?: boolean;
   }) => void;
   setAnswer: (qid: string, key: string) => void;
+  replaceAnswers: (answers: Record<string, string>) => void;
   goTo: (index: number) => void;
-  next: () => void;
+  next: (maxIndex?: number) => void;
   prev: () => void;
   setStatus: (s: Status) => void;
 };
@@ -60,16 +61,20 @@ export function createExamStore(persistKey: string) {
             sessionId: sid,
             moduleSessionId: msid,
             deadlineTs,
-            currentIndex: index,
+            currentIndex: Math.max(0, index),
             status: "running",
-            answers: fresh ? {} : s.answers,
+            answers:
+              fresh || s.sessionId !== sid || s.moduleSessionId !== msid ? {} : s.answers,
           })),
 
         setAnswer: (qid, key) =>
           set((s) => ({ answers: { ...s.answers, [qid]: key } })),
 
-        goTo: (index) => set({ currentIndex: index }),
-        next: () => set((s) => ({ currentIndex: s.currentIndex + 1 })),
+        replaceAnswers: (answers) => set({ answers }),
+
+        goTo: (index) => set({ currentIndex: Math.max(0, index) }),
+        next: (maxIndex = Number.MAX_SAFE_INTEGER) =>
+          set((s) => ({ currentIndex: Math.min(maxIndex, s.currentIndex + 1) })),
         prev: () => set((s) => ({ currentIndex: Math.max(0, s.currentIndex - 1) })),
         setStatus: (status) => set({ status }),
       }),

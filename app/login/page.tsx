@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { Button } from "@/app/components/ui-client";
+import { AlertTriangle, ArrowRight } from "@/app/components/icons";
+
+const FIELD_CLASS =
+  "min-h-12 w-full rounded-md border border-border-strong bg-card px-3.5 text-base text-foreground placeholder:text-faint-foreground transition-colors duration-200 hover:border-border-strong focus:border-primary";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -30,70 +36,85 @@ export default function LoginPage() {
         router.push("/dashboard");
       }
     } catch {
-      setError("Gagal terhubung ke server.");
+      setError("Gagal terhubung ke server. Periksa koneksi lalu coba lagi.");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-950 px-4">
-      <div className="w-full max-w-sm space-y-8">
-        <div className="text-center">
-          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-600">
-            <svg className="h-7 w-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h1 className="text-2xl font-bold text-white">Psiko CAT</h1>
-          <p className="mt-1 text-sm text-zinc-500">Sistem Psikotes Terintegrasi</p>
+    <div className="ornate hud-grid flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
+      <div className="hero-panel grid w-full max-w-4xl gap-8 sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
+        <div className="relative text-white">
+          <Image
+            src="/brand/dajiks-lockup.png"
+            alt="D'Ajiks Akademi"
+            width={1024}
+            height={768}
+            className="h-auto w-52 max-w-full object-contain"
+            priority
+          />
+          <h1 className="font-heading mt-5 text-3xl sm:text-4xl">Psiko CAT</h1>
+          <p className="mt-3 text-base text-white/75">Sistem Psikotes Terintegrasi</p>
+          <p className="mt-6 max-w-[32ch] text-sm text-white/75">Satu ruang untuk latihan, simulasi, dan perkembangan hasil psikotes Anda.</p>
+          <p className="mt-8 text-xs text-white/65">Didukung oleh D Ajiks Corporation</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl border border-zinc-800 bg-zinc-900 p-8">
-          {error && (
-            <div className="rounded-lg bg-red-900/40 border border-red-700/60 px-4 py-2.5 text-sm text-red-300">
-              {error}
-            </div>
-          )}
+        <form onSubmit={handleSubmit} className="surface-panel relative space-y-5 p-6 sm:p-7">
+          <h2 className="font-heading text-xl text-foreground">Masuk ke akun</h2>
+          {/* Pesan galat hidup di dalam form dan diumumkan lewat aria-live, bukan
+              muncul diam-diam di atas viewport. */}
+          <div aria-live="polite">
+            {error && (
+              <p className="flex items-start gap-2.5 rounded-md border border-destructive/30 bg-destructive-soft px-4 py-3 text-sm text-destructive">
+                <AlertTriangle className="mt-px size-4 shrink-0" />
+                {error}
+              </p>
+            )}
+          </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Username</label>
+            <label htmlFor="username" className="block text-sm font-semibold text-foreground">
+              Username
+            </label>
             <input
+              id="username"
+              name="username"
               required
               type="text"
               autoComplete="username"
+              autoCapitalize="none"
+              spellCheck={false}
               value={form.username}
               onChange={(e) => setForm({ ...form, username: e.target.value })}
               placeholder="contoh: salfa"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500/30"
+              className={FIELD_CLASS}
             />
           </div>
 
           <div className="space-y-1.5">
-            <label className="text-xs font-medium text-zinc-400 uppercase tracking-wider">Password</label>
+            <label htmlFor="password" className="block text-sm font-semibold text-foreground">
+              Password
+            </label>
             <input
+              id="password"
+              name="password"
               required
               type="password"
               autoComplete="current-password"
               value={form.password}
               onChange={(e) => setForm({ ...form, password: e.target.value })}
               placeholder="••••••••"
-              className="w-full rounded-lg border border-zinc-700 bg-zinc-800 px-4 py-3 text-sm text-white placeholder-zinc-600 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500/30"
+              className={FIELD_CLASS}
             />
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full rounded-lg bg-blue-600 py-3 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-50 transition-colors mt-2"
-          >
-            {loading ? "Masuk..." : "Masuk →"}
-          </button>
+          <Button type="submit" variant="accent" size="lg" block disabled={loading} className="rounded-full">
+            {loading ? "Memeriksa..." : "Masuk"}
+            {!loading && <ArrowRight className="size-4" />}
+          </Button>
         </form>
 
-        <p className="text-center text-xs text-zinc-700">
-          POLRI / IPDN — D&apos;Ajiks Akademi
-        </p>
       </div>
     </div>
   );

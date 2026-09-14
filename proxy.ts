@@ -1,21 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
 
-const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET ?? "fallback-dev-secret-change-in-prod"
-);
 const COOKIE_NAME = "psiko_session";
+
+function getJwtSecret(): Uint8Array {
+  const secret = process.env.JWT_SECRET;
+  if (!secret) throw new Error("JWT_SECRET wajib diatur");
+  return new TextEncoder().encode(secret);
+}
 
 const PUBLIC_PATHS = ["/login", "/api/auth/login"];
 
-export async function middleware(req: NextRequest) {
+export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  if (PUBLIC_PATHS.some((p) => pathname.startsWith(p))) {
+  if (PUBLIC_PATHS.includes(pathname)) {
     return NextResponse.next();
   }
 
-  if (pathname.startsWith("/_next") || pathname.startsWith("/favicon")) {
+  if (
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/favicon") ||
+    pathname.startsWith("/brand")
+  ) {
     return NextResponse.next();
   }
 
@@ -26,7 +33,7 @@ export async function middleware(req: NextRequest) {
   }
 
   try {
-    const { payload } = await jwtVerify(token, JWT_SECRET);
+    const { payload } = await jwtVerify(token, getJwtSecret());
 
     if (pathname.startsWith("/admin") && payload.role !== "admin") {
       return NextResponse.redirect(new URL("/dashboard", req.url));

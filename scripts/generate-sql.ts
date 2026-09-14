@@ -2,10 +2,20 @@ import * as fs from "fs";
 import * as path from "path";
 
 const soalPath = path.join(__dirname, "../soal.json");
-const raw = JSON.parse(fs.readFileSync(soalPath, "utf-8"));
-const soalList: any[] = raw.soal.filter((s: any) => s.id >= 38);
+type SourceQuestion = {
+  id: number;
+  pilihan: Record<string, string>;
+  kunci: string[];
+  ganda?: boolean;
+  soal?: string | null;
+  gambar?: string | null;
+  instruksi?: string;
+  wacana?: string | null;
+};
+const raw = JSON.parse(fs.readFileSync(soalPath, "utf-8")) as { soal: SourceQuestion[] };
+const soalList = raw.soal.filter((s) => s.id >= 38);
 
-function buildPayload(soal: any) {
+function buildPayload(soal: SourceQuestion) {
   const choices = Object.entries(soal.pilihan as Record<string, string>).map(
     ([k, v]) => ({ key: k.toUpperCase() as "A"|"B"|"C"|"D"|"E", text: String(v) })
   );

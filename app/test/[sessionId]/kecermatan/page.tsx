@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import KecermatanClient from "./KecermatanClient";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
+import { getSessionAccess } from "@/lib/session-access";
 
 export default async function KecermatanPage({
   params,
@@ -9,10 +10,12 @@ export default async function KecermatanPage({
   params: Promise<{ sessionId: string }>;
 }) {
   const { sessionId } = await params;
+  const access = await getSessionAccess(sessionId, false);
+  if (!access.ok) notFound();
 
   const { data: ms } = await supabaseAdmin
     .from("module_sessions")
-    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id")
+    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id, kecermatan_package_number")
     .eq("test_session_id", sessionId)
     .eq("module_type", "KECERMATAN")
     .maybeSingle();
@@ -37,19 +40,27 @@ export default async function KecermatanPage({
 
   const { data: questions } = await supabaseAdmin
     .from("questions")
-    .select("id, type, sequence_number, column_index, options_payload, is_active, created_at, updated_at")
+    .select("id, type, sequence_number, column_index, package_number, options_payload, is_active, created_at, updated_at")
     .eq("type", "KECERMATAN")
     .eq("is_active", true)
+    .eq("package_number", ms.kecermatan_package_number ?? 7)
     .order("column_index", { ascending: true })
     .order("sequence_number", { ascending: true });
 
   const snapshot = (ms.recovery_snapshot ?? null) as RecoverySnapshot | null;
+  const { data: testSession } = await supabaseAdmin
+    .from("test_sessions")
+    .select("users(name)")
+    .eq("id", sessionId)
+    .maybeSingle();
+  const participant = testSession?.users as unknown as { name: string } | null;
 
   return (
     <KecermatanClient
       questions={questions ?? []}
       moduleSessionId={ms.id}
       sessionId={sessionId}
+      participantName={participant?.name ?? "Peserta"}
       snapshot={snapshot}
     />
   );

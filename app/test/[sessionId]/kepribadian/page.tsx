@@ -2,6 +2,7 @@ import { notFound, redirect } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import KepribadianClient from "./KepribadianClient";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
+import { getSessionAccess } from "@/lib/session-access";
 
 export default async function KepribadianPage({
   params,
@@ -9,6 +10,8 @@ export default async function KepribadianPage({
   params: Promise<{ sessionId: string }>;
 }) {
   const { sessionId } = await params;
+  const access = await getSessionAccess(sessionId, false);
+  if (!access.ok) notFound();
 
   const { data: ms } = await supabaseAdmin
     .from("module_sessions")
@@ -37,7 +40,7 @@ export default async function KepribadianPage({
 
   const { data: questions } = await supabaseAdmin
     .from("questions")
-    .select("id, type, sequence_number, column_index, options_payload, is_active, created_at, updated_at")
+    .select("id, type, sequence_number, column_index, package_number, options_payload, is_active, created_at, updated_at")
     .eq("type", "KEPRIBADIAN")
     .eq("is_active", true)
     .order("sequence_number", { ascending: true });

@@ -1,26 +1,1242 @@
 @import "tailwindcss";
 
+/*
+  ─────────────────────────────────────────────────────────────────────────────
+  Psiko CAT — design tokens
+  ─────────────────────────────────────────────────────────────────────────────
+  Identitas navy/gold dari CAT_PPUPD_REDESIGN_PLAN dipertahankan. Yang berubah:
+  token dinaikkan jadi sistem (surface ladder, elevation scale, radius scale,
+  motion scale) dan beberapa nilai digeser supaya lolos WCAG AA.
+
+  Nilai yang digeser dari palet lama, beserta alasannya:
+    --muted-foreground  #66758b -> #576881   (4.32:1 -> 5.23:1 di atas page bg)
+    --success           #0d8a69 -> #0b7a5d   (4.32:1 -> 4.90:1 sebagai teks)
+    --accent-ink        baru     #8a5a12     (gold sebagai TEKS; #d9983f cuma 2.47:1)
+    --border-strong     baru     #7d8ea6     (batas kontrol form, 3.34:1)
+    --ring              gold     -> navy     (ring gold lama 1.8:1, gagal 3:1)
+
+  Nama mentah di :root sengaja diberi prefiks pendek (--r-*, --elev-*, --t-*,
+  --e-*) karena @theme inline juga menulis ke :root; kalau namanya sama, hasilnya
+  referensi melingkar.
+
+  Disiplin bentuk (shape lock) — satu skala, dipatuhi di semua permukaan:
+    kontrol (tombol, input, pilihan)  rounded-md    10px
+    kartu                             rounded-lg    14px
+    panel / modal / hero              rounded-xl    18px
+    pil / avatar                      rounded-full
+
+  Disiplin warna: gold hanya untuk (a) background dengan teks navy, (b) indikator
+  state aktif, (c) --accent-ink kalau harus jadi teks di permukaan terang.
+*/
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  /* ── Surface ladder ──────────────────────────────────────────────────────
+     Sidebar dan chrome ujian pakai lapis navy terpisah supaya panel navigasi
+     jelas beda dari permukaan konten. */
+  --surface-page: #f2f5f9;
+  --surface-card: #ffffff;
+  --surface-inset: #eef1f6;
+  --surface-nav: #0b2442;
+  --surface-nav-deep: #081b34;
+
+  /* ── Ink ────────────────────────────────────────────────────────────────── */
+  --foreground: #10213b;
+  --muted-foreground: #576881;
+  --faint-foreground: #7a8ba4;
+
+  /* ── Line ───────────────────────────────────────────────────────────────── */
+  --border: #dbe3ee;
+  --border-strong: #7d8ea6;
+
+  /* ── Brand & state ──────────────────────────────────────────────────────── */
+  --primary: #102d52;
+  --primary-hover: #16385f;
+  --primary-active: #0c2545;
+  --primary-foreground: #ffffff;
+  --accent: #d9983f;
+  --accent-strong: #c4842c;
+  --accent-soft: #fff4df;
+  --accent-ink: #8a5a12;
+  --success: #0b7a5d;
+  --success-soft: #ecfdf5;
+  --destructive: #c62828;
+  --destructive-soft: #fdeeee;
+  --ring: #102d52;
+  --ring-on-nav: #f0c078;
+
+  /* ── Elevation ───────────────────────────────────────────────────────────
+     Tiap tingkat punya offset + blur lembut (bukan halo tanpa offset), warnanya
+     ditarik ke navy supaya bayangan terasa satu keluarga dengan permukaan. */
+  --elev-1: 0 1px 2px rgb(16 45 82 / 0.05), 0 1px 3px -1px rgb(16 45 82 / 0.06);
+  --elev-2: 0 2px 4px rgb(16 45 82 / 0.04), 0 6px 14px -6px rgb(16 45 82 / 0.12);
+  --elev-3: 0 4px 8px rgb(16 45 82 / 0.05), 0 14px 30px -10px rgb(16 45 82 / 0.16);
+  --elev-4: 0 10px 20px rgb(16 45 82 / 0.06), 0 30px 60px -20px rgb(16 45 82 / 0.24);
+
+  /* ── Radius ─────────────────────────────────────────────────────────────── */
+  --r-sm: 6px;
+  --r-md: 10px;
+  --r-lg: 14px;
+  --r-xl: 18px;
+  --r-2xl: 24px;
+
+  /* ── Motion ──────────────────────────────────────────────────────────────
+     Operate mode: 120-260ms. Peserta sedang di dalam tugas, bukan menonton. */
+  --t-1: 120ms;
+  --t-2: 180ms;
+  --t-3: 260ms;
+  --e-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --e-in-out: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--surface-page);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-card: var(--surface-card);
+  --color-surface-inset: var(--surface-inset);
+  --color-surface-nav: var(--surface-nav);
+  --color-surface-nav-deep: var(--surface-nav-deep);
+
+  --color-muted-foreground: var(--muted-foreground);
+  --color-faint-foreground: var(--faint-foreground);
+
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-success: var(--success);
+  --color-success-soft: var(--success-soft);
+  --color-destructive: var(--destructive);
+  --color-destructive-soft: var(--destructive-soft);
+  --color-ring: var(--ring);
+
+  --radius-sm: var(--r-sm);
+  --radius-md: var(--r-md);
+  --radius-lg: var(--r-lg);
+  --radius-xl: var(--r-xl);
+  --radius-2xl: var(--r-2xl);
+
+  --shadow-e1: var(--elev-1);
+  --shadow-e2: var(--elev-2);
+  --shadow-e3: var(--elev-3);
+  --shadow-e4: var(--elev-4);
+  --shadow-glow: var(--glow-accent);
+
+  --ease-out: var(--e-out);
+  --ease-in-out: var(--e-in-out);
+
+  --font-sans: var(--font-sans-src), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, monospace;
+
+  /* Tipografi Operate: skala rem tetap (bukan fluid), tracking mengetat seiring
+     ukuran naik. --text-base sengaja dibiarkan 16px supaya input di iOS tidak
+     memicu zoom-on-focus. */
+  --text-xs--line-height: 1.45;
+  --text-sm--line-height: 1.55;
+  --text-base--line-height: 1.6;
+  --text-lg--line-height: 1.5;
+  --text-xl--line-height: 1.4;
+  --text-2xl--line-height: 1.25;
+  --text-2xl--letter-spacing: -0.014em;
+  --text-3xl--line-height: 1.18;
+  --text-3xl--letter-spacing: -0.02em;
+  --text-4xl--line-height: 1.12;
+  --text-4xl--letter-spacing: -0.025em;
+  --text-5xl--line-height: 1.05;
+  --text-5xl--letter-spacing: -0.03em;
+  --text-6xl--line-height: 1;
+  --text-6xl--letter-spacing: -0.034em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─────────────────────────────────────────────────────────────────────────────
+   Identitas ornate D'Ajiks Akademi — SCOPED, bukan global
+   ─────────────────────────────────────────────────────────────────────────────
+   :root di atas SENGAJA tidak disentuh. Permukaan tempat peserta mengerjakan
+   soal (app/test/*, app/latihan/*) tidak pernah berada di dalam elemen
+   ber-class .ornate, jadi mereka tetap resolve ke token light di atas tanpa
+   satu pun filenya diubah.
+
+   KONSEKUENSI: token yang TIDAK ditulis di sini akan mewarisi nilai LIGHT-nya,
+   bukan hilang. Itu sebabnya token "soft" dan --accent-ink wajib ada di bawah:
+   Badge tone="accent" memakai pasangan bg-accent-soft + text-accent-ink, dan
+   --accent-ink light (#8a5a12) di atas wash gold-di-atas-navy cuma 1.80:1.
+
+   Kontras token diverifikasi oleh `npm run check:contrast`.
+   ───────────────────────────────────────────────────────────────────────────── */
+.ornate {
+  color-scheme: dark;
+
+  /* Surface ladder — warm black; card lebih terang dari page. */
+  --surface-page: #0b0a09;
+  --surface-card: #151210;
+  --surface-inset: #1e1a16;
+  --surface-nav: #090807;
+  --surface-nav-deep: #060505;
+
+  --foreground: #f6f0e4;
+  --muted-foreground: #a79b89;
+  --faint-foreground: #847a6c;
+
+  --border: #2a241e;
+  --border-strong: #8b622c;
+
+  --primary: #d9983f;
+  --primary-hover: #e0a44a;
+  --primary-active: #c4842c;
+  --primary-foreground: #0b0a09;
+  --accent: #d9983f;
+  --accent-strong: #c4842c;
+  --accent-soft: rgb(217 152 63 / 0.14);
+  --accent-ink: #efc078;
+  --success: #3ed6a0;
+  --success-soft: rgb(62 214 160 / 0.14);
+  --destructive: #fd948d;
+  --destructive-soft: rgb(253 148 141 / 0.14);
+  --ring: #efc078;
+  --ring-on-nav: #efc078;
+
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.40), 0 1px 3px -1px rgb(0 0 0 / 0.48);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.38), 0 6px 14px -6px rgb(0 0 0 / 0.55);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.40), 0 14px 30px -10px rgb(0 0 0 / 0.60);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.42), 0 30px 60px -20px rgb(0 0 0 / 0.70);
+  --glow-accent: 0 0 24px -6px rgb(217 152 63 / 0.55);
+}
+
+/* CTA gold: dua stop, bukan flat — echo highlight logam di logo. Scoped ke
+   .ornate supaya tombol accent di permukaan light (halaman soal) tidak ikut.
+   Teks tetap navy di atas gold, sesuai disiplin warna yang sudah ada. */
+.ornate .btn-accent-metal {
+  background-image: linear-gradient(160deg, #e8b45c 0%, #d9983f 55%, #c4842c 100%);
+  color: var(--primary-foreground);
+}
+
+.ornate .btn-accent-metal:hover {
+  background-image: linear-gradient(160deg, #f0c078 0%, #e0a24a 55%, #cc8d33 100%);
+}
+
+.ornate .btn-primary {
+  border: 1px solid rgb(217 152 63 / 0.55);
+  background: transparent;
+  color: var(--accent-ink);
+  box-shadow: none;
+}
+
+.ornate .btn-primary:hover {
+  border-color: var(--accent);
+  background: rgb(217 152 63 / 0.10);
+}
+
+.ornate .btn-primary:active {
+  background: rgb(217 152 63 / 0.15);
+}
+
+.ornate .btn-secondary {
+  border-color: var(--border-strong);
+}
+
+.ornate .badge-base {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.ornate .badge-info {
+  border-color: var(--border);
+  background: var(--surface-inset);
+  color: rgb(246 240 228 / 0.80);
+}
+
+.ornate .meter-track {
+  box-shadow: inset 0 0 0 1px rgb(217 152 63 / 0.15);
+}
+
+/* Echo garis tipis kiri-kanan "AKADEMI" di logo. Dipakai sebagai pembatas
+   SECTION, bukan per-baris daftar — hairline di tiap baris tabel adalah pola
+   yang sudah ditolak di disiplin desain repo ini. */
+.ornate .rule-ornate {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--accent-ink);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.ornate .rule-ornate::before,
+.ornate .rule-ornate::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: linear-gradient(90deg, transparent, rgb(217 152 63 / 0.5), transparent);
+}
+
+.eyebrow {
+  color: var(--accent-ink);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hud-grid {
+  background-image: radial-gradient(circle, rgb(217 152 63 / 0.055) 1px, transparent 1px);
+  background-size: 22px 22px;
+  background-attachment: fixed;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Base
+   ───────────────────────────────────────────────────────────────────────────── */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scrollbar-gutter: stable;
 }
 
 body {
-  background: var(--background);
+  background: var(--surface-page);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans-src), ui-sans-serif, system-ui, sans-serif;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Cormorant Garamond dibatasi ke judul halaman dan angka skor saja. Di luar itu satu
+   keluarga (Source Sans 3) memikul heading, label, tombol, dan data — pola
+   Operate: display font di label UI bikin antarmuka terasa asing. */
+.font-heading {
+  font-family: var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Angka yang dibaca berdampingan atau berubah tiap detik harus punya lebar
+   glyph sama, kalau tidak layout bergoyang tiap tick. */
+.tnum {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--accent) 34%, white);
+  color: var(--foreground);
+}
+
+.ornate ::selection {
+  background: color-mix(in srgb, var(--accent) 34%, black);
+}
+
+/* Tailwind v4 tidak menyentuh cursor, dan default UA untuk <button> adalah
+   `default`, bukan `pointer`. Tanpa rule ini setiap tombol di app terasa mati
+   dibanding kartu <a> di sebelahnya. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+summary,
+label[for] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+button,
+a,
+summary,
+[role="button"] {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ring navy 13.8:1 di permukaan terang; di permukaan navy diganti gold terang
+   lewat .on-nav. Offset memisahkan ring dari border kontrol. */
+:where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.on-nav :where(a, button, input, summary, [tabindex]):focus-visible {
+  outline-color: var(--ring-on-nav);
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Layout primitives
+   ───────────────────────────────────────────────────────────────────────────── */
+
+.app-page {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 76rem;
+  padding-inline: 1rem;
+  padding-block: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .app-page {
+    padding-inline: 1.75rem;
+    padding-block: 2rem;
+  }
+}
+
+/* Kartu: hairline + elevation 1. Kartu tidak pernah bersarang di dalam kartu —
+   kelompok di dalam kartu pakai .inset-panel. */
+.surface-card {
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface-card);
+  box-shadow: var(--elev-1);
+}
+
+.surface-panel {
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  background: var(--surface-card);
+  box-shadow: var(--elev-3);
+}
+
+.inset-panel {
+  border-radius: var(--r-md);
+  background: var(--surface-inset);
+}
+
+/* Shared hero geometry stays outside the timed question surface. */
+/* Satu tampilan hero gold-on-black di semua permukaan (dashboard maupun
+   latihan/ujian yang tetap light) — dulu ujian sengaja dipertahankan navy,
+   sekarang disamakan supaya headernya ikut identitas gold di semua tempat. */
+.hero-panel {
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  overflow: hidden;
+  border: 1px solid rgb(217 152 63 / 0.22);
+  border-radius: var(--r-xl);
+  padding: 2rem;
+  color: white;
+  background:
+    radial-gradient(120% 140% at 8% 0%, rgb(217 152 63 / 0.10), transparent 55%),
+    linear-gradient(150deg, #17130f 0%, #0d0b09 62%, #100d0b 100%);
+  box-shadow: var(--elev-3);
+}
+
+.hero-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-panel::before,
+.hero-panel::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-panel::before {
+  inset: 0 0 0 62%;
+  background: rgb(217 152 63 / 0.035);
+  border-left: 1px solid rgb(217 152 63 / 0.12);
+  transform: skewX(-24deg);
+}
+
+.hero-panel::after {
+  width: 19rem;
+  height: 19rem;
+  right: -5rem;
+  top: -8rem;
+  border: 1px solid rgb(217 152 63 / 0.65);
+  transform: rotate(38deg);
+  box-shadow: 0 0 0 24px rgb(217 152 63 / 0.035), 0 0 0 48px rgb(217 152 63 / 0.035);
+}
+
+.module-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface-card);
+  box-shadow: var(--elev-2);
+}
+
+/* Adaptasi pola kartu dua-lapis dari Uiverse: tepi gradien adalah respons
+   hover, sedangkan permukaan di dalamnya mundur sedikit. Gold tetap hanya
+   menjadi aksen merek, bukan glow neon baru. */
+.module-card.package-hover-card {
+  padding: 1px;
+  border-color: transparent;
+  background: linear-gradient(145deg, color-mix(in srgb, var(--accent) 82%, white), var(--primary));
+  box-shadow: var(--elev-2);
+  transition: box-shadow var(--t-2) var(--e-out);
+}
+
+.package-hover-card__inner {
+  display: flex;
+  min-height: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: calc(1.5rem - 1px);
+  border: 1px solid var(--border);
+  border-radius: calc(var(--r-lg) - 1px);
+  background: var(--surface-card);
+  box-shadow: var(--elev-2);
+  transition:
+    border-radius var(--t-2) var(--e-out),
+    transform var(--t-2) var(--e-out);
+}
+
+.module-card:first-child:not(.package-hover-card),
+.module-card:first-child.package-hover-card > .package-hover-card__inner {
+  background: linear-gradient(145deg, var(--accent-soft), var(--surface-card) 70%);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+}
+
+.module-card:last-child:not(.package-hover-card),
+.module-card:last-child.package-hover-card > .package-hover-card__inner {
+  background: linear-gradient(145deg, var(--surface-inset), var(--surface-card) 70%);
+}
+
+.module-card.module-card-featured:not(.package-hover-card),
+.module-card.module-card-featured.package-hover-card > .package-hover-card__inner {
+  background: linear-gradient(145deg, #17130f, #241d17 70%);
+  border-color: var(--border-strong);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .package-hover-card:hover {
+    box-shadow:
+      var(--elev-3),
+      0 12px 30px -16px rgb(217 152 63 / 0.46);
+  }
+
+  .package-hover-card:hover > .package-hover-card__inner {
+    border-radius: var(--r-xl);
+    transform: scale(0.985);
+  }
+}
+
+.package-hover-card:focus-within {
+  box-shadow:
+    var(--elev-3),
+    0 0 0 3px color-mix(in srgb, var(--ring) 26%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .module-card.package-hover-card,
+  .package-hover-card__inner {
+    transition: none;
+  }
+}
+
+.summary-strip > :last-child {
+  background: var(--accent-soft);
+}
+
+.question-enter {
+  animation: question-enter 140ms ease-out;
+}
+
+/* Carousel hidup di halaman pemilihan paket, bukan di permukaan soal yang
+   bertimer. Kartu tengah adalah satu-satunya paket yang siap dimulai.
+
+   Palet dikunci: SATU gradien warm-black untuk semua kartu (dulu tiap kartu ganti
+   warna biru/ungu/teal lewat data-tone — itu bikin paket terbaca seolah beda
+   jenis, padahal isinya sejenis). Emas cuma dipakai sebagai penanda: numeral,
+   rim kartu aktif, dan kilau sekali-jalan waktu kartu masuk ke tengah.
+
+   Kedalaman dibikin nyata: stage punya perspective, kartu tetangga mundur di
+   sumbu Z + miring rotateY (coverflow), bukan sekadar rotate 2D + blur. Blur
+   filter dibuang — di stage yang bergerak dia repaint tiap frame dan bikin
+   teks tetangga kotor. Penggantinya: mundur ke belakang + dim. */
+.package-carousel {
+  /* Skala lokal, bukan token global: cuma blok ini yang punya permukaan gelap
+     pekat dengan teks di atasnya. */
+  --pc-ink-dim: #b3a694;
+  --pc-rim: rgb(255 255 255 / 0.16);    /* rim datar, dipakai badge + ubin simbol */
+
+  /* Rim kartu bukan garis satu alpha, tapi gradien: terang di sudut atas-kiri
+     (arah datang cahaya, sama dengan radial permukaan), meredup di bawah. Itu
+     yang bikin tepinya terbaca sebagai material, bukan stroke. */
+  --pc-rim-grad: linear-gradient(
+    158deg,
+    rgb(255 255 255 / 0.42) 0%,
+    rgb(255 255 255 / 0.10) 34%,
+    rgb(255 255 255 / 0.04) 62%,
+    rgb(255 255 255 / 0.20) 100%
+  );
+
+  /* Glide sengaja lebih panjang dari skala Operate global (--t-3 260ms): kartu
+     menempuh 13rem + 9rem di sumbu Z + 19deg rotasi sekaligus. Di 260ms itu
+     patah. Layar ini di luar timer, jadi boleh. Ease-nya ekor panjang tanpa
+     overshoot — rotateY yang memantul terbaca goyang, bukan mahal. */
+  --pc-glide: 560ms;
+  --pc-ease: cubic-bezier(0.22, 0.96, 0.26, 1);
+  overflow: hidden;
+  padding-block: 0.5rem;
+}
+
+.package-carousel__stage {
+  position: relative;
+  height: 22rem;
+  perspective: 1500px;
+  perspective-origin: 50% 45%;
+}
+
+.package-carousel__card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  --pc-depth: -9rem;
+  --pc-tilt: -19deg;
+  display: flex;
+  width: min(21rem, calc(100% - 5rem));
+  min-height: 19rem;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1.5rem;
+  border: 1.5px solid transparent;
+  border-radius: 1.5rem;
+  /* Satu gradien warm-black untuk semua kartu + satu lapis
+     radial di sudut atas-kiri supaya permukaannya tidak mati rata. Lapis
+     terakhir jatuh di border-box, jadi dia yang mengisi border transparan di
+     atas — trik padding-box/border-box, tanpa elemen tambahan. */
+  background:
+    radial-gradient(115% 85% at 12% 0%, rgb(217 152 63 / 0.14), transparent 58%) padding-box,
+    linear-gradient(155deg, #1c1713 0%, #241d17 52%, #2d241b 100%) padding-box,
+    var(--pc-rim-grad) border-box;
+  color: white;
+  text-align: left;
+  /* Elevasi + satu hairline bevel di dalam tepi atas. Bevel-nya yang bikin
+     kartu punya ketebalan, bukan lembaran. */
+  box-shadow: var(--elev-3), inset 0 1px 0 rgb(255 255 255 / 0.14);
+  transform:
+    translateX(-50%)
+    translateX(calc(var(--package-offset) * 13rem))
+    translateZ(var(--pc-depth))
+    rotateY(calc(var(--package-offset) * var(--pc-tilt)));
+  /* rotateY tanpa ini bikin teks shimmer di subpiksel selama kartu berputar. */
+  backface-visibility: hidden;
+  transition:
+    transform var(--pc-glide) var(--pc-ease),
+    opacity 320ms var(--e-out),
+    box-shadow 420ms var(--e-out);
+}
+
+/* Tekstur permukaan: garis grid tipis + bloom emas di sudut. Static, tidak
+   ikut animasi, jadi tidak menambah beban repaint. */
+.package-carousel__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(9rem 9rem at 108% 106%, rgb(217 152 63 / 0.24), transparent 70%),
+    repeating-linear-gradient(90deg, rgb(255 255 255 / 0.05) 0 1px, transparent 1px 2.75rem),
+    repeating-linear-gradient(0deg, rgb(255 255 255 / 0.035) 0 1px, transparent 1px 2.75rem);
+  mask-image: linear-gradient(200deg, rgb(0 0 0 / 0.75), rgb(0 0 0 / 0.25) 60%, black);
+  pointer-events: none;
+}
+
+/* Tiga elemen futuristik di kartu tengah, semua cuma waktu is-active:
+   1) Kilau emas (::before) — satu-jalan, nyala waktu kartu mendarat.
+   2) Scanline (span.package-carousel__scanline) — beam asimetris ala comet:
+      ekor panjang lembut di atas, inti tajam, jatuh pendek di bawah — bukan
+      blob simetris. Easing dibikin sine (bukan linear) supaya kecepatan
+      mendekati nol pas sambungan loop; itu yang bikin siklusnya kerasa mulus,
+      bukan "linear lalu teleport".
+   3) Reticle (span.package-carousel__reticle) — bracket sudut statis, motif
+      viewfinder/HUD. Elemen terpisah dari ::after (tekstur grid) karena
+      ::after punya mask-image terarah (vignette) yang bikin sudut gak rata
+      terangnya kalau bracket ditumpuk di situ; reticle butuh keempat sudut
+      sama terang.
+   Cuma transform + opacity yang dianimasikan (bukan top/background-position)
+   supaya tetap di jalur GPU compositor, bukan repaint tiap frame.
+*/
+.package-carousel__card::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background: linear-gradient(
+    104deg,
+    transparent 42%,
+    rgb(217 152 63 / 0.16) 48%,
+    rgb(255 232 196 / 0.40) 50%,
+    rgb(217 152 63 / 0.16) 52%,
+    transparent 58%
+  );
+  opacity: 0;
+  pointer-events: none;
+}
+
+.package-carousel__card.is-active::before {
+  animation: package-sheen 1000ms var(--e-out) 380ms;
+}
+
+.package-carousel__card > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Selector dua-kelas biar spesifisitasnya menang atas `.package-carousel__card > *`
+   di atas, jadi position:absolute di sini tidak kalah sama position:relative itu.
+   Gradiennya sengaja tidak simetris: ekor (0-50%) jauh lebih panjang dan lembut
+   dari jatuhnya (50-68%) — itu yang bikin dia kebaca sebagai cahaya yang LEWAT
+   (arah turun), bukan blok cahaya yang cuma nongol lalu hilang. mix-blend-mode
+   dibuang: di atas dua lapis gradien gelap + tekstur ::after, blend "screen"
+   malah bikin keruh, bukan terang bersih — opacity polos lebih jelas. */
+.package-carousel__card > .package-carousel__scanline {
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 2.25rem;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgb(255 232 196 / 0) 8%,
+    rgb(255 232 196 / 0.18) 26%,
+    rgb(255 236 205 / 0.42) 40%,
+    rgb(255 244 222 / 0.92) 48%,
+    rgb(217 152 63 / 1) 50%,
+    rgb(255 244 222 / 0.55) 52%,
+    rgb(255 232 196 / 0.15) 58%,
+    transparent 68%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-2.25rem);
+}
+
+/* Easing sine (bukan linear): di linear, kecepatan konstan lalu reset ke atas
+   itu instan — kerasa seperti "teleport", bukan siklus. Sine bikin kecepatan
+   turun ke ~nol pas mendekati ujung bawah dan naik lagi pas mulai dari atas,
+   jadi sambungan loop-nya tidak kerasa. */
+.package-carousel__card.is-active > .package-carousel__scanline {
+  opacity: 1;
+  animation: package-scanline 2400ms cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+/* Bracket sudut, statis (tidak ikut animasi) — motif viewfinder/HUD yang
+   langsung terbaca "sistem sedang membaca kartu ini" bahkan dari screenshot
+   diam. Tiap sudut = dua garis solid (trik gradien dua-stop warna sama,
+   dikunci ukurannya lewat background-size supaya jadi "batang", bukan
+   gradasi) — nol elemen DOM tambahan per sudut, delapan lapis background. */
+.package-carousel__card > .package-carousel__reticle {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) top 0.85rem left 0.85rem / 1rem 2px no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) top 0.85rem left 0.85rem / 2px 1rem no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) top 0.85rem right 0.85rem / 1rem 2px no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) top 0.85rem right 0.85rem / 2px 1rem no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) bottom 0.85rem left 0.85rem / 1rem 2px no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) bottom 0.85rem left 0.85rem / 2px 1rem no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) bottom 0.85rem right 0.85rem / 1rem 2px no-repeat,
+    linear-gradient(rgb(240 200 135 / 0.65), rgb(240 200 135 / 0.65)) bottom 0.85rem right 0.85rem / 2px 1rem no-repeat;
+  transition: opacity var(--t-2) var(--e-out);
+}
+
+.package-carousel__card.is-active > .package-carousel__reticle {
+  opacity: 1;
+}
+
+/* Tetangga berangkat 50ms setelah kartu tengah. Kalau semua bergerak dalam
+   satu detak, geraknya terbaca sebagai satu blok yang digeser; jeda kecil ini
+   yang bikin tumpukannya terasa punya urutan. */
+.package-carousel__card.is-neighbor {
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0.55;
+  box-shadow: var(--elev-2), inset 0 1px 0 rgb(255 255 255 / 0.08);
+  transition-delay: 50ms;
+}
+
+.package-carousel__card.is-neighbor:hover {
+  opacity: 0.78;
+}
+
+.package-carousel__card.is-active {
+  --pc-depth: 0rem;
+  /* Rim yang sama, tapi emas: paling terang di sudut atas-kiri, tipis di dasar,
+     menyala lagi di sudut bawah-kanan tempat bloom permukaan berada. */
+  --pc-rim-grad: linear-gradient(
+    158deg,
+    rgb(255 236 205 / 0.92) 0%,
+    rgb(217 152 63 / 0.55) 30%,
+    rgb(217 152 63 / 0.16) 58%,
+    rgb(240 192 120 / 0.72) 100%
+  );
+  z-index: 2;
+  cursor: default;
+  opacity: 1;
+  box-shadow:
+    var(--elev-4),
+    inset 0 1px 0 rgb(255 232 196 / 0.26),
+    0 8px 34px -14px rgb(217 152 63 / 0.60);
+}
+
+.package-carousel__card.is-distant {
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition-delay: 0ms;
+}
+
+.package-carousel__card:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.package-carousel__index {
+  font-variant-numeric: tabular-nums;
+  color: var(--accent);
+  text-shadow: 0 1px 12px rgb(217 152 63 / 0.35);
+}
+
+.package-carousel__badge {
+  border: 1px solid var(--pc-rim);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 0.08);
+}
+
+.package-carousel__symbols {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.5rem;
+}
+
+.package-carousel__symbols > span {
+  display: flex;
+  height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--pc-rim);
+  border-radius: 0.5rem;
+  background: rgb(255 255 255 / 0.07);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+  font-size: 1.5rem;
+  transition: border-color var(--t-2) var(--e-out), background-color var(--t-2) var(--e-out);
+}
+
+/* Kunci simbol cuma "menyala" di kartu yang benar-benar akan dimulai. */
+.package-carousel__card.is-active .package-carousel__symbols > span {
+  border-color: rgb(217 152 63 / 0.40);
+  background: rgb(217 152 63 / 0.13);
+}
+
+.package-detail-dialog {
+  max-width: min(42rem, calc(100vw - 2rem));
+}
+
+.package-detail-dialog::backdrop {
+  background: rgb(0 0 0 / 0.78);
+}
+
+.package-detail-dialog > .surface-panel {
+  max-height: calc(100dvh - 2rem);
+  overflow-y: auto;
+  border-color: rgb(217 152 63 / 0.28);
+  background:
+    radial-gradient(90% 70% at 100% 0%, rgb(217 152 63 / 0.10), transparent 58%),
+    var(--surface-card);
+}
+
+.package-column-list {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: var(--surface-inset);
+}
+
+.package-column-list > li {
+  display: flex;
+  min-height: 3.25rem;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.625rem 0.875rem;
+  border-top: 1px solid var(--border);
+}
+
+.package-column-list > li:first-child {
+  border-top: 0;
+}
+
+/* Pulse mengikuti referensi user; slice duplikat memberi glitch singkat tanpa
+   menambah dependency atau mengubah CTA lain. */
+.ornate .start-glitch {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 0;
+  color: var(--primary-foreground);
+  background-image: linear-gradient(135deg, #c4842c 0%, #e8b45c 52%, #b97824 100%);
+  transition: scale 180ms var(--e-out);
+}
+
+.ornate .start-glitch:hover {
+  animation: start-glitch-pulse 1.5s infinite;
+}
+
+.ornate .start-glitch:active {
+  scale: 0.95;
+}
+
+.ornate .start-glitch::before {
+  content: attr(data-label);
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: #efc078;
+  color: #0b0a09;
+  opacity: 0;
+  pointer-events: none;
+  text-shadow: -2px 0 #f6f0e4, 2px 0 #8b622c;
+}
+
+.ornate .start-glitch:hover::before {
+  animation: start-glitch-slice 650ms steps(2, end) infinite;
+}
+
+@keyframes start-glitch-pulse {
+  0% { box-shadow: 0 0 0 0 rgb(217 152 63 / 0.40); }
+  70% { box-shadow: 0 0 0 10px rgb(217 152 63 / 0); }
+  100% { box-shadow: 0 0 0 0 rgb(217 152 63 / 0); }
+}
+
+@keyframes start-glitch-slice {
+  0%, 68%, 100% { opacity: 0; transform: translateX(0); }
+  70% { opacity: 0.9; clip-path: inset(18% 0 56% 0); transform: translateX(-3px); }
+  78% { opacity: 0.75; clip-path: inset(60% 0 14% 0); transform: translateX(3px); }
+  86% { opacity: 0.85; clip-path: inset(39% 0 37% 0); transform: translateX(-2px); }
+  94% { opacity: 0; transform: translateX(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ornate .start-glitch:hover {
+    animation: none;
+  }
+
+  .ornate .start-glitch:hover::before {
+    animation: none;
+  }
+}
+
+@media (max-width: 639px) {
+  .package-carousel {
+    --pc-glide: 400ms;
+  }
+
+  .package-carousel__stage {
+    height: 20rem;
+    perspective: 900px;
+  }
+
+  .package-carousel__card {
+    --pc-depth: 0rem;
+    --pc-tilt: 0deg;
+    width: calc(100% - 1rem);
+    min-height: 18rem;
+    transform: translateX(-50%) translateX(calc(var(--package-offset) * 100%));
+  }
+
+  .package-carousel__card.is-neighbor {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes package-sheen {
+  from { opacity: 0; transform: translateX(-38%); }
+  35%  { opacity: 1; }
+  to   { opacity: 0; transform: translateX(38%); }
+}
+
+/* Opacity turun ke 0 pas ujung siklus (21.5rem -> -2.25rem) supaya band sudah
+   nyaris tak kasat mata pas reset posisi — dobel sama easing sine di atas
+   biar sambungan loop-nya benar-benar tidak kelihatan "lompat". */
+@keyframes package-scanline {
+  0%   { transform: translateY(-2.25rem); opacity: 0; }
+  12%  { opacity: 0.95; }
+  88%  { opacity: 0.95; }
+  100% { transform: translateY(21.5rem); opacity: 0; }
+}
+
+@keyframes question-enter {
+  from { opacity: 0.85; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 639px) {
+  .hero-panel { padding: 1.5rem; }
+  .hero-panel::before { left: 65%; }
+  .hero-panel::after { right: -13rem; }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Dots loader
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Loader referensi user, warna diganti ke gold accent (--color: var(--accent))
+   gantiin abu-abu asli. Class di-prefix dots-loader supaya .circle/.dot/.outline
+   generic gak bentrok sama komponen lain. Dipakai di layar countdown sebelum
+   latihan mulai (LatihanGate). */
+.dots-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --color: var(--accent);
+  --animation: 2s ease-in-out infinite;
+}
+
+.dots-loader__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  border: solid 2px var(--color);
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: transparent;
+  animation: dots-loader-circle var(--animation);
+}
+
+.dots-loader__dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--color);
+  animation: dots-loader-dot var(--animation);
+}
+
+.dots-loader__outline {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: dots-loader-outline var(--animation);
+}
+
+.dots-loader__circle:nth-child(2) { animation-delay: 0.3s; }
+.dots-loader__circle:nth-child(3) { animation-delay: 0.6s; }
+.dots-loader__circle:nth-child(4) { animation-delay: 0.9s; }
+.dots-loader__circle:nth-child(5) { animation-delay: 1.2s; }
+
+.dots-loader__circle:nth-child(1) .dots-loader__dot { animation-delay: 0s; }
+.dots-loader__circle:nth-child(2) .dots-loader__dot { animation-delay: 0.3s; }
+.dots-loader__circle:nth-child(3) .dots-loader__dot { animation-delay: 0.6s; }
+.dots-loader__circle:nth-child(4) .dots-loader__dot { animation-delay: 0.9s; }
+.dots-loader__circle:nth-child(5) .dots-loader__dot { animation-delay: 1.2s; }
+
+.dots-loader__circle:nth-child(1) .dots-loader__outline { animation-delay: 0.9s; }
+.dots-loader__circle:nth-child(2) .dots-loader__outline { animation-delay: 1.2s; }
+.dots-loader__circle:nth-child(3) .dots-loader__outline { animation-delay: 1.5s; }
+.dots-loader__circle:nth-child(4) .dots-loader__outline { animation-delay: 1.8s; }
+.dots-loader__circle:nth-child(5) .dots-loader__outline { animation-delay: 2.1s; }
+
+@keyframes dots-loader-circle {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.5; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes dots-loader-dot {
+  0% { transform: scale(1); }
+  50% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+@keyframes dots-loader-outline {
+  0% {
+    transform: scale(0);
+    outline: solid 20px var(--color);
+    outline-offset: 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    outline: solid 0 transparent;
+    outline-offset: 20px;
+    opacity: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CTA pulse
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Efek pulse/glitch dari referensi user, warna diganti ke gold accent yang
+   sudah ada (bukan teal-ungu aslinya) — dipakai tombol "Mulai Paket" final
+   di modal rincian paket Kecermatan. */
+.btn-pulse-cta {
+  transition: scale var(--t-2) var(--e-out);
+}
+
+.btn-pulse-cta:hover {
+  animation: btn-pulse 1.5s infinite;
+}
+
+.btn-pulse-cta:active {
+  scale: 0.95;
+}
+
+@keyframes btn-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgb(217 152 63 / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgb(217 152 63 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgb(217 152 63 / 0);
+  }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   CTA sparkle
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Efek dipinjam dari sparkle-button (uiverse.io) buat CTA "Mulai latihan" dan
+   "Mulai tryout lengkap". Diringkas ke plain CSS: dot polos gantiin 12 SVG
+   bintang identik di sumber aslinya. Tidak ada warna baru — dot dan ikon
+   sparkle pakai currentColor/--primary, warna teks yang sudah dipakai tombol
+   accent (navy di atas gold), bukan ungu dari sumber asli. */
+.cta-sparkle-wrap {
+  position: relative;
+}
+
+.cta-sparkle-wrap .particle-pen {
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--t-3) var(--e-out);
+}
+
+.cta-sparkle-wrap:is(:hover, :focus-within) .particle-pen {
+  opacity: 1;
+}
+
+.cta-sparkle-wrap:is(:hover, :focus-within) .particle {
+  animation-play-state: running;
+}
+
+.particle {
+  position: absolute;
+  top: calc(var(--y) * 1%);
+  left: calc(var(--x) * 1%);
+  width: calc(var(--size) * 1rem);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--primary);
+  animation: cta-particle-float calc(var(--duration) * 1s) calc(var(--delay) * -1s) infinite ease-in-out;
+  animation-play-state: paused;
+}
+
+@keyframes cta-particle-float {
+  0%, 100% { translate: 0 0; scale: 1; opacity: 0.85; }
+  50% { translate: 0 -160%; scale: 0.6; opacity: 0; }
+}
+
+.sparkle path {
+  transform-box: fill-box;
+  transform-origin: center;
+  fill: currentColor;
+  animation-duration: 0.6s;
+}
+
+.cta-sparkle-wrap:is(:hover, :focus-within) .sparkle path {
+  animation-name: cta-sparkle-bounce;
+}
+
+@keyframes cta-sparkle-bounce {
+  35%, 65% { scale: var(--scale, 1); }
+}
+
+/* ─────────────────────────────────────────────────────────────────────────────
+   Loading & motion
+   ───────────────────────────────────────────────────────────────────────────── */
+
+/* Skeleton berbentuk sama dengan konten yang akan datang, bukan spinner di
+   tengah layar — halaman tidak melompat saat data masuk. */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--r-md);
+  background: var(--surface-inset);
+}
+
+.skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgb(255 255 255 / 0.72), transparent);
+  animation: skeleton-sweep 1.4s var(--e-in-out) infinite;
+}
+
+@keyframes skeleton-sweep {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+}
+
+/* Satu momen gerak yang diotorisasi: konten soal berganti, dan panel modal
+   masuk. Bukan entrance identik di tiap section. */
+.enter-rise {
+  animation: fade-rise var(--t-3) var(--e-out) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .skeleton::after {
+    display: none;
+  }
 }

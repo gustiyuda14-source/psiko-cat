@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
+    "check:scoring": "tsx scripts/check-scoring.ts",
+    "check:access": "tsx scripts/check-access-policy.ts",
+    "check:contrast": "tsx scripts/check-contrast.ts",
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate"

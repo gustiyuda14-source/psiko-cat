@@ -1,21 +1,38 @@
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import ConfirmSubmitButton from "@/app/components/ConfirmSubmitButton";
+import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
+import { Badge, Meter, PageHeader, buttonStyles } from "@/app/components/ui";
+import { ArrowRight, Check } from "@/app/components/icons";
+import { getSessionAccess } from "@/lib/session-access";
+import { runSessionCalculate } from "@/lib/scoring/runner";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
-const MODULE_META = {
-  KECERDASAN:  { label: "Sub-Tes Kecerdasan",  icon: "🧠", desc: "100 soal · 90 menit · kognitif & spasial", href: "kecerdasan",  order: 1 },
-  KECERMATAN:  { label: "Sub-Tes Kecermatan",  icon: "🎯", desc: "500 soal · 10 menit · 10 lajur simbol",   href: "kecermatan",  order: 2 },
-  KEPRIBADIAN: { label: "Sub-Tes Kepribadian", icon: "💡", desc: "100 pernyataan · 60 menit · skala Likert", href: "kepribadian", order: 3 },
-} as const;
+const QUESTION_COUNT: Record<ModuleType, number> = { KECERDASAN: 100, KECERMATAN: 500, KEPRIBADIAN: 100 };
+const QUESTION_NOUN: Record<ModuleType, string> = { KECERDASAN: "butir", KECERMATAN: "butir", KEPRIBADIAN: "pernyataan" };
 
 function statusBadge(s: ModuleStatus) {
   if (s === "COMPLETED" || s === "TIMED_OUT")
-    return <span className="rounded-full bg-emerald-700/40 border border-emerald-600 px-2 py-0.5 text-xs text-emerald-300">Selesai</span>;
-  if (s === "IN_PROGRESS")
-    return <span className="rounded-full bg-blue-700/40 border border-blue-600 px-2 py-0.5 text-xs text-blue-300">Berlangsung</span>;
-  return <span className="rounded-full bg-zinc-700/40 border border-zinc-600 px-2 py-0.5 text-xs text-zinc-400">Belum Dimulai</span>;
+    return (
+      <Badge tone="success">
+        <Check className="size-3.5" strokeWidth={3} />
+        Selesai
+      </Badge>
+    );
+  if (s === "IN_PROGRESS") return <Badge tone="info">Berlangsung</Badge>;
+  return <Badge tone="neutral">Belum dimulai</Badge>;
+}
+
+async function calculateSession(formData: FormData) {
+  "use server";
+  const sessionId = formData.get("sessionId");
+  if (typeof sessionId !== "string") return;
+  const access = await getSessionAccess(sessionId);
+  if (!access.ok) return;
+  await runSessionCalculate(sessionId);
+  redirect(`/test/${sessionId}/result`);
 }
 
 export default async function SessionOverviewPage({
@@ -24,6 +41,8 @@ export default async function SessionOverviewPage({
   params: Promise<{ sessionId: string }>;
 }) {
   const { sessionId } = await params;
+  const access = await getSessionAccess(sessionId);
+  if (!access.ok) notFound();
 
   const { data: session } = await supabaseAdmin
     .from("test_sessions")
@@ -56,9 +75,9 @@ export default async function SessionOverviewPage({
 
   const getButtonState = (moduleType: string, seqOrder: number) => {
     const m = moduleSessions.find((ms) => ms.module_type === moduleType);
-    if (!m) return { disabled: true, label: "Tidak Tersedia" };
-    if (m.status === "COMPLETED" || m.status === "TIMED_OUT") return { disabled: true, label: "Selesai ✓" };
-    if (m.status === "IN_PROGRESS") return { disabled: false, label: "Lanjutkan →" };
+    if (!m) return { disabled: true, label: "Tidak tersedia" };
+    if (m.status === "COMPLETED" || m.status === "TIMED_OUT") return { disabled: true, label: "Selesai" };
+    if (m.status === "IN_PROGRESS") return { disabled: false, label: "Lanjutkan" };
     const prev = moduleSessions.find((ms) => ms.sequence_order === seqOrder - 1);
     if (seqOrder === 1 || prev?.status === "COMPLETED" || prev?.status === "TIMED_OUT") {
       return { disabled: false, label: "Mulai" };
@@ -67,89 +86,113 @@ export default async function SessionOverviewPage({
   };
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-white px-4 py-10">
-      <div className="max-w-2xl mx-auto space-y-8">
-        <div>
-          <h1 className="text-2xl font-bold">Psiko CAT</h1>
-          <p className="text-zinc-400 text-sm mt-1">
-            Peserta: <span className="text-white">{user?.name}</span>
-            <span className="text-zinc-600 ml-2">({user?.email})</span>
-          </p>
+    <div className="min-h-[100dvh] bg-background text-foreground">
+      <div className="mx-auto w-full max-w-2xl px-4 py-6 sm:px-6 sm:py-10">
+        <PageHeader title="Sesi ujian" description={`Psiko CAT · ${user?.name ?? ""}${user?.email ? ` · ${user.email}` : ""}`} />
+
+        <div className="surface-card mt-6 space-y-2.5 px-5 py-4">
+          <div className="flex items-baseline justify-between text-sm">
+            <span className="font-medium text-foreground">Kemajuan sesi</span>
+            <span className="tnum text-muted-foreground">
+              {doneCount} dari {moduleSessions.length} sub-tes selesai
+            </span>
+          </div>
+          <Meter
+            value={doneCount}
+            max={moduleSessions.length}
+            tone={allDone ? "success" : "primary"}
+            label={`${doneCount} dari ${moduleSessions.length} sub-tes selesai`}
+          />
         </div>
 
-        {/* Progress overview */}
-        <div className="rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4 space-y-2">
-          <div className="flex items-center justify-between text-xs text-zinc-500">
-            <span>Progress Tes</span>
-            <span className="font-mono">{doneCount} / {moduleSessions.length} selesai</span>
-          </div>
-          <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
-            <div
-              className="h-full bg-emerald-500 rounded-full transition-all duration-500"
-              style={{ width: `${(doneCount / moduleSessions.length) * 100}%` }}
-            />
-          </div>
-        </div>
-
-        <div className="space-y-3">
+        {/* Daftar bernomor: sub-tes memang harus dikerjakan berurutan, jadi
+            nomor di sini menyampaikan urutan yang mengikat, bukan hiasan. */}
+        <ol className="surface-card mt-4 divide-y divide-border overflow-hidden">
           {moduleSessions.map((ms) => {
-            const meta = MODULE_META[ms.module_type as keyof typeof MODULE_META];
+            const moduleType = ms.module_type as ModuleType;
+            const meta = MODULE_CONFIG[moduleType];
             const btn = getButtonState(ms.module_type, ms.sequence_order);
+            const done = ms.status === "COMPLETED" || ms.status === "TIMED_OUT";
+
             return (
-              <div
+              <li
                 key={ms.id}
-                className="flex items-center justify-between rounded-xl border border-zinc-800 bg-zinc-900 px-5 py-4"
+                className="flex flex-wrap items-center gap-x-4 gap-y-3 px-5 py-4 sm:flex-nowrap"
               >
-                <div className="flex items-center gap-4">
-                  <span className="text-2xl shrink-0">{meta.icon}</span>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold">{meta.label}</span>
-                      {statusBadge(ms.status)}
-                    </div>
-                    <p className="text-xs text-zinc-500">{meta.desc}</p>
+                <span
+                  className={`tnum flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                    done
+                      ? "bg-success text-white"
+                      : btn.disabled
+                        ? "bg-surface-inset text-faint-foreground"
+                        : "bg-primary text-primary-foreground"
+                  }`}
+                  aria-hidden="true"
+                >
+                  {done ? <Check className="size-4" strokeWidth={3} /> : ms.sequence_order}
+                </span>
+
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-medium text-foreground">{meta.label}</span>
+                    {statusBadge(ms.status)}
                   </div>
+                  <p className="tnum mt-0.5 text-xs text-muted-foreground">
+                    {QUESTION_COUNT[moduleType]} {QUESTION_NOUN[moduleType]} ·{" "}
+                    {meta.time_limit_seconds / 60} menit ·{" "}
+                    <span className="font-sans">{meta.shortDesc}</span>
+                  </p>
                 </div>
+
                 {btn.disabled ? (
-                  <span className="text-sm text-zinc-500">{btn.label}</span>
+                  <span className="shrink-0 text-sm text-muted-foreground">{btn.label}</span>
                 ) : (
                   <Link
-                    href={`/test/${sessionId}/${meta.href}`}
-                    className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold hover:bg-blue-500 transition-colors"
+                    href={`/test/${sessionId}/${meta.slug}`}
+                    className={buttonStyles({
+                      variant: "primary",
+                      size: "md",
+                      className: "shrink-0",
+                    })}
                   >
                     {btn.label}
+                    <ArrowRight className="size-4" />
                   </Link>
                 )}
-              </div>
+              </li>
             );
           })}
-        </div>
+        </ol>
 
-        {allDone && (
-          <form action={`/test/${sessionId}/result`} method="GET">
-            <input type="hidden" name="calculate" value="1" />
-            <button
-              type="submit"
-              className="w-full rounded-xl bg-emerald-600 py-3.5 text-base font-bold hover:bg-emerald-500 transition-colors"
+        {allDone ? (
+          <form action={calculateSession} className="mt-6">
+            <input type="hidden" name="sessionId" value={sessionId} />
+            <ConfirmSubmitButton
+              title="Hitung nilai NAP sekarang?"
+              confirmLabel="Ya, hitung nilai"
+              message="Ketiga sub-tes sudah selesai. Setelah nilai dihitung, sesi ini terkunci dan tidak bisa dikerjakan ulang."
+              className={buttonStyles({ variant: "accent", size: "lg", block: true })}
             >
-              Hitung Nilai NAP →
-            </button>
+              Hitung nilai NAP
+              <ArrowRight className="size-4" />
+            </ConfirmSubmitButton>
           </form>
-        )}
-
-        {!allDone && (
-          <div className="space-y-3">
-            <p className="text-center text-xs text-zinc-600">
+        ) : (
+          <div className="mt-6 space-y-3">
+            <p className="text-center text-xs text-muted-foreground">
               Selesaikan ketiga sub-tes secara berurutan untuk menghitung nilai NAP.
             </p>
-            <form action={`/test/${sessionId}/result`} method="GET">
-              <input type="hidden" name="calculate" value="1" />
-              <button
-                type="submit"
-                className="w-full rounded-xl border border-amber-700/40 py-2.5 text-xs font-semibold text-amber-500 hover:bg-amber-950/20 transition-colors"
+            <form action={calculateSession}>
+              <input type="hidden" name="sessionId" value={sessionId} />
+              <ConfirmSubmitButton
+                title="Paksa hitung nilai sekarang?"
+                confirmLabel="Ya, paksa hitung"
+                tone="danger"
+                message="Masih ada sub-tes yang belum selesai. Butir yang belum dikerjakan dihitung sebagai tidak dijawab, dan sesi ini tidak bisa dibuka lagi setelahnya."
+                className={buttonStyles({ variant: "danger", size: "md", block: true })}
               >
-                Paksa Submit &amp; Hitung Sekarang →
-              </button>
+                Paksa submit dan hitung sekarang
+              </ConfirmSubmitButton>
             </form>
           </div>
         )}
