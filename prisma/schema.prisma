@@ -53,19 +53,19 @@ enum AntiCheatEventType {
 // ─────────────────────────────────────────────
 
 model User {
-  id            String        @id @default(cuid())
-  name          String
-  email         String        @unique
-  phone         String?
+  id    String  @id @default(cuid())
+  name  String
+  email String  @unique
+  phone String?
 
   // Auth fields — managed by seed-students.ts, NOT Supabase Auth
-  username      String?       @unique
+  username      String? @unique
   password_hash String?
-  role          String        @default("peserta")
+  role          String  @default("peserta")
   gender        String?
 
-  created_at    DateTime      @default(now())
-  updated_at    DateTime      @updatedAt
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 
   test_sessions TestSession[]
 
@@ -74,24 +74,24 @@ model User {
 }
 
 model TestSession {
-  id                       String        @id @default(cuid())
-  user_id                  String
-  status                   SessionStatus @default(PENDING)
+  id      String        @id @default(cuid())
+  user_id String
+  status  SessionStatus @default(PENDING)
 
   // Hasil NAP — hanya terisi setelah status COMPLETED
   nap_score                Float?
-  kecerdasan_contribution  Float?        // max 60 pts
-  kepribadian_contribution Float?        // max 20 pts
-  kecermatan_contribution  Float?        // max 20 pts
+  kecerdasan_contribution  Float? // max 60 pts
+  kepribadian_contribution Float? // max 20 pts
+  kecermatan_contribution  Float? // max 20 pts
   is_passed                Boolean?
-  disqualified_reason      String?       // e.g. "Kecermatan KS (score=38)"
+  disqualified_reason      String? // e.g. "Kecermatan KS (score=38)"
 
-  started_at               DateTime?
-  completed_at             DateTime?
-  created_at               DateTime      @default(now())
-  updated_at               DateTime      @updatedAt
+  started_at   DateTime?
+  completed_at DateTime?
+  created_at   DateTime  @default(now())
+  updated_at   DateTime  @updatedAt
 
-  user              User            @relation(fields: [user_id], references: [id])
+  user              User             @relation(fields: [user_id], references: [id])
   module_sessions   ModuleSession[]
   anti_cheat_events AntiCheatEvent[]
 
@@ -101,37 +101,37 @@ model TestSession {
 }
 
 model ModuleSession {
-  id                 String       @id @default(cuid())
-  test_session_id    String
-  module_type        ModuleType
-  status             ModuleStatus @default(NOT_STARTED)
-  sequence_order     Int          // 1=Kecerdasan, 2=Kepribadian, 3=Kecermatan
+  id              String       @id @default(cuid())
+  test_session_id String
+  module_type     ModuleType
+  status          ModuleStatus @default(NOT_STARTED)
+  sequence_order  Int // 1=Kecerdasan, 2=Kepribadian, 3=Kecermatan
 
   // Hasil scoring — hanya terisi setelah COMPLETED
-  raw_score          Float?       // Nilai Murni skala 0-100
-  nap_contribution   Float?       // Kontribusi ke NAP
-  is_disqualifying   Boolean?     // true jika raw_score <= 40
+  raw_score        Float? // Nilai Murni skala 0-100
+  nap_contribution Float? // Kontribusi ke NAP
+  is_disqualifying Boolean? // true jika raw_score <= 40
 
   // Indeks khusus Kecermatan (null untuk modul lain)
-  ke_index           Float?       // Kecepatan: (total_klik/500)×100
-  kt_index           Float?       // Ketelitian: (benar/klik)×100
-  kh_index           Float?       // Ketahanan: konversi SD → 0-100
+  ke_index Float? // Kecepatan: (total_klik/500)×100
+  kt_index Float? // Ketelitian: (benar/klik)×100
+  kh_index Float? // Ketahanan: konversi SD → 0-100
 
-  time_limit_seconds Int          // 5400 / 3600 / 600
+  time_limit_seconds Int // 5400 / 3600 / 600
   started_at         DateTime?
   completed_at       DateTime?
 
   // SESSION RECOVERY — di-PATCH tiap 30 detik via /api/session/[id]/sync
   // Shape: { current_question_index, current_column_index, column_remaining_ms, snapshot_at }
-  recovery_snapshot  Json?        @db.JsonB
+  recovery_snapshot Json? @db.JsonB
 
   // Paket bank soal Kecermatan yang dipilih random saat sesi dibuat — dipertahankan
   // sepanjang sesi (termasuk resume) supaya simbol soal tidak berganti di tengah jalan.
   // Null untuk ModuleSession non-Kecermatan.
   kecermatan_package_number Int?
 
-  created_at         DateTime     @default(now())
-  updated_at         DateTime     @updatedAt
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 
   test_session    TestSession     @relation(fields: [test_session_id], references: [id])
   answers         Answer[]
@@ -145,19 +145,19 @@ model ModuleSession {
 model Question {
   id              String       @id @default(cuid())
   type            QuestionType
-  sequence_number Int          // urutan dalam modul (1-100 atau 1-500)
-  column_index    Int?         // khusus Kecermatan: lajur ke-1 s.d. 10
-  package_number  Int?         // khusus Kecermatan: paket bank soal (banyak paket, 1 dipilih random per sesi/latihan). Null untuk modul lain.
+  sequence_number Int // urutan dalam modul (1-100 atau 1-500)
+  column_index    Int? // khusus Kecermatan: lajur ke-1 s.d. 10
+  package_number  Int? // khusus Kecermatan: paket bank soal (banyak paket, 1 dipilih random per sesi/latihan). Null untuk modul lain.
 
   // Aman dikirim ke client: teks soal, pilihan, SVG content (Kecerdasan Spasial)
-  options_payload Json         @db.JsonB
+  options_payload Json @db.JsonB
 
   // SERVER-SIDE ONLY — kunci jawaban & bobot. TIDAK PERNAH di-select untuk response client
-  scoring_rule    Json         @db.JsonB
+  scoring_rule Json @db.JsonB
 
-  is_active       Boolean      @default(true)
-  created_at      DateTime     @default(now())
-  updated_at      DateTime     @updatedAt
+  is_active  Boolean  @default(true)
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
 
   answers         Answer[]
   kecermatan_logs KecermatanLog[]
@@ -169,16 +169,16 @@ model Question {
 }
 
 model Answer {
-  id                String        @id @default(cuid())
+  id                String @id @default(cuid())
   module_session_id String
   question_id       String
-  selected_key      String        // "A" | "B" | "C" | "D" | "E"
-  column_index      Int?          // denormalisasi dari Question — efisiensi kalkulasi Kt
+  selected_key      String // "A" | "B" | "C" | "D" | "E"
+  column_index      Int? // denormalisasi dari Question — efisiensi kalkulasi Kt
 
-  answered_at       DateTime      @default(now())
+  answered_at DateTime @default(now())
 
-  module_session    ModuleSession @relation(fields: [module_session_id], references: [id])
-  question          Question      @relation(fields: [question_id], references: [id])
+  module_session ModuleSession @relation(fields: [module_session_id], references: [id])
+  question       Question      @relation(fields: [question_id], references: [id])
 
   @@unique([module_session_id, question_id])
   @@index([module_session_id])
@@ -188,19 +188,21 @@ model Answer {
 
 model KecermatanLog {
   // BigInt autoincrement PK: hindari UUID B-tree fragmentation pada insert volume tinggi
-  id                BigInt        @id @default(autoincrement())
+  id                BigInt @id @default(autoincrement())
   module_session_id String
   question_id       String
-  column_index      Int           // 1-10
-  clicked_at_ms     BigInt        // Unix epoch ms dari Date.now() client
-  response_value    String        // opsi yang diklik: "A"-"E"
+  column_index      Int // 1-10
+  clicked_at_ms     BigInt // Unix epoch ms dari Date.now() client
+  response_value    String // opsi yang diklik: "A"-"E"
 
   // null selama tes aktif; diisi saat server scoring (POST /calculate)
-  is_correct        Boolean?
+  is_correct Boolean?
 
-  module_session    ModuleSession @relation(fields: [module_session_id], references: [id])
-  question          Question      @relation(fields: [question_id], references: [id])
+  module_session ModuleSession @relation(fields: [module_session_id], references: [id])
+  question       Question      @relation(fields: [question_id], references: [id])
 
+  // Cegah duplikat/replay log per soal (F07, AUDIT_CAT_2026-09-12.md)
+  @@unique([module_session_id, question_id])
   // Composite index untuk kalkulasi Kh (SD): COUNT(*) GROUP BY column_index
   @@index([module_session_id, column_index])
   @@index([module_session_id])
@@ -211,10 +213,10 @@ model AntiCheatEvent {
   id              BigInt             @id @default(autoincrement())
   test_session_id String
   event_type      AntiCheatEventType
-  occurred_at_ms  BigInt             // Unix epoch ms
+  occurred_at_ms  BigInt // Unix epoch ms
   metadata        Json?              @db.JsonB
 
-  test_session    TestSession        @relation(fields: [test_session_id], references: [id])
+  test_session TestSession @relation(fields: [test_session_id], references: [id])
 
   @@index([test_session_id])
   @@index([test_session_id, event_type])

@@ -113,7 +113,13 @@ export async function POST(req: NextRequest) {
       if (error) throw error;
     }
     if (rows.length) {
-      const { error } = await supabaseAdmin.from("kecermatan_logs").insert(rows);
+      // ignoreDuplicates: the existingIds check above isn't atomic against a
+      // concurrent request logging the same question; the DB unique
+      // constraint on (module_session_id, question_id) is the real guard,
+      // this just keeps a race from 500ing the whole batch.
+      const { error } = await supabaseAdmin
+        .from("kecermatan_logs")
+        .upsert(rows, { onConflict: "module_session_id,question_id", ignoreDuplicates: true });
       if (error) throw error;
     }
     return NextResponse.json({ inserted: rows.length, duplicates: questionIds.length - rows.length });
