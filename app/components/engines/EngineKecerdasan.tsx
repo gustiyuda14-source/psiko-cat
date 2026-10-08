@@ -10,7 +10,9 @@ import { useKecerdasanStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
+  ExamBody,
   ExamCompleted,
+  ExamDock,
   ExamHeader,
   ExamLoading,
   OfflineNotice,
@@ -20,8 +22,7 @@ import {
   SubmitDialog,
 } from "@/app/components/ExamChrome";
 import { Badge } from "@/app/components/ui";
-import { Button } from "@/app/components/ui-client";
-import { Check, ChevronLeft, ChevronRight } from "@/app/components/icons";
+import { Check } from "@/app/components/icons";
 
 type Props = {
   questions: SafeQuestion[];
@@ -146,118 +147,87 @@ export default function EngineKecerdasan({
         secondsLeft={secondsLeft}
         saveState={engine.saveState}
         pendingCount={engine.pendingCount}
+        onEnd={() => setShowConfirm(true)}
       />
       {engine.saveError && (
         <SaveErrorNotice message={engine.saveError} onRetry={() => void engine.flushAnswers()} />
       )}
 
-      <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-6">
-        <QuestionNavigator
-          itemLabel="Soal"
-          questionIds={sorted.map((question) => question.id)}
-          answers={state.answers}
-          currentIndex={idx}
-          secondsLeft={secondsLeft}
-          onGoTo={(index) => store.getState().goTo(index)}
-          onSubmit={() => setShowConfirm(true)}
-        />
+      <ExamBody
+        navigator={
+          <QuestionNavigator
+            itemLabel="Soal"
+            questionIds={sorted.map((question) => question.id)}
+            answers={state.answers}
+            currentIndex={idx}
+            secondsLeft={secondsLeft}
+            onGoTo={(index) => store.getState().goTo(index)}
+          />
+        }
+      >
+        {/* key memaksa remount saat soal berganti: satu momen gerak yang
+            menandai "ini konten baru", bukan animasi hias di tiap elemen. */}
+        <article key={q?.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="qnum tnum">Soal {idx + 1}</p>
+            <Badge tone={multi ? "accent" : "neutral"}>
+              {multi ? "Boleh lebih dari satu jawaban" : "Satu jawaban"}
+            </Badge>
+          </div>
 
-        <main className="min-w-0 flex-1 space-y-4">
-          {/* key memaksa remount saat soal berganti: satu momen gerak yang
-              menandai "ini konten baru", bukan animasi hias di tiap elemen. */}
-          <article key={q?.id} data-active-question tabIndex={-1} className="surface-card enter-rise overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3 sm:px-6">
-              <h2 className="tnum text-sm font-semibold text-foreground">Soal {idx + 1}</h2>
-              <Badge tone={multi ? "accent" : "neutral"}>
-                {multi ? "Boleh lebih dari satu jawaban" : "Satu jawaban"}
-              </Badge>
+          {payload?.instruksi && (
+            <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
+          )}
+
+          {payload?.sub_text && (
+            <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
+              {payload.sub_text}
             </div>
+          )}
 
-            <div className="space-y-5 px-4 py-5 sm:px-6 sm:py-6">
-              {payload?.instruksi && (
-                <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
-              )}
+          {payload?.question_text && (
+            <p className="max-w-[68ch] text-lg leading-relaxed text-foreground">
+              {payload.question_text}
+            </p>
+          )}
 
-              {payload?.sub_text && (
-                <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-                  {payload.sub_text}
-                </div>
-              )}
+          {payload?.svg_content && (
+            <div
+              className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
+              dangerouslySetInnerHTML={{ __html: payload.svg_content }}
+            />
+          )}
 
-              {payload?.question_text && (
-                <p className="max-w-[68ch] text-base leading-relaxed text-foreground">
-                  {payload.question_text}
-                </p>
-              )}
+          <div className="opts pt-1">
+            {payload?.choices?.map((c) => {
+              const isSelected = multi ? Boolean(picked?.includes(c.key)) : picked === c.key;
+              return (
+                <button
+                  key={c.key}
+                  type="button"
+                  onClick={() => choose(c.key)}
+                  aria-pressed={isSelected}
+                  className={`opt ${isSelected ? "sel" : ""}`}
+                >
+                  <span className={`mark ${multi ? "is-square" : ""}`}>
+                    {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
+                  </span>
+                  <span className="text-sm leading-relaxed">{c.text}</span>
+                </button>
+              );
+            })}
+          </div>
+        </article>
+      </ExamBody>
 
-              {payload?.svg_content && (
-                <div
-                  className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
-                  dangerouslySetInnerHTML={{ __html: payload.svg_content }}
-                />
-              )}
-
-              <div className="space-y-2 pt-1">
-                {payload?.choices?.map((c) => {
-                  const isSelected = multi ? Boolean(picked?.includes(c.key)) : picked === c.key;
-                  return (
-                    <button
-                      key={c.key}
-                      type="button"
-                      onClick={() => choose(c.key)}
-                      aria-pressed={isSelected}
-                      className={`flex min-h-12 w-full items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-[background-color,border-color,box-shadow] duration-150 ease-out sm:gap-4 sm:px-4 ${
-                        isSelected
-                          ? "border-primary bg-primary/6 shadow-e1"
-                          : "border-border hover:border-border-strong hover:bg-surface-inset"
-                      }`}
-                    >
-                      <span
-                        className={`flex size-9 shrink-0 items-center justify-center text-sm font-bold transition-colors duration-150 ${
-                          multi ? "rounded-[6px]" : "rounded-full"
-                        } ${
-                          isSelected
-                            ? "bg-primary text-primary-foreground"
-                            : "border border-border-strong/45 bg-surface-inset text-muted-foreground"
-                        }`}
-                      >
-                        {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
-                      </span>
-                      <span className="text-sm leading-relaxed text-foreground">{c.text}</span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </article>
-
-          {/* Maju adalah aksi yang dominan: peserta hampir selalu bergerak ke
-              depan, jadi Sebelumnya turun ke sekunder. Sebelumnya keduanya
-              identik dan tidak memandu apa pun. */}
-          <nav className="flex gap-3" aria-label="Navigasi soal">
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => store.getState().prev()}
-              disabled={idx === 0}
-              className="flex-1 sm:flex-none"
-            >
-              <ChevronLeft className="size-4" />
-              Sebelumnya
-            </Button>
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => store.getState().next(sorted.length - 1)}
-              disabled={idx >= sorted.length - 1}
-              className="flex-1 sm:ml-auto sm:min-w-40 sm:flex-none"
-            >
-              Soal berikutnya
-              <ChevronRight className="size-4" />
-            </Button>
-          </nav>
-        </main>
-      </div>
+      <ExamDock
+        onPrev={() => store.getState().prev()}
+        onNext={() => store.getState().next(sorted.length - 1)}
+        prevDisabled={idx === 0}
+        nextDisabled={idx >= sorted.length - 1}
+        prevLabel="Soal sebelumnya"
+        nextLabel="Soal berikutnya"
+      />
     </div>
   );
 }

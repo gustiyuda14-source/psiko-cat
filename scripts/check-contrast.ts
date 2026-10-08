@@ -4,11 +4,11 @@ import { readFileSync } from "node:fs";
 type Color = [number, number, number, number];
 
 const css = readFileSync(new URL("../app/globals.css", import.meta.url), "utf8");
-const ornate = css.match(/\.ornate\s*\{([\s\S]*?)\n\}/)?.[1];
-assert.ok(ornate, "Blok token .ornate tidak ditemukan");
+const root = css.match(/:root\s*\{([\s\S]*?)\n\}/)?.[1];
+assert.ok(root, "Blok token :root tidak ditemukan");
 
 const tokens = new Map(
-  [...ornate.matchAll(/(--[\w-]+):\s*([^;]+);/g)].map(([, name, value]) => [name, value.trim()]),
+  [...root.matchAll(/(--[\w-]+):\s*([^;]+);/g)].map(([, name, value]) => [name, value.trim()]),
 );
 
 function color(input: string): Color {
@@ -52,28 +52,38 @@ function check(label: string, fg: Color, bg: Color, minimum: number) {
 const page = token("--surface-page");
 const card = token("--surface-card");
 const inset = token("--surface-inset");
+const nav = token("--surface-nav");
+const white = color("#ffffff");
 const accentSoft = over(token("--accent-soft"), card);
 const successSoft = over(token("--success-soft"), card);
 const destructiveSoft = over(token("--destructive-soft"), card);
 
-check("foreground/card", token("--foreground"), card, 16.4);
-check("foreground/page", token("--foreground"), page, 17.4);
-check("muted/card", token("--muted-foreground"), card, 6.8);
-check("muted/page", token("--muted-foreground"), page, 7.2);
-check("faint/card", token("--faint-foreground"), card, 4.4);
-for (const [name, bg, minimum] of [["card", card, 7.5], ["page", page, 8], ["inset", inset, 7]] as const) {
-  check(`accent/${name}`, token("--accent"), bg, minimum);
-}
-check("accent-ink/card", token("--accent-ink"), card, 11);
-check("accent-ink/accent-soft", token("--accent-ink"), accentSoft, 8.8);
-check("CTA solid", token("--primary-foreground"), token("--accent"), 8);
-check("CTA metal light", token("--primary-foreground"), color("#e8b45c"), 10.4);
-check("CTA metal dark", token("--primary-foreground"), color("#c4842c"), 6.3);
-check("success/card", token("--success"), card, 10);
-check("success/soft", token("--success"), successSoft, 7.75);
-check("destructive/card", token("--destructive"), card, 8.7);
-check("destructive/soft", token("--destructive"), destructiveSoft, 6.8);
-check("sidebar active", token("--accent-ink"), over([217, 152, 63, 0.12], token("--surface-nav")), 10.2);
-check("border-strong/card", token("--border-strong"), card, 3.4);
+// Teks di permukaan terang (palet dajiks-cest): AA 4.5:1 untuk teks, 3:1 untuk batas kontrol.
+check("foreground/card", token("--foreground"), card, 7);
+check("foreground/inset", token("--foreground"), inset, 7);
+check("muted/card", token("--muted-foreground"), card, 4.5);
+check("muted/inset", token("--muted-foreground"), inset, 4.5);
+check("faint/card (placeholder)", token("--faint-foreground"), card, 3.9);
+check("brand-ink/card", token("--brand-ink"), card, 7);
+check("brand-ink/inset", token("--brand-ink"), inset, 7);
+check("gold (teks emas)/card", token("--gold"), card, 4.5);
+check("accent-ink/accent-soft", token("--accent-ink"), accentSoft, 4.5);
+check("success/card", token("--success"), card, 4.5);
+check("success/soft", token("--success"), successSoft, 4.5);
+check("destructive/card", token("--destructive"), card, 4.5);
+check("destructive/soft", token("--destructive"), destructiveSoft, 4.5);
+check("border-strong/card (batas kontrol)", token("--border-strong"), card, 3);
+check("ring/card (fokus)", token("--ring"), card, 3);
 
-console.log("Kontras black-gold .ornate lulus.");
+// Permukaan navy: bar ujian, sidebar aktif, panel hasil.
+check("putih/bar navy", white, nav, 12);
+check("putih/brand-ink", white, token("--brand-ink"), 12);
+check("gold-hi/bar navy", token("--gold-hi"), nav, 7);
+check("ring-on-nav/bar navy", token("--ring-on-nav"), nav, 3);
+check("timer low (putih/#a95b0d)", white, color("#a95b0d"), 4.5);
+check("timer critical (putih/#a31e3b)", white, color("#a31e3b"), 4.5);
+
+// Tombol emas: teks navy #16224a di atas tiga stop gradasi.
+for (const stop of ["#b8892b", "#f3dd8e", "#c9a24a"]) check(`CTA navy/${stop}`, color("#16224a"), color(stop), 4.5);
+
+console.log("Kontras palet terang cest lulus.");

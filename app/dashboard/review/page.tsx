@@ -126,24 +126,25 @@ export default async function ReviewPage({
   return (
     <div className="app-page grid gap-6 lg:grid-cols-[minmax(0,1fr)_15rem]">
       <div className="order-2 space-y-6 lg:order-1">
-        <div className="hero-panel on-nav">
-          <h1 className="font-heading text-2xl text-white sm:text-3xl">Ruang Review</h1>
-          <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <span className="text-white/75">
+        <header>
+          <span className="section-kicker">Review</span>
+          <h1 className="mb-2 mt-1 text-[clamp(1.45rem,2.4vw,2rem)] font-bold leading-tight">Ruang Review</h1>
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+            <span className="text-muted-foreground">
               {formatDate(selected.completed_at ?? selected.created_at)}
             </span>
-            <span className="tnum font-semibold text-white">
+            <span className="tnum font-semibold text-foreground">
               {sessionKind(selected)} {round1(selected.nap_score)}
             </span>
             <Badge tone={selectedOutcome.tone}>{selectedOutcome.label}</Badge>
             <Link
               href={`/test/${selected.id}/result`}
-              className="inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-accent underline-offset-4"
+              className="inline-flex min-h-11 items-center text-sm font-semibold text-brand-ink underline decoration-accent underline-offset-4"
             >
               Lihat halaman hasil
             </Link>
           </div>
-        </div>
+        </header>
 
         <PembahasanSection
           kecerdasan={kecerdasanItems}
@@ -157,7 +158,7 @@ export default async function ReviewPage({
         className="order-1 space-y-2 lg:order-2 lg:sticky lg:top-6 lg:self-start"
         aria-label="Pilih sesi selesai"
       >
-        <h2 className="rule-ornate">Sesi selesai</h2>
+        <h2 className="section-kicker">Sesi selesai</h2>
         <ul className="flex gap-2 overflow-x-auto pb-2 lg:block lg:space-y-2 lg:overflow-visible lg:pb-0">
           {sessions.map((s) => {
             const active = s.id === selected.id;

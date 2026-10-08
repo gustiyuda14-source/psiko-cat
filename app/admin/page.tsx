@@ -74,25 +74,25 @@ export default async function AdminPage() {
   );
 
   return (
-    <div className="ornate min-h-[100dvh] bg-background text-foreground">
+    <div className="min-h-[100dvh] bg-background text-foreground">
       <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
-        <PageHeader title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={<LogoutButton />} />
+        <PageHeader kicker="Admin" title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={<LogoutButton />} />
 
-        <dl className="surface-card summary-strip mt-6 flex flex-col overflow-hidden divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0">
+        <dl className="prog-strip is-3 mt-6">
           {[
-            { label: "Peserta terdaftar", value: totalPeserta, tone: "text-foreground" },
-            { label: "Total attempt", value: totalTes, tone: "text-primary" },
-            { label: "Total lulus", value: totalLulus, tone: "text-success" },
+            { label: "Peserta terdaftar", value: totalPeserta, tone: "" },
+            { label: "Total attempt", value: totalTes, tone: "" },
+            { label: "Total lulus", value: totalLulus, tone: "!text-success" },
           ].map((s) => (
-            <div key={s.label} className="flex-1 px-5 py-4">
-              <dt className="eyebrow">{s.label}</dt>
-              <dd className={`tnum font-heading mt-1 text-3xl ${s.tone}`}>{s.value}</dd>
+            <div key={s.label}>
+              <dt>{s.label}</dt>
+              <dd className={`prog-big ${s.tone}`}>{s.value}</dd>
             </div>
           ))}
         </dl>
 
         <section className="mt-6 space-y-2">
-          <h2 className="rule-ornate">Daftar peserta</h2>
+          <h2 className="section-kicker">Daftar peserta</h2>
 
           {peserta.length === 0 ? (
             <EmptyState
@@ -168,7 +168,7 @@ export default async function AdminPage() {
                                   )}
                                   <Link
                                     href={`/test/${s.id}/result`}
-                                    className="flex items-center gap-0.5 text-xs font-semibold text-primary hover:underline"
+                                    className="flex items-center gap-0.5 text-xs font-semibold text-brand-ink hover:underline"
                                   >
                                     Detail
                                     <ChevronRight className="size-3.5" />

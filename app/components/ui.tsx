@@ -22,18 +22,14 @@ export type Variant = "primary" | "accent" | "secondary" | "ghost" | "danger";
 export type Size = "sm" | "md" | "lg";
 
 const VARIANT: Record<Variant, string> = {
-  // Aksi utama di permukaan terang.
-  primary:
-    "btn-primary bg-primary text-primary-foreground shadow-e1 hover:bg-primary-hover active:bg-primary-active",
-  // CTA bermuatan merek. Gold hanya sebagai background dengan teks navy.
-  // btn-accent-metal menambahkan gradient logam, tapi HANYA di dalam .ornate —
-  // di permukaan light, bg-accent yang flat tetap yang berlaku.
-  accent:
-    "btn-accent-metal bg-accent text-primary shadow-e2 hover:bg-accent-strong active:bg-accent-strong",
-  // Aksi pendamping. Border cukup kuat untuk lolos 3:1 sebagai batas kontrol.
+  // Aksi utama: gradasi emas dengan teks navy, seperti .btn-primary di dajiks-cest.
+  primary: "btn-gold border border-transparent",
+  // CTA bermuatan merek: tampilan sama dengan primary (cest hanya punya satu gaya emas).
+  accent: "btn-gold border border-transparent shadow-e1",
+  // Aksi pendamping = .btn-ghost cest: putih, garis krem, hover krem + garis emas.
   secondary:
-    "btn-secondary border border-border-strong/55 bg-card text-foreground shadow-e1 hover:border-border-strong hover:bg-surface-inset active:bg-surface-inset",
-  ghost: "text-muted-foreground hover:bg-surface-inset hover:text-foreground",
+    "border border-border bg-card text-foreground hover:border-accent hover:bg-surface-inset active:bg-surface-inset",
+  ghost: "border border-transparent text-muted-foreground hover:bg-surface-inset hover:text-foreground",
   danger:
     "border border-destructive/45 bg-card text-destructive hover:border-destructive hover:bg-destructive-soft",
 };
@@ -57,7 +53,7 @@ export function buttonStyles({
   className?: string;
 } = {}) {
   return [
-    "inline-flex items-center justify-center rounded-md font-semibold",
+    "inline-flex items-center justify-center rounded-md font-heading font-semibold",
     "transition-[background-color,border-color,color,box-shadow,transform] duration-200 ease-out",
     "active:translate-y-px",
     "disabled:pointer-events-none disabled:opacity-45 disabled:shadow-none",
@@ -77,11 +73,11 @@ export function buttonStyles({
 type Tone = "neutral" | "info" | "success" | "danger" | "accent";
 
 const TONE: Record<Tone, string> = {
-  neutral: "border-border bg-surface-inset text-muted-foreground",
-  info: "badge-info border-primary/20 bg-primary/8 text-primary",
-  success: "border-success/25 bg-success-soft text-success",
-  danger: "border-destructive/25 bg-destructive-soft text-destructive",
-  accent: "border-accent/35 bg-accent-soft text-accent-ink",
+  neutral: "bg-[#eef0f3] text-[#3d4a5c]",
+  info: "bg-[#e8ebf5] text-brand-ink",
+  success: "bg-success-soft text-success",
+  danger: "bg-destructive-soft text-destructive",
+  accent: "bg-[#f6edd6] text-[#7a5710]",
 };
 
 export function Badge({
@@ -95,7 +91,7 @@ export function Badge({
 }) {
   return (
     <span
-      className={`badge-base inline-flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold ${TONE[tone]} ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-[6px] px-2.5 py-1 font-heading text-[0.72rem] font-bold uppercase tracking-[0.12em] ${TONE[tone]} ${className}`}
     >
       {children}
     </span>
@@ -110,20 +106,22 @@ export function PageHeader({
   title,
   description,
   actions,
+  kicker,
 }: {
   title: string;
   description?: string;
   actions?: React.ReactNode;
+  /** Label kecil di atas judul, mis. "Beranda". */
+  kicker?: string;
 }) {
   return (
-    <header className="hero-panel on-nav flex flex-wrap items-end justify-between gap-5">
-      <div className="relative min-w-0 flex-1 basis-72">
-        <h1 className="font-heading text-2xl text-white sm:text-3xl">{title}</h1>
-        {description && (
-          <p className="mt-3 max-w-[68ch] text-sm text-white/75">{description}</p>
-        )}
+    <header className="flex flex-wrap items-end justify-between gap-5">
+      <div className="min-w-0 flex-1 basis-72">
+        {kicker && <span className="section-kicker">{kicker}</span>}
+        <h1 className="mb-2 mt-1 text-[clamp(1.45rem,2.4vw,2rem)] font-bold leading-tight">{title}</h1>
+        {description && <p className="muted max-w-[75ch]">{description}</p>}
       </div>
-      {actions && <div className="relative flex flex-wrap items-center gap-2">{actions}</div>}
+      {actions && <div className="flex flex-wrap items-center gap-2">{actions}</div>}
     </header>
   );
 }
@@ -228,7 +226,7 @@ export function EmptyState({
   action?: React.ReactNode;
 }) {
   return (
-    <div className="surface-card flex flex-col items-center gap-2 px-6 py-12 text-center">
+    <div className="flex flex-col items-center gap-2 rounded-lg border border-dashed border-border px-6 py-12 text-center">
       <p className="text-sm font-semibold text-foreground">{title}</p>
       <p className="max-w-[46ch] text-sm text-muted-foreground">{description}</p>
       {action && <div className="mt-3">{action}</div>}

@@ -10,7 +10,9 @@ import { useKepribadianStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
+  ExamBody,
   ExamCompleted,
+  ExamDock,
   ExamHeader,
   ExamLoading,
   OfflineNotice,
@@ -20,8 +22,6 @@ import {
   SubmitDialog,
 } from "@/app/components/ExamChrome";
 import { Badge } from "@/app/components/ui";
-import { Button } from "@/app/components/ui-client";
-import { ChevronLeft, ChevronRight } from "@/app/components/icons";
 
 type Props = {
   questions: SafeQuestion[];
@@ -152,104 +152,75 @@ export default function EngineKepribadian({
         secondsLeft={secondsLeft}
         saveState={engine.saveState}
         pendingCount={engine.pendingCount}
+        onEnd={() => setShowConfirm(true)}
       />
       {engine.saveError && (
         <SaveErrorNotice message={engine.saveError} onRetry={() => void engine.flushAnswers()} />
       )}
 
-      <div className="mx-auto flex max-w-7xl flex-col items-stretch gap-4 px-4 py-4 sm:px-6 sm:py-6 lg:flex-row lg:items-start lg:gap-6">
-        <QuestionNavigator
-          itemLabel="Pernyataan"
-          questionIds={sorted.map((question) => question.id)}
-          answers={state.answers}
-          currentIndex={idx}
-          secondsLeft={secondsLeft}
-          onGoTo={(index) => {
-            if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-            store.getState().goTo(index);
-          }}
-          onSubmit={() => setShowConfirm(true)}
-        />
+      <ExamBody
+        navigator={
+          <QuestionNavigator
+            itemLabel="Pernyataan"
+            questionIds={sorted.map((question) => question.id)}
+            answers={state.answers}
+            currentIndex={idx}
+            secondsLeft={secondsLeft}
+            onGoTo={(index) => {
+              if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+              store.getState().goTo(index);
+            }}
+          />
+        }
+      >
+        <article key={q?.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <p className="qnum tnum">Pernyataan {idx + 1}</p>
+            {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
+          </div>
 
-        <main className="min-w-0 flex-1 space-y-4">
-          <article key={q?.id} data-active-question tabIndex={-1} className="surface-card enter-rise overflow-hidden">
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border px-4 py-3 sm:px-6">
-              <h2 className="tnum text-sm font-semibold text-foreground">Pernyataan {idx + 1}</h2>
-              {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
-            </div>
+          {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,
+              jadi ukurannya naik dan lebar barisnya dikunci ke ukuran nyaman baca. */}
+          <p className="mx-auto max-w-[46ch] py-6 text-center text-lg font-medium leading-relaxed text-foreground sm:py-8 sm:text-xl">
+            {payload?.statement}
+          </p>
 
-            {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,
-                jadi ukurannya naik dan lebar barisnya dikunci ke ukuran nyaman
-                baca alih-alih memenuhi kartu. */}
-            <div className="px-4 py-8 sm:px-6 sm:py-10">
-              <p className="mx-auto max-w-[46ch] text-center text-lg font-medium leading-relaxed text-foreground sm:text-xl">
-                {payload?.statement}
-              </p>
-            </div>
+          <fieldset className="opts mx-auto max-w-2xl">
+            <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
+            {payload?.choices?.map((c) => {
+              const isSelected = picked === c.key;
+              return (
+                <button
+                  key={c.key}
+                  type="button"
+                  onClick={() => choose(c.key)}
+                  aria-pressed={isSelected}
+                  className={`opt ${isSelected ? "sel" : ""}`}
+                >
+                  <span className="mark">{isSelected && <span className="mark-dot" />}</span>
+                  <span className="flex-1 text-sm font-medium">{c.text}</span>
+                  <kbd className="hidden font-mono text-xs text-faint-foreground sm:block">{c.key}</kbd>
+                </button>
+              );
+            })}
+          </fieldset>
+        </article>
+      </ExamBody>
 
-            <fieldset className="space-y-2 px-4 pb-5 sm:px-6 sm:pb-6">
-              <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
-              {payload?.choices?.map((c) => {
-                const isSelected = picked === c.key;
-                return (
-                  <button
-                    key={c.key}
-                    type="button"
-                    onClick={() => choose(c.key)}
-                    aria-pressed={isSelected}
-                    className={`flex min-h-12 w-full items-center gap-3 rounded-md border px-3 py-2.5 text-left transition-[background-color,border-color,box-shadow] duration-150 ease-out sm:gap-4 sm:px-4 ${
-                      isSelected
-                        ? "border-primary bg-primary/6 shadow-e1"
-                        : "border-border hover:border-border-strong hover:bg-surface-inset"
-                    }`}
-                  >
-                    <span
-                      className={`flex size-5 shrink-0 items-center justify-center rounded-full border-2 transition-colors duration-150 ${
-                        isSelected ? "border-primary bg-primary" : "border-border-strong/60"
-                      }`}
-                    >
-                      {isSelected && <span className="size-1.5 rounded-full bg-white" />}
-                    </span>
-                    <span className="flex-1 text-sm font-medium text-foreground">{c.text}</span>
-                    <kbd className="hidden font-mono text-xs text-faint-foreground sm:block">
-                      {c.key}
-                    </kbd>
-                  </button>
-                );
-              })}
-            </fieldset>
-          </article>
-
-          <nav className="flex gap-3" aria-label="Navigasi pernyataan">
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => {
-                if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-                store.getState().prev();
-              }}
-              disabled={idx === 0}
-              className="flex-1 sm:flex-none"
-            >
-              <ChevronLeft className="size-4" />
-              Sebelumnya
-            </Button>
-            <Button
-              variant="primary"
-              size="lg"
-              onClick={() => {
-                if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-                store.getState().next(sorted.length - 1);
-              }}
-              disabled={idx >= sorted.length - 1}
-              className="flex-1 sm:ml-auto sm:min-w-40 sm:flex-none"
-            >
-              Pernyataan berikutnya
-              <ChevronRight className="size-4" />
-            </Button>
-          </nav>
-        </main>
-      </div>
+      <ExamDock
+        onPrev={() => {
+          if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+          store.getState().prev();
+        }}
+        onNext={() => {
+          if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+          store.getState().next(sorted.length - 1);
+        }}
+        prevDisabled={idx === 0}
+        nextDisabled={idx >= sorted.length - 1}
+        prevLabel="Pernyataan sebelumnya"
+        nextLabel="Pernyataan berikutnya"
+      />
     </div>
   );
 }

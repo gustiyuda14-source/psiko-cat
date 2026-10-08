@@ -31,7 +31,7 @@ function ChartFrame({
   footer?: React.ReactNode;
 }) {
   return (
-    <figure className="surface-card space-y-3 p-4 sm:p-5">
+    <figure className="min-w-0 space-y-3">
       <figcaption className="flex items-baseline justify-between gap-3">
         <span className="text-sm font-semibold text-foreground">{title}</span>
         <span className="tnum text-xs text-muted-foreground">{meta}</span>
