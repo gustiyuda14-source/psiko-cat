@@ -3,7 +3,8 @@ import Link from "next/link";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import ConfirmSubmitButton from "@/app/components/ConfirmSubmitButton";
 import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
-import { Badge, Meter, PageHeader, buttonStyles } from "@/app/components/ui";
+import { Badge, Meter, buttonStyles } from "@/app/components/ui";
+import { ExamBar } from "@/app/components/ExamChrome";
 import { ArrowRight, Check } from "@/app/components/icons";
 import { getSessionAccess } from "@/lib/session-access";
 import { runSessionCalculate } from "@/lib/scoring/runner";
@@ -87,10 +88,19 @@ export default async function SessionOverviewPage({
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
+      <ExamBar
+        title="Sesi ujian"
+        count={`Psiko CAT · ${user?.name ?? ""}${user?.email ? ` · ${user.email}` : ""}`}
+        actions={
+          <Link href="/dashboard" className="mbtn">
+            <span aria-hidden="true">←</span>
+            Keluar
+          </Link>
+        }
+      />
       <div className="mx-auto w-full max-w-2xl px-4 py-6 sm:px-6 sm:py-10">
-        <PageHeader title="Sesi ujian" description={`Psiko CAT · ${user?.name ?? ""}${user?.email ? ` · ${user.email}` : ""}`} />
 
-        <div className="surface-card mt-6 space-y-2.5 px-5 py-4">
+        <div className="surface-card space-y-2.5 px-5 py-4">
           <div className="flex items-baseline justify-between text-sm">
             <span className="font-medium text-foreground">Kemajuan sesi</span>
             <span className="tnum text-muted-foreground">

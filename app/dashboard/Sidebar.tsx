@@ -6,57 +6,54 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref } from "@/lib/test-config";
-import {
-  ChevronDown,
-  ClipboardCheck,
-  Close,
-  Home,
-  Menu,
-  Repeat,
-  Timer,
-} from "@/app/components/icons";
+import { ChevronDown, Close } from "@/app/components/icons";
+import { NavHome, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
+
+/*
+  Shell navigasi dashboard mengikuti dajiks-cest: sidebar putih tetap di kiri
+  (264px), top bar lengket 76px, di HP sidebar jadi laci geser dengan
+  hamburger navy yang berubah jadi X. Urutan dan isi menu (termasuk submenu
+  Latihan) masih menu psiko-cat; penyesuaian submenu menyusul.
+*/
 
 type NavItem = {
   label: string;
   href: string;
-  icon: (p: { className?: string }) => React.ReactElement;
+  icon: () => React.ReactElement;
 };
 
 const PRIMARY_NAV: NavItem[] = [
-  { label: "Beranda", href: "/dashboard", icon: Home },
-  { label: "Simulasi", href: "/dashboard/simulasi", icon: Timer },
+  { label: "Beranda", href: "/dashboard", icon: NavHome },
+  { label: "Simulasi", href: "/dashboard/simulasi", icon: NavSimulasi },
 ];
 
 const SECONDARY_NAV: NavItem[] = [
-  { label: "Review Soal", href: "/dashboard/review", icon: ClipboardCheck },
+  { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
 ];
 
 function isActive(pathname: string, href: string): boolean {
   return href === "/dashboard" ? pathname === href : pathname.startsWith(href);
 }
 
-function initials(name: string): string {
-  return name
-    .trim()
-    .split(/\s+/)
-    .slice(0, 2)
-    .map((part) => part[0]?.toUpperCase() ?? "")
-    .join("");
+/* Tujuan tombol Kembali: induk halaman, bukan riwayat browser (peserta yang
+   masuk lewat tautan langsung tidak boleh terlempar keluar aplikasi). */
+function backTarget(pathname: string): { href: string; label: string } | null {
+  if (pathname === "/dashboard") return null;
+  if (pathname.startsWith("/dashboard/latihan/")) {
+    return { href: "/dashboard/latihan", label: "Kembali ke Latihan" };
+  }
+  return { href: "/dashboard", label: "Kembali ke Beranda" };
 }
 
-/* State aktif memakai gold wash, hairline, dan glow kecil tanpa mengubah alur nav. */
+/* Item aktif: latar krem + garis emas kiri; kotak ikon jadi navy (lihat .nav-active di globals.css). */
 function navItemClass(active: boolean): string {
   return [
-    "flex min-h-11 items-center gap-3 rounded-md px-3 text-sm font-medium",
-    "transition-[background-color,color] duration-200 ease-out",
+    "flex min-h-12 items-center gap-3 rounded-md border px-3 text-sm font-semibold",
+    "transition-[background-color,border-color,color] duration-200 ease-out",
+    "max-lg:min-h-[52px] max-lg:text-base font-heading",
     active
-      ? [
-          "relative bg-accent/12 font-semibold text-accent-ink",
-          "before:absolute before:bottom-1.5 before:left-0 before:top-1.5",
-          "before:w-[3px] before:rounded-full before:bg-accent",
-          "shadow-[0_0_18px_-6px_rgb(217_152_63/0.55)]",
-        ].join(" ")
-      : "text-foreground/70 hover:bg-accent/6 hover:text-foreground",
+      ? "nav-active border-border bg-surface-inset text-brand-ink shadow-[inset_3px_0_0_var(--gold)]"
+      : "border-transparent text-muted-foreground hover:border-border hover:bg-surface-inset hover:text-brand-ink",
   ].join(" ");
 }
 
@@ -102,59 +99,74 @@ export default function Sidebar({ name, username }: { name: string; username: st
     };
   }, [open]);
 
-  const currentLabel = latihanActive
-    ? "Latihan"
-    : [...PRIMARY_NAV, ...SECONDARY_NAV].find((item) => isActive(pathname, item.href))?.label;
+  const back = backTarget(pathname);
 
-  const sidebarBody = (navigationId: string) => (
-    <div className="on-nav flex h-full flex-col bg-surface-nav text-white">
-      <div className="flex min-h-16 items-center justify-between gap-3 border-b border-white/10 px-5">
-        <div className="flex min-w-0 items-center gap-3">
+  const renderLink = (item: NavItem) => {
+    const active = isActive(pathname, item.href);
+    const Icon = item.icon;
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={() => setOpen(false)}
+        aria-current={active ? "page" : undefined}
+        className={navItemClass(active)}
+      >
+        <Icon />
+        {item.label}
+      </Link>
+    );
+  };
+
+  const sidebarBody = (navigationId: string, mobile: boolean) => (
+    <div className="flex h-full flex-col overflow-y-auto overscroll-contain bg-card">
+      <div className="flex items-center gap-3 border-b border-border px-6 py-8 max-lg:px-6 max-lg:py-4">
+        <span className="size-12 shrink-0 overflow-hidden rounded-sm bg-[#151515]" aria-hidden="true">
           <Image
             src="/brand/dajiks-emblem.png"
             alt=""
-            width={512}
-            height={512}
-            className="size-9 shrink-0 object-contain"
+            width={96}
+            height={96}
+            className="size-full object-cover"
             priority
           />
-          <div className="min-w-0">
-            <p className="truncate font-heading text-sm">Psiko CAT</p>
-            <p className="truncate text-xs text-white/60">Ajiks Akademi</p>
-          </div>
-        </div>
-        <button
-          ref={closeButtonRef}
-          type="button"
-          onClick={() => {
-            setOpen(false);
-            menuButtonRef.current?.focus();
-          }}
-          aria-label="Tutup menu"
-          className="flex size-10 shrink-0 items-center justify-center rounded-md text-white/75 transition-colors duration-200 hover:bg-white/10 hover:text-white lg:hidden"
-        >
-          <Close className="size-5" />
-        </button>
+        </span>
+        <span className="font-heading text-[1.1rem] font-bold leading-[1.15] tracking-[-0.02em]">
+          D’AJIKS
+          <br />
+          <b className="text-gold">AKADEMI</b>
+        </span>
+        {mobile && (
+          <button
+            ref={closeButtonRef}
+            type="button"
+            onClick={() => {
+              setOpen(false);
+              menuButtonRef.current?.focus();
+            }}
+            aria-label="Tutup menu"
+            className="ml-auto grid size-11 shrink-0 place-items-center rounded-xl border border-border bg-surface-inset text-brand-ink transition-colors duration-200 hover:border-gold"
+          >
+            <Close className="size-5" />
+          </button>
+        )}
       </div>
 
-      <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4" aria-label="Menu utama">
-        <p className="eyebrow px-3 pb-1">Utama</p>
-        {PRIMARY_NAV.map((item) => {
-          const active = isActive(pathname, item.href);
-          const Icon = item.icon;
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              aria-current={active ? "page" : undefined}
-              className={navItemClass(active)}
-            >
-              <Icon className="size-[18px] shrink-0" />
-              {item.label}
-            </Link>
-          );
-        })}
+      {mobile && (
+        <div className="mx-4 mt-4 flex items-center gap-3 rounded-lg bg-brand-ink px-4 py-3 text-white">
+          <UserGlyph className="size-9 shrink-0 rounded-full border border-dashed border-gold-hi/60 p-[7px] text-gold-hi" />
+          <span className="grid min-w-0">
+            <small className="font-heading text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-gold-hi">
+              Peserta
+            </small>
+            <b className="truncate font-heading text-base font-semibold">{name}</b>
+            <span className="truncate text-xs text-white/70">@{username}</span>
+          </span>
+        </div>
+      )}
+
+      <nav className="grid gap-2 px-3 py-8 max-lg:gap-1 max-lg:py-4" aria-label="Menu utama">
+        {PRIMARY_NAV.map(renderLink)}
 
         <div className="flex items-center gap-1">
           <Link
@@ -166,7 +178,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
             aria-current={pathname === "/dashboard/latihan" ? "page" : undefined}
             className={`${navItemClass(latihanActive)} min-w-0 flex-1`}
           >
-            <Repeat className="size-[18px] shrink-0" />
+            <NavLatihan />
             Latihan
           </Link>
           <button
@@ -175,7 +187,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
             aria-label={latihanOpen ? "Tutup pilihan latihan" : "Buka pilihan latihan"}
             aria-expanded={latihanOpen}
             aria-controls={`${navigationId}-latihan-submenu`}
-            className="flex size-11 shrink-0 items-center justify-center rounded-md text-white/78 transition-colors duration-200 hover:bg-white/10 hover:text-white"
+            className="flex size-11 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-200 hover:bg-surface-inset hover:text-brand-ink"
           >
             <ChevronDown
               className={`size-4 transition-transform duration-200 ease-out ${
@@ -186,7 +198,10 @@ export default function Sidebar({ name, username }: { name: string; username: st
         </div>
 
         {latihanOpen && (
-          <ul id={`${navigationId}-latihan-submenu`} className="ml-[18px] space-y-0.5 border-l border-white/12 py-1 pl-3">
+          <ul
+            id={`${navigationId}-latihan-submenu`}
+            className="ml-[26px] space-y-0.5 border-l border-dashed border-border py-1 pl-3"
+          >
             {MODULE_ORDER.map((type) => {
               const meta = MODULE_CONFIG[type];
               const href = latihanHref(type);
@@ -199,8 +214,8 @@ export default function Sidebar({ name, username }: { name: string; username: st
                     aria-current={active ? "page" : undefined}
                     className={`flex min-h-10 items-center rounded-md px-3 text-sm transition-colors duration-200 ${
                       active
-                        ? "bg-accent/10 font-semibold text-accent-ink"
-                        : "text-foreground/65 hover:bg-accent/8 hover:text-foreground"
+                        ? "bg-surface-inset font-semibold text-brand-ink shadow-[inset_3px_0_0_var(--gold)]"
+                        : "text-muted-foreground hover:bg-surface-inset hover:text-brand-ink"
                     }`}
                   >
                     {meta.label}
@@ -211,75 +226,69 @@ export default function Sidebar({ name, username }: { name: string; username: st
           </ul>
         )}
 
-        <p className="eyebrow px-3 pb-1 pt-4">Riwayat</p>
-        {SECONDARY_NAV.map((item) => {
-          const active = isActive(pathname, item.href);
-          const Icon = item.icon;
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              aria-current={active ? "page" : undefined}
-              className={navItemClass(active)}
-            >
-              <Icon className="size-[18px] shrink-0" />
-              {item.label}
-            </Link>
-          );
-        })}
+        {SECONDARY_NAV.map(renderLink)}
       </nav>
 
-      <div className="space-y-3 border-t border-white/10 px-5 py-4">
-        <div className="flex items-center gap-3">
-          <span
-            className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-xs font-semibold"
-            aria-hidden="true"
-          >
-            {initials(name)}
-          </span>
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium">{name}</p>
-            <p className="truncate text-xs text-white/60">@{username}</p>
-          </div>
-        </div>
-        <LogoutButton className="flex min-h-10 w-full items-center justify-center gap-2 rounded-md border border-white/15 px-3 text-xs font-semibold text-white/75 transition-colors duration-200 hover:border-white/30 hover:bg-white/8 hover:text-white" />
-        <p className="text-xs text-white/50">Didukung oleh D Ajiks Corporation</p>
-      </div>
+      <p className="mx-6 mb-6 mt-auto border-t border-dashed border-border pt-4 text-sm text-muted-foreground lg:border-t-0 lg:pt-0">
+        Didukung oleh D Ajiks Corporation
+      </p>
     </div>
   );
 
   return (
     <>
-      <div className="flex min-h-14 items-center justify-between border-b border-border bg-card px-4 shadow-e1 lg:hidden">
-        <div className="min-w-0">
-          <p className="truncate font-heading text-sm text-foreground">Psiko CAT</p>
-          {currentLabel && (
-            <p className="truncate text-xs text-muted-foreground">{currentLabel}</p>
-          )}
-        </div>
+      <aside
+        className="fixed inset-y-0 left-0 z-[8] hidden w-[var(--sidebar-width)] border-r border-border lg:block"
+        aria-label="Navigasi utama"
+      >
+        {sidebarBody("desktop", false)}
+      </aside>
+
+      <header className="sticky top-0 z-[7] flex min-h-[var(--topbar-height)] items-center gap-4 border-b border-border bg-card px-4 py-3 sm:px-6 lg:ml-[var(--sidebar-width)] lg:px-[clamp(24px,4vw,64px)]">
         <button
           ref={menuButtonRef}
           type="button"
           onClick={() => setOpen(true)}
-          aria-label="Buka menu"
+          aria-label="Menu"
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="flex size-11 items-center justify-center rounded-md border border-border text-foreground transition-colors duration-200 hover:border-border-strong hover:bg-surface-inset"
+          className="group grid size-[46px] shrink-0 place-items-center rounded-xl bg-brand-ink text-gold-hi shadow-[inset_0_0_0_1px_rgb(232_199_102/0.35)] transition-shadow duration-200 hover:shadow-[inset_0_0_0_1.5px_var(--gold-hi)] lg:hidden"
         >
-          <Menu className="size-5" />
+          <span className="relative block h-3.5 w-5" aria-hidden="true">
+            <i className={`absolute left-0 top-0 h-[2.25px] w-full rounded-sm bg-current transition-transform duration-200 ${open ? "translate-y-[6px] rotate-45" : ""}`} />
+            <i className={`absolute left-0 top-[6px] h-[2.25px] w-[70%] rounded-sm bg-current transition-[opacity,transform] duration-150 ${open ? "scale-x-0 opacity-0" : ""}`} />
+            <i className={`absolute left-0 top-3 h-[2.25px] w-full rounded-sm bg-current transition-transform duration-200 ${open ? "-translate-y-[6px] -rotate-45" : ""}`} />
+          </span>
         </button>
-      </div>
 
-      <aside className="hidden w-64 shrink-0 border-r border-white/10 lg:block xl:w-72">
-        {sidebarBody("desktop")}
-      </aside>
+        {back && (
+          <Link
+            href={back.href}
+            aria-label={back.label}
+            className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset max-lg:px-3"
+          >
+            <span aria-hidden="true" className="font-bold text-gold">←</span>
+            <span className="max-lg:sr-only">{back.label}</span>
+          </Link>
+        )}
+
+        <div className="min-w-0">
+          <strong className="block truncate text-base">Psiko CAT</strong>
+        </div>
+
+        <div className="ml-auto hidden min-w-0 text-right lg:block">
+          <span className="block text-sm text-muted-foreground">Peserta</span>
+          <b className="block truncate text-sm">{name}</b>
+        </div>
+
+        <LogoutButton className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset max-lg:ml-auto" />
+      </header>
 
       {open && (
         <>
           <button
             type="button"
-            className="fixed inset-0 z-40 cursor-default bg-black/70 lg:hidden"
+            className="fixed inset-0 z-[7] cursor-default bg-[rgb(15_35_43/0.4)] lg:hidden"
             onClick={() => {
               setOpen(false);
               menuButtonRef.current?.focus();
@@ -289,12 +298,12 @@ export default function Sidebar({ name, username }: { name: string; username: st
           <aside
             ref={mobileAsideRef}
             id="mobile-navigation"
-            className="fixed inset-y-0 left-0 z-50 w-[min(18rem,86vw)] shadow-e4 lg:hidden"
+            className="fixed inset-y-0 left-0 z-[9] w-[min(82vw,310px)] border-r border-border shadow-[18px_0_40px_-18px_rgb(22_34_74/0.45)] lg:hidden"
             aria-label="Navigasi utama"
             role="dialog"
             aria-modal="true"
           >
-            {sidebarBody("mobile")}
+            {sidebarBody("mobile", true)}
           </aside>
         </>
       )}

@@ -43,9 +43,9 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="ornate hud-grid flex min-h-[100dvh] items-center justify-center bg-surface-nav-deep px-4 py-10 sm:px-8">
-      <div className="hero-panel grid w-full max-w-4xl gap-8 sm:p-10 lg:grid-cols-2 lg:items-center lg:gap-12">
-        <div className="relative text-white">
+    <div className="flex min-h-[100dvh] items-center justify-center bg-background px-4 py-10 sm:px-8">
+      <div className="prog-panel mt-0 w-full max-w-4xl lg:[grid-template-columns:minmax(0,5fr)_minmax(0,6fr)]">
+        <div className="prog-hero justify-center p-8 sm:p-10">
           <Image
             src="/brand/dajiks-lockup.png"
             alt="D'Ajiks Akademi"
@@ -54,14 +54,19 @@ export default function LoginPage() {
             className="h-auto w-52 max-w-full object-contain"
             priority
           />
-          <h1 className="font-heading mt-5 text-3xl sm:text-4xl">Psiko CAT</h1>
-          <p className="mt-3 text-base text-white/75">Sistem Psikotes Terintegrasi</p>
-          <p className="mt-6 max-w-[32ch] text-sm text-white/75">Satu ruang untuk latihan, simulasi, dan perkembangan hasil psikotes Anda.</p>
-          <p className="mt-8 text-xs text-white/65">Didukung oleh D Ajiks Corporation</p>
+          <span className="prog-label mt-2">Sistem Psikotes Terintegrasi</span>
+          <h1 className="text-3xl text-white sm:text-4xl">Psiko CAT</h1>
+          <p className="mt-2 max-w-[32ch] text-sm text-white/75">
+            Satu ruang untuk latihan, simulasi, dan perkembangan hasil psikotes Anda.
+          </p>
+          <p className="prog-meta">Didukung oleh D Ajiks Corporation</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="surface-panel relative space-y-5 p-6 sm:p-7">
-          <h2 className="font-heading text-xl text-foreground">Masuk ke akun</h2>
+        <form onSubmit={handleSubmit} className="space-y-5 p-6 sm:p-10">
+          <div>
+            <span className="section-kicker">Masuk</span>
+            <h2 className="mt-1 font-heading text-xl text-foreground">Masuk ke akun</h2>
+          </div>
           {/* Pesan galat hidup di dalam form dan diumumkan lewat aria-live, bukan
               muncul diam-diam di atas viewport. */}
           <div aria-live="polite">
@@ -109,12 +114,11 @@ export default function LoginPage() {
             />
           </div>
 
-          <Button type="submit" variant="accent" size="lg" block disabled={loading} className="rounded-full">
+          <Button type="submit" variant="primary" size="lg" block disabled={loading}>
             {loading ? "Memeriksa..." : "Masuk"}
             {!loading && <ArrowRight className="size-4" />}
           </Button>
         </form>
-
       </div>
     </div>
   );

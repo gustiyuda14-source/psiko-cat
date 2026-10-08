@@ -1,0 +1,80 @@
+/* ===== Halaman Hasil — dipindah dari dajiks-cest (assets/cest-report.css). Dipakai /test/[sessionId]/result. ===== */
+/* --- kerangka 2 kolom --- */
+.rep-page { container-type: inline-size }
+.rep-grid { display: grid; gap: var(--space-4); align-items: start }
+.rep-main { display: grid; gap: var(--space-4); min-width: 0 }
+.rep-main > *, .rep-side > * { min-width: 0 }
+.rep-main > .card { margin: 0 }
+.rep-side { display: grid; gap: var(--space-4); min-width: 0 }
+@container (min-width: 920px) { .rep-grid { grid-template-columns: minmax(0, 1fr) 352px } .rep-side { position: sticky; top: 92px } }
+@container (max-width: 919px) { .rep-side { order: -1 } }  /* satu kolom: skor dulu, baru rincian */
+
+/* --- hero: ITP + CES + CEFR satu ukuran, rel ukur membawa ambang 400 --- */
+.rep-hero { position: relative; overflow: hidden; padding: var(--space-6); border-radius: var(--r-xl); background: var(--brand-ink); color: #fff; box-shadow: var(--elev-2) }
+.rep-hero::before { content: ''; position: absolute; inset: -1px; translate: -105% 0; pointer-events: none; background: linear-gradient(100deg, transparent 0%, rgba(243, 221, 142, .05) 26%, rgba(255, 248, 226, .22) 50%, rgba(243, 221, 142, .05) 74%, transparent 100%); animation: prog-glint 1.5s linear .4s both }
+.rep-kicker { margin: 0; color: var(--gold-hi); font: 700 .7rem var(--font-display-src), sans-serif; letter-spacing: .14em; text-transform: uppercase }
+.rep-hero > .rep-kicker span { color: rgba(255, 255, 255, .55) }
+.rep-trio { display: grid; gap: var(--space-3); margin: var(--space-4) 0 }
+.rep-cell + .rep-cell { padding-top: var(--space-3); border-top: 2px dashed rgba(255, 255, 255, .25) }
+.rep-cell b { font-size: clamp(2.3rem, 13cqw, 3.2rem) }
+.rep-cell b { display: block; margin-top: var(--space-1); background: var(--gold-grad); -webkit-background-clip: text; background-clip: text; color: transparent; font: 700 3rem/.95 var(--font-display-src), sans-serif; letter-spacing: -.04em; font-variant-numeric: tabular-nums }
+.rep-cell > span { display: block; margin-top: var(--space-1); color: rgba(255, 255, 255, .62); font: 600 .74rem var(--font-display-src), sans-serif; font-variant-numeric: tabular-nums }
+.rep-rail { margin-bottom: var(--space-4) }
+.rep-rail svg { display: block; width: 100%; height: auto; overflow: visible }
+.rep-rail .r-track { fill: rgba(255, 255, 255, .14) }
+.rep-rail .r-band { fill: rgba(232, 199, 102, .28) }
+.rep-rail .r-fill { fill: url(#rep-gold); transform-origin: left; animation: rep-rail-in .9s ease-out both }
+.rep-rail .r-tick { stroke: rgba(255, 255, 255, .3); stroke-width: 1.5 }
+.rep-rail .r-pass { stroke: var(--gold-hi); stroke-width: 2; stroke-dasharray: 3 3 }
+.rep-rail text { font: 600 20px var(--font-display-src), sans-serif; fill: rgba(255, 255, 255, .62); font-variant-numeric: tabular-nums }
+.rep-rail .r-pass-t { fill: var(--gold-hi); font-weight: 700 }
+.rep-rail .r-dot { fill: #fff; stroke: var(--brand-ink); stroke-width: 3 }
+@keyframes rep-rail-in { from { transform: scaleX(0) } }
+.rep-status { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding-top: var(--space-4); border-top: 2px dashed rgba(255, 255, 255, .25) }
+.rep-status .muted, .rep-status p { max-width: 52ch; margin: 0; color: rgba(255, 255, 255, .78) }
+.rep-status .pill { margin: 0; border-color: currentColor; background: rgba(255, 255, 255, .08) }
+.rep-status .pill.ok { color: #7bdcb5 }.rep-status .pill.bad { color: #ff9db1 }.rep-status .pill.warn-pill { color: var(--gold-hi); background: rgba(232, 199, 102, .16) }
+.rep-how summary { padding: var(--space-2) 0; color: var(--gold); font: 600 .84rem var(--font-display-src), sans-serif; cursor: pointer }
+.rep-how p { margin: 0 }
+/* --- kartu modul (bahasa tiket) --- */
+.rep-mods { display: grid; gap: var(--space-3); grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) }
+.rep-mod { position: relative; overflow: hidden; display: grid; grid-template-columns: minmax(0, 1fr) 50px; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-2) }
+.rep-mod-b { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4) }
+.rep-mod-b .rep-kicker { color: var(--gold) }
+.rep-mod-b .muted { margin: 0 }
+.rep-mod-v { display: flex; align-items: baseline; gap: var(--space-2); margin: 0 }
+.rep-mod-v strong { font: 700 2rem/1 var(--font-display-src), sans-serif; letter-spacing: -.03em; font-variant-numeric: tabular-nums }
+.rep-mod-v em { color: var(--muted-foreground); font: 600 .78rem var(--font-display-src), sans-serif; font-style: normal }
+.rep-mod-s { position: relative; display: flex; align-items: center; justify-content: center; border-left: 2px dashed var(--border); background: var(--surface-inset); color: var(--brand-ink) }
+.rep-mod-s span { writing-mode: vertical-rl; transform: rotate(180deg); font: 700 .66rem var(--font-display-src), sans-serif; letter-spacing: .2em; text-transform: uppercase }
+.rep-mod.is-pending .rep-mod-s { background: var(--brand-ink); color: var(--gold-hi) }
+.rep-mod .cat-meter > span { height: 22px; font-size: .6rem }
+.rep-mod .cat-meter .lv-c::after { background: var(--brand-ink) }.rep-mod .cat-meter .lv-c b { position: relative; color: #fff }
+.rep-mod .btn { align-self: flex-start; min-height: 38px }
+/* --- panel aksi + pemilih paket (kolom kanan) --- */
+.rep-acts { display: grid; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-2) }
+.rep-acts .rep-kicker { color: var(--gold); margin-bottom: var(--space-1) }
+.rep-acts .btn, .rep-acts > span .btn { width: 100% }
+.rep-acts > span:empty { display: none }
+.pill { display: inline-block; padding: var(--space-1) var(--space-3); border: 1px solid var(--border); border-radius: 99px; margin: 3px 6px 3px 0; font-size: .875rem; font-weight: 700 }
+.pill.ok { color: var(--success); border-color: var(--success); background: var(--success-soft) }.pill.bad { color: var(--destructive); border-color: var(--destructive) }.pill.neu { color: var(--muted-foreground) }
+.pill:hover { box-shadow: var(--elev-2) }.pill:focus-visible { outline: 3px solid var(--ring) }
+.pill.warn-pill { border-color: #c76a15; background: #fff7ed; color: #713a08 }
+@keyframes prog-glint { to { translate: 105% 0 } }
+@media (prefers-reduced-motion: reduce) { .rep-hero::before { animation: none } }
+
+/* Tambahan psiko-cat */
+.rep-kv { display: grid; gap: var(--space-1); margin: var(--space-2) 0 0; padding: var(--space-2) var(--space-3); border-radius: var(--r-md); background: var(--surface-inset) }
+.rep-kv > div { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-2) }
+.rep-kv dt { color: var(--muted-foreground); font-size: .78rem }
+.rep-kv dd { margin: 0; font: 700 .95rem var(--font-display-src), sans-serif; font-variant-numeric: tabular-nums }
+.rep-mod-meter { margin-top: var(--space-1) }
+.rep-acts a { text-decoration: none }
+
+/* Strip statistik 3 sel (Admin): varian .prog-strip */
+.prog-strip.is-3 { grid-template-columns: repeat(3, minmax(0, 1fr)) }
+@media (max-width: 640px) { .prog-strip.is-3 { grid-template-columns: minmax(0, 1fr) } .prog-strip.is-3 > div + div { border-left: 0; border-top: 1.5px dashed var(--border) } }
+
+/* Pil status di panel navy (menimpa .pill dasar di atas) */
+.rep-status .pill.ok, .rep-status .pill.bad { background: rgba(255, 255, 255, .08) }
+.rep-status .pill.warn-pill { border-color: var(--gold-hi); background: rgba(232, 199, 102, .16); color: var(--gold-hi) }

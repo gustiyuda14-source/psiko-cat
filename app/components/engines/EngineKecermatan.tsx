@@ -8,15 +8,16 @@ import type {
 } from "@/lib/types/safe-question";
 import { useKecermatanStore, COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
 import {
+  ExamBar,
   ExamCompleted,
   ExamLoading,
+  ExamTimer,
   OfflineNotice,
   ResumeDialog,
   SaveErrorNotice,
 } from "@/app/components/ExamChrome";
 import type { SaveState } from "@/lib/hooks/use-exam-engine";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { Timer } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
   KecermatanKeyStrip,
@@ -467,42 +468,34 @@ export default function EngineKecermatan({
           romawi, bar timer) lalu mengulang angka detik yang sama di dalam kartu
           soal. Di modul 1,2 detik per butir, chrome itu memakan ruang yang
           seharusnya jadi ruang baca. */}
-      <header className="on-nav sticky top-0 z-30 bg-surface-nav text-white shadow-e3">
-        <div className="mx-auto flex min-h-14 max-w-3xl items-center justify-between gap-4 px-4">
-          <div className="min-w-0">
-            <p className="truncate text-sm font-semibold">Sub-Tes Kecermatan</p>
-            <p className="truncate text-xs text-white/70">
-              Kolom {ROMAN[activeColIdx]}
-              <span className="tnum"> · {activeColIdx + 1}/{TOTAL_COLS}</span>
-              <span className="hidden sm:inline"> · {participantName}</span>
-              <span className="hidden sm:inline">
-                {saveState === "saved"
-                  ? " · Tersimpan"
-                  : saveState === "saving"
-                    ? " · Menyimpan…"
-                    : saveState === "error"
-                      ? " · Belum tersimpan"
-                      : ` · ${Object.keys(store.pendingLogs).length} menunggu`}
-              </span>
-            </p>
-          </div>
-          <div
-            className={`flex shrink-0 items-center gap-2 rounded-md px-2.5 py-1.5 transition-colors duration-200 ease-out ${
-              critical && !showColIntro ? "bg-accent text-primary" : "bg-white/8 text-white"
-            }`}
-          >
-            <Timer className="size-4" />
-            <span className="sr-only">{showColIntro ? "Kolom dimulai dalam" : "Sisa waktu kolom"}</span>
-            <span className={`tnum text-lg font-bold ${warning ? "text-accent" : ""}`}>
-              {showColIntro ? introSeconds : secondsLeft}
-              <span className="ml-0.5 text-xs font-semibold opacity-80">dtk</span>
+      <ExamBar
+        title="Sub-Tes Kecermatan"
+        count={
+          <>
+            Kolom {ROMAN[activeColIdx]}
+            <span className="tnum"> · {activeColIdx + 1}/{TOTAL_COLS}</span>
+            <span className="max-sm:hidden"> · {participantName}</span>
+            <span className="max-sm:hidden">
+              {saveState === "saved"
+                ? " · Tersimpan"
+                : saveState === "saving"
+                  ? " · Menyimpan…"
+                  : saveState === "error"
+                    ? " · Belum tersimpan"
+                    : ` · ${Object.keys(store.pendingLogs).length} menunggu`}
             </span>
-          </div>
-        </div>
-
-        {/* Sepuluh segmen kemajuan kolom. Sebelumnya ini deretan <div> yang
-            tampak seperti tab padahal tidak bisa diklik — afordans yang
-            berbohong. Sekarang bentuknya jelas indikator, bukan kontrol. */}
+          </>
+        }
+        timer={
+          <ExamTimer
+            seconds={showColIntro ? introSeconds : secondsLeft}
+            unit="dtk"
+            label={showColIntro ? "Kolom dimulai dalam" : "Sisa waktu kolom"}
+            muted={showColIntro}
+          />
+        }
+      >
+        {/* Sepuluh segmen kemajuan kolom: indikator, bukan kontrol. */}
         <div
           className="mx-auto flex max-w-3xl gap-1 px-4 pb-2"
           role="img"
@@ -535,7 +528,7 @@ export default function EngineKecermatan({
             />
           </div>
         )}
-      </header>
+      </ExamBar>
       {saveError && (
         <SaveErrorNotice message={saveError} onRetry={() => void flushLogs()} />
       )}

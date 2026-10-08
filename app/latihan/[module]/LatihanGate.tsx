@@ -5,10 +5,11 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
-import { Badge, EmptyState, PageHeader } from "@/app/components/ui";
+import { EmptyState } from "@/app/components/ui";
+import { ExamBar } from "@/app/components/ExamChrome";
 import { KecermatanKeyStrip } from "@/app/components/KecermatanKeyStrip";
 import { Button } from "@/app/components/ui-client";
-import { ArrowRight, ChevronLeft } from "@/app/components/icons";
+import { ArrowRight } from "@/app/components/icons";
 import { SparkleIcon, SparkleParticles } from "@/app/components/CtaSparkle";
 import LatihanKecerdasan from "./LatihanKecerdasan";
 import LatihanKepribadian from "./LatihanKepribadian";
@@ -81,24 +82,21 @@ export default function LatihanGate({
   }, [countdown]);
 
   return (
-    <div className="app-page space-y-5">
-      <PageHeader
+    <div className="min-h-[100dvh] bg-background">
+      <ExamBar
         title={`Latihan ${meta.label}`}
-        description={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${meta.shortDesc}`}
+        count={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${
+          timedMode ? "60 detik/kolom" : "Tanpa batas waktu"
+        }`}
         actions={
-          <>
-            <Badge tone="neutral">{timedMode ? "60 detik/kolom" : "Tanpa batas waktu"}</Badge>
-            <Link
-              href={exitHref}
-              className="inline-flex min-h-11 items-center gap-1.5 rounded-md border border-white/25 px-3.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-white/12"
-            >
-              <ChevronLeft className="size-4" />
-              Keluar latihan
-            </Link>
-          </>
+          <Link href={exitHref} className="mbtn">
+            <span aria-hidden="true">←</span>
+            Keluar latihan
+          </Link>
         }
       />
 
+      <div className={started && moduleType !== "KECERMATAN" ? "" : "app-page space-y-5"}>
       {started ? (
         <div ref={practiceRef}>
           {moduleType === "KECERDASAN" ? (
@@ -181,6 +179,7 @@ export default function LatihanGate({
           </span>
         </div>
       )}
+      </div>
     </div>
   );
 }

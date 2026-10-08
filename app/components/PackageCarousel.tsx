@@ -1,11 +1,20 @@
 "use client";
 
-import type { CSSProperties } from "react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, ChevronLeft, ChevronRight, Close } from "@/app/components/icons";
+import { ArrowRight, Close } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
-import { Button, Dialog } from "@/app/components/ui-client";
+import { Dialog } from "@/app/components/ui-client";
+import { TicketCatalog, type TicketItem } from "@/app/components/TicketCatalog";
+
+/*
+  Katalog paket bergaya "tiket level" dari dajiks-cest (assets/cest-catalog.js):
+  konsol cari + filter, kartu tiket (badan + sobekan berlubang) di track
+  scroll-snap dengan kartu tengah fokus, rel penghitung + titik di bawah.
+  Ketuk kartu samping = geser ke tengah, ketuk kartu tengah = pilih paket.
+  CSS ada di app/catalog.css.
+*/
 
 export type PackageSection = {
   index: number;
@@ -20,8 +29,20 @@ export type PackageOption = {
   /** Pratinjau simbol kolom pertama — cuma dipakai Kecermatan. */
   symbols?: string[];
   /** Rincian per-bagian (kolom) — cuma dipakai Kecermatan. Kalau diisi,
-      "Mulai Paket" buka modal rincian dulu, bukan langsung pindah halaman. */
+      memilih paket membuka modal rincian dulu, bukan langsung pindah halaman. */
   sections?: PackageSection[];
+};
+
+const FILTERS = [
+  { key: "all", label: "Semua" },
+  { key: "ready", label: "Tersedia" },
+  { key: "soon", label: "Belum tersedia" },
+];
+
+const TONE: Record<string, TicketItem["tone"]> = {
+  kecerdasan: "green",
+  kecermatan: "cyan",
+  kepribadian: "amber",
 };
 
 export function PackageCarousel({
@@ -44,242 +65,153 @@ export function PackageCarousel({
   /** Nama modul buat aria-label, mis. "kecerdasan". */
   moduleLabel: string;
 }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [showDetail, setShowDetail] = useState(false);
+  const router = useRouter();
+  const [detail, setDetail] = useState<PackageOption | null>(null);
   const [timedMode, setTimedMode] = useState(false);
-  const active = packages[activeIndex];
 
-  if (!active) return null;
-  const activeAvailable = active.questionCount === expectedCount;
+  const base = moduleLabel.split(" ")[0];
+  const items: TicketItem[] = packages.map((pkg, index) => {
+    const available = pkg.questionCount === expectedCount;
+    const percent = pkg.questionCount ? Math.min(100, Math.round((pkg.questionCount / expectedCount) * 100)) : 0;
+    return {
+      id: pkg.id,
+      tag: base,
+      tone: TONE[base] ?? "green",
+      badges: available ? [completeLabel] : [],
+      title: pkg.label,
+      meta: pkg.questionCount == null ? "Jumlah butir belum tersedia" : `${pkg.questionCount} ${unitLabel}`,
+      symbols: pkg.symbols,
+      symbolsLabel: `Pratinjau simbol ${pkg.label}`,
+      foot: available ? "Mulai paket" : "Belum tersedia",
+      stub: ["Paket", String(index + 1).padStart(2, "0")],
+      ring: available || percent > 0 ? { p: percent, text: `${percent}%` } : undefined,
+      locked: !available,
+      group: [available ? "ready" : "soon"],
+      search: pkg.label,
+    };
+  });
 
-  function move(direction: -1 | 1) {
-    setActiveIndex((index) => Math.min(packages.length - 1, Math.max(0, index + direction)));
+  function pick(item: TicketItem) {
+    const pkg = packages.find((p) => p.id === item.id);
+    if (!pkg) return;
+    if (pkg.sections) setDetail(pkg);
+    else router.push(`${hrefBase}/${pkg.id}`);
   }
 
   return (
-    <section className="package-carousel" aria-labelledby="package-carousel-title">
-      <div className="mb-4 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="text-xs font-bold tracking-wide text-muted-foreground">PILIH PAKET</p>
-          <h2 id="package-carousel-title" className="mt-1 font-heading text-2xl text-foreground">
-            Tentukan set latihan Anda
-          </h2>
-        </div>
-        <div className="flex items-center gap-2" aria-label="Navigasi paket">
-          <button
-            type="button"
-            onClick={() => move(-1)}
-            disabled={activeIndex === 0}
-            className="inline-flex size-11 items-center justify-center rounded-md border border-border-strong bg-card text-foreground shadow-e1 transition-colors hover:bg-surface-inset disabled:pointer-events-none disabled:opacity-45"
-            aria-label="Paket sebelumnya"
-          >
-            <ChevronLeft className="size-4" />
-          </button>
-          <span className="tnum min-w-16 text-center text-sm font-semibold text-muted-foreground">
-            {activeIndex + 1} / {packages.length}
-          </span>
-          <button
-            type="button"
-            onClick={() => move(1)}
-            disabled={activeIndex === packages.length - 1}
-            className="inline-flex size-11 items-center justify-center rounded-md border border-border-strong bg-card text-foreground shadow-e1 transition-colors hover:bg-surface-inset disabled:pointer-events-none disabled:opacity-45"
-            aria-label="Paket berikutnya"
-          >
-            <ChevronRight className="size-4" />
-          </button>
-        </div>
+    <section aria-labelledby="package-carousel-title">
+      <div className="mb-4">
+        <span className="section-kicker">Katalog latihan</span>
+        <h2 id="package-carousel-title" className="mt-1 font-heading text-2xl text-foreground">
+          Pilih paket
+        </h2>
       </div>
 
-      <div
-        className="package-carousel__stage"
-        aria-label={`Pilihan paket ${moduleLabel}`}
-        onKeyDown={(event) => {
-          if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
-          event.preventDefault();
-          move(event.key === "ArrowLeft" ? -1 : 1);
-        }}
+      <TicketCatalog
+        items={items}
+        label={`paket ${moduleLabel}`}
+        filters={FILTERS}
+        search
+        placeholder="Cari paket…"
+        onPick={pick}
+      />
+
+      <Dialog
+        open={detail !== null}
+        onClose={() => setDetail(null)}
+        labelledBy="package-detail-title"
       >
-        {packages.map((pkg, index) => {
-          const offset = index - activeIndex;
-          const state = offset === 0 ? "is-active" : Math.abs(offset) === 1 ? "is-neighbor" : "is-distant";
-          const isActive = offset === 0;
+        {detail?.sections && (
+          <>
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <p className="section-kicker">Paket terpilih</p>
+                <h2 id="package-detail-title" className="font-heading mt-1 text-2xl text-foreground">
+                  {detail.label}
+                </h2>
+                <p className="tnum mt-1 text-sm text-muted-foreground">
+                  {detail.questionCount} {unitLabel} · Tanpa batas waktu
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setDetail(null)}
+                className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-surface-inset hover:text-foreground"
+                aria-label="Tutup"
+              >
+                <Close className="size-4" />
+              </button>
+            </div>
 
-          const pkgAvailable = pkg.questionCount === expectedCount;
+            <ul className="mt-5 max-h-80 space-y-2 overflow-y-auto pr-1">
+              {detail.sections.map((section) => (
+                <li
+                  key={section.index}
+                  className="inset-panel flex items-center justify-between gap-3 px-3.5 py-2.5"
+                >
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">Kolom {section.index}</p>
+                    <p className="tnum text-xs text-muted-foreground">{section.questionCount} butir</p>
+                  </div>
+                  {section.symbols && (
+                    <span className="cat-symbols w-44" aria-label={`Simbol kolom ${section.index}`}>
+                      {section.symbols.map((symbol, k) => (
+                        <span key={k}>{symbol}</span>
+                      ))}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
 
-          return (
-            <button
-              key={pkg.id}
-              type="button"
-              onClick={() => {
-                if (!isActive) {
-                  setActiveIndex(index);
-                  return;
-                }
-                if (pkg.sections && pkgAvailable) setShowDetail(true);
-              }}
-              aria-pressed={isActive}
-              aria-hidden={Math.abs(offset) > 1 ? true : undefined}
-              tabIndex={isActive ? 0 : -1}
-              className={`package-carousel__card ${state}`}
-              style={{ "--package-offset": offset } as CSSProperties}
+            <div className="inset-panel mt-5 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+              <div>
+                <p className="text-sm font-semibold text-foreground">Aktifkan timer per kolom?</p>
+                <p className="mt-0.5 text-xs text-muted-foreground">
+                  {timedMode
+                    ? "60 detik per kolom, urutan terkunci — persis mode ujian."
+                    : "Tanpa batas waktu, bebas pindah kolom kapan saja."}
+                </p>
+              </div>
+              <div
+                role="radiogroup"
+                aria-label="Aktifkan timer per kolom"
+                className="inline-flex gap-1 rounded-md border border-border bg-card p-1"
+              >
+                {[false, true].map((on) => (
+                  <button
+                    key={String(on)}
+                    type="button"
+                    role="radio"
+                    aria-checked={timedMode === on}
+                    onClick={() => setTimedMode(on)}
+                    className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
+                      timedMode === on
+                        ? "bg-brand-ink text-white"
+                        : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
+                    }`}
+                  >
+                    {on ? "Ya" : "Tidak"}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href={`${hrefBase}/${detail.id}?autostart=1${timedMode ? "&timed=1" : ""}`}
+              className={buttonStyles({
+                variant: "accent",
+                size: "lg",
+                block: true,
+                className: "btn-pulse-cta mt-4 justify-center",
+              })}
             >
-              <span className="flex items-start justify-between gap-3">
-                <span className="package-carousel__index font-heading text-4xl leading-none">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span className="package-carousel__badge px-2.5 py-1 text-xs font-semibold">
-                  {pkg.questionCount === expectedCount ? completeLabel : "Belum lengkap"}
-                </span>
-              </span>
-              <span>
-                <span className="block text-lg font-bold">{pkg.label}</span>
-                <span className="mt-1 block text-sm text-[var(--pc-ink-dim)]">
-                  {pkg.questionCount == null
-                    ? "Jumlah butir belum tersedia"
-                    : `${pkg.questionCount} ${unitLabel}`}
-                </span>
-              </span>
-              {pkg.symbols && (
-                <span className="package-carousel__symbols" aria-label={`Pratinjau simbol ${pkg.label}`}>
-                  {pkg.symbols.map((symbol, symbolIndex) => (
-                    <span key={symbolIndex}>{symbol}</span>
-                  ))}
-                </span>
-              )}
-              <span className="package-carousel__reticle" aria-hidden="true" />
-              <span className="package-carousel__scanline" aria-hidden="true" />
-            </button>
-          );
-        })}
-      </div>
-
-      <div className="flex flex-col gap-4 border-t border-border pt-5 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-sm text-muted-foreground">
-          Dipilih: <span className="font-semibold text-foreground">{active.label}</span>
-          <span className="tnum"> · {active.questionCount ?? "—"} {unitLabel}</span>
-        </p>
-        {active.sections ? (
-          activeAvailable ? (
-            <p className="text-sm text-muted-foreground">Klik kartu paket di atas buat mulai</p>
-          ) : (
-            <Button variant="secondary" size="lg" disabled>
-              Paket belum tersedia
-            </Button>
-          )
-        ) : activeAvailable ? (
-          <Link
-            href={`${hrefBase}/${active.id}`}
-            className={buttonStyles({ variant: "primary", size: "lg" })}
-          >
-            Mulai {active.label}
-            <ArrowRight className="size-4" />
-          </Link>
-        ) : (
-          <Button variant="secondary" size="lg" disabled>
-            Paket belum tersedia
-          </Button>
+              Mulai Paket
+              <ArrowRight className="size-4" />
+            </Link>
+          </>
         )}
-      </div>
-      <p className="sr-only" aria-live="polite">
-        {active.label} dipilih.
-      </p>
-
-      {active.sections && (
-        <Dialog
-          open={showDetail}
-          onClose={() => setShowDetail(false)}
-          labelledBy="package-detail-title"
-        >
-          <div className="flex items-start justify-between gap-4">
-            <div>
-              <p className="text-xs font-bold tracking-wide text-muted-foreground">PAKET TERPILIH</p>
-              <h2 id="package-detail-title" className="font-heading mt-1 text-2xl text-foreground">
-                {active.label}
-              </h2>
-              <p className="tnum mt-1 text-sm text-muted-foreground">
-                {active.questionCount} {unitLabel} · Tanpa batas waktu
-              </p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setShowDetail(false)}
-              className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-surface-inset hover:text-foreground"
-              aria-label="Tutup"
-            >
-              <Close className="size-4" />
-            </button>
-          </div>
-
-          <ul className="mt-5 max-h-80 space-y-2 overflow-y-auto pr-1">
-            {active.sections.map((section) => (
-              <li
-                key={section.index}
-                className="inset-panel flex items-center justify-between gap-3 px-3.5 py-2.5"
-              >
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Kolom {section.index}</p>
-                  <p className="tnum text-xs text-muted-foreground">{section.questionCount} butir</p>
-                </div>
-                {section.symbols && (
-                  <span className="package-carousel__symbols" aria-label={`Simbol kolom ${section.index}`}>
-                    {section.symbols.map((symbol, symbolIndex) => (
-                      <span key={symbolIndex}>{symbol}</span>
-                    ))}
-                  </span>
-                )}
-              </li>
-            ))}
-          </ul>
-
-          <div className="inset-panel mt-5 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-            <div>
-              <p className="text-sm font-semibold text-foreground">Aktifkan timer per kolom?</p>
-              <p className="mt-0.5 text-xs text-muted-foreground">
-                {timedMode
-                  ? "60 detik per kolom, urutan terkunci — persis mode ujian."
-                  : "Tanpa batas waktu, bebas pindah kolom kapan saja."}
-              </p>
-            </div>
-            <div role="radiogroup" aria-label="Aktifkan timer per kolom" className="inline-flex gap-1 rounded-md border border-border bg-card p-1">
-              <button
-                type="button"
-                role="radio"
-                aria-checked={!timedMode}
-                onClick={() => setTimedMode(false)}
-                className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
-                  !timedMode ? "bg-accent text-primary-foreground" : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
-                }`}
-              >
-                Tidak
-              </button>
-              <button
-                type="button"
-                role="radio"
-                aria-checked={timedMode}
-                onClick={() => setTimedMode(true)}
-                className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
-                  timedMode ? "bg-accent text-primary-foreground" : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
-                }`}
-              >
-                Ya
-              </button>
-            </div>
-          </div>
-
-          <Link
-            href={`${hrefBase}/${active.id}?autostart=1${timedMode ? "&timed=1" : ""}`}
-            className={buttonStyles({
-              variant: "accent",
-              size: "lg",
-              block: true,
-              className: "btn-pulse-cta mt-4 justify-center rounded-full",
-            })}
-          >
-            Mulai Paket
-            <ArrowRight className="size-4" />
-          </Link>
-        </Dialog>
-      )}
+      </Dialog>
     </section>
   );
 }

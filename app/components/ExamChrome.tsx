@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { Check, CloudOff, Timer } from "@/app/components/icons";
+import { Check, ChevronLeft, ChevronRight, CloudOff, Timer } from "@/app/components/icons";
 import type { SaveState } from "@/lib/hooks/use-exam-engine";
 
 /*
@@ -50,8 +50,64 @@ function useTimeAnnouncement(secondsLeft: number): string {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Header
+// Bar atas (cest .mbar)
 // ─────────────────────────────────────────────────────────────────────────────
+
+/* Satu bar navy untuk semua layar tes dan latihan: judul, hitungan, timer, aksi.
+   `children` = baris tambahan di bawah bar (mis. segmen kolom Kecermatan). */
+export function ExamBar({
+  title,
+  count,
+  timer,
+  actions,
+  children,
+}: {
+  title: string;
+  count?: React.ReactNode;
+  timer?: React.ReactNode;
+  actions?: React.ReactNode;
+  children?: React.ReactNode;
+}) {
+  return (
+    <div className="mbar-wrap">
+      <header className="mbar">
+        <strong className="mbar-title">{title}</strong>
+        {count && <span className="mbar-count truncate">{count}</span>}
+        <span className="sp" />
+        {timer}
+        {actions}
+      </header>
+      {children}
+    </div>
+  );
+}
+
+export function ExamTimer({
+  seconds,
+  unit,
+  label = "Sisa waktu",
+  muted = false,
+}: {
+  seconds: number;
+  /** Sufiks satuan (mis. "dtk") bila yang ditampilkan detik mentah, bukan m:ss. */
+  unit?: string;
+  label?: string;
+  /** Layar transisi: timer tidak boleh menyala kuning/merah. */
+  muted?: boolean;
+}) {
+  // Ambang menurut skala: waktu sub-tes (menit) vs. detik per kolom Kecermatan.
+  const [warnAt, critAt] = unit ? [20, 10] : [300, 60];
+  const critical = !muted && seconds <= critAt;
+  const warning = !muted && !critical && seconds <= warnAt;
+  return (
+    <span className={`mtimer ${critical ? "critical" : warning ? "low" : ""}`}>
+      <Timer className="size-4" />
+      <span className="sr-only">{label}</span>
+      <span className="tnum">{unit ? seconds : formatTime(seconds)}</span>
+      {unit && <span className="text-xs font-semibold opacity-80">{unit}</span>}
+    </span>
+  );
+}
 
 type ExamHeaderProps = {
   title: string;
@@ -62,6 +118,8 @@ type ExamHeaderProps = {
   secondsLeft: number;
   saveState?: SaveState;
   pendingCount?: number;
+  /** Tombol "Selesai" di bar (seperti End Test di cest). */
+  onEnd?: () => void;
 };
 
 export function ExamHeader({
@@ -73,79 +131,53 @@ export function ExamHeader({
   secondsLeft,
   saveState = "saved",
   pendingCount = 0,
+  onEnd,
 }: ExamHeaderProps) {
   const announcement = useTimeAnnouncement(secondsLeft);
-  const critical = secondsLeft <= 60;
-  const warning = !critical && secondsLeft <= 300;
-  const progress = total ? answered / total : 0;
+  const status =
+    saveState === "saved"
+      ? "Tersimpan di server"
+      : saveState === "saving"
+        ? "Menyimpan…"
+        : saveState === "error"
+          ? "Belum tersimpan"
+          : `${pendingCount} menunggu`;
 
   return (
-    <header className="on-nav sticky top-0 z-30 bg-surface-nav text-white shadow-e3">
-      <div className="mx-auto flex min-h-15 max-w-7xl items-center justify-between gap-4 px-4 py-2.5 sm:px-6">
-        <div className="min-w-0">
-          <p className="truncate text-sm font-semibold">{title}</p>
-          <p className="mt-0.5 truncate text-xs text-white/70">
+    <>
+      <ExamBar
+        title={title}
+        count={
+          <>
             <span className="tnum">
               {itemLabel} {current} dari {total}
             </span>
-            <span className="hidden sm:inline"> · </span>
-            <span className="hidden tnum sm:inline">{answered} terjawab</span>
-            <span className="hidden sm:inline"> · </span>
-            <span className="hidden sm:inline" role="status">
-              {saveState === "saved"
-                ? "Tersimpan di server"
-                : saveState === "saving"
-                  ? "Menyimpan…"
-                  : saveState === "error"
-                    ? "Belum tersimpan"
-                    : `${pendingCount} menunggu`}
+            <span className="mbar-sub-hide max-sm:hidden">
+              {" · "}
+              <span className="tnum">{answered} terjawab</span>
+              {" · "}
+              <span role="status">{status}</span>
             </span>
-          </p>
-        </div>
-
-        {/* Eskalasi waktu tanpa warna baru: teks putih -> teks gold -> chip gold
-            terisi. Chip terisi punya kontras 5.6:1 dan menarik mata tanpa
-            animasi berkedip. */}
-        <div
-          className={`flex shrink-0 items-center gap-2 rounded-md px-2.5 py-1.5 transition-colors duration-200 ease-out ${
-            critical ? "bg-accent text-primary" : "bg-white/8 text-white"
-          }`}
-        >
-          <Timer className={`size-4 ${warning ? "text-accent" : ""}`} />
-          <span className="sr-only">Sisa waktu</span>
-          <span
-            className={`tnum text-lg font-bold sm:text-xl ${
-              warning ? "text-accent" : ""
-            }`}
-          >
-            {formatTime(secondsLeft)}
-          </span>
-        </div>
-      </div>
-
-      <div
-        className="h-0.5 bg-white/12"
-        role="progressbar"
-        aria-label="Kemajuan jawaban"
-        aria-valuemin={0}
-        aria-valuemax={total}
-        aria-valuenow={answered}
-      >
-        <div
-          className="h-full origin-left bg-accent transition-transform duration-300 ease-out"
-          style={{ transform: `scaleX(${progress})` }}
-        />
-      </div>
-
+          </>
+        }
+        timer={<ExamTimer seconds={secondsLeft} />}
+        actions={
+          onEnd && (
+            <button type="button" className="mbtn" onClick={onEnd}>
+              Selesai
+            </button>
+          )
+        }
+      />
       <p aria-live="polite" className="sr-only">
         {announcement}
       </p>
-    </header>
+    </>
   );
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Navigator soal
+// Navigator soal (cest nav pane)
 // ─────────────────────────────────────────────────────────────────────────────
 
 type QuestionNavigatorProps = {
@@ -173,32 +205,32 @@ function NavigatorContent({
   const unansweredCount = questionIds.length - answeredCount;
 
   return (
-    <div className="space-y-5">
-      {secondsLeft == null && (
-        <div className="rounded-xl border border-border bg-card px-4 py-5 text-center">
-          <p className="text-xs font-bold tracking-wide text-muted-foreground">MODE LATIHAN</p>
-          <p className="mt-2 text-xl font-bold text-foreground">Tanpa batas waktu</p>
-        </div>
-      )}
-
-      <div className="grid grid-cols-3 gap-2 text-center text-xs font-semibold">
-        <div className="rounded-lg bg-success-soft px-2 py-3 text-success">
-          <strong className="tnum block text-base">{answeredCount}</strong>
-          Terjawab
-        </div>
-        <div className="rounded-lg bg-accent-soft px-2 py-3 text-accent-ink">
-          <strong className="tnum block text-base">{currentIndex + 1}</strong>
-          Aktif
-        </div>
-        <div className="rounded-lg bg-surface-inset px-2 py-3 text-muted-foreground">
-          <strong className="tnum block text-base">{unansweredCount}</strong>
-          Kosong
+    <div>
+      <div className="dnav-head">
+        <div>
+          <p className="dnav-kicker">{secondsLeft == null ? "Mode latihan" : `Navigasi ${itemLabel.toLowerCase()}`}</p>
+          <p className="dnav-count">
+            <b className="tnum">{currentIndex + 1}</b> / {questionIds.length}
+            <span>{secondsLeft == null ? "Tanpa batas waktu" : `${answeredCount} terjawab`}</span>
+          </p>
         </div>
       </div>
 
-      <div>
-        <p className="mb-3 text-xs font-bold tracking-wide text-muted-foreground">NOMOR {itemLabel.toUpperCase()}</p>
-        <div className="grid max-h-[18rem] grid-cols-5 gap-2 overflow-y-auto pr-1">
+      <ul className="dnav-legend">
+        <li>
+          <span className="dnum is-done" aria-hidden="true" />
+          Terjawab
+          <b>{answeredCount}</b>
+        </li>
+        <li>
+          <span className="dnum" aria-hidden="true" />
+          Kosong
+          <b>{unansweredCount}</b>
+        </li>
+      </ul>
+
+      <h3 className="dnav-title">Nomor {itemLabel}</h3>
+      <div className="dnav-grid">
         {questionIds.map((id, index) => {
           const answered = Boolean(answers[id]);
           const current = index === currentIndex;
@@ -208,49 +240,17 @@ function NavigatorContent({
               type="button"
               onClick={() => onGoTo(index)}
               aria-current={current ? "step" : undefined}
-              aria-label={`${itemLabel} ${index + 1}${
-                answered ? ", sudah dijawab" : ", belum dijawab"
-              }`}
-              className={`tnum flex h-12 items-center justify-center rounded-lg border text-sm font-bold transition-colors duration-150 ease-out ${
-                current
-                  ? "border-accent-strong bg-accent text-primary ring-2 ring-primary ring-offset-2"
-                  : answered
-                    ? "border-success bg-success text-white hover:brightness-95"
-                    : "border-border-strong/55 bg-card text-muted-foreground hover:border-primary/45 hover:text-foreground"
-              }`}
+              aria-label={`${itemLabel} ${index + 1}${answered ? ", sudah dijawab" : ", belum dijawab"}`}
+              className={`dnum ${answered ? "is-done" : ""}`}
             >
               {index + 1}
             </button>
           );
         })}
-        </div>
       </div>
 
-      <ul className="flex flex-wrap gap-x-3 gap-y-2 border-t border-border pt-4 text-xs font-medium text-muted-foreground">
-        <li className="flex items-center gap-1.5">
-          <span className="size-3 rounded-sm bg-success" aria-hidden="true" />
-          Terjawab
-        </li>
-        <li className="flex items-center gap-1.5">
-          <span
-            className="size-3 rounded-sm border border-border-strong/55 bg-card"
-            aria-hidden="true"
-          />
-          Kosong
-        </li>
-        <li className="flex items-center gap-1.5">
-          <span className="size-3 rounded-sm border-2 border-primary bg-accent" aria-hidden="true" />
-          Aktif
-        </li>
-      </ul>
-
       {onSubmit && (
-        <Button
-          variant="danger"
-          size="lg"
-          block
-          onClick={onSubmit}
-        >
+        <Button variant="danger" size="lg" block className="mt-6" onClick={onSubmit}>
           {submitLabel ?? "Selesai Ujian"}
         </Button>
       )}
@@ -277,14 +277,20 @@ export function QuestionNavigator(props: QuestionNavigatorProps) {
 
   return (
     <>
-      <details ref={detailsRef} className="group/nav overflow-hidden rounded-xl border border-border bg-card shadow-sm lg:hidden">
-        <summary ref={summaryRef} className="flex min-h-12 list-none items-center justify-between gap-3 px-4 py-3 text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden">
+      <details
+        ref={detailsRef}
+        className="group/nav mx-4 mt-4 overflow-hidden rounded-lg border border-border bg-card sm:mx-6 lg:hidden"
+      >
+        <summary
+          ref={summaryRef}
+          className="flex min-h-12 list-none items-center justify-between gap-3 px-4 py-3 font-heading text-sm font-semibold text-foreground [&::-webkit-details-marker]:hidden"
+        >
           <span>Navigasi {noun}</span>
           <span className="flex items-center gap-2 text-xs font-medium text-muted-foreground">
             <span className="tnum group-open/nav:hidden">
               {answeredCount}/{props.questionIds.length}
             </span>
-            <span className="hidden text-primary group-open/nav:inline">Tutup</span>
+            <span className="hidden text-brand-ink group-open/nav:inline">Tutup</span>
           </span>
         </summary>
         <div className="border-t border-border p-4">
@@ -293,12 +299,65 @@ export function QuestionNavigator(props: QuestionNavigatorProps) {
       </details>
 
       <aside
-        className="sticky top-24 order-2 hidden w-80 shrink-0 self-start rounded-2xl border border-border bg-card p-5 shadow-sm lg:block"
+        className="order-2 hidden bg-card p-5 lg:sticky lg:top-[58px] lg:block lg:h-[calc(100dvh-58px)] lg:w-[300px] lg:shrink-0 lg:overflow-auto lg:border-l lg:border-border"
         aria-label={`Navigasi ${noun}`}
       >
         <NavigatorContent {...props} />
       </aside>
     </>
+  );
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Badan layar tes + dock navigasi
+// ─────────────────────────────────────────────────────────────────────────────
+
+/* Tata letak cest: konten di tengah (maks 1132px), panel navigator menempel di kanan. */
+export function ExamBody({
+  navigator,
+  children,
+}: {
+  navigator?: React.ReactNode;
+  children: React.ReactNode;
+}) {
+  return (
+    <div className="flex flex-col lg:flex-row lg:items-start">
+      {navigator}
+      <main className="min-w-0 flex-1 px-4 pb-32 pt-6 sm:px-6 lg:px-8 lg:pt-8">
+        <div className="mx-auto max-w-[1132px] space-y-4">{children}</div>
+      </main>
+    </div>
+  );
+}
+
+/* Tombol maju (bulat emas, seperti #m-next cest) dan mundur (bulat putih) melayang di kanan bawah. */
+export function ExamDock({
+  onPrev,
+  onNext,
+  prevDisabled,
+  nextDisabled,
+  prevLabel = "Sebelumnya",
+  nextLabel = "Berikutnya",
+  noPane = false,
+}: {
+  onPrev: () => void;
+  onNext: () => void;
+  prevDisabled?: boolean;
+  nextDisabled?: boolean;
+  prevLabel?: string;
+  nextLabel?: string;
+  /** Layar tanpa panel navigator di kanan. */
+  noPane?: boolean;
+}) {
+  return (
+    <nav className={`xdock ${noPane ? "no-pane" : ""}`} aria-label="Navigasi">
+      <button type="button" className="xround is-prev" onClick={onPrev} disabled={prevDisabled} aria-label={prevLabel} title={prevLabel}>
+        <ChevronLeft />
+      </button>
+      <button type="button" className="xround" onClick={onNext} disabled={nextDisabled} aria-label={nextLabel} title={nextLabel}>
+        <ChevronRight />
+      </button>
+    </nav>
   );
 }
 
