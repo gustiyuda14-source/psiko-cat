@@ -6,6 +6,7 @@ import {
   isModuleSequenceAvailable,
   isTerminalModule,
 } from "@/lib/session-access";
+import { SIMULASI_PACKAGE } from "@/lib/test-config";
 import type {
   KecerdasanOptionsPayload,
   KepribadianOptionsPayload,
@@ -71,6 +72,7 @@ export async function POST(
       .select("id, type, options_payload")
       .in("id", [...latestByQuestion.keys()])
       .eq("type", access.moduleSession.module_type)
+      .eq("package_number", SIMULASI_PACKAGE[access.moduleSession.module_type as keyof typeof SIMULASI_PACKAGE])
       .eq("is_active", true);
     if (questionError) throw questionError;
     if (questions?.length !== latestByQuestion.size) {

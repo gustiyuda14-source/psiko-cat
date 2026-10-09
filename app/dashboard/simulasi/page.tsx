@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config";
+import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PACKAGE, type ModuleType } from "@/lib/test-config";
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronRight } from "@/app/components/icons";
@@ -39,7 +39,14 @@ export default async function SimulasiPage() {
   // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
   const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }] =
     await Promise.all([
-      supabaseAdmin.from("questions").select("type").eq("is_active", true).neq("type", "KECERMATAN"),
+      supabaseAdmin
+        .from("questions")
+        .select("type")
+        .eq("is_active", true)
+        .or(
+          `and(type.eq.KECERDASAN,package_number.eq.${SIMULASI_PACKAGE.KECERDASAN}),` +
+            `and(type.eq.KEPRIBADIAN,package_number.eq.${SIMULASI_PACKAGE.KEPRIBADIAN})`
+        ),
       supabaseAdmin
         .from("questions")
         .select("id", { count: "exact", head: true })

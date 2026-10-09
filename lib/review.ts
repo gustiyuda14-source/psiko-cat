@@ -13,6 +13,7 @@ import type {
 } from "@/lib/types/safe-question";
 
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
+import { SIMULASI_PACKAGE } from "@/lib/test-config";
 
 export async function fetchKecerdasanReview(moduleSessionId: string): Promise<KecerdasanReviewItem[]> {
   const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
@@ -24,6 +25,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
       .from("questions")
       .select("id, sequence_number, options_payload, scoring_rule")
       .eq("type", "KECERDASAN")
+      .eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
       .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);
@@ -55,6 +57,7 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
       .from("questions")
       .select("id, sequence_number, options_payload")
       .eq("type", "KEPRIBADIAN")
+      .eq("package_number", SIMULASI_PACKAGE.KEPRIBADIAN)
       .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);

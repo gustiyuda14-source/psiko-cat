@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { getSessionAccess } from "@/lib/session-access";
+import { SIMULASI_PACKAGE } from "@/lib/test-config";
 
 type ModulePayload = {
   moduleSessionId: string;
@@ -87,6 +88,7 @@ export async function POST(req: NextRequest) {
       .select("id")
       .in("id", questionIds)
       .eq("type", moduleType)
+      .eq("package_number", SIMULASI_PACKAGE[moduleType])
       .eq("is_active", true);
     if (questionError || questions?.length !== new Set(questionIds).size) return;
     if (entries.some(([, key]) => !/^[A-E]{1,5}$/.test(key))) return;

@@ -7,6 +7,7 @@ import { calculateKecerdasan } from "./kecerdasan";
 import { calculateKepribadian } from "./kepribadian";
 import { calculateKecermatan, type KecermatanColumnStats } from "./kecermatan";
 import { calculateNAP, calculateSingleModuleResult } from "./nap";
+import { SIMULASI_PACKAGE } from "@/lib/test-config";
 import type {
   KecerdasanScoringRule,
   KepribadianScoringRule,
@@ -22,7 +23,7 @@ async function scoreKecerdasan(module_session_id: string) {
   const questionIds = (answers ?? []).map((a) => a.question_id);
   if (answerError) throw answerError;
   const { data: questions, error: questionError } = questionIds.length
-    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds)
+    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds).eq("package_number", SIMULASI_PACKAGE.KEPRIBADIAN).eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
     : { data: [], error: null };
   if (questionError) throw questionError;
 

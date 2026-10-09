@@ -54,6 +54,11 @@ export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEnt
   KEPRIBADIAN_PACKAGES.map((id) => [id, `Paket ${id}`])
 );
 
+// Simulasi/tryout membaca SATU paket per module, tidak pernah semua soal aktif
+// (pola dajiks-cest: bank simulasi terpisah dari bank drilling). Paket lain
+// cuma muncul di latihan. Kecermatan memakai kecermatan_package_number per sesi.
+export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 1 } as const;
+
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
   (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(
     ([type, config]) => [config.slug, type]
