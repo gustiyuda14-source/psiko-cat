@@ -1,9 +1,14 @@
-import { MODULE_CONFIG, MODULE_ORDER, latihanHref } from "@/lib/test-config";
+import {
+  KECERDASAN_PACKAGES,
+  KECERMATAN_ANGKA_PACKAGES,
+  KECERMATAN_PACKAGES,
+  KEPRIBADIAN_PACKAGES,
+  MODULE_CONFIG,
+  MODULE_ORDER,
+  latihanHref,
+} from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
-import type { TicketItem } from "@/app/components/TicketCatalog";
-import LatihanCatalog from "./LatihanCatalog";
-
-const TONE = { KECERDASAN: "green", KECERMATAN: "cyan", KEPRIBADIAN: "amber" } as const;
+import LatihanCatalog, { type LatihanModule } from "./LatihanCatalog";
 
 const DESC = {
   KECERDASAN: "Soal kognitif dan spasial, 100 butir per paket",
@@ -11,18 +16,22 @@ const DESC = {
   KEPRIBADIAN: "Pernyataan skala Likert, 100 butir per paket",
 } as const;
 
+// Kunci progres = rute sesi paket (lib/latihan-progress.ts). Kecermatan punya dua aspek.
+const PACKAGES = {
+  KECERDASAN: KECERDASAN_PACKAGES.map((id) => ({ key: `/latihan/kecerdasan/${id}`, total: 100 })),
+  KEPRIBADIAN: KEPRIBADIAN_PACKAGES.map((id) => ({ key: `/latihan/kepribadian/${id}`, total: 100 })),
+  KECERMATAN: [
+    ...KECERMATAN_PACKAGES.map((id) => ({ key: `/latihan/kecermatan/${id}`, total: 500 })),
+    ...KECERMATAN_ANGKA_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-angka/${id}`, total: 500 })),
+  ],
+};
+
 export default function LatihanIndexPage() {
-  const items: TicketItem[] = MODULE_ORDER.map((type, index) => ({
-    id: latihanHref(type),
-    tag: "Latihan",
-    tone: TONE[type],
-    badges: ["Tanpa timer"],
-    title: MODULE_CONFIG[type].label,
-    meta: DESC[type],
-    symbols: type === "KECERMATAN" ? ["A", "B", "C", "D", "E"] : undefined,
-    symbolsLabel: "Pilihan jawaban A hingga E",
-    foot: "Pilih paket",
-    stub: ["Sub-tes", String(index + 1).padStart(2, "0")],
+  const modules: LatihanModule[] = MODULE_ORDER.map((type) => ({
+    href: latihanHref(type),
+    label: MODULE_CONFIG[type].label,
+    desc: DESC[type],
+    packages: PACKAGES[type],
   }));
 
   return (
@@ -37,7 +46,7 @@ export default function LatihanIndexPage() {
           <span className="section-kicker">Katalog latihan</span>
           <h2 className="mt-1 font-heading text-2xl">Pilih sub-tes</h2>
         </div>
-        <LatihanCatalog items={items} />
+        <LatihanCatalog modules={modules} />
       </section>
     </div>
   );

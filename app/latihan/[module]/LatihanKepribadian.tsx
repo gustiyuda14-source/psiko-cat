@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { recordLatihanProgress } from "@/lib/latihan-progress";
 import type { SafeQuestion, KepribadianOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
@@ -9,13 +10,24 @@ import { ExamBody, ExamDock, QuestionNavigator } from "@/app/components/ExamChro
 import { KepribadianReview, type KepribadianReviewItem } from "@/app/components/PembahasanSection";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 
-export default function LatihanKepribadian({ questions }: { questions: SafeQuestion[] }) {
+export default function LatihanKepribadian({
+  questions,
+  progressKey,
+}: {
+  questions: SafeQuestion[];
+  progressKey?: string;
+}) {
   const sorted = useMemo(
     () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
     [questions]
   );
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, string>>({});
+
+  // Capaian terjauh paket ini (lib/latihan-progress.ts) untuk rak tabung di pemilih paket.
+  useEffect(() => {
+    if (progressKey) recordLatihanProgress(progressKey, Object.keys(answers).length);
+  }, [progressKey, answers]);
   const [showFinish, setShowFinish] = useState(false);
   const [finished, setFinished] = useState(false);
   const advanceTimer = useRef<number | null>(null);

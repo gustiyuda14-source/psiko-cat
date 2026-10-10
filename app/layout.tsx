@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Source_Sans_3, Lexend } from "next/font/google";
 import "./globals.css";
 import "./catalog.css";
+import "./honey.css";
 import "./exam.css";
 import "./report.css";
 

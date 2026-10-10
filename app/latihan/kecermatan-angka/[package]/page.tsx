@@ -32,6 +32,7 @@ export default async function LatihanKecermatanAngkaPackagePage({
       moduleType="KECERMATAN"
       questions={safeQuestions}
       packageLabel={KECERMATAN_ANGKA_PACKAGE_LABELS[pkg]}
+      progressKey={`/latihan/kecermatan-angka/${pkg}`}
     />
   );
 }

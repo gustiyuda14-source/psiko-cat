@@ -5,8 +5,7 @@ import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PACKAGE, type ModuleType } from "
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronRight } from "@/app/components/icons";
-import type { TicketItem } from "@/app/components/TicketCatalog";
-import SimulasiCatalog from "./SimulasiCatalog";
+import SimulasiCatalog, { type LastScores, type SimulasiItem } from "./SimulasiCatalog";
 
 function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString("id-ID", {
@@ -37,7 +36,7 @@ export default async function SimulasiPage() {
   // Kecermatan sekarang punya banyak paket bank soal (masing-masing 500 soal, 1 dipilih
   // random per sesi/latihan) — hitung dari satu paket referensi, bukan total semua paket,
   // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
-  const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }] =
+  const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }] =
     await Promise.all([
       supabaseAdmin
         .from("questions")
@@ -59,6 +58,15 @@ export default async function SimulasiPage() {
         .eq("user_id", session.sub)
         .in("status", ["PENDING", "IN_PROGRESS"])
         .order("created_at", { ascending: false }),
+      // Nilai murni terakhir per sub-tes (isi madu di sisi kubus). Urut terbaru dulu;
+      // baris pertama per module_type yang dipakai.
+      supabaseAdmin
+        .from("module_sessions")
+        .select("module_type, raw_score, completed_at, test_sessions!inner(user_id)")
+        .eq("test_sessions.user_id", session.sub)
+        .not("raw_score", "is", null)
+        .order("completed_at", { ascending: false })
+        .limit(60),
     ]);
 
   const countByType = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
@@ -73,28 +81,34 @@ export default async function SimulasiPage() {
 
   const running = openSessions ?? [];
 
-  const TONE = { KECERDASAN: "green", KECERMATAN: "cyan", KEPRIBADIAN: "amber" } as const;
-  const items: TicketItem[] = [
+  const last: LastScores = {};
+  for (const row of scoredRows ?? []) {
+    const type = row.module_type as ModuleType;
+    if (last[type] || row.raw_score == null) continue;
+    last[type] = {
+      score: row.raw_score,
+      at: row.completed_at
+        ? new Date(row.completed_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
+        : "-",
+    };
+  }
+
+  const items: SimulasiItem[] = [
     {
       id: "ALL",
-      tag: "Paket lengkap",
-      tone: "green",
-      badges: ["NAP"],
       title: "Tryout Lengkap Paket 1",
-      meta: `${totalQuestions} butir · ${totalMinutes} menit · 3 sub-tes`,
-      foot: "Mulai tryout lengkap",
-      stub: ["Sub-tes", "03"],
+      meta: `${totalQuestions} butir · ${totalMinutes} menit`,
+      desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai nilai NAP.",
+      faces: [...MODULE_ORDER],
     },
-    ...MODULE_ORDER.map((type, index): TicketItem => {
+    ...MODULE_ORDER.map((type): SimulasiItem => {
       const meta = MODULE_CONFIG[type];
       return {
         id: type,
-        tag: "Sub-tes",
-        tone: TONE[type],
         title: meta.label,
-        meta: `${countByType[type] ?? 0} butir · ${meta.time_limit_seconds / 60} menit · ${meta.shortDesc}`,
-        foot: "Mulai sub-tes",
-        stub: ["Sub-tes", String(index + 1).padStart(2, "0")],
+        meta: `${countByType[type] ?? 0} butir · ${meta.time_limit_seconds / 60} menit`,
+        desc: `Satu sub-tes (${meta.shortDesc}) dengan timer berjalan. Hasil masuk riwayat.`,
+        faces: [type],
       };
     }),
   ];
@@ -104,7 +118,7 @@ export default async function SimulasiPage() {
       <PageHeader
         kicker="Simulasi"
         title="Simulasi"
-        description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai nilai NAP. Ketuk kartu tengah untuk memulai."
+        description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai nilai NAP. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
       />
 
       {/* Sesi yang belum selesai muncul paling atas: peserta yang browsernya
@@ -142,7 +156,7 @@ export default async function SimulasiPage() {
           <span className="section-kicker">Katalog simulasi</span>
           <h2 className="mt-1 font-heading text-2xl">Pilih tes</h2>
         </div>
-        <SimulasiCatalog items={items} action={startSession} />
+        <SimulasiCatalog items={items} last={last} action={startSession} />
       </section>
     </div>
   );

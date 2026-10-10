@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { recordLatihanProgress } from "@/lib/latihan-progress";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
 import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";
@@ -54,8 +55,10 @@ function buildLocalGroups(
 export default function LatihanKecermatan({
   questions,
   timedMode = false,
+  progressKey,
 }: {
   questions: SafeQuestion[];
+  progressKey?: string;
   /** Ya di modal "Aktifkan timer per kolom?" — kunci navigasi sekuensial,
       60 detik/kolom, jeda 5 detik tiap ganti kolom. Default bebas navigasi. */
   timedMode?: boolean;
@@ -69,6 +72,11 @@ export default function LatihanKecermatan({
   );
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<Record<string, Feedback>>({});
+
+  // Capaian terjauh paket ini (lib/latihan-progress.ts) untuk rak tabung di pemilih paket.
+  useEffect(() => {
+    if (progressKey) recordLatihanProgress(progressKey, Object.keys(answers).length);
+  }, [progressKey, answers]);
   const answeredIds = useRef(new Set<string>());
   const [error, setError] = useState("");
   const [finished, setFinished] = useState(false);

@@ -1,19 +1,20 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { ArrowRight, Close } from "@/app/components/icons";
+import { ArrowRight } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
-import { Dialog } from "@/app/components/ui-client";
-import { TicketCatalog, type TicketItem } from "@/app/components/TicketCatalog";
+import { Button, ConfirmDialog } from "@/app/components/ui-client";
+import { fillY, wavePath } from "@/lib/honey";
+import { clearLatihanProgress, useLatihanProgress } from "@/lib/latihan-progress";
 
 /*
-  Katalog paket bergaya "tiket level" dari dajiks-cest (assets/cest-catalog.js):
-  konsol cari + filter, kartu tiket (badan + sobekan berlubang) di track
-  scroll-snap dengan kartu tengah fokus, rel penghitung + titik di bawah.
-  Ketuk kartu samping = geser ke tengah, ketuk kartu tengah = pilih paket.
-  CSS ada di app/catalog.css.
+  Pemilih paket latihan bergaya rak tabung ukur: satu tabung per paket, madu =
+  capaian terjauh (butir terbanyak yang pernah dijawab dalam satu sesi, dari
+  lib/latihan-progress.ts). Garis ukur 10 kolom untuk Kecermatan, 4 untuk modul
+  lain. Panel di samping berisi rincian paket + tombol mulai; untuk Kecermatan
+  juga rincian kolom dan pilihan timer per kolom (dulu modal). Nama komponen
+  dipertahankan supaya pemanggilnya tidak berubah. CSS di app/honey.css.
 */
 
 export type PackageSection = {
@@ -28,22 +29,38 @@ export type PackageOption = {
   questionCount: number | null;
   /** Pratinjau simbol kolom pertama — cuma dipakai Kecermatan. */
   symbols?: string[];
-  /** Rincian per-bagian (kolom) — cuma dipakai Kecermatan. Kalau diisi,
-      memilih paket membuka modal rincian dulu, bukan langsung pindah halaman. */
+  /** Rincian per-bagian (kolom) — cuma dipakai Kecermatan. */
   sections?: PackageSection[];
 };
 
-const FILTERS = [
-  { key: "all", label: "Semua" },
-  { key: "ready", label: "Tersedia" },
-  { key: "soon", label: "Belum tersedia" },
-];
+const TUBE_D = "M5 14 V146 A15 15 0 0 0 35 146 V14";
+const WAVE = wavePath(20, 2, -40, 80, 180);
 
-const TONE: Record<string, TicketItem["tone"]> = {
-  kecerdasan: "green",
-  kecermatan: "cyan",
-  kepribadian: "amber",
-};
+function Tube({ p, marks, locked, live }: { p: number; marks: number; locked: boolean; live: boolean }) {
+  const ys = Array.from({ length: marks - 1 }, (_, i) => 14 + (147 * (i + 1)) / marks);
+  return (
+    <svg viewBox="0 0 40 170" aria-hidden="true">
+      <path className="hc-tube-body" d={`${TUBE_D} Z`} />
+      <g clipPath="url(#pc-tube-in)">
+        {locked && <rect width="40" height="170" fill="url(#pc-hatch)" />}
+        <g className="hc-honey-y" style={{ transform: `translateY(${fillY(14, 147, p)}px)` }}>
+          <g className={live ? "hc-honey-x is-live is-tube" : "hc-honey-x"}>
+            <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
+          </g>
+        </g>
+      </g>
+      {ys.map((y) => (
+        <g key={y}>
+          <path className="hc-tube-div" d={`M8 ${y} H32`} />
+          <path className="hc-tube-tick" d={`M37 ${y} h3`} />
+        </g>
+      ))}
+      <path className="hc-tube-glare" d="M11 22 V136" />
+      <rect className="hc-tube-lip" x="1.5" y="8" width="37" height="6" rx="2" />
+      <path className="hc-tube-line" d={TUBE_D} />
+    </svg>
+  );
+}
 
 export function PackageCarousel({
   packages,
@@ -58,45 +75,34 @@ export function PackageCarousel({
   expectedCount: number;
   /** "butir" atau "pernyataan". */
   unitLabel: string;
-  /** Label badge saat paket lengkap, mis. "10 kolom" atau "100 butir". */
+  /** Keterangan isi paket lengkap, mis. "10 kolom" atau "100 butir". */
   completeLabel: string;
   /** Prefix rute sesi, mis. "/latihan/kecerdasan" — id paket ditempel di belakangnya. */
   hrefBase: string;
   /** Nama modul buat aria-label, mis. "kecerdasan". */
   moduleLabel: string;
 }) {
-  const router = useRouter();
-  const [detail, setDetail] = useState<PackageOption | null>(null);
+  const progress = useLatihanProgress();
+  const firstReady = packages.find((p) => p.questionCount === expectedCount);
+  const [selected, setSelected] = useState(firstReady?.id ?? packages[0]?.id);
   const [timedMode, setTimedMode] = useState(false);
+  const [confirmReset, setConfirmReset] = useState(false);
 
-  const base = moduleLabel.split(" ")[0];
-  const items: TicketItem[] = packages.map((pkg, index) => {
-    const available = pkg.questionCount === expectedCount;
-    const percent = pkg.questionCount ? Math.min(100, Math.round((pkg.questionCount / expectedCount) * 100)) : 0;
-    return {
-      id: pkg.id,
-      tag: base,
-      tone: TONE[base] ?? "green",
-      badges: available ? [completeLabel] : [],
-      title: pkg.label,
-      meta: pkg.questionCount == null ? "Jumlah butir belum tersedia" : `${pkg.questionCount} ${unitLabel}`,
-      symbols: pkg.symbols,
-      symbolsLabel: `Pratinjau simbol ${pkg.label}`,
-      foot: available ? "Mulai paket" : "Belum tersedia",
-      stub: ["Paket", String(index + 1).padStart(2, "0")],
-      ring: available || percent > 0 ? { p: percent, text: `${percent}%` } : undefined,
-      locked: !available,
-      group: [available ? "ready" : "soon"],
-      search: pkg.label,
-    };
+  const marks = packages.some((p) => p.sections) ? 10 : 4;
+  const view = packages.map((pkg) => {
+    const key = `${hrefBase}/${pkg.id}`;
+    const ready = pkg.questionCount === expectedCount;
+    const done = Math.min(progress[key] ?? 0, pkg.questionCount ?? 0);
+    const p = ready && pkg.questionCount ? done / pkg.questionCount : 0;
+    return { pkg, key, ready, done, p };
   });
-
-  function pick(item: TicketItem) {
-    const pkg = packages.find((p) => p.id === item.id);
-    if (!pkg) return;
-    if (pkg.sections) setDetail(pkg);
-    else router.push(`${hrefBase}/${pkg.id}`);
-  }
+  const current = view.find((v) => v.pkg.id === selected) ?? view[0];
+  if (!current) return null;
+  const { pkg, ready, done, p } = current;
+  const perColumn = pkg.sections?.length ? (pkg.questionCount ?? 0) / pkg.sections.length : 0;
+  const status = (v: (typeof view)[number]) =>
+    !v.ready ? "Belum tersedia" : v.p >= 1 ? "Selesai" : v.p > 0 ? `${Math.round(v.p * 100)}%` : "Belum mulai";
+  const href = pkg.sections ? `${hrefBase}/${pkg.id}?autostart=1${timedMode ? "&timed=1" : ""}` : `${hrefBase}/${pkg.id}`;
 
   return (
     <section aria-labelledby="package-carousel-title">
@@ -107,111 +113,149 @@ export function PackageCarousel({
         </h2>
       </div>
 
-      <TicketCatalog
-        items={items}
-        label={`paket ${moduleLabel}`}
-        filters={FILTERS}
-        search
-        placeholder="Cari paket…"
-        onPick={pick}
-      />
+      <svg width="0" height="0" className="absolute" aria-hidden="true">
+        <defs>
+          <clipPath id="pc-tube-in">
+            <path d="M8 14 V146 A12 12 0 0 0 32 146 V14 Z" />
+          </clipPath>
+          <linearGradient id="pc-honey" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="var(--honey-top)" />
+            <stop offset="1" stopColor="var(--honey-bot)" />
+          </linearGradient>
+          <pattern id="pc-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+            <rect width="7" height="7" fill="var(--surface-card)" />
+            <rect width="2.5" height="7" fill="var(--hatch)" />
+          </pattern>
+        </defs>
+      </svg>
 
-      <Dialog
-        open={detail !== null}
-        onClose={() => setDetail(null)}
-        labelledBy="package-detail-title"
-      >
-        {detail?.sections && (
-          <>
-            <div className="flex items-start justify-between gap-4">
-              <div>
-                <p className="section-kicker">Paket terpilih</p>
-                <h2 id="package-detail-title" className="font-heading mt-1 text-2xl text-foreground">
-                  {detail.label}
-                </h2>
-                <p className="tnum mt-1 text-sm text-muted-foreground">
-                  {detail.questionCount} {unitLabel} · Tanpa batas waktu
-                </p>
-              </div>
+      <div className="hc-stage">
+        <div className="hc-field hc-frame hc-rackfield">
+          <p className="hc-hud" aria-hidden="true">
+            Rak <b>{moduleLabel}</b>&nbsp; {packages.length} paket
+          </p>
+          <div className="hc-rack" role="group" aria-label={`Paket ${moduleLabel}`}>
+            {view.map((v, i) => (
               <button
+                key={v.pkg.id}
                 type="button"
-                onClick={() => setDetail(null)}
-                className="rounded-md p-1.5 text-muted-foreground transition-colors hover:bg-surface-inset hover:text-foreground"
-                aria-label="Tutup"
+                className={`hc-tube${v.ready ? "" : " is-locked"}`}
+                aria-pressed={v.pkg.id === current.pkg.id}
+                aria-label={`${v.pkg.label}, ${status(v)}${v.ready ? `, ${v.done} dari ${v.pkg.questionCount} ${unitLabel}` : ""}`}
+                style={{ animationDelay: `${i * 40}ms` }}
+                onClick={() => setSelected(v.pkg.id)}
               >
-                <Close className="size-4" />
+                <Tube p={v.p} marks={marks} locked={!v.ready} live={v.pkg.id === current.pkg.id && v.p > 0 && v.p < 1} />
+                <span className="hc-tube-name">{v.pkg.label}</span>
+                <span className="hc-tube-meta tnum">{status(v)}</span>
               </button>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            <ul className="mt-5 max-h-80 space-y-2 overflow-y-auto pr-1">
-              {detail.sections.map((section) => (
-                <li
-                  key={section.index}
-                  className="inset-panel flex items-center justify-between gap-3 px-3.5 py-2.5"
-                >
-                  <div>
-                    <p className="text-sm font-semibold text-foreground">Kolom {section.index}</p>
-                    <p className="tnum text-xs text-muted-foreground">{section.questionCount} butir</p>
+        <aside className="hc-panel" aria-live="polite" key={pkg.id}>
+          <div className="hc-panel-top">
+            <span className="hc-tag">{moduleLabel.split(" ")[0]}</span>
+            <span className="hc-code tnum">{ready ? `${completeLabel} · tanpa timer` : "Belum tersedia"}</span>
+          </div>
+          <h2 className="hc-panel-title">{pkg.label}</h2>
+          <p className="hc-panel-desc tnum">
+            {pkg.questionCount == null ? "Jumlah butir belum tersedia" : `${pkg.questionCount} ${unitLabel}`}
+          </p>
+
+          {!ready ? (
+            <p className="hc-panel-desc mt-4">Soal paket ini sedang disiapkan. Paket terbuka otomatis begitu soalnya lengkap.</p>
+          ) : (
+            <>
+              <div className="hc-meter">
+                <svg viewBox="0 0 40 170" className="hc-meter-tube" aria-hidden="true">
+                  <path className="hc-tube-body" d={`${TUBE_D} Z`} />
+                  <g clipPath="url(#pc-tube-in)">
+                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(14, 147, p)}px)` }}>
+                      <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
+                    </g>
+                  </g>
+                  <path className="hc-tube-line" d={TUBE_D} />
+                </svg>
+                <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
+                <span className="hc-meter-of tnum">
+                  Terjauh {done} dari {pkg.questionCount} {unitLabel}
+                  <br />
+                  {p >= 1 ? "Paket pernah diselesaikan" : done ? "Sesi baru mulai dari awal" : "Belum pernah dikerjakan"}
+                </span>
+              </div>
+
+              {pkg.sections && (
+                <>
+                  <div className="hc-cols" aria-label={`${Math.floor(done / (perColumn || 1))} dari ${pkg.sections.length} kolom tercapai`}>
+                    {pkg.sections.map((s, k) => (
+                      <i key={s.index} className={perColumn && done >= perColumn * (k + 1) ? "is-on" : ""}>
+                        <b>{s.index}</b>
+                      </i>
+                    ))}
                   </div>
-                  {section.symbols && (
-                    <span className="cat-symbols w-44" aria-label={`Simbol kolom ${section.index}`}>
-                      {section.symbols.map((symbol, k) => (
-                        <span key={k}>{symbol}</span>
+                  <details className="hc-details">
+                    <summary>Lihat simbol tiap kolom</summary>
+                    <ul>
+                      {pkg.sections.map((s) => (
+                        <li key={s.index}>
+                          <span>
+                            Kolom {s.index} <small className="tnum">{s.questionCount} butir</small>
+                          </span>
+                          {s.symbols && (
+                            <span className="cat-symbols" aria-label={`Simbol kolom ${s.index}`}>
+                              {s.symbols.map((symbol, k) => (
+                                <span key={k}>{symbol}</span>
+                              ))}
+                            </span>
+                          )}
+                        </li>
                       ))}
-                    </span>
-                  )}
-                </li>
-              ))}
-            </ul>
+                    </ul>
+                  </details>
+                  <div className="hc-timer">
+                    <div>
+                      <b>Timer per kolom</b>
+                      <span>{timedMode ? "60 detik per kolom, urutan terkunci, persis mode ujian." : "Tanpa batas waktu, bebas pindah kolom."}</span>
+                    </div>
+                    <div role="radiogroup" aria-label="Aktifkan timer per kolom" className="hc-seg">
+                      {[false, true].map((on) => (
+                        <button key={String(on)} type="button" role="radio" aria-checked={timedMode === on} onClick={() => setTimedMode(on)}>
+                          {on ? "Ya" : "Tidak"}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                </>
+              )}
 
-            <div className="inset-panel mt-5 flex flex-wrap items-center justify-between gap-3 px-4 py-3">
-              <div>
-                <p className="text-sm font-semibold text-foreground">Aktifkan timer per kolom?</p>
-                <p className="mt-0.5 text-xs text-muted-foreground">
-                  {timedMode
-                    ? "60 detik per kolom, urutan terkunci — persis mode ujian."
-                    : "Tanpa batas waktu, bebas pindah kolom kapan saja."}
-                </p>
+              <div className="hc-actions">
+                <Link href={href} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+                  {done ? "Latihan lagi" : "Mulai latihan"}
+                  <ArrowRight className="size-4" />
+                </Link>
+                <Button variant="ghost" disabled={!done} onClick={() => setConfirmReset(true)}>
+                  Hapus progres paket ini
+                </Button>
               </div>
-              <div
-                role="radiogroup"
-                aria-label="Aktifkan timer per kolom"
-                className="inline-flex gap-1 rounded-md border border-border bg-card p-1"
-              >
-                {[false, true].map((on) => (
-                  <button
-                    key={String(on)}
-                    type="button"
-                    role="radio"
-                    aria-checked={timedMode === on}
-                    onClick={() => setTimedMode(on)}
-                    className={`min-h-9 rounded-[6px] px-3.5 text-sm font-semibold transition-colors duration-150 ${
-                      timedMode === on
-                        ? "bg-brand-ink text-white"
-                        : "text-muted-foreground hover:bg-surface-inset hover:text-foreground"
-                    }`}
-                  >
-                    {on ? "Ya" : "Tidak"}
-                  </button>
-                ))}
-              </div>
-            </div>
+            </>
+          )}
+        </aside>
+      </div>
 
-            <Link
-              href={`${hrefBase}/${detail.id}?autostart=1${timedMode ? "&timed=1" : ""}`}
-              className={buttonStyles({
-                variant: "accent",
-                size: "lg",
-                block: true,
-                className: "btn-pulse-cta mt-4 justify-center",
-              })}
-            >
-              Mulai Paket
-              <ArrowRight className="size-4" />
-            </Link>
-          </>
-        )}
-      </Dialog>
+      <ConfirmDialog
+        open={confirmReset}
+        onClose={() => setConfirmReset(false)}
+        onConfirm={() => {
+          clearLatihanProgress(current.key);
+          setConfirmReset(false);
+        }}
+        title="Hapus progres paket ini?"
+        confirmLabel="Hapus progres"
+        tone="danger"
+      >
+        <p className="text-muted-foreground">Capaian {pkg.label} di perangkat ini dihapus. Paket lain tidak terpengaruh.</p>
+      </ConfirmDialog>
     </section>
   );
 }

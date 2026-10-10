@@ -39,10 +39,13 @@ export default function LatihanGate({
   moduleType,
   questions,
   packageLabel,
+  progressKey,
 }: {
   moduleType: ModuleType;
   questions: SafeQuestion[];
   packageLabel?: string;
+  /** Rute sesi paket, kunci progres latihan (lib/latihan-progress.ts). */
+  progressKey?: string;
 }) {
   // Halaman sesi sengaja tidak punya sidebar, jadi satu-satunya jalan keluar harus
   // ada di sini. Kecermatan balik ke pemilih paket (tempat user tadi memilih),
@@ -100,11 +103,11 @@ export default function LatihanGate({
       {started ? (
         <div ref={practiceRef}>
           {moduleType === "KECERDASAN" ? (
-            <LatihanKecerdasan questions={questions} />
+            <LatihanKecerdasan questions={questions} progressKey={progressKey} />
           ) : moduleType === "KEPRIBADIAN" ? (
-            <LatihanKepribadian questions={questions} />
+            <LatihanKepribadian questions={questions} progressKey={progressKey} />
           ) : (
-            <LatihanKecermatan questions={questions} timedMode={timedMode} />
+            <LatihanKecermatan questions={questions} timedMode={timedMode} progressKey={progressKey} />
           )}
         </div>
       ) : countdown !== null ? (

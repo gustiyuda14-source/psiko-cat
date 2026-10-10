@@ -1,7 +1,8 @@
 "use client";
 
 import QuestionPassage from "@/app/components/QuestionPassage";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { recordLatihanProgress } from "@/lib/latihan-progress";
 import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
@@ -15,13 +16,24 @@ import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 // baru dikumpulkan di akhir dan dapat pembahasan lengkap. Bedanya cuma
 // jawaban disimpan di state lokal (bukan module_sessions) dan pengecekan
 // lewat /api/practice/check per butir saat submit, bukan sekali jalan di server.
-export default function LatihanKecerdasan({ questions }: { questions: SafeQuestion[] }) {
+export default function LatihanKecerdasan({
+  questions,
+  progressKey,
+}: {
+  questions: SafeQuestion[];
+  progressKey?: string;
+}) {
   const sorted = useMemo(
     () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
     [questions]
   );
   const [idx, setIdx] = useState(0);
   const [picks, setPicks] = useState<Record<string, string>>({});
+
+  // Capaian terjauh paket ini (lib/latihan-progress.ts) untuk rak tabung di pemilih paket.
+  useEffect(() => {
+    if (progressKey) recordLatihanProgress(progressKey, Object.keys(picks).length);
+  }, [progressKey, picks]);
   const [showConfirm, setShowConfirm] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);

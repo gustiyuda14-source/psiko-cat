@@ -26,5 +26,5 @@ export default async function LatihanKecermatanPackagePage({
 
   const safeQuestions = (questions ?? []) as unknown as SafeQuestion[];
 
-  return <LatihanGate moduleType="KECERMATAN" questions={safeQuestions} packageLabel={KECERMATAN_PACKAGE_LABELS[pkg]} />;
+  return <LatihanGate moduleType="KECERMATAN" questions={safeQuestions} packageLabel={KECERMATAN_PACKAGE_LABELS[pkg]} progressKey={`/latihan/kecermatan/${pkg}`} />;
 }
