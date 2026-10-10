@@ -235,3 +235,28 @@
 .hc-seg button { min-height: 36px; padding: 0 14px; border-radius: 6px; font: 600 .875rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
 .hc-seg button[aria-checked="true"] { background: var(--brand-ink); color: #fff }
 @media (max-width: 760px) { .hc-rack { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
+
+/* ── Jalur madu (HiveLinks di DrillCatalog) ──
+   Kartu aspek → puncak inti sarang, penanda fokus → panel. Jejak titik mengalir
+   searah jalur; jalur aktif dapat siluet emas + pulsa madu yang berakhir di inti. */
+.hc-linked { position: relative; isolation: isolate }
+.hc-linked .hc-panel { z-index: 2 }
+.hc-links { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none }
+.hc-link { animation: hc-link-in 600ms var(--e-out) both }
+@keyframes hc-link-in { from { opacity: 0 } }
+.hc-link-trace { fill: none; stroke: var(--border-strong); stroke-width: 1.2; stroke-linecap: round; stroke-dasharray: 1.5 6.5; opacity: .5; animation: hc-flow 1.8s linear infinite }
+.hc-link.is-on .hc-link-trace { stroke: var(--accent-strong); opacity: .95; animation-duration: .9s }
+@keyframes hc-flow { to { stroke-dashoffset: -8 } }
+.hc-link-halo { fill: none; stroke: var(--accent); stroke-width: 8; stroke-linecap: round; opacity: .2 }
+.hc-link-pulse { fill: none; stroke: var(--honey-top); stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 8 92; stroke-dashoffset: 8; animation: hc-pulse 2.4s cubic-bezier(.45, 0, .55, 1) infinite }
+.hc-link-pulse.is-glow { stroke: var(--accent); stroke-width: 9; opacity: .7 }
+.is-panel .hc-link-pulse { animation-delay: 1.2s }
+@keyframes hc-pulse { to { stroke-dashoffset: -100 } }
+.hc-link-node { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 1.2 }
+.hc-link.is-on .hc-link-node, .hc-link-node.is-hub { fill: var(--accent-strong); stroke: none }
+.hc-link-ping { fill: none; stroke: var(--accent-strong); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: hc-ping 2.4s ease-out 2.1s infinite both }
+@keyframes hc-ping { from { transform: scale(.5); opacity: .9 } to { transform: scale(3); opacity: 0 } }
+@media (prefers-reduced-motion: reduce) {
+  .hc-link, .hc-link-trace, .hc-link-ping { animation: none }
+  .hc-link-pulse { display: none }
+}
