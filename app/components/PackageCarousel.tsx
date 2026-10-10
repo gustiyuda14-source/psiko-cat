@@ -152,7 +152,7 @@ export function PackageCarousel({
                   <polygon points={HEX} className="hc-core-base" />
                   <g clipPath="url(#pc-hex)">
                     {/* Saat 0% tetap ada "benih" madu tipis yang beriak di dasar sel, ajakan mulai mengisi. */}
-                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, Math.max(p, 0.06))}px)` }}>
+                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, Math.max(p, 0.18))}px)` }}>
                       <g className="hc-honey-x is-live">
                         <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
                       </g>
