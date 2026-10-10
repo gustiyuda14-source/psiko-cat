@@ -8,7 +8,7 @@ export default function DrillPage() {
       <PageHeader
         kicker="Drilling"
         title="Drilling per jenis soal"
-        description="Latih satu jenis soal sampai lancar. Setiap set berisi 10 soal dengan pembahasan langsung setelah menjawab. Progres tersimpan di perangkat ini."
+        description="Latih satu jenis soal sampai lancar. Semua soal kartu tampil di panel nomor, dikelompokkan per level, dengan pembahasan langsung setelah menjawab. Progres tersimpan di perangkat ini."
       />
       <DrillCatalog cards={drillCatalog()} />
     </div>

@@ -147,13 +147,13 @@
 @keyframes hc-breathe { 50% { stroke-opacity: .35 } }
 .hc-meter-pct { font: 700 2rem/1 var(--font-display-src), sans-serif; letter-spacing: -.03em; color: var(--foreground) }
 .hc-meter-of { font-size: .875rem; line-height: 1.35; color: var(--muted-foreground) }
-.hc-tiers { list-style: none; margin: 16px 0 0; padding: 0; border-top: 1px solid var(--border) }
-.hc-tiers li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--border) }
-.hc-tiers b { display: block; font: 600 .95rem var(--font-display-src), sans-serif; color: var(--foreground) }
-.hc-tiers span { display: block; font-size: .8rem; color: var(--muted-foreground) }
-.hc-pips { display: flex !important; gap: 3px; margin-top: 6px }
-.hc-pips i { width: 9px; height: 10px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--border) }
-.hc-pips i.is-on { background: var(--honey-bot) }
+.hc-levels { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none }
+.hc-level { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-inset); font-size: .8rem }
+.hc-level b { font: 600 .8rem/1 var(--font-display-src), sans-serif; color: var(--foreground) }
+.hc-level span { color: var(--muted-foreground) }
+.hc-level::before { content: ""; width: 8px; height: 9px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot); opacity: .45 }
+.hc-level[data-tier="2"]::before { opacity: .75 }
+.hc-level[data-tier="3"]::before { opacity: 1 }
 .hc-actions { display: grid; gap: 8px; margin-top: 20px }
 
 @media (prefers-reduced-motion: reduce) {

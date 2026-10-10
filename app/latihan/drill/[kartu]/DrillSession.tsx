@@ -1,10 +1,11 @@
 "use client";
 
 import QuestionPassage from "@/app/components/QuestionPassage";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { SafeDrillItem } from "@/lib/drill-bank";
-import { DRILL_SET_SIZE, DRILL_TIERS, readDrillProgress, writeDrillProgress } from "@/lib/drill-cards";
+import { DRILL_TIERS, readDrillProgress, writeDrillProgress, type DrillProgress } from "@/lib/drill-cards";
+import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
 import { ExamBar, ExamBody, ExamDock } from "@/app/components/ExamChrome";
 import { Badge, EmptyState } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
@@ -16,34 +17,23 @@ type Result = { benar: boolean; kunci: string[]; pembahasan: string; gambar_pemb
 const LETTERS = ["a", "b", "c", "d", "e"];
 const tierLabel = (t: number) => DRILL_TIERS.find((x) => x.tier === t)?.label ?? "";
 
-// Set berikutnya (pola dajiks-cest): soal yang belum pernah dikerjakan dulu, lalu yang pernah
-// salah, lalu sisanya. Dipanggil dari klik tombol, jadi localStorage aman dibaca di sini.
-function pickSet(items: SafeDrillItem[], tier: number | null): string[] {
-  const progress = readDrillProgress();
-  const pool = items.filter((it) => tier === null || it.tier === tier);
-  const rank = (it: SafeDrillItem) => {
-    const p = progress[it.id];
-    if (!p) return 0;
-    return p[0] < p[1] ? 1 : 2;
-  };
-  return [...pool]
-    .sort((a, b) => rank(a) - rank(b) || a.tier - b.tier)
-    .slice(0, DRILL_SET_SIZE)
-    .map((it) => it.id);
+type NavState = "ok" | "bad" | "done" | "todo";
+const NAV_LABEL: Record<NavState, string> = { ok: "Benar", bad: "Pernah salah", done: "Dipilih, belum diperiksa", todo: "Belum dikerjakan" };
+
+// Soal pertama yang dibuka (pola dajiks-cest): yang belum pernah dikerjakan, lalu yang pernah salah, lalu soal 1.
+function startIndex(items: SafeDrillItem[], progress: DrillProgress) {
+  const fresh = items.findIndex((it) => !progress[it.id]);
+  if (fresh >= 0) return fresh;
+  const wrong = items.findIndex((it) => progress[it.id][0] < progress[it.id][1]);
+  return Math.max(0, wrong);
 }
 
-export default function DrillSession({
-  label,
-  tier,
-  items,
-}: {
-  label: string;
-  tier: number | null;
-  items: SafeDrillItem[];
-}) {
-  const byId = new Map(items.map((it) => [it.id, it]));
-  const [setIds, setSetIds] = useState<string[] | null>(null);
-  const [idx, setIdx] = useState(0);
+export default function DrillSession({ label, items: raw }: { label: string; items: SafeDrillItem[] }) {
+  // Semua soal kartu, urut Dasar → Menengah → Lanjut; nomor soal = posisi di daftar ini.
+  const items = useMemo(() => [...raw].sort((a, b) => a.tier - b.tier), [raw]);
+  const progress = useDrillProgress();
+  // null = belum memilih soal sendiri; ikut startIndex sampai progres localStorage terbaca.
+  const [chosen, setChosen] = useState<number | null>(null);
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [results, setResults] = useState<Record<string, Result>>({});
   // Setelah Periksa, gulir ke pembahasan (opsi panjang + dock bawah bisa menutupinya).
@@ -52,24 +42,21 @@ export default function DrillSession({
   const [error, setError] = useState<string | null>(null);
   const shownAt = useRef(0);
 
-  const q = setIds ? byId.get(setIds[idx]) : undefined;
+  const idx = chosen ?? startIndex(items, progress);
+  const q = items[idx];
   const picked = q ? picks[q.id] ?? "" : "";
   const result = q ? results[q.id] : undefined;
   const need = q?.multi ? 2 : 1;
-  const poolSize = items.filter((it) => tier === null || it.tier === tier).length;
 
-  const goTo = useCallback((i: number) => {
-    setIdx(i);
-    setError(null);
+  useEffect(() => {
     shownAt.current = performance.now();
   }, []);
 
-  const startSet = () => {
-    setSetIds(pickSet(items, tier));
-    setPicks({});
-    setResults({});
-    goTo(0);
-  };
+  const goTo = useCallback((i: number) => {
+    setChosen(i);
+    setError(null);
+    shownAt.current = performance.now();
+  }, []);
 
   const choose = useCallback(
     (key: string) => {
@@ -88,6 +75,8 @@ export default function DrillSession({
 
   const check = async () => {
     if (!q || picked.length !== need || checking) return;
+    // Kunci posisi: progres baru akan menggeser startIndex, soal ini harus tetap tampil dengan pembahasannya.
+    setChosen(idx);
     setChecking(true);
     setError(null);
     const ms = Math.round(performance.now() - shownAt.current);
@@ -116,8 +105,8 @@ export default function DrillSession({
     enabled: Boolean(q),
     choiceKeys: (q ? LETTERS.filter((k) => k in q.opsi) : LETTERS).map((k) => k.toUpperCase()),
     onChoose: choose,
-    onPrev: () => setIds && goTo(Math.max(0, idx - 1)),
-    onNext: () => setIds && goTo(Math.min(setIds.length - 1, idx + 1)),
+    onPrev: () => goTo(Math.max(0, idx - 1)),
+    onNext: () => goTo(Math.min(items.length - 1, idx + 1)),
   });
 
   const exit = (
@@ -126,74 +115,77 @@ export default function DrillSession({
       Keluar drilling
     </Link>
   );
-  const subtitle = `${tier ? tierLabel(tier) : "Semua tingkat"} · ${DRILL_SET_SIZE} soal per set`;
-
-  if (!setIds) {
+  if (!q) {
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={`Drilling ${label}`} count={subtitle} actions={exit} />
+        <ExamBar title={`Drilling ${label}`} count="0 soal" actions={exit} />
         <div className="app-page">
-          {poolSize === 0 ? (
-            <EmptyState title="Belum ada soal" description="Tingkat ini belum punya soal. Pilih tingkat lain dari katalog drilling." />
-          ) : (
-            <div className="surface-card mx-auto max-w-2xl space-y-5 px-5 py-6 sm:px-7 sm:py-7">
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Pilih jawaban lalu tekan <b>Periksa</b>. Kunci dan pembahasan langsung muncul, jadi kamu tahu letak salahnya
-                saat itu juga. Soal yang belum pernah dikerjakan didahulukan, lalu soal yang pernah salah.
-              </p>
-              <dl className="inset-panel grid grid-cols-3 gap-4 px-5 py-4">
-                <div>
-                  <dt className="text-xs text-muted-foreground">Bank soal</dt>
-                  <dd className="tnum font-heading text-lg text-foreground">{poolSize}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-muted-foreground">Per set</dt>
-                  <dd className="tnum font-heading text-lg text-foreground">{Math.min(DRILL_SET_SIZE, poolSize)}</dd>
-                </div>
-                <div>
-                  <dt className="text-xs text-muted-foreground">Batas waktu</dt>
-                  <dd className="font-heading text-lg text-foreground">Tidak ada</dd>
-                </div>
-              </dl>
-              <Button variant="accent" size="lg" block onClick={startSet}>
-                Mulai set
-                <ArrowRight className="size-4" />
-              </Button>
-            </div>
-          )}
+          <EmptyState title="Belum ada soal" description="Soal untuk kartu ini sedang disiapkan. Pilih kartu lain dari katalog drilling." />
         </div>
       </div>
     );
   }
 
-  if (!q) return null;
-  const done = Object.keys(results).length;
+  // Warna nomor: hasil sesi ini dulu, lalu pilihan yang belum diperiksa, lalu riwayat di perangkat ini.
+  const stateOf = (id: string): NavState => {
+    const r = results[id];
+    if (r) return r.benar ? "ok" : "bad";
+    if (picks[id]) return "done";
+    const p = progress[id];
+    return p ? (p[0] === p[1] ? "ok" : "bad") : "todo";
+  };
+  const states = items.map((it) => stateOf(it.id));
+  const count = { ok: 0, bad: 0, done: 0, todo: 0 };
+  for (const st of states) count[st]++;
+  const worked = items.length - count.todo - count.done;
 
   return (
     <div className="min-h-[100dvh] bg-background">
-      <ExamBar title={`Drilling ${label}`} count={`${subtitle} · ${done}/${setIds.length} diperiksa`} actions={exit} />
+      <ExamBar title={`Drilling ${label}`} count={`Soal ${idx + 1} dari ${items.length} · ${tierLabel(q.tier)}`} actions={exit} />
       <ExamBody
         navigator={
           <aside className="order-2 bg-card p-5 lg:sticky lg:top-[58px] lg:h-[calc(100dvh-58px)] lg:w-[300px] lg:shrink-0 lg:overflow-auto lg:border-l lg:border-border" aria-label="Navigasi soal">
-            <h3 className="dnav-title">Soal di set ini</h3>
-            <div className="dnav-grid">
-              {setIds.map((id, i) => {
-                const r = results[id];
-                const state = r ? (r.benar ? "benar" : "salah") : picks[id] ? "dipilih" : "belum";
-                return (
-                  <button
-                    key={id}
-                    type="button"
-                    onClick={() => goTo(i)}
-                    aria-current={i === idx ? "step" : undefined}
-                    aria-label={`Soal ${i + 1}, ${state}`}
-                    className={`dnum ${r ? (r.benar ? "is-ok" : "is-bad") : picks[id] ? "is-done" : ""}`}
-                  >
-                    {i + 1}
-                  </button>
-                );
-              })}
+            <div className="dnav-head">
+              <div>
+                <p className="dnav-kicker">Drilling · {label}</p>
+                <p className="dnav-count">
+                  <b>{worked}</b>/{items.length} <span>soal dikerjakan</span>
+                </p>
+              </div>
             </div>
+            <ul className="dnav-legend">
+              {(Object.keys(count) as NavState[])
+                .filter((k) => k !== "done" || count.done)
+                .map((k) => (
+                  <li key={k}>
+                    <i className={`dnum is-${k}`} aria-hidden="true" />
+                    {NAV_LABEL[k]} <b>{count[k]}</b>
+                  </li>
+                ))}
+            </ul>
+            {DRILL_TIERS.map(({ tier, label: lv }) => {
+              const own = items.map((it, i) => [it, i] as const).filter(([it]) => it.tier === tier);
+              if (!own.length) return null;
+              return (
+                <section key={tier}>
+                  <h3 className="dnav-title">{lv}</h3>
+                  <div className="dnav-grid">
+                    {own.map(([it, i]) => (
+                      <button
+                        key={it.id}
+                        type="button"
+                        onClick={() => goTo(i)}
+                        aria-current={i === idx ? "step" : undefined}
+                        aria-label={`Soal ${i + 1}, ${lv}, ${NAV_LABEL[states[i]].toLowerCase()}`}
+                        className={`dnum is-${states[i]}`}
+                      >
+                        {i + 1}
+                      </button>
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
           </aside>
         }
       >
@@ -257,7 +249,7 @@ export default function DrillSession({
                   {p}
                 </p>
               ))}
-              {idx < setIds.length - 1 && (
+              {idx < items.length - 1 && (
                 <Button variant="primary" className="mt-4" onClick={() => goTo(idx + 1)}>
                   Soal berikutnya
                   <ArrowRight className="size-4" />
@@ -278,9 +270,9 @@ export default function DrillSession({
       </ExamBody>
       <ExamDock
         onPrev={() => goTo(Math.max(0, idx - 1))}
-        onNext={() => goTo(Math.min(setIds.length - 1, idx + 1))}
+        onNext={() => goTo(Math.min(items.length - 1, idx + 1))}
         prevDisabled={idx === 0}
-        nextDisabled={idx >= setIds.length - 1}
+        nextDisabled={idx >= items.length - 1}
         prevLabel="Soal sebelumnya"
         nextLabel="Soal berikutnya"
       />

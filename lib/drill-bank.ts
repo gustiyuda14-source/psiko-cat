@@ -1,6 +1,6 @@
 import "server-only";
 import bank from "@/data/drill-bank.json";
-import { DRILL_CARDS } from "@/lib/drill-cards";
+import { DRILL_ASPEK, DRILL_CARDS } from "@/lib/drill-cards";
 
 // Bank drill hasil `npm run build:drill` (bank/drill/** → data/drill-bank.json).
 // SERVER ONLY: kunci dan pembahasan ada di sini; ke browser hanya SafeDrillItem.
@@ -63,9 +63,11 @@ export function drillItemsFor(kartu: string): SafeDrillItem[] {
   return ITEMS.filter((it) => it.kartu === kartu).map(safeDrillItem);
 }
 
-/** Ringkasan per kartu untuk katalog: id soal per tier (tanpa isi soal). */
+/** Ringkasan per kartu untuk katalog: id soal per tier (tanpa isi soal). Urut per aspek supaya
+ *  kartu baru (mis. K16 logika) masuk kelompok aspeknya di roda, bukan di ujung daftar. */
 export function drillCatalog() {
-  return Object.entries(DRILL_CARDS).map(([kartu, card]) => {
+  const order = (k: string) => DRILL_ASPEK.findIndex((a) => a.key === DRILL_CARDS[k].aspek);
+  return Object.entries(DRILL_CARDS).sort(([a], [b]) => order(a) - order(b)).map(([kartu, card]) => {
     const items = ITEMS.filter((it) => it.kartu === kartu);
     return {
       kartu,

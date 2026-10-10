@@ -65,7 +65,7 @@
 @media (prefers-reduced-motion: reduce) { .dnum, .xround, .opt { transition: none } .dnum:hover, .xround:hover:not(:disabled) { transform: none } }
 
 /* Kartu soal: instruksi + bacaan + teks soal + gambar dalam satu kotak, teks tegas dan cukup besar. */
-.q-card { display: grid; gap: .875rem; padding: clamp(1rem, 2vw, 1.5rem); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
+.q-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: .875rem; padding: clamp(1rem, 2vw, 1.5rem); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
 .q-ins { margin: 0; color: var(--foreground); font-size: .9375rem; font-weight: 600; line-height: 1.5 }
 .q-stem { margin: 0; max-width: 70ch; color: var(--foreground); font-size: clamp(1.125rem, 1.5vw, 1.375rem); font-weight: 600; line-height: 1.6 }
 .q-passage { padding: 1rem 1.25rem; border-left: 3px solid var(--border); border-radius: var(--r-md); background: var(--surface-inset) }

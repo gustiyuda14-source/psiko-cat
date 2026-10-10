@@ -1,50 +1,19 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
 import { SectorCards, type Sector } from "@/app/components/SectorCards";
 import { fillY, hexPoints, wavePath } from "@/lib/honey";
-import {
-  DRILL_ASPEK,
-  DRILL_PROGRESS_KEY,
-  DRILL_TIERS,
-  readDrillProgress,
-  writeDrillProgress,
-  type DrillCard,
-  type DrillProgress,
-} from "@/lib/drill-cards";
+import { DRILL_ASPEK, DRILL_TIERS, readDrillProgress, writeDrillProgress, type DrillCard, type DrillProgress } from "@/lib/drill-cards";
+import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
 
 type CatalogCard = DrillCard & { kartu: string; tiers: string[][] };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
-
-// localStorage sebagai external store: string mentah stabil antar render, server = "".
-function subscribe(onChange: () => void) {
-  window.addEventListener("storage", onChange);
-  window.addEventListener("drill-progress", onChange);
-  return () => {
-    window.removeEventListener("storage", onChange);
-    window.removeEventListener("drill-progress", onChange);
-  };
-}
-function useProgress(): DrillProgress {
-  const raw = useSyncExternalStore(
-    subscribe,
-    () => {
-      try {
-        return localStorage.getItem(DRILL_PROGRESS_KEY) ?? "";
-      } catch {
-        return "";
-      }
-    },
-    () => ""
-  );
-  return useMemo(() => (raw ? readDrillProgress() : {}), [raw]);
-}
 
 function stats(ids: string[], progress: DrillProgress) {
   const done = ids.filter((id) => progress[id]);
@@ -72,7 +41,7 @@ function MiniHexes({ fills }: { fills: (number | null)[] }) {
 
 export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const router = useRouter();
-  const progress = useProgress();
+  const progress = useDrillProgress();
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(cards[0]?.kartu ?? "");
@@ -136,14 +105,12 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
     };
   });
 
-  const start = (kartu: string, tier?: number) =>
-    router.push(`/latihan/drill/${kartu}${tier ? `?tier=${tier}` : ""}`);
+  const start = (kartu: string) => router.push(`/latihan/drill/${kartu}`);
 
   const resetCard = () => {
     const next = { ...readDrillProgress() };
     for (const id of card.tiers.flat()) delete next[id];
     writeDrillProgress(next);
-    window.dispatchEvent(new Event("drill-progress"));
     setResetStep(0);
   };
 
@@ -238,28 +205,17 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
                 </span>
               </div>
 
-              <ul className="hc-tiers">
+              <ul className="hc-levels" aria-label="Level soal di kartu ini">
                 {DRILL_TIERS.map(({ tier, label }) => {
                   const ids = card.tiers[tier - 1];
+                  if (!ids.length) return null;
                   const s = stats(ids, progress);
                   return (
-                    <li key={tier}>
-                      <div className="min-w-0">
-                        <b>{label}</b>
-                        <span className="tnum">
-                          {ids.length ? `${s.done}/${s.total} dikerjakan${s.acc !== null ? ` · akurasi ${s.acc}%` : ""}` : "Belum ada soal"}
-                        </span>
-                        {ids.length > 0 && (
-                          <span className="hc-pips" aria-hidden="true">
-                            {Array.from({ length: 10 }, (_, j) => (
-                              <i key={j} className={j < Math.round((s.done / s.total) * 10) ? "is-on" : ""} />
-                            ))}
-                          </span>
-                        )}
-                      </div>
-                      <Button variant="secondary" size="sm" disabled={!ids.length} onClick={() => start(card.kartu, tier)}>
-                        {s.done ? "Lanjut" : "Mulai"}
-                      </Button>
+                    <li key={tier} className="hc-level" data-tier={tier}>
+                      <b>{label}</b>
+                      <span className="tnum">
+                        {s.done}/{s.total}
+                      </span>
                     </li>
                   );
                 })}
@@ -267,7 +223,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
               <div className="hc-actions">
                 <Button variant="primary" size="lg" block onClick={() => start(card.kartu)}>
-                  Campuran semua tingkat
+                  {cardStats.done ? "Lanjutkan drilling" : "Mulai drilling"}
                   <ArrowRight className="size-4" />
                 </Button>
                 <Button variant="ghost" onClick={() => setResetStep(1)} disabled={!cardStats.done}>
