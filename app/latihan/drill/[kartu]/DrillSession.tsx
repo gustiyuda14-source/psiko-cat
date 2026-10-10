@@ -11,7 +11,7 @@ import { Button } from "@/app/components/ui-client";
 import { ArrowRight, Check, Close } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 
-type Result = { benar: boolean; kunci: string[]; pembahasan: string; ms: number };
+type Result = { benar: boolean; kunci: string[]; pembahasan: string; gambar_pembahasan?: string | null; ms: number };
 
 const LETTERS = ["a", "b", "c", "d", "e"];
 const tierLabel = (t: number) => DRILL_TIERS.find((x) => x.tier === t)?.label ?? "";
@@ -275,6 +275,13 @@ export default function DrillSession({
               }}
               className={`scroll-mb-28 rounded-md border p-4 text-sm leading-relaxed ${result.benar ? "border-success/40 bg-success-soft" : "border-destructive/40 bg-destructive-soft"}`} role="status">
               <p className="mb-2 font-heading text-base text-foreground">{result.benar ? "Benar" : `Belum tepat — kunci ${result.kunci.join(", ").toUpperCase()}`}</p>
+              {result.gambar_pembahasan && (
+                <figure className="my-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={result.gambar_pembahasan} alt="Gambar pembahasan: jawaban yang benar" className="q-figure" />
+                  <figcaption className="mt-1 text-center text-xs text-muted-foreground">Gambar pembahasan</figcaption>
+                </figure>
+              )}
               {result.pembahasan.split("<br>").map((p, i) => (
                 <p key={i} className="mt-2 text-foreground">
                   {p}

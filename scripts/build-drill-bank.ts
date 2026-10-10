@@ -30,7 +30,7 @@ type Item = {
   gambar?: string | null; opsi_gambar?: Record<string, string> | null;
   opsi: Record<string, string>; kunci: string[];
   hitung?: string; nilai_opsi?: Record<string, Value>;
-  pembahasan: string; status_kunci: string;
+  pembahasan: string; status_kunci: string; gambar_pembahasan?: string;
 };
 
 const args = new Set(process.argv.slice(2));
@@ -127,6 +127,8 @@ function checkItem(it: Item, file: string) {
   }
   for (const img of [it.gambar, ...Object.values(it.opsi_gambar ?? {})])
     if (img && !existsSync(join(ROOT, "public", img))) fail(id, `gambar ${img} tidak ada di public/`);
+  if (it.gambar_pembahasan !== undefined && (!/^[\w.-]+\.(png|svg)$/.test(it.gambar_pembahasan) || !existsSync(join(ROOT, "data/drill-pembahasan", it.gambar_pembahasan))))
+    fail(id, `gambar_pembahasan ${it.gambar_pembahasan} tidak ada di data/drill-pembahasan/`);
   checkKey(it);
 }
 

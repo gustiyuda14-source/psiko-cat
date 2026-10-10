@@ -28,5 +28,7 @@ export async function POST(req: NextRequest) {
     benar: picked.join("") === kunci.join(""),
     kunci,
     pembahasan: item.pembahasan,
+    // Gambar pembahasan memperlihatkan jawaban, jadi alamatnya baru diberikan setelah peserta menjawab.
+    gambar_pembahasan: item.gambar_pembahasan ? `/api/drill/gambar/${item.id}` : null,
   });
 }

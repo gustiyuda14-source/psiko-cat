@@ -25,6 +25,8 @@ export type DrillItem = {
   opsi: Record<string, string>;
   kunci: string[];
   pembahasan: string;
+  /** Gambar pembahasan (jawaban terisi / urutan benar) di data/drill-pembahasan/, SERVER ONLY. */
+  gambar_pembahasan?: string;
   status_kunci: string;
 };
 
