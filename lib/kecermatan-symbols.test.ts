@@ -14,7 +14,7 @@ for (const shown of [["◆", "◆", "♫", "✦"], ["◆", "🍀", "♫"], ["◆
 assert.equal(getMissingSymbolKey({ symbol_map: { ...symbol_map, E: "◆" }, shown: ["◆", "🍀", "♫", "✦"], choices: [...KECERMATAN_KEYS] }), null);
 assert.equal(getMissingSymbolKey(null as unknown as KecermatanOptionsPayload), null);
 let verified = 0;
-for (const id of [3, 4, 5, 6, 7, 8, 201]) {
+for (const id of [3, 4, 5, 6, 7, 8, 201, 202]) {
   const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
     kolom: { simbol: KecermatanOptionsPayload["symbol_map"]; soal: { shown: string[]; kunci: string }[] }[];
   };
@@ -23,5 +23,5 @@ for (const id of [3, 4, 5, 6, 7, 8, 201]) {
     verified++;
   }
 }
-assert.equal(verified, 3500);
+assert.equal(verified, 4000);
 console.log(`Kecermatan: ${verified} source answers, all keys, emoji, ordering, and malformed payload checks passed.`);
