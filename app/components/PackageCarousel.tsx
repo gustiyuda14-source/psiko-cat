@@ -1,20 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { ArrowRight } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
+import { DrillWheel, type WheelCard } from "@/app/dashboard/drill/DrillWheel";
 import { fillY, wavePath } from "@/lib/honey";
 import { clearLatihanProgress, useLatihanProgress } from "@/lib/latihan-progress";
 
 /*
-  Pemilih paket latihan bergaya rak tabung ukur: satu tabung per paket, madu =
-  capaian terjauh (butir terbanyak yang pernah dijawab dalam satu sesi, dari
-  lib/latihan-progress.ts). Garis ukur 10 kolom untuk Kecermatan, 4 untuk modul
-  lain. Panel di samping berisi rincian paket + tombol mulai; untuk Kecermatan
-  juga rincian kolom dan pilihan timer per kolom (dulu modal). Nama komponen
-  dipertahankan supaya pemanggilnya tidak berubah. CSS di app/honey.css.
+  Pemilih paket latihan memakai roda madu yang sama dengan katalog drilling: satu
+  irisan per paket, satu cincin per kolom (10 untuk Kecermatan, 4 bagian untuk modul
+  lain), madu = capaian terjauh (butir terbanyak yang pernah dijawab dalam satu sesi,
+  dari lib/latihan-progress.ts). Roda berputar supaya paket terpilih berhenti di
+  penanda. Panel di samping berisi rincian paket + tombol mulai; untuk Kecermatan juga
+  rincian kolom dan pilihan timer per kolom. Nama komponen dipertahankan supaya
+  pemanggilnya tidak berubah. CSS di app/honey.css.
 */
 
 export type PackageSection = {
@@ -33,34 +35,8 @@ export type PackageOption = {
   sections?: PackageSection[];
 };
 
-const TUBE_D = "M5 14 V146 A15 15 0 0 0 35 146 V14";
-const WAVE = wavePath(20, 2, -40, 80, 180);
-
-function Tube({ p, marks, locked, live }: { p: number; marks: number; locked: boolean; live: boolean }) {
-  const ys = Array.from({ length: marks - 1 }, (_, i) => 14 + (147 * (i + 1)) / marks);
-  return (
-    <svg viewBox="0 0 40 170" aria-hidden="true">
-      <path className="hc-tube-body" d={`${TUBE_D} Z`} />
-      <g clipPath="url(#pc-tube-in)">
-        {locked && <rect width="40" height="170" fill="url(#pc-hatch)" />}
-        <g className="hc-honey-y" style={{ transform: `translateY(${fillY(14, 147, p)}px)` }}>
-          <g className={live ? "hc-honey-x is-live is-tube" : "hc-honey-x"}>
-            <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
-          </g>
-        </g>
-      </g>
-      {ys.map((y) => (
-        <g key={y}>
-          <path className="hc-tube-div" d={`M8 ${y} H32`} />
-          <path className="hc-tube-tick" d={`M37 ${y} h3`} />
-        </g>
-      ))}
-      <path className="hc-tube-glare" d="M11 22 V136" />
-      <rect className="hc-tube-lip" x="1.5" y="8" width="37" height="6" rx="2" />
-      <path className="hc-tube-line" d={TUBE_D} />
-    </svg>
-  );
-}
+const WAVE = wavePath(50, 4.5, -100, 200, 140);
+const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
 
 export function PackageCarousel({
   packages,
@@ -87,6 +63,7 @@ export function PackageCarousel({
   const [selected, setSelected] = useState(firstReady?.id ?? packages[0]?.id);
   const [timedMode, setTimedMode] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
+  const panelRef = useRef<HTMLElement>(null);
 
   const marks = packages.some((p) => p.sections) ? 10 : 4;
   const view = packages.map((pkg) => {
@@ -102,6 +79,22 @@ export function PackageCarousel({
   const perColumn = pkg.sections?.length ? (pkg.questionCount ?? 0) / pkg.sections.length : 0;
   const status = (v: (typeof view)[number]) =>
     !v.ready ? "Belum tersedia" : v.p >= 1 ? "Selesai" : v.p > 0 ? `${Math.round(v.p * 100)}%` : "Belum mulai";
+  const ring = (v: (typeof view)[number], k: number) => Math.max(0, Math.min(1, v.p * marks - k));
+  const wheel: WheelCard[] = view.map((v, i) => ({
+    kartu: String(v.pkg.id),
+    no: String(i + 1).padStart(2, "0"),
+    label: v.pkg.label,
+    aspek: "paket",
+    aspekLabel: "",
+    tiers: Array.from({ length: marks }, (_, k) => ring(v, k)),
+    p: v.p,
+    locked: !v.ready,
+    match: true,
+    aria: `${v.pkg.label}, ${status(v)}${v.ready ? `, ${v.done} dari ${v.pkg.questionCount} ${unitLabel}` : ""}`,
+  }));
+  const ready_ = view.filter((v) => v.ready);
+  const doneAll = ready_.reduce((n, v) => n + v.done, 0);
+  const totalAll = ready_.reduce((n, v) => n + (v.pkg.questionCount ?? 0), 0);
   const href = pkg.sections ? `${hrefBase}/${pkg.id}?autostart=1${timedMode ? "&timed=1" : ""}` : `${hrefBase}/${pkg.id}`;
 
   return (
@@ -113,47 +106,28 @@ export function PackageCarousel({
         </h2>
       </div>
 
-      <svg width="0" height="0" className="absolute" aria-hidden="true">
-        <defs>
-          <clipPath id="pc-tube-in">
-            <path d="M8 14 V146 A12 12 0 0 0 32 146 V14 Z" />
-          </clipPath>
-          <linearGradient id="pc-honey" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="var(--honey-top)" />
-            <stop offset="1" stopColor="var(--honey-bot)" />
-          </linearGradient>
-          <pattern id="pc-hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-            <rect width="7" height="7" fill="var(--surface-card)" />
-            <rect width="2.5" height="7" fill="var(--hatch)" />
-          </pattern>
-        </defs>
-      </svg>
-
       <div className="hc-stage">
-        <div className="hc-field hc-frame hc-rackfield">
-          <p className="hc-hud" aria-hidden="true">
-            Rak <b>{moduleLabel}</b>&nbsp; {packages.length} paket
-          </p>
-          <div className="hc-rack" role="group" aria-label={`Paket ${moduleLabel}`}>
-            {view.map((v, i) => (
-              <button
-                key={v.pkg.id}
-                type="button"
-                className={`hc-tube${v.ready ? "" : " is-locked"}`}
-                aria-pressed={v.pkg.id === current.pkg.id}
-                aria-label={`${v.pkg.label}, ${status(v)}${v.ready ? `, ${v.done} dari ${v.pkg.questionCount} ${unitLabel}` : ""}`}
-                style={{ animationDelay: `${i * 40}ms` }}
-                onClick={() => setSelected(v.pkg.id)}
-              >
-                <Tube p={v.p} marks={marks} locked={!v.ready} live={v.pkg.id === current.pkg.id && v.p > 0 && v.p < 1} />
-                <span className="hc-tube-name">{v.pkg.label}</span>
-                <span className="hc-tube-meta tnum">{status(v)}</span>
-              </button>
-            ))}
-          </div>
+        <div className="hc-field">
+          <DrillWheel
+            cards={wheel}
+            selected={String(current.pkg.id)}
+            overall={{ p: totalAll ? doneAll / totalAll : 0, done: doneAll, total: totalAll }}
+            unit={unitLabel}
+            hud={
+              <>
+                Roda <b>{moduleLabel}</b>&nbsp; {packages.length} paket
+              </>
+            }
+            legend={marks === 10 ? "Satu cincin per kolom: dalam kolom 1, luar kolom 10." : "Satu cincin per seperempat paket, dari dalam ke luar."}
+            onSelect={(id, again) => {
+              setSelected(Number(id));
+              // Ketuk irisan yang sudah terpilih = lanjut ke tombol mulai di panel.
+              if (again) panelRef.current?.querySelector<HTMLElement>("a, button:not(:disabled)")?.focus();
+            }}
+          />
         </div>
 
-        <aside className="hc-panel" aria-live="polite" key={pkg.id}>
+        <aside ref={panelRef} className="hc-panel" aria-live="polite" key={pkg.id}>
           <div className="hc-panel-top">
             <span className="hc-tag">{moduleLabel.split(" ")[0]}</span>
             <span className="hc-code tnum">{ready ? `${completeLabel} · tanpa timer` : "Belum tersedia"}</span>
@@ -168,14 +142,23 @@ export function PackageCarousel({
           ) : (
             <>
               <div className="hc-meter">
-                <svg viewBox="0 0 40 170" className="hc-meter-tube" aria-hidden="true">
-                  <path className="hc-tube-body" d={`${TUBE_D} Z`} />
-                  <g clipPath="url(#pc-tube-in)">
-                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(14, 147, p)}px)` }}>
+                <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
+                  <defs>
+                    <clipPath id="pc-hex">
+                      <polygon points={HEX} />
+                    </clipPath>
+                    <linearGradient id="pc-honey" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stopColor="var(--honey-top)" />
+                      <stop offset="1" stopColor="var(--honey-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <polygon points={HEX} className="hc-core-base" />
+                  <g clipPath="url(#pc-hex)">
+                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
                       <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
                     </g>
                   </g>
-                  <path className="hc-tube-line" d={TUBE_D} />
+                  <polygon points={HEX} className="hc-core-line" />
                 </svg>
                 <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
                 <span className="hc-meter-of tnum">

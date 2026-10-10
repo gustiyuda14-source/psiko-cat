@@ -165,30 +165,9 @@
 .hc-scores em { font: 700 1.15rem var(--font-display-src), sans-serif; font-style: normal; color: var(--foreground) }
 .hc-scores em.is-na { font-size: .85rem; color: var(--muted-foreground) }
 @media (max-width: 760px) { .hc-cubes { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
-@media (prefers-reduced-motion: reduce) { .hc-cube, .hc-tube { animation: none } }
+@media (prefers-reduced-motion: reduce) { .hc-cube { animation: none } }
 
-/* ── Rak tabung Latihan ── */
-.hc-rackfield { padding: 52px 12px 24px }
-.hc-rack { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 30px 8px }
-.hc-tube { position: relative; display: grid; justify-items: center; gap: 6px; padding: 6px 0 10px; border: 0; border-bottom: 1.5px solid var(--border-strong); background: none; animation: hc-in 560ms var(--e-out) both }
-.hc-tube svg { width: 44px; height: 176px; overflow: visible; filter: drop-shadow(0 6px 10px rgb(27 42 92 / .1)); transition: transform 320ms var(--e-out), filter 320ms }
-.hc-tube:hover svg { transform: translateY(-4px) }
-.hc-tube[aria-pressed="true"] svg { transform: translateY(-10px); filter: drop-shadow(0 10px 16px rgb(27 42 92 / .16)) drop-shadow(0 0 18px var(--hc-glow)) }
-.hc-tube:focus-visible { outline: none }
-.hc-tube:focus-visible .hc-tube-line { stroke: var(--ring); stroke-width: 3 }
-.hc-tube-body { fill: var(--surface-card) }
-.hc-tube-line { fill: none; stroke: var(--border-strong); stroke-width: 1.2; vector-effect: non-scaling-stroke }
-.hc-tube[aria-pressed="true"] .hc-tube-line { stroke: var(--brand-ink); stroke-width: 2.2 }
-.hc-tube-lip { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 1; vector-effect: non-scaling-stroke }
-.hc-tube-div { stroke: var(--border); stroke-dasharray: 2 2; vector-effect: non-scaling-stroke }
-.hc-tube-tick { stroke: var(--border-strong); vector-effect: non-scaling-stroke }
-.hc-tube-glare { stroke: rgb(255 255 255 / .9); stroke-width: 2.5; stroke-linecap: round; vector-effect: non-scaling-stroke }
-.hc-tube-name { font: 600 .9rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
-.hc-tube-meta { font: 600 .75rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
-.hc-tube[aria-pressed="true"] .hc-tube-name { color: var(--accent-ink) }
-.hc-honey-x.is-live.is-tube { animation-name: hc-wave20 }
-@keyframes hc-wave20 { to { transform: translateX(-20px) } }
-.hc-meter-tube { width: 22px; height: 62px; flex: none; overflow: visible }
+/* ── Panel paket Latihan ── */
 .hc-cols { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin-top: 14px }
 .hc-cols i { position: relative; height: 26px; border-radius: 4px; background: var(--border) }
 .hc-cols i.is-on { background: var(--honey-bot) }
