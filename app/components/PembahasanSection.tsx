@@ -1,3 +1,4 @@
+import QuestionPassage from "@/app/components/QuestionPassage";
 import type {
   KecerdasanOptionsPayload,
   KepribadianOptionsPayload,
@@ -124,6 +125,14 @@ function KecerdasanItem({ item }: { item: KecerdasanReviewItem }) {
 
       {item.payload.instruksi && (
         <p className="text-xs font-medium text-muted-foreground">{item.payload.instruksi}</p>
+      )}
+      {item.payload.sub_text && (
+        <details className="group">
+          <summary className="cursor-pointer text-xs font-semibold text-muted-foreground hover:text-foreground">Lihat bacaan</summary>
+          <div className="mt-2">
+            <QuestionPassage text={item.payload.sub_text} compact />
+          </div>
+        </details>
       )}
       {item.payload.question_text && (
         <p className="max-w-[68ch] leading-relaxed text-foreground">{item.payload.question_text}</p>

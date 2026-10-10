@@ -1,5 +1,6 @@
 "use client";
 
+import QuestionPassage from "@/app/components/QuestionPassage";
 import { useCallback, useMemo, useState } from "react";
 import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
@@ -164,13 +165,9 @@ export default function LatihanKecerdasan({ questions }: { questions: SafeQuesti
           {payload?.instruksi && (
             <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
           )}
-          {payload?.sub_text && (
-            <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-              {payload.sub_text}
-            </div>
-          )}
+          <QuestionPassage text={payload?.sub_text} />
           {payload?.question_text && (
-            <p className="max-w-[68ch] text-lg leading-relaxed text-foreground">{payload.question_text}</p>
+            <p className={`max-w-[68ch] leading-relaxed text-foreground ${payload.sub_text ? "text-base font-semibold" : "text-lg"}`}>{payload.question_text}</p>
           )}
           {payload?.svg_content && (
             <div

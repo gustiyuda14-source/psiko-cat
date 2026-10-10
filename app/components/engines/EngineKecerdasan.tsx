@@ -1,5 +1,6 @@
 "use client";
 
+import QuestionPassage from "@/app/components/QuestionPassage";
 import type {
   SafeQuestion,
   KecerdasanOptionsPayload,
@@ -179,14 +180,10 @@ export default function EngineKecerdasan({
             <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
           )}
 
-          {payload?.sub_text && (
-            <div className="inset-panel px-4 py-3 text-sm leading-relaxed text-muted-foreground">
-              {payload.sub_text}
-            </div>
-          )}
+          <QuestionPassage text={payload?.sub_text} />
 
           {payload?.question_text && (
-            <p className="max-w-[68ch] text-lg leading-relaxed text-foreground">
+            <p className={`max-w-[68ch] leading-relaxed text-foreground ${payload.sub_text ? "text-base font-semibold" : "text-lg"}`}>
               {payload.question_text}
             </p>
           )}
