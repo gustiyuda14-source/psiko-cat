@@ -10,7 +10,8 @@
     "check:contrast": "tsx scripts/check-contrast.ts",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "check:soal-gambar": "tsx scripts/generate-soal-susun-gambar.ts --check && tsx scripts/generate-soal-pola-gambar.ts --check"
   },
   "prisma": {
     "seed": "tsx prisma/seed.ts"
