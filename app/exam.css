@@ -52,6 +52,8 @@
 .mark-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff }
 /* Drilling: status per soal setelah diperiksa (navigator + opsi) dan rumus MathML. */
 .dnum.is-ok { border-color: var(--success); background: var(--success-soft); color: var(--success) }
+/* Simulasi/latihan: sudah dijawab = hijau (tanpa arti benar/salah). Drill memakai is-ok/is-bad/is-done sendiri. */
+.dnum.is-answered { border-color: var(--success); background: var(--success-soft); color: var(--success) }
 .dnum.is-bad { border-color: var(--destructive); background: var(--destructive-soft); color: var(--destructive) }
 .opt:disabled { cursor: default }
 .opt:disabled:hover { border-color: var(--border); background: var(--surface-card) }

@@ -218,7 +218,7 @@ function NavigatorContent({
 
       <ul className="dnav-legend">
         <li>
-          <span className="dnum is-done" aria-hidden="true" />
+          <span className="dnum is-answered" aria-hidden="true" />
           Terjawab
           <b>{answeredCount}</b>
         </li>
@@ -241,7 +241,7 @@ function NavigatorContent({
               onClick={() => onGoTo(index)}
               aria-current={current ? "step" : undefined}
               aria-label={`${itemLabel} ${index + 1}${answered ? ", sudah dijawab" : ", belum dijawab"}`}
-              className={`dnum ${answered ? "is-done" : ""}`}
+              className={`dnum ${answered ? "is-answered" : ""}`}
             >
               {index + 1}
             </button>
