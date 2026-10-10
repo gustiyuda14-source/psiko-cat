@@ -385,7 +385,7 @@ export default function LatihanKecermatan({
                 {shown.map((sym, i) => (
                   <div
                     key={i}
-                    className="flex h-16 items-center justify-center rounded-md border border-border bg-surface-inset text-3xl"
+                    className="flex h-[4.5rem] items-center justify-center rounded-md border border-border bg-surface-inset text-4xl sm:h-20 sm:text-[2.5rem]"
                   >
                     <KecermatanSymbol symbol={sym} />
                   </div>

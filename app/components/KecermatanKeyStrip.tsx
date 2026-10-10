@@ -35,7 +35,7 @@ export function KecermatanKeyStrip({
           <div className="bg-primary py-1 text-xs font-bold text-primary-foreground">{k}</div>
           <div
             className={`flex items-center justify-center ${
-              size === "lg" ? "h-14 text-3xl" : "h-11 text-2xl"
+              size === "lg" ? "h-16 text-3xl sm:h-24 sm:text-[2.75rem]" : "h-16 text-3xl sm:h-20 sm:text-[2.75rem]"
             }`}
           >
             {typeof symbolMap?.[k] === "string" ? <KecermatanSymbol symbol={symbolMap[k]!} /> : "?"}
