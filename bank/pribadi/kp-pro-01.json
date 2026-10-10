@@ -1,0 +1,1113 @@
+{
+  "batch": "kp-pro-01",
+  "status": "review",
+  "catatan": "72 butir latihan Kepribadian aspek Prososial (18 L/T1, 36 K/T2, 18 KR/T3; 36 favorable : 36 unfavorable). Belum di-seed. Kunci mengikuti aturan aspek (pedoman §1.1a): favorable = D ideal, unfavorable = A ideal.",
+  "definisi_aspek": {
+    "Prososial": "tulus membantu, aktif di masyarakat, tidak mengharap imbalan, dan tidak menutupi kesalahan."
+  },
+  "items": [
+    {
+      "id": "KP-PRO-101",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membantu tetangga lansia membawa belanjaan sampai rumahnya tanpa berharap diberi upah.",
+      "alasan": "Menolong tanpa mengharap imbalan adalah inti ketulusan."
+    },
+    {
+      "id": "KP-PRO-102",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya baru bersedia membantu panitia kegiatan kelas setelah dijanjikan nilai tambahan oleh wali kelas.",
+      "alasan": "Bantuan yang menunggu imbalan menandakan pamrih, bukan ketulusan."
+    },
+    {
+      "id": "KP-PRO-103",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya ikut membersihkan saluran air bersama warga setiap kali musim hujan hampir tiba.",
+      "alasan": "Terlibat aktif dalam kegiatan bersama warga di lingkungan tempat tinggal."
+    },
+    {
+      "id": "KP-PRO-104",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya memilih tetap di dalam rumah ketika warga bergotong royong memperbaiki jalan kampung.",
+      "alasan": "Menghindari kerja bersama warga menunjukkan rendahnya keterlibatan di masyarakat."
+    },
+    {
+      "id": "KP-PRO-105",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menegur sahabat yang menyontek saat ulangan, lalu menawarkan diri mengajarinya materi yang belum ia pahami.",
+      "alasan": "Setia kawan yang sehat: tidak membiarkan kesalahan teman, tetapi tetap membantunya."
+    },
+    {
+      "id": "KP-PRO-106",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya ikut berbohong kepada guru agar teman dekat saya tidak dihukum karena membolos.",
+      "alasan": "Menutupi kesalahan teman adalah setia kawan yang tidak sehat."
+    },
+    {
+      "id": "KP-PRO-107",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya cepat menyadari ketika ada teman yang murung, lalu menyempatkan diri menanyakan keadaannya.",
+      "alasan": "Peka terhadap perasaan orang lain dan menindaklanjutinya adalah wujud empati."
+    },
+    {
+      "id": "KP-PRO-108",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menganggap cerita teman tentang masalah keluarganya bukan urusan saya.",
+      "alasan": "Tidak peduli pada kesulitan teman menunjukkan empati yang rendah."
+    },
+    {
+      "id": "KP-PRO-109",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya meminjamkan buku catatan kepada teman yang tidak masuk sekolah karena sakit.",
+      "alasan": "Rela berbagi milik sendiri agar teman tidak tertinggal pelajaran."
+    },
+    {
+      "id": "KP-PRO-110",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menyimpan kiriman makanan dari rumah untuk diri sendiri meskipun rekan sekamar jarang mendapat kiriman.",
+      "alasan": "Enggan berbagi dengan rekan yang kekurangan menunjukkan sikap prososial yang rendah."
+    },
+    {
+      "id": "KP-PRO-111",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menemani rekan seangkatan yang menangis karena rindu keluarga pada malam-malam awal di asrama.",
+      "alasan": "Hadir bagi rekan yang sedang sedih adalah wujud empati."
+    },
+    {
+      "id": "KP-PRO-112",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya ikut merahasiakan rekan yang menyelundupkan ponsel ke asrama agar angkatan kami tidak dihukum.",
+      "alasan": "Merahasiakan pelanggaran rekan berarti menutupi kesalahan, bukan setia kawan yang sehat."
+    },
+    {
+      "id": "KP-PRO-113",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya membantu merapikan perlengkapan rekan yang terburu-buru bersiap apel tanpa perlu ia minta.",
+      "alasan": "Menolong atas inisiatif sendiri tanpa menunggu diminta atau dibalas."
+    },
+    {
+      "id": "KP-PRO-114",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mencari alasan agar tidak ditunjuk mengikuti bakti sosial lembaga pendidikan di desa sekitar.",
+      "alasan": "Menghindari kegiatan sosial menunjukkan rendahnya kepedulian pada masyarakat."
+    },
+    {
+      "id": "KP-PRO-115",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya bersedia memakai hari libur untuk mengajari anak-anak kampung tentang keselamatan berlalu lintas.",
+      "alasan": "Rela memberi waktu pribadi untuk kegiatan yang bermanfaat bagi masyarakat."
+    },
+    {
+      "id": "KP-PRO-116",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya lebih bersemangat menolong warga yang kelak bisa membalas budi kepada saya.",
+      "alasan": "Memilih siapa yang ditolong berdasarkan balasan yang mungkin diterima adalah pamrih."
+    },
+    {
+      "id": "KP-PRO-117",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di lokasi bencana, saya akan meluangkan waktu mendengarkan cerita pengungsi yang kehilangan rumahnya.",
+      "alasan": "Mendengarkan korban dengan sungguh-sungguh adalah bentuk empati."
+    },
+    {
+      "id": "KP-PRO-118",
+      "aspek": "Prososial",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya enggan membagikan pengalaman lapangan kepada rekan baru agar tidak tersaingi.",
+      "alasan": "Menahan ilmu demi kepentingan sendiri bertentangan dengan sikap berbagi."
+    },
+    {
+      "id": "KP-PRO-119",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengajari adik tetangga membaca tanpa dibayar lebih bermakna daripada memberi les privat berbayar pada jam yang sama.",
+      "bedah": {
+        "sisi_x": "mengajar membaca tanpa dibayar",
+        "sisi_y": "memberi les berbayar",
+        "pembanding": "lebih bermakna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mengajar tanpa bayaran mencerminkan menolong tanpa pamrih."
+    },
+    {
+      "id": "KP-PRO-120",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menolong teman yang sering mentraktir saya lebih masuk akal daripada menolong teman yang jarang bergaul dengan saya.",
+      "bedah": {
+        "sisi_x": "menolong teman yang sering mentraktir",
+        "sisi_y": "menolong teman yang jarang bergaul",
+        "pembanding": "lebih masuk akal",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Pertolongan yang tulus tidak memilih orang berdasarkan balasan yang pernah diterima."
+    },
+    {
+      "id": "KP-PRO-121",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjadi relawan pengatur parkir saat hajatan warga lebih memuaskan daripada sekadar hadir sebagai tamu undangan.",
+      "bedah": {
+        "sisi_x": "menjadi relawan parkir di hajatan warga",
+        "sisi_y": "hadir sebagai tamu undangan",
+        "pembanding": "lebih memuaskan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Ikut bekerja untuk acara warga menunjukkan keterlibatan aktif di masyarakat."
+    },
+    {
+      "id": "KP-PRO-122",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Bersantai di rumah pada akhir pekan lebih wajar daripada ikut membersihkan tempat ibadah bersama warga sekitar.",
+      "bedah": {
+        "sisi_x": "bersantai di rumah",
+        "sisi_y": "membersihkan tempat ibadah bersama warga",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kegiatan bersama warga mencerminkan keaktifan di masyarakat."
+    },
+    {
+      "id": "KP-PRO-123",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menasihati sahabat yang mulai ikut balap liar lebih tepat daripada diam agar persahabatan tetap terjaga.",
+      "bedah": {
+        "sisi_x": "menasihati sahabat yang ikut balap liar",
+        "sisi_y": "diam demi persahabatan",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setia kawan yang sehat berani mengingatkan sahabat yang berbuat salah."
+    },
+    {
+      "id": "KP-PRO-124",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membela teman sekelas yang ketahuan merusak fasilitas sekolah lebih mencerminkan kesetiaan daripada mendorongnya mengakui perbuatan kepada guru.",
+      "bedah": {
+        "sisi_x": "membela teman yang merusak fasilitas",
+        "sisi_y": "mendorongnya mengaku kepada guru",
+        "pembanding": "lebih mencerminkan kesetiaan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setia kawan yang sehat tidak menutupi kesalahan; mendorong teman mengaku justru membantunya."
+    },
+    {
+      "id": "KP-PRO-125",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menemani teman yang baru kehilangan ayahnya lebih penting daripada menyelesaikan latihan soal untuk ujian besok.",
+      "bedah": {
+        "sisi_x": "menemani teman yang berduka",
+        "sisi_y": "menyelesaikan latihan soal",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Hadir saat teman berduka menunjukkan empati yang kuat."
+    },
+    {
+      "id": "KP-PRO-126",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanggapi curahan hati teman dengan solusi singkat lebih efisien daripada mendengarkan perasaannya sampai tuntas.",
+      "bedah": {
+        "sisi_x": "menanggapi dengan solusi singkat",
+        "sisi_y": "mendengarkan perasaannya sampai tuntas",
+        "pembanding": "lebih efisien",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Empati berarti mau memahami perasaan teman, bukan sekadar cepat selesai."
+    },
+    {
+      "id": "KP-PRO-127",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membagi bekal makan siang dengan teman yang tidak membawa uang lebih menyenangkan daripada menyimpannya untuk dimakan sepulang latihan.",
+      "bedah": {
+        "sisi_x": "membagi bekal dengan teman",
+        "sisi_y": "menyimpan bekal untuk diri sendiri",
+        "pembanding": "lebih menyenangkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Rela berbagi milik sendiri dengan teman yang membutuhkan."
+    },
+    {
+      "id": "KP-PRO-128",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyimpan rangkuman materi untuk diri sendiri lebih menguntungkan daripada membagikannya ke grup kelas menjelang ujian.",
+      "bedah": {
+        "sisi_x": "menyimpan rangkuman sendiri",
+        "sisi_y": "membagikan rangkuman ke kelas",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berbagi ilmu agar teman ikut berhasil mencerminkan sikap prososial."
+    },
+    {
+      "id": "KP-PRO-129",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyumbangkan pakaian layak pakai ke panti asuhan lebih berguna daripada menjualnya secara daring untuk tambahan uang saku.",
+      "bedah": {
+        "sisi_x": "menyumbangkan pakaian",
+        "sisi_y": "menjual pakaian untuk uang saku",
+        "pembanding": "lebih berguna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memberi kepada yang membutuhkan tanpa mengharap keuntungan."
+    },
+    {
+      "id": "KP-PRO-130",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengunggah foto saat membantu korban kebakaran lebih bermanfaat daripada membantu diam-diam tanpa diketahui orang lain.",
+      "bedah": {
+        "sisi_x": "membantu sambil mengunggah foto",
+        "sisi_y": "membantu diam-diam",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Membantu tanpa perlu diketahui orang menunjukkan ketulusan tanpa pamrih.",
+      "catatan_psikologi": "Mengunggah kegiatan sosial bisa menginspirasi orang lain. Yang dinilai di sini adalah dorongan untuk dilihat orang, bukan kegiatan mengunggahnya."
+    },
+    {
+      "id": "KP-PRO-131",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengikuti kegiatan karang taruna di kampung lebih berharga daripada menghabiskan sore di tempat nongkrong bersama teman.",
+      "bedah": {
+        "sisi_x": "ikut karang taruna",
+        "sisi_y": "nongkrong bersama teman",
+        "pembanding": "lebih berharga",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Aktif dalam organisasi kemasyarakatan mencerminkan keterlibatan di masyarakat."
+    },
+    {
+      "id": "KP-PRO-132",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengajari teman cara mengerjakan soal lebih bijak daripada membiarkannya menyalin tugas saya agar cepat selesai.",
+      "bedah": {
+        "sisi_x": "mengajari cara mengerjakan",
+        "sisi_y": "membiarkan teman menyalin tugas",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Membantu teman tanpa ikut membenarkan kecurangannya adalah setia kawan yang sehat."
+    },
+    {
+      "id": "KP-PRO-133",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membiarkan teman satu tim menyalin jawaban saat ujian lebih solider daripada menolaknya lalu menanggung kemarahannya.",
+      "bedah": {
+        "sisi_x": "membiarkan teman menyalin jawaban",
+        "sisi_y": "menolak walau dimarahi",
+        "pembanding": "lebih solider",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menolak ikut dalam kecurangan teman adalah kesetiakawanan yang sehat."
+    },
+    {
+      "id": "KP-PRO-134",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjenguk tetangga yang dirawat di rumah sakit lebih utama daripada menonton pertandingan final bersama keluarga.",
+      "bedah": {
+        "sisi_x": "menjenguk tetangga yang sakit",
+        "sisi_y": "menonton pertandingan final",
+        "pembanding": "lebih utama",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menunjukkan kepedulian kepada orang yang sedang sakit."
+    },
+    {
+      "id": "KP-PRO-135",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menghindari teman yang sedang bersedih lebih aman daripada mencoba menghiburnya lalu salah bicara.",
+      "bedah": {
+        "sisi_x": "menghindari teman yang bersedih",
+        "sisi_y": "mencoba menghiburnya",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Empati mendorong kita mendekat, bukan menjauh dari teman yang bersedih."
+    },
+    {
+      "id": "KP-PRO-136",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menabung seluruh uang hasil kerja sambilan lebih cermat daripada menyisihkan sebagian untuk membantu teman yang menunggak biaya sekolah.",
+      "bedah": {
+        "sisi_x": "menabung seluruh uang",
+        "sisi_y": "menyisihkan untuk membantu teman",
+        "pembanding": "lebih cermat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Rela menyisihkan milik sendiri untuk teman yang kesulitan mencerminkan sikap berbagi."
+    },
+    {
+      "id": "KP-PRO-137",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membawakan ransel rekan yang cedera saat latihan jalan jauh lebih terpuji daripada menghemat tenaga sendiri agar tetap prima.",
+      "bedah": {
+        "sisi_x": "membawakan ransel rekan yang cedera",
+        "sisi_y": "menghemat tenaga sendiri",
+        "pembanding": "lebih terpuji",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Rela menanggung beban demi rekan yang kesulitan."
+    },
+    {
+      "id": "KP-PRO-138",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mencatat setiap bantuan yang pernah saya berikan kepada rekan lebih adil daripada melupakannya begitu saja.",
+      "bedah": {
+        "sisi_x": "mencatat setiap bantuan",
+        "sisi_y": "melupakan bantuan yang diberikan",
+        "pembanding": "lebih adil",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Orang yang tulus menolong tidak menghitung-hitung bantuannya."
+    },
+    {
+      "id": "KP-PRO-139",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengikuti bakti sosial lembaga ke desa sekitar asrama lebih membanggakan daripada memakai waktu pesiar untuk berjalan-jalan ke kota.",
+      "bedah": {
+        "sisi_x": "ikut bakti sosial ke desa",
+        "sisi_y": "jalan-jalan saat pesiar",
+        "pembanding": "lebih membanggakan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memilih terlibat dalam kegiatan untuk masyarakat dibanding kesenangan pribadi."
+    },
+    {
+      "id": "KP-PRO-140",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memakai jam bebas untuk tidur lebih bijak daripada membantu warga sekitar asrama memperbaiki jembatan yang rusak.",
+      "bedah": {
+        "sisi_x": "tidur di jam bebas",
+        "sisi_y": "membantu warga memperbaiki jembatan",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Ikut membantu warga sekitar menunjukkan kepedulian aktif pada masyarakat."
+    },
+    {
+      "id": "KP-PRO-141",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Melaporkan rekan yang memalsukan daftar hadir piket lebih tepat daripada menutupinya demi menjaga kekompakan angkatan.",
+      "bedah": {
+        "sisi_x": "melaporkan pemalsuan daftar hadir",
+        "sisi_y": "menutupinya demi kekompakan",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Kekompakan yang sehat tidak dibangun dengan menutupi pelanggaran."
+    },
+    {
+      "id": "KP-PRO-142",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membantu rekan menyembunyikan rokok saat pemeriksaan kamar lebih mencerminkan solidaritas daripada membujuknya menyerahkan rokok itu kepada pengasuh.",
+      "bedah": {
+        "sisi_x": "menyembunyikan rokok rekan",
+        "sisi_y": "membujuknya menyerahkan kepada pengasuh",
+        "pembanding": "lebih mencerminkan solidaritas",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Solidaritas yang sehat membantu rekan memperbaiki diri, bukan menyembunyikan pelanggarannya."
+    },
+    {
+      "id": "KP-PRO-143",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menghampiri rekan yang tampak murung setelah menerima kabar dari rumah lebih penting daripada memakai jam istirahat untuk tidur siang.",
+      "bedah": {
+        "sisi_x": "menghampiri rekan yang murung",
+        "sisi_y": "tidur siang",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Peka dan mau hadir bagi rekan yang sedang bersedih."
+    },
+    {
+      "id": "KP-PRO-144",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membiarkan rekan yang gagal tes jasmani menenangkan diri sendirian lebih menghargai privasinya daripada mengajaknya bicara.",
+      "bedah": {
+        "sisi_x": "membiarkan rekan menyendiri",
+        "sisi_y": "mengajaknya bicara",
+        "pembanding": "lebih menghargai privasi",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Empati mendorong kita hadir dan menawarkan dukungan.",
+      "catatan_psikologi": "Memberi ruang kadang memang dibutuhkan. Yang dinilai adalah kesediaan menghampiri dan menawarkan dukungan, bukan memaksa rekan bicara."
+    },
+    {
+      "id": "KP-PRO-145",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengajarkan teknik lari yang efisien kepada rekan yang tertinggal lebih bermakna daripada berlatih sendiri agar nilai saya tetap teratas.",
+      "bedah": {
+        "sisi_x": "mengajarkan teknik kepada rekan",
+        "sisi_y": "berlatih sendiri demi nilai teratas",
+        "pembanding": "lebih bermakna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berbagi kemampuan agar rekan ikut maju."
+    },
+    {
+      "id": "KP-PRO-146",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyimpan perlengkapan cadangan untuk keperluan sendiri lebih praktis daripada meminjamkannya kepada rekan yang kehilangan miliknya.",
+      "bedah": {
+        "sisi_x": "menyimpan perlengkapan cadangan",
+        "sisi_y": "meminjamkannya kepada rekan",
+        "pembanding": "lebih praktis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Meminjamkan barang kepada rekan yang membutuhkan adalah wujud berbagi."
+    },
+    {
+      "id": "KP-PRO-147",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menggantikan jaga malam rekan yang demam tanpa meminta gantian lebih mulia daripada menukarnya dengan jadwal jaga saya di lain hari.",
+      "bedah": {
+        "sisi_x": "menggantikan tanpa meminta gantian",
+        "sisi_y": "menukar dengan jadwal lain",
+        "pembanding": "lebih mulia",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menolong tanpa menuntut balasan mencerminkan ketulusan."
+    },
+    {
+      "id": "KP-PRO-148",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, mengisi penyuluhan bahaya narkoba di sekolah lebih bernilai daripada mengambil libur akhir pekan secara penuh.",
+      "bedah": {
+        "sisi_x": "mengisi penyuluhan di sekolah",
+        "sisi_y": "libur akhir pekan penuh",
+        "pembanding": "lebih bernilai",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memberi waktu untuk kegiatan yang melindungi masyarakat."
+    },
+    {
+      "id": "KP-PRO-149",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, melayani warga sebatas jam kerja lebih profesional daripada tetap membantu warga yang datang setelah jam dinas usai.",
+      "bedah": {
+        "sisi_x": "melayani sebatas jam kerja",
+        "sisi_y": "membantu warga setelah jam dinas",
+        "pembanding": "lebih profesional",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kesediaan menolong di luar kewajiban mencerminkan ketulusan membantu.",
+      "catatan_psikologi": "Menjaga batas jam kerja juga penting bagi kesehatan petugas. Yang dinilai adalah kesediaan menolong warga yang membutuhkan, bukan anjuran bekerja tanpa batas."
+    },
+    {
+      "id": "KP-PRO-150",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, mendengarkan keluhan pengungsi lansia lebih mendesak daripada menyelesaikan laporan harian sebelum waktunya.",
+      "bedah": {
+        "sisi_x": "mendengarkan keluhan pengungsi lansia",
+        "sisi_y": "menyelesaikan laporan lebih awal",
+        "pembanding": "lebih mendesak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memahami kebutuhan dan perasaan korban adalah wujud empati."
+    },
+    {
+      "id": "KP-PRO-151",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, diam saat rekan satu unit bersikap kasar kepada warga lebih menjaga kekompakan daripada menegurnya secara langsung.",
+      "bedah": {
+        "sisi_x": "diam saat rekan bersikap kasar",
+        "sisi_y": "menegur rekan secara langsung",
+        "pembanding": "lebih menjaga kekompakan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kesetiakawanan yang sehat berani menegur rekan yang berbuat salah."
+    },
+    {
+      "id": "KP-PRO-152",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di lokasi banjir, menyimpan sisa bantuan makanan untuk regu sendiri lebih aman daripada membagikannya kepada pengungsi yang belum kebagian.",
+      "bedah": {
+        "sisi_x": "menyimpan sisa bantuan untuk regu",
+        "sisi_y": "membagikan kepada pengungsi yang belum kebagian",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mendahulukan warga yang belum mendapat bantuan mencerminkan sikap berbagi."
+    },
+    {
+      "id": "KP-PRO-153",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, mendampingi rekan mengakui kesalahan prosedur kepada atasan lebih terhormat daripada memperbaikinya diam-diam agar tidak tercatat.",
+      "bedah": {
+        "sisi_x": "mendampingi rekan mengaku kepada atasan",
+        "sisi_y": "memperbaiki diam-diam",
+        "pembanding": "lebih terhormat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setia kawan yang sehat mendampingi rekan bertanggung jawab, bukan menutupi kesalahan."
+    },
+    {
+      "id": "KP-PRO-154",
+      "aspek": "Prososial",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menyelesaikan pekerjaan di kantor lebih efektif daripada rutin menyapa dan berbincang dengan warga di lingkungan sekitar.",
+      "bedah": {
+        "sisi_x": "bekerja di kantor",
+        "sisi_y": "rutin menyapa warga",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Dekat dan aktif di tengah masyarakat adalah bagian dari sikap prososial."
+    },
+    {
+      "id": "KP-PRO-155",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menolak membantu tetangga karena tidak ada upahnya lebih memalukan daripada kehilangan waktu bermain karena ikut membantu.",
+      "bedah": {
+        "sisi_x": "menolak membantu karena tanpa upah",
+        "sisi_y": "kehilangan waktu bermain karena membantu",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih berkorban waktu demi menolong tanpa upah."
+    },
+    {
+      "id": "KP-PRO-156",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Sudah membantu tetapi tidak mendapat ucapan terima kasih lebih menyebalkan daripada tidak membantu sama sekali.",
+      "bedah": {
+        "sisi_x": "membantu tanpa ucapan terima kasih",
+        "sisi_y": "tidak membantu sama sekali",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menganggap menolong tanpa balasan lebih buruk daripada tidak menolong; itu tanda pamrih."
+    },
+    {
+      "id": "KP-PRO-157",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Tidak hadir saat warga bergotong royong membangun pos keamanan lebih mengecewakan daripada melewatkan acara jalan-jalan bersama teman.",
+      "bedah": {
+        "sisi_x": "absen dari gotong royong warga",
+        "sisi_y": "melewatkan jalan-jalan bersama teman",
+        "pembanding": "lebih mengecewakan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih ikut kegiatan warga daripada kesenangan pribadi."
+    },
+    {
+      "id": "KP-PRO-158",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengorbankan hari Minggu menjadi panitia donor darah di kampung lebih merugikan daripada melewatkan latihan rutin persiapan seleksi.",
+      "bedah": {
+        "sisi_x": "menjadi panitia donor darah",
+        "sisi_y": "melewatkan latihan persiapan seleksi",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menganggap kegiatan sosial sebagai kerugian; itu bertentangan dengan sikap prososial."
+    },
+    {
+      "id": "KP-PRO-159",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membiarkan sahabat terus berbuat curang lebih buruk daripada membuatnya marah karena saya tegur.",
+      "bedah": {
+        "sisi_x": "membiarkan sahabat berbuat curang",
+        "sisi_y": "sahabat marah karena ditegur",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih menegur sahabat walau ia marah; itulah setia kawan yang sehat."
+    },
+    {
+      "id": "KP-PRO-160",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Dijauhi teman karena melaporkan perundungan di kelas lebih menyedihkan daripada pura-pura tidak tahu kejadian itu.",
+      "bedah": {
+        "sisi_x": "dijauhi karena melaporkan perundungan",
+        "sisi_y": "pura-pura tidak tahu",
+        "pembanding": "lebih menyedihkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memilih diam terhadap perundungan demi tetap diterima teman."
+    },
+    {
+      "id": "KP-PRO-161",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ikut menertawakan teman yang dipermalukan di depan kelas lebih tercela daripada ikut ditertawakan karena membelanya.",
+      "bedah": {
+        "sisi_x": "menertawakan teman yang dipermalukan",
+        "sisi_y": "ditertawakan karena membela",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih membela teman yang dipermalukan."
+    },
+    {
+      "id": "KP-PRO-162",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendengarkan keluh kesah teman yang sama berulang kali lebih menjengkelkan daripada mengerjakan tugas tambahan dari guru.",
+      "bedah": {
+        "sisi_x": "mendengarkan keluh kesah teman",
+        "sisi_y": "mengerjakan tugas tambahan",
+        "pembanding": "lebih menjengkelkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menghindari curahan hati teman; empatinya rendah."
+    },
+    {
+      "id": "KP-PRO-163",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membuang sisa makanan pesta lebih memprihatinkan daripada repot membungkusnya untuk dibagikan kepada tetangga sekitar.",
+      "bedah": {
+        "sisi_x": "membuang sisa makanan",
+        "sisi_y": "repot membungkus untuk dibagikan",
+        "pembanding": "lebih memprihatinkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti rela repot demi berbagi dengan tetangga."
+    },
+    {
+      "id": "KP-PRO-164",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Pura-pura tidak melihat rekan yang kerepotan mengangkat logistik lebih memalukan daripada terlambat beristirahat karena ikut membantunya.",
+      "bedah": {
+        "sisi_x": "pura-pura tidak melihat rekan",
+        "sisi_y": "terlambat istirahat karena membantu",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti rela mengorbankan waktu istirahat untuk menolong rekan."
+    },
+    {
+      "id": "KP-PRO-165",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membagi jatah air minum kepada rekan yang kehabisan saat latihan lapangan lebih merugikan daripada melihatnya kelelahan sampai garis akhir.",
+      "bedah": {
+        "sisi_x": "membagi jatah air minum",
+        "sisi_y": "melihat rekan kelelahan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memilih tidak berbagi dengan rekan yang membutuhkan."
+    },
+    {
+      "id": "KP-PRO-166",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ikut menutupi rekan yang keluar asrama tanpa izin lebih buruk daripada dianggap tidak setia kawan oleh seangkatan.",
+      "bedah": {
+        "sisi_x": "menutupi rekan yang keluar tanpa izin",
+        "sisi_y": "dianggap tidak setia kawan",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti menolak menutupi pelanggaran meski dicap tidak setia kawan.",
+      "catatan_psikologi": "Menolak menutupi pelanggaran bukan berarti tidak setia kawan. Kesetiakawanan yang sehat justru mencegah rekan terjerumus lebih jauh."
+    },
+    {
+      "id": "KP-PRO-167",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Dihukum bersama karena regu jujur mengakui kesalahan seorang rekan lebih menyebalkan daripada sepakat merahasiakannya dari pengasuh.",
+      "bedah": {
+        "sisi_x": "dihukum karena regu jujur mengaku",
+        "sisi_y": "merahasiakan kesalahan rekan",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menutupi kesalahan rekan demi menghindari hukuman."
+    },
+    {
+      "id": "KP-PRO-168",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Bersikap acuh kepada junior yang kesulitan beradaptasi lebih mengecewakan daripada kehilangan waktu luang untuk membimbingnya.",
+      "bedah": {
+        "sisi_x": "acuh kepada junior yang kesulitan",
+        "sisi_y": "kehilangan waktu luang untuk membimbing",
+        "pembanding": "lebih mengecewakan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti rela memberi waktu bagi junior yang sedang kesulitan."
+    },
+    {
+      "id": "KP-PRO-169",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Merapikan lemari rekan yang sedang dirawat di klinik lebih membebani daripada kamar kami ditegur saat pemeriksaan pagi.",
+      "bedah": {
+        "sisi_x": "merapikan lemari rekan yang sakit",
+        "sisi_y": "kamar ditegur saat pemeriksaan",
+        "pembanding": "lebih membebani",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih ditegur daripada menolong rekan yang sakit."
+    },
+    {
+      "id": "KP-PRO-170",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, mengabaikan lansia yang kebingungan di terminal lebih memalukan daripada menunda jam makan siang untuk mengantarnya.",
+      "bedah": {
+        "sisi_x": "mengabaikan lansia yang kebingungan",
+        "sisi_y": "menunda makan siang untuk mengantar",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menolong warga yang kesulitan."
+    },
+    {
+      "id": "KP-PRO-171",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menghadiri pertemuan warga setiap bulan lebih membosankan daripada dianggap kurang dekat dengan masyarakat.",
+      "bedah": {
+        "sisi_x": "menghadiri pertemuan warga",
+        "sisi_y": "dianggap kurang dekat dengan masyarakat",
+        "pembanding": "lebih membosankan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menjauh dari kegiatan warga."
+    },
+    {
+      "id": "KP-PRO-172",
+      "aspek": "Prososial",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di lokasi bencana, menyerahkan jatah makan pribadi kepada pengungsi lebih memberatkan daripada membiarkan mereka menunggu kiriman bantuan berikutnya.",
+      "bedah": {
+        "sisi_x": "menyerahkan jatah makan kepada pengungsi",
+        "sisi_y": "membiarkan pengungsi menunggu bantuan",
+        "pembanding": "lebih memberatkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memilih tidak berbagi dengan warga yang membutuhkan.",
+      "catatan_psikologi": "Petugas juga perlu menjaga stamina agar bisa terus bekerja. Yang dinilai adalah kesediaan berbagi, bukan anjuran mengabaikan kebutuhan diri."
+    }
+  ]
+}

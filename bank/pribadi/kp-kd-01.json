@@ -1,0 +1,1112 @@
+{
+  "batch": "kp-kd-01",
+  "status": "review",
+  "catatan": "72 butir Kepribadian aspek Kepercayaan Diri (L 18, K 36, KR 18) untuk review mentor. Belum di-seed. Kunci mengikuti aturan aspek (pedoman §1.1a): favorable = D ideal, unfavorable = A ideal.",
+  "definisi_aspek": {
+    "Kepercayaan Diri": "berani tampil dan bicara, yakin pada pendapat sendiri, dan tidak bergantung pada nasib."
+  },
+  "items": [
+    {
+      "id": "KP-KD-101",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya bersedia maju menjadi ketua kelompok ketika tidak ada teman yang mau memulai.",
+      "alasan": "Berani mengambil peran memimpin saat orang lain ragu."
+    },
+    {
+      "id": "KP-KD-102",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Suara saya biasanya menjadi pelan dan terbata-bata setiap kali harus presentasi di depan kelas.",
+      "alasan": "Gugup sampai suara hilang saat tampil di depan kelas menandakan kepercayaan diri yang rendah."
+    },
+    {
+      "id": "KP-KD-103",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya tetap mempertahankan jawaban saya dalam diskusi kelompok selama saya punya alasan yang kuat.",
+      "alasan": "Yakin pada pendapat sendiri yang didukung alasan."
+    },
+    {
+      "id": "KP-KD-104",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya cenderung pasrah pada keberuntungan setiap kali menghadapi ujian penting.",
+      "alasan": "Orang yang percaya diri yakin hasil ditentukan oleh usahanya, bukan keberuntungan."
+    },
+    {
+      "id": "KP-KD-105",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya bisa mengakui di depan teman-teman bahwa saya kurang mahir dalam pelajaran tertentu tanpa merasa rendah diri.",
+      "alasan": "Menerima kelemahan dengan tenang menandakan rasa aman terhadap diri sendiri."
+    },
+    {
+      "id": "KP-KD-106",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya memilih duduk di barisan paling belakang agar tidak ditunjuk guru untuk maju ke depan.",
+      "alasan": "Menghindari kesempatan tampil adalah kebalikan dari berani tampil."
+    },
+    {
+      "id": "KP-KD-107",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya tidak keberatan diminta membawakan acara di pertemuan warga atau acara keluarga besar.",
+      "alasan": "Bersedia berbicara di depan banyak orang."
+    },
+    {
+      "id": "KP-KD-108",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya berusaha keras menyembunyikan kekurangan diri agar teman-teman tidak memandang rendah saya.",
+      "alasan": "Takut kekurangannya terlihat menandakan rasa tidak aman terhadap diri sendiri."
+    },
+    {
+      "id": "KP-KD-109",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya mudah mengganti pendapat begitu ada satu teman yang tidak setuju.",
+      "alasan": "Pendapat yang mudah goyah menunjukkan kurang yakin pada penilaian sendiri."
+    },
+    {
+      "id": "KP-KD-110",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat ditunjuk memimpin yel-yel di lapangan, saya mengeluarkan suara keras tanpa ragu.",
+      "alasan": "Berani tampil dan bersuara di depan banyak rekan."
+    },
+    {
+      "id": "KP-KD-111",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya berharap nama saya tidak dipanggil ketika pelatih mencari sukarelawan untuk memberi contoh gerakan.",
+      "alasan": "Berharap tidak ditunjuk tampil menandakan takut menjadi pusat perhatian."
+    },
+    {
+      "id": "KP-KD-112",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya yakin hasil tes kesamaptaan saya bergantung pada kesungguhan latihan harian, bukan pada keberuntungan.",
+      "alasan": "Meyakini hasil ditentukan oleh usaha sendiri, bukan nasib."
+    },
+    {
+      "id": "KP-KD-113",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya merasa tidak berharga setiap kali tertinggal dari rekan seangkatan dalam latihan fisik.",
+      "alasan": "Harga diri yang runtuh karena satu kekurangan menandakan kepercayaan diri yang rapuh."
+    },
+    {
+      "id": "KP-KD-114",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ketika pengasuh meminta usul untuk kegiatan asrama, saya menyampaikan gagasan saya dengan yakin.",
+      "alasan": "Yakin menyampaikan pendapat sendiri pada saat diminta."
+    },
+    {
+      "id": "KP-KD-115",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya gugup dan kehilangan kata-kata ketika harus melaporkan kesiapan pasukan kepada perwira.",
+      "alasan": "Tidak sanggup berbicara di depan atasan menandakan kepercayaan diri yang rendah."
+    },
+    {
+      "id": "KP-KD-116",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya siap berdiri di depan kerumunan untuk mengarahkan warga saat terjadi keramaian.",
+      "alasan": "Berani tampil dan memimpin di hadapan banyak orang."
+    },
+    {
+      "id": "KP-KD-117",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas sebagai polisi, saya sanggup menjelaskan aturan lalu lintas di depan ratusan pelajar dengan tenang.",
+      "alasan": "Tenang berbicara di depan umum."
+    },
+    {
+      "id": "KP-KD-118",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika kelak bertugas sebagai polisi, saya kira berhasil tidaknya mengungkap kasus sangat bergantung pada nasib baik.",
+      "alasan": "Menggantungkan keberhasilan pada nasib adalah kebalikan dari yakin pada usaha sendiri."
+    },
+    {
+      "id": "KP-KD-119",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mencalonkan diri sebagai ketua OSIS lebih saya minati daripada menjadi tim sukses bagi calon lain.",
+      "bedah": {
+        "sisi_x": "mencalonkan diri sebagai ketua OSIS",
+        "sisi_y": "menjadi tim sukses calon lain",
+        "pembanding": "lebih saya minati",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mencalonkan diri menuntut keberanian tampil dan memimpin."
+    },
+    {
+      "id": "KP-KD-120",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjadi anggota biasa dalam kepanitiaan lebih nyaman daripada menjadi koordinator yang harus tampil di depan.",
+      "bedah": {
+        "sisi_x": "anggota biasa kepanitiaan",
+        "sisi_y": "koordinator yang tampil di depan",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Sisi Y menuntut keberanian tampil; sisi X memilih aman di belakang."
+    },
+    {
+      "id": "KP-KD-121",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membacakan hasil diskusi kelompok di depan kelas lebih saya sukai daripada bertugas menulis laporannya.",
+      "bedah": {
+        "sisi_x": "membacakan hasil diskusi di depan kelas",
+        "sisi_y": "menulis laporan",
+        "pembanding": "lebih saya sukai",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memilih berbicara di depan kelas mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-122",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengirim pertanyaan lewat tulisan kepada pembicara seminar lebih tepat daripada bertanya langsung melalui mikrofon.",
+      "bedah": {
+        "sisi_x": "bertanya lewat tulisan",
+        "sisi_y": "bertanya langsung melalui mikrofon",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bertanya langsung di depan peserta seminar menuntut keberanian bicara di depan umum."
+    },
+    {
+      "id": "KP-KD-123",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyampaikan pendapat yang berbeda dalam rapat OSIS lebih bermanfaat daripada diam agar suasana tetap tenang.",
+      "bedah": {
+        "sisi_x": "menyampaikan pendapat berbeda",
+        "sisi_y": "diam agar suasana tenang",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin pada pendapat sendiri walau berbeda dari forum."
+    },
+    {
+      "id": "KP-KD-124",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengikuti jawaban mayoritas teman saat mengerjakan tugas kelompok lebih aman daripada mempertahankan jawaban yang saya yakini.",
+      "bedah": {
+        "sisi_x": "mengikuti jawaban mayoritas",
+        "sisi_y": "mempertahankan jawaban yang diyakini",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Percaya diri berarti berani berpegang pada keyakinan sendiri."
+    },
+    {
+      "id": "KP-KD-125",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Hasil seleksi lebih ditentukan oleh latihan yang saya jalani daripada oleh tingkat kesulitan soal yang kebetulan keluar.",
+      "bedah": {
+        "sisi_x": "latihan yang dijalani",
+        "sisi_y": "kesulitan soal yang kebetulan keluar",
+        "pembanding": "lebih ditentukan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Meyakini hasil berada dalam kendali usaha sendiri."
+    },
+    {
+      "id": "KP-KD-126",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Kekalahan tim saya dalam lomba cerdas cermat lebih sering disebabkan oleh nasib daripada oleh kurangnya persiapan.",
+      "bedah": {
+        "sisi_x": "disebabkan nasib",
+        "sisi_y": "disebabkan kurang persiapan",
+        "pembanding": "lebih sering disebabkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Orang yang percaya diri melihat hasil sebagai akibat usahanya; sisi X menyerahkannya pada nasib."
+    },
+    {
+      "id": "KP-KD-127",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Terbuka mengakui kelemahan saya di depan teman lebih melegakan daripada menyimpannya rapat-rapat.",
+      "bedah": {
+        "sisi_x": "terbuka mengakui kelemahan",
+        "sisi_y": "menyimpan kelemahan rapat-rapat",
+        "pembanding": "lebih melegakan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menerima kelemahan dengan tenang menandakan rasa aman terhadap diri."
+    },
+    {
+      "id": "KP-KD-128",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menutupi nilai rapor yang kurang bagus dari teman-teman lebih menenangkan daripada menceritakannya apa adanya.",
+      "bedah": {
+        "sisi_x": "menutupi nilai rapor",
+        "sisi_y": "menceritakan apa adanya",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani apa adanya tentang kekurangan sendiri mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-129",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjadi pemimpin regu dalam perkemahan Pramuka lebih saya inginkan daripada menjadi anggota yang mengikuti arahan pemimpin regu.",
+      "bedah": {
+        "sisi_x": "menjadi pemimpin regu",
+        "sisi_y": "menjadi anggota regu",
+        "pembanding": "lebih saya inginkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Ingin memimpin mencerminkan keberanian tampil di depan."
+    },
+    {
+      "id": "KP-KD-130",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyerahkan tugas berpidato kepada teman yang lebih fasih lebih bijak daripada mencobanya sendiri di depan kelas.",
+      "bedah": {
+        "sisi_x": "menyerahkan pidato kepada teman",
+        "sisi_y": "mencoba berpidato sendiri",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mencoba berpidato sendiri mencerminkan keberanian bicara di depan umum.",
+      "catatan_psikologi": "Dalam kerja tim, menyerahkan tugas kepada yang paling fasih memang wajar. Yang diukur di sini keberanian mencoba tampil, bukan strategi pembagian tugas."
+    },
+    {
+      "id": "KP-KD-131",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menentukan pilihan ekstrakurikuler sesuai minat sendiri lebih memuaskan daripada mengikuti pilihan sahabat dekat.",
+      "bedah": {
+        "sisi_x": "memilih sesuai minat sendiri",
+        "sisi_y": "mengikuti pilihan sahabat",
+        "pembanding": "lebih memuaskan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin pada pilihan sendiri tanpa bergantung pada teman."
+    },
+    {
+      "id": "KP-KD-132",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membiarkan teman lain menjadi pembawa bendera dalam upacara lebih menenangkan daripada mengajukan diri untuk tugas itu.",
+      "bedah": {
+        "sisi_x": "membiarkan teman menjadi pembawa bendera",
+        "sisi_y": "mengajukan diri",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mengajukan diri untuk tampil di upacara mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-133",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Bertanya langsung kepada guru di depan kelas lebih efektif daripada menunggu teman lain menanyakan hal yang sama.",
+      "bedah": {
+        "sisi_x": "bertanya langsung di depan kelas",
+        "sisi_y": "menunggu teman bertanya",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani bersuara di depan kelas tanpa bergantung pada orang lain."
+    },
+    {
+      "id": "KP-KD-134",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menunggu persetujuan teman sebangku sebelum mengacungkan tangan lebih aman daripada langsung menjawab dengan keyakinan sendiri.",
+      "bedah": {
+        "sisi_x": "menunggu persetujuan teman",
+        "sisi_y": "langsung menjawab dengan keyakinan sendiri",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Yakin pada jawaban sendiri tanpa menunggu pengakuan orang lain."
+    },
+    {
+      "id": "KP-KD-135",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanggapi salah ucap saat presentasi dengan senyum lalu melanjutkan lebih tepat daripada berhenti untuk menenangkan diri lebih dulu.",
+      "bedah": {
+        "sisi_x": "tersenyum lalu melanjutkan",
+        "sisi_y": "berhenti menenangkan diri",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menerima kekeliruan kecil dengan tenang dan tetap tampil.",
+      "catatan_psikologi": "Berhenti sejenak untuk menenangkan diri juga strategi yang sehat. Yang diukur di sini kemampuan tetap tampil tanpa terganggu oleh kesalahan kecil."
+    },
+    {
+      "id": "KP-KD-136",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menunggu kesempatan datang dengan sendirinya lebih realistis daripada berusaha menciptakan kesempatan itu sendiri.",
+      "bedah": {
+        "sisi_x": "menunggu kesempatan datang",
+        "sisi_y": "menciptakan kesempatan sendiri",
+        "pembanding": "lebih realistis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menciptakan kesempatan sendiri mencerminkan keyakinan pada kendali usaha pribadi."
+    },
+    {
+      "id": "KP-KD-137",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengajukan diri menjadi komandan peleton dalam latihan baris-berbaris lebih bermanfaat daripada menunggu ditunjuk oleh pelatih.",
+      "bedah": {
+        "sisi_x": "mengajukan diri menjadi komandan peleton",
+        "sisi_y": "menunggu ditunjuk pelatih",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani mengambil peran memimpin atas inisiatif sendiri."
+    },
+    {
+      "id": "KP-KD-138",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Berdiri di barisan tengah saat apel lebih saya sukai daripada di barisan depan yang mudah dilihat pelatih.",
+      "bedah": {
+        "sisi_x": "barisan tengah",
+        "sisi_y": "barisan depan",
+        "pembanding": "lebih saya sukai",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani berada di posisi yang terlihat mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-139",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyampaikan usul perbaikan jadwal piket kepada pengasuh dengan sopan lebih tepat daripada menyimpannya sendiri supaya tidak merepotkan.",
+      "bedah": {
+        "sisi_x": "menyampaikan usul dengan sopan",
+        "sisi_y": "menyimpan usul sendiri",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin menyampaikan pendapat sendiri dengan cara yang santun."
+    },
+    {
+      "id": "KP-KD-140",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengubah jawaban saat ditanya materi oleh pelatih begitu rekan lain menjawab berbeda lebih bijak daripada tetap pada jawaban saya.",
+      "bedah": {
+        "sisi_x": "mengubah jawaban mengikuti rekan",
+        "sisi_y": "tetap pada jawaban sendiri",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Percaya diri berarti berpegang pada jawaban yang diyakini, bukan ikut-ikutan."
+    },
+    {
+      "id": "KP-KD-141",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Tekun berlatih renang setiap sore lebih menentukan kelulusan tes renang daripada kondisi kolam dan cuaca pada hari tes.",
+      "bedah": {
+        "sisi_x": "tekun berlatih",
+        "sisi_y": "kondisi kolam dan cuaca",
+        "pembanding": "lebih menentukan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Meyakini hasil ditentukan oleh usaha sendiri."
+    },
+    {
+      "id": "KP-KD-142",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menghindari latihan memanjat tali yang menjadi kelemahan saya lebih menenangkan daripada mengakuinya dan meminta bimbingan pelatih.",
+      "bedah": {
+        "sisi_x": "menghindari latihan yang menjadi kelemahan",
+        "sisi_y": "mengakui kelemahan dan minta bimbingan",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mengakui kelemahan dengan tenang menandakan rasa aman terhadap diri."
+    },
+    {
+      "id": "KP-KD-143",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membawakan acara malam keakraban angkatan lebih saya minati daripada menjadi petugas perlengkapan di belakang panggung.",
+      "bedah": {
+        "sisi_x": "membawakan acara",
+        "sisi_y": "petugas perlengkapan",
+        "pembanding": "lebih saya minati",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memilih tampil dan berbicara di depan banyak orang."
+    },
+    {
+      "id": "KP-KD-144",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menjadi anggota regu jaga lebih nyaman daripada ditunjuk sebagai komandan regu jaga yang bertanggung jawab melapor.",
+      "bedah": {
+        "sisi_x": "anggota regu jaga",
+        "sisi_y": "komandan regu jaga",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Siap memimpin dan melapor mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-145",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengakui kepada senior bahwa saya belum menguasai tata cara menghormat lebih tepat daripada mempelajarinya sendiri dengan memperhatikan rekan.",
+      "bedah": {
+        "sisi_x": "mengakui belum menguasai kepada senior",
+        "sisi_y": "belajar sendiri dari rekan",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tenang mengakui kekurangan tanpa merasa terancam."
+    },
+    {
+      "id": "KP-KD-146",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Penempatan setelah lulus pendidikan lebih bergantung pada keberuntungan daripada pada prestasi selama di asrama.",
+      "bedah": {
+        "sisi_x": "keberuntungan",
+        "sisi_y": "prestasi di asrama",
+        "pembanding": "lebih bergantung",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Orang yang percaya diri yakin prestasinya menentukan masa depannya.",
+      "catatan_psikologi": "Dalam kenyataan, penempatan juga dipengaruhi kebutuhan organisasi. Yang diukur di sini keyakinan bahwa usaha sendiri berpengaruh, bukan pengetahuan tentang sistem penempatan."
+    },
+    {
+      "id": "KP-KD-147",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menjelaskan alasan pilihan strategi regu dalam lomba lintas medan lebih penting daripada menyetujui usul rekan yang lebih populer.",
+      "bedah": {
+        "sisi_x": "menjelaskan alasan pilihan sendiri",
+        "sisi_y": "menyetujui usul rekan populer",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin pada pendapat sendiri dan berani menjelaskannya."
+    },
+    {
+      "id": "KP-KD-148",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, memberi pengarahan langsung kepada warga di balai desa lebih efektif daripada menitipkan pesan melalui ketua RT.",
+      "bedah": {
+        "sisi_x": "pengarahan langsung kepada warga",
+        "sisi_y": "menitipkan pesan melalui ketua RT",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berbicara langsung di depan warga menuntut kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-149",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas mengamankan acara besar, berjaga di pos belakang lebih saya sukai daripada berdiri di depan mengatur arus massa.",
+      "bedah": {
+        "sisi_x": "berjaga di pos belakang",
+        "sisi_y": "mengatur arus massa di depan",
+        "pembanding": "lebih saya sukai",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani tampil di depan massa mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-150",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi polisi lalu lintas, menegakkan aturan dengan yakin kepada pengendara yang bersikeras lebih tepat daripada mengalah agar tidak berdebat.",
+      "bedah": {
+        "sisi_x": "menegakkan aturan dengan yakin",
+        "sisi_y": "mengalah agar tidak berdebat",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin pada penilaian sendiri walau ditekan orang lain."
+    },
+    {
+      "id": "KP-KD-151",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi polisi, keberhasilan pengamanan acara besar lebih ditentukan oleh keberuntungan daripada oleh kesiapan personel.",
+      "bedah": {
+        "sisi_x": "keberuntungan",
+        "sisi_y": "kesiapan personel",
+        "pembanding": "lebih ditentukan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kepercayaan diri bertumpu pada keyakinan bahwa usaha dan persiapan menentukan hasil."
+    },
+    {
+      "id": "KP-KD-152",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di lokasi bencana, mengoordinasi relawan yang kebingungan lebih saya pilih daripada bertugas mengangkut logistik bantuan.",
+      "bedah": {
+        "sisi_x": "mengoordinasi relawan",
+        "sisi_y": "mengangkut logistik",
+        "pembanding": "lebih saya pilih",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani mengambil peran memimpin di depan banyak orang."
+    },
+    {
+      "id": "KP-KD-153",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, mendampingi rekan yang memimpin apel pagi lebih nyaman daripada ditugasi memimpinnya sendiri.",
+      "bedah": {
+        "sisi_x": "mendampingi rekan yang memimpin",
+        "sisi_y": "memimpin apel sendiri",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Siap memimpin di depan pasukan mencerminkan kepercayaan diri."
+    },
+    {
+      "id": "KP-KD-154",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi polisi, mempelajari prosedur baru diam-diam agar tidak terlihat kurang lebih menjaga wibawa daripada bertanya terbuka kepada rekan.",
+      "bedah": {
+        "sisi_x": "belajar diam-diam agar tidak terlihat kurang",
+        "sisi_y": "bertanya terbuka kepada rekan",
+        "pembanding": "lebih menjaga wibawa",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Tidak takut kekurangannya terlihat menandakan rasa aman terhadap diri."
+    },
+    {
+      "id": "KP-KD-155",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Diam saja saat presentasi kelompok lebih memalukan daripada berbicara walau sesekali tersendat.",
+      "bedah": {
+        "sisi_x": "diam saat presentasi",
+        "sisi_y": "berbicara walau tersendat",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih tetap berbicara di depan kelas walau belum lancar."
+    },
+    {
+      "id": "KP-KD-156",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ditolak saat mencalonkan diri menjadi ketua kelas lebih memalukan daripada tidak pernah mencalonkan diri sama sekali.",
+      "bedah": {
+        "sisi_x": "ditolak setelah mencalonkan diri",
+        "sisi_y": "tidak pernah mencalonkan diri",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih tidak tampil demi menghindari penolakan."
+    },
+    {
+      "id": "KP-KD-157",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyalahkan nasib ketika nilai turun lebih merugikan daripada mengakui bahwa cara belajar saya perlu diperbaiki.",
+      "bedah": {
+        "sisi_x": "menyalahkan nasib",
+        "sisi_y": "mengakui cara belajar perlu diperbaiki",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih melihat hasil sebagai akibat usaha sendiri, bukan nasib."
+    },
+    {
+      "id": "KP-KD-158",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Salah bicara saat berpidato di depan sekolah lebih memalukan daripada menolak tawaran menjadi pembicara.",
+      "bedah": {
+        "sisi_x": "salah bicara saat berpidato",
+        "sisi_y": "menolak tawaran menjadi pembicara",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menolak tampil daripada menanggung risiko salah bicara."
+    },
+    {
+      "id": "KP-KD-159",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Selalu mengiyakan pendapat teman agar diterima lebih merugikan daripada sesekali berbeda pendapat dengan mereka.",
+      "bedah": {
+        "sisi_x": "selalu mengiyakan pendapat teman",
+        "sisi_y": "sesekali berbeda pendapat",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih berani berbeda dan yakin pada pendapat sendiri."
+    },
+    {
+      "id": "KP-KD-160",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ketahuan kurang pandai bernyanyi di acara perpisahan sekolah lebih memalukan daripada menolak ikut tampil sejak awal.",
+      "bedah": {
+        "sisi_x": "ketahuan kurang pandai saat tampil",
+        "sisi_y": "menolak tampil sejak awal",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menyembunyikan kekurangan dengan tidak tampil."
+    },
+    {
+      "id": "KP-KD-161",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menghindari foto bersama karena merasa kurang menarik lebih disayangkan daripada ikut berfoto apa adanya.",
+      "bedah": {
+        "sisi_x": "menghindari foto karena merasa kurang menarik",
+        "sisi_y": "ikut berfoto apa adanya",
+        "pembanding": "lebih disayangkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih menerima diri apa adanya dan tetap tampil."
+    },
+    {
+      "id": "KP-KD-162",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengemukakan pendapat yang ternyata keliru di depan kelas lebih memalukan daripada menyimpan pendapat itu untuk diri sendiri.",
+      "bedah": {
+        "sisi_x": "mengemukakan pendapat yang keliru",
+        "sisi_y": "menyimpan pendapat",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih diam daripada berani menyampaikan pendapat."
+    },
+    {
+      "id": "KP-KD-163",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Melewatkan kesempatan menjadi pemimpin regu Pramuka lebih saya sesali daripada gagal menjalankan peran itu dengan sempurna.",
+      "bedah": {
+        "sisi_x": "melewatkan kesempatan memimpin",
+        "sisi_y": "memimpin walau tidak sempurna",
+        "pembanding": "lebih saya sesali",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih mencoba memimpin walau belum sempurna."
+    },
+    {
+      "id": "KP-KD-164",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memimpin apel pagi dengan suara bergetar lebih memalukan daripada meminta rekan lain menggantikan saya.",
+      "bedah": {
+        "sisi_x": "suara bergetar saat memimpin apel",
+        "sisi_y": "meminta rekan menggantikan",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mundur dari tugas tampil daripada tampil dengan gugup."
+    },
+    {
+      "id": "KP-KD-165",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menjawab pertanyaan pengasuh dengan suara lirih lebih mengecewakan daripada menjawab lantang meskipun jawabannya kurang lengkap.",
+      "bedah": {
+        "sisi_x": "menjawab dengan suara lirih",
+        "sisi_y": "menjawab lantang walau kurang lengkap",
+        "pembanding": "lebih mengecewakan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih berbicara dengan yakin walau jawaban belum sempurna."
+    },
+    {
+      "id": "KP-KD-166",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ditertawakan rekan saat mencoba tampil di pentas seni asrama lebih memalukan daripada hanya menjadi penonton.",
+      "bedah": {
+        "sisi_x": "ditertawakan saat tampil",
+        "sisi_y": "menjadi penonton",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih tidak tampil demi menghindari ditertawakan.",
+      "catatan_psikologi": "Memilih menjadi penonton di acara hiburan itu wajar. Yang diukur di sini apakah rasa takut ditertawakan menghalangi keberanian tampil."
+    },
+    {
+      "id": "KP-KD-167",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengandalkan keberuntungan saat ujian kenaikan tingkat lebih berbahaya daripada kelelahan karena belajar tambahan setiap malam.",
+      "bedah": {
+        "sisi_x": "mengandalkan keberuntungan",
+        "sisi_y": "lelah karena belajar tambahan",
+        "pembanding": "lebih berbahaya",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih bertumpu pada usaha sendiri, bukan keberuntungan."
+    },
+    {
+      "id": "KP-KD-168",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ditolaknya usul saya dalam rapat angkatan lebih memalukan daripada tidak mengajukan usul sama sekali.",
+      "bedah": {
+        "sisi_x": "usul ditolak di rapat",
+        "sisi_y": "tidak mengajukan usul",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih diam daripada berani mengajukan pendapat."
+    },
+    {
+      "id": "KP-KD-169",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menghindari sesi tanya jawab dengan warga lebih merugikan daripada keliru sedikit saat menjawab pertanyaan mereka.",
+      "bedah": {
+        "sisi_x": "menghindari tanya jawab dengan warga",
+        "sisi_y": "keliru sedikit saat menjawab",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih tetap berbicara di depan warga walau berisiko keliru."
+    },
+    {
+      "id": "KP-KD-170",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi polisi, terlihat canggung saat mengatur lalu lintas di persimpangan ramai lebih memalukan daripada meminta ditempatkan di pos yang sepi.",
+      "bedah": {
+        "sisi_x": "canggung di persimpangan ramai",
+        "sisi_y": "meminta pos yang sepi",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menghindari tempat yang membuatnya terlihat."
+    },
+    {
+      "id": "KP-KD-171",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi polisi, pasrah menunggu keberuntungan dalam mencari orang hilang lebih buruk daripada lelah menyisir lokasi berulang kali.",
+      "bedah": {
+        "sisi_x": "pasrah menunggu keberuntungan",
+        "sisi_y": "lelah menyisir lokasi",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih bertumpu pada usaha sendiri, bukan nasib."
+    },
+    {
+      "id": "KP-KD-172",
+      "aspek": "Kepercayaan Diri",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, ketahuan belum mahir menggunakan perangkat baru di depan warga lebih memalukan daripada menyerahkan pelayanan kepada rekan yang lebih mahir.",
+      "bedah": {
+        "sisi_x": "ketahuan belum mahir di depan warga",
+        "sisi_y": "menyerahkan pelayanan kepada rekan",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menyembunyikan kekurangan daripada menghadapinya dengan tenang."
+    }
+  ]
+}

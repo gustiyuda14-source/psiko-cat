@@ -1,0 +1,2185 @@
+{
+  "batch": "sk-d-01",
+  "status": "review",
+  "catatan": "Batch 180 butir Substansi Khusus D8 (72), D9 (54), D10 (18), D11 (36). Butir ditulis sub-agen; dirakit dan dicek ulang oleh controller. Belum di-seed.",
+  "dimensi": {
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D8-101",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika rumus matematika belum dipahami",
+      "opsi": {
+        "A": "Mempelajari ulang sendiri",
+        "B": "Menunggu dijelaskan guru"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian tampak dari usaha memahami materi sendiri lebih dulu. Menunggu penjelasan guru wajar, tetapi bersifat pasif."
+    },
+    {
+      "id": "SK-D8-102",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika perlengkapan apel belum siap",
+      "opsi": {
+        "A": "Meminta bantuan rekan",
+        "B": "Menyiapkan sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perlengkapan pribadi adalah tanggung jawab sendiri, sehingga disiapkan secara mandiri."
+    },
+    {
+      "id": "SK-D8-103",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika melihat lampu kelas dibiarkan menyala",
+      "opsi": {
+        "A": "Langsung mematikannya",
+        "B": "Mengingatkan petugas piket"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti segera bertindak atas hal kecil yang bisa dikerjakan sendiri tanpa melempar ke orang lain."
+    },
+    {
+      "id": "SK-D8-104",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam mempersiapkan seleksi masuk",
+      "opsi": {
+        "A": "Persiapan mandiri",
+        "B": "Belajar berkelompok"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesiapan seleksi bertumpu pada persiapan mandiri. Belajar berkelompok bermanfaat, tetapi tidak menggantikan usaha pribadi."
+    },
+    {
+      "id": "SK-D8-105",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika lari pagi terasa sangat berat",
+      "opsi": {
+        "A": "Mengurangi jarak",
+        "B": "Tetap menuntaskan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan tampak dari kemauan menuntaskan latihan walau terasa berat."
+    },
+    {
+      "id": "SK-D8-106",
+      "dimensi": "D8",
+      "situasi": "Hal yang dirasakan memuaskan dalam mengikuti lomba",
+      "opsi": {
+        "A": "Menambah teman",
+        "B": "Meraih juara"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan semangat berprestasi, sehingga yang memuaskan adalah capaian juara."
+    },
+    {
+      "id": "SK-D8-107",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika merencanakan kerja bakti di kampung",
+      "opsi": {
+        "A": "Mengandalkan panitia",
+        "B": "Mengajak warga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan masyarakat berhasil bila warga ikut bergerak. Menggerakkan partisipasi warga adalah bentuk inisiatif."
+    },
+    {
+      "id": "SK-D8-108",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika rak buku di rumah mulai berantakan",
+      "opsi": {
+        "A": "Menunggu diminta orang tua",
+        "B": "Merapikan tanpa disuruh"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti bertindak tanpa harus diminta lebih dulu."
+    },
+    {
+      "id": "SK-D8-109",
+      "dimensi": "D8",
+      "situasi": "Hal yang diyakini dalam memperbaiki nilai rapor",
+      "opsi": {
+        "A": "Bimbingan orang lain",
+        "B": "Usaha sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perbaikan nilai terutama ditentukan oleh usaha sendiri. Bimbingan membantu, tetapi bukan penentu utama."
+    },
+    {
+      "id": "SK-D8-110",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika muncul gagasan kegiatan OSIS",
+      "opsi": {
+        "A": "Menyimpannya dulu",
+        "B": "Segera mengusulkannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti gagasan yang baik segera disampaikan agar bisa ditindaklanjuti."
+    },
+    {
+      "id": "SK-D8-111",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika gagal memasang tenda Pramuka",
+      "opsi": {
+        "A": "Meminta dipasangkan",
+        "B": "Mencoba lagi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba lagi sampai berhasil menunjukkan keuletan dan kemandirian."
+    },
+    {
+      "id": "SK-D8-112",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam mengikuti latihan Paskibra",
+      "opsi": {
+        "A": "Menikmati kebersamaan",
+        "B": "Menjadi yang terbaik"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi mendorong untuk tampil sebaik mungkin. Kebersamaan tetap penting, tetapi bukan yang diutamakan di sini."
+    },
+    {
+      "id": "SK-D8-113",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jalan depan rumah tergenang",
+      "opsi": {
+        "A": "Mengajak tetangga bergotong royong",
+        "B": "Melaporkan ke pengurus RT"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masalah lingkungan diselesaikan dengan menggerakkan partisipasi warga sekitar."
+    },
+    {
+      "id": "SK-D8-114",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika uang saku menipis",
+      "opsi": {
+        "A": "Meminta tambahan",
+        "B": "Mengatur sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian tampak dari kemampuan mengatur keperluan sendiri tanpa bergantung pada orang lain."
+    },
+    {
+      "id": "SK-D8-115",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika seragam sekolah kusut",
+      "opsi": {
+        "A": "Meminta disetrikakan",
+        "B": "Menyetrika sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebutuhan pribadi sederhana diselesaikan sendiri sebagai wujud kemandirian."
+    },
+    {
+      "id": "SK-D8-116",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan ketika target hafalan belum tercapai",
+      "opsi": {
+        "A": "Terus berusaha",
+        "B": "Menurunkan target"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan berarti tetap berusaha mencapai target, bukan menurunkannya."
+    },
+    {
+      "id": "SK-D8-117",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam mengisi libur sekolah",
+      "opsi": {
+        "A": "Mengasah kemampuan",
+        "B": "Beristirahat cukup"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi mendorong pemanfaatan waktu luang untuk mengembangkan kemampuan."
+    },
+    {
+      "id": "SK-D8-118",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika adik kesulitan belajar membaca",
+      "opsi": {
+        "A": "Memberi tahu ibu",
+        "B": "Langsung mendampinginya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti langsung turun tangan membantu tanpa menunggu."
+    },
+    {
+      "id": "SK-D8-119",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan dalam menggalang dana korban banjir",
+      "opsi": {
+        "A": "Menyumbang secara pribadi",
+        "B": "Mengajak warga berdonasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan kemasyarakatan lebih berdampak bila partisipasi warga digerakkan."
+    },
+    {
+      "id": "SK-D8-120",
+      "dimensi": "D8",
+      "situasi": "Hal yang diyakini dalam meraih prestasi akademik",
+      "opsi": {
+        "A": "Ketekunan",
+        "B": "Kecerdasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Prestasi lebih ditentukan oleh ketekunan daripada kecerdasan bawaan."
+    },
+    {
+      "id": "SK-D8-121",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika laporan kegiatan OSIS belum ada yang menyusun",
+      "opsi": {
+        "A": "Menunggu pembagian tugas",
+        "B": "Mulai menyusunnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti mengambil pekerjaan yang terbengkalai tanpa menunggu ditunjuk."
+    },
+    {
+      "id": "SK-D8-122",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika gerakan baris pasukan belum kompak",
+      "opsi": {
+        "A": "Berlatih tambahan",
+        "B": "Menunggu latihan berikutnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif dan ulet mendorong latihan tambahan tanpa menunggu jadwal."
+    },
+    {
+      "id": "SK-D8-123",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan ketika belum lolos seleksi tim basket",
+      "opsi": {
+        "A": "Berlatih lebih giat",
+        "B": "Mencoba cabang lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan berarti terus berjuang pada tujuan yang sama dengan latihan lebih giat."
+    },
+    {
+      "id": "SK-D8-124",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika keran air di rumah bocor",
+      "opsi": {
+        "A": "Mencoba memperbaiki",
+        "B": "Menunggu ayah pulang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian dan inisiatif tampak dari kemauan mencoba menyelesaikan masalah sendiri."
+    },
+    {
+      "id": "SK-D8-125",
+      "dimensi": "D8",
+      "situasi": "Hal yang dirasakan paling berkesan dalam masa SMA",
+      "opsi": {
+        "A": "Kenangan bersama teman",
+        "B": "Prestasi yang diraih"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan orientasi berprestasi, sehingga capaian prestasi menjadi hal yang paling berkesan."
+    },
+    {
+      "id": "SK-D8-126",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jadwal kegiatan Pramuka berubah mendadak",
+      "opsi": {
+        "A": "Menunggu kabar ketua",
+        "B": "Mencari informasi sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti aktif mencari informasi, bukan menunggu dikabari."
+    },
+    {
+      "id": "SK-D8-127",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika mendapat tugas makalah yang sulit",
+      "opsi": {
+        "A": "Mencari referensi sendiri",
+        "B": "Bertanya kepada kakak kelas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas pribadi diselesaikan sendiri lebih dulu dengan mencari bahan secara mandiri."
+    },
+    {
+      "id": "SK-D8-128",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam berlatih renang menjelang tes",
+      "opsi": {
+        "A": "Menambah latihan mandiri",
+        "B": "Menunggu jadwal pelatih"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif dan keuletan mendorong latihan mandiri di luar jadwal resmi."
+    },
+    {
+      "id": "SK-D8-129",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika orang tua sedang sakit",
+      "opsi": {
+        "A": "Menunggu diminta membantu",
+        "B": "Mengambil alih pekerjaan rumah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti langsung mengambil peran tanpa menunggu diminta."
+    },
+    {
+      "id": "SK-D8-130",
+      "dimensi": "D8",
+      "situasi": "Hal yang menentukan dalam mencapai target lari dua belas menit",
+      "opsi": {
+        "A": "Program dari pelatih",
+        "B": "Kegigihan berlatih"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Program pelatih memberi arah, tetapi kegigihan diri sendirilah yang menentukan tercapainya target."
+    },
+    {
+      "id": "SK-D8-131",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika ingin mengadakan penyuluhan antinarkoba di desa",
+      "opsi": {
+        "A": "Melibatkan tokoh masyarakat",
+        "B": "Mengundang narasumber ahli"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan di masyarakat lebih kuat bila tokoh setempat dilibatkan untuk menggerakkan partisipasi warga."
+    },
+    {
+      "id": "SK-D8-132",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika kelas kosong karena guru berhalangan",
+      "opsi": {
+        "A": "Menunggu guru pengganti",
+        "B": "Belajar mandiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu kosong dimanfaatkan dengan belajar mandiri sebagai wujud inisiatif."
+    },
+    {
+      "id": "SK-D8-133",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jadwal pemeriksaan kamar diumumkan",
+      "opsi": {
+        "A": "Segera merapikan kamar",
+        "B": "Menunggu arahan senior"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti langsung bersiap tanpa menunggu arahan."
+    },
+    {
+      "id": "SK-D8-134",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika tertinggal pelajaran karena sakit",
+      "opsi": {
+        "A": "Meminta diajari rekan",
+        "B": "Mengejar materi sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketertinggalan pribadi dikejar dengan usaha mandiri lebih dulu."
+    },
+    {
+      "id": "SK-D8-135",
+      "dimensi": "D8",
+      "situasi": "Hal yang dirasakan ketika latihan halang rintang sangat melelahkan",
+      "opsi": {
+        "A": "Keinginan beristirahat",
+        "B": "Tekad menuntaskan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan tampak dari tekad menuntaskan latihan meskipun lelah."
+    },
+    {
+      "id": "SK-D8-136",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam menjalani pendidikan kedinasan",
+      "opsi": {
+        "A": "Lulus dengan prestasi",
+        "B": "Lulus tepat waktu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi menuntut lebih dari sekadar lulus, yaitu lulus dengan capaian terbaik."
+    },
+    {
+      "id": "SK-D8-137",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika perlengkapan pribadi rusak di asrama",
+      "opsi": {
+        "A": "Meminta ganti baru",
+        "B": "Memperbaikinya sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian berarti berusaha mengatasi masalah perlengkapan sendiri lebih dulu."
+    },
+    {
+      "id": "SK-D8-138",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika tugas piket dapur selesai lebih cepat",
+      "opsi": {
+        "A": "Membantu bagian lain",
+        "B": "Beristirahat sejenak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti mencari pekerjaan lain yang bisa dibantu tanpa diminta."
+    },
+    {
+      "id": "SK-D8-139",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan ketika nilai jasmani masih di bawah rata-rata",
+      "opsi": {
+        "A": "Latihan sesuai jadwal",
+        "B": "Latihan tambahan mandiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kekurangan diri dikejar dengan latihan mandiri di luar jadwal sebagai wujud keuletan."
+    },
+    {
+      "id": "SK-D8-140",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika pengasuh memberi tugas tanpa penjelasan rinci",
+      "opsi": {
+        "A": "Menunggu penjelasan lanjutan",
+        "B": "Mencari tahu sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap mandiri dan proaktif mendorong untuk mencari tahu sendiri cara menyelesaikan tugas."
+    },
+    {
+      "id": "SK-D8-141",
+      "dimensi": "D8",
+      "situasi": "Hal yang diyakini dalam menghadapi tes kesamaptaan",
+      "opsi": {
+        "A": "Keuletan berlatih",
+        "B": "Bakat bawaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hasil tes jasmani terutama ditentukan oleh keuletan berlatih."
+    },
+    {
+      "id": "SK-D8-142",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika regu ditunjuk mengikuti lomba ketangkasan",
+      "opsi": {
+        "A": "Berlatih sesuai jadwal",
+        "B": "Berlatih di luar jadwal"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi dan inisiatif mendorong latihan ekstra di luar jadwal."
+    },
+    {
+      "id": "SK-D8-143",
+      "dimensi": "D8",
+      "situasi": "Hal yang dirasakan memotivasi selama tinggal di asrama",
+      "opsi": {
+        "A": "Target prestasi",
+        "B": "Waktu pesiar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan orientasi berprestasi sebagai sumber motivasi."
+    },
+    {
+      "id": "SK-D8-144",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika waktu belajar malam terasa kurang",
+      "opsi": {
+        "A": "Menambah belajar mandiri",
+        "B": "Mengikuti jadwal yang ada"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti menambah usaha sendiri saat merasa kurang, tanpa menunggu jadwal diubah."
+    },
+    {
+      "id": "SK-D8-145",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika gagal menembus target waktu lari",
+      "opsi": {
+        "A": "Terus mencoba",
+        "B": "Menerima hasilnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan berarti terus mencoba sampai target tercapai."
+    },
+    {
+      "id": "SK-D8-146",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika junior terlihat kebingungan di hari pertama",
+      "opsi": {
+        "A": "Menghampiri lebih dulu",
+        "B": "Menunggu ditanya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti mendekat dan membantu tanpa menunggu ditanya."
+    },
+    {
+      "id": "SK-D8-147",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam bakti sosial taruna ke desa binaan",
+      "opsi": {
+        "A": "Menuntaskan pekerjaan fisik",
+        "B": "Menggerakkan warga desa"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan di masyarakat diutamakan untuk menggerakkan partisipasi warga agar hasilnya berlanjut."
+    },
+    {
+      "id": "SK-D8-148",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika materi hukum sulit dipahami",
+      "opsi": {
+        "A": "Mengulang sendiri",
+        "B": "Menunggu kelas tambahan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian belajar tampak dari kemauan mengulang materi sendiri."
+    },
+    {
+      "id": "SK-D8-149",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan ketika mendapat kesempatan memimpin apel",
+      "opsi": {
+        "A": "Tampil maksimal",
+        "B": "Tampil aman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi mendorong untuk memanfaatkan kesempatan dengan tampil maksimal."
+    },
+    {
+      "id": "SK-D8-150",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika pelatih belum datang saat jam latihan",
+      "opsi": {
+        "A": "Memulai pemanasan",
+        "B": "Menunggu di lapangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti memulai hal yang sudah jelas perlu dilakukan tanpa menunggu."
+    },
+    {
+      "id": "SK-D8-151",
+      "dimensi": "D8",
+      "situasi": "Hal yang menentukan dalam bertahan selama masa orientasi",
+      "opsi": {
+        "A": "Kemauan sendiri",
+        "B": "Dorongan pengasuh"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Daya tahan selama pendidikan terutama bersumber dari kemauan diri sendiri."
+    },
+    {
+      "id": "SK-D8-152",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika ada materi ujian yang belum diajarkan",
+      "opsi": {
+        "A": "Mempelajarinya lebih dulu",
+        "B": "Menunggu pertemuan berikutnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti mempelajari materi lebih dulu tanpa menunggu diajarkan."
+    },
+    {
+      "id": "SK-D8-153",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika kemampuan menembak belum memenuhi standar",
+      "opsi": {
+        "A": "Berlatih lebih tekun",
+        "B": "Menunggu evaluasi pelatih"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan mendorong latihan lebih tekun tanpa menunggu dievaluasi."
+    },
+    {
+      "id": "SK-D8-154",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika mendapat waktu bebas di asrama",
+      "opsi": {
+        "A": "Bercengkerama dengan rekan",
+        "B": "Mengulang pelajaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi mendorong pemanfaatan waktu luang untuk belajar."
+    },
+    {
+      "id": "SK-D8-155",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jahitan baju dinas terlepas",
+      "opsi": {
+        "A": "Membawa ke penjahit",
+        "B": "Menjahit sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perbaikan kecil pada perlengkapan pribadi dikerjakan sendiri sebagai wujud kemandirian."
+    },
+    {
+      "id": "SK-D8-156",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika menjadi anggota Polri dan melihat tanda kemacetan",
+      "opsi": {
+        "A": "Menunggu laporan masuk",
+        "B": "Mengatur sebelum padat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti bertindak mencegah masalah sebelum membesar."
+    },
+    {
+      "id": "SK-D8-157",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam membangun keamanan lingkungan sebagai anggota Polri",
+      "opsi": {
+        "A": "Partisipasi warga",
+        "B": "Patroli petugas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keamanan lingkungan paling kuat bila warga ikut terlibat. Menggerakkan partisipasi adalah kunci dimensi ini."
+    },
+    {
+      "id": "SK-D8-158",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika penyelidikan kasus belum menemukan titik terang",
+      "opsi": {
+        "A": "Menunggu bukti baru",
+        "B": "Terus menggali keterangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan dan sikap proaktif mendorong untuk terus menggali, bukan menunggu."
+    },
+    {
+      "id": "SK-D8-159",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan dalam mencegah pencurian di permukiman",
+      "opsi": {
+        "A": "Menghidupkan ronda warga",
+        "B": "Menambah personel jaga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pencegahan kejahatan di permukiman diperkuat dengan menggerakkan partisipasi warga."
+    },
+    {
+      "id": "SK-D8-160",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan dalam meredakan konflik antarwarga sebagai polisi",
+      "opsi": {
+        "A": "Melibatkan tokoh setempat",
+        "B": "Menangani secara langsung"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penyelesaian masalah di masyarakat lebih kuat bila tokoh setempat ikut digerakkan."
+    },
+    {
+      "id": "SK-D8-161",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jadwal patroli selesai lebih awal",
+      "opsi": {
+        "A": "Menyisir titik rawan",
+        "B": "Beristirahat di pos"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti memanfaatkan waktu tersisa untuk tugas yang berguna."
+    },
+    {
+      "id": "SK-D8-162",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam kampanye tertib berlalu lintas",
+      "opsi": {
+        "A": "Memasang spanduk imbauan",
+        "B": "Menggandeng komunitas pengendara"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kampanye lebih efektif bila masyarakat dilibatkan secara aktif."
+    },
+    {
+      "id": "SK-D8-163",
+      "dimensi": "D8",
+      "situasi": "Hal yang dirasakan memuaskan dalam bertugas sebagai polisi",
+      "opsi": {
+        "A": "Suasana kerja",
+        "B": "Capaian kinerja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan orientasi berprestasi, sehingga yang memuaskan adalah capaian kerja."
+    },
+    {
+      "id": "SK-D8-164",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika peralatan pos jaga kurang memadai",
+      "opsi": {
+        "A": "Memanfaatkan yang ada",
+        "B": "Menunggu pengadaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian berarti tetap bekerja dengan sumber daya yang tersedia tanpa menunggu."
+    },
+    {
+      "id": "SK-D8-165",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan dalam pemulihan pascabencana di sebuah desa",
+      "opsi": {
+        "A": "Mengerahkan tim sendiri",
+        "B": "Menggerakkan relawan warga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pemulihan di masyarakat lebih kuat dan berkelanjutan bila warga ikut digerakkan."
+    },
+    {
+      "id": "SK-D8-166",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika berkas laporan menumpuk di meja",
+      "opsi": {
+        "A": "Meminta bantuan rekan",
+        "B": "Menyelesaikan sendiri bertahap"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pekerjaan yang menjadi tanggung jawab sendiri diselesaikan secara mandiri."
+    },
+    {
+      "id": "SK-D8-167",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika tetangga lansia tinggal sendirian",
+      "opsi": {
+        "A": "Menjenguk tanpa diminta",
+        "B": "Menunggu dimintai tolong"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti peduli dan bertindak lebih dulu tanpa menunggu diminta."
+    },
+    {
+      "id": "SK-D8-168",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika ingin menghidupkan taman baca di kampung",
+      "opsi": {
+        "A": "Mengajak pemuda setempat",
+        "B": "Mengelolanya seorang diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan di masyarakat akan bertahan bila warga ikut dilibatkan."
+    },
+    {
+      "id": "SK-D8-169",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipikirkan ketika belum terpilih menjadi pengurus OSIS",
+      "opsi": {
+        "A": "Mendukung yang terpilih",
+        "B": "Mencoba tahun depan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mendukung yang terpilih itu baik, tetapi dimensi ini menekankan keuletan untuk terus mencoba."
+    },
+    {
+      "id": "SK-D8-170",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam mengikuti olimpiade sains",
+      "opsi": {
+        "A": "Meraih medali",
+        "B": "Menambah pengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Semangat berprestasi diarahkan pada capaian terbaik, yaitu meraih medali."
+    },
+    {
+      "id": "SK-D8-171",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan dalam menyosialisasikan pencegahan perundungan sebagai polisi",
+      "opsi": {
+        "A": "Melibatkan siswa dan guru",
+        "B": "Memberikan ceramah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sosialisasi lebih berhasil bila sasaran ikut terlibat aktif, bukan hanya mendengar."
+    },
+    {
+      "id": "SK-D8-172",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika menjadi anggota Polri dan melihat warga kebingungan di terminal",
+      "opsi": {
+        "A": "Menunggu didatangi",
+        "B": "Menghampiri dan membantu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sikap proaktif berarti mendekati warga yang butuh bantuan tanpa menunggu didatangi."
+    },
+    {
+      "id": "SK-D9-101",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika masih bisa berkumpul lengkap bersama keluarga",
+      "opsi": {
+        "A": "Kegembiraan",
+        "B": "Syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebersamaan keluarga dimaknai dengan syukur, bukan sekadar kegembiraan sesaat."
+    },
+    {
+      "id": "SK-D9-102",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika gagal meraih juara kelas",
+      "opsi": {
+        "A": "Hikmah kegagalan",
+        "B": "Selisih nilai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan dimaknai dengan mencari hikmahnya, bukan terpaku pada angka."
+    },
+    {
+      "id": "SK-D9-103",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika dipercaya memegang kas kelas",
+      "opsi": {
+        "A": "Kepercayaan teman",
+        "B": "Titipan amanah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Uang kas dipandang sebagai amanah yang dipertanggungjawabkan, bukan hanya soal kepercayaan teman."
+    },
+    {
+      "id": "SK-D9-104",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan setelah membantu tetangga yang kesusahan",
+      "opsi": {
+        "A": "Rasa dihargai",
+        "B": "Ketenangan hati"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebaikan membawa ketenangan batin, bukan diukur dari penghargaan orang."
+    },
+    {
+      "id": "SK-D9-105",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam memaknai rezeki keluarga",
+      "opsi": {
+        "A": "Keberkahan rezeki",
+        "B": "Besarnya penghasilan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki dinilai dari keberkahannya, bukan dari besar jumlahnya."
+    },
+    {
+      "id": "SK-D9-106",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika harus dirawat berhari-hari karena sakit",
+      "opsi": {
+        "A": "Makna kesehatan",
+        "B": "Pelajaran yang tertinggal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sakit dimaknai sebagai pengingat berharganya kesehatan."
+    },
+    {
+      "id": "SK-D9-107",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika memandang langit malam yang luas",
+      "opsi": {
+        "A": "Kebesaran Sang Pencipta",
+        "B": "Keindahan alam"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan makna spiritual di balik hal yang tampak."
+    },
+    {
+      "id": "SK-D9-108",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam memilih sahabat",
+      "opsi": {
+        "A": "Kebaikan akhlak",
+        "B": "Kesamaan hobi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Persahabatan yang bermakna berpijak pada akhlak yang baik."
+    },
+    {
+      "id": "SK-D9-109",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika mendapat rezeki tak terduga",
+      "opsi": {
+        "A": "Rasa gembira",
+        "B": "Rasa syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki disikapi lebih dulu dengan syukur, bukan hanya gembira."
+    },
+    {
+      "id": "SK-D9-110",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika usaha belajar belum membuahkan hasil",
+      "opsi": {
+        "A": "Butuh waktu lebih",
+        "B": "Ada hikmah tersembunyi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Hasil yang belum datang dimaknai sebagai keadaan yang menyimpan hikmah."
+    },
+    {
+      "id": "SK-D9-111",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam merayakan kelulusan sekolah",
+      "opsi": {
+        "A": "Ungkapan syukur",
+        "B": "Pesta perpisahan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kelulusan dirayakan dengan mengutamakan rasa syukur, bukan kemeriahan."
+    },
+    {
+      "id": "SK-D9-112",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan dari menjalankan nasihat orang tua",
+      "opsi": {
+        "A": "Keuntungan praktis",
+        "B": "Keberkahan hidup"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Nasihat orang tua dimaknai sebagai sumber keberkahan, bukan sekadar manfaat praktis."
+    },
+    {
+      "id": "SK-D9-113",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika teman memamerkan barang mahal",
+      "opsi": {
+        "A": "Motivasi menabung",
+        "B": "Rasa cukup"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Rasa cukup adalah wujud syukur atas apa yang dimiliki, di atas dorongan materi."
+    },
+    {
+      "id": "SK-D9-114",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan bermakna dari kegiatan bakti sosial",
+      "opsi": {
+        "A": "Keikhlasan memberi",
+        "B": "Pengalaman berorganisasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai utama bakti sosial terletak pada keikhlasan, bukan pada pengalaman yang didapat."
+    },
+    {
+      "id": "SK-D9-115",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini dalam menjaga barang titipan teman",
+      "opsi": {
+        "A": "Amanah",
+        "B": "Pertemanan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Barang titipan dijaga karena merupakan amanah, bukan sekadar karena berteman."
+    },
+    {
+      "id": "SK-D9-116",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menerima pujian dari guru",
+      "opsi": {
+        "A": "Rasa percaya diri",
+        "B": "Rasa syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pujian disikapi dengan syukur agar tetap rendah hati."
+    },
+    {
+      "id": "SK-D9-117",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam memulai hari",
+      "opsi": {
+        "A": "Niat yang baik",
+        "B": "Rencana kegiatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Makna sebuah hari diawali dari niat yang baik."
+    },
+    {
+      "id": "SK-D9-118",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika melihat orang tua bekerja keras membiayai sekolah",
+      "opsi": {
+        "A": "Amanah belajar",
+        "B": "Kebutuhan biaya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan sekolah dimaknai sebagai amanah yang harus dijaga."
+    },
+    {
+      "id": "SK-D9-119",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika kalah dalam pertandingan final",
+      "opsi": {
+        "A": "Lawan lebih kuat",
+        "B": "Ada hikmahnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kekalahan dimaknai dengan mencari hikmah di baliknya."
+    },
+    {
+      "id": "SK-D9-120",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam menilai keberhasilan hidup",
+      "opsi": {
+        "A": "Kemapanan ekonomi",
+        "B": "Kebermaknaan hidup"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keberhasilan hidup diukur dari maknanya, bukan dari kemapanan materi."
+    },
+    {
+      "id": "SK-D9-121",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika berdiam sejenak di tengah kesibukan",
+      "opsi": {
+        "A": "Ketenangan batin",
+        "B": "Kesegaran tubuh"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan ketenangan batin di atas manfaat fisik."
+    },
+    {
+      "id": "SK-D9-122",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika memiliki rezeki lebih dari teman",
+      "opsi": {
+        "A": "Berbagi dengan tulus",
+        "B": "Menyimpan untuk nanti"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki lebih dimaknai sebagai kesempatan berbagi, bukan sekadar disimpan."
+    },
+    {
+      "id": "SK-D9-123",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika masih diberi kesehatan",
+      "opsi": {
+        "A": "Semangat",
+        "B": "Syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesehatan adalah karunia yang disikapi pertama-tama dengan syukur."
+    },
+    {
+      "id": "SK-D9-124",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam menerima hadiah lomba",
+      "opsi": {
+        "A": "Rasa syukur",
+        "B": "Nilai hadiahnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hadiah disambut dengan syukur, bukan diukur dari nilainya."
+    },
+    {
+      "id": "SK-D9-125",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika diberi kepercayaan menjaga adik",
+      "opsi": {
+        "A": "Tugas tambahan",
+        "B": "Amanah orang tua"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kepercayaan menjaga adik dipandang sebagai amanah, bukan beban tugas."
+    },
+    {
+      "id": "SK-D9-126",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika memaafkan kesalahan teman",
+      "opsi": {
+        "A": "Hubungan membaik",
+        "B": "Ketenangan batin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memaafkan terutama membawa ketenangan batin bagi diri sendiri."
+    },
+    {
+      "id": "SK-D9-127",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika pertama kali mengenakan seragam taruna",
+      "opsi": {
+        "A": "Rasa syukur",
+        "B": "Rasa gagah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan mengenakan seragam disambut dengan syukur, bukan kebanggaan penampilan."
+    },
+    {
+      "id": "SK-D9-128",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini dalam menjalani kerasnya pendidikan",
+      "opsi": {
+        "A": "Tuntutan kurikulum",
+        "B": "Tempaan bermakna"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kerasnya pendidikan dimaknai sebagai tempaan diri yang bermakna."
+    },
+    {
+      "id": "SK-D9-129",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan menguatkan ketika jauh dari keluarga di asrama",
+      "opsi": {
+        "A": "Kiriman dari rumah",
+        "B": "Restu orang tua"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kekuatan batin dari restu orang tua lebih berharga daripada kiriman benda."
+    },
+    {
+      "id": "SK-D9-130",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika menerima uang saku pendidikan",
+      "opsi": {
+        "A": "Rasa syukur",
+        "B": "Rencana penggunaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki disikapi lebih dulu dengan syukur sebelum hal-hal material."
+    },
+    {
+      "id": "SK-D9-131",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika ditunjuk menjadi komandan peleton",
+      "opsi": {
+        "A": "Amanah yang dipikul",
+        "B": "Peluang menonjol"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kepercayaan memimpin dimaknai sebagai amanah, bukan kesempatan menonjolkan diri."
+    },
+    {
+      "id": "SK-D9-132",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan setelah melewati masa orientasi yang berat",
+      "opsi": {
+        "A": "Rasa lega",
+        "B": "Rasa syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Masa berat yang terlewati disikapi dengan syukur."
+    },
+    {
+      "id": "SK-D9-133",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika cedera menghambat latihan",
+      "opsi": {
+        "A": "Ujian kesabaran",
+        "B": "Kesalahan teknik"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan makna di balik peristiwa, yaitu cedera sebagai ujian kesabaran."
+    },
+    {
+      "id": "SK-D9-134",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam menjalani hari-hari di asrama",
+      "opsi": {
+        "A": "Ketenangan batin",
+        "B": "Kenyamanan fasilitas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan batin diutamakan di atas kenyamanan fasilitas."
+    },
+    {
+      "id": "SK-D9-135",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menerima penghargaan taruna teladan",
+      "opsi": {
+        "A": "Nilai tambah karier",
+        "B": "Tanggung jawab moral"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penghargaan dimaknai sebagai tanggung jawab moral untuk memberi teladan, bukan keuntungan karier."
+    },
+    {
+      "id": "SK-D9-136",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika pesiar bersama keluarga",
+      "opsi": {
+        "A": "Kesenangan berjalan-jalan",
+        "B": "Syukur atas kebersamaan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu bersama keluarga dimaknai dengan syukur, bukan sekadar hiburan."
+    },
+    {
+      "id": "SK-D9-137",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika menerima teguran keras dari pengasuh",
+      "opsi": {
+        "A": "Bagian dari prosedur",
+        "B": "Ada pelajaran berharga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Teguran dimaknai sebagai sumber hikmah dan pelajaran."
+    },
+    {
+      "id": "SK-D9-138",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan menguatkan ketika merindukan rumah",
+      "opsi": {
+        "A": "Keyakinan batin",
+        "B": "Kesibukan kegiatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kekuatan batin menjadi sandaran utama saat rindu, bukan pengalihan lewat kesibukan."
+    },
+    {
+      "id": "SK-D9-139",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan sebelum tidur di asrama",
+      "opsi": {
+        "A": "Mensyukuri hari ini",
+        "B": "Menyiapkan perlengkapan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hari dimaknai dengan syukur sebelum beristirahat."
+    },
+    {
+      "id": "SK-D9-140",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika mengenang perjuangan masuk pendidikan",
+      "opsi": {
+        "A": "Rasa puas",
+        "B": "Rasa syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perjuangan yang berbuah disikapi dengan syukur, bukan kepuasan diri."
+    },
+    {
+      "id": "SK-D9-141",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan dari kesempatan menempuh pendidikan kedinasan",
+      "opsi": {
+        "A": "Jaminan pekerjaan",
+        "B": "Amanah bangsa"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pendidikan kedinasan dimaknai sebagai amanah, bukan sekadar jaminan pekerjaan."
+    },
+    {
+      "id": "SK-D9-142",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika orang tua hadir dalam upacara pelantikan",
+      "opsi": {
+        "A": "Bangga dan puas",
+        "B": "Haru dan syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Momen pelantikan dimaknai dengan syukur, bukan kebanggaan diri."
+    },
+    {
+      "id": "SK-D9-143",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika mengucapkan sumpah sebagai anggota Polri",
+      "opsi": {
+        "A": "Janji kepada Tuhan",
+        "B": "Syarat administrasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sumpah jabatan dimaknai sebagai janji yang dipertanggungjawabkan kepada Tuhan."
+    },
+    {
+      "id": "SK-D9-144",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika berhasil menolong korban kecelakaan",
+      "opsi": {
+        "A": "Kebermaknaan tugas",
+        "B": "Kepuasan berprestasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pertolongan yang diberikan dimaknai dari sisi kebermaknaannya."
+    },
+    {
+      "id": "SK-D9-145",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menerima gaji pertama sebagai polisi",
+      "opsi": {
+        "A": "Rasa syukur",
+        "B": "Rencana keuangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Gaji pertama disambut dengan syukur sebelum urusan material."
+    },
+    {
+      "id": "SK-D9-146",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam bertugas di daerah terpencil",
+      "opsi": {
+        "A": "Tunjangan daerah",
+        "B": "Keikhlasan mengabdi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas di daerah sulit dijalani dengan keikhlasan, bukan karena tunjangan."
+    },
+    {
+      "id": "SK-D9-147",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika tugas di lokasi bencana sangat melelahkan",
+      "opsi": {
+        "A": "Nilai pengabdian",
+        "B": "Ketahanan fisik"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kelelahan dimaknai melalui nilai pengabdian di baliknya."
+    },
+    {
+      "id": "SK-D9-148",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menerima kenaikan pangkat",
+      "opsi": {
+        "A": "Penghasilan bertambah",
+        "B": "Amanah bertambah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kenaikan pangkat dimaknai sebagai amanah yang bertambah."
+    },
+    {
+      "id": "SK-D9-149",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika masyarakat mengucapkan terima kasih",
+      "opsi": {
+        "A": "Kebanggaan diri",
+        "B": "Ketenangan batin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ucapan terima kasih membawa ketenangan batin, bukan kebanggaan diri."
+    },
+    {
+      "id": "SK-D9-150",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika dimutasi ke daerah yang jauh",
+      "opsi": {
+        "A": "Hikmah penugasan",
+        "B": "Biaya perpindahan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mutasi dimaknai dengan mencari hikmahnya, bukan terpaku pada hal materi."
+    },
+    {
+      "id": "SK-D9-151",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan setelah pengamanan malam pergantian tahun",
+      "opsi": {
+        "A": "Syukur atas kelancaran",
+        "B": "Lega bisa beristirahat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas yang selesai dengan lancar disikapi dengan syukur."
+    },
+    {
+      "id": "SK-D9-152",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan dalam memaknai seragam polisi",
+      "opsi": {
+        "A": "Wibawa penampilan",
+        "B": "Amanah pengabdian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Seragam dimaknai sebagai amanah, bukan sekadar wibawa penampilan."
+    },
+    {
+      "id": "SK-D9-153",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menemani keluarga korban yang berduka",
+      "opsi": {
+        "A": "Kronologi kejadian",
+        "B": "Makna kehidupan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dimensi ini menekankan perenungan makna di balik peristiwa."
+    },
+    {
+      "id": "SK-D9-154",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini dalam menjalani pekerjaan sebagai polisi",
+      "opsi": {
+        "A": "Bernilai pengabdian",
+        "B": "Sumber penghasilan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pekerjaan dimaknai sebagai pengabdian, bukan semata sumber penghasilan."
+    },
+    {
+      "id": "SK-D10-101",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika menilai keberhasilan kerja bakti kelas",
+      "opsi": {
+        "A": "Kelas menjadi bersih",
+        "B": "Lamanya bekerja"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kerja bakti dinilai dari hasilnya, yaitu kelas yang bersih."
+    },
+    {
+      "id": "SK-D10-102",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai program kerja OSIS",
+      "opsi": {
+        "A": "Jumlah rapat persiapan",
+        "B": "Manfaat yang dirasakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Program dinilai dari hasil dan manfaatnya, bukan banyaknya rapat."
+    },
+    {
+      "id": "SK-D10-103",
+      "dimensi": "D10",
+      "situasi": "Hal yang menentukan dalam keberhasilan belajar kelompok",
+      "opsi": {
+        "A": "Lamanya berkumpul",
+        "B": "Pemahaman materi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Belajar kelompok berhasil bila materi dipahami, bukan karena lama berkumpul."
+    },
+    {
+      "id": "SK-D10-104",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan dalam mengevaluasi latihan lari",
+      "opsi": {
+        "A": "Banyaknya sesi latihan",
+        "B": "Pencapaian target waktu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Latihan dinilai dari target yang tercapai."
+    },
+    {
+      "id": "SK-D10-105",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai keberhasilan pentas seni",
+      "opsi": {
+        "A": "Tujuan acara tercapai",
+        "B": "Kemeriahan dekorasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Acara dinilai berhasil bila tujuannya tercapai."
+    },
+    {
+      "id": "SK-D10-106",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika membantu orang tua merenovasi kamar",
+      "opsi": {
+        "A": "Lamanya pengerjaan",
+        "B": "Kamar layak dipakai"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pekerjaan dinilai dari hasilnya, yaitu kamar yang layak dipakai."
+    },
+    {
+      "id": "SK-D10-107",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam persiapan lomba cerdas cermat",
+      "opsi": {
+        "A": "Penguasaan materi",
+        "B": "Banyaknya catatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Persiapan dinilai dari hasil penguasaan materi, bukan banyaknya catatan."
+    },
+    {
+      "id": "SK-D10-108",
+      "dimensi": "D10",
+      "situasi": "Hal yang menentukan dalam menilai rapat panitia",
+      "opsi": {
+        "A": "Keputusan yang dihasilkan",
+        "B": "Durasi pembahasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rapat dinilai dari keputusan yang dihasilkan."
+    },
+    {
+      "id": "SK-D10-109",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan dalam menilai hasil belajar sebulan",
+      "opsi": {
+        "A": "Kemajuan nilai",
+        "B": "Jam belajar terkumpul"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Belajar dinilai dari kemajuan yang dicapai, bukan jumlah jam."
+    },
+    {
+      "id": "SK-D10-110",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai latihan menembak",
+      "opsi": {
+        "A": "Lamanya latihan",
+        "B": "Ketepatan sasaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Latihan menembak dinilai dari ketepatan yang dicapai."
+    },
+    {
+      "id": "SK-D10-111",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika regu menyiapkan pameran pendidikan",
+      "opsi": {
+        "A": "Pesan tersampaikan",
+        "B": "Kerapian tata letak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pameran dinilai berhasil bila pesannya sampai kepada pengunjung."
+    },
+    {
+      "id": "SK-D10-112",
+      "dimensi": "D10",
+      "situasi": "Hal yang menentukan dalam menilai tugas piket regu",
+      "opsi": {
+        "A": "Tugas tuntas",
+        "B": "Kesibukan anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Piket dinilai dari tuntasnya tugas, bukan dari sibuknya anggota."
+    },
+    {
+      "id": "SK-D10-113",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai program pembinaan jasmani",
+      "opsi": {
+        "A": "Padatnya jadwal",
+        "B": "Peningkatan kebugaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Program jasmani dinilai dari hasil peningkatan kebugaran."
+    },
+    {
+      "id": "SK-D10-114",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika menyusun laporan kegiatan asrama",
+      "opsi": {
+        "A": "Capaian kegiatan",
+        "B": "Tebalnya laporan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Laporan menonjolkan capaian kegiatan sebagai ukuran keberhasilan."
+    },
+    {
+      "id": "SK-D10-115",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai operasi keselamatan lalu lintas",
+      "opsi": {
+        "A": "Banyaknya personel dikerahkan",
+        "B": "Turunnya angka kecelakaan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Operasi dinilai dari hasilnya, yaitu turunnya kecelakaan."
+    },
+    {
+      "id": "SK-D10-116",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika mengevaluasi patroli malam",
+      "opsi": {
+        "A": "Jarak tempuh patroli",
+        "B": "Situasi tetap kondusif"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Patroli dinilai dari hasilnya, yaitu situasi yang tetap aman."
+    },
+    {
+      "id": "SK-D10-117",
+      "dimensi": "D10",
+      "situasi": "Hal yang menentukan dalam menilai penyuluhan kepada warga",
+      "opsi": {
+        "A": "Pemahaman warga",
+        "B": "Lamanya penyuluhan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penyuluhan dinilai dari pemahaman yang dicapai warga."
+    },
+    {
+      "id": "SK-D10-118",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan dalam menilai pelayanan surat keterangan",
+      "opsi": {
+        "A": "Banyaknya loket dibuka",
+        "B": "Urusan warga tuntas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pelayanan dinilai dari tuntasnya urusan warga."
+    },
+    {
+      "id": "SK-D11-101",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan setelah nilai ulangan matematika rendah",
+      "opsi": {
+        "A": "Fokus ke ulangan berikutnya",
+        "B": "Mencari letak kesalahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai rendah dijadikan bahan belajar dengan mencari letak kesalahannya."
+    },
+    {
+      "id": "SK-D11-102",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika teman mengkritik cara memimpin rapat",
+      "opsi": {
+        "A": "Perbedaan sudut pandang",
+        "B": "Bahan perbaikan diri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kritik diterima sebagai masukan untuk memperbaiki diri."
+    },
+    {
+      "id": "SK-D11-103",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika cara menghafal terasa tidak efektif",
+      "opsi": {
+        "A": "Mengganti metode belajar",
+        "B": "Mengulang lebih sering"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Cara yang tidak efektif disesuaikan, bukan sekadar diulang."
+    },
+    {
+      "id": "SK-D11-104",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan setelah kalah dalam lomba debat",
+      "opsi": {
+        "A": "Segera bangkit",
+        "B": "Mengulas kekalahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kekalahan diulas dulu agar ada pelajaran untuk lomba berikutnya."
+    },
+    {
+      "id": "SK-D11-105",
+      "dimensi": "D11",
+      "situasi": "Hal yang dirasakan berguna dari rapor semester",
+      "opsi": {
+        "A": "Catatan kelemahan",
+        "B": "Daftar nilai tertinggi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rapor berguna untuk mengenali kelemahan yang perlu diperbaiki."
+    },
+    {
+      "id": "SK-D11-106",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika orang tua menegur kebiasaan bangun siang",
+      "opsi": {
+        "A": "Menjelaskan alasan",
+        "B": "Menerima teguran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Teguran diterima sebagai masukan untuk berubah."
+    },
+    {
+      "id": "SK-D11-107",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan dalam menyusun rencana belajar baru",
+      "opsi": {
+        "A": "Bagian yang lemah",
+        "B": "Bagian yang disukai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rencana belajar dimulai dari mengenali bagian yang masih lemah."
+    },
+    {
+      "id": "SK-D11-108",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika usulan acara OSIS kurang diminati siswa",
+      "opsi": {
+        "A": "Mempromosikan lebih gencar",
+        "B": "Meminta pendapat siswa"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan dari siswa dicari untuk memperbaiki usulan."
+    },
+    {
+      "id": "SK-D11-109",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika gagal dalam ujian praktik",
+      "opsi": {
+        "A": "Jadwal ujian ulang",
+        "B": "Penyebab kegagalan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan dipelajari dengan mencari penyebabnya."
+    },
+    {
+      "id": "SK-D11-110",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pelatih Paskibra mengoreksi gerakan",
+      "opsi": {
+        "A": "Menerapkan koreksinya",
+        "B": "Menambah latihan sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Koreksi pelatih diterima dan langsung diterapkan."
+    },
+    {
+      "id": "SK-D11-111",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini dalam mengembangkan kemampuan diri",
+      "opsi": {
+        "A": "Keyakinan diri",
+        "B": "Kesediaan dikritik"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kemampuan berkembang bila terbuka terhadap kritik."
+    },
+    {
+      "id": "SK-D11-112",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika tim futsal sekolah terus kalah",
+      "opsi": {
+        "A": "Menjaga semangat tim",
+        "B": "Mengubah strategi bermain"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kekalahan beruntun menandakan strategi perlu disesuaikan."
+    },
+    {
+      "id": "SK-D11-113",
+      "dimensi": "D11",
+      "situasi": "Hal yang dirasakan ketika kesalahan sendiri ditunjukkan guru",
+      "opsi": {
+        "A": "Pemacu semangat",
+        "B": "Peluang memperbaiki"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesalahan yang ditunjukkan dijadikan peluang belajar dan memperbaiki."
+    },
+    {
+      "id": "SK-D11-114",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan setelah presentasi kelompok kurang lancar",
+      "opsi": {
+        "A": "Saling menyemangati",
+        "B": "Mengevaluasi bersama"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Presentasi yang kurang lancar dievaluasi agar ada perbaikan."
+    },
+    {
+      "id": "SK-D11-115",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika adik memberi saran soal kebiasaan buruk",
+      "opsi": {
+        "A": "Mendengarkan sarannya",
+        "B": "Menjelaskan posisi diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan diterima dari siapa pun, termasuk dari adik."
+    },
+    {
+      "id": "SK-D11-116",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika target membaca buku tidak tercapai",
+      "opsi": {
+        "A": "Penyebab tidak tercapai",
+        "B": "Target bulan depan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Target yang gagal dievaluasi dulu penyebabnya."
+    },
+    {
+      "id": "SK-D11-117",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan dalam evaluasi akhir kepengurusan OSIS",
+      "opsi": {
+        "A": "Keberhasilan yang diraih",
+        "B": "Kekurangan yang terjadi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Evaluasi berguna bila kekurangan dikenali untuk perbaikan pengurus berikutnya."
+    },
+    {
+      "id": "SK-D11-118",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika jawaban soal latihan berulang kali salah",
+      "opsi": {
+        "A": "Mempelajari pembahasannya",
+        "B": "Mengerjakan soal lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesalahan berulang dipelajari dari pembahasannya."
+    },
+    {
+      "id": "SK-D11-119",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan setelah mendapat nilai rendah dalam ujian kesamaptaan",
+      "opsi": {
+        "A": "Mengulang latihan biasa",
+        "B": "Menganalisis kelemahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai rendah dijadikan bahan untuk menganalisis kelemahan."
+    },
+    {
+      "id": "SK-D11-120",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika senior menunjukkan kesalahan sikap",
+      "opsi": {
+        "A": "Cara penyampaiannya",
+        "B": "Kebenaran masukannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Yang dipikirkan adalah isi masukan agar bisa diperbaiki, bukan cara penyampaiannya."
+    },
+    {
+      "id": "SK-D11-121",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika regu kalah dalam lomba ketangkasan",
+      "opsi": {
+        "A": "Mengevaluasi strategi regu",
+        "B": "Menghibur anggota regu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kekalahan dijadikan bahan untuk mengevaluasi strategi."
+    },
+    {
+      "id": "SK-D11-122",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini dari kegagalan dalam latihan navigasi darat",
+      "opsi": {
+        "A": "Sumber pelajaran",
+        "B": "Bagian dari proses"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan diyakini sebagai sumber pelajaran yang perlu digali."
+    },
+    {
+      "id": "SK-D11-123",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pengasuh memberi catatan pada laporan",
+      "opsi": {
+        "A": "Merevisi sesuai catatan",
+        "B": "Menjelaskan maksud laporan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Catatan pengasuh diterima sebagai masukan untuk perbaikan."
+    },
+    {
+      "id": "SK-D11-124",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pembagian waktu belajar di asrama tidak berhasil",
+      "opsi": {
+        "A": "Menyusun ulang jadwal",
+        "B": "Tetap pada jadwal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Cara yang tidak berhasil perlu disesuaikan."
+    },
+    {
+      "id": "SK-D11-125",
+      "dimensi": "D11",
+      "situasi": "Hal yang dirasakan penting setelah menerima sanksi disiplin",
+      "opsi": {
+        "A": "Merenungi kesalahan",
+        "B": "Menjalani sanksi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sanksi menjadi bermakna bila kesalahan direnungi untuk perbaikan."
+    },
+    {
+      "id": "SK-D11-126",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan dalam evaluasi mingguan bersama pengasuh",
+      "opsi": {
+        "A": "Mengakui kekurangan",
+        "B": "Menyampaikan capaian"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Evaluasi berguna bila kekurangan diakui dan dibahas."
+    },
+    {
+      "id": "SK-D11-127",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika rekan menyarankan teknik lari berbeda",
+      "opsi": {
+        "A": "Mencoba sarannya",
+        "B": "Mempertahankan teknik sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan rekan dicoba sebagai bentuk keterbukaan untuk belajar."
+    },
+    {
+      "id": "SK-D11-128",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika gagal dalam ujian tertulis materi hukum",
+      "opsi": {
+        "A": "Membaca materi baru",
+        "B": "Mengkaji soal yang salah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan dipelajari dari soal yang salah."
+    },
+    {
+      "id": "SK-D11-129",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan dalam menerima penilaian dari pelatih",
+      "opsi": {
+        "A": "Catatan kekurangan",
+        "B": "Nilai akhir"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penilaian berguna untuk mengenali kekurangan, bukan sekadar angka."
+    },
+    {
+      "id": "SK-D11-130",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pengamanan acara sebelumnya kurang lancar",
+      "opsi": {
+        "A": "Mengkaji ulang rencana",
+        "B": "Menambah jumlah personel"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pengalaman kurang lancar dijadikan dasar untuk menyesuaikan rencana."
+    },
+    {
+      "id": "SK-D11-131",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika warga mengeluhkan pelayanan",
+      "opsi": {
+        "A": "Kesalahpahaman warga",
+        "B": "Masukan berharga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keluhan warga diterima sebagai masukan untuk perbaikan."
+    },
+    {
+      "id": "SK-D11-132",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika cara sosialisasi tidak dipahami warga",
+      "opsi": {
+        "A": "Mengubah pendekatan",
+        "B": "Mengulang penjelasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Cara yang tidak berhasil disesuaikan dengan pendekatan baru."
+    },
+    {
+      "id": "SK-D11-133",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini dalam meningkatkan kinerja satuan",
+      "opsi": {
+        "A": "Penambahan anggaran",
+        "B": "Evaluasi kesalahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kinerja meningkat dengan belajar dari kesalahan."
+    },
+    {
+      "id": "SK-D11-134",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika atasan menilai laporan kurang lengkap",
+      "opsi": {
+        "A": "Melengkapi sesuai arahan",
+        "B": "Menjelaskan kendala lapangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan atasan diterima dan ditindaklanjuti."
+    },
+    {
+      "id": "SK-D11-135",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan setelah gagal mencegah sebuah tindak pidana",
+      "opsi": {
+        "A": "Keterbatasan personel",
+        "B": "Celah yang terlewat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan dipelajari dengan mencari celah yang terlewat."
+    },
+    {
+      "id": "SK-D11-136",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pengaturan lalu lintas tidak mengurai kemacetan",
+      "opsi": {
+        "A": "Menambah petugas jaga",
+        "B": "Menyesuaikan pola pengaturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Strategi yang tidak berhasil disesuaikan, bukan sekadar ditambah tenaganya."
+    }
+  ]
+}

@@ -60,6 +60,8 @@ type SkItem = { id: string; dimensi: string; situasi: string; opsi: { A: string;
 // Proporsi dimensi per 63 butir sumber (pedoman §3.1).
 const PROPORSI: Record<string, number> = { D1: 4, D2: 5, D3: 6, D4: 12, D5: 6, D6: 6, D7: 4, D8: 8, D9: 6, D10: 2, D11: 4 };
 let skTotal = 0;
+// Kembar sengaja mirip; butir lain tidak boleh hampir sama (situasi + opsi).
+const skSeen: { id: string; kembar: string | null; w: string[] }[] = [];
 const skFiles = fs.readdirSync(dir).filter((f) => /^sk-.*\.json$/.test(f));
 for (const f of skFiles) {
   const bank = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")) as { dimensi: Record<string, unknown>; items: SkItem[] };
@@ -83,6 +85,12 @@ for (const f of skFiles) {
       assert.notEqual(t.kunci, it.kunci, `${at}: kembar harus menukar posisi pilihan`);
       kembar++;
     }
+    const sw = words(`${it.situasi} ${it.opsi.A} ${it.opsi.B}`);
+    for (const o of skSeen) {
+      if (o.id === it.kembar_dengan) continue;
+      assert.ok(jaccard(sw, o.w) < 0.6, `${at}: terlalu mirip ${o.id}`);
+    }
+    skSeen.push({ id: it.id, kembar: it.kembar_dengan, w: sw });
     perDim.set(it.dimensi, (perDim.get(it.dimensi) ?? 0) + 1);
     if (it.kunci === "A") kunciA++;
     skTotal++;

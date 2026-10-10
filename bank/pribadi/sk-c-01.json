@@ -1,0 +1,1839 @@
+{
+  "batch": "sk-c-01",
+  "status": "review",
+  "catatan": "Batch 144 butir Substansi Khusus dimensi D5 (54, termasuk 9 pasang kembar), D6 (36 berani + 18 mengukur), dan D7 (18 tegas + 18 tenang) untuk review mentor. Belum di-seed. Kunci mengikuti aturan dimensi pedoman §3.1; D5 menghindari situasi memutuskan bersama (butir sumber 46). Butir ditulis sub-agen; dirakit dan dicek ulang oleh controller.",
+  "dimensi": {
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur komando yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D5-101",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika OSIS hendak menggelar kegiatan di luar jam sekolah",
+      "opsi": {
+        "A": "Antusiasme anggota",
+        "B": "Izin pembina"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-128",
+      "pembahasan": "Kegiatan OSIS di luar jam sekolah baru sah bila diizinkan pembina sebagai pihak berwenang; antusiasme anggota tidak memberi dasar resmi. Butir kembar dengan SK-D5-128; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-102",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menemukan masalah serius saat piket asrama",
+      "opsi": {
+        "A": "Melalui atasan langsung",
+        "B": "Langsung ke pimpinan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-131",
+      "pembahasan": "Laporan disampaikan berjenjang melalui atasan langsung sesuai jalur komando, tidak melompati jenjang. Butir kembar dengan SK-D5-131; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-103",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan sebelum anggota Polri melakukan penggeledahan",
+      "opsi": {
+        "A": "Pengalaman lapangan",
+        "B": "Surat perintah"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-134",
+      "pembahasan": "Penggeledahan hanya sah bila dilandasi surat perintah dari pejabat berwenang; pengalaman tidak menggantikan dasar hukum. Butir kembar dengan SK-D5-134; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-104",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika menentukan siapa yang menandatangani laporan panitia",
+      "opsi": {
+        "A": "Jabatan resmi",
+        "B": "Kontribusi terbesar"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-137",
+      "pembahasan": "Penanda tangan laporan ditentukan oleh jabatan resmi dalam susunan panitia, bukan oleh besarnya kontribusi. Butir kembar dengan SK-D5-137; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-105",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika aduan warga ternyata menjadi urusan dinas lain",
+      "opsi": {
+        "A": "Menangani sampai tuntas",
+        "B": "Meneruskan ke dinas terkait"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-140",
+      "pembahasan": "Urusan yang menjadi wewenang instansi lain diteruskan ke instansi tersebut agar ditangani pihak yang sah. Butir kembar dengan SK-D5-140; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-106",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menentukan siswa yang bertugas dalam upacara bendera",
+      "opsi": {
+        "A": "Penunjukan pembina",
+        "B": "Keinginan siswa"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-143",
+      "pembahasan": "Petugas upacara ditetapkan melalui penunjukan pembina yang berwenang, bukan sekadar keinginan siswa. Butir kembar dengan SK-D5-143; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-107",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika rekan satu regu menyarankan rute patroli lain dari yang diperintahkan",
+      "opsi": {
+        "A": "Mencoba rute usulan",
+        "B": "Mengikuti rute perintah"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-146",
+      "pembahasan": "Rute patroli yang sudah diperintahkan dijalankan sesuai komando; usulan rekan tidak mengubah perintah yang sah. Butir kembar dengan SK-D5-146; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-108",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan sebelum meninggalkan kelas untuk mengikuti lomba",
+      "opsi": {
+        "A": "Izin guru piket",
+        "B": "Undangan panitia lomba"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-149",
+      "pembahasan": "Meninggalkan jam pelajaran memerlukan izin dari guru piket yang berwenang di sekolah; undangan panitia berasal dari pihak luar. Butir kembar dengan SK-D5-149; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-109",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika senior memberi tugas tambahan di luar jadwal resmi pengasuh",
+      "opsi": {
+        "A": "Menghormati senior",
+        "B": "Mengikuti jadwal resmi"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-152",
+      "pembahasan": "Kegiatan di asrama mengikuti jadwal resmi dari pengasuh sebagai pemegang kewenangan, bukan perintah senior di luar jalur. Butir kembar dengan SK-D5-152; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-110",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika bendahara OSIS sakit dan dana kegiatan harus segera dicairkan",
+      "opsi": {
+        "A": "Meminta penunjukan pengganti",
+        "B": "Mencairkan atas nama sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pencairan dana harus dilakukan oleh pejabat yang ditunjuk, sehingga diminta penunjukan pengganti yang sah."
+    },
+    {
+      "id": "SK-D5-111",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum anggota Polri menilang pengendara",
+      "opsi": {
+        "A": "Efek jera",
+        "B": "Kewenangan petugas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tilang hanya sah bila dilakukan petugas yang berwenang; efek jera tidak menjadi dasar tindakan."
+    },
+    {
+      "id": "SK-D5-112",
+      "dimensi": "D5",
+      "situasi": "Hal yang diyakini membuat sebuah perintah wajib dijalankan",
+      "opsi": {
+        "A": "Manfaat yang besar",
+        "B": "Sumber yang sah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perintah mengikat karena berasal dari atasan yang sah dalam jalur komando, bukan karena besar manfaatnya."
+    },
+    {
+      "id": "SK-D5-113",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika diminta teman mencatat kehadiran kelas padahal itu tugas sekretaris",
+      "opsi": {
+        "A": "Menyerahkan ke sekretaris",
+        "B": "Membantu mencatat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pencatatan kehadiran adalah tugas sekretaris kelas, sehingga dikembalikan kepada pemegang tugasnya."
+    },
+    {
+      "id": "SK-D5-114",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan dalam membagi pos jaga pada perkemahan Pramuka",
+      "opsi": {
+        "A": "Kecocokan antaranggota",
+        "B": "Susunan resmi regu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pembagian pos jaga mengikuti susunan resmi regu dan tanggung jawab tiap jabatan."
+    },
+    {
+      "id": "SK-D5-115",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika kakak kelas yang bukan pengurus meminta kunci ruang OSIS",
+      "opsi": {
+        "A": "Hak aksesnya",
+        "B": "Hubungan baik"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kunci ruang hanya diberikan kepada yang berhak; hubungan baik tidak memberi kewenangan."
+    },
+    {
+      "id": "SK-D5-116",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menerima surat untuk kepala sekolah saat menjaga meja piket",
+      "opsi": {
+        "A": "Meneruskan ke penerima",
+        "B": "Menindaklanjuti sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Surat ditujukan kepada kepala sekolah, sehingga diteruskan kepada pihak yang berwenang menindaklanjutinya."
+    },
+    {
+      "id": "SK-D5-117",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan agar kegiatan OSIS diakui sebagai kegiatan resmi sekolah",
+      "opsi": {
+        "A": "Dukungan siswa",
+        "B": "Surat keputusan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan menjadi resmi bila disahkan melalui surat keputusan pihak berwenang."
+    },
+    {
+      "id": "SK-D5-118",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika komandan peleton memberi perintah yang berbeda dari kebiasaan regu",
+      "opsi": {
+        "A": "Menjalankan perintah",
+        "B": "Mempertahankan kebiasaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perintah komandan yang sah dijalankan meskipun berbeda dari kebiasaan regu."
+    },
+    {
+      "id": "SK-D5-119",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan petugas jaga pintu asrama saat ada tamu tanpa izin kunjungan",
+      "opsi": {
+        "A": "Keramahan menyambut",
+        "B": "Prosedur kunjungan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Petugas jaga bertindak sesuai prosedur kunjungan yang ditetapkan pimpinan asrama."
+    },
+    {
+      "id": "SK-D5-120",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika diminta menggantikan tugas jaga teman tanpa sepengetahuan pengasuh",
+      "opsi": {
+        "A": "Solidaritas teman",
+        "B": "Persetujuan pengasuh"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pertukaran tugas jaga hanya sah bila disetujui pengasuh yang berwenang mengatur jadwal."
+    },
+    {
+      "id": "SK-D5-121",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan sebelum menggunakan kendaraan dinas untuk keperluan kegiatan",
+      "opsi": {
+        "A": "Izin pemakaian",
+        "B": "Kebutuhan mendesak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kendaraan dinas dipakai setelah ada izin dari pejabat berwenang, bukan karena kebutuhan semata."
+    },
+    {
+      "id": "SK-D5-122",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum pengurus kelas memakai uang kas",
+      "opsi": {
+        "A": "Kebutuhan kelas",
+        "B": "Prosedur pencairan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Uang kas digunakan melalui prosedur dan persetujuan pihak berwenang."
+    },
+    {
+      "id": "SK-D5-123",
+      "dimensi": "D5",
+      "situasi": "Hal yang diyakini paling berhak memimpin regu ketika ketua berhalangan",
+      "opsi": {
+        "A": "Wakil yang ditunjuk",
+        "B": "Anggota paling aktif"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kepemimpinan beralih kepada wakil yang ditunjuk sesuai susunan resmi, bukan kepada yang paling aktif."
+    },
+    {
+      "id": "SK-D5-124",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan anggota Polri sebelum menahan seseorang",
+      "opsi": {
+        "A": "Dasar hukum penahanan",
+        "B": "Rasa aman warga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penahanan hanya sah bila memiliki dasar hukum dan dilakukan pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D5-125",
+      "dimensi": "D5",
+      "situasi": "Hal yang diyakini menjadi dasar ketua OSIS memberi tugas kepada pengurus",
+      "opsi": {
+        "A": "Kemampuan pengurus",
+        "B": "Struktur organisasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penugasan mengikuti struktur organisasi dan bidang tiap jabatan."
+    },
+    {
+      "id": "SK-D5-126",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika pesan perintah apel datang dari grup percakapan tidak resmi",
+      "opsi": {
+        "A": "Memastikan ke pengasuh",
+        "B": "Langsung bersiap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perintah dipastikan berasal dari jalur komando yang sah sebelum dijalankan."
+    },
+    {
+      "id": "SK-D5-127",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan agar pengumuman dapat dipasang di papan informasi sekolah",
+      "opsi": {
+        "A": "Isi yang menarik",
+        "B": "Pengesahan sekolah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Papan informasi resmi hanya memuat pengumuman yang disahkan pihak sekolah."
+    },
+    {
+      "id": "SK-D5-128",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum pengurus OSIS mengadakan acara sepulang sekolah",
+      "opsi": {
+        "A": "Izin pembina",
+        "B": "Antusiasme anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-101",
+      "pembahasan": "Kegiatan OSIS di luar jam sekolah baru sah bila diizinkan pembina sebagai pihak berwenang; antusiasme anggota tidak memberi dasar resmi. Butir kembar dengan SK-D5-101; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-129",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan anggota lalu lintas ketika warga meminta jalan ditutup untuk hajatan",
+      "opsi": {
+        "A": "Langsung membantu menutup",
+        "B": "Memeriksa izin keramaian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penutupan jalan harus didasari izin dari pihak berwenang, sehingga izinnya diperiksa lebih dahulu."
+    },
+    {
+      "id": "SK-D5-130",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan dalam menjalankan tugas pengamanan unjuk rasa",
+      "opsi": {
+        "A": "Rencana operasi",
+        "B": "Naluri lapangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pengamanan dijalankan sesuai rencana operasi yang ditetapkan pimpinan."
+    },
+    {
+      "id": "SK-D5-131",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika mendapati kejadian penting selama jaga asrama",
+      "opsi": {
+        "A": "Langsung ke pimpinan",
+        "B": "Melalui atasan langsung"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-102",
+      "pembahasan": "Laporan disampaikan berjenjang melalui atasan langsung sesuai jalur komando, tidak melompati jenjang. Butir kembar dengan SK-D5-102; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-132",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika pelatih mengubah aba-aba latihan baris secara mendadak",
+      "opsi": {
+        "A": "Menuntaskan rencana awal",
+        "B": "Mengikuti aba-aba baru"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aba-aba pelatih adalah perintah yang sah, sehingga langsung diikuti."
+    },
+    {
+      "id": "SK-D5-133",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika teman meminta stempel OSIS untuk acara pribadinya",
+      "opsi": {
+        "A": "Aturan pemakaian stempel",
+        "B": "Keinginan menolong teman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Stempel organisasi hanya dipakai untuk urusan resmi oleh pihak yang berwenang."
+    },
+    {
+      "id": "SK-D5-134",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum memeriksa rumah warga dalam tugas kepolisian",
+      "opsi": {
+        "A": "Surat perintah",
+        "B": "Pengalaman lapangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-103",
+      "pembahasan": "Penggeledahan hanya sah bila dilandasi surat perintah dari pejabat berwenang; pengalaman tidak menggantikan dasar hukum. Butir kembar dengan SK-D5-103; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-135",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan petugas piket kelas ketika siswa kelas lain hendak meminjam proyektor",
+      "opsi": {
+        "A": "Mengarahkan ke petugas sarana",
+        "B": "Meminjamkan langsung"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Peminjaman alat sekolah menjadi wewenang petugas sarana, bukan petugas piket kelas."
+    },
+    {
+      "id": "SK-D5-136",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan untuk keluar asrama pada hari pesiar",
+      "opsi": {
+        "A": "Persetujuan lisan senior",
+        "B": "Surat izin resmi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pesiar memerlukan izin resmi dari pejabat berwenang; senior tidak berwenang memberi izin keluar."
+    },
+    {
+      "id": "SK-D5-137",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan dalam memilih penanda tangan laporan kegiatan",
+      "opsi": {
+        "A": "Kontribusi terbesar",
+        "B": "Jabatan resmi"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-104",
+      "pembahasan": "Penanda tangan laporan ditentukan oleh jabatan resmi dalam susunan panitia, bukan oleh besarnya kontribusi. Butir kembar dengan SK-D5-104; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-138",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan ketika mewakili sekolah menghadiri undangan resmi",
+      "opsi": {
+        "A": "Surat tugas",
+        "B": "Kepercayaan diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kehadiran sebagai wakil sekolah sah bila dilengkapi surat tugas."
+    },
+    {
+      "id": "SK-D5-139",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum mengumumkan libur ekstrakurikuler kepada anggota",
+      "opsi": {
+        "A": "Jadwal anggota",
+        "B": "Keputusan pembina"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Libur kegiatan diumumkan berdasarkan keputusan pembina sebagai pihak berwenang."
+    },
+    {
+      "id": "SK-D5-140",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan bila keluhan yang diterima di pos polisi menjadi wewenang instansi lain",
+      "opsi": {
+        "A": "Meneruskan ke dinas terkait",
+        "B": "Menangani sampai tuntas"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-105",
+      "pembahasan": "Urusan yang menjadi wewenang instansi lain diteruskan ke instansi tersebut agar ditangani pihak yang sah. Butir kembar dengan SK-D5-105; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-141",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan ketika regu ingin menambah jam latihan malam di asrama",
+      "opsi": {
+        "A": "Semangat regu",
+        "B": "Izin pengasuh"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan tambahan di asrama memerlukan izin pengasuh yang berwenang."
+    },
+    {
+      "id": "SK-D5-142",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan dalam membagi pekerjaan antarseksi panitia",
+      "opsi": {
+        "A": "Tugas pokok seksi",
+        "B": "Kesiapan tiap anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pekerjaan dibagi sesuai tugas pokok tiap seksi agar tidak saling melangkahi."
+    },
+    {
+      "id": "SK-D5-143",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan dalam menetapkan petugas upacara kelas",
+      "opsi": {
+        "A": "Keinginan siswa",
+        "B": "Penunjukan pembina"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-106",
+      "pembahasan": "Petugas upacara ditetapkan melalui penunjukan pembina yang berwenang, bukan sekadar keinginan siswa. Butir kembar dengan SK-D5-106; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-144",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan anggota Polri ketika menemukan jalan rusak parah saat patroli",
+      "opsi": {
+        "A": "Memperbaiki bersama warga",
+        "B": "Melapor ke dinas terkait"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perbaikan jalan adalah wewenang dinas terkait, sehingga kerusakan dilaporkan kepada instansi tersebut."
+    },
+    {
+      "id": "SK-D5-145",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika teman dari pos lain meminta bertukar tempat jaga",
+      "opsi": {
+        "A": "Bertahan sesuai penugasan",
+        "B": "Bergantian dengan teman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pos jaga dijalankan sesuai penugasan resmi; perubahan hanya oleh pihak yang menugaskan."
+    },
+    {
+      "id": "SK-D5-146",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan bila teman satu tim mengusulkan jalur patroli berbeda dari perintah",
+      "opsi": {
+        "A": "Mengikuti rute perintah",
+        "B": "Mencoba rute usulan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-107",
+      "pembahasan": "Rute patroli yang sudah diperintahkan dijalankan sesuai komando; usulan rekan tidak mengubah perintah yang sah. Butir kembar dengan SK-D5-107; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-147",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan sebelum menjatuhkan hukuman kepada junior yang melanggar di asrama",
+      "opsi": {
+        "A": "Wewenang menghukum",
+        "B": "Efek pembinaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hukuman hanya boleh dijatuhkan oleh pihak yang berwenang, bukan oleh senior."
+    },
+    {
+      "id": "SK-D5-148",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan ketika tugas penjagaan diserahkan kepada anggota lain",
+      "opsi": {
+        "A": "Kekompakan regu",
+        "B": "Serah terima resmi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penyerahan tugas dilakukan melalui serah terima resmi agar tanggung jawabnya jelas dan sah."
+    },
+    {
+      "id": "SK-D5-149",
+      "dimensi": "D5",
+      "situasi": "Hal yang dibutuhkan ketika harus keluar sekolah lebih awal untuk mewakili lomba",
+      "opsi": {
+        "A": "Undangan panitia lomba",
+        "B": "Izin guru piket"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-108",
+      "pembahasan": "Meninggalkan jam pelajaran memerlukan izin dari guru piket yang berwenang di sekolah; undangan panitia berasal dari pihak luar. Butir kembar dengan SK-D5-108; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-150",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika dititipi perintah atasan untuk disampaikan ke regu lain",
+      "opsi": {
+        "A": "Menyampaikan apa adanya",
+        "B": "Menyesuaikan dengan keadaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perintah atasan disampaikan utuh tanpa diubah, karena perubahan isi bukan wewenang penyampai."
+    },
+    {
+      "id": "SK-D5-151",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan anggota Polri saat diminta warga menagih utang tetangganya",
+      "opsi": {
+        "A": "Penyelesaian masalah warga",
+        "B": "Batas tugas kepolisian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penagihan utang pribadi berada di luar tugas kepolisian, sehingga batas tugas itu dijaga."
+    },
+    {
+      "id": "SK-D5-152",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan bila kakak tingkat menyuruh kegiatan yang tidak tercantum dalam jadwal pengasuh",
+      "opsi": {
+        "A": "Mengikuti jadwal resmi",
+        "B": "Menghormati senior"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-109",
+      "pembahasan": "Kegiatan di asrama mengikuti jadwal resmi dari pengasuh sebagai pemegang kewenangan, bukan perintah senior di luar jalur. Butir kembar dengan SK-D5-109; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D5-153",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika diminta mengubah daftar piket yang ditetapkan pembina asrama",
+      "opsi": {
+        "A": "Siapa yang bersedia",
+        "B": "Siapa yang menetapkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Daftar piket hanya dapat diubah oleh pihak yang menetapkannya."
+    },
+    {
+      "id": "SK-D5-154",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika adik kelas meminta tanda tangan ketua OSIS yang sedang tidak ada",
+      "opsi": {
+        "A": "Menunggu yang berwenang",
+        "B": "Mewakili tanda tangan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Tanda tangan ketua hanya sah bila diberikan oleh ketua atau pejabat yang ditunjuk resmi."
+    },
+    {
+      "id": "SK-D6-101",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika keluarga harus pindah ke kota yang asing",
+      "opsi": {
+        "A": "Menyambut perubahan",
+        "B": "Mempertahankan kebiasaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan dihadapi dengan berani, bukan bertahan pada kebiasaan lama."
+    },
+    {
+      "id": "SK-D6-102",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan ketika ditunjuk mendadak menjadi pemimpin upacara",
+      "opsi": {
+        "A": "Persiapan matang",
+        "B": "Keberanian tampil"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penunjukan mendadak adalah tantangan yang dijawab dengan keberanian; waktu persiapan tidak tersedia."
+    },
+    {
+      "id": "SK-D6-103",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika ditawari menjadi pengurus inti di tiga organisasi sekaligus",
+      "opsi": {
+        "A": "Menimbang kemampuan",
+        "B": "Menerima semuanya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan mengukur kemampuan dan risikonya lebih dahulu."
+    },
+    {
+      "id": "SK-D6-104",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika melihat perundungan di lorong sekolah",
+      "opsi": {
+        "A": "Menghentikan langsung",
+        "B": "Mengamati dulu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perundungan adalah ancaman bagi teman, sehingga dibutuhkan keberanian untuk segera menghentikannya."
+    },
+    {
+      "id": "SK-D6-105",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan saat jadwal latihan asrama diubah total oleh pelatih",
+      "opsi": {
+        "A": "Waktu penyesuaian",
+        "B": "Kesiapan berubah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan besar dihadapi dengan berani dan siap berubah, bukan menunggu waktu penyesuaian."
+    },
+    {
+      "id": "SK-D6-106",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika sekolah membuka lomba bergengsi tingkat provinsi",
+      "opsi": {
+        "A": "Kesiapan diri",
+        "B": "Semangat bersaing"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, kesiapan diri diukur lebih dahulu agar usaha terarah."
+    },
+    {
+      "id": "SK-D6-107",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika pelatih meminta mencoba rintangan tinggi untuk pertama kali",
+      "opsi": {
+        "A": "Mengamati teman dulu",
+        "B": "Mencoba langsung"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tantangan baru dihadapi dengan berani mencoba."
+    },
+    {
+      "id": "SK-D6-108",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan anggota Polri saat menghadapi pelaku bersenjata tajam",
+      "opsi": {
+        "A": "Perlindungan diri",
+        "B": "Keberanian bertindak"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ancaman nyata menuntut keberanian bertindak untuk melindungi masyarakat."
+    },
+    {
+      "id": "SK-D6-109",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika regu mengejar target nilai kesamaptaan tertinggi",
+      "opsi": {
+        "A": "Menghitung kemampuan",
+        "B": "Memacu sekuat tenaga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Target dicapai dengan menghitung kemampuan, bukan sekadar memacu tenaga."
+    },
+    {
+      "id": "SK-D6-110",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika banjir mulai masuk ke rumah tetangga lansia",
+      "opsi": {
+        "A": "Menunggu bantuan datang",
+        "B": "Segera mengevakuasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Situasi genting menuntut keberanian bertindak segera."
+    },
+    {
+      "id": "SK-D6-111",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika sekolah menerapkan sistem belajar yang serba baru",
+      "opsi": {
+        "A": "Mencoba menyesuaikan",
+        "B": "Bertahan cara lama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan disikapi dengan berani mencoba, tidak bertahan pada cara lama."
+    },
+    {
+      "id": "SK-D6-112",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dibutuhkan dalam bersaing memperebutkan kursi terbatas di sekolah kedinasan",
+      "opsi": {
+        "A": "Perhitungan matang",
+        "B": "Keberanian mencoba"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan ketat, perhitungan matang diutamakan; keberanian berlaku untuk perubahan dan ancaman."
+    },
+    {
+      "id": "SK-D6-113",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diyakini ketika ditunjuk memimpin regu yang dikenal sulit diatur",
+      "opsi": {
+        "A": "Risiko kegagalan",
+        "B": "Kesempatan bertumbuh"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas sulit dipandang sebagai tantangan yang dihadapi dengan berani."
+    },
+    {
+      "id": "SK-D6-114",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika api mulai muncul dari dapur asrama",
+      "opsi": {
+        "A": "Memadamkan segera",
+        "B": "Menjauh dari api"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Saat genting dan api masih kecil, dibutuhkan keberanian untuk segera memadamkannya."
+    },
+    {
+      "id": "SK-D6-115",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika ada tawaran usaha dengan keuntungan besar",
+      "opsi": {
+        "A": "Segera bergabung",
+        "B": "Memeriksa risikonya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan memeriksa risiko lebih dahulu."
+    },
+    {
+      "id": "SK-D6-116",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan untuk menyampaikan pendapat berbeda di depan seluruh kelas",
+      "opsi": {
+        "A": "Kepandaian berdiplomasi",
+        "B": "Keberanian bicara"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menyampaikan pendapat berbeda adalah tantangan yang membutuhkan keberanian."
+    },
+    {
+      "id": "SK-D6-117",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ada orang asing terus mengikuti adik sepulang sekolah",
+      "opsi": {
+        "A": "Menegur orang itu",
+        "B": "Menghindari orang itu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ancaman terhadap keluarga dihadapi dengan berani, tidak sekadar dihindari."
+    },
+    {
+      "id": "SK-D6-118",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika menetapkan target lari 2,4 km untuk seleksi",
+      "opsi": {
+        "A": "Nilai tertinggi",
+        "B": "Kemampuan saat ini"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Target ditetapkan dengan mengukur kemampuan saat ini agar realistis."
+    },
+    {
+      "id": "SK-D6-119",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika terjadi kecelakaan lalu lintas di depan mata",
+      "opsi": {
+        "A": "Menolong korban",
+        "B": "Menghubungi petugas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keadaan genting menuntut keberanian untuk langsung menolong korban."
+    },
+    {
+      "id": "SK-D6-120",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan anggota Polri ketika diterjunkan ke lokasi bencana gempa",
+      "opsi": {
+        "A": "Keberanian",
+        "B": "Kelengkapan alat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Lokasi bencana adalah situasi genting yang menuntut keberanian."
+    },
+    {
+      "id": "SK-D6-121",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika mendapat kesempatan langka mewakili sekolah ke luar negeri",
+      "opsi": {
+        "A": "Mengambil kesempatan",
+        "B": "Menghitung kesiapan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan menghitung kesiapan dan risikonya."
+    },
+    {
+      "id": "SK-D6-122",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika mendapat tugas pertama sebagai komandan regu",
+      "opsi": {
+        "A": "Langsung menjalankan",
+        "B": "Mempelajari dulu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas baru adalah tantangan yang dijawab dengan berani menjalankannya."
+    },
+    {
+      "id": "SK-D6-123",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diyakini ketika teknologi baru dipakai dalam pelayanan kantor polisi",
+      "opsi": {
+        "A": "Dipelajari bertahap",
+        "B": "Segera dikuasai"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan cara kerja disambut dengan berani, segera dikuasai."
+    },
+    {
+      "id": "SK-D6-124",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dibutuhkan ketika bersaing dengan sekolah unggulan dalam lomba baris-berbaris",
+      "opsi": {
+        "A": "Semangat juang",
+        "B": "Strategi terukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, strategi yang terukur diutamakan."
+    },
+    {
+      "id": "SK-D6-125",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika teman sekelas diancam kelompok dari sekolah lain",
+      "opsi": {
+        "A": "Menghadapi bersama",
+        "B": "Menghindari keributan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ancaman terhadap teman dihadapi dengan berani, tidak dihindari."
+    },
+    {
+      "id": "SK-D6-126",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika mendapat perintah pindah tugas ke daerah terpencil",
+      "opsi": {
+        "A": "Menimbang kondisi keluarga",
+        "B": "Menerima tantangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penugasan ke daerah baru adalah perubahan yang dihadapi dengan berani."
+    },
+    {
+      "id": "SK-D6-127",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika satuan diberi target menurunkan angka kecelakaan",
+      "opsi": {
+        "A": "Mengukur kemampuan satuan",
+        "B": "Menambah jumlah razia"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Target dikejar dengan mengukur kemampuan satuan lebih dahulu."
+    },
+    {
+      "id": "SK-D6-128",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan ketika memimpin evakuasi siswa saat gempa",
+      "opsi": {
+        "A": "Keberanian",
+        "B": "Ketelitian"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Evakuasi saat gempa adalah situasi genting yang menuntut keberanian."
+    },
+    {
+      "id": "SK-D6-129",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika melihat pencopet beraksi di pasar",
+      "opsi": {
+        "A": "Mengingatkan korban",
+        "B": "Menghentikan pelaku"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ancaman kejahatan di depan mata dihadapi dengan keberanian menghentikan pelaku."
+    },
+    {
+      "id": "SK-D6-130",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika berebut posisi inti tim basket sekolah",
+      "opsi": {
+        "A": "Mengenali kemampuan lawan",
+        "B": "Tampil habis-habisan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, kekuatan lawan diukur lebih dahulu."
+    },
+    {
+      "id": "SK-D6-131",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika pertama kali mendapat giliran jaga malam di pos terpencil",
+      "opsi": {
+        "A": "Keselamatan diri",
+        "B": "Tugas jaga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tantangan tugas dihadapi dengan berani, fokus pada tugas yang dijalankan."
+    },
+    {
+      "id": "SK-D6-132",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diyakini tepat ketika menghadapi kebiasaan baru di lingkungan asrama",
+      "opsi": {
+        "A": "Perlahan mengamati",
+        "B": "Cepat menyesuaikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan lingkungan dihadapi dengan berani menyesuaikan diri."
+    },
+    {
+      "id": "SK-D6-133",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika mendapat tawaran beasiswa yang menuntut pindah jurusan",
+      "opsi": {
+        "A": "Untung ruginya",
+        "B": "Besarnya kesempatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan menghitung untung dan ruginya."
+    },
+    {
+      "id": "SK-D6-134",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika dibutuhkan relawan di lokasi kebakaran permukiman",
+      "opsi": {
+        "A": "Memberi dukungan",
+        "B": "Bersedia maju"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Situasi genting menuntut keberanian untuk maju."
+    },
+    {
+      "id": "SK-D6-135",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan anggota Polri ketika sekelompok pemuda mabuk membuat keributan di jalan",
+      "opsi": {
+        "A": "Mendatangi langsung",
+        "B": "Memantau dari jauh"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Gangguan keamanan adalah ancaman yang dihadapi dengan berani, bukan sekadar dipantau."
+    },
+    {
+      "id": "SK-D6-136",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika target hafalan materi wawasan kebangsaan terasa terlalu tinggi",
+      "opsi": {
+        "A": "Membagi target",
+        "B": "Menambah jam belajar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Target diukur dan dibagi sesuai kemampuan agar tercapai."
+    },
+    {
+      "id": "SK-D6-137",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari menjadi ketua kelas di kelas baru",
+      "opsi": {
+        "A": "Memberi kesempatan teman",
+        "B": "Menerima jabatan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Jabatan baru adalah tantangan yang diterima dengan berani."
+    },
+    {
+      "id": "SK-D6-138",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan ketika badai merobohkan tenda Pramuka pada malam hari",
+      "opsi": {
+        "A": "Bertindak cepat",
+        "B": "Menunggu reda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Situasi genting menuntut keberanian untuk segera bertindak."
+    },
+    {
+      "id": "SK-D6-139",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dibutuhkan saat sekolah bersaing dalam penilaian sekolah peduli lingkungan",
+      "opsi": {
+        "A": "Semangat anggota",
+        "B": "Perhitungan sumber daya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, sumber daya dihitung agar usaha terarah."
+    },
+    {
+      "id": "SK-D6-140",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika pertama kali berlatih renang di kolam dalam",
+      "opsi": {
+        "A": "Berlatih di tepi",
+        "B": "Terjun berlatih"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tantangan baru dihadapi dengan berani mencobanya."
+    },
+    {
+      "id": "SK-D6-141",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika pindah ke sekolah baru di kota besar",
+      "opsi": {
+        "A": "Mencoba hal baru",
+        "B": "Mencari yang sudah dikenal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Lingkungan baru adalah perubahan yang dihadapi dengan berani."
+    },
+    {
+      "id": "SK-D6-142",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika bersaing dengan peserta yang lebih berpengalaman",
+      "opsi": {
+        "A": "Percaya diri penuh",
+        "B": "Membaca kekuatan lawan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, kekuatan lawan diukur lebih dahulu."
+    },
+    {
+      "id": "SK-D6-143",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan saat menghadapi warga yang marah di lokasi sengketa lahan",
+      "opsi": {
+        "A": "Keberanian menengahi",
+        "B": "Kesabaran menunggu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Situasi genting menuntut keberanian untuk segera menengahi."
+    },
+    {
+      "id": "SK-D6-144",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika pimpinan menerapkan pola kerja baru di satuan",
+      "opsi": {
+        "A": "Segera beradaptasi",
+        "B": "Mempelajari dampaknya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan pola kerja dihadapi dengan berani beradaptasi."
+    },
+    {
+      "id": "SK-D6-145",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika menghadapi pertandingan final melawan juara bertahan",
+      "opsi": {
+        "A": "Tekad menang",
+        "B": "Kelemahan lawan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Persaingan dihadapi dengan mengukur lawan, tidak hanya mengandalkan tekad."
+    },
+    {
+      "id": "SK-D6-146",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan ketika menjadi petugas pertama di lokasi perampokan",
+      "opsi": {
+        "A": "Kehati-hatian",
+        "B": "Keberanian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam situasi genting yang mengancam, keberanian didahulukan; perhitungan risiko berlaku pada persaingan atau peluang."
+    },
+    {
+      "id": "SK-D6-147",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika diminta membawakan materi di depan seluruh angkatan",
+      "opsi": {
+        "A": "Menyarankan yang lain",
+        "B": "Menyanggupi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tantangan tampil di depan angkatan diterima dengan berani."
+    },
+    {
+      "id": "SK-D6-148",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika satuan berpeluang meraih penghargaan pelayanan terbaik",
+      "opsi": {
+        "A": "Menggenjot semua layanan",
+        "B": "Menilai kesiapan satuan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan menilai kesiapan dan risikonya lebih dahulu."
+    },
+    {
+      "id": "SK-D6-149",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika terjadi keributan saat pertandingan antarkelas",
+      "opsi": {
+        "A": "Melerai segera",
+        "B": "Mengamankan diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keributan adalah situasi genting yang dihadapi dengan berani."
+    },
+    {
+      "id": "SK-D6-150",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diyakini paling tepat ketika keadaan berubah mendadak dalam tugas pengamanan",
+      "opsi": {
+        "A": "Mengamati perkembangan",
+        "B": "Mengambil tindakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan mendadak di lapangan dihadapi dengan berani mengambil tindakan."
+    },
+    {
+      "id": "SK-D6-151",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dibutuhkan ketika menetapkan target nilai rapor untuk mendaftar Akpol",
+      "opsi": {
+        "A": "Perhitungan realistis",
+        "B": "Cita-cita tinggi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Target ditetapkan dengan perhitungan yang realistis."
+    },
+    {
+      "id": "SK-D6-152",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika anjing galak menghadang adik di jalan",
+      "opsi": {
+        "A": "Menghalau anjing",
+        "B": "Mencari jalan lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ancaman terhadap adik dihadapi dengan berani menghalaunya."
+    },
+    {
+      "id": "SK-D6-153",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari mencoba posisi baru di tim Paskibra",
+      "opsi": {
+        "A": "Bertahan di posisi lama",
+        "B": "Mencoba posisi baru"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tantangan posisi baru dihadapi dengan berani mencobanya."
+    },
+    {
+      "id": "SK-D6-154",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika peluang menjadi juara umum terbuka lebar",
+      "opsi": {
+        "A": "Menghitung langkah",
+        "B": "Mempercepat langkah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang besar disikapi dengan menghitung langkah, bukan tergesa-gesa."
+    },
+    {
+      "id": "SK-D7-101",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika anggota regu berulang kali terlambat apel",
+      "opsi": {
+        "A": "Menegur dengan tegas",
+        "B": "Menasihati dengan pelan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan anggota adalah tindakan memimpin, sehingga dibutuhkan ketegasan."
+    },
+    {
+      "id": "SK-D7-102",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan paling dibutuhkan setelah seharian latihan fisik",
+      "opsi": {
+        "A": "Hiburan",
+        "B": "Ketenangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam ranah perasaan, ketenangan diutamakan."
+    },
+    {
+      "id": "SK-D7-103",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan dalam memimpin kerja bakti kelas",
+      "opsi": {
+        "A": "Suasana akrab",
+        "B": "Arahan jelas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin kerja bakti adalah tindakan memimpin yang membutuhkan arahan tegas dan jelas."
+    },
+    {
+      "id": "SK-D7-104",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan dalam suasana kamar asrama",
+      "opsi": {
+        "A": "Suasana tenang",
+        "B": "Suasana ramai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kehidupan bersama di asrama paling baik dijalani dalam suasana tenang."
+    },
+    {
+      "id": "SK-D7-105",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diutamakan ketua angkatan saat mengatur pembagian kamar asrama",
+      "opsi": {
+        "A": "Ketenangan",
+        "B": "Ketegasan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengatur anggota adalah tindakan memimpin, sehingga yang diutamakan ketegasan; ketenangan berlaku untuk perasaan."
+    },
+    {
+      "id": "SK-D7-106",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika rencana pesiar batal mendadak",
+      "opsi": {
+        "A": "Tetap bersemangat",
+        "B": "Tetap tenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam perasaan, sikap yang diutamakan adalah tetap tenang."
+    },
+    {
+      "id": "SK-D7-107",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika anggota panitia lambat menyelesaikan tugas",
+      "opsi": {
+        "A": "Menetapkan tenggat",
+        "B": "Memberi kelonggaran"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menggerakkan anggota panitia menuntut ketegasan, misalnya dengan menetapkan tenggat."
+    },
+    {
+      "id": "SK-D7-108",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diutamakan dalam kehidupan bertetangga",
+      "opsi": {
+        "A": "Keakraban",
+        "B": "Ketenteraman"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kehidupan bersama diutamakan tenteram dan tenang."
+    },
+    {
+      "id": "SK-D7-109",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan ketika mengarahkan penonton yang berdesakan",
+      "opsi": {
+        "A": "Instruksi tegas",
+        "B": "Imbauan ramah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan massa adalah tindakan memimpin yang membutuhkan instruksi tegas."
+    },
+    {
+      "id": "SK-D7-110",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diyakini membuat rumah terasa nyaman",
+      "opsi": {
+        "A": "Suasana damai",
+        "B": "Suasana meriah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kehidupan bersama di rumah paling nyaman dalam suasana damai dan tenang."
+    },
+    {
+      "id": "SK-D7-111",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin regu Pramuka mendirikan tenda",
+      "opsi": {
+        "A": "Membiarkan berkreasi",
+        "B": "Memberi perintah jelas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin regu menuntut ketegasan dalam memberi perintah."
+    },
+    {
+      "id": "SK-D7-112",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika menerima kritik keras dari pelatih",
+      "opsi": {
+        "A": "Tenang",
+        "B": "Tertantang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kritik menyentuh perasaan, dan dalam perasaan ketenangan diutamakan."
+    },
+    {
+      "id": "SK-D7-113",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diyakini efektif dalam menggerakkan anggota ekskul yang malas",
+      "opsi": {
+        "A": "Keakraban",
+        "B": "Ketegasan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menggerakkan anggota adalah tindakan memimpin yang menuntut ketegasan."
+    },
+    {
+      "id": "SK-D7-114",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan ketika hati sedang gelisah",
+      "opsi": {
+        "A": "Keramaian teman",
+        "B": "Ketenangan batin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Suasana batin yang gelisah membutuhkan ketenangan."
+    },
+    {
+      "id": "SK-D7-115",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan saat memimpin piket kebersihan asrama",
+      "opsi": {
+        "A": "Pembagian yang tegas",
+        "B": "Kerelaan anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin piket membutuhkan pembagian tugas yang tegas."
+    },
+    {
+      "id": "SK-D7-116",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan paling berharga dari kebersamaan satu angkatan",
+      "opsi": {
+        "A": "Keseruan",
+        "B": "Kedamaian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebersamaan yang ideal dirasakan damai dan tenang."
+    },
+    {
+      "id": "SK-D7-117",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika regu ribut saat pengarahan sebelum latihan",
+      "opsi": {
+        "A": "Menghentikan dengan tegas",
+        "B": "Menunggu mereka tenang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengendalikan regu adalah tindakan memimpin, sehingga dibutuhkan ketegasan."
+    },
+    {
+      "id": "SK-D7-118",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diutamakan ketika menerima kabar buruk dari keluarga di kampung",
+      "opsi": {
+        "A": "Menjaga ketenangan",
+        "B": "Meluapkan perasaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perasaan yang terguncang dijaga agar tetap tenang."
+    },
+    {
+      "id": "SK-D7-119",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan anggota Polri dalam mengatur arus lalu lintas yang macet",
+      "opsi": {
+        "A": "Sikap yang ramah",
+        "B": "Isyarat yang tegas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengatur arus lalu lintas adalah tindakan mengarahkan yang membutuhkan ketegasan."
+    },
+    {
+      "id": "SK-D7-120",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan saat hari libur sekolah",
+      "opsi": {
+        "A": "Istirahat yang tenang",
+        "B": "Liburan yang seru"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam suasana hati, ketenangan diutamakan."
+    },
+    {
+      "id": "SK-D7-121",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diutamakan ketua kelas ketika teman mengabaikan jadwal piket",
+      "opsi": {
+        "A": "Memaklumi kesibukan",
+        "B": "Menegakkan jadwal"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketua kelas yang menggerakkan teman bertindak tegas menegakkan jadwal."
+    },
+    {
+      "id": "SK-D7-122",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diyakini menandakan kedewasaan perasaan",
+      "opsi": {
+        "A": "Keceriaan",
+        "B": "Ketenangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perasaan yang dewasa ditandai oleh ketenangan."
+    },
+    {
+      "id": "SK-D7-123",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan dalam memimpin latihan Paskibra menjelang hari pelaksanaan",
+      "opsi": {
+        "A": "Ketegasan pelatih",
+        "B": "Kesabaran pelatih"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin latihan adalah tindakan memimpin yang menuntut ketegasan."
+    },
+    {
+      "id": "SK-D7-124",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diutamakan dalam menjalani keseharian di asrama",
+      "opsi": {
+        "A": "Hati yang gembira",
+        "B": "Hati yang tenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Suasana batin yang diutamakan adalah hati yang tenang."
+    },
+    {
+      "id": "SK-D7-125",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika anggota satuan tidak menjalankan pembagian tugas pengamanan",
+      "opsi": {
+        "A": "Menegaskan kembali tugas",
+        "B": "Mendengarkan alasan mereka"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan anggota satuan menuntut ketegasan dalam menegaskan tugas."
+    },
+    {
+      "id": "SK-D7-126",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan ketika suasana hati sedang kacau",
+      "opsi": {
+        "A": "Ketenangan",
+        "B": "Ketegasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Suasana hati termasuk ranah perasaan, sehingga yang dibutuhkan ketenangan; ketegasan berlaku untuk tindakan memimpin."
+    },
+    {
+      "id": "SK-D7-127",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dibutuhkan ketika menggerakkan warga untuk mengungsi dari banjir",
+      "opsi": {
+        "A": "Bujukan yang halus",
+        "B": "Komando yang tegas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menggerakkan warga adalah tindakan memimpin yang membutuhkan komando tegas."
+    },
+    {
+      "id": "SK-D7-128",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan ketika suasana kelas sedang tegang",
+      "opsi": {
+        "A": "Ketenangan",
+        "B": "Candaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Suasana bersama yang tegang dipulihkan dengan ketenangan."
+    },
+    {
+      "id": "SK-D7-129",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika anggota regu ragu memulai tugas yang diberikan",
+      "opsi": {
+        "A": "Memberi waktu",
+        "B": "Memberi aba-aba"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin regu menuntut ketegasan untuk menggerakkan anggota."
+    },
+    {
+      "id": "SK-D7-130",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan setelah menyelesaikan tugas berat",
+      "opsi": {
+        "A": "Bangga dan puas",
+        "B": "Lega dan tenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam perasaan, ketenangan diutamakan."
+    },
+    {
+      "id": "SK-D7-131",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diyakini membuat pemimpin upacara berwibawa",
+      "opsi": {
+        "A": "Suara tegas",
+        "B": "Senyum ramah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memimpin upacara adalah tindakan memimpin yang menuntut ketegasan."
+    },
+    {
+      "id": "SK-D7-132",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dibutuhkan anggota Polri setelah menjalani tugas yang menegangkan",
+      "opsi": {
+        "A": "Bercerita ke rekan",
+        "B": "Menenangkan diri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Suasana batin setelah tugas berat dipulihkan dengan ketenangan."
+    },
+    {
+      "id": "SK-D7-133",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diutamakan ketika mengarahkan junior yang baru masuk asrama",
+      "opsi": {
+        "A": "Kejelasan perintah",
+        "B": "Kehangatan sikap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan junior adalah tindakan memimpin yang menuntut perintah tegas dan jelas."
+    },
+    {
+      "id": "SK-D7-134",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang diyakini membuat hidup bersama di asrama nyaman",
+      "opsi": {
+        "A": "Saling menjaga ketenangan",
+        "B": "Saling menghibur"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kehidupan bersama paling nyaman bila setiap penghuni saling menjaga ketenangan."
+    },
+    {
+      "id": "SK-D7-135",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin kerja bakti warga RT yang mulai bubar sebelum selesai",
+      "opsi": {
+        "A": "Memaklumi kelelahan",
+        "B": "Menegaskan target kerja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menggerakkan warga adalah tindakan memimpin yang menuntut ketegasan."
+    },
+    {
+      "id": "SK-D7-136",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan paling melegakan ketika pulang ke rumah",
+      "opsi": {
+        "A": "Suasana tenang",
+        "B": "Sambutan meriah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam perasaan dan kehidupan keluarga, suasana tenang diutamakan."
+    }
+  ]
+}

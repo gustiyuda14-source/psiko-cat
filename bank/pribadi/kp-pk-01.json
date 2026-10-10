@@ -1,0 +1,1112 @@
+{
+  "batch": "kp-pk-01",
+  "status": "review",
+  "catatan": "72 butir latihan Kepribadian aspek Pengambilan Keputusan (18 T1, 36 T2, 18 T3; 36 favorable : 36 unfavorable). Belum di-seed. Kunci mengikuti aturan aspek (pedoman §1.1a): favorable = D ideal, unfavorable = A ideal. Keputusan cepat/mandiri dibatasi pada situasi darurat, pilihan pribadi, dan tugas yang menjadi tanggung jawab sendiri; tidak ada butir yang mengunggulkan bertindak di atas perintah atasan.",
+  "definisi_aspek": {
+    "Pengambilan Keputusan": "cepat, yakin, berani menanggung risiko, dan memutuskan sendiri berdasarkan informasi."
+  },
+  "items": [
+    {
+      "id": "KP-PK-101",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ketika diminta memilih tema tugas kelompok, saya dapat menentukannya dengan cepat setelah melihat pilihan yang tersedia.",
+      "alasan": "Cepat dan yakin menentukan pilihan begitu informasinya cukup."
+    },
+    {
+      "id": "KP-PK-102",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membutuhkan waktu berhari-hari hanya untuk memutuskan ekstrakurikuler yang akan saya ikuti.",
+      "alasan": "Berlarut-larut untuk pilihan sederhana menandakan sulit memutuskan."
+    },
+    {
+      "id": "KP-PK-103",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Sebelum memilih sekolah lanjutan, saya mencari tahu sendiri akreditasi, biaya, dan syarat masuknya.",
+      "alasan": "Mengumpulkan informasi sendiri sebagai dasar keputusan."
+    },
+    {
+      "id": "KP-PK-104",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya biasanya memilih sesuatu hanya karena mendengar cerita teman, tanpa memeriksa kebenarannya terlebih dahulu.",
+      "alasan": "Keputusan yang baik berdasar informasi yang diperiksa, bukan sekadar cerita orang."
+    },
+    {
+      "id": "KP-PK-105",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Sebagai panitia, saya siap menanggung akibatnya jika keputusan yang saya ambil ternyata kurang tepat.",
+      "alasan": "Berani menanggung risiko dari keputusan sendiri."
+    },
+    {
+      "id": "KP-PK-106",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya cenderung menghindari mengambil keputusan apa pun selama masih ada kemungkinan pilihan itu keliru.",
+      "alasan": "Takut keliru sampai tidak berani memutuskan adalah kebalikan dari berani menanggung risiko."
+    },
+    {
+      "id": "KP-PK-107",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya tetap pada pilihan untuk mendaftar seleksi Polri walaupun beberapa teman meragukannya.",
+      "alasan": "Yakin pada keputusan sendiri dan tidak goyah oleh keraguan orang lain."
+    },
+    {
+      "id": "KP-PK-108",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya selalu menanyakan pendapat banyak orang dulu, bahkan untuk keputusan kecil seperti memilih pakaian.",
+      "alasan": "Bergantung pada orang lain untuk hal kecil menandakan kurang mandiri dalam memutuskan."
+    },
+    {
+      "id": "KP-PK-109",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Setelah menyusun jadwal belajar untuk persiapan seleksi, saya menjalankannya tanpa sering mengubah-ubah.",
+      "alasan": "Konsisten menjalankan keputusan yang sudah dibuat."
+    },
+    {
+      "id": "KP-PK-110",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat ditunjuk menjadi ketua piket, saya cepat membagi tugas kepada anggota tanpa menunggu ditanya lebih dulu.",
+      "alasan": "Cepat memutuskan dalam tanggung jawab yang memang diberikan kepadanya."
+    },
+    {
+      "id": "KP-PK-111",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ketika diberi waktu singkat untuk memilih anggota regu lomba, saya kebingungan dan berharap ada yang memilihkan.",
+      "alasan": "Bingung dan berharap dipilihkan menandakan sulit memutuskan di bawah batas waktu."
+    },
+    {
+      "id": "KP-PK-112",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Sebelum memilih kegiatan tambahan di asrama, saya mempelajari dulu jadwal, syarat, dan manfaatnya dari pengumuman resmi.",
+      "alasan": "Memutuskan berdasarkan informasi dari sumber yang jelas."
+    },
+    {
+      "id": "KP-PK-113",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya ikut saja pilihan teman sekamar tentang tujuan pesiar meskipun sebenarnya saya punya rencana sendiri.",
+      "alasan": "Mengikuti orang lain padahal punya rencana sendiri menandakan kurang mandiri dalam memutuskan."
+    },
+    {
+      "id": "KP-PK-114",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya tetap menjalankan target latihan lari yang sudah saya tetapkan, meskipun rekan sekamar mengajak bersantai.",
+      "alasan": "Konsisten pada keputusan sendiri dan tidak mudah terbawa ajakan."
+    },
+    {
+      "id": "KP-PK-115",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya enggan mengajukan diri memimpin regu karena takut disalahkan jika keputusan saya keliru.",
+      "alasan": "Menghindari peran karena takut disalahkan adalah kebalikan dari berani menanggung risiko keputusan."
+    },
+    {
+      "id": "KP-PK-116",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas mengatur lalu lintas saat lampu jalan padam, saya sanggup segera memutuskan arus mana yang didahulukan.",
+      "alasan": "Situasi lalu lintas yang menjadi tugasnya menuntut keputusan cepat dan yakin."
+    },
+    {
+      "id": "KP-PK-117",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya cenderung langsung percaya pada laporan pertama tanpa memeriksa keterangan dari pihak lain.",
+      "alasan": "Keputusan yang baik berdasar informasi lengkap, bukan hanya satu sumber."
+    },
+    {
+      "id": "KP-PK-118",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat bertugas membantu evakuasi bencana, saya mudah bimbang menentukan warga mana yang perlu dibantu lebih dulu.",
+      "alasan": "Bimbang pada situasi darurat adalah kebalikan dari cepat dan yakin memutuskan."
+    },
+    {
+      "id": "KP-PK-119",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menentukan pilihan dalam waktu yang diberikan lebih tepat daripada meminta tambahan waktu agar bisa menimbang lebih lama.",
+      "bedah": {
+        "sisi_x": "menentukan dalam waktu yang diberikan",
+        "sisi_y": "meminta tambahan waktu menimbang",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Cepat memutuskan dalam batas waktu yang ada."
+    },
+    {
+      "id": "KP-PK-120",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membandingkan biaya dan manfaat beberapa bimbingan belajar lebih bijak daripada memilih tempat yang paling ramai peminatnya.",
+      "bedah": {
+        "sisi_x": "membandingkan biaya dan manfaat",
+        "sisi_y": "memilih tempat paling ramai",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memutuskan berdasarkan informasi, bukan ikut keramaian."
+    },
+    {
+      "id": "KP-PK-121",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Sebagai ketua kelas, mengambil keputusan lalu menanggung akibatnya lebih terhormat daripada membiarkan masalah menggantung agar tidak disalahkan.",
+      "bedah": {
+        "sisi_x": "memutuskan dan menanggung akibatnya",
+        "sisi_y": "membiarkan masalah menggantung",
+        "pembanding": "lebih terhormat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani memutuskan dan menanggung risiko sebagai bagian dari tanggung jawab."
+    },
+    {
+      "id": "KP-PK-122",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memilih ekstrakurikuler sesuai minat sendiri lebih memuaskan daripada mendaftar di kegiatan yang dipilih sahabat.",
+      "bedah": {
+        "sisi_x": "memilih sesuai minat sendiri",
+        "sisi_y": "ikut pilihan sahabat",
+        "pembanding": "lebih memuaskan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memutuskan sendiri pilihan pribadi tanpa bergantung pada teman."
+    },
+    {
+      "id": "KP-PK-123",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menuntaskan program latihan fisik yang sudah saya susun lebih bermakna daripada menggantinya setiap kali melihat video latihan baru.",
+      "bedah": {
+        "sisi_x": "menuntaskan program yang disusun",
+        "sisi_y": "mengganti program tiap ada video baru",
+        "pembanding": "lebih bermakna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Konsisten menjalankan keputusan, tidak mudah berganti arah."
+    },
+    {
+      "id": "KP-PK-124",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Langsung memilih jawaban yang paling saya yakini saat ujian lebih efektif daripada terus menimbang ulang hingga waktu habis.",
+      "bedah": {
+        "sisi_x": "langsung memilih jawaban yang diyakini",
+        "sisi_y": "terus menimbang ulang",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Yakin dan cepat memutuskan, tidak terjebak keraguan."
+    },
+    {
+      "id": "KP-PK-125",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membaca sendiri syarat pendaftaran di situs resmi lebih dapat dipercaya daripada mengandalkan kabar dari grup percakapan.",
+      "bedah": {
+        "sisi_x": "membaca syarat di situs resmi",
+        "sisi_y": "mengandalkan kabar grup percakapan",
+        "pembanding": "lebih dapat dipercaya",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mencari informasi dari sumber yang tepat sebagai dasar keputusan."
+    },
+    {
+      "id": "KP-PK-126",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menentukan sendiri jam belajar yang cocok bagi saya lebih masuk akal daripada meniru jadwal teman yang nilainya bagus.",
+      "bedah": {
+        "sisi_x": "menentukan jam belajar sendiri",
+        "sisi_y": "meniru jadwal teman",
+        "pembanding": "lebih masuk akal",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memutuskan sendiri sesuai kebutuhan diri, bukan meniru orang lain."
+    },
+    {
+      "id": "KP-PK-127",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memutuskan ikut seleksi Paskibra meski peluangnya kecil lebih berharga daripada membatalkan niat karena takut gagal.",
+      "bedah": {
+        "sisi_x": "memutuskan ikut meski peluang kecil",
+        "sisi_y": "membatalkan niat karena takut",
+        "pembanding": "lebih berharga",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani mengambil keputusan yang mengandung risiko."
+    },
+    {
+      "id": "KP-PK-128",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menunda memilih jurusan sampai hari terakhir pendaftaran lebih aman daripada memutuskannya jauh-jauh hari.",
+      "bedah": {
+        "sisi_x": "menunda sampai hari terakhir",
+        "sisi_y": "memutuskan jauh-jauh hari",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memutuskan lebih awal mencerminkan ketegasan; menunda adalah kebalikannya."
+    },
+    {
+      "id": "KP-PK-129",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengikuti firasat saat memilih tempat kursus lebih praktis daripada membandingkan informasi dari beberapa tempat.",
+      "bedah": {
+        "sisi_x": "mengikuti firasat",
+        "sisi_y": "membandingkan informasi",
+        "pembanding": "lebih praktis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Keputusan yang baik berdasar perbandingan informasi, bukan firasat semata."
+    },
+    {
+      "id": "KP-PK-130",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membiarkan orang lain menjadi penentu dalam kerja kelompok lebih menenangkan daripada menanggung risiko dari keputusan sendiri.",
+      "bedah": {
+        "sisi_x": "membiarkan orang lain menentukan",
+        "sisi_y": "menanggung risiko keputusan sendiri",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani menanggung risiko keputusan sendiri adalah inti aspek ini."
+    },
+    {
+      "id": "KP-PK-131",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyerahkan pilihan kampus kepada keinginan teman satu kelompok lebih menyenangkan daripada memilih sendiri lalu berpisah dengan mereka.",
+      "bedah": {
+        "sisi_x": "menyerahkan pilihan kepada teman",
+        "sisi_y": "memilih sendiri",
+        "pembanding": "lebih menyenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memilih sendiri pilihan pribadi mencerminkan kemandirian dalam memutuskan."
+    },
+    {
+      "id": "KP-PK-132",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Berganti-ganti target nilai setiap minggu lebih fleksibel daripada berpegang pada target yang saya tetapkan di awal semester.",
+      "bedah": {
+        "sisi_x": "berganti target setiap minggu",
+        "sisi_y": "berpegang pada target awal",
+        "pembanding": "lebih fleksibel",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Konsisten pada keputusan yang sudah dibuat, tidak berubah-ubah tanpa alasan kuat.",
+      "catatan_psikologi": "Menyesuaikan target karena ada informasi baru itu wajar. Yang dinilai kurang di sini adalah mengganti target terus-menerus tanpa alasan."
+    },
+    {
+      "id": "KP-PK-133",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memeriksa ulang berkali-kali sebelum mengirim jawaban kuis daring lebih teliti daripada mengirimnya begitu saya merasa yakin.",
+      "bedah": {
+        "sisi_x": "memeriksa ulang berkali-kali",
+        "sisi_y": "mengirim begitu yakin",
+        "pembanding": "lebih teliti",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bertindak begitu yakin mencerminkan ketegasan; memeriksa berkali-kali menandakan keraguan.",
+      "catatan_psikologi": "Memeriksa ulang sekali itu baik. Yang dinilai kurang adalah keraguan berulang yang membuat keputusan tertahan."
+    },
+    {
+      "id": "KP-PK-134",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanyakan pendapat orang tua untuk setiap pilihan kecil sehari-hari lebih sopan daripada memutuskannya sendiri.",
+      "bedah": {
+        "sisi_x": "menanyakan setiap pilihan kecil",
+        "sisi_y": "memutuskan sendiri",
+        "pembanding": "lebih sopan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Untuk hal kecil sehari-hari, memutuskan sendiri menunjukkan kemandirian."
+    },
+    {
+      "id": "KP-PK-135",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memilih pengurus kelas berdasarkan popularitas lebih mudah daripada menilai rekam jejak kerja para calonnya.",
+      "bedah": {
+        "sisi_x": "memilih berdasarkan popularitas",
+        "sisi_y": "menilai rekam jejak",
+        "pembanding": "lebih mudah",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menilai rekam jejak berarti memutuskan berdasarkan informasi."
+    },
+    {
+      "id": "KP-PK-136",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memilih opsi paling aman walau hasilnya kecil lebih menenteramkan daripada mengambil pilihan berisiko yang sudah saya hitung matang.",
+      "bedah": {
+        "sisi_x": "memilih opsi paling aman",
+        "sisi_y": "mengambil risiko yang dihitung matang",
+        "pembanding": "lebih menenteramkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani mengambil risiko yang sudah diperhitungkan mencerminkan aspek ini.",
+      "catatan_psikologi": "Berhati-hati tidak salah. Yang dinilai adalah keberanian mengambil risiko yang sudah diperhitungkan, bukan nekat."
+    },
+    {
+      "id": "KP-PK-137",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat ditunjuk memimpin barisan, segera memberi aba-aba yang jelas lebih tepat daripada menunggu barisan rapi dengan sendirinya.",
+      "bedah": {
+        "sisi_x": "segera memberi aba-aba",
+        "sisi_y": "menunggu barisan rapi sendiri",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Cepat dan tegas dalam peran yang memang diberikan."
+    },
+    {
+      "id": "KP-PK-138",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Sebagai ketua kamar, menyusun pembagian piket berdasarkan jadwal latihan tiap anggota lebih tepat daripada mengundinya secara acak.",
+      "bedah": {
+        "sisi_x": "membagi berdasarkan jadwal latihan",
+        "sisi_y": "mengundi secara acak",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memutuskan berdasarkan data yang tersedia."
+    },
+    {
+      "id": "KP-PK-139",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat ditugasi mengatur kerja bakti barak, memutuskan pembagian kerja lalu menanggung hasilnya lebih bertanggung jawab daripada saling menunggu siapa yang memulai.",
+      "bedah": {
+        "sisi_x": "memutuskan dan menanggung hasilnya",
+        "sisi_y": "saling menunggu",
+        "pembanding": "lebih bertanggung jawab",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berani memutuskan dan menanggung akibat dalam tugas yang diberikan."
+    },
+    {
+      "id": "KP-PK-140",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memilih bacaan di waktu luang sesuai kebutuhan sendiri lebih bermanfaat daripada membaca apa pun yang sedang dibaca teman sekamar.",
+      "bedah": {
+        "sisi_x": "memilih bacaan sesuai kebutuhan",
+        "sisi_y": "ikut bacaan teman",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mandiri dalam pilihan pribadi."
+    },
+    {
+      "id": "KP-PK-141",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menjalankan program latihan mandiri yang sudah direncanakan lebih membuahkan hasil daripada menyesuaikannya dengan suasana hati setiap pagi.",
+      "bedah": {
+        "sisi_x": "menjalankan program yang direncanakan",
+        "sisi_y": "menyesuaikan dengan suasana hati",
+        "pembanding": "lebih membuahkan hasil",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Konsisten menjalankan keputusan yang sudah dibuat."
+    },
+    {
+      "id": "KP-PK-142",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ketika waktu pesiar hanya beberapa jam, segera menentukan tujuan lebih menyenangkan daripada menghabiskan waktu berdebat di gerbang asrama.",
+      "bedah": {
+        "sisi_x": "segera menentukan tujuan",
+        "sisi_y": "berdebat lama",
+        "pembanding": "lebih menyenangkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Cepat memutuskan saat waktu terbatas."
+    },
+    {
+      "id": "KP-PK-143",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menunggu rekan menentukan cara belajar bersama menjelang ujian lebih nyaman daripada mengusulkan cara yang sudah saya rencanakan.",
+      "bedah": {
+        "sisi_x": "menunggu rekan menentukan",
+        "sisi_y": "mengusulkan rencana sendiri",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mengusulkan rencana sendiri menunjukkan inisiatif dalam memutuskan."
+    },
+    {
+      "id": "KP-PK-144",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mempercayai kabar dari mulut ke mulut tentang perubahan jadwal apel lebih cepat daripada memastikannya di papan pengumuman.",
+      "bedah": {
+        "sisi_x": "percaya kabar mulut ke mulut",
+        "sisi_y": "memastikan di papan pengumuman",
+        "pembanding": "lebih cepat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memastikan informasi dari sumber resmi adalah dasar keputusan yang baik."
+    },
+    {
+      "id": "KP-PK-145",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menolak tawaran menjadi ketua regu agar tidak menanggung kesalahan lebih aman daripada menerimanya dengan segala risikonya.",
+      "bedah": {
+        "sisi_x": "menolak agar tidak menanggung kesalahan",
+        "sisi_y": "menerima dengan risikonya",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani menanggung risiko adalah bagian dari pengambilan keputusan."
+    },
+    {
+      "id": "KP-PK-146",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengubah rencana belajar malam setiap kali ada ajakan mengobrol lebih luwes daripada menjalankan jadwal yang sudah saya susun.",
+      "bedah": {
+        "sisi_x": "mengubah rencana karena ajakan",
+        "sisi_y": "menjalankan jadwal yang disusun",
+        "pembanding": "lebih luwes",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Konsisten menjalankan keputusan sendiri, tidak mudah terbawa ajakan."
+    },
+    {
+      "id": "KP-PK-147",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Diam menunggu ketika regu bingung memilih rute latihan navigasi lebih sopan daripada segera mengusulkan rute yang sudah saya perhitungkan.",
+      "bedah": {
+        "sisi_x": "diam menunggu",
+        "sisi_y": "segera mengusulkan rute yang diperhitungkan",
+        "pembanding": "lebih sopan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Segera mengusulkan keputusan yang sudah diperhitungkan mencerminkan ketegasan."
+    },
+    {
+      "id": "KP-PK-148",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat bertugas di lalu lintas, segera mengalihkan kendaraan dari jalan yang tergenang lebih tepat daripada menunggu antrean semakin panjang.",
+      "bedah": {
+        "sisi_x": "segera mengalihkan kendaraan",
+        "sisi_y": "menunggu antrean memanjang",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tugas lapangan yang menjadi tanggung jawabnya menuntut keputusan cepat."
+    },
+    {
+      "id": "KP-PK-149",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menyusun laporan berdasarkan keterangan saksi dan bukti lebih dapat dipertanggungjawabkan daripada berdasarkan dugaan awal.",
+      "bedah": {
+        "sisi_x": "berdasarkan keterangan dan bukti",
+        "sisi_y": "berdasarkan dugaan awal",
+        "pembanding": "lebih dapat dipertanggungjawabkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Keputusan dan laporan harus berdasar informasi yang teruji."
+    },
+    {
+      "id": "KP-PK-150",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat mengamankan acara warga, menjalankan rencana pengamanan yang telah disepakati lebih bijak daripada mengubahnya karena komentar penonton.",
+      "bedah": {
+        "sisi_x": "menjalankan rencana yang disepakati",
+        "sisi_y": "mengubah karena komentar penonton",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Konsisten menjalankan keputusan dan tidak goyah oleh tekanan penonton."
+    },
+    {
+      "id": "KP-PK-151",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menuruti desakan kerumunan saat menangani perselisihan lebih aman daripada bertindak sesuai fakta yang ditemukan.",
+      "bedah": {
+        "sisi_x": "menuruti desakan kerumunan",
+        "sisi_y": "bertindak sesuai fakta",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memutuskan berdasarkan fakta dan tidak tunduk pada tekanan massa."
+    },
+    {
+      "id": "KP-PK-152",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat bertugas di layanan pengaduan, menunda mencatat laporan warga sampai rekan senior datang lebih aman daripada segera mencatatnya sendiri.",
+      "bedah": {
+        "sisi_x": "menunda sampai senior datang",
+        "sisi_y": "segera mencatat sendiri",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mencatat laporan adalah tugasnya sendiri, jadi tidak perlu ditunda menunggu orang lain."
+    },
+    {
+      "id": "KP-PK-153",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Dalam mengatur lalu lintas, mengandalkan kebiasaan hari-hari sebelumnya lebih praktis daripada memeriksa kondisi arus terbaru sebelum bertindak.",
+      "bedah": {
+        "sisi_x": "mengandalkan kebiasaan sebelumnya",
+        "sisi_y": "memeriksa kondisi terbaru",
+        "pembanding": "lebih praktis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Keputusan yang baik berdasar informasi terkini."
+    },
+    {
+      "id": "KP-PK-154",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Dalam patroli malam, hanya mencatat kejadian tanpa menentukan tindak lanjut lebih aman daripada memilih langkah sesuai kewenangan meski berisiko dikritik.",
+      "bedah": {
+        "sisi_x": "hanya mencatat tanpa tindak lanjut",
+        "sisi_y": "memilih langkah sesuai kewenangan",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berani memutuskan dalam batas kewenangan meski ada risiko dikritik."
+    },
+    {
+      "id": "KP-PK-155",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Kehilangan kesempatan karena terlalu lama bimbang lebih menyesakkan daripada sedikit keliru karena memutuskan dengan cepat.",
+      "bedah": {
+        "sisi_x": "kehilangan kesempatan karena bimbang",
+        "sisi_y": "sedikit keliru karena cepat memutuskan",
+        "pembanding": "lebih menyesakkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih cepat memutuskan meski ada risiko keliru."
+    },
+    {
+      "id": "KP-PK-156",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memilih tempat les hanya karena ikut-ikutan lebih merugikan daripada repot membandingkan beberapa pilihan terlebih dahulu.",
+      "bedah": {
+        "sisi_x": "memilih karena ikut-ikutan",
+        "sisi_y": "membandingkan beberapa pilihan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak keputusan yang berdasar perbandingan informasi."
+    },
+    {
+      "id": "KP-PK-157",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Tidak pernah mencoba karena takut salah pilih lebih mengecewakan daripada gagal setelah berani mengambil keputusan.",
+      "bedah": {
+        "sisi_x": "tidak mencoba karena takut salah",
+        "sisi_y": "gagal setelah berani memutuskan",
+        "pembanding": "lebih mengecewakan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak keberanian menanggung risiko keputusan."
+    },
+    {
+      "id": "KP-PK-158",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjalani sekolah pilihan teman lebih menyedihkan daripada menghadapi kesulitan dari sekolah yang saya pilih sendiri.",
+      "bedah": {
+        "sisi_x": "menjalani pilihan teman",
+        "sisi_y": "menghadapi kesulitan pilihan sendiri",
+        "pembanding": "lebih menyedihkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak memutuskan sendiri dan menanggung akibatnya."
+    },
+    {
+      "id": "KP-PK-159",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membatalkan rencana yang sudah matang hanya karena dibujuk teman lebih memalukan daripada dianggap kaku karena tetap menjalankannya.",
+      "bedah": {
+        "sisi_x": "membatalkan rencana karena dibujuk",
+        "sisi_y": "dianggap kaku karena konsisten",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak konsistensi menjalankan keputusan sendiri."
+    },
+    {
+      "id": "KP-PK-160",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Salah memilih kelompok belajar karena memutuskan cepat lebih menjengkelkan daripada tertinggal karena terlalu lama menimbang.",
+      "bedah": {
+        "sisi_x": "salah karena memutuskan cepat",
+        "sisi_y": "tertinggal karena lama menimbang",
+        "pembanding": "lebih menjengkelkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih lama menimbang; orang yang tegas menerima risiko keputusan cepat.",
+      "catatan_psikologi": "Menimbang dengan cermat tetap penting. Yang dinilai adalah kesediaan memutuskan tepat waktu, bukan tergesa-gesa."
+    },
+    {
+      "id": "KP-PK-161",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Berbeda pilihan dengan teman-teman satu kelas lebih menakutkan daripada mengikuti pilihan mereka meski tidak sesuai keinginan.",
+      "bedah": {
+        "sisi_x": "berbeda pilihan dengan teman",
+        "sisi_y": "mengikuti pilihan teman",
+        "pembanding": "lebih menakutkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memihak ikut arus; orang yang mandiri berani berbeda pilihan."
+    },
+    {
+      "id": "KP-PK-162",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Dikritik atas keputusan saya sebagai ketua panitia lebih buruk daripada membiarkan acara berjalan tanpa arah yang jelas.",
+      "bedah": {
+        "sisi_x": "dikritik atas keputusan",
+        "sisi_y": "acara tanpa arah",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih tidak memutuskan daripada menanggung risiko dikritik."
+    },
+    {
+      "id": "KP-PK-163",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Meluangkan waktu mencari informasi sebelum memilih kegiatan lebih melelahkan daripada langsung ikut pilihan yang sedang ramai.",
+      "bedah": {
+        "sisi_x": "mencari informasi sebelum memilih",
+        "sisi_y": "ikut pilihan yang ramai",
+        "pembanding": "lebih melelahkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memihak ikut-ikutan; keputusan yang baik berdasar informasi."
+    },
+    {
+      "id": "KP-PK-164",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membiarkan regu kebingungan saat saya ditunjuk sebagai komandan lebih buruk daripada memberi keputusan yang kemudian dikoreksi pelatih.",
+      "bedah": {
+        "sisi_x": "membiarkan regu kebingungan",
+        "sisi_y": "memberi keputusan yang dikoreksi",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak berani memutuskan dalam peran yang diberikan, sambil tetap menerima koreksi atasan."
+    },
+    {
+      "id": "KP-PK-165",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Sebagai ketua kamar, mengubah pembagian tugas setiap ada yang protes lebih merepotkan daripada menjelaskan alasannya lalu tetap menjalankannya.",
+      "bedah": {
+        "sisi_x": "mengubah setiap ada protes",
+        "sisi_y": "menjelaskan lalu tetap menjalankan",
+        "pembanding": "lebih merepotkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak konsisten menjalankan keputusan yang sudah dibuat."
+    },
+    {
+      "id": "KP-PK-166",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyusun sendiri jadwal belajar malam lebih membingungkan daripada mengikuti jadwal yang dibuat teman sekamar.",
+      "bedah": {
+        "sisi_x": "menyusun jadwal sendiri",
+        "sisi_y": "mengikuti jadwal teman",
+        "pembanding": "lebih membingungkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memihak bergantung pada teman dalam urusan pribadi."
+    },
+    {
+      "id": "KP-PK-167",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengusulkan strategi regu dalam lomba ketangkasan lalu disalahkan bila kalah lebih menakutkan daripada diam mengikuti usulan orang lain.",
+      "bedah": {
+        "sisi_x": "mengusulkan strategi dan disalahkan",
+        "sisi_y": "diam mengikuti usulan orang",
+        "pembanding": "lebih menakutkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menghindari risiko keputusan dengan cara diam dan ikut orang lain."
+    },
+    {
+      "id": "KP-PK-168",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memeriksa sendiri jadwal dan perlengkapan sebelum latihan lapangan lebih merepotkan daripada mengikuti kabar dari rekan satu barak.",
+      "bedah": {
+        "sisi_x": "memeriksa jadwal dan perlengkapan sendiri",
+        "sisi_y": "mengikuti kabar rekan",
+        "pembanding": "lebih merepotkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti memihak bergantung pada kabar orang lain, bukan informasi yang dipastikan sendiri."
+    },
+    {
+      "id": "KP-PK-169",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat bertugas di jalan raya, ragu menghentikan kendaraan yang jelas membahayakan pengguna jalan lebih berbahaya daripada menerima protes pengendaranya.",
+      "bedah": {
+        "sisi_x": "ragu menghentikan kendaraan berbahaya",
+        "sisi_y": "menerima protes pengendara",
+        "pembanding": "lebih berbahaya",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak bertindak tegas dalam tugas meski ada risiko diprotes."
+    },
+    {
+      "id": "KP-PK-170",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, bertindak hanya berdasarkan desas-desus warga lebih merugikan daripada meluangkan waktu memeriksa fakta di lapangan.",
+      "bedah": {
+        "sisi_x": "bertindak berdasarkan desas-desus",
+        "sisi_y": "memeriksa fakta di lapangan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memihak keputusan yang berdasar fakta."
+    },
+    {
+      "id": "KP-PK-171",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, memutuskan langkah dalam tugas yang menjadi tanggung jawab saya lebih menakutkan daripada menunggu rekan lain memutuskannya.",
+      "bedah": {
+        "sisi_x": "memutuskan dalam tugas sendiri",
+        "sisi_y": "menunggu rekan memutuskan",
+        "pembanding": "lebih menakutkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menghindari tanggung jawab memutuskan dalam tugas sendiri."
+    },
+    {
+      "id": "KP-PK-172",
+      "aspek": "Pengambilan Keputusan",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Saat bertugas di pos pelayanan, menolak permintaan warga yang menyalahi aturan lebih tidak enak daripada menurutinya agar tidak dicap kaku.",
+      "bedah": {
+        "sisi_x": "menolak permintaan yang menyalahi aturan",
+        "sisi_y": "menuruti agar tidak dicap kaku",
+        "pembanding": "lebih tidak enak",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti membiarkan tekanan orang lain menggeser keputusan yang benar."
+    }
+  ]
+}

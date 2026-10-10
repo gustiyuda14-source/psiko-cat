@@ -1,0 +1,1641 @@
+{
+  "batch": "sk-a-01",
+  "status": "review",
+  "catatan": "Batch 135 butir Substansi Khusus D1 (36), D2 (45), D3 (54), masing-masing 9 pasang kembar. Ditulis controller setelah sub-agen terhenti batas pemakaian. Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-101",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menulis berita untuk majalah dinding",
+      "opsi": {
+        "A": "Ketepatan fakta",
+        "B": "Daya tarik cerita"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-102",
+      "pembahasan": "Kebenaran diutamakan. \"Ketepatan fakta\" dipilih karena sesuai fakta; \"Daya tarik cerita\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-102."
+    },
+    {
+      "id": "SK-D1-102",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang dalam menyusun artikel buletin sekolah",
+      "opsi": {
+        "A": "Daya tarik cerita",
+        "B": "Ketepatan fakta"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-101",
+      "pembahasan": "Kebenaran diutamakan. \"Ketepatan fakta\" dipilih karena sesuai fakta; \"Daya tarik cerita\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-101; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-103",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan ketika nilai teman salah dihitung lebih tinggi oleh guru",
+      "opsi": {
+        "A": "Memberitahukan kekeliruan",
+        "B": "Menjaga kegembiraannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-104",
+      "pembahasan": "Kebenaran diutamakan. \"Memberitahukan kekeliruan\" dipilih karena sesuai fakta; \"Menjaga kegembiraannya\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-104."
+    },
+    {
+      "id": "SK-D1-104",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan bila mengetahui skor teman tercatat lebih besar dari seharusnya",
+      "opsi": {
+        "A": "Menjaga kegembiraannya",
+        "B": "Memberitahukan kekeliruan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-103",
+      "pembahasan": "Kebenaran diutamakan. \"Memberitahukan kekeliruan\" dipilih karena sesuai fakta; \"Menjaga kegembiraannya\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-103; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-105",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan dalam melaporkan hasil patroli kepada atasan",
+      "opsi": {
+        "A": "Keadaan sebenarnya",
+        "B": "Kesan yang menenangkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-106",
+      "pembahasan": "Kebenaran diutamakan. \"Keadaan sebenarnya\" dipilih karena sesuai fakta; \"Kesan yang menenangkan\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-106."
+    },
+    {
+      "id": "SK-D1-106",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menyusun laporan kegiatan pengamanan",
+      "opsi": {
+        "A": "Kesan yang menenangkan",
+        "B": "Keadaan sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-105",
+      "pembahasan": "Kebenaran diutamakan. \"Keadaan sebenarnya\" dipilih karena sesuai fakta; \"Kesan yang menenangkan\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-105; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-107",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipikirkan ketika orang tua bertanya tentang nilai ujian yang turun",
+      "opsi": {
+        "A": "Kejujuran",
+        "B": "Ketenangan keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-108",
+      "pembahasan": "Kebenaran diutamakan. \"Kejujuran\" dipilih karena sesuai fakta; \"Ketenangan keluarga\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-108."
+    },
+    {
+      "id": "SK-D1-108",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan saat menjawab pertanyaan keluarga soal prestasi belajar",
+      "opsi": {
+        "A": "Ketenangan keluarga",
+        "B": "Kejujuran"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-107",
+      "pembahasan": "Kebenaran diutamakan. \"Kejujuran\" dipilih karena sesuai fakta; \"Ketenangan keluarga\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-107; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-109",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika ditanya pengasuh tentang keributan di barak",
+      "opsi": {
+        "A": "Kejadian sebenarnya",
+        "B": "Nama baik regu"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-110",
+      "pembahasan": "Kebenaran diutamakan. \"Kejadian sebenarnya\" dipilih karena sesuai fakta; \"Nama baik regu\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-110."
+    },
+    {
+      "id": "SK-D1-110",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang saat dimintai keterangan tentang kejadian di asrama",
+      "opsi": {
+        "A": "Nama baik regu",
+        "B": "Kejadian sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-109",
+      "pembahasan": "Kebenaran diutamakan. \"Kejadian sebenarnya\" dipilih karena sesuai fakta; \"Nama baik regu\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-109; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-111",
+      "dimensi": "D1",
+      "situasi": "Hal yang diyakini dalam menyelesaikan perselisihan antarwarga",
+      "opsi": {
+        "A": "Kebenaran duduk perkara",
+        "B": "Kerukunan warga"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-112",
+      "pembahasan": "Kebenaran diutamakan. \"Kebenaran duduk perkara\" dipilih karena sesuai fakta; \"Kerukunan warga\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-112."
+    },
+    {
+      "id": "SK-D1-112",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menengahi sengketa antartetangga",
+      "opsi": {
+        "A": "Kerukunan warga",
+        "B": "Kebenaran duduk perkara"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-111",
+      "pembahasan": "Kebenaran diutamakan. \"Kebenaran duduk perkara\" dipilih karena sesuai fakta; \"Kerukunan warga\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-111; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-113",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan dalam mengisi daftar hadir kegiatan",
+      "opsi": {
+        "A": "Kehadiran yang sebenarnya",
+        "B": "Solidaritas teman"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-114",
+      "pembahasan": "Kebenaran diutamakan. \"Kehadiran yang sebenarnya\" dipilih karena sesuai fakta; \"Solidaritas teman\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-114."
+    },
+    {
+      "id": "SK-D1-114",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika mencatat kehadiran anggota rapat",
+      "opsi": {
+        "A": "Solidaritas teman",
+        "B": "Kehadiran yang sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-113",
+      "pembahasan": "Kebenaran diutamakan. \"Kehadiran yang sebenarnya\" dipilih karena sesuai fakta; \"Solidaritas teman\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-113; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-115",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menilai karya lomba yang diikuti teman sendiri",
+      "opsi": {
+        "A": "Penilaian objektif",
+        "B": "Dukungan pertemanan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-116",
+      "pembahasan": "Kebenaran diutamakan. \"Penilaian objektif\" dipilih karena sesuai fakta; \"Dukungan pertemanan\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-116."
+    },
+    {
+      "id": "SK-D1-116",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang saat menjadi juri lomba yang diikuti sahabat",
+      "opsi": {
+        "A": "Dukungan pertemanan",
+        "B": "Penilaian objektif"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-115",
+      "pembahasan": "Kebenaran diutamakan. \"Penilaian objektif\" dipilih karena sesuai fakta; \"Dukungan pertemanan\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-115; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-117",
+      "dimensi": "D1",
+      "situasi": "Hal yang diyakini dalam menuliskan berita acara",
+      "opsi": {
+        "A": "Kesesuaian fakta",
+        "B": "Kemudahan proses"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-118",
+      "pembahasan": "Kebenaran diutamakan. \"Kesesuaian fakta\" dipilih karena sesuai fakta; \"Kemudahan proses\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-118."
+    },
+    {
+      "id": "SK-D1-118",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika mencatat keterangan saksi",
+      "opsi": {
+        "A": "Kemudahan proses",
+        "B": "Kesesuaian fakta"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-117",
+      "pembahasan": "Kebenaran diutamakan. \"Kesesuaian fakta\" dipilih karena sesuai fakta; \"Kemudahan proses\" itu baik, tetapi tidak boleh mengalahkan kebenaran. Butir kembar dari SK-D1-117; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D1-119",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipikirkan ketika teman meminta dibantu saat ujian berlangsung",
+      "opsi": {
+        "A": "Rasa setia kawan",
+        "B": "Kejujuran ujian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Kejujuran ujian\" dipilih karena sesuai fakta; \"Rasa setia kawan\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-120",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menemukan kesalahan data dalam laporan OSIS yang sudah dibagikan",
+      "opsi": {
+        "A": "Meralat data",
+        "B": "Menjaga citra pengurus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Meralat data\" dipilih karena sesuai fakta; \"Menjaga citra pengurus\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-121",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan ketika pelatih salah mencatat waktu lari yang menguntungkan diri sendiri",
+      "opsi": {
+        "A": "Menerima keberuntungan",
+        "B": "Melaporkan kesalahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Melaporkan kesalahan\" dipilih karena sesuai fakta; \"Menerima keberuntungan\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-122",
+      "dimensi": "D1",
+      "situasi": "Hal yang diyakini dalam menyampaikan kabar duka kepada keluarga korban",
+      "opsi": {
+        "A": "Informasi yang benar",
+        "B": "Kata yang menghibur"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Informasi yang benar\" dipilih karena sesuai fakta; \"Kata yang menghibur\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-123",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipikirkan ketika teman sekamar menyangkal pelanggaran yang sudah terbukti",
+      "opsi": {
+        "A": "Pengakuan teman",
+        "B": "Fakta yang ada"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Fakta yang ada\" dipilih karena sesuai fakta; \"Pengakuan teman\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-124",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan dalam mengisi biodata pendaftaran seleksi",
+      "opsi": {
+        "A": "Kesan terbaik",
+        "B": "Data sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Data sebenarnya\" dipilih karena sesuai fakta; \"Kesan terbaik\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-125",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan ketika kembalian belanja di kantin berlebih",
+      "opsi": {
+        "A": "Mengembalikan kelebihan",
+        "B": "Menganggapnya rezeki"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Mengembalikan kelebihan\" dipilih karena sesuai fakta; \"Menganggapnya rezeki\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-126",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika diminta menilai kinerja rekan regu",
+      "opsi": {
+        "A": "Penilaian apa adanya",
+        "B": "Penilaian yang membesarkan hati"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Penilaian apa adanya\" dipilih karena sesuai fakta; \"Penilaian yang membesarkan hati\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-127",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menyampaikan hasil rapat kepada anggota yang tidak hadir",
+      "opsi": {
+        "A": "Isi rapat sebenarnya",
+        "B": "Ringkasan yang menyenangkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Isi rapat sebenarnya\" dipilih karena sesuai fakta; \"Ringkasan yang menyenangkan\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-128",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipikirkan ketika barang bukti tidak sesuai keterangan pelapor",
+      "opsi": {
+        "A": "Kebenaran barang bukti",
+        "B": "Perasaan pelapor"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Kebenaran barang bukti\" dipilih karena sesuai fakta; \"Perasaan pelapor\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-129",
+      "dimensi": "D1",
+      "situasi": "Hal yang diyakini menjadi dasar keputusan disiplin di asrama",
+      "opsi": {
+        "A": "Pertimbangan kemanusiaan",
+        "B": "Fakta pelanggaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Fakta pelanggaran\" dipilih karena sesuai fakta; \"Pertimbangan kemanusiaan\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-130",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan ketika guru menanyakan siapa yang menyontek dan kamu melihatnya",
+      "opsi": {
+        "A": "Melindungi teman",
+        "B": "Menjawab jujur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Menjawab jujur\" dipilih karena sesuai fakta; \"Melindungi teman\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-131",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan dalam membuat konten media sosial sekolah",
+      "opsi": {
+        "A": "Informasi akurat",
+        "B": "Konten yang viral"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Informasi akurat\" dipilih karena sesuai fakta; \"Konten yang viral\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-132",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika diminta mempromosikan kegiatan yang hasilnya kurang memuaskan",
+      "opsi": {
+        "A": "Gambaran sebenarnya",
+        "B": "Citra kegiatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Gambaran sebenarnya\" dipilih karena sesuai fakta; \"Citra kegiatan\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-133",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipikirkan ketika mendengar kabar burung tentang teman",
+      "opsi": {
+        "A": "Menjaga keakraban",
+        "B": "Memastikan kebenaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Memastikan kebenaran\" dipilih karena sesuai fakta; \"Menjaga keakraban\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-134",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilakukan ketika hasil timbang berat badan menjelang seleksi kurang dari target",
+      "opsi": {
+        "A": "Mencatat apa adanya",
+        "B": "Membulatkan ke atas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Mencatat apa adanya\" dipilih karena sesuai fakta; \"Membulatkan ke atas\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-135",
+      "dimensi": "D1",
+      "situasi": "Hal yang diyakini dalam menyampaikan evaluasi latihan kepada regu",
+      "opsi": {
+        "A": "Semangat regu",
+        "B": "Kenyataan hasil latihan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Kenyataan hasil latihan\" dipilih karena sesuai fakta; \"Semangat regu\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D1-136",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika teman meminta pendapat tentang pidatonya yang kurang bagus",
+      "opsi": {
+        "A": "Pujian penyemangat",
+        "B": "Pendapat jujur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. \"Pendapat jujur\" dipilih karena sesuai fakta; \"Pujian penyemangat\" itu baik, tetapi tidak boleh mengalahkan kebenaran."
+    },
+    {
+      "id": "SK-D2-101",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam mengumumkan hasil seleksi pengurus OSIS",
+      "opsi": {
+        "A": "Terbuka kepada semua",
+        "B": "Disampaikan terbatas"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-102",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Terbuka kepada semua\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Disampaikan terbatas\". Butir kembar dari SK-D2-102."
+    },
+    {
+      "id": "SK-D2-102",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika menyampaikan hasil pemilihan ketua kelas",
+      "opsi": {
+        "A": "Disampaikan terbatas",
+        "B": "Terbuka kepada semua"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-101",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Terbuka kepada semua\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Disampaikan terbatas\". Butir kembar dari SK-D2-101; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-103",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan dalam melaporkan dana sumbangan acara kampung",
+      "opsi": {
+        "A": "Rincian dibuka",
+        "B": "Laporan ringkas"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-104",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Rincian dibuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Laporan ringkas\". Butir kembar dari SK-D2-104."
+    },
+    {
+      "id": "SK-D2-104",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan saat mempertanggungjawabkan iuran warga",
+      "opsi": {
+        "A": "Laporan ringkas",
+        "B": "Rincian dibuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-103",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Rincian dibuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Laporan ringkas\". Butir kembar dari SK-D2-103; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-105",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting dalam pelayanan pembuatan SIM",
+      "opsi": {
+        "A": "Kejelasan biaya",
+        "B": "Kecepatan layanan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-106",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Kejelasan biaya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kecepatan layanan\". Butir kembar dari SK-D2-106."
+    },
+    {
+      "id": "SK-D2-106",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan pada layanan penerbitan SKCK",
+      "opsi": {
+        "A": "Kecepatan layanan",
+        "B": "Kejelasan biaya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-105",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Kejelasan biaya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kecepatan layanan\". Butir kembar dari SK-D2-105; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-107",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan dalam menyusun jadwal piket asrama",
+      "opsi": {
+        "A": "Diumumkan terbuka",
+        "B": "Diatur ketua saja"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-108",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Diumumkan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Diatur ketua saja\". Butir kembar dari SK-D2-108."
+    },
+    {
+      "id": "SK-D2-108",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan saat membagi giliran jaga barak",
+      "opsi": {
+        "A": "Diatur ketua saja",
+        "B": "Diumumkan terbuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-107",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Diumumkan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Diatur ketua saja\". Butir kembar dari SK-D2-107; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-109",
+      "dimensi": "D2",
+      "situasi": "Hal yang diyakini membangun kepercayaan orang tua kepada sekolah",
+      "opsi": {
+        "A": "Keterbukaan informasi",
+        "B": "Prestasi sekolah"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-110",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Keterbukaan informasi\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Prestasi sekolah\". Butir kembar dari SK-D2-110."
+    },
+    {
+      "id": "SK-D2-110",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan dalam menjaga kepercayaan wali murid",
+      "opsi": {
+        "A": "Prestasi sekolah",
+        "B": "Keterbukaan informasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-109",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Keterbukaan informasi\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Prestasi sekolah\". Butir kembar dari SK-D2-109; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-111",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika warga bertanya alasan penutupan jalan",
+      "opsi": {
+        "A": "Menjelaskan alasannya",
+        "B": "Meminta bersabar"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-112",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menjelaskan alasannya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Meminta bersabar\". Butir kembar dari SK-D2-112."
+    },
+    {
+      "id": "SK-D2-112",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan bila pengendara menanyakan sebab pengalihan arus",
+      "opsi": {
+        "A": "Meminta bersabar",
+        "B": "Menjelaskan alasannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-111",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menjelaskan alasannya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Meminta bersabar\". Butir kembar dari SK-D2-111; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-113",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam penilaian lomba antarkelas",
+      "opsi": {
+        "A": "Kriteria diumumkan",
+        "B": "Keputusan juri"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-114",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Kriteria diumumkan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Keputusan juri\". Butir kembar dari SK-D2-114."
+    },
+    {
+      "id": "SK-D2-114",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan dalam menetapkan juara lomba kebersihan",
+      "opsi": {
+        "A": "Keputusan juri",
+        "B": "Kriteria diumumkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-113",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Kriteria diumumkan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Keputusan juri\". Butir kembar dari SK-D2-113; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-115",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika kebijakan baru asrama mulai diterapkan",
+      "opsi": {
+        "A": "Menyosialisasikan alasannya",
+        "B": "Langsung menerapkannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-116",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menyosialisasikan alasannya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Langsung menerapkannya\". Butir kembar dari SK-D2-116."
+    },
+    {
+      "id": "SK-D2-116",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan saat aturan baru barak diberlakukan",
+      "opsi": {
+        "A": "Langsung menerapkannya",
+        "B": "Menyosialisasikan alasannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-115",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menyosialisasikan alasannya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Langsung menerapkannya\". Butir kembar dari SK-D2-115; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-117",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting dalam mengelola kas regu",
+      "opsi": {
+        "A": "Catatan terbuka",
+        "B": "Kepercayaan bendahara"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-118",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Catatan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kepercayaan bendahara\". Butir kembar dari SK-D2-118."
+    },
+    {
+      "id": "SK-D2-118",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam mencatat uang bersama angkatan",
+      "opsi": {
+        "A": "Kepercayaan bendahara",
+        "B": "Catatan terbuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-117",
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Catatan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kepercayaan bendahara\". Butir kembar dari SK-D2-117; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-119",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika warga menanyakan status laporan kehilangan",
+      "opsi": {
+        "A": "Memberi informasi terkini",
+        "B": "Meminta menunggu kabar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Memberi informasi terkini\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Meminta menunggu kabar\"."
+    },
+    {
+      "id": "SK-D2-120",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam menyampaikan hasil rapat OSIS kepada siswa",
+      "opsi": {
+        "A": "Disimpan pengurus",
+        "B": "Dipublikasikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Dipublikasikan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Disimpan pengurus\"."
+    },
+    {
+      "id": "SK-D2-121",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika sekolah mengubah jadwal ujian",
+      "opsi": {
+        "A": "Pemberitahuan luas",
+        "B": "Pemberitahuan bertahap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Pemberitahuan luas\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Pemberitahuan bertahap\"."
+    },
+    {
+      "id": "SK-D2-122",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting dalam penerimaan anggota baru organisasi",
+      "opsi": {
+        "A": "Syarat yang terbuka",
+        "B": "Seleksi yang ketat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Syarat yang terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Seleksi yang ketat\"."
+    },
+    {
+      "id": "SK-D2-123",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika iuran ekstrakurikuler dinaikkan",
+      "opsi": {
+        "A": "Mengumumkan besarannya",
+        "B": "Menjelaskan rinciannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menjelaskan rinciannya\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Mengumumkan besarannya\"."
+    },
+    {
+      "id": "SK-D2-124",
+      "dimensi": "D2",
+      "situasi": "Hal yang diyakini membuat pelayanan publik dipercaya",
+      "opsi": {
+        "A": "Petugas ramah",
+        "B": "Informasi terbuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Informasi terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Petugas ramah\"."
+    },
+    {
+      "id": "SK-D2-125",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam pengumuman kelulusan seleksi",
+      "opsi": {
+        "A": "Dikabarkan perorangan",
+        "B": "Diumumkan terbuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Diumumkan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Dikabarkan perorangan\"."
+    },
+    {
+      "id": "SK-D2-126",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika rapat panitia memutuskan perubahan anggaran",
+      "opsi": {
+        "A": "Mengabarkan seluruh anggota",
+        "B": "Mencatat untuk pengurus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Mengabarkan seluruh anggota\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Mencatat untuk pengurus\"."
+    },
+    {
+      "id": "SK-D2-127",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan dalam memasang informasi tarif layanan di kantor polisi",
+      "opsi": {
+        "A": "Ditanyakan ke petugas",
+        "B": "Mudah dilihat warga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Mudah dilihat warga\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Ditanyakan ke petugas\"."
+    },
+    {
+      "id": "SK-D2-128",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting oleh warga dalam proses pembuatan laporan polisi",
+      "opsi": {
+        "A": "Keramahan petugas",
+        "B": "Kejelasan prosedur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Kejelasan prosedur\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Keramahan petugas\"."
+    },
+    {
+      "id": "SK-D2-129",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam membagikan hasil evaluasi kegiatan Pramuka",
+      "opsi": {
+        "A": "Disampaikan kepada semua",
+        "B": "Dibahas pembina"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Disampaikan kepada semua\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Dibahas pembina\"."
+    },
+    {
+      "id": "SK-D2-130",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika keputusan pembagian kamar asrama dipertanyakan",
+      "opsi": {
+        "A": "Menegaskan keputusan",
+        "B": "Menjelaskan dasar keputusan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menjelaskan dasar keputusan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Menegaskan keputusan\"."
+    },
+    {
+      "id": "SK-D2-131",
+      "dimensi": "D2",
+      "situasi": "Hal yang diyakini mencegah prasangka di antara anggota regu",
+      "opsi": {
+        "A": "Keterbukaan",
+        "B": "Kekompakan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Keterbukaan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kekompakan\"."
+    },
+    {
+      "id": "SK-D2-132",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika diminta menjelaskan penggunaan uang kas kelas",
+      "opsi": {
+        "A": "Bukti pengeluaran",
+        "B": "Kejujuran bendahara"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Bukti pengeluaran\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kejujuran bendahara\"."
+    },
+    {
+      "id": "SK-D2-133",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam pengadaan seragam angkatan",
+      "opsi": {
+        "A": "Harga diumumkan",
+        "B": "Harga dipercayakan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Harga diumumkan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Harga dipercayakan\"."
+    },
+    {
+      "id": "SK-D2-134",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika jadwal kegiatan desa berubah",
+      "opsi": {
+        "A": "Menunggu ditanya",
+        "B": "Menyebarkan kabar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menyebarkan kabar\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Menunggu ditanya\"."
+    },
+    {
+      "id": "SK-D2-135",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting dalam rapat warga tentang keamanan lingkungan",
+      "opsi": {
+        "A": "Informasi terbuka",
+        "B": "Keputusan cepat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Informasi terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Keputusan cepat\"."
+    },
+    {
+      "id": "SK-D2-136",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan petugas ketika antrean layanan terhambat gangguan sistem",
+      "opsi": {
+        "A": "Mempercepat layanan",
+        "B": "Mengumumkan kendala"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Mengumumkan kendala\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Mempercepat layanan\"."
+    },
+    {
+      "id": "SK-D2-137",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam menyusun laporan pertanggungjawaban OSIS",
+      "opsi": {
+        "A": "Diserahkan ke pembina",
+        "B": "Dapat diakses siswa"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Dapat diakses siswa\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Diserahkan ke pembina\"."
+    },
+    {
+      "id": "SK-D2-138",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika teman bertanya mengapa usulannya ditolak rapat",
+      "opsi": {
+        "A": "Kata penghiburan",
+        "B": "Alasan penolakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Alasan penolakan\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kata penghiburan\"."
+    },
+    {
+      "id": "SK-D2-139",
+      "dimensi": "D2",
+      "situasi": "Hal yang diyakini menjaga kepercayaan antara pengasuh dan taruna",
+      "opsi": {
+        "A": "Komunikasi terbuka",
+        "B": "Kedekatan pribadi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Komunikasi terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Kedekatan pribadi\"."
+    },
+    {
+      "id": "SK-D2-140",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika rute bus sekolah berubah",
+      "opsi": {
+        "A": "Mengumumkan lebih awal",
+        "B": "Mengatur di hari itu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Mengumumkan lebih awal\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Mengatur di hari itu\"."
+    },
+    {
+      "id": "SK-D2-141",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam pemilihan ketua angkatan",
+      "opsi": {
+        "A": "Penghitungan terbuka",
+        "B": "Penghitungan cepat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Penghitungan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Penghitungan cepat\"."
+    },
+    {
+      "id": "SK-D2-142",
+      "dimensi": "D2",
+      "situasi": "Hal yang dirasakan penting dalam kegiatan penggalangan dana",
+      "opsi": {
+        "A": "Laporan terbuka",
+        "B": "Target tercapai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Laporan terbuka\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Target tercapai\"."
+    },
+    {
+      "id": "SK-D2-143",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika warga mempertanyakan razia kendaraan",
+      "opsi": {
+        "A": "Melanjutkan pemeriksaan",
+        "B": "Menjelaskan tujuan razia"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Menjelaskan tujuan razia\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Melanjutkan pemeriksaan\"."
+    },
+    {
+      "id": "SK-D2-144",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan dalam menyampaikan hasil rapat koordinasi kepada anggota regu",
+      "opsi": {
+        "A": "Penjelasan menyeluruh",
+        "B": "Perintah singkat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Penjelasan menyeluruh\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Perintah singkat\"."
+    },
+    {
+      "id": "SK-D2-145",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika ada keluhan tentang nilai rapor",
+      "opsi": {
+        "A": "Nilai akhir",
+        "B": "Rincian penilaian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. \"Rincian penilaian\" membuat pihak yang berkepentingan mengetahui informasinya, dibanding \"Nilai akhir\"."
+    },
+    {
+      "id": "SK-D3-101",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika anggota ekskul berkali-kali bolos latihan",
+      "opsi": {
+        "A": "Menerapkan sanksi",
+        "B": "Memberi motivasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-102",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan sanksi\" memberi kepastian dan efek tertib; \"Memberi motivasi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-102."
+    },
+    {
+      "id": "SK-D3-102",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan bila anggota tim sering absen tanpa izin",
+      "opsi": {
+        "A": "Memberi motivasi",
+        "B": "Menerapkan sanksi"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-101",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan sanksi\" memberi kepastian dan efek tertib; \"Memberi motivasi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-101; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-103",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika menemukan siswa merokok di sekolah",
+      "opsi": {
+        "A": "Aturan sekolah",
+        "B": "Penjelasan bahaya"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-104",
+      "pembahasan": "Penegakan aturan diutamakan. \"Aturan sekolah\" memberi kepastian dan efek tertib; \"Penjelasan bahaya\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-104."
+    },
+    {
+      "id": "SK-D3-104",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan saat memergoki pelajar merokok di area sekolah",
+      "opsi": {
+        "A": "Penjelasan bahaya",
+        "B": "Aturan sekolah"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-103",
+      "pembahasan": "Penegakan aturan diutamakan. \"Aturan sekolah\" memberi kepastian dan efek tertib; \"Penjelasan bahaya\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-103; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-105",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan terhadap pengendara tanpa helm",
+      "opsi": {
+        "A": "Menilang",
+        "B": "Menasihati"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-106",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menilang\" memberi kepastian dan efek tertib; \"Menasihati\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-106."
+    },
+    {
+      "id": "SK-D3-106",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan kepada pemotor yang tidak memakai helm",
+      "opsi": {
+        "A": "Menasihati",
+        "B": "Menilang"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-105",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menilang\" memberi kepastian dan efek tertib; \"Menasihati\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-105; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-107",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini dalam menjaga ketertiban asrama",
+      "opsi": {
+        "A": "Penegakan tata tertib",
+        "B": "Teladan senior"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-108",
+      "pembahasan": "Penegakan aturan diutamakan. \"Penegakan tata tertib\" memberi kepastian dan efek tertib; \"Teladan senior\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-108."
+    },
+    {
+      "id": "SK-D3-108",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang dalam menegakkan disiplin barak",
+      "opsi": {
+        "A": "Teladan senior",
+        "B": "Penegakan tata tertib"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-107",
+      "pembahasan": "Penegakan aturan diutamakan. \"Penegakan tata tertib\" memberi kepastian dan efek tertib; \"Teladan senior\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-107; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-109",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika pedagang berjualan di trotoar yang dilarang",
+      "opsi": {
+        "A": "Menertibkan sesuai aturan",
+        "B": "Memaklumi kebutuhan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-110",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menertibkan sesuai aturan\" memberi kepastian dan efek tertib; \"Memaklumi kebutuhan\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-110."
+    },
+    {
+      "id": "SK-D3-110",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan bila menemukan lapak di jalur pejalan kaki",
+      "opsi": {
+        "A": "Memaklumi kebutuhan",
+        "B": "Menertibkan sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-109",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menertibkan sesuai aturan\" memberi kepastian dan efek tertib; \"Memaklumi kebutuhan\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-109; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-111",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika teman menyalin tugas orang lain",
+      "opsi": {
+        "A": "Ketentuan kejujuran akademik",
+        "B": "Kesempatan memperbaiki"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-112",
+      "pembahasan": "Penegakan aturan diutamakan. \"Ketentuan kejujuran akademik\" memberi kepastian dan efek tertib; \"Kesempatan memperbaiki\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-112."
+    },
+    {
+      "id": "SK-D3-112",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan saat mendapati tugas teman hasil salinan",
+      "opsi": {
+        "A": "Kesempatan memperbaiki",
+        "B": "Ketentuan kejujuran akademik"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-111",
+      "pembahasan": "Penegakan aturan diutamakan. \"Ketentuan kejujuran akademik\" memberi kepastian dan efek tertib; \"Kesempatan memperbaiki\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-111; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-113",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika peserta melanggar peraturan pertandingan",
+      "opsi": {
+        "A": "Menerapkan aturan lomba",
+        "B": "Memberi kelonggaran"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-114",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan aturan lomba\" memberi kepastian dan efek tertib; \"Memberi kelonggaran\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-114."
+    },
+    {
+      "id": "SK-D3-114",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan saat peserta menyalahi aturan lomba",
+      "opsi": {
+        "A": "Memberi kelonggaran",
+        "B": "Menerapkan aturan lomba"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-113",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan aturan lomba\" memberi kepastian dan efek tertib; \"Memberi kelonggaran\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-113; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-115",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika rekan satu regu tidak memakai atribut lengkap",
+      "opsi": {
+        "A": "Mencatat pelanggaran",
+        "B": "Mengingatkan secara pribadi"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-116",
+      "pembahasan": "Penegakan aturan diutamakan. \"Mencatat pelanggaran\" memberi kepastian dan efek tertib; \"Mengingatkan secara pribadi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-116."
+    },
+    {
+      "id": "SK-D3-116",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan bila anggota regu datang tanpa atribut lengkap",
+      "opsi": {
+        "A": "Mengingatkan secara pribadi",
+        "B": "Mencatat pelanggaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-115",
+      "pembahasan": "Penegakan aturan diutamakan. \"Mencatat pelanggaran\" memberi kepastian dan efek tertib; \"Mengingatkan secara pribadi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-115; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-117",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan terhadap kendaraan yang parkir di bahu jalan",
+      "opsi": {
+        "A": "Menindak tegas",
+        "B": "Mengimbau pengemudi"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-118",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menindak tegas\" memberi kepastian dan efek tertib; \"Mengimbau pengemudi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-118."
+    },
+    {
+      "id": "SK-D3-118",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan bila mobil berhenti sembarangan di tepi jalan raya",
+      "opsi": {
+        "A": "Mengimbau pengemudi",
+        "B": "Menindak tegas"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-117",
+      "pembahasan": "Penegakan aturan diutamakan. \"Menindak tegas\" memberi kepastian dan efek tertib; \"Mengimbau pengemudi\" baik, tetapi tidak menggantikan aturan. Butir kembar dari SK-D3-117; posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-119",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika teman datang terlambat ke kelas berulang kali",
+      "opsi": {
+        "A": "Melapor ke wali kelas",
+        "B": "Menegur secara pribadi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melapor ke wali kelas\" memberi kepastian dan efek tertib; \"Menegur secara pribadi\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-120",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika anggota OSIS tidak menjalankan tugas",
+      "opsi": {
+        "A": "Pendekatan pribadi",
+        "B": "Teguran resmi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Teguran resmi\" memberi kepastian dan efek tertib; \"Pendekatan pribadi\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-121",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini membuat siswa tertib",
+      "opsi": {
+        "A": "Sanksi yang konsisten",
+        "B": "Keteladanan guru"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Sanksi yang konsisten\" memberi kepastian dan efek tertib; \"Keteladanan guru\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-122",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika junior melanggar jam malam asrama",
+      "opsi": {
+        "A": "Melaporkan ke pengasuh",
+        "B": "Menasihati sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan ke pengasuh\" memberi kepastian dan efek tertib; \"Menasihati sendiri\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-123",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan dalam menangani keributan di acara sekolah",
+      "opsi": {
+        "A": "Aturan acara",
+        "B": "Penengahan damai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Aturan acara\" memberi kepastian dan efek tertib; \"Penengahan damai\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-124",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menemukan kendaraan tanpa surat lengkap",
+      "opsi": {
+        "A": "Memberi kelonggaran",
+        "B": "Menindak sesuai ketentuan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menindak sesuai ketentuan\" memberi kepastian dan efek tertib; \"Memberi kelonggaran\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-125",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika teman mengambil makanan di luar jatah asrama",
+      "opsi": {
+        "A": "Rasa lapar teman",
+        "B": "Ketentuan jatah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Ketentuan jatah\" memberi kepastian dan efek tertib; \"Rasa lapar teman\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-126",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini efektif mencegah pelanggaran lalu lintas",
+      "opsi": {
+        "A": "Kampanye keselamatan",
+        "B": "Penindakan tegas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Penindakan tegas\" memberi kepastian dan efek tertib; \"Kampanye keselamatan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-127",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan terhadap pelanggaran kecil anggota regu",
+      "opsi": {
+        "A": "Dimaafkan kali ini",
+        "B": "Dicatat sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Dicatat sesuai aturan\" memberi kepastian dan efek tertib; \"Dimaafkan kali ini\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-128",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika siswa membawa ponsel saat ujian",
+      "opsi": {
+        "A": "Menyita sesuai aturan",
+        "B": "Menyuruh menyimpan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menyita sesuai aturan\" memberi kepastian dan efek tertib; \"Menyuruh menyimpan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-129",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika sahabat melanggar aturan latihan",
+      "opsi": {
+        "A": "Persahabatan",
+        "B": "Aturan latihan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Aturan latihan\" memberi kepastian dan efek tertib; \"Persahabatan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-130",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika penonton memasuki area terlarang saat pertandingan",
+      "opsi": {
+        "A": "Memaklumi antusiasme",
+        "B": "Menertibkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menertibkan\" memberi kepastian dan efek tertib; \"Memaklumi antusiasme\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-131",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini menjadi dasar ketertiban di jalan raya",
+      "opsi": {
+        "A": "Penegakan aturan",
+        "B": "Kesadaran pengendara"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Penegakan aturan\" memberi kepastian dan efek tertib; \"Kesadaran pengendara\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-132",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika rekan menggunakan fasilitas asrama tanpa izin",
+      "opsi": {
+        "A": "Mengingatkan rekan",
+        "B": "Melaporkan pelanggaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan pelanggaran\" memberi kepastian dan efek tertib; \"Mengingatkan rekan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-133",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika peserta upacara bercanda di barisan",
+      "opsi": {
+        "A": "Memberi contoh sikap",
+        "B": "Menegur sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menegur sesuai aturan\" memberi kepastian dan efek tertib; \"Memberi contoh sikap\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-134",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menemukan pelajar membolos di warung saat jam sekolah",
+      "opsi": {
+        "A": "Mengembalikan ke sekolah",
+        "B": "Mendengarkan alasannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Mengembalikan ke sekolah\" memberi kepastian dan efek tertib; \"Mendengarkan alasannya\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-135",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika anggota panitia mengambil uang kas tanpa izin",
+      "opsi": {
+        "A": "Menyelesaikan secara kekeluargaan",
+        "B": "Memproses sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Memproses sesuai aturan\" memberi kepastian dan efek tertib; \"Menyelesaikan secara kekeluargaan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-136",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini dalam menghadapi pelanggaran disiplin taruna",
+      "opsi": {
+        "A": "Sanksi sesuai ketentuan",
+        "B": "Pembinaan pribadi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Sanksi sesuai ketentuan\" memberi kepastian dan efek tertib; \"Pembinaan pribadi\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-137",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika pengendara menerobos lampu merah",
+      "opsi": {
+        "A": "Menghentikan dan menilang",
+        "B": "Mencatat untuk diingatkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menghentikan dan menilang\" memberi kepastian dan efek tertib; \"Mencatat untuk diingatkan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-138",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika ada warga menyerobot antrean bantuan",
+      "opsi": {
+        "A": "Menertibkan sesuai aturan",
+        "B": "Menenangkan warga lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menertibkan sesuai aturan\" memberi kepastian dan efek tertib; \"Menenangkan warga lain\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-139",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika teman sekelas memalsukan tanda tangan orang tua",
+      "opsi": {
+        "A": "Menasihati teman",
+        "B": "Melaporkan ke guru"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan ke guru\" memberi kepastian dan efek tertib; \"Menasihati teman\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-140",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menemukan pelanggaran saat menjadi petugas piket sekolah",
+      "opsi": {
+        "A": "Mengingatkan secara lisan",
+        "B": "Mencatat di buku piket"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Mencatat di buku piket\" memberi kepastian dan efek tertib; \"Mengingatkan secara lisan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-141",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini membuat aturan dihormati",
+      "opsi": {
+        "A": "Penegakan yang konsisten",
+        "B": "Sosialisasi yang sering"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Penegakan yang konsisten\" memberi kepastian dan efek tertib; \"Sosialisasi yang sering\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-142",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika anggota regu tertidur saat jam jaga",
+      "opsi": {
+        "A": "Melaporkan sesuai prosedur",
+        "B": "Membangunkan dan menasihati"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan sesuai prosedur\" memberi kepastian dan efek tertib; \"Membangunkan dan menasihati\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-143",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika pengunjung asrama melanggar jam besuk",
+      "opsi": {
+        "A": "Memberi tambahan waktu",
+        "B": "Menegakkan jam besuk"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menegakkan jam besuk\" memberi kepastian dan efek tertib; \"Memberi tambahan waktu\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-144",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika menemukan balapan liar di jalan kampung",
+      "opsi": {
+        "A": "Pembinaan pemuda",
+        "B": "Penindakan hukum"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Penindakan hukum\" memberi kepastian dan efek tertib; \"Pembinaan pemuda\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-145",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika teman membawa barang terlarang ke asrama",
+      "opsi": {
+        "A": "Melaporkan ke pengasuh",
+        "B": "Membujuk membuangnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan ke pengasuh\" memberi kepastian dan efek tertib; \"Membujuk membuangnya\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-146",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini menghentikan kebiasaan buang sampah sembarangan di sekolah",
+      "opsi": {
+        "A": "Denda sesuai aturan",
+        "B": "Ajakan menjaga kebersihan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Denda sesuai aturan\" memberi kepastian dan efek tertib; \"Ajakan menjaga kebersihan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-147",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika anggota tim memakai suplemen terlarang menjelang lomba",
+      "opsi": {
+        "A": "Melaporkan ke panitia",
+        "B": "Menasihati secara pribadi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan ke panitia\" memberi kepastian dan efek tertib; \"Menasihati secara pribadi\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-148",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika anggota kelompok belajar sering tidak mengerjakan bagiannya",
+      "opsi": {
+        "A": "Mengerjakan bagiannya",
+        "B": "Menerapkan sanksi kesepakatan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan sanksi kesepakatan\" memberi kepastian dan efek tertib; \"Mengerjakan bagiannya\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-149",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika menangani pengendara di bawah umur",
+      "opsi": {
+        "A": "Ketentuan hukum",
+        "B": "Rasa iba"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Ketentuan hukum\" memberi kepastian dan efek tertib; \"Rasa iba\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-150",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika rekan piket meninggalkan pos tanpa izin",
+      "opsi": {
+        "A": "Menggantikan sementara",
+        "B": "Melaporkan ke komandan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan ke komandan\" memberi kepastian dan efek tertib; \"Menggantikan sementara\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-151",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini menjaga wibawa peraturan sekolah",
+      "opsi": {
+        "A": "Sanksi ditegakkan",
+        "B": "Aturan dijelaskan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Sanksi ditegakkan\" memberi kepastian dan efek tertib; \"Aturan dijelaskan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-152",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika siswa mencoret-coret fasilitas sekolah",
+      "opsi": {
+        "A": "Mengajak membersihkan",
+        "B": "Menerapkan sanksi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menerapkan sanksi\" memberi kepastian dan efek tertib; \"Mengajak membersihkan\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-153",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika senior memperlakukan junior secara berlebihan",
+      "opsi": {
+        "A": "Menyelesaikan baik-baik",
+        "B": "Melaporkan pelanggaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Melaporkan pelanggaran\" memberi kepastian dan efek tertib; \"Menyelesaikan baik-baik\" baik, tetapi tidak menggantikan aturan."
+    },
+    {
+      "id": "SK-D3-154",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipikirkan ketika menemukan kendaraan dengan knalpot bising",
+      "opsi": {
+        "A": "Menilang sesuai aturan",
+        "B": "Menegur pemiliknya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. \"Menilang sesuai aturan\" memberi kepastian dan efek tertib; \"Menegur pemiliknya\" baik, tetapi tidak menggantikan aturan."
+    }
+  ]
+}

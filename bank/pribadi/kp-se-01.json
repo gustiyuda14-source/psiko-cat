@@ -1,0 +1,1114 @@
+{
+  "batch": "kp-se-01",
+  "status": "review",
+  "catatan": "72 butir Kepribadian aspek Stabilitas Emosi (L 18, K 36, KR 18) untuk review mentor. Belum di-seed. Kunci mengikuti aturan aspek (pedoman §1.1a): favorable = D ideal, unfavorable = A ideal. Sub-segi: kendali marah, menerima kritik, tenang di bawah tekanan, berpikir positif, bangkit dari kegagalan.",
+  "definisi_aspek": {
+    "Stabilitas Emosi": "emosi terkendali, menerima kritik, berpikir positif, dan tidak meledak."
+  },
+  "items": [
+    {
+      "id": "KP-SE-101",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ketika adik merusak barang kesayangan saya, saya tetap menegurnya dengan suara yang terkendali.",
+      "alasan": "Marah tetap tersalurkan, tetapi dengan cara yang terkendali."
+    },
+    {
+      "id": "KP-SE-102",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya sering membentak orang di rumah ketika suasana hati saya sedang buruk.",
+      "alasan": "Melampiaskan suasana hati kepada orang lain menandakan kendali emosi yang lemah."
+    },
+    {
+      "id": "KP-SE-103",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mencatat koreksi dari pengasuh tanpa merasa dipermalukan, lalu memperbaikinya keesokan harinya.",
+      "alasan": "Menerima kritik sebagai bahan perbaikan, bukan sebagai serangan pribadi."
+    },
+    {
+      "id": "KP-SE-104",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menyimpan rasa kesal berhari-hari kepada guru yang mengoreksi tugas saya di depan kelas.",
+      "alasan": "Sulit menerima koreksi dan memendam kekesalan menandakan emosi yang belum stabil."
+    },
+    {
+      "id": "KP-SE-105",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya tetap dapat berpikir jernih ketika waktu ujian hampir habis dan masih banyak soal tersisa.",
+      "alasan": "Tetap tenang dan jernih di bawah tekanan waktu."
+    },
+    {
+      "id": "KP-SE-106",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mudah panik ketika pelatih menambah beban latihan secara mendadak.",
+      "alasan": "Panik saat menghadapi perubahan mendadak menandakan daya tahan terhadap tekanan yang rendah."
+    },
+    {
+      "id": "KP-SE-107",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ketika rencana liburan keluarga batal, saya mencari kegiatan lain yang tetap menyenangkan di rumah.",
+      "alasan": "Melihat sisi baik dan beralih secara positif saat rencana gagal."
+    },
+    {
+      "id": "KP-SE-108",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya sering membayangkan hal terburuk akan terjadi sebelum menghadapi seleksi atau lomba.",
+      "alasan": "Pikiran yang selalu tertuju pada hal terburuk adalah kebalikan dari berpikir positif."
+    },
+    {
+      "id": "KP-SE-109",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Setelah gagal dalam tes kesamaptaan, saya segera menyusun jadwal latihan tambahan untuk tes berikutnya.",
+      "alasan": "Cepat bangkit dan mengubah kegagalan menjadi rencana perbaikan."
+    },
+    {
+      "id": "KP-SE-110",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya butuh waktu lama untuk bersemangat lagi setelah tidak terpilih menjadi komandan peleton.",
+      "alasan": "Lama terpuruk setelah kecewa menandakan kesulitan bangkit dari kegagalan."
+    },
+    {
+      "id": "KP-SE-111",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya akan tetap bersikap sopan kepada pengendara yang memaki saat ditilang.",
+      "alasan": "Tidak terpancing amarah meskipun diperlakukan kasar saat bertugas."
+    },
+    {
+      "id": "KP-SE-112",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mudah terpancing emosi ketika rekan sekamar meminjam barang saya tanpa izin.",
+      "alasan": "Mudah terpancing oleh masalah kecil menandakan kendali marah yang lemah."
+    },
+    {
+      "id": "KP-SE-113",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya berterima kasih ketika teman menunjukkan kesalahan dalam presentasi saya, meskipun caranya kurang halus.",
+      "alasan": "Menerima kritik dengan lapang meskipun penyampaiannya kurang enak didengar."
+    },
+    {
+      "id": "KP-SE-114",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, saya merasa akan mudah kehilangan kesabaran saat mengatur lalu lintas yang macet parah.",
+      "alasan": "Mudah kehilangan kesabaran di situasi menekan menandakan emosi yang belum stabil."
+    },
+    {
+      "id": "KP-SE-115",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saat perkemahan Pramuka diguyur hujan deras, saya tetap tenang mengatur regu untuk mengamankan tenda.",
+      "alasan": "Tetap tenang dan terarah ketika keadaan mendadak sulit."
+    },
+    {
+      "id": "KP-SE-116",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya merasa tersinggung ketika senior mengoreksi cara saya merapikan tempat tidur.",
+      "alasan": "Tersinggung oleh koreksi kecil menandakan kesulitan menerima kritik."
+    },
+    {
+      "id": "KP-SE-117",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri yang bertugas di lokasi bencana, saya tetap bersemangat meskipun fasilitas serba terbatas.",
+      "alasan": "Tetap berpikir positif dan bersemangat dalam keadaan serba kurang."
+    },
+    {
+      "id": "KP-SE-118",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Satu nilai ulangan yang jelek bisa membuat suasana hati saya buruk sepanjang minggu.",
+      "alasan": "Suasana hati yang lama terpuruk karena satu kegagalan kecil menandakan emosi yang belum stabil."
+    },
+    {
+      "id": "KP-SE-119",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengatur napas sejenak saat disindir teman lebih bijak daripada langsung menjawab dengan nada ketus.",
+      "bedah": {
+        "sisi_x": "mengatur napas saat disindir",
+        "sisi_y": "langsung menjawab dengan ketus",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menenangkan diri sebelum bereaksi adalah inti kendali marah."
+    },
+    {
+      "id": "KP-SE-120",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjelaskan alasan di balik kesalahan saya lebih penting daripada langsung menerima koreksi dari guru.",
+      "bedah": {
+        "sisi_x": "menjelaskan alasan kesalahan",
+        "sisi_y": "langsung menerima koreksi",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima koreksi tanpa sibuk membela diri menunjukkan kematangan emosi."
+    },
+    {
+      "id": "KP-SE-121",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat dibangunkan mendadak untuk apel malam, bergerak tertib sesuai prosedur lebih tepat daripada terburu-buru karena cemas terlambat.",
+      "bedah": {
+        "sisi_x": "bergerak tertib sesuai prosedur",
+        "sisi_y": "terburu-buru karena cemas",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tetap tenang dan teratur di bawah tekanan waktu."
+    },
+    {
+      "id": "KP-SE-122",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memikirkan semua hal yang bisa gagal sebelum lomba lebih realistis daripada fokus pada persiapan yang sudah saya lakukan.",
+      "bedah": {
+        "sisi_x": "memikirkan semua kemungkinan gagal",
+        "sisi_y": "fokus pada persiapan",
+        "pembanding": "lebih realistis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berpikir positif berarti fokus pada hal yang bisa dikendalikan, bukan larut dalam kekhawatiran."
+    },
+    {
+      "id": "KP-SE-123",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengevaluasi penyebab kekalahan tim lebih berguna daripada menghindari pembicaraan tentang pertandingan itu.",
+      "bedah": {
+        "sisi_x": "mengevaluasi penyebab kekalahan",
+        "sisi_y": "menghindari pembicaraan tentang kekalahan",
+        "pembanding": "lebih berguna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Bangkit dari kegagalan berarti berani menghadapinya dan belajar darinya."
+    },
+    {
+      "id": "KP-SE-124",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyampaikan kekesalan kepada rekan seketika itu juga lebih jujur daripada menunggu emosi reda sebelum membicarakannya.",
+      "bedah": {
+        "sisi_x": "menyampaikan kekesalan seketika",
+        "sisi_y": "menunggu emosi reda lalu membicarakannya",
+        "pembanding": "lebih jujur",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Membicarakan masalah setelah tenang adalah bentuk kendali emosi yang sehat.",
+      "catatan_psikologi": "Menunggu emosi reda bukan berarti memendam. Masalahnya tetap dibicarakan, hanya saja dalam keadaan tenang."
+    },
+    {
+      "id": "KP-SE-125",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri yang mengamankan unjuk rasa, menjaga sikap tenang lebih penting daripada menunjukkan ketegasan dengan suara keras.",
+      "bedah": {
+        "sisi_x": "menjaga sikap tenang",
+        "sisi_y": "menunjukkan ketegasan dengan suara keras",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Ketenangan petugas meredam suasana yang sedang panas.",
+      "catatan_psikologi": "Ketegasan tetap diperlukan dalam pengamanan. Yang dinilai di sini adalah petugas tidak ikut terbawa emosi massa."
+    },
+    {
+      "id": "KP-SE-126",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanggapi kritik di rapat OSIS dengan pembelaan panjang lebih meyakinkan daripada mengakui bagian yang memang keliru.",
+      "bedah": {
+        "sisi_x": "pembelaan panjang atas kritik",
+        "sisi_y": "mengakui bagian yang keliru",
+        "pembanding": "lebih meyakinkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima kritik berarti mau mengakui kekeliruan, bukan bertahan dengan pembelaan."
+    },
+    {
+      "id": "KP-SE-127",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Melihat tugas tambahan dari guru sebagai kesempatan berlatih lebih menyenangkan daripada menganggapnya beban yang memberatkan.",
+      "bedah": {
+        "sisi_x": "melihat tugas sebagai kesempatan",
+        "sisi_y": "menganggap tugas sebagai beban",
+        "pembanding": "lebih menyenangkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memaknai keadaan secara positif adalah ciri emosi yang stabil."
+    },
+    {
+      "id": "KP-SE-128",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Setelah gagal ujian renang, menyendiri sampai rasa malu hilang lebih nyaman daripada langsung kembali berlatih bersama rekan.",
+      "bedah": {
+        "sisi_x": "menyendiri sampai rasa malu hilang",
+        "sisi_y": "langsung kembali berlatih",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Cepat bangkit dan kembali berlatih menunjukkan pemulihan emosi yang baik."
+    },
+    {
+      "id": "KP-SE-129",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menerima teguran pelatih dengan sikap tenang lebih dewasa daripada menggerutu kepada rekan sesudahnya.",
+      "bedah": {
+        "sisi_x": "menerima teguran dengan tenang",
+        "sisi_y": "menggerutu kepada rekan",
+        "pembanding": "lebih dewasa",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menerima kritik tanpa melampiaskan kekesalan di belakang."
+    },
+    {
+      "id": "KP-SE-130",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menunjukkan wajah kesal kepada orang tua yang melarang saya pergi lebih jujur daripada menanyakan alasannya dengan tenang.",
+      "bedah": {
+        "sisi_x": "menunjukkan wajah kesal",
+        "sisi_y": "menanyakan alasan dengan tenang",
+        "pembanding": "lebih jujur",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menanggapi larangan dengan tenang menunjukkan kendali emosi."
+    },
+    {
+      "id": "KP-SE-131",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri yang diprovokasi pengendara di jalan, menanggapinya dengan santun lebih terhormat daripada menegurnya dengan nada keras.",
+      "bedah": {
+        "sisi_x": "menanggapi provokasi dengan santun",
+        "sisi_y": "menegur dengan nada keras",
+        "pembanding": "lebih terhormat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tidak terpancing provokasi adalah wujud kendali marah."
+    },
+    {
+      "id": "KP-SE-132",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri yang menjaga antrean bantuan, mengeluhkan kericuhan kepada rekan lebih melegakan daripada menata ulang antrean dengan tenang.",
+      "bedah": {
+        "sisi_x": "mengeluhkan kericuhan",
+        "sisi_y": "menata ulang antrean dengan tenang",
+        "pembanding": "lebih melegakan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Tetap tenang dan bertindak saat situasi kacau menunjukkan ketahanan terhadap tekanan."
+    },
+    {
+      "id": "KP-SE-133",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Setelah tidak lolos seleksi Paskibra, mendaftar lagi tahun berikutnya lebih bermakna daripada berhenti mengikuti kegiatan baris-berbaris.",
+      "bedah": {
+        "sisi_x": "mendaftar lagi tahun berikutnya",
+        "sisi_y": "berhenti dari kegiatan baris-berbaris",
+        "pembanding": "lebih bermakna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Bangkit dan mencoba lagi setelah gagal."
+    },
+    {
+      "id": "KP-SE-134",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Merasa cemas sepanjang malam menjelang ujian jasmani lebih wajar daripada beristirahat dengan pikiran tenang.",
+      "bedah": {
+        "sisi_x": "cemas sepanjang malam",
+        "sisi_y": "beristirahat dengan pikiran tenang",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mampu menenangkan pikiran menjelang ujian menunjukkan emosi yang stabil.",
+      "catatan_psikologi": "Sedikit cemas sebelum ujian itu normal. Yang dinilai adalah kemampuan meredakannya, bukan membiarkannya berlarut."
+    },
+    {
+      "id": "KP-SE-135",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Pergi berolahraga untuk meredakan amarah lebih sehat daripada memendamnya sambil mengurung diri di kamar.",
+      "bedah": {
+        "sisi_x": "berolahraga meredakan amarah",
+        "sisi_y": "memendam amarah di kamar",
+        "pembanding": "lebih sehat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menyalurkan amarah secara sehat, bukan memendamnya.",
+      "catatan_psikologi": "Mengendalikan emosi tidak sama dengan memendam. Emosi perlu disalurkan dengan cara yang tidak merugikan diri maupun orang lain."
+    },
+    {
+      "id": "KP-SE-136",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, membela cara kerja sendiri saat dievaluasi atasan lebih penting daripada mencatat masukan untuk perbaikan.",
+      "bedah": {
+        "sisi_x": "membela cara kerja sendiri",
+        "sisi_y": "mencatat masukan untuk perbaikan",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima evaluasi sebagai bahan perbaikan menunjukkan kematangan emosi."
+    },
+    {
+      "id": "KP-SE-137",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menganggap disiplin asrama yang ketat sebagai bekal masa depan lebih bermanfaat daripada menghitung hari menuju libur.",
+      "bedah": {
+        "sisi_x": "menganggap disiplin sebagai bekal",
+        "sisi_y": "menghitung hari menuju libur",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memaknai tekanan secara positif membantu bertahan di lingkungan yang berat."
+    },
+    {
+      "id": "KP-SE-138",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendiamkan teman yang menyinggung perasaan saya selama beberapa hari lebih aman daripada membicarakannya baik-baik setelah tenang.",
+      "bedah": {
+        "sisi_x": "mendiamkan teman berhari-hari",
+        "sisi_y": "membicarakan baik-baik setelah tenang",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mengelola rasa tersinggung dengan membicarakannya secara tenang, bukan mendiamkan."
+    },
+    {
+      "id": "KP-SE-139",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanyakan letak kekurangan saya kepada pelatih basket lebih berguna daripada membandingkan diri dengan pemain lain yang juga keliru.",
+      "bedah": {
+        "sisi_x": "menanyakan letak kekurangan",
+        "sisi_y": "membandingkan diri dengan pemain lain",
+        "pembanding": "lebih berguna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Terbuka terhadap kritik, bukan mencari pembenaran."
+    },
+    {
+      "id": "KP-SE-140",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mencurigai teman yang tiba-tiba membantu lebih aman daripada menerima bantuannya dengan pikiran positif.",
+      "bedah": {
+        "sisi_x": "mencurigai teman yang membantu",
+        "sisi_y": "menerima bantuan dengan pikiran positif",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berprasangka baik adalah bagian dari berpikir positif."
+    },
+    {
+      "id": "KP-SE-141",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri dan gagal mengungkap kasus, mempelajari kekeliruan bersama tim lebih tepat daripada terus menyesali kegagalan tersebut.",
+      "bedah": {
+        "sisi_x": "mempelajari kekeliruan bersama tim",
+        "sisi_y": "terus menyesali kegagalan",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Bangkit dengan belajar dari kegagalan, bukan larut dalam penyesalan."
+    },
+    {
+      "id": "KP-SE-142",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Merasa direndahkan saat dikoreksi junior lebih wajar daripada menerimanya sebagai masukan yang berharga.",
+      "bedah": {
+        "sisi_x": "merasa direndahkan oleh koreksi junior",
+        "sisi_y": "menerima sebagai masukan",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima kritik dari siapa pun tanpa merasa harga diri terancam."
+    },
+    {
+      "id": "KP-SE-143",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyusun daftar prioritas saat tugas menumpuk lebih menenangkan daripada mengerjakan semuanya sekaligus dengan tergesa-gesa.",
+      "bedah": {
+        "sisi_x": "menyusun daftar prioritas",
+        "sisi_y": "mengerjakan semuanya dengan tergesa-gesa",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tetap teratur dan tenang saat beban menumpuk."
+    },
+    {
+      "id": "KP-SE-144",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjauhi pentas seni setelah sekali tampil buruk lebih nyaman daripada mencoba tampil lagi tahun berikutnya.",
+      "bedah": {
+        "sisi_x": "menjauhi pentas setelah tampil buruk",
+        "sisi_y": "mencoba tampil lagi",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bangkit dan mencoba lagi menunjukkan pemulihan dari kegagalan."
+    },
+    {
+      "id": "KP-SE-145",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat rekan sekamar membuat kegaduhan di jam istirahat, menegurnya dengan nada datar lebih efektif daripada menghardiknya agar segera diam.",
+      "bedah": {
+        "sisi_x": "menegur dengan nada datar",
+        "sisi_y": "menghardik agar diam",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menegur tanpa meluapkan amarah adalah wujud kendali emosi."
+    },
+    {
+      "id": "KP-SE-146",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menunjukkan kemarahan kepada pelanggar yang berulang lebih mempan daripada menjelaskan sanksinya dengan tenang.",
+      "bedah": {
+        "sisi_x": "menunjukkan kemarahan kepada pelanggar",
+        "sisi_y": "menjelaskan sanksi dengan tenang",
+        "pembanding": "lebih mempan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Ketegasan tidak memerlukan luapan amarah."
+    },
+    {
+      "id": "KP-SE-147",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menganggap kekalahan dalam pemilihan ketua kelas sebagai pengalaman berharga lebih sehat daripada merasa tidak disukai teman-teman.",
+      "bedah": {
+        "sisi_x": "menganggap kekalahan sebagai pengalaman",
+        "sisi_y": "merasa tidak disukai teman",
+        "pembanding": "lebih sehat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Memaknai kekalahan secara positif, bukan sebagai penolakan pribadi."
+    },
+    {
+      "id": "KP-SE-148",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengeluhkan menu makan asrama yang itu-itu saja lebih jujur daripada mensyukuri makanan yang tersedia.",
+      "bedah": {
+        "sisi_x": "mengeluhkan menu asrama",
+        "sisi_y": "mensyukuri makanan yang tersedia",
+        "pembanding": "lebih jujur",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima keadaan dengan pikiran positif adalah ciri emosi yang stabil."
+    },
+    {
+      "id": "KP-SE-149",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri di lokasi kecelakaan, memeriksa korban dengan tenang lebih tepat daripada bergerak secepat mungkin tanpa rencana.",
+      "bedah": {
+        "sisi_x": "memeriksa korban dengan tenang",
+        "sisi_y": "bergerak cepat tanpa rencana",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tetap tenang di situasi darurat membuat tindakan lebih terarah."
+    },
+    {
+      "id": "KP-SE-150",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membatalkan presentasi saat proyektor tiba-tiba rusak lebih aman daripada melanjutkannya dengan cara lain secara tenang.",
+      "bedah": {
+        "sisi_x": "membatalkan presentasi",
+        "sisi_y": "melanjutkan dengan cara lain secara tenang",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Tetap tenang dan mencari jalan keluar saat terjadi gangguan mendadak."
+    },
+    {
+      "id": "KP-SE-151",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Setelah tertinggal dalam lari jarak jauh, memperbaiki teknik napas lebih bermanfaat daripada menyalahkan cuaca panas hari itu.",
+      "bedah": {
+        "sisi_x": "memperbaiki teknik napas",
+        "sisi_y": "menyalahkan cuaca panas",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Bangkit dari kegagalan dengan memperbaiki diri, bukan mencari kambing hitam."
+    },
+    {
+      "id": "KP-SE-152",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Tidak membaca komentar teman tentang karya saya lebih menenangkan daripada mempelajarinya satu per satu.",
+      "bedah": {
+        "sisi_x": "tidak membaca komentar",
+        "sisi_y": "mempelajari komentar satu per satu",
+        "pembanding": "lebih menenangkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menghadapi kritik dengan terbuka, bukan menghindarinya."
+    },
+    {
+      "id": "KP-SE-153",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saat adik terus mengganggu waktu belajar, memintanya berhenti dengan nada tenang lebih ampuh daripada mengusirnya dari kamar sambil berteriak.",
+      "bedah": {
+        "sisi_x": "meminta berhenti dengan tenang",
+        "sisi_y": "mengusir sambil berteriak",
+        "pembanding": "lebih ampuh",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menyampaikan keberatan tanpa meledak."
+    },
+    {
+      "id": "KP-SE-154",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Bersikap ketus kepada rekan karena kelelahan setelah latihan berat lebih wajar daripada beristirahat sambil menata suasana hati.",
+      "bedah": {
+        "sisi_x": "bersikap ketus karena lelah",
+        "sisi_y": "beristirahat sambil menata suasana hati",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kelelahan tidak dilampiaskan kepada orang lain; suasana hati dikelola."
+    },
+    {
+      "id": "KP-SE-155",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Berteriak kepada orang tua saat berbeda pendapat lebih memalukan daripada mengalah sementara lalu berbicara lagi esok hari.",
+      "bedah": {
+        "sisi_x": "berteriak kepada orang tua",
+        "sisi_y": "mengalah sementara lalu bicara lagi",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih meredakan emosi dulu lalu membicarakan perbedaan dengan tenang."
+    },
+    {
+      "id": "KP-SE-156",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengakui kesalahan saat dikoreksi pengasuh di depan peleton lebih memalukan daripada membantahnya agar terlihat tidak bersalah.",
+      "bedah": {
+        "sisi_x": "mengakui kesalahan saat dikoreksi",
+        "sisi_y": "membantah agar terlihat tidak bersalah",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih membantah kritik daripada menerimanya."
+    },
+    {
+      "id": "KP-SE-157",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Terus meratapi kegagalan ujian lebih merugikan daripada segera mempelajari ulang materi yang belum dikuasai.",
+      "bedah": {
+        "sisi_x": "meratapi kegagalan",
+        "sisi_y": "mempelajari ulang materi",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih bangkit dan memperbaiki diri setelah gagal."
+    },
+    {
+      "id": "KP-SE-158",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Bertahan tenang menyelesaikan soal olimpiade saat waktu hampir habis lebih menyiksa daripada menyerah dan mengumpulkan lembar jawaban.",
+      "bedah": {
+        "sisi_x": "bertahan tenang menyelesaikan soal",
+        "sisi_y": "menyerah dan mengumpulkan jawaban",
+        "pembanding": "lebih menyiksa",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menyerah daripada bertahan tenang di bawah tekanan."
+    },
+    {
+      "id": "KP-SE-159",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, kehilangan kendali di depan warga lebih merugikan daripada menerima cemoohan warga dengan kepala dingin.",
+      "bedah": {
+        "sisi_x": "kehilangan kendali di depan warga",
+        "sisi_y": "menerima cemoohan dengan kepala dingin",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih tetap tenang walau dicemooh."
+    },
+    {
+      "id": "KP-SE-160",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mencari sisi baik dari penolakan masuk tim inti lebih melelahkan daripada membiarkan diri kecewa berhari-hari.",
+      "bedah": {
+        "sisi_x": "mencari sisi baik dari penolakan",
+        "sisi_y": "membiarkan diri kecewa berhari-hari",
+        "pembanding": "lebih melelahkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih larut dalam kekecewaan daripada berpikir positif.",
+      "catatan_psikologi": "Merasa kecewa itu wajar. Berpikir positif bukan menyangkal kecewa, melainkan tidak membiarkannya berlarut."
+    },
+    {
+      "id": "KP-SE-161",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membantah teguran pelatih di lapangan lebih merugikan daripada menjalani koreksi itu meskipun terasa berat.",
+      "bedah": {
+        "sisi_x": "membantah teguran pelatih",
+        "sisi_y": "menjalani koreksi meski berat",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih menerima kritik daripada melawannya."
+    },
+    {
+      "id": "KP-SE-162",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saat pesiar, menghindari ajakan berkelahi dari pemuda setempat lebih memalukan daripada meladeni tantangannya.",
+      "bedah": {
+        "sisi_x": "menghindari ajakan berkelahi",
+        "sisi_y": "meladeni tantangan berkelahi",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menganggap mengendalikan diri lebih buruk daripada terpancing amarah.",
+      "catatan_psikologi": "Menghindari perkelahian bukan tanda pengecut, melainkan tanda mampu mengendalikan emosi."
+    },
+    {
+      "id": "KP-SE-163",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Panik saat tersesat dalam kegiatan jelajah Pramuka lebih berbahaya daripada berhenti sejenak untuk membaca peta.",
+      "bedah": {
+        "sisi_x": "panik saat tersesat",
+        "sisi_y": "berhenti sejenak membaca peta",
+        "pembanding": "lebih berbahaya",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih tetap tenang saat keadaan genting."
+    },
+    {
+      "id": "KP-SE-164",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menjawab pertanyaan wartawan yang memojokkan dengan tenang lebih merugikan daripada menjawabnya dengan nada tinggi.",
+      "bedah": {
+        "sisi_x": "menjawab dengan tenang",
+        "sisi_y": "menjawab dengan nada tinggi",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih bereaksi dengan emosi saat dipojokkan."
+    },
+    {
+      "id": "KP-SE-165",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menggerutu karena mendapat jadwal piket di hari pesiar lebih buruk daripada menerimanya dengan lapang dada.",
+      "bedah": {
+        "sisi_x": "menggerutu karena jadwal piket",
+        "sisi_y": "menerima dengan lapang dada",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih menerima keadaan dengan pikiran positif."
+    },
+    {
+      "id": "KP-SE-166",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendaftar ulang lomba debat setelah tahun lalu tersingkir di babak awal lebih memalukan daripada tidak ikut sama sekali.",
+      "bedah": {
+        "sisi_x": "mendaftar ulang setelah tersingkir",
+        "sisi_y": "tidak ikut sama sekali",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti menganggap bangkit setelah gagal lebih buruk daripada menghindar."
+    },
+    {
+      "id": "KP-SE-167",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Patah semangat setelah gagal melewati rintangan tembok lebih merugikan daripada mengulang latihan meski ditertawakan rekan.",
+      "bedah": {
+        "sisi_x": "patah semangat setelah gagal",
+        "sisi_y": "mengulang latihan meski ditertawakan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih bangkit walau sempat gagal dan ditertawakan."
+    },
+    {
+      "id": "KP-SE-168",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendengarkan kritik orang tua tentang pergaulan saya lebih menyebalkan daripada mengabaikannya diam-diam.",
+      "bedah": {
+        "sisi_x": "mendengarkan kritik orang tua",
+        "sisi_y": "mengabaikan kritik diam-diam",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mengabaikan kritik daripada mendengarkannya."
+    },
+    {
+      "id": "KP-SE-169",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, tersinggung oleh kritik warga di media sosial lebih merugikan daripada menjadikannya bahan perbaikan pelayanan.",
+      "bedah": {
+        "sisi_x": "tersinggung oleh kritik warga",
+        "sisi_y": "menjadikan kritik bahan perbaikan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih mengolah kritik menjadi perbaikan."
+    },
+    {
+      "id": "KP-SE-170",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjelaskan kesalahpahaman dengan tenang kepada teman yang menuduh saya lebih menyakitkan daripada membalasnya dengan kemarahan.",
+      "bedah": {
+        "sisi_x": "menjelaskan dengan tenang",
+        "sisi_y": "membalas dengan kemarahan",
+        "pembanding": "lebih menyakitkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih meluapkan amarah daripada menjelaskan dengan tenang."
+    },
+    {
+      "id": "KP-SE-171",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Meledak marah karena candaan teman lebih memalukan daripada mengatakan dengan tenang bahwa candaan itu menyinggung saya.",
+      "bedah": {
+        "sisi_x": "meledak marah karena candaan",
+        "sisi_y": "mengatakan dengan tenang bahwa tersinggung",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti memilih menyampaikan rasa tersinggung secara terkendali."
+    },
+    {
+      "id": "KP-SE-172",
+      "aspek": "Stabilitas Emosi",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi anggota Polri, menjalani mutasi ke daerah terpencil dengan sikap positif lebih merugikan daripada terus menyesali keputusan pimpinan.",
+      "bedah": {
+        "sisi_x": "menjalani mutasi dengan sikap positif",
+        "sisi_y": "menyesali keputusan pimpinan",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih larut dalam penyesalan daripada berpikir positif."
+    }
+  ]
+}
