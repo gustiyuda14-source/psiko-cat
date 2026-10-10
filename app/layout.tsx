@@ -26,6 +26,17 @@ const lexend = Lexend({
 export const metadata: Metadata = {
   title: "Psiko CAT — Ajiks Akademi",
   description: "Sistem Psikotes Terintegrasi D'Ajiks Akademi",
+  metadataBase: new URL("https://psiko-cat.vercel.app"),
+  // Preview link (WA/Telegram/X), pola sama dengan dajiks-cest. Gambar = screenshot /login 1200x630.
+  openGraph: {
+    type: "website",
+    url: "/",
+    siteName: "D'Ajiks Akademi × Pejuang Kedinasan",
+    title: "Psiko CAT – D'Ajiks Akademi × Pejuang Kedinasan",
+    description: "Latihan, simulasi, dan perkembangan hasil psikotes dalam satu ruang.",
+    images: [{ url: "/brand/og-preview.jpg", width: 1200, height: 630 }],
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export const viewport: Viewport = {
