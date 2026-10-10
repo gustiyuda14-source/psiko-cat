@@ -173,7 +173,7 @@ export function PackageCarousel({
                       </i>
                     ))}
                   </div>
-                  <details className="hc-details">
+                  <details className="hc-details" open>
                     <summary>Lihat simbol tiap kolom</summary>
                     <ul>
                       {pkg.sections.map((s) => (
