@@ -5,6 +5,8 @@ import { DRILL_CARDS } from "@/lib/drill-cards";
 // Bank drill hasil `npm run build:drill` (bank/drill/** → data/drill-bank.json).
 // SERVER ONLY: kunci dan pembahasan ada di sini; ke browser hanya SafeDrillItem.
 
+export type DrillTable = { judul?: string; kolom: string[]; baris: string[][] };
+
 export type DrillItem = {
   id: string;
   kartu: string;
@@ -12,6 +14,9 @@ export type DrillItem = {
   tier: number;
   sumber: string;
   instruksi?: string;
+  /** Paragraf bacaan (K04), tampil dalam kotak di atas pertanyaan. */
+  bacaan?: string[];
+  tabel?: DrillTable;
   stem: string;
   rumus?: string;
   gambar?: string | null;
@@ -21,7 +26,7 @@ export type DrillItem = {
   status_kunci: string;
 };
 
-export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "stem" | "rumus" | "gambar" | "opsi"> & {
+export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "bacaan" | "tabel" | "stem" | "rumus" | "gambar" | "opsi"> & {
   multi: boolean;
 };
 
@@ -39,6 +44,8 @@ export function safeDrillItem(it: DrillItem): SafeDrillItem {
     sub_type: it.sub_type,
     tier: it.tier,
     instruksi: it.instruksi,
+    bacaan: it.bacaan,
+    tabel: it.tabel,
     stem: it.stem,
     rumus: it.rumus,
     gambar: it.gambar ?? null,

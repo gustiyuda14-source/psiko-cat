@@ -229,7 +229,43 @@ export default function DrillSession({
             <Badge tone="neutral">{tierLabel(q.tier)}</Badge>
           </div>
           {q.instruksi && <p className="text-sm font-semibold text-foreground">{q.instruksi}</p>}
-          <p className="max-w-[68ch] text-lg leading-relaxed text-foreground">{q.stem}</p>
+          {(q.bacaan || q.tabel) && (
+            <section aria-label="Bacaan" className="surface-card space-y-3 px-5 py-4 sm:px-7 sm:py-6">
+              {q.bacaan?.map((p, i) => (
+                <p key={i} className="text-justify text-base leading-7 text-foreground hyphens-auto">
+                  {p}
+                </p>
+              ))}
+              {q.tabel && (
+                <div className="overflow-x-auto">
+                  <table className="w-full min-w-[420px] border-collapse text-sm tnum">
+                    {q.tabel.judul && <caption className="pb-2 text-left font-semibold text-foreground">{q.tabel.judul}</caption>}
+                    <thead>
+                      <tr>
+                        {q.tabel.kolom.map((c) => (
+                          <th key={c} scope="col" className="border border-border bg-[var(--surface-inset)] px-3 py-2 text-left font-semibold">
+                            {c}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {q.tabel.baris.map((r, i) => (
+                        <tr key={i}>
+                          {r.map((c, j) => (
+                            <td key={j} className={`border border-border px-3 py-2 ${j ? "text-right" : "font-medium"}`}>
+                              {c}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+            </section>
+          )}
+          <p className={`max-w-[68ch] leading-relaxed text-foreground ${q.bacaan ? "text-base font-semibold" : "text-lg"}`}>{q.stem}</p>
           {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
           {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
           {q.gambar && (

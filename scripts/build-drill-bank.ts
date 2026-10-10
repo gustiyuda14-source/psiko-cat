@@ -25,7 +25,8 @@ const CARDS = DRILL_CARDS;
 type Value = number | string | boolean;
 type Item = {
   id: string; kartu: string; sub_type: string; tier: number; sumber: string;
-  instruksi?: string; stem: string; rumus?: string; wacana_id?: string | null;
+  instruksi?: string; bacaan?: string[]; tabel?: { judul?: string; kolom: string[]; baris: string[][] };
+  stem: string; rumus?: string; wacana_id?: string | null;
   gambar?: string | null; opsi_gambar?: Record<string, string> | null;
   opsi: Record<string, string>; kunci: string[];
   hitung?: string; nilai_opsi?: Record<string, Value>;
@@ -100,6 +101,10 @@ function checkItem(it: Item, file: string) {
   if (![1, 2, 3].includes(it.tier)) fail(id, "tier harus 1, 2, atau 3");
   if (!it.sumber) fail(id, "sumber kosong");
   if (!it.stem?.trim()) fail(id, "stem kosong");
+  if (it.bacaan !== undefined && (!Array.isArray(it.bacaan) || !it.bacaan.length || it.bacaan.some((p) => typeof p !== "string" || !p.trim())))
+    fail(id, "bacaan harus array paragraf tidak kosong");
+  if (it.tabel && (!it.tabel.kolom?.length || !it.tabel.baris?.length || it.tabel.baris.some((r) => r.length !== it.tabel!.kolom.length)))
+    fail(id, "tabel: setiap baris harus sepanjang kolom");
   if (!STATUSES.has(it.status_kunci)) fail(id, `status_kunci ${it.status_kunci} tidak dikenal`);
 
   const keys = Object.keys(it.opsi ?? {});
@@ -137,7 +142,7 @@ const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 function preview(card: string, items: Item[]) {
   const rows = items.map((it, i) => `
 <article><header><b>${i + 1}. ${esc(it.id)}</b> <span>${esc(it.sub_type)} · tier ${it.tier} · ${esc(it.sumber)} · ${esc(it.status_kunci)}</span></header>
-${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}<p class="stem">${esc(it.stem)}</p>${it.rumus ?? ""}${it.gambar ? `<img src="../../public/${esc(it.gambar)}" alt="" style="max-width:100%">` : ""}
+${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}${(it.bacaan ?? []).map((p) => `<p class="bc">${esc(p)}</p>`).join("")}${it.tabel ? `<table>${[it.tabel.kolom, ...it.tabel.baris].map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</table>` : ""}<p class="stem">${esc(it.stem)}</p>${it.rumus ?? ""}${it.gambar ? `<img src="../../public/${esc(it.gambar)}" alt="" style="max-width:100%">` : ""}
 <ol type="A">${LETTERS.map((k) => `<li class="${it.kunci.includes(k) ? "key" : ""}">${esc(it.opsi[k])}</li>`).join("")}</ol>
 <div class="pb">${it.pembahasan.split("<br>").map((p) => `<p>${esc(p)}</p>`).join("")}</div></article>`).join("");
   const html = `<!doctype html><html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -145,7 +150,7 @@ ${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}<p class="stem">
 <style>body{font:16px/1.55 system-ui,sans-serif;max-width:820px;margin:24px auto;padding:0 16px;background:#fff;color:#16224a}
 article{border:1px solid #d9dee8;border-radius:10px;padding:14px 18px;margin:14px 0}header span{color:#667;font-size:13px}
 .stem{font-size:18px}math{font-size:22px;margin:8px 0}li{margin:3px 0}.key{font-weight:700;color:#127a3a}
-.key::after{content:"  ✓ kunci"}.pb{background:#f6f7fb;border-radius:8px;padding:4px 12px;font-size:14px}.ins{color:#556}</style>
+.key::after{content:"  ✓ kunci"}.pb{background:#f6f7fb;border-radius:8px;padding:4px 12px;font-size:14px}.ins{color:#556}.bc{text-align:justify}td{border:1px solid #d9dee8;padding:2px 8px}</style>
 <h1>${card} — ${esc(CARDS[card].label)} (${items.length} soal)</h1>${rows}</html>`;
   const dir = join(ROOT, "output/drill-preview");
   mkdirSync(dir, { recursive: true });
@@ -170,7 +175,7 @@ function main() {
   const stems = new Map<string, string>();
   const sim = simulationStems();
   for (const it of items) {
-    const n = norm(it.stem + (it.rumus ?? "") + (it.gambar && existsSync(join(ROOT, "public", it.gambar)) ? readFileSync(join(ROOT, "public", it.gambar), "utf8") : it.gambar ?? ""));
+    const n = norm((it.bacaan ?? []).join("") + JSON.stringify(it.tabel ?? "") + it.stem + (it.rumus ?? "") + (it.gambar && existsSync(join(ROOT, "public", it.gambar)) ? readFileSync(join(ROOT, "public", it.gambar), "utf8") : it.gambar ?? ""));
     if (!it.gambar && sim.has(norm(it.stem))) fail(it.id, "stem sama dengan soal simulasi Paket 1 (soal.json)");
     if (stems.has(n)) fail(it.id, `stem sama dengan ${stems.get(n)}`);
     stems.set(n, it.id);
