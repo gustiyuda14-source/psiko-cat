@@ -234,7 +234,7 @@ export default function DrillSession({
           {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
           {q.gambar && (
             // eslint-disable-next-line @next/next/no-img-element
-            <img src={`/${q.gambar}`} alt="" className="mx-auto max-h-[60vh] w-auto" />
+            <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] w-full max-w-[760px] rounded-md border border-border bg-white p-2" />
           )}
 
           <div className="opts pt-1">

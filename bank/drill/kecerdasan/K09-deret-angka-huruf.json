@@ -1,0 +1,466 @@
+[
+  {
+    "id": "K09-B2-071",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 1,
+    "sumber": "B2#71",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "3, 6, …, …, 48, 96",
+    "opsi": {
+      "a": "9, 12",
+      "b": "18, 36",
+      "c": "12, 24",
+      "d": "12, 36",
+      "e": "24, 48"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "[3*2**2, 3*2**3].join(', ')",
+    "nilai_opsi": {
+      "a": "9, 12",
+      "b": "18, 36",
+      "c": "12, 24",
+      "d": "12, 36",
+      "e": "24, 48"
+    },
+    "pembahasan": "Bandingkan suku yang berdekatan: 6 = 3 × 2 dan 96 = 48 × 2. Polanya dikali 2 setiap langkah: 3, 6, 12, 24, 48, 96.<br>Opsi A (9, 12) gugur karena menambah 3, padahal tiap suku dikali 2; Opsi B (18, 36) gugur karena mengalikan 3 tanpa mengecek suku 48 (36 × 3 bukan 48); Opsi D (12, 36) gugur karena suku keempat dikali 3, polanya tidak konsisten; Opsi E (24, 48) gugur karena melompati satu suku (6 × 4). Jawaban: Opsi C (12, 24). Tips: cek rasio dari dua ujung (awal dan akhir) supaya pola terkunci dari dua sisi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B2-072",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "B2#72",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "1, 3, 2, 9, 3, 27, 4, …, …",
+    "opsi": {
+      "a": "81, 5",
+      "b": "5, 81",
+      "c": "54, 5",
+      "d": "81, 4",
+      "e": "36, 5"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "[27*3, 5].join(', ')",
+    "nilai_opsi": {
+      "a": "81, 5",
+      "b": "5, 81",
+      "c": "54, 5",
+      "d": "81, 4",
+      "e": "36, 5"
+    },
+    "pembahasan": "Ada dua jalur yang berselang-seling. Suku ganjil: 1, 2, 3, 4, … (naik 1). Suku genap: 3, 9, 27, … (dikali 3). Suku ke-8 milik jalur genap: 27 × 3 = 81; suku ke-9 milik jalur ganjil: 5.<br>Opsi B (5, 81) gugur karena urutan kedua jalur tertukar; Opsi C (54, 5) gugur karena jalur genap dikali 2, padahal dikali 3; Opsi D (81, 4) gugur karena jalur ganjil tidak dinaikkan; Opsi E (36, 5) gugur karena jalur genap ditambah 9, padahal dikali 3. Jawaban: Opsi A (81, 5). Tips: deret yang naik-turun tidak beraturan biasanya dua deret yang diselang-seling; pisahkan ganjil dan genap.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B2-073",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 3,
+    "sumber": "B2#73",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "5, 6, 12, 9, 13, 65, …",
+    "opsi": {
+      "a": "71",
+      "b": "60",
+      "c": "390",
+      "d": "59",
+      "e": "13"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "String(65-6)",
+    "nilai_opsi": {
+      "a": "71",
+      "b": "60",
+      "c": "390",
+      "d": "59",
+      "e": "13"
+    },
+    "pembahasan": "Operasinya berganti dengan bilangan yang naik: 5 + 1 = 6, 6 × 2 = 12, 12 − 3 = 9, 9 + 4 = 13, 13 × 5 = 65, lalu 65 − 6 = 59.<br>Opsi A (71) gugur karena menambah 6, padahal operasi keenam adalah −6; Opsi B (60) gugur karena mengurangkan 5, padahal bilangannya naik menjadi 6; Opsi C (390) gugur karena mengalikan 6, padahal pola operasinya +, ×, − berulang; Opsi E (13) gugur karena membagi 5. Jawaban: Opsi D (59). Tips: jika selisih melompat besar lalu kecil, coba pola operasi berganti (+, ×, −) dengan angka 1, 2, 3, …",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B3-071",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "B3#71",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "3, 7, 3, 5, 11, 5, 8, 15, …",
+    "opsi": {
+      "a": "19",
+      "b": "8",
+      "c": "11",
+      "d": "12",
+      "e": "15"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "String(8)",
+    "nilai_opsi": {
+      "a": "19",
+      "b": "8",
+      "c": "11",
+      "d": "12",
+      "e": "15"
+    },
+    "pembahasan": "Kelompokkan tiap tiga suku: (3, 7, 3), (5, 11, 5), (8, 15, …). Pola kelompok: a, b, a — suku ketiga selalu sama dengan suku pertama kelompoknya. Jadi jawabannya 8.<br>Opsi A (19) gugur karena melanjutkan jalur tengah (+4), padahal suku ke-9 adalah ulangan suku pertama kelompok; Opsi C (11) gugur karena menambah 3 pada 8; Opsi D (12) gugur karena menambah 4 pada 8; Opsi E (15) gugur karena mengulang suku sebelumnya. Jawaban: Opsi B (8). Tips: coba kelompokkan per 2 atau per 3 suku bila ada angka yang berulang.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B3-072",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "B3#72",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "5, 3, 10, 6, 15, 12, 20, 24, …, …",
+    "opsi": {
+      "a": "25, 36",
+      "b": "30, 48",
+      "c": "48, 25",
+      "d": "25, 30",
+      "e": "25, 48"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "[25, 48].join(', ')",
+    "nilai_opsi": {
+      "a": "25, 36",
+      "b": "30, 48",
+      "c": "48, 25",
+      "d": "25, 30",
+      "e": "25, 48"
+    },
+    "pembahasan": "Jalur ganjil: 5, 10, 15, 20 → naik 5, berikutnya 25. Jalur genap: 3, 6, 12, 24 → dikali 2, berikutnya 48. Suku ke-9 ganjil (25), suku ke-10 genap (48).<br>Opsi A (25, 36) gugur karena jalur genap ditambah 12, padahal dikali 2; Opsi B (30, 48) gugur karena jalur ganjil ditambah 10, padahal ditambah 5; Opsi C (48, 25) gugur karena urutan kedua jalur tertukar; Opsi D (25, 30) gugur karena jalur genap ditambah 6. Jawaban: Opsi E (25, 48). Tips: tentukan dulu suku yang ditanya termasuk jalur mana sebelum menghitung.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-A3-051",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "A3#51",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "6, 9, 27, 24, 27, …, …",
+    "opsi": {
+      "a": "81, 84",
+      "b": "81, 78",
+      "c": "30, 90",
+      "d": "78, 81",
+      "e": "54, 51"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "[27*3, 27*3-3].join(', ')",
+    "nilai_opsi": {
+      "a": "81, 84",
+      "b": "81, 78",
+      "c": "30, 90",
+      "d": "78, 81",
+      "e": "54, 51"
+    },
+    "pembahasan": "Polanya berulang tiap tiga langkah: +3, ×3, −3. 6 + 3 = 9, 9 × 3 = 27, 27 − 3 = 24, 24 + 3 = 27, 27 × 3 = 81, 81 − 3 = 78.<br>Opsi A (81, 84) gugur karena menganggap langkah ketiga +3, padahal −3; Opsi C (30, 90) gugur karena mengulang +3 lalu ×3 dari awal; Opsi D (78, 81) gugur karena urutan tertukar; Opsi E (54, 51) gugur karena mengalikan 2, padahal dikali 3. Jawaban: Opsi B (81, 78). Tips: tulis operasi di antara setiap pasangan suku; siklus 2–3 operasi akan terlihat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-A3-052",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "A3#52",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "2, 5, 10, 3, 6, 18, 4, 7, 28, …, …",
+    "opsi": {
+      "a": "5, 8",
+      "b": "5, 9",
+      "c": "6, 9",
+      "d": "29, 5",
+      "e": "5, 40"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "[5, 5+3].join(', ')",
+    "nilai_opsi": {
+      "a": "5, 8",
+      "b": "5, 9",
+      "c": "6, 9",
+      "d": "29, 5",
+      "e": "5, 40"
+    },
+    "pembahasan": "Kelompokkan per tiga: (2, 5, 10), (3, 6, 18), (4, 7, 28). Polanya (n, n + 3, n × (n + 3)). Kelompok berikutnya dimulai n = 5: 5, 8, 40. Dua suku yang ditanya: 5, 8.<br>Opsi B (5, 9) gugur karena menambah 4, padahal suku kedua tiap kelompok = suku pertama + 3; Opsi C (6, 9) gugur karena menaikkan suku pertama kelompok sebanyak 2; Opsi D (29, 5) gugur karena melanjutkan +1 setelah 28; Opsi E (5, 40) gugur karena melompati satu suku (40 = 5 × 8 adalah suku ketiga kelompok). Jawaban: Opsi A (5, 8). Tips: jika suku ketiga besar, cek apakah ia hasil kali dua suku sebelumnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-A3-053",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 3,
+    "sumber": "A3#53",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "2, 2, 4, 12, 13, A, 18, 18, 36, B. Nilai A dan B adalah …",
+    "opsi": {
+      "a": "A = 14, B = 108",
+      "b": "A = 15, B = 72",
+      "c": "A = 15, B = 108",
+      "d": "A = 15, B = 144",
+      "e": "A = 26, B = 108"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "'A = ' + (13+2) + ', B = ' + (36*3)",
+    "nilai_opsi": {
+      "a": "A = 14, B = 108",
+      "b": "A = 15, B = 72",
+      "c": "A = 15, B = 108",
+      "d": "A = 15, B = 144",
+      "e": "A = 26, B = 108"
+    },
+    "pembahasan": "Operasinya: ×1, ×2, ×3, lalu +1, +2, +3, lalu ×1, ×2, ×3 lagi. 2 → 2 → 4 → 12, lalu 12 + 1 = 13, 13 + 2 = 15 (A), 15 + 3 = 18, lalu 18 → 18 → 36 → 36 × 3 = 108 (B).<br>Opsi A (A = 14, B = 108) gugur karena menganggap tambahannya selalu +1; Opsi B (A = 15, B = 72) gugur karena langkah terakhir dikali 2, padahal ×3; Opsi D (A = 15, B = 144) gugur karena langkah terakhir dikali 4; Opsi E (A = 26, B = 108) gugur karena menganggap 13 dikali 2. Jawaban: Opsi C (A = 15, B = 108). Tips: cari blok operasi yang berulang (×1, ×2, ×3) dan blok penyelingnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B2-074",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "B2#74",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "S, K, O, M, K, O, …",
+    "opsi": {
+      "a": "H",
+      "b": "I",
+      "c": "Q",
+      "d": "G",
+      "e": "F"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "String.fromCharCode('K'.charCodeAt(0)-4)",
+    "nilai_opsi": {
+      "a": "H",
+      "b": "I",
+      "c": "Q",
+      "d": "G",
+      "e": "F"
+    },
+    "pembahasan": "Dua jalur huruf. Ganjil: S, O, K → mundur 4 huruf (S = 19, O = 15, K = 11), berikutnya G (7). Genap: K, M, O → maju 2. Suku ke-7 milik jalur ganjil, jadi G.<br>Opsi A (H) gugur karena mundur 3, padahal jalur ganjil mundur 4; Opsi B (I) gugur karena mundur 2; Opsi C (Q) gugur karena melanjutkan jalur genap (K, M, O, Q), padahal suku ke-7 milik jalur ganjil; Opsi E (F) gugur karena mundur 5. Jawaban: Opsi D (G). Tips: ubah huruf ke nomor urut (A = 1 … Z = 26); hafalkan patokan E = 5, J = 10, O = 15, T = 20.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B2-075",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 1,
+    "sumber": "B2#75",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "D, G, J, M, P, …, …",
+    "opsi": {
+      "a": "R, U",
+      "b": "S, U",
+      "c": "S, V",
+      "d": "T, W",
+      "e": "Q, T"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "[String.fromCharCode('P'.charCodeAt(0)+3), String.fromCharCode('P'.charCodeAt(0)+6)].join(', ')",
+    "nilai_opsi": {
+      "a": "R, U",
+      "b": "S, U",
+      "c": "S, V",
+      "d": "T, W",
+      "e": "Q, T"
+    },
+    "pembahasan": "Setiap huruf maju 3: D (4), G (7), J (10), M (13), P (16), lalu S (19) dan V (22).<br>Opsi A (R, U) gugur karena maju 2, padahal maju 3; Opsi B (S, U) gugur karena langkah terakhir maju 2; Opsi D (T, W) gugur karena maju 4; Opsi E (Q, T) gugur karena maju 1 lalu 3. Jawaban: Opsi C (S, V). Tips: deret huruf maju tetap: hitung jarak sekali, lalu lompati dengan jari atau nomor urut.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B2-076",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "B2#76",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "W, D, S, F, O, H, …",
+    "opsi": {
+      "a": "K",
+      "b": "J",
+      "c": "L",
+      "d": "M",
+      "e": "I"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "String.fromCharCode('O'.charCodeAt(0)-4)",
+    "nilai_opsi": {
+      "a": "K",
+      "b": "J",
+      "c": "L",
+      "d": "M",
+      "e": "I"
+    },
+    "pembahasan": "Jalur ganjil: W, S, O → mundur 4 (23, 19, 15), berikutnya K (11). Jalur genap: D, F, H → maju 2. Suku ke-7 milik jalur ganjil: K.<br>Opsi B (J) gugur karena melanjutkan jalur genap (D, F, H, J), padahal suku ke-7 milik jalur ganjil; Opsi C (L) gugur karena mundur 3, padahal mundur 4; Opsi D (M) gugur karena mundur 2; Opsi E (I) gugur karena mundur 6. Jawaban: Opsi A (K). Tips: beri nomor posisi 1, 2, 3, … di atas deret; posisi ganjil dan genap dicek terpisah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B3-073",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 3,
+    "sumber": "B3#73",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "B, F, G, I, L, L, Q, …",
+    "opsi": {
+      "a": "V",
+      "b": "N",
+      "c": "P",
+      "d": "R",
+      "e": "O"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "String.fromCharCode('L'.charCodeAt(0)+3)",
+    "nilai_opsi": {
+      "a": "V",
+      "b": "N",
+      "c": "P",
+      "d": "R",
+      "e": "O"
+    },
+    "pembahasan": "Jalur ganjil: B, G, L, Q → maju 5. Jalur genap: F, I, L → maju 3, berikutnya O. Suku ke-8 milik jalur genap: O. Huruf L muncul dua kali karena kedua jalur kebetulan bertemu.<br>Opsi A (V) gugur karena melanjutkan jalur ganjil (+5), padahal suku ke-8 milik jalur genap; Opsi B (N) gugur karena jalur genap maju 2; Opsi C (P) gugur karena jalur genap maju 4; Opsi D (R) gugur karena maju 1 dari Q. Jawaban: Opsi E (O). Tips: huruf kembar berurutan (L, L) tanda dua jalur bertemu, bukan pola berhenti.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B3-074",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 3,
+    "sumber": "B3#74",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "C, T, F, R, I, P, L, N, …, …",
+    "opsi": {
+      "a": "O, M",
+      "b": "O, L",
+      "c": "N, L",
+      "d": "P, L",
+      "e": "L, O"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "[String.fromCharCode('L'.charCodeAt(0)+3), String.fromCharCode('N'.charCodeAt(0)-2)].join(', ')",
+    "nilai_opsi": {
+      "a": "O, M",
+      "b": "O, L",
+      "c": "N, L",
+      "d": "P, L",
+      "e": "L, O"
+    },
+    "pembahasan": "Jalur ganjil: C, F, I, L → maju 3, berikutnya O. Jalur genap: T, R, P, N → mundur 2, berikutnya L. Suku ke-9 (ganjil) O, suku ke-10 (genap) L.<br>Opsi A (O, M) gugur karena jalur kedua mundur 1, padahal mundur 2; Opsi C (N, L) gugur karena jalur pertama maju 2, padahal maju 3; Opsi D (P, L) gugur karena jalur pertama maju 4; Opsi E (L, O) gugur karena urutan kedua jalur tertukar. Jawaban: Opsi B (O, L). Tips: jalur maju dan jalur mundur sering dipasangkan; tandai arah setiap jalur dengan panah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-B3-075",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 3,
+    "sumber": "B3#75",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "D, F, H, G, F, H, J, …, …",
+    "opsi": {
+      "a": "L, N",
+      "b": "I, J",
+      "c": "K, J",
+      "d": "I, H",
+      "e": "H, I"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "[String.fromCharCode('J'.charCodeAt(0)-1), String.fromCharCode('J'.charCodeAt(0)-2)].join(', ')",
+    "nilai_opsi": {
+      "a": "L, N",
+      "b": "I, J",
+      "c": "K, J",
+      "d": "I, H",
+      "e": "H, I"
+    },
+    "pembahasan": "Polanya maju 2, maju 2, mundur 1, mundur 1, lalu berulang: D → F → H → G → F → H → J → I → H.<br>Opsi A (L, N) gugur karena menganggap polanya maju 2 terus; Opsi B (I, J) gugur karena langkah keempat dibaca maju 1; Opsi C (K, J) gugur karena maju 1 lalu mundur 1; Opsi E (H, I) gugur karena urutan tertukar. Jawaban: Opsi D (I, H). Tips: tulis langkah (+2, +2, −1, −1) di bawah deret; siklus 4 langkah akan terlihat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-A3-054",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "A3#54",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "Z, Y, W, X, V, U, S, T, R, Q, …, …",
+    "opsi": {
+      "a": "P, O",
+      "b": "N, O",
+      "c": "O, N",
+      "d": "P, Q",
+      "e": "O, P"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "[String.fromCharCode('O'.charCodeAt(0)), String.fromCharCode('P'.charCodeAt(0))].join(', ')",
+    "nilai_opsi": {
+      "a": "P, O",
+      "b": "N, O",
+      "c": "O, N",
+      "d": "P, Q",
+      "e": "O, P"
+    },
+    "pembahasan": "Huruf turun dari Z dan dikelompokkan berpasangan: (Z, Y), (W, X), (V, U), (S, T), (R, Q). Pasangan ke-2, ke-4, dan seterusnya ditukar urutannya. Pasangan ke-6 adalah P dan O, ditukar menjadi O, P.<br>Opsi A (P, O) gugur karena tidak menukar pasangan, padahal pasangan genap ditukar; Opsi B (N, O) gugur karena melompati huruf P; Opsi C (O, N) gugur karena salah mengambil pasangan berikutnya; Opsi D (P, Q) gugur karena mengulang huruf Q. Jawaban: Opsi E (O, P). Tips: pada deret huruf yang terasa \"meloncat mundur\", coba kelompokkan dua-dua.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-A3-055",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-2BARIS",
+    "tier": 3,
+    "sumber": "A3#55",
+    "instruksi": "Lengkapi deret berikut.",
+    "stem": "Baris huruf: BC, FG, …, LM, PQ. Baris angka: 214, …, 225, 232, 240. Pasangan pengisi kedua titik-titik adalah …",
+    "opsi": {
+      "a": "IJ dan 219",
+      "b": "JK dan 219",
+      "c": "IJ dan 220",
+      "d": "HI dan 219",
+      "e": "IJ dan 218"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "'IJ dan ' + (214+5)",
+    "nilai_opsi": {
+      "a": "IJ dan 219",
+      "b": "JK dan 219",
+      "c": "IJ dan 220",
+      "d": "HI dan 219",
+      "e": "IJ dan 218"
+    },
+    "pembahasan": "Baris huruf: BC → FG maju 4, lalu FG ke LM berjarak 6 huruf yang dibagi dua langkah sama, yaitu 3: FG → IJ → LM, lalu LM → PQ maju 4. Baris angka: selisih 225 → 232 → 240 adalah 7 dan 8, jadi selisih sebelumnya 5 dan 6: 214 + 5 = 219, 219 + 6 = 225.<br>Opsi B (JK dan 219) gugur karena menganggap huruf selalu maju 4 (FG ke LM hanya bisa dicapai lewat dua langkah 3); Opsi C (IJ dan 220) gugur karena selisih angka dibuat 6 lalu 5, padahal selisihnya naik 5, 6, 7, 8; Opsi D (HI dan 219) gugur karena huruf maju 2; Opsi E (IJ dan 218) gugur karena selisih angka pertama dibuat 4. Jawaban: Opsi A (IJ dan 219). Tips: kerjakan baris yang paling banyak petunjuknya dulu, lalu cocokkan pilihan.",
+    "status_kunci": "ganda"
+  }
+]

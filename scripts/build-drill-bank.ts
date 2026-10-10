@@ -137,7 +137,7 @@ const esc = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replac
 function preview(card: string, items: Item[]) {
   const rows = items.map((it, i) => `
 <article><header><b>${i + 1}. ${esc(it.id)}</b> <span>${esc(it.sub_type)} · tier ${it.tier} · ${esc(it.sumber)} · ${esc(it.status_kunci)}</span></header>
-${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}<p class="stem">${esc(it.stem)}</p>${it.rumus ?? ""}
+${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}<p class="stem">${esc(it.stem)}</p>${it.rumus ?? ""}${it.gambar ? `<img src="../../public/${esc(it.gambar)}" alt="" style="max-width:100%">` : ""}
 <ol type="A">${LETTERS.map((k) => `<li class="${it.kunci.includes(k) ? "key" : ""}">${esc(it.opsi[k])}</li>`).join("")}</ol>
 <div class="pb">${it.pembahasan.split("<br>").map((p) => `<p>${esc(p)}</p>`).join("")}</div></article>`).join("");
   const html = `<!doctype html><html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -170,8 +170,8 @@ function main() {
   const stems = new Map<string, string>();
   const sim = simulationStems();
   for (const it of items) {
-    const n = norm(it.stem + (it.rumus ?? ""));
-    if (sim.has(norm(it.stem))) fail(it.id, "stem sama dengan soal simulasi Paket 1 (soal.json)");
+    const n = norm(it.stem + (it.rumus ?? "") + (it.gambar && existsSync(join(ROOT, "public", it.gambar)) ? readFileSync(join(ROOT, "public", it.gambar), "utf8") : it.gambar ?? ""));
+    if (!it.gambar && sim.has(norm(it.stem))) fail(it.id, "stem sama dengan soal simulasi Paket 1 (soal.json)");
     if (stems.has(n)) fail(it.id, `stem sama dengan ${stems.get(n)}`);
     stems.set(n, it.id);
   }
