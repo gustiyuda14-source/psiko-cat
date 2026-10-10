@@ -15,7 +15,9 @@ if (!SUPABASE_URL || !SERVICE_KEY) {
 const supabase = createClient(SUPABASE_URL, SERVICE_KEY);
 
 // Paket 7 sudah ada di DB (di-seed lewat prisma/seed.ts sebelumnya) — jangan diulang di sini.
-const PACKAGES = [3, 4, 5, 6, 8];
+// Argumen CLI (mis. `tsx scripts/seed-kecermatan-packages.ts 201`) menimpa daftar default.
+const cliPackages = process.argv.slice(2).map(Number).filter(Number.isInteger);
+const PACKAGES = cliPackages.length ? cliPackages : [3, 4, 5, 6, 8];
 
 type SymbolMap = Record<"A" | "B" | "C" | "D" | "E", string>;
 type BankSoal = {

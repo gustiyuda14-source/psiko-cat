@@ -21,6 +21,7 @@ import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
   KecermatanKeyStrip,
+  KecermatanSymbol,
   KECERMATAN_KEYS,
   type KecermatanKey,
 } from "@/app/components/KecermatanKeyStrip";
@@ -590,7 +591,7 @@ export default function EngineKecermatan({
                     key={i}
                     className="flex h-16 items-center justify-center rounded-md border border-border bg-surface-inset text-3xl"
                   >
-                    {sym}
+                    <KecermatanSymbol symbol={sym} />
                   </div>
                 ))}
               </div>

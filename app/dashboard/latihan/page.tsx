@@ -1,6 +1,7 @@
 import {
   KECERDASAN_PACKAGES,
   KECERMATAN_ANGKA_PACKAGES,
+  KECERMATAN_SPASIAL_PACKAGES,
   KECERMATAN_PACKAGES,
   KEPRIBADIAN_PACKAGES,
   MODULE_CONFIG,
@@ -16,13 +17,14 @@ const DESC = {
   KEPRIBADIAN: "Pernyataan skala Likert, 100 butir per paket",
 } as const;
 
-// Kunci progres = rute sesi paket (lib/latihan-progress.ts). Kecermatan punya dua aspek.
+// Kunci progres = rute sesi paket (lib/latihan-progress.ts). Kecermatan punya tiga aspek.
 const PACKAGES = {
   KECERDASAN: KECERDASAN_PACKAGES.map((id) => ({ key: `/latihan/kecerdasan/${id}`, total: 100 })),
   KEPRIBADIAN: KEPRIBADIAN_PACKAGES.map((id) => ({ key: `/latihan/kepribadian/${id}`, total: 100 })),
   KECERMATAN: [
     ...KECERMATAN_PACKAGES.map((id) => ({ key: `/latihan/kecermatan/${id}`, total: 500 })),
     ...KECERMATAN_ANGKA_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-angka/${id}`, total: 500 })),
+    ...KECERMATAN_SPASIAL_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-spasial/${id}`, total: 500 })),
   ],
 };
 

@@ -1,4 +1,5 @@
 import QuestionPassage from "@/app/components/QuestionPassage";
+import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import type {
   KecerdasanOptionsPayload,
   KepribadianOptionsPayload,
@@ -372,7 +373,7 @@ export function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGro
                         key={i}
                         className="flex h-11 items-center justify-center rounded-md border border-border bg-card text-xl"
                       >
-                        {sym}
+                        <KecermatanSymbol symbol={sym} />
                       </span>
                     ))}
                   </div>
@@ -380,13 +381,13 @@ export function KecermatanDetailReview({ groups }: { groups: KecermatanColumnGro
                     <div className="flex gap-1.5">
                       <dt className="text-muted-foreground">Anda pilih</dt>
                       <dd className="font-bold text-destructive">
-                        {item.selected_key} ({item.selected_symbol})
+                        {item.selected_key} (<KecermatanSymbol symbol={item.selected_symbol} />)
                       </dd>
                     </div>
                     <div className="flex gap-1.5">
                       <dt className="text-muted-foreground">Kunci</dt>
                       <dd className="font-bold text-success">
-                        {item.correct_key} ({item.correct_symbol})
+                        {item.correct_key} (<KecermatanSymbol symbol={item.correct_symbol} />)
                       </dd>
                     </div>
                   </dl>

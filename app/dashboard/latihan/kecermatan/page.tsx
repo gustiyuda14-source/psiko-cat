@@ -3,6 +3,8 @@ import {
   KECERMATAN_PACKAGE_LABELS,
   KECERMATAN_ANGKA_PACKAGES,
   KECERMATAN_ANGKA_PACKAGE_LABELS,
+  KECERMATAN_SPASIAL_PACKAGES,
+  KECERMATAN_SPASIAL_PACKAGE_LABELS,
 } from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
 import { buildKecermatanPackages } from "@/lib/kecermatan-packages";
@@ -13,13 +15,14 @@ import { KecermatanAspectPicker } from "@/app/components/KecermatanAspectPicker"
 // karena dia permukaan menjelajah, bukan sesi; sesinya sendiri di app/latihan/kecermatan/[package]
 // (atau .../kecermatan-angka/[package]) yang di luar shell.
 //
-// Dua aspek (emoji/gambar vs angka-huruf) satu tile sidebar yang sama — bedanya
+// Tiga aspek (emoji/gambar, angka-huruf, spasial) satu tile sidebar yang sama — bedanya
 // cuma sub-tab di dalam halaman ini (KecermatanAspectPicker), bukan dua entri
 // nav terpisah.
 export default async function LatihanKecermatanPackagesPage() {
-  const [emojiPackages, angkaPackages] = await Promise.all([
+  const [emojiPackages, angkaPackages, spasialPackages] = await Promise.all([
     buildKecermatanPackages(KECERMATAN_PACKAGES, KECERMATAN_PACKAGE_LABELS),
     buildKecermatanPackages(KECERMATAN_ANGKA_PACKAGES, KECERMATAN_ANGKA_PACKAGE_LABELS),
+    buildKecermatanPackages(KECERMATAN_SPASIAL_PACKAGES, KECERMATAN_SPASIAL_PACKAGE_LABELS),
   ]);
 
   return (
@@ -29,7 +32,7 @@ export default async function LatihanKecermatanPackagesPage() {
         description="Pilih aspek dan paket untuk berlatih dalam 10 kolom. Lihat simbol kolom pertama di bawah; kunci simbol berganti saat berpindah kolom."
       />
 
-      <KecermatanAspectPicker emojiPackages={emojiPackages} angkaPackages={angkaPackages} />
+      <KecermatanAspectPicker emojiPackages={emojiPackages} angkaPackages={angkaPackages} spasialPackages={spasialPackages} />
     </div>
   );
 }

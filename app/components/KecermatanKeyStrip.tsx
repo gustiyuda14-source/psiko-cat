@@ -1,6 +1,14 @@
 import { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 export { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 
+// Aspek Spasial menyimpan simbol sebagai path SVG di public/, aspek lain
+// menyimpan glyph teks. Ukuran gambar ikut font-size wadahnya (em).
+export function KecermatanSymbol({ symbol }: { symbol: string }) {
+  if (!symbol.startsWith("/kecermatan-spasial/")) return <>{symbol}</>;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={symbol} alt="" draggable={false} className="h-[1.5em] w-[1.5em]" />;
+}
+
 /*
   Strip kunci: A-E dengan simbolnya, dalam grid 5 kolom yang sama persis dengan
   grid tombol jawaban di bawahnya.
@@ -30,7 +38,7 @@ export function KecermatanKeyStrip({
               size === "lg" ? "h-14 text-3xl" : "h-11 text-2xl"
             }`}
           >
-            {typeof symbolMap?.[k] === "string" ? symbolMap[k] : "?"}
+            {typeof symbolMap?.[k] === "string" ? <KecermatanSymbol symbol={symbolMap[k]!} /> : "?"}
           </div>
         </div>
       ))}

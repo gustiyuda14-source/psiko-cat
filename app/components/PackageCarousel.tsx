@@ -6,6 +6,7 @@ import { ArrowRight } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { PackageOrbit, type OrbitItem } from "@/app/components/PackageOrbit";
+import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { fillY, wavePath } from "@/lib/honey";
 import { clearLatihanProgress, useLatihanProgress } from "@/lib/latihan-progress";
 
@@ -184,7 +185,7 @@ export function PackageCarousel({
                           {s.symbols && (
                             <span className="cat-symbols" aria-label={`Simbol kolom ${s.index}`}>
                               {s.symbols.map((symbol, k) => (
-                                <span key={k}>{symbol}</span>
+                                <span key={k}><KecermatanSymbol symbol={symbol} /></span>
                               ))}
                             </span>
                           )}

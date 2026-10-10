@@ -40,6 +40,15 @@ export const KECERMATAN_ANGKA_PACKAGE_LABELS: Record<number, string> = Object.fr
   KECERMATAN_ANGKA_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
+// Aspek ketiga Kecermatan: Spasial (gambar geometris mirip, simbol = path SVG
+// di public/kecermatan-spasial). Latihan saja — tidak masuk pool ujian
+// pickRandomKecermatanPackage().
+export const KECERMATAN_SPASIAL_PACKAGES = [201];
+
+export const KECERMATAN_SPASIAL_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_SPASIAL_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
 // Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)
 // khusus simulasi (SIMULASI_PACKAGE) dan TIDAK boleh muncul di sini, supaya
 // soal simulasi tidak bocor lewat latihan (pola dajiks-cest). Slot 2-11 tampil

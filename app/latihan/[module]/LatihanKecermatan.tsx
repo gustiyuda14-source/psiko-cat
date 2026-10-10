@@ -6,7 +6,7 @@ import { recordLatihanProgress } from "@/lib/latihan-progress";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
 import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";
-import { KecermatanKeyStrip, KECERMATAN_KEYS } from "@/app/components/KecermatanKeyStrip";
+import { KecermatanKeyStrip, KecermatanSymbol, KECERMATAN_KEYS } from "@/app/components/KecermatanKeyStrip";
 import { buttonStyles, Meter } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { Repeat, Timer } from "@/app/components/icons";
@@ -387,7 +387,7 @@ export default function LatihanKecermatan({
                     key={i}
                     className="flex h-16 items-center justify-center rounded-md border border-border bg-surface-inset text-3xl"
                   >
-                    {sym}
+                    <KecermatanSymbol symbol={sym} />
                   </div>
                 ))}
               </div>
