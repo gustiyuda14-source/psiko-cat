@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { verifyPassword, createSessionToken } from "@/lib/auth";
+import { sessionVersion } from "@/lib/account-rules";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,7 +13,8 @@ export async function POST(req: NextRequest) {
 
     const { data: user, error } = await supabaseAdmin
       .from("users")
-      .select("id, name, username, password_hash, role")
+      // select("*") supaya tetap jalan sebelum kolom aktif dibuat (kolom hilang = aktif).
+      .select("*")
       .eq("username", username.toLowerCase().trim())
       .single();
 
@@ -25,11 +27,16 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "Username atau password salah" }, { status: 401 });
     }
 
+    if (user.aktif === false) {
+      return NextResponse.json({ error: "Akun dinonaktifkan. Hubungi admin." }, { status: 403 });
+    }
+
     const token = await createSessionToken({
       sub: user.id,
       username: user.username,
       name: user.name,
       role: user.role as "peserta" | "admin",
+      pv: sessionVersion(user.password_hash),
     });
 
     const res = NextResponse.json({ role: user.role, name: user.name });

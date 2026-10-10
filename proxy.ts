@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
+import { sessionBlocked } from "@/lib/account-guard";
 
 const COOKIE_NAME = "psiko_session";
 
@@ -34,6 +35,15 @@ export async function proxy(req: NextRequest) {
 
   try {
     const { payload } = await jwtVerify(token, getJwtSecret());
+
+    // Akun dinonaktifkan / dihapus / password direset admin → sesi berakhir (seperti dajiks-cest).
+    if (await sessionBlocked(String(payload.sub ?? ""), typeof payload.pv === "string" ? payload.pv : undefined)) {
+      const res = pathname.startsWith("/api/")
+        ? NextResponse.json({ error: "Sesi berakhir. Masuk lagi." }, { status: 401 })
+        : NextResponse.redirect(new URL("/login", req.url));
+      res.cookies.delete(COOKIE_NAME);
+      return res;
+    }
 
     if (pathname.startsWith("/admin") && payload.role !== "admin") {
       return NextResponse.redirect(new URL("/dashboard", req.url));

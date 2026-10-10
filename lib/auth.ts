@@ -14,6 +14,8 @@ export type SessionPayload = {
   username: string;
   name: string;
   role: "peserta" | "admin";
+  /** Sidik jari hash password saat login (lib/account-rules.ts); reset password = token lama ditolak proxy. */
+  pv?: string;
 };
 
 export async function createSessionToken(payload: SessionPayload): Promise<string> {

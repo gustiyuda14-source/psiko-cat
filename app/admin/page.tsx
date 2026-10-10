@@ -3,7 +3,7 @@ import Link from "next/link";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import LogoutButton from "@/app/components/LogoutButton";
-import { Accordion, Badge, EmptyState, PageHeader } from "@/app/components/ui";
+import { Accordion, Badge, EmptyState, PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronRight } from "@/app/components/icons";
 
 function formatDate(iso: string | null) {
@@ -76,7 +76,12 @@ export default async function AdminPage() {
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
       <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
-        <PageHeader kicker="Admin" title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={<LogoutButton />} />
+        <PageHeader kicker="Admin" title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={
+          <div className="flex flex-wrap gap-2">
+            <Link href="/admin/akun" className={buttonStyles({ variant: "primary", size: "sm" })}>Kelola akun</Link>
+            <LogoutButton />
+          </div>
+        } />
 
         <dl className="prog-strip is-3 mt-6">
           {[
