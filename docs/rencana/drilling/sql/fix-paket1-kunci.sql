@@ -31,9 +31,9 @@
 --     AND q.sequence_number IN (39,44,49,51,52,57,58,59,66,70,71,72,73,85,86)
 --   GROUP BY q.sequence_number ORDER BY q.sequence_number;
 --
--- CATATAN: scripts/seed-kecerdasan.ts & generate-sql.ts meng-UPDATE berdasarkan
--- type + sequence_number TANPA filter package_number -> jika dijalankan ulang akan
--- menimpa paket 2-11 juga. Jangan pakai skrip itu; pakai file ini.
+-- STATUS: SUDAH DITERAPKAN ke production 2026-10-10 (15 baris, lewat supabase-js dengan
+-- pengecekan teks lama + kunci; dry-run ulang: 0 baris tersisa). Tidak perlu dijalankan lagi.
+-- Skrip seed-kecerdasan.ts & generate-sql.ts kini memfilter package_number = 1.
 
 BEGIN;
 

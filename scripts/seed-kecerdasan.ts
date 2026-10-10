@@ -2,6 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
 import * as dotenv from "dotenv";
+import { SIMULASI_PACKAGE } from "../lib/test-config";
 
 dotenv.config({ path: path.join(__dirname, "../.env.local") });
 
@@ -68,6 +69,8 @@ async function main() {
       .from("questions")
       .update({ options_payload, scoring_rule })
       .eq("type", "KECERDASAN")
+      // soal.json = Paket 1 (simulasi); tanpa filter ini paket latihan 2–11 ikut tertimpa.
+      .eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
       .eq("sequence_number", soal.id);
 
     if (error) {

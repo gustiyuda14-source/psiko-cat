@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as path from "path";
+import { SIMULASI_PACKAGE } from "../lib/test-config";
 
 const soalPath = path.join(__dirname, "../soal.json");
 type SourceQuestion = {
@@ -53,7 +54,7 @@ for (const soal of soalList) {
   sql += `UPDATE questions 
 SET options_payload = '${optionsStr}'::jsonb, 
     scoring_rule = '${scoringStr}'::jsonb 
-WHERE type = 'KECERDASAN' AND sequence_number = ${soal.id};\n`;
+WHERE type = 'KECERDASAN' AND package_number = ${SIMULASI_PACKAGE.KECERDASAN} AND sequence_number = ${soal.id};\n`;
 }
 
 sql += "\nCOMMIT;\n";
