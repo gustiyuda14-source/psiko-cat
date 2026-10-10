@@ -1,0 +1,425 @@
+[
+  {
+    "id": "K11-B3-086",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 2,
+    "sumber": "B3#86",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Seorang pengawas akan mengunjungi enam pos jaga, yaitu Anggrek, Bougenvil, Cempaka, Dahlia, Edelweis, dan Flamboyan, masing-masing tepat satu kali. Jadwalnya harus memenuhi syarat berikut:",
+      "• Pos Dahlia baru boleh dikunjungi setelah pos Cempaka dan pos Edelweis dikunjungi.\n• Pos Edelweis tidak boleh dikunjungi sebelum pos Anggrek.\n• Pos kedua yang dikunjungi adalah Bougenvil."
+    ],
+    "stem": "Manakah urutan kunjungan yang memenuhi semua syarat?",
+    "opsi": {
+      "a": "Bougenvil, Anggrek, Cempaka, Edelweis, Dahlia, Flamboyan",
+      "b": "Anggrek, Bougenvil, Edelweis, Cempaka, Dahlia, Flamboyan",
+      "c": "Cempaka, Bougenvil, Dahlia, Anggrek, Edelweis, Flamboyan",
+      "d": "Anggrek, Bougenvil, Dahlia, Cempaka, Edelweis, Flamboyan",
+      "e": "Edelweis, Bougenvil, Anggrek, Cempaka, Dahlia, Flamboyan"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji setiap opsi terhadap tiga syarat: Bougenvil harus kedua, Anggrek sebelum Edelweis, dan Dahlia setelah Cempaka serta Edelweis. Hanya Anggrek, Bougenvil, Edelweis, Cempaka, Dahlia, Flamboyan yang lolos semua syarat.<br>Opsi A (Bougenvil, Anggrek, Cempaka, Edelweis, Dahlia, Flamboyan) gugur karena Bougenvil berada di urutan pertama, padahal harus kedua; Opsi C (Cempaka, Bougenvil, Dahlia, Anggrek, Edelweis, Flamboyan) gugur karena Dahlia dikunjungi sebelum Edelweis; Opsi D (Anggrek, Bougenvil, Dahlia, Cempaka, Edelweis, Flamboyan) gugur karena Dahlia dikunjungi sebelum Cempaka dan Edelweis; Opsi E (Edelweis, Bougenvil, Anggrek, Cempaka, Dahlia, Flamboyan) gugur karena Edelweis dikunjungi sebelum Anggrek. Jawaban: Opsi B (Anggrek, Bougenvil, Edelweis, Cempaka, Dahlia, Flamboyan). Tips: pakai syarat yang paling mudah dicek (posisi tetap) untuk mencoret opsi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-B3-087",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 2,
+    "sumber": "B3#87",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Seorang pengawas akan mengunjungi enam pos jaga, yaitu Anggrek, Bougenvil, Cempaka, Dahlia, Edelweis, dan Flamboyan, masing-masing tepat satu kali. Jadwalnya harus memenuhi syarat berikut:",
+      "• Pos Dahlia baru boleh dikunjungi setelah pos Cempaka dan pos Edelweis dikunjungi.\n• Pos Edelweis tidak boleh dikunjungi sebelum pos Anggrek.\n• Pos kedua yang dikunjungi adalah Bougenvil."
+    ],
+    "stem": "Manakah pernyataan berikut yang PASTI benar?",
+    "opsi": {
+      "a": "Pos Dahlia tidak mungkin dikunjungi pada urutan ketiga.",
+      "b": "Pos Anggrek pasti dikunjungi pertama.",
+      "c": "Pos Flamboyan pasti dikunjungi terakhir.",
+      "d": "Pos Cempaka pasti dikunjungi sebelum pos Edelweis.",
+      "e": "Pos Edelweis tidak mungkin dikunjungi pada urutan ketiga."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Dahlia harus didahului Cempaka, Edelweis, dan Anggrek (karena Anggrek sebelum Edelweis), ditambah Bougenvil di urutan kedua. Jadi minimal empat pos ada sebelum Dahlia, sehingga Dahlia paling cepat dikunjungi pada urutan kelima. Dahlia tidak mungkin di urutan ketiga.<br>Opsi B (Pos Anggrek pasti dikunjungi pertama.) gugur karena Cempaka atau Flamboyan juga bisa dikunjungi pertama; Opsi C (Pos Flamboyan pasti dikunjungi terakhir.) gugur karena Dahlia juga bisa dikunjungi terakhir; Opsi D (Pos Cempaka pasti dikunjungi sebelum pos Edelweis.) gugur karena Edelweis boleh dikunjungi lebih dulu daripada Cempaka; Opsi E (Pos Edelweis tidak mungkin dikunjungi pada urutan ketiga.) gugur karena urutan Anggrek, Bougenvil, Edelweis, … memenuhi semua syarat. Jawaban: Opsi A (Pos Dahlia tidak mungkin dikunjungi pada urutan ketiga.). Tips: hitung berapa pos yang wajib mendahului suatu pos; itu batas urutan paling awalnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-B3-088",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 3,
+    "sumber": "B3#88",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Seorang pengawas akan mengunjungi enam pos jaga, yaitu Anggrek, Bougenvil, Cempaka, Dahlia, Edelweis, dan Flamboyan, masing-masing tepat satu kali. Jadwalnya harus memenuhi syarat berikut:",
+      "• Pos Dahlia baru boleh dikunjungi setelah pos Cempaka dan pos Edelweis dikunjungi.\n• Pos Edelweis tidak boleh dikunjungi sebelum pos Anggrek.\n• Pos kedua yang dikunjungi adalah Bougenvil."
+    ],
+    "stem": "Jika pos Flamboyan dikunjungi paling akhir, manakah yang dapat menjadi pos pertama dan ketiga (berurutan)?",
+    "opsi": {
+      "a": "Anggrek dan Edelweis",
+      "b": "Anggrek dan Dahlia",
+      "c": "Cempaka dan Dahlia",
+      "d": "Edelweis dan Cempaka",
+      "e": "Flamboyan dan Cempaka"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Dengan Flamboyan keenam dan Bougenvil kedua, Dahlia harus kelima (setelah Cempaka, Edelweis, dan Anggrek). Urutan 1, 3, 4 diisi Anggrek, Cempaka, Edelweis dengan Anggrek sebelum Edelweis. Pasangan pertama–ketiga yang mungkin: Anggrek–Edelweis, Anggrek–Cempaka, atau Cempaka–Anggrek. Di antara opsi, hanya Anggrek dan Edelweis.<br>Opsi B (Anggrek dan Dahlia) gugur karena Dahlia paling cepat di urutan kelima; Opsi C (Cempaka dan Dahlia) gugur karena Dahlia paling cepat di urutan kelima; Opsi D (Edelweis dan Cempaka) gugur karena Edelweis tidak boleh pertama karena harus didahului Anggrek; Opsi E (Flamboyan dan Cempaka) gugur karena Flamboyan sudah ditetapkan terakhir. Jawaban: Opsi A (Anggrek dan Edelweis). Tips: setelah satu posisi dikunci, tulis semua kemungkinan yang tersisa; biasanya hanya dua atau tiga.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-B3-089",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 3,
+    "sumber": "B3#89",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Pada hari Rabu, seorang psikolog mempunyai jadwal konsultasi dengan tujuh pasien: Ani, Bayu, Citra, Dimas, Eka, Fajar, dan Gita. Setiap pasien mendapat satu jadwal, urutan 1 sampai 7, dengan syarat:",
+      "• Bayu dijadwalkan sebelum Gita.\n• Fajar dijadwalkan sebelum Ani.\n• Salah satu dari Citra atau Eka dijadwalkan pada urutan ketiga.\n• Dimas dijadwalkan tepat sebelum atau tepat sesudah Citra."
+    ],
+    "stem": "Jika Gita dijadwalkan pada urutan kedua dan Ani pada urutan kelima, pernyataan manakah yang PASTI benar?",
+    "opsi": {
+      "a": "Citra dijadwalkan pada urutan keenam.",
+      "b": "Dimas dijadwalkan pada urutan ketujuh.",
+      "c": "Fajar dijadwalkan pada urutan keempat.",
+      "d": "Citra dijadwalkan pada urutan ketiga.",
+      "e": "Dimas dijadwalkan pada urutan keempat."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Bayu harus sebelum Gita (urutan kedua), jadi Bayu pertama. Fajar harus sebelum Ani (urutan kelima), jadi Fajar di urutan ketiga atau keempat. Urutan ketiga harus Citra atau Eka. Jika Citra ketiga, Dimas harus keempat (urutan kedua sudah Gita) dan Fajar tidak kebagian tempat. Jadi Eka ketiga, Fajar keempat, dan Citra–Dimas mengisi urutan 6–7 dalam urutan mana pun.<br>Opsi A (Citra dijadwalkan pada urutan keenam.) gugur karena Citra bisa juga pada urutan ketujuh; Opsi B (Dimas dijadwalkan pada urutan ketujuh.) gugur karena Dimas bisa juga pada urutan keenam; Opsi D (Citra dijadwalkan pada urutan ketiga.) gugur karena Citra di urutan ketiga memaksa Dimas ke urutan keempat, sehingga Fajar tidak punya tempat sebelum Ani; Opsi E (Dimas dijadwalkan pada urutan keempat.) gugur karena urutan keempat harus diisi Fajar. Jawaban: Opsi C (Fajar dijadwalkan pada urutan keempat.). Tips: posisi yang dikunci soal sering langsung memaksa satu orang lain; cari syarat \"sebelum\" yang berbatasan dengan posisi itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-B3-090",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "B3#90",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Pada hari Rabu, seorang psikolog mempunyai jadwal konsultasi dengan tujuh pasien: Ani, Bayu, Citra, Dimas, Eka, Fajar, dan Gita. Setiap pasien mendapat satu jadwal, urutan 1 sampai 7, dengan syarat:",
+      "• Bayu dijadwalkan sebelum Gita.\n• Fajar dijadwalkan sebelum Ani.\n• Salah satu dari Citra atau Eka dijadwalkan pada urutan ketiga.\n• Dimas dijadwalkan tepat sebelum atau tepat sesudah Citra."
+    ],
+    "stem": "Urutan manakah yang memenuhi semua syarat dari urutan 1 sampai 7?",
+    "opsi": {
+      "a": "Bayu, Fajar, Citra, Dimas, Gita, Ani, Eka",
+      "b": "Fajar, Bayu, Dimas, Eka, Citra, Gita, Ani",
+      "c": "Gita, Bayu, Eka, Citra, Dimas, Fajar, Ani",
+      "d": "Bayu, Ani, Eka, Fajar, Citra, Dimas, Gita",
+      "e": "Fajar, Ani, Citra, Bayu, Dimas, Gita, Eka"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Cek setiap opsi: urutan ketiga harus Citra atau Eka, Dimas harus bersebelahan dengan Citra, Bayu sebelum Gita, dan Fajar sebelum Ani. Hanya Bayu, Fajar, Citra, Dimas, Gita, Ani, Eka yang memenuhi keempatnya.<br>Opsi B (Fajar, Bayu, Dimas, Eka, Citra, Gita, Ani) gugur karena urutan ketiga diisi Dimas, bukan Citra atau Eka; Opsi C (Gita, Bayu, Eka, Citra, Dimas, Fajar, Ani) gugur karena Gita dijadwalkan sebelum Bayu; Opsi D (Bayu, Ani, Eka, Fajar, Citra, Dimas, Gita) gugur karena Ani dijadwalkan sebelum Fajar; Opsi E (Fajar, Ani, Citra, Bayu, Dimas, Gita, Eka) gugur karena Dimas tidak bersebelahan dengan Citra. Jawaban: Opsi A (Bayu, Fajar, Citra, Dimas, Gita, Ani, Eka). Tips: mulai dari syarat posisi tetap (urutan ketiga), lalu syarat bersebelahan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-062",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 1,
+    "sumber": "A3#62",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Data ujian Matematika di sebuah SMA menunjukkan nilai tertinggi diraih Rina dengan nilai 95. Nilai Sinta 6 angka lebih kecil daripada Rina, dan 2 angka lebih besar daripada Tono. Nilai Umar 3 angka lebih besar daripada Tono."
+    ],
+    "stem": "Siapa saja yang memperoleh nilai di atas 88?",
+    "opsi": {
+      "a": "Rina dan Umar",
+      "b": "Rina, Umar, dan Sinta",
+      "c": "Rina, Sinta, dan Tono",
+      "d": "Umar dan Sinta",
+      "e": "Rina, Umar, Sinta, dan Tono"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Rina 95, Sinta 95 − 6 = 89, Tono 89 − 2 = 87, Umar 87 + 3 = 90. Yang di atas 88: Rina, Umar, dan Sinta.<br>Opsi A (Rina dan Umar) gugur karena Sinta (89) juga di atas 88; Opsi C (Rina, Sinta, dan Tono) gugur karena Tono hanya 87, sedangkan Umar (90) terlewat; Opsi D (Umar dan Sinta) gugur karena Rina (95) terlewat; Opsi E (Rina, Umar, Sinta, dan Tono) gugur karena Tono hanya 87. Jawaban: Opsi B (Rina, Umar, dan Sinta). Tips: hitung nilai setiap orang dulu dari orang yang diketahui nilainya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-063",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 1,
+    "sumber": "A3#63",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Dewi dan Fitri suka berenang, sedangkan Gina dan Hana suka bersepeda. Fitri dan Hana sama-sama suka melukis."
+    ],
+    "stem": "Siapa yang suka bersepeda dan melukis?",
+    "opsi": {
+      "a": "Dewi",
+      "b": "Fitri",
+      "c": "Gina",
+      "d": "Hana",
+      "e": "Tidak ada"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Yang suka bersepeda: Gina dan Hana. Yang suka melukis: Fitri dan Hana. Orang yang ada di kedua kelompok hanya Hana.<br>Opsi A (Dewi) gugur karena Dewi hanya suka berenang; Opsi B (Fitri) gugur karena Fitri suka berenang dan melukis, bukan bersepeda; Opsi C (Gina) gugur karena Gina tidak disebut suka melukis; Opsi E (Tidak ada) gugur karena Hana memenuhi keduanya. Jawaban: Opsi D (Hana). Tips: cari nama yang muncul di kedua kelompok.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-064",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "A3#64",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Raka, Sinta, Laras, Tegar, dan Bima masing-masing mengambil permen dari sebuah toples. Pertama, empat anak mengambil satu permen rasa stroberi. Kemudian Sinta dan Tegar tidak mengambil permen rasa cokelat seperti yang dilakukan anak lainnya. Sinta hanya mengambil satu permen, yaitu rasa melon. Setelah itu, selain Sinta, hanya Raka dan Bima yang tidak mengambil permen rasa kopi."
+    ],
+    "stem": "Siapa yang hanya mengambil satu permen rasa kopi dan satu permen rasa stroberi?",
+    "opsi": {
+      "a": "Laras",
+      "b": "Tegar",
+      "c": "Raka",
+      "d": "Sinta",
+      "e": "Bima"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Laras) gugur karena Laras juga mengambil cokelat; Opsi C (Raka) gugur karena Raka tidak mengambil kopi; Opsi D (Sinta) gugur karena Sinta hanya mengambil melon; Opsi E (Bima) gugur karena Bima tidak mengambil kopi. Jawaban: Opsi B (Tegar). Tips: susun tabel anak × rasa; isi dari kalimat yang paling pasti (Sinta) lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-065",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "A3#65",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Raka, Sinta, Laras, Tegar, dan Bima masing-masing mengambil permen dari sebuah toples. Pertama, empat anak mengambil satu permen rasa stroberi. Kemudian Sinta dan Tegar tidak mengambil permen rasa cokelat seperti yang dilakukan anak lainnya. Sinta hanya mengambil satu permen, yaitu rasa melon. Setelah itu, selain Sinta, hanya Raka dan Bima yang tidak mengambil permen rasa kopi."
+    ],
+    "stem": "Siapa yang mengambil tiga permen?",
+    "opsi": {
+      "a": "Raka",
+      "b": "Sinta",
+      "c": "Tegar",
+      "d": "Bima",
+      "e": "Laras"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Raka) gugur karena Raka mengambil dua permen; Opsi B (Sinta) gugur karena Sinta mengambil satu permen; Opsi C (Tegar) gugur karena Tegar mengambil dua permen; Opsi D (Bima) gugur karena Bima mengambil dua permen. Jawaban: Opsi E (Laras). Tips: kalimat \"seperti yang dilakukan anak lainnya\" berarti semua anak sisanya ikut mengambil.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-066",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 3,
+    "sumber": "A3#66",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Raka, Sinta, Laras, Tegar, dan Bima masing-masing mengambil permen dari sebuah toples. Pertama, empat anak mengambil satu permen rasa stroberi. Kemudian Sinta dan Tegar tidak mengambil permen rasa cokelat seperti yang dilakukan anak lainnya. Sinta hanya mengambil satu permen, yaitu rasa melon. Setelah itu, selain Sinta, hanya Raka dan Bima yang tidak mengambil permen rasa kopi."
+    ],
+    "stem": "Siapa dua anak yang mengambil permen dengan rasa yang persis sama?",
+    "opsi": {
+      "a": "Laras dan Tegar",
+      "b": "Tegar dan Bima",
+      "c": "Raka dan Laras",
+      "d": "Raka dan Bima",
+      "e": "Sinta dan Raka"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Laras dan Tegar) gugur karena Laras mengambil tiga rasa, Tegar dua; Opsi B (Tegar dan Bima) gugur karena jumlahnya sama (dua), tetapi rasanya berbeda: Tegar kopi, Bima cokelat; Opsi C (Raka dan Laras) gugur karena Laras mengambil kopi, Raka tidak; Opsi E (Sinta dan Raka) gugur karena Sinta hanya mengambil melon. Jawaban: Opsi D (Raka dan Bima). Tips: \"rasa yang persis sama\" berbeda dengan \"jumlah rasa yang sama\"; cek isi, bukan hanya banyaknya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-067",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "A3#67",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Raka, Sinta, Laras, Tegar, dan Bima masing-masing mengambil permen dari sebuah toples. Pertama, empat anak mengambil satu permen rasa stroberi. Kemudian Sinta dan Tegar tidak mengambil permen rasa cokelat seperti yang dilakukan anak lainnya. Sinta hanya mengambil satu permen, yaitu rasa melon. Setelah itu, selain Sinta, hanya Raka dan Bima yang tidak mengambil permen rasa kopi."
+    ],
+    "stem": "Berapa jumlah seluruh permen yang mereka ambil?",
+    "opsi": {
+      "a": "8",
+      "b": "9",
+      "c": "11",
+      "d": "10",
+      "e": "7"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat. Jumlahnya 2 + 1 + 3 + 2 + 2 = 10 permen.<br>Opsi A (8) gugur karena lupa permen kopi Tegar dan permen melon Sinta; Opsi B (9) gugur karena lupa permen melon Sinta; Opsi C (11) gugur karena menghitung stroberi lima anak, padahal Sinta tidak mengambil stroberi; Opsi E (7) gugur karena hanya menghitung stroberi dan cokelat. Jawaban: Opsi D (10). Tips: jumlahkan per anak dari tabel, jangan per kalimat (ada kalimat yang menyebut anak yang sama).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-068",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 2,
+    "sumber": "A3#68",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Enam pelari bernomor 1 sampai 6 mengikuti lomba lari. Hasil lomba:",
+      "• Pelari 3 finis paling akhir.\n• Pelari 6 finis sebelum pelari 2.\n• Pelari 1 finis sebelum pelari 5.\n• Pelari 4 finis di antara pelari 2 dan pelari 5."
+    ],
+    "stem": "Urutan finis yang MUNGKIN dari pertama sampai terakhir adalah …",
+    "opsi": {
+      "a": "6, 1, 2, 4, 5, 3",
+      "b": "1, 6, 4, 2, 5, 3",
+      "c": "6, 2, 1, 4, 3, 5",
+      "d": "2, 6, 1, 4, 5, 3",
+      "e": "6, 5, 4, 2, 1, 3"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Pelari 3 pasti keenam. Sisanya diurutkan dengan syarat 6 sebelum 2, 1 sebelum 5, dan 4 berada di antara 2 dan 5. Hanya 6, 1, 2, 4, 5, 3 yang lolos semua syarat.<br>Opsi B (1, 6, 4, 2, 5, 3) gugur karena pelari 4 tidak berada di antara pelari 2 dan 5; Opsi C (6, 2, 1, 4, 3, 5) gugur karena pelari 3 tidak finis paling akhir; Opsi D (2, 6, 1, 4, 5, 3) gugur karena pelari 2 finis sebelum pelari 6; Opsi E (6, 5, 4, 2, 1, 3) gugur karena pelari 5 finis sebelum pelari 1. Jawaban: Opsi A (6, 1, 2, 4, 5, 3). Tips: coret dulu opsi yang tidak menaruh pelari 3 di akhir.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-069",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 3,
+    "sumber": "A3#69",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Enam pelari bernomor 1 sampai 6 mengikuti lomba lari. Hasil lomba:",
+      "• Pelari 3 finis paling akhir.\n• Pelari 6 finis sebelum pelari 2.\n• Pelari 1 finis sebelum pelari 5.\n• Pelari 4 finis di antara pelari 2 dan pelari 5."
+    ],
+    "stem": "Urutan finis yang TIDAK MUNGKIN dari pertama sampai terakhir adalah …",
+    "opsi": {
+      "a": "1, 6, 2, 4, 5, 3",
+      "b": "6, 2, 1, 4, 5, 3",
+      "c": "1, 5, 4, 6, 2, 3",
+      "d": "6, 1, 5, 4, 2, 3",
+      "e": "6, 4, 2, 1, 5, 3"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Pelari 3 pasti keenam. Sisanya diurutkan dengan syarat 6 sebelum 2, 1 sebelum 5, dan 4 berada di antara 2 dan 5. Pada 6, 4, 2, 1, 5, 3 pelari 4 finis sebelum pelari 2 dan 5, jadi tidak berada di antara keduanya.<br>Opsi A (1, 6, 2, 4, 5, 3) gugur karena urutan ini memenuhi semua syarat; Opsi B (6, 2, 1, 4, 5, 3) gugur karena urutan ini memenuhi semua syarat; Opsi C (1, 5, 4, 6, 2, 3) gugur karena urutan ini memenuhi semua syarat; Opsi D (6, 1, 5, 4, 2, 3) gugur karena urutan ini memenuhi semua syarat. Jawaban: Opsi E (6, 4, 2, 1, 5, 3). Tips: untuk soal \"tidak mungkin\", cukup temukan satu syarat yang dilanggar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-070",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 3,
+    "sumber": "A3#70",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Sebuah perusahaan mencari seorang staf administrasi dengan dua penilaian utama: komunikasi dan ketelitian. Lima kandidat melamar, yaitu Kirana, Lestari, Mega, Nadia, dan Olivia. Hasil penilaian:",
+      "• Kirana lebih baik komunikasinya daripada Lestari, tetapi tidak lebih teliti daripada Olivia.\n• Komunikasi Nadia paling baik di antara semua kandidat, tetapi ia tidak lebih teliti daripada Mega.\n• Lestari tidak lebih baik komunikasinya daripada Olivia, tetapi lebih teliti daripada Kirana dan Nadia.\n• Komunikasi Kirana lebih baik daripada Olivia, tetapi kalah dari Mega.\n• Mega tidak seteliti Olivia, tetapi lebih teliti daripada Lestari.\n• Kirana lebih teliti daripada Nadia.",
+      "Pada setiap penilaian tidak ada dua kandidat dengan peringkat yang sama. Peringkat pertama komunikasi mendapat skor 5 dan berkurang 1 untuk setiap peringkat di bawahnya. Peringkat pertama ketelitian mendapat skor 8 dan berkurang 1 untuk setiap peringkat di bawahnya. Skor akhir = skor komunikasi + skor ketelitian."
+    ],
+    "stem": "Dengan memperhatikan kedua penilaian, siapa yang paling berpeluang diterima?",
+    "opsi": {
+      "a": "Kirana",
+      "b": "Lestari",
+      "c": "Mega",
+      "d": "Nadia",
+      "e": "Olivia"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10.<br>Opsi A (Kirana) gugur karena skornya 8; Opsi B (Lestari) gugur karena skornya 7; Opsi D (Nadia) gugur karena skornya 9, walaupun komunikasinya terbaik; Opsi E (Olivia) gugur karena skornya 10, walaupun paling teliti. Jawaban: Opsi C (Mega). Tips: susun dua daftar peringkat terpisah, baru jumlahkan skornya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-071",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 3,
+    "sumber": "A3#71",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Sebuah perusahaan mencari seorang staf administrasi dengan dua penilaian utama: komunikasi dan ketelitian. Lima kandidat melamar, yaitu Kirana, Lestari, Mega, Nadia, dan Olivia. Hasil penilaian:",
+      "• Kirana lebih baik komunikasinya daripada Lestari, tetapi tidak lebih teliti daripada Olivia.\n• Komunikasi Nadia paling baik di antara semua kandidat, tetapi ia tidak lebih teliti daripada Mega.\n• Lestari tidak lebih baik komunikasinya daripada Olivia, tetapi lebih teliti daripada Kirana dan Nadia.\n• Komunikasi Kirana lebih baik daripada Olivia, tetapi kalah dari Mega.\n• Mega tidak seteliti Olivia, tetapi lebih teliti daripada Lestari.\n• Kirana lebih teliti daripada Nadia.",
+      "Pada setiap penilaian tidak ada dua kandidat dengan peringkat yang sama. Peringkat pertama komunikasi mendapat skor 5 dan berkurang 1 untuk setiap peringkat di bawahnya. Peringkat pertama ketelitian mendapat skor 8 dan berkurang 1 untuk setiap peringkat di bawahnya. Skor akhir = skor komunikasi + skor ketelitian."
+    ],
+    "stem": "Siapa yang paling kecil peluangnya untuk diterima?",
+    "opsi": {
+      "a": "Kirana",
+      "b": "Lestari",
+      "c": "Mega",
+      "d": "Nadia",
+      "e": "Olivia"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10. Skor terendah dimiliki Lestari (7).<br>Opsi A (Kirana) gugur karena skornya 8; Opsi C (Mega) gugur karena skornya 11, tertinggi; Opsi D (Nadia) gugur karena skornya 9; Opsi E (Olivia) gugur karena skornya 10, walaupun paling teliti. Jawaban: Opsi B (Lestari). Tips: kandidat yang terbawah di satu penilaian belum tentu terendah di skor akhir; jumlahkan dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-072",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "A3#72",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Sebuah perusahaan mencari seorang staf administrasi dengan dua penilaian utama: komunikasi dan ketelitian. Lima kandidat melamar, yaitu Kirana, Lestari, Mega, Nadia, dan Olivia. Hasil penilaian:",
+      "• Kirana lebih baik komunikasinya daripada Lestari, tetapi tidak lebih teliti daripada Olivia.\n• Komunikasi Nadia paling baik di antara semua kandidat, tetapi ia tidak lebih teliti daripada Mega.\n• Lestari tidak lebih baik komunikasinya daripada Olivia, tetapi lebih teliti daripada Kirana dan Nadia.\n• Komunikasi Kirana lebih baik daripada Olivia, tetapi kalah dari Mega.\n• Mega tidak seteliti Olivia, tetapi lebih teliti daripada Lestari.\n• Kirana lebih teliti daripada Nadia.",
+      "Pada setiap penilaian tidak ada dua kandidat dengan peringkat yang sama. Peringkat pertama komunikasi mendapat skor 5 dan berkurang 1 untuk setiap peringkat di bawahnya. Peringkat pertama ketelitian mendapat skor 8 dan berkurang 1 untuk setiap peringkat di bawahnya. Skor akhir = skor komunikasi + skor ketelitian."
+    ],
+    "stem": "Berapakah skor akhir Nadia?",
+    "opsi": {
+      "a": "13",
+      "b": "10",
+      "c": "9",
+      "d": "4",
+      "e": "11"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10.<br>Opsi A (13) gugur karena memakai skor ketelitian terbaik (8) untuk Nadia; Opsi B (10) gugur karena memakai skor ketelitian 5 untuk Nadia; Opsi D (4) gugur karena lupa menambah skor komunikasi 5; Opsi E (11) gugur karena menjawab skor Mega yang tertinggi. Jawaban: Opsi C (9). Tips: Nadia terbaik di komunikasi (5) tetapi paling tidak teliti (4).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-A3-073",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 2,
+    "sumber": "A3#73",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Sebuah perusahaan mencari seorang staf administrasi dengan dua penilaian utama: komunikasi dan ketelitian. Lima kandidat melamar, yaitu Kirana, Lestari, Mega, Nadia, dan Olivia. Hasil penilaian:",
+      "• Kirana lebih baik komunikasinya daripada Lestari, tetapi tidak lebih teliti daripada Olivia.\n• Komunikasi Nadia paling baik di antara semua kandidat, tetapi ia tidak lebih teliti daripada Mega.\n• Lestari tidak lebih baik komunikasinya daripada Olivia, tetapi lebih teliti daripada Kirana dan Nadia.\n• Komunikasi Kirana lebih baik daripada Olivia, tetapi kalah dari Mega.\n• Mega tidak seteliti Olivia, tetapi lebih teliti daripada Lestari.\n• Kirana lebih teliti daripada Nadia.",
+      "Pada setiap penilaian tidak ada dua kandidat dengan peringkat yang sama. Peringkat pertama komunikasi mendapat skor 5 dan berkurang 1 untuk setiap peringkat di bawahnya. Peringkat pertama ketelitian mendapat skor 8 dan berkurang 1 untuk setiap peringkat di bawahnya. Skor akhir = skor komunikasi + skor ketelitian."
+    ],
+    "stem": "Berapa selisih skor akhir tertinggi dan terendah?",
+    "opsi": {
+      "a": "3",
+      "b": "4",
+      "c": "1",
+      "d": "18",
+      "e": "7"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10. Selisihnya 11 − 7 = 4.<br>Opsi A (3) gugur karena memakai skor terendah kedua (11 − 8); Opsi C (1) gugur karena membandingkan dua skor tertinggi (11 − 10); Opsi D (18) gugur karena menjumlahkan skor tertinggi dan terendah; Opsi E (7) gugur karena menjawab skor terendah. Jawaban: Opsi B (4). Tips: skor tertinggi dan terendah dicari dari skor akhir, bukan dari salah satu penilaian.",
+    "status_kunci": "ganda"
+  }
+]
