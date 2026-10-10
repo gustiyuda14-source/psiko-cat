@@ -40,18 +40,18 @@ export const KECERMATAN_ANGKA_PACKAGE_LABELS: Record<number, string> = Object.fr
   KECERMATAN_ANGKA_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
-// Kecerdasan dan Kepribadian baru punya Paket 1 terisi (bank soal existing,
-// di-tag package_number=1). Paket 2-10 disediakan slotnya duluan di carousel
-// (nampil "Belum tersedia") supaya begitu bank soalnya nyusul, tinggal insert
-// ke DB dengan package_number yang sesuai — tidak ada kode yang perlu diubah.
-export const KECERDASAN_PACKAGES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)
+// khusus simulasi (SIMULASI_PACKAGE) dan TIDAK boleh muncul di sini, supaya
+// soal simulasi tidak bocor lewat latihan (pola dajiks-cest). Slot 2-11 tampil
+// "Belum tersedia" sampai bank soalnya di-insert dengan package_number tsb.
+export const KECERDASAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 export const KECERDASAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
-  KECERDASAN_PACKAGES.map((id) => [id, `Paket ${id}`])
+  KECERDASAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
-export const KEPRIBADIAN_PACKAGES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+export const KEPRIBADIAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
-  KEPRIBADIAN_PACKAGES.map((id) => [id, `Paket ${id}`])
+  KEPRIBADIAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
 // Simulasi/tryout membaca SATU paket per module, tidak pernah semua soal aktif

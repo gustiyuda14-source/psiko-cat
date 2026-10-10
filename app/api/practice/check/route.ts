@@ -7,6 +7,7 @@ import type {
   KecermatanOptionsPayload,
   KecermatanScoringRule,
 } from "@/lib/types/safe-question";
+import { SIMULASI_PACKAGE } from "@/lib/test-config";
 
 // Latihan dan ujian membaca dari bank soal yang sama (belum ada bank terpisah,
 // lihat F11 di AUDIT_CAT_2026-09-12.md). Peserta bisa tahu question_id dari
@@ -60,13 +61,19 @@ export async function POST(req: NextRequest) {
 
     const { data: question, error } = await supabaseAdmin
       .from("questions")
-      .select("type, scoring_rule, options_payload")
+      .select("type, package_number, scoring_rule, options_payload")
       .eq("id", question_id)
       .eq("is_active", true)
       .single();
 
     if (error || !question) {
       return NextResponse.json({ error: "Soal tidak ditemukan" }, { status: 404 });
+    }
+
+    // Soal paket simulasi tidak pernah dipakai latihan: jangan pernah balikin kuncinya.
+    const simulasiPackage = SIMULASI_PACKAGE[question.type as keyof typeof SIMULASI_PACKAGE];
+    if (simulasiPackage !== undefined && question.package_number === simulasiPackage) {
+      return NextResponse.json({ error: "Soal simulasi tidak tersedia untuk latihan" }, { status: 403 });
     }
 
     if (
