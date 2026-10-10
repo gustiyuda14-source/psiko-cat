@@ -421,5 +421,53 @@
     ],
     "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10. Selisihnya 11 − 7 = 4.<br>Opsi A (3) gugur karena memakai skor terendah kedua (11 − 8); Opsi C (1) gugur karena membandingkan dua skor tertinggi (11 − 10); Opsi D (18) gugur karena menjumlahkan skor tertinggi dan terendah; Opsi E (7) gugur karena menjawab skor terendah. Jawaban: Opsi B (4). Tips: skor tertinggi dan terendah dicari dari skor akhir, bukan dari salah satu penilaian.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-PR-054",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-JADWAL",
+    "tier": 1,
+    "sumber": "PR#54",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Bima memiliki jadwal libur kerja hari Senin dan Citra hari Kamis. Dodi libur pada hari yang sama dengan Citra. Minggu ini Bima bertukar jadwal libur dengan Citra, sedangkan jadwal Dodi tidak berubah."
+    ],
+    "stem": "Kesimpulan yang tepat adalah …",
+    "opsi": {
+      "a": "Bima libur dua kali dalam minggu ini",
+      "b": "Bima dan Dodi libur pada hari yang sama",
+      "c": "Bima dan Citra libur pada hari yang sama",
+      "d": "Dodi dan Citra libur bersama pada hari Senin",
+      "e": "Citra libur dua kali dalam minggu ini"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Setelah bertukar: Bima libur Kamis, Citra libur Senin. Dodi tetap Kamis. Jadi Bima dan Dodi libur pada hari yang sama.<br>Opsi A (Bima libur dua kali dalam minggu ini) gugur karena bertukar berarti tetap satu hari libur; Opsi C (Bima dan Citra libur pada hari yang sama) gugur karena Bima Kamis, Citra Senin; Opsi D (Dodi dan Citra libur bersama pada hari Senin) gugur karena Dodi libur Kamis, bukan Senin; Opsi E (Citra libur dua kali dalam minggu ini) gugur karena bertukar berarti tetap satu hari libur. Jawaban: Opsi B (Bima dan Dodi libur pada hari yang sama). Tips: tulis jadwal awal, terapkan pertukaran, baru bandingkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K11-PR-064",
+    "kartu": "K11",
+    "sub_type": "ANL-WCN-URUTAN",
+    "tier": 2,
+    "sumber": "PR#64",
+    "instruksi": "Bacalah informasi berikut, lalu jawab pertanyaannya.",
+    "bacaan": [
+      "Pohon jambu air lebih rendah dari pohon kelapa gading. Pohon kelapa gading paling rendah dibanding jenis pohon kelapa lainnya (kelapa hijau, kelapa sawit, dan lain-lain)."
+    ],
+    "stem": "Kesimpulan yang tepat adalah …",
+    "opsi": {
+      "a": "Pohon jambu air lebih tinggi dari pohon kelapa gading",
+      "b": "Semua pohon kelapa sama tinggi dengan pohon jambu air",
+      "c": "Pohon kelapa hijau lebih tinggi dari pohon jambu air",
+      "d": "Pohon jambu air lebih tinggi dari pohon kelapa hijau",
+      "e": "Pohon jambu air sama tinggi dengan pohon kelapa sawit"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Jambu air < kelapa gading ≤ semua kelapa lain (gading paling rendah di antara kelapa). Jadi setiap jenis kelapa lain, termasuk kelapa hijau, lebih tinggi dari jambu air.<br>Opsi A (Pohon jambu air lebih tinggi dari pohon kelapa gading) gugur karena bertentangan dengan pernyataan pertama; Opsi B (Semua pohon kelapa sama tinggi dengan pohon jambu air) gugur karena kelapa gading lebih tinggi dari jambu air; Opsi D (Pohon jambu air lebih tinggi dari pohon kelapa hijau) gugur karena kelapa hijau lebih tinggi dari gading, apalagi dari jambu; Opsi E (Pohon jambu air sama tinggi dengan pohon kelapa sawit) gugur karena kelapa sawit (jenis kelapa lain) lebih tinggi dari gading. Jawaban: Opsi C (Pohon kelapa hijau lebih tinggi dari pohon jambu air). Tips: susun urutan di garis bilangan; \"paling rendah di kelompoknya\" jadi batas bawah kelompok itu.",
+    "status_kunci": "ganda"
   }
 ]

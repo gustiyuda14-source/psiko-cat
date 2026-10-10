@@ -114,7 +114,7 @@ export default function DrillSession({
 
   useExamKeyboard({
     enabled: Boolean(q),
-    choiceKeys: LETTERS.map((k) => k.toUpperCase()),
+    choiceKeys: (q ? LETTERS.filter((k) => k in q.opsi) : LETTERS).map((k) => k.toUpperCase()),
     onChoose: choose,
     onPrev: () => setIds && goTo(Math.max(0, idx - 1)),
     onNext: () => setIds && goTo(Math.min(setIds.length - 1, idx + 1)),
@@ -215,7 +215,7 @@ export default function DrillSession({
           </div>
 
           <div className={`pt-1 ${q.opsi_gambar ? "opts-fig" : "opts"}`}>
-            {LETTERS.map((k) => {
+            {LETTERS.filter((k) => k in q.opsi).map((k) => {
               const sel = picked.includes(k);
               const isKey = result?.kunci.includes(k);
               const state = result ? (isKey ? "is-key" : sel ? "is-wrong" : "") : sel ? "sel" : "";

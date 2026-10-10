@@ -1,7 +1,7 @@
 // Kartu katalog drill Kecerdasan (docs/rencana/drilling/00 §2). Dipakai script build
 // (validasi sub_type) dan UI (katalog, label). Aman diimpor dari client.
 
-export type DrillAspek = "verbal" | "numerik" | "logika" | "analitis" | "figural";
+export type DrillAspek = "verbal" | "numerik" | "logika" | "analitis" | "figural" | "sikap";
 
 export const DRILL_ASPEK: { key: DrillAspek; label: string }[] = [
   { key: "verbal", label: "Verbal" },
@@ -9,9 +9,11 @@ export const DRILL_ASPEK: { key: DrillAspek; label: string }[] = [
   { key: "logika", label: "Logika" },
   { key: "analitis", label: "Analitis" },
   { key: "figural", label: "Figural" },
+  { key: "sikap", label: "Sikap Kerja" },
 ];
 
-export type DrillCard = { label: string; aspek: DrillAspek; desc: string; prefix: string[] };
+/** opsi: jumlah pilihan per soal (default 5 = a–e; Sikap Kerja 2 = a–b). */
+export type DrillCard = { label: string; aspek: DrillAspek; desc: string; prefix: string[]; opsi?: number };
 
 export const DRILL_CARDS: Record<string, DrillCard> = {
   K01: { label: "Sinonim & Antonim", aspek: "verbal", desc: "Persamaan dan lawan kata, termasuk kata baku langka", prefix: ["VRB-SIN-", "VRB-ANT-"] },
@@ -28,6 +30,7 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K12: { label: "Pola & Matriks Gambar", aspek: "figural", desc: "Matriks 3×3, deret, dan analogi gambar", prefix: ["FIG-MTX-", "FIG-SERI", "FIG-ANALOGI", "FIG-ROTASI-"] },
   K13: { label: "Ikon Kategori", aspek: "figural", desc: "Kelompok gambar berdasarkan kategori", prefix: ["FIG-IKON-"] },
   K14: { label: "Susun Potongan Gambar", aspek: "figural", desc: "Urutkan potongan menjadi gambar utuh", prefix: ["FIG-SUSUN-"] },
+  K15: { label: "Sikap Kerja", aspek: "sikap", desc: "Pilihan A/B sesuai kunci latihan nilai kerja institusi", prefix: ["SKJ-"], opsi: 2 },
 };
 
 export const DRILL_TIERS = [

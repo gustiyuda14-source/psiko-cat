@@ -108,7 +108,8 @@ function checkItem(it: Item, file: string) {
   if (!STATUSES.has(it.status_kunci)) fail(id, `status_kunci ${it.status_kunci} tidak dikenal`);
 
   const keys = Object.keys(it.opsi ?? {});
-  if (keys.join() !== LETTERS.join()) fail(id, "opsi harus tepat a–e");
+  const want = LETTERS.slice(0, card.opsi ?? 5);
+  if (keys.join() !== want.join()) fail(id, `opsi harus tepat ${want[0]}–${want[want.length - 1]}`);
   const texts = Object.values(it.opsi ?? {}).map((t) => t.trim());
   if (texts.some((t) => !t)) fail(id, "ada opsi kosong");
   if (new Set(texts).size !== texts.length) fail(id, "ada opsi kembar");
@@ -117,7 +118,7 @@ function checkItem(it: Item, file: string) {
 
   const [p1, p2] = (it.pembahasan ?? "").split("<br>");
   if (!p1?.trim() || !p2?.trim()) fail(id, "pembahasan harus 2 paragraf dipisah <br>");
-  for (const k of LETTERS)
+  for (const k of keys)
     if (!it.kunci.includes(k) && !p2?.includes(`Opsi ${k.toUpperCase()}`)) fail(id, `paragraf 2 tidak menggugurkan Opsi ${k.toUpperCase()}`);
 
   if (it.rumus !== undefined) {
@@ -145,7 +146,7 @@ function preview(card: string, items: Item[]) {
   const rows = items.map((it, i) => `
 <article><header><b>${i + 1}. ${esc(it.id)}</b> <span>${esc(it.sub_type)} · tier ${it.tier} · ${esc(it.sumber)} · ${esc(it.status_kunci)}</span></header>
 ${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}${(it.bacaan ?? []).map((p) => `<p class="bc">${esc(p)}</p>`).join("")}${it.tabel ? `<table>${[it.tabel.kolom, ...it.tabel.baris].map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join("")}</tr>`).join("")}</table>` : ""}<p class="stem">${esc(it.stem)}</p>${it.rumus ?? ""}${it.gambar ? `<img src="../../public/${esc(it.gambar)}" alt="" style="max-width:100%">` : ""}
-<ol type="A">${LETTERS.map((k) => `<li class="${it.kunci.includes(k) ? "key" : ""}">${esc(it.opsi[k])}</li>`).join("")}</ol>
+<ol type="A">${Object.keys(it.opsi).map((k) => `<li class="${it.kunci.includes(k) ? "key" : ""}">${esc(it.opsi[k])}</li>`).join("")}</ol>
 <div class="pb">${it.pembahasan.split("<br>").map((p) => `<p>${esc(p)}</p>`).join("")}</div></article>`).join("");
   const html = `<!doctype html><html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Preview ${card} ${esc(CARDS[card].label)}</title>

@@ -460,5 +460,215 @@
     ],
     "pembahasan": "Setiap peserta berada di aula atau di lapangan. Aula kosong, jadi pilihan aula gugur dan tersisa lapangan: semua peserta sedang berada di lapangan.<br>Opsi A (Semua peserta pelatihan sedang berada di aula.) gugur karena bertentangan dengan fakta aula kosong; Opsi C (Semua peserta pelatihan suka berada di lapangan.) gugur karena \"suka\" tidak disebut; premis hanya menyebut tempat; Opsi D (Sebagian peserta pelatihan sedang berada di aula.) gugur karena bertentangan dengan fakta aula kosong; Opsi E (Peserta pelatihan sedang pulang.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi B (Semua peserta pelatihan sedang berada di lapangan.). Tips: \"A atau B\" + \"bukan A\" → pasti B.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-055",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "PR#55",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua hewan berdarah panas memiliki jantung beruang empat. Paus adalah hewan berdarah panas.",
+    "opsi": {
+      "a": "Semua hewan memiliki jantung beruang empat dan berdarah panas.",
+      "b": "Sebagian paus berdarah dingin.",
+      "c": "Paus memiliki jantung beruang empat.",
+      "d": "Beberapa paus tidak memiliki jantung beruang empat.",
+      "e": "Semua paus tidak memiliki jantung beruang empat."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Paus termasuk hewan berdarah panas, dan semua hewan berdarah panas memiliki jantung beruang empat. Jadi paus memiliki jantung beruang empat.<br>Opsi A (Semua hewan memiliki jantung beruang empat dan berdarah panas.) gugur karena premis hanya bicara hewan berdarah panas, bukan semua hewan; Opsi B (Sebagian paus berdarah dingin.) gugur karena bertentangan dengan premis kedua; Opsi D (Beberapa paus tidak memiliki jantung beruang empat.) gugur karena bertentangan dengan kesimpulan: semua paus berdarah panas, jadi semua paus memiliki jantung beruang empat; Opsi E (Semua paus tidak memiliki jantung beruang empat.) gugur karena bertentangan dengan kedua premis. Jawaban: Opsi C (Paus memiliki jantung beruang empat.). Tips: pola Semua A = B, X = A → X = B.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-056",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 2,
+    "sumber": "PR#56",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua peserta upacara mengenakan seragam putih. Sebagian peserta upacara mengenakan topi.",
+    "opsi": {
+      "a": "Sebagian peserta upacara tidak berseragam putih tetapi bertopi.",
+      "b": "Semua peserta upacara berseragam putih dan bertopi.",
+      "c": "Sebagian peserta upacara berseragam putih dan tidak bertopi.",
+      "d": "Sebagian peserta upacara berseragam putih dan bertopi.",
+      "e": "Semua peserta upacara tidak berseragam putih."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Peserta yang bertopi tetap peserta, jadi juga berseragam putih: sebagian peserta berseragam putih dan bertopi.<br>Opsi A (Sebagian peserta upacara tidak berseragam putih tetapi bertopi.) gugur karena semua peserta berseragam putih; Opsi B (Semua peserta upacara berseragam putih dan bertopi.) gugur karena hanya sebagian yang bertopi; Opsi C (Sebagian peserta upacara berseragam putih dan tidak bertopi.) gugur karena \"sebagian bertopi\" tidak memastikan ada yang tidak bertopi; Opsi E (Semua peserta upacara tidak berseragam putih.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi D (Sebagian peserta upacara berseragam putih dan bertopi.). Tips: \"sebagian\" tidak otomatis berarti \"sebagian lain tidak\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-057",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 3,
+    "sumber": "PR#57",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Beberapa warga hadir di balai desa. Semua pengurus karang taruna hadir di balai desa.",
+    "opsi": {
+      "a": "Semua warga adalah pengurus karang taruna.",
+      "b": "Beberapa pengurus karang taruna tidak hadir di balai desa.",
+      "c": "Semua pengurus karang taruna adalah warga.",
+      "d": "Ada warga yang bukan pengurus karang taruna dan tidak hadir.",
+      "e": "Tidak dapat disimpulkan hubungan antara warga dan pengurus karang taruna."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Kedua premis hanya menyatakan dua kelompok sama-sama hadir. Hadir di tempat yang sama tidak menentukan apakah pengurus itu warga atau sebaliknya.<br>Opsi A (Semua warga adalah pengurus karang taruna.) gugur karena tidak ada premis yang menyamakan warga dengan pengurus; Opsi B (Beberapa pengurus karang taruna tidak hadir di balai desa.) gugur karena bertentangan dengan premis kedua; Opsi C (Semua pengurus karang taruna adalah warga.) gugur karena keanggotaan pengurus sebagai warga tidak dinyatakan; Opsi D (Ada warga yang bukan pengurus karang taruna dan tidak hadir.) gugur karena \"beberapa hadir\" tidak memastikan ada warga yang tidak hadir. Jawaban: Opsi E (Tidak dapat disimpulkan hubungan antara warga dan pengurus karang taruna.). Tips: dua kelompok yang sama-sama masuk himpunan ketiga belum tentu beririsan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-058",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "PR#58",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Setiap pengunjung museum wajib menitipkan tas di loker. Laras adalah pengunjung museum.",
+    "opsi": {
+      "a": "Laras wajib menitipkan tas di loker.",
+      "b": "Beberapa pengunjung museum adalah teman Laras.",
+      "c": "Semua pengunjung museum adalah teman Laras.",
+      "d": "Laras mungkin tidak menitipkan tas.",
+      "e": "Laras tidak perlu menitipkan tas di loker."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Laras termasuk pengunjung museum, dan setiap pengunjung wajib menitipkan tas. Jadi Laras wajib menitipkan tas di loker.<br>Opsi B (Beberapa pengunjung museum adalah teman Laras.) gugur karena pertemanan tidak dibahas dalam premis; Opsi C (Semua pengunjung museum adalah teman Laras.) gugur karena pertemanan tidak dibahas dalam premis; Opsi D (Laras mungkin tidak menitipkan tas.) gugur karena kemungkinan melanggar tidak dapat disimpulkan dari aturan wajib; Opsi E (Laras tidak perlu menitipkan tas di loker.) gugur karena bertentangan dengan premis. Jawaban: Opsi A (Laras wajib menitipkan tas di loker.). Tips: aturan untuk \"setiap\" anggota langsung berlaku untuk individu anggota.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-059",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 2,
+    "sumber": "PR#59",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua siswa akan pulang lebih awal jika rapat guru diadakan. Hari ini rapat guru diadakan.",
+    "opsi": {
+      "a": "Beberapa siswa yang pulang lebih awal kecewa.",
+      "b": "Beberapa siswa tidak pulang lebih awal hari ini.",
+      "c": "Semua siswa tidak pulang lebih awal hari ini.",
+      "d": "Tidak ada siswa yang tidak pulang lebih awal hari ini.",
+      "e": "Beberapa siswa pulang lebih awal karena sakit."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Syarat (rapat guru) terpenuhi, maka akibatnya berlaku untuk semua siswa. \"Tidak ada siswa yang tidak pulang lebih awal\" = semua siswa pulang lebih awal.<br>Opsi A (Beberapa siswa yang pulang lebih awal kecewa.) gugur karena perasaan siswa tidak dibahas; Opsi B (Beberapa siswa tidak pulang lebih awal hari ini.) gugur karena bertentangan: semua siswa pulang lebih awal; Opsi C (Semua siswa tidak pulang lebih awal hari ini.) gugur karena bertentangan dengan kesimpulan modus ponens; Opsi E (Beberapa siswa pulang lebih awal karena sakit.) gugur karena alasan sakit tidak ada dalam premis. Jawaban: Opsi D (Tidak ada siswa yang tidak pulang lebih awal hari ini.). Tips: kenali bentuk negatif ganda: tidak ada yang tidak = semua.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-060",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "PR#60",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Setiap anggota tim SAR memiliki sertifikat pertolongan pertama. Raka tidak memiliki sertifikat pertolongan pertama.",
+    "opsi": {
+      "a": "Raka mungkin anggota tim SAR.",
+      "b": "Raka bukan anggota tim SAR.",
+      "c": "Anggota tim SAR tidak harus bersertifikat.",
+      "d": "Raka anggota tim SAR tetapi tidak bersertifikat.",
+      "e": "Ada anggota tim SAR yang tidak bersertifikat."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Jika anggota tim SAR → bersertifikat. Raka tidak bersertifikat, maka Raka bukan anggota tim SAR (modus tollens).<br>Opsi A (Raka mungkin anggota tim SAR.) gugur karena modus tollens memberi kepastian, bukan kemungkinan; Opsi C (Anggota tim SAR tidak harus bersertifikat.) gugur karena bertentangan dengan premis pertama; Opsi D (Raka anggota tim SAR tetapi tidak bersertifikat.) gugur karena bertentangan dengan premis pertama; Opsi E (Ada anggota tim SAR yang tidak bersertifikat.) gugur karena bertentangan dengan kata \"setiap\". Jawaban: Opsi B (Raka bukan anggota tim SAR.). Tips: p → q, bukan q, maka bukan p.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-061",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 2,
+    "sumber": "PR#61",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Nadia berlatih renang setiap Sabtu pagi jika tidak ada ujian di sekolah. Jika ada ujian, latihan renang dipindah ke Minggu pagi. Sabtu pagi ini Nadia ada ujian di sekolah.",
+    "opsi": {
+      "a": "Nadia tetap berlatih renang Sabtu pagi ini.",
+      "b": "Nadia tidak berangkat ujian Sabtu ini.",
+      "c": "Nadia berlatih renang pada Minggu pagi minggu ini.",
+      "d": "Nadia mengganti ujian ke hari lain.",
+      "e": "Nadia tidak berlatih renang sama sekali minggu ini."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Syarat \"ada ujian\" terpenuhi, maka berlaku aturan kedua: latihan dipindah ke Minggu pagi.<br>Opsi A (Nadia tetap berlatih renang Sabtu pagi ini.) gugur karena latihan Sabtu hanya jika tidak ada ujian; Opsi B (Nadia tidak berangkat ujian Sabtu ini.) gugur karena premis menyatakan Nadia ada ujian; Opsi D (Nadia mengganti ujian ke hari lain.) gugur karena tidak ada aturan pemindahan ujian; Opsi E (Nadia tidak berlatih renang sama sekali minggu ini.) gugur karena latihan dipindah, bukan dibatalkan. Jawaban: Opsi C (Nadia berlatih renang pada Minggu pagi minggu ini.). Tips: cari aturan yang syaratnya cocok dengan fakta, lalu ambil akibatnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-062",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 2,
+    "sumber": "PR#62",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua pelamar yang berlari 2,4 km kurang dari 12 menit lolos tahap fisik. Semua pelamar yang push-up lebih dari 40 kali lolos tahap fisik. Bagas berlari 2,4 km dalam 11 menit dan push-up 35 kali.",
+    "opsi": {
+      "a": "Bagas tidak lolos tahap fisik karena push-up kurang dari 40.",
+      "b": "Bagas lolos tahap fisik.",
+      "c": "Semua pelamar lolos tahap fisik.",
+      "d": "Beberapa pelamar yang push-up kurang dari 40 kali tidak lolos.",
+      "e": "Bagas harus mengulang tes push-up."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Cukup satu syarat terpenuhi. Lari 11 menit < 12 menit, maka Bagas lolos tahap fisik.<br>Opsi A (Bagas tidak lolos tahap fisik karena push-up kurang dari 40.) gugur karena push-up hanya salah satu jalur lolos, bukan syarat wajib; Opsi C (Semua pelamar lolos tahap fisik.) gugur karena premis tidak membahas semua pelamar; Opsi D (Beberapa pelamar yang push-up kurang dari 40 kali tidak lolos.) gugur karena tidak lolos lewat push-up tidak berarti gagal lewat lari; Opsi E (Bagas harus mengulang tes push-up.) gugur karena tes ulang tidak dibahas. Jawaban: Opsi B (Bagas lolos tahap fisik.). Tips: dua aturan \"semua … lolos\" bersifat ATAU: satu terpenuhi sudah cukup.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-063",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 3,
+    "sumber": "PR#63",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua buku bersampul biru disimpan di rak atas. Beberapa buku bersampul tebal disimpan di rak atas.",
+    "opsi": {
+      "a": "Semua buku bersampul tebal disimpan di rak atas.",
+      "b": "Ada buku bersampul biru yang disimpan di laci.",
+      "c": "Beberapa buku bersampul tebal bersampul biru.",
+      "d": "Ada buku di rak atas yang bersampul tebal.",
+      "e": "Semua buku di rak atas bersampul biru."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Premis kedua langsung menyatakan ada buku bersampul tebal di rak atas. Itu satu-satunya hal yang pasti.<br>Opsi A (Semua buku bersampul tebal disimpan di rak atas.) gugur karena premis hanya menyebut beberapa; Opsi B (Ada buku bersampul biru yang disimpan di laci.) gugur karena bertentangan dengan premis pertama; Opsi C (Beberapa buku bersampul tebal bersampul biru.) gugur karena sama-sama di rak atas tidak berarti tebal dan biru beririsan; Opsi E (Semua buku di rak atas bersampul biru.) gugur karena premis tidak menyatakan rak atas hanya berisi buku biru. Jawaban: Opsi D (Ada buku di rak atas yang bersampul tebal.). Tips: jebakan klasik: dua kelompok di tempat yang sama belum tentu beririsan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-PR-067",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 3,
+    "sumber": "PR#67",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua peserta terdaftar yang hadir di aula seminar mengenakan kartu identitas. Joko adalah peserta terdaftar seminar. Joko tidak mengenakan kartu identitas.",
+    "opsi": {
+      "a": "Joko bukan peserta terdaftar seminar.",
+      "b": "Beberapa peserta yang hadir tidak mengenakan kartu identitas.",
+      "c": "Joko batal terdaftar karena tidak mengenakan kartu identitas.",
+      "d": "Joko adalah peserta terdaftar yang tidak hadir di aula seminar.",
+      "e": "Semua peserta yang hadir mengenakan kartu identitas kecuali Joko."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Peserta terdaftar yang hadir → memakai kartu identitas. Joko peserta terdaftar tetapi tidak memakai kartu, maka Joko tidak hadir di aula (modus tollens).<br>Opsi A (Joko bukan peserta terdaftar seminar.) gugur karena premis kedua menyatakan Joko terdaftar; Opsi B (Beberapa peserta yang hadir tidak mengenakan kartu identitas.) gugur karena bertentangan dengan premis pertama; Opsi C (Joko batal terdaftar karena tidak mengenakan kartu identitas.) gugur karena status pendaftaran tidak berubah karena kartu; Opsi E (Semua peserta yang hadir mengenakan kartu identitas kecuali Joko.) gugur karena \"semua\" tidak memberi pengecualian. Jawaban: Opsi D (Joko adalah peserta terdaftar yang tidak hadir di aula seminar.). Tips: modus tollens: akibat tidak terjadi → syarat (hadir) tidak terpenuhi.",
+    "status_kunci": "ganda"
   }
 ]

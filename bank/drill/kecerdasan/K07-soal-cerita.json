@@ -950,5 +950,205 @@
     },
     "pembahasan": "Lewat Ngawi 4 × 3 = 12 cara. Lewat Ponorogo 5 × 2 = 10 cara. Karena memilih salah satu jalur, hasilnya dijumlah: 12 + 10 = 22 cara.<br>Opsi A (14 cara) gugur karena menjumlahkan semua jalan; Opsi B (120 cara) gugur karena mengalikan semua jalan; Opsi C (12 cara) gugur karena hanya menghitung jalur lewat Ngawi; Opsi D (10 cara) gugur karena hanya menghitung jalur lewat Ponorogo. Jawaban: Opsi E (22 cara). Tips: kalikan di dalam satu jalur, jumlahkan antarjalur.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-036",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 2,
+    "sumber": "PR#36",
+    "stem": "Seseorang biasa berkendara ke kantor selama 1 jam untuk jarak 40 km. Jika suatu hari ia terlambat berangkat 20 menit dan tetap ingin tiba tepat waktu, kecepatan yang harus digunakan adalah …",
+    "opsi": {
+      "a": "48 km/jam",
+      "b": "50 km/jam",
+      "c": "55 km/jam",
+      "d": "60 km/jam",
+      "e": "64 km/jam"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "40/(40/60)",
+    "nilai_opsi": {
+      "a": 48,
+      "b": 50,
+      "c": 55,
+      "d": 60,
+      "e": 64
+    },
+    "pembahasan": "Waktu tersisa = 60 − 20 = 40 menit = 2/3 jam. Kecepatan = 40 ÷ 2/3 = 60 km/jam.<br>Opsi A (48 km/jam) gugur karena menambah 20% dari 40; Opsi B (50 km/jam) gugur karena menambah 10 km/jam begitu saja; Opsi C (55 km/jam) gugur karena tebakan tanpa menghitung waktu tersisa; Opsi E (64 km/jam) gugur karena salah waktu tersisa (37,5 menit). Jawaban: Opsi D (60 km/jam). Tips: ubah menit ke jam dulu (40 menit = 2/3 jam).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-049",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 2,
+    "sumber": "PR#49",
+    "stem": "Setiap pagi Tegar berlari mengelilingi lapangan yang kelilingnya 0,4 km sebanyak 6 putaran dengan kecepatan 8 km/jam. Berapa lama Tegar berlari setiap pagi?",
+    "opsi": {
+      "a": "12 menit",
+      "b": "15 menit",
+      "c": "18 menit",
+      "d": "24 menit",
+      "e": "30 menit"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "0.4*6/8*60",
+    "nilai_opsi": {
+      "a": 12,
+      "b": 15,
+      "c": 18,
+      "d": 24,
+      "e": 30
+    },
+    "pembahasan": "Jarak = 0,4 × 6 = 2,4 km. Waktu = 2,4 ÷ 8 = 0,3 jam = 18 menit.<br>Opsi A (12 menit) gugur karena menghitung 0,4 × 6 ÷ 12 (salah kecepatan); Opsi B (15 menit) gugur karena menghitung 2 km saja; Opsi D (24 menit) gugur karena menghitung 0,4 × 6 × 10; Opsi E (30 menit) gugur karena menghitung 0,5 jam. Jawaban: Opsi C (18 menit). Tips: jarak total dulu, baru bagi kecepatan, lalu × 60 menit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-050",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UMUR",
+    "tier": 3,
+    "sumber": "PR#50",
+    "stem": "Enam tahun yang lalu, usia Fajar (f) adalah sepertiga usianya sekarang. Usia Gita (g) sekarang tiga kali usianya dua tahun yang lalu. Pernyataan yang benar adalah …",
+    "opsi": {
+      "a": "f < 3g",
+      "b": "3f = g",
+      "c": "f = 3g",
+      "d": "f > 3g",
+      "e": "f < g"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "f − 6 = f/3 → 2f/3 = 6 → f = 9. g = 3(g − 2) → g = 3g − 6 → g = 3. Jadi f = 9 = 3 × 3 = 3g.<br>Opsi A (f < 3g) gugur karena f tepat sama dengan 3g, bukan lebih kecil; Opsi B (3f = g) gugur karena 3f = 27 ≠ g; Opsi D (f > 3g) gugur karena f tepat sama dengan 3g, bukan lebih besar; Opsi E (f < g) gugur karena f = 9 lebih besar dari g = 3. Jawaban: Opsi C (f = 3g). Tips: susun dua persamaan terpisah, hitung nilai f dan g, baru bandingkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-051",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GEOMETRI",
+    "tier": 1,
+    "sumber": "PR#51",
+    "stem": "Denah sebuah gedung dibuat dengan skala 1 : 250. Jika panjang gedung sebenarnya 15 m, panjang gedung pada denah adalah …",
+    "opsi": {
+      "a": "3 cm",
+      "b": "4,5 cm",
+      "c": "6 cm",
+      "d": "7,5 cm",
+      "e": "60 cm"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "1500/250",
+    "nilai_opsi": {
+      "a": 3,
+      "b": 4.5,
+      "c": 6,
+      "d": 7.5,
+      "e": 60
+    },
+    "pembahasan": "15 m = 1.500 cm. Panjang di denah = 1.500 ÷ 250 = 6 cm.<br>Opsi A (3 cm) gugur karena membagi dengan 500; Opsi B (4,5 cm) gugur karena salah konversi m ke cm; Opsi D (7,5 cm) gugur karena membagi dengan 200; Opsi E (60 cm) gugur karena membagi 15.000 (salah satu nol). Jawaban: Opsi C (6 cm). Tips: samakan satuan ke cm sebelum membagi skala.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-052",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GEOMETRI",
+    "tier": 2,
+    "sumber": "PR#52",
+    "stem": "Sebuah tiang setinggi 1,5 m berdiri tegak di tanah datar dan bayangannya 2 m. Pada saat yang sama, bayangan sebuah pohon 12 m. Tinggi pohon tersebut adalah …",
+    "opsi": {
+      "a": "8 m",
+      "b": "9 m",
+      "c": "12 m",
+      "d": "16 m",
+      "e": "18 m"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "1.5/2*12",
+    "nilai_opsi": {
+      "a": 8,
+      "b": 9,
+      "c": 12,
+      "d": 16,
+      "e": 18
+    },
+    "pembahasan": "Perbandingan tinggi : bayangan sama. Tinggi pohon = 1,5/2 × 12 = 9 m.<br>Opsi A (8 m) gugur karena salah perkalian; Opsi C (12 m) gugur karena menganggap tinggi = bayangan; Opsi D (16 m) gugur karena membalik perbandingan (2/1,5 × 12); Opsi E (18 m) gugur karena menghitung 1,5 × 12. Jawaban: Opsi B (9 m). Tips: tulis tinggi/bayangan = tinggi/bayangan, posisi jangan tertukar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-053",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "PR#53",
+    "stem": "Sebuah foto berukuran lebar 3 cm dan tinggi 5 cm diperbesar sehingga lebarnya menjadi 9 cm. Perbandingan luas foto sebelum dan sesudah diperbesar adalah …",
+    "opsi": {
+      "a": "1 : 3",
+      "b": "1 : 9",
+      "c": "3 : 5",
+      "d": "1 : 6",
+      "e": "5 : 9"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "(3*5)/(9*15)",
+    "nilai_opsi": {
+      "a": "=1/3",
+      "b": "=1/9",
+      "c": "=3/5",
+      "d": "=1/6",
+      "e": "=5/9"
+    },
+    "pembahasan": "Faktor perbesaran 9 ÷ 3 = 3, jadi tinggi baru 15 cm. Luas 3 × 5 = 15 dan 9 × 15 = 135, perbandingan 15 : 135 = 1 : 9.<br>Opsi A (1 : 3) gugur karena itu perbandingan panjang sisi, bukan luas; Opsi C (3 : 5) gugur karena itu perbandingan lebar : tinggi; Opsi D (1 : 6) gugur karena lupa memperbesar tinggi dengan faktor yang sama; Opsi E (5 : 9) gugur karena membandingkan tinggi lama dengan lebar baru. Jawaban: Opsi B (1 : 9). Tips: luas naik sebesar kuadrat faktor perbesaran (3² = 9).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-065",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 1,
+    "sumber": "PR#65",
+    "stem": "Sebuah kereta menempuh perjalanan dari Kota P ke Kota Q selama 3 jam dengan kecepatan 80 km/jam. Sinta mengendarai mobil menempuh jarak yang sama dalam waktu 4 jam. Kesimpulan yang tepat adalah …",
+    "opsi": {
+      "a": "Kecepatan mobil Sinta lebih besar daripada kereta",
+      "b": "Kecepatan kereta dan mobil Sinta tidak dapat dibandingkan",
+      "c": "Kecepatan mobil Sinta sama dengan kereta",
+      "d": "Kecepatan mobil Sinta lebih kecil daripada kereta",
+      "e": "Kecepatan mobil Sinta dua kali kecepatan kereta"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Jarak = 3 × 80 = 240 km. Kecepatan mobil = 240 ÷ 4 = 60 km/jam, lebih kecil dari 80 km/jam.<br>Opsi A (Kecepatan mobil Sinta lebih besar daripada kereta) gugur karena waktu lebih lama berarti lebih lambat; Opsi B (Kecepatan kereta dan mobil Sinta tidak dapat dibandingkan) gugur karena jaraknya sama sehingga kecepatan bisa dihitung; Opsi C (Kecepatan mobil Sinta sama dengan kereta) gugur karena 60 ≠ 80 km/jam; Opsi E (Kecepatan mobil Sinta dua kali kecepatan kereta) gugur karena 60 bahkan lebih kecil dari 80. Jawaban: Opsi D (Kecepatan mobil Sinta lebih kecil daripada kereta). Tips: jarak sama: waktu lebih lama = kecepatan lebih kecil.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-PR-066",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 2,
+    "sumber": "PR#66",
+    "stem": "Setiap pembelian 3 kemeja gratis 1 dasi. Setiap pembelian 5 dasi gratis 1 kemeja. Barang gratis tidak dihitung untuk promo. Rudi membeli 7 kemeja dan 11 dasi. Berapa yang Rudi bawa pulang?",
+    "opsi": {
+      "a": "7 kemeja dan 13 dasi",
+      "b": "9 kemeja dan 11 dasi",
+      "c": "9 kemeja dan 13 dasi",
+      "d": "8 kemeja dan 13 dasi",
+      "e": "9 kemeja dan 14 dasi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Dasi gratis = 7 ÷ 3 = 2 (sisa 1). Kemeja gratis = 11 ÷ 5 = 2 (sisa 1). Total 7 + 2 = 9 kemeja dan 11 + 2 = 13 dasi.<br>Opsi A (7 kemeja dan 13 dasi) gugur karena lupa kemeja gratis; Opsi B (9 kemeja dan 11 dasi) gugur karena lupa dasi gratis; Opsi D (8 kemeja dan 13 dasi) gugur karena kemeja gratis dihitung 1; Opsi E (9 kemeja dan 14 dasi) gugur karena menghitung kemeja gratis ikut promo (9 ÷ 3 = 3 dasi). Jawaban: Opsi C (9 kemeja dan 13 dasi). Tips: bonus dihitung dari pembelian saja, ambil hasil bagi bulat ke bawah.",
+    "status_kunci": "ganda"
   }
 ]

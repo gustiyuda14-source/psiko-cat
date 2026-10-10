@@ -1018,5 +1018,425 @@
     ],
     "pembahasan": "KONDUKTOR adalah bahan penghantar listrik atau panas. Lawannya isolator (bahan yang tidak menghantarkan).<br>Opsi A (RESISTOR) gugur karena komponen penghambat arus, bukan lawan penghantar; Opsi B (KAPASITOR) gugur karena komponen penyimpan muatan; Opsi D (SEMIKONDUKTOR) gugur karena setengah penghantar, berada di antara keduanya; Opsi E (INDUKTOR) gugur karena komponen kumparan. Jawaban: Opsi C (ISOLATOR). Tips: istilah fisika: konduktor >< isolator; semikonduktor bukan lawan, tetapi di antaranya.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-001",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 1,
+    "sumber": "PR#1",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "BUANA = …",
+    "opsi": {
+      "a": "Langit",
+      "b": "Dunia",
+      "c": "Cahaya",
+      "d": "Lautan",
+      "e": "Pusaka"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "BUANA (KBBI) berarti dunia atau jagat.<br>Opsi A (Langit) gugur karena langit hanya bagian dari alam, bukan dunia; Opsi C (Cahaya) gugur karena cahaya padanan kata sinar/nur; Opsi D (Lautan) gugur karena lautan padanan kata samudra/bahari; Opsi E (Pusaka) gugur karena pusaka berarti harta warisan. Jawaban: Opsi B (Dunia). Tips: buana sering muncul dalam frasa \"seantero buana\" = seluruh dunia.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-002",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 1,
+    "sumber": "PR#2",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "SEBAB = …",
+    "opsi": {
+      "a": "Dampak",
+      "b": "Tujuan",
+      "c": "Lantaran",
+      "d": "Masalah",
+      "e": "Ikatan"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "SEBAB berarti hal yang menjadikan sesuatu terjadi; padanannya lantaran (karena).<br>Opsi A (Dampak) gugur karena dampak adalah akibat, kebalikan sebab; Opsi B (Tujuan) gugur karena tujuan adalah arah yang ingin dicapai, bukan asal kejadian; Opsi D (Masalah) gugur karena masalah adalah persoalan, belum tentu penyebab; Opsi E (Ikatan) gugur karena ikatan berarti tali atau hubungan. Jawaban: Opsi C (Lantaran). Tips: uji dalam kalimat: \"ia terlambat ___ hujan\" — hanya lantaran yang pas.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-003",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 3,
+    "sumber": "PR#3",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "KONFORMITAS = …",
+    "opsi": {
+      "a": "Penyimpangan",
+      "b": "Keragaman",
+      "c": "Perbedaan",
+      "d": "Kesesuaian",
+      "e": "Ketidakwajaran"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "KONFORMITAS berarti kesesuaian sikap atau perilaku dengan norma yang berlaku.<br>Opsi A (Penyimpangan) gugur karena penyimpangan adalah deviasi, lawan konformitas; Opsi B (Keragaman) gugur karena keragaman berarti variasi; Opsi C (Perbedaan) gugur karena perbedaan bertolak belakang dengan kesesuaian; Opsi E (Ketidakwajaran) gugur karena ketidakwajaran berarti anomali. Jawaban: Opsi D (Kesesuaian). Tips: konform = sesuai bentuk/norma; ingat \"conform\" dalam bahasa Inggris.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-004",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 2,
+    "sumber": "PR#4",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "TRIKOTOMI = …",
+    "opsi": {
+      "a": "Tiga kekuatan",
+      "b": "Kembar tiga",
+      "c": "Pembagian menjadi tiga bagian",
+      "d": "Perpecahan",
+      "e": "Tiga fungsi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "TRIKOTOMI berarti pembagian atas tiga kelompok atau bagian (tri = tiga, -tomi = potong/bagi).<br>Opsi A (Tiga kekuatan) gugur karena kekuatan tidak terkandung dalam -tomi; Opsi B (Kembar tiga) gugur karena kembar tidak berkaitan dengan membagi; Opsi D (Perpecahan) gugur karena perpecahan tidak menyebut jumlah bagian; Opsi E (Tiga fungsi) gugur karena fungsi tidak terkandung dalam -tomi. Jawaban: Opsi C (Pembagian menjadi tiga bagian). Tips: pecah kata: di-/tri- = jumlah, -tomi = membagi (seperti dikotomi = dibagi dua).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-005",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 2,
+    "sumber": "PR#5",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "JERUJI = …",
+    "opsi": {
+      "a": "Tirai",
+      "b": "Kawat duri",
+      "c": "Rintangan",
+      "d": "Gembok",
+      "e": "Batang-batang pagar yang berderet"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "JERUJI berarti batang-batang (besi/kayu) yang dipasang berderet pada jendela, pagar, atau sel.<br>Opsi A (Tirai) gugur karena tirai adalah kain penutup; Opsi B (Kawat duri) gugur karena kawat duri adalah kawat berduri, bukan batang berderet; Opsi C (Rintangan) gugur karena rintangan terlalu umum; jeruji memang menghalangi, tetapi artinya benda berderet; Opsi D (Gembok) gugur karena gembok adalah alat pengunci. Jawaban: Opsi E (Batang-batang pagar yang berderet). Tips: jeruji ≈ terali ≈ kisi-kisi; bayangkan jendela sel penjara.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-006",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 3,
+    "sumber": "PR#6",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "CUKAI = …",
+    "opsi": {
+      "a": "Potongan harga",
+      "b": "Pungutan negara atas barang tertentu",
+      "c": "Bunga pinjaman",
+      "d": "Sumbangan sukarela",
+      "e": "Uang muka"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "CUKAI adalah pungutan negara yang dikenakan pada barang tertentu, misalnya rokok dan minuman beralkohol.<br>Opsi A (Potongan harga) gugur karena potongan harga adalah rabat/diskon; Opsi C (Bunga pinjaman) gugur karena bunga pinjaman adalah tambahan atas utang; Opsi D (Sumbangan sukarela) gugur karena sumbangan sukarela padanan infak/donasi, tidak wajib; Opsi E (Uang muka) gugur karena uang muka padanan panjar/DP. Jawaban: Opsi B (Pungutan negara atas barang tertentu). Tips: bedakan istilah keuangan: cukai & retribusi = pungutan, rabat = potongan, premi = iuran asuransi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-007",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 1,
+    "sumber": "PR#7",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "RIVAL = …",
+    "opsi": {
+      "a": "Pesaing",
+      "b": "Kawan",
+      "c": "Saksi",
+      "d": "Kerabat",
+      "e": "Tetangga"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "RIVAL berarti lawan atau pesaing.<br>Opsi B (Kawan) gugur karena kawan adalah lawan kata rival; Opsi C (Saksi) gugur karena saksi adalah orang yang melihat kejadian; Opsi D (Kerabat) gugur karena kerabat adalah keluarga; Opsi E (Tetangga) gugur karena tetangga adalah orang yang tinggal berdekatan. Jawaban: Opsi A (Pesaing). Tips: rival ≈ satru ≈ seteru ≈ lawan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-008",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 2,
+    "sumber": "PR#8",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "ARTISTIK = …",
+    "opsi": {
+      "a": "Sopan santun",
+      "b": "Kerajinan tangan",
+      "c": "Adat istiadat",
+      "d": "Bercita rasa seni",
+      "e": "Terampil bekerja"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "ARTISTIK berarti mempunyai nilai seni atau bercita rasa seni (sinonim estetis).<br>Opsi A (Sopan santun) gugur karena sopan santun berkaitan dengan adab, bukan seni; Opsi B (Kerajinan tangan) gugur karena kerajinan tangan adalah benda/kegiatan, bukan sifat; Opsi C (Adat istiadat) gugur karena adat istiadat adalah kebiasaan masyarakat; Opsi E (Terampil bekerja) gugur karena terampil berarti cekatan, belum tentu bernilai seni. Jawaban: Opsi D (Bercita rasa seni). Tips: akhiran -istik menunjukkan sifat: artistik = bersifat seni.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-009",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 2,
+    "sumber": "PR#9",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "BERCEKCOK = …",
+    "opsi": {
+      "a": "Berunding",
+      "b": "Berdusta",
+      "c": "Bersaing",
+      "d": "Bersalaman",
+      "e": "Bertengkar mulut"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "BERCEKCOK berarti bertengkar dengan kata-kata (bertengkar mulut).<br>Opsi A (Berunding) gugur karena berunding berarti bermusyawarah dengan baik; Opsi B (Berdusta) gugur karena berdusta berarti berbohong; Opsi C (Bersaing) gugur karena bersaing tidak harus melibatkan pertengkaran; Opsi D (Bersalaman) gugur karena bersalaman adalah lawan suasana cekcok. Jawaban: Opsi E (Bertengkar mulut). Tips: cekcok selalu soal adu mulut, bukan adu fisik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-010",
+    "kartu": "K01",
+    "sub_type": "VRB-SIN-DEF",
+    "tier": 3,
+    "sumber": "PR#10",
+    "instruksi": "Pilih arti kata yang paling tepat.",
+    "stem": "MENAMPI = …",
+    "opsi": {
+      "a": "Menakar",
+      "b": "Membersihkan beras dengan nyiru",
+      "c": "Menjemur",
+      "d": "Menggiling",
+      "e": "Menumbuk"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "MENAMPI berarti menampah: mengayak/membersihkan beras dengan nyiru supaya sekam dan kotoran terbuang.<br>Opsi A (Menakar) gugur karena menakar berarti mengukur banyaknya; Opsi C (Menjemur) gugur karena menjemur berarti mengeringkan di bawah matahari; Opsi D (Menggiling) gugur karena menggiling berarti melumatkan dengan mesin; Opsi E (Menumbuk) gugur karena menumbuk berarti melumatkan dengan alu. Jawaban: Opsi B (Membersihkan beras dengan nyiru). Tips: kata kegiatan tradisional (menampi, melimbang, mendulang) sering keluar; hafalkan alatnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-011",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 3,
+    "sumber": "PR#11",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "SINTESIS >< …",
+    "opsi": {
+      "a": "Hipotesis",
+      "b": "Tesis",
+      "c": "Analisis",
+      "d": "Fotosintesis",
+      "e": "Sintaksis"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "SINTESIS berarti memadukan bagian menjadi satu; ANALISIS berarti mengurai keseluruhan menjadi bagian.<br>Opsi A (Hipotesis) gugur karena hipotesis adalah dugaan sementara; Opsi B (Tesis) gugur karena tesis adalah pernyataan/karya ilmiah; Opsi D (Fotosintesis) gugur karena fotosintesis adalah proses pada tumbuhan, mirip bunyi saja; Opsi E (Sintaksis) gugur karena sintaksis adalah tata kalimat, mirip bunyi saja. Jawaban: Opsi C (Analisis). Tips: pengecoh antonim sering mirip bunyi; fokus ke makna (gabung >< urai).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-012",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 1,
+    "sumber": "PR#12",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "UTUH >< …",
+    "opsi": {
+      "a": "Lengkap",
+      "b": "Bulat",
+      "c": "Rapat",
+      "d": "Terbelah",
+      "e": "Kukuh"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "UTUH berarti tidak terpecah; lawannya terbelah.<br>Opsi A (Lengkap) gugur karena lengkap sinonim utuh; Opsi B (Bulat) gugur karena bulat sinonim utuh (\"tekad bulat\"); Opsi C (Rapat) gugur karena rapat berarti tidak bercelah, searah dengan utuh; Opsi E (Kukuh) gugur karena kukuh berarti kuat, bukan lawan utuh. Jawaban: Opsi D (Terbelah). Tips: buang dulu opsi yang sinonim, sisa satu yang berlawanan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-013",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 1,
+    "sumber": "PR#13",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "RAPUH >< …",
+    "opsi": {
+      "a": "Ringkih",
+      "b": "Kokoh",
+      "c": "Lemah",
+      "d": "Renta",
+      "e": "Getas"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "RAPUH berarti mudah patah/hancur; lawannya kokoh.<br>Opsi A (Ringkih) gugur karena ringkih sinonim rapuh; Opsi C (Lemah) gugur karena lemah searah dengan rapuh; Opsi D (Renta) gugur karena renta berarti tua dan lemah, searah; Opsi E (Getas) gugur karena getas berarti mudah patah, sinonim. Jawaban: Opsi B (Kokoh). Tips: empat opsi searah = tanda satu-satunya yang berlawanan adalah jawaban.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-014",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 3,
+    "sumber": "PR#14",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "DIVERGEN >< …",
+    "opsi": {
+      "a": "Konvergen",
+      "b": "Disparitas",
+      "c": "Meluas",
+      "d": "Menyebar",
+      "e": "Memudar"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "DIVERGEN berarti menyebar dari satu titik; KONVERGEN berarti menuju satu titik (memusat).<br>Opsi B (Disparitas) gugur karena disparitas berarti kesenjangan; Opsi C (Meluas) gugur karena meluas searah dengan menyebar; Opsi D (Menyebar) gugur karena menyebar adalah arti divergen itu sendiri; Opsi E (Memudar) gugur karena memudar berarti makin samar. Jawaban: Opsi A (Konvergen). Tips: di- = berpisah, kon- = bersama: divergen >< konvergen.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-015",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 2,
+    "sumber": "PR#15",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "LAZIM >< …",
+    "opsi": {
+      "a": "Umum",
+      "b": "Wajar",
+      "c": "Sering",
+      "d": "Normal",
+      "e": "Ganjil"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "LAZIM berarti biasa atau umum; lawannya ganjil (aneh, tidak biasa).<br>Opsi A (Umum) gugur karena umum sinonim lazim; Opsi B (Wajar) gugur karena wajar sinonim lazim; Opsi C (Sering) gugur karena sering searah dengan lazim; Opsi D (Normal) gugur karena normal sinonim lazim. Jawaban: Opsi E (Ganjil). Tips: ganjil juga bisa berarti bilangan tak genap; di sini maknanya \"aneh\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-016",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 2,
+    "sumber": "PR#16",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "PARSIAL >< …",
+    "opsi": {
+      "a": "Sebagian",
+      "b": "Menyeluruh",
+      "c": "Fakultatif",
+      "d": "Kompleks",
+      "e": "Sektoral"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "PARSIAL berarti sebagian; lawannya menyeluruh (total/universal).<br>Opsi A (Sebagian) gugur karena sebagian adalah arti parsial itu sendiri; Opsi C (Fakultatif) gugur karena fakultatif berarti tidak wajib; Opsi D (Kompleks) gugur karena kompleks berarti rumit; Opsi E (Sektoral) gugur karena sektoral berarti per bidang, searah dengan parsial. Jawaban: Opsi B (Menyeluruh). Tips: parsial >< total/universal/menyeluruh.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-017",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 3,
+    "sumber": "PR#17",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "REGRESI >< …",
+    "opsi": {
+      "a": "Resesi",
+      "b": "Stagnasi",
+      "c": "Progresi",
+      "d": "Depresi",
+      "e": "Represi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "REGRESI berarti kemunduran; PROGRESI berarti kemajuan.<br>Opsi A (Resesi) gugur karena resesi berarti kelesuan ekonomi, searah kemunduran; Opsi B (Stagnasi) gugur karena stagnasi berarti kemandekan; Opsi D (Depresi) gugur karena depresi berarti tekanan/kemerosotan; Opsi E (Represi) gugur karena represi berarti penekanan. Jawaban: Opsi C (Progresi). Tips: re-/regres = mundur, pro-/progres = maju.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-018",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 1,
+    "sumber": "PR#18",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "NOMADEN >< …",
+    "opsi": {
+      "a": "Berpindah-pindah",
+      "b": "Mengembara",
+      "c": "Merantau",
+      "d": "Menetap",
+      "e": "Musiman"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "NOMADEN berarti hidup berpindah-pindah; lawannya menetap.<br>Opsi A (Berpindah-pindah) gugur karena berpindah-pindah adalah arti nomaden; Opsi B (Mengembara) gugur karena mengembara searah dengan nomaden; Opsi C (Merantau) gugur karena merantau berarti pergi ke daerah lain, searah; Opsi E (Musiman) gugur karena musiman tidak berlawanan dengan berpindah. Jawaban: Opsi D (Menetap). Tips: nomaden >< sedenter/menetap.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-019",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 1,
+    "sumber": "PR#19",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "PASIF >< …",
+    "opsi": {
+      "a": "Aktif",
+      "b": "Diam",
+      "c": "Lamban",
+      "d": "Statis",
+      "e": "Pasrah"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "PASIF berarti tidak giat/menerima saja; lawannya aktif.<br>Opsi B (Diam) gugur karena diam searah dengan pasif; Opsi C (Lamban) gugur karena lamban searah dengan pasif; Opsi D (Statis) gugur karena statis berarti tidak bergerak, searah; Opsi E (Pasrah) gugur karena pasrah berarti menerima saja, searah. Jawaban: Opsi A (Aktif). Tips: pasangan serapan berimbuhan sama: pasif >< aktif, negatif >< positif.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K01-PR-020",
+    "kartu": "K01",
+    "sub_type": "VRB-ANT-1K",
+    "tier": 1,
+    "sumber": "PR#20",
+    "instruksi": "Pilih lawan kata yang paling tepat.",
+    "stem": "ANGKUH >< …",
+    "opsi": {
+      "a": "Sombong",
+      "b": "Keras hati",
+      "c": "Tinggi hati",
+      "d": "Pemalu",
+      "e": "Rendah hati"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "ANGKUH berarti sombong; lawannya rendah hati.<br>Opsi A (Sombong) gugur karena sombong sinonim angkuh; Opsi B (Keras hati) gugur karena keras hati berarti teguh/bandel, bukan lawan angkuh; Opsi C (Tinggi hati) gugur karena tinggi hati sinonim angkuh; Opsi D (Pemalu) gugur karena pemalu berarti sifat malu, bukan lawan sombong. Jawaban: Opsi E (Rendah hati). Tips: angkuh ≈ jumawa ≈ congkak >< rendah hati.",
+    "status_kunci": "ganda"
   }
 ]
