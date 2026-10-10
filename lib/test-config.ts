@@ -59,6 +59,9 @@ export const KECERDASAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntr
 );
 
 export const KEPRIBADIAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+// Paket latihan PRIBADI = 48 Kepribadian (Likert 4) + 63 Substansi Khusus (A/B),
+// docs/pedoman/PEDOMAN_ENGINE_PRIBADI.md. Simulasi Paket 1 masih format lama.
+export const PRIBADI_PACKAGE_SIZE = 48 + 63;
 export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KEPRIBADIAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );

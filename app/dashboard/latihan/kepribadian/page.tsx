@@ -1,4 +1,4 @@
-import { KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS } from "@/lib/test-config";
+import { KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS, PRIBADI_PACKAGE_SIZE } from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { PackageCarousel } from "@/app/components/PackageCarousel";
@@ -27,14 +27,14 @@ export default async function LatihanKepribadianPackagesPage() {
     <div className="app-page space-y-6">
       <PageHeader
         title="Latihan Kepribadian"
-        description="Pilih paket untuk berlatih. Setiap paket berisi 100 pernyataan skala Likert."
+        description="Pilih paket untuk berlatih. Setiap paket berisi 48 pernyataan Kepribadian dan 63 butir Substansi Khusus."
       />
 
       <PackageCarousel
         packages={packages}
-        expectedCount={100}
-        unitLabel="pernyataan"
-        completeLabel="100 pernyataan"
+        expectedCount={PRIBADI_PACKAGE_SIZE}
+        unitLabel="butir"
+        completeLabel="48 + 63 butir"
         hrefBase="/latihan/kepribadian"
         moduleLabel="kepribadian"
       />

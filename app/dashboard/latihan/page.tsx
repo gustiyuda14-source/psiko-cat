@@ -4,6 +4,7 @@ import {
   KECERMATAN_SPASIAL_PACKAGES,
   KECERMATAN_PACKAGES,
   KEPRIBADIAN_PACKAGES,
+  PRIBADI_PACKAGE_SIZE,
   MODULE_CONFIG,
   MODULE_ORDER,
   latihanHref,
@@ -14,13 +15,13 @@ import LatihanCatalog, { type LatihanModule } from "./LatihanCatalog";
 const DESC = {
   KECERDASAN: "Soal kognitif dan spasial, 100 butir per paket",
   KECERMATAN: "Temukan simbol yang tidak muncul, 10 kolom",
-  KEPRIBADIAN: "Pernyataan skala Likert, 100 butir per paket",
+  KEPRIBADIAN: "Kepribadian + Substansi Khusus, 111 butir per paket",
 } as const;
 
 // Kunci progres = rute sesi paket (lib/latihan-progress.ts). Kecermatan punya tiga aspek.
 const PACKAGES = {
   KECERDASAN: KECERDASAN_PACKAGES.map((id) => ({ key: `/latihan/kecerdasan/${id}`, total: 100 })),
-  KEPRIBADIAN: KEPRIBADIAN_PACKAGES.map((id) => ({ key: `/latihan/kepribadian/${id}`, total: 100 })),
+  KEPRIBADIAN: KEPRIBADIAN_PACKAGES.map((id) => ({ key: `/latihan/kepribadian/${id}`, total: PRIBADI_PACKAGE_SIZE })),
   KECERMATAN: [
     ...KECERMATAN_PACKAGES.map((id) => ({ key: `/latihan/kecermatan/${id}`, total: 500 })),
     ...KECERMATAN_ANGKA_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-angka/${id}`, total: 500 })),

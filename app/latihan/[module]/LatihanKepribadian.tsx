@@ -7,8 +7,13 @@ import { Badge } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { Check } from "@/app/components/icons";
 import { ExamBody, ExamDock, QuestionNavigator } from "@/app/components/ExamChrome";
-import { KepribadianReview, type KepribadianReviewItem } from "@/app/components/PembahasanSection";
+import { PribadiReview, type PribadiReviewItem, type PribadiReviewSummary } from "@/app/components/PribadiReview";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+
+// Latihan PRIBADI: butir Kepribadian (Likert 4) dan Substansi Khusus (A/B) dalam
+// satu paket, urut sequence_number. Label aspek bisa disembunyikan peserta
+// (pedoman §7.1, tahap tryout mini); preferensinya disimpan per browser.
+const ASPECT_PREF = "pribadi-show-aspect";
 
 export default function LatihanKepribadian({
   questions,
@@ -29,7 +34,27 @@ export default function LatihanKepribadian({
     if (progressKey) recordLatihanProgress(progressKey, Object.keys(answers).length);
   }, [progressKey, answers]);
   const [showFinish, setShowFinish] = useState(false);
-  const [finished, setFinished] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+  const [result, setResult] = useState<{ summary: PribadiReviewSummary; items: PribadiReviewItem[] } | null>(null);
+  const finished = result !== null;
+  // Komponen ini baru dirender setelah peserta menekan "Mulai" (LatihanGate),
+  // jadi selalu di browser — aman membaca localStorage di initializer.
+  const [showAspect, setShowAspect] = useState(() => {
+    try {
+      return localStorage.getItem(ASPECT_PREF) !== "0";
+    } catch {
+      return true;
+    }
+  });
+  const toggleAspect = () => {
+    setShowAspect((v) => {
+      try {
+        localStorage.setItem(ASPECT_PREF, v ? "0" : "1");
+      } catch {}
+      return !v;
+    });
+  };
   const advanceTimer = useRef<number | null>(null);
 
   const q = sorted[idx];
@@ -68,16 +93,35 @@ export default function LatihanKepribadian({
     onNext: () => goTo(idx + 1),
   });
 
+  const submit = useCallback(async () => {
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      const res = await fetch("/api/practice/pribadi", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          answers: sorted.map((question) => ({ question_id: question.id, selected_key: answers[question.id] ?? null })),
+        }),
+      });
+      if (!res.ok) throw new Error("Pembahasan belum dapat dimuat. Coba selesaikan lagi.");
+      const data = (await res.json()) as { summary: PribadiReviewSummary; items: Omit<PribadiReviewItem, "payload">[] };
+      const payloadById = new Map(sorted.map((question) => [question.id, question.options_payload as unknown as KepribadianOptionsPayload]));
+      setResult({
+        summary: data.summary,
+        items: data.items.map((item) => ({ ...item, payload: payloadById.get(item.question_id)! }) as PribadiReviewItem),
+      });
+      window.scrollTo({ top: 0 });
+    } catch (error) {
+      setSubmitError(error instanceof Error ? error.message : "Pembahasan belum dapat dimuat. Coba selesaikan lagi.");
+    } finally {
+      setSubmitting(false);
+    }
+  }, [answers, sorted]);
+
   if (!q) return null;
 
-  if (finished) {
-    const items: KepribadianReviewItem[] = sorted.map((question) => ({
-      question_id: question.id,
-      sequence_number: question.sequence_number,
-      selected_key: answers[question.id] ?? null,
-      payload: question.options_payload as unknown as KepribadianOptionsPayload,
-    }));
-
+  if (result) {
     return (
       <section className="surface-card mx-auto my-6 w-[calc(100%-2rem)] max-w-3xl space-y-5 px-6 py-8 sm:px-8">
         <div className="text-center">
@@ -89,7 +133,7 @@ export default function LatihanKepribadian({
             Jawaban latihan hanya tersimpan selama halaman ini terbuka.
           </p>
         </div>
-        <KepribadianReview items={items} />
+        <PribadiReview summary={result.summary} items={result.items} />
         <Button
           variant="primary"
           size="lg"
@@ -97,7 +141,7 @@ export default function LatihanKepribadian({
           onClick={() => {
             setAnswers({});
             setIdx(0);
-            setFinished(false);
+            setResult(null);
           }}
         >
           Mulai ulang latihan
@@ -113,7 +157,7 @@ export default function LatihanKepribadian({
         onClose={() => setShowFinish(false)}
         onConfirm={() => {
           setShowFinish(false);
-          setFinished(true);
+          void submit();
         }}
         title="Selesaikan latihan?"
         confirmLabel="Selesai latihan"
@@ -121,18 +165,18 @@ export default function LatihanKepribadian({
         <div className="inset-panel flex items-baseline justify-between gap-4 px-4 py-3">
           <span className="text-muted-foreground">Terjawab</span>
           <span className="tnum font-semibold text-foreground">
-            {answeredCount} dari {sorted.length} pernyataan
+            {answeredCount} dari {sorted.length} butir
           </span>
         </div>
         <p className="text-muted-foreground">
-          Anda tetap dapat menyelesaikan latihan meskipun masih ada pernyataan yang belum dijawab.
+          Anda tetap dapat menyelesaikan latihan meskipun masih ada butir yang belum dijawab.
         </p>
       </ConfirmDialog>
 
       <ExamBody
         navigator={
           <QuestionNavigator
-            itemLabel="Pernyataan"
+            itemLabel="Butir"
             questionIds={sorted.map((question) => question.id)}
             answers={answers}
             currentIndex={idx}
@@ -141,14 +185,35 @@ export default function LatihanKepribadian({
               if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
               setShowFinish(true);
             }}
-            submitLabel="Selesai Latihan"
+            submitLabel={submitting ? "Memuat pembahasan…" : "Selesai Latihan"}
           />
         }
       >
         <article key={q.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
+          {submitError && (
+            <p role="alert" className="rounded-md bg-destructive-soft px-3 py-2 text-sm text-destructive">
+              {submitError}
+            </p>
+          )}
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="qnum tnum">Pernyataan {idx + 1}</p>
-            {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
+            <p className="qnum tnum">Butir {idx + 1}</p>
+            <div className="flex flex-wrap items-center gap-2">
+              {payload?.subtes === "SK" ? (
+                <Badge tone="accent">Substansi Khusus</Badge>
+              ) : (
+                <>
+                  {showAspect && payload?.aspect ? <Badge tone="info">{payload.aspect}</Badge> : <Badge tone="neutral">Kepribadian</Badge>}
+                  <button
+                    type="button"
+                    onClick={toggleAspect}
+                    aria-pressed={showAspect}
+                    className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                  >
+                    {showAspect ? "Sembunyikan aspek" : "Tampilkan aspek"}
+                  </button>
+                </>
+              )}
+            </div>
           </div>
 
           <div className="q-card mx-auto w-full max-w-2xl">
@@ -158,7 +223,9 @@ export default function LatihanKepribadian({
           </div>
 
           <fieldset className="opts mx-auto max-w-2xl">
-            <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
+            <legend className="sr-only">
+              {payload?.subtes === "SK" ? "Pilih yang paling sesuai" : "Seberapa sesuai pernyataan ini dengan Anda"}
+            </legend>
             {payload?.choices?.map((c) => {
               const isSelected = picked === c.key;
               return (

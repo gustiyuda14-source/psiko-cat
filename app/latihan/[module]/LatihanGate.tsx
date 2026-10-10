@@ -24,7 +24,7 @@ const MODE_NOTE: Record<ModuleType, string> = {
   KECERDASAN: `Sama seperti simulasi: jawab semua butir dulu, baru kumpulkan untuk melihat kunci dan pembahasan lengkap. ${BANK_NOTE}`,
   KECERMATAN: `Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai. ${BANK_NOTE}`,
   KEPRIBADIAN:
-    "Tidak ada jawaban benar atau salah — pilihan langsung membawa ke pernyataan berikutnya.",
+    "Paket berisi Kepribadian (skala 4 tingkat) lalu Substansi Khusus (pilih A atau B). Selesaikan semua butir untuk melihat nilai, kunci, dan pembahasan berdasarkan aspek.",
 };
 
 /*
@@ -65,7 +65,7 @@ export default function LatihanGate({
   const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
   const practiceRef = useRef<HTMLDivElement>(null);
   const meta = MODULE_CONFIG[moduleType];
-  const noun = moduleType === "KEPRIBADIAN" ? "pernyataan" : "butir";
+  const noun = "butir";
   const firstQuestion = moduleType === "KECERMATAN"
     ? [...questions].sort((a, b) => (a.column_index ?? 0) - (b.column_index ?? 0) || a.sequence_number - b.sequence_number)[0]
     : undefined;

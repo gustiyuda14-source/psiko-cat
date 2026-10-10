@@ -27,6 +27,9 @@ export type KecerdasanOptionsPayload = {
 export type KepribadianOptionsPayload = {
   statement: string;
   aspect?: string;
+  // Paket latihan PRIBADI (2-11): "KP" = Likert 4 tingkat, "SK" = Substansi
+  // Khusus pilihan paksa A/B. Kosong = butir lama Likert 5 (simulasi Paket 1).
+  subtes?: "KP" | "SK";
   choices: Array<{ key: "A" | "B" | "C" | "D" | "E"; text: string }>;
 };
 
