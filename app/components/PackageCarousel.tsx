@@ -322,6 +322,7 @@ export function PackageCarousel({
             </defs>
             <g key={pkg.id} className="hc-link is-on is-panel">
               <path className="hc-link-halo" d={link.d} filter="url(#pc-blur)" />
+              <path className="hc-link-rail" d={link.d} />
               <path className="hc-link-trace" d={link.d} />
               <path className="hc-link-pulse is-glow" d={link.d} pathLength={100} filter="url(#pc-blur)" />
               <path className="hc-link-pulse" d={link.d} pathLength={100} />

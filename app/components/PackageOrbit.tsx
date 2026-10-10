@@ -114,8 +114,14 @@ export function PackageOrbit({
           </filter>
         </defs>
 
-        <circle className="hc-dial-ring" r={Rorb} />
-        <circle className="hc-dial-ring" r={coreR + 10} />
+        {/* Lintasan orbit + cincin inti: rel emas solid, pendar lembut, titik yang bergeser pelan. */}
+        {[Rorb, hub].map((r) => (
+          <g key={r} aria-hidden="true">
+            <circle className="po-orbit-glow" r={r} filter="url(#po-blur)" />
+            <circle className="po-orbit" r={r} />
+            <circle className="po-orbit-dash" r={r} />
+          </g>
+        ))}
         <polygon className="hc-mark" points="0,-6 9,0 0,6" transform={`translate(${mx} ${my}) rotate(${focus})`} />
 
         <g className="hc-spin" style={{ transform: `rotate(${spin}deg)` }}>
@@ -127,6 +133,7 @@ export function PackageOrbit({
             return (
               <g key={it.id} transform={`rotate(${angle(i)})`} className={sel ? "hc-link is-on" : "hc-link"} aria-hidden="true">
                 {sel && <path className="hc-link-halo" d={d} filter="url(#po-blur)" />}
+                <path className="hc-link-rail" d={d} />
                 <path className="hc-link-trace" d={d} />
                 {sel && <path className="hc-link-pulse is-glow" d={d} pathLength={100} filter="url(#po-blur)" />}
                 {sel && <path className="hc-link-pulse" d={d} pathLength={100} />}
