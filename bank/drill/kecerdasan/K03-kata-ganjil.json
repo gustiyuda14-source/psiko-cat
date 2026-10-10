@@ -1,0 +1,128 @@
+[
+  {
+    "id": "K03-A3-020",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL",
+    "tier": 1,
+    "sumber": "A3#20",
+    "instruksi": "Pilih kata yang maknanya paling jauh dari empat kata lainnya.",
+    "stem": "Kata: Mendengar, Berlari, Melihat, Mencium, Meraba.",
+    "opsi": {
+      "a": "Mendengar",
+      "b": "Berlari",
+      "c": "Melihat",
+      "d": "Mencium",
+      "e": "Meraba"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Mendengar, melihat, mencium, dan meraba adalah kerja pancaindra. Berlari adalah gerak tubuh, bukan kerja indra.<br>Opsi A (Mendengar) gugur karena kerja indra telinga; Opsi C (Melihat) gugur karena kerja indra mata; Opsi D (Mencium) gugur karena kerja indra hidung; Opsi E (Meraba) gugur karena kerja indra kulit. Jawaban: Opsi B (Berlari). Tips: sebut kategori empat kata, lalu cari yang tidak punya ciri itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K03-A3-021",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL",
+    "tier": 2,
+    "sumber": "A3#21",
+    "instruksi": "Pilih kata yang maknanya paling jauh dari empat kata lainnya.",
+    "stem": "Kata: Tokyo, Bangkok, Sydney, Hanoi, Manila.",
+    "opsi": {
+      "a": "Tokyo",
+      "b": "Bangkok",
+      "c": "Sydney",
+      "d": "Hanoi",
+      "e": "Manila"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Tokyo, Bangkok, Hanoi, dan Manila adalah ibu kota negara di Asia. Sydney adalah kota besar di Australia, tetapi bukan ibu kota negara (ibu kota Australia adalah Canberra).<br>Opsi A (Tokyo) gugur karena ibu kota Jepang; Opsi B (Bangkok) gugur karena ibu kota Thailand; Opsi D (Hanoi) gugur karena ibu kota Vietnam; Opsi E (Manila) gugur karena ibu kota Filipina. Jawaban: Opsi C (Sydney). Tips: kota terkenal belum tentu ibu kota; cek status kotanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K03-A3-022",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL",
+    "tier": 2,
+    "sumber": "A3#22",
+    "instruksi": "Pilih kata yang maknanya paling jauh dari empat kata lainnya.",
+    "stem": "Kata: Lambung, Paru-paru, Trakea, Bronkus, Alveolus.",
+    "opsi": {
+      "a": "Lambung",
+      "b": "Paru-paru",
+      "c": "Trakea",
+      "d": "Bronkus",
+      "e": "Alveolus"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Paru-paru, trakea, bronkus, dan alveolus termasuk sistem pernapasan. Lambung termasuk sistem pencernaan.<br>Opsi B (Paru-paru) gugur karena organ pernapasan; Opsi C (Trakea) gugur karena saluran pernapasan (batang tenggorok); Opsi D (Bronkus) gugur karena cabang saluran pernapasan; Opsi E (Alveolus) gugur karena gelembung paru tempat pertukaran gas. Jawaban: Opsi A (Lambung). Tips: kelompokkan organ menurut sistem tubuhnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K03-A3-023",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL",
+    "tier": 2,
+    "sumber": "A3#23",
+    "instruksi": "Pilih kata yang maknanya paling jauh dari empat kata lainnya.",
+    "stem": "Kata: Jingga, Nila, Ungu, Cokelat, Hijau.",
+    "opsi": {
+      "a": "Jingga",
+      "b": "Nila",
+      "c": "Ungu",
+      "d": "Cokelat",
+      "e": "Hijau"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Jingga, nila, ungu, dan hijau termasuk tujuh warna pelangi (me-ji-ku-hi-bi-ni-u). Cokelat tidak termasuk.<br>Opsi A (Jingga) gugur karena warna pelangi; Opsi B (Nila) gugur karena warna pelangi; Opsi C (Ungu) gugur karena warna pelangi; Opsi E (Hijau) gugur karena warna pelangi. Jawaban: Opsi D (Cokelat). Tips: jembatan keledai mejikuhibiniu: merah, jingga, kuning, hijau, biru, nila, ungu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K03-A3-024",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL-NUM",
+    "tier": 1,
+    "sumber": "A3#24",
+    "instruksi": "Pilih bilangan yang paling berbeda dari empat bilangan lainnya.",
+    "stem": "Bilangan: 7, 11, 13, 17, 15.",
+    "opsi": {
+      "a": "7",
+      "b": "11",
+      "c": "13",
+      "d": "17",
+      "e": "15"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "7, 11, 13, dan 17 adalah bilangan prima. 15 = 3 × 5, jadi bukan prima.<br>Opsi A (7) gugur karena bilangan prima; Opsi B (11) gugur karena bilangan prima; Opsi C (13) gugur karena bilangan prima; Opsi D (17) gugur karena bilangan prima. Jawaban: Opsi E (15). Tips: untuk deret bilangan ganjil, cek dulu sifat prima atau kelipatan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K03-A3-025",
+    "kartu": "K03",
+    "sub_type": "VRB-GJL",
+    "tier": 3,
+    "sumber": "A3#25",
+    "instruksi": "Pilih kata yang maknanya paling jauh dari empat kata lainnya.",
+    "stem": "Kata: Kentang, Singkong, Jagung, Ubi jalar, Talas.",
+    "opsi": {
+      "a": "Kentang",
+      "b": "Singkong",
+      "c": "Jagung",
+      "d": "Ubi jalar",
+      "e": "Talas"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Kentang, singkong, ubi jalar, dan talas adalah umbi (bagian yang dimakan tumbuh di dalam tanah). Jagung dimakan bijinya.<br>Opsi A (Kentang) gugur karena umbi batang; Opsi B (Singkong) gugur karena umbi akar; Opsi D (Ubi jalar) gugur karena umbi akar; Opsi E (Talas) gugur karena umbi batang. Jawaban: Opsi C (Jagung). Tips: semua bahan pangan pokok; bedakan bagian tanaman yang dimakan.",
+    "status_kunci": "ganda"
+  }
+]

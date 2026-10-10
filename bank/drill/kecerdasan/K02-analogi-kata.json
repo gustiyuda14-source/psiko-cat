@@ -1,0 +1,513 @@
+[
+  {
+    "id": "K02-B3-017",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 1,
+    "sumber": "B3#17",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "SIGAP : TANGKAS = …",
+    "opsi": {
+      "a": "Cepat : Lambat",
+      "b": "Tulis : Penulis",
+      "c": "Gelap : Malam",
+      "d": "Rapi : Teratur",
+      "e": "Pandai : Belajar"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Sigap dan tangkas bersinonim (sama-sama cepat dan cekatan). Pasangan yang juga bersinonim: rapi dan teratur.<br>Opsi A (Cepat : Lambat) gugur karena hubungannya berlawanan, bukan bersinonim; Opsi B (Tulis : Penulis) gugur karena hubungan kegiatan dan pelakunya; Opsi C (Gelap : Malam) gugur karena hubungan sifat dan waktu yang identik dengannya, bukan sinonim; Opsi E (Pandai : Belajar) gugur karena hubungan hasil dan usaha. Jawaban: Opsi D (Rapi : Teratur). Tips: ubah soal jadi kalimat uji: \"sigap sama artinya dengan tangkas\", lalu pasang setiap opsi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-018",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 2,
+    "sumber": "B3#18",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "PINTU : KUNCI = …",
+    "opsi": {
+      "a": "Kaleng : Pembuka kaleng",
+      "b": "Gembok : Rantai",
+      "c": "Rumah : Atap",
+      "d": "Jendela : Kaca",
+      "e": "Lemari : Pakaian"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kunci adalah alat untuk membuka pintu. Pasangan sejenis: pembuka kaleng adalah alat untuk membuka kaleng.<br>Opsi B (Gembok : Rantai) gugur karena gembok mengunci rantai; arah hubungannya terbalik; Opsi C (Rumah : Atap) gugur karena hubungan keseluruhan dan bagiannya; Opsi D (Jendela : Kaca) gugur karena hubungan benda dan bahannya; Opsi E (Lemari : Pakaian) gugur karena hubungan wadah dan isinya. Jawaban: Opsi A (Kaleng : Pembuka kaleng). Tips: kalimat uji: \"B adalah alat untuk membuka A\"; cek arahnya juga.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-019",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-1K",
+    "tier": 2,
+    "sumber": "B3#19",
+    "instruksi": "Pilih kata yang tepat untuk melengkapi analogi.",
+    "stem": "DAUN SUJI : HIJAU = ARANG : …",
+    "opsi": {
+      "a": "Abu-abu",
+      "b": "Cokelat",
+      "c": "Hitam",
+      "d": "Putih",
+      "e": "Biru"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Daun suji dipakai sebagai pewarna hijau alami. Arang memberi warna hitam.<br>Opsi A (Abu-abu) gugur karena warna abu sisa pembakaran, bukan warna arang; Opsi B (Cokelat) gugur karena warna kayu, bukan arang; Opsi D (Putih) gugur karena warna kapur; Opsi E (Biru) gugur karena warna nila/tarum. Jawaban: Opsi C (Hitam). Tips: relasi bahan dan warna yang dihasilkannya: sebut warna khas bahan itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-020",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 3,
+    "sumber": "B3#20",
+    "instruksi": "Pilih pasangan kata yang tepat untuk mengisi titik-titik.",
+    "stem": "SUARA : … = … : TERMOMETER",
+    "opsi": {
+      "a": "Speaker ; Suhu",
+      "b": "Mikrofon ; Suhu",
+      "c": "Mikrofon ; Celsius",
+      "d": "Nada ; Cuaca",
+      "e": "Telinga ; Badan"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Mikrofon adalah alat yang menangkap suara; termometer adalah alat yang mengukur suhu. Jadi SUARA : MIKROFON = SUHU : TERMOMETER.<br>Opsi A (Speaker ; Suhu) gugur karena speaker mengeluarkan suara, bukan menangkapnya; Opsi C (Mikrofon ; Celsius) gugur karena celsius adalah satuan, bukan besaran yang ditangkap termometer; Opsi D (Nada ; Cuaca) gugur karena nada bukan alat; cuaca tidak diukur oleh termometer saja; Opsi E (Telinga ; Badan) gugur karena badan bukan hal yang diukur termometer. Jawaban: Opsi B (Mikrofon ; Suhu). Tips: isi titik-titik satu per satu, lalu baca kedua sisi dengan kalimat yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-021",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 2,
+    "sumber": "B3#21",
+    "instruksi": "Pilih pasangan kata yang tepat untuk mengisi titik-titik.",
+    "stem": "… : BUNGA = KAKAP : …",
+    "opsi": {
+      "a": "Taman ; Laut",
+      "b": "Duri ; Sisik",
+      "c": "Kelopak ; Insang",
+      "d": "Melati ; Laut",
+      "e": "Mawar ; Ikan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Mawar adalah salah satu jenis bunga; kakap adalah salah satu jenis ikan.<br>Opsi A (Taman ; Laut) gugur karena hubungan tempat, bukan jenis dan golongannya; Opsi B (Duri ; Sisik) gugur karena hubungan bagian, bukan jenis; Opsi C (Kelopak ; Insang) gugur karena hubungan bagian tubuh, bukan jenis; Opsi D (Melati ; Laut) gugur karena sisi kanan menjadi tempat hidup, bukan golongan kakap. Jawaban: Opsi E (Mawar ; Ikan). Tips: relasi jenis–golongan: \"A adalah salah satu jenis B\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-023",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-1K",
+    "tier": 2,
+    "sumber": "B3#23",
+    "instruksi": "Pilih kata yang tepat untuk melengkapi analogi.",
+    "stem": "MESIN : REPARASI = GEDUNG : …",
+    "opsi": {
+      "a": "Revisi",
+      "b": "Reformasi",
+      "c": "Regenerasi",
+      "d": "Renovasi",
+      "e": "Rekonsiliasi"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Reparasi adalah perbaikan untuk mesin; renovasi adalah perbaikan atau pembaruan untuk gedung.<br>Opsi A (Revisi) gugur karena perbaikan untuk tulisan atau naskah; Opsi B (Reformasi) gugur karena perubahan sistem sosial atau politik; Opsi C (Regenerasi) gugur karena pergantian generasi; Opsi E (Rekonsiliasi) gugur karena pemulihan hubungan. Jawaban: Opsi D (Renovasi). Tips: pasangkan objek dengan istilah perbaikan yang khusus untuknya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B3-024",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 1,
+    "sumber": "B3#24",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "BOLA : BULAT = …",
+    "opsi": {
+      "a": "Kertas : Tipis",
+      "b": "Batu : Keras",
+      "c": "Ubin : Persegi",
+      "d": "Kapas : Ringan",
+      "e": "Gula : Manis"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Bulat adalah bentuk bola. Pasangan yang juga benda dan bentuknya: ubin dan persegi.<br>Opsi A (Kertas : Tipis) gugur karena tipis adalah ketebalan, bukan bentuk; Opsi B (Batu : Keras) gugur karena keras adalah sifat bahan; Opsi D (Kapas : Ringan) gugur karena ringan adalah berat; Opsi E (Gula : Manis) gugur karena manis adalah rasa. Jawaban: Opsi C (Ubin : Persegi). Tips: tentukan jenis sifatnya (bentuk, rasa, berat) sebelum membandingkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-013",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 2,
+    "sumber": "A3#13",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "GELAP : CAHAYA ≈ … : … (dari kata: Gelas, Haus, Minum, Segar, Air)",
+    "opsi": {
+      "a": "Gelas",
+      "b": "Haus",
+      "c": "Minum",
+      "d": "Segar",
+      "e": "Air"
+    },
+    "kunci": [
+      "b",
+      "e"
+    ],
+    "pembahasan": "Gelap terjadi karena kekurangan cahaya; haus terjadi karena kekurangan air. Jadi GELAP : CAHAYA = HAUS : AIR.<br>Opsi A (Gelas) gugur karena wadah air, bukan yang dibutuhkan; Opsi C (Minum) gugur karena perbuatan, bukan benda yang kurang; Opsi D (Segar) gugur karena akibat setelah minum. Jawaban: Opsi B (Haus) dan Opsi E (Air). Tips: kalimat uji: \"A terjadi karena kekurangan B\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-014",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 2,
+    "sumber": "A3#14",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "MOBIL : MESIN ≈ … : … (dari kata: Darah, Dokter, Bensin, Tubuh, Jantung)",
+    "opsi": {
+      "a": "Darah",
+      "b": "Dokter",
+      "c": "Bensin",
+      "d": "Tubuh",
+      "e": "Jantung"
+    },
+    "kunci": [
+      "d",
+      "e"
+    ],
+    "pembahasan": "Mesin adalah bagian penggerak utama mobil; jantung adalah organ penggerak (pemompa) utama tubuh.<br>Opsi A (Darah) gugur karena padanan bahan bakar, bukan penggerak utama; Opsi B (Dokter) gugur karena padanan montir; Opsi C (Bensin) gugur karena bahan bakar, bukan penggerak utama. Jawaban: Opsi D (Tubuh) dan Opsi E (Jantung). Tips: relasi keseluruhan dan bagian intinya; jangan tertukar dengan bahan bakarnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-015",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 2,
+    "sumber": "A3#15",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "ATAP : … ≈ AKAR : … (dari kata: Rumah, Genteng, Tanah, Pohon, Batang)",
+    "opsi": {
+      "a": "Rumah",
+      "b": "Genteng",
+      "c": "Tanah",
+      "d": "Pohon",
+      "e": "Batang"
+    },
+    "kunci": [
+      "a",
+      "d"
+    ],
+    "pembahasan": "Atap adalah bagian rumah; akar adalah bagian pohon.<br>Opsi B (Genteng) gugur karena bahan atap, bukan keseluruhannya; Opsi C (Tanah) gugur karena tempat akar, bukan keseluruhannya; Opsi E (Batang) gugur karena sesama bagian pohon. Jawaban: Opsi A (Rumah) dan Opsi D (Pohon). Tips: pola A : … = C : …: hubungan kedua sisi harus sama (bagian dari keseluruhan).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-016",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 3,
+    "sumber": "A3#16",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "MASKER : … ≈ … : HUJAN (dari kata: Debu, Payung, Wajah, Awan, Basah)",
+    "opsi": {
+      "a": "Debu",
+      "b": "Payung",
+      "c": "Wajah",
+      "d": "Awan",
+      "e": "Basah"
+    },
+    "kunci": [
+      "a",
+      "b"
+    ],
+    "pembahasan": "Masker melindungi dari debu; payung melindungi dari hujan.<br>Opsi C (Wajah) gugur karena bagian yang ditutup masker, bukan yang ditahan; Opsi D (Awan) gugur karena asal hujan, bukan pelindung; Opsi E (Basah) gugur karena akibat hujan. Jawaban: Opsi A (Debu) dan Opsi B (Payung). Tips: pola A : … = … : D: tentukan relasi dari pasangan yang lengkap dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-017",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 3,
+    "sumber": "A3#17",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "… : KHATULISTIWA ≈ YOGYAKARTA : … (dari kata: Pontianak, Bandung, Kembang, Hujan, Pelajar)",
+    "opsi": {
+      "a": "Pontianak",
+      "b": "Bandung",
+      "c": "Kembang",
+      "d": "Hujan",
+      "e": "Pelajar"
+    },
+    "kunci": [
+      "a",
+      "e"
+    ],
+    "pembahasan": "Pontianak dijuluki Kota Khatulistiwa; Yogyakarta dijuluki Kota Pelajar.<br>Opsi B (Bandung) gugur karena dijuluki Kota Kembang, bukan Kota Khatulistiwa; Opsi C (Kembang) gugur karena julukan Bandung, bukan Yogyakarta; Opsi D (Hujan) gugur karena julukan Bogor. Jawaban: Opsi A (Pontianak) dan Opsi E (Pelajar). Tips: relasi kota dan julukannya: hafalkan julukan kota besar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-018",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 1,
+    "sumber": "A3#18",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "HAMA : GAGAL PANEN ≈ … : … (dari kata: Hujan, Kemarau, Kekeringan, Sawah, Petani)",
+    "opsi": {
+      "a": "Hujan",
+      "b": "Kemarau",
+      "c": "Kekeringan",
+      "d": "Sawah",
+      "e": "Petani"
+    },
+    "kunci": [
+      "b",
+      "c"
+    ],
+    "pembahasan": "Hama menyebabkan gagal panen; kemarau menyebabkan kekeringan.<br>Opsi A (Hujan) gugur karena tidak menyebabkan kekeringan; Opsi D (Sawah) gugur karena tempat, bukan penyebab; Opsi E (Petani) gugur karena pelaku, bukan penyebab. Jawaban: Opsi B (Kemarau) dan Opsi C (Kekeringan). Tips: relasi sebab–akibat: urutan sebab di kiri dan akibat di kanan harus sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-A3-019",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-2K",
+    "tier": 1,
+    "sumber": "A3#19",
+    "instruksi": "Pilih dua kata yang tepat untuk mengisi kedua titik-titik.",
+    "stem": "HAMPIR : NYARIS ≈ … : … (dari kata: Lambat, Lekas, Jauh, Cepat, Tiba)",
+    "opsi": {
+      "a": "Lambat",
+      "b": "Lekas",
+      "c": "Jauh",
+      "d": "Cepat",
+      "e": "Tiba"
+    },
+    "kunci": [
+      "b",
+      "d"
+    ],
+    "pembahasan": "Hampir dan nyaris bersinonim. Pasangan sinonim di opsi: lekas dan cepat.<br>Opsi A (Lambat) gugur karena lawan cepat; Opsi C (Jauh) gugur karena keterangan jarak; Opsi E (Tiba) gugur karena berarti sampai. Jawaban: Opsi B (Lekas) dan Opsi D (Cepat). Tips: jika soal bersinonim, buang lawan kata di opsi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-021",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-1K",
+    "tier": 2,
+    "sumber": "B2#21",
+    "instruksi": "Pilih kata yang tepat untuk melengkapi analogi.",
+    "stem": "SUMATERA BARAT : RUMAH GADANG ≈ PAPUA : …",
+    "opsi": {
+      "a": "Joglo",
+      "b": "Tongkonan",
+      "c": "Limas",
+      "d": "Bolon",
+      "e": "Honai"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Rumah Gadang adalah rumah adat Sumatera Barat; honai adalah rumah adat Papua.<br>Opsi A (Joglo) gugur karena rumah adat Jawa; Opsi B (Tongkonan) gugur karena rumah adat Toraja, Sulawesi Selatan; Opsi C (Limas) gugur karena rumah adat Sumatera Selatan; Opsi D (Bolon) gugur karena rumah adat Batak, Sumatera Utara. Jawaban: Opsi E (Honai). Tips: relasi daerah dan rumah adatnya: pengetahuan umum budaya Nusantara.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-022",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-1K",
+    "tier": 1,
+    "sumber": "B2#22",
+    "instruksi": "Pilih kata yang tepat untuk melengkapi analogi.",
+    "stem": "PENGLIHATAN : TUNANETRA ≈ PENDENGARAN : …",
+    "opsi": {
+      "a": "Tunawicara",
+      "b": "Tunarungu",
+      "c": "Tunadaksa",
+      "d": "Tunanetra",
+      "e": "Tunagrahita"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Tunanetra adalah orang yang kehilangan penglihatan; tunarungu adalah orang yang kehilangan pendengaran.<br>Opsi A (Tunawicara) gugur karena gangguan kemampuan bicara; Opsi C (Tunadaksa) gugur karena gangguan gerak tubuh; Opsi D (Tunanetra) gugur karena gangguan penglihatan, mengulang sisi kiri; Opsi E (Tunagrahita) gugur karena hambatan kecerdasan. Jawaban: Opsi B (Tunarungu). Tips: relasi kemampuan dan sebutan bagi yang kehilangan kemampuan itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-023",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-1K",
+    "tier": 2,
+    "sumber": "B2#23",
+    "instruksi": "Pilih kata yang tepat untuk melengkapi analogi.",
+    "stem": "SAPI : RUMPUT ≈ KOALA : …",
+    "opsi": {
+      "a": "Daun eukaliptus",
+      "b": "Bambu",
+      "c": "Rumput",
+      "d": "Serangga",
+      "e": "Buah ara"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Makanan utama sapi adalah rumput; makanan utama koala adalah daun eukaliptus (kayu putih).<br>Opsi B (Bambu) gugur karena makanan panda; Opsi C (Rumput) gugur karena makanan sapi, mengulang sisi kiri; Opsi D (Serangga) gugur karena makanan hewan insektivora; Opsi E (Buah ara) gugur karena makanan sebagian burung dan kelelawar. Jawaban: Opsi A (Daun eukaliptus). Tips: relasi hewan dan makanan utamanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-024",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 1,
+    "sumber": "B2#24",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "DAYA : WATT ≈ …",
+    "opsi": {
+      "a": "Arus : Kabel",
+      "b": "Suhu : Termometer",
+      "c": "Hambatan : Ohm",
+      "d": "Massa : Timbangan",
+      "e": "Tegangan : Baterai"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Watt adalah satuan daya; ohm adalah satuan hambatan listrik.<br>Opsi A (Arus : Kabel) gugur karena kabel penghantar, bukan satuan arus; Opsi B (Suhu : Termometer) gugur karena termometer alat ukur, bukan satuan; Opsi D (Massa : Timbangan) gugur karena timbangan alat ukur, bukan satuan; Opsi E (Tegangan : Baterai) gugur karena baterai sumber tegangan, bukan satuan. Jawaban: Opsi C (Hambatan : Ohm). Tips: relasi besaran dan satuannya; bedakan satuan dari alat ukur.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-025",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 2,
+    "sumber": "B2#25",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "JEMUR : KERING ≈ …",
+    "opsi": {
+      "a": "Tangkap : Lempar",
+      "b": "Tunai : Bayar",
+      "c": "Lunak : Rebus",
+      "d": "Setrika : Licin",
+      "e": "Jatuh : Bangun"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Menjemur menghasilkan kering; menyetrika menghasilkan licin. Relasinya perbuatan dan hasilnya.<br>Opsi A (Tangkap : Lempar) gugur karena hubungan berlawanan; Opsi B (Tunai : Bayar) gugur karena cara membayar, bukan hasil perbuatan; Opsi C (Lunak : Rebus) gugur karena urutan terbalik: hasil di kiri, perbuatan di kanan; Opsi E (Jatuh : Bangun) gugur karena hubungan berlawanan atau berurutan. Jawaban: Opsi D (Setrika : Licin). Tips: perhatikan urutan: perbuatan di kiri, hasil di kanan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-026",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 3,
+    "sumber": "B2#26",
+    "instruksi": "Pilih pasangan kata yang tepat untuk mengisi titik-titik.",
+    "stem": "PESAWAT : … ≈ KAPAL : …",
+    "opsi": {
+      "a": "Hanggar ; Dermaga",
+      "b": "Landasan ; Nakhoda",
+      "c": "Sayap ; Laut",
+      "d": "Udara ; Jangkar",
+      "e": "Pilot ; Pelabuhan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Hanggar adalah tempat pesawat berlabuh atau disimpan; dermaga adalah tempat kapal bersandar.<br>Opsi B (Landasan ; Nakhoda) gugur karena dua kata dari relasi berbeda (tempat dan pengemudi); Opsi C (Sayap ; Laut) gugur karena bagian pesawat dan tempat kapal berlayar, relasinya tidak sama; Opsi D (Udara ; Jangkar) gugur karena tempat dan bagian alat, relasinya tidak sama; Opsi E (Pilot ; Pelabuhan) gugur karena pengemudi dan tempat, relasinya tidak sama. Jawaban: Opsi A (Hanggar ; Dermaga). Tips: isi kedua titik-titik dengan relasi yang sama; pasangan campuran langsung gugur.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-027",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 1,
+    "sumber": "B2#27",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "UTARA : SELATAN ≈ …",
+    "opsi": {
+      "a": "Timur : Tenggara",
+      "b": "Barat daya : Selatan",
+      "c": "Timur laut : Barat laut",
+      "d": "Utara : Timur laut",
+      "e": "Barat laut : Tenggara"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Utara dan selatan adalah arah yang berlawanan (180°). Pasangan berlawanan di opsi: barat laut dan tenggara.<br>Opsi A (Timur : Tenggara) gugur karena bersebelahan (45°), tidak berlawanan; Opsi B (Barat daya : Selatan) gugur karena bersebelahan (45°); Opsi C (Timur laut : Barat laut) gugur karena tegak lurus (90°), tidak berlawanan; Opsi D (Utara : Timur laut) gugur karena bersebelahan (45°). Jawaban: Opsi E (Barat laut : Tenggara). Tips: bayangkan mata angin; arah berlawanan selalu berseberangan lurus.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-028",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 3,
+    "sumber": "B2#28",
+    "instruksi": "Pilih pasangan kata yang tepat untuk mengisi titik-titik.",
+    "stem": "SEPAK BOLA : … ≈ LALU LINTAS : …",
+    "opsi": {
+      "a": "Gawang ; Polisi",
+      "b": "Wasit ; Polisi",
+      "c": "Wasit ; Sopir",
+      "d": "Penonton ; Rambu",
+      "e": "Kartu merah ; Jalan raya"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Wasit menegakkan aturan dalam sepak bola; polisi lalu lintas menegakkan aturan di jalan.<br>Opsi A (Gawang ; Polisi) gugur karena gawang tidak sepadan dengan polisi; Opsi C (Wasit ; Sopir) gugur karena sopir adalah peserta lalu lintas, bukan penegak aturannya; Opsi D (Penonton ; Rambu) gugur karena penonton bukan penegak aturan; rambu bukan orang; Opsi E (Kartu merah ; Jalan raya) gugur karena sanksi dan tempat, relasinya tidak sama. Jawaban: Opsi B (Wasit ; Polisi). Tips: cari peran yang sama di dua bidang berbeda.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-029",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 3,
+    "sumber": "B2#29",
+    "instruksi": "Pilih pasangan yang hubungannya sama dengan hubungan kata pada soal.",
+    "stem": "RINA : NADI : DINO ≈ …",
+    "opsi": {
+      "a": "Adik : Kakak : Ibu",
+      "b": "SD : SMP : SMA",
+      "c": "Pagi : Siang : Malam",
+      "d": "Satu : Dua : Tiga",
+      "e": "Tari : Riko : Kola"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Suku akhir kata pertama menjadi suku awal kata berikutnya: RI-NA → NA-DI → DI-NO. Pasangan yang sama: TA-RI → RI-KO → KO-LA.<br>Opsi A (Adik : Kakak : Ibu) gugur karena urutan anggota keluarga, tidak membentuk rantai suku kata; Opsi B (SD : SMP : SMA) gugur karena urutan jenjang sekolah; Opsi C (Pagi : Siang : Malam) gugur karena urutan waktu; Opsi D (Satu : Dua : Tiga) gugur karena urutan bilangan. Jawaban: Opsi E (Tari : Riko : Kola). Tips: analogi tiga suku: periksa huruf atau suku kata, bukan hanya makna.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K02-B2-030",
+    "kartu": "K02",
+    "sub_type": "VRB-ANL-PAIR",
+    "tier": 2,
+    "sumber": "B2#30",
+    "instruksi": "Pilih pasangan kata yang tepat untuk mengisi titik-titik.",
+    "stem": "INDIA : … ≈ JEPANG : …",
+    "opsi": {
+      "a": "Rupee ; Won",
+      "b": "Ringgit ; Yen",
+      "c": "New Delhi ; Yen",
+      "d": "Rupee ; Yen",
+      "e": "Baht ; Won"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Rupee adalah mata uang India; yen adalah mata uang Jepang.<br>Opsi A (Rupee ; Won) gugur karena won adalah mata uang Korea Selatan; Opsi B (Ringgit ; Yen) gugur karena ringgit adalah mata uang Malaysia; Opsi C (New Delhi ; Yen) gugur karena ibu kota dan mata uang, relasinya tidak sama; Opsi E (Baht ; Won) gugur karena mata uang Thailand dan Korea Selatan. Jawaban: Opsi D (Rupee ; Yen). Tips: relasi negara dan mata uangnya; pastikan kedua sisi memakai relasi yang sama.",
+    "status_kunci": "ganda"
+  }
+]
