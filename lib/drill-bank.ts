@@ -1,0 +1,64 @@
+import "server-only";
+import bank from "@/data/drill-bank.json";
+import { DRILL_CARDS } from "@/lib/drill-cards";
+
+// Bank drill hasil `npm run build:drill` (bank/drill/** → data/drill-bank.json).
+// SERVER ONLY: kunci dan pembahasan ada di sini; ke browser hanya SafeDrillItem.
+
+export type DrillItem = {
+  id: string;
+  kartu: string;
+  sub_type: string;
+  tier: number;
+  sumber: string;
+  instruksi?: string;
+  stem: string;
+  rumus?: string;
+  gambar?: string | null;
+  opsi: Record<string, string>;
+  kunci: string[];
+  pembahasan: string;
+  status_kunci: string;
+};
+
+export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "stem" | "rumus" | "gambar" | "opsi"> & {
+  multi: boolean;
+};
+
+const ITEMS = bank as DrillItem[];
+const BY_ID = new Map(ITEMS.map((it) => [it.id, it]));
+
+export function getDrillItem(id: string): DrillItem | undefined {
+  return BY_ID.get(id);
+}
+
+export function safeDrillItem(it: DrillItem): SafeDrillItem {
+  return {
+    id: it.id,
+    kartu: it.kartu,
+    sub_type: it.sub_type,
+    tier: it.tier,
+    instruksi: it.instruksi,
+    stem: it.stem,
+    rumus: it.rumus,
+    gambar: it.gambar ?? null,
+    opsi: it.opsi,
+    multi: it.kunci.length > 1,
+  };
+}
+
+export function drillItemsFor(kartu: string): SafeDrillItem[] {
+  return ITEMS.filter((it) => it.kartu === kartu).map(safeDrillItem);
+}
+
+/** Ringkasan per kartu untuk katalog: id soal per tier (tanpa isi soal). */
+export function drillCatalog() {
+  return Object.entries(DRILL_CARDS).map(([kartu, card]) => {
+    const items = ITEMS.filter((it) => it.kartu === kartu);
+    return {
+      kartu,
+      ...card,
+      tiers: [1, 2, 3].map((tier) => items.filter((it) => it.tier === tier).map((it) => it.id)),
+    };
+  });
+}

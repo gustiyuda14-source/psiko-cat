@@ -55,6 +55,16 @@ export function NavLatihan() {
   );
 }
 
+export function NavDrill() {
+  return (
+    <NavSvg>
+      <path className="sf" d="M5 5h6v6H5z" />
+      <path d="M5 5h6v6H5zM13 5h6v6h-6zM5 13h6v6H5zM13 13h6v6h-6z" />
+      <path className="ac" d="m14.5 16 1.5 1.5 3-3" />
+    </NavSvg>
+  );
+}
+
 export function NavReview() {
   return (
     <NavSvg>

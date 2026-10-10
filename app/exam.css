@@ -50,6 +50,16 @@
 .mark.is-square { border-radius: 6px }
 .opt.sel .mark { background: var(--ok); border-color: var(--ok); color: #fff }
 .mark-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff }
+/* Drilling: status per soal setelah diperiksa (navigator + opsi) dan rumus MathML. */
+.dnum.is-ok { border-color: var(--success); background: var(--success-soft); color: var(--success) }
+.dnum.is-bad { border-color: var(--destructive); background: var(--destructive-soft); color: var(--destructive) }
+.opt:disabled { cursor: default }
+.opt:disabled:hover { border-color: var(--border); background: var(--surface-card) }
+.opt.is-key, .opt.is-key:disabled:hover { border-color: var(--success); background: var(--success-soft); box-shadow: inset 0 0 0 1px var(--success) }
+.opt.is-key .mark { background: var(--success); border-color: var(--success); color: #fff }
+.opt.is-wrong, .opt.is-wrong:disabled:hover { border-color: var(--destructive); background: var(--destructive-soft) }
+.opt.is-wrong .mark { background: var(--destructive); border-color: var(--destructive); color: #fff }
+.drill-math math { font-size: 1.6rem; margin: .5rem 0 }
 .qnum { margin: 0; color: var(--muted-foreground); font-size: .875rem; font-weight: 700 }
 
 @media (prefers-reduced-motion: reduce) { .dnum, .xround, .opt { transition: none } .dnum:hover, .xround:hover:not(:disabled) { transform: none } }

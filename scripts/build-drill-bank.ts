@@ -11,6 +11,7 @@
  */
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
+import { DRILL_CARDS } from "../lib/drill-cards";
 
 const ROOT = join(__dirname, "..");
 const SRC = join(ROOT, "bank/drill");
@@ -19,23 +20,7 @@ const LETTERS = ["a", "b", "c", "d", "e"] as const;
 const SHIPPABLE = new Set(["resmi", "ganda"]);
 const STATUSES = new Set(["resmi", "ganda", "hitung", "tunggal"]);
 
-// Kartu katalog drill + sub_type yang boleh (taksonomi docs/rencana/drilling/02).
-const CARDS: Record<string, { label: string; prefix: string[] }> = {
-  K01: { label: "Sinonim & Antonim", prefix: ["VRB-SIN-", "VRB-ANT-"] },
-  K02: { label: "Analogi Kata", prefix: ["VRB-ANL-"] },
-  K03: { label: "Kata Ganjil", prefix: ["VRB-GJL"] },
-  K04: { label: "Pemahaman Bacaan", prefix: ["VRB-BACA-"] },
-  K05: { label: "Hitung Cepat", prefix: ["NUM-HIT-", "NUM-ALJ-"] },
-  K06: { label: "Konversi Satuan", prefix: ["NUM-SAT-"] },
-  K07: { label: "Soal Cerita", prefix: ["NUM-CRT-"] },
-  K08: { label: "Silogisme", prefix: ["LOG-SIL-"] },
-  K09: { label: "Deret Angka & Huruf", prefix: ["ANL-DRT-"] },
-  K10: { label: "Angka dalam Gambar", prefix: ["ANL-ANGKA-", "ANL-OPERASI-", "ANL-KODE"] },
-  K11: { label: "Wacana Logika", prefix: ["ANL-WCN-"] },
-  K12: { label: "Pola & Matriks Gambar", prefix: ["FIG-MTX-", "FIG-SERI", "FIG-ANALOGI", "FIG-ROTASI-"] },
-  K13: { label: "Ikon Kategori", prefix: ["FIG-IKON-"] },
-  K14: { label: "Susun Potongan Gambar", prefix: ["FIG-SUSUN-"] },
-};
+const CARDS = DRILL_CARDS;
 
 type Value = number | string | boolean;
 type Item = {
