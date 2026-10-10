@@ -77,3 +77,8 @@
 @media (min-width: 640px) { .opts-fig { grid-template-columns: repeat(5, minmax(0, 1fr)) } }
 .opt.opt-fig { position: relative; flex-direction: column; justify-content: center; gap: .5rem; padding: .75rem .5rem }
 .opt.opt-fig > svg:last-child { position: absolute; top: .5rem; right: .5rem; margin: 0 }
+
+/* Gambar soal: dibatasi tinggi layar supaya soal + opsi muat tanpa banyak gulir; gambar kecil tidak diperbesar. */
+.q-figure { display: block; width: auto; height: auto; max-width: min(100%, 680px); max-height: min(40vh, 380px); margin-inline: auto; padding: .375rem; border: 1px solid var(--border); border-radius: var(--r-md); background: #fff; object-fit: contain }
+.opt-figure { width: auto; height: auto; max-width: 100%; max-height: 96px; object-fit: contain }
+@media (min-width: 640px) { .opt-figure { max-height: 120px } }

@@ -237,7 +237,7 @@ export default function DrillSession({
             {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
             {q.gambar && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] max-w-full rounded-md border border-border bg-white p-2" />
+              <img src={`/${q.gambar}`} alt="" className="q-figure" />
             )}
           </div>
 
@@ -251,7 +251,7 @@ export default function DrillSession({
                   <span className={`mark ${q.multi ? "is-square" : ""}`}>{k.toUpperCase()}</span>
                   {q.opsi_gambar?.[k] ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="h-auto w-24 sm:w-28" />
+                    <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="opt-figure" />
                   ) : (
                     <span className="opt-text">{q.opsi[k]}</span>
                   )}
