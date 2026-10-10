@@ -1,0 +1,5138 @@
+{
+  "nomor": 205,
+  "nama": "Paket Spasial 5",
+  "kategori": "SPASIAL",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k01_A.svg",
+        "B": "/kecermatan-spasial/p205/k01_B.svg",
+        "C": "/kecermatan-spasial/p205/k01_C.svg",
+        "D": "/kecermatan-spasial/p205/k01_D.svg",
+        "E": "/kecermatan-spasial/p205/k01_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_D.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg",
+            "/kecermatan-spasial/p205/k01_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k01_C.svg",
+            "/kecermatan-spasial/p205/k01_B.svg",
+            "/kecermatan-spasial/p205/k01_E.svg",
+            "/kecermatan-spasial/p205/k01_A.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k02_A.svg",
+        "B": "/kecermatan-spasial/p205/k02_B.svg",
+        "C": "/kecermatan-spasial/p205/k02_C.svg",
+        "D": "/kecermatan-spasial/p205/k02_D.svg",
+        "E": "/kecermatan-spasial/p205/k02_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_D.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k02_A.svg",
+            "/kecermatan-spasial/p205/k02_B.svg",
+            "/kecermatan-spasial/p205/k02_E.svg",
+            "/kecermatan-spasial/p205/k02_C.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k03_A.svg",
+        "B": "/kecermatan-spasial/p205/k03_B.svg",
+        "C": "/kecermatan-spasial/p205/k03_C.svg",
+        "D": "/kecermatan-spasial/p205/k03_D.svg",
+        "E": "/kecermatan-spasial/p205/k03_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_A.svg",
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_D.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k03_C.svg",
+            "/kecermatan-spasial/p205/k03_E.svg",
+            "/kecermatan-spasial/p205/k03_B.svg",
+            "/kecermatan-spasial/p205/k03_D.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k04_A.svg",
+        "B": "/kecermatan-spasial/p205/k04_B.svg",
+        "C": "/kecermatan-spasial/p205/k04_C.svg",
+        "D": "/kecermatan-spasial/p205/k04_D.svg",
+        "E": "/kecermatan-spasial/p205/k04_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_E.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_C.svg",
+            "/kecermatan-spasial/p205/k04_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k04_A.svg",
+            "/kecermatan-spasial/p205/k04_B.svg",
+            "/kecermatan-spasial/p205/k04_D.svg",
+            "/kecermatan-spasial/p205/k04_C.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k05_A.svg",
+        "B": "/kecermatan-spasial/p205/k05_B.svg",
+        "C": "/kecermatan-spasial/p205/k05_C.svg",
+        "D": "/kecermatan-spasial/p205/k05_D.svg",
+        "E": "/kecermatan-spasial/p205/k05_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg",
+            "/kecermatan-spasial/p205/k05_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_C.svg",
+            "/kecermatan-spasial/p205/k05_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k05_A.svg",
+            "/kecermatan-spasial/p205/k05_B.svg",
+            "/kecermatan-spasial/p205/k05_D.svg",
+            "/kecermatan-spasial/p205/k05_E.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k06_A.svg",
+        "B": "/kecermatan-spasial/p205/k06_B.svg",
+        "C": "/kecermatan-spasial/p205/k06_C.svg",
+        "D": "/kecermatan-spasial/p205/k06_D.svg",
+        "E": "/kecermatan-spasial/p205/k06_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_D.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_E.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k06_C.svg",
+            "/kecermatan-spasial/p205/k06_B.svg",
+            "/kecermatan-spasial/p205/k06_A.svg",
+            "/kecermatan-spasial/p205/k06_D.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k07_A.svg",
+        "B": "/kecermatan-spasial/p205/k07_B.svg",
+        "C": "/kecermatan-spasial/p205/k07_C.svg",
+        "D": "/kecermatan-spasial/p205/k07_D.svg",
+        "E": "/kecermatan-spasial/p205/k07_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_E.svg",
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_C.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k07_A.svg",
+            "/kecermatan-spasial/p205/k07_D.svg",
+            "/kecermatan-spasial/p205/k07_B.svg",
+            "/kecermatan-spasial/p205/k07_E.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k08_A.svg",
+        "B": "/kecermatan-spasial/p205/k08_B.svg",
+        "C": "/kecermatan-spasial/p205/k08_C.svg",
+        "D": "/kecermatan-spasial/p205/k08_D.svg",
+        "E": "/kecermatan-spasial/p205/k08_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg",
+            "/kecermatan-spasial/p205/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_D.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k08_E.svg",
+            "/kecermatan-spasial/p205/k08_A.svg",
+            "/kecermatan-spasial/p205/k08_B.svg",
+            "/kecermatan-spasial/p205/k08_D.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k09_A.svg",
+        "B": "/kecermatan-spasial/p205/k09_B.svg",
+        "C": "/kecermatan-spasial/p205/k09_C.svg",
+        "D": "/kecermatan-spasial/p205/k09_D.svg",
+        "E": "/kecermatan-spasial/p205/k09_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_C.svg",
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k09_A.svg",
+            "/kecermatan-spasial/p205/k09_B.svg",
+            "/kecermatan-spasial/p205/k09_D.svg",
+            "/kecermatan-spasial/p205/k09_E.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "simbol": {
+        "A": "/kecermatan-spasial/p205/k10_A.svg",
+        "B": "/kecermatan-spasial/p205/k10_B.svg",
+        "C": "/kecermatan-spasial/p205/k10_C.svg",
+        "D": "/kecermatan-spasial/p205/k10_D.svg",
+        "E": "/kecermatan-spasial/p205/k10_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_B.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_E.svg",
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-spasial/p205/k10_C.svg",
+            "/kecermatan-spasial/p205/k10_D.svg",
+            "/kecermatan-spasial/p205/k10_A.svg",
+            "/kecermatan-spasial/p205/k10_E.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    }
+  ]
+}

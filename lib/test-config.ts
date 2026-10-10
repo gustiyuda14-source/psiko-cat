@@ -42,7 +42,7 @@ export const KECERMATAN_ANGKA_PACKAGE_LABELS: Record<number, string> = Object.fr
 
 // Aspek ketiga Kecermatan: Spasial (gambar geometris mirip, simbol = path SVG
 // di public/kecermatan-spasial). Latihan saja — tidak masuk pool ujian
-// pickRandomKecermatanPackage(). Baru 201 yang ada soalnya; 202-206 slot "Belum tersedia".
+// pickRandomKecermatanPackage(). Semua 6 paket (201-206) sudah berisi soal.
 export const KECERMATAN_SPASIAL_PACKAGES = [201, 202, 203, 204, 205, 206];
 
 export const KECERMATAN_SPASIAL_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(

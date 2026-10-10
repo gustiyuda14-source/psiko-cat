@@ -6,8 +6,12 @@ import * as path from "path";
 // memakai keadaan 0 di semua slot; 4 gambar lain masing-masing membalik tepat
 // satu slot. Jadi tiap pasangan gambar dalam satu kolom cuma beda 1-2 detail.
 //
-// Pakai: npx tsx scripts/generate-kecermatan-spasial.ts 202
-// Hasil: public/kecermatan-spasial/p202/*.svg + prisma/data/bank_soal_p202.json
+// Paket 202 memakai 10 komposisi tulisan tangan (KOLOM). Paket lain merakit
+// komposisi acak (randomKolom) dari pustaka bentuk dengan seed = nomor paket,
+// jadi tiap paket beda isi tapi tetap bisa direproduksi.
+//
+// Pakai: npx tsx scripts/generate-kecermatan-spasial.ts 203
+// Hasil: public/kecermatan-spasial/p203/*.svg + prisma/data/bank_soal_p203.json
 
 const PKG = Number(process.argv[2]);
 if (!Number.isInteger(PKG)) throw new Error("Nomor paket wajib, mis. 202");
@@ -127,13 +131,109 @@ const KOLOM: Kolom[] = [
     ] },
 ];
 
+// mulberry32 — RNG kecil ber-seed supaya paket bisa dibangkitkan ulang identik.
+let seed = PKG * 7919;
+const rng = () => {
+  seed = (seed + 0x6d2b79f5) | 0;
+  let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+};
+const pick = <T,>(a: readonly T[]) => a[Math.floor(rng() * a.length)];
+const shuffle = <T,>(a: T[]) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+
+// --- Mode acak -------------------------------------------------------------
+const C = 52; // pusat bentuk utama
+const rot = (pts: [number, number][], deg: number): [number, number][] => {
+  const a = (deg * Math.PI) / 180, c = Math.cos(a), sn = Math.sin(a);
+  return pts.map(([x, y]) => [C + (x - C) * c - (y - C) * sn, C + (x - C) * sn + (y - C) * c]);
+};
+const starN = (n: number, R: number, deg: number, f: Fill) =>
+  poly(Array.from({ length: n * 2 }, (_, i) => {
+    const a = ((deg + (180 / n) * i) * Math.PI) / 180, r = i % 2 ? R * 0.45 : R;
+    return [C + r * Math.cos(a), C + r * Math.sin(a)] as [number, number];
+  }), f);
+
+// Bentuk utama: fungsi (rotasi) -> SVG. `inner` = boleh diberi tanda di pusat.
+type Main = { name: string; draw: (deg: number) => string; inner: boolean; step: number };
+const MAINS: Main[] = [
+  ...[3, 4, 5, 6, 7, 8].map((n) => ({ name: `ngon${n}`, draw: (d: number) => ngon(C, C, 26, n, d - 90, "k"), inner: true, step: 180 / n })),
+  ...[4, 5, 6].map((n) => ({ name: `star${n}`, draw: (d: number) => starN(n, 28, d - 90, "k"), inner: true, step: 180 / n })),
+  { name: "panah", draw: (d) => poly(rot([[52, 24], [76, 50], [61, 50], [61, 78], [43, 78], [43, 50], [28, 50]], d), "k"), inner: false, step: 90 },
+  { name: "kepala-panah", draw: (d) => poly(rot([[30, 26], [80, 46], [58, 54], [66, 78], [52, 82], [46, 60], [28, 70]], d), "k"), inner: false, step: 90 },
+  { name: "silang", draw: (d) => poly(rot([[44, 26], [60, 26], [60, 44], [78, 44], [78, 60], [60, 60], [60, 78], [44, 78], [44, 60], [26, 60], [26, 44], [44, 44]], d), "k"), inner: true, step: 45 },
+  { name: "trapesium", draw: (d) => poly(rot([[38, 32], [66, 32], [80, 72], [24, 72]], d), "k"), inner: true, step: 180 },
+  { name: "siku", draw: (d) => poly(rot([[26, 78], [78, 78], [78, 26]], d), "k"), inner: false, step: 90 },
+  { name: "chevron", draw: (d) => poly(rot([[26, 30], [52, 50], [78, 30], [78, 50], [52, 74], [26, 50]], d), "k"), inner: false, step: 180 },
+  { name: "dasi", draw: (d) => poly(rot([[26, 30], [52, 52], [26, 74]], d), "k") + poly(rot([[78, 30], [52, 52], [78, 74]], d), "w"), inner: false, step: 90 },
+  { name: "bulan", draw: (d) => { const [[bx, by]] = rot([[64, 46]], d); return `<circle cx="${C}" cy="${C}" r="27" fill="#000"/><circle cx="${r1(bx)}" cy="${r1(by)}" r="22" fill="#fff"/>`; }, inner: false, step: 90 },
+  { name: "L", draw: (d) => poly(rot([[34, 24], [52, 24], [52, 62], [72, 62], [72, 80], [34, 80]], d), "k"), inner: false, step: 90 },
+];
+
+type El = { kind: "tri" | "sq" | "dot" | "dia" | "pent"; x: number; y: number; r: number; fill: Fill; dir: number };
+const drawEl = (e: El | null) => {
+  if (!e) return "";
+  switch (e.kind) {
+    case "tri": return tri(e.x, e.y, e.r, e.dir, e.fill);
+    case "sq": return sq(e.x, e.y, r1(e.r * 1.5), e.fill);
+    case "dot": return dot(e.x, e.y, r1(e.r * 0.85), e.fill);
+    case "dia": return ngon(e.x, e.y, e.r, 4, -90, e.fill);
+    case "pent": return ngon(e.x, e.y, e.r, 5, -90, e.fill);
+  }
+};
+// 8 jangkar di sekeliling bentuk utama (sudut + tengah sisi)
+const ANCHORS: [number, number, number][] = [
+  [20, 20, 7.5], [84, 20, 7.5], [20, 84, 7.5], [84, 84, 7.5],
+  [52, 15, 6], [52, 89, 6], [15, 52, 6], [89, 52, 6],
+];
+const KINDS = ["tri", "sq", "dot", "dia", "pent"] as const;
+const otherFill = (f: Fill): Fill => pick((["k", "w", "g"] as Fill[]).filter((x) => x !== f));
+
+// Satu slot = elemen kecil + versi yang dibalik satu atributnya.
+function slotFor(e: El, allowGone: boolean): [string, string] {
+  const kinds: string[] = ["fill", "kind"];
+  if (e.kind === "tri") kinds.push("dir", "dir");
+  if (allowGone) kinds.push("gone");
+  const how = pick(kinds);
+  const alt: El | null =
+    how === "fill" ? { ...e, fill: otherFill(e.fill) } :
+    how === "dir" ? { ...e, dir: e.dir + pick([90, 180, -90]) } :
+    how === "kind" ? { ...e, kind: pick(KINDS.filter((k) => k !== e.kind)) } : null;
+  return [drawEl(e), drawEl(alt)];
+}
+
+function randomKolom(main: Main): Kolom {
+  // Poligon/bintang beraturan muat di lingkaran r28, aman diputar bebas;
+  // bentuk lain cuma kelipatan 90 supaya sudutnya tidak menabrak jangkar.
+  const free = /^(ngon|star)/.test(main.name);
+  const deg = free ? pick([0, 15, 30, 45, 60]) : pick([0, 90, 180, 270]);
+  const slots: [string, string][] = [];
+  // Kadang bentuk utama sendiri jadi slot: diputar setengah langkah simetri
+  // (paling sulit). Bentuk tak beraturan tidak — putaran 90° terlalu mencolok.
+  const mainSlot = free && rng() < 0.35;
+  if (mainSlot) slots.push([main.draw(deg), main.draw(deg + main.step)]);
+  if (main.inner && slots.length < 4 && rng() < 0.7) {
+    slots.push(slotFor({ kind: pick(KINDS), x: C, y: C, r: 9, fill: pick(["w", "g"] as Fill[]), dir: pick([-90, 90, 0, 180]) }, false));
+  }
+  let gone = false;
+  for (const [x, y, r] of shuffle([...ANCHORS])) {
+    if (slots.length === 4) break;
+    const allowGone = !gone && rng() < 0.3;
+    const pair = slotFor({ kind: pick(KINDS), x, y, r, fill: pick(["k", "w", "g", "k", "w"] as Fill[]), dir: pick([-90, 90, 0, 180]) }, allowGone);
+    if (pair[1] === "") gone = true;
+    slots.push(pair);
+  }
+  return { main: mainSlot ? "" : main.draw(deg), slots };
+}
+
+const SET: Kolom[] = PKG === 202 ? KOLOM : shuffle([...MAINS]).slice(0, 10).map(randomKolom);
+
 const KEYS = ["A", "B", "C", "D", "E"] as const;
-const shuffle = <T,>(a: T[]) => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const svgDir = path.join(__dirname, `../public/kecermatan-spasial/p${PKG}`);
 fs.mkdirSync(svgDir, { recursive: true });
 
-const kolom = KOLOM.map((k, c) => {
+const kolom = SET.map((k, c) => {
   // varian 0 = dasar, varian 1-4 = balik slot ke-(n-1); urutan huruf diacak
   const variants = shuffle([0, 1, 2, 3, 4]);
   const id = String(c + 1).padStart(2, "0");
