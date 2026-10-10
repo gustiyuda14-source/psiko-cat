@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useLayoutEffect, useRef, useState, type RefObject } from "react";
 import Link from "next/link";
 import { ArrowRight } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
@@ -43,6 +43,52 @@ export type PackageOption = {
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
 
+/*
+  Jalur ke panel: dari tepi dial terpilih (yang selalu berhenti di penanda fokus)
+  ke tepi panel — siku horizontal di desktop, vertikal di HP saat panel turun ke bawah.
+  Diukur dari DOM supaya ikut tata letak apa pun.
+*/
+type PanelLink = { w: number; h: number; d: string; at: [number, number] };
+
+function measurePanelLink(stage: HTMLElement): PanelLink | null {
+  const svg = stage.querySelector<SVGSVGElement>(".hc-wheel[data-reach]");
+  const aside = stage.querySelector(".hc-panel");
+  if (!svg || !aside) return null;
+  const n = (v: number) => Math.round(v * 10) / 10;
+  const clamp = (v: number, a: number, b: number) => n(Math.min(Math.max(v, a), b));
+  const o = stage.getBoundingClientRect(), s = svg.getBoundingClientRect(), r = aside.getBoundingClientRect();
+  const p = { l: r.left - o.left, t: r.top - o.top, r: r.right - o.left, b: r.bottom - o.top };
+  const cx = n(s.left + s.width / 2 - o.left), cy = n(s.top + s.height / 2 - o.top), reach = Number(svg.dataset.reach);
+  if (p.l > cx + reach) {
+    const x0 = n(cx + reach), y = clamp(cy, p.t + 32, p.b - 32), mid = n(x0 + (p.l - x0) / 2);
+    return { w: n(o.width), h: n(o.height), d: `M${x0} ${cy}H${mid}V${y}H${n(p.l)}`, at: [n(p.l), y] };
+  }
+  const y0 = n(cy + reach), x = clamp(cx, p.l + 32, p.r - 32), mid = n(y0 + (p.t - y0) / 2);
+  return { w: n(o.width), h: n(o.height), d: `M${cx} ${y0}V${mid}H${x}V${n(p.t)}`, at: [x, n(p.t)] };
+}
+
+function usePanelLink(root: RefObject<HTMLDivElement | null>) {
+  const [link, setLink] = useState<PanelLink | null>(null);
+  const last = useRef("");
+  // Ukur tiap render (setState hanya kalau berubah) dan saat ukuran panggung berubah.
+  useLayoutEffect(() => {
+    const el = root.current;
+    if (!el) return;
+    const sync = () => {
+      const next = measurePanelLink(el);
+      const key = JSON.stringify(next);
+      if (key === last.current) return;
+      last.current = key;
+      setLink(next);
+    };
+    sync();
+    const ro = new ResizeObserver(sync);
+    ro.observe(el);
+    return () => ro.disconnect();
+  });
+  return link;
+}
+
 export function PackageCarousel({
   packages,
   expectedCount,
@@ -69,6 +115,8 @@ export function PackageCarousel({
   const [timedMode, setTimedMode] = useState(false);
   const [confirmReset, setConfirmReset] = useState(false);
   const panelRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
+  const link = usePanelLink(stageRef);
 
   const marks = packages.some((p) => p.sections) ? 10 : 4;
   const view = packages.map((pkg) => {
@@ -108,7 +156,7 @@ export function PackageCarousel({
         </h2>
       </div>
 
-      <div className="hc-stage">
+      <div ref={stageRef} className="hc-stage hc-linked">
         <div className="hc-field">
           <PackageOrbit
             items={orbit}
@@ -263,6 +311,24 @@ export function PackageCarousel({
             </>
           )}
         </aside>
+
+        {link && (
+          // key = paket terpilih: jalur muncul ulang tiap ganti paket.
+          <svg className="hc-links" width={link.w} height={link.h} aria-hidden="true">
+            <defs>
+              <filter id="pc-blur" filterUnits="userSpaceOnUse" x="0" y="0" width={link.w} height={link.h}>
+                <feGaussianBlur stdDeviation="3" />
+              </filter>
+            </defs>
+            <g key={pkg.id} className="hc-link is-on is-panel">
+              <path className="hc-link-halo" d={link.d} filter="url(#pc-blur)" />
+              <path className="hc-link-trace" d={link.d} />
+              <path className="hc-link-pulse is-glow" d={link.d} pathLength={100} filter="url(#pc-blur)" />
+              <path className="hc-link-pulse" d={link.d} pathLength={100} />
+              <rect className="hc-link-node" x={link.at[0] - 3.5} y={link.at[1] - 3.5} width={7} height={7} transform={`rotate(45 ${link.at[0]} ${link.at[1]})`} />
+            </g>
+          </svg>
+        )}
       </div>
 
       <ConfirmDialog

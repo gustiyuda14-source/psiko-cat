@@ -76,6 +76,10 @@ export function PackageOrbit({
   const markR = Rorb - dR * 1.14 - 12;
   const mx = Math.cos((focus * Math.PI) / 180) * markR;
   const my = Math.sin((focus * Math.PI) / 180) * markR;
+  // Jangkauan tepi luar dial terpilih (skala 1.14 + cincin skala) — dibaca PackageCarousel
+  // lewat data-reach untuk menarik jalur ke panel.
+  const reach = Rorb + (dR + 12) * 1.14;
+  const hub = coreR + 10;
 
   function onKey(e: React.KeyboardEvent, id: string) {
     if (e.key === "Enter" || e.key === " ") {
@@ -96,7 +100,7 @@ export function PackageOrbit({
       <p className="hc-hud" aria-hidden="true">
         {hud}
       </p>
-      <svg className="hc-wheel" width={W} height={H} viewBox={`${-W / 2} ${-H / 2} ${W} ${H}`} role="group" aria-label="Orbit paket. Gunakan panah untuk berpindah paket.">
+      <svg className="hc-wheel" width={W} height={H} viewBox={`${-W / 2} ${-H / 2} ${W} ${H}`} data-reach={reach.toFixed(1)} role="group" aria-label="Orbit paket. Gunakan panah untuk berpindah paket.">
         <defs>
           <linearGradient id="po-honey" x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="var(--honey-top)" />
@@ -105,6 +109,9 @@ export function PackageOrbit({
           <clipPath id="po-core">
             <polygon points={CORE_HEX} />
           </clipPath>
+          <filter id="po-blur" filterUnits="userSpaceOnUse" x={-W / 2} y={-H / 2} width={W} height={H}>
+            <feGaussianBlur stdDeviation="3" />
+          </filter>
         </defs>
 
         <circle className="hc-dial-ring" r={Rorb} />
@@ -112,6 +119,20 @@ export function PackageOrbit({
         <polygon className="hc-mark" points="0,-6 9,0 0,6" transform={`translate(${mx} ${my}) rotate(${focus})`} />
 
         <g className="hc-spin" style={{ transform: `rotate(${spin}deg)` }}>
+          {/* Jalur madu: tiap paket tersambung ke inti, titik mengalir ke dalam; jalur paket
+              terpilih dapat siluet emas + pulsa yang mendarat di inti. */}
+          {items.map((it, i) => {
+            const sel = it.id === selected;
+            const d = `M${(Rorb - (dR + 12) * (sel ? 1.14 : 1)).toFixed(1)} 0H${hub.toFixed(1)}`;
+            return (
+              <g key={it.id} transform={`rotate(${angle(i)})`} className={sel ? "hc-link is-on" : "hc-link"} aria-hidden="true">
+                {sel && <path className="hc-link-halo" d={d} filter="url(#po-blur)" />}
+                <path className="hc-link-trace" d={d} />
+                {sel && <path className="hc-link-pulse is-glow" d={d} pathLength={100} filter="url(#po-blur)" />}
+                {sel && <path className="hc-link-pulse" d={d} pathLength={100} />}
+              </g>
+            );
+          })}
           {items.map((it, i) => {
             const sel = it.id === selected;
             const a = angle(i);
@@ -181,6 +202,10 @@ export function PackageOrbit({
             </g>
           </g>
           <polygon className="hc-core-line" points={CORE_HEX} />
+        </g>
+        <g transform={`rotate(${focus}) translate(${hub} 0)`} aria-hidden="true">
+          <circle className="hc-link-ping" r={5} />
+          <circle className="hc-link-node is-hub" r={3.5} />
         </g>
         <g className={`hc-core-text${overall.p >= 0.6 ? " is-high" : ""}`} aria-hidden="true">
           <text y={-coreR * 0.3} textAnchor="middle" className="hc-core-lab">
