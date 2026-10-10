@@ -1,0 +1,669 @@
+[
+  {
+    "id": "K12-A3-091",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-XOR",
+    "tier": 3,
+    "sumber": "A3#91",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-091.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-091-a.svg",
+      "b": "drill/img/K12-A3-091-b.svg",
+      "c": "drill/img/K12-A3-091-c.svg",
+      "d": "drill/img/K12-A3-091-d.svg",
+      "e": "drill/img/K12-A3-091-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Di setiap baris, kolom 3 berisi bagian yang muncul hanya di salah satu kolom 1 atau 2; bagian yang muncul di keduanya hilang. Baris 1: garis datar ada di kedua kolom, jadi hilang. Baris 2: titik hitam hilang. Baris 3: garis \\ ada di kedua kolom sehingga hilang; sisanya garis /, lingkaran kecil, dan garis datar.<br>Opsi B gugur karena lingkaran kecil dari kolom 1 ikut hilang, padahal hanya ada di satu kolom; Opsi C gugur karena lupa garis datar dari kolom 2; Opsi D gugur karena menggabungkan semua garis; garis \\ yang ada di kedua kolom seharusnya hilang; Opsi E gugur karena hanya menyisakan garis yang sama, kebalikan dari aturannya. Jawaban: Opsi A. Tips: coret bagian yang sama di kolom 1 dan 2, lalu gabungkan sisanya.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-092",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-KURANG",
+    "tier": 3,
+    "sumber": "A3#92",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-092.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-092-a.svg",
+      "b": "drill/img/K12-A3-092-b.svg",
+      "c": "drill/img/K12-A3-092-c.svg",
+      "d": "drill/img/K12-A3-092-d.svg",
+      "e": "drill/img/K12-A3-092-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kolom 3 = kolom 1 dikurangi bagian yang ada di kolom 2. Baris 1: atas+bawah dikurangi bawah = atas. Baris 2: empat segitiga dikurangi atas dan kanan = bawah dan kiri. Baris 3: atas, bawah, kiri dikurangi bawah = atas dan kiri.<br>Opsi A gugur karena segitiga kiri ikut terbuang, padahal tidak ada di kolom 2; Opsi C gugur karena segitiga yang tersisa di kiri, bukan di kanan; Opsi D gugur karena kolom 1 disalin tanpa dikurangi; Opsi E gugur karena menyalin kolom 2, padahal kolom 2 yang dibuang. Jawaban: Opsi B. Tips: tumpuk kolom 2 di atas kolom 1 dan hapus bagian yang tertutup.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-093",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-INVERSI",
+    "tier": 2,
+    "sumber": "A3#93",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-093.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-093-a.svg",
+      "b": "drill/img/K12-A3-093-b.svg",
+      "c": "drill/img/K12-A3-093-c.svg",
+      "d": "drill/img/K12-A3-093-d.svg",
+      "e": "drill/img/K12-A3-093-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Setiap baris memakai satu bentuk. Kolom 1 bentuk hitam penuh, kolom 2 bentuk yang sama tinggal garis tepi, kolom 3 garis tepi itu ditambah pita hitam mendatar. Baris 3 memakai bentuk tong, jadi jawabannya tong bergaris tepi dengan pita mendatar.<br>Opsi A gugur karena pita dipasang tegak, padahal mendatar; Opsi B gugur karena bentuknya dari baris 1, bukan bentuk tong di baris 3; Opsi D gugur karena lupa pita hitam mendatar; Opsi E gugur karena menyalin kolom 1 yang masih hitam. Jawaban: Opsi C. Tips: bandingkan kolom yang bersebelahan: apa yang hilang (isi hitam) dan apa yang ditambah (pita).",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-094",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-LATIN",
+    "tier": 2,
+    "sumber": "A3#94",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-094.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-094-a.svg",
+      "b": "drill/img/K12-A3-094-b.svg",
+      "c": "drill/img/K12-A3-094-c.svg",
+      "d": "drill/img/K12-A3-094-d.svg",
+      "e": "drill/img/K12-A3-094-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Setiap baris dan setiap kolom memuat tiga bingkai (belah ketupat, rumah, trapesium) dan tiga isi (tetes, bintang, tanda tambah) masing-masing tepat sekali. Baris 3 sudah punya trapesium-bintang dan belah ketupat-tanda tambah, jadi tersisa bingkai rumah dengan isi tetes.<br>Opsi A gugur karena bingkai trapesium sudah ada di baris 3; Opsi B gugur karena tanda tambah sudah ada di baris 3; Opsi C gugur karena bintang sudah ada di baris 3; Opsi E gugur karena bingkai belah ketupat sudah ada di baris 3. Jawaban: Opsi D. Tips: pisahkan dua atribut (bingkai dan isi), lalu cari yang belum muncul di baris itu.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-095",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-INVERSI",
+    "tier": 3,
+    "sumber": "A3#95",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-095.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-095-a.svg",
+      "b": "drill/img/K12-A3-095-b.svg",
+      "c": "drill/img/K12-A3-095-c.svg",
+      "d": "drill/img/K12-A3-095-d.svg",
+      "e": "drill/img/K12-A3-095-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Di baris 1 dan 3, kolom 3 adalah bentuk kolom 1 yang dihitamkan dengan bentuk kolom 2 dilubangi putih di tengahnya. Di baris 2, bentuk luar kolom 3 adalah segi delapan bersudut potong, jadi kolom 1 berisi garis tepi bentuk itu saja.<br>Opsi A gugur karena mengambil bentuk kecil, padahal kolom 1 berisi bentuk luar; Opsi B gugur karena menyalin kolom 3; Opsi C gugur karena kolom 1 selalu hanya garis tepi, tidak hitam; Opsi D gugur karena tanda tambah milik kolom 2, bukan kolom 1. Jawaban: Opsi E. Tips: bila tanda tanya ada di kolom 1, jalankan aturannya mundur dari kolom 3.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-096",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-POSISI",
+    "tier": 1,
+    "sumber": "A3#96",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-096.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-096-a.svg",
+      "b": "drill/img/K12-A3-096-b.svg",
+      "c": "drill/img/K12-A3-096-c.svg",
+      "d": "drill/img/K12-A3-096-d.svg",
+      "e": "drill/img/K12-A3-096-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Dibaca dari kiri ke kanan, baris demi baris, kotak hitam berpindah satu posisi searah jarum jam mengelilingi tepi: atas tengah, kanan atas, kanan tengah, lalu kanan bawah, bawah tengah, kiri bawah, kiri tengah, kiri atas, atas tengah. Tanda tanya adalah langkah ke-4: kanan bawah.<br>Opsi B gugur karena kotak tidak pernah berada di tengah; Opsi C gugur karena posisi kiri bawah adalah langkah ke-6; Opsi D gugur karena tertinggal satu langkah (posisi kanan tengah); Opsi E gugur karena melompat dua langkah. Jawaban: Opsi A. Tips: beri nomor delapan posisi tepi searah jarum jam, lalu ikuti langkahnya.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-A3-097",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 2,
+    "sumber": "A3#97",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-A3-097.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-A3-097-a.svg",
+      "b": "drill/img/K12-A3-097-b.svg",
+      "c": "drill/img/K12-A3-097-c.svg",
+      "d": "drill/img/K12-A3-097-d.svg",
+      "e": "drill/img/K12-A3-097-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kolom 1 adalah gabungan (tumpukan) kolom 2 dan kolom 3. Baris 1: lingkaran + silang. Baris 3: segitiga + titik. Baris 2: bulan sabit hitam + persegi.<br>Opsi A gugur karena lupa persegi dari kolom 3; Opsi C gugur karena lupa bulan sabit dari kolom 2; Opsi D gugur karena menambah tanda silang dari baris 1; Opsi E gugur karena bulan sabit harus hitam seperti di kolom 2. Jawaban: Opsi B. Tips: cek arah aturan: kadang kolom 1 yang merupakan hasil, bukan kolom 3.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B2-098",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 2,
+    "sumber": "B2#98",
+    "instruksi": "Hubungan gambar pertama dengan gambar kedua sama dengan hubungan gambar ketiga dengan gambar pengganti tanda tanya.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-B2-098.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B2-098-a.svg",
+      "b": "drill/img/K12-B2-098-b.svg",
+      "c": "drill/img/K12-B2-098-c.svg",
+      "d": "drill/img/K12-B2-098-d.svg",
+      "e": "drill/img/K12-B2-098-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Gambar 1 adalah setengah bangun (garis tepi). Gambar 2 melengkapinya dengan cerminan belahan itu di sebelah kanan, diwarnai hitam. Terapkan ke setengah rumah: belahan kiri tetap garis tepi, belahan kanan adalah cerminannya yang hitam.<br>Opsi A gugur karena warna kedua belahan tertukar; Opsi B gugur karena belahan cerminnya harus hitam; Opsi D gugur karena belahan asli harus tetap garis tepi; Opsi E gugur karena belahan kedua digeser, bukan dicerminkan (atapnya miring ke arah yang sama). Jawaban: Opsi C. Tips: cerminan membalik arah miring; pergeseran tidak.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B2-099",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-2BLANK",
+    "tier": 3,
+    "sumber": "B2#99",
+    "instruksi": "Perhatikan matriks berikut. Ada dua tanda tanya. Pada setiap pilihan, gambar atas mengisi tanda tanya pertama (baris 2) dan gambar bawah mengisi tanda tanya kedua (baris 3).",
+    "stem": "Pasangan gambar manakah pengganti kedua tanda tanya?",
+    "gambar": "drill/img/K12-B2-099.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B2-099-a.svg",
+      "b": "drill/img/K12-B2-099-b.svg",
+      "c": "drill/img/K12-B2-099-c.svg",
+      "d": "drill/img/K12-B2-099-d.svg",
+      "e": "drill/img/K12-B2-099-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Dua aturan berjalan bersamaan. Pertama, setiap langkah ke kanan atau ke bawah memutar lampu 90° searah jarum jam. Kedua, jumlah titik mengikuti nomor kolom (1, 2, 3). Tanda tanya baris 2 kolom 2: lampu menghadap ke bawah (180°) dengan dua titik. Tanda tanya baris 3 kolom 2: lampu menghadap ke kiri (270°) dengan dua titik.<br>Opsi A gugur karena kedua gambar tertukar; Opsi B gugur karena jumlah titik mengikuti kolom (kolom 2 = dua titik); Opsi D gugur karena jumlah titik di baris 3 kolom 2 tetap dua, sesuai kolomnya; Opsi E gugur karena putarannya tertinggal satu langkah. Jawaban: Opsi C. Tips: pisahkan aturan putaran dan aturan jumlah titik; cek masing-masing di pilihan.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B3-096",
+    "kartu": "K12",
+    "sub_type": "FIG-ROTASI-CERMIN",
+    "tier": 1,
+    "sumber": "B3#96",
+    "instruksi": "Gambar di kiri diputar (tanpa dibalik). Pilih gambar yang merupakan hasil putarannya; gambar lain adalah cerminan.",
+    "stem": "Gambar manakah yang merupakan hasil putaran gambar di atas?",
+    "gambar": "drill/img/K12-B3-096.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B3-096-a.svg",
+      "b": "drill/img/K12-B3-096-b.svg",
+      "c": "drill/img/K12-B3-096-c.svg",
+      "d": "drill/img/K12-B3-096-d.svg",
+      "e": "drill/img/K12-B3-096-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Pakai patokan: ujung panah, titik hitam, dan kait kecil. Pada gambar asli, bila panah menunjuk ke atas, titik hitam ada di kanan dan kait di kiri. Hanya opsi yang diputar 180° (panah ke bawah, titik di kiri, kait di kanan) yang mempertahankan susunan itu; opsi lain menukar sisi titik dan kait, tanda gambar dicerminkan.<br>Opsi A gugur karena cerminan yang diputar 270°; Opsi B gugur karena gambar dibalik kiri-kanan (cerminan); Opsi D gugur karena cerminan yang diputar 90°; Opsi E gugur karena cerminan yang diputar 180°. Jawaban: Opsi C. Tips: putar opsi di kepala sampai panahnya ke atas, lalu cek sisi titik.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B3-097",
+    "kartu": "K12",
+    "sub_type": "FIG-ROTASI-CERMIN",
+    "tier": 2,
+    "sumber": "B3#97",
+    "instruksi": "Gambar di kiri diputar (tanpa dibalik). Pilih gambar yang merupakan hasil putarannya; gambar lain adalah cerminan.",
+    "stem": "Gambar manakah yang merupakan hasil putaran gambar di atas?",
+    "gambar": "drill/img/K12-B3-097.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B3-097-a.svg",
+      "b": "drill/img/K12-B3-097-b.svg",
+      "c": "drill/img/K12-B3-097-c.svg",
+      "d": "drill/img/K12-B3-097-d.svg",
+      "e": "drill/img/K12-B3-097-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Patokannya: ujung lancip, lingkaran kecil, garis miring, dan kait. Pada gambar asli, berjalan searah jarum jam dari ujung lancip kiri, urutannya kait → garis → lingkaran kecil → ujung kanan. Putaran mempertahankan urutan searah jarum jam itu, sedangkan cerminan membaliknya. Hanya opsi yang diputar 120° yang urutannya tetap.<br>Opsi A gugur karena cerminan yang diputar 120°; Opsi B gugur karena cerminan yang diputar 240°; Opsi C gugur karena cerminan tanpa putaran; Opsi E gugur karena cerminan yang diputar 60°. Jawaban: Opsi D. Tips: pilih tiga patokan, lalu cek urutan searah jarum jamnya di setiap opsi.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B3-098",
+    "kartu": "K12",
+    "sub_type": "FIG-ROTASI-CERMIN",
+    "tier": 3,
+    "sumber": "B3#98",
+    "instruksi": "Gambar di kiri diputar (tanpa dibalik). Pilih gambar yang merupakan hasil putarannya; gambar lain adalah cerminan.",
+    "stem": "Gambar manakah yang merupakan hasil putaran gambar di atas?",
+    "gambar": "drill/img/K12-B3-098.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B3-098-a.svg",
+      "b": "drill/img/K12-B3-098-b.svg",
+      "c": "drill/img/K12-B3-098-c.svg",
+      "d": "drill/img/K12-B3-098-d.svg",
+      "e": "drill/img/K12-B3-098-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Bentuk X hampir simetris, jadi patokannya adalah titik-titik: lingkaran putih kecil dan pasangan titik hitam di lengan kanan bawah. Putaran mempertahankan susunan semua titik relatif terhadap lingkaran putih; cerminan membaliknya. Satu opsi tampak benar tetapi satu titiknya berpindah. Hanya putaran 240° yang cocok di semua titik.<br>Opsi A gugur karena cerminan yang diputar 240°; Opsi B gugur karena cerminan yang diputar 90°; Opsi C gugur karena putarannya benar, tetapi satu titik hitam berpindah tempat; Opsi D gugur karena cerminan yang diputar 150°. Jawaban: Opsi E. Tips: pada bentuk yang hampir simetris, jangan menilai dari garis luarnya; hitung dan cocokkan titik-titiknya.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B3-099",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "B3#99",
+    "instruksi": "Hubungan gambar pertama dengan gambar kedua sama dengan hubungan gambar ketiga dengan gambar pengganti tanda tanya.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-B3-099.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B3-099-a.svg",
+      "b": "drill/img/K12-B3-099-b.svg",
+      "c": "drill/img/K12-B3-099-c.svg",
+      "d": "drill/img/K12-B3-099-d.svg",
+      "e": "drill/img/K12-B3-099-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Dari gambar 1 ke gambar 2 ada dua perubahan. Isi bingkai diputar 90° searah jarum jam (segitiga menghadap kanan, titik dari kanan pindah ke bawah). Bentuk utama berganti dari garis tepi menjadi hitam. Bingkai tidak berubah. Terapkan ke gambar 3: rumah menghadap kanan dan hitam, titik dari kiri pindah ke atas.<br>Opsi B gugur karena diputar berlawanan arah jarum jam; Opsi C gugur karena titik tidak ikut berputar; Opsi D gugur karena warna bentuk utama tidak dibalik; Opsi E gugur karena isi tidak diputar. Jawaban: Opsi A. Tips: daftar semua perubahan dari gambar 1 ke 2 (posisi, putaran, warna), lalu terapkan satu per satu.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-B3-100",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "B3#100",
+    "instruksi": "Hubungan gambar pertama dengan gambar kedua sama dengan hubungan gambar ketiga dengan gambar pengganti tanda tanya.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-B3-100.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-B3-100-a.svg",
+      "b": "drill/img/K12-B3-100-b.svg",
+      "c": "drill/img/K12-B3-100-c.svg",
+      "d": "drill/img/K12-B3-100-d.svg",
+      "e": "drill/img/K12-B3-100-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ada tiga perubahan dari gambar 1 ke 2. Setiap huruf mundur satu (C E F H → B D E G). Bangun bawah naik ke atas tanpa berubah. Bangun atas turun ke bawah dan dibalik (segitiga menghadap bawah). Terapkan ke gambar 3: K M N P → J L M O, trapesium naik ke atas, kubah turun dan dibalik.<br>Opsi A gugur karena kubah yang turun ke bawah tidak dibalik; Opsi C gugur karena posisi atas dan bawah tidak ditukar; Opsi D gugur karena huruf tidak digeser; Opsi E gugur karena huruf digeser maju, padahal mundur satu. Jawaban: Opsi B. Tips: kerjakan huruf dan bangun secara terpisah; huruf paling cepat dicek.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-KD-019",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-2BLANK",
+    "tier": 3,
+    "sumber": "KD#19",
+    "instruksi": "Perhatikan matriks berikut. Ada dua tanda tanya. Pada setiap pilihan, gambar atas mengisi tanda tanya pertama (baris 2) dan gambar bawah mengisi tanda tanya kedua (baris 3).",
+    "stem": "Pasangan gambar manakah pengganti kedua tanda tanya?",
+    "gambar": "drill/img/K12-KD-019.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-KD-019-a.svg",
+      "b": "drill/img/K12-KD-019-b.svg",
+      "c": "drill/img/K12-KD-019-c.svg",
+      "d": "drill/img/K12-KD-019-d.svg",
+      "e": "drill/img/K12-KD-019-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kolom 3 adalah tumpukan kolom 1 dan kolom 2 (baris 1: lingkaran + kotak kecil). Baris 2: kolom 3 berisi segitiga dan titik hitam, segitiga sudah ada di kolom 1, jadi kolom 2 = titik hitam. Baris 3: kolom 3 berisi rumah dan garis bawah, garis sudah ada di kolom 2, jadi kolom 1 = garis tepi rumah.<br>Opsi A gugur karena titik di baris 2 harus hitam; Opsi C gugur karena tanda tanya pertama berisi titik saja, bukan menyalin kolom 3; Opsi D gugur karena tanda tanya kedua berisi rumah saja; garis bawah milik kolom 2; Opsi E gugur karena rumah di baris 3 hanya garis tepi, bukan hitam. Jawaban: Opsi B. Tips: selesaikan satu tanda tanya dulu, lalu cocokkan pilihan yang benar di bagian itu.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-026",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-INVERSI",
+    "tier": 1,
+    "sumber": "P1#26",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-026.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-026-a.svg",
+      "b": "drill/img/K12-P1-026-b.svg",
+      "c": "drill/img/K12-P1-026-c.svg",
+      "d": "drill/img/K12-P1-026-d.svg",
+      "e": "drill/img/K12-P1-026-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Di setiap baris, kolom 2 adalah kolom 1 dengan warna dibalik (hitam jadi putih), dan kolom 3 sama persis dengan kolom 1. Jadi kolom 3 baris 3 = kolom 1 baris 3: hitam dengan kotak putih di kiri bawah.<br>Opsi A gugur karena bagian putih dicerminkan ke kanan bawah; Opsi B gugur karena seluruh kotak dihitamkan; Opsi D gugur karena polanya diputar, bagian putih pindah ke kiri atas; Opsi E gugur karena menyalin kolom 2 (warna terbalik). Jawaban: Opsi C. Tips: kalau kolom 2 tampak \"terbalik\", periksa apakah kolom 3 hanya kembali ke kolom 1.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-027",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 1,
+    "sumber": "P1#27",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-027.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-027-a.svg",
+      "b": "drill/img/K12-P1-027-b.svg",
+      "c": "drill/img/K12-P1-027-c.svg",
+      "d": "drill/img/K12-P1-027-d.svg",
+      "e": "drill/img/K12-P1-027-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Hitung sisi tiap bangun: 4, 5, 6. Setiap langkah bertambah satu sisi, jadi berikutnya bangun bersisi 7.<br>Opsi A gugur karena jumlah sisinya justru berkurang; Opsi B gugur karena jumlah sisinya tidak bertambah (masih 6); Opsi C gugur karena melompat dua (8 sisi); Opsi E gugur karena lingkaran tidak punya sisi lurus. Jawaban: Opsi D. Tips: untuk barisan bangun, hitung sisi atau sudutnya dulu sebelum melihat bentuk.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-028",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 1,
+    "sumber": "P1#28",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-028.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-028-a.svg",
+      "b": "drill/img/K12-P1-028-b.svg",
+      "c": "drill/img/K12-P1-028-c.svg",
+      "d": "drill/img/K12-P1-028-d.svg",
+      "e": "drill/img/K12-P1-028-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Baca per kolom: baris 3 adalah gabungan baris 1 (titik) dan baris 2 (garis) di kolom yang sama. Kolom 3: titik kanan bawah + garis datar.<br>Opsi A gugur karena titiknya harus di kanan bawah, seperti baris 1 kolom 3; Opsi B gugur karena garis tegak milik kolom 1; Opsi C gugur karena lupa garis datar dari baris 2; Opsi E gugur karena lupa titik dari baris 1. Jawaban: Opsi D. Tips: kalau baris 3 tampak campuran, cek apakah ia tumpukan dua baris di atasnya.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-031",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 2,
+    "sumber": "P1#31",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-031.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-031-a.svg",
+      "b": "drill/img/K12-P1-031-b.svg",
+      "c": "drill/img/K12-P1-031-c.svg",
+      "d": "drill/img/K12-P1-031-d.svg",
+      "e": "drill/img/K12-P1-031-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Baca per kolom: baris 3 adalah tumpukan baris 1 (tanda silang) dan baris 2 (tanda lingkaran) pada kolom yang sama. Kolom 3: silang di kanan atas dan kiri bawah, lingkaran di kiri atas dan kanan bawah.<br>Opsi A gugur karena satu tanda silang (kiri bawah) hilang; Opsi B gugur karena lupa tanda lingkaran dari baris 2; Opsi C gugur karena lupa tanda silang dari baris 1; Opsi D gugur karena posisi silang dan lingkaran tertukar. Jawaban: Opsi E. Tips: catat posisi tiap tanda per kuadran; jangan hanya menghitung jumlahnya.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-032",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 2,
+    "sumber": "P1#32",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-032.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-032-a.svg",
+      "b": "drill/img/K12-P1-032-b.svg",
+      "c": "drill/img/K12-P1-032-c.svg",
+      "d": "drill/img/K12-P1-032-d.svg",
+      "e": "drill/img/K12-P1-032-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ada tiga lapisan: luar, tengah, dalam. Setiap langkah, bentuk bergeser satu lapis ke luar (belah ketupat-lingkaran-persegi → lingkaran-persegi-belah ketupat → persegi-belah ketupat-lingkaran → kembali belah ketupat-lingkaran-persegi). Pola isi berganti tiap langkah: hitam-putih-hitam lalu putih-hitam-putih. Gambar 4: belah ketupat putih, lingkaran hitam, persegi putih.<br>Opsi A gugur karena lapisan tengah dan dalam tertukar; Opsi B gugur karena urutan bentuknya sama dengan gambar 3; Opsi C gugur karena pola isi tidak berganti (masih hitam-putih-hitam); Opsi D gugur karena urutan bentuknya sama dengan gambar 2. Jawaban: Opsi E. Tips: pisahkan dua aturan: urutan bentuk (berputar tiap 3 langkah) dan pola isi (berganti tiap 1 langkah).",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-033",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 2,
+    "sumber": "P1#33",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-033.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-033-a.svg",
+      "b": "drill/img/K12-P1-033-b.svg",
+      "c": "drill/img/K12-P1-033-c.svg",
+      "d": "drill/img/K12-P1-033-d.svg",
+      "e": "drill/img/K12-P1-033-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Beri nomor ruang dari bawah (0) ke atas (4). Titik berada di 0, 4, 1, 3: dua jalur bergantian, satu naik dari bawah (0, 1, …) dan satu turun dari atas (4, 3, …), sehingga keduanya bertemu di tengah. Berikutnya ruang 2.<br>Opsi B gugur karena kembali ke posisi gambar 1; Opsi C gugur karena mengulang posisi gambar 2; Opsi D gugur karena mengulang posisi gambar 3; Opsi E gugur karena mengulang posisi gambar 4. Jawaban: Opsi A. Tips: jika langkahnya besar-kecil bergantian, coba pisahkan menjadi dua jalur.",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-035",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 3,
+    "sumber": "P1#35",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-035.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-035-a.svg",
+      "b": "drill/img/K12-P1-035-b.svg",
+      "c": "drill/img/K12-P1-035-c.svg",
+      "d": "drill/img/K12-P1-035-d.svg",
+      "e": "drill/img/K12-P1-035-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Seluruh gambar berputar 135° searah jarum jam setiap langkah: lengan menunjuk ke atas, kanan bawah, kiri, kanan atas. Langkah berikutnya menunjuk ke bawah. Titik putih selalu berada 90° searah jarum jam dari lengan, jadi ia berada di kiri.<br>Opsi A gugur karena hanya diputar 90°, padahal setiap langkah 135°; Opsi C gugur karena kembali ke gambar 1; Opsi D gugur karena arah lengannya benar, tetapi titik putih berada di sisi yang salah (cerminan); Opsi E gugur karena sama dengan gambar 4, belum diputar. Jawaban: Opsi B. Tips: ukur sudut antar-gambar dengan arah mata angin (8 arah = 45° per langkah).",
+    "status_kunci": "tunggal"
+  },
+  {
+    "id": "K12-P1-036",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 1,
+    "sumber": "P1#36",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-P1-036.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-P1-036-a.svg",
+      "b": "drill/img/K12-P1-036-b.svg",
+      "c": "drill/img/K12-P1-036-c.svg",
+      "d": "drill/img/K12-P1-036-d.svg",
+      "e": "drill/img/K12-P1-036-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kolom 3 adalah tumpukan kolom 1 dan kolom 2. Di baris 3, kolom 2 kosong, sehingga kolom 3 sama dengan kolom 1: satu garis datar.<br>Opsi B gugur karena menambah titik yang tidak ada di baris 3; Opsi C gugur karena garisnya harus datar, bukan tegak; Opsi D gugur karena kolom 1 tidak boleh hilang; kolom 2 yang kosong; Opsi E gugur karena menambah garis miring yang tidak ada di baris 3. Jawaban: Opsi A. Tips: kotak kosong bukan jebakan; tumpukan dengan kotak kosong = gambar aslinya.",
+    "status_kunci": "tunggal"
+  }
+]

@@ -20,13 +20,15 @@ export type DrillItem = {
   stem: string;
   rumus?: string;
   gambar?: string | null;
+  /** Opsi bergambar: huruf → path di public/ (nama file tidak membocorkan kunci). */
+  opsi_gambar?: Record<string, string> | null;
   opsi: Record<string, string>;
   kunci: string[];
   pembahasan: string;
   status_kunci: string;
 };
 
-export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "bacaan" | "tabel" | "stem" | "rumus" | "gambar" | "opsi"> & {
+export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "bacaan" | "tabel" | "stem" | "rumus" | "gambar" | "opsi_gambar" | "opsi"> & {
   multi: boolean;
 };
 
@@ -49,6 +51,7 @@ export function safeDrillItem(it: DrillItem): SafeDrillItem {
     stem: it.stem,
     rumus: it.rumus,
     gambar: it.gambar ?? null,
+    opsi_gambar: it.opsi_gambar ?? null,
     opsi: it.opsi,
     multi: it.kunci.length > 1,
   };

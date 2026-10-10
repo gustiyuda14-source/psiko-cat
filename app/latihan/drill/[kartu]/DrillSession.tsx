@@ -237,19 +237,24 @@ export default function DrillSession({
             {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
             {q.gambar && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] w-full max-w-[760px] rounded-md border border-border bg-white p-2" />
+              <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] max-w-full rounded-md border border-border bg-white p-2" />
             )}
           </div>
 
-          <div className="opts pt-1">
+          <div className={`pt-1 ${q.opsi_gambar ? "opts-fig" : "opts"}`}>
             {LETTERS.map((k) => {
               const sel = picked.includes(k);
               const isKey = result?.kunci.includes(k);
               const state = result ? (isKey ? "is-key" : sel ? "is-wrong" : "") : sel ? "sel" : "";
               return (
-                <button key={k} type="button" onClick={() => choose(k)} aria-pressed={sel} disabled={Boolean(result)} className={`opt ${state}`}>
+                <button key={k} type="button" onClick={() => choose(k)} aria-pressed={sel} disabled={Boolean(result)} className={`opt ${q.opsi_gambar ? "opt-fig" : ""} ${state}`}>
                   <span className={`mark ${q.multi ? "is-square" : ""}`}>{k.toUpperCase()}</span>
-                  <span className="opt-text">{q.opsi[k]}</span>
+                  {q.opsi_gambar?.[k] ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="h-auto w-24 sm:w-28" />
+                  ) : (
+                    <span className="opt-text">{q.opsi[k]}</span>
+                  )}
                   {result && isKey && <Check className="ml-auto size-5 text-success" strokeWidth={3} />}
                   {result && sel && !isKey && <Close className="ml-auto size-5 text-destructive" strokeWidth={3} />}
                 </button>
