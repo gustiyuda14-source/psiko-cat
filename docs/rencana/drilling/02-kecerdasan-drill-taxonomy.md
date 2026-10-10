@@ -111,6 +111,7 @@ So the "level" column in the tables means **which package family uses the format
 | NUM-CRT-HIMPUNAN | Soal cerita → inclusion–exclusion, "% not in either" | P81; B66 (2) | |
 | NUM-CRT-LINIER | Soal cerita → linear growth meeting point, digit puzzle, rooms/people equation | P87; B68,69 (3) | B68/69 are multi-constraint puzzles (Lanjut) |
 | NUM-CRT-PENCACAHAN | Banyak rute → rule of product, rule of sum, round trip with or without repeats, paths in a directed graph | R1–R10 (10) | Separate PDF; not in B or A |
+| NUM-CRT-ALOKASI | Alokasi waktu & delegasi → time window minus total workload; pick the task(s) that cover the excess, max tasks that fit, two workers in parallel | AK26#1 (1) | Reported from Akpol 2026 test-takers. Order/deadline variants go to ANL-WCN-JADWAL |
 | NUM-SMA (out of profile) | Limit, inverse function, integral, linear programming from a graph | KD9–12 (4) | Not a psikotes POLRI type. **Exclude from drills** |
 
 ### 1.3 PENALARAN LOGIS (aspek_resmi: logis)

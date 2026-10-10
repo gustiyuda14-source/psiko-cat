@@ -22,7 +22,7 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K04: { label: "Pemahaman Bacaan", aspek: "verbal", desc: "Wacana dan tabel data", prefix: ["VRB-BACA-"] },
   K05: { label: "Hitung Cepat", aspek: "numerik", desc: "Operasi campuran, pecahan, desimal, akar, persen", prefix: ["NUM-HIT-", "NUM-ALJ-"] },
   K06: { label: "Konversi Satuan", aspek: "numerik", desc: "Panjang, luas, volume, berat, waktu, kuantitas", prefix: ["NUM-SAT-"] },
-  K07: { label: "Soal Cerita", aspek: "numerik", desc: "Proporsi, kecepatan, uang, rasio, pencacahan", prefix: ["NUM-CRT-"] },
+  K07: { label: "Soal Cerita", aspek: "numerik", desc: "Proporsi, kecepatan, uang, rasio, pencacahan, alokasi waktu", prefix: ["NUM-CRT-"] },
   K08: { label: "Silogisme", aspek: "logika", desc: "Menarik kesimpulan dari premis", prefix: ["LOG-SIL-"] },
   K09: { label: "Deret Angka & Huruf", aspek: "analitis", desc: "Pola deret satu dan dua baris", prefix: ["ANL-DRT-"] },
   K10: { label: "Angka dalam Gambar", aspek: "analitis", desc: "Operasi tersembunyi dan kode", prefix: ["ANL-ANGKA-", "ANL-OPERASI-", "ANL-KODE"] },

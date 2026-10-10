@@ -1150,5 +1150,453 @@
     ],
     "pembahasan": "Dasi gratis = 7 ÷ 3 = 2 (sisa 1). Kemeja gratis = 11 ÷ 5 = 2 (sisa 1). Total 7 + 2 = 9 kemeja dan 11 + 2 = 13 dasi.<br>Opsi A (7 kemeja dan 13 dasi) gugur karena lupa kemeja gratis; Opsi B (9 kemeja dan 11 dasi) gugur karena lupa dasi gratis; Opsi D (8 kemeja dan 13 dasi) gugur karena kemeja gratis dihitung 1; Opsi E (9 kemeja dan 14 dasi) gugur karena menghitung kemeja gratis ikut promo (9 ÷ 3 = 3 dasi). Jawaban: Opsi C (9 kemeja dan 13 dasi). Tips: bonus dihitung dari pembelian saja, ambil hasil bagi bulat ke bawah.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-001",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 1,
+    "sumber": "AK26#1",
+    "stem": "Bripda Sari bertugas piket di SPKT Polsek Bukit Indah. Sebelum serah terima piket, ia memiliki waktu pukul 08.00–09.30 untuk menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: menyusun laporan kejadian semalam (39 menit), mengarsipkan berkas pengaduan (24 menit), memperbarui buku mutasi (31 menit), dan mengecek kelengkapan inventaris (35 menit). Bila waktunya tidak cukup, ia akan meminta seorang rekan mengerjakan satu tugas secara penuh agar tugas sisanya selesai paling lambat pukul 09.30. Tugas mana yang harus diserahkan kepada rekannya?",
+    "opsi": {
+      "a": "Menyusun laporan kejadian semalam",
+      "b": "Mengarsipkan berkas pengaduan",
+      "c": "Memperbarui buku mutasi",
+      "d": "Mengecek kelengkapan inventaris",
+      "e": "Tidak perlu; semua tugas dapat diselesaikan sendiri tepat waktu"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "pilih(v => v >= 39 + 24 + 31 + 35 - 90)",
+    "nilai_opsi": {
+      "a": 39,
+      "b": 24,
+      "c": 31,
+      "d": 35,
+      "e": 0
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 08.00–09.30 = 90 menit. Langkah 2 (beban total): 39 + 24 + 31 + 35 = 129 menit. Langkah 3 (kelebihan): 129 − 90 = 39 menit, jadi tugas yang dilepas minimal 39 menit. Langkah 4 (pilih): hanya menyusun laporan kejadian semalam (39 menit) yang ≥ 39. Cek: 24 + 31 + 35 = 90 menit, tepat sama dengan waktu tersedia.<br>Opsi B (mengarsipkan berkas pengaduan) gugur karena hanya mengurangi sebagian kelebihan: sisa 39 + 31 + 35 = 105 menit, lebih 15 menit; Opsi C (memperbarui buku mutasi) gugur karena dipilih tanpa menghitung kelebihan: sisa 39 + 24 + 35 = 98 menit, lebih 8 menit; Opsi D (mengecek kelengkapan inventaris) gugur karena 35 menit kurang dari kelebihan 39 menit: sisa 39 + 24 + 31 = 94 menit, lebih 4 menit; Opsi E (semua dapat diselesaikan sendiri) gugur karena 09.30 − 08.00 dikurangkan seperti bilangan biasa dan dibaca 130 menit, sehingga 129 menit tampak muat. Jawaban: Opsi A (menyusun laporan kejadian semalam). Tips: hitung kelebihan dulu (total − waktu tersedia), lalu cari tugas yang ≥ kelebihan; jangan mencoba tugas satu per satu — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-002",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 1,
+    "sumber": "AK26#1",
+    "stem": "Rini adalah sekretaris panitia lomba baris-berbaris antar-SMA. Pada hari persiapan, ia memiliki waktu pukul 13.30–15.35 untuk empat tugas yang dikerjakan satu per satu tanpa jeda: mencetak sertifikat peserta (34 menit), menyusun daftar regu dan urutan tampil (52 menit), menyiapkan berkas penilaian juri (41 menit), dan menata meja registrasi (38 menit). Bila waktunya tidak cukup, ia akan meminta seorang anggota panitia mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 15.35. Tugas mana yang harus diserahkan?",
+    "opsi": {
+      "a": "Mencetak sertifikat peserta",
+      "b": "Menyusun daftar regu dan urutan tampil",
+      "c": "Menyiapkan berkas penilaian juri",
+      "d": "Menata meja registrasi",
+      "e": "Tidak perlu; semua tugas dapat diselesaikan sendiri tepat waktu"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "Math.min(...[34, 52, 41, 38].filter(v => v >= 34 + 52 + 41 + 38 - 125))",
+    "nilai_opsi": {
+      "a": 34,
+      "b": 52,
+      "c": 41,
+      "d": 38,
+      "e": 0
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 13.30–15.30 = 120 menit, ditambah 5 menit sampai 15.35, jadi 125 menit. Langkah 2 (beban total): 34 + 52 + 41 + 38 = 165 menit. Langkah 3 (kelebihan): 165 − 125 = 40 menit. Langkah 4 (pilih): tugas yang ≥ 40 menit adalah berkas penilaian juri (41 menit) dan daftar regu (52 menit); yang paling singkat 41 menit. Cek: 34 + 52 + 38 = 124 menit ≤ 125 menit, sisa 1 menit.<br>Opsi A (mencetak sertifikat peserta) gugur karena memilih tugas tersingkat tanpa memeriksa cukup atau tidak: sisa 52 + 41 + 38 = 131 menit, lebih 6 menit; Opsi B (menyusun daftar regu dan urutan tampil) gugur karena memilih tugas terpanjang: sisa 34 + 41 + 38 = 113 menit memang cukup, tetapi 52 menit bukan durasi paling singkat yang cukup; Opsi D (menata meja registrasi) gugur karena 38 menit kurang 2 menit dari kelebihan 40 menit: sisa 34 + 52 + 41 = 127 menit, lewat 2 menit; Opsi E (semua dapat diselesaikan sendiri) gugur karena 15.35 − 13.30 dikurangkan seperti bilangan biasa dan dibaca 205 menit, sehingga 165 menit tampak muat. Jawaban: Opsi C (menyiapkan berkas penilaian juri). Tips: hitung kelebihan dulu, lalu pilih tugas terkecil yang ≥ kelebihan; tugas terpanjang hampir selalu cukup, tetapi jarang yang diminta — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-003",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 1,
+    "sumber": "AK26#1",
+    "stem": "Wulan menjadi relawan di posko pengungsian Desa Lembah Asri dan bertugas pukul 06.30–08.37. Ada lima tugas yang dikerjakan satu per satu tanpa jeda: mendata pengungsi baru (26 menit), membagikan paket sarapan (33 menit), mengecek stok obat (18 menit), menyusun laporan kebutuhan logistik (47 menit), dan menata gudang bantuan (40 menit). Waktunya tidak cukup untuk semua tugas, sehingga ia meminta seorang relawan lain mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 08.37. Tugas mana yang harus diserahkan?",
+    "opsi": {
+      "a": "Mendata pengungsi baru",
+      "b": "Membagikan paket sarapan",
+      "c": "Mengecek stok obat",
+      "d": "Menyusun laporan kebutuhan logistik",
+      "e": "Menata gudang bantuan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "Math.min(...[26, 33, 18, 47, 40].filter(v => v >= 26 + 33 + 18 + 47 + 40 - 127))",
+    "nilai_opsi": {
+      "a": 26,
+      "b": 33,
+      "c": 18,
+      "d": 47,
+      "e": 40
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 06.30–08.30 = 120 menit, ditambah 7 menit sampai 08.37, jadi 127 menit. Langkah 2 (beban total): 26 + 33 + 18 + 47 + 40 = 164 menit. Langkah 3 (kelebihan): 164 − 127 = 37 menit. Langkah 4 (pilih): tugas yang ≥ 37 menit adalah menata gudang (40 menit) dan laporan logistik (47 menit); yang paling singkat 40 menit. Cek: 26 + 33 + 18 + 47 = 124 menit ≤ 127 menit, sisa 3 menit.<br>Opsi A (mendata pengungsi baru) gugur karena hanya mengurangi sebagian kelebihan: sisa 33 + 18 + 47 + 40 = 138 menit, lebih 11 menit; Opsi B (membagikan paket sarapan) gugur karena memilih tugas yang paling dekat di bawah kelebihan: 33 < 37, sisa 26 + 18 + 47 + 40 = 131 menit, lebih 4 menit; Opsi C (mengecek stok obat) gugur karena memilih tugas tersingkat tanpa memeriksa cukup atau tidak: sisa 26 + 33 + 47 + 40 = 146 menit, lebih 19 menit; Opsi D (menyusun laporan kebutuhan logistik) gugur karena 47 menit memang cukup (sisa 26 + 33 + 18 + 40 = 117 menit), tetapi bukan yang paling singkat. Jawaban: Opsi E (menata gudang bantuan). Tips: dengan lima tugas langkahnya sama — hitung kelebihan sekali, lalu cari tugas terkecil yang ≥ kelebihan — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-004",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 1,
+    "sumber": "AK26#1",
+    "stem": "Hendra adalah ketua regu di asrama siswa. Pada jam kegiatan malam pukul 19.30–21.00, ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: mengisi buku laporan regu (11 menit), menyusun jadwal piket minggu depan (31 menit), merekap absensi apel (28 menit), dan memeriksa kebersihan kamar (18 menit). Bila waktunya tidak cukup, ia akan meminta wakilnya mengerjakan satu tugas secara penuh. Tugas mana yang perlu diserahkan kepada wakilnya agar semua tugas selesai paling lambat pukul 21.00?",
+    "opsi": {
+      "a": "Mengisi buku laporan regu",
+      "b": "Tidak ada; semua tugas dapat diselesaikan sendiri tepat waktu",
+      "c": "Menyusun jadwal piket minggu depan",
+      "d": "Merekap absensi apel",
+      "e": "Memeriksa kebersihan kamar"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "(11 + 31 + 28 + 18 <= 90) ? 0 : pilih(v => 11 + 31 + 28 + 18 - v <= 90)",
+    "nilai_opsi": {
+      "a": 11,
+      "b": 0,
+      "c": 31,
+      "d": 28,
+      "e": 18
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 19.30–21.00 = 1 jam 30 menit = 90 menit. Langkah 2 (beban total): 11 + 31 + 28 + 18 = 88 menit. Langkah 3 (kelebihan): 88 ≤ 90, tidak ada kelebihan; justru tersisa 2 menit. Langkah 4 (pilih): tidak ada tugas yang perlu diserahkan. Cek: dikerjakan sendiri mulai 19.30, semua tugas selesai pukul 20.58.<br>Opsi A (mengisi buku laporan regu) gugur karena salah konversi 1 jam 30 menit = 1,3 jam = 78 menit: kelebihan semu 88 − 78 = 10 menit, dan tugas terpendek yang ≥ 10 menit adalah 11 menit; Opsi C (menyusun jadwal piket minggu depan) gugur karena langsung melepas tugas terlama (31 menit) tanpa menjumlah beban; Opsi D (merekap absensi apel) gugur karena rentang dihitung 1 jam saja: kelebihan semu 88 − 60 = 28 menit, dan tugas terpendek yang ≥ 28 menit adalah 28 menit; Opsi E (memeriksa kebersihan kamar) gugur karena salah menjumlah 31 + 28 menjadi 69 (seharusnya 59), sehingga beban dikira 108 menit dan kelebihan semu 108 − 90 = 18 menit, cocok dengan tugas 18 menit. Jawaban: Opsi B (tidak ada; semua tugas dapat diselesaikan sendiri tepat waktu). Tips: pastikan dulu memang ada kelebihan; bila total ≤ waktu tersedia, tidak perlu bantuan — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-005",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 1,
+    "sumber": "AK26#1",
+    "stem": "Agus, staf sekretariat kantor kecamatan, memiliki waktu pukul 10.00–11.30 sebelum rapat dimulai. Ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: mengetik undangan rapat (26 menit), menyusun notula rapat sebelumnya (34 menit), menggandakan bahan rapat (19 menit), dan menata ruang rapat (23 menit). Bila semua tugas dikerjakan sendiri, berapa menit kekurangan waktunya?",
+    "opsi": {
+      "a": "22 menit",
+      "b": "28 menit",
+      "c": "42 menit",
+      "d": "12 menit",
+      "e": "24 menit"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "26 + 34 + 19 + 23 - 90",
+    "nilai_opsi": {
+      "a": 22,
+      "b": 28,
+      "c": 42,
+      "d": 12,
+      "e": 24
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 10.00–11.30 = 1 jam 30 menit = 90 menit. Langkah 2 (beban total): 26 + 34 + 19 + 23 = 102 menit. Langkah 3 (kekurangan): 102 − 90 = 12 menit. Cek: mulai 10.00 ditambah 102 menit = 11.42, terlambat 12 menit dari 11.30.<br>Opsi A (22 menit) gugur karena yang dihitung justru sisa waktu bila tugas terlama (34 menit) diserahkan: 90 − 68 = 22 menit, padahal yang ditanya kekurangan bila semua dikerjakan sendiri; Opsi B (28 menit) gugur karena 11.30 − 10.00 dikurangkan seperti bilangan biasa dan dibaca 130 menit: 130 − 102 = 28; Opsi C (42 menit) gugur karena rentang dihitung 1 jam saja: 102 − 60 = 42; Opsi E (24 menit) gugur karena salah konversi 1 jam 30 menit = 1,3 jam = 78 menit: 102 − 78 = 24. Jawaban: Opsi D (12 menit). Tips: kekurangan waktu = beban total − waktu tersedia; ubah rentang jam ke menit dengan teliti (1 jam 30 menit = 90 menit, bukan 1,3 jam) — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-006",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Bripda Yusuf bertugas piket di Polsek Sukamaju dan memiliki waktu kosong pukul 14.45–16.25 sebelum apel serah terima. Ada lima tugas yang harus selesai dalam waktu itu: mengarsipkan surat masuk (9 menit), memperbarui papan data kejadian (16 menit), menyusun laporan kegiatan patroli (41 menit), mengetik surat tanda terima laporan polisi (25 menit), dan menyusun rekap laporan harian (31 menit). Ia akan meminta rekan mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 16.25. Tugas mana yang ia serahkan kepada rekannya?",
+    "opsi": {
+      "a": "Mengarsipkan surat masuk",
+      "b": "Memperbarui papan data kejadian",
+      "c": "Menyusun laporan kegiatan patroli",
+      "d": "Mengetik surat tanda terima laporan polisi",
+      "e": "Menyusun rekap laporan harian"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "(() => { const t = [9, 16, 41, 25, 31]; const X = t.reduce((a, b) => a + b) - ((16 * 60 + 25) - (14 * 60 + 45)); return Math.min(...t.filter(v => v >= X)); })()",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 16,
+      "c": 41,
+      "d": 25,
+      "e": 31
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 14.45–15.00 = 15 menit, 15.00–16.00 = 60 menit, 16.00–16.25 = 25 menit, jadi 100 menit. Langkah 2 (beban total): 9 + 16 + 41 + 25 + 31 = 122 menit. Langkah 3 (kelebihan): 122 − 100 = 22 menit. Langkah 4 (pilih): tugas yang ≥ 22 menit adalah 25, 31, dan 41 menit; yang paling singkat adalah surat tanda terima (25 menit). Cek: 9 + 16 + 41 + 31 = 97 menit ≤ 100 menit.<br>Opsi A (mengarsipkan surat masuk) gugur karena memilih tugas paling ringan: sisa 113 menit, lebih 13 menit; Opsi B (memperbarui papan data kejadian) gugur karena 16 < 22: sisa 106 menit, lebih 6 menit; Opsi C (menyusun laporan kegiatan patroli) gugur karena 14.45–15.00 terlewat sehingga waktu dikira 85 menit dan kelebihan 37 menit, jadi hanya tugas 41 menit yang tampak cukup; Opsi E (menyusun rekap laporan harian) gugur karena 31 menit memang cukup (sisa 91 menit), tetapi bukan yang paling singkat. Jawaban: Opsi D (mengetik surat tanda terima laporan polisi). Tips: hitung rentang lewat jam bulat terdekat (15 + 60 + 25), cari kelebihan, lalu pilih tugas terkecil yang ≥ kelebihan — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-007",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Gilang, sekretaris panitia lomba lari antarasrama, memiliki waktu pukul 09.50–11.28 sebelum rapat teknis dimulai. Ia harus menyelesaikan lima tugas: mencetak dan menyusun nomor dada (26 menit), merekap formulir pendaftaran (33 menit), membuat denah lintasan (28 menit), menghubungi petugas medis (24 menit), dan menyiapkan daftar hadir juri (12 menit). Ia akan meminta seorang anggota panitia mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 11.28. Tugas mana yang ia serahkan?",
+    "opsi": {
+      "a": "Mencetak dan menyusun nomor dada",
+      "b": "Merekap formulir pendaftaran",
+      "c": "Tidak perlu, semua tugas dapat ia selesaikan sendiri",
+      "d": "Menyiapkan daftar hadir juri",
+      "e": "Menghubungi petugas medis"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "(() => { const t = [26, 33, 28, 24, 12]; const X = t.reduce((a, b) => a + b) - ((11 * 60 + 28) - (9 * 60 + 50)); return Math.min(...t.filter(v => v >= X)); })()",
+    "nilai_opsi": {
+      "a": 26,
+      "b": 33,
+      "c": 0,
+      "d": 12,
+      "e": 24
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 09.50–10.00 = 10 menit, 10.00–11.00 = 60 menit, 11.00–11.28 = 28 menit, jadi 98 menit. Langkah 2 (beban total): 26 + 33 + 28 + 24 + 12 = 123 menit. Langkah 3 (kelebihan): 123 − 98 = 25 menit. Langkah 4 (pilih): tugas yang ≥ 25 menit adalah 26, 28, dan 33 menit; yang paling singkat adalah nomor dada (26 menit). Cek: 33 + 28 + 24 + 12 = 97 menit ≤ 98 menit.<br>Opsi B (merekap formulir pendaftaran) gugur karena 33 menit memang cukup (sisa 90 menit), tetapi bukan yang paling singkat; Opsi C (tidak perlu bantuan) gugur karena jam dikurangkan seperti desimal (11,28 − 9,50 = 1,78, dibaca 1 jam 78 menit = 138 menit), padahal waktunya hanya 98 menit untuk beban 123 menit; Opsi D (menyiapkan daftar hadir juri) gugur karena memilih tugas paling ringan: sisa 111 menit, lebih 13 menit; Opsi E (menghubungi petugas medis) gugur karena 24 < 25: sisa 99 menit, lebih 1 menit. Jawaban: Opsi A (mencetak dan menyusun nomor dada). Tips: 1 jam = 60 menit, bukan 100; hitung kelebihan dulu, lalu pilih tugas terkecil yang ≥ kelebihan — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-008",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Ratna, relawan di posko banjir Desa Karangsari, bertugas pukul 07.50–09.35. Pada pukul 08.30–08.45 ia wajib mengikuti rapat koordinasi sehingga tidak dapat mengerjakan tugas lain. Pekerjaan yang terpotong oleh rapat koordinasi boleh dilanjutkan sesudahnya. Tugasnya: memperbarui papan informasi (9 menit), mengecek stok air bersih (13 menit), mendata pengungsi baru (28 menit), menyusun laporan kebutuhan logistik untuk kecamatan (44 menit), dan membagikan selimut di tenda B (23 menit). Ia akan meminta relawan lain mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 09.35. Tugas mana yang ia serahkan?",
+    "opsi": {
+      "a": "Memperbarui papan informasi",
+      "b": "Mengecek stok air bersih",
+      "c": "Mendata pengungsi baru",
+      "d": "Menyusun laporan kebutuhan logistik",
+      "e": "Membagikan selimut di tenda B"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "(() => { const t = [9, 13, 28, 44, 23]; const X = t.reduce((a, b) => a + b) - ((9 * 60 + 35) - (7 * 60 + 50) - 15); return Math.min(...t.filter(v => v >= X)); })()",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 13,
+      "c": 28,
+      "d": 44,
+      "e": 23
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 07.50–09.35 = 10 + 60 + 35 = 105 menit, dikurangi rapat koordinasi 15 menit, jadi 90 menit; karena pekerjaan boleh dilanjutkan sesudah rapat, cukup bandingkan jumlah menit. Langkah 2 (beban total): 9 + 13 + 28 + 44 + 23 = 117 menit. Langkah 3 (kelebihan): 117 − 90 = 27 menit. Langkah 4 (pilih): tugas yang ≥ 27 menit adalah 28 dan 44 menit; yang paling singkat adalah mendata pengungsi (28 menit). Cek: 9 + 13 + 44 + 23 = 89 menit ≤ 90 menit.<br>Opsi A (memperbarui papan informasi) gugur karena memilih tugas paling ringan: sisa 108 menit, lebih 18 menit; Opsi B (mengecek stok air bersih) gugur karena rapat lupa dikurangkan sehingga kelebihan dikira 117 − 105 = 12 menit, padahal sisa 104 menit lebih 14 menit dari 90; Opsi D (menyusun laporan kebutuhan logistik) gugur karena 44 menit memang cukup (sisa 73 menit), tetapi bukan yang paling singkat; Opsi E (membagikan selimut di tenda B) gugur karena 23 < 27: sisa 94 menit, lebih 4 menit. Jawaban: Opsi C (mendata pengungsi baru). Tips: kurangkan dulu setiap jeda wajib dari rentang jam, baru hitung kelebihan — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-009",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Taruna Bayu mendapat giliran piket asrama pukul 11.35–13.10. Pada pukul 12.05–12.30 ia wajib mengikuti istirahat, ibadah, dan makan siang (ishoma) sehingga tidak dapat bekerja. Pekerjaan yang terpotong oleh ishoma boleh dilanjutkan sesudahnya. Tugas piketnya: mencatat buku piket (7 menit), merapikan gudang perlengkapan (33 menit), mengecek kebersihan kamar mandi (17 menit), memeriksa daftar izin bermalam (11 menit), dan menyusun jadwal piket minggu depan (21 menit). Ia akan meminta rekannya mengerjakan tepat satu tugas, dan memilih tugas yang membuat sisa waktu luangnya paling sedikit, dengan syarat empat tugas lainnya tetap selesai sendiri paling lambat pukul 13.10. Tugas mana yang ia serahkan?",
+    "opsi": {
+      "a": "Mencatat buku piket",
+      "b": "Merapikan gudang perlengkapan",
+      "c": "Mengecek kebersihan kamar mandi",
+      "d": "Tidak perlu, semua tugas dapat ia selesaikan sendiri",
+      "e": "Menyusun jadwal piket minggu depan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "Math.min(...[7, 33, 17, 11, 21].filter(v => v >= (7 + 33 + 17 + 11 + 21) - ((13 * 60 + 10) - (11 * 60 + 35) - 25)))",
+    "nilai_opsi": {
+      "a": 7,
+      "b": 33,
+      "c": 17,
+      "d": 0,
+      "e": 21
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 11.35–13.10 = 25 + 60 + 10 = 95 menit, dikurangi ishoma 12.05–12.30 = 25 menit, jadi 70 menit; karena pekerjaan boleh dilanjutkan sesudah ishoma, cukup bandingkan jumlah menit. Langkah 2 (beban total): 7 + 33 + 17 + 11 + 21 = 89 menit. Langkah 3 (kelebihan): 89 − 70 = 19 menit. Langkah 4 (pilih): tugas yang ≥ 19 menit adalah 21 dan 33 menit; sisa waktu paling sedikit didapat dari tugas terkecil yang cukup, yaitu jadwal piket (21 menit). Cek: 7 + 33 + 17 + 11 = 68 menit ≤ 70 menit, sisa 2 menit.<br>Opsi A (mencatat buku piket) gugur karena memilih tugas paling ringan: sisa 82 menit, lebih 12 menit; Opsi B (merapikan gudang perlengkapan) gugur karena beban tinggal 56 menit sehingga waktu luang tersisa 14 menit, lebih banyak daripada 2 menit; Opsi C (mengecek kebersihan kamar mandi) gugur karena 17 < 19: sisa 72 menit, lebih 2 menit; Opsi D (tidak perlu bantuan) gugur karena ishoma lupa dikurangkan: beban 89 menit memang ≤ 95 menit, tetapi waktu kerja hanya 70 menit. Jawaban: Opsi E (menyusun jadwal piket minggu depan). Tips: \"sisa waktu paling sedikit\" sama dengan tugas terkecil yang ≥ kelebihan; kurangkan jeda dulu — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-010",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Intan, staf Kantor Kelurahan Mekarsari, memiliki waktu pukul 10.40–12.05 sebelum istirahat siang. Daftar tugasnya: memindai berkas surat pengantar (17 menit), menyusun rekap data penduduk pindah (38 menit), mengisi buku agenda surat (8 menit), memverifikasi berkas pengajuan bantuan (25 menit), mengarsipkan surat keluar (13 menit), dan menginput data posyandu (23 menit). Setiap tugas harus diselesaikan utuh dan ia bekerja sendiri tanpa bantuan. Paling banyak berapa tugas yang dapat ia selesaikan dalam waktu tersebut?",
+    "opsi": {
+      "a": "3 tugas",
+      "b": "4 tugas",
+      "c": "5 tugas",
+      "d": "2 tugas",
+      "e": "6 tugas"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "(() => { const W = (12 * 60 + 5) - (10 * 60 + 40); let s = 0, n = 0; for (const x of [17, 38, 8, 25, 13, 23].sort((a, b) => a - b)) { if (s + x > W) break; s += x; n++; } return n; })()",
+    "nilai_opsi": {
+      "a": 3,
+      "b": 4,
+      "c": 5,
+      "d": 2,
+      "e": 6
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 10.40–11.00 = 20 menit, 11.00–12.00 = 60 menit, 12.00–12.05 = 5 menit, jadi 85 menit. Langkah 2 (urutkan dari terpendek): 8, 13, 17, 23, 25, 38. Langkah 3 (jumlahkan bertahap): 8 → 21 → 38 → 61 → 86 menit; tugas kelima membuat jumlah melewati 85, jadi berhenti di 4 tugas. Cek: 4 tugas terpendek = 61 menit ≤ 85 menit, sedangkan 5 tugas apa pun paling sedikit 86 menit > 85 menit.<br>Opsi A (3 tugas) gugur karena mengikuti urutan daftar: 17 + 38 + 8 = 63 menit, lalu tambah 25 menjadi 88 menit dan tidak muat; Opsi C (5 tugas) gugur karena 11.40–12.05 dikira 35 menit (40 − 5 = 35) sehingga waktu dikira 95 menit dan 86 menit tampak muat; Opsi D (2 tugas) gugur karena mendahulukan tugas terpanjang: 38 + 25 = 63 menit, lalu tambah 23 menjadi 86 menit dan tidak muat; Opsi E (6 tugas) gugur karena jam dikurangkan seperti desimal (12,05 − 10,40 = 1,65, dibaca 1 jam 65 menit = 125 menit) sehingga total 124 menit tampak muat. Jawaban: Opsi B (4 tugas). Tips: untuk \"paling banyak tugas\", urutkan dari terpendek lalu jumlahkan sampai melewati batas — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-011",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 2,
+    "sumber": "AK26#1",
+    "stem": "Yusuf, petugas sekretariat panitia seleksi, memiliki waktu pukul 08.35–10.10 sebelum peserta datang. Daftar tugasnya: mencocokkan nomor peserta (14 menit), menyusun denah ruang ujian (27 menit), menempel pengumuman (8 menit), mengecek kelengkapan berkas (19 menit), merekap daftar hadir pengawas (33 menit), dan menata meja registrasi (22 menit). Setiap tugas harus diselesaikan utuh dan ia bekerja sendiri. Jika ia menyelesaikan sebanyak mungkin tugas, berapa menit waktu yang tersisa sebelum pukul 10.10?",
+    "opsi": {
+      "a": "5 menit",
+      "b": "27 menit",
+      "c": "15 menit",
+      "d": "28 menit",
+      "e": "12 menit"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "(() => { const W = (10 * 60 + 10) - (8 * 60 + 35); let s = 0; for (const x of [14, 27, 8, 19, 33, 22].sort((a, b) => a - b)) { if (s + x > W) break; s += x; } return W - s; })()",
+    "nilai_opsi": {
+      "a": 5,
+      "b": 27,
+      "c": 15,
+      "d": 28,
+      "e": 12
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 08.35–09.00 = 25 menit, 09.00–10.00 = 60 menit, 10.00–10.10 = 10 menit, jadi 95 menit. Langkah 2 (urutkan dari terpendek): 8, 14, 19, 22, 27, 33. Langkah 3 (jumlahkan bertahap): 8 → 22 → 41 → 63 → 90 menit (5 tugas); tambah 33 menjadi 123 menit dan tidak muat. Langkah 4 (sisa): 95 − 90 = 5 menit. Cek: kelompok 5 tugas yang muat hanya tanpa tugas 33 menit, sebab membuang tugas lain menyisakan paling sedikit 123 − 27 = 96 menit.<br>Opsi B (27 menit) gugur karena mengikuti urutan daftar: 14 + 27 + 8 + 19 = 68 menit, tambah 33 menjadi 101 menit dan tidak muat, lalu sisa dikira 95 − 68 = 27; Opsi C (15 menit) gugur karena 08.35–09.00 dikira 35 menit sehingga waktu dikira 105 menit dan sisa 105 − 90 = 15; Opsi D (28 menit) gugur karena yang dihitung kelebihan beban, 123 − 95 = 28, bukan sisa waktu; Opsi E (12 menit) gugur karena jam dikurangkan seperti desimal (10,10 − 8,35 = 1,75, dibaca 1 jam 75 menit = 135 menit) sehingga 6 tugas tampak muat dengan sisa 12. Jawaban: Opsi A (5 menit). Tips: urutkan dari terpendek, jumlahkan sampai batas, lalu kurangkan jumlahnya dari waktu tersedia — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-012",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 3,
+    "sumber": "AK26#1",
+    "stem": "Bripda Putri bertugas piket di Polsek Cempaka Raya pukul 13.48–15.12. Apel siang berlangsung 13.48–14.00 sehingga waktu itu tidak bisa dipakai bekerja. Tugasnya: merekap laporan pengaduan (24 menit), mengarsipkan berkas perkara (16 menit), menyusun jadwal patroli (32 menit), memperbarui buku mutasi (18 menit), dan menulis notula rapat (28 menit). Ia akan melimpahkan tepat dua tugas kepada rekannya sehingga sisa tugas yang ia kerjakan sendiri tepat mengisi waktu kerjanya, tanpa waktu kosong dan tanpa melewati pukul 15.12. Pasangan tugas mana yang harus dilimpahkan?",
+    "opsi": {
+      "a": "Mengarsipkan berkas perkara dan memperbarui buku mutasi",
+      "b": "Memperbarui buku mutasi dan menulis notula rapat",
+      "c": "Menyusun jadwal patroli dan menulis notula rapat",
+      "d": "Mengarsipkan berkas perkara dan menyusun jadwal patroli",
+      "e": "Memperbarui buku mutasi dan merekap laporan pengaduan"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "pilih(v => v === (24 + 16 + 32 + 18 + 28) - (84 - 12))",
+    "nilai_opsi": {
+      "a": 34,
+      "b": 46,
+      "c": 60,
+      "d": 48,
+      "e": 42
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 14.00–15.12 = 72 menit (13.48–15.12 = 84 menit, dikurangi apel 12 menit). Langkah 2 (beban total): 24 + 16 + 32 + 18 + 28 = 118 menit. Langkah 3 (kelebihan): 118 − 72 = 46 menit; tugas terlama hanya 32 menit, jadi perlu dua tugas yang jumlahnya tepat 46 menit. Langkah 4 (pilih): hitung 46 − tugas: 32 butuh 14, 28 butuh 18, 24 butuh 22, 16 butuh 30; hanya 18 yang ada, jadi pasangannya buku mutasi + notula rapat = 18 + 28 = 46 menit. Cek: sisa 24 + 16 + 32 = 72 menit, tepat mengisi waktu kerja.<br>Opsi A (berkas perkara + buku mutasi) gugur karena lupa mengurangi apel: 16 + 18 = 34 = 118 − 84, padahal sisa 24 + 32 + 28 = 84 menit, lewat 12 menit; Opsi C (jadwal patroli + notula rapat) gugur karena asal memilih dua tugas terlama: sisa 24 + 16 + 18 = 58 menit, ada 14 menit kosong; Opsi D (berkas perkara + jadwal patroli) gugur karena mengambil tugas terlama lalu menambah yang terpendek: 32 + 16 = 48, sisa 70 menit, ada 2 menit kosong; Opsi E (buku mutasi + laporan pengaduan) gugur karena hanya menutup sebagian kelebihan: 18 + 24 = 42 < 46, sisa 76 menit, lewat 4 menit. Jawaban: Opsi B (memperbarui buku mutasi dan menulis notula rapat). Tips: setelah kelebihan diketahui, hitung \"kelebihan − tugas\" mulai dari tugas terlama, bukan mencoba pasangan satu per satu — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-013",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 3,
+    "sumber": "AK26#1",
+    "stem": "Melati, sekretaris panitia bakti sosial, memiliki waktu kerja pukul 08.35–10.46; rentang itu sudah termasuk istirahat 15 menit yang tidak dipakai bekerja. Pekerjaan yang terpotong oleh istirahat boleh dilanjutkan sesudahnya. Tugasnya: menyusun proposal (37 menit), mendata donatur (26 menit), membuat surat undangan (17 menit), merekap anggaran (32 menit), mendesain spanduk (31 menit), dan mengonfirmasi relawan (15 menit). Ia akan menyerahkan tepat dua tugas kepada rekannya agar sisa tugasnya selesai paling lambat pukul 10.46, dengan jumlah durasi tugas yang diserahkan sekecil mungkin. Pasangan tugas mana yang diserahkan?",
+    "opsi": {
+      "a": "Membuat surat undangan dan mengonfirmasi relawan",
+      "b": "Mendata donatur dan mengonfirmasi relawan",
+      "c": "Menyusun proposal dan merekap anggaran",
+      "d": "Mendesain spanduk dan mengonfirmasi relawan",
+      "e": "Mendata donatur dan membuat surat undangan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "(d => Math.min(...d.flatMap((x, i) => d.slice(i + 1).map(y => x + y)).filter(s => s >= d.reduce((a, b) => a + b) - (131 - 15))))([37, 26, 17, 32, 31, 15])",
+    "nilai_opsi": {
+      "a": 32,
+      "b": 41,
+      "c": 69,
+      "d": 46,
+      "e": 43
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): 08.35–10.46 = 131 menit, dikurangi istirahat 15 menit = 116 menit. Langkah 2 (beban total): 37 + 26 + 17 + 32 + 31 + 15 = 158 menit. Langkah 3 (kelebihan): 158 − 116 = 42 menit; tugas terlama 37 < 42, jadi perlu dua tugas berjumlah minimal 42 menit, sekecil mungkin. Langkah 4 (pilih): untuk tiap tugas cari pasangan terkecil yang cukup: 15 butuh ≥ 27, terdekat 31 (46); 17 butuh ≥ 25, terdekat 26 (43); 26 butuh ≥ 16, terdekat 17 (43, pasangan yang sama); 31, 32, dan 37 dengan 15 menjadi 46, 47, dan 52. Tidak ada yang tepat 42, dan 43 hanya dari mendata donatur + membuat surat undangan. Cek: sisa 37 + 32 + 31 + 15 = 115 menit ≤ 116 menit.<br>Opsi A (surat undangan + relawan) gugur karena lupa mengurangi istirahat: kelebihan dikira 158 − 131 = 27, padahal sisa 37 + 26 + 32 + 31 = 126 menit, lewat 10 menit; Opsi B (donatur + relawan) gugur karena 26 + 15 = 41 kurang 1 menit: sisa 117 menit, lewat 1 menit; Opsi C (proposal + anggaran) gugur karena memilih dua tugas terlama: cukup, tetapi 37 + 32 = 69 menit jauh di atas 43; Opsi D (spanduk + relawan) gugur karena berhenti pada pasangan pertama yang cukup: 15 + 31 = 46 menit, masih lebih besar dari 43. Jawaban: Opsi E (mendata donatur dan membuat surat undangan). Tips: jangan berhenti pada pasangan pertama yang cukup; untuk tiap tugas hitung \"kelebihan − tugas\", ambil tugas terdekat di atasnya, lalu bandingkan jumlahnya — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-014",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 3,
+    "sumber": "AK26#1",
+    "stem": "Di posko banjir Desa Sumberjati, Fikri dan Danu harus menyelesaikan enam tugas: mendata pengungsi (29 menit), membersihkan dapur umum (12 menit), mendirikan tenda (38 menit), memasang lampu darurat (18 menit), membagikan makanan (36 menit), dan mengecek stok obat (15 menit). Keduanya mulai bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan. Pembagian mana yang membuat seluruh tugas selesai paling cepat?",
+    "opsi": {
+      "a": "Fikri: data pengungsi, dapur umum, tenda; Danu: lampu, makanan, obat",
+      "b": "Fikri: makanan, data pengungsi; Danu: tenda, lampu, obat, dapur umum",
+      "c": "Fikri: dapur umum, lampu, makanan; Danu: obat, data pengungsi, tenda",
+      "d": "Fikri: tenda, makanan; Danu: data pengungsi, lampu, obat, dapur umum",
+      "e": "Fikri: tenda, lampu, obat; Danu: makanan, data pengungsi, dapur umum"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "(d => { const t = d.reduce((a, b) => a + b); let best = t; for (let m = 0; m < 1 << d.length; m++) { const s = d.reduce((a, x, i) => (m >> i) & 1 ? a + x : a, 0); best = Math.min(best, Math.max(s, t - s)); } return best; })([29, 12, 38, 18, 36, 15])",
+    "nilai_opsi": {
+      "a": 79,
+      "b": 83,
+      "c": 82,
+      "d": 74,
+      "e": 77
+    },
+    "pembahasan": "Langkah 1 (beban total): 29 + 12 + 38 + 18 + 36 + 15 = 148 menit. Langkah 2 (target): seluruh tugas selesai saat beban terbesar selesai, jadi paling cepat bila beban keduanya sama, 148 ÷ 2 = 74 menit. Langkah 3 (cari 74): mulai dari dua tugas terlama, 38 + 36 = 74, tepat; sisanya 29 + 18 + 15 + 12 = 74 menit. Langkah 4 (bandingkan beban terbesar): A 79, B 83, C 82, D 74, E 77 menit. Cek: pada Opsi D, Fikri 38 + 36 = 74 menit dan Danu 29 + 18 + 15 + 12 = 74 menit, keduanya selesai pada menit ke-74.<br>Opsi A (bagi menurut urutan daftar) gugur karena tidak melihat durasi: Fikri 29 + 12 + 38 = 79, Danu 18 + 36 + 15 = 69 menit; Opsi B (makanan + data pengungsi untuk Fikri) gugur karena langsung memasangkan dua tugas yang jumlahnya di bawah setengah total (36 + 29 = 65 < 74) tanpa mencari pasangan yang tepat: Danu memikul 38 + 18 + 15 + 12 = 83 menit; Opsi C (masing-masing tiga tugas) gugur karena menyamakan jumlah tugas, bukan waktu: Fikri 12 + 18 + 36 = 66, Danu 15 + 29 + 38 = 82 menit; Opsi E (cara rakus: tugas terlama berikutnya ke yang bebannya lebih ringan) gugur karena belum seimbang: Fikri 38 + 18 + 15 = 71, Danu 36 + 29 + 12 = 77 menit. Jawaban: Opsi D (Fikri: tenda, makanan; Danu: sisanya). Tips: jadikan setengah total sebagai target dan cari kombinasi yang tepat mulai dari tugas terlama; yang menentukan adalah beban terbesar, bukan banyaknya tugas — target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-015",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 3,
+    "sumber": "AK26#1",
+    "stem": "Sabtu pagi pukul 07.50, Taruna Rangga dan Taruna Danu mulai kerja bakti asrama. Tugasnya: mengepel lorong (23 menit), membersihkan kamar mandi (32 menit), merapikan gudang (13 menit), mencuci tirai (31 menit), dan menyapu halaman (21 menit). Mereka bekerja bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan. Jika pembagian tugas diatur sebaik mungkin, pukul berapa paling cepat semua tugas selesai?",
+    "opsi": {
+      "a": "08.53",
+      "b": "08.50",
+      "c": "08.56",
+      "d": "08.58",
+      "e": "09.50"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "7 * 60 + 50 + (d => { const t = d.reduce((a, b) => a + b); let best = t; for (let m = 0; m < 1 << d.length; m++) { const s = d.reduce((a, x, i) => (m >> i) & 1 ? a + x : a, 0); best = Math.min(best, Math.max(s, t - s)); } return best; })([23, 32, 13, 31, 21])",
+    "nilai_opsi": {
+      "a": 533,
+      "b": 530,
+      "c": 536,
+      "d": 538,
+      "e": 590
+    },
+    "pembahasan": "Langkah 1 (beban total): 23 + 32 + 13 + 31 + 21 = 120 menit. Langkah 2 (target): 120 ÷ 2 = 60 menit, tetapi hanya tercapai bila ada kelompok tugas berjumlah tepat 60. Langkah 3 (cek): dengan lima tugas, satu orang memegang dua tugas (lawan tiga) atau satu tugas (lawan empat, minimal 120 − 32 = 88 menit). Jumlah dua tugas terdekat dengan 60 adalah 55 (lawannya 65) dan 63 (lawannya 57); tidak ada yang tepat 60. Langkah 4 (pilih): beban terbesar paling kecil = 63 menit, yaitu Rangga kamar mandi + tirai = 32 + 31 = 63 dan Danu lorong + gudang + halaman = 23 + 13 + 21 = 57. Cek: 07.50 + 63 menit = 07.50 + 10 + 53 = 08.53.<br>Opsi B (08.50) gugur karena langsung memakai setengah total, padahal tidak ada pembagian berjumlah tepat 60 menit; Opsi C (08.56) gugur karena memakai cara rakus (tugas terlama berikutnya ke yang bebannya lebih ringan): 32 dan 31 dibagi dua, 23 ke yang 31 (54), 21 ke yang 32 (53), 13 ke yang 53 (66), selesai pada menit ke-66; Opsi D (08.58) gugur karena membagi menurut urutan daftar: 23 + 32 + 13 = 68 lawan 31 + 21 = 52, selesai pada menit ke-68; Opsi E (09.50) gugur karena menjumlahkan semua tugas seolah dikerjakan satu orang: 07.50 + 120 menit. Jawaban: Opsi A (08.53). Tips: setengah total hanya batas bawah — cek dulu apakah ada kombinasi yang tepat; bila tidak ada, ambil kombinasi terdekat di atasnya lalu tambahkan ke jam mulai, target di bawah 75 detik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-AK-016",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI",
+    "tier": 3,
+    "sumber": "AK26#1",
+    "stem": "Ipda Tiara di Bagian Operasional Polres Tanjung Wangi bekerja pukul 13.25–15.10. Tugasnya: menyusun rencana pengamanan (38 menit), membuat surat perintah (16 menit), memeriksa laporan kegiatan (28 menit), merekap absensi personel (24 menit), dan memperbarui peta rawan (19 menit). Ia akan meminta Bripka Fikri mengerjakan tepat satu tugas. Fikri hanya bisa membantu pukul 14.20–14.57 dan, karena belum terbiasa, membutuhkan 1,5 kali durasi normal. Tugas mana yang harus diserahkan kepada Fikri agar Tiara selesai paling lambat pukul 15.10 dan Fikri paling lambat pukul 14.57?",
+    "opsi": {
+      "a": "Membuat surat perintah",
+      "b": "Memeriksa laporan kegiatan",
+      "c": "Merekap absensi personel",
+      "d": "Menyusun rencana pengamanan",
+      "e": "Memperbarui peta rawan"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "pilih(v => v >= (38 + 16 + 28 + 24 + 19) - 105 && 1.5 * v <= 37)",
+    "nilai_opsi": {
+      "a": 16,
+      "b": 28,
+      "c": 24,
+      "d": 38,
+      "e": 19
+    },
+    "pembahasan": "Langkah 1 (waktu tersedia): Tiara 13.25–15.10 = 105 menit; Fikri 14.20–14.57 = 37 menit. Langkah 2 (beban total): 38 + 16 + 28 + 24 + 19 = 125 menit. Langkah 3 (kelebihan): 125 − 105 = 20 menit, jadi tugas yang diserahkan minimal 20 menit (syarat Tiara); syarat Fikri: 1,5 × durasi ≤ 37, artinya durasi ≤ 37 ÷ 1,5 ≈ 24,7 menit. Langkah 4 (pilih): tugas berdurasi antara 20 dan 24,7 menit hanya merekap absensi personel (24 menit). Cek: Tiara mengerjakan 38 + 16 + 28 + 19 = 101 menit ≤ 105 menit; Fikri butuh 1,5 × 24 = 36 menit ≤ 37 menit.<br>Opsi A (surat perintah) gugur karena 16 < 20: Tiara masih harus mengerjakan 38 + 28 + 24 + 19 = 109 menit, lewat 4 menit; Opsi B (laporan kegiatan) gugur karena lupa faktor 1,5: 28 menit memang muat dalam 37 menit, tetapi Fikri butuh 1,5 × 28 = 42 menit, lewat 5 menit; Opsi D (rencana pengamanan) gugur karena memilih tugas terlama: Fikri butuh 1,5 × 38 = 57 menit, jauh melebihi 37 menit; Opsi E (peta rawan) gugur karena 19 kurang 1 menit dari kelebihan 20: Tiara mengerjakan 38 + 16 + 28 + 24 = 106 menit, lewat 1 menit. Jawaban: Opsi C (merekap absensi personel). Tips: ubah dua syarat menjadi satu rentang durasi — batas bawah = kelebihan, batas atas = waktu rekan ÷ faktor lambat — lalu cari tugas di dalam rentang itu, target di bawah 75 detik.",
+    "status_kunci": "ganda"
   }
 ]
