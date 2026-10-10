@@ -589,7 +589,7 @@ export default function EngineKecermatan({
                 {payload?.shown.map((sym, i) => (
                   <div
                     key={i}
-                    className="flex h-[4.5rem] items-center justify-center rounded-md border border-border bg-surface-inset text-4xl sm:h-20 sm:text-[2.5rem]"
+                    className="flex h-20 items-center justify-center rounded-md border border-border bg-surface-inset text-[2.67rem] sm:h-[5.5rem] sm:text-[2.92rem]"
                   >
                     <KecermatanSymbol symbol={sym} />
                   </div>
