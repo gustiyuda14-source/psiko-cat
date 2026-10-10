@@ -153,10 +153,17 @@ export function PackageOrbit({
                       </text>
                     </g>
                   </g>
+                  {/* Nama melengkung di busur bawah dial, di luar cincin skala,
+                      supaya tidak menimpa dial tetangga. */}
                   {sel && (
-                    <text className="po-name" y={dR * 1.14 + 28} textAnchor="middle">
-                      {it.label} · <tspan className="po-status">{it.status}</tspan>
-                    </text>
+                    <>
+                      <path id={`po-arc-${it.id}`} fill="none" d={`M ${-(dR * 1.14 + 26)} 0 A ${dR * 1.14 + 26} ${dR * 1.14 + 26} 0 0 0 ${dR * 1.14 + 26} 0`} />
+                      <text className="po-name">
+                        <textPath href={`#po-arc-${it.id}`} startOffset="50%" textAnchor="middle">
+                          {it.label} · <tspan className="po-status">{it.status}</tspan>
+                        </textPath>
+                      </text>
+                    </>
                   )}
                 </g>
               </g>
