@@ -1,12 +1,21 @@
-// Aturan akun yang sama dengan dajiks-cest (api/admin.js): nama huruf besar, ID berurutan p001…,
-// password acak 8 karakter tanpa huruf/angka yang mirip. Murni (tanpa I/O) supaya bisa dites.
+// Aturan akun mengikuti dajiks-cest (api/admin.js): nama huruf besar, ID berurutan p001….
+// Password: nama depan + @ atau * + 4 angka acak (mudah diingat peserta). Murni (tanpa I/O) supaya bisa dites.
 import { createHash, randomInt } from "node:crypto";
 
-export const PW_ALPHABET = "abcdefghjkmnpqrstuvwxyz23456789"; // tanpa 0/o/1/l/i agar tidak salah ketik
 export const MAX_NAMES = 50; // per permintaan; UI mengirim per 25
 export const MAX_NAME_LEN = 120;
 
-export const genPassword = (): string => Array.from({ length: 8 }, () => PW_ALPHABET[randomInt(PW_ALPHABET.length)]).join("");
+export const PW_SYMBOLS = "@*";
+
+/** Kata nama untuk password: kata pertama yang punya ≥3 huruf, huruf kecil tanpa aksen, maks 12 huruf. */
+export function nameWord(nama: string): string {
+  const words = nama.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().split(/\s+/).map((w) => w.replace(/[^a-z]/g, ""));
+  return (words.find((w) => w.length >= 3) ?? "peserta").slice(0, 12);
+}
+
+/** Contoh: "BUDI SANTOSO" → "budi@4821", "I KETUT ARYA" → "ketut*0937". */
+export const genPassword = (nama: string): string =>
+  nameWord(nama) + PW_SYMBOLS[randomInt(PW_SYMBOLS.length)] + String(randomInt(10_000)).padStart(4, "0");
 
 export const cleanName = (n: unknown): string =>
   String(n ?? "")

@@ -1,16 +1,18 @@
 // Self-check aturan akun (lib/account-rules.ts) dan penjaga sesi (lib/account-guard.ts).
 // Supabase ditiru dengan fetch palsu, tidak menyentuh database asli. Jalankan: npm run check:accounts
 import assert from "node:assert/strict";
-import { cleanName, genPassword, nextIds, PW_ALPHABET, sessionVersion } from "../lib/account-rules";
+import { cleanName, genPassword, nameWord, nextIds, sessionVersion } from "../lib/account-rules";
 
 assert.equal(cleanName("  budi\tsantoso \n"), "BUDI SANTOSO");
 assert.deepEqual(nextIds(["admin", "salfa", "p002", "p010", "gusti"], 3), ["p011", "p012", "p013"]);
 assert.deepEqual(nextIds([], 1), ["p001"]);
-for (let i = 0; i < 200; i++) {
-  const pw = genPassword();
-  assert.equal(pw.length, 8);
-  assert.ok([...pw].every((ch) => PW_ALPHABET.includes(ch)), pw);
-}
+assert.equal(nameWord("BUDI SANTOSO"), "budi");
+assert.equal(nameWord("I KETUT ARYA"), "ketut");
+assert.equal(nameWord("NI LUH AYU"), "luh");
+assert.equal(nameWord("ANDRÉ"), "andre");
+assert.equal(nameWord("A B"), "peserta");
+assert.equal(nameWord("MUHAMMADRIZKYPRATAMA"), "muhammadrizk");
+for (let i = 0; i < 200; i++) assert.match(genPassword("BUDI SANTOSO"), /^budi[@*]\d{4}$/);
 assert.equal(sessionVersion("hash-a"), sessionVersion("hash-a"));
 assert.notEqual(sessionVersion("hash-a"), sessionVersion("hash-b"));
 

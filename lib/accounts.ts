@@ -60,7 +60,7 @@ export async function createAccounts(rawNames: unknown, allowDuplicates: boolean
     const now = new Date().toISOString();
     const out = await Promise.all(
       names.map(async (nama, i) => {
-        const password = genPassword();
+        const password = genPassword(nama);
         return { id: ids[i], nama, password, row: {
             // id/created_at/updated_at diisi di sini: default kolom dibuat Prisma di sisi aplikasi, bukan di database.
             id: randomUUID(), name: nama, username: ids[i], email: `${ids[i]}@psikotes.internal`,
@@ -84,7 +84,9 @@ async function patch(username: string, values: Record<string, unknown>): Promise
 }
 
 export async function resetPassword(username: string) {
-  const password = genPassword();
+  const current = await findAccount(username);
+  if (!current) throw new AccountError(404, "ID tidak ditemukan.");
+  const password = genPassword(current.nama);
   const u = await patch(username, { password_hash: await bcrypt.hash(password, 10) });
   return { id: u.id, nama: u.nama, password };
 }

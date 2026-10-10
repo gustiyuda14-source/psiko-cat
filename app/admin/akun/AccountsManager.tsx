@@ -167,7 +167,7 @@ export default function AccountsManager() {
       <section className="surface-card space-y-3 p-5 sm:p-6" aria-labelledby="h-new">
         <h2 id="h-new" className="font-heading text-xl text-foreground">Buat akun baru</h2>
         <p className="text-sm text-muted-foreground">
-          Tulis satu nama per baris (boleh tempel dari Excel/CSV). Username dibuat otomatis (p001, p002, …) dan password acak 8 karakter. Akun langsung bisa dipakai login, tanpa deploy.
+          Tulis satu nama per baris (boleh tempel dari Excel/CSV). Username dibuat otomatis (p001, p002, …) dan password berupa nama depan + @ atau * + 4 angka (contoh: budi@4821). Akun langsung bisa dipakai login, tanpa deploy.
         </p>
         <label htmlFor="names" className="block text-sm font-semibold text-foreground">Nama peserta</label>
         <textarea
