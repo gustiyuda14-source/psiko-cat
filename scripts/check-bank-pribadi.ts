@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
 
-// Validator bank Kepribadian (bank/pribadi/kp-*.json), aturan pedoman §6.1 + §1.1a.
+// Validator bank PRIBADI: Kepribadian (kp-*.json, pedoman §6.1 + §1.1a) dan Substansi Khusus (sk-*.json).
 // Pakai: npx tsx scripts/check-bank-pribadi.ts
 
 type Item = {
@@ -55,4 +55,44 @@ for (const f of files) {
   }
   for (const [a, c] of perAspek) assert.ok(Math.abs(c.fav - c.unfav) <= 1, `${f} ${a}: arah timpang ${c.fav}:${c.unfav}`);
 }
-console.log(`Bank PRIBADI: ${total} butir KP dari ${files.length} file lolos semua cek.`);
+// --- Substansi Khusus (bank/pribadi/sk-*.json), pedoman §3 + §4.2 ---
+type SkItem = { id: string; dimensi: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
+// Proporsi dimensi per 63 butir sumber (pedoman §3.1).
+const PROPORSI: Record<string, number> = { D1: 4, D2: 5, D3: 6, D4: 12, D5: 6, D6: 6, D7: 4, D8: 8, D9: 6, D10: 2, D11: 4 };
+let skTotal = 0;
+const skFiles = fs.readdirSync(dir).filter((f) => /^sk-.*\.json$/.test(f));
+for (const f of skFiles) {
+  const bank = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")) as { dimensi: Record<string, unknown>; items: SkItem[] };
+  const byId = new Map(bank.items.map((it) => [it.id, it]));
+  const perDim = new Map<string, number>();
+  let kunciA = 0, kembar = 0;
+  for (const it of bank.items) {
+    const at = `${f} ${it.id}`;
+    assert.ok(!seenId.has(it.id), `${at}: id ganda`);
+    seenId.add(it.id);
+    assert.ok(bank.dimensi[it.dimensi], `${at}: dimensi tidak dikenal`);
+    assert.ok(it.situasi.startsWith("Hal yang "), `${at}: situasi harus diawali "Hal yang"`);
+    assert.ok(it.opsi.A?.trim() && it.opsi.B?.trim() && it.opsi.A !== it.opsi.B, `${at}: opsi tidak valid`);
+    assert.ok(it.kunci === "A" || it.kunci === "B", `${at}: kunci harus A/B`);
+    assert.ok(it.pembahasan.trim(), `${at}: pembahasan kosong`);
+    if (it.kembar_dengan) {
+      const t = byId.get(it.kembar_dengan);
+      assert.ok(t && t.kembar_dengan === it.id, `${at}: pasangan kembar tidak timbal balik`);
+      assert.equal(t.dimensi, it.dimensi, `${at}: kembar beda dimensi`);
+      assert.equal(t.opsi[t.kunci], it.opsi[it.kunci], `${at}: kembar memilih nilai berbeda`);
+      assert.notEqual(t.kunci, it.kunci, `${at}: kembar harus menukar posisi pilihan`);
+      kembar++;
+    }
+    perDim.set(it.dimensi, (perDim.get(it.dimensi) ?? 0) + 1);
+    if (it.kunci === "A") kunciA++;
+    skTotal++;
+  }
+  const n = bank.items.length;
+  assert.ok(Math.abs(kunciA - n / 2) <= 1, `${f}: kunci A ${kunciA} dari ${n}, tidak seimbang`);
+  if (n === 63) {
+    for (const [d, want] of Object.entries(PROPORSI)) assert.ok(Math.abs((perDim.get(d) ?? 0) - want) <= 1, `${f} ${d}: ${perDim.get(d) ?? 0} butir, target ${want}±1`);
+    assert.ok(kembar / 2 >= 4, `${f}: minimal 4 pasang kembar`);
+  }
+}
+
+console.log(`Bank PRIBADI: ${total} butir KP dan ${skTotal} butir SK dari ${files.length + skFiles.length} file lolos semua cek.`);
