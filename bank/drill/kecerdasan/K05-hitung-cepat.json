@@ -1,0 +1,934 @@
+[
+ {
+  "id": "K05-B2-042",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-CAMPUR",
+  "tier": 1,
+  "sumber": "B2#42",
+  "stem": "75 − 14 × 3 + 26 = …",
+  "opsi": {
+   "a": "209",
+   "b": "33",
+   "c": "59",
+   "d": "7",
+   "e": "61"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "75 - 14*3 + 26",
+  "nilai_opsi": {
+   "a": 209,
+   "b": 33,
+   "c": 59,
+   "d": 7,
+   "e": 61
+  },
+  "pembahasan": "Perkalian dikerjakan lebih dulu: 14 × 3 = 42. Setelah itu kerjakan dari kiri ke kanan: 75 − 42 = 33, lalu 33 + 26 = 59.<br>Opsi A (209) gugur karena menghitung dari kiri ke kanan tanpa mendahulukan perkalian: (75 − 14) × 3 + 26; Opsi B (33) gugur karena berhenti sebelum menambahkan 26; Opsi D (7) gugur karena mengurangkan 42 dan 26 sekaligus: 75 − (42 + 26); Opsi E (61) gugur karena salah menghitung 75 − 42. Jawaban: Opsi C (59). Tips: lingkari dulu tanda × dan : sebelum mulai menghitung.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-050",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-CAMPUR",
+  "tier": 1,
+  "sumber": "B2#50",
+  "stem": "−12 + 23 − (−9) + 4 = …",
+  "opsi": {
+   "a": "24",
+   "b": "6",
+   "c": "2",
+   "d": "48",
+   "e": "−24"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "-12 + 23 - (-9) + 4",
+  "nilai_opsi": {
+   "a": 24,
+   "b": 6,
+   "c": 2,
+   "d": 48,
+   "e": -24
+  },
+  "pembahasan": "Ubah dulu tanda ganda: − (−9) = +9. Bentuknya menjadi −12 + 23 + 9 + 4. Hitung: −12 + 23 = 11, 11 + 9 = 20, 20 + 4 = 24.<br>Opsi B (6) gugur karena mengubah − (−9) menjadi −9, padahal kurang negatif sama dengan tambah; Opsi C (2) gugur karena salah tanda pada − (−9) dan lupa menambahkan 4; Opsi D (48) gugur karena menganggap −12 sebagai +12; Opsi E (−24) gugur karena membalik tanda hasil akhir. Jawaban: Opsi A (24). Tips: dua tanda minus yang bertemu langsung jadi plus; tulis ulang soal sebelum menghitung.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-036",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-CAMPUR",
+  "tier": 1,
+  "sumber": "A3#36",
+  "stem": "2 × (−3) × 4 × (−1) × 5 × (−2) = …",
+  "opsi": {
+   "a": "240",
+   "b": "120",
+   "c": "−120",
+   "d": "24",
+   "e": "−240"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "2*(-3)*4*(-1)*5*(-2)",
+  "nilai_opsi": {
+   "a": 240,
+   "b": 120,
+   "c": -120,
+   "d": 24,
+   "e": -240
+  },
+  "pembahasan": "Kalikan angkanya tanpa tanda dulu: 2 × 3 × 4 × 1 × 5 × 2 = 240. Lalu tentukan tanda: ada tiga faktor negatif (−3, −1, −2). Jumlah negatif ganjil berarti hasilnya negatif, jadi −240.<br>Opsi A (240) gugur karena lupa menghitung jumlah tanda negatif (ada tiga, jadi hasilnya negatif); Opsi B (120) gugur karena melewatkan faktor (−2) di akhir; Opsi C (−120) gugur karena melewatkan faktor 2 di depan; Opsi D (24) gugur karena hanya mengalikan empat faktor pertama. Jawaban: Opsi E (−240). Tips: pisahkan urusan tanda dari urusan angka: hitung banyaknya faktor negatif, ganjil = negatif.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-043",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-DESIMAL",
+  "tier": 1,
+  "sumber": "B2#43",
+  "stem": "0,06 − 3 × 0,4 = …",
+  "opsi": {
+   "a": "1,14",
+   "b": "−1,14",
+   "c": "−1,176",
+   "d": "−0,54",
+   "e": "1,26"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "0.06 - 3*0.4",
+  "nilai_opsi": {
+   "a": 1.14,
+   "b": -1.14,
+   "c": -1.176,
+   "d": -0.54,
+   "e": 1.26
+  },
+  "pembahasan": "Perkalian dulu: 3 × 0,4 = 1,2. Lalu 0,06 − 1,2 = −(1,2 − 0,06) = −1,14.<br>Opsi A (1,14) gugur karena tandanya terbalik; 0,06 lebih kecil dari 1,2 sehingga hasilnya negatif; Opsi C (−1,176) gugur karena mengurangkan dulu baru mengalikan: (0,06 − 3) × 0,4; Opsi D (−0,54) gugur karena menganggap 3 × 0,4 = 0,6; Opsi E (1,26) gugur karena menjumlahkan 0,06 + 1,2. Jawaban: Opsi B (−1,14). Tips: jika pengurang lebih besar, kurangkan yang besar dengan yang kecil lalu beri tanda minus.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-039",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-DESIMAL",
+  "tier": 1,
+  "sumber": "A3#39",
+  "stem": "0,48 : 8 + 5,6 : 0,7 = …",
+  "opsi": {
+   "a": "80,06",
+   "b": "8,6",
+   "c": "0,86",
+   "d": "8,06",
+   "e": "8,006"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "0.48/8 + 5.6/0.7",
+  "nilai_opsi": {
+   "a": 80.06,
+   "b": 8.6,
+   "c": 0.86,
+   "d": 8.06,
+   "e": 8.006
+  },
+  "pembahasan": "Bagi satu per satu. 0,48 : 8 = 0,06. Untuk 5,6 : 0,7, kalikan keduanya dengan 10 menjadi 56 : 7 = 8. Jumlahnya 0,06 + 8 = 8,06.<br>Opsi A (80,06) gugur karena salah geser koma pada 5,6 : 0,7 sehingga menjadi 80; Opsi B (8,6) gugur karena menganggap 0,48 : 8 = 0,6; Opsi C (0,86) gugur karena membagi 5,6 : 0,7 menjadi 0,8; Opsi E (8,006) gugur karena menganggap 0,48 : 8 = 0,006. Jawaban: Opsi D (8,06). Tips: pembagian dengan desimal: geser koma pembagi dan yang dibagi sama banyak sampai pembaginya bulat.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-047",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-DESIMAL",
+  "tier": 2,
+  "sumber": "B2#47",
+  "stem": "(0,4)² + 9 : 0,3 − 30 = …",
+  "opsi": {
+   "a": "0,016",
+   "b": "1,6",
+   "c": "0,16",
+   "d": "30,16",
+   "e": "0,8"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "0.4**2 + 9/0.3 - 30",
+  "nilai_opsi": {
+   "a": 0.016,
+   "b": 1.6,
+   "c": 0.16,
+   "d": 30.16,
+   "e": 0.8
+  },
+  "pembahasan": "Pangkat dulu: (0,4)² = 0,4 × 0,4 = 0,16. Lalu pembagian: 9 : 0,3 = 90 : 3 = 30. Hasilnya 0,16 + 30 − 30 = 0,16.<br>Opsi A (0,016) gugur karena salah menempatkan koma pada (0,4)²; Opsi B (1,6) gugur karena menganggap (0,4)² = 1,6; Opsi D (30,16) gugur karena lupa mengurangkan 30; Opsi E (0,8) gugur karena menganggap (0,4)² = 0,8 (mengalikan dengan 2, bukan dengan dirinya). Jawaban: Opsi C (0,16). Tips: banyak angka desimal hasil kuadrat = 2 × banyak angka desimal bilangannya (0,4 → dua angka: 0,16).",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-040",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PERSEN",
+  "tier": 2,
+  "sumber": "A3#40",
+  "stem": "0,5 × (6)² + 300 × 0,04% = …",
+  "opsi": {
+   "a": "18,12",
+   "b": "9,12",
+   "c": "30",
+   "d": "18,012",
+   "e": "21"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "0.5*6**2 + 300*0.0004",
+  "nilai_opsi": {
+   "a": 18.12,
+   "b": 9.12,
+   "c": 30,
+   "d": 18.012,
+   "e": 21
+  },
+  "pembahasan": "Pangkat lebih dulu: 6² = 36, jadi 0,5 × 36 = 18. Persen: 0,04% = 0,0004, sehingga 300 × 0,0004 = 0,12. Jumlahnya 18 + 0,12 = 18,12.<br>Opsi B (9,12) gugur karena menghitung (0,5 × 6)², bukan 0,5 × 6²; Opsi C (30) gugur karena membaca 0,04% sebagai 4% sehingga 300 × 4% = 12; Opsi D (18,012) gugur karena salah geser koma pada 300 × 0,04%; Opsi E (21) gugur karena menghitung 300 × 0,04% = 3. Jawaban: Opsi A (18,12). Tips: ubah persen ke desimal dengan menggeser koma dua langkah ke kiri: 0,04% → 0,0004.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-041",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 1,
+  "sumber": "B2#41",
+  "stem": "3/4 − 1/6 + 2/3 = …",
+  "opsi": {
+   "a": "1 7/12",
+   "b": "7/12",
+   "c": "1 1/12",
+   "d": "1 1/6",
+   "e": "1 1/4"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "3/4 - 1/6 + 2/3",
+  "nilai_opsi": {
+   "a": 1.5833333333333333,
+   "b": 0.5833333333333334,
+   "c": 1.0833333333333333,
+   "d": 1.1666666666666667,
+   "e": 1.25
+  },
+  "pembahasan": "Samakan penyebut ke KPK 4, 6, dan 3, yaitu 12: 3/4 = 9/12, 1/6 = 2/12, 2/3 = 8/12. Hitung 9/12 − 2/12 + 8/12 = 15/12 = 1 3/12 = 1 1/4.<br>Opsi A (1 7/12) gugur karena menjumlahkan 1/6, padahal tandanya kurang; Opsi B (7/12) gugur karena lupa menambahkan 2/3; Opsi C (1 1/12) gugur karena menyamakan 2/3 menjadi 6/12, seharusnya 8/12; Opsi D (1 1/6) gugur karena menyamakan 3/4 menjadi 8/12, seharusnya 9/12. Jawaban: Opsi E (1 1/4). Tips: cari KPK penyebut sekali saja, lalu kerjakan pembilangnya dari kiri ke kanan.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-037",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 2,
+  "sumber": "A3#37",
+  "stem": "5 1/3 + 2 1/4 − 3 5/6 = …",
+  "opsi": {
+   "a": "3 1/4",
+   "b": "3 3/4",
+   "c": "4 1/4",
+   "d": "3 5/6",
+   "e": "2 3/4"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "16/3 + 9/4 - 23/6",
+  "nilai_opsi": {
+   "a": 3.25,
+   "b": 3.75,
+   "c": 4.25,
+   "d": 3.8333333333333335,
+   "e": 2.75
+  },
+  "pembahasan": "Kerjakan bagian bulat dan pecahan terpisah. Bulat: 5 + 2 − 3 = 4. Pecahan: 1/3 + 1/4 − 5/6 = 4/12 + 3/12 − 10/12 = −3/12 = −1/4. Hasilnya 4 − 1/4 = 3 3/4.<br>Opsi A (3 1/4) gugur karena bagian pecahannya dihitung −3/4, seharusnya −1/4; Opsi C (4 1/4) gugur karena salah tanda pada bagian pecahan (+1/4); Opsi D (3 5/6) gugur karena menyamakan 5/6 menjadi 9/12, seharusnya 10/12; Opsi E (2 3/4) gugur karena mengurangkan satu bulat terlalu banyak. Jawaban: Opsi B (3 3/4). Tips: pada pecahan campuran, hitung bulat dan pecahan terpisah, lalu gabungkan di akhir.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-048",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 2,
+  "sumber": "B2#48",
+  "stem": "(1/3 + 2/5) : (3/4 − 1/2) = …",
+  "rumus": "<math display=\"block\"><mfrac displaystyle=\"true\"><mrow><mfrac displaystyle=\"true\"><mn>1</mn><mn>3</mn></mfrac><mo>+</mo><mfrac displaystyle=\"true\"><mn>2</mn><mn>5</mn></mfrac></mrow><mrow><mfrac displaystyle=\"true\"><mn>3</mn><mn>4</mn></mfrac><mo>−</mo><mfrac displaystyle=\"true\"><mn>1</mn><mn>2</mn></mfrac></mrow></mfrac><mo>=</mo><mo>…</mo></math>",
+  "opsi": {
+   "a": "11/60",
+   "b": "2 2/15",
+   "c": "11/15",
+   "d": "2 14/15",
+   "e": "1 7/15"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "(1/3 + 2/5) / (3/4 - 1/2)",
+  "nilai_opsi": {
+   "a": 0.18333333333333332,
+   "b": 2.1333333333333333,
+   "c": 0.7333333333333333,
+   "d": 2.933333333333333,
+   "e": 1.4666666666666666
+  },
+  "pembahasan": "Kurung pertama: 1/3 + 2/5 = 5/15 + 6/15 = 11/15. Kurung kedua: 3/4 − 1/2 = 1/4. Membagi dengan 1/4 sama dengan mengalikan 4: 11/15 × 4 = 44/15 = 2 14/15.<br>Opsi A (11/60) gugur karena mengalikan kedua kurung, padahal tandanya bagi; Opsi B (2 2/15) gugur karena salah menjumlahkan 1/3 + 2/5 menjadi 8/15; Opsi C (11/15) gugur karena lupa membagi dengan isi kurung kedua; Opsi E (1 7/15) gugur karena menghitung 3/4 − 1/2 = 1/2. Jawaban: Opsi D (2 14/15). Tips: membagi dengan pecahan = mengalikan dengan kebalikannya.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-049",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 1,
+  "sumber": "B2#49",
+  "stem": "1 − 1/3 − 1/9 − 1/27 = …",
+  "opsi": {
+   "a": "1/27",
+   "b": "2/3",
+   "c": "14/27",
+   "d": "13/27",
+   "e": "8/27"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "1 - 1/3 - 1/9 - 1/27",
+  "nilai_opsi": {
+   "a": 0.037037037037037035,
+   "b": 0.6666666666666666,
+   "c": 0.5185185185185185,
+   "d": 0.48148148148148145,
+   "e": 0.2962962962962963
+  },
+  "pembahasan": "Samakan penyebut ke 27: 1 = 27/27, 1/3 = 9/27, 1/9 = 3/27. Hasilnya (27 − 9 − 3 − 1)/27 = 14/27.<br>Opsi A (1/27) gugur karena menganggap hasilnya sama dengan suku terakhir; Opsi B (2/3) gugur karena hanya mengurangkan 1/3; Opsi D (13/27) gugur karena salah menyamakan 1/3 menjadi 10/27; Opsi E (8/27) gugur karena menyamakan 1/9 menjadi 9/27, seharusnya 3/27. Jawaban: Opsi C (14/27). Tips: penyebut kelipatan (3, 9, 27) cukup disamakan ke penyebut terbesar.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-043",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 1,
+  "sumber": "A3#43",
+  "stem": "3/4 dari (5/6 × 24) adalah …",
+  "opsi": {
+   "a": "15",
+   "b": "20",
+   "c": "18",
+   "d": "12",
+   "e": "16"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "3/4*(5/6*24)",
+  "nilai_opsi": {
+   "a": 15,
+   "b": 20,
+   "c": 18,
+   "d": 12,
+   "e": 16
+  },
+  "pembahasan": "Hitung isi kurung dulu: 5/6 × 24 = 5 × 4 = 20. Lalu 3/4 dari 20 = 3 × 5 = 15.<br>Opsi B (20) gugur karena berhenti di 5/6 × 24 tanpa mengambil 3/4-nya; Opsi C (18) gugur karena menghitung 3/4 × 24; Opsi D (12) gugur karena menghitung 1/2 dari 24; Opsi E (16) gugur karena menghitung 2/3 × 24. Jawaban: Opsi A (15). Tips: \"dari\" pada pecahan berarti kali; bagi dulu dengan penyebut supaya angkanya kecil.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-041",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 2,
+  "sumber": "A3#41",
+  "stem": "Manakah pecahan yang nilainya paling besar?",
+  "opsi": {
+   "a": "7/12",
+   "b": "5/8",
+   "c": "3/5",
+   "d": "11/18",
+   "e": "13/20"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "terbesar()",
+  "nilai_opsi": {
+   "a": "=7/12",
+   "b": "=5/8",
+   "c": "=3/5",
+   "d": "=11/18",
+   "e": "=13/20"
+  },
+  "pembahasan": "Ubah semua ke desimal (atau bandingkan dengan 0,6): 7/12 ≈ 0,583, 5/8 = 0,625, 3/5 = 0,6, 11/18 ≈ 0,611, 13/20 = 0,65. Yang terbesar 13/20.<br>Opsi A (7/12) gugur karena nilainya ≈ 0,583; Opsi B (5/8) gugur karena nilainya 0,625; Opsi C (3/5) gugur karena nilainya 0,6; Opsi D (11/18) gugur karena nilainya ≈ 0,611. Jawaban: Opsi E (13/20). Tips: jadikan desimal dua angka; cukup untuk membedakan pecahan yang berdekatan.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-037",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 2,
+  "sumber": "B3#37",
+  "stem": "Manakah bilangan berikut yang nilainya tidak lebih dari 3/4?",
+  "opsi": {
+   "a": "76%",
+   "b": "0,8",
+   "c": "15/18",
+   "d": "√(9/16)",
+   "e": "750%"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "pilih(v => v <= 0.75)",
+  "nilai_opsi": {
+   "a": "=0.76",
+   "b": "=0.8",
+   "c": "=15/18",
+   "d": "=Math.sqrt(9/16)",
+   "e": "=7.5"
+  },
+  "pembahasan": "3/4 = 0,75. \"Tidak lebih dari\" berarti kurang dari atau sama dengan 0,75. √(9/16) = 3/4 = 0,75 tepat sama, jadi memenuhi.<br>Opsi A (76%) gugur karena 76% = 0,76 lebih dari 0,75; Opsi B (0,8) gugur karena 0,8 lebih dari 0,75; Opsi C (15/18) gugur karena 15/18 ≈ 0,833 lebih dari 0,75; Opsi E (750%) gugur karena 750% = 7,5 jauh lebih dari 0,75. Jawaban: Opsi D (√(9/16)). Tips: \"tidak lebih dari\" = ≤ (sama dengan termasuk); \"kurang dari\" = < (sama dengan tidak termasuk).",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-044",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 1,
+  "sumber": "B2#44",
+  "stem": "√144 − ∛125 + √196 = …",
+  "opsi": {
+   "a": "31",
+   "b": "21",
+   "c": "23",
+   "d": "11",
+   "e": "19"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "Math.sqrt(144) - Math.cbrt(125) + Math.sqrt(196)",
+  "nilai_opsi": {
+   "a": 31,
+   "b": 21,
+   "c": 23,
+   "d": 11,
+   "e": 19
+  },
+  "pembahasan": "√144 = 12, ∛125 = 5 (karena 5 × 5 × 5 = 125), √196 = 14. Hasilnya 12 − 5 + 14 = 21.<br>Opsi A (31) gugur karena menjumlahkan ∛125, padahal tandanya kurang; Opsi C (23) gugur karena menganggap ∛125 = 3; Opsi D (11) gugur karena salah menganggap √196 = 4; Opsi E (19) gugur karena menganggap √144 = 10. Jawaban: Opsi B (21). Tips: hafalkan kuadrat 1–25 dan kubik 1–10; akar langsung terbaca tanpa menghitung.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-045",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 1,
+  "sumber": "B2#45",
+  "stem": "3² + 9² + 15² + 21² = …",
+  "opsi": {
+   "a": "2.304",
+   "b": "726",
+   "c": "810",
+   "d": "756",
+   "e": "693"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "3**2 + 9**2 + 15**2 + 21**2",
+  "nilai_opsi": {
+   "a": 2304,
+   "b": 726,
+   "c": 810,
+   "d": 756,
+   "e": 693
+  },
+  "pembahasan": "Kuadratkan satu per satu: 3² = 9, 9² = 81, 15² = 225, 21² = 441. Jumlahkan: 9 + 81 + 225 + 441 = 756.<br>Opsi A (2.304) gugur karena menjumlahkan dulu lalu mengkuadratkan: (3 + 9 + 15 + 21)²; Opsi B (726) gugur karena salah menghitung 15² = 195; Opsi C (810) gugur karena salah menghitung 21² = 495; Opsi E (693) gugur karena menganggap 9² = 9 × 2 = 18. Jawaban: Opsi D (756). Tips: kuadrat tiap suku dulu, baru dijumlahkan; (a + b)² tidak sama dengan a² + b².",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B2-046",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 2,
+  "sumber": "B2#46",
+  "stem": "∛39.304 = …",
+  "opsi": {
+   "a": "32",
+   "b": "36",
+   "c": "34",
+   "d": "38",
+   "e": "44"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "Math.cbrt(39304)",
+  "nilai_opsi": {
+   "a": 32,
+   "b": 36,
+   "c": 34,
+   "d": 38,
+   "e": 44
+  },
+  "pembahasan": "Lihat angka satuan: kubik yang berakhiran 4 berasal dari bilangan berakhiran 4. Lihat ribuan: 39 berada di antara 27 (3³) dan 64 (4³), jadi puluhannya 3. Akarnya 34 (34³ = 39.304).<br>Opsi A (32) gugur karena 32³ = 32.768; Opsi B (36) gugur karena 36³ = 46.656; Opsi D (38) gugur karena 38³ = 54.872; Opsi E (44) gugur karena 44³ = 85.184. Jawaban: Opsi C (34). Tips: akar kubik sempurna: satuan dari angka terakhir, puluhan dari kelompok ribuan.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-038",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 3,
+  "sumber": "B3#38",
+  "stem": "Nilai dari ⅓ √(9√(9√(9√81))) adalah …",
+  "rumus": "<math display=\"block\"><mfrac><mn>1</mn><mn>3</mn></mfrac><msqrt><mn>9</mn><msqrt><mn>9</mn><msqrt><mn>9</mn><msqrt><mn>81</mn></msqrt></msqrt></msqrt></msqrt></math>",
+  "opsi": {
+   "a": "3",
+   "b": "1",
+   "c": "9",
+   "d": "27",
+   "e": "81"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "(1/3)*Math.sqrt(9*Math.sqrt(9*Math.sqrt(9*Math.sqrt(81))))",
+  "nilai_opsi": {
+   "a": 3,
+   "b": 1,
+   "c": 9,
+   "d": 27,
+   "e": 81
+  },
+  "pembahasan": "Kerjakan dari akar terdalam: √81 = 9. Lalu √(9 × 9) = √81 = 9, dan pola yang sama berulang sampai akar terluar, hasilnya selalu 9. Terakhir ⅓ × 9 = 3.<br>Opsi B (1) gugur karena membagi 3 sekali lagi; Opsi C (9) gugur karena lupa mengalikan ⅓ di depan; Opsi D (27) gugur karena mengalikan 9 dengan 3, bukan membagi; Opsi E (81) gugur karena mengambil angka terdalam tanpa menghitung akar. Jawaban: Opsi A (3). Tips: akar bertingkat yang berulang sering stabil di satu nilai; hitung satu tingkat, lihat polanya.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-040",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 3,
+  "sumber": "B3#40",
+  "stem": "(√169 − 8) + (2√49 × 1/√4) : 0,5 − (3² − √18/√2) = …",
+  "rumus": "<math display=\"block\"><mrow><mo>(</mo><msqrt><mn>169</mn></msqrt><mo>−</mo><mn>8</mn><mo>)</mo></mrow><mo>+</mo><mfrac displaystyle=\"true\"><mrow><mn>2</mn><msqrt><mn>49</mn></msqrt><mo>×</mo><mfrac displaystyle=\"true\"><mn>1</mn><msqrt><mn>4</mn></msqrt></mfrac></mrow><mn>0,5</mn></mfrac><mo>−</mo><mrow><mo>(</mo><msup><mn>3</mn><mn>2</mn></msup><mo>−</mo><mfrac displaystyle=\"true\"><msqrt><mn>18</mn></msqrt><msqrt><mn>2</mn></msqrt></mfrac><mo>)</mo></mrow><mo>=</mo><mo>…</mo></math>",
+  "opsi": {
+   "a": "11",
+   "b": "12",
+   "c": "13",
+   "d": "14",
+   "e": "10"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "(Math.sqrt(169)-8) + (2*Math.sqrt(49)*1/Math.sqrt(4))/0.5 - (3**2 - Math.sqrt(18)/Math.sqrt(2))",
+  "nilai_opsi": {
+   "a": 11,
+   "b": 12,
+   "c": 13,
+   "d": 14,
+   "e": 10
+  },
+  "pembahasan": "Kurung 1: √169 − 8 = 13 − 8 = 5. Kurung 2: 2√49 × 1/√4 = 14 × 1/2 = 7, lalu 7 : 0,5 = 14. Kurung 3: √18/√2 = √9 = 3, jadi 3² − 3 = 6. Total: 5 + 14 − 6 = 13.<br>Opsi A (11) gugur karena menganggap √18/√2 = 1; Opsi B (12) gugur karena menganggap √18/√2 = 2; Opsi D (14) gugur karena salah menghitung √169 = 14; Opsi E (10) gugur karena lupa mengurangkan √18/√2 dari 3². Jawaban: Opsi C (13). Tips: √a/√b = √(a/b); bagi 0,5 sama dengan kali 2.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-042",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PERSEN",
+  "tier": 3,
+  "sumber": "B3#42",
+  "stem": "[(5/8 × 40%) : (1/2)²] × √0,36 = …",
+  "rumus": "<math display=\"block\"><mrow><mo>[</mo><mfrac displaystyle=\"true\"><mrow><mfrac displaystyle=\"true\"><mn>5</mn><mn>8</mn></mfrac><mo>×</mo><mn>40</mn><mo>%</mo></mrow><msup><mrow><mo>(</mo><mfrac displaystyle=\"true\"><mn>1</mn><mn>2</mn></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mfrac><mo>]</mo></mrow><mo>×</mo><msqrt><mn>0,36</mn></msqrt><mo>=</mo><mo>…</mo></math>",
+  "opsi": {
+   "a": "0,06",
+   "b": "0,15",
+   "c": "0,36",
+   "d": "0,6",
+   "e": "1,2"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "((5/8*0.4)/((1/2)**2))*Math.sqrt(0.36)",
+  "nilai_opsi": {
+   "a": 0.06,
+   "b": 0.15,
+   "c": 0.36,
+   "d": 0.6,
+   "e": 1.2
+  },
+  "pembahasan": "5/8 × 40% = 5/8 × 0,4 = 0,25. (1/2)² = 1/4 = 0,25, sehingga 0,25 : 0,25 = 1. √0,36 = 0,6. Hasilnya 1 × 0,6 = 0,6.<br>Opsi A (0,06) gugur karena salah menganggap √0,36 = 0,06; Opsi B (0,15) gugur karena lupa membagi dengan (1/2)²; Opsi C (0,36) gugur karena lupa mengakarkan 0,36; Opsi E (1,2) gugur karena salah menghitung 5/8 × 40% = 0,5. Jawaban: Opsi D (0,6). Tips: √ bilangan desimal: banyak angka di belakang koma dibagi dua (0,36 → 0,6).",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-039",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PERSEN",
+  "tier": 1,
+  "sumber": "B3#39",
+  "stem": "Berapakah 6,5% dari 380?",
+  "opsi": {
+   "a": "2,47",
+   "b": "24,7",
+   "c": "247",
+   "d": "26,6",
+   "e": "58,46"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "0.065*380",
+  "nilai_opsi": {
+   "a": 2.47,
+   "b": 24.7,
+   "c": 247,
+   "d": 26.6,
+   "e": 58.46
+  },
+  "pembahasan": "6,5% dari 380 = 6,5 × 380 : 100. Cara cepat: 10% dari 380 = 38, 5% = 19, 1% = 3,8, 0,5% = 1,9. Jadi 6,5% = 19 + 3,8 + 1,9 = 24,7.<br>Opsi A (2,47) gugur karena salah geser koma satu langkah; Opsi C (247) gugur karena lupa membagi 100; Opsi D (26,6) gugur karena membaca 6,5% sebagai 7%; Opsi E (58,46) gugur karena membagi 380 dengan 6,5. Jawaban: Opsi B (24,7). Tips: pecah persen menjadi 10%, 5%, 1%, 0,5% yang mudah dihitung di kepala.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-044",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PERSEN",
+  "tier": 3,
+  "sumber": "B3#44",
+  "stem": "(0,6% × 0,5%) : (0,2% × 0,3% × 0,4%) = …",
+  "rumus": "<math display=\"block\"><mfrac><mrow><mn>0,6</mn><mo>%</mo><mo>×</mo><mn>0,5</mn><mo>%</mo></mrow><mrow><mn>0,2</mn><mo>%</mo><mo>×</mo><mn>0,3</mn><mo>%</mo><mo>×</mo><mn>0,4</mn><mo>%</mo></mrow></mfrac><mo>=</mo><mo>…</mo></math>",
+  "opsi": {
+   "a": "12,5",
+   "b": "125",
+   "c": "1.250",
+   "d": "12.500",
+   "e": "0,125"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "(0.006*0.005)/(0.002*0.003*0.004)",
+  "nilai_opsi": {
+   "a": 12.5,
+   "b": 125,
+   "c": 1250,
+   "d": 12500,
+   "e": 0.125
+  },
+  "pembahasan": "Tulis persen sebagai per seratus. Pembilang: 0,6 × 0,5 = 0,3, dibagi 100² . Penyebut: 0,2 × 0,3 × 0,4 = 0,024, dibagi 100³. Hasilnya (0,3 : 0,024) × 100 = 12,5 × 100 = 1.250.<br>Opsi A (12,5) gugur karena lupa bahwa penyebut punya satu faktor persen lebih banyak (×100); Opsi B (125) gugur karena salah satu langkah geser koma; Opsi D (12.500) gugur karena kelebihan satu langkah geser koma; Opsi E (0,125) gugur karena salah geser koma empat langkah. Jawaban: Opsi C (1.250). Tips: hitung angkanya dulu, lalu urus faktor 100: penyebut punya satu persen lebih banyak berarti dikali 100.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-041",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TEORI",
+  "tier": 3,
+  "sumber": "B3#41",
+  "stem": "Sisa pembagian 2²⁵ oleh 7 adalah …",
+  "opsi": {
+   "a": "2",
+   "b": "1",
+   "c": "3",
+   "d": "4",
+   "e": "6"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "Number(2n**25n % 7n)",
+  "nilai_opsi": {
+   "a": 2,
+   "b": 1,
+   "c": 3,
+   "d": 4,
+   "e": 6
+  },
+  "pembahasan": "Cari pola sisa 2ⁿ dibagi 7: 2¹ → 2, 2² → 4, 2³ = 8 → 1, lalu berulang tiap 3 pangkat. 25 = 3 × 8 + 1, jadi 2²⁵ bersisa sama dengan 2¹, yaitu 2.<br>Opsi B (1) gugur karena menganggap 25 habis dibagi 3 (posisi terakhir siklus); Opsi C (3) gugur karena 3 tidak pernah muncul dalam siklus sisa 2ⁿ : 7 (2, 4, 1); Opsi D (4) gugur karena mengambil posisi kedua siklus, padahal 25 bersisa 1 jika dibagi 3; Opsi E (6) gugur karena 6 tidak pernah muncul dalam siklus sisa 2ⁿ : 7 (2, 4, 1). Jawaban: Opsi A (2). Tips: sisa pangkat selalu berulang; cari panjang siklusnya, lalu bagi pangkatnya dengan panjang siklus.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-A3-042",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TEORI",
+  "tier": 2,
+  "sumber": "A3#42",
+  "stem": "Bilangan berikut yang dapat dinyatakan sebagai jumlah tiga bilangan bulat berurutan adalah …",
+  "opsi": {
+   "a": "98",
+   "b": "103",
+   "c": "115",
+   "d": "121",
+   "e": "111"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "pilih(v => v % 3 === 0)",
+  "nilai_opsi": {
+   "a": "=98",
+   "b": "=103",
+   "c": "=115",
+   "d": "=121",
+   "e": "=111"
+  },
+  "pembahasan": "Tiga bilangan berurutan: (n − 1) + n + (n + 1) = 3n, jadi jumlahnya selalu kelipatan 3. Hanya 111 yang habis dibagi 3 (111 = 36 + 37 + 38).<br>Opsi A (98) gugur karena 98 tidak habis dibagi 3; Opsi B (103) gugur karena 103 tidak habis dibagi 3; Opsi C (115) gugur karena 115 tidak habis dibagi 3; Opsi D (121) gugur karena 121 tidak habis dibagi 3. Jawaban: Opsi E (111). Tips: cek habis dibagi 3 lewat jumlah angka: 1 + 1 + 1 = 3.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-043",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TEORI",
+  "tier": 3,
+  "sumber": "B3#43",
+  "stem": "1/(2×3) + 1/(3×4) + 1/(4×5) + 1/(5×6) = …",
+  "opsi": {
+   "a": "3/10",
+   "b": "1/3",
+   "c": "2/3",
+   "d": "1/2",
+   "e": "1/6"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "1/(2*3)+1/(3*4)+1/(4*5)+1/(5*6)",
+  "nilai_opsi": {
+   "a": "=3/10",
+   "b": "=1/3",
+   "c": "=2/3",
+   "d": "=1/2",
+   "e": "=1/6"
+  },
+  "pembahasan": "Setiap suku bisa dipecah: 1/(n(n+1)) = 1/n − 1/(n+1). Jumlahnya menjadi (1/2 − 1/3) + (1/3 − 1/4) + (1/4 − 1/5) + (1/5 − 1/6). Suku tengah saling menghapus, tersisa 1/2 − 1/6 = 1/3.<br>Opsi A (3/10) gugur karena hanya menjumlahkan tiga suku pertama (1/2 − 1/5); Opsi C (2/3) gugur karena menjumlahkan 1/2 + 1/6, padahal seharusnya dikurangkan; Opsi D (1/2) gugur karena hanya mengambil bagian pertama pemecahan; Opsi E (1/6) gugur karena hanya mengambil bagian terakhir pemecahan. Jawaban: Opsi B (1/3). Tips: deret 1/(n(n+1)) = suku pertama pemecahan dikurangi suku terakhir.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-045",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-IDENTITAS",
+  "tier": 3,
+  "sumber": "B3#45",
+  "stem": "Jika 1/a + 1/b = 8 dan 1/a − 1/b = 2, maka nilai 1/a² − 1/b² adalah …",
+  "opsi": {
+   "a": "6",
+   "b": "10",
+   "c": "16",
+   "d": "32",
+   "e": "64"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "8*2",
+  "nilai_opsi": {
+   "a": 6,
+   "b": 10,
+   "c": 16,
+   "d": 32,
+   "e": 64
+  },
+  "pembahasan": "Pakai bentuk x² − y² = (x + y)(x − y) dengan x = 1/a dan y = 1/b. Jadi 1/a² − 1/b² = (1/a + 1/b)(1/a − 1/b) = 8 × 2 = 16.<br>Opsi A (6) gugur karena mengurangkan 8 − 2; Opsi B (10) gugur karena menjumlahkan 8 + 2; Opsi D (32) gugur karena mengalikan 2 lagi; Opsi E (64) gugur karena mengkuadratkan 8. Jawaban: Opsi C (16). Tips: selisih dua kuadrat = jumlah × selisih; tidak perlu mencari a dan b.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-055",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-PERBANDINGAN",
+  "tier": 3,
+  "sumber": "B3#55",
+  "stem": "Jika p = −3x² + 5 dan q = −4x² + 5, dengan x bilangan real, maka …",
+  "opsi": {
+   "a": "p > q",
+   "b": "p < q",
+   "c": "p = q",
+   "d": "p ≥ q",
+   "e": "hubungan p dan q tidak dapat ditentukan"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "(() => { const xs = [-3,-1,0,0.5,2]; const s = xs.map(x => (-3*x*x+5) - (-4*x*x+5)); return s.every(d => d >= 0) && s.some(d => d === 0) ? 'p>=q' : 'salah'; })()",
+  "nilai_opsi": {
+   "a": "p>q",
+   "b": "p<q",
+   "c": "p=q",
+   "d": "p>=q",
+   "e": "?"
+  },
+  "pembahasan": "Hitung selisihnya: p − q = (−3x² + 5) − (−4x² + 5) = x². Kuadrat bilangan real selalu ≥ 0, jadi p ≥ q. Kesamaan terjadi saat x = 0.<br>Opsi A (p > q) gugur karena untuk x = 0 nilainya sama, jadi tidak selalu lebih besar; Opsi B (p < q) gugur karena p − q = x² tidak pernah negatif; Opsi C (p = q) gugur karena hanya benar ketika x = 0; Opsi E (hubungan p dan q tidak dapat ditentukan) gugur karena hubungannya bisa ditentukan dari p − q = x² ≥ 0. Jawaban: Opsi D (p ≥ q). Tips: bandingkan dua bentuk dengan menghitung selisihnya, lalu lihat tandanya.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-056",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-PERBANDINGAN",
+  "tier": 2,
+  "sumber": "B3#56",
+  "stem": "Jika x = 75% − 20% + 1,5 − 9/20 dan y = √(25 − 4 × 4 + 2³), maka …",
+  "rumus": "<math display=\"block\"><mi>x</mi><mo>=</mo><mn>75</mn><mo>%</mo><mo>−</mo><mn>20</mn><mo>%</mo><mo>+</mo><mn>1,5</mn><mo>−</mo><mfrac><mn>9</mn><mn>20</mn></mfrac><mspace width=\"1em\"/><mtext>dan</mtext><mspace width=\"1em\"/><mi>y</mi><mo>=</mo><msqrt><mn>25</mn><mo>−</mo><mn>4</mn><mo>×</mo><mn>4</mn><mo>+</mo><msup><mn>2</mn><mn>3</mn></msup></msqrt></math>",
+  "opsi": {
+   "a": "x < y",
+   "b": "x > y",
+   "c": "x = y",
+   "d": "x dan y keduanya negatif",
+   "e": "hubungan x dan y tidak dapat ditentukan"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "(() => { const x = 0.75-0.2+1.5-9/20, y = Math.sqrt(25-16+8); return x<y?'x<y':x>y?'x>y':'x=y'; })()",
+  "nilai_opsi": {
+   "a": "x<y",
+   "b": "x>y",
+   "c": "x=y",
+   "d": "neg",
+   "e": "?"
+  },
+  "pembahasan": "x = 0,75 − 0,20 + 1,5 − 0,45 = 1,6. y = √(25 − 16 + 8) = √17, dan √17 lebih dari √16 = 4. Jadi x < y.<br>Opsi B (x > y) gugur karena x = 1,6 sedangkan y = √17 ≈ 4,12; Opsi C (x = y) gugur karena x = 1,6 dan y ≈ 4,12 tidak sama; Opsi D (x dan y keduanya negatif) gugur karena keduanya positif; Opsi E (hubungan x dan y tidak dapat ditentukan) gugur karena keduanya bisa dihitung pasti. Jawaban: Opsi A (x < y). Tips: untuk akar yang tidak bulat, apit dengan kuadrat terdekat (√16 < √17 < √25).",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-057",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-PERBANDINGAN",
+  "tier": 2,
+  "sumber": "B3#57",
+  "stem": "A = 3/8 dari 72, B = 2/5 dari 45, dan C = 5/6 dari 36. Pernyataan berikut yang SALAH adalah …",
+  "opsi": {
+   "a": "A > B",
+   "b": "C > A",
+   "c": "A + B > C",
+   "d": "A − B + C = 39",
+   "e": "C − A = B"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "pilih(v => v === false)",
+  "nilai_opsi": {
+   "a": "=27>18",
+   "b": "=30>27",
+   "c": "=27+18>30",
+   "d": "=27-18+30===39",
+   "e": "=30-27===18"
+  },
+  "pembahasan": "Hitung dulu: A = 3/8 × 72 = 27, B = 2/5 × 45 = 18, C = 5/6 × 36 = 30. Lalu cek setiap pernyataan. C − A = 30 − 27 = 3, bukan 18, jadi pernyataan itu salah.<br>Opsi A (A > B) gugur karena A = 27 dan B = 18, jadi A > B benar; Opsi B (C > A) gugur karena C = 30 dan A = 27, jadi C > A benar; Opsi C (A + B > C) gugur karena 45 > 30 benar; Opsi D (A − B + C = 39) gugur karena 27 − 18 + 30 = 39 benar. Jawaban: Opsi E (C − A = B). Tips: pada soal \"yang SALAH\", hitung semua nilai sekali di awal, lalu centang pernyataan satu per satu.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-059",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-PERBANDINGAN",
+  "tier": 1,
+  "sumber": "B3#59",
+  "stem": "Jika x = 1/16 dan y = 6,25%, maka …",
+  "opsi": {
+   "a": "x > y",
+   "b": "x = y",
+   "c": "x < y",
+   "d": "x = 2y",
+   "e": "hubungan x dan y tidak dapat ditentukan"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "(() => { const x = 1/16, y = 0.0625; return Math.abs(x-y)<1e-12?'x=y':x>y?'x>y':'x<y'; })()",
+  "nilai_opsi": {
+   "a": "x>y",
+   "b": "x=y",
+   "c": "x<y",
+   "d": "x=2y",
+   "e": "?"
+  },
+  "pembahasan": "1/16 = 0,0625. 6,25% = 6,25 : 100 = 0,0625. Keduanya sama, jadi x = y.<br>Opsi A (x > y) gugur karena 1/16 = 0,0625 = 6,25%, keduanya sama; Opsi C (x < y) gugur karena keduanya sama besar; Opsi D (x = 2y) gugur karena x tidak dua kali y; Opsi E (hubungan x dan y tidak dapat ditentukan) gugur karena keduanya bisa dihitung pasti. Jawaban: Opsi B (x = y). Tips: hafalkan pecahan persen umum: 1/8 = 12,5%, 1/16 = 6,25%, 1/20 = 5%, 1/25 = 4%.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-058",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-AKAR-PANGKAT",
+  "tier": 3,
+  "sumber": "B3#58",
+  "stem": "Diketahui x = (3² × 3⁴ × 3⁶)^(1/3) dan y = ∛(27²). Pernyataan yang benar adalah …",
+  "rumus": "<math display=\"block\"><mi>x</mi><mo>=</mo><msup><mrow><mo>(</mo><msup><mn>3</mn><mn>2</mn></msup><mo>×</mo><msup><mn>3</mn><mn>4</mn></msup><mo>×</mo><msup><mn>3</mn><mn>6</mn></msup><mo>)</mo></mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></msup><mspace width=\"1em\"/><mtext>dan</mtext><mspace width=\"1em\"/><mi>y</mi><mo>=</mo><mroot><msup><mn>27</mn><mn>2</mn></msup><mn>3</mn></mroot></math>",
+  "opsi": {
+   "a": "x = 3y",
+   "b": "x = y/3",
+   "c": "x = y²",
+   "d": "x = 9/y",
+   "e": "x = y² − 9"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "pilih(v => v === true)",
+  "nilai_opsi": {
+   "a": "=81===3*9",
+   "b": "=81===9/3",
+   "c": "=81===9**2",
+   "d": "=81===9/9",
+   "e": "=81===9**2-9"
+  },
+  "pembahasan": "Gabungkan pangkat: 3² × 3⁴ × 3⁶ = 3¹², lalu dipangkatkan 1/3 menjadi 3⁴ = 81. y = ∛(27²) = (∛27)² = 3² = 9. Karena 9² = 81, maka x = y².<br>Opsi A (x = 3y) gugur karena 3y = 27, bukan 81; Opsi B (x = y/3) gugur karena y/3 = 3, bukan 81; Opsi D (x = 9/y) gugur karena 9/y = 1, bukan 81; Opsi E (x = y² − 9) gugur karena y² − 9 = 72, bukan 81. Jawaban: Opsi C (x = y²). Tips: kalikan basis sama = jumlahkan pangkat; akar pangkat n = pangkat 1/n.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-060",
+  "kartu": "K05",
+  "sub_type": "NUM-ALJ-IDENTITAS",
+  "tier": 3,
+  "sumber": "B3#60",
+  "stem": "Jika x = 5⁶ − y, y = 5⁵, dan z = 4y, maka pernyataan yang benar adalah …",
+  "opsi": {
+   "a": "x + y = z",
+   "b": "z = x − y",
+   "c": "y² = x + z",
+   "d": "x = z",
+   "e": "2y = x − z"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "pilih(v => v === true)",
+  "nilai_opsi": {
+   "a": "=(5**6-5**5)+5**5===4*5**5",
+   "b": "=4*5**5===(5**6-5**5)-5**5",
+   "c": "=(5**5)**2===(5**6-5**5)+4*5**5",
+   "d": "=(5**6-5**5)===4*5**5",
+   "e": "=2*5**5===(5**6-5**5)-4*5**5"
+  },
+  "pembahasan": "Tulis dalam y: 5⁶ = 5 × 5⁵ = 5y. Maka x = 5y − y = 4y. Karena z = 4y, jadi x = z.<br>Opsi A (x + y = z) gugur karena x + y = 5⁶ = 25y, bukan 4y; Opsi B (z = x − y) gugur karena x − y = 3y, bukan 4y; Opsi C (y² = x + z) gugur karena y² jauh lebih besar dari x + z = 8y; Opsi E (2y = x − z) gugur karena x − z = 0, bukan 2y. Jawaban: Opsi D (x = z). Tips: nyatakan semua besaran dalam satu variabel (di sini y) sebelum membandingkan.",
+  "status_kunci": "ganda"
+ },
+ {
+  "id": "K05-B3-036",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-PECAHAN",
+  "tier": 3,
+  "sumber": "B3#36",
+  "stem": "Jika p = 10 3/4 + 3 1/6 + 15 2/3 dan q = (3/4 × 1 1/3) : 1 1/2, maka nilai p + q = …",
+  "rumus": "<math display=\"block\"><mi>p</mi><mo>=</mo><mn>10</mn><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>+</mo><mn>3</mn><mfrac><mn>1</mn><mn>6</mn></mfrac><mo>+</mo><mn>15</mn><mfrac><mn>2</mn><mn>3</mn></mfrac><mspace width=\"1em\"/><mtext>dan</mtext><mspace width=\"1em\"/><mi>q</mi><mo>=</mo><mrow><mo>(</mo><mfrac><mn>3</mn><mn>4</mn></mfrac><mo>×</mo><mn>1</mn><mfrac><mn>1</mn><mn>3</mn></mfrac><mo>)</mo></mrow><mo>:</mo><mn>1</mn><mfrac><mn>1</mn><mn>2</mn></mfrac></math>",
+  "opsi": {
+   "a": "30 1/4",
+   "b": "30 1/12",
+   "c": "29 7/12",
+   "d": "30 1/2",
+   "e": "31 1/4"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "(10+3/4 + 3+1/6 + 15+2/3) + ((3/4*(4/3))/(3/2))",
+  "nilai_opsi": {
+   "a": 30.25,
+   "b": 30.083333333333332,
+   "c": 29.583333333333332,
+   "d": 30.5,
+   "e": 31.25
+  },
+  "pembahasan": "p: bulat 10 + 3 + 15 = 28, pecahan 3/4 + 1/6 + 2/3 = 9/12 + 2/12 + 8/12 = 19/12 = 1 7/12, jadi p = 29 7/12. q: 3/4 × 4/3 = 1, lalu 1 : 3/2 = 2/3. p + q = 29 7/12 + 8/12 = 29 15/12 = 30 3/12 = 30 1/4.<br>Opsi B (30 1/12) gugur karena salah menghitung q = 1/2; Opsi C (29 7/12) gugur karena lupa menambahkan q; Opsi D (30 1/2) gugur karena menganggap q = 11/12 lalu membulatkan; Opsi E (31 1/4) gugur karena salah menjumlahkan bagian bulat (30). Jawaban: Opsi A (30 1/4). Tips: selesaikan p dan q terpisah, samakan penyebut hanya sekali di akhir.",
+  "status_kunci": "ganda"
+ }
+]
