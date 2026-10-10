@@ -205,7 +205,7 @@ export default function DrillSession({
           <div className="q-card">
             {q.instruksi && <p className="q-ins">{q.instruksi}</p>}
             <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
-            <p className="q-stem">{q.stem}</p>
+            <p className="q-stem whitespace-pre-line">{q.stem}</p>
             {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
             {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
             {q.gambar && (

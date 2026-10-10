@@ -152,7 +152,7 @@ ${it.instruksi ? `<p class="ins">${esc(it.instruksi)}</p>` : ""}${(it.bacaan ?? 
 <title>Preview ${card} ${esc(CARDS[card].label)}</title>
 <style>body{font:16px/1.55 system-ui,sans-serif;max-width:820px;margin:24px auto;padding:0 16px;background:#fff;color:#16224a}
 article{border:1px solid #d9dee8;border-radius:10px;padding:14px 18px;margin:14px 0}header span{color:#667;font-size:13px}
-.stem{font-size:18px}math{font-size:22px;margin:8px 0}li{margin:3px 0}.key{font-weight:700;color:#127a3a}
+.stem{font-size:18px;white-space:pre-line}math{font-size:22px;margin:8px 0}li{margin:3px 0}.key{font-weight:700;color:#127a3a}
 .key::after{content:"  ✓ kunci"}.pb{background:#f6f7fb;border-radius:8px;padding:4px 12px;font-size:14px}.ins{color:#556}.bc{text-align:justify}td{border:1px solid #d9dee8;padding:2px 8px}</style>
 <h1>${card} — ${esc(CARDS[card].label)} (${items.length} soal)</h1>${rows}</html>`;
   const dir = join(ROOT, "output/drill-preview");

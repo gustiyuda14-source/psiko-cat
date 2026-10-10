@@ -9,7 +9,7 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
 ```json
 {
   "id": "K05-B3-041",              // <kartu>-<sumber>-<nnn>; soal tulisan baru: <kartu>-N-<nnn>
-  "kartu": "K05",                  // K01..K14 (daftar di scripts/build-drill-bank.ts)
+  "kartu": "K05",                  // K01..K16 (daftar di lib/drill-cards.ts)
   "sub_type": "NUM-HIT-TEORI",     // kode taksonomi docs/rencana/drilling/02, harus milik kartunya
   "tier": 3,                       // 1 Dasar · 2 Menengah · 3 Lanjut
   "sumber": "B3#41",               // asal struktur soal (P1, B2, B3, A3, KD, R + nomor); "baru" bila original

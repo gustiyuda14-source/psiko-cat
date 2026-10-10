@@ -1,0 +1,593 @@
+[
+  {
+    "id": "K16-KC1-001",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 1,
+    "sumber": "KC1#1",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah kebun jeruk dipanen dari dua blok."
+    ],
+    "tabel": {
+      "kolom": [
+        "Blok",
+        "Jumlah Pohon",
+        "Hasil / Pohon / Musim"
+      ],
+      "baris": [
+        [
+          "Blok Utara",
+          "40",
+          "25 kg"
+        ],
+        [
+          "Blok Selatan",
+          "p",
+          "q kg"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Berapa kilogram total hasil panen Blok Selatan dalam satu musim?\nPernyataan (1): Perbandingan jumlah pohon di Blok Utara dan Blok Selatan adalah 4 : 5.\nPernyataan (2): Total hasil panen kedua blok adalah 2.200 kg per musim.",
+    "opsi": {
+      "a": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+      "b": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+      "c": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+      "d": "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+      "e": "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Total Blok Selatan = p × q. (1) saja: 40 : p = 4 : 5, jadi p = 50 pohon, tetapi hasil per pohon (q) tidak diketahui; totalnya bisa 50 × 20 = 1.000 kg, bisa 50 × 30 = 1.500 kg. Tidak cukup. (2) saja: Blok Utara = 40 × 25 = 1.000 kg, jadi Blok Selatan = 2.200 − 1.000 = 1.200 kg. Cukup, tanpa perlu tahu p dan q satu per satu.<br>Opsi A gugur karena (1) hanya memberi jumlah pohon, bukan hasil per pohon; Opsi C gugur karena (2) saja sudah cukup sehingga tidak perlu digabung; Opsi D gugur karena (1) saja tidak cukup; Opsi E gugur karena (2) memberi angka pasti 1.200 kg. Jawaban: Opsi B. Tips: data di tabel boleh dipakai kapan saja; hitung dulu bagian yang sudah lengkap (Blok Utara), sering itu kuncinya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-002",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 1,
+    "sumber": "KC1#2",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Tahun ini Pak Hendra tepat berusia 45 tahun. Istrinya berusia m tahun, sedangkan anaknya, Raka, berusia r tahun."
+    ],
+    "stem": "Pertanyaan: Berapa usia Raka sekarang?\nPernyataan (1): Lima tahun yang lalu, usia Pak Hendra empat kali usia Raka.\nPernyataan (2): Jumlah usia istri Pak Hendra dan Raka sekarang adalah 52 tahun.",
+    "opsi": {
+      "a": "Pernyataan (1) dan (2) bersama-sama pun TIDAK cukup untuk menjawab pertanyaan.",
+      "b": "Masing-masing pernyataan, (1) SAJA maupun (2) SAJA, sudah cukup untuk menjawab pertanyaan.",
+      "c": "Pernyataan (1) dan (2) BERSAMA-SAMA cukup, tetapi satu pernyataan saja tidak cukup.",
+      "d": "Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.",
+      "e": "Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "(1) saja: lima tahun lalu Pak Hendra berusia 40 tahun, jadi 40 = 4 × (r − 5), r − 5 = 10, r = 15 tahun. Cukup. (2) saja: m + r = 52 memuat dua bilangan yang belum diketahui; bisa m = 40 dan r = 12, bisa m = 37 dan r = 15. Tidak cukup.<br>Opsi A gugur karena (1) sudah memberi usia pasti; Opsi B gugur karena (2) saja masih menyisakan banyak kemungkinan; Opsi C gugur karena (1) saja sudah cukup sehingga tidak perlu digabung; Opsi D gugur karena justru (2) yang tidak cukup. Jawaban: Opsi E. Tips: petunjuk yang tersambung ke orang yang usianya sudah diketahui (Pak Hendra) biasanya langsung mengunci jawaban.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-003",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 2,
+    "sumber": "KC1#3",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sinta menemukan potongan nota dari kantin kampus. Harga satuan barangnya tertutup noda kopi."
+    ],
+    "tabel": {
+      "judul": "KANTIN KAMPUS · NOTA",
+      "kolom": [
+        "Barang",
+        "Harga satuan"
+      ],
+      "baris": [
+        [
+          "Roti",
+          "@ r rupiah"
+        ],
+        [
+          "Susu kotak",
+          "@ s rupiah"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Berapa harga satu roti?\nPernyataan (1): Harga 4 roti dan 3 susu kotak adalah Rp26.000.\nPernyataan (2): Harga 8 roti dan 6 susu kotak adalah Rp52.000.",
+    "opsi": {
+      "a": "Hanya pernyataan (1) yang cukup.",
+      "b": "Hanya pernyataan (2) yang cukup.",
+      "c": "Keduanya harus digabung; satu saja tidak cukup.",
+      "d": "Pernyataan (1) saja cukup, pernyataan (2) saja juga cukup.",
+      "e": "Digabung pun tetap tidak cukup."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "(1) saja: 4r + 3s = 26.000 punya dua bilangan yang belum diketahui, jadi tidak cukup. (2) saja: 8r + 6s = 52.000 juga satu persamaan dengan dua bilangan, tidak cukup. Digabung: (2) persis 2 × (1), jadi tidak ada informasi baru; r = 5.000 (s = 2.000) dan r = 2.000 (s = 6.000) sama-sama memenuhi. Tetap tidak cukup.<br>Opsi A gugur karena satu persamaan dua bilangan tidak memberi nilai pasti; Opsi B gugur karena alasan yang sama; Opsi C gugur karena kedua persamaan kembar (kelipatan), bukan dua persamaan berbeda; Opsi D gugur karena masing-masing jelas tidak cukup. Jawaban: Opsi E. Tips: sebelum memilih \"digabung cukup\", cek apakah persamaan kedua hanya kelipatan persamaan pertama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-004",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 1,
+    "sumber": "KC1#4",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Berikut data hasil latihan menembak dua regu."
+    ],
+    "tabel": {
+      "kolom": [
+        "Regu",
+        "Jumlah Anggota",
+        "Rata-rata Nilai"
+      ],
+      "baris": [
+        [
+          "Regu A",
+          "24",
+          "80"
+        ],
+        [
+          "Regu B",
+          "16",
+          "x"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Berapa nilai x?\nPernyataan (1): Rata-rata nilai gabungan kedua regu adalah 82.\nPernyataan (2): Jumlah seluruh nilai anggota Regu B adalah 1.360.",
+    "opsi": {
+      "a": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+      "b": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+      "c": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+      "d": "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+      "e": "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "(1) saja: jumlah nilai gabungan = 40 × 82 = 3.280, jumlah Regu A = 24 × 80 = 1.920, jadi jumlah Regu B = 1.360 dan x = 1.360 : 16 = 85. Cukup. (2) saja: x = 1.360 : 16 = 85. Cukup.<br>Opsi A gugur karena (2) saja juga cukup; Opsi B gugur karena (1) saja juga cukup; Opsi C gugur karena tidak perlu digabung, masing-masing sudah cukup; Opsi E gugur karena keduanya memberi x pasti. Jawaban: Opsi D. Tips: rata-rata gabungan selalu bisa dibalik menjadi jumlah nilai bila banyak anggota tiap kelompok diketahui.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-005",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-3P",
+    "tier": 2,
+    "sumber": "KC1#5",
+    "instruksi": "Tentukan apakah pernyataan (1), (2), dan (3) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Raka membeli sebuah sepeda bekas, lalu beberapa bulan kemudian menjualnya kembali."
+    ],
+    "stem": "Pertanyaan: Berapa harga beli sepeda tersebut?\nPernyataan (1): Raka menjual sepeda itu seharga Rp1.800.000.\nPernyataan (2): Dari penjualan itu, Raka mendapat untung 20% dari harga beli.\nPernyataan (3): Keuntungan yang Raka peroleh sebesar Rp300.000.",
+    "opsi": {
+      "a": "Pernyataan (1) dan (2) bersama-sama cukup, tetapi pasangan pernyataan lainnya tidak cukup.",
+      "b": "Pernyataan (3) SAJA sudah cukup untuk menjawab pertanyaan.",
+      "c": "Dua pernyataan mana pun, jika dipasangkan, sudah cukup untuk menjawab pertanyaan.",
+      "d": "Ketiga pernyataan harus digunakan bersama-sama agar pertanyaan dapat dijawab.",
+      "e": "Ketiga pernyataan bersama-sama pun tidak cukup untuk menjawab pertanyaan."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Tidak ada satu pernyataan pun yang cukup sendirian. Uji setiap pasangan: (1) + (2): 1,2 × beli = 1.800.000, beli = 1.500.000. (1) + (3): beli = 1.800.000 − 300.000 = 1.500.000. (2) + (3): 20% × beli = 300.000, beli = 1.500.000. Ketiga pasangan memberi jawaban pasti.<br>Opsi A gugur karena pasangan (1)+(3) dan (2)+(3) juga cukup; Opsi B gugur karena untung Rp300.000 saja tidak memberi harga beli tanpa harga jual atau persentase; Opsi D gugur karena dua pernyataan sudah cukup; Opsi E gugur karena setiap pasangan memberi Rp1.500.000. Jawaban: Opsi C. Tips: pada soal tiga pernyataan, harga beli, harga jual, untung (rupiah), dan untung (%) saling terkait; dua data mana pun biasanya mengunci yang lain.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-006",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 2,
+    "sumber": "KC1#6",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Diketahui n adalah bilangan bulat."
+    ],
+    "stem": "Pertanyaan: Apakah n bilangan ganjil?\nPernyataan (1): 5n + 4 adalah bilangan ganjil.\nPernyataan (2): n habis dibagi 5.",
+    "opsi": {
+      "a": "Hanya pernyataan (1) yang cukup.",
+      "b": "Hanya pernyataan (2) yang cukup.",
+      "c": "Keduanya harus digabung; satu saja tidak cukup.",
+      "d": "Pernyataan (1) saja cukup, pernyataan (2) saja juga cukup.",
+      "e": "Digabung pun tetap tidak cukup."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "(1) saja: 5n + 4 ganjil berarti 5n ganjil (ganjil − genap = ganjil), dan 5n ganjil hanya bila n ganjil. Jawabannya pasti \"ya\". Cukup. (2) saja: kelipatan 5 berselang-seling, n = 5 ganjil, n = 10 genap. Jawabannya bisa ya, bisa tidak. Tidak cukup.<br>Opsi B gugur karena kelipatan 5 bisa ganjil atau genap; Opsi C gugur karena (1) saja sudah cukup; Opsi D gugur karena (2) saja tidak cukup; Opsi E gugur karena (1) memberi jawaban pasti \"ya\". Jawaban: Opsi A. Tips: kali bilangan ganjil tidak mengubah sifat ganjil/genap; tambah bilangan genap juga tidak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-007",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-URUTAN",
+    "tier": 2,
+    "sumber": "KC1#7",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Tiga kotak paket, yaitu P, Q, dan R, ditimbang di kantor pos. Berat ketiganya berbeda."
+    ],
+    "stem": "Pertanyaan: Kotak mana yang paling berat?\nPernyataan (1): Kotak P lebih berat daripada kotak Q.\nPernyataan (2): Kotak R lebih berat daripada kotak Q.",
+    "opsi": {
+      "a": "Pernyataan (1) dan (2) bersama-sama pun TIDAK cukup untuk menjawab pertanyaan.",
+      "b": "Masing-masing pernyataan, (1) SAJA maupun (2) SAJA, sudah cukup untuk menjawab pertanyaan.",
+      "c": "Pernyataan (1) dan (2) BERSAMA-SAMA cukup, tetapi satu pernyataan saja tidak cukup.",
+      "d": "Pernyataan (2) SAJA cukup, tetapi pernyataan (1) SAJA tidak cukup.",
+      "e": "Pernyataan (1) SAJA cukup, tetapi pernyataan (2) SAJA tidak cukup."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "(1) saja hanya membandingkan P dan Q, R belum diketahui; tidak cukup. (2) saja hanya membandingkan R dan Q; tidak cukup. Digabung: Q pasti paling ringan, tetapi P dan R tidak pernah dibandingkan; urutan P > R > Q dan R > P > Q sama-sama mungkin. Tetap tidak cukup.<br>Opsi B gugur karena tiap pernyataan hanya membandingkan dua kotak; Opsi C gugur karena gabungan hanya menentukan yang paling ringan, bukan yang paling berat; Opsi D gugur karena (2) saja tidak menyebut P; Opsi E gugur karena (1) saja tidak menyebut R. Jawaban: Opsi A. Tips: dua perbandingan yang sama-sama memakai Q sebagai pembanding hanya menentukan posisi Q.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-008",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 1,
+    "sumber": "KC1#8",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Bu Wati memiliki halaman berbentuk persegi panjang dengan panjang p meter dan lebar l meter."
+    ],
+    "stem": "Pertanyaan: Berapa luas halaman Bu Wati?\nPernyataan (1): Perbandingan panjang dan lebar halaman adalah 5 : 3.\nPernyataan (2): Panjang halaman 15 meter dan kelilingnya 48 meter.",
+    "opsi": {
+      "a": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+      "b": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+      "c": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+      "d": "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+      "e": "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "(1) saja: perbandingan hanya memberi bentuk, bukan ukuran; halaman 5 × 3 m dan 10 × 6 m sama-sama 5 : 3, luasnya 15 m² dan 60 m². Tidak cukup. (2) saja: 2 × (15 + l) = 48, l = 9, luas = 15 × 9 = 135 m². Cukup.<br>Opsi A gugur karena perbandingan tanpa satu ukuran nyata tidak memberi luas pasti; Opsi C gugur karena (2) saja sudah cukup; Opsi D gugur karena (1) saja tidak cukup; Opsi E gugur karena (2) memberi luas pasti. Jawaban: Opsi B. Tips: perbandingan baru berguna bila ada minimal satu ukuran nyata.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-009",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 1,
+    "sumber": "KC1#9",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Pada label sebuah toples tertulis: \"Isi 80 butir permen. Rasa: hanya jeruk dan stroberi.\""
+    ],
+    "stem": "Pertanyaan: Berapa banyak permen rasa jeruk di dalam toples?\nPernyataan (1): Jika diambil satu permen secara acak, peluang terambil permen stroberi adalah 0,45.\nPernyataan (2): Banyak permen jeruk 8 butir lebih banyak daripada permen stroberi.",
+    "opsi": {
+      "a": "Hanya pernyataan (1) yang cukup.",
+      "b": "Hanya pernyataan (2) yang cukup.",
+      "c": "Keduanya harus digabung; satu saja tidak cukup.",
+      "d": "Pernyataan (1) saja cukup, pernyataan (2) saja juga cukup.",
+      "e": "Digabung pun tetap tidak cukup."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "(1) saja: stroberi = 0,45 × 80 = 36, jadi jeruk = 80 − 36 = 44. Cukup. (2) saja: j + s = 80 dan j − s = 8, jadi 2j = 88, j = 44. Cukup.<br>Opsi A gugur karena (2) saja juga cukup; Opsi B gugur karena (1) saja juga cukup; Opsi C gugur karena tidak perlu digabung; Opsi E gugur karena keduanya memberi 44 butir. Jawaban: Opsi D. Tips: jumlah total di label adalah data soal, boleh dipakai bersama setiap pernyataan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC1-010",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 2,
+    "sumber": "KC1#10",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Berikut data penjualan dua produk di sebuah toko selama satu minggu."
+    ],
+    "tabel": {
+      "kolom": [
+        "Produk",
+        "Harga Satuan",
+        "Jumlah Terjual"
+      ],
+      "baris": [
+        [
+          "Produk M",
+          "Rp15.000",
+          "40"
+        ],
+        [
+          "Produk N",
+          "h",
+          "n"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Apakah pendapatan dari Produk N lebih besar daripada pendapatan dari Produk M?\nPernyataan (1): Harga satuan Produk N adalah Rp18.000.\nPernyataan (2): Jumlah Produk N yang terjual adalah ⅘ dari jumlah Produk M yang terjual.",
+    "opsi": {
+      "a": "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+      "b": "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+      "c": "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+      "d": "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+      "e": "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Pendapatan Produk M = 15.000 × 40 = Rp600.000. (1) saja: 18.000 × n; n = 40 memberi Rp720.000 (ya), n = 30 memberi Rp540.000 (tidak). Tidak cukup. (2) saja: n = 32, tetapi harga h tidak diketahui. Tidak cukup. Digabung: 18.000 × 32 = Rp576.000, lebih kecil dari Rp600.000. Jawabannya pasti \"tidak\". Cukup.<br>Opsi A gugur karena tanpa n jawabannya masih bisa ya atau tidak; Opsi B gugur karena tanpa harga jawabannya juga belum pasti; Opsi D gugur karena masing-masing tidak cukup; Opsi E gugur karena gabungan memberi jawaban pasti \"tidak\". Jawaban: Opsi C. Tips: untuk pertanyaan ya/tidak, \"pasti tidak\" sama berharganya dengan \"pasti ya\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-001",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 2,
+    "sumber": "KC2#1",
+    "instruksi": "Tentukan apakah keterangan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah kapal penyeberangan berangkat dari pelabuhan membawa sejumlah penumpang. Di pelabuhan transit, 12 penumpang turun dan 7 penumpang baru naik. Sebelum pelabuhan transit, tidak ada penumpang yang naik atau turun."
+    ],
+    "stem": "Pertanyaan: Berapa penumpang yang dibawa kapal saat berangkat dari pelabuhan?\nKeterangan (1): Setelah meninggalkan pelabuhan transit, kapal berisi 45 penumpang.\nKeterangan (2): Setelah meninggalkan pelabuhan transit, jumlah penumpang kapal 5 orang lebih sedikit daripada saat berangkat.",
+    "opsi": {
+      "a": "Keterangan (1) saja sudah cukup untuk menjawab, tetapi keterangan (2) saja tidak cukup.",
+      "b": "Keterangan (2) saja sudah cukup untuk menjawab, tetapi keterangan (1) saja tidak cukup.",
+      "c": "Kedua keterangan harus dipakai bersama; salah satunya saja tidak cukup.",
+      "d": "Masing-masing keterangan, tanpa bantuan yang lain, sudah cukup untuk menjawab.",
+      "e": "Kedua keterangan digabung pun belum cukup untuk menjawab."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "(1) saja: x − 12 + 7 = 45, jadi x = 50. Cukup. (2) saja: berkurang 5 orang sudah pasti dari kalimat soal (−12 + 7 = −5), berapa pun jumlah awalnya; x = 30 dan x = 60 sama-sama memenuhi. Tidak cukup.<br>Opsi B gugur karena (2) hanya mengulang informasi di soal; Opsi C gugur karena (1) saja sudah cukup; Opsi D gugur karena (2) saja tidak cukup; Opsi E gugur karena (1) memberi angka pasti 50. Jawaban: Opsi A. Tips: keterangan yang hanya mengulang isi soal tidak menambah informasi, walau terlihat berisi angka.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-002",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 2,
+    "sumber": "KC2#2",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah kolam ikan diisi air melalui pipa P dan pipa Q. Debit air setiap pipa selalu tetap."
+    ],
+    "stem": "Pertanyaan: Jika kolam dalam keadaan kosong dan kedua pipa dibuka bersamaan, berapa jam waktu yang dibutuhkan sampai kolam penuh?\nPernyataan (1): Jika hanya pipa P yang dibuka, kolam kosong akan penuh dalam 8 jam.\nPernyataan (2): Setelah kedua pipa dibuka bersamaan selama 2 jam sejak kolam kosong, kolam terisi tepat sepertiganya.",
+    "opsi": {
+      "a": "Jawaban belum dapat ditentukan meskipun kedua pernyataan digunakan bersama.",
+      "b": "Jawaban dapat ditentukan dari pernyataan (2) saja, sedangkan pernyataan (1) saja tidak memungkinkan.",
+      "c": "Jawaban dapat ditentukan dari pernyataan (1) saja, dan dapat juga dari pernyataan (2) saja.",
+      "d": "Jawaban dapat ditentukan dari pernyataan (1) saja, sedangkan pernyataan (2) saja tidak memungkinkan.",
+      "e": "Jawaban baru dapat ditentukan jika kedua pernyataan digunakan bersama."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "(1) saja: debit pipa Q tidak diketahui; bila Q juga 8 jam, berdua 4 jam, bila Q 24 jam, berdua 6 jam. Tidak cukup. (2) saja: debit tetap, jadi sepertiga kolam dalam 2 jam berarti penuh dalam 3 × 2 = 6 jam. Cukup.<br>Opsi A gugur karena (2) saja sudah memberi 6 jam; Opsi C gugur karena (1) saja tidak cukup; Opsi D gugur karena terbalik, justru (1) yang tidak cukup; Opsi E gugur karena (2) saja sudah cukup. Jawaban: Opsi B. Tips: bila soal menanyakan kerja bersama, data kerja bersama langsung lebih berharga daripada data satu pipa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-003",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-URUTAN",
+    "tier": 2,
+    "sumber": "KC2#3",
+    "instruksi": "Tentukan apakah petunjuk (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Empat perenang, yaitu Kirana, Laras, Mega, dan Nadia, mengikuti lomba renang 50 meter. Tidak ada dua perenang yang finis bersamaan."
+    ],
+    "stem": "Pertanyaan: Siapa yang finis di urutan ketiga?\nPetunjuk (1): Kirana finis tepat satu urutan di depan Laras, dan Mega tidak menjadi juara pertama.\nPetunjuk (2): Nadia finis paling akhir, dan Laras finis lebih dulu daripada Mega.",
+    "opsi": {
+      "a": "Petunjuk (1) dan petunjuk (2) masing-masing sudah cukup untuk menentukan perenang yang finis ketiga.",
+      "b": "Hanya petunjuk (1) yang cukup untuk menentukan perenang yang finis ketiga.",
+      "c": "Perenang yang finis ketiga baru dapat ditentukan jika petunjuk (1) dan (2) dipakai bersama.",
+      "d": "Walaupun petunjuk (1) dan (2) digabung, perenang yang finis ketiga tetap tidak dapat ditentukan.",
+      "e": "Hanya petunjuk (2) yang cukup untuk menentukan perenang yang finis ketiga."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "(1) saja: urutan Kirana–Laras–Mega–Nadia (ketiga Mega) dan Nadia–Kirana–Laras–Mega (ketiga Laras) sama-sama memenuhi. Tidak cukup. (2) saja: Kirana–Laras–Mega–Nadia (ketiga Mega) dan Laras–Mega–Kirana–Nadia (ketiga Kirana) sama-sama memenuhi. Tidak cukup. Digabung: Nadia keempat, Kirana tepat di depan Laras, Laras di depan Mega, dan Mega bukan pertama; satu-satunya urutan adalah Kirana, Laras, Mega, Nadia. Ketiga = Mega. Cukup.<br>Opsi A gugur karena masing-masing petunjuk masih menyisakan beberapa urutan; Opsi B gugur karena (1) saja masih bisa Mega atau Laras di urutan ketiga; Opsi D gugur karena gabungan memberi satu urutan pasti; Opsi E gugur karena (2) saja masih bisa Mega atau Kirana di urutan ketiga. Jawaban: Opsi C. Tips: buktikan \"tidak cukup\" cukup dengan dua urutan sah yang memberi jawaban berbeda.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-004",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 2,
+    "sumber": "KC2#4",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Menjelang tahun ajaran baru, harga seragam sekolah di sebuah toko naik x%. Sebulan kemudian, harga itu turun y% dari harga setelah kenaikan. Nilai x dan y sama-sama lebih dari 0."
+    ],
+    "stem": "Pertanyaan: Apakah harga seragam setelah penurunan lebih mahal daripada harga sebelum kenaikan?\nPernyataan (1): Persentase kenaikan sama dengan persentase penurunan.\nPernyataan (2): Kenaikan harga menjelang tahun ajaran baru sebesar 25%.",
+    "opsi": {
+      "a": "Pernyataan (1) sendiri memadai untuk menjawab, sedangkan pernyataan (2) sendiri tidak.",
+      "b": "Kedua pernyataan diperlukan sekaligus; masing-masing sendiri tidak memadai.",
+      "c": "Kedua pernyataan tidak memadai, sekalipun digunakan bersama.",
+      "d": "Pernyataan (2) sendiri memadai untuk menjawab, sedangkan pernyataan (1) sendiri tidak.",
+      "e": "Setiap pernyataan, sendiri-sendiri, sudah memadai untuk menjawab."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "(1) saja: harga awal 100 menjadi 100 × (1 + x/100) × (1 − x/100) = 100 × (1 − (x/100)²), selalu di bawah 100 untuk x > 0. Jawabannya pasti \"tidak\". Cukup. (2) saja: 100 → 125; turun 10% menjadi 112,5 (lebih mahal), turun 30% menjadi 87,5 (lebih murah). Jawabannya bisa ya, bisa tidak. Tidak cukup.<br>Opsi B gugur karena (1) saja sudah memadai; Opsi C gugur karena (1) memberi jawaban pasti \"tidak\"; Opsi D gugur karena terbalik, (2) saja tidak memadai; Opsi E gugur karena (2) saja masih bergantung pada y. Jawaban: Opsi A. Tips: naik a% lalu turun a% selalu berakhir lebih murah dari harga awal.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-005",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 3,
+    "sumber": "KC2#5",
+    "instruksi": "Tentukan apakah data (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Lima peserta seleksi tim pencak silat memperoleh nilai tes fisik seperti pada tabel. Nilai n adalah bilangan bulat dari 0 sampai 100."
+    ],
+    "tabel": {
+      "kolom": [
+        "Peserta",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "baris": [
+        [
+          "Nilai",
+          "65",
+          "75",
+          "85",
+          "95",
+          "n"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Apakah rata-rata nilai kelima peserta lebih dari 80?\nData (1): Nilai n lebih besar daripada 75.\nData (2): Tidak ada peserta yang nilainya lebih tinggi daripada n.",
+    "opsi": {
+      "a": "Data (1) dan data (2) harus digabungkan untuk menjawab pertanyaan, karena masing-masing belum cukup.",
+      "b": "Data (2) saja sudah menjawab pertanyaan, sedangkan data (1) saja belum.",
+      "c": "Data (1) saja sudah menjawab pertanyaan, sedangkan data (2) saja belum.",
+      "d": "Data (1) dan data (2), bahkan jika digabungkan, belum menjawab pertanyaan.",
+      "e": "Data (1) saja maupun data (2) saja sudah menjawab pertanyaan."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Jumlah empat nilai = 65 + 75 + 85 + 95 = 320. Rata-rata lebih dari 80 berarti 320 + n > 400, yaitu n > 80. (1) saja: n = 76 (tidak) dan n = 90 (ya) sama-sama memenuhi. Tidak cukup. (2) saja: n paling tinggi berarti n ≥ 95, pasti lebih dari 80; rata-rata paling kecil 415 : 5 = 83. Jawabannya pasti \"ya\". Cukup.<br>Opsi A gugur karena (2) saja sudah cukup; Opsi C gugur karena terbalik, (1) saja masih bisa ya atau tidak; Opsi D gugur karena (2) memberi jawaban pasti; Opsi E gugur karena (1) saja tidak cukup. Jawaban: Opsi B. Tips: ubah pertanyaan rata-rata menjadi syarat satu bilangan (di sini n > 80), lalu uji setiap data terhadap batas itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-006",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 3,
+    "sumber": "KC2#6",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Panitia lomba memiliki n botol air mineral, dengan n lebih dari 16. Botol itu akan dibagikan kepada 8 regu dengan jumlah yang sama dan sebanyak mungkin, lalu sisanya disimpan panitia."
+    ],
+    "stem": "Pertanyaan: Berapa botol yang disimpan panitia?\nPernyataan (1): Jika botol dibagikan sama banyak kepada 16 regu, akan tersisa 7 botol.\nPernyataan (2): Jika panitia mendapat tambahan 1 botol, semua botol dapat dibagikan sama banyak kepada 8 regu tanpa sisa.",
+    "opsi": {
+      "a": "Pertanyaan terjawab dengan pernyataan (2) saja, tetapi tidak terjawab dengan pernyataan (1) saja.",
+      "b": "Pertanyaan tidak terjawab, baik dengan salah satu pernyataan maupun dengan keduanya.",
+      "c": "Pertanyaan terjawab dengan pernyataan (1) saja, tetapi tidak terjawab dengan pernyataan (2) saja.",
+      "d": "Pertanyaan terjawab dengan pernyataan (1) saja, dan terjawab pula dengan pernyataan (2) saja.",
+      "e": "Pertanyaan baru terjawab bila kedua pernyataan digabungkan."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Yang ditanya sisa n dibagi 8. (1) saja: n = 16k + 7, dan 16k habis dibagi 8, jadi sisa dibagi 8 selalu 7 (contoh 23 → 7, 39 → 7). Cukup. (2) saja: n + 1 kelipatan 8, berarti n kurang 1 dari kelipatan 8, sisanya 7. Cukup.<br>Opsi A gugur karena (1) saja juga cukup; Opsi B gugur karena keduanya memberi sisa 7; Opsi C gugur karena (2) saja juga cukup; Opsi E gugur karena tidak perlu digabung. Jawaban: Opsi D. Tips: sisa pembagian oleh 16 langsung menentukan sisa pembagian oleh 8, karena 16 kelipatan 8.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-007",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 3,
+    "sumber": "KC2#7",
+    "instruksi": "Tentukan apakah fakta (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah sanggar seni memiliki anggota putra dan putri. Sebagian dari mereka mengikuti kelas tari."
+    ],
+    "stem": "Pertanyaan: Apakah jumlah anggota putri di sanggar itu lebih banyak daripada jumlah anggota putra?\nFakta (1): Sebanyak 40% anggota putri mengikuti kelas tari.\nFakta (2): Jumlah anggota putri yang mengikuti kelas tari sama dengan jumlah anggota putra yang mengikuti kelas tari.",
+    "opsi": {
+      "a": "Setiap fakta sudah dapat menjawab pertanyaan tanpa bantuan fakta lainnya.",
+      "b": "Pertanyaan baru dapat dijawab jika kedua fakta digabung; satu fakta saja tidak cukup.",
+      "c": "Fakta (2) saja dapat menjawab pertanyaan, sedangkan fakta (1) saja tidak.",
+      "d": "Fakta (1) saja dapat menjawab pertanyaan, sedangkan fakta (2) saja tidak.",
+      "e": "Masih diperlukan data lain, karena gabungan kedua fakta pun belum dapat menjawab pertanyaan."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "(1) saja tidak menyebut anggota putra sama sekali. Tidak cukup. (2) saja hanya menyamakan peserta tari, bukan seluruh anggota. Tidak cukup. Digabung: putri 10 orang berarti 4 putri ikut tari, jadi 4 putra ikut tari; bila 50% putra ikut tari, putra = 8 (putri lebih banyak), bila 20% putra ikut tari, putra = 20 (putri lebih sedikit). Persentase putra yang ikut tari tidak diketahui. Tetap tidak cukup.<br>Opsi A gugur karena masing-masing fakta tidak menyebut jumlah putra; Opsi B gugur karena gabungan masih bisa ya atau tidak; Opsi C gugur karena peserta tari yang sama tidak berarti anggota yang sama; Opsi D gugur karena (1) tidak menyebut putra. Jawaban: Opsi E. Tips: jumlah peserta yang sama baru berarti jumlah total yang sama bila persentase keikutsertaannya juga sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-008",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 3,
+    "sumber": "KC2#8",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah halaman parkir berbentuk persegi panjang dengan panjang p meter dan lebar l meter. Pak Bima ingin mengecat seluruh permukaannya."
+    ],
+    "stem": "Pertanyaan: Berapa meter persegi luas halaman parkir itu?\nPernyataan (1): Jarak lurus dari satu sudut halaman ke sudut yang berseberangan adalah 13 meter.\nPernyataan (2): Pak Bima mengukur keliling halaman dan mendapatkan 34 meter.",
+    "opsi": {
+      "a": "Luas halaman tetap tidak dapat dihitung meskipun kedua pernyataan digunakan.",
+      "b": "Luas halaman dapat dihitung dari pernyataan (1) saja, tetapi tidak dari pernyataan (2) saja.",
+      "c": "Luas halaman baru dapat dihitung setelah pernyataan (1) dan (2) digabungkan.",
+      "d": "Luas halaman dapat dihitung dari pernyataan (2) saja, tetapi tidak dari pernyataan (1) saja.",
+      "e": "Luas halaman dapat dihitung dari pernyataan (1) saja, dan juga dari pernyataan (2) saja."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "(1) saja: p² + l² = 169; 5 × 12 (luas 60) dan sekitar 9,19 × 9,19 (luas 84,5) sama-sama memenuhi. Tidak cukup. (2) saja: p + l = 17; 5 × 12 (luas 60) dan 8 × 9 (luas 72) sama-sama memenuhi. Tidak cukup. Digabung: (p + l)² = p² + 2pl + l², jadi 289 = 169 + 2pl, pl = 60 m². Cukup.<br>Opsi A gugur karena gabungan memberi luas pasti 60 m²; Opsi B gugur karena diagonal saja masih memberi banyak ukuran; Opsi D gugur karena keliling saja juga masih memberi banyak ukuran; Opsi E gugur karena masing-masing tidak cukup. Jawaban: Opsi C. Tips: diagonal memberi p² + l², keliling memberi p + l; keduanya digabung lewat (p + l)² langsung menghasilkan p × l.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-009",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-NILAI",
+    "tier": 3,
+    "sumber": "KC2#9",
+    "instruksi": "Tentukan apakah informasi (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Sebuah toko kue menjual kue lumpur hanya dalam kemasan kotak. Bu Sari membeli tepat 62 kue lumpur, semuanya dalam kotak."
+    ],
+    "tabel": {
+      "judul": "TOKO KUE · PILIHAN KEMASAN",
+      "kolom": [
+        "Kemasan",
+        "Isi"
+      ],
+      "baris": [
+        [
+          "Kotak kecil",
+          "4 kue"
+        ],
+        [
+          "Kotak besar",
+          "9 kue"
+        ]
+      ]
+    },
+    "stem": "Pertanyaan: Berapa kotak kecil yang dibeli Bu Sari?\nInformasi (1): Bu Sari membawa pulang 13 kotak kue.\nInformasi (2): Kotak kecil yang dibeli Bu Sari lebih banyak daripada kotak besar.",
+    "opsi": {
+      "a": "Kedua informasi harus dipakai bersama untuk sampai pada satu jawaban pasti; satu informasi saja belum.",
+      "b": "Informasi (1) sendiri sudah mengarah pada satu jawaban pasti, sedangkan informasi (2) sendiri masih menyisakan lebih dari satu kemungkinan.",
+      "c": "Informasi (1) dan (2), bahkan jika digabung, masih menyisakan lebih dari satu kemungkinan.",
+      "d": "Informasi (1) sendiri maupun informasi (2) sendiri sudah mengarah pada satu jawaban pasti.",
+      "e": "Informasi (2) sendiri sudah mengarah pada satu jawaban pasti, sedangkan informasi (1) sendiri masih menyisakan lebih dari satu kemungkinan."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Cari semua pasangan 4k + 9b = 62 dengan k, b bilangan cacah: b = 2 memberi k = 11, b = 6 memberi k = 2 (b lain tidak menghasilkan k bulat). Hanya dua kemungkinan: 11 kecil + 2 besar (13 kotak) atau 2 kecil + 6 besar (8 kotak). (1) saja: 13 kotak hanya cocok dengan k = 11. Cukup. (2) saja: kecil lebih banyak dari besar hanya cocok dengan 11 > 2. Cukup.<br>Opsi A gugur karena masing-masing informasi sudah menyisakan satu kemungkinan; Opsi B gugur karena (2) saja juga cukup; Opsi C gugur karena satu informasi pun sudah tinggal satu kemungkinan; Opsi E gugur karena (1) saja juga cukup. Jawaban: Opsi D. Tips: bila banyak kemungkinan terbatas, daftar dulu semuanya; lalu cek apakah tiap informasi menyisakan tepat satu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K16-KC2-010",
+    "kartu": "K16",
+    "sub_type": "LOG-KCK-YATIDAK",
+    "tier": 3,
+    "sumber": "KC2#10",
+    "instruksi": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Kamu tidak perlu menghitung jawabannya.",
+    "bacaan": [
+      "Diketahui a dan b adalah bilangan bulat."
+    ],
+    "stem": "Pertanyaan: Apakah a lebih kecil daripada b?\nPernyataan (1): a² lebih kecil daripada b².\nPernyataan (2): a adalah bilangan positif.",
+    "opsi": {
+      "a": "Pernyataan (2) saja sudah cukup untuk memastikan jawabannya, pernyataan (1) saja tidak.",
+      "b": "Pernyataan (1) saja maupun pernyataan (2) saja sudah cukup untuk memastikan jawabannya.",
+      "c": "Pernyataan (1) saja sudah cukup untuk memastikan jawabannya, pernyataan (2) saja tidak.",
+      "d": "Jawabannya baru dapat dipastikan jika pernyataan (1) dan (2) digunakan bersama.",
+      "e": "Jawabannya tetap tidak dapat dipastikan walaupun pernyataan (1) dan (2) digunakan bersama."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "(1) saja: a = 2, b = 5 (ya) dan a = 2, b = −5 (tidak). Tidak cukup. (2) saja: b tidak dibatasi; a = 2, b = 5 (ya) dan a = 2, b = 1 (tidak). Tidak cukup. Digabung: a = 2, b = 5 memberi ya, a = 2, b = −5 memberi tidak, dan keduanya memenuhi a positif serta a² < b². Tetap tidak cukup.<br>Opsi A gugur karena (2) tidak menyebut b; Opsi B gugur karena masing-masing masih bisa ya atau tidak; Opsi C gugur karena kuadrat menghilangkan tanda negatif b; Opsi D gugur karena b negatif masih memberi jawaban \"tidak\". Jawaban: Opsi E. Tips: kuadrat menyembunyikan tanda; selalu coba pasangan dengan bilangan negatif.",
+    "status_kunci": "ganda"
+  }
+]
