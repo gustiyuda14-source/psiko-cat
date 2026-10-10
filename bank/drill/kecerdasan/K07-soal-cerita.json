@@ -1,0 +1,954 @@
+[
+  {
+    "id": "K07-B3-061",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PROPORSI",
+    "tier": 3,
+    "sumber": "B3#61",
+    "stem": "Jika 40 pegawai magang dapat menyelesaikan suatu pekerjaan dalam 5 jam dan 24 pegawai tetap dapat menyelesaikannya dalam 4 jam, berapa bagian pekerjaan yang diselesaikan 8 pegawai magang dan 12 pegawai tetap dalam 1 jam?",
+    "opsi": {
+      "a": "1/25 bagian",
+      "b": "33/200 bagian",
+      "c": "1/8 bagian",
+      "d": "37/2400 bagian",
+      "e": "3/20 bagian"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "8/(40*5)+12/(24*4)",
+    "nilai_opsi": {
+      "a": "=1/25",
+      "b": "=33/200",
+      "c": "=1/8",
+      "d": "=37/2400",
+      "e": "=3/20"
+    },
+    "pembahasan": "Satu pegawai magang mengerjakan 1/(40 × 5) = 1/200 bagian per jam; satu pegawai tetap 1/(24 × 4) = 1/96 bagian per jam. Dalam 1 jam: 8/200 + 12/96 = 1/25 + 1/8 = 8/200 + 25/200 = 33/200 bagian.<br>Opsi A (1/25 bagian) gugur karena hanya menghitung pegawai magang; Opsi C (1/8 bagian) gugur karena hanya menghitung pegawai tetap; Opsi D (37/2400 bagian) gugur karena menjumlahkan kecepatan satu orang tanpa dikali banyak pegawai; Opsi E (3/20 bagian) gugur karena menukar jam kerja kedua kelompok (magang 4 jam, tetap 5 jam). Jawaban: Opsi B (33/200 bagian). Tips: ubah dulu ke kecepatan satu orang per jam, baru kalikan jumlah orang.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-062",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 2,
+    "sumber": "B3#62",
+    "stem": "Pak Darto memancing di kolam dengan membayar Rp25.000/jam. Setiap 15 menit ia mendapat 0,5 kg ikan. Ia membawa pulang 1 kg ikan dan menjual sisanya Rp18.000/kg. Jika Pak Darto membawa uang Rp60.000 dan memancing selama 2 jam, berapa uang yang dibawanya pulang?",
+    "opsi": {
+      "a": "Rp82.000",
+      "b": "Rp89.000",
+      "c": "Rp54.000",
+      "d": "Rp64.000",
+      "e": "Rp4.000"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "60000-2*25000+(2*60/15*0.5-1)*18000",
+    "nilai_opsi": {
+      "a": 82000,
+      "b": 89000,
+      "c": 54000,
+      "d": 64000,
+      "e": 4000
+    },
+    "pembahasan": "Dalam 2 jam ada 8 kali 15 menit, jadi ikan 8 × 0,5 = 4 kg. Dijual 4 − 1 = 3 kg × Rp18.000 = Rp54.000. Sewa 2 × Rp25.000 = Rp50.000. Uang pulang = 60.000 − 50.000 + 54.000 = Rp64.000.<br>Opsi A (Rp82.000) gugur karena menjual semua ikan, lupa 1 kg dibawa pulang; Opsi B (Rp89.000) gugur karena hanya membayar sewa 1 jam; Opsi C (Rp54.000) gugur karena hanya menghitung hasil penjualan ikan; Opsi E (Rp4.000) gugur karena lupa menambahkan uang awal Rp60.000 (54.000 − 50.000). Jawaban: Opsi D (Rp64.000). Tips: tulis arus uang: uang awal − pengeluaran + pemasukan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-063",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UMUR",
+    "tier": 1,
+    "sumber": "B3#63",
+    "stem": "Dimas berumur 16 tahun pada 2 tahun yang lalu. Jika umur Raka 5 tahun mendatang adalah 23 tahun, berapa selisih umur mereka sekarang?",
+    "opsi": {
+      "a": "0 tahun",
+      "b": "2 tahun",
+      "c": "4 tahun",
+      "d": "10 tahun",
+      "e": "7 tahun"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "(16+2)-(23-5)",
+    "nilai_opsi": {
+      "a": 0,
+      "b": 2,
+      "c": 4,
+      "d": 10,
+      "e": 7
+    },
+    "pembahasan": "Umur Dimas sekarang 16 + 2 = 18 tahun. Umur Raka sekarang 23 − 5 = 18 tahun. Selisihnya 18 − 18 = 0 tahun.<br>Opsi B (2 tahun) gugur karena lupa menambahkan 2 tahun pada umur Dimas (16 dibanding 18); Opsi C (4 tahun) gugur karena mengurangi 2 tahun dari umur Dimas, padahal harus ditambah; Opsi D (10 tahun) gugur karena menambah 5 tahun pada umur Raka, padahal harus dikurangi; Opsi E (7 tahun) gugur karena langsung mengurangkan 23 − 16 tanpa menyamakan waktu. Jawaban: Opsi A (0 tahun). Tips: samakan semua umur ke \"sekarang\" sebelum dibandingkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-064",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GEOMETRI",
+    "tier": 2,
+    "sumber": "B3#64",
+    "stem": "Sebuah tangki air berbentuk tabung memiliki tinggi 150 cm dan diameter alas 140 cm. Berapa liter air yang dapat ditampung tangki itu? (π = 22/7)",
+    "opsi": {
+      "a": "9.240 liter",
+      "b": "23.100 liter",
+      "c": "2.310 liter",
+      "d": "770 liter",
+      "e": "66 liter"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "22/7*70**2*150/1000",
+    "nilai_opsi": {
+      "a": 9240,
+      "b": 23100,
+      "c": 2310,
+      "d": 770,
+      "e": 66
+    },
+    "pembahasan": "Jari-jari = 140 : 2 = 70 cm. Volume = 22/7 × 70 × 70 × 150 = 22 × 10 × 70 × 150 = 2.310.000 cm³. Karena 1 liter = 1.000 cm³, volumenya 2.310 liter.<br>Opsi A (9.240 liter) gugur karena memakai diameter sebagai jari-jari; Opsi B (23.100 liter) gugur karena salah konversi, memakai 1 liter = 100 cm³; Opsi D (770 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi); Opsi E (66 liter) gugur karena memakai keliling alas × tinggi, bukan luas alas × tinggi. Jawaban: Opsi C (2.310 liter). Tips: jari-jari 7, 14, 70, 140 selalu cocok dengan π = 22/7; coret 7-nya dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-065",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 2,
+    "sumber": "B3#65",
+    "stem": "Sebuah mobil travel menempuh 120 km dari kota P ke kota Q dengan kecepatan rata-rata 40 km/jam, lalu kembali ke kota P melalui rute yang sama. Total waktu perjalanan pulang-pergi adalah 5 jam. Kecepatan rata-rata mobil saat kembali ke kota P adalah …",
+    "opsi": {
+      "a": "40 km/jam",
+      "b": "48 km/jam",
+      "c": "120 km/jam",
+      "d": "24 km/jam",
+      "e": "60 km/jam"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "120/(5-120/40)",
+    "nilai_opsi": {
+      "a": 40,
+      "b": 48,
+      "c": 120,
+      "d": 24,
+      "e": 60
+    },
+    "pembahasan": "Waktu pergi = 120 : 40 = 3 jam. Waktu pulang = 5 − 3 = 2 jam. Kecepatan pulang = 120 : 2 = 60 km/jam.<br>Opsi A (40 km/jam) gugur karena menganggap kecepatan pulang sama dengan kecepatan pergi; Opsi B (48 km/jam) gugur karena menghitung kecepatan rata-rata pulang-pergi (240 : 5); Opsi C (120 km/jam) gugur karena membagi jarak pulang-pergi 240 km dengan waktu pulang 2 jam; Opsi D (24 km/jam) gugur karena membagi 120 km dengan total waktu 5 jam. Jawaban: Opsi E (60 km/jam). Tips: pisahkan perjalanan pergi dan pulang; cari waktu yang diketahui dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-066",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-HIMPUNAN",
+    "tier": 2,
+    "sumber": "B3#66",
+    "stem": "Dari lulusan sebuah SMA, 2/5 diterima di jurusan teknik, 1/3 diterima di jurusan ekonomi, dan 1/6 diterima di kedua jurusan tersebut. Berapa persen lulusan yang tidak diterima di jurusan teknik maupun jurusan ekonomi?",
+    "opsi": {
+      "a": "26,67%",
+      "b": "10%",
+      "c": "43,33%",
+      "d": "56,67%",
+      "e": "83,33%"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "(1-(2/5+1/3-1/6))*100",
+    "nilai_opsi": {
+      "a": "=800/30",
+      "b": 10,
+      "c": "=1300/30",
+      "d": "=1700/30",
+      "e": "=2500/30"
+    },
+    "pembahasan": "Yang diterima minimal di satu jurusan = 2/5 + 1/3 − 1/6 = 12/30 + 10/30 − 5/30 = 17/30. Yang tidak diterima = 1 − 17/30 = 13/30 ≈ 43,33%.<br>Opsi A (26,67%) gugur karena lupa menambahkan kembali lulusan yang diterima di kedua jurusan; Opsi B (10%) gugur karena mengurangkan irisan sekali lagi, padahal irisan sudah terhitung dua kali; Opsi D (56,67%) gugur karena menjawab persen lulusan yang diterima; Opsi E (83,33%) gugur karena hanya mengurangkan lulusan yang diterima di kedua jurusan. Jawaban: Opsi C (43,33%). Tips: gabungan dua himpunan = A + B − irisan; irisan dikurangkan sekali saja.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-068",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-LINIER",
+    "tier": 3,
+    "sumber": "B3#68",
+    "stem": "Sebuah bilangan terdiri atas empat angka yang berbeda. Jumlah keempat angkanya 20. Angka keempat sama dengan angka pertama ditambah angka ketiga. Angka kedua sama dengan angka ketiga dikurangi angka pertama. Angka keempat dua kali angka kedua. Bilangan tersebut adalah …",
+    "opsi": {
+      "a": "2468",
+      "b": "2486",
+      "c": "4268",
+      "d": "3467",
+      "e": "1359"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "2468",
+    "nilai_opsi": {
+      "a": 2468,
+      "b": 2486,
+      "c": 4268,
+      "d": 3467,
+      "e": 1359
+    },
+    "pembahasan": "Misalkan angkanya a, b, c, d. Dari d = a + c dan d = 2b, serta b = c − a: a + c = 2c − 2a, sehingga c = 3a, b = 2a, d = 4a. Jumlah a + 2a + 3a + 4a = 10a = 20, jadi a = 2. Bilangannya 2468.<br>Opsi B (2486) gugur karena menukar angka ketiga dan keempat; angka keempat harus 2 + 6 = 8, bukan 6; Opsi C (4268) gugur karena menukar angka pertama dan kedua; angka kedua harus 6 − 2 = 4; Opsi D (3467) gugur karena hanya memenuhi syarat jumlah 20; Opsi E (1359) gugur karena memakai pola ganjil berurutan, tidak memenuhi syarat angka keempat = 2 × angka kedua. Jawaban: Opsi A (2468). Tips: uji syarat satu per satu ke opsi; yang gugur di satu syarat langsung dicoret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B3-069",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-LINIER",
+    "tier": 2,
+    "sumber": "B3#69",
+    "stem": "Sebuah asrama memiliki sejumlah kamar. Jika setiap kamar diisi 3 siswa, ada 10 siswa yang tidak mendapat kamar. Jika setiap kamar diisi 4 siswa, ada 3 kamar yang kosong. Berapa banyak kamar di asrama itu?",
+    "opsi": {
+      "a": "76 kamar",
+      "b": "22 kamar",
+      "c": "13 kamar",
+      "d": "25 kamar",
+      "e": "19 kamar"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "(10+4*3)/(4-3)",
+    "nilai_opsi": {
+      "a": 76,
+      "b": 22,
+      "c": 13,
+      "d": 25,
+      "e": 19
+    },
+    "pembahasan": "Misalkan banyak kamar k. Banyak siswa 3k + 10 = 4(k − 3). Maka 3k + 10 = 4k − 12, sehingga k = 22 kamar (siswa 76 orang).<br>Opsi A (76 kamar) gugur karena menjawab banyak siswa, bukan banyak kamar; Opsi C (13 kamar) gugur karena menulis 3k + 10 = 4k − 3, lupa 3 kamar kosong berarti 4 × 3 siswa; Opsi D (25 kamar) gugur karena menambahkan 3 kamar kosong pada jawaban; Opsi E (19 kamar) gugur karena mengurangkan 3 kamar kosong dari jawaban. Jawaban: Opsi B (22 kamar). Tips: kamar kosong berarti kamar dikurangi, bukan siswa dikurangi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-026",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 1,
+    "sumber": "A3#26",
+    "stem": "Sebuah truk melaju dengan kecepatan 45 km/jam. Truk berangkat pukul 09.50 dan tiba di tujuan pukul 11.10. Jarak yang ditempuh truk adalah …",
+    "opsi": {
+      "a": "45 km",
+      "b": "54 km",
+      "c": "90 km",
+      "d": "60 km",
+      "e": "75 km"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "45*80/60",
+    "nilai_opsi": {
+      "a": 45,
+      "b": 54,
+      "c": 90,
+      "d": 60,
+      "e": 75
+    },
+    "pembahasan": "Waktu tempuh 09.50 → 11.10 = 1 jam 20 menit = 4/3 jam. Jarak = 45 × 4/3 = 60 km.<br>Opsi A (45 km) gugur karena menganggap waktu tempuh hanya 1 jam; Opsi B (54 km) gugur karena membaca 1 jam 20 menit sebagai 1,2 jam; Opsi C (90 km) gugur karena menghitung waktu tempuh 2 jam (jam 09 ke jam 11); Opsi E (75 km) gugur karena salah mengurangkan waktu menjadi 1 jam 40 menit. Jawaban: Opsi D (60 km). Tips: ubah menit ke pecahan jam: 20 menit = 1/3 jam, bukan 0,2 jam.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-027",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 1,
+    "sumber": "A3#27",
+    "stem": "Perbandingan peserta pria dan wanita dalam lomba lari adalah 7 : 3. Berapa persen peserta wanita dalam lomba tersebut?",
+    "opsi": {
+      "a": "70%",
+      "b": "30%",
+      "c": "42,86%",
+      "d": "40%",
+      "e": "10%"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "3/(7+3)*100",
+    "nilai_opsi": {
+      "a": 70,
+      "b": 30,
+      "c": "=300/7",
+      "d": 40,
+      "e": 10
+    },
+    "pembahasan": "Total bagian 7 + 3 = 10. Peserta wanita = 3/10 × 100% = 30%.<br>Opsi A (70%) gugur karena menjawab persen peserta pria; Opsi C (42,86%) gugur karena membagi wanita dengan pria (3/7), bukan dengan total; Opsi D (40%) gugur karena memakai selisih 7 − 3 sebagai bagian wanita; Opsi E (10%) gugur karena menjawab persen satu bagian. Jawaban: Opsi B (30%). Tips: persen bagian selalu dibagi total bagian, bukan dibagi bagian lain.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-028",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 2,
+    "sumber": "A3#28",
+    "stem": "Rina dan Sari membayar tagihan air yang besarnya sama. Untuk membayar tagihan itu, gaji Rina sebesar Rp2.400.000 dipotong 4%, sedangkan gaji Sari dipotong 3%. Gaji Sari adalah …",
+    "opsi": {
+      "a": "Rp1.800.000",
+      "b": "Rp2.400.000",
+      "c": "Rp96.000",
+      "d": "Rp9.600.000",
+      "e": "Rp3.200.000"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "0.04*2400000/0.03",
+    "nilai_opsi": {
+      "a": 1800000,
+      "b": 2400000,
+      "c": 96000,
+      "d": 9600000,
+      "e": 3200000
+    },
+    "pembahasan": "Tagihan = 4% × 2.400.000 = Rp96.000. Tagihan itu 3% gaji Sari, jadi gaji Sari = 96.000 : 3% = Rp3.200.000.<br>Opsi A (Rp1.800.000) gugur karena membalik perbandingan (2.400.000 × 3/4); Opsi B (Rp2.400.000) gugur karena menganggap gaji sama karena tagihannya sama; Opsi C (Rp96.000) gugur karena berhenti pada besar tagihan; Opsi D (Rp9.600.000) gugur karena membagi tagihan dengan selisih persentase 1%. Jawaban: Opsi E (Rp3.200.000). Tips: potongan persen lebih kecil berarti gajinya lebih besar; cek arah jawaban.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-029",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PROPORSI",
+    "tier": 2,
+    "sumber": "A3#29",
+    "stem": "Budi mengecat pagar seluas 30 m² dalam 2 jam, sedangkan Andi mengecat pagar seluas yang sama dalam 3 jam. Jika mereka bekerja bersama mengecat pagar 30 m², waktu yang diperlukan adalah …",
+    "opsi": {
+      "a": "1 jam 12 menit",
+      "b": "2 jam 30 menit",
+      "c": "5 jam",
+      "d": "1 jam",
+      "e": "1 jam 20 menit"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "60/(1/2+1/3)",
+    "nilai_opsi": {
+      "a": 72,
+      "b": 150,
+      "c": 300,
+      "d": 60,
+      "e": 80
+    },
+    "pembahasan": "Kecepatan Budi 1/2 pagar per jam, Andi 1/3 pagar per jam. Bersama 1/2 + 1/3 = 5/6 pagar per jam. Waktu = 6/5 jam = 1,2 jam = 1 jam 12 menit.<br>Opsi B (2 jam 30 menit) gugur karena merata-ratakan waktu kedua orang; Opsi C (5 jam) gugur karena menjumlahkan waktu kedua orang; Opsi D (1 jam) gugur karena mengurangkan waktu kedua orang; Opsi E (1 jam 20 menit) gugur karena membaca 1,2 jam sebagai 1 jam 20 menit. Jawaban: Opsi A (1 jam 12 menit). Tips: kerja bersama: jumlahkan kecepatan, lalu balik hasilnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-030",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "A3#30",
+    "stem": "Sepotong kayu basah beratnya 25 gram. Setelah dikeringkan, beratnya menjadi 21 gram. Berapa persen kadar air dalam kayu basah tersebut?",
+    "opsi": {
+      "a": "19,05%",
+      "b": "84%",
+      "c": "16%",
+      "d": "4%",
+      "e": "21%"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "(25-21)/25*100",
+    "nilai_opsi": {
+      "a": "=400/21",
+      "b": 84,
+      "c": 16,
+      "d": 4,
+      "e": 21
+    },
+    "pembahasan": "Berat air = 25 − 21 = 4 gram. Kadar air = 4/25 × 100% = 16%.<br>Opsi A (19,05%) gugur karena membagi berat air dengan berat kayu kering; Opsi B (84%) gugur karena menjawab persen bagian kering; Opsi D (4%) gugur karena menulis berat air (4 gram) sebagai persen; Opsi E (21%) gugur karena menulis berat kering sebagai persen. Jawaban: Opsi C (16%). Tips: kadar air dihitung terhadap berat basah (awal).",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-031",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 1,
+    "sumber": "A3#31",
+    "stem": "Dina memiliki 3 lembar uang Rp20.000, 2 lembar Rp10.000, dan 1 lembar Rp5.000. Uang itu dipakai membeli 15 roti seharga Rp3.500 per roti. Berapa sisa uang Dina?",
+    "opsi": {
+      "a": "Rp52.500",
+      "b": "Rp32.500",
+      "c": "Rp85.000",
+      "d": "Rp27.500",
+      "e": "Rp42.500"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "3*20000+2*10000+5000-15*3500",
+    "nilai_opsi": {
+      "a": 52500,
+      "b": 32500,
+      "c": 85000,
+      "d": 27500,
+      "e": 42500
+    },
+    "pembahasan": "Uang Dina = 3 × 20.000 + 2 × 10.000 + 5.000 = Rp85.000. Harga roti = 15 × 3.500 = Rp52.500. Sisa = 85.000 − 52.500 = Rp32.500.<br>Opsi A (Rp52.500) gugur karena menjawab total harga roti; Opsi C (Rp85.000) gugur karena lupa mengurangkan harga roti; Opsi D (Rp27.500) gugur karena lupa menghitung uang Rp5.000; Opsi E (Rp42.500) gugur karena salah menghitung 15 × 3.500 menjadi 42.500. Jawaban: Opsi B (Rp32.500). Tips: 15 × 3.500 = 10 × 3.500 + 5 × 3.500 = 35.000 + 17.500.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-032",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "A3#32",
+    "stem": "Perbandingan tabungan Fajar dan Gilang adalah 5 : 9. Selisih tabungan mereka Rp180.000. Jumlah tabungan Gilang adalah …",
+    "opsi": {
+      "a": "Rp225.000",
+      "b": "Rp630.000",
+      "c": "Rp324.000",
+      "d": "Rp405.000",
+      "e": "Rp45.000"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "180000/(9-5)*9",
+    "nilai_opsi": {
+      "a": 225000,
+      "b": 630000,
+      "c": 324000,
+      "d": 405000,
+      "e": 45000
+    },
+    "pembahasan": "Selisih 9 − 5 = 4 bagian = Rp180.000, jadi 1 bagian = Rp45.000. Tabungan Gilang = 9 × 45.000 = Rp405.000.<br>Opsi A (Rp225.000) gugur karena menjawab tabungan Fajar; Opsi B (Rp630.000) gugur karena menjawab jumlah tabungan keduanya; Opsi C (Rp324.000) gugur karena membagi selisih dengan 5, padahal selisihnya 4 bagian; Opsi E (Rp45.000) gugur karena berhenti pada nilai satu bagian. Jawaban: Opsi D (Rp405.000). Tips: cari nilai satu bagian dari selisih bagian, baru kalikan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-033",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GEOMETRI",
+    "tier": 2,
+    "sumber": "A3#33",
+    "stem": "Saat mendaki, Rizky berkemah di ketinggian 1.865 m. Sumber air berada di ketinggian 1.730 m. Setiap kenaikan atau penurunan 1 m membutuhkan 3 langkah kaki. Berapa langkah yang dibutuhkan Rizky untuk mengambil air dan kembali ke tenda?",
+    "opsi": {
+      "a": "405 langkah",
+      "b": "270 langkah",
+      "c": "135 langkah",
+      "d": "1.620 langkah",
+      "e": "810 langkah"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "(1865-1730)*3*2",
+    "nilai_opsi": {
+      "a": 405,
+      "b": 270,
+      "c": 135,
+      "d": 1620,
+      "e": 810
+    },
+    "pembahasan": "Selisih ketinggian 1.865 − 1.730 = 135 m. Sekali jalan 135 × 3 = 405 langkah. Pergi dan kembali 2 × 405 = 810 langkah.<br>Opsi A (405 langkah) gugur karena hanya menghitung perjalanan turun; Opsi B (270 langkah) gugur karena lupa mengalikan 3 langkah per meter; Opsi C (135 langkah) gugur karena berhenti pada selisih ketinggian; Opsi D (1.620 langkah) gugur karena mengalikan pulang-pergi dua kali. Jawaban: Opsi E (810 langkah). Tips: \"mengambil dan kembali\" berarti dua kali jalan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-A3-034",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 3,
+    "sumber": "A3#34",
+    "stem": "Rata-rata nilai 20 siswa putri adalah 85. Rata-rata nilai siswa putra adalah 76. Jika digabungkan, rata-ratanya menjadi 80. Banyak siswa putra adalah …",
+    "opsi": {
+      "a": "20 siswa",
+      "b": "16 siswa",
+      "c": "25 siswa",
+      "d": "45 siswa",
+      "e": "9 siswa"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "20*(85-80)/(80-76)",
+    "nilai_opsi": {
+      "a": 20,
+      "b": 16,
+      "c": 25,
+      "d": 45,
+      "e": 9
+    },
+    "pembahasan": "Putri berjarak 85 − 80 = 5 di atas rata-rata gabungan, putra 80 − 76 = 4 di bawahnya. Kelebihan putri 20 × 5 = 100 harus menutup kekurangan putra 4n, jadi n = 25.<br>Opsi A (20 siswa) gugur karena menganggap banyak siswa putra sama dengan putri; Opsi B (16 siswa) gugur karena membalik perbandingan jarak ke rata-rata gabungan (20 × 4/5); Opsi D (45 siswa) gugur karena menjawab banyak seluruh siswa; Opsi E (9 siswa) gugur karena menjawab selisih kedua rata-rata (85 − 76). Jawaban: Opsi C (25 siswa). Tips: kelompok yang lebih dekat ke rata-rata gabungan jumlahnya lebih banyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-062",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 2,
+    "sumber": "B2#62",
+    "stem": "Perjalanan Sinta ke kantor: 0,6 jam dari rumah ke halte, 45 menit naik bus ke terminal, dan 18 menit berjalan kaki dari terminal ke kantor. Jika Sinta berangkat pukul 06.30, pukul berapa ia sampai di kantor?",
+    "opsi": {
+      "a": "08.09",
+      "b": "07.39",
+      "c": "08.33",
+      "d": "07.51",
+      "e": "08.19"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "6*60+30+0.6*60+45+18",
+    "nilai_opsi": {
+      "a": 489,
+      "b": 459,
+      "c": 513,
+      "d": 471,
+      "e": 499
+    },
+    "pembahasan": "0,6 jam = 0,6 × 60 = 36 menit. Total waktu 36 + 45 + 18 = 99 menit = 1 jam 39 menit. Sampai pukul 06.30 + 1.39 = 08.09.<br>Opsi B (07.39) gugur karena membaca 0,6 jam sebagai 6 menit; Opsi C (08.33) gugur karena menganggap 0,6 jam = 60 menit; Opsi D (07.51) gugur karena lupa 18 menit berjalan kaki; Opsi E (08.19) gugur karena salah menjumlah 36 + 45 + 18 menjadi 109 menit. Jawaban: Opsi A (08.09). Tips: desimal jam selalu dikali 60: 0,6 jam = 36 menit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-063",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 3,
+    "sumber": "B2#63",
+    "stem": "Seorang pedagang keliling menempuh 56 km dalam 10 jam. Sebagian jalan ia tempuh dengan berjalan kaki berkecepatan 4 km/jam dan sisanya dengan bersepeda berkecepatan 8 km/jam. Jarak yang ditempuh dengan bersepeda adalah …",
+    "opsi": {
+      "a": "24 km",
+      "b": "32 km",
+      "c": "28 km",
+      "d": "40 km",
+      "e": "20 km"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "56-(80-56)",
+    "nilai_opsi": {
+      "a": 24,
+      "b": 32,
+      "c": 28,
+      "d": 40,
+      "e": 20
+    },
+    "pembahasan": "Misalkan jalan kaki x km dan sepeda y km: x + y = 56 dan x/4 + y/8 = 10, atau 2x + y = 80. Dikurangkan: x = 24, jadi y = 56 − 24 = 32 km.<br>Opsi A (24 km) gugur karena menjawab jarak berjalan kaki; Opsi C (28 km) gugur karena membagi jarak sama rata; Opsi D (40 km) gugur karena membagi waktu sama rata (8 × 5 jam); Opsi E (20 km) gugur karena membagi waktu sama rata lalu memakai kecepatan jalan kaki (4 × 5 jam). Jawaban: Opsi B (32 km). Tips: kalikan persamaan waktu dengan KPK kecepatan supaya pecahannya hilang.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-064",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-LINIER",
+    "tier": 2,
+    "sumber": "B2#64",
+    "stem": "Rani membayar Rp26.000 untuk 4 buku tulis dan 1 pensil. Dewi membeli 3 buku tulis dan 2 pensil di toko yang sama seharga Rp22.000. Harga 1 pensil adalah …",
+    "opsi": {
+      "a": "Rp6.000",
+      "b": "Rp4.000",
+      "c": "Rp8.000",
+      "d": "Rp5.200",
+      "e": "Rp2.000"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "26000-4*((2*26000-22000)/5)",
+    "nilai_opsi": {
+      "a": 6000,
+      "b": 4000,
+      "c": 8000,
+      "d": 5200,
+      "e": 2000
+    },
+    "pembahasan": "Kalikan persamaan Rani dengan 2: 8 buku + 2 pensil = 52.000. Kurangi persamaan Dewi: 5 buku = 30.000, jadi 1 buku = Rp6.000. Pensil = 26.000 − 4 × 6.000 = Rp2.000.<br>Opsi A (Rp6.000) gugur karena menjawab harga 1 buku tulis; Opsi B (Rp4.000) gugur karena menjawab selisih kedua belanjaan; Opsi C (Rp8.000) gugur karena menjawab harga 1 buku + 1 pensil; Opsi D (Rp5.200) gugur karena membagi Rp26.000 rata ke 5 barang. Jawaban: Opsi E (Rp2.000). Tips: samakan koefisien salah satu barang, lalu kurangkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-065",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "B2#65",
+    "stem": "Hasil panen jagung Pak Made dibagi: 1/4 untuk keluarga, 1/3 dijual, dan 1/6 dibagikan kepada tetangga. Jika sisa jagung 90 kg, berapa total hasil panen Pak Made?",
+    "opsi": {
+      "a": "270 kg",
+      "b": "180 kg",
+      "c": "540 kg",
+      "d": "360 kg",
+      "e": "120 kg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "90/(1-1/4-1/3-1/6)",
+    "nilai_opsi": {
+      "a": 270,
+      "b": 180,
+      "c": 540,
+      "d": 360,
+      "e": 120
+    },
+    "pembahasan": "Bagian terpakai 1/4 + 1/3 + 1/6 = 3/12 + 4/12 + 2/12 = 9/12 = 3/4. Sisa 1/4 bagian = 90 kg, jadi total = 4 × 90 = 360 kg.<br>Opsi A (270 kg) gugur karena menganggap sisanya 1/3 bagian; Opsi B (180 kg) gugur karena menganggap sisanya 1/2 bagian; Opsi C (540 kg) gugur karena menganggap sisanya 1/6 bagian; Opsi E (120 kg) gugur karena menganggap 90 kg adalah 3/4 bagian yang terpakai. Jawaban: Opsi D (360 kg). Tips: jumlahkan pecahan yang terpakai, lalu cari pecahan sisanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-066",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-GERAK",
+    "tier": 1,
+    "sumber": "B2#66",
+    "stem": "Jarak dari Bandung ke Sumedang 45 km. Rudi mengendarai sepeda motor dengan kecepatan 36 km/jam dan berangkat pukul 07.15. Pukul berapa Rudi sampai di Sumedang?",
+    "opsi": {
+      "a": "08.40",
+      "b": "08.15",
+      "c": "08.30",
+      "d": "08.00",
+      "e": "08.03"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "7*60+15+45/36*60",
+    "nilai_opsi": {
+      "a": 520,
+      "b": 495,
+      "c": 510,
+      "d": 480,
+      "e": 483
+    },
+    "pembahasan": "Waktu tempuh = 45 : 36 = 1,25 jam = 1 jam 15 menit. Sampai pukul 07.15 + 1.15 = 08.30.<br>Opsi A (08.40) gugur karena membaca 1,25 jam sebagai 1 jam 25 menit; Opsi B (08.15) gugur karena menganggap waktu tempuh 1 jam; Opsi D (08.00) gugur karena menganggap 45 km ditempuh dalam 45 menit; Opsi E (08.03) gugur karena membalik pembagian (36 : 45 = 0,8 jam = 48 menit). Jawaban: Opsi C (08.30). Tips: 0,25 jam = 15 menit, 0,5 jam = 30 menit, 0,75 jam = 45 menit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-067",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 1,
+    "sumber": "B2#67",
+    "stem": "Tono membeli laptop bekas seharga Rp4.000.000 dan mengeluarkan Rp800.000 untuk perbaikan. Ia kemudian menjual laptop itu seharga Rp6.000.000. Berapa persen keuntungan Tono?",
+    "opsi": {
+      "a": "25%",
+      "b": "50%",
+      "c": "30%",
+      "d": "20%",
+      "e": "33%"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "(6000000-4800000)/4800000*100",
+    "nilai_opsi": {
+      "a": 25,
+      "b": 50,
+      "c": 30,
+      "d": 20,
+      "e": "=100/3"
+    },
+    "pembahasan": "Modal = 4.000.000 + 800.000 = Rp4.800.000. Untung = 6.000.000 − 4.800.000 = Rp1.200.000. Persen untung = 1.200.000 : 4.800.000 × 100% = 25%.<br>Opsi B (50%) gugur karena lupa biaya perbaikan (2.000.000 : 4.000.000); Opsi C (30%) gugur karena membagi untung dengan harga beli saja, tanpa biaya perbaikan; Opsi D (20%) gugur karena membagi untung dengan harga jual; Opsi E (33%) gugur karena lupa biaya perbaikan dan membagi dengan harga jual. Jawaban: Opsi A (25%). Tips: persen untung dihitung dari modal total, termasuk biaya tambahan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-068",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 3,
+    "sumber": "B2#68",
+    "stem": "Tarif iklan di sebuah aplikasi: 2 hari pertama Rp40.000/hari, 3 hari berikutnya Rp25.000/hari, dan hari-hari selanjutnya Rp12.000/hari. Jika Dani membayar Rp215.000, berapa hari iklannya ditayangkan?",
+    "opsi": {
+      "a": "5 hari",
+      "b": "8 hari",
+      "c": "7 hari",
+      "d": "12 hari",
+      "e": "10 hari"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "2+3+(215000-2*40000-3*25000)/12000",
+    "nilai_opsi": {
+      "a": 5,
+      "b": 8,
+      "c": 7,
+      "d": 12,
+      "e": 10
+    },
+    "pembahasan": "2 hari pertama = 2 × 40.000 = 80.000. 3 hari berikutnya = 3 × 25.000 = 75.000. Sisa uang 215.000 − 155.000 = 60.000 = 60.000 : 12.000 = 5 hari. Total 2 + 3 + 5 = 10 hari.<br>Opsi A (5 hari) gugur karena hanya menghitung hari bertarif Rp12.000; Opsi B (8 hari) gugur karena membagi semua biaya dengan tarif tengah Rp25.000; Opsi C (7 hari) gugur karena lupa 3 hari bertarif Rp25.000; Opsi D (12 hari) gugur karena menghitung 2 hari pertama dua kali. Jawaban: Opsi E (10 hari). Tips: habiskan uang per tingkat tarif dari yang pertama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-069",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PROPORSI",
+    "tier": 1,
+    "sumber": "B2#69",
+    "stem": "Sebuah gedung direncanakan selesai dalam 30 hari oleh 12 pekerja. Jika pemilik ingin gedung selesai dalam 20 hari, berapa pekerja tambahan yang diperlukan?",
+    "opsi": {
+      "a": "18 orang",
+      "b": "8 orang",
+      "c": "4 orang",
+      "d": "6 orang",
+      "e": "10 orang"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "12*30/20-12",
+    "nilai_opsi": {
+      "a": 18,
+      "b": 8,
+      "c": 4,
+      "d": 6,
+      "e": 10
+    },
+    "pembahasan": "Pekerjaan = 12 × 30 = 360 hari-orang. Agar selesai 20 hari perlu 360 : 20 = 18 pekerja. Tambahan = 18 − 12 = 6 orang.<br>Opsi A (18 orang) gugur karena menjawab jumlah seluruh pekerja, bukan tambahannya; Opsi B (8 orang) gugur karena menganggap berbanding lurus (12 × 20/30); Opsi C (4 orang) gugur karena mengurangkan 12 dengan hasil berbanding lurus; Opsi E (10 orang) gugur karena menjawab selisih hari. Jawaban: Opsi D (6 orang). Tips: waktu makin singkat, pekerja makin banyak: berbanding terbalik.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-B2-070",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 1,
+    "sumber": "B2#70",
+    "stem": "Perbandingan uang Ani, Beni, dan Citra adalah 3 : 4 : 6. Jika uang Citra Rp72.000, berapa jumlah uang mereka bertiga?",
+    "opsi": {
+      "a": "Rp84.000",
+      "b": "Rp156.000",
+      "c": "Rp36.000",
+      "d": "Rp216.000",
+      "e": "Rp120.000"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "72000/6*(3+4+6)",
+    "nilai_opsi": {
+      "a": 84000,
+      "b": 156000,
+      "c": 36000,
+      "d": 216000,
+      "e": 120000
+    },
+    "pembahasan": "6 bagian = Rp72.000, jadi 1 bagian = Rp12.000. Jumlah bagian 3 + 4 + 6 = 13, jadi jumlah uang = 13 × 12.000 = Rp156.000.<br>Opsi A (Rp84.000) gugur karena hanya menjumlahkan uang Ani dan Beni; Opsi C (Rp36.000) gugur karena menjawab uang Ani; Opsi D (Rp216.000) gugur karena mengalikan uang Citra dengan 3 orang; Opsi E (Rp120.000) gugur karena lupa menghitung uang Ani. Jawaban: Opsi B (Rp156.000). Tips: cari nilai satu bagian dulu dari orang yang diketahui.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-001",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 2,
+    "sumber": "R#1",
+    "stem": "Tim kesenian dari kota P akan tampil di kota T dengan pesawat. Ada penerbangan langsung dari P ke T. Ada juga penerbangan dari P ke Q, dari P ke R, dari Q ke S, dari R ke S, dari R ke T, dan dari S ke T. Berapa jalur yang dapat ditempuh dari P ke T?",
+    "opsi": {
+      "a": "3 jalur",
+      "b": "2 jalur",
+      "c": "4 jalur",
+      "d": "5 jalur",
+      "e": "6 jalur"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "4",
+    "nilai_opsi": {
+      "a": 3,
+      "b": 2,
+      "c": 4,
+      "d": 5,
+      "e": 6
+    },
+    "pembahasan": "Daftar semua jalur: P → T; P → Q → S → T; P → R → S → T; P → R → T. Jadi ada 4 jalur.<br>Opsi A (3 jalur) gugur karena lupa menghitung penerbangan langsung P → T; Opsi B (2 jalur) gugur karena hanya menghitung jalur yang melewati S; Opsi D (5 jalur) gugur karena menghitung jalur P → R → S → T dua kali; Opsi E (6 jalur) gugur karena mengalikan banyak penerbangan, padahal jalurnya bercabang tidak penuh. Jawaban: Opsi C (4 jalur). Tips: tulis jalur satu per satu dari kota asal; jangan langsung mengalikan bila cabangnya tidak lengkap.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-003",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 1,
+    "sumber": "R#3",
+    "stem": "Mbak Sari memiliki 2 mobil, 4 sepeda motor, dan 3 sepeda. Dengan berapa cara ia dapat berangkat ke kantor jika memakai satu kendaraan saja?",
+    "opsi": {
+      "a": "9 cara",
+      "b": "24 cara",
+      "c": "3 cara",
+      "d": "6 cara",
+      "e": "5 cara"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "2+4+3",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 24,
+      "c": 3,
+      "d": 6,
+      "e": 5
+    },
+    "pembahasan": "Memilih satu kendaraan dari beberapa kelompok memakai aturan penjumlahan: 2 + 4 + 3 = 9 cara.<br>Opsi B (24 cara) gugur karena mengalikan, padahal hanya memilih satu kendaraan; Opsi C (3 cara) gugur karena menghitung jenis kendaraan, bukan kendaraannya; Opsi D (6 cara) gugur karena lupa menghitung sepeda; Opsi E (5 cara) gugur karena lupa menghitung sepeda motor. Jawaban: Opsi A (9 cara). Tips: \"atau\" (pilih salah satu) dijumlah; \"dan\" (dipakai bersama) dikali.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-004",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 1,
+    "sumber": "R#4",
+    "stem": "Dika memiliki 4 kemeja, 3 celana, dan 2 pasang sepatu. Berapa banyak cara Dika berpakaian dengan kombinasi yang berbeda?",
+    "opsi": {
+      "a": "9 cara",
+      "b": "12 cara",
+      "c": "8 cara",
+      "d": "6 cara",
+      "e": "24 cara"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "4*3*2",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 12,
+      "c": 8,
+      "d": 6,
+      "e": 24
+    },
+    "pembahasan": "Kemeja, celana, dan sepatu dipakai bersamaan, jadi memakai aturan perkalian: 4 × 3 × 2 = 24 cara.<br>Opsi A (9 cara) gugur karena menjumlahkan, padahal ketiganya dipakai bersama; Opsi B (12 cara) gugur karena lupa menghitung sepatu; Opsi C (8 cara) gugur karena lupa menghitung celana; Opsi D (6 cara) gugur karena lupa menghitung kemeja. Jawaban: Opsi E (24 cara). Tips: barang yang dipakai sekaligus dikalikan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-005",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 1,
+    "sumber": "R#5",
+    "stem": "Dari kota Jogja ke kota Tempuran ada 3 rute, sedangkan dari Tempuran ke Sidoarjo ada 6 rute. Berapa banyak pilihan rute dari Jogja ke Sidoarjo melalui Tempuran?",
+    "opsi": {
+      "a": "9 rute",
+      "b": "18 rute",
+      "c": "36 rute",
+      "d": "12 rute",
+      "e": "6 rute"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "3*6",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 18,
+      "c": 36,
+      "d": 12,
+      "e": 6
+    },
+    "pembahasan": "Ruas pertama 3 pilihan dan ruas kedua 6 pilihan dilalui berurutan, jadi 3 × 6 = 18 rute.<br>Opsi A (9 rute) gugur karena menjumlahkan, padahal kedua ruas dilalui berurutan; Opsi C (36 rute) gugur karena menghitung pulang-pergi; Opsi D (12 rute) gugur karena salah mengalikan 3 × 4; Opsi E (6 rute) gugur karena hanya menghitung ruas kedua. Jawaban: Opsi B (18 rute). Tips: ruas yang dilalui berurutan selalu dikalikan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-006",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 3,
+    "sumber": "R#6",
+    "stem": "Dalam latihan sepak bola, Andre harus mengoper bola sampai ke Fikri di depan gawang. Andre bisa mengoper ke Bayu atau Candra. Bayu bisa mengoper ke Dodi atau Eko. Candra hanya bisa mengoper ke Eko. Eko bisa mengoper ke Dodi atau Fikri. Dodi bisa mengoper ke Fikri. Setiap pemain menerima bola paling banyak satu kali. Berapa alternatif jalur bola dari Andre ke Fikri?",
+    "opsi": {
+      "a": "3 jalur",
+      "b": "4 jalur",
+      "c": "6 jalur",
+      "d": "5 jalur",
+      "e": "2 jalur"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "5",
+    "nilai_opsi": {
+      "a": 3,
+      "b": 4,
+      "c": 6,
+      "d": 5,
+      "e": 2
+    },
+    "pembahasan": "Lewat Bayu: B → D → F; B → E → F; B → E → D → F (3 jalur). Lewat Candra: C → E → F; C → E → D → F (2 jalur). Total 5 jalur.<br>Opsi A (3 jalur) gugur karena lupa jalur yang melewati Eko lalu Dodi; Opsi B (4 jalur) gugur karena lupa jalur Andre → Candra → Eko → Dodi → Fikri; Opsi C (6 jalur) gugur karena menghitung jalur Andre → Bayu → Eko → Fikri dua kali; Opsi E (2 jalur) gugur karena hanya menghitung jalur lewat Bayu yang paling pendek. Jawaban: Opsi D (5 jalur). Tips: kelompokkan jalur berdasarkan operan pertama supaya tidak ada yang terlewat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-007",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 1,
+    "sumber": "R#7",
+    "stem": "Dari kota P ke kota Q ada 3 rute jalan, dari kota Q ke kota R ada 4 rute, dan dari kota R ke kota S ada 2 rute. Berapa banyak rute dari P ke S melalui Q dan R?",
+    "opsi": {
+      "a": "9 rute",
+      "b": "12 rute",
+      "c": "24 rute",
+      "d": "8 rute",
+      "e": "6 rute"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "3*4*2",
+    "nilai_opsi": {
+      "a": 9,
+      "b": 12,
+      "c": 24,
+      "d": 8,
+      "e": 6
+    },
+    "pembahasan": "Ketiga ruas dilalui berurutan, jadi 3 × 4 × 2 = 24 rute.<br>Opsi A (9 rute) gugur karena menjumlahkan banyak rute tiap ruas; Opsi B (12 rute) gugur karena lupa ruas R ke S; Opsi D (8 rute) gugur karena lupa ruas P ke Q; Opsi E (6 rute) gugur karena lupa ruas Q ke R. Jawaban: Opsi C (24 rute). Tips: berapa pun banyaknya ruas, selama berurutan tetap dikalikan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-008",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 3,
+    "sumber": "R#8",
+    "stem": "Rio pergi dari desa A ke desa C melalui desa B, lalu pulang lewat desa B juga. Dari A ke B ada 3 jalan dan dari B ke C ada 4 jalan. Jika di setiap ruas jalan pulang harus berbeda dengan jalan saat pergi, berapa banyak cara perjalanan pergi-pulang Rio?",
+    "opsi": {
+      "a": "72 cara",
+      "b": "144 cara",
+      "c": "12 cara",
+      "d": "132 cara",
+      "e": "24 cara"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "3*4*(3-1)*(4-1)",
+    "nilai_opsi": {
+      "a": 72,
+      "b": 144,
+      "c": 12,
+      "d": 132,
+      "e": 24
+    },
+    "pembahasan": "Pergi: 3 × 4 = 12 cara. Pulang: di ruas C → B tinggal 4 − 1 = 3 jalan dan di ruas B → A tinggal 3 − 1 = 2 jalan, jadi 3 × 2 = 6 cara. Total 12 × 6 = 72 cara.<br>Opsi B (144 cara) gugur karena membolehkan jalan pulang sama dengan jalan pergi; Opsi C (12 cara) gugur karena hanya menghitung perjalanan pergi; Opsi D (132 cara) gugur karena hanya membuang rute pulang yang sama persis di kedua ruas; Opsi E (24 cara) gugur karena mengalikan perjalanan pergi dengan 2. Jawaban: Opsi A (72 cara). Tips: jalan yang sudah dipakai mengurangi pilihan satu di setiap ruas.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-R-009",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-PENCACAHAN",
+    "tier": 2,
+    "sumber": "R#9",
+    "stem": "Dari Solo ke Madiun bisa melalui Ngawi atau melalui Ponorogo. Dari Solo ke Ngawi ada 4 jalan dan dari Ngawi ke Madiun ada 3 jalan. Dari Solo ke Ponorogo ada 5 jalan dan dari Ponorogo ke Madiun ada 2 jalan. Berapa banyak cara perjalanan dari Solo ke Madiun?",
+    "opsi": {
+      "a": "14 cara",
+      "b": "120 cara",
+      "c": "12 cara",
+      "d": "10 cara",
+      "e": "22 cara"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "4*3+5*2",
+    "nilai_opsi": {
+      "a": 14,
+      "b": 120,
+      "c": 12,
+      "d": 10,
+      "e": 22
+    },
+    "pembahasan": "Lewat Ngawi 4 × 3 = 12 cara. Lewat Ponorogo 5 × 2 = 10 cara. Karena memilih salah satu jalur, hasilnya dijumlah: 12 + 10 = 22 cara.<br>Opsi A (14 cara) gugur karena menjumlahkan semua jalan; Opsi B (120 cara) gugur karena mengalikan semua jalan; Opsi C (12 cara) gugur karena hanya menghitung jalur lewat Ngawi; Opsi D (10 cara) gugur karena hanya menghitung jalur lewat Ponorogo. Jawaban: Opsi E (22 cara). Tips: kalikan di dalam satu jalur, jumlahkan antarjalur.",
+    "status_kunci": "ganda"
+  }
+]

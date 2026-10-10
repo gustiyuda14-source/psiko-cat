@@ -1,0 +1,464 @@
+[
+  {
+    "id": "K08-B3-081",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "B3#81",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Sebagian burung pandai bernyanyi. Tidak ada burung yang tidak bersayap.",
+    "opsi": {
+      "a": "Semua burung yang bersayap pandai bernyanyi.",
+      "b": "Sebagian burung yang pandai bernyanyi bersayap.",
+      "c": "Burung kenari pandai bernyanyi.",
+      "d": "Sebagian burung yang tidak pandai bernyanyi tidak bersayap.",
+      "e": "Semua burung yang pandai bernyanyi tidak bersayap."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "\"Tidak ada burung yang tidak bersayap\" sama artinya dengan \"semua burung bersayap\". Burung yang pandai bernyanyi termasuk burung, jadi mereka juga bersayap: sebagian burung yang pandai bernyanyi bersayap.<br>Opsi A (Semua burung yang bersayap pandai bernyanyi.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi C (Burung kenari pandai bernyanyi.) gugur karena memakai pengetahuan di luar pernyataan; Opsi D (Sebagian burung yang tidak pandai bernyanyi tidak bersayap.) gugur karena bertentangan dengan premis kedua: semua burung bersayap; Opsi E (Semua burung yang pandai bernyanyi tidak bersayap.) gugur karena bertentangan dengan premis kedua. Jawaban: Opsi B (Sebagian burung yang pandai bernyanyi bersayap.). Tips: ubah dulu kalimat negatif ganda menjadi \"semua …\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B3-082",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 2,
+    "sumber": "B3#82",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua satpam memakai seragam batik pada hari Jumat. Kemarin hari Senin. Dodi adalah seorang satpam.",
+    "opsi": {
+      "a": "Dua hari lagi Dodi memakai seragam batik.",
+      "b": "Kemarin Dodi memakai seragam batik.",
+      "c": "Tiga hari yang lalu Dodi memakai seragam batik.",
+      "d": "Tiga hari lagi Dodi memakai seragam batik.",
+      "e": "Hari ini Dodi memakai seragam batik."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Kemarin Senin, jadi hari ini Selasa. Dodi satpam, jadi ia memakai batik setiap Jumat. Dari Selasa ke Jumat ada tiga hari: tiga hari lagi Dodi memakai seragam batik.<br>Opsi A (Dua hari lagi Dodi memakai seragam batik.) gugur karena dua hari lagi adalah Kamis; Opsi B (Kemarin Dodi memakai seragam batik.) gugur karena kemarin hari Senin; Opsi C (Tiga hari yang lalu Dodi memakai seragam batik.) gugur karena tiga hari yang lalu adalah Sabtu; Opsi E (Hari ini Dodi memakai seragam batik.) gugur karena hari ini Selasa. Jawaban: Opsi D (Tiga hari lagi Dodi memakai seragam batik.). Tips: tetapkan \"hari ini\" dulu, lalu hitung maju atau mundur ke hari yang disebut premis.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B3-083",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 2,
+    "sumber": "B3#83",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua lulusan berpredikat terbaik memiliki nilai di atas 90. Sebagian lulusan tahun ini berpredikat terbaik.",
+    "opsi": {
+      "a": "Semua lulusan tahun ini memiliki nilai di atas 90.",
+      "b": "Semua yang nilainya di atas 90 berpredikat terbaik.",
+      "c": "Sebagian lulusan tahun ini tidak memiliki nilai di atas 90.",
+      "d": "Tidak ada lulusan tahun ini yang berpredikat terbaik.",
+      "e": "Sebagian lulusan tahun ini memiliki nilai di atas 90."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Lulusan tahun ini yang berpredikat terbaik pasti memiliki nilai di atas 90 (premis pertama). Karena lulusan seperti itu ada (premis kedua), sebagian lulusan tahun ini memiliki nilai di atas 90.<br>Opsi A (Semua lulusan tahun ini memiliki nilai di atas 90.) gugur karena premis kedua hanya menyebut \"sebagian\"; Opsi B (Semua yang nilainya di atas 90 berpredikat terbaik.) gugur karena membalik premis pertama; Opsi C (Sebagian lulusan tahun ini tidak memiliki nilai di atas 90.) gugur karena \"sebagian\" tidak otomatis berarti \"sebagian lagi tidak\"; Opsi D (Tidak ada lulusan tahun ini yang berpredikat terbaik.) gugur karena bertentangan dengan premis kedua. Jawaban: Opsi E (Sebagian lulusan tahun ini memiliki nilai di atas 90.). Tips: \"semua A adalah B\" + \"sebagian C adalah A\" → \"sebagian C adalah B\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B3-084",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "B3#84",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua pembalap profesional memakai helm berstandar internasional. Sebagian pesepeda muda adalah pembalap profesional.",
+    "opsi": {
+      "a": "Sebagian pesepeda muda memakai helm berstandar internasional.",
+      "b": "Semua pesepeda muda adalah pembalap profesional.",
+      "c": "Sebagian pembalap profesional tidak memakai helm berstandar internasional.",
+      "d": "Semua yang memakai helm berstandar internasional adalah pembalap profesional.",
+      "e": "Helm berstandar internasional harganya mahal."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Pesepeda muda yang merupakan pembalap profesional pasti memakai helm berstandar internasional. Jadi sebagian pesepeda muda memakai helm berstandar internasional.<br>Opsi B (Semua pesepeda muda adalah pembalap profesional.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi C (Sebagian pembalap profesional tidak memakai helm berstandar internasional.) gugur karena bertentangan dengan premis pertama; Opsi D (Semua yang memakai helm berstandar internasional adalah pembalap profesional.) gugur karena membalik premis pertama; Opsi E (Helm berstandar internasional harganya mahal.) gugur karena tidak dibahas dalam pernyataan. Jawaban: Opsi A (Sebagian pesepeda muda memakai helm berstandar internasional.). Tips: ikuti \"sebagian\" sampai ke kesimpulan; kata itu tidak pernah naik menjadi \"semua\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B3-085",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 2,
+    "sumber": "B3#85",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Dinda dan Raka adalah sahabat. Setiap Sabtu pagi mereka berlari bersama.",
+    "opsi": {
+      "a": "Semua sahabat suka berlari.",
+      "b": "Raka selalu menunggu Dinda.",
+      "c": "Tidak dapat disimpulkan",
+      "d": "Dinda berlari lebih cepat daripada Raka.",
+      "e": "Semua orang yang berlari pada Sabtu pagi adalah sahabat."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Kedua pernyataan hanya menceritakan kebiasaan Dinda dan Raka. Tidak satu pun opsi lain yang pasti benar dari pernyataan itu, karena semuanya menambah informasi baru atau menggeneralisasi.<br>Opsi A (Semua sahabat suka berlari.) gugur karena menggeneralisasi dari satu pasangan; Opsi B (Raka selalu menunggu Dinda.) gugur karena tidak disebut dalam pernyataan; Opsi D (Dinda berlari lebih cepat daripada Raka.) gugur karena tidak ada perbandingan kecepatan; Opsi E (Semua orang yang berlari pada Sabtu pagi adalah sahabat.) gugur karena membalik dan menggeneralisasi pernyataan. Jawaban: Opsi C (Tidak dapat disimpulkan). Tips: pilih \"tidak dapat disimpulkan\" hanya setelah setiap opsi lain terbukti menambah informasi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-076",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "A3#76",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Jika hujan turun, jalan menjadi licin. Jika jalan licin, pengendara memperlambat laju.",
+    "opsi": {
+      "a": "Jika pengendara memperlambat laju, hujan turun.",
+      "b": "Jika hujan tidak turun, pengendara tidak memperlambat laju.",
+      "c": "Jika hujan turun, pengendara memperlambat laju.",
+      "d": "Jika jalan licin, hujan turun.",
+      "e": "Jika hujan turun, pengendara tidak memperlambat laju."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Rantai: hujan → jalan licin → pengendara memperlambat laju. Jadi jika hujan turun, pengendara memperlambat laju (silogisme hipotetis).<br>Opsi A (Jika pengendara memperlambat laju, hujan turun.) gugur karena membalik arah implikasi; Opsi B (Jika hujan tidak turun, pengendara tidak memperlambat laju.) gugur karena mengingkari sebab; jalan bisa licin karena hal lain; Opsi D (Jika jalan licin, hujan turun.) gugur karena membalik premis pertama; Opsi E (Jika hujan turun, pengendara tidak memperlambat laju.) gugur karena bertentangan dengan rantai premis. Jawaban: Opsi C (Jika hujan turun, pengendara memperlambat laju.). Tips: sambungkan ujung implikasi pertama dengan pangkal implikasi kedua.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-077",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 3,
+    "sumber": "A3#77",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Jika petugas tidak datang, kantor pelayanan tutup. Jika kantor pelayanan tidak tutup, antrean panjang terbentuk. Hari ini antrean panjang terbentuk.",
+    "opsi": {
+      "a": "Petugas datang.",
+      "b": "Kantor pelayanan tidak tutup.",
+      "c": "Kantor pelayanan tutup.",
+      "d": "Petugas tidak datang.",
+      "e": "Tidak dapat disimpulkan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Fakta \"antrean panjang terbentuk\" adalah akibat pada premis kedua. Akibat yang benar tidak membuktikan sebabnya (kesalahan membenarkan akibat), jadi tidak ada kesimpulan pasti.<br>Opsi A (Petugas datang.) gugur karena menarik kesimpulan dari akibat; antrean bisa terbentuk karena sebab lain; Opsi B (Kantor pelayanan tidak tutup.) gugur karena membenarkan akibat (antrean) untuk menyimpulkan sebab; Opsi C (Kantor pelayanan tutup.) gugur karena tidak ada premis yang menghubungkan antrean dengan kantor tutup; Opsi D (Petugas tidak datang.) gugur karena tidak ada premis yang mengarah ke sana. Jawaban: Opsi E (Tidak dapat disimpulkan). Tips: fakta yang cocok dengan bagian \"maka\" tidak bisa dipakai untuk menyimpulkan bagian \"jika\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-078",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 2,
+    "sumber": "A3#78",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua lukisan di galeri itu dibuat dengan cat minyak. Sebagian lukisan di galeri itu bertema alam.",
+    "opsi": {
+      "a": "Sebagian lukisan bercat minyak di galeri itu bertema alam.",
+      "b": "Semua lukisan di galeri itu bertema alam.",
+      "c": "Semua lukisan bercat minyak bertema alam.",
+      "d": "Sebagian lukisan di galeri itu tidak dibuat dengan cat minyak.",
+      "e": "Semua lukisan bertema alam di galeri itu dibuat dengan cat air."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Lukisan bertema alam di galeri itu juga lukisan di galeri itu, jadi pasti bercat minyak. Maka sebagian lukisan bercat minyak di galeri itu bertema alam.<br>Opsi B (Semua lukisan di galeri itu bertema alam.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi C (Semua lukisan bercat minyak bertema alam.) gugur karena menggeneralisasi ke semua lukisan bercat minyak; Opsi D (Sebagian lukisan di galeri itu tidak dibuat dengan cat minyak.) gugur karena bertentangan dengan premis pertama; Opsi E (Semua lukisan bertema alam di galeri itu dibuat dengan cat air.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi A (Sebagian lukisan bercat minyak di galeri itu bertema alam.). Tips: subjek bersama (lukisan di galeri itu) adalah jembatan kedua premis.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-079",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 2,
+    "sumber": "A3#79",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Nadia mulai bekerja minggu ini. Pabrik Sentosa sudah tiga bulan berhenti beroperasi dan belum menerima karyawan baru.",
+    "opsi": {
+      "a": "Nadia bekerja di Pabrik Sentosa.",
+      "b": "Nadia tidak bekerja di Pabrik Sentosa.",
+      "c": "Nadia belum tentu bekerja di Pabrik Sentosa.",
+      "d": "Nadia tidak bekerja.",
+      "e": "Pabrik Sentosa akan dibuka minggu ini."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Nadia mulai bekerja minggu ini, sedangkan Pabrik Sentosa tidak beroperasi dan tidak menerima karyawan baru. Jadi tempat kerja Nadia pasti bukan Pabrik Sentosa.<br>Opsi A (Nadia bekerja di Pabrik Sentosa.) gugur karena bertentangan dengan fakta pabrik tidak beroperasi; Opsi C (Nadia belum tentu bekerja di Pabrik Sentosa.) gugur karena premis sudah memastikan Nadia tidak mungkin bekerja di sana; Opsi D (Nadia tidak bekerja.) gugur karena bertentangan dengan premis pertama; Opsi E (Pabrik Sentosa akan dibuka minggu ini.) gugur karena tidak disebut dalam pernyataan. Jawaban: Opsi B (Nadia tidak bekerja di Pabrik Sentosa.). Tips: jika dua fakta saling meniadakan, kesimpulannya pasti (\"tidak\"), bukan \"belum tentu\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-080",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 3,
+    "sumber": "A3#80",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua ikan tidak dapat berenang. Sebagian ikan hidup di laut.",
+    "opsi": {
+      "a": "Sebagian ikan dapat berenang.",
+      "b": "Semua ikan hidup di laut.",
+      "c": "Semua yang hidup di laut tidak dapat berenang.",
+      "d": "Sebagian ikan yang tidak dapat berenang hidup di laut.",
+      "e": "Sebagian ikan yang dapat berenang hidup di laut."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Dalam soal ini premis dianggap benar walaupun bertentangan dengan kenyataan. Semua ikan tidak dapat berenang, dan sebagian ikan hidup di laut. Jadi sebagian ikan yang tidak dapat berenang hidup di laut.<br>Opsi A (Sebagian ikan dapat berenang.) gugur karena memakai pengetahuan umum yang bertentangan dengan premis; Opsi B (Semua ikan hidup di laut.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi C (Semua yang hidup di laut tidak dapat berenang.) gugur karena menggeneralisasi ke semua makhluk laut; Opsi E (Sebagian ikan yang dapat berenang hidup di laut.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi D (Sebagian ikan yang tidak dapat berenang hidup di laut.). Tips: silogisme menguji bentuk penalaran; jangan koreksi premis dengan pengetahuan umum.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-081",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 1,
+    "sumber": "A3#81",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua perenang andal memiliki napas yang panjang. Laras memiliki napas yang panjang.",
+    "opsi": {
+      "a": "Laras adalah perenang andal.",
+      "b": "Laras berbakat menjadi perenang.",
+      "c": "Laras menjadi perenang andal karena napasnya panjang.",
+      "d": "Laras bukan perenang andal.",
+      "e": "Laras belum tentu perenang andal."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Premis hanya menyatakan perenang andal → napas panjang, bukan sebaliknya. Laras yang bernapas panjang bisa perenang andal, bisa juga bukan. Jadi Laras belum tentu perenang andal.<br>Opsi A (Laras adalah perenang andal.) gugur karena membalik premis; napas panjang tidak hanya milik perenang; Opsi B (Laras berbakat menjadi perenang.) gugur karena menambah penilaian di luar pernyataan; Opsi C (Laras menjadi perenang andal karena napasnya panjang.) gugur karena membalik sebab-akibat; Opsi D (Laras bukan perenang andal.) gugur karena terlalu pasti; Laras mungkin saja perenang andal. Jawaban: Opsi E (Laras belum tentu perenang andal.). Tips: \"semua A adalah B\" tidak berarti \"semua B adalah A\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-082",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-JEBAKAN",
+    "tier": 3,
+    "sumber": "A3#82",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua kopi di kedai itu terasa pahit. Sebagian minuman yang terasa pahit mengandung gula.",
+    "opsi": {
+      "a": "Semua kopi di kedai itu mengandung gula.",
+      "b": "Tidak dapat disimpulkan",
+      "c": "Sebagian kopi di kedai itu mengandung gula.",
+      "d": "Sebagian kopi di kedai itu tidak mengandung gula.",
+      "e": "Semua minuman yang terasa pahit adalah kopi."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kopi termasuk minuman pahit, tetapi yang bergula hanya \"sebagian\" minuman pahit, dan bagian itu belum tentu kopi. Karena istilah tengah (minuman pahit) tidak pernah dibahas seluruhnya, tidak ada kesimpulan pasti.<br>Opsi A (Semua kopi di kedai itu mengandung gula.) gugur karena premis kedua hanya menyebut \"sebagian\" minuman pahit; Opsi C (Sebagian kopi di kedai itu mengandung gula.) gugur karena minuman pahit yang bergula bisa saja bukan kopi; Opsi D (Sebagian kopi di kedai itu tidak mengandung gula.) gugur karena tidak ada premis tentang kopi tanpa gula; Opsi E (Semua minuman yang terasa pahit adalah kopi.) gugur karena membalik premis pertama. Jawaban: Opsi B (Tidak dapat disimpulkan). Tips: dua premis \"semua A adalah B\" dan \"sebagian B adalah C\" tidak menghasilkan kesimpulan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-083",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 3,
+    "sumber": "A3#83",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua drone pengintai adalah pesawat nirawak. Semua pesawat nirawak dikendalikan dari darat. Elang-7 tidak dikendalikan dari darat.",
+    "opsi": {
+      "a": "Elang-7 bukan drone pengintai.",
+      "b": "Elang-7 adalah pesawat nirawak.",
+      "c": "Ada drone pengintai yang tidak dikendalikan dari darat.",
+      "d": "Sebagian pesawat nirawak adalah Elang-7.",
+      "e": "Elang-7 adalah drone pengintai."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Rantai: drone pengintai → pesawat nirawak → dikendalikan dari darat. Elang-7 tidak dikendalikan dari darat, jadi Elang-7 bukan pesawat nirawak, dan karena itu juga bukan drone pengintai (modus tollens).<br>Opsi B (Elang-7 adalah pesawat nirawak.) gugur karena pesawat nirawak pasti dikendalikan dari darat; Opsi C (Ada drone pengintai yang tidak dikendalikan dari darat.) gugur karena bertentangan dengan rantai premis; Opsi D (Sebagian pesawat nirawak adalah Elang-7.) gugur karena Elang-7 tidak mungkin pesawat nirawak; Opsi E (Elang-7 adalah drone pengintai.) gugur karena bertentangan dengan rantai premis. Jawaban: Opsi A (Elang-7 bukan drone pengintai.). Tips: jika ujung rantai salah, setiap mata rantai sebelumnya juga salah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-084",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 3,
+    "sumber": "A3#84",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua meja di toko itu terbuat dari jati. Semua jati di toko itu berasal dari hutan tanaman. Sebagian meja di toko itu berwarna cokelat.",
+    "opsi": {
+      "a": "Semua yang berasal dari hutan tanaman adalah meja.",
+      "b": "Semua meja di toko itu berwarna cokelat.",
+      "c": "Sebagian barang berwarna cokelat di toko itu berasal dari hutan tanaman.",
+      "d": "Sebagian jati di toko itu tidak berasal dari hutan tanaman.",
+      "e": "Semua barang berwarna cokelat di toko itu terbuat dari jati."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Meja → jati → hutan tanaman. Meja yang berwarna cokelat juga berasal dari hutan tanaman. Jadi sebagian barang berwarna cokelat di toko itu berasal dari hutan tanaman.<br>Opsi A (Semua yang berasal dari hutan tanaman adalah meja.) gugur karena membalik rantai premis; Opsi B (Semua meja di toko itu berwarna cokelat.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi D (Sebagian jati di toko itu tidak berasal dari hutan tanaman.) gugur karena bertentangan dengan premis kedua; Opsi E (Semua barang berwarna cokelat di toko itu terbuat dari jati.) gugur karena menggeneralisasi; barang cokelat lain belum tentu jati. Jawaban: Opsi C (Sebagian barang berwarna cokelat di toko itu berasal dari hutan tanaman.). Tips: pada tiga premis, rantaikan dua \"semua\" dulu, baru tempelkan \"sebagian\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-A3-085",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 3,
+    "sumber": "A3#85",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua kucing di rumah itu suka ikan. Sebagian kucing di rumah itu suka susu. Semua yang suka susu bertubuh gemuk.",
+    "opsi": {
+      "a": "Semua kucing di rumah itu bertubuh gemuk.",
+      "b": "Semua yang suka ikan suka susu.",
+      "c": "Sebagian kucing di rumah itu tidak suka ikan.",
+      "d": "Sebagian kucing di rumah itu yang suka ikan bertubuh gemuk.",
+      "e": "Semua yang bertubuh gemuk suka susu."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Kucing yang suka susu pasti gemuk (premis ketiga) dan pasti suka ikan (premis pertama). Kucing seperti itu ada (premis kedua), jadi sebagian kucing di rumah itu yang suka ikan bertubuh gemuk.<br>Opsi A (Semua kucing di rumah itu bertubuh gemuk.) gugur karena hanya kucing yang suka susu yang pasti gemuk; Opsi B (Semua yang suka ikan suka susu.) gugur karena membalik dan menggeneralisasi premis; Opsi C (Sebagian kucing di rumah itu tidak suka ikan.) gugur karena bertentangan dengan premis pertama; Opsi E (Semua yang bertubuh gemuk suka susu.) gugur karena membalik premis ketiga. Jawaban: Opsi D (Sebagian kucing di rumah itu yang suka ikan bertubuh gemuk.). Tips: lacak kelompok \"sebagian\" melewati setiap premis \"semua\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-084",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "B2#84",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Kambing memakan rumput gajah. Rumput gajah kaya serat. Semua hewan yang memakan makanan kaya serat pencernaannya sehat.",
+    "opsi": {
+      "a": "Kambing termasuk hewan karnivora.",
+      "b": "Pencernaan kambing sehat.",
+      "c": "Kambing memiliki empat lambung.",
+      "d": "Kambing lebih sehat daripada gajah.",
+      "e": "Rumput gajah hanya dimakan kambing."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kambing memakan rumput gajah yang kaya serat, jadi kambing termasuk hewan yang memakan makanan kaya serat. Menurut premis ketiga, pencernaannya sehat.<br>Opsi A (Kambing termasuk hewan karnivora.) gugur karena bertentangan dengan premis; kambing memakan rumput; Opsi C (Kambing memiliki empat lambung.) gugur karena memakai pengetahuan di luar pernyataan; Opsi D (Kambing lebih sehat daripada gajah.) gugur karena tidak ada perbandingan dalam pernyataan; Opsi E (Rumput gajah hanya dimakan kambing.) gugur karena tidak disebut dalam pernyataan. Jawaban: Opsi B (Pencernaan kambing sehat.). Tips: masukkan subjek ke dalam kelompok \"semua …\" lalu terapkan sifatnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-085",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "B2#85",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Bu Wati seorang perawat. Jika Bu Wati tidak pernah absen, ia mendapat penghargaan. Semua perawat tidak pernah absen.",
+    "opsi": {
+      "a": "Bu Wati perawat yang sibuk.",
+      "b": "Semua perawat mendapat penghargaan.",
+      "c": "Bu Wati pernah absen, tetapi tetap mendapat penghargaan.",
+      "d": "Bu Wati belum tentu mendapat penghargaan.",
+      "e": "Bu Wati mendapat penghargaan."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Bu Wati perawat, dan semua perawat tidak pernah absen, jadi Bu Wati tidak pernah absen. Syarat pada premis kedua terpenuhi, maka Bu Wati mendapat penghargaan (modus ponens).<br>Opsi A (Bu Wati perawat yang sibuk.) gugur karena tidak disebut dalam pernyataan; Opsi B (Semua perawat mendapat penghargaan.) gugur karena syarat penghargaan hanya dinyatakan untuk Bu Wati; Opsi C (Bu Wati pernah absen, tetapi tetap mendapat penghargaan.) gugur karena bertentangan dengan premis ketiga; Opsi D (Bu Wati belum tentu mendapat penghargaan.) gugur karena syarat penghargaan terpenuhi, jadi kesimpulannya pasti. Jawaban: Opsi E (Bu Wati mendapat penghargaan.). Tips: buktikan syarat \"jika\" terpenuhi dulu, baru ambil bagian \"maka\".",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-086",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "B2#86",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Sebagai pelatih, Pak Joni selalu datang tepat waktu. Jika seseorang selalu datang tepat waktu, ia dipercaya timnya.",
+    "opsi": {
+      "a": "Pak Joni dipercaya timnya.",
+      "b": "Pak Joni pelatih terbaik.",
+      "c": "Semua pelatih seperti Pak Joni.",
+      "d": "Hanya Pak Joni yang dipercaya timnya.",
+      "e": "Pak Joni tidak perlu dipercaya."
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Pak Joni selalu datang tepat waktu, sehingga syarat premis kedua terpenuhi. Maka Pak Joni dipercaya timnya.<br>Opsi B (Pak Joni pelatih terbaik.) gugur karena menambah penilaian di luar pernyataan; Opsi C (Semua pelatih seperti Pak Joni.) gugur karena menggeneralisasi dari satu orang; Opsi D (Hanya Pak Joni yang dipercaya timnya.) gugur karena kata \"hanya\" tidak didukung premis; Opsi E (Pak Joni tidak perlu dipercaya.) gugur karena bertentangan dengan kesimpulan yang sah. Jawaban: Opsi A (Pak Joni dipercaya timnya.). Tips: waspadai kata \"hanya\", \"semua\", dan \"terbaik\" yang menyusup ke opsi.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-087",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "B2#87",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua kebun di desa itu subur dan berpengairan. Sebagian kebun di desa itu ditanami cabai.",
+    "opsi": {
+      "a": "Semua kebun di desa itu ditanami cabai.",
+      "b": "Semua lahan yang subur dan berpengairan adalah kebun.",
+      "c": "Sebagian lahan yang subur dan berpengairan ditanami cabai.",
+      "d": "Semua yang ditanami cabai adalah kebun di desa itu.",
+      "e": "Semua lahan yang subur ditanami cabai."
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Kebun yang ditanami cabai juga kebun di desa itu, sehingga pasti subur dan berpengairan. Jadi sebagian lahan yang subur dan berpengairan ditanami cabai.<br>Opsi A (Semua kebun di desa itu ditanami cabai.) gugur karena mengubah \"sebagian\" menjadi \"semua\"; Opsi B (Semua lahan yang subur dan berpengairan adalah kebun.) gugur karena membalik premis pertama; Opsi D (Semua yang ditanami cabai adalah kebun di desa itu.) gugur karena menggeneralisasi ke semua tanaman cabai; Opsi E (Semua lahan yang subur ditanami cabai.) gugur karena menggeneralisasi ke semua lahan subur. Jawaban: Opsi C (Sebagian lahan yang subur dan berpengairan ditanami cabai.). Tips: kesimpulan \"sebagian\" boleh dibalik: sebagian A adalah B = sebagian B adalah A.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-088",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "B2#88",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua burung adalah hewan. Semua hewan membutuhkan oksigen. Merpati adalah burung yang dapat terbang. Tidak semua burung dapat menyelam.",
+    "opsi": {
+      "a": "Merpati dapat menyelam.",
+      "b": "Merpati tidak dapat menyelam.",
+      "c": "Merpati tidak membutuhkan oksigen.",
+      "d": "Merpati membutuhkan oksigen.",
+      "e": "Merpati mungkin tidak membutuhkan oksigen."
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Merpati → burung → hewan → membutuhkan oksigen. Premis tentang menyelam hanya pengalih; \"tidak semua\" tidak memberi tahu apa pun tentang merpati.<br>Opsi A (Merpati dapat menyelam.) gugur karena premis keempat tidak menyebut burung mana yang bisa menyelam; Opsi B (Merpati tidak dapat menyelam.) gugur karena premis keempat tidak menentukan nasib merpati; Opsi C (Merpati tidak membutuhkan oksigen.) gugur karena bertentangan dengan rantai premis; Opsi E (Merpati mungkin tidak membutuhkan oksigen.) gugur karena kesimpulan rantai premis sudah pasti. Jawaban: Opsi D (Merpati membutuhkan oksigen.). Tips: premis \"tidak semua\" jarang bisa dipakai untuk satu individu; cari rantai \"semua\" yang utuh.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-089",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 2,
+    "sumber": "B2#89",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua mawar di kebun Bu Rina berwarna merah. Semua anak suka bunga. Tari membawa mawar yang tidak berwarna merah.",
+    "opsi": {
+      "a": "Tari tidak suka bunga.",
+      "b": "Di kebun Bu Rina ada mawar yang tidak berwarna merah.",
+      "c": "Tari pasti seorang anak.",
+      "d": "Mawar yang dibawa Tari berasal dari kebun Bu Rina.",
+      "e": "Mawar yang dibawa Tari bukan dari kebun Bu Rina."
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Semua mawar dari kebun Bu Rina berwarna merah. Mawar yang dibawa Tari tidak merah, jadi pasti bukan dari kebun Bu Rina (modus tollens). Premis tentang anak suka bunga hanya pengalih.<br>Opsi A (Tari tidak suka bunga.) gugur karena tidak ada premis tentang kesukaan Tari; Opsi B (Di kebun Bu Rina ada mawar yang tidak berwarna merah.) gugur karena bertentangan dengan premis pertama; Opsi C (Tari pasti seorang anak.) gugur karena tidak ada premis yang menyatakan Tari anak-anak; Opsi D (Mawar yang dibawa Tari berasal dari kebun Bu Rina.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi E (Mawar yang dibawa Tari bukan dari kebun Bu Rina.). Tips: cari premis yang bertabrakan langsung dengan fakta; di situ kesimpulan negatifnya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-B2-090",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 2,
+    "sumber": "B2#90",
+    "instruksi": "Pilih kesimpulan yang paling tepat berdasarkan pernyataan berikut.",
+    "stem": "Semua peserta pelatihan sedang berada di aula atau di lapangan. Aula sedang kosong.",
+    "opsi": {
+      "a": "Semua peserta pelatihan sedang berada di aula.",
+      "b": "Semua peserta pelatihan sedang berada di lapangan.",
+      "c": "Semua peserta pelatihan suka berada di lapangan.",
+      "d": "Sebagian peserta pelatihan sedang berada di aula.",
+      "e": "Peserta pelatihan sedang pulang."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Setiap peserta berada di aula atau di lapangan. Aula kosong, jadi pilihan aula gugur dan tersisa lapangan: semua peserta sedang berada di lapangan.<br>Opsi A (Semua peserta pelatihan sedang berada di aula.) gugur karena bertentangan dengan fakta aula kosong; Opsi C (Semua peserta pelatihan suka berada di lapangan.) gugur karena \"suka\" tidak disebut; premis hanya menyebut tempat; Opsi D (Sebagian peserta pelatihan sedang berada di aula.) gugur karena bertentangan dengan fakta aula kosong; Opsi E (Peserta pelatihan sedang pulang.) gugur karena bertentangan dengan premis pertama. Jawaban: Opsi B (Semua peserta pelatihan sedang berada di lapangan.). Tips: \"A atau B\" + \"bukan A\" → pasti B.",
+    "status_kunci": "ganda"
+  }
+]

@@ -29,3 +29,10 @@ Perbaikan terhadap sumber:
 Tidak diinfus: A3#56 (aturan tidak dapat dipastikan dari satu contoh), A3#61 (duplikat B3#45, sudah di K05), B2#80 dan B2#83 sumber (aturan tidak jelas; B2#83 diganti aturan kali silang yang dijelaskan).
 
 Hasil cek buta Codex batch 2: 32/33 sama kunci. K10-B3-080: aturan Codex sama (√(610−441)=13), hanya salah tulis huruf — kunci tetap E. K10-A3-059: Codex menilai ambigu (tambahan +3,+4,+5 tidak terkait operand) — soal diganti aturan 2a+b (unik untuk 3 contoh linear), dicek ulang Codex: A (37) sama. Semua 33 dinaikkan ke "ganda".
+
+## Batch 3 — K07 Soal Cerita (34) + K08 Silogisme (22) · 2026-10-10
+
+Sumber: B3 61–66, 68, 69; A3 26–34; B2 62–70; Rute 1, 3–9 (K07) · B3 81–85; A3 76–85; B2 84–90 (K08). Adaptasi ringan (nama, angka, konteks diganti; struktur dan sub-task sama).
+Dibuang: B3 67 (tanda fungsi rasional) dan B3 70 (sistem barisan) — di luar profil psikotes; Rute 2 (urutan kunjungan desa) — kalimat sumber tidak cukup untuk satu jawaban.
+Temuan sumber: B3#66 tidak ada opsi benar (1/3 + 1/4 − 1/4 → 66,67%, tidak ada di opsi) · B3#68 punya dua solusi (2136 dan 3126), diganti aturan unik (2468) · B3#83, A3#78, A3#82, A3#84, A3#85 tidak ada kesimpulan yang sah secara formal di opsi sumber — ditulis ulang dengan kesimpulan sah (A3#82 jadi soal "tidak dapat disimpulkan") · B2#90 opsi "sebagian di kantor" ikut benar — diganti.
+Verifikasi: K07 kunci cocok `hitung` (34/34). Cek buta Codex: 54/56 sama. K07-B3-066 ("tidak diterima di kedua jurusan" bisa berarti tidak keduanya sekaligus) dan K08-B2-089 (merah vs kuning tidak eksplisit saling meniadakan) dinilai ambigu — stem diperjelas, dicek ulang Codex: sama, tidak ambigu. Semua 56 dinaikkan ke "ganda".
