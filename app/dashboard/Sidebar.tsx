@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
-import { NavDrill, NavHome, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
+import { NavAdmin, NavDrill, NavHome, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
 
 /*
   Shell navigasi dashboard mengikuti dajiks-cest: sidebar putih tetap di kiri
@@ -30,6 +30,12 @@ const PRIMARY_NAV: NavItem[] = [
 const SECONDARY_NAV: NavItem[] = [
   { label: "Drilling", href: "/dashboard/drill", icon: NavDrill },
   { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
+];
+
+// Hanya untuk akun admin (seperti tautan "Admin: akun peserta" di dajiks-cest); akses dicek ulang di server.
+const ADMIN_NAV: NavItem[] = [
+  { label: "Admin: akun peserta", href: "/admin/akun", icon: NavAdmin },
+  { label: "Admin: hasil peserta", href: "/admin", icon: NavAdmin },
 ];
 
 function isActive(pathname: string, href: string): boolean {
@@ -58,7 +64,7 @@ function navItemClass(active: boolean): string {
   ].join(" ");
 }
 
-export default function Sidebar({ name, username }: { name: string; username: string }) {
+export default function Sidebar({ name, username, isAdmin = false }: { name: string; username: string; isAdmin?: boolean }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const latihanActive = pathname.startsWith("/dashboard/latihan");
@@ -228,6 +234,7 @@ export default function Sidebar({ name, username }: { name: string; username: st
         )}
 
         {SECONDARY_NAV.map(renderLink)}
+        {isAdmin && ADMIN_NAV.map(renderLink)}
       </nav>
 
       <p className="mx-6 mb-6 mt-auto border-t border-dashed border-border pt-4 text-sm text-muted-foreground lg:border-t-0 lg:pt-0">

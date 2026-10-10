@@ -78,6 +78,7 @@ export default async function AdminPage() {
       <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
         <PageHeader kicker="Admin" title="Dashboard Admin" description="D'Ajiks Akademi · Psiko CAT" actions={
           <div className="flex flex-wrap gap-2">
+            <Link href="/dashboard" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Beranda</Link>
             <Link href="/admin/akun" className={buttonStyles({ variant: "primary", size: "sm" })}>Kelola akun</Link>
             <LogoutButton />
           </div>

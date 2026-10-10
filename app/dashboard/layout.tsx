@@ -9,11 +9,11 @@ export default async function DashboardLayout({
 }) {
   const session = await getSession();
   if (!session) redirect("/login");
-  if (session.role === "admin") redirect("/admin");
+  // Seperti akun admin di dajiks-cest (p002): admin = peserta biasa + menu Admin di sidebar.
 
   return (
     <div className="min-h-[100dvh] bg-background">
-      <Sidebar name={session.name} username={session.username} />
+      <Sidebar name={session.name} username={session.username} isAdmin={session.role === "admin"} />
       <main className="lg:ml-[var(--sidebar-width)]">{children}</main>
     </div>
   );

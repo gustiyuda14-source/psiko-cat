@@ -19,7 +19,7 @@ export default async function AkunPage() {
           kicker="Admin"
           title="Akun peserta"
           description="Buat akun, reset password, aktif/nonaktifkan, dan ganti nama."
-          actions={<Link href="/admin" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Dashboard admin</Link>}
+          actions={<Link href="/dashboard" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Beranda</Link>}
         />
         <AccountsManager />
       </div>

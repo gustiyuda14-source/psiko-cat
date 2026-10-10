@@ -30,11 +30,7 @@ export default function LoginPage() {
         setError(data.error ?? "Login gagal");
         return;
       }
-      if (data.role === "admin") {
-        router.push("/admin");
-      } else {
-        router.push("/dashboard");
-      }
+      router.push("/dashboard");
     } catch {
       setError("Gagal terhubung ke server. Periksa koneksi lalu coba lagi.");
     } finally {
