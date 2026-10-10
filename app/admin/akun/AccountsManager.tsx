@@ -104,7 +104,7 @@ export default function AccountsManager() {
   }
 
   const loginUrl = typeof window === "undefined" ? "" : window.location.origin + "/login?ref=akun"; // query baru: WA sudah cache /login tanpa preview
-  const card = (u: Credential) => `D'Ajiks Akademi — Psiko CAT\nNama: ${u.nama}\nUsername: ${u.id}\nPassword: ${u.password}\nMasuk: ${loginUrl}`;
+  const card = (u: Credential) => `D'Ajiks Akademi — Psiko CAT\nNama: ${u.nama}\nUsername: ${u.id}\nPassword: ${u.password}\nMasuk: ${loginUrl}\n(Tolong ID dan password-nya di-save ya, agar tidak terhapus pesan sementara atau hilang)`;
 
   async function copyAll() {
     try {
