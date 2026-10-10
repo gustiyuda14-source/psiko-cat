@@ -99,20 +99,15 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const wheel: WheelCard[] = cards.map((c, i) => {
     const t = c.tiers.map((ids) => stats(ids, progress));
     const all = stats(c.tiers.flat(), progress);
-    const tiers = t.map((s) => (s.total ? s.done / s.total : 0));
-    const p = all.total ? all.done / all.total : 0;
     return {
       kartu: c.kartu,
       no: String(i + 1).padStart(2, "0"),
       label: c.label,
       aspek: c.aspek,
       aspekLabel: aspekLabel(c.aspek),
-      tiers,
-      p,
+      tiers: t.map((s) => (s.total ? s.done / s.total : 0)) as [number, number, number],
+      p: all.total ? all.done / all.total : 0,
       locked: all.total === 0,
-      aria: `${c.label}, ${aspekLabel(c.aspek)}, ${
-        all.total === 0 ? "belum tersedia" : `${Math.round(p * 100)} persen. Dasar ${Math.round(tiers[0] * 100)}, Menengah ${Math.round(tiers[1] * 100)}, Lanjut ${Math.round(tiers[2] * 100)} persen`
-      }`,
       match: matches(c),
     };
   });
@@ -171,12 +166,6 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
               cards={wheel}
               selected={current}
               overall={{ p: allStats.total ? allStats.done / allStats.total : 0, done: allStats.done, total: allStats.total }}
-              hud={
-                <>
-                  Roda <b>drilling</b>&nbsp; {visible.length} jenis
-                </>
-              }
-              legend="Cincin dalam Dasar, tengah Menengah, luar Lanjut."
               onSelect={(kartu, again) => {
                 setSelected(kartu);
                 // Ketuk irisan yang sudah terpilih = lanjut ke aksi utama di panel.

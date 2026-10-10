@@ -5,16 +5,15 @@ import Link from "next/link";
 import { ArrowRight } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { DrillWheel, type WheelCard } from "@/app/dashboard/drill/DrillWheel";
+import { PackageOrbit, type OrbitItem } from "@/app/components/PackageOrbit";
 import { fillY, wavePath } from "@/lib/honey";
 import { clearLatihanProgress, useLatihanProgress } from "@/lib/latihan-progress";
 
 /*
-  Pemilih paket latihan memakai roda madu yang sama dengan katalog drilling: satu
-  irisan per paket, satu cincin per kolom (10 untuk Kecermatan, 4 bagian untuk modul
-  lain), madu = capaian terjauh (butir terbanyak yang pernah dijawab dalam satu sesi,
-  dari lib/latihan-progress.ts). Roda berputar supaya paket terpilih berhenti di
-  penanda. Panel di samping berisi rincian paket + tombol mulai; untuk Kecermatan juga
+  Pemilih paket latihan berupa orbit dial (PackageOrbit) yang berputar seperti roda
+  drilling: satu dial per paket, satu juring per kolom (10 untuk Kecermatan, 4 bagian
+  untuk modul lain), madu = capaian terjauh (butir terbanyak yang pernah dijawab dalam
+  satu sesi, dari lib/latihan-progress.ts). Panel di samping berisi rincian paket + tombol mulai; untuk Kecermatan juga
   rincian kolom dan pilihan timer per kolom. Nama komponen dipertahankan supaya
   pemanggilnya tidak berubah. CSS di app/honey.css.
 */
@@ -80,16 +79,13 @@ export function PackageCarousel({
   const status = (v: (typeof view)[number]) =>
     !v.ready ? "Belum tersedia" : v.p >= 1 ? "Selesai" : v.p > 0 ? `${Math.round(v.p * 100)}%` : "Belum mulai";
   const ring = (v: (typeof view)[number], k: number) => Math.max(0, Math.min(1, v.p * marks - k));
-  const wheel: WheelCard[] = view.map((v, i) => ({
-    kartu: String(v.pkg.id),
+  const orbit: OrbitItem[] = view.map((v, i) => ({
+    id: String(v.pkg.id),
     no: String(i + 1).padStart(2, "0"),
     label: v.pkg.label,
-    aspek: "paket",
-    aspekLabel: "",
-    tiers: Array.from({ length: marks }, (_, k) => ring(v, k)),
-    p: v.p,
+    status: status(v),
+    segs: Array.from({ length: marks }, (_, k) => ring(v, k)),
     locked: !v.ready,
-    match: true,
     aria: `${v.pkg.label}, ${status(v)}${v.ready ? `, ${v.done} dari ${v.pkg.questionCount} ${unitLabel}` : ""}`,
   }));
   const ready_ = view.filter((v) => v.ready);
@@ -108,17 +104,17 @@ export function PackageCarousel({
 
       <div className="hc-stage">
         <div className="hc-field">
-          <DrillWheel
-            cards={wheel}
+          <PackageOrbit
+            items={orbit}
             selected={String(current.pkg.id)}
             overall={{ p: totalAll ? doneAll / totalAll : 0, done: doneAll, total: totalAll }}
             unit={unitLabel}
             hud={
               <>
-                Roda <b>{moduleLabel}</b>&nbsp; {packages.length} paket
+                Orbit <b>{moduleLabel}</b>&nbsp; {packages.length} paket
               </>
             }
-            legend={marks === 10 ? "Satu cincin per kolom: dalam kolom 1, luar kolom 10." : "Satu cincin per seperempat paket, dari dalam ke luar."}
+            legend={marks === 10 ? "Satu juring per kolom, searah jarum jam dari atas." : "Satu juring per seperempat paket, searah jarum jam dari atas."}
             onSelect={(id, again) => {
               setSelected(Number(id));
               // Ketuk irisan yang sudah terpilih = lanjut ke tombol mulai di panel.

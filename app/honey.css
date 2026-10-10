@@ -167,6 +167,25 @@
 @media (max-width: 760px) { .hc-cubes { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
 @media (prefers-reduced-motion: reduce) { .hc-cube { animation: none } }
 
+/* ── Orbit paket Latihan (PackageOrbit) ── */
+.po-dial { cursor: pointer; outline: none; transition: opacity 300ms, filter 300ms }
+.po-scale { transition: transform 600ms var(--hc-ease) }
+.po-seg { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 1 }
+.po-dial:hover .po-seg { stroke: var(--brand-ink) }
+.po-dial.is-sel { filter: drop-shadow(0 8px 14px rgb(27 42 92 / .16)) drop-shadow(0 0 18px var(--hc-glow)) }
+.po-dial.is-sel .po-seg { stroke: var(--brand-ink); stroke-width: 1.6 }
+.po-dial.is-locked { opacity: .45 }
+.po-hex { fill: var(--surface-inset); stroke: var(--border-strong); stroke-width: 1 }
+.po-dial.is-sel .po-hex { fill: var(--brand-ink); stroke: none }
+.po-dial:focus-visible .po-hex { stroke: var(--ring); stroke-width: 3 }
+.po-no { font-weight: 300; fill: var(--foreground); font-variant-numeric: tabular-nums; pointer-events: none }
+.po-dial.is-sel .po-no { font-weight: 600; fill: var(--gold-hi) }
+.po-name { font-size: 14px; font-weight: 600; fill: var(--accent-ink); pointer-events: none }
+.po-status { fill: var(--muted-foreground); font-variant-numeric: tabular-nums }
+.po-ticks.is-live { animation: po-spin 24s linear infinite }
+@keyframes po-spin { to { transform: rotate(360deg) } }
+@media (prefers-reduced-motion: reduce) { .po-ticks.is-live { animation: none } .po-scale { transition-duration: 1ms } }
+
 /* ── Panel paket Latihan ── */
 .hc-cols { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin-top: 14px }
 .hc-cols i { position: relative; height: 26px; border-radius: 4px; background: var(--border) }

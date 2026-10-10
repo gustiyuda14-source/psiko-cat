@@ -4,11 +4,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { annularSector, fillY, nearestAngle, wavePath } from "@/lib/honey";
 
 /*
-  Roda madu: satu irisan per item, dikelompokkan per aspek. Tiap irisan punya N cincin
-  (drilling: 3 tingkat, dalam Dasar s.d. luar Lanjut; latihan: satu cincin per kolom);
-  madu mengisi cincin searah jarum jam sesuai bagian yang sudah dikerjakan. Roda berputar
+  Roda drilling: satu irisan per kartu, dikelompokkan per aspek. Tiap irisan punya
+  3 cincin = 3 tingkat (dalam Dasar, tengah Menengah, luar Lanjut); madu mengisi
+  cincin searah jarum jam sesuai bagian soal yang sudah dikerjakan. Roda berputar
   supaya irisan terpilih berhenti di penanda fokus (kanan di desktop, bawah di HP).
-  Dipakai katalog drilling dan PackageCarousel (latihan). CSS di app/honey.css.
+  CSS di app/honey.css.
 */
 
 export type WheelCard = {
@@ -17,10 +17,8 @@ export type WheelCard = {
   label: string;
   aspek: string;
   aspekLabel: string;
-  /** Bagian dikerjakan per cincin (dalam ke luar), 0-1. Semua item sama panjang. */
-  tiers: number[];
-  /** aria-label irisan. */
-  aria: string;
+  /** Bagian dikerjakan per tingkat, 0-1. */
+  tiers: [number, number, number];
   p: number;
   locked: boolean;
   /** Lolos filter aspek + pencarian. */
@@ -31,7 +29,7 @@ const GAP = 7; // derajat jeda antar kelompok aspek
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const CORE_HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
 
-function useWidth<T extends HTMLElement>() {
+export function useWidth<T extends HTMLElement>() {
   const ref = useRef<T>(null);
   const [w, setW] = useState(0);
   useEffect(() => {
@@ -44,7 +42,7 @@ function useWidth<T extends HTMLElement>() {
   return [ref, w] as const;
 }
 
-function useWide() {
+export function useWide() {
   const [wide, setWide] = useState(true);
   useEffect(() => {
     const mq = matchMedia("(min-width: 960px)");
@@ -61,18 +59,11 @@ export function DrillWheel({
   selected,
   onSelect,
   overall,
-  hud,
-  legend,
-  unit = "soal",
 }: {
   cards: WheelCard[];
   selected: string;
   onSelect: (kartu: string, focus?: boolean) => void;
   overall: { p: number; done: number; total: number };
-  hud: React.ReactNode;
-  legend: string;
-  /** Satuan di inti, mis. "soal" atau "butir". */
-  unit?: string;
 }) {
   const [boxRef, W] = useWidth<HTMLDivElement>();
   const focus = useWide() ? 0 : 90;
@@ -80,13 +71,11 @@ export function DrillWheel({
 
   const geo = useMemo(() => {
     const groups = cards.filter((c, i) => i === 0 || c.aspek !== cards[i - 1].aspek).length;
-    // Satu kelompok saja (latihan): irisan rapat tanpa celah aspek.
-    const gap = groups > 1 ? GAP : 0;
-    const sweep = (360 - groups * gap) / cards.length;
+    const sweep = (360 - groups * GAP) / cards.length;
     const centers: Record<string, number> = {};
     let acc = 0;
     cards.forEach((c, i) => {
-      if (i > 0 && c.aspek !== cards[i - 1].aspek) acc += gap;
+      if (i > 0 && c.aspek !== cards[i - 1].aspek) acc += GAP;
       centers[c.kartu] = acc + sweep / 2;
       acc += sweep;
     });
@@ -104,9 +93,7 @@ export function DrillWheel({
 
   const Ro = Math.max(120, Math.min(W / 2 - 34, 270));
   const Ri = Ro * 0.36;
-  const rings = cards[0]?.tiers.length || 3;
-  const band = (Ro - Ri) / rings;
-  const pad = Math.min(2, band * 0.15);
+  const band = (Ro - Ri) / 3;
   const rMid = (Ri + Ro) / 2;
   const H = 2 * Ro + 110;
   const coreR = Ri * 0.92;
@@ -150,7 +137,7 @@ export function DrillWheel({
   return (
     <div ref={boxRef} className="hc-wheelbox hc-frame">
       <p className="hc-hud" aria-hidden="true">
-        {hud}
+        Roda <b>drilling</b>&nbsp; {cards.filter((c) => c.match).length} jenis
       </p>
       <svg className="hc-wheel" width={W} height={H} viewBox={`${-W / 2} ${-H / 2} ${W} ${H}`} role="group" aria-label="Roda jenis soal. Gunakan panah untuk berpindah kartu.">
         <defs>
@@ -196,7 +183,9 @@ export function DrillWheel({
                     tabIndex={c.match && sel ? 0 : -1}
                     aria-pressed={sel}
                     aria-disabled={!c.match}
-                    aria-label={c.aria}
+                    aria-label={`${c.label}, ${c.aspekLabel}, ${
+                      c.locked ? "belum tersedia" : `${Math.round(c.p * 100)} persen. Dasar ${Math.round(c.tiers[0] * 100)}, Menengah ${Math.round(c.tiers[1] * 100)}, Lanjut ${Math.round(c.tiers[2] * 100)} persen`
+                    }`}
                     onClick={() => c.match && onSelect(c.kartu, sel)}
                     onKeyDown={(e) => onKey(e, c.kartu)}
                   >
@@ -207,11 +196,11 @@ export function DrillWheel({
                         <path
                           key={t}
                           fill="url(#dw-honey)"
-                          d={annularSector(Ri + band * t + pad, Ri + band * (t + 1) - pad, -half + 0.01, -half + 0.01 + (2 * half - 0.02) * Math.min(1, f))}
+                          d={annularSector(Ri + band * t + 2, Ri + band * (t + 1) - 2, -half + 0.01, -half + 0.01 + (2 * half - 0.02) * Math.min(1, f))}
                         />
                       ) : null
                     )}
-                    <path className="hc-wedge-sep" d={Array.from({ length: rings - 1 }, (_, t) => arc(Ri + band * (t + 1))).join(" ")} />
+                    <path className="hc-wedge-sep" d={`${arc(Ri + band)} ${arc(Ri + 2 * band)}`} />
                     <path className="hc-wedge-out" d={base} />
                   </g>
                   <g transform={`translate(${rMid} 0)`} className="hc-wedge-label" aria-hidden="true">
@@ -229,7 +218,7 @@ export function DrillWheel({
             );
           })}
 
-          {groups.filter((g) => g.label).map((g) => {
+          {groups.map((g) => {
             const ang = (g.from + g.to) / 2;
             return (
               <g key={g.aspek} transform={`rotate(${ang}) translate(${Ro + 40} 0)`} aria-hidden="true">
@@ -262,11 +251,11 @@ export function DrillWheel({
             {Math.round(overall.p * 100)}%
           </text>
           <text y={coreR * 0.42} textAnchor="middle" className="hc-core-of">
-            {overall.done} / {overall.total} {unit}
+            {overall.done} / {overall.total} soal
           </text>
         </g>
       </svg>
-      <p className="hc-legend">{legend}</p>
+      <p className="hc-legend">Cincin dalam Dasar, tengah Menengah, luar Lanjut.</p>
     </div>
   );
 }
