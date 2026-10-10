@@ -95,7 +95,8 @@ export function DrillWheel({
   const Ri = Ro * 0.36;
   const band = (Ro - Ri) / 3;
   const rMid = (Ri + Ro) / 2;
-  const H = 2 * Ro + 110;
+  // Layar sempit: ruang atas lebih supaya label aspek teratas tidak menabrak teks HUD "Roda drilling".
+  const H = 2 * Ro + (W < 600 ? 160 : 110);
   const coreR = Ri * 0.92;
   const coreScale = (coreR * 2) / 115.47;
   const { half } = geo;
@@ -203,7 +204,7 @@ export function DrillWheel({
                     <path className="hc-wedge-sep" d={`${arc(Ri + band)} ${arc(Ri + 2 * band)}`} />
                     <path className="hc-wedge-out" d={base} />
                   </g>
-                  <g transform={`translate(${rMid} 0)`} className="hc-wedge-label" aria-hidden="true">
+                  <g transform={`translate(${rMid} 0)`} className={`hc-wedge-label${sel ? " is-sel" : ""}`} aria-hidden="true">
                     <g className="hc-upright" style={{ transform: `rotate(${-(ang + spin)}deg)` }}>
                       <text className="hc-wedge-no" y={-3} textAnchor="middle">
                         {c.no}

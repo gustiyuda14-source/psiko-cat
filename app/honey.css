@@ -89,6 +89,20 @@
 .hc-wedge-pct { font-size: 11.5px; font-weight: 600; fill: var(--brand-ink); font-variant-numeric: tabular-nums }
 .hc-aspek { font-size: 11.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; fill: var(--muted-foreground) }
 
+/* Aksen navy khusus roda drilling (simulasi memakai kelas hc-core-* yang sama, jadi semua di bawah .hc-wheel). */
+.hc-wheel .hc-dial-ring { stroke: var(--brand-ink); stroke-opacity: .35 }
+.hc-wheel .hc-tick { stroke: var(--brand-ink); stroke-opacity: .3 }
+.hc-wheel .hc-tick.is-major { stroke: var(--accent-strong); stroke-opacity: 1 }
+.hc-wheel .hc-aspek { fill: var(--brand-ink); font-weight: 700 }
+.hc-wheel .hc-wedge.is-sel .hc-wedge-base { fill: var(--surface-nav) }
+.hc-wheel .hc-wedge.is-sel .hc-wedge-sep { stroke: rgb(255 255 255 / .28) }
+.hc-wedge-label.is-sel .hc-wedge-no { fill: var(--gold-hi) }
+.hc-wedge-label.is-sel .hc-wedge-pct { fill: #fff }
+.hc-wheel .hc-core-base { fill: var(--surface-nav) }
+.hc-wheel .hc-core-line { stroke: var(--gold-hi); stroke-width: 1.5 }
+.hc-wheel .hc-core-text text { fill: #fff }
+.hc-wheel .hc-core-lab, .hc-wheel .hc-core-of { fill: var(--gold-hi) !important }
+
 /* ── Inti madu (total) + meter panel ── */
 .hc-core-base { fill: var(--surface-card) }
 .hc-core-line { fill: none; stroke: var(--border-strong); stroke-width: 1; vector-effect: non-scaling-stroke }
@@ -136,7 +150,8 @@
 .hc-panel-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
 .hc-tag { padding: 7px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font: 600 .72rem/1 var(--font-display-src), sans-serif; letter-spacing: .16em; text-transform: uppercase }
 .hc-mod { padding: 6px 9px; border: 1px solid var(--border-strong); border-radius: 999px; color: var(--foreground); font: 600 .66rem/1 var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap }
-.hc-mod[data-mod="kecerdasan"] { border-color: transparent; background: var(--accent-soft); color: var(--accent-ink) }
+.hc-mod[data-mod="kecerdasan"] { border-color: transparent; background: var(--surface-nav); color: var(--gold-hi) }
+.hc-mod[data-mod="kepribadian"] { border-color: transparent; background: var(--gold-grad); color: var(--surface-nav) }
 .hc-sector > .hc-mod { position: absolute; top: 10px; right: 10px; padding: 4px 7px; font-size: .58rem; letter-spacing: .06em }
 .hc-code { font: 600 .8rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
 .hc-panel-title { margin: 14px 0 6px; font: 700 1.6rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground); text-wrap: balance }
@@ -149,7 +164,7 @@
 .hc-meter-of { font-size: .875rem; line-height: 1.35; color: var(--muted-foreground) }
 .hc-levels { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none }
 .hc-level { display: inline-flex; align-items: center; gap: 8px; padding: 7px 11px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-inset); font-size: .8rem }
-.hc-level b { font: 600 .8rem/1 var(--font-display-src), sans-serif; color: var(--foreground) }
+.hc-level b { font: 600 .8rem/1 var(--font-display-src), sans-serif; color: var(--brand-ink) }
 .hc-level span { color: var(--muted-foreground) }
 .hc-level::before { content: ""; width: 8px; height: 9px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot); opacity: .45 }
 .hc-level[data-tier="2"]::before { opacity: .75 }
