@@ -56,7 +56,6 @@ export default function DrillSession({
   const picked = q ? picks[q.id] ?? "" : "";
   const result = q ? results[q.id] : undefined;
   const need = q?.multi ? 2 : 1;
-  const finished = setIds !== null && setIds.every((id) => results[id]);
   const poolSize = items.filter((it) => tier === null || it.tier === tier).length;
 
   const goTo = useCallback((i: number) => {
@@ -114,7 +113,7 @@ export default function DrillSession({
   };
 
   useExamKeyboard({
-    enabled: Boolean(q) && !finished,
+    enabled: Boolean(q),
     choiceKeys: LETTERS.map((k) => k.toUpperCase()),
     onChoose: choose,
     onPrev: () => setIds && goTo(Math.max(0, idx - 1)),
@@ -163,35 +162,6 @@ export default function DrillSession({
             </div>
           )}
         </div>
-      </div>
-    );
-  }
-
-  if (finished) {
-    const benar = setIds.filter((id) => results[id].benar).length;
-    const times = setIds.map((id) => results[id].ms).sort((a, b) => a - b);
-    const median = Math.round(times[Math.floor(times.length / 2)] / 1000);
-    return (
-      <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={`Drilling ${label}`} count={subtitle} actions={exit} />
-        <section className="surface-card mx-auto my-6 w-[calc(100%-2rem)] max-w-xl space-y-5 px-6 py-8 text-center sm:px-8">
-          <h2 className="font-heading text-2xl text-foreground">Set selesai</h2>
-          <p className="tnum font-heading text-5xl text-foreground">
-            {benar}/{setIds.length}
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Median waktu {median} detik per soal. Target ujian sekitar 54 detik per soal.
-          </p>
-          <div className="flex flex-col gap-2.5 sm:flex-row sm:justify-center">
-            <Link href="/dashboard/drill" className="mbtn justify-center">
-              Kembali ke katalog
-            </Link>
-            <Button variant="accent" onClick={startSet}>
-              Set berikutnya
-              <ArrowRight className="size-4" />
-            </Button>
-          </div>
-        </section>
       </div>
     );
   }
