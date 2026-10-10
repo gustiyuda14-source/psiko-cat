@@ -162,19 +162,21 @@ export default function LatihanKecerdasan({ questions }: { questions: SafeQuesti
             </Badge>
           </div>
 
-          {payload?.instruksi && (
-            <p className="text-sm font-semibold text-foreground">{payload.instruksi}</p>
-          )}
-          <QuestionPassage text={payload?.sub_text} />
-          {payload?.question_text && (
-            <p className={`max-w-[68ch] leading-relaxed text-foreground ${payload.sub_text ? "text-base font-semibold" : "text-lg"}`}>{payload.question_text}</p>
-          )}
-          {payload?.svg_content && (
-            <div
-              className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
-              dangerouslySetInnerHTML={{ __html: payload.svg_content }}
-            />
-          )}
+          <div className="q-card">
+            {payload?.instruksi && (
+              <p className="q-ins">{payload.instruksi}</p>
+            )}
+            <QuestionPassage text={payload?.sub_text} />
+            {payload?.question_text && (
+              <p className="q-stem">{payload.question_text}</p>
+            )}
+            {payload?.svg_content && (
+              <div
+                className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
+                dangerouslySetInnerHTML={{ __html: payload.svg_content }}
+              />
+            )}
+          </div>
 
           <div className="opts pt-1">
             {payload?.choices?.map((c) => {
@@ -190,7 +192,7 @@ export default function LatihanKecerdasan({ questions }: { questions: SafeQuesti
                   <span className={`mark ${multi ? "is-square" : ""}`}>
                     {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
                   </span>
-                  <span className="text-sm leading-relaxed">{c.text}</span>
+                  <span className="opt-text">{c.text}</span>
                 </button>
               );
             })}

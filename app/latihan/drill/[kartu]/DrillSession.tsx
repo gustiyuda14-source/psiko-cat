@@ -229,15 +229,17 @@ export default function DrillSession({
             <p className="qnum tnum">Soal {idx + 1}</p>
             <Badge tone="neutral">{tierLabel(q.tier)}</Badge>
           </div>
-          {q.instruksi && <p className="text-sm font-semibold text-foreground">{q.instruksi}</p>}
-          <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
-          <p className={`max-w-[68ch] leading-relaxed text-foreground ${q.bacaan ? "text-base font-semibold" : "text-lg"}`}>{q.stem}</p>
-          {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
-          {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
-          {q.gambar && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] w-full max-w-[760px] rounded-md border border-border bg-white p-2" />
-          )}
+          <div className="q-card">
+            {q.instruksi && <p className="q-ins">{q.instruksi}</p>}
+            <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
+            <p className="q-stem">{q.stem}</p>
+            {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
+            {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
+            {q.gambar && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={`/${q.gambar}`} alt="" className="mx-auto h-auto max-h-[60vh] w-full max-w-[760px] rounded-md border border-border bg-white p-2" />
+            )}
+          </div>
 
           <div className="opts pt-1">
             {LETTERS.map((k) => {
@@ -247,7 +249,7 @@ export default function DrillSession({
               return (
                 <button key={k} type="button" onClick={() => choose(k)} aria-pressed={sel} disabled={Boolean(result)} className={`opt ${state}`}>
                   <span className={`mark ${q.multi ? "is-square" : ""}`}>{k.toUpperCase()}</span>
-                  <span className="text-sm leading-relaxed">{q.opsi[k]}</span>
+                  <span className="opt-text">{q.opsi[k]}</span>
                   {result && isKey && <Check className="ml-auto size-5 text-success" strokeWidth={3} />}
                   {result && sel && !isKey && <Close className="ml-auto size-5 text-destructive" strokeWidth={3} />}
                 </button>

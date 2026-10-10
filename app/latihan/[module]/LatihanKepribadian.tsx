@@ -139,9 +139,11 @@ export default function LatihanKepribadian({ questions }: { questions: SafeQuest
             {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
           </div>
 
-          <p className="mx-auto max-w-[46ch] py-6 text-center text-lg font-medium leading-relaxed text-foreground sm:py-8 sm:text-xl">
-            {payload?.statement}
-          </p>
+          <div className="q-card mx-auto w-full max-w-2xl">
+            <p className="mx-auto max-w-[46ch] py-4 text-center text-xl font-semibold leading-relaxed text-foreground sm:py-6 sm:text-2xl">
+              {payload?.statement}
+            </p>
+          </div>
 
           <fieldset className="opts mx-auto max-w-2xl">
             <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
@@ -156,7 +158,7 @@ export default function LatihanKepribadian({ questions }: { questions: SafeQuest
                   className={`opt ${isSelected ? "sel" : ""}`}
                 >
                   <span className="mark">{isSelected && <span className="mark-dot" />}</span>
-                  <span className="flex-1 text-sm font-medium">{c.text}</span>
+                  <span className="opt-text">{c.text}</span>
                   <kbd className="hidden font-mono text-xs text-faint-foreground sm:block">{c.key}</kbd>
                 </button>
               );

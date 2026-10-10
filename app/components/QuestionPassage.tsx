@@ -1,4 +1,4 @@
-// Bacaan/wacana soal dalam satu kartu: paragraf rata kiri-kanan, baris "• …" jadi daftar,
+// Bacaan/wacana soal (panel di dalam .q-card): paragraf rata kiri-kanan, baris "• …" jadi daftar,
 // tabel opsional. Dipakai simulasi, latihan, drilling, dan pembahasan.
 
 export type PassageTable = { judul?: string; kolom: string[]; baris: string[][] };
@@ -33,7 +33,7 @@ export default function QuestionPassage({
   const size = compact ? "text-sm leading-6" : "text-base leading-7";
 
   return (
-    <section aria-label="Bacaan" className={`surface-card space-y-3 ${compact ? "px-4 py-3" : "px-5 py-4 sm:px-7 sm:py-6"}`}>
+    <section aria-label="Bacaan" className={`q-passage space-y-3 ${compact ? "is-compact" : ""}`}>
       {parts.map((b, i) =>
         b.list ? (
           <ul key={i} className={`list-disc space-y-1.5 pl-5 text-justify text-foreground marker:text-muted-foreground ${size}`}>
