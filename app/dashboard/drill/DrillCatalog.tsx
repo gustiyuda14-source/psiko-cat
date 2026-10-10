@@ -92,6 +92,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   }, []);
 
   const aspekLabel = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.label ?? key;
+  const modul = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.modul ?? "Kecerdasan";
   const q = query.trim().toLowerCase();
   const matches = (c: CatalogCard) =>
     (filter === "all" || c.aspek === filter) && (!q || `${c.label} ${c.desc}`.toLowerCase().includes(q));
@@ -131,6 +132,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
       p: s.total ? s.done / s.total : 0,
       meta: `${own.length} jenis · ${s.total} soal`,
       mini: <MiniHexes fills={own.map((w) => (w.locked ? null : w.p))} />,
+      badge: a.key === "all" ? undefined : modul(a.key),
     };
   });
 
@@ -193,6 +195,9 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
         <aside ref={panelRef} className="hc-panel" aria-live="polite" key={current}>
           <div className="hc-panel-top">
+            <span className="hc-mod" data-mod={modul(card.aspek).toLowerCase()}>
+              Drilling {modul(card.aspek)}
+            </span>
             <span className="hc-tag">{aspekLabel(card.aspek)}</span>
             <span className="hc-code tnum">
               Kartu {String(cards.indexOf(card) + 1).padStart(2, "0")}

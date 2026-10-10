@@ -219,14 +219,25 @@ export function DrillWheel({
           })}
 
           {groups.map((g) => {
+            // Label melengkung di busur luar. Di separuh bawah layar busurnya dibalik
+            // (kanan→kiri jadi kiri→kanan) supaya huruf tetap tegak, bukan terbalik.
             const ang = (g.from + g.to) / 2;
+            const v = (((ang + spin) % 360) + 360) % 360;
+            const bottom = v > 0 && v < 180;
+            const r = Ro + 40;
+            const P = (d: number) => {
+              const a = ((ang + d) * Math.PI) / 180;
+              return `${(r * Math.cos(a)).toFixed(2)} ${(r * Math.sin(a)).toFixed(2)}`;
+            };
+            const id = `dw-asp-${g.aspek}`;
             return (
-              <g key={g.aspek} transform={`rotate(${ang}) translate(${Ro + 40} 0)`} aria-hidden="true">
-                <g className="hc-upright" style={{ transform: `rotate(${-(ang + spin)}deg)` }}>
-                  <text className="hc-aspek" textAnchor="middle" dominantBaseline="middle">
+              <g key={g.aspek} aria-hidden="true">
+                <path id={id} d={bottom ? `M${P(80)} A${r} ${r} 0 0 0 ${P(-80)}` : `M${P(-80)} A${r} ${r} 0 0 1 ${P(80)}`} fill="none" />
+                <text className="hc-aspek" dy="0.35em">
+                  <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">
                     {g.label}
-                  </text>
-                </g>
+                  </textPath>
+                </text>
               </g>
             );
           })}

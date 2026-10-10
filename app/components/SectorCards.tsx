@@ -13,6 +13,8 @@ export type Sector = {
   /** Persen gabungan 0-1; null = tidak ditampilkan. */
   p: number | null;
   mini?: React.ReactNode;
+  /** Label kecil di pojok kanan atas, mis. modul Kecerdasan/Kepribadian. */
+  badge?: string;
 };
 
 export function SectorCards({
@@ -36,6 +38,11 @@ export function SectorCards({
           aria-pressed={s.key === active}
           onClick={() => onPick(s.key)}
         >
+          {s.badge && (
+            <span className="hc-mod" data-mod={s.badge.toLowerCase()}>
+              {s.badge}
+            </span>
+          )}
           <span className="hc-sector-mini" aria-hidden="true">
             {s.mini}
           </span>

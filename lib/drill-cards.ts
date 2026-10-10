@@ -3,13 +3,14 @@
 
 export type DrillAspek = "verbal" | "numerik" | "logika" | "analitis" | "figural" | "sikap";
 
-export const DRILL_ASPEK: { key: DrillAspek; label: string }[] = [
-  { key: "verbal", label: "Verbal" },
-  { key: "numerik", label: "Numerik" },
-  { key: "logika", label: "Logika" },
-  { key: "analitis", label: "Analitis" },
-  { key: "figural", label: "Figural" },
-  { key: "sikap", label: "Sikap Kerja" },
+/** modul = tes resmi asal aspek: Sikap Kerja bagian tes Kepribadian, sisanya Kecerdasan. */
+export const DRILL_ASPEK: { key: DrillAspek; label: string; modul: "Kecerdasan" | "Kepribadian" }[] = [
+  { key: "verbal", label: "Verbal", modul: "Kecerdasan" },
+  { key: "numerik", label: "Numerik", modul: "Kecerdasan" },
+  { key: "logika", label: "Logika", modul: "Kecerdasan" },
+  { key: "analitis", label: "Analitis", modul: "Kecerdasan" },
+  { key: "figural", label: "Figural", modul: "Kecerdasan" },
+  { key: "sikap", label: "Sikap Kerja", modul: "Kepribadian" },
 ];
 
 /** opsi: jumlah pilihan per soal (default 5 = a–e; Sikap Kerja 2 = a–b). */
