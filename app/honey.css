@@ -193,25 +193,6 @@
 @media (max-width: 760px) { .hc-cubes { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
 @media (prefers-reduced-motion: reduce) { .hc-cube { animation: none } }
 
-/* ── Orbit paket Latihan (PackageOrbit) ── */
-.po-dial { cursor: pointer; outline: none; transition: opacity 300ms, filter 300ms }
-.po-scale { transition: transform 600ms var(--hc-ease) }
-.po-seg { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 1 }
-.po-dial:hover .po-seg { stroke: var(--brand-ink) }
-.po-dial.is-sel { filter: drop-shadow(0 8px 14px rgb(27 42 92 / .16)) drop-shadow(0 0 18px var(--hc-glow)) }
-.po-dial.is-sel .po-seg { stroke: var(--brand-ink); stroke-width: 1.6 }
-.po-dial.is-locked { opacity: .45 }
-.po-hex { fill: var(--surface-inset); stroke: var(--border-strong); stroke-width: 1 }
-.po-dial.is-sel .po-hex { fill: var(--brand-ink); stroke: none }
-.po-dial:focus-visible .po-hex { stroke: var(--ring); stroke-width: 3 }
-.po-no { font-weight: 300; fill: var(--foreground); font-variant-numeric: tabular-nums; pointer-events: none }
-.po-dial.is-sel .po-no { font-weight: 600; fill: var(--gold-hi) }
-.po-name { font-size: 14px; font-weight: 600; fill: var(--accent-ink); pointer-events: none }
-.po-status { fill: var(--muted-foreground); font-variant-numeric: tabular-nums }
-.po-ticks.is-live { animation: po-spin 24s linear infinite }
-@keyframes po-spin { to { transform: rotate(360deg) } }
-@media (prefers-reduced-motion: reduce) { .po-ticks.is-live { animation: none } .po-scale { transition-duration: 1ms } }
-
 /* ── Panel paket Latihan ── */
 .hc-cols { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; margin-top: 14px }
 .hc-cols i { position: relative; height: 26px; border-radius: 4px; background: var(--border) }
@@ -236,34 +217,54 @@
 .hc-seg button[aria-checked="true"] { background: var(--brand-ink); color: #fff }
 @media (max-width: 760px) { .hc-rack { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
 
-/* ── Jalur madu Latihan (PackageOrbit + PackageCarousel) ──
-   Paket → inti: titik mengalir ke dalam; paket terpilih dapat siluet emas + pulsa madu
-   yang mendarat di inti. Dial terpilih → panel lewat overlay di atas orbit, di bawah panel. */
-.hc-linked { position: relative; isolation: isolate }
-.hc-linked .hc-panel { z-index: 2 }
-.hc-links { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none }
-.hc-link { animation: hc-link-in 600ms var(--e-out) both }
-@keyframes hc-link-in { from { opacity: 0 } }
-/* Rel solid tipis di bawah putus-putus supaya jalur terbaca utuh dan rapi. */
-.hc-link-rail { fill: none; stroke: var(--accent-strong); stroke-width: 1; opacity: .28 }
-.hc-link.is-on .hc-link-rail { stroke-width: 1.6; opacity: .6 }
-.hc-link-trace { fill: none; stroke: var(--accent-strong); stroke-width: 1.5; stroke-dasharray: 3 5; opacity: .75; animation: hc-flow 1.8s linear infinite }
-.hc-link.is-on .hc-link-trace { stroke-width: 2.2; opacity: 1; animation-duration: .9s }
-@keyframes hc-flow { to { stroke-dashoffset: -8 } }
-.hc-link-halo { fill: none; stroke: var(--accent); stroke-width: 8; stroke-linecap: round; opacity: .2 }
-.hc-link-pulse { fill: none; stroke: var(--honey-top); stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 8 92; stroke-dashoffset: 8; animation: hc-pulse 2.4s cubic-bezier(.45, 0, .55, 1) infinite }
-.hc-link-pulse.is-glow { stroke: var(--accent); stroke-width: 9; opacity: .7 }
-.is-panel .hc-link-pulse { animation-delay: 1.2s }
-@keyframes hc-pulse { to { stroke-dashoffset: -100 } }
-.hc-link-node { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 1.2 }
-.hc-link.is-on .hc-link-node, .hc-link-node.is-hub { fill: var(--accent-strong); stroke: none }
-.hc-link-ping { fill: none; stroke: var(--accent-strong); stroke-width: 1.5; transform-box: fill-box; transform-origin: center; animation: hc-ping 2.4s ease-out 2.1s infinite both }
-@keyframes hc-ping { from { transform: scale(.5); opacity: .9 } to { transform: scale(3); opacity: 0 } }
-.po-orbit { fill: none; stroke: var(--accent-strong); stroke-width: 1.25; opacity: .5 }
-.po-orbit-glow { fill: none; stroke: var(--accent); stroke-width: 6; opacity: .16 }
-.po-orbit-dash { fill: none; stroke: var(--accent-strong); stroke-width: 2.6; stroke-linecap: round; stroke-dasharray: 0 12; animation: po-orbit-flow 6s linear infinite }
-@keyframes po-orbit-flow { to { stroke-dashoffset: -24 } }
-@media (prefers-reduced-motion: reduce) {
-  .hc-link, .hc-link-trace, .hc-link-ping, .po-orbit-dash { animation: none }
-  .hc-link-pulse { display: none }
-}
+/* ── Daftar paket Latihan (PackageCarousel) ──
+   Kartu "Lanjutkan" navy di atas, daftar baris tenang di bawah. Bar segmen: --f = isi 0-100%. */
+.pk-hero { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-bottom: 20px; padding: 18px 20px; border-radius: var(--r-xl); background: var(--surface-nav); color: #fff; box-shadow: 0 14px 30px -20px rgb(15 24 56 / .7) }
+.pk-hero > div { display: grid; gap: 8px; flex: 1 1 260px }
+.pk-hero-kicker { font: 600 11px/1 var(--font-display-src), sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi) }
+.pk-hero-title { font: 600 1.2rem/1.2 var(--font-display-src), sans-serif }
+.pk-hero-sub { font-size: .875rem; color: #c9d1e8 }
+.pk-hero .pk-segs { max-width: 420px }
+.pk-hero .pk-segs i { height: 6px; background: linear-gradient(90deg, var(--gold-hi) var(--f), rgb(255 255 255 / .18) 0) }
+.pk-hero-cta { display: inline-flex; flex: 1 1 auto; max-width: 100%; align-items: center; justify-content: center; gap: 8px; min-height: 48px; padding: 0 22px; border-radius: 12px; background: var(--gold-hi); color: var(--brand-ink); font: 600 1rem var(--font-display-src), sans-serif; transition: filter var(--motion) }
+.pk-hero-cta:hover { filter: brightness(1.05) }
+.pk-hero-cta:focus-visible { outline: 3px solid var(--ring-on-nav); outline-offset: 2px }
+@media (min-width: 640px) { .pk-hero-cta { flex: 0 0 auto } }
+
+.pk-list { list-style: none; margin: 0; padding: 0; min-width: 0 }
+.pk-row { display: flex; width: 100%; align-items: center; gap: 12px; min-height: 64px; padding: 8px 10px; border-bottom: 1px solid var(--border); border-radius: 10px; text-align: left; transition: background-color var(--motion) }
+.pk-row:hover:not(:disabled) { background: var(--surface-inset) }
+.pk-row.is-sel { background: var(--accent-soft) }
+.pk-row:focus-visible { outline: 3px solid var(--ring); outline-offset: -3px }
+.pk-row:disabled { opacity: .5; cursor: default }
+.pk-hex { position: relative; display: grid; place-items: center; width: 34px; height: 40px; flex: none }
+.pk-hex svg { position: absolute; inset: 0; width: 100%; height: 100% }
+.pk-hex polygon { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 4 }
+.pk-hex.is-part polygon { fill: var(--accent-soft); stroke: var(--accent-strong) }
+.pk-hex.is-full polygon { fill: var(--accent); stroke: var(--accent-strong) }
+.pk-row:disabled .pk-hex polygon { fill: var(--hatch) }
+.pk-hex b { position: relative; font: 700 12px var(--font-display-src), sans-serif; color: var(--brand-ink) }
+.pk-row-main { display: grid; flex: 1; min-width: 0; gap: 7px }
+.pk-row-top { display: flex; justify-content: space-between; gap: 10px }
+.pk-row-top b { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font: 600 1rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
+.pk-status { flex: none; font-size: .875rem; font-weight: 600; color: var(--muted-foreground) }
+.pk-status.is-part { color: var(--brand-ink) }
+.pk-status.is-full { color: var(--accent-ink) }
+.pk-chev { flex: none; color: var(--border-strong) }
+.pk-segs { display: flex; gap: 3px }
+.pk-segs i { flex: 1; height: 5px; border-radius: 2px; background: linear-gradient(90deg, var(--honey-bot) var(--f), var(--border) 0) }
+
+/* Panel samping hanya di desktop; di HP rincian pindah ke lembar bawah. */
+@media (max-width: 959px) { .pk-side { display: none } }
+@media (min-width: 960px) { .pk-side { position: sticky; top: 24px } }
+
+.pk-sheet { width: 100%; max-width: 560px; max-height: 88dvh; margin: auto auto 0; padding: 0; border: 0; background: transparent; overflow: visible }
+.pk-sheet::backdrop { background: rgb(15 24 56 / .5) }
+.pk-sheet[open] { animation: pk-up 280ms var(--e-out) }
+@keyframes pk-up { from { transform: translateY(100%) } }
+.pk-sheet-body { max-height: 88dvh; overflow-y: auto; border-radius: var(--r-xl) var(--r-xl) 0 0; padding-top: 28px; padding-bottom: calc(24px + env(safe-area-inset-bottom)) }
+.pk-sheet-body::before { animation: none }
+.pk-sheet-close { position: absolute; top: 12px; right: 12px; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; border-radius: 999px; color: var(--muted-foreground) }
+.pk-sheet-close:hover { background: var(--surface-inset); color: var(--foreground) }
+.pk-sheet-close:focus-visible { outline: 3px solid var(--ring) }
+@media (prefers-reduced-motion: reduce) { .pk-sheet[open] { animation: none } }
