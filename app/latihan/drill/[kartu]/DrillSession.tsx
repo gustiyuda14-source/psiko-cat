@@ -46,6 +46,8 @@ export default function DrillSession({
   const [idx, setIdx] = useState(0);
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [results, setResults] = useState<Record<string, Result>>({});
+  // Setelah Periksa, gulir ke pembahasan (opsi panjang + dock bawah bisa menutupinya).
+  const revealNext = useRef(false);
   const [checking, setChecking] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const shownAt = useRef(0);
@@ -98,6 +100,7 @@ export default function DrillSession({
       });
       if (!res.ok) throw new Error("Jawaban belum bisa diperiksa. Coba lagi.");
       const data = (await res.json()) as Omit<Result, "ms">;
+      revealNext.current = true;
       setResults((cur) => ({ ...cur, [q.id]: { ...data, ms } }));
       const progress = readDrillProgress();
       const prev = progress[q.id] ?? [0, 0, 0];
@@ -263,7 +266,14 @@ export default function DrillSession({
           </div>
 
           {result ? (
-            <div className={`rounded-md border p-4 text-sm leading-relaxed ${result.benar ? "border-success/40 bg-success-soft" : "border-destructive/40 bg-destructive-soft"}`} role="status">
+            <div
+              ref={(el) => {
+                if (!el || !revealNext.current) return;
+                revealNext.current = false;
+                const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                el.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" });
+              }}
+              className={`scroll-mb-28 rounded-md border p-4 text-sm leading-relaxed ${result.benar ? "border-success/40 bg-success-soft" : "border-destructive/40 bg-destructive-soft"}`} role="status">
               <p className="mb-2 font-heading text-base text-foreground">{result.benar ? "Benar" : `Belum tepat — kunci ${result.kunci.join(", ").toUpperCase()}`}</p>
               {result.pembahasan.split("<br>").map((p, i) => (
                 <p key={i} className="mt-2 text-foreground">
