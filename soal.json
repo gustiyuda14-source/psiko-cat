@@ -725,7 +725,7 @@
       "aspek": "logis",
       "tipe": "silogisme",
       "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
-      "soal": "Semua anak kecil suka orang yang memberikan permen.\nLoki tidak pernah membelikan adiknya permen tetapi sering membelikannya balon.\nKesimpulan yang paling tepat adalah …..",
+      "soal": "Semua anak kecil tidak suka orang yang tidak pernah memberinya permen.\nLoki tidak pernah memberi adiknya yang masih kecil permen, tetapi sering memberinya balon.\nKesimpulan yang paling tepat adalah …..",
       "pilihan": {
         "a": "Loki sayang kepada adiknya.",
         "b": "Loki tidak disukai adiknya.",
@@ -815,7 +815,7 @@
       "aspek": "logis",
       "tipe": "silogisme",
       "instruksi": "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
-      "soal": "Jika semua harta benda Barton terbawa banjir, maka ia menderita.\nBarton tidak terlalu menderita.\nKesimpulan yang paling tepat adalah …..",
+      "soal": "Jika semua harta benda Barton terbawa banjir, maka ia menderita.\nBarton tidak menderita.\nKesimpulan yang paling tepat adalah …..",
       "pilihan": {
         "a": "Semua harta benda Barton tidak terbawa banjir.",
         "b": "Ada harta benda Barton yang tidak terkena banjir.",
@@ -910,7 +910,7 @@
         "a": "Semua delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi.",
         "b": "Sebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi dan tidak mampu berkomunikasi dengan baik.",
         "c": "Semua delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi dan tidak mampu berkomunikasi dengan baik.",
-        "d": "Sebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tidak tinggi dan mampu berkomunikasi dengan baik.",
+        "d": "Sebagian delegasi dalam pertemuan internasional memiliki rasa percaya diri tinggi dan mampu berkomunikasi dengan baik.",
         "e": "Sebagian delegasi dalam pertemuan internasional yang memiliki kemampuan komunikasi tidak baik juga memiliki rasa percaya diri tinggi."
       },
       "kunci": [
@@ -941,7 +941,7 @@
       "aspek": "analitis",
       "tipe": "deret",
       "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
-      "soal": "H31J | P25R | T22V | X19Z | B16D | F13H | J10L | … | R4T",
+      "soal": "H31J | … | P25R | T22V | X19Z | B16D | F13H | J10L | … | R4T",
       "pilihan": {
         "a": "L26N",
         "b": "N7P",
@@ -960,7 +960,7 @@
       "aspek": "analitis",
       "tipe": "deret",
       "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
-      "soal": "Baris 1: 11A | 13B | 15C | … | 19E | 21F | 23G | 25H | 27I | 29J\nBaris 2: N48 | O45 | P42 | … | R36 | S33 | T30 | U37 | V34 | W31",
+      "soal": "Baris 1: 11A | 13B | 15C | … | 19E | 21F | 23G | 25H | 27I | 29J\nBaris 2: N48 | O45 | P42 | … | R36 | S33 | T30 | U27 | V24 | W21",
       "pilihan": {
         "a": "Q39",
         "b": "16D",
@@ -1055,7 +1055,7 @@
       "aspek": "analitis",
       "tipe": "deret",
       "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
-      "soal": "Baris 1: G | H | K | P | Q | … | Y | … | E\nBaris 2: E | F | I | N | … | R | … | X | A",
+      "soal": "Baris 1: G | H | K | P | Q | … | Y | … | C\nBaris 2: E | F | I | N | … | R | … | X | A",
       "pilihan": {
         "a": "P, W",
         "b": "T, Z",
@@ -1074,7 +1074,7 @@
       "aspek": "analitis",
       "tipe": "deret",
       "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
-      "soal": "Berlian atas: ST | WX | AB | … | IJ | MN | QR\nBerlian bawah: JK | NO | RS | UW | ZA | … | HI",
+      "soal": "Berlian atas: ST | WX | AB | … | IJ | MN | QR\nBerlian bawah: JK | NO | RS | VW | ZA | … | HI",
       "pilihan": {
         "a": "EF",
         "b": "FE",
@@ -1093,7 +1093,7 @@
       "aspek": "analitis",
       "tipe": "deret",
       "instruksi": "Pilihlah dua jawaban untuk melengkapi deret berikut.",
-      "soal": "Baris 1: B11 | 14D | F17 | 20H | J23 | 26L | … | 32P\nBaris 2: 112U | S99 | 96Q | O93 | 90M | K87 | … | G81",
+      "soal": "Baris 1: B11 | 14D | F17 | 20H | J23 | 26L | … | 32P\nBaris 2: 102U | S99 | 96Q | O93 | 90M | K87 | … | G81",
       "pilihan": {
         "a": "N29",
         "b": "M29",
@@ -1224,7 +1224,7 @@
       "aspek": "analitis",
       "tipe": "wacana",
       "wacana": "Seorang Raja minyak dari Abu Dhabi ingin membeli Kapal. Kondisi kapal:\n• Kapal Pesiar lebih besar dari Kapal Samudra, namun lebih boros dari Kapal Feri.\n• Kapal Feri keluaran terbaru dan lebih canggih dari Kapal Pesiar.\n• Kapal Samudra lebih mahal dari Kapal Feri.\n• Kapal Cruise lebih murah dari Kapal Samudra, namun tidak lebih boros dari Kapal Feri.\n• Kapal Feri lebih kecil dari Kapal Cruise.\n• Kapal Cruise lebih besar dari Kapal Pesiar dan tidak lebih canggih dari Kapal Pesiar.",
-      "instruksi": "Kapal manakah yang tidak memiliki keuntungan jika dibeli oleh Raja minyak?",
+      "instruksi": "Kapal manakah yang tidak memiliki satu pun keunggulan dibandingkan kapal lainnya jika dibeli oleh Raja minyak?",
       "pilihan": {
         "a": "Kapal Samudra",
         "b": "Kapal Cruise",
@@ -1295,7 +1295,7 @@
       "id": 70,
       "aspek": "analitis",
       "tipe": "wacana",
-      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.\n• Benjo mendapat giliran piket pada hari Rabu.",
       "instruksi": "Deri dan Benjo tidak pernah mendapat giliran membersihkan kelas bersama-sama, kecuali pada hari .....",
       "pilihan": {
         "a": "Senin",
@@ -1313,7 +1313,7 @@
       "id": 71,
       "aspek": "analitis",
       "tipe": "wacana",
-      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.\n• Benjo mendapat giliran piket pada hari Rabu.",
       "instruksi": "Azel dan Deri mendapat giliran bekerja sama membersihkan kelas pada hari .....",
       "pilihan": {
         "a": "Selasa dan Kamis",
@@ -1331,7 +1331,7 @@
       "id": 72,
       "aspek": "analitis",
       "tipe": "wacana",
-      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.",
+      "wacana": "Tugas piket: Azel, Clara, Enzi (perempuan) dan Benjo, Deri (laki-laki).\n• Setiap hari 3 orang membersihkan kelas (Senin–Jumat).\n• Setiap orang mendapat giliran piket dengan jumlah yang sama.\n• Jumat: Azel dan Deri ikut basket → tidak bisa piket.\n• Senin & Rabu: Clara harus pulang bantu ibu berjualan.\n• Setiap hari harus ada anak laki-laki.\n• Senin & Kamis: Enzi les Bahasa Inggris → tidak bisa piket.\n• Benjo mendapat giliran piket pada hari Rabu.",
       "instruksi": "Siswa yang membersihkan kelas pada hari Selasa adalah .....",
       "pilihan": {
         "a": "Deri, Enzi dan Azel",
@@ -1350,7 +1350,7 @@
       "aspek": "analitis",
       "tipe": "wacana",
       "wacana": "Lomba balap karung: Aline, Bianca, Clarita, Divia, dan Emillie.\n• Clarita berhasil mendahului Bianca tiba di garis finish.\n• Aline tiba di garis finish setelah Clarita.\n• Bianca tidak mampu mengimbangi kecepatan Aline.",
-      "instruksi": "Dari pernyataan di atas, apabila Emmelie tiba di garis finish tepat setelah Clarita, siapakah peserta yang memenangkan perlombaan balap karung?",
+      "instruksi": "Dari pernyataan di atas, apabila Emillie tiba di garis finish tepat setelah Clarita dan Divia tiba setelah Bianca, siapakah peserta yang memenangkan perlombaan balap karung?",
       "pilihan": {
         "a": "Emillie",
         "b": "Bianca",
@@ -1556,7 +1556,7 @@
       "id": 85,
       "aspek": "praktis",
       "tipe": "hitung",
-      "instruksi": "Beberapa tahun yang lalu Romanoff berusia tiga kali lebih tua daripada anaknya. Pada waktu itu usia Romanoff adalah 30 tahun. Bila sekarang usia Romanoff dua kali lebih tua dari anaknya maka berapa usia Romanoff?",
+      "instruksi": "Beberapa tahun yang lalu Romanoff berusia tiga kali usia anaknya. Pada waktu itu usia Romanoff adalah 30 tahun. Bila sekarang usia Romanoff dua kali usia anaknya maka berapa usia Romanoff?",
       "pilihan": {
         "a": "30 tahun",
         "b": "20 tahun",
@@ -1573,7 +1573,7 @@
       "id": 86,
       "aspek": "praktis",
       "tipe": "hitung",
-      "instruksi": "Danvers berangkat ke kantor naik sepeda. Jarak antara kantor dan rumahnya 3,5 km. Apabila diameter roda sepeda Danvers 70 cm, maka berapa banyak putaran roda sepeda Danvers?",
+      "instruksi": "Danvers berangkat ke kantor naik sepeda. Jarak antara kantor dan rumahnya 3,5 km. Apabila keliling roda sepeda Danvers 70 cm, maka berapa banyak putaran roda sepeda Danvers?",
       "pilihan": {
         "a": "3500 kali",
         "b": "4500 kali",
