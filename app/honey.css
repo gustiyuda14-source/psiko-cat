@@ -218,6 +218,10 @@
 .hc-cols i.is-on { background: var(--honey-bot) }
 .hc-cols b { position: absolute; inset: 0; display: grid; place-items: center; font: 600 10px var(--font-display-src), sans-serif; color: var(--muted-foreground) }
 .hc-cols i.is-on b { color: var(--brand-ink) }
+.hc-parts { display: flex }
+.hc-parts i { flex: 1 1 0; min-width: 24px; transition: background-color 400ms var(--e-out) }
+.hc-details.is-parts ul { max-height: none }
+.hc-parts b { font-size: 9.5px; letter-spacing: .06em; white-space: nowrap; overflow: hidden }
 .hc-details { margin-top: 12px; font-size: .875rem }
 .hc-details summary { cursor: pointer; font: 600 .85rem var(--font-display-src), sans-serif; color: var(--brand-ink) }
 .hc-details ul { list-style: none; margin: 10px 0 0; padding: 0; max-height: 15rem; overflow-y: auto; display: grid; gap: 6px }

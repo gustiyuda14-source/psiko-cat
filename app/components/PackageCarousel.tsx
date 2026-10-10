@@ -25,6 +25,9 @@ export type PackageSection = {
   symbols?: string[];
 };
 
+/** Satu bagian isi paket berurutan, mis. aspek Kepribadian atau Substansi Khusus. */
+export type PackagePart = { label: string; short: string; part: string; count: number };
+
 export type PackageOption = {
   id: number;
   label: string;
@@ -33,6 +36,8 @@ export type PackageOption = {
   symbols?: string[];
   /** Rincian per-bagian (kolom) — cuma dipakai Kecermatan. */
   sections?: PackageSection[];
+  /** Komposisi isi paket berurutan — dipakai Kepribadian (aspek + Substansi Khusus). */
+  parts?: PackagePart[];
 };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
@@ -167,6 +172,40 @@ export function PackageCarousel({
                   {p >= 1 ? "Paket pernah diselesaikan" : done ? "Sesi baru mulai dari awal" : "Belum pernah dikerjakan"}
                 </span>
               </div>
+
+              {pkg.parts && pkg.parts.length > 0 && (
+                <>
+                  {/* Bar komposisi: lebar segmen sebanding jumlah butir, terisi madu
+                      sesuai capaian terjauh (urutan pengerjaan = urutan segmen). */}
+                  <div className="hc-cols hc-parts" aria-label={`Komposisi ${pkg.label}`}>
+                    {pkg.parts.reduce<{ el: React.ReactNode[]; end: number }>(
+                      (acc, part, k) => {
+                        const end = acc.end + part.count;
+                        acc.el.push(
+                          <i key={k} title={`${part.label} · ${part.count} ${unitLabel}`} style={{ flexGrow: part.count }} className={done >= end ? "is-on" : ""}>
+                            <b>{part.short}</b>
+                          </i>
+                        );
+                        return { el: acc.el, end };
+                      },
+                      { el: [], end: 0 }
+                    ).el}
+                  </div>
+                  <details className="hc-details is-parts" open>
+                    <summary>Lihat isi paket</summary>
+                    <ul>
+                      {pkg.parts.map((part, k) => (
+                        <li key={k}>
+                          <span>
+                            {part.label} <small className="tnum">{part.count} {unitLabel}</small>
+                          </span>
+                          <small>{part.part}</small>
+                        </li>
+                      ))}
+                    </ul>
+                  </details>
+                </>
+              )}
 
               {pkg.sections && (
                 <>
