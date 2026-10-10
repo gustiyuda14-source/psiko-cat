@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useLayoutEffect, useMemo, useRef, useState, useSyncExternalStore, type RefObject } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
@@ -70,119 +70,9 @@ function MiniHexes({ fills }: { fills: (number | null)[] }) {
   );
 }
 
-/*
-  Jalur madu: tiap kartu aspek tersambung ke puncak inti sarang, dan penanda fokus
-  roda tersambung ke panel. Koordinat diukur dari DOM (kartu bisa digeser, roda
-  berganti orientasi di HP), jadi overlay ikut tata letak apa pun.
-*/
-type Pt = [number, number];
-type Links = { w: number; h: number; hub: Pt; cards: { d: string; at: Pt; on: boolean }[]; panel: { d: string; at: Pt } | null };
-
-function measureLinks(el: HTMLElement): Links | null {
-  const core = el.querySelector(".hc-wheel .hc-core-line");
-  if (!core) return null;
-  const o = el.getBoundingClientRect();
-  const n = (v: number) => Math.round(v * 10) / 10;
-  const box = (e: Element) => {
-    const r = e.getBoundingClientRect();
-    return { l: r.left - o.left, t: r.top - o.top, r: r.right - o.left, b: r.bottom - o.top };
-  };
-  const c = box(core);
-  const hub: Pt = [n((c.l + c.r) / 2), n(c.t)];
-  const cards = [...el.querySelectorAll(".hc-sector")].map((b) => {
-    const r = box(b);
-    const x = n((r.l + r.r) / 2), y = n(r.b), k = n((hub[1] - y) / 2);
-    return { d: `M${x} ${y}C${x} ${y + k} ${hub[0]} ${hub[1] - k} ${hub[0]} ${hub[1]}`, at: [x, y] as Pt, on: b.getAttribute("aria-pressed") === "true" };
-  });
-
-  let panel: Links["panel"] = null;
-  const mark = el.querySelector(".hc-wheel .hc-mark");
-  const aside = el.querySelector(".hc-panel");
-  if (mark && aside) {
-    const m = box(mark), p = box(aside);
-    const mx = n((m.l + m.r) / 2), my = n((m.t + m.b) / 2);
-    const clamp = (v: number, a: number, b: number) => n(Math.min(Math.max(v, a), b));
-    if (p.l > mx) {
-      // Panel di kanan roda (desktop): siku horizontal ke tepi kiri panel.
-      const y = clamp(my, p.t + 32, p.b - 32), mid = n(mx + (p.l - mx) / 2);
-      panel = { d: `M${mx + 8} ${my}H${mid}V${y}H${n(p.l)}`, at: [n(p.l), y] };
-    } else {
-      // Panel di bawah roda (HP): siku vertikal ke tepi atas panel.
-      const x = clamp(mx, p.l + 32, p.r - 32), mid = n(my + (p.t - my) / 2);
-      panel = { d: `M${mx} ${my + 8}V${mid}H${x}V${n(p.t)}`, at: [x, n(p.t)] };
-    }
-  }
-  return { w: n(o.width), h: n(o.height), hub, cards, panel };
-}
-
-function useHiveLinks(root: RefObject<HTMLDivElement | null>) {
-  const [links, setLinks] = useState<Links | null>(null);
-  const last = useRef("");
-  // Ukur tiap render (setState hanya kalau berubah), saat ukuran berubah, dan saat
-  // baris kartu digeser horizontal di layar sempit.
-  useLayoutEffect(() => {
-    const el = root.current;
-    if (!el) return;
-    const sync = () => {
-      const next = measureLinks(el);
-      const key = JSON.stringify(next);
-      if (key === last.current) return;
-      last.current = key;
-      setLinks(next);
-    };
-    sync();
-    const ro = new ResizeObserver(sync);
-    ro.observe(el);
-    el.addEventListener("scroll", sync, true);
-    return () => {
-      ro.disconnect();
-      el.removeEventListener("scroll", sync, true);
-    };
-  });
-  return links;
-}
-
-function HiveLinks({ links, panelKey }: { links: Links; panelKey: string }) {
-  const trail = (d: string, on: boolean) => (
-    <>
-      {on && <path className="hc-link-halo" d={d} filter="url(#hl-blur)" />}
-      <path className="hc-link-trace" d={d} />
-      {on && <path className="hc-link-pulse is-glow" d={d} pathLength={100} filter="url(#hl-blur)" />}
-      {on && <path className="hc-link-pulse" d={d} pathLength={100} />}
-    </>
-  );
-  const [px, py] = links.panel?.at ?? [0, 0];
-  return (
-    <svg className="hc-links" width={links.w} height={links.h} aria-hidden="true">
-      <defs>
-        <filter id="hl-blur" filterUnits="userSpaceOnUse" x="0" y="0" width={links.w} height={links.h}>
-          <feGaussianBlur stdDeviation="3" />
-        </filter>
-      </defs>
-      {links.cards.map((c, i) => (
-        <g key={i} className={c.on ? "hc-link is-on" : "hc-link"}>
-          {trail(c.d, c.on)}
-          <circle className="hc-link-node" cx={c.at[0]} cy={c.at[1]} r={3} />
-        </g>
-      ))}
-      {links.panel && (
-        // key = kartu terpilih: jalur ke panel muncul ulang tiap ganti kartu.
-        <g key={panelKey} className="hc-link is-on is-panel">
-          {trail(links.panel.d, true)}
-          <rect className="hc-link-node" x={px - 3.5} y={py - 3.5} width={7} height={7} transform={`rotate(45 ${px} ${py})`} />
-        </g>
-      )}
-      <circle className="hc-link-ping" cx={links.hub[0]} cy={links.hub[1]} r={5} />
-      <circle className="hc-link-node is-hub" cx={links.hub[0]} cy={links.hub[1]} r={3.5} />
-    </svg>
-  );
-}
-
 export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const router = useRouter();
   const progress = useProgress();
-  const linkRoot = useRef<HTMLDivElement>(null);
-  const links = useHiveLinks(linkRoot);
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState(cards[0]?.kartu ?? "");
@@ -267,124 +157,121 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
         <kbd aria-hidden="true">/</kbd>
       </label>
 
-      <div ref={linkRoot} className="hc-linked">
-        <SectorCards sectors={sectors} active={filter} onPick={(k) => setFilter(k === filter ? "all" : k)} label="Pilih aspek" />
+      <SectorCards sectors={sectors} active={filter} onPick={(k) => setFilter(k === filter ? "all" : k)} label="Pilih aspek" />
 
-        <div className="hc-stage">
-          <div className="hc-field">
-            {visible.length ? (
-              <DrillWheel
-                cards={wheel}
-                selected={current}
-                overall={{ p: allStats.total ? allStats.done / allStats.total : 0, done: allStats.done, total: allStats.total }}
-                onSelect={(kartu, again) => {
-                  setSelected(kartu);
-                  // Ketuk irisan yang sudah terpilih = lanjut ke aksi utama di panel.
-                  if (again) panelRef.current?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus();
+      <div className="hc-stage">
+        <div className="hc-field">
+          {visible.length ? (
+            <DrillWheel
+              cards={wheel}
+              selected={current}
+              overall={{ p: allStats.total ? allStats.done / allStats.total : 0, done: allStats.done, total: allStats.total }}
+              onSelect={(kartu, again) => {
+                setSelected(kartu);
+                // Ketuk irisan yang sudah terpilih = lanjut ke aksi utama di panel.
+                if (again) panelRef.current?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus();
+              }}
+            />
+          ) : (
+            <div className="hc-empty">
+              <p>
+                Tidak ada jenis soal yang cocok dengan <strong>“{query}”</strong>
+                {filter !== "all" ? " di aspek ini" : ""}.
+              </p>
+              <Button
+                variant="secondary"
+                onClick={() => {
+                  setQuery("");
+                  setFilter("all");
                 }}
-              />
-            ) : (
-              <div className="hc-empty">
-                <p>
-                  Tidak ada jenis soal yang cocok dengan <strong>“{query}”</strong>
-                  {filter !== "all" ? " di aspek ini" : ""}.
-                </p>
-                <Button
-                  variant="secondary"
-                  onClick={() => {
-                    setQuery("");
-                    setFilter("all");
-                  }}
-                >
-                  Hapus pencarian dan filter
+              >
+                Hapus pencarian dan filter
+              </Button>
+            </div>
+          )}
+        </div>
+
+        <aside ref={panelRef} className="hc-panel" aria-live="polite" key={current}>
+          <div className="hc-panel-top">
+            <span className="hc-tag">{aspekLabel(card.aspek)}</span>
+            <span className="hc-code tnum">
+              Kartu {String(cards.indexOf(card) + 1).padStart(2, "0")}
+              {locked ? "" : ` · ${cardStats.total} soal`}
+            </span>
+          </div>
+          <h2 className="hc-panel-title">{card.label}</h2>
+          <p className="hc-panel-desc">{card.desc}</p>
+
+          {locked ? (
+            <p className="hc-panel-desc mt-4">Soal untuk kartu ini sedang disiapkan. Kartu terbuka otomatis begitu soalnya tersedia.</p>
+          ) : (
+            <>
+              <div className="hc-meter">
+                <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
+                  <defs>
+                    <clipPath id="dp-hex">
+                      <polygon points={HEX} />
+                    </clipPath>
+                    <linearGradient id="dp-honey" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stopColor="var(--honey-top)" />
+                      <stop offset="1" stopColor="var(--honey-bot)" />
+                    </linearGradient>
+                  </defs>
+                  <polygon points={HEX} className="hc-core-base" />
+                  <g clipPath="url(#dp-hex)">
+                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
+                      <path d={WAVE} fill="url(#dp-honey)" className="hc-honey" />
+                    </g>
+                  </g>
+                  <polygon points={HEX} className="hc-core-line" />
+                </svg>
+                <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
+                <span className="hc-meter-of tnum">
+                  {cardStats.done} dari {cardStats.total} soal
+                  <br />
+                  {cardStats.acc !== null ? `Akurasi ${cardStats.acc}%` : "Belum ada jawaban"}
+                </span>
+              </div>
+
+              <ul className="hc-tiers">
+                {DRILL_TIERS.map(({ tier, label }) => {
+                  const ids = card.tiers[tier - 1];
+                  const s = stats(ids, progress);
+                  return (
+                    <li key={tier}>
+                      <div className="min-w-0">
+                        <b>{label}</b>
+                        <span className="tnum">
+                          {ids.length ? `${s.done}/${s.total} dikerjakan${s.acc !== null ? ` · akurasi ${s.acc}%` : ""}` : "Belum ada soal"}
+                        </span>
+                        {ids.length > 0 && (
+                          <span className="hc-pips" aria-hidden="true">
+                            {Array.from({ length: 10 }, (_, j) => (
+                              <i key={j} className={j < Math.round((s.done / s.total) * 10) ? "is-on" : ""} />
+                            ))}
+                          </span>
+                        )}
+                      </div>
+                      <Button variant="secondary" size="sm" disabled={!ids.length} onClick={() => start(card.kartu, tier)}>
+                        {s.done ? "Lanjut" : "Mulai"}
+                      </Button>
+                    </li>
+                  );
+                })}
+              </ul>
+
+              <div className="hc-actions">
+                <Button variant="primary" size="lg" block onClick={() => start(card.kartu)}>
+                  Campuran semua tingkat
+                  <ArrowRight className="size-4" />
+                </Button>
+                <Button variant="ghost" onClick={() => setResetStep(1)} disabled={!cardStats.done}>
+                  Ulang kartu ini dari nol
                 </Button>
               </div>
-            )}
-          </div>
-
-          <aside ref={panelRef} className="hc-panel" aria-live="polite" key={current}>
-            <div className="hc-panel-top">
-              <span className="hc-tag">{aspekLabel(card.aspek)}</span>
-              <span className="hc-code tnum">
-                Kartu {String(cards.indexOf(card) + 1).padStart(2, "0")}
-                {locked ? "" : ` · ${cardStats.total} soal`}
-              </span>
-            </div>
-            <h2 className="hc-panel-title">{card.label}</h2>
-            <p className="hc-panel-desc">{card.desc}</p>
-
-            {locked ? (
-              <p className="hc-panel-desc mt-4">Soal untuk kartu ini sedang disiapkan. Kartu terbuka otomatis begitu soalnya tersedia.</p>
-            ) : (
-              <>
-                <div className="hc-meter">
-                  <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
-                    <defs>
-                      <clipPath id="dp-hex">
-                        <polygon points={HEX} />
-                      </clipPath>
-                      <linearGradient id="dp-honey" x1="0" y1="0" x2="0" y2="1">
-                        <stop offset="0" stopColor="var(--honey-top)" />
-                        <stop offset="1" stopColor="var(--honey-bot)" />
-                      </linearGradient>
-                    </defs>
-                    <polygon points={HEX} className="hc-core-base" />
-                    <g clipPath="url(#dp-hex)">
-                      <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
-                        <path d={WAVE} fill="url(#dp-honey)" className="hc-honey" />
-                      </g>
-                    </g>
-                    <polygon points={HEX} className="hc-core-line" />
-                  </svg>
-                  <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
-                  <span className="hc-meter-of tnum">
-                    {cardStats.done} dari {cardStats.total} soal
-                    <br />
-                    {cardStats.acc !== null ? `Akurasi ${cardStats.acc}%` : "Belum ada jawaban"}
-                  </span>
-                </div>
-
-                <ul className="hc-tiers">
-                  {DRILL_TIERS.map(({ tier, label }) => {
-                    const ids = card.tiers[tier - 1];
-                    const s = stats(ids, progress);
-                    return (
-                      <li key={tier}>
-                        <div className="min-w-0">
-                          <b>{label}</b>
-                          <span className="tnum">
-                            {ids.length ? `${s.done}/${s.total} dikerjakan${s.acc !== null ? ` · akurasi ${s.acc}%` : ""}` : "Belum ada soal"}
-                          </span>
-                          {ids.length > 0 && (
-                            <span className="hc-pips" aria-hidden="true">
-                              {Array.from({ length: 10 }, (_, j) => (
-                                <i key={j} className={j < Math.round((s.done / s.total) * 10) ? "is-on" : ""} />
-                              ))}
-                            </span>
-                          )}
-                        </div>
-                        <Button variant="secondary" size="sm" disabled={!ids.length} onClick={() => start(card.kartu, tier)}>
-                          {s.done ? "Lanjut" : "Mulai"}
-                        </Button>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <div className="hc-actions">
-                  <Button variant="primary" size="lg" block onClick={() => start(card.kartu)}>
-                    Campuran semua tingkat
-                    <ArrowRight className="size-4" />
-                  </Button>
-                  <Button variant="ghost" onClick={() => setResetStep(1)} disabled={!cardStats.done}>
-                    Ulang kartu ini dari nol
-                  </Button>
-                </div>
-              </>
-            )}
-          </aside>
-        </div>
-        {links && <HiveLinks links={links} panelKey={current} />}
+            </>
+          )}
+        </aside>
       </div>
 
       <ConfirmDialog
