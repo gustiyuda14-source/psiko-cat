@@ -139,7 +139,7 @@ export function PackageCarousel({
           ) : (
             <>
               <div className="hc-meter">
-                <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
+                <svg viewBox="0 0 100 115.47" className={`hc-meter-hex${p <= 0 ? " is-empty" : ""}`} aria-hidden="true">
                   <defs>
                     <clipPath id="pc-hex">
                       <polygon points={HEX} />
@@ -151,8 +151,11 @@ export function PackageCarousel({
                   </defs>
                   <polygon points={HEX} className="hc-core-base" />
                   <g clipPath="url(#pc-hex)">
-                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
-                      <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
+                    {/* Saat 0% tetap ada "benih" madu tipis yang beriak di dasar sel, ajakan mulai mengisi. */}
+                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, Math.max(p, 0.06))}px)` }}>
+                      <g className="hc-honey-x is-live">
+                        <path d={WAVE} fill="url(#pc-honey)" className="hc-honey" />
+                      </g>
                     </g>
                   </g>
                   <polygon points={HEX} className="hc-core-line" />

@@ -103,7 +103,31 @@
 .hc-core-text.is-high text { fill: var(--brand-ink) !important }
 
 /* ── Panel ── */
-.hc-panel { border: 1px solid var(--border); border-radius: var(--r-xl); background: var(--surface-inset); padding: 24px; min-width: 0 }
+/* Panel = satu sel sarang madu milik dial terpilih: bahan hangat berlapis,
+   motif sarang samar di pojok, dan garis emas yang menelusuri tepi setiap kali
+   paket berganti (panel di-remount lewat key, jadi animasinya ikut terulang). */
+.hc-panel {
+  position: relative; isolation: isolate; overflow: hidden; min-width: 0; padding: 24px;
+  border: 1px solid var(--border); border-radius: var(--r-xl);
+  background:
+    radial-gradient(120% 80% at 100% 100%, color-mix(in oklab, var(--honey-top) 16%, transparent), transparent 62%),
+    linear-gradient(180deg, var(--surface-card), var(--surface-inset));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .75), 0 18px 40px -24px rgb(122 87 16 / .38);
+}
+.hc-panel::before {
+  content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: var(--gold-grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: hc-trace 900ms var(--e-out) both;
+}
+@keyframes hc-trace { from { clip-path: inset(0 0 100% 0) } }
+.hc-panel::after {
+  content: ""; position: absolute; right: -8px; bottom: -8px; z-index: -1; width: 220px; height: 220px; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48' viewBox='0 0 28 48'%3E%3Cpath d='M14 0 28 8v16l-14 8L0 24V8zM14 32v16' fill='none' stroke='%23b8892b' stroke-width='1'/%3E%3C/svg%3E");
+  opacity: .14;
+  -webkit-mask: radial-gradient(circle at 100% 100%, #000, transparent 70%); mask: radial-gradient(circle at 100% 100%, #000, transparent 70%);
+}
 .hc-panel > * { animation: hc-swap 320ms var(--e-out) both }
 .hc-panel > :nth-child(2) { animation-delay: 30ms }
 .hc-panel > :nth-child(3) { animation-delay: 60ms }
@@ -115,7 +139,9 @@
 .hc-panel-title { margin: 14px 0 6px; font: 700 1.6rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground); text-wrap: balance }
 .hc-panel-desc { margin: 0; color: var(--muted-foreground) }
 .hc-meter { display: flex; align-items: center; gap: 14px; margin: 20px 0 6px }
-.hc-meter-hex { width: 54px; height: 62px; flex: none; overflow: visible }
+.hc-meter-hex { width: 54px; height: 62px; flex: none; overflow: visible; filter: drop-shadow(0 6px 10px rgb(122 87 16 / .18)) }
+.hc-meter-hex.is-empty .hc-core-line { stroke: var(--accent-strong); animation: hc-breathe 2.6s ease-in-out infinite }
+@keyframes hc-breathe { 50% { stroke-opacity: .35 } }
 .hc-meter-pct { font: 700 2rem/1 var(--font-display-src), sans-serif; letter-spacing: -.03em; color: var(--foreground) }
 .hc-meter-of { font-size: .875rem; line-height: 1.35; color: var(--muted-foreground) }
 .hc-tiers { list-style: none; margin: 16px 0 0; padding: 0; border-top: 1px solid var(--border) }
@@ -130,7 +156,7 @@
 @media (prefers-reduced-motion: reduce) {
   .hc-spin, .hc-upright, .hc-pop, .hc-honey-y, .hc-sector { transition-duration: 1ms !important }
   .hc-honey-x.is-live { animation: none }
-  .hc-panel > * { animation: none }
+  .hc-panel > *, .hc-panel::before, .hc-meter-hex.is-empty .hc-core-line { animation: none }
 }
 
 /* ── Kubus Simulasi ── */
