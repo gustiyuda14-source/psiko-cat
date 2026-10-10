@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   // Preview link (WA/Telegram/X), pola sama dengan dajiks-cest. Gambar = screenshot /login 1200x630.
   openGraph: {
     type: "website",
-    url: "/",
+    url: "/login",
     siteName: "D'Ajiks Akademi × Pejuang Kedinasan",
     title: "Psiko CAT – D'Ajiks Akademi × Pejuang Kedinasan",
     description: "Latihan, simulasi, dan perkembangan hasil psikotes dalam satu ruang.",

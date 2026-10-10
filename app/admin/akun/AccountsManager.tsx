@@ -103,7 +103,7 @@ export default function AccountsManager() {
     }
   }
 
-  const loginUrl = typeof window === "undefined" ? "" : window.location.origin + "/login";
+  const loginUrl = typeof window === "undefined" ? "" : window.location.origin + "/login?ref=akun"; // query baru: WA sudah cache /login tanpa preview
   const card = (u: Credential) => `D'Ajiks Akademi — Psiko CAT\nNama: ${u.nama}\nUsername: ${u.id}\nPassword: ${u.password}\nMasuk: ${loginUrl}`;
 
   async function copyAll() {
