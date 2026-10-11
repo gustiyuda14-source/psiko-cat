@@ -44,21 +44,26 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const progress = useDrillProgress();
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
+  const [findOpen, setFindOpen] = useState(false);
   const [selected, setSelected] = useState(cards[0]?.kartu ?? "");
   const [resetStep, setResetStep] = useState(0);
   const panelRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
+  const findBtnRef = useRef<HTMLButtonElement>(null);
 
-  // "/" = fokus ke kolom cari, seperti katalog lama.
+  // "/" = buka kotak cari dan fokus ke kolomnya.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key !== "/" || /INPUT|TEXTAREA/.test((e.target as HTMLElement).tagName)) return;
       e.preventDefault();
-      searchRef.current?.focus();
+      setFindOpen(true);
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, []);
+  useEffect(() => {
+    if (findOpen) searchRef.current?.focus();
+  }, [findOpen]);
 
   const aspekLabel = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.label ?? key;
   const modul = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.modul ?? "Kecerdasan";
@@ -116,17 +121,56 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
   return (
     <>
-      <label className="hc-search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-          <circle cx="11" cy="11" r="6.5" />
-          <path d="M20 20l-4.2-4.2" />
-        </svg>
-        <span className="sr-only">Cari jenis soal</span>
-        <input ref={searchRef} type="search" value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Cari jenis soal…" autoComplete="off" />
-        <kbd aria-hidden="true">/</kbd>
-      </label>
-
-      <SectorCards sectors={sectors} active={filter} onPick={(k) => setFilter(k === filter ? "all" : k)} label="Pilih aspek" />
+      <div className="hc-dock">
+        <SectorCards sectors={sectors} active={filter} onPick={(k) => setFilter(k === filter ? "all" : k)} label="Pilih aspek" />
+        <div
+          className="hc-find"
+          onBlur={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setFindOpen(false);
+          }}
+        >
+          <button
+            ref={findBtnRef}
+            type="button"
+            className="hc-find-btn"
+            aria-label="Cari jenis soal"
+            aria-expanded={findOpen}
+            aria-controls="hc-find-pop"
+            aria-keyshortcuts="/"
+            title="Cari jenis soal ( / )"
+            data-active={q ? "true" : undefined}
+            onClick={() => setFindOpen((o) => !o)}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="6.5" />
+              <path d="M20 20l-4.2-4.2" />
+            </svg>
+          </button>
+          {findOpen && (
+            <div id="hc-find-pop" className="hc-find-pop" role="search">
+              <input
+                ref={searchRef}
+                type="search"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key !== "Escape") return;
+                  setFindOpen(false);
+                  findBtnRef.current?.focus();
+                }}
+                placeholder="Cari jenis soal…"
+                aria-label="Cari jenis soal"
+                autoComplete="off"
+              />
+              {query && (
+                <button type="button" className="hc-find-clear" aria-label="Hapus pencarian" onClick={() => { setQuery(""); searchRef.current?.focus(); }}>
+                  ×
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
 
       <div className="hc-stage">
         <div className="hc-field">
