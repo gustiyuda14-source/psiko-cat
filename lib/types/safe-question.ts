@@ -7,9 +7,20 @@
  * response shape API routes yang melayani soal ke client.
  */
 
-import type { QuestionModel } from "@/app/generated/prisma/models/Question";
+import type { ModuleType } from "@/lib/test-config";
 
-export type SafeQuestion = Omit<QuestionModel, "scoring_rule">;
+// Baris tabel `questions` tanpa scoring_rule (skema: prisma/schema.prisma).
+export type SafeQuestion = {
+  id: string;
+  type: ModuleType;
+  sequence_number: number;
+  column_index: number | null;
+  package_number: number | null;
+  options_payload: unknown;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+};
 
 // ─────────────────────────────────────────────────────────────────────────────
 // JSONB payload contracts (type-safe di application layer)
@@ -63,10 +74,6 @@ export type KecermatanScoringRule = {
   correct_choice: string;
 };
 
-export type ScoringRule =
-  | KecerdasanScoringRule
-  | KepribadianScoringRule
-  | KecermatanScoringRule;
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Recovery snapshot shape — disimpan di ModuleSession.recovery_snapshot

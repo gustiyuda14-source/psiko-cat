@@ -128,16 +128,6 @@ export function Repeat(p: IconProps) {
   );
 }
 
-export function ClipboardCheck(p: IconProps) {
-  return (
-    <Svg {...p}>
-      <path d="M9 4h6v3H9z" />
-      <path d="M15 5.5h2A1.5 1.5 0 0 1 18.5 7v12A1.5 1.5 0 0 1 17 20.5H7A1.5 1.5 0 0 1 5.5 19V7A1.5 1.5 0 0 1 7 5.5h2" />
-      <path d="m9 13 2 2 4-4" />
-    </Svg>
-  );
-}
-
 export function AlertTriangle(p: IconProps) {
   return (
     <Svg {...p}>

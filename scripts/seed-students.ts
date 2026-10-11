@@ -7,9 +7,8 @@
 
 import { createClient } from "@supabase/supabase-js";
 import bcrypt from "bcryptjs";
-import * as dotenv from "dotenv";
 
-dotenv.config({ path: ".env.local" });
+process.loadEnvFile(".env.local");
 
 const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,

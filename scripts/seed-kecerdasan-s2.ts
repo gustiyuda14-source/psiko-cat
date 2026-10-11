@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
-import * as dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 
 // Simulasi Kecerdasan Paket 2 (package_number 12) dari tiga sumber:
@@ -145,7 +144,7 @@ console.log(`OK: 100 soal (${rows.filter((r) => r.options_payload.is_multi_selec
 console.log("Sebaran huruf kunci:", dist, "· tingkat:", tiers);
 
 if (process.argv.includes("--insert")) {
-  dotenv.config({ path: path.join(root, ".env.local") });
+  process.loadEnvFile(path.join(root, ".env.local"));
   const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
   (async () => {
     const { count, error: e1 } = await supabase.from("questions").select("id", { count: "exact", head: true }).eq("type", "KECERDASAN").eq("package_number", PKG);

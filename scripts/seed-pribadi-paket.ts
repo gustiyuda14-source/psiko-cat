@@ -2,7 +2,6 @@ import assert from "node:assert/strict";
 import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
-import * as dotenv from "dotenv";
 import { summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/pribadi";
 
 // Seed satu paket latihan PRIBADI dari bank file ke tabel questions.
@@ -11,7 +10,7 @@ import { summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/p
 // Urutan butir diambil dari bank/pribadi/paket-<NN>.json. Jalankan
 // scripts/check-bank-pribadi.ts dulu untuk validasi isi butir.
 
-dotenv.config({ path: path.join(__dirname, "../.env.local") });
+process.loadEnvFile(path.join(__dirname, "../.env.local"));
 
 const PKG = Number(process.argv[2]);
 const APPLY = process.argv.includes("--apply");

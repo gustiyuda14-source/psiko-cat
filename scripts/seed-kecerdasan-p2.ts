@@ -1,7 +1,6 @@
 import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
-import * as dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 
 // Gabung Paket latihan Kecerdasan package_number 2 dari tiga sumber:
@@ -70,7 +69,7 @@ const dist = rows.reduce<Record<string, number>>((m, r) => { for (const k of r.s
 console.log(`OK: 100 soal, ${rows.filter((r) => r.options_payload.is_multi_select).length} soal dua jawaban. Sebaran huruf kunci:`, dist);
 
 if (process.argv.includes("--insert")) {
-  dotenv.config({ path: path.join(__dirname, "../.env.local") });
+  process.loadEnvFile(path.join(__dirname, "../.env.local"));
   const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
   (async () => {
     const { count, error: e1 } = await supabase.from("questions").select("id", { count: "exact", head: true }).eq("type", "KECERDASAN").eq("package_number", PKG);
