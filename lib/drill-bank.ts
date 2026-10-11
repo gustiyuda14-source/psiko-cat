@@ -1,6 +1,6 @@
 import "server-only";
 import bank from "@/data/drill-bank.json";
-import { DRILL_ASPEK, DRILL_CARDS } from "@/lib/drill-cards";
+import { DRILL_ASPEK, DRILL_CARDS, drillCategory } from "@/lib/drill-cards";
 
 // Bank drill hasil `npm run build:drill` (bank/drill/** → data/drill-bank.json).
 // SERVER ONLY: kunci dan pembahasan ada di sini; ke browser hanya SafeDrillItem.
@@ -63,6 +63,17 @@ export function drillItemsFor(kartu: string): SafeDrillItem[] {
   return ITEMS.filter((it) => it.kartu === kartu).map(safeDrillItem);
 }
 
+/** Kategori soal satu kartu (urut seperti navigasi sesi) beserta id soalnya. */
+function kategoriOf(items: DrillItem[]) {
+  const map = new Map<number, { label: string; ids: string[] }>();
+  for (const it of items) {
+    const [key, label] = drillCategory(it.sub_type);
+    if (!map.has(key)) map.set(key, { label, ids: [] });
+    map.get(key)!.ids.push(it.id);
+  }
+  return [...map].sort(([a], [b]) => a - b).map(([, v]) => v);
+}
+
 /** Ringkasan per kartu untuk katalog: id soal per tier (tanpa isi soal). Urut per aspek supaya
  *  kartu baru (mis. K16 logika) masuk kelompok aspeknya di roda, bukan di ujung daftar. */
 export function drillCatalog() {
@@ -73,6 +84,7 @@ export function drillCatalog() {
       kartu,
       ...card,
       tiers: [1, 2, 3].map((tier) => items.filter((it) => it.tier === tier).map((it) => it.id)),
+      kategori: kategoriOf(items),
     };
   });
 }

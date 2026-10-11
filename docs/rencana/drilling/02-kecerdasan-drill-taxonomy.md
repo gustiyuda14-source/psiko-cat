@@ -134,7 +134,8 @@ So the "level" column in the tables means **which package family uses the format
 | ANL-DRT-LINGKARAN | Number series drawn on a circle (reported Akpol 2026: "cara pengerjaan sama, penyajian beda") | Four layouts: numbers on the ring with no start mark (find the break; tier 3 also no direction arrow), numbers in pie sectors with MULAI, centre number = first term with arrow to the ring, two blanks P/Q on the ring (interleaved tracks) | 1K / PAIR | AK26#2 (30, all new) |
 | ANL-ANGKA-GAMBAR | Numbers in a figure | Two figures with "=": find the operation linking the numbers on the edges/corners to the centre (square, triangle, cart, nested parallelograms, arrow box, circles on a triangle or rectangle) | 1K | B76–80; A56–58 (8) |
 | ANL-OPERASI-SIMBOL | Redefined operation | "Jika 2×3=36, 5×6=900 maka 4×7=…" | 1K | A59,60 (2) |
-| ANL-KODE | Letter cipher / artificial language | A74 letter-string arithmetic; A75 morpheme decoding (ilmya/elmya/atropo/kase) | 1K | A74,75 (2) |
+| ANL-KODE-HURUF | Letter value cipher (nilai huruf) | A74 letter-string arithmetic (A = 1 … Z = 26) | 1K | A74 (1) |
+| ANL-KODE-PANDA | Artificial language (bahasa panda) | A75 morpheme decoding (ilmya/elmya/atropo/kase); new items: word-set elimination with scrambled order, two-part compound words with fixed part order, "tidak dapat ditentukan", count of determined words | 1K | A75 (1); baru (20) |
 | ANL-WCN-URUTAN | Linear ordering | Strict or partial order from before/after/between clauses; "mungkin / tidak mungkin" stems | 1K | P64,73; A62,68,69; B86–88 (8) |
 | ANL-WCN-JADWAL | Scheduling / assignment grid | Persons × days/slots with exclusion and quota constraints | 1K | P70–72; B89,90 (5) |
 | ANL-WCN-MULTIATRIBUT | Multi-attribute comparison | Several entities ranked on 2–4 attributes (size, cost, speed, beauty, smartness), with scoring rules | 1K | P66–69; A70–73 (8) |

@@ -448,7 +448,7 @@
   {
     "id": "K10-A3-074",
     "kartu": "K10",
-    "sub_type": "ANL-KODE",
+    "sub_type": "ANL-KODE-HURUF",
     "tier": 3,
     "sumber": "A3#74",
     "stem": "Dengan A = 1, B = 2, …, Z = 26, nilai KAKI = 11 + 1 + 11 + 9 = 32. Berapakah nilai MATA − DADA?",
@@ -476,7 +476,7 @@
   {
     "id": "K10-A3-075",
     "kartu": "K10",
-    "sub_type": "ANL-KODE",
+    "sub_type": "ANL-KODE-PANDA",
     "tier": 3,
     "sumber": "A3#75",
     "stem": "Dalam sebuah bahasa sandi, \"tamo rilu\" berarti \"kucing hitam\", \"pevo rilu\" berarti \"rumah hitam\", dan \"pevo senka\" berarti \"rumah besar\". Apa sandi untuk \"kucing besar\"?",
@@ -499,6 +499,406 @@
       "e": "rilu senka"
     },
     "pembahasan": "Kata yang sama di dua kalimat menunjukkan artinya. \"rilu\" muncul pada \"kucing hitam\" dan \"rumah hitam\", jadi rilu = hitam, tamo = kucing, pevo = rumah. Dari \"pevo senka\" = \"rumah besar\", senka = besar. Urutannya benda lalu sifat, jadi \"kucing besar\" = \"tamo senka\".<br>Opsi A (senka tamo) gugur karena urutannya terbalik; pada sandi ini benda disebut dulu, lalu sifatnya; Opsi C (pevo senka) gugur karena pevo berarti rumah, bukan kucing; Opsi D (tamo rilu) gugur karena rilu berarti hitam; Opsi E (rilu senka) gugur karena tidak memuat sandi untuk kucing. Jawaban: Opsi B (tamo senka). Tips: cari kata yang muncul di dua kalimat sekaligus; itu kunci pembukanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-001",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"mira tolu\" berarti \"buku merah\"\n• \"mira sefa\" berarti \"buku biru\"\n• \"kano sefa\" berarti \"tas biru\"\nApa sandi untuk \"tas merah\"?",
+    "opsi": {
+      "a": "mira kano",
+      "b": "sefa tolu",
+      "c": "kano tolu",
+      "d": "kano sefa",
+      "e": "mira tolu"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "\"mira\" muncul di kalimat 1 dan 2, yang sama-sama memuat \"buku\", jadi mira = buku dan tolu = merah. Dari kalimat 2 dan 3, \"sefa\" = biru, jadi kano = tas. Tas merah = kano tolu.<br>Opsi A (mira kano) gugur karena artinya \"buku tas\"; Opsi B (sefa tolu) gugur karena artinya \"biru merah\"; Opsi D (kano sefa) gugur karena artinya \"tas biru\"; Opsi E (mira tolu) gugur karena artinya \"buku merah\". Jawaban: Opsi C (kano tolu). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-002",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"ribo nesa\" berarti \"ayam putih\"\n• \"ribo kuta\" berarti \"ayam hitam\"\n• \"piso kuta\" berarti \"kuda hitam\"\nApa arti \"piso nesa\"?",
+    "opsi": {
+      "a": "ayam putih",
+      "b": "kuda hitam",
+      "c": "ayam hitam",
+      "d": "kuda besar",
+      "e": "kuda putih"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Kalimat 1 dan 2: ribo = ayam, jadi nesa = putih dan kuta = hitam. Kalimat 3: kuta = hitam, jadi piso = kuda. Piso nesa = kuda putih.<br>Opsi A (ayam putih) gugur karena memuat \"ayam\" (sandinya \"ribo\"), padahal \"ribo\" tidak ada dalam sandi yang ditanyakan; Opsi B (kuda hitam) gugur karena memuat \"hitam\" (sandinya \"kuta\"), padahal \"kuta\" tidak ada dalam sandi yang ditanyakan; Opsi C (ayam hitam) gugur karena memuat \"ayam\" (sandinya \"ribo\"), padahal \"ribo\" tidak ada dalam sandi yang ditanyakan; Opsi D (kuda besar) gugur karena kata \"besar\" tidak pernah muncul di kalimat mana pun. Jawaban: Opsi E (kuda putih). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-003",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"lapo meri\" berarti \"pagi cerah\"\n• \"lapo dunu\" berarti \"pagi hujan\"\n• \"sika dunu\" berarti \"sore hujan\"\nApa sandi untuk \"cerah\"?",
+    "opsi": {
+      "a": "lapo",
+      "b": "dunu",
+      "c": "sika",
+      "d": "lapo meri",
+      "e": "meri"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 sama-sama memuat \"lapo\" dan \"pagi\", jadi lapo = pagi. Sisa kalimat 1: meri = cerah.<br>Opsi A (lapo) gugur karena artinya \"pagi\"; Opsi B (dunu) gugur karena artinya \"hujan\"; Opsi C (sika) gugur karena artinya \"sore\"; Opsi D (lapo meri) gugur karena artinya \"pagi cerah\". Jawaban: Opsi E (meri). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-004",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"taku rena\" berarti \"kopi panas\"\n• \"taku jomi\" berarti \"kopi dingin\"\n• \"lebo jomi\" berarti \"teh dingin\"\nApa sandi untuk \"teh panas\"?",
+    "opsi": {
+      "a": "taku lebo",
+      "b": "taku rena",
+      "c": "lebo rena",
+      "d": "lebo jomi",
+      "e": "rena jomi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Kalimat 1 dan 2: taku = kopi, rena = panas, jomi = dingin. Kalimat 3: jomi = dingin, jadi lebo = teh. Teh panas = lebo rena.<br>Opsi A (taku lebo) gugur karena artinya \"kopi teh\"; Opsi B (taku rena) gugur karena artinya \"kopi panas\"; Opsi D (lebo jomi) gugur karena artinya \"teh dingin\"; Opsi E (rena jomi) gugur karena artinya \"panas dingin\". Jawaban: Opsi C (lebo rena). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-005",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"fesa kilo\" berarti \"rumah baru\"\n• \"fesa pamu\" berarti \"rumah lama\"\n• \"doro pamu\" berarti \"mobil lama\"\nApa arti \"doro\"?",
+    "opsi": {
+      "a": "rumah",
+      "b": "lama",
+      "c": "mobil",
+      "d": "baru",
+      "e": "sepeda"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Kalimat 2 dan 3 sama-sama memuat \"pamu\" dan \"lama\", jadi pamu = lama. Sisa kalimat 3: doro = mobil.<br>Opsi A (rumah) gugur karena memuat \"rumah\" (sandinya \"fesa\"), padahal \"fesa\" tidak ada dalam sandi yang ditanyakan; Opsi B (lama) gugur karena memuat \"lama\" (sandinya \"pamu\"), padahal \"pamu\" tidak ada dalam sandi yang ditanyakan; Opsi D (baru) gugur karena memuat \"baru\" (sandinya \"kilo\"), padahal \"kilo\" tidak ada dalam sandi yang ditanyakan; Opsi E (sepeda) gugur karena kata \"sepeda\" tidak pernah muncul di kalimat mana pun. Jawaban: Opsi C (mobil). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-006",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 1,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"suli wago\" berarti \"jalan lurus\"\n• \"suli neki\" berarti \"jalan sempit\"\n• \"bota neki\" berarti \"pintu sempit\"\nApa sandi untuk \"pintu lurus\"?",
+    "opsi": {
+      "a": "suli wago",
+      "b": "bota neki",
+      "c": "suli bota",
+      "d": "wago neki",
+      "e": "bota wago"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Kalimat 1 dan 2: suli = jalan, wago = lurus, neki = sempit. Kalimat 3: neki = sempit, jadi bota = pintu. Pintu lurus = bota wago.<br>Opsi A (suli wago) gugur karena artinya \"jalan lurus\"; Opsi B (bota neki) gugur karena artinya \"pintu sempit\"; Opsi C (suli bota) gugur karena artinya \"jalan pintu\"; Opsi D (wago neki) gugur karena artinya \"lurus sempit\". Jawaban: Opsi E (bota wago). Tips: cari dua kalimat yang hanya berbeda satu kata. Kata sandi yang sama di kedua kalimat pasti berarti kata arti yang sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-007",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"kaso limu dera\" berarti \"saya makan nasi\"\n• \"limu pori dera\" berarti \"saya makan roti\"\n• \"dera wenu pori\" berarti \"kamu makan roti\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"kamu makan nasi\"?",
+    "opsi": {
+      "a": "limu dera kaso",
+      "b": "wenu dera pori",
+      "c": "wenu limu kaso",
+      "d": "wenu dera kaso",
+      "e": "wenu kaso pori"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: kaso = nasi, pori = roti. Kalimat 2 dan 3 sama-sama memuat \"dera pori\" dan \"makan roti\", jadi dera = makan; sisanya limu = saya dan wenu = kamu. Kamu makan nasi = wenu dera kaso.<br>Opsi A (limu dera kaso) gugur karena artinya \"saya makan nasi\"; Opsi B (wenu dera pori) gugur karena artinya \"kamu makan roti\"; Opsi C (wenu limu kaso) gugur karena artinya \"kamu saya nasi\"; Opsi E (wenu kaso pori) gugur karena artinya \"kamu nasi roti\". Jawaban: Opsi D (wenu dera kaso). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-008",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"mobe rasi tun\" berarti \"adik sedang tidur\"\n• \"tun gale rasi\" berarti \"kakak sedang tidur\"\n• \"gale rasi vemo\" berarti \"kakak sedang belajar\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa arti \"mobe vemo rasi\"?",
+    "opsi": {
+      "a": "adik sedang belajar",
+      "b": "kakak sedang belajar",
+      "c": "adik sedang tidur",
+      "d": "kakak sedang tidur",
+      "e": "adik belajar tidur"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kalimat 1 dan 2: mobe = adik, gale = kakak. Kalimat 2 dan 3: tun = tidur, vemo = belajar. Sisa kata rasi = sedang. Mobe vemo rasi = adik sedang belajar (urutan sandi tidak harus sama dengan urutan arti).<br>Opsi B (kakak sedang belajar) gugur karena memuat \"kakak\" (sandinya \"gale\"), padahal \"gale\" tidak ada dalam sandi yang ditanyakan; Opsi C (adik sedang tidur) gugur karena memuat \"tidur\" (sandinya \"tun\"), padahal \"tun\" tidak ada dalam sandi yang ditanyakan; Opsi D (kakak sedang tidur) gugur karena memuat \"kakak\" (sandinya \"gale\"), padahal \"gale\" tidak ada dalam sandi yang ditanyakan; Opsi E (adik belajar tidur) gugur karena memuat \"tidur\" (sandinya \"tun\"), padahal \"tun\" tidak ada dalam sandi yang ditanyakan. Jawaban: Opsi A (adik sedang belajar). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-009",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"ga lume tiso\" berarti \"hari ini cerah\"\n• \"pera lume tiso\" berarti \"hari ini hujan\"\n• \"pera domu\" berarti \"besok hujan\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"besok cerah\"?",
+    "opsi": {
+      "a": "domu pera",
+      "b": "domu ga",
+      "c": "lume ga",
+      "d": "tiso ga",
+      "e": "domu lume"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: ga = cerah, pera = hujan. Kalimat 3: pera = hujan, jadi domu = besok. Besok cerah = domu ga.<br>Opsi A (domu pera) gugur karena artinya \"besok hujan\"; Opsi C (lume ga) gugur karena memakai kata sandi yang artinya belum pasti; Opsi D (tiso ga) gugur karena memakai kata sandi yang artinya belum pasti; Opsi E (domu lume) gugur karena memakai kata sandi yang artinya belum pasti. Jawaban: Opsi B (domu ga). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-010",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"hapi zoru melo\" berarti \"baju merah besar\"\n• \"melo kibu hapi\" berarti \"celana merah besar\"\n• \"kibu hapi dusa\" berarti \"celana besar baru\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa arti \"zoru dusa\"?",
+    "opsi": {
+      "a": "baju baru",
+      "b": "celana baru",
+      "c": "baju merah",
+      "d": "baju besar",
+      "e": "celana merah"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: zoru = baju, kibu = celana. Kalimat 2 dan 3 sama-sama memuat kibu dan hapi; artinya yang sama adalah celana dan besar, jadi hapi = besar, melo = merah, dusa = baru. Zoru dusa = baju baru.<br>Opsi B (celana baru) gugur karena memuat \"celana\" (sandinya \"kibu\"), padahal \"kibu\" tidak ada dalam sandi yang ditanyakan; Opsi C (baju merah) gugur karena memuat \"merah\" (sandinya \"melo\"), padahal \"melo\" tidak ada dalam sandi yang ditanyakan; Opsi D (baju besar) gugur karena memuat \"besar\" (sandinya \"hapi\"), padahal \"hapi\" tidak ada dalam sandi yang ditanyakan; Opsi E (celana merah) gugur karena memuat \"celana\" (sandinya \"kibu\"), padahal \"kibu\" tidak ada dalam sandi yang ditanyakan. Jawaban: Opsi A (baju baru). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-011",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"lopa riku sani\" berarti \"ibu ke pasar\"\n• \"sani mota lopa\" berarti \"ayah ke pasar\"\n• \"mota sani beru\" berarti \"ayah ke sekolah\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"ibu ke sekolah\"?",
+    "opsi": {
+      "a": "riku sani beru",
+      "b": "mota sani beru",
+      "c": "riku sani lopa",
+      "d": "riku lopa beru",
+      "e": "riku mota beru"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: riku = ibu, mota = ayah. Kalimat 2 dan 3 berbeda satu kata: lopa = pasar, beru = sekolah. Sisanya sani = ke. Ibu ke sekolah = riku sani beru.<br>Opsi B (mota sani beru) gugur karena artinya \"ayah ke sekolah\"; Opsi C (riku sani lopa) gugur karena artinya \"ibu ke pasar\"; Opsi D (riku lopa beru) gugur karena artinya \"ibu pasar sekolah\"; Opsi E (riku mota beru) gugur karena artinya \"ibu ayah sekolah\". Jawaban: Opsi A (riku sani beru). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-012",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"tema voki\" berarti \"gunung tinggi\"\n• \"voki rusa\" berarti \"pohon tinggi\"\n• \"rusa jalo\" berarti \"pohon besar\"\n• \"jalo nimi\" berarti \"batu besar\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"batu tinggi\"?",
+    "opsi": {
+      "a": "jalo voki",
+      "b": "nimi rusa",
+      "c": "nimi voki",
+      "d": "tema nimi",
+      "e": "nimi jalo"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Telusuri berantai. Kalimat 1 dan 2: voki = tinggi, jadi tema = gunung dan rusa = pohon. Kalimat 3: rusa = pohon, jadi jalo = besar. Kalimat 4: jalo = besar, jadi nimi = batu. Batu tinggi = nimi voki.<br>Opsi A (jalo voki) gugur karena artinya \"besar tinggi\"; Opsi B (nimi rusa) gugur karena artinya \"batu pohon\"; Opsi D (tema nimi) gugur karena artinya \"gunung batu\"; Opsi E (nimi jalo) gugur karena artinya \"batu besar\". Jawaban: Opsi C (nimi voki). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-013",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 2,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"kuro lami pesa\" berarti \"kucing makan ikan\"\n• \"pesa duno kuro\" berarti \"anjing makan ikan\"\n• \"duno tifa kuro\" berarti \"anjing makan tulang\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa arti \"lami kuro tifa\"?",
+    "opsi": {
+      "a": "kucing makan tulang",
+      "b": "anjing makan tulang",
+      "c": "kucing makan ikan",
+      "d": "kucing ikan tulang",
+      "e": "anjing makan ikan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: lami = kucing, duno = anjing. Kalimat 2 dan 3 berbeda satu kata: pesa = ikan, tifa = tulang. Sisanya kuro = makan. Lami kuro tifa = kucing makan tulang.<br>Opsi B (anjing makan tulang) gugur karena memuat \"anjing\" (sandinya \"duno\"), padahal \"duno\" tidak ada dalam sandi yang ditanyakan; Opsi C (kucing makan ikan) gugur karena memuat \"ikan\" (sandinya \"pesa\"), padahal \"pesa\" tidak ada dalam sandi yang ditanyakan; Opsi D (kucing ikan tulang) gugur karena memuat \"ikan\" (sandinya \"pesa\"), padahal \"pesa\" tidak ada dalam sandi yang ditanyakan; Opsi E (anjing makan ikan) gugur karena memuat \"anjing\" (sandinya \"duno\"), padahal \"duno\" tidak ada dalam sandi yang ditanyakan. Jawaban: Opsi A (kucing makan tulang). Tips: urutan sandi bisa diacak. Bandingkan himpunan katanya, bukan posisinya, lalu kunci satu kata dan lanjutkan berantai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-014",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"sobi kale nuri\" berarti \"anak itu pintar\"\n• \"nuri teva sobi\" berarti \"anak itu rajin\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"anak\"?",
+    "opsi": {
+      "a": "sobi",
+      "b": "nuri",
+      "c": "kale",
+      "d": "Tidak dapat ditentukan",
+      "e": "teva"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Kedua kalimat sama-sama memuat sobi dan nuri, juga \"anak itu\". Yang bisa dipastikan hanya kale = pintar dan teva = rajin. Sobi dan nuri berarti anak dan itu, tetapi tidak ada kalimat lain yang memisahkan keduanya, jadi sandi untuk \"anak\" tidak dapat ditentukan.<br>Opsi A (sobi) gugur karena memakai kata sandi yang artinya belum pasti; Opsi B (nuri) gugur karena memakai kata sandi yang artinya belum pasti; Opsi C (kale) gugur karena artinya \"pintar\"; Opsi E (teva) gugur karena artinya \"rajin\". Jawaban: Opsi D (Tidak dapat ditentukan). Tips: setelah semua kata dipasangkan, cek mana yang benar-benar terkunci. Kata yang selalu muncul berdua, atau kata yang tidak pernah muncul, tidak dapat ditentukan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-015",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"tarbelo\" berarti \"kursi kayu\"\n• \"tarmusi\" berarti \"kursi besi\"\n• \"dokbelo\" berarti \"meja kayu\"\nSetiap kata sandi terdiri atas dua bagian, dan setiap bagian mewakili satu kata.\nApa sandi untuk \"meja besi\"?",
+    "opsi": {
+      "a": "tarmusi",
+      "b": "dokmusi",
+      "c": "musidok",
+      "d": "dokbelo",
+      "e": "belomusi"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Pecah setiap kata menjadi dua bagian. tar-belo dan tar-musi sama-sama \"kursi\", jadi tar = kursi, belo = kayu, musi = besi. dok-belo = meja kayu, jadi dok = meja. Bagian benda selalu di depan, jadi meja besi = dok + musi = dokmusi.<br>Opsi A (tarmusi) gugur karena artinya \"kursi besi\"; Opsi C (musidok) gugur karena urutannya terbalik, padahal bagian benda selalu di depan; Opsi D (dokbelo) gugur karena artinya \"meja kayu\"; Opsi E (belomusi) gugur karena tidak memuat bagian \"dok\" (meja), hanya gabungan kayu dan besi. Jawaban: Opsi B (dokmusi). Tips: pecah kata sandi menjadi bagian-bagian yang berulang, lalu perhatikan posisi bagian (depan atau belakang) karena posisinya ikut menentukan arti.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-016",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"sanarito\" berarti \"rumah besar\"\n• \"mekarito\" berarti \"rumah kecil\"\n• \"sanagelo\" berarti \"kapal besar\"\nSetiap kata sandi terdiri atas dua bagian, dan setiap bagian mewakili satu kata.\nApa sandi untuk \"kapal kecil\"?",
+    "opsi": {
+      "a": "gelomeka",
+      "b": "sanagelo",
+      "c": "mekarito",
+      "d": "gelosana",
+      "e": "mekagelo"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Pecah setiap kata menjadi dua bagian. sana-rito dan meka-rito sama-sama \"rumah\", jadi rito = rumah, sana = besar, meka = kecil. sana-gelo = kapal besar, jadi gelo = kapal. Dalam bahasa ini sifat ditulis di depan benda, jadi kapal kecil = meka + gelo = mekagelo.<br>Opsi A (gelomeka) gugur karena urutannya terbalik, padahal sifat ditulis di depan benda; Opsi B (sanagelo) gugur karena artinya \"kapal besar\"; Opsi C (mekarito) gugur karena artinya \"rumah kecil\"; Opsi D (gelosana) gugur karena urutannya terbalik dan artinya \"kapal besar\". Jawaban: Opsi E (mekagelo). Tips: pecah kata sandi menjadi bagian-bagian yang berulang, lalu perhatikan posisi bagian (depan atau belakang) karena posisinya ikut menentukan arti.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-017",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"fino garu\" berarti \"langit biru\"\n• \"garu pelo\" berarti \"laut biru\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"langit hijau\"?",
+    "opsi": {
+      "a": "fino pelo",
+      "b": "fino tasi",
+      "c": "pelo garu",
+      "d": "Tidak dapat ditentukan",
+      "e": "garu"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Garu muncul di kedua kalimat bersama \"biru\", jadi garu = biru, fino = langit, pelo = laut. Kata \"hijau\" tidak pernah muncul, sehingga sandinya tidak bisa diketahui. Sandi \"langit hijau\" tidak dapat ditentukan.<br>Opsi A (fino pelo) gugur karena artinya \"langit laut\"; Opsi B (fino tasi) gugur karena \"tasi\" tidak pernah muncul di kalimat mana pun; Opsi C (pelo garu) gugur karena artinya \"laut biru\"; Opsi E (garu) gugur karena artinya \"biru\". Jawaban: Opsi D (Tidak dapat ditentukan). Tips: setelah semua kata dipasangkan, cek mana yang benar-benar terkunci. Kata yang selalu muncul berdua, atau kata yang tidak pernah muncul, tidak dapat ditentukan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-018",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"mavi tolo kesa\" berarti \"polisi menangkap pencuri\"\n• \"kesa runa mavi\" berarti \"polisi menangkap perampok\"\n• \"kesa pido runa\" berarti \"polisi melihat perampok\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa sandi untuk \"polisi melihat pencuri\"?",
+    "opsi": {
+      "a": "mavi pido tolo",
+      "b": "kesa pido tolo",
+      "c": "kesa mavi tolo",
+      "d": "kesa pido runa",
+      "e": "pido tolo runa"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: tolo = pencuri, runa = perampok. Kalimat 2 dan 3 sama-sama memuat kesa dan runa; arti yang sama adalah polisi dan perampok, jadi kesa = polisi, mavi = menangkap, pido = melihat. Polisi melihat pencuri = kesa pido tolo.<br>Opsi A (mavi pido tolo) gugur karena artinya \"menangkap melihat pencuri\"; Opsi C (kesa mavi tolo) gugur karena artinya \"polisi menangkap pencuri\"; Opsi D (kesa pido runa) gugur karena artinya \"polisi melihat perampok\"; Opsi E (pido tolo runa) gugur karena artinya \"melihat pencuri perampok\". Jawaban: Opsi B (kesa pido tolo). Tips: setelah semua kata dipasangkan, cek mana yang benar-benar terkunci. Kata yang selalu muncul berdua, atau kata yang tidak pernah muncul, tidak dapat ditentukan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-019",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"nuka ruli fesa\" berarti \"guru itu sabar\"\n• \"fesa ruli dovi\" berarti \"guru itu tegas\"\n• \"dovi pelo\" berarti \"tegas bertindak\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nBerapa banyak kata sandi yang artinya dapat dipastikan?",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "1"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: nuka = sabar, dovi = tegas. Kalimat 3: dovi = tegas, jadi pelo = bertindak. Ruli dan fesa berarti \"guru\" dan \"itu\", tetapi tidak ada kalimat yang memisahkan keduanya. Jadi yang pasti hanya nuka, dovi, dan pelo: 3 kata.<br>Opsi A (2) gugur karena jumlah kata sandi yang artinya pasti bukan 2; Opsi C (4) gugur karena jumlah kata sandi yang artinya pasti bukan 4; Opsi D (5) gugur karena jumlah kata sandi yang artinya pasti bukan 5; Opsi E (1) gugur karena jumlah kata sandi yang artinya pasti bukan 1. Jawaban: Opsi B (3). Tips: setelah semua kata dipasangkan, cek mana yang benar-benar terkunci. Kata yang selalu muncul berdua, atau kata yang tidak pernah muncul, tidak dapat ditentukan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K10-N-020",
+    "kartu": "K10",
+    "sub_type": "ANL-KODE-PANDA",
+    "tier": 3,
+    "sumber": "baru",
+    "stem": "Dalam sebuah bahasa sandi:\n• \"so pita lenu\" berarti \"dia sangat senang\"\n• \"lenu sore so\" berarti \"dia sangat sedih\"\n• \"kima lenu\" berarti \"kamu sangat\"\nUrutan kata sandi tidak selalu sama dengan urutan artinya.\nApa arti \"kima lenu pita\"?",
+    "opsi": {
+      "a": "dia sangat senang",
+      "b": "kamu sangat sedih",
+      "c": "kamu dia senang",
+      "d": "kamu sangat senang",
+      "e": "dia sangat sedih"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Kalimat 1 dan 2 berbeda satu kata: pita = senang, sore = sedih. Kalimat 3 memuat lenu bersama \"sangat\", dan lenu juga ada di kalimat 1 dan 2, jadi lenu = sangat dan kima = kamu; sisanya so = dia. Kima lenu pita = kamu sangat senang.<br>Opsi A (dia sangat senang) gugur karena memuat \"dia\" (sandinya \"so\"), padahal \"so\" tidak ada dalam sandi yang ditanyakan; Opsi B (kamu sangat sedih) gugur karena memuat \"sedih\" (sandinya \"sore\"), padahal \"sore\" tidak ada dalam sandi yang ditanyakan; Opsi C (kamu dia senang) gugur karena memuat \"dia\" (sandinya \"so\"), padahal \"so\" tidak ada dalam sandi yang ditanyakan; Opsi E (dia sangat sedih) gugur karena memuat \"dia\" (sandinya \"so\"), padahal \"so\" tidak ada dalam sandi yang ditanyakan. Jawaban: Opsi D (kamu sangat senang). Tips: setelah semua kata dipasangkan, cek mana yang benar-benar terkunci. Kata yang selalu muncul berdua, atau kata yang tidak pernah muncul, tidak dapat ditentukan.",
     "status_kunci": "ganda"
   }
 ]

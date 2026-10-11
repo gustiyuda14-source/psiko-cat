@@ -302,3 +302,8 @@
 .pk-sheet-close:hover { background: var(--surface-inset); color: var(--foreground) }
 .pk-sheet-close:focus-visible { outline: 3px solid var(--ring) }
 @media (prefers-reduced-motion: reduce) { .pk-sheet[open] { animation: none } }
+
+/* Kategori soal di panel kartu; kategori yang cocok dengan pencarian disorot madu. */
+.hc-cats .hc-level::before { opacity: .6 }
+.hc-cats .hc-level[data-hit] { border-color: var(--honey-bot); background: color-mix(in srgb, var(--honey-top) 28%, var(--surface-inset)) }
+.hc-cats .hc-level[data-hit]::before { opacity: 1 }

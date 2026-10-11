@@ -10,7 +10,7 @@ import { DRILL_ASPEK, DRILL_TIERS, readDrillProgress, writeDrillProgress, type D
 import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
 
-type CatalogCard = DrillCard & { kartu: string; tiers: string[][] };
+type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[] };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
@@ -67,9 +67,12 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
   const aspekLabel = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.label ?? key;
   const modul = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.modul ?? "Kecerdasan";
-  const q = query.trim().toLowerCase();
+  // Cari: setiap kata harus ada di judul, deskripsi, aspek, atau kategori soal kartu; saat mencari, filter aspek diabaikan.
+  const words = query.trim().toLowerCase().split(/\s+/).filter(Boolean);
+  const q = words.join(" ");
+  const hit = (text: string) => words.length > 0 && words.every((w) => text.toLowerCase().includes(w));
   const matches = (c: CatalogCard) =>
-    (filter === "all" || c.aspek === filter) && (!q || `${c.label} ${c.desc}`.toLowerCase().includes(q));
+    q ? hit([c.label, c.desc, aspekLabel(c.aspek), ...c.kategori.map((k) => k.label)].join(" ")) : filter === "all" || c.aspek === filter;
 
   const wheel: WheelCard[] = cards.map((c, i) => {
     const t = c.tiers.map((ids) => stats(ids, progress));
@@ -188,8 +191,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
           ) : (
             <div className="hc-empty">
               <p>
-                Tidak ada jenis soal yang cocok dengan <strong>“{query}”</strong>
-                {filter !== "all" ? " di aspek ini" : ""}.
+                Tidak ada jenis soal yang cocok dengan <strong>“{query}”</strong>.
               </p>
               <Button
                 variant="secondary"
@@ -248,6 +250,20 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
                   {cardStats.acc !== null ? `Akurasi ${cardStats.acc}%` : "Belum ada jawaban"}
                 </span>
               </div>
+
+              <ul className="hc-levels hc-cats" aria-label="Kategori soal di kartu ini">
+                {card.kategori.map(({ label, ids }) => {
+                  const s = stats(ids, progress);
+                  return (
+                    <li key={label} className="hc-level" data-hit={hit(label) ? "true" : undefined}>
+                      <b>{label}</b>
+                      <span className="tnum">
+                        {s.done}/{s.total}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
 
               <ul className="hc-levels" aria-label="Level soal di kartu ini">
                 {DRILL_TIERS.map(({ tier, label }) => {
