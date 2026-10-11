@@ -15,15 +15,15 @@ export type ProgressCard = { kartu: string; label: string; aspek: string; tiers:
 export const TARGET = 80;
 const MIN_FOR_PRIO = 5;
 
-/** Soal dikerjakan, total soal, akurasi (benar / percobaan) untuk sekumpulan id soal. */
+/** Soal dikerjakan, total soal, akurasi (benar / percobaan) untuk sekumpulan id soal.
+ *  ok/bad = soal benar tanpa pernah salah / soal pernah salah — sama dengan navigasi sesi drill. */
 export function stats(ids: string[], progress: DrillProgress) {
   const done = ids.filter((id) => progress[id]);
   const right = done.reduce((s, id) => s + progress[id][0], 0);
   const tries = done.reduce((s, id) => s + progress[id][1], 0);
-  return { done: done.length, total: ids.length, right, tries, acc: tries ? Math.round((right / tries) * 100) : null };
+  const ok = done.filter((id) => progress[id][0] === progress[id][1]).length;
+  return { done: done.length, total: ids.length, right, tries, ok, bad: done.length - ok, acc: tries ? Math.round((right / tries) * 100) : null };
 }
-
-const band = (a: number) => (a >= 85 ? "is-a4" : a >= 70 ? "is-a3" : a >= 60 ? "is-a2" : "is-a1");
 const tierIds = (cards: ProgressCard[], i: number) => cards.flatMap((c) => c.tiers[i]);
 
 export function aspekTiers(cards: ProgressCard[], progress: DrillProgress) {
@@ -66,15 +66,13 @@ export default function DrillProgressTicket({
         <div className="pg-sec-h">
           <h3>Progress drilling per kartu dan level</h3>
           <div className="pg-legend">
-            <span><i style={{ background: "var(--brand-ink)" }} />85% ke atas</span>
-            <span><i style={{ background: "var(--pg-mid)" }} />70 sampai 84%</span>
-            <span><i style={{ background: "var(--pg-soft)" }} />60 sampai 69%</span>
-            <span><i style={{ background: "var(--pg-weak-bg)", boxShadow: "inset 0 0 0 1.5px var(--pg-weak-line)" }} />Di bawah 60%</span>
+            <span><i style={{ background: "var(--success)" }} />Benar</span>
+            <span><i style={{ background: "var(--destructive)" }} />Pernah salah</span>
             <span><i style={{ background: "repeating-linear-gradient(135deg,var(--pg-track) 0 3px,#f8f4ea 3px 6px)" }} />Belum dikerjakan</span>
           </div>
         </div>
         <div className="pg-heat-scroll">
-          <div className="pg-heat" role="table" aria-label="Akurasi drilling per kartu dan level">
+          <div className="pg-heat" role="table" aria-label="Hasil drilling per kartu dan level">
             <div role="row" style={{ display: "contents" }}>
               <span className="pg-hd" role="columnheader">Kartu</span>
               {DRILL_TIERS.map(({ tier, label }) => (
@@ -103,12 +101,23 @@ export default function DrillProgressTicket({
                           </span>
                         );
                       return (
-                        <span key={t.tier} role="cell" className={`pg-cell ${band(s.acc!)}`} title={`${c.label}, ${t.label}: ${s.done} dari ${s.total} soal, akurasi ${s.acc}%`}>
+                        <span
+                          key={t.tier}
+                          role="cell"
+                          className="pg-cell is-mix"
+                          title={`${c.label}, ${t.label}: ${s.ok} benar, ${s.bad} pernah salah, ${s.total - s.done} belum dari ${s.total} soal`}
+                        >
                           <span>
                             {s.done}/{s.total}
                           </span>
-                          <b>{s.acc}%</b>
-                          <span className="pg-cov" style={{ width: `${pct(s.done, s.total)}%` }} />
+                          <b>
+                            <span className="pg-ok">✓ {s.ok}</span>
+                            <span className="pg-bad">✗ {s.bad}</span>
+                          </b>
+                          <span className="pg-mixbar" aria-hidden="true">
+                            <i className="pg-ok" style={{ width: `${(s.ok / s.total) * 100}%` }} />
+                            <i className="pg-bad" style={{ width: `${(s.bad / s.total) * 100}%` }} />
+                          </span>
                         </span>
                       );
                     })}
@@ -118,7 +127,7 @@ export default function DrillProgressTicket({
             ))}
           </div>
         </div>
-        <p className="pg-note">Garis di dasar sel menunjukkan proporsi soal yang telah dikerjakan pada level tersebut.</p>
+        <p className="pg-note">Bar di dasar sel: hijau = soal dijawab benar, merah = soal pernah dijawab salah, arsir = belum dikerjakan (sama dengan warna nomor soal di sesi drill).</p>
         </>
       }
       stub={
