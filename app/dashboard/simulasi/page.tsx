@@ -96,7 +96,7 @@ export default async function SimulasiPage() {
       // Tren Nilai Akhir Psikotest: sesi selesai milik peserta ini, sama dengan Beranda.
       supabaseAdmin
         .from("test_sessions")
-        .select("nap_score, completed_at, created_at, status, module_sessions(module_type)")
+        .select("nap_score, completed_at, created_at, status, module_sessions(module_type, package_number)")
         .eq("user_id", session.sub)
         .in("status", ["COMPLETED", "DISQUALIFIED"])
         .order("created_at", { ascending: true }),
@@ -138,7 +138,7 @@ export default async function SimulasiPage() {
     };
   }
 
-  type Done = { nap_score: number | null; completed_at: string | null; created_at: string; module_sessions: { module_type: string }[] };
+  type Done = { nap_score: number | null; completed_at: string | null; created_at: string; module_sessions: { module_type: string; package_number: number | null }[] };
   const done = (doneSessions ?? []) as Done[];
   const isFull = (s: Done) => MODULE_ORDER.every((t) => s.module_sessions.some((m) => m.module_type === t));
   const tryouts: TryoutPoint[] = done
@@ -146,12 +146,30 @@ export default async function SimulasiPage() {
     .map((s) => ({ at: s.completed_at ?? s.created_at, nap: s.nap_score! }));
   const single = done.filter((s) => !isFull(s)).length;
 
+  // Tryout lengkap per kartu paket: kartu dibaca dari package_number Kecerdasan
+  // (null = sesi lama = Paket 1). `done` urut lama → baru.
+  const paketOf = (s: Done) => {
+    const pkg = s.module_sessions.find((m) => m.module_type === "KECERDASAN")?.package_number ?? SIMULASI_PAKET[1].KECERDASAN;
+    return Number(Object.keys(SIMULASI_PAKET).find((id) => SIMULASI_PAKET[Number(id)].KECERDASAN === pkg) ?? 0);
+  };
+  const runsOf = (id: number) => done.filter((s) => isFull(s) && s.nap_score != null && paketOf(s) === id);
+
   // 5 slot paket simulasi penuh. Kartu terbuka otomatis begitu paketnya terdaftar di
   // SIMULASI_PAKET dan bank soal Kecerdasan + Kepribadiannya sudah ada di DB.
   const packages: SimulasiPackage[] = [1, 2, 3, 4, 5].map((id) => ({
     id,
     meta: `${totalOf(id)} butir · ${totalMinutes} menit`,
     ready: !!SIMULASI_PAKET[id] && countsOf(id).KECERDASAN > 0 && countsOf(id).KEPRIBADIAN > 0,
+    ...(() => {
+      const runs = runsOf(id);
+      const last = runs.at(-1);
+      return {
+        runs: runs.length,
+        nap: last?.nap_score ?? undefined,
+        prev: runs.at(-2)?.nap_score ?? undefined,
+        at: last ? new Date(last.completed_at ?? last.created_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" }) : undefined,
+      };
+    })(),
   }));
 
   const itemsOf = (paket: number): SimulasiItem[] => [

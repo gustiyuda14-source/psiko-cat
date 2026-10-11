@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useTransition } from "react";
-import type { ModuleType } from "@/lib/test-config";
+import { useState, useTransition, type CSSProperties } from "react";
+import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config";
 import { fillY, wavePath } from "@/lib/honey";
 import { Button } from "@/app/components/ui-client";
-import { ArrowRight, ChevronLeft, ChevronRight } from "@/app/components/icons";
+import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
 
 /*
   Katalog Simulasi: tiap tes = kubus isometrik. Tiga sisi kubus = tiga sub-tes
@@ -12,12 +12,14 @@ import { ArrowRight, ChevronLeft, ChevronRight } from "@/app/components/icons";
   terakhir (0-100) dari riwayat. Tryout lengkap menyalakan ketiga sisi; kartu
   sub-tes hanya menyalakan sisinya sendiri. Memulai tes tetap lewat server action
   `startSession` (buat sesi lalu redirect). CSS di app/honey.css.
-  Langkah 1 = pilih paket simulasi (kartu); kubus + panel baru tampil setelah
-  paket dipilih. Paket tanpa bank soal tampil "Belum tersedia".
+  Langkah 1 = pilih paket simulasi: timeline hexagon. Paket siap terkecil yang belum
+  pernah ditryout-kan jadi kartu unggulan (navy + border emas berputar); kalau semua
+  sudah, paket siap terakhir. Paket tanpa bank soal tampil "Segera".
 */
 
 export type SimulasiItem = { id: string; title: string; meta: string; desc: string; faces: ModuleType[] };
-export type SimulasiPackage = { id: number; meta: string; ready: boolean };
+/** runs/nap/prev/at = tryout lengkap selesai untuk paket ini (nap = terakhir, prev = sebelumnya). */
+export type SimulasiPackage = { id: number; meta: string; ready: boolean; runs: number; nap?: number; prev?: number; at?: string };
 export type LastScores = Partial<Record<ModuleType, { score: number; at: string; prev?: number }>>;
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
@@ -27,7 +29,8 @@ const FACES: { type: ModuleType; label: string; side: string; pts: string; y0: n
   { type: "KEPRIBADIAN", label: "Kepribadian", side: "atas", pts: "0,28.87 50,0 100,28.87 50,57.735", y0: 0, h: 57.735, shade: 0, text: "matrix(0.866 0.5 -0.866 0.5 50 31)" },
 ];
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
-const OUTLINE = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
+const OUTLINE = HEX;
+const SUB_VAR = { KECERDASAN: "--sub-kc", KECERMATAN: "--sub-km", KEPRIBADIAN: "--sub-kp" } as const;
 
 function Cube({ item, last, idx }: { item: SimulasiItem; last: LastScores; idx: number }) {
   return (
@@ -89,37 +92,118 @@ export default function SimulasiCatalog({
   const [pending, startTransition] = useTransition();
   const list = pkg === null ? [] : items[pkg] ?? [];
   const item = list[selected];
+  const ready = packages.filter((p) => p.ready);
+  const featured = (ready.find((p) => p.runs === 0) ?? ready.at(-1))?.id;
 
   if (pkg === null || !item) {
     return (
-      <div className="sp-grid" role="list" aria-label="Pilih paket simulasi">
-        {packages.map((p, i) => (
-          <button
-            key={p.id}
-            type="button"
-            role="listitem"
-            className="sp-card"
-            disabled={!p.ready}
-            style={{ animationDelay: `${i * 60}ms` }}
-            onClick={() => {
-              setSelected(0);
-              setPkg(p.id);
-            }}
-          >
-            <span className={`pk-hex${p.ready ? " is-part" : ""}`} aria-hidden="true">
-              <svg viewBox="-4 -4 108 124">
-                <polygon points={HEX} />
-              </svg>
-              <b>{p.id}</b>
-            </span>
-            <span className="sp-card-main">
-              <b>Simulasi Penuh Paket {p.id}</b>
-              <span className="tnum">{p.ready ? p.meta : "Belum tersedia"}</span>
-            </span>
-            {p.ready && <ChevronRight className="size-5 pk-chev" />}
-          </button>
-        ))}
-      </div>
+      <>
+        <svg width="0" height="0" className="absolute" aria-hidden="true">
+          <defs>
+            <linearGradient id="sp-gold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stopColor="#b8892b" />
+              <stop offset=".5" stopColor="#f3dd8e" />
+              <stop offset="1" stopColor="#c9a24a" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <ol className="sp-list" aria-label="Pilih paket simulasi">
+          {packages.map((p, i) => {
+            const state = !p.ready ? "is-locked" : p.id === featured ? "is-featured" : p.runs > 0 ? "is-done" : "";
+            const delta = p.nap !== undefined && p.prev !== undefined ? Math.round(p.nap) - Math.round(p.prev) : 0;
+            return (
+              <li key={p.id} className={`sp-step ${state}`} style={{ animationDelay: `${i * 70}ms` }}>
+                <span className="sp-node" aria-hidden="true">
+                  <svg viewBox="-4 -4 108 124">
+                    <polygon points={HEX} />
+                  </svg>
+                  <b className="tnum">{String(p.id).padStart(2, "0")}</b>
+                  {p.runs > 0 && (
+                    <span className="sp-tick">
+                      <Check className="size-3" />
+                    </span>
+                  )}
+                </span>
+                <button
+                  type="button"
+                  className="sp-card"
+                  disabled={!p.ready}
+                  onClick={() => {
+                    setSelected(0);
+                    setPkg(p.id);
+                  }}
+                >
+                  {state === "is-featured" && (
+                    <>
+                      <span className="sp-shine" aria-hidden="true" />
+                      <span className="sp-badge">
+                        <i aria-hidden="true" />
+                        {p.runs > 0 ? "Paket terbaru" : "Lanjutkan di sini"}
+                      </span>
+                    </>
+                  )}
+                  <span>
+                    <span className="sp-title">Simulasi Penuh Paket {p.id}</span>
+                    <span className="sp-meta tnum">
+                      {!p.ready ? (
+                        <span>Bank soal sedang disusun</span>
+                      ) : p.runs > 0 ? (
+                        <>
+                          <span>Selesai {p.runs} kali</span>
+                          <span>terakhir {p.at}</span>
+                        </>
+                      ) : (
+                        <>
+                          <span>Belum pernah dikerjakan</span>
+                          <span>{p.meta}</span>
+                        </>
+                      )}
+                    </span>
+                  </span>
+                  {!p.ready ? (
+                    <span className="sp-soon">Segera</span>
+                  ) : (
+                    <>
+                      <span className="sp-side">
+                        {p.nap !== undefined && (
+                          <span className="sp-score tnum">
+                            <small>Nilai Akhir Psikotest</small>
+                            <strong>{Math.round(p.nap)}</strong>
+                            {delta !== 0 && (
+                              <em className={delta > 0 ? "pg-up" : "pg-down"}>
+                                {delta > 0 ? "+" : "−"}
+                                {Math.abs(delta)}
+                              </em>
+                            )}
+                          </span>
+                        )}
+                        <span className="sp-cta">
+                          {p.runs > 0 ? "Ulangi paket" : "Pilih paket"}
+                          <ArrowRight className="size-4" />
+                        </span>
+                      </span>
+                      <span className="sp-mix">
+                        <span className="sp-bar" aria-hidden="true">
+                          {MODULE_ORDER.map((t) => (
+                            <i key={t} style={{ flex: MODULE_CONFIG[t].time_limit_seconds, background: `var(${SUB_VAR[t]})` }} />
+                          ))}
+                        </span>
+                        <span className="sp-legend tnum">
+                          {MODULE_ORDER.map((t) => (
+                            <span key={t} style={{ "--c": `var(${SUB_VAR[t]})` } as CSSProperties}>
+                              <b>{MODULE_CONFIG[t].label}</b> {MODULE_CONFIG[t].time_limit_seconds / 60} mnt
+                            </span>
+                          ))}
+                        </span>
+                      </span>
+                    </>
+                  )}
+                </button>
+              </li>
+            );
+          })}
+        </ol>
+      </>
     );
   }
 
