@@ -13,9 +13,17 @@ import type {
 } from "@/lib/types/safe-question";
 
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
+import { simulasiPackageOf } from "@/lib/test-config";
+
+/** Paket bank soal yang dipakai sebuah module simulasi (null di sesi lama = Paket 1). */
+export async function modulePackageOf(moduleSessionId: string, type: "KECERDASAN" | "KEPRIBADIAN"): Promise<number> {
+  const { data, error } = await supabaseAdmin.from("module_sessions").select("package_number").eq("id", moduleSessionId).maybeSingle();
+  if (error) throw error;
+  return simulasiPackageOf(type, data?.package_number);
+}
 
 export async function fetchKecerdasanReview(moduleSessionId: string): Promise<KecerdasanReviewItem[]> {
+  const pkg = await modulePackageOf(moduleSessionId, "KECERDASAN");
   const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
     supabaseAdmin
     .from("answers")
@@ -25,7 +33,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
       .from("questions")
       .select("id, sequence_number, options_payload, scoring_rule")
       .eq("type", "KECERDASAN")
-      .eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
+      .eq("package_number", pkg)
       .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);
@@ -49,7 +57,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
 
 /**
  * Paket Kepribadian milik satu sesi: dari soal yang sudah dijawab (sesi lama
- * dikerjakan di Paket 1 Likert 5), atau paket simulasi aktif bila belum ada jawaban.
+ * dikerjakan di Paket 1 Likert 5), atau paket yang tercatat di sesi bila belum ada jawaban.
  */
 export async function kepribadianPackageOf(moduleSessionId: string): Promise<number> {
   const { data, error } = await supabaseAdmin
@@ -59,7 +67,7 @@ export async function kepribadianPackageOf(moduleSessionId: string): Promise<num
     .limit(1);
   if (error) throw error;
   const pkg = (data?.[0]?.question as unknown as { package_number: number | null } | null)?.package_number;
-  return pkg ?? SIMULASI_PACKAGE.KEPRIBADIAN;
+  return pkg ?? modulePackageOf(moduleSessionId, "KEPRIBADIAN");
 }
 
 export async function fetchKepribadianReview(moduleSessionId: string): Promise<KepribadianReviewItem[]> {

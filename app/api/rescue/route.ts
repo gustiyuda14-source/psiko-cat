@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { getSessionAccess } from "@/lib/session-access";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
+import { simulasiPackageOf } from "@/lib/test-config";
 
 type ModulePayload = {
   moduleSessionId: string;
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
     // Verify module_session belongs to the authenticated user
     const { data: ms } = await supabaseAdmin
       .from("module_sessions")
-      .select("id, status, module_type, test_session_id, test_sessions!inner(user_id)")
+      .select("id, status, module_type, test_session_id, package_number, test_sessions!inner(user_id)")
       .eq("id", payload.moduleSessionId)
       .eq("test_session_id", sessionId)
       .eq("module_type", moduleType)
@@ -88,7 +88,7 @@ export async function POST(req: NextRequest) {
       .select("id")
       .in("id", questionIds)
       .eq("type", moduleType)
-      .eq("package_number", SIMULASI_PACKAGE[moduleType])
+      .eq("package_number", simulasiPackageOf(moduleType, ms.package_number))
       .eq("is_active", true);
     if (questionError || questions?.length !== new Set(questionIds).size) return;
     if (entries.some(([, key]) => !/^[A-E]{1,5}$/.test(key))) return;

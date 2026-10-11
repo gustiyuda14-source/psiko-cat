@@ -130,6 +130,10 @@ model ModuleSession {
   // Null untuk ModuleSession non-Kecermatan.
   kecermatan_package_number Int?
 
+  // Paket bank soal simulasi Kecerdasan/Kepribadian (lib/test-config.ts SIMULASI_PAKET).
+  // Null = sesi lama, dianggap Paket 1. Null untuk Kecermatan.
+  package_number Int?
+
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
 

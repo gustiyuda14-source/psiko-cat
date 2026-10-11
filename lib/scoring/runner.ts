@@ -6,10 +6,9 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 import { calculateKecerdasan } from "./kecerdasan";
 import { calculateKepribadian } from "./kepribadian";
 import { pribadiModuleScore, type PribadiRule } from "./pribadi";
-import { kepribadianPackageOf } from "@/lib/review";
+import { kepribadianPackageOf, modulePackageOf } from "@/lib/review";
 import { calculateKecermatan, withinColumnWindow, type KecermatanColumnStats } from "./kecermatan";
 import { calculateNAP, calculateSingleModuleResult } from "./nap";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
 import type {
   KecerdasanScoringRule,
   KepribadianScoringRule,
@@ -24,8 +23,9 @@ async function scoreKecerdasan(module_session_id: string) {
 
   const questionIds = (answers ?? []).map((a) => a.question_id);
   if (answerError) throw answerError;
+  const pkg = await modulePackageOf(module_session_id, "KECERDASAN");
   const { data: questions, error: questionError } = questionIds.length
-    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds).eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
+    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds).eq("package_number", pkg)
     : { data: [], error: null };
   if (questionError) throw questionError;
 

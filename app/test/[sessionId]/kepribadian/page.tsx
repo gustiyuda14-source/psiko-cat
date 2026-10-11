@@ -3,7 +3,7 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 import KepribadianClient from "./KepribadianClient";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
 import { getSessionAccess } from "@/lib/session-access";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
+import { simulasiPackageOf } from "@/lib/test-config";
 
 export default async function KepribadianPage({
   params,
@@ -16,7 +16,7 @@ export default async function KepribadianPage({
 
   const { data: ms } = await supabaseAdmin
     .from("module_sessions")
-    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id")
+    .select("id, status, started_at, recovery_snapshot, sequence_order, test_session_id, package_number")
     .eq("test_session_id", sessionId)
     .eq("module_type", "KEPRIBADIAN")
     .maybeSingle();
@@ -43,7 +43,7 @@ export default async function KepribadianPage({
     .from("questions")
     .select("id, type, sequence_number, column_index, package_number, options_payload, is_active, created_at, updated_at")
     .eq("type", "KEPRIBADIAN")
-    .eq("package_number", SIMULASI_PACKAGE.KEPRIBADIAN)
+    .eq("package_number", simulasiPackageOf("KEPRIBADIAN", ms.package_number))
     .eq("is_active", true)
     .order("sequence_number", { ascending: true });
 

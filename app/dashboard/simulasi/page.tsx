@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import ResetSesiButton from "./ResetSesiButton";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PACKAGE, type ModuleType } from "@/lib/test-config";
+import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PAKET, type ModuleType } from "@/lib/test-config";
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronDown, ChevronRight } from "@/app/components/icons";
@@ -29,8 +29,9 @@ async function startSession(formData: FormData) {
     : MODULE_ORDER.includes(requested as ModuleType)
       ? [requested as ModuleType]
       : [];
-  if (!moduleTypes.length) return;
-  await createTestSessionAndRedirect(session.sub, moduleTypes);
+  const paket = Number(formData.get("paket"));
+  if (!moduleTypes.length || !SIMULASI_PAKET[paket]) return;
+  await createTestSessionAndRedirect(session.sub, moduleTypes, paket);
 }
 
 // Hapus sesi PENDING/IN_PROGRESS milik peserta yang login (user id dari cookie,
@@ -67,12 +68,10 @@ export default async function SimulasiPage() {
     await Promise.all([
       supabaseAdmin
         .from("questions")
-        .select("type")
+        .select("type, package_number")
         .eq("is_active", true)
-        .or(
-          `and(type.eq.KECERDASAN,package_number.eq.${SIMULASI_PACKAGE.KECERDASAN}),` +
-            `and(type.eq.KEPRIBADIAN,package_number.eq.${SIMULASI_PACKAGE.KEPRIBADIAN})`
-        ),
+        .in("type", ["KECERDASAN", "KEPRIBADIAN"])
+        .in("package_number", [...new Set(Object.values(SIMULASI_PAKET).flatMap((p) => [p.KECERDASAN, p.KEPRIBADIAN]))]),
       supabaseAdmin
         .from("questions")
         .select("id", { count: "exact", head: true })
@@ -103,13 +102,19 @@ export default async function SimulasiPage() {
         .order("created_at", { ascending: true }),
     ]);
 
-  const countByType = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
-    acc[row.type] = (acc[row.type] ?? 0) + 1;
+  // Jumlah butir per type+paket bank soal ("KECERDASAN:12" → 100).
+  const bankCount = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
+    const k = `${row.type}:${row.package_number}`;
+    acc[k] = (acc[k] ?? 0) + 1;
     return acc;
   }, {});
-  countByType["KECERMATAN"] = kecermatanCount ?? 0;
-
-  const totalQuestions = MODULE_ORDER.reduce((sum, type) => sum + (countByType[type] ?? 0), 0);
+  /** Butir per sub-tes untuk satu kartu paket; Kecermatan sama untuk semua paket. */
+  const countsOf = (paket: number): Record<ModuleType, number> => ({
+    KECERDASAN: bankCount[`KECERDASAN:${SIMULASI_PAKET[paket]?.KECERDASAN}`] ?? 0,
+    KEPRIBADIAN: bankCount[`KEPRIBADIAN:${SIMULASI_PAKET[paket]?.KEPRIBADIAN}`] ?? 0,
+    KECERMATAN: kecermatanCount ?? 0,
+  });
+  const totalOf = (paket: number) => MODULE_ORDER.reduce((sum, type) => sum + countsOf(paket)[type], 0);
   const totalMinutes =
     MODULE_ORDER.reduce((sum, type) => sum + MODULE_CONFIG[type].time_limit_seconds, 0) / 60;
 
@@ -141,19 +146,19 @@ export default async function SimulasiPage() {
     .map((s) => ({ at: s.completed_at ?? s.created_at, nap: s.nap_score! }));
   const single = done.filter((s) => !isFull(s)).length;
 
-  // 5 slot paket simulasi penuh. Baru paket 1 yang punya bank soal (SIMULASI_PACKAGE);
-  // paket 2-5 tampil "Belum tersedia" sampai soal + pemilihan paket di sesi dibuat.
+  // 5 slot paket simulasi penuh. Kartu terbuka otomatis begitu paketnya terdaftar di
+  // SIMULASI_PAKET dan bank soal Kecerdasan + Kepribadiannya sudah ada di DB.
   const packages: SimulasiPackage[] = [1, 2, 3, 4, 5].map((id) => ({
     id,
-    meta: `${totalQuestions} butir · ${totalMinutes} menit`,
-    ready: id === 1,
+    meta: `${totalOf(id)} butir · ${totalMinutes} menit`,
+    ready: !!SIMULASI_PAKET[id] && countsOf(id).KECERDASAN > 0 && countsOf(id).KEPRIBADIAN > 0,
   }));
 
-  const items: SimulasiItem[] = [
+  const itemsOf = (paket: number): SimulasiItem[] => [
     {
       id: "ALL",
-      title: "Tryout Lengkap Paket 1",
-      meta: `${totalQuestions} butir · ${totalMinutes} menit`,
+      title: `Tryout Lengkap Paket ${paket}`,
+      meta: `${totalOf(paket)} butir · ${totalMinutes} menit`,
       desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai Nilai Akhir Psikotest.",
       faces: [...MODULE_ORDER],
     },
@@ -162,7 +167,7 @@ export default async function SimulasiPage() {
       return {
         id: type,
         title: meta.label,
-        meta: `${countByType[type] ?? 0} butir · ${meta.time_limit_seconds / 60} menit`,
+        meta: `${countsOf(paket)[type]} butir · ${meta.time_limit_seconds / 60} menit`,
         desc: `Satu sub-tes (${meta.shortDesc}) dengan timer berjalan. Hasil masuk riwayat.`,
         faces: [type],
       };
@@ -219,7 +224,7 @@ export default async function SimulasiPage() {
           <span className="section-kicker">Katalog simulasi</span>
           <h2 className="mt-1 font-heading text-2xl">Pilih paket simulasi</h2>
         </div>
-        <SimulasiCatalog packages={packages} items={items} last={last} action={startSession} />
+        <SimulasiCatalog packages={packages} items={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, itemsOf(p.id)]))} last={last} action={startSession} />
       </section>
     </div>
   );

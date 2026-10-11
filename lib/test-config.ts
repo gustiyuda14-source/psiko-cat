@@ -88,6 +88,25 @@ export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEnt
 // lib/review.ts kepribadianPackageOf memilih paket dari jawaban sesi.
 export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 
+// Kartu Simulasi Penuh → package_number bank soal per module. Nomor sesi tersimpan di
+// module_sessions.package_number; sesi lama (null) memakai SIMULASI_PACKAGE (= Paket 1).
+// Nomor simulasi tidak boleh bentrok dengan paket latihan (KECERDASAN_PACKAGES 2-11).
+// ponytail: Kepribadian Paket 2 belum disusun, sementara memakai paket 11.
+export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number }> = {
+  1: SIMULASI_PACKAGE,
+  2: { KECERDASAN: 12, KEPRIBADIAN: 11 },
+};
+
+/** Paket bank soal sebuah module simulasi; null (sesi lama) = Paket 1. */
+export function simulasiPackageOf(type: "KECERDASAN" | "KEPRIBADIAN", packageNumber: number | null | undefined): number {
+  return packageNumber ?? SIMULASI_PACKAGE[type];
+}
+
+/** Semua package_number milik simulasi — tidak pernah boleh dibuka lewat latihan. */
+export function isSimulasiPackage(type: string, packageNumber: number | null): boolean {
+  return Object.values(SIMULASI_PAKET).some((p) => p[type as keyof typeof p] === packageNumber);
+}
+
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
   (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(
     ([type, config]) => [config.slug, type]

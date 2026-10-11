@@ -46,6 +46,7 @@ export type ModuleAccessRow = {
   time_limit_seconds: number;
   started_at: string | null;
   kecermatan_package_number: number | null;
+  package_number: number | null;
 };
 
 export async function getModuleAccess(
@@ -62,7 +63,7 @@ export async function getModuleAccess(
   const { data, error } = await supabaseAdmin
     .from("module_sessions")
     .select(
-      "id, test_session_id, module_type, status, sequence_order, time_limit_seconds, started_at, kecermatan_package_number"
+      "id, test_session_id, module_type, status, sequence_order, time_limit_seconds, started_at, kecermatan_package_number, package_number"
     )
     .eq("id", moduleSessionId)
     .eq("test_session_id", sessionId)

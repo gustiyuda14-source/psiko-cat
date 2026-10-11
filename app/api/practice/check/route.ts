@@ -7,7 +7,7 @@ import type {
   KecermatanOptionsPayload,
   KecermatanScoringRule,
 } from "@/lib/types/safe-question";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
+import { isSimulasiPackage } from "@/lib/test-config";
 
 // Latihan dan ujian membaca dari bank soal yang sama (belum ada bank terpisah,
 // lihat F11 di AUDIT_CAT_2026-09-12.md). Peserta bisa tahu question_id dari
@@ -71,8 +71,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Soal paket simulasi tidak pernah dipakai latihan: jangan pernah balikin kuncinya.
-    const simulasiPackage = SIMULASI_PACKAGE[question.type as keyof typeof SIMULASI_PACKAGE];
-    if (simulasiPackage !== undefined && question.package_number === simulasiPackage) {
+    if (isSimulasiPackage(question.type, question.package_number)) {
       return NextResponse.json({ error: "Soal simulasi tidak tersedia untuk latihan" }, { status: 403 });
     }
 

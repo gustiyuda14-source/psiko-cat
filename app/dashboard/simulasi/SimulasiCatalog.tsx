@@ -79,22 +79,18 @@ export default function SimulasiCatalog({
   action,
 }: {
   packages: SimulasiPackage[];
-  items: SimulasiItem[];
+  /** Kubus per kartu paket yang sudah tersedia. */
+  items: Record<number, SimulasiItem[]>;
   last: LastScores;
   action: (formData: FormData) => Promise<void>;
 }) {
   const [pkg, setPkg] = useState<number | null>(null);
   const [selected, setSelected] = useState(0);
   const [pending, startTransition] = useTransition();
-  const item = items[selected];
+  const list = pkg === null ? [] : items[pkg] ?? [];
+  const item = list[selected];
 
-  function start() {
-    const fd = new FormData();
-    fd.set("module", item.id);
-    startTransition(() => action(fd));
-  }
-
-  if (pkg === null) {
+  if (pkg === null || !item) {
     return (
       <div className="sp-grid" role="list" aria-label="Pilih paket simulasi">
         {packages.map((p, i) => (
@@ -127,6 +123,13 @@ export default function SimulasiCatalog({
     );
   }
 
+  function start() {
+    const fd = new FormData();
+    fd.set("module", item.id);
+    fd.set("paket", String(pkg));
+    startTransition(() => action(fd));
+  }
+
   return (
     <>
       <button type="button" className="sp-back" onClick={() => setPkg(null)}>
@@ -139,7 +142,7 @@ export default function SimulasiCatalog({
             Nilai terakhir <b>per sub-tes</b>
           </p>
           <div className="hc-cubes" role="group" aria-label="Pilih tes">
-            {items.map((it, i) => (
+            {list.map((it, i) => (
               <button
                 key={it.id}
                 type="button"

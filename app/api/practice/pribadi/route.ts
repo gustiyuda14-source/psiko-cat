@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { SIMULASI_PACKAGE } from "@/lib/test-config";
+import { isSimulasiPackage } from "@/lib/test-config";
 import type { KepribadianOptionsPayload } from "@/lib/types/safe-question";
 import { itemScore, summarize, type PribadiRule } from "@/lib/scoring/pribadi";
 
@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
     if (!rows || rows.length !== ids.length) {
       return NextResponse.json({ error: "Soal tidak ditemukan" }, { status: 404 });
     }
-    if (rows.some((r) => r.package_number === SIMULASI_PACKAGE.KEPRIBADIAN)) {
+    if (rows.some((r) => isSimulasiPackage("KEPRIBADIAN", r.package_number))) {
       return NextResponse.json({ error: "Soal simulasi tidak tersedia untuk latihan" }, { status: 403 });
     }
 
