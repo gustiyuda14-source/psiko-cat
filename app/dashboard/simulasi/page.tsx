@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
+import ResetSesiButton from "./ResetSesiButton";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PACKAGE, type ModuleType } from "@/lib/test-config";
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
-import { ChevronRight } from "@/app/components/icons";
+import { ChevronDown, ChevronRight } from "@/app/components/icons";
 import SimulasiCatalog, { type LastScores, type SimulasiItem } from "./SimulasiCatalog";
 import SimulasiProgress, { type SubScores, type TryoutPoint } from "./SimulasiProgress";
 
@@ -29,6 +31,30 @@ async function startSession(formData: FormData) {
       : [];
   if (!moduleTypes.length) return;
   await createTestSessionAndRedirect(session.sub, moduleTypes);
+}
+
+// Hapus sesi PENDING/IN_PROGRESS milik peserta yang login (user id dari cookie,
+// bukan dari form). Sesi selesai & riwayat nilai tidak disentuh.
+async function resetOpenSessions() {
+  "use server";
+  const session = await getSession();
+  if (!session) return;
+  const { data: open } = await supabaseAdmin
+    .from("test_sessions")
+    .select("id, module_sessions(id)")
+    .eq("user_id", session.sub)
+    .in("status", ["PENDING", "IN_PROGRESS"]);
+  const testIds = (open ?? []).map((s) => s.id);
+  if (!testIds.length) return;
+  const moduleIds = (open ?? []).flatMap((s) => s.module_sessions.map((m) => m.id));
+  if (moduleIds.length) {
+    await supabaseAdmin.from("answers").delete().in("module_session_id", moduleIds);
+    await supabaseAdmin.from("kecermatan_logs").delete().in("module_session_id", moduleIds);
+    await supabaseAdmin.from("module_sessions").delete().in("id", moduleIds);
+  }
+  await supabaseAdmin.from("anti_cheat_events").delete().in("test_session_id", testIds);
+  await supabaseAdmin.from("test_sessions").delete().in("id", testIds).eq("user_id", session.sub);
+  revalidatePath("/dashboard/simulasi");
 }
 
 export default async function SimulasiPage() {
@@ -143,12 +169,16 @@ export default async function SimulasiPage() {
         description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai Nilai Akhir Psikotest. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
       />
 
-      {/* Sesi yang belum selesai muncul paling atas: peserta yang browsernya
-          tertutup di tengah ujian butuh jalan kembali, dan timernya tetap jalan
-          di server. */}
+      <SimulasiProgress tryouts={tryouts} subScores={subScores} single={single} />
+
+      {/* Sesi yang belum selesai: jalan kembali kalau browser tertutup di tengah
+          ujian (timer tetap jalan di server). Dilipat supaya tidak memenuhi layar. */}
       {running.length > 0 && (
-        <aside className="notice" aria-labelledby="running-h">
-          <strong id="running-h" className="text-sm">Ada sesi yang belum selesai</strong>
+        <details className="notice group">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold [&::-webkit-details-marker]:hidden">
+            Sesi belum selesai ({running.length})
+            <ChevronDown className="size-4 transition-transform group-open:rotate-180" />
+          </summary>
           <ul className="mt-3 divide-y divide-dashed divide-border">
             {running.map((s) => (
               <li key={s.id} className="flex flex-wrap items-center justify-between gap-3 py-3">
@@ -170,10 +200,11 @@ export default async function SimulasiPage() {
               </li>
             ))}
           </ul>
-        </aside>
+          <div className="mt-3 flex justify-end border-t border-dashed border-border pt-3">
+            <ResetSesiButton action={resetOpenSessions} count={running.length} />
+          </div>
+        </details>
       )}
-
-      <SimulasiProgress tryouts={tryouts} subScores={subScores} single={single} />
 
       <section>
         <div className="mb-1">

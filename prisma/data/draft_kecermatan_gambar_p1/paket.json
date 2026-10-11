@@ -1,0 +1,5138 @@
+{
+  "nomor": 201,
+  "nama": "Draf Paket Gambar Mirip 1",
+  "kategori": "GAMBAR_MIRIP",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "svg/k01_A.svg",
+        "B": "svg/k01_B.svg",
+        "C": "svg/k01_C.svg",
+        "D": "svg/k01_D.svg",
+        "E": "svg/k01_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_C.svg",
+            "svg/k01_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_B.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_B.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_A.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_E.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_D.svg",
+            "svg/k01_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_B.svg",
+            "svg/k01_A.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k01_A.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_C.svg",
+            "svg/k01_A.svg",
+            "svg/k01_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_E.svg",
+            "svg/k01_A.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k01_E.svg",
+            "svg/k01_C.svg",
+            "svg/k01_B.svg",
+            "svg/k01_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k01_D.svg",
+            "svg/k01_A.svg",
+            "svg/k01_E.svg",
+            "svg/k01_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k01_B.svg",
+            "svg/k01_A.svg",
+            "svg/k01_E.svg",
+            "svg/k01_C.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "simbol": {
+        "A": "svg/k02_A.svg",
+        "B": "svg/k02_B.svg",
+        "C": "svg/k02_C.svg",
+        "D": "svg/k02_D.svg",
+        "E": "svg/k02_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k02_D.svg",
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg",
+            "svg/k02_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg",
+            "svg/k02_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k02_D.svg",
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg",
+            "svg/k02_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_C.svg",
+            "svg/k02_E.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_C.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k02_D.svg",
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_D.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_D.svg",
+            "svg/k02_C.svg",
+            "svg/k02_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_C.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_B.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg",
+            "svg/k02_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_C.svg",
+            "svg/k02_E.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k02_D.svg",
+            "svg/k02_B.svg",
+            "svg/k02_E.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_D.svg",
+            "svg/k02_A.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_C.svg",
+            "svg/k02_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_A.svg",
+            "svg/k02_B.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_E.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k02_C.svg",
+            "svg/k02_B.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k02_A.svg",
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k02_B.svg",
+            "svg/k02_C.svg",
+            "svg/k02_D.svg",
+            "svg/k02_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k02_E.svg",
+            "svg/k02_B.svg",
+            "svg/k02_A.svg",
+            "svg/k02_D.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "simbol": {
+        "A": "svg/k03_A.svg",
+        "B": "svg/k03_B.svg",
+        "C": "svg/k03_C.svg",
+        "D": "svg/k03_D.svg",
+        "E": "svg/k03_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k03_E.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_B.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_D.svg",
+            "svg/k03_A.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_A.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_A.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_B.svg",
+            "svg/k03_A.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k03_E.svg",
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_B.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_B.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k03_B.svg",
+            "svg/k03_D.svg",
+            "svg/k03_C.svg",
+            "svg/k03_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k03_D.svg",
+            "svg/k03_A.svg",
+            "svg/k03_E.svg",
+            "svg/k03_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_D.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k03_C.svg",
+            "svg/k03_B.svg",
+            "svg/k03_E.svg",
+            "svg/k03_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k03_A.svg",
+            "svg/k03_C.svg",
+            "svg/k03_D.svg",
+            "svg/k03_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k03_E.svg",
+            "svg/k03_D.svg",
+            "svg/k03_A.svg",
+            "svg/k03_B.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "simbol": {
+        "A": "svg/k04_A.svg",
+        "B": "svg/k04_B.svg",
+        "C": "svg/k04_C.svg",
+        "D": "svg/k04_D.svg",
+        "E": "svg/k04_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_A.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_B.svg",
+            "svg/k04_D.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_C.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_D.svg",
+            "svg/k04_A.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_A.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_C.svg",
+            "svg/k04_E.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_D.svg",
+            "svg/k04_E.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_A.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_E.svg",
+            "svg/k04_B.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_A.svg",
+            "svg/k04_C.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_A.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_D.svg",
+            "svg/k04_A.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k04_D.svg",
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k04_E.svg",
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_C.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_B.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg",
+            "svg/k04_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k04_B.svg",
+            "svg/k04_A.svg",
+            "svg/k04_D.svg",
+            "svg/k04_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k04_C.svg",
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k04_A.svg",
+            "svg/k04_E.svg",
+            "svg/k04_C.svg",
+            "svg/k04_B.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "simbol": {
+        "A": "svg/k05_A.svg",
+        "B": "svg/k05_B.svg",
+        "C": "svg/k05_C.svg",
+        "D": "svg/k05_D.svg",
+        "E": "svg/k05_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_A.svg",
+            "svg/k05_B.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_A.svg",
+            "svg/k05_B.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_E.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_D.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_D.svg",
+            "svg/k05_E.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_E.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_B.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_D.svg",
+            "svg/k05_C.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_B.svg",
+            "svg/k05_D.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_D.svg",
+            "svg/k05_A.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_A.svg",
+            "svg/k05_B.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_A.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_C.svg",
+            "svg/k05_D.svg",
+            "svg/k05_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_A.svg",
+            "svg/k05_B.svg",
+            "svg/k05_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k05_C.svg",
+            "svg/k05_E.svg",
+            "svg/k05_D.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k05_E.svg",
+            "svg/k05_B.svg",
+            "svg/k05_A.svg",
+            "svg/k05_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k05_A.svg",
+            "svg/k05_E.svg",
+            "svg/k05_C.svg",
+            "svg/k05_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k05_D.svg",
+            "svg/k05_B.svg",
+            "svg/k05_E.svg",
+            "svg/k05_A.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "simbol": {
+        "A": "svg/k06_A.svg",
+        "B": "svg/k06_B.svg",
+        "C": "svg/k06_C.svg",
+        "D": "svg/k06_D.svg",
+        "E": "svg/k06_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k06_D.svg",
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_D.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_B.svg",
+            "svg/k06_A.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_C.svg",
+            "svg/k06_E.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_C.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_A.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_D.svg",
+            "svg/k06_B.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_E.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_B.svg",
+            "svg/k06_C.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_D.svg",
+            "svg/k06_B.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_A.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k06_D.svg",
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_D.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_B.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k06_D.svg",
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_A.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_C.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_E.svg",
+            "svg/k06_C.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_B.svg",
+            "svg/k06_C.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_A.svg",
+            "svg/k06_C.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k06_E.svg",
+            "svg/k06_C.svg",
+            "svg/k06_B.svg",
+            "svg/k06_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k06_B.svg",
+            "svg/k06_E.svg",
+            "svg/k06_C.svg",
+            "svg/k06_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_E.svg",
+            "svg/k06_D.svg",
+            "svg/k06_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k06_D.svg",
+            "svg/k06_C.svg",
+            "svg/k06_A.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k06_A.svg",
+            "svg/k06_D.svg",
+            "svg/k06_E.svg",
+            "svg/k06_B.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "simbol": {
+        "A": "svg/k07_A.svg",
+        "B": "svg/k07_B.svg",
+        "C": "svg/k07_C.svg",
+        "D": "svg/k07_D.svg",
+        "E": "svg/k07_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_E.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_D.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_D.svg",
+            "svg/k07_B.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_A.svg",
+            "svg/k07_D.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg",
+            "svg/k07_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_D.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_E.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_A.svg",
+            "svg/k07_E.svg",
+            "svg/k07_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_B.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_E.svg",
+            "svg/k07_C.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k07_B.svg",
+            "svg/k07_C.svg",
+            "svg/k07_D.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k07_E.svg",
+            "svg/k07_B.svg",
+            "svg/k07_D.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k07_C.svg",
+            "svg/k07_A.svg",
+            "svg/k07_E.svg",
+            "svg/k07_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_B.svg",
+            "svg/k07_A.svg",
+            "svg/k07_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k07_A.svg",
+            "svg/k07_E.svg",
+            "svg/k07_C.svg",
+            "svg/k07_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k07_D.svg",
+            "svg/k07_E.svg",
+            "svg/k07_C.svg",
+            "svg/k07_A.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "simbol": {
+        "A": "svg/k08_A.svg",
+        "B": "svg/k08_B.svg",
+        "C": "svg/k08_C.svg",
+        "D": "svg/k08_D.svg",
+        "E": "svg/k08_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_C.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_E.svg",
+            "svg/k08_A.svg",
+            "svg/k08_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k08_D.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_C.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg",
+            "svg/k08_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_C.svg",
+            "svg/k08_A.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k08_C.svg",
+            "svg/k08_B.svg",
+            "svg/k08_D.svg",
+            "svg/k08_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k08_A.svg",
+            "svg/k08_B.svg",
+            "svg/k08_E.svg",
+            "svg/k08_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k08_B.svg",
+            "svg/k08_A.svg",
+            "svg/k08_E.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k08_E.svg",
+            "svg/k08_A.svg",
+            "svg/k08_D.svg",
+            "svg/k08_C.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "simbol": {
+        "A": "svg/k09_A.svg",
+        "B": "svg/k09_B.svg",
+        "C": "svg/k09_C.svg",
+        "D": "svg/k09_D.svg",
+        "E": "svg/k09_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_E.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_D.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_B.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k09_D.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k09_D.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_B.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_E.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_E.svg",
+            "svg/k09_C.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_E.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg",
+            "svg/k09_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k09_D.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k09_D.svg",
+            "svg/k09_B.svg",
+            "svg/k09_A.svg",
+            "svg/k09_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_A.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k09_C.svg",
+            "svg/k09_B.svg",
+            "svg/k09_E.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k09_E.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_C.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k09_D.svg",
+            "svg/k09_C.svg",
+            "svg/k09_A.svg",
+            "svg/k09_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k09_B.svg",
+            "svg/k09_A.svg",
+            "svg/k09_D.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k09_A.svg",
+            "svg/k09_B.svg",
+            "svg/k09_C.svg",
+            "svg/k09_E.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "simbol": {
+        "A": "svg/k10_A.svg",
+        "B": "svg/k10_B.svg",
+        "C": "svg/k10_C.svg",
+        "D": "svg/k10_D.svg",
+        "E": "svg/k10_E.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "svg/k10_C.svg",
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_C.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_B.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_B.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_B.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "svg/k10_C.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "svg/k10_C.svg",
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_B.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_B.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "svg/k10_D.svg",
+            "svg/k10_B.svg",
+            "svg/k10_C.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "svg/k10_C.svg",
+            "svg/k10_A.svg",
+            "svg/k10_D.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "svg/k10_C.svg",
+            "svg/k10_E.svg",
+            "svg/k10_B.svg",
+            "svg/k10_A.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_D.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_C.svg",
+            "svg/k10_E.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_C.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_E.svg",
+            "svg/k10_A.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "svg/k10_A.svg",
+            "svg/k10_E.svg",
+            "svg/k10_C.svg",
+            "svg/k10_D.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "svg/k10_B.svg",
+            "svg/k10_A.svg",
+            "svg/k10_D.svg",
+            "svg/k10_E.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    }
+  ]
+}
