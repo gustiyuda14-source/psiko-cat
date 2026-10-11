@@ -11,6 +11,7 @@
  */
 
 import type { KepribadianScoringRule } from "@/lib/types/safe-question";
+import { round2 } from "./nap";
 
 export type KepribadianScoreResult = {
   poin_akumulasi: number;   // 0-20
@@ -39,8 +40,8 @@ export function calculateKepribadian(
     }
   }
 
-  const raw_score = (poin_akumulasi / 20) * 100;
-  const nap_contribution = poin_akumulasi; // sudah dalam skala 0-20
+  const raw_score = round2((poin_akumulasi / 20) * 100);
+  const nap_contribution = round2(poin_akumulasi); // sudah dalam skala 0-20
 
   return {
     poin_akumulasi,

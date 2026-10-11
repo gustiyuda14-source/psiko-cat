@@ -56,10 +56,10 @@ export default async function AdminPage() {
 
   const peserta = (users ?? []) as unknown as UserRow[];
 
-  // F09 (AUDIT_CAT_2026-09-12.md): formula Kh bisa tetap 100 walau responsnya
-  // dikit banget, selama sebarannya rata antar 10 lajur (SD≈0). Norma resmi
-  // belum diputuskan, jadi formula dibiarkan — ini cuma penanda buat admin
-  // supaya sesi dengan pola itu dicek manual, bukan diambil begitu saja.
+  // F09 (AUDIT_CAT_2026-09-12.md): rumus Kecermatan v1 memberi Kh 100 walau
+  // responsnya dikit banget asal rata antar lajur. Rumus v2 (2026-10-11,
+  // lib/scoring/kecermatan.ts) sudah meredam Kh untuk volume kecil; penanda ini
+  // dipertahankan untuk sesi lama yang dinilai dengan v1.
   function needsKecermatanReview(testSession: UserRow["test_sessions"][number]) {
     return testSession.module_sessions.some(
       (m) => m.module_type === "KECERMATAN" && (m.ke_index ?? 100) < 30 && (m.kh_index ?? 0) >= 90

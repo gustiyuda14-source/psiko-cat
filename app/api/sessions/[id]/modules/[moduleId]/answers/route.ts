@@ -106,7 +106,12 @@ export async function POST(
 
     const { error: upsertError } = await supabaseAdmin
       .from("answers")
-      .upsert(rows, { onConflict: "module_session_id,question_id" });
+      // Kepribadian: jawaban terkunci begitu dipilih (pedoman PRIBADI §4), jadi
+      // jawaban pertama yang tersimpan berlaku. Kecerdasan masih boleh diganti.
+      .upsert(rows, {
+        onConflict: "module_session_id,question_id",
+        ignoreDuplicates: access.moduleSession.module_type === "KEPRIBADIAN",
+      });
     if (upsertError) throw upsertError;
     return NextResponse.json({ saved: rows.length });
   } catch (err) {

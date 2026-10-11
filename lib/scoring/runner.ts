@@ -5,7 +5,9 @@
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { calculateKecerdasan } from "./kecerdasan";
 import { calculateKepribadian } from "./kepribadian";
-import { calculateKecermatan, type KecermatanColumnStats } from "./kecermatan";
+import { pribadiModuleScore, type PribadiRule } from "./pribadi";
+import { kepribadianPackageOf } from "@/lib/review";
+import { calculateKecermatan, withinColumnWindow, type KecermatanColumnStats } from "./kecermatan";
 import { calculateNAP, calculateSingleModuleResult } from "./nap";
 import { SIMULASI_PACKAGE } from "@/lib/test-config";
 import type {
@@ -23,7 +25,7 @@ async function scoreKecerdasan(module_session_id: string) {
   const questionIds = (answers ?? []).map((a) => a.question_id);
   if (answerError) throw answerError;
   const { data: questions, error: questionError } = questionIds.length
-    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds).eq("package_number", SIMULASI_PACKAGE.KEPRIBADIAN).eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
+    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds).eq("package_number", SIMULASI_PACKAGE.KECERDASAN)
     : { data: [], error: null };
   if (questionError) throw questionError;
 
@@ -35,25 +37,26 @@ async function scoreKecerdasan(module_session_id: string) {
   return calculateKecerdasan(answerMap, ruleMap);
 }
 
+// Simulasi sekarang paket PRIBADI (Likert 4 + Substansi Khusus, pedoman §5.3).
+// Sesi lama di Paket 1 Likert 5 tetap dinilai dengan rumus bobot lamanya.
 async function scoreKepribadian(module_session_id: string) {
-  const { data: answers, error: answerError } = await supabaseAdmin
-    .from("answers")
-    .select("question_id, selected_key")
-    .eq("module_session_id", module_session_id);
-
-  const questionIds = (answers ?? []).map((a) => a.question_id);
+  const pkg = await kepribadianPackageOf(module_session_id);
+  const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
+    supabaseAdmin.from("answers").select("question_id, selected_key").eq("module_session_id", module_session_id),
+    // Semua butir paket, bukan cuma yang dijawab: butir kosong ikut dihitung 0.
+    supabaseAdmin.from("questions").select("id, scoring_rule").eq("type", "KEPRIBADIAN").eq("package_number", pkg),
+  ]);
   if (answerError) throw answerError;
-  const { data: questions, error: questionError } = questionIds.length
-    ? await supabaseAdmin.from("questions").select("id, scoring_rule").in("id", questionIds)
-    : { data: [], error: null };
   if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
-  const ruleMap = new Map(
-    (questions ?? []).map((q) => [q.id, q.scoring_rule as KepribadianScoringRule])
-  );
+  const rules = (questions ?? []).map((q) => ({ id: q.id, rule: q.scoring_rule as unknown as PribadiRule | KepribadianScoringRule }));
+  const isPribadi = rules.length > 0 && rules.every(({ rule }) => rule.type === "likert4" || rule.type === "forced_choice");
 
-  return calculateKepribadian(answerMap, ruleMap);
+  if (isPribadi) {
+    return pribadiModuleScore(rules.map(({ id, rule }) => ({ rule: rule as PribadiRule, selected: answerMap.get(id) ?? null })));
+  }
+  return calculateKepribadian(answerMap, new Map(rules.map(({ id, rule }) => [id, rule as KepribadianScoringRule])));
 }
 
 async function scoreKecermatan(module_session_id: string) {
@@ -68,13 +71,15 @@ async function scoreKecermatan(module_session_id: string) {
     id: string;
     question_id: string;
     column_index: number;
+    clicked_at_ms: number;
     response_value: string;
     question: { scoring_rule: KecermatanScoringRule };
   };
 
-  const safeLogs = [...new Map(
-    ((logs ?? []) as unknown as LogRow[]).map((log) => [log.question_id, log])
+  const uniqueLogs = [...new Map(
+    ((logs ?? []) as unknown as LogRow[]).map((log) => [log.question_id, { ...log, clicked_at_ms: Number(log.clicked_at_ms) }])
   ).values()];
+  const safeLogs = withinColumnWindow(uniqueLogs);
 
   const columnMap = new Map<number, { total_klik: number; total_benar: number }>();
   for (let i = 1; i <= 10; i++) {

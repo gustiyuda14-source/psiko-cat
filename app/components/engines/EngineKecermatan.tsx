@@ -343,6 +343,10 @@ export default function EngineKecermatan({
     (qid: string, colIdx: number, choice: string) => {
       const s = useKecermatanStore.getState();
       if (s.answers[qid]) return;
+      // Waktu kolom habis = kolom tertutup, walau log terakhir gagal terkirim dan
+      // layar masih tertahan di kolom ini (offline). Tanpa ini peserta bisa terus
+      // menjawab sampai batas modul dan menaikkan Kecepatan.
+      if (s.columnDeadlineTs != null && Date.now() >= s.columnDeadlineTs) return;
       s.setAnswer(qid, choice);
       useKecermatanStore.getState().queueLog({
         question_id: qid,
@@ -602,7 +606,7 @@ export default function EngineKecermatan({
                     key={ch}
                     type="button"
                     onClick={() => handleAnswer(currentQ.id, currentColIdx, ch)}
-                    disabled={Boolean(picked)}
+                    disabled={Boolean(picked) || displayRemainingMs <= 0}
                     aria-label={`Jawab ${ch}`}
                     className={`flex h-14 items-center justify-center rounded-md text-base font-bold transition-[background-color,border-color,transform] duration-100 ease-out ${
                       picked === ch

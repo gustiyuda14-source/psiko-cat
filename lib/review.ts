@@ -47,7 +47,23 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
     });
 }
 
+/**
+ * Paket Kepribadian milik satu sesi: dari soal yang sudah dijawab (sesi lama
+ * dikerjakan di Paket 1 Likert 5), atau paket simulasi aktif bila belum ada jawaban.
+ */
+export async function kepribadianPackageOf(moduleSessionId: string): Promise<number> {
+  const { data, error } = await supabaseAdmin
+    .from("answers")
+    .select("question:questions(package_number)")
+    .eq("module_session_id", moduleSessionId)
+    .limit(1);
+  if (error) throw error;
+  const pkg = (data?.[0]?.question as unknown as { package_number: number | null } | null)?.package_number;
+  return pkg ?? SIMULASI_PACKAGE.KEPRIBADIAN;
+}
+
 export async function fetchKepribadianReview(moduleSessionId: string): Promise<KepribadianReviewItem[]> {
+  const pkg = await kepribadianPackageOf(moduleSessionId);
   const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
     supabaseAdmin
     .from("answers")
@@ -57,7 +73,7 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
       .from("questions")
       .select("id, sequence_number, options_payload")
       .eq("type", "KEPRIBADIAN")
-      .eq("package_number", SIMULASI_PACKAGE.KEPRIBADIAN)
+      .eq("package_number", pkg)
       .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);

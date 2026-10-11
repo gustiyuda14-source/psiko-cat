@@ -71,9 +71,10 @@ export const KECERDASAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntr
   KECERDASAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
-export const KEPRIBADIAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+export const KEPRIBADIAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 // Paket latihan PRIBADI = 48 Kepribadian (Likert 4) + 63 Substansi Khusus (A/B),
-// docs/pedoman/PEDOMAN_ENGINE_PRIBADI.md. Simulasi Paket 1 masih format lama.
+// docs/pedoman/PEDOMAN_ENGINE_PRIBADI.md. Paket 11 (bank/pribadi/paket-11.json)
+// dipindah jadi simulasi, jadi tidak muncul di latihan.
 export const PRIBADI_PACKAGE_SIZE = 48 + 63;
 export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KEPRIBADIAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
@@ -82,7 +83,10 @@ export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEnt
 // Simulasi/tryout membaca SATU paket per module, tidak pernah semua soal aktif
 // (pola dajiks-cest: bank simulasi terpisah dari bank drilling). Paket lain
 // cuma muncul di latihan. Kecermatan memakai kecermatan_package_number per sesi.
-export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 1 } as const;
+// Kepribadian simulasi = paket PRIBADI 11 (format pedoman, Likert 4 + Substansi
+// Khusus). Paket 1 Likert 5 lama tetap di DB untuk riwayat sesi lama —
+// lib/review.ts kepribadianPackageOf memilih paket dari jawaban sesi.
+export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 
 export const SLUG_TO_MODULE: Record<string, ModuleType> = Object.fromEntries(
   (Object.entries(MODULE_CONFIG) as [ModuleType, ModuleConfigEntry][]).map(

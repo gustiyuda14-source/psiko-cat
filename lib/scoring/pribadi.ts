@@ -9,6 +9,8 @@
  *   paket, pakai yang ada saja.
  */
 
+import { round2 } from "./nap";
+
 export type KpPembahasan = {
   definisi_aspek: string;
   // Kosong untuk pernyataan langsung ("Saya …") yang tidak punya dua sisi.
@@ -34,6 +36,13 @@ export type PribadiSkRule = {
 export type PribadiRule = PribadiKpRule | PribadiSkRule;
 
 const FAV: Record<string, number> = { A: 1, B: 2, C: 3, D: 4 };
+
+/** Nilai sub-tes PRIBADI di simulasi (§5.3): 20% ke Nilai Akhir Psikotest, gugur bila ≤ 40. */
+export function pribadiModuleScore(items: { rule: PribadiRule; selected: string | null }[]) {
+  const raw_score = round2(summarize(items).pribadi);
+  const nap_contribution = round2(raw_score * 0.2);
+  return { poin_akumulasi: nap_contribution, raw_score, nap_contribution, is_disqualifying: raw_score <= 40 };
+}
 
 export function itemScore(rule: PribadiRule, selected: string | null): { skor: number; max: number; ideal: string } {
   if (rule.type === "forced_choice") {

@@ -2,7 +2,9 @@ import assert from "node:assert/strict";
 import { cleanDrill, cleanLatihan, latihanKeyMax } from "./progress-rules";
 
 assert.equal(latihanKeyMax("/latihan/kecerdasan/2"), 100);
-assert.equal(latihanKeyMax("/latihan/kepribadian/11"), 111);
+assert.equal(latihanKeyMax("/latihan/kepribadian/10"), 111);
+// Paket 11 dipindah jadi simulasi, bukan latihan lagi.
+assert.equal(latihanKeyMax("/latihan/kepribadian/11"), null);
 assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/301"), 500);
 assert.equal(latihanKeyMax("/latihan/kecermatan/9"), 500);
 assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/306"), null);

@@ -280,17 +280,17 @@ function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
     {
       label: "Kecepatan (Ke)",
       value: summary.ke_index,
-      note: "Berapa banyak butir sempat diklik dari 500.",
+      note: "Jawaban benar dari 500, dikurangi tebakan (salah ÷ 4).",
     },
     {
       label: "Ketelitian (Kt)",
       value: summary.kt_index,
-      note: "Berapa persen dari klik itu yang benar.",
+      note: "Persen jawaban benar. Penuh bila minimal 150 benar bersih.",
     },
     {
       label: "Ketahanan (Kh)",
       value: summary.kh_index,
-      note: "Seberapa stabil hasilnya dari kolom I ke X.",
+      note: "Seberapa ajeg jumlah benar dari kolom I ke X.",
     },
   ];
 
@@ -312,7 +312,7 @@ function KecermatanReview({ summary }: { summary: KecermatanSummary }) {
           <dd className="tnum font-semibold text-foreground">{r1(summary.raw_score)}</dd>
         </div>
         <div className="flex justify-between gap-4">
-          <dt className="text-muted-foreground">Kontribusi ke NAP</dt>
+          <dt className="text-muted-foreground">Kontribusi ke Nilai Akhir Psikotest</dt>
           <dd className="tnum font-semibold text-foreground">
             {r1(summary.nap_contribution)} <span className="text-muted-foreground">/ 20</span>
           </dd>

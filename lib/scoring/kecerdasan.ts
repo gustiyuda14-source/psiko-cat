@@ -8,6 +8,7 @@
  */
 
 import type { KecerdasanScoringRule } from "@/lib/types/safe-question";
+import { round2 } from "./nap";
 
 export type KecerdasanScoreResult = {
   jumlah_benar: number;
@@ -35,8 +36,8 @@ export function calculateKecerdasan(
     }
   }
 
-  const raw_score = (jumlah_benar / 100) * 100;
-  const nap_contribution = jumlah_benar * 0.6;
+  const raw_score = round2((jumlah_benar / 100) * 100);
+  const nap_contribution = round2(jumlah_benar * 0.6);
 
   return {
     jumlah_benar,

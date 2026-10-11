@@ -75,11 +75,12 @@ export default function EngineKepribadian({
     []
   );
 
-  // Auto-advance dipertahankan: skala Likert tidak punya jawaban benar/salah,
-  // jadi peserta tidak perlu menimbang ulang sebelum lanjut.
+  // Aturan ujian PRIBADI (pedoman §4): maju saja, jawaban terkunci begitu
+  // dipilih, tidak bisa kembali ke nomor sebelumnya. Server ikut menolak
+  // jawaban kedua (answers route, ignoreDuplicates untuk Kepribadian).
   const choose = useCallback(
     (key: string) => {
-      if (!q) return;
+      if (!q || state.answers[q.id]) return;
       engine.handleAnswer(q.id, key);
       if (idx < sorted.length - 1) {
         if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
@@ -89,7 +90,7 @@ export default function EngineKepribadian({
         );
       }
     },
-    [engine, q, idx, sorted.length, store]
+    [engine, q, idx, sorted.length, store, state.answers]
   );
 
   const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
@@ -98,10 +99,6 @@ export default function EngineKepribadian({
     enabled: mounted && !showResume && !showConfirm && state.status === "running",
     choiceKeys,
     onChoose: choose,
-    onPrev: () => {
-      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-      store.getState().prev();
-    },
     onNext: () => {
       if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
       store.getState().next(sorted.length - 1);
@@ -167,6 +164,7 @@ export default function EngineKepribadian({
             currentIndex={idx}
             secondsLeft={secondsLeft}
             onGoTo={(index) => {
+              if (index < idx) return;
               if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
               store.getState().goTo(index);
             }}
@@ -176,7 +174,11 @@ export default function EngineKepribadian({
         <article key={q?.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="qnum tnum">Pernyataan {idx + 1}</p>
-            {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
+            {payload?.subtes === "SK" ? (
+              <Badge tone="info">Substansi Khusus</Badge>
+            ) : (
+              payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>
+            )}
           </div>
 
           {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,
@@ -188,7 +190,9 @@ export default function EngineKepribadian({
           </div>
 
           <fieldset className="opts mx-auto max-w-2xl">
-            <legend className="sr-only">Seberapa sesuai pernyataan ini dengan Anda</legend>
+            <legend className="sr-only">
+              {payload?.subtes === "SK" ? "Pilih yang paling tepat" : "Seberapa sesuai pernyataan ini dengan Anda"}
+            </legend>
             {payload?.choices?.map((c) => {
               const isSelected = picked === c.key;
               return (
@@ -196,6 +200,7 @@ export default function EngineKepribadian({
                   key={c.key}
                   type="button"
                   onClick={() => choose(c.key)}
+                  disabled={Boolean(picked) && !isSelected}
                   aria-pressed={isSelected}
                   className={`opt ${isSelected ? "sel" : ""}`}
                 >
@@ -210,15 +215,12 @@ export default function EngineKepribadian({
       </ExamBody>
 
       <ExamDock
-        onPrev={() => {
-          if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-          store.getState().prev();
-        }}
+        onPrev={() => {}}
         onNext={() => {
           if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
           store.getState().next(sorted.length - 1);
         }}
-        prevDisabled={idx === 0}
+        prevDisabled
         nextDisabled={idx >= sorted.length - 1}
         prevLabel="Pernyataan sebelumnya"
         nextLabel="Pernyataan berikutnya"

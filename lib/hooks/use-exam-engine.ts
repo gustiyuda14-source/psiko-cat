@@ -12,6 +12,7 @@ import type { ExamState } from "@/lib/stores/exam-store";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
 
 const FLUSH_THRESHOLD = 5;
+const MAX_BATCH = 100;
 const HEARTBEAT_MS = 30_000;
 
 type ExamStore = UseBoundStore<StoreApi<ExamState>>;
@@ -65,7 +66,9 @@ export function useExamEngine({
       return Promise.resolve(true);
     }
 
-    const batch = [...pendingAnswers.current].map(([question_id, selected_key]) => ({
+    // Server menerima maks 100 jawaban per request; paket PRIBADI berisi 111,
+    // jadi sisa antrean ikut di flush berikutnya.
+    const batch = [...pendingAnswers.current].slice(0, MAX_BATCH).map(([question_id, selected_key]) => ({
       question_id,
       selected_key,
     }));
@@ -175,7 +178,7 @@ export function useExamEngine({
     const guard = (event: BeforeUnloadEvent) => event.preventDefault();
     const sendPending = () => {
       if (!pendingAnswers.current.size) return;
-      const answers = [...pendingAnswers.current].map(([question_id, selected_key]) => ({
+      const answers = [...pendingAnswers.current].slice(0, MAX_BATCH).map(([question_id, selected_key]) => ({
         question_id,
         selected_key,
       }));

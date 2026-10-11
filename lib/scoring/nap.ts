@@ -9,6 +9,13 @@
  *   2. Salah satu sub-tes memiliki raw_score <= 40 (predikat Kurang Sekali)
  */
 
+/**
+ * Bulatkan ke 2 desimal. Bobot desimal (0,6 · 0,15 · 0,2) membuat float meleset
+ * tipis — 61 bisa tersimpan 60,999999999999986 dan menggugurkan peserta yang lulus.
+ * Semua nilai dibulatkan dulu sebelum dibandingkan dengan ambang 40 / 61.
+ */
+export const round2 = (n: number) => Math.round(n * 100) / 100;
+
 export type ModuleContributions = {
   kecerdasan_contribution: number;  // 0-60
   kepribadian_contribution: number; // 0-20
@@ -26,11 +33,15 @@ export type NAPResult = {
   predikat: string | null;
 };
 
-export function calculateNAP(modules: ModuleContributions): NAPResult {
-  const nap_score =
+export function calculateNAP(input: ModuleContributions): NAPResult {
+  const modules = Object.fromEntries(
+    Object.entries(input).map(([k, v]) => [k, round2(v)])
+  ) as ModuleContributions;
+  const nap_score = round2(
     modules.kecerdasan_contribution +
     modules.kepribadian_contribution +
-    modules.kecermatan_contribution;
+    modules.kecermatan_contribution
+  );
 
   // Cek gugur mutlak — sub-tes dengan Predikat Kurang Sekali
   if (modules.kecerdasan_raw <= 40) {
@@ -89,7 +100,8 @@ export function getNAPPredikat(nap_score: number): string {
   return "Kurang Sekali";
 }
 
-export function calculateSingleModuleResult(raw_score: number): NAPResult {
+export function calculateSingleModuleResult(raw: number): NAPResult {
+  const raw_score = round2(raw);
   const predikat = getNAPPredikat(raw_score);
   const is_passed = raw_score > 40;
 
