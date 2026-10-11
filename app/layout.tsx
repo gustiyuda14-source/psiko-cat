@@ -3,6 +3,7 @@ import { Source_Sans_3, Lexend } from "next/font/google";
 import "./globals.css";
 import "./catalog.css";
 import "./honey.css";
+import "./paket.css";
 import "./exam.css";
 import "./report.css";
 import "./progress.css";

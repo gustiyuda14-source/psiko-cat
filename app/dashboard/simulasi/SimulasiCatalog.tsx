@@ -12,9 +12,10 @@ import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
   terakhir (0-100) dari riwayat. Tryout lengkap menyalakan ketiga sisi; kartu
   sub-tes hanya menyalakan sisinya sendiri. Memulai tes tetap lewat server action
   `startSession` (buat sesi lalu redirect). CSS di app/honey.css.
-  Langkah 1 = pilih paket simulasi: timeline hexagon. Paket siap terkecil yang belum
-  pernah ditryout-kan jadi kartu unggulan (navy + border emas berputar); kalau semua
-  sudah, paket siap terakhir. Paket tanpa bank soal tampil "Segera".
+  Langkah 1 = pilih paket simulasi: timeline hexagon, paket siap = kartu navy. Paket siap
+  terkecil yang belum pernah ditryout-kan jadi kartu unggulan (border emas berputar +
+  badge); kalau semua sudah, paket siap terakhir. Paket yang pernah ditryout-kan dapat
+  badge hijau. Paket tanpa bank soal tampil "Segera".
 */
 
 export type SimulasiItem = { id: string; title: string; meta: string; desc: string; faces: ModuleType[] };
@@ -109,7 +110,8 @@ export default function SimulasiCatalog({
         </svg>
         <ol className="sp-list" aria-label="Pilih paket simulasi">
           {packages.map((p, i) => {
-            const state = !p.ready ? "is-locked" : p.id === featured ? "is-featured" : p.runs > 0 ? "is-done" : "";
+            const state = !p.ready ? "is-locked" : `is-ready${p.id === featured ? " is-featured" : ""}${p.runs > 0 ? " is-done" : ""}`;
+            const isFeatured = p.ready && p.id === featured;
             const delta = p.nap !== undefined && p.prev !== undefined ? Math.round(p.nap) - Math.round(p.prev) : 0;
             return (
               <li key={p.id} className={`sp-step ${state}`} style={{ animationDelay: `${i * 70}ms` }}>
@@ -133,14 +135,22 @@ export default function SimulasiCatalog({
                     setPkg(p.id);
                   }}
                 >
-                  {state === "is-featured" && (
-                    <>
-                      <span className="sp-shine" aria-hidden="true" />
-                      <span className="sp-badge">
-                        <i aria-hidden="true" />
-                        {p.runs > 0 ? "Paket terbaru" : "Lanjutkan di sini"}
-                      </span>
-                    </>
+                  {isFeatured && <span className="sp-shine" aria-hidden="true" />}
+                  {(isFeatured || p.runs > 0) && (
+                    <span className="sp-badges">
+                      {isFeatured && (
+                        <span className="sp-badge">
+                          <i aria-hidden="true" />
+                          {p.runs > 0 ? "Paket terbaru" : "Lanjutkan di sini"}
+                        </span>
+                      )}
+                      {p.runs > 0 && (
+                        <span className="sp-badge is-ok">
+                          <Check />
+                          Sudah dikerjakan
+                        </span>
+                      )}
+                    </span>
                   )}
                   <span>
                     <span className="sp-title">Simulasi Penuh Paket {p.id}</span>

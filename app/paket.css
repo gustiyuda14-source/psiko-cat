@@ -1,0 +1,107 @@
+/* ── Kartu paket (Simulasi langkah 1 + daftar paket Latihan) ──
+   Timeline hexagon. is-ready = kartu navy; is-featured (paket berikutnya) menambah border
+   emas berputar (conic-gradient/@property) + kilau + badge emas; is-done = badge hijau. */
+.sp-list { --sub-kc: var(--brand-ink); --sub-km: #c9a24a; --sub-kp: #8a9bb8; display: grid; gap: 18px; max-width: 880px; margin: 24px 0 0; padding: 0; list-style: none }
+.sp-step { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 18px; animation: sp-in 700ms var(--e-out) both }
+@keyframes sp-in { from { opacity: 0; transform: translateY(14px); filter: blur(4px) } }
+.sp-step:not(:last-child)::before { content: ""; position: absolute; left: 27px; top: 34px; bottom: -52px; width: 2px; background: linear-gradient(var(--accent-strong), var(--accent)) }
+.sp-step.is-locked::before, .sp-step:has(+ .is-locked)::before { background: repeating-linear-gradient(var(--border-strong) 0 4px, transparent 4px 9px); opacity: .5 }
+.sp-node { position: relative; z-index: 1; display: grid; place-items: center; width: 56px; height: 64px; margin-top: 6px }
+.sp-node svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible }
+.sp-node polygon { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 3 }
+.sp-node b { position: relative; font: 600 .95rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.is-done .sp-node polygon { fill: var(--accent-soft); stroke: var(--accent-strong) }
+.is-done .sp-node b { color: var(--accent-ink) }
+.is-featured .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 6px 10px rgb(184 137 43 / .45)) }
+.is-featured .sp-node b { color: var(--brand-ink) }
+.is-locked .sp-node polygon { fill: var(--surface-inset); stroke-dasharray: 6 6 }
+.sp-tick { position: absolute; right: -2px; bottom: 2px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--success); color: #fff; box-shadow: 0 0 0 3px var(--surface-page) }
+
+@property --sp-ang { syntax: "<angle>"; inherits: false; initial-value: 0deg }
+.sp-card { position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px 28px; align-items: center; width: 100%; padding: 22px 24px; border: 1px solid var(--border); border-radius: var(--r-xl); background: var(--surface-card); box-shadow: var(--elev-2); text-align: left; transition: transform 320ms var(--e-out), box-shadow 320ms var(--e-out), border-color 200ms }
+.sp-card:hover:not(:disabled) { transform: translateY(-2px); box-shadow: var(--elev-3); border-color: var(--accent) }
+.sp-card:focus-visible { outline: 3px solid var(--ring); outline-offset: 3px }
+.sp-title { display: block; font: 600 1.15rem/1.25 var(--font-display-src), sans-serif; letter-spacing: -.01em; color: var(--brand-ink) }
+.sp-meta { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 4px; font-size: .9rem; color: var(--muted-foreground) }
+.sp-meta span:not(:last-child)::after { content: "·"; margin-left: 14px; color: var(--border-strong) }
+.sp-mix { grid-column: 1 / -1; display: grid; gap: 8px }
+.sp-bar { display: flex; gap: 3px; height: 8px }
+.sp-bar i { border-radius: 99px; transform-origin: left; animation: sp-grow 900ms var(--e-out) 300ms both }
+@keyframes sp-grow { from { transform: scaleX(0) } }
+.sp-legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0; padding: 0; list-style: none; font-size: .85rem; color: var(--muted-foreground) }
+.sp-legend > span { display: inline-flex; align-items: center; gap: 7px }
+.sp-legend > span::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--c) }
+.sp-legend b { font-weight: 600; color: var(--foreground) }
+.sp-side { display: grid; justify-items: end; gap: 10px }
+.sp-score { text-align: right; line-height: 1.1 }
+.sp-score small { display: block; font-size: .78rem; color: var(--muted-foreground) }
+.sp-score strong { font: 600 1.6rem var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--brand-ink) }
+.sp-score em { margin-left: 4px; font: 600 .85rem var(--font-sans-src), sans-serif; font-style: normal }
+.sp-cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface-card); font: 600 .9rem var(--font-display-src), sans-serif; color: var(--brand-ink); transition: background 200ms, border-color 200ms }
+.sp-cta svg { transition: transform 300ms var(--e-out) }
+.sp-card:hover .sp-cta { background: var(--surface-inset); border-color: var(--brand-ink) }
+.sp-card:hover .sp-cta svg { transform: translateX(3px) }
+.sp-card:active:not(:disabled) .sp-cta { transform: scale(.97) }
+
+.is-ready { --sub-kc: #e8c766; --sub-km: #f8e7a8; --sub-kp: #6f85bd }
+.is-ready .sp-card { border-color: transparent;
+  background: radial-gradient(120% 140% at 100% 0%, rgb(232 199 102 / .16), transparent 55%), linear-gradient(160deg, #1f2f66, var(--surface-nav) 45%, var(--surface-nav-deep));
+  box-shadow: 0 18px 40px -16px rgb(15 24 56 / .55), 0 0 0 1px rgb(15 24 56 / .4) }
+.is-featured .sp-card::before { content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from var(--sp-ang), rgb(232 199 102 / .12) 0deg, var(--accent-strong) 50deg, #f8e7a8 80deg, rgb(232 199 102 / .12) 130deg,
+    rgb(232 199 102 / .12) 180deg, var(--accent-strong) 230deg, #f8e7a8 260deg, rgb(232 199 102 / .12) 310deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); animation: sp-spin 7s linear infinite }
+.sp-shine { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none }
+.sp-shine::after { content: ""; position: absolute; top: 0; left: -60%; width: 34%; height: 100%; background: linear-gradient(105deg, transparent, rgb(255 255 255 / .10), transparent); transform: skewX(-18deg); animation: sp-sweep 6s ease-in-out infinite }
+@keyframes sp-spin { to { --sp-ang: 360deg } }
+@keyframes sp-sweep { 0%, 60% { left: -60% } 100% { left: 130% } }
+.is-ready .sp-card:hover:not(:disabled) { border-color: transparent; box-shadow: 0 24px 50px -16px rgb(15 24 56 / .6), 0 0 0 1px rgb(15 24 56 / .4) }
+.sp-card:has(.sp-badges) { margin-top: 14px }
+.sp-badges { position: absolute; top: 0; left: 24px; transform: translateY(-50%); display: flex; gap: 8px }
+.sp-badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px 6px 10px; border-radius: 999px; background: var(--gold-grad); font: 600 .78rem var(--font-display-src), sans-serif; color: var(--brand-ink); box-shadow: 0 6px 16px -4px rgb(184 137 43 / .55), 0 0 0 4px var(--surface-page) }
+.sp-badge.is-ok { background: linear-gradient(120deg, #087453, #2fb57c); color: #fff; box-shadow: 0 6px 16px -4px rgb(8 116 83 / .5), 0 0 0 4px var(--surface-page) }
+.sp-badge.is-ok svg { width: 12px; height: 12px }
+.sp-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-ink); animation: sp-pulse 1.8s ease-in-out infinite }
+@keyframes sp-pulse { 50% { opacity: .3 } }
+.is-ready .sp-title { font-size: 1.3rem; color: #fff }
+.is-ready .sp-meta, .is-ready .sp-legend, .is-ready .sp-score small { color: #c4cde3 }
+.is-ready .sp-meta span:not(:last-child)::after { color: rgb(232 199 102 / .5) }
+.is-ready .sp-legend b, .is-ready .sp-score strong { color: #fff }
+.is-ready .sp-score em.pg-up { color: #7fe0b5 }
+.is-ready .sp-score em.pg-down { color: #ff9fae }
+.is-featured .sp-cta { border-color: transparent; background: var(--gold-grad); box-shadow: 0 8px 20px -8px rgb(232 199 102 / .7) }
+.is-featured .sp-card:hover .sp-cta { background: var(--gold-grad); filter: brightness(1.05) }
+.is-ready:not(.is-featured) .sp-cta { border-color: rgb(232 199 102 / .5); background: transparent; color: #f3dd8e }
+.is-ready:not(.is-featured) .sp-card:hover .sp-cta { border-color: #e8c766; background: rgb(232 199 102 / .1) }
+.is-ready .sp-card:focus-visible { outline-color: var(--ring-on-nav) }
+
+.is-locked .sp-card { background: repeating-linear-gradient(135deg, transparent 0 10px, rgb(135 125 102 / .05) 10px 11px), var(--surface-inset); border-style: dashed; box-shadow: none; cursor: default }
+.is-locked .sp-title { color: var(--muted-foreground) }
+.sp-soon { padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface-card); font: 500 .8rem var(--font-display-src), sans-serif; color: var(--faint-foreground) }
+
+@media (max-width: 640px) {
+  .sp-step { grid-template-columns: 40px minmax(0, 1fr); gap: 12px }
+  .sp-node { width: 40px; height: 46px; margin-top: 4px }
+  .sp-node b { font-size: .8rem }
+  .sp-tick { width: 16px; height: 16px; right: -6px; bottom: -4px }
+  .sp-step:not(:last-child)::before { left: 19px; top: 26px }
+  .sp-card { grid-template-columns: minmax(0, 1fr); padding: 20px 18px }
+  .is-locked .sp-card, .sp-card:not(:has(.sp-cta)) { grid-template-columns: minmax(0, 1fr) auto }
+  .sp-card:not(:has(.sp-cta)) .sp-side { display: grid; grid-template-columns: none; justify-items: end }
+  .sp-card:not(:has(.sp-cta)) .sp-score { text-align: right }
+  .sp-side { grid-template-columns: 1fr auto; justify-items: stretch; align-items: center }
+  .sp-side:has(> :only-child) { grid-template-columns: 1fr }
+  .sp-score { text-align: left }
+  .sp-badges { left: 18px }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sp-step, .sp-bar i, .sp-card::before, .sp-shine::after, .sp-badge i { animation: none }
+  .sp-card, .sp-cta, .sp-cta svg { transition: none }
+}
+
+/* Latihan (PackageCarousel): bar segmen progres di kartu navy, kartu terpilih di desktop */
+.sp-mix .pk-segs i { height: 6px; background: linear-gradient(90deg, var(--gold-hi) var(--f), rgb(255 255 255 / .16) 0) }
+.is-locked .sp-mix .pk-segs i { background: var(--border) }
+.sp-step.is-sel .sp-card { outline: 2px solid var(--gold-hi); outline-offset: 3px }
+.sp-chev { color: var(--gold-hi) }

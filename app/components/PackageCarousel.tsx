@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, ChevronRight, Close } from "@/app/components/icons";
+import { ArrowRight, Check, ChevronRight, Close } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
@@ -12,9 +12,10 @@ import { resetProgress, useLatihanProgress } from "@/lib/practice-progress";
 
 /*
   Pemilih paket latihan: kartu "Lanjutkan" (satu ketukan ke paket yang sedang
-  berjalan) di atas daftar semua paket. Tiap baris = nomor dalam heks kecil, status,
-  dan bar segmen (10 per kolom untuk Kecermatan, 4 seperempat untuk modul lain) yang
-  terisi madu sesuai capaian terjauh dari lib/practice-progress.ts.
+  berjalan) di atas daftar semua paket. Daftar = timeline kartu paket yang sama dengan
+  katalog Simulasi (app/paket.css): kartu navy, paket "Lanjutkan" ber-border emas
+  berputar, paket selesai ber-badge hijau. Bar segmen (10 per kolom untuk Kecermatan,
+  4 seperempat untuk modul lain) terisi sesuai capaian terjauh dari lib/practice-progress.ts.
   Rincian paket + tombol mulai: panel samping di desktop, lembar dari bawah di HP
   (<dialog> native — focus trap, Esc, dan top layer gratis). Nama komponen
   dipertahankan supaya pemanggilnya tidak berubah. CSS di app/honey.css.
@@ -288,15 +289,39 @@ export function PackageCarousel({
         </div>
       )}
 
+      <svg width="0" height="0" className="absolute" aria-hidden="true">
+        <defs>
+          <linearGradient id="sp-gold" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stopColor="#b8892b" />
+            <stop offset=".5" stopColor="#f3dd8e" />
+            <stop offset="1" stopColor="#c9a24a" />
+          </linearGradient>
+        </defs>
+      </svg>
       <div className="hc-stage">
-        <ul className="pk-list" aria-label="Semua paket">
+        <ol className="sp-list" aria-label="Semua paket">
           {view.map((v, i) => {
             const sel = wide && v.pkg.id === pkg.id;
+            const featured = v === next;
+            const state = !v.ready
+              ? "is-locked"
+              : `is-ready${featured ? " is-featured" : ""}${v.p >= 1 ? " is-done" : ""}${sel ? " is-sel" : ""}`;
             return (
-              <li key={v.pkg.id}>
+              <li key={v.pkg.id} className={`sp-step ${state}`} style={{ animationDelay: `${i * 50}ms` }}>
+                <span className="sp-node" aria-hidden="true">
+                  <svg viewBox="-4 -4 108 124">
+                    <polygon points={HEX} />
+                  </svg>
+                  <b className="tnum">{String(i + 1).padStart(2, "0")}</b>
+                  {v.p >= 1 && (
+                    <span className="sp-tick">
+                      <Check className="size-3" />
+                    </span>
+                  )}
+                </span>
                 <button
                   type="button"
-                  className={`pk-row${sel ? " is-sel" : ""}`}
+                  className="sp-card"
                   disabled={!v.ready}
                   aria-pressed={wide ? sel : undefined}
                   aria-haspopup={wide ? undefined : "dialog"}
@@ -306,25 +331,60 @@ export function PackageCarousel({
                     if (!wide) setSheetOpen(true);
                   }}
                 >
-                  <span className={`pk-hex${v.p >= 1 ? " is-full" : v.p > 0 ? " is-part" : ""}`} aria-hidden="true">
-                    <svg viewBox="0 0 100 115.47">
-                      <polygon points="50,2 98,29.9 98,85.6 50,113.5 2,85.6 2,29.9" />
-                    </svg>
-                    <b className="tnum">{String(i + 1).padStart(2, "0")}</b>
-                  </span>
-                  <span className="pk-row-main">
-                    <span className="pk-row-top">
-                      <b>{v.pkg.label}</b>
-                      <span className={`pk-status tnum${v.p >= 1 ? " is-full" : v.p > 0 ? " is-part" : ""}`}>{status(v)}</span>
+                  {featured && <span className="sp-shine" aria-hidden="true" />}
+                  {(featured || v.p >= 1) && (
+                    <span className="sp-badges">
+                      {featured && (
+                        <span className="sp-badge">
+                          <i aria-hidden="true" />
+                          {v.p > 0 ? "Lanjutkan di sini" : "Mulai dari sini"}
+                        </span>
+                      )}
+                      {v.p >= 1 && (
+                        <span className="sp-badge is-ok">
+                          <Check />
+                          Selesai
+                        </span>
+                      )}
                     </span>
-                    {segs(v)}
+                  )}
+                  <span>
+                    <span className="sp-title">{v.pkg.label}</span>
+                    <span className="sp-meta tnum">
+                      {!v.ready ? (
+                        <span>Soal sedang disiapkan</span>
+                      ) : v.done > 0 ? (
+                        <span>Terjauh {v.done} dari {v.pkg.questionCount} {unitLabel}</span>
+                      ) : (
+                        <>
+                          <span>Belum mulai</span>
+                          <span>{v.pkg.questionCount} {unitLabel}</span>
+                        </>
+                      )}
+                    </span>
                   </span>
-                  <ChevronRight className="pk-chev size-5" />
+                  {!v.ready ? (
+                    <span className="sp-soon">Segera</span>
+                  ) : (
+                    <>
+                      <span className="sp-side">
+                        {v.p > 0 ? (
+                          <span className="sp-score tnum">
+                            <small>Capaian</small>
+                            <strong>{Math.round(v.p * 100)}%</strong>
+                          </span>
+                        ) : (
+                          <ChevronRight className="sp-chev size-5" />
+                        )}
+                      </span>
+                      <span className="sp-mix">{segs(v)}</span>
+                    </>
+                  )}
                 </button>
               </li>
             );
           })}
-        </ul>
+        </ol>
 
         {/* Desktop: panel samping. Di bawah 960px disembunyikan CSS (juga saat render
             server, sebelum useWide tahu lebar layar) dan rinciannya pindah ke lembar. */}
