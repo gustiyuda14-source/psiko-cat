@@ -986,5 +986,905 @@
     },
     "pembahasan": "Huruf: K(11), M(13), O(15), Q(17) naik 2, jadi berikutnya S(19). Angka: 03, 09, 27, 81 dikali 3, jadi berikutnya 81 × 3 = 243. Hasilnya S243.<br>Opsi A (S250) gugur karena angka dibulatkan menjadi 250, padahal hasil pasti 81 × 3 = 243; Opsi C (S162) gugur karena angka dikali 2 (81 × 2 = 162), padahal dikali 3; Opsi D (R243) gugur karena huruf hanya naik 1 dari Q (menjadi R), padahal naik 2; Opsi E (T243) gugur karena huruf naik 3 dari Q (menjadi T), padahal naik 2. Jawaban: Opsi B (S243). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
     "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-AK-001",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang dibaca searah jarum jam. Titik awal deret tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-001.svg",
+    "opsi": {
+      "a": "32",
+      "b": "36",
+      "c": "34",
+      "d": "35",
+      "e": "38"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "34",
+    "nilai_opsi": {
+      "a": 32,
+      "b": 36,
+      "c": 34,
+      "d": 35,
+      "e": 38
+    },
+    "pembahasan": "Sambungan putus ada di antara 60 dan 4, jadi deret dimulai dari 4: 4, 6, 10, 16, 24, ?, 46, 60. Selisihnya +2, +4, +6, +8, +10, +12, +14, jadi ? = 24 + 10 = 34. Cek: 34 + 12 = 46.<br>Opsi A (32) gugur karena selisih dianggap tetap +8, padahal selisih bertambah 2 setiap langkah; Opsi B (36) gugur karena selisih +12 dipakai satu langkah terlalu awal; Opsi D (35) gugur karena diambil nilai tengah 24 dan 46, padahal deret tidak naik tetap; Opsi E (38) gugur karena selisih +14 dipakai di posisi yang salah. Jawaban: Opsi C (34). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-002",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang dibaca searah jarum jam. Titik awal deret tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-002.svg",
+    "opsi": {
+      "a": "18",
+      "b": "27",
+      "c": "15",
+      "d": "17",
+      "e": "19"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "17",
+    "nilai_opsi": {
+      "a": 18,
+      "b": 27,
+      "c": 15,
+      "d": 17,
+      "e": 19
+    },
+    "pembahasan": "Sambungan putus ada di antara 129 dan 2, jadi deret dimulai dari 2: 2, 3, 5, 9, ?, 33, 65, 129. Polanya ×2 − 1 (3 = 2 × 2 − 1, 5 = 3 × 2 − 1, 9 = 5 × 2 − 1), jadi ? = 9 × 2 − 1 = 17. Cek: 17 × 2 − 1 = 33.<br>Opsi A (18) gugur karena dihitung 9 × 2 tanpa dikurangi 1; Opsi B (27) gugur karena dihitung 9 × 3, pengalinya salah; Opsi C (15) gugur karena selisih dianggap bertambah tetap (+1, +2, +4, +6); Opsi E (19) gugur karena dihitung 9 × 2 + 1, tanda operasinya terbalik. Jawaban: Opsi D (17). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-003",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang dibaca searah jarum jam. Titik awal deret tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-003.svg",
+    "opsi": {
+      "a": "46",
+      "b": "48",
+      "c": "49",
+      "d": "47",
+      "e": "50"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "48",
+    "nilai_opsi": {
+      "a": 46,
+      "b": 48,
+      "c": 49,
+      "d": 47,
+      "e": 50
+    },
+    "pembahasan": "Sambungan putus ada di antara 80 dan 3, jadi deret dimulai dari 3: 3, 8, 15, 24, 35, ?, 63, 80. Selisihnya +5, +7, +9, +11, +13, +15, +17 (bilangan ganjil naik), jadi ? = 35 + 13 = 48. Cek: 48 + 15 = 63. Bentuk lainnya: tiap suku = n² − 1 (2² − 1, 3² − 1, …, 7² − 1 = 48).<br>Opsi A (46) gugur karena selisih dianggap tetap +11; Opsi C (49) gugur karena dipakai 7² tanpa dikurangi 1; Opsi D (47) gugur karena selisih +12 dipakai, padahal selisihnya selalu bilangan ganjil; Opsi E (50) gugur karena selisih +15 dipakai satu langkah terlalu awal. Jawaban: Opsi B (48). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-004",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang dibaca searah jarum jam. Titik awal deret tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-004.svg",
+    "opsi": {
+      "a": "18",
+      "b": "26",
+      "c": "21",
+      "d": "24",
+      "e": "23"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "21",
+    "nilai_opsi": {
+      "a": 18,
+      "b": 26,
+      "c": 21,
+      "d": 24,
+      "e": 23
+    },
+    "pembahasan": "Sambungan putus ada di antara 55 dan 2, jadi deret dimulai dari 2: 2, 3, 5, 8, 13, ?, 34, 55. Setiap suku = jumlah dua suku sebelumnya (2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13), jadi ? = 8 + 13 = 21. Cek: 13 + 21 = 34 dan 21 + 34 = 55.<br>Opsi A (18) gugur karena selisih dianggap +1, +2, +3, +5, lalu ditambah 5 lagi; Opsi B (26) gugur karena 13 dikali 2, padahal polanya penjumlahan dua suku sebelumnya; Opsi D (24) gugur karena diambil nilai tengah 13 dan 34 lalu dibulatkan; Opsi E (23) gugur karena selisih +10 ditambahkan, padahal selisihnya mengikuti suku sebelumnya. Jawaban: Opsi C (21). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-005",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang berurutan mengelilingi lingkaran. Titik awal dan arah baca tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-005.svg",
+    "opsi": {
+      "a": "16",
+      "b": "26",
+      "c": "21",
+      "d": "39",
+      "e": "23"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "26",
+    "nilai_opsi": {
+      "a": 16,
+      "b": 26,
+      "c": 21,
+      "d": 39,
+      "e": 23
+    },
+    "pembahasan": "Sambungan putus ada di antara 58 dan 1, jadi deret dimulai dari 1: 1, 2, 5, 10, 13, ?, 29, 58. Polanya bergantian ×2 dan +3: 1 × 2 = 2, 2 + 3 = 5, 5 × 2 = 10, 10 + 3 = 13, 13 × 2 = 26, 26 + 3 = 29, 29 × 2 = 58. Jadi ? = 26. Dibaca berlawanan arah pun hasilnya sama (÷2 dan −3 bergantian).<br>Opsi A (16) gugur karena dihitung 13 + 3, padahal langkah sesudah +3 adalah ×2; Opsi C (21) gugur karena diambil nilai tengah 13 dan 29; Opsi D (39) gugur karena dihitung 13 × 3, angka pengalinya salah; Opsi E (23) gugur karena dihitung 13 + 10, menyamakan selisih dengan suku sebelumnya. Jawaban: Opsi B (26). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-006",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang berurutan mengelilingi lingkaran. Titik awal dan arah baca tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-006.svg",
+    "opsi": {
+      "a": "120",
+      "b": "96",
+      "c": "144",
+      "d": "48",
+      "e": "360"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "120",
+    "nilai_opsi": {
+      "a": 120,
+      "b": 96,
+      "c": 144,
+      "d": 48,
+      "e": 360
+    },
+    "pembahasan": "Sambungan putus ada di antara 720 dan 1, jadi deret dimulai dari 1: 1, 2, 6, 24, ?, 720. Pengalinya naik satu-satu: ×2, ×3, ×4, ×5, ×6. Jadi ? = 24 × 5 = 120. Cek: 120 × 6 = 720.<br>Opsi B (96) gugur karena dihitung 24 × 4, pengalinya tidak dinaikkan; Opsi C (144) gugur karena dihitung 24 × 6, pengali ×5 dilewati; Opsi D (48) gugur karena dihitung 24 × 2, deret dianggap dikali tetap; Opsi E (360) gugur karena 720 dibagi 2, padahal langkah terakhir adalah ×6. Jawaban: Opsi A (120). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-007",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang berurutan mengelilingi lingkaran. Titik awal dan arah baca tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-007.svg",
+    "opsi": {
+      "a": "29",
+      "b": "32",
+      "c": "35",
+      "d": "31",
+      "e": "33"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "32",
+    "nilai_opsi": {
+      "a": 29,
+      "b": 32,
+      "c": 35,
+      "d": 31,
+      "e": 33
+    },
+    "pembahasan": "Sambungan putus ada di antara 65 dan 2, jadi deret dimulai dari 2: 2, 5, 11, 20, ?, 47, 65. Selisihnya +3, +6, +9, +12, +15, +18 (kelipatan 3), jadi ? = 20 + 12 = 32. Cek: 32 + 15 = 47 dan 47 + 18 = 65.<br>Opsi A (29) gugur karena selisih dianggap tetap +9; Opsi C (35) gugur karena selisih +15 dipakai satu langkah terlalu awal; Opsi D (31) gugur karena selisih dianggap bertambah 2 (+3, +6, +9, +11); Opsi E (33) gugur karena diambil nilai tengah 20 dan 47 lalu dibulatkan. Jawaban: Opsi B (32). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-008",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran membentuk satu deret yang berurutan mengelilingi lingkaran. Titik awal dan arah baca tidak ditandai. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-008.svg",
+    "opsi": {
+      "a": "15",
+      "b": "14",
+      "c": "12",
+      "d": "13",
+      "e": "9"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "13",
+    "nilai_opsi": {
+      "a": 15,
+      "b": 14,
+      "c": 12,
+      "d": 13,
+      "e": 9
+    },
+    "pembahasan": "Sambungan putus ada di antara 19 dan 2, jadi deret dimulai dari 2: 2, 3, 5, 7, 11, ?, 17, 19. Selisihnya tidak berpola tetap (+1, +2, +2, +4, …), tetapi semua suku adalah bilangan prima berurutan. Bilangan prima sesudah 11 adalah 13. Cek: sesudah 13 berturut-turut 17 dan 19.<br>Opsi A (15) gugur karena diambil bilangan ganjil sesudah 11, padahal 15 = 3 × 5 bukan prima; Opsi B (14) gugur karena diambil nilai tengah 11 dan 17; Opsi C (12) gugur karena dianggap naik 1 dari 11; Opsi E (9) gugur karena diambil bilangan ganjil sebelum 11 tanpa mengecek urutan. Jawaban: Opsi D (13). Tips: cari dulu \"sambungan putus\" di lingkaran, yaitu dua angka bertetangga yang lompatannya paling tidak wajar. Di situlah deret berakhir dan dimulai.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-009",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-009.svg",
+    "opsi": {
+      "a": "49",
+      "b": "55",
+      "c": "51",
+      "d": "52",
+      "e": "74"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "52",
+    "nilai_opsi": {
+      "a": 49,
+      "b": 55,
+      "c": 51,
+      "d": 52,
+      "e": 74
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 7, 10, 16, 25, 37, ?. Selisihnya +3, +6, +9, +12, lalu +15 (kelipatan 3). Jadi ? = 37 + 15 = 52.<br>Opsi A (49) gugur karena selisih +12 diulang, padahal selisih naik 3 setiap langkah; Opsi B (55) gugur karena selisih +18 dipakai, satu langkah terlalu jauh; Opsi C (51) gugur karena selisih dianggap naik 2 menjadi +14; Opsi E (74) gugur karena 37 dikali 2, padahal polanya penjumlahan. Jawaban: Opsi D (52). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-010",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-010.svg",
+    "opsi": {
+      "a": "49",
+      "b": "66",
+      "c": "50",
+      "d": "69",
+      "e": "58"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "58",
+    "nilai_opsi": {
+      "a": 49,
+      "b": 66,
+      "c": 50,
+      "d": 69,
+      "e": 58
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 3, 4, 8, 17, 33, ?. Selisihnya +1, +4, +9, +16, yaitu 1², 2², 3², 4². Selisih berikutnya 5² = 25, jadi ? = 33 + 25 = 58.<br>Opsi A (49) gugur karena selisih +16 diulang; Opsi B (66) gugur karena 33 dikali 2 karena selisih disangka berlipat; Opsi C (50) gugur karena selisih dianggap +17, naik 1 dari selisih sebelumnya; Opsi D (69) gugur karena selisih 6² = 36 dipakai, satu kuadrat terlalu jauh. Jawaban: Opsi E (58). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-011",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-011.svg",
+    "opsi": {
+      "a": "126",
+      "b": "127",
+      "c": "128",
+      "d": "95",
+      "e": "159"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "127",
+    "nilai_opsi": {
+      "a": 126,
+      "b": 127,
+      "c": 128,
+      "d": 95,
+      "e": 159
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 1, 3, 7, 15, 31, 63, ?, 255. Polanya ×2 + 1 (3 = 1 × 2 + 1, 7 = 3 × 2 + 1, dan seterusnya). Jadi ? = 63 × 2 + 1 = 127. Cek: 127 × 2 + 1 = 255.<br>Opsi A (126) gugur karena dihitung 63 × 2 tanpa ditambah 1; Opsi C (128) gugur karena dihitung 63 × 2 + 2; Opsi D (95) gugur karena selisih dianggap tetap +32; Opsi E (159) gugur karena diambil nilai tengah 63 dan 255. Jawaban: Opsi B (127). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-012",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-012.svg",
+    "opsi": {
+      "a": "30",
+      "b": "25",
+      "c": "20",
+      "d": "35",
+      "e": "0"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "25",
+    "nilai_opsi": {
+      "a": 30,
+      "b": 25,
+      "c": 20,
+      "d": 35,
+      "e": 0
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 100, 95, 85, 70, 50, ?. Pengurangnya bertambah 5: −5, −10, −15, −20, lalu −25. Jadi ? = 50 − 25 = 25.<br>Opsi A (30) gugur karena pengurang −20 diulang; Opsi C (20) gugur karena pengurang −30 dipakai, satu langkah terlalu jauh; Opsi D (35) gugur karena pengurang dianggap tetap −15; Opsi E (0) gugur karena 50 dikurangi 50 karena deret disangka habis di juring terakhir. Jawaban: Opsi B (25). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-013",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-013.svg",
+    "opsi": {
+      "a": "152",
+      "b": "36",
+      "c": "228",
+      "d": "200",
+      "e": "190"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "190",
+    "nilai_opsi": {
+      "a": 152,
+      "b": 36,
+      "c": 228,
+      "d": 200,
+      "e": 190
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 3, 6, 4, 12, 10, 40, 38, ?. Polanya berpasangan: ×2, −2, ×3, −2, ×4, −2, lalu ×5. Jadi ? = 38 × 5 = 190.<br>Opsi A (152) gugur karena dihitung 38 × 4, pengalinya tidak dinaikkan; Opsi B (36) gugur karena dihitung 38 − 2, padahal sesudah −2 giliran perkalian; Opsi C (228) gugur karena dihitung 38 × 6, pengali ×5 dilewati; Opsi D (200) gugur karena dihitung 40 × 5, lupa bahwa suku terakhir adalah 38. Jawaban: Opsi E (190). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-014",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-014.svg",
+    "opsi": {
+      "a": "26",
+      "b": "46",
+      "c": "22",
+      "d": "25",
+      "e": "48"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "26",
+    "nilai_opsi": {
+      "a": 26,
+      "b": 46,
+      "c": 22,
+      "d": 25,
+      "e": 48
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 2, 5, 10, 9, 12, 24, 23, ?. Operasinya berulang tiap tiga langkah: +3, ×2, −1, lalu +3, ×2, −1, lalu +3. Jadi ? = 23 + 3 = 26.<br>Opsi B (46) gugur karena dihitung 23 × 2, padahal sesudah −1 giliran +3; Opsi C (22) gugur karena dihitung 23 − 1, operasi −1 diulang; Opsi D (25) gugur karena dihitung 23 + 2, angka penambahnya salah; Opsi E (48) gugur karena dihitung 24 × 2, suku terakhir 23 dilewati. Jawaban: Opsi A (26). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-015",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Lingkaran dibagi menjadi beberapa juring. Angka pada juring membentuk deret yang dibaca searah jarum jam, dimulai dari juring bertanda MULAI. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-015.svg",
+    "opsi": {
+      "a": "26",
+      "b": "9",
+      "c": "44",
+      "d": "18",
+      "e": "11"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "11",
+    "nilai_opsi": {
+      "a": 26,
+      "b": 9,
+      "c": 44,
+      "d": 18,
+      "e": 11
+    },
+    "pembahasan": "Tulis ulang sesuai arah baca: 64, 32, 36, 18, 22, ?. Operasinya bergantian ÷2 dan +4: 64 ÷ 2 = 32, 32 + 4 = 36, 36 ÷ 2 = 18, 18 + 4 = 22, lalu 22 ÷ 2 = 11.<br>Opsi A (26) gugur karena dihitung 22 + 4, padahal sesudah +4 giliran ÷2; Opsi B (9) gugur karena dihitung 18 ÷ 2, suku terakhir 22 dilewati; Opsi C (44) gugur karena dihitung 22 × 2, operasinya terbalik; Opsi D (18) gugur karena dihitung 22 − 4, penambahnya dibalik. Jawaban: Opsi E (11). Tips: tulis ulang angka juring menjadi satu baris sesuai arah baca, lalu kerjakan seperti deret biasa.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-016",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-016.svg",
+    "opsi": {
+      "a": "254",
+      "b": "191",
+      "c": "256",
+      "d": "253",
+      "e": "255"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "255",
+    "nilai_opsi": {
+      "a": 254,
+      "b": 191,
+      "c": 256,
+      "d": 253,
+      "e": 255
+    },
+    "pembahasan": "Mulai dari tengah: 3, 7, 15, 31, 63, 127, ?. Polanya ×2 + 1 (7 = 3 × 2 + 1, 15 = 7 × 2 + 1). Jadi ? = 127 × 2 + 1 = 255.<br>Opsi A (254) gugur karena dihitung 127 × 2 tanpa ditambah 1; Opsi B (191) gugur karena selisih dianggap tetap +64; Opsi C (256) gugur karena dihitung 127 × 2 + 2; Opsi D (253) gugur karena dihitung 127 × 2 − 1, tanda operasinya terbalik. Jawaban: Opsi E (255). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-017",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-017.svg",
+    "opsi": {
+      "a": "49",
+      "b": "47",
+      "c": "48",
+      "d": "46",
+      "e": "42"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "49",
+    "nilai_opsi": {
+      "a": 49,
+      "b": 47,
+      "c": 48,
+      "d": 46,
+      "e": 42
+    },
+    "pembahasan": "Mulai dari tengah: 1, 4, 9, 16, 25, 36, ?. Deret ini adalah kuadrat berurutan: 1², 2², 3², 4², 5², 6², lalu 7². Jadi ? = 49.<br>Opsi B (47) gugur karena selisih +11 diulang, padahal selisih naik 2; Opsi C (48) gugur karena dipakai 7² − 1, pola n² − 1 tertukar dengan pola kuadrat murni; Opsi D (46) gugur karena selisih dianggap tetap +10; Opsi E (42) gugur karena 36 ditambah 6, akar dari 36. Jawaban: Opsi A (49). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-018",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-018.svg",
+    "opsi": {
+      "a": "68",
+      "b": "65",
+      "c": "71",
+      "d": "67",
+      "e": "85"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "68",
+    "nilai_opsi": {
+      "a": 68,
+      "b": 65,
+      "c": 71,
+      "d": 67,
+      "e": 85
+    },
+    "pembahasan": "Mulai dari tengah: 5, 8, 14, 23, 35, 50, ?. Selisihnya +3, +6, +9, +12, +15, lalu +18. Jadi ? = 50 + 18 = 68.<br>Opsi B (65) gugur karena selisih +15 diulang; Opsi C (71) gugur karena selisih +21 dipakai, satu langkah terlalu jauh; Opsi D (67) gugur karena selisih dianggap naik 2 menjadi +17; Opsi E (85) gugur karena 50 ditambah 35, suku sebelumnya ikut dijumlahkan. Jawaban: Opsi A (68). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-019",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-019.svg",
+    "opsi": {
+      "a": "648",
+      "b": "288",
+      "c": "360",
+      "d": "432",
+      "e": "1296"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "432",
+    "nilai_opsi": {
+      "a": 648,
+      "b": 288,
+      "c": 360,
+      "d": 432,
+      "e": 1296
+    },
+    "pembahasan": "Mulai dari tengah: 2, 6, 12, 36, 72, 216, ?. Pengalinya bergantian ×3 dan ×2: 2 × 3 = 6, 6 × 2 = 12, 12 × 3 = 36, 36 × 2 = 72, 72 × 3 = 216, lalu 216 × 2 = 432.<br>Opsi A (648) gugur karena dihitung 216 × 3, pengali ×3 diulang; Opsi B (288) gugur karena dihitung 216 + 72, suku sebelumnya dijumlahkan; Opsi C (360) gugur karena selisih 144 ditambahkan ke 216; Opsi E (1296) gugur karena dihitung 216 × 6, kedua pengali digabung. Jawaban: Opsi D (432). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-020",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-020.svg",
+    "opsi": {
+      "a": "29",
+      "b": "42",
+      "c": "31",
+      "d": "34",
+      "e": "33"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "34",
+    "nilai_opsi": {
+      "a": 29,
+      "b": 42,
+      "c": 31,
+      "d": 34,
+      "e": 33
+    },
+    "pembahasan": "Mulai dari tengah: 2, 3, 5, 8, 13, 21, ?. Setiap suku = jumlah dua suku sebelumnya, termasuk angka tengah (2 + 3 = 5, 3 + 5 = 8). Jadi ? = 13 + 21 = 34.<br>Opsi A (29) gugur karena selisih +8 diulang; Opsi B (42) gugur karena 21 dikali 2, polanya bukan perkalian; Opsi C (31) gugur karena selisih dianggap naik 2 menjadi +10; Opsi E (33) gugur karena selisih dianggap naik 4 dari +8 menjadi +12. Jawaban: Opsi D (34). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-021",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-021.svg",
+    "opsi": {
+      "a": "20",
+      "b": "36",
+      "c": "38",
+      "d": "39",
+      "e": "37"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "38",
+    "nilai_opsi": {
+      "a": 20,
+      "b": 36,
+      "c": 38,
+      "d": 39,
+      "e": 37
+    },
+    "pembahasan": "Mulai dari tengah: 3, 4, 8, 9, 18, 19, ?. Operasinya bergantian +1 dan ×2: 3 + 1 = 4, 4 × 2 = 8, 8 + 1 = 9, 9 × 2 = 18, 18 + 1 = 19, lalu 19 × 2 = 38.<br>Opsi A (20) gugur karena dihitung 19 + 1, padahal sesudah +1 giliran ×2; Opsi B (36) gugur karena dihitung 18 × 2, suku terakhir 19 dilewati; Opsi D (39) gugur karena dihitung 19 × 2 + 1, kedua operasi digabung; Opsi E (37) gugur karena dihitung 19 × 2 − 1. Jawaban: Opsi C (38). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-022",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-022.svg",
+    "opsi": {
+      "a": "6",
+      "b": "1",
+      "c": "13",
+      "d": "12",
+      "e": "14"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "13",
+    "nilai_opsi": {
+      "a": 6,
+      "b": 1,
+      "c": 13,
+      "d": 12,
+      "e": 14
+    },
+    "pembahasan": "Mulai dari tengah: 10, 9, 11, 8, 12, 7, ?. Operasinya −1, +2, −3, +4, −5, lalu +6 (besarnya naik 1, tandanya bergantian). Jadi ? = 7 + 6 = 13. Tampak juga dua deret selang-seling: 10, 11, 12, 13 dan 9, 8, 7.<br>Opsi A (6) gugur karena dihitung 7 − 1, pola turun dianggap berlanjut; Opsi B (1) gugur karena dihitung 7 − 6, tandanya tidak dibalik; Opsi D (12) gugur karena dihitung 7 + 5, besar langkah tidak dinaikkan; Opsi E (14) gugur karena dihitung 7 + 7, besar langkah dinaikkan dua kali. Jawaban: Opsi C (13). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-023",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka di tengah lingkaran adalah suku pertama. Deret berlanjut ke angka yang ditunjuk panah, lalu searah jarum jam mengelilingi lingkaran. Angka berapa yang tepat untuk mengganti tanda tanya?",
+    "gambar": "drill/img/K09-AK-023.svg",
+    "opsi": {
+      "a": "53",
+      "b": "74",
+      "c": "73",
+      "d": "61",
+      "e": "69"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "69",
+    "nilai_opsi": {
+      "a": 53,
+      "b": 74,
+      "c": 73,
+      "d": 61,
+      "e": 69
+    },
+    "pembahasan": "Mulai dari tengah: 6, 7, 9, 13, 21, 37, ?. Selisihnya +1, +2, +4, +8, +16, lalu +32 (selisih dikali 2). Jadi ? = 37 + 32 = 69.<br>Opsi A (53) gugur karena selisih +16 diulang; Opsi B (74) gugur karena 37 dikali 2, padahal yang berlipat selisihnya; Opsi C (73) gugur karena dihitung 37 × 2 − 1; Opsi D (61) gugur karena selisih dianggap naik 8 menjadi +24. Jawaban: Opsi E (69). Tips: angka tengah ikut dihitung sebagai suku pertama. Tulis deretnya mulai dari tengah, baru cari polanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-024",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-024.svg",
+    "opsi": {
+      "a": "7 dan 12",
+      "b": "11 dan 7",
+      "c": "7 dan 11",
+      "d": "6 dan 11",
+      "e": "8 dan 13"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "[7, 11].join(' dan ')",
+    "nilai_opsi": {
+      "a": "7 dan 12",
+      "b": "11 dan 7",
+      "c": "7 dan 11",
+      "d": "6 dan 11",
+      "e": "8 dan 13"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 1, 3, 5, P (+2), jadi P = 7. Posisi genap: 20, 17, 14, Q (−3), jadi Q = 11.<br>Opsi A (7 dan 12) gugur karena Q dihitung 14 − 2, pengurang deret ganjil terbawa; Opsi B (11 dan 7) gugur karena P dan Q tertukar; Opsi D (6 dan 11) gugur karena P dihitung 5 + 1; Opsi E (8 dan 13) gugur karena semua angka dianggap satu deret, lalu ditebak naik 1. Jawaban: Opsi C (7 dan 11). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-025",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-025.svg",
+    "opsi": {
+      "a": "12 dan 20",
+      "b": "16 dan 30",
+      "c": "10 dan 20",
+      "d": "16 dan 25",
+      "e": "16 dan 20"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "[16, 20].join(' dan ')",
+    "nilai_opsi": {
+      "a": "12 dan 20",
+      "b": "16 dan 30",
+      "c": "10 dan 20",
+      "d": "16 dan 25",
+      "e": "16 dan 20"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 2, 4, 8, P (×2), jadi P = 16. Posisi genap: 5, 10, 15, Q (+5), jadi Q = 20.<br>Opsi A (12 dan 20) gugur karena P dihitung 8 + 4, padahal deret ganjil dikali 2; Opsi B (16 dan 30) gugur karena Q dihitung 15 × 2, padahal deret genap ditambah 5; Opsi C (10 dan 20) gugur karena P dihitung 8 + 2; Opsi D (16 dan 25) gugur karena Q dihitung 15 + 10. Jawaban: Opsi E (16 dan 20). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-026",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 2,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-026.svg",
+    "opsi": {
+      "a": "6 dan 18",
+      "b": "9 dan 18",
+      "c": "6 dan 20",
+      "d": "7 dan 18",
+      "e": "18 dan 6"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "[6, 18].join(' dan ')",
+    "nilai_opsi": {
+      "a": "6 dan 18",
+      "b": "9 dan 18",
+      "c": "6 dan 20",
+      "d": "7 dan 18",
+      "e": "18 dan 6"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 3, P, 12, 24 (×2), jadi P = 3 × 2 = 6 (cek: 6 × 2 = 12). Posisi genap: 30, 26, 22, Q (−4), jadi Q = 18.<br>Opsi B (9 dan 18) gugur karena P dihitung 3 + 6 tanpa dicek ke 12 dan 24; Opsi C (6 dan 20) gugur karena Q dihitung 22 − 2; Opsi D (7 dan 18) gugur karena P diambil nilai tengah 3 dan 12 lalu dibulatkan; Opsi E (18 dan 6) gugur karena P dan Q tertukar. Jawaban: Opsi A (6 dan 18). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-027",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-027.svg",
+    "opsi": {
+      "a": "23 dan 32",
+      "b": "25 dan 29",
+      "c": "25 dan 32",
+      "d": "25 dan 35",
+      "e": "24 dan 32"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "[25, 32].join(' dan ')",
+    "nilai_opsi": {
+      "a": "23 dan 32",
+      "b": "25 dan 29",
+      "c": "25 dan 32",
+      "d": "25 dan 35",
+      "e": "24 dan 32"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 1, 4, 9, 16, P (kuadrat 1², 2², 3², 4²), jadi P = 5² = 25. Posisi genap: 2, 5, 11, 20, Q, selisihnya +3, +6, +9, lalu +12, jadi Q = 32.<br>Opsi A (23 dan 32) gugur karena P dihitung 16 + 7, selisih deret kuadrat diulang; Opsi B (25 dan 29) gugur karena Q dihitung 20 + 9, selisih +9 diulang; Opsi D (25 dan 35) gugur karena Q dihitung 20 + 15, selisih +12 dilewati; Opsi E (24 dan 32) gugur karena P dihitung 16 + 8. Jawaban: Opsi C (25 dan 32). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-028",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-028.svg",
+    "opsi": {
+      "a": "9 dan 36",
+      "b": "9 dan 54",
+      "c": "15 dan 54",
+      "d": "9 dan 24",
+      "e": "54 dan 9"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "[9, 54].join(' dan ')",
+    "nilai_opsi": {
+      "a": "9 dan 36",
+      "b": "9 dan 54",
+      "c": "15 dan 54",
+      "d": "9 dan 24",
+      "e": "54 dan 9"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 81, 27, P, 3 (÷3), jadi P = 9 (cek: 9 ÷ 3 = 3). Posisi genap: 2, 6, 18, Q (×3), jadi Q = 54.<br>Opsi A (9 dan 36) gugur karena Q dihitung 18 × 2; Opsi C (15 dan 54) gugur karena P diambil nilai tengah 27 dan 3; Opsi D (9 dan 24) gugur karena Q dihitung 18 + 6, padahal deret genap dikali 3; Opsi E (54 dan 9) gugur karena P dan Q tertukar. Jawaban: Opsi B (9 dan 54). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-029",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-029.svg",
+    "opsi": {
+      "a": "12 dan 30",
+      "b": "11 dan 30",
+      "c": "12 dan 35",
+      "d": "13 dan 30",
+      "e": "12 dan 25"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "[12, 30].join(' dan ')",
+    "nilai_opsi": {
+      "a": "12 dan 30",
+      "b": "11 dan 30",
+      "c": "12 dan 35",
+      "d": "13 dan 30",
+      "e": "12 dan 25"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 5, 8, P, 17, 23, selisihnya +3, +4, +5, +6, jadi P = 12 (cek: 12 + 5 = 17). Posisi genap: 100, 90, 75, 55, Q, pengurangnya −10, −15, −20, lalu −25, jadi Q = 30.<br>Opsi B (11 dan 30) gugur karena P dihitung 8 + 3, selisih +3 diulang; Opsi C (12 dan 35) gugur karena Q dihitung 55 − 20, pengurang −20 diulang; Opsi D (13 dan 30) gugur karena P dihitung mundur 17 − 4, arah pola selisih terbalik; Opsi E (12 dan 25) gugur karena Q dihitung 55 − 30, pengurang −25 dilewati. Jawaban: Opsi A (12 dan 30). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-AK-030",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-LINGKARAN",
+    "tier": 3,
+    "sumber": "AK26#2",
+    "instruksi": "Lengkapi deret berbentuk lingkaran berikut.",
+    "stem": "Angka pada lingkaran dibaca searah jarum jam, dimulai dari angka bertanda MULAI. Nilai P dan Q berturut-turut adalah …",
+    "gambar": "drill/img/K09-AK-030.svg",
+    "opsi": {
+      "a": "15 dan 30",
+      "b": "17 dan 36",
+      "c": "13 dan 34",
+      "d": "17 dan 34",
+      "e": "17 dan 26"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "[17, 34].join(' dan ')",
+    "nilai_opsi": {
+      "a": "15 dan 30",
+      "b": "17 dan 36",
+      "c": "13 dan 34",
+      "d": "17 dan 34",
+      "e": "17 dan 26"
+    },
+    "pembahasan": "Pisahkan posisi ganjil dan genap. Posisi ganjil: 3, 5, 9, P, selisihnya +2, +4, lalu +8, jadi P = 17. Posisi genap: 6, 10, 18, Q, selisihnya +4, +8, lalu +16, jadi Q = 34. Tampak juga tiap angka genap = 2 × angka sebelumnya (34 = 2 × 17).<br>Opsi A (15 dan 30) gugur karena selisih deret ganjil dianggap naik 2 (+2, +4, +6); Opsi B (17 dan 36) gugur karena Q dihitung 18 × 2, bukan 2 × P; Opsi C (13 dan 34) gugur karena P dihitung 9 + 4, selisih deret ganjil +4 diulang; Opsi E (17 dan 26) gugur karena selisih deret genap +8 diulang. Jawaban: Opsi D (17 dan 34). Tips: jika ada dua tanda tanya, uji pola selang-seling (posisi ganjil dan genap) karena biasanya satu jawaban berasal dari tiap deret.",
+    "status_kunci": "ganda"
   }
 ]
