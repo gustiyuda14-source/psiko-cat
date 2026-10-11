@@ -85,8 +85,9 @@
 /* Drill bergambar: teks kiri (dibungkus, tidak memanjang), gambar kanan sebesar kolomnya; ditumpuk di layar sempit. */
 .q-body { display: grid; gap: .875rem; align-content: start; min-width: 0 }
 .q-figure-side { width: 100%; max-width: 440px; max-height: none }
+.q-figure.q-figure-tall { max-width: min(100%, 448px); max-height: min(85vh, 640px) }
 @media (min-width: 900px) {
-  .q-card-fig { grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: center }
+  .q-card-fig { grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: start }
   .q-card-fig .q-stem { max-width: 34ch }
   .q-figure-side { margin: 0 }
 }

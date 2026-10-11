@@ -251,12 +251,18 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
               {result.gambar_pembahasan && (
                 <figure className="my-3">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={result.gambar_pembahasan} alt="Gambar pembahasan: jawaban yang benar" className="q-figure" />
+                  <img
+                    src={result.gambar_pembahasan}
+                    alt="Gambar pembahasan: jawaban yang benar"
+                    className="q-figure"
+                    // Gambar tegak (peta denah) butuh ruang lebih tinggi supaya labelnya terbaca.
+                    onLoad={(e) => e.currentTarget.classList.toggle("q-figure-tall", e.currentTarget.naturalHeight > e.currentTarget.naturalWidth * 1.1)}
+                  />
                   <figcaption className="mt-1 text-center text-xs text-muted-foreground">Gambar pembahasan</figcaption>
                 </figure>
               )}
               {result.pembahasan.split("<br>").map((p, i) => (
-                <p key={i} className="mt-2 text-foreground">
+                <p key={i} className="mt-2 whitespace-pre-line text-foreground">
                   {p}
                 </p>
               ))}

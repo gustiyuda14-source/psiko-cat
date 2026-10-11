@@ -35,11 +35,11 @@ const angDiff = (a: number, b: number) => { const d = Math.abs(a - b) % 360; ret
 const left = (h: number) => (h + 6) % 8;
 const right = (h: number) => (h + 2) % 8;
 const ERR_SECTOR: [string, (d: number) => number][] = [
-  ["arah tetangga", (d) => (d + 7) % 8], ["arah tetangga", (d) => (d + 1) % 8],
-  ["cermin kiri-kanan, Timur tertukar dengan Barat", (d) => (8 - d) % 8],
-  ["cermin atas-bawah, Utara tertukar dengan Selatan", (d) => (12 - d) % 8],
-  ["arah berlawanan, titik acuan tertukar", (d) => (d + 4) % 8],
-  ["terputar 90°", (d) => (d + 2) % 8], ["terputar 90°", (d) => (d + 6) % 8],
+  ["hampir benar, meleset satu langkah di kompas", (d) => (d + 7) % 8], ["hampir benar, meleset satu langkah di kompas", (d) => (d + 1) % 8],
+  ["jebakan kiri-kanan tertukar", (d) => (8 - d) % 8],
+  ["jebakan atas-bawah tertukar", (d) => (12 - d) % 8],
+  ["kebalikannya, acuan dan tujuan tertukar", (d) => (d + 4) % 8],
+  ["meleset seperempat putaran", (d) => (d + 2) % 8], ["meleset seperempat putaran", (d) => (d + 6) % 8],
 ];
 
 // ---------- geometri ----------
@@ -179,7 +179,8 @@ function compass(cx: number, cy: number) {
   return `<circle cx="${cx}" cy="${cy}" r="36" fill="#fff" stroke="#d1d5db"/>${rays}${labels}`;
 }
 
-function renderSvg(p: Peta, n: number): string {
+// `extra` = gambar pembahasan: peta dipudarkan + coretan (panah, jalur) dan keterangan di pita atas.
+function renderSvg(p: Peta, n: number, extra?: { cap: string[]; over: string }): string {
   const roads = rect(M - 4, HY[0] - R / 2, W - 2 * M + 8, R, "#8f98a3") + rect(M - 4, HY[1] - R / 2, W - 2 * M + 8, R, "#8f98a3")
     + rect(VX[0] - R / 2, TOP - 4, R, H - TOP - M + 8, "#8f98a3") + rect(VX[1] - R / 2, TOP - 4, R, H - TOP - M + 8, "#8f98a3");
   const dash = 'stroke="#fff" stroke-width="1.5" stroke-dasharray="8 6"';
@@ -192,10 +193,27 @@ function renderSvg(p: Peta, n: number): string {
   };
   const blocks = [0, 1, 2].flatMap((r) => [0, 1, 2].map((c) => rect(bx0(c), by0(r), BW, BH, "#e7efd9", 'rx="6" stroke="#c9d8b4"'))).join("");
   const objs = p.objs.map((o, i) => icon(o, ROOFS[i % ROOFS.length]) + (o.cells.length === 4 ? label(o.cx, o.cy + 5, o.name) : label(o.cx, o.y + o.h + 17, o.name))).join("");
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${f1(H)}" role="img" aria-label="Denah peta ${n}">`
+  const head = extra
+    ? `<defs>${MK("ok", C_OK)}${MK("no", C_NO)}${MK("ref", C_REF)}</defs>${rect(0, TOP - 6, W, H - TOP + 6, "#fff", 'opacity=".4"')}${extra.over}`
+      + `<text x="${M + 4}" y="30" font-size="14" font-weight="700" fill="#1f2937" ${FONT}>${extra.cap[0]}</text><text x="${M + 4}" y="52" font-size="14" font-weight="700" fill="${C_OK}" ${FONT}>${extra.cap[1]}</text>`
+    : `<text x="${M + 4}" y="30" font-size="15" font-weight="700" fill="#1f2937" ${FONT}>Peta ${n}</text><text x="${M + 4}" y="50" font-size="12" fill="#4b5563" ${FONT}>Atas peta = Utara</text>`;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${f1(H)}" width="${W}" height="${f1(H)}" role="img" aria-label="${extra ? "Pembahasan" : "Denah"} peta ${n}">`
     + rect(0, 0, W, H, "#f8f7f2") + roads + lines + blocks + p.trees.map(([x, y]) => tree(x, y - 6)).join("") + objs + p.streets.map(sname).join("")
-    + compass(W - 46, 42) + `<text x="${M + 4}" y="30" font-size="15" font-weight="700" fill="#1f2937" ${FONT}>Peta ${n}</text>`
-    + `<text x="${M + 4}" y="50" font-size="12" fill="#4b5563" ${FONT}>Atas peta = Utara</text></svg>`;
+    + compass(W - 46, 42) + head + "</svg>";
+}
+
+// ---------- coretan pembahasan ----------
+const C_OK = "#15803d", C_NO = "#dc2626", C_REF = "#2563eb";
+const MK = (id: string, c: string) => `<marker id="${id}" viewBox="0 0 10 10" refX="7" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="${c}"/></marker>`;
+const ring = (o: Obj, c: string, dash = false) => rect(o.x - 6, o.y - 6, o.w + 12, o.h + 34, "none", `rx="8" stroke="${c}" stroke-width="3"${dash ? ' stroke-dasharray="6 4"' : ""}`);
+const tag = (x: number, y: number, t: string, c: string) => {
+  const w = t.length * 7 + 14;
+  return rect(x - w / 2, y - 11, w, 20, "#fff", `rx="10" stroke="${c}" stroke-width="1.5"`) + `<text x="${f1(x)}" y="${f1(y + 4)}" text-anchor="middle" font-size="12" font-weight="700" fill="${c}" ${FONT}>${t}</text>`;
+};
+function arrow(a: Obj, b: Obj, c: string, mk: string, t: string, dash = false) {
+  const dx = b.cx - a.cx, dy = b.cy - a.cy, L = Math.hypot(dx, dy), ux = dx / L, uy = dy / L;
+  return `<line x1="${f1(a.cx + ux * 12)}" y1="${f1(a.cy + uy * 12)}" x2="${f1(b.cx - ux * 22)}" y2="${f1(b.cy - uy * 22)}" stroke="${c}" stroke-width="4" stroke-linecap="round"${dash ? ' stroke-dasharray="7 6"' : ""} marker-end="url(#${mk})"/>`
+    + tag(a.cx + dx * 0.55, a.cy + dy * 0.55, t, c);
 }
 
 // ---------- soal ----------
@@ -205,9 +223,18 @@ const INSTRUKSI = "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diu
 const bOf = (a: Obj, b: Obj) => bearing(a.cx, a.cy, b.cx, b.cy);
 const corners = (o: Obj) => [[o.x, o.y], [o.x + o.w, o.y], [o.x, o.y + o.h], [o.x + o.w, o.y + o.h]];
 const safeKey = (a: Obj, b: Obj) => { const br = bOf(a, b), d = sectorOf(br); return angDiff(br, d * 45) <= 10 && corners(b).every(([x, y]) => sectorOf(bearing(a.cx, a.cy, x, y)) === d) ? d : -1; };
-const where = (d: number, a: string, b: string) => d % 2
-  ? `${b} bergeser ke ${d < 4 ? "kanan (Timur)" : "kiri (Barat)"} dan ke ${d === 1 || d === 7 ? "atas (Utara)" : "bawah (Selatan)"} dengan jarak yang hampir sama dari ${a}`
-  : `${b} berada hampir lurus di ${["atas", "kanan", "bawah", "kiri"][d / 2]} ${a}`;
+// Bahasa pembahasan: arah peta dalam kata sehari-hari (atas/kanan/bawah/kiri).
+const POS = ["atas", "kanan-atas", "kanan", "kanan-bawah", "bawah", "kiri-bawah", "kiri", "kiri-atas"];
+const MOVE = ["lurus ke atas", "serong ke kanan-atas", "lurus ke kanan", "serong ke kanan-bawah", "lurus ke bawah", "serong ke kiri-bawah", "lurus ke kiri", "serong ke kiri-atas"];
+let story = 0; // pemilih gambaran nyata bergilir (tanpa rnd supaya kunci tetap sama)
+const tipsArah = (d: number) => d % 2
+  ? "Tips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus."
+  : "Tips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.";
+const nyataArah = (d: number, x: string) => [
+  `Gambaran nyata: petugas patroli melapor lewat HT, "Pelaku lari ke arah ${DIR[d]} dari ${x}." Rekan yang memegang peta harus langsung tahu itu ${MOVE[d]} di peta.`,
+  `Gambaran nyata: ada laporan "Kebakaran di sebelah ${DIR[d]} ${x}." Petugas yang salah membaca arah akan datang ke tempat yang salah.`,
+  `Gambaran nyata: saat latihan lapangan, komandan memberi perintah "Regu 2 bergerak ke ${DIR[d]}!" Kamu harus tahu arahnya tanpa ragu: ${MOVE[d]} di peta.`,
+][story++ % 3];
 
 function arrange<T>(key: T, others: T[], pos: number): T[] { const o = [...others]; o.splice(pos, 0, key); return o; }
 
@@ -222,17 +249,21 @@ function arahBangunan(p: Peta, pos: number, used: Set<string>): Item | null {
     const ds: { z: Obj; why: string }[] = [];
     for (const [why, f] of ERR_SECTOR) { const z = pool.find(({ z, br }) => sectorOf(br) === f(d) && !ds.some((q) => q.z === z)); if (z && ds.length < 4) ds.push({ z: z.z, why }); }
     for (const { z } of shuffle(pool)) if (ds.length < 4 && !ds.some((q) => q.z === z)) ds.push({ z, why: "" });
-    for (const q of ds) q.why = ERR_SECTOR.find(([, f]) => f(d) === sectorOf(bOf(x, q.z)))?.[0] ?? "arah lain";
+    for (const q of ds) q.why = ERR_SECTOR.find(([, f]) => f(d) === sectorOf(bOf(x, q.z)))?.[0] ?? "bukan arah yang ditanya";
     if (ds.length < 4) continue;
     used.add(x.name + y.name);
     const opts = arrange({ z: y, why: "" }, shuffle(ds), pos);
     const near = ds.filter((q) => angDiff(bOf(x, q.z), d * 45) <= 50).length;
-    const why2 = opts.map((o, i) => o.z === y ? "" : `Opsi ${LET[i].toUpperCase()} gugur karena ${o.z.name} berada di ${DIR[sectorOf(bOf(x, o.z))]} ${x.name} (${o.why}).`).filter(Boolean).join(" ");
+    const why2 = opts.map((o, i) => { const s = sectorOf(bOf(x, o.z)); return o.z === y ? "" : `Opsi ${LET[i].toUpperCase()} (${o.z.name}): letaknya di ${POS[s]} ${x.name}, jadi ${DIR[s]}; ${o.why}.`; }).filter(Boolean).join("\n");
+    const close = ds.filter((q) => ERR_SECTOR.slice(0, 2).some(([, f]) => f(d) === sectorOf(bOf(x, q.z))))
+      .sort((a, b) => angDiff(bOf(x, a.z), d * 45) - angDiff(bOf(x, b.z), d * 45)).slice(0, 1);
     return {
+      cap: [`Dari ${x.name} ke ${y.name}:`, `${MOVE[d]} = ${DIR[d]}`],
+      over: ring(x, C_REF) + ring(y, C_OK) + close.map((q) => ring(q.z, C_NO, true) + arrow(x, q.z, C_NO, "no", `${DIR[sectorOf(bOf(x, q.z))]} ✗`, true)).join("") + arrow(x, y, C_OK, "ok", `${DIR[d]} ✓`),
       sub_type: "FIG-DENAH-ARAH", tier: d % 2 === 0 ? 1 : near >= 2 ? 3 : 2,
       stem: `Di antara pilihan berikut, bangunan yang terletak di arah ${DIR[d]} dari ${x.name} adalah …`,
       opsi: Object.fromEntries(opts.map((o, i) => [LET[i], o.z.name])), kunci: [LET[pos]],
-      pembahasan: `Ambil titik tengah ${x.name} sebagai acuan; atas peta = Utara sesuai kompas. ${where(d, x.name, y.name)}, jadi ${y.name} berada di ${DIR[d]} ${x.name}.<br>${why2} Jawaban: ${y.name}. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.`,
+      pembahasan: `Langkah 1: Taruh jari di tengah ${x.name}.\nLangkah 2: Lihat kompas: ${DIR[d]} = ${MOVE[d]}. Geser jari ${MOVE[d]} dari ${x.name}.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah ${y.name}.<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${y.name}.<br>${nyataArah(d, x.name)}\n${tipsArah(d)}`,
     };
   }
   return null;
@@ -250,12 +281,15 @@ function arahArah(p: Peta, pos: number, used: Set<string>): Item | null {
     // Urut searah jarum jam mulai dari arah tertentu supaya kunci jatuh di `pos`.
     const all = [{ s: d, why: "" }, ...ds].sort((a, b) => a.s - b.s);
     const k = all.findIndex((o) => o.s === d), opts = all.map((_, i) => all[(i + k - pos + 5) % 5]);
-    const why2 = opts.map((o, i) => o.s === d ? "" : `Opsi ${LET[i].toUpperCase()} gugur karena ${DIR[o.s]} adalah ${o.why}.`).filter(Boolean).join(" ");
+    const why2 = opts.map((o, i) => o.s === d ? "" : `Opsi ${LET[i].toUpperCase()} (${DIR[o.s]}): itu arah ${POS[o.s]}; ${o.why}.`).filter(Boolean).join("\n");
+    const geser = d % 2 ? `geser ke ${d < 4 ? "kanan" : "kiri"} dan ke ${d === 1 || d === 7 ? "atas" : "bawah"} hampir sama jauh` : "hampir lurus";
     return {
+      cap: [`Dari ${x.name} ke ${y.name}:`, `${MOVE[d]} = ${DIR[d]}`],
+      over: ring(x, C_REF) + ring(y, C_OK) + arrow(x, y, C_OK, "ok", `${DIR[d]} ✓`),
       sub_type: "FIG-DENAH-ARAH", tier: d % 2 === 0 ? 1 : 2,
       stem: `${y.name} terletak di arah mana dari ${x.name}?`,
       opsi: Object.fromEntries(opts.map((o, i) => [LET[i], DIR[o.s]])), kunci: [LET[pos]],
-      pembahasan: `Ambil titik tengah ${x.name} sebagai acuan; atas peta = Utara sesuai kompas. ${where(d, x.name, y.name)}, jadi arahnya ${DIR[d]}.<br>${why2} Jawaban: ${DIR[d]}. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.`,
+      pembahasan: `Langkah 1: Taruh jari di tengah ${x.name}, lalu cari ${y.name}.\nLangkah 2: ${y.name} ada di ${POS[d]} ${x.name} (${geser}).\nLangkah 3: Cocokkan dengan kompas: ${POS[d]} = ${DIR[d]}.<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${DIR[d]}.<br>${nyataArah(d, x.name)}\n${tipsArah(d)}`,
     };
   }
   return null;
@@ -299,27 +333,43 @@ function rute(p: Peta, pos: number, turns: number, walker: string): Item | null 
     const key = nth(along(p, st, h, side, at), 0);
     if (!key || key === x) continue;
     const cand: [Obj | null, string][] = [
-      [nth(along(p, st, h, dirFor(h, notK), at), 0), `$ ada di sisi ${notK} (kiri dan kanan tertukar)`],
-      [nth(along(p, st, rev, dirFor(rev, K), at), 0), `$ didapat bila belokan terakhir dibalik ke ${last.turn === "kiri" ? "kanan" : "kiri"}`],
-      [nth(along(p, last.st, last.h, dirFor(last.h, K), turnAt), 0), `$ didapat bila ${walker} lurus terus tanpa belok di ${last.cross.name}`],
-      [nth(along(p, st, h, side, at), 1), `$ adalah bangunan kedua, bukan yang pertama`],
-      [nth(along(p, st, rev, dirFor(rev, notK), at), 0), `$ didapat bila belokan terakhir dibalik dan sisi tertukar`],
-      [nth(along(p, st, h, dirFor(h, notK), at), 1), `$ adalah bangunan kedua di sisi ${notK}`],
+      [nth(along(p, st, h, dirFor(h, notK), at), 0), `ada di sisi ${notK}; kiri dan kanan tertukar`],
+      [nth(along(p, st, rev, dirFor(rev, K), at), 0), `itu kalau belokan terakhir salah arah (belok ${last.turn === "kiri" ? "kanan" : "kiri"})`],
+      [nth(along(p, last.st, last.h, dirFor(last.h, K), turnAt), 0), `itu kalau ${walker} lupa belok di ${last.cross.name} dan jalan lurus terus`],
+      [nth(along(p, st, h, side, at), 1), `itu bangunan kedua; yang pertama terlewat`],
+      [nth(along(p, st, rev, dirFor(rev, notK), at), 0), `itu kalau belokan terakhir salah arah dan sisinya juga tertukar`],
+      [nth(along(p, st, h, dirFor(h, notK), at), 1), `itu bangunan kedua di sisi ${notK}`],
     ];
     const ds: { z: Obj; why: string }[] = [];
-    for (const [z, why] of cand) if (z && z !== key && z !== x && !ds.some((q) => q.z === z) && ds.length < 4) ds.push({ z, why: why.replace("$", z.name) });
+    for (const [z, why] of cand) if (z && z !== key && z !== x && !ds.some((q) => q.z === z) && ds.length < 4) ds.push({ z, why });
     if (ds.length < 4) continue;
     const opts = arrange({ z: key, why: "" }, shuffle(ds), pos);
     const heads = [...steps.map((s) => s.h), h];
     const tier = turns === 3 || heads.includes(4) ? 3 : turns === 1 && heads.every((q) => q === 0 || q === 2) ? 1 : 2;
     const route = steps.map((s, i) => `${i ? "lalu di" : "Di"} persimpangan ${s.cross.name} ia belok ${s.turn}`).join(", ");
-    const trace = steps.map((s, i) => `Di ${s.cross.name} belok ${s.turn}: dari menghadap ${DIR[s.h]}, ${s.turn} = ${DIR[s.turn === "kiri" ? left(s.h) : right(s.h)]}, jadi kini menghadap ${DIR[i + 1 < turns ? steps[i + 1].h : h]} di ${s.cross.name}.`).join(" ");
-    const why2 = opts.map((o, i) => o.z === key ? "" : `Opsi ${LET[i].toUpperCase()} gugur karena ${o.why}.`).filter(Boolean).join(" ");
+    const nh = (i: number) => (i + 1 < turns ? steps[i + 1].h : h);
+    const trace = steps.map((s, i) => `Langkah ${i + 2}: Di ${s.cross.name} belok ${s.turn}. Menghadap ${DIR[s.h]}, ${s.turn}nya adalah ${DIR[nh(i)]}. Sekarang menghadap ${DIR[nh(i)]}.`).join("\n");
+    const why2 = opts.map((o, i) => o.z === key ? "" : `Opsi ${LET[i].toUpperCase()} (${o.z.name}): ${o.why}.`).filter(Boolean).join("\n");
+    const pt = (a: Street, b: Street) => (a.axis === "V" ? [VX[a.i], HY[b.i]] : [VX[b.i], HY[a.i]]);
+    const path = [s0.axis === "V" ? [VX[s0.i], x.cy] : [x.cx, HY[s0.i]], ...steps.map((s) => pt(s.st, s.cross)), st.axis === "V" ? [VX[st.i], key.cy] : [key.cx, HY[st.i]]];
+    const swap = ds.find((q) => q.why.startsWith("ada di sisi"));
+    const nyata = story++ % 2
+      ? `Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap ${DIR[h]} melihat ${DIR[left(h)]} di kirinya dan ${DIR[right(h)]} di kanannya${h === 4 ? ", kebalikan dari kiri-kanan layar" : ""}.`
+      : "Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.";
+    const tips = heads.includes(4)
+      ? "Tips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar."
+      : 'Tips: setiap kali belok, ucapkan dalam hati "sekarang aku menghadap ..." supaya arah tidak tertukar.';
     return {
+      cap: [`Jalur ${walker}: ${turns} belokan`, `Menghadap ${DIR[h]}, ${K} = ${DIR[side]}`],
+      over: ring(x, C_REF) + ring(key, C_OK) + (swap ? ring(swap.z, C_NO, true) + tag(swap.z.cx, swap.z.y - 8, `${notK} ✗`, C_NO) : "")
+        + `<polyline points="${path.map((q) => q.map(f1).join(",")).join(" ")}" fill="none" stroke="${C_REF}" stroke-width="5" stroke-linejoin="round" stroke-linecap="round" opacity=".9" marker-end="url(#ref)"/>`
+        + `<circle cx="${f1(path[0][0])}" cy="${f1(path[0][1])}" r="6" fill="${C_REF}"/>` + tag(x.cx, x.y - 8, "Mulai", C_REF)
+        + steps.map((s, i) => { const [qx, qy] = path[i + 1]; return `<circle cx="${f1(qx)}" cy="${f1(qy)}" r="10" fill="${C_REF}"/><text x="${f1(qx)}" y="${f1(qy + 4.5)}" text-anchor="middle" font-size="13" font-weight="700" fill="#fff" ${FONT}>${i + 1}</text>` + tag(qx + (qx > W / 2 ? 46 : -46), qy, `${s.turn} → ${SHORT[nh(i)]}`, C_REF); }).join("")
+        + tag(key.cx, key.y - 8, `${K} ✓`, C_OK),
       sub_type: "FIG-DENAH-RUTE", tier,
       stem: `${walker} keluar dari ${x.name} ke ${s0.name}, lalu berjalan ke arah ${DIR[steps[0].h]}. ${route}. Bangunan pertama di sebelah ${K} ${walker} setelah belokan terakhir adalah …`,
       opsi: Object.fromEntries(opts.map((o, i) => [LET[i], o.z.name])), kunci: [LET[pos]],
-      pembahasan: `${walker} mulai menghadap ${DIR[steps[0].h]} di ${s0.name}. ${trace} Menghadap ${DIR[h]}, sisi ${K} = ${DIR[side]}; bangunan pertama di sisi ${DIR[side]} ${st.name} setelah persimpangan adalah ${key.name}.<br>${why2} Jawaban: ${key.name}. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.`,
+      pembahasan: `Langkah 1: ${walker} keluar dari ${x.name} ke ${s0.name}, menghadap ${DIR[steps[0].h]}.\n${trace}\nLangkah ${turns + 2}: Menghadap ${DIR[h]}, sisi ${K} = ${DIR[side]}. Bangunan pertama di sisi itu: ${key.name}.<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${key.name}.<br>${nyata}\n${tips}`,
     };
   }
   return null;
@@ -327,6 +377,8 @@ function rute(p: Peta, pos: number, turns: number, walker: string): Item | null 
 
 // ---------- utama ----------
 const items: Item[] = [];
+const BANK = path.join(ROOT, "bank/drill/kecerdasan/K17-denah-arah.json");
+const OLD = new Map<string, Item>(fs.existsSync(BANK) ? (JSON.parse(fs.readFileSync(BANK, "utf8")) as Item[]).map((i) => [i.id as string, i]) : []);
 const positions = shuffle(Array.from({ length: N_MAPS * 5 }, (_, i) => i % 5));
 let n = 0;
 for (let m = 1; m <= N_MAPS; m++) {
@@ -342,12 +394,15 @@ for (let m = 1; m <= N_MAPS; m++) {
     const img = `drill/img/K17-peta-${String(m).padStart(2, "0")}.svg`;
     fs.writeFileSync(path.join(ROOT, "public", img), renderSvg(p, m));
     for (const s of set as Item[]) {
-      n++;
-      items.push({ id: `K17-N-${String(n).padStart(3, "0")}`, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", instruksi: INSTRUKSI, stem: s.stem, gambar: img, opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, status_kunci: "tunggal" });
+      const id = `K17-N-${String(++n).padStart(3, "0")}`, pb = `${id}.svg`;
+      fs.writeFileSync(path.join(ROOT, "data/drill-pembahasan", pb), renderSvg(p, m, s as { cap: string[]; over: string }));
+      // Status cek buta tetap berlaku selama stem/opsi/kunci tidak berubah; berubah = harus dicek ulang.
+      const was = OLD.get(id), same = was && JSON.stringify([was.stem, was.opsi, was.kunci]) === JSON.stringify([s.stem, s.opsi, s.kunci]);
+      items.push({ id, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", instruksi: INSTRUKSI, stem: s.stem, gambar: img, opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, gambar_pembahasan: pb, status_kunci: same ? was.status_kunci : "tunggal" });
     }
     break;
   }
 }
-fs.writeFileSync(path.join(ROOT, "bank/drill/kecerdasan/K17-denah-arah.json"), JSON.stringify(items, null, 2) + "\n");
+fs.writeFileSync(BANK, JSON.stringify(items, null, 2) + "\n");
 const count = (k: string, v: unknown) => items.filter((i) => i[k] === v).length;
 console.log(`${items.length} soal, ${N_MAPS} peta · ARAH ${count("sub_type", "FIG-DENAH-ARAH")} RUTE ${count("sub_type", "FIG-DENAH-RUTE")} · tier ${[1, 2, 3].map((t) => count("tier", t)).join("/")}`);
