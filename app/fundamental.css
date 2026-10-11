@@ -1,0 +1,72 @@
+/* ===== Drilling Fundamental (app/dashboard/fundamental, app/latihan/fundamental). Token dari globals.css, prefix fd-. ===== */
+.fd-chip { padding: 4px 9px; border: 1px dashed var(--border); border-radius: 6px; background: var(--surface-inset); color: var(--brand-ink); font: 600 .8rem var(--font-display-src), sans-serif }
+
+/* Area kerja: soal/deret kiri, numpad kanan; bertumpuk di layar sempit. */
+.fd-work { display: grid; gap: var(--space-5); align-items: start }
+@media (min-width: 900px) { .fd-work { grid-template-columns: minmax(0, 1fr) 320px } }
+.q-stem.fd-stem { font-size: clamp(1.5rem, 2.6vw, 2.1rem); line-height: 1.35; letter-spacing: -.01em }
+
+.fd-answer { display: flex; align-items: center; gap: var(--space-3); padding-top: var(--space-4); border-top: 1.5px dashed var(--border) }
+.fd-field { min-width: 7.5rem; min-height: 64px; padding: 0 var(--space-4); border: 1.5px solid var(--border); border-radius: var(--r-md); background: var(--surface-inset); color: var(--foreground); font: 700 2rem var(--font-display-src), sans-serif; text-align: left; transition: border-color var(--motion), box-shadow var(--motion) }
+.fd-field[aria-current] { border-color: var(--ok); box-shadow: inset 0 0 0 1px var(--ok); background: var(--surface-card) }
+.fd-placeholder { color: var(--muted-foreground); opacity: .5 }
+.fd-slash { color: var(--muted-foreground); font: 600 2rem var(--font-display-src), sans-serif }
+.fd-answer.is-ok .fd-field { border-color: var(--success); background: var(--success-soft); color: var(--success) }
+.fd-answer.is-bad .fd-field { border-color: var(--destructive); background: var(--destructive-soft); color: var(--destructive) }
+
+.fd-pad { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-2); padding: var(--space-3); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
+.fd-key { min-height: 64px; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-inset); color: var(--foreground); font: 700 1.6rem var(--font-display-src), sans-serif; transition: background var(--motion), border-color var(--motion), transform 80ms }
+.fd-key:hover:not(:disabled) { border-color: var(--ok) }
+.fd-key:active:not(:disabled) { transform: scale(.95) }
+.fd-key.is-fn { font-size: 1.3rem; color: var(--muted-foreground) }
+.fd-key.is-enter { background: var(--gold-grad); border-color: transparent; color: #16224a; font-size: 1rem }
+@media (max-width: 600px) { .fd-key { min-height: 56px } }
+
+/* Rekening Koran: deret tegak, jawaban ditulis di celah antara dua angka. */
+.fd-progress { height: 4px; background: linear-gradient(90deg, var(--gold) var(--p), rgba(255, 255, 255, .15) 0); transition: background var(--motion) }
+.fd-strip { display: flex; flex-direction: column; align-items: center; margin: 0; padding: var(--space-4) 0; list-style: none; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
+.fd-strip li { display: flex; flex-direction: column; align-items: center }
+.fd-digit { display: grid; place-items: center; width: 64px; height: 48px; color: var(--foreground); font: 700 2rem var(--font-display-src), sans-serif }
+.fd-strip li.is-past .fd-digit { color: var(--muted-foreground); opacity: .55 }
+.fd-strip li.is-pair .fd-digit { border-radius: var(--r-md); background: var(--brand-ink); color: var(--gold-hi) }
+.fd-slot { display: grid; place-items: center; min-width: 44px; height: 30px; margin-left: 110px; color: var(--muted-foreground); font: 700 1.1rem var(--font-display-src), sans-serif }
+.fd-slot.is-ok { color: var(--success) }
+.fd-slot.is-bad { color: var(--destructive); text-decoration: line-through }
+.fd-slot.is-active { border: 1.5px solid var(--ok); border-radius: 8px; background: var(--surface-inset) }
+.fd-slot.is-active::after { content: ''; width: 2px; height: 16px; background: var(--ok); animation: fd-caret 1s steps(1) infinite }
+.fd-hint { margin: 0; color: var(--muted-foreground); font-size: .9rem }
+@keyframes fd-caret { 50% { opacity: 0 } }
+@media (prefers-reduced-motion: no-preference) { .fd-strip.is-shake { animation: fd-shake .28s ease-in-out } }
+@keyframes fd-shake { 20%, 60% { translate: -6px 0 } 40%, 80% { translate: 6px 0 } }
+
+.fd-example { display: inline-grid; grid-template-columns: auto auto; align-items: center; gap: 2px var(--space-4); width: fit-content; padding: var(--space-3) var(--space-5); border: 1.5px dashed var(--border); border-radius: var(--r-md); font: 700 1.6rem var(--font-display-src), sans-serif }
+.fd-example span { grid-column: 1 }
+.fd-example i { grid-column: 2; color: var(--success); font-style: normal; font-size: 1.1rem }
+.fd-example small { grid-column: 1 / -1; color: var(--muted-foreground); font: 500 .85rem var(--font-display-src), sans-serif }
+
+/* Layar mulai / hasil. */
+.fd-result { display: flex; flex-direction: column; gap: var(--space-4); max-width: 720px; margin: 0 auto; padding: var(--space-6); border: 1px solid var(--border); border-radius: var(--r-xl); background: var(--surface-card); box-shadow: var(--elev-2) }
+.fd-result-title { margin: 0; font: 700 clamp(1.5rem, 2.6vw, 2rem)/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em }
+.fd-stats { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border: 1.5px solid var(--border); border-radius: var(--r-lg); background: var(--surface-inset) }
+.fd-stats div { display: flex; flex-direction: column-reverse; gap: 2px; padding: var(--space-3) var(--space-4) }
+.fd-stats div + div { border-left: 1.5px dashed var(--border) }
+.fd-stats dt { color: var(--muted-foreground); font: 700 .7rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase }
+.fd-stats dd { margin: 0; color: var(--brand-ink); font: 700 1.7rem/1.1 var(--font-display-src), sans-serif }
+.fd-stats dd span { color: var(--muted-foreground); font-size: 1rem }
+.fd-tier { display: grid; place-items: center; flex: none; width: 76px; height: 76px; border-radius: 18px; background: var(--brand-ink); color: var(--gold-hi); font: 800 2rem var(--font-display-src), sans-serif }
+.fd-tier[data-rank="S+"], .fd-tier[data-rank="S"] { background: var(--gold-grad); color: #16224a }
+.fd-wrong { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; font-size: .9rem }
+.fd-wrong li { padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-inset) }
+.fd-wrong li > span { color: var(--muted-foreground) }
+.fd-wrong s { color: var(--destructive) }
+.fd-wrong b { color: var(--success) }
+.mbtn.fd-ghost { border-color: var(--border); color: var(--foreground) }
+.mbtn.fd-ghost:hover { background: var(--surface-inset) }
+@media (max-width: 600px) { .fd-result { padding: var(--space-4) } .fd-stats dd { font-size: 1.35rem } }
+/* HP: deret dipadatkan supaya numpad tetap terlihat tanpa gulir; judul bar dipotong, bukan mendorong tombol Keluar. */
+@media (max-width: 600px) {
+  .fd-strip { padding: var(--space-2) 0 }
+  .fd-digit { width: 52px; height: 34px; font-size: 1.6rem }
+  .fd-slot { height: 22px; margin-left: 96px; font-size: 1rem }
+  .mbar .mbar-title { min-width: 0; overflow: hidden; text-overflow: ellipsis }
+}

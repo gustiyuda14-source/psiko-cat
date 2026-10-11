@@ -65,6 +65,17 @@ export function NavDrill() {
   );
 }
 
+export function NavFundamental() {
+  return (
+    <NavSvg>
+      <rect className="sf" x="4" y="3.5" width="16" height="17" rx="2" />
+      <rect x="4" y="3.5" width="16" height="17" rx="2" />
+      <path d="M7.5 7.5h9M8 12h2M9 11v2M14 12h2.5M8 16.5l2 1M10 16.5l-2 1" />
+      <path className="ac" d="M14 16h2.5M14 17.6h2.5" />
+    </NavSvg>
+  );
+}
+
 export function NavKosakata() {
   return (
     <NavSvg>
