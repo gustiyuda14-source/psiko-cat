@@ -670,5 +670,110 @@
     ],
     "pembahasan": "Peserta terdaftar yang hadir → memakai kartu identitas. Joko peserta terdaftar tetapi tidak memakai kartu, maka Joko tidak hadir di aula (modus tollens).<br>Opsi A (Joko bukan peserta terdaftar seminar.) gugur karena premis kedua menyatakan Joko terdaftar; Opsi B (Beberapa peserta yang hadir tidak mengenakan kartu identitas.) gugur karena bertentangan dengan premis pertama; Opsi C (Joko batal terdaftar karena tidak mengenakan kartu identitas.) gugur karena status pendaftaran tidak berubah karena kartu; Opsi E (Semua peserta yang hadir mengenakan kartu identitas kecuali Joko.) gugur karena \"semua\" tidak memberi pengecualian. Jawaban: Opsi D (Joko adalah peserta terdaftar yang tidak hadir di aula seminar.). Tips: modus tollens: akibat tidak terjadi → syarat (hadir) tidak terpenuhi.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K08-MB-041",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "MB#9.1",
+    "instruksi": "Pilih kesimpulan yang sah berdasarkan premis berikut.",
+    "stem": "P1: Semua calon prajurit POLRI harus lulus tes kesamaptaan.\nP2: Budi adalah calon prajurit POLRI.",
+    "opsi": {
+      "a": "Budi lulus kesamaptaan",
+      "b": "Budi mungkin lulus",
+      "c": "Budi tak lulus",
+      "d": "Budi tak ikut kesamaptaan",
+      "e": "Lulus adalah Budi"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Modus ponens (P → Q, P, maka Q). P1: calon prajurit POLRI → harus lulus tes kesamaptaan. P2: Budi adalah calon prajurit POLRI (P benar). Jadi Budi harus lulus tes kesamaptaan.<br>Opsi B (Budi mungkin lulus) gugur karena terlalu lemah: P1 menyatakan semua calon harus lulus, bukan sekadar mungkin; Opsi C (Budi tak lulus) gugur karena bertentangan dengan P1 yang mewajibkan semua calon prajurit lulus; Opsi D (Budi tak ikut kesamaptaan) gugur karena bertentangan dengan P1: calon prajurit wajib mengikuti dan lulus tes kesamaptaan; Opsi E (Lulus adalah Budi) gugur karena membalik subjek dan predikat: tidak ada premis yang menyatakan hanya Budi yang lulus. Jawaban: Opsi A (Budi lulus kesamaptaan). Tips: tandai kata \"semua\" dan \"harus\": subjek yang masuk kelompok itu otomatis memenuhi sifat kelompoknya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K08-MB-042",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KATEGORI",
+    "tier": 1,
+    "sumber": "MB#9.2",
+    "instruksi": "Pilih kesimpulan yang tepat berdasarkan premis berikut.",
+    "stem": "P1: Semua peserta ujian Kedinasan memiliki kartu peserta.\nP2: Sebagian warga masyarakat adalah peserta ujian Kedinasan.",
+    "opsi": {
+      "a": "Semua warga punya",
+      "b": "Semua punya kartu",
+      "c": "Sebagian punya",
+      "d": "Sebagian tak ikut",
+      "e": "Tidak ada yang punya"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "P1 berbentuk universal (semua peserta → punya kartu), P2 berbentuk partikular (sebagian warga adalah peserta). Gabungan premis universal dan partikular menghasilkan kesimpulan partikular: sebagian warga masyarakat memiliki kartu peserta.<br>Opsi A (Semua warga punya) gugur karena menggeneralisasi ke semua warga, padahal hanya sebagian warga yang berstatus peserta; Opsi B (Semua punya kartu) gugur karena menggeneralisasi ke semua; premis hanya menjamin kartu bagi peserta ujian, bukan bagi seluruh warga; Opsi D (Sebagian tak ikut) gugur karena tidak dapat disimpulkan: premis tidak menyebut warga yang bukan peserta; Opsi E (Tidak ada yang punya) gugur karena bertentangan dengan P1 dan P2: warga yang menjadi peserta pasti memiliki kartu. Jawaban: Opsi C (Sebagian punya). Tips: universal + partikular menghasilkan kesimpulan partikular; jangan menaikkan \"sebagian\" menjadi \"semua\".",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K08-MB-043",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 1,
+    "sumber": "MB#9.3",
+    "instruksi": "Pilih kesimpulan yang sah berdasarkan premis berikut.",
+    "stem": "P1: Jika nilai SKD tinggi, maka peserta lolos ke SKB.\nP2: Jika peserta lolos ke SKB, maka peluang diterima tinggi.",
+    "opsi": {
+      "a": "Tak lolos SKB",
+      "b": "Peluang tinggi → SKD tinggi",
+      "c": "SKD rendah → diterima",
+      "d": "Semua diterima",
+      "e": "SKD tinggi → peluang tinggi"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Silogisme hipotetis (P → Q, Q → R, maka P → R): nilai SKD tinggi → lolos ke SKB → peluang diterima tinggi. Jadi jika nilai SKD tinggi, maka peluang diterima tinggi.<br>Opsi A (Tak lolos SKB) gugur karena tidak ada premis yang menyatakan peserta tidak lolos ke SKB; Opsi B (Peluang tinggi → SKD tinggi) gugur karena membalik arah implikasi, padahal premis tidak berlaku dua arah; Opsi C (SKD rendah → diterima) gugur karena meniadakan sebab (SKD rendah) lalu menyimpulkan akibat; premis tidak mengatur SKD rendah; Opsi D (Semua diterima) gugur karena menggeneralisasi: premis hanya menyebut peluang tinggi, bukan pasti diterima. Jawaban: Opsi E (SKD tinggi → peluang tinggi). Tips: sambungkan ujung implikasi pertama dengan pangkal implikasi kedua; arah panah tidak boleh dibalik.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K08-MB-044",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 2,
+    "sumber": "MB#9.4",
+    "instruksi": "Pilih kesimpulan yang sah berdasarkan premis berikut.",
+    "stem": "P1: Semua prajurit yang disiplin selalu hadir tepat waktu.\nP2: Sertu Ahmad tidak hadir tepat waktu.",
+    "opsi": {
+      "a": "Ahmad tidak disiplin",
+      "b": "Semua tak disiplin",
+      "c": "Ahmad disiplin",
+      "d": "Ahmad hadir esok",
+      "e": "Ahmad izin"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Modus tollens (P → Q, ¬Q, maka ¬P). Prajurit disiplin → hadir tepat waktu. Sertu Ahmad tidak hadir tepat waktu, jadi Sertu Ahmad bukan prajurit yang disiplin.<br>Opsi B (Semua tak disiplin) gugur karena menggeneralisasi dari satu orang: premis tidak menyatakan semua prajurit tidak disiplin; Opsi C (Ahmad disiplin) gugur karena bertentangan dengan P1: prajurit yang disiplin pasti hadir tepat waktu; Opsi D (Ahmad hadir esok) gugur karena informasi di luar premis: tidak ada keterangan tentang kehadiran esok; Opsi E (Ahmad izin) gugur karena alasan ketidakhadiran tidak disebut dalam premis, sehingga tidak dapat disimpulkan. Jawaban: Opsi A (Ahmad tidak disiplin). Tips: jika akibat tidak terpenuhi, sebabnya pasti tidak terpenuhi (modus tollens).",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K08-MB-045",
+    "kartu": "K08",
+    "sub_type": "LOG-SIL-KONDISIONAL",
+    "tier": 2,
+    "sumber": "MB#9.5",
+    "instruksi": "Pilih kesimpulan yang tepat berdasarkan premis berikut.",
+    "stem": "P1: Semua siswa STIS jago matematika.\nP2: Andi tidak jago matematika.",
+    "opsi": {
+      "a": "Andi siswa STIS",
+      "b": "Andi bukan siswa STIS",
+      "c": "Yang jago = STIS",
+      "d": "Andi jago fisika",
+      "e": "Andi mungkin STIS"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Modus tollens (P → Q, ¬Q, maka ¬P). Siswa STIS → jago matematika. Andi tidak jago matematika, jadi Andi bukan siswa STIS.<br>Opsi A (Andi siswa STIS) gugur karena bertentangan dengan P1: semua siswa STIS jago matematika, sedangkan Andi tidak; Opsi C (Yang jago = STIS) gugur karena membalik premis: orang yang jago matematika belum tentu siswa STIS; Opsi D (Andi jago fisika) gugur karena tidak ada informasi tentang kemampuan fisika dalam premis; Opsi E (Andi mungkin STIS) gugur karena tidak mungkin: sifat jago matematika wajib dimiliki siswa STIS, dan Andi tidak memilikinya. Jawaban: Opsi B (Andi bukan siswa STIS). Tips: jika sifat wajib sebuah kelompok tidak dimiliki seseorang, orang itu pasti bukan anggota kelompok.",
+    "status_kunci": "resmi"
   }
 ]

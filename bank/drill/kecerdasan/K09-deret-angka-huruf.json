@@ -462,5 +462,529 @@
     },
     "pembahasan": "Baris huruf: BC → FG maju 4, lalu FG ke LM berjarak 6 huruf yang dibagi dua langkah sama, yaitu 3: FG → IJ → LM, lalu LM → PQ maju 4. Baris angka: selisih 225 → 232 → 240 adalah 7 dan 8, jadi selisih sebelumnya 5 dan 6: 214 + 5 = 219, 219 + 6 = 225.<br>Opsi B (JK dan 219) gugur karena menganggap huruf selalu maju 4 (FG ke LM hanya bisa dicapai lewat dua langkah 3); Opsi C (IJ dan 220) gugur karena selisih angka dibuat 6 lalu 5, padahal selisihnya naik 5, 6, 7, 8; Opsi D (HI dan 219) gugur karena huruf maju 2; Opsi E (IJ dan 218) gugur karena selisih angka pertama dibuat 4. Jawaban: Opsi A (IJ dan 219). Tips: kerjakan baris yang paling banyak petunjuknya dulu, lalu cocokkan pilihan.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K09-MB-001",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "MB#1.1",
+    "instruksi": "Tentukan huruf berikutnya dari deret berikut.",
+    "stem": "B, D, G, K, P, …",
+    "opsi": {
+      "a": "U",
+      "b": "W",
+      "c": "V",
+      "d": "S",
+      "e": "T"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "String.fromCharCode(64 + 16 + 6)",
+    "nilai_opsi": {
+      "a": "U",
+      "b": "W",
+      "c": "V",
+      "d": "S",
+      "e": "T"
+    },
+    "pembahasan": "Ubah huruf ke nomor urut: B(2), D(4), G(7), K(11), P(16). Selisihnya +2, +3, +4, +5, jadi selisih berikutnya +6: 16 + 6 = 22 → huruf ke-22 adalah V.<br>Opsi A (U) gugur karena mengulang selisih sebelumnya +5 (16 + 5 = 21); Opsi B (W) gugur karena menambah 7 (16 + 7 = 23), melompati selisih +6; Opsi D (S) gugur karena menambah 3 (16 + 3 = 19), padahal selisihnya naik 2, 3, 4, 5, 6; Opsi E (T) gugur karena menambah 4 (16 + 4 = 20), padahal selisih berikutnya 6. Jawaban: Opsi C (V). Tips: ubah huruf ke nomor urut (A = 1 … Z = 26) dan hafalkan patokan E = 5, J = 10, O = 15, T = 20, lalu cari selisihnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-002",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 1,
+    "sumber": "MB#1.2",
+    "instruksi": "Tentukan huruf berikutnya dari deret berikut.",
+    "stem": "A, C, E, G, I, K, M, …",
+    "opsi": {
+      "a": "Q",
+      "b": "P",
+      "c": "N",
+      "d": "O",
+      "e": "R"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "String.fromCharCode(64 + 13 + 2)",
+    "nilai_opsi": {
+      "a": "Q",
+      "b": "P",
+      "c": "N",
+      "d": "O",
+      "e": "R"
+    },
+    "pembahasan": "Nomor urut: A(1), C(3), E(5), G(7), I(9), K(11), M(13). Setiap suku naik 2, jadi suku berikutnya 13 + 2 = 15 → huruf ke-15 adalah O.<br>Opsi A (Q) gugur karena menambah 4 (13 + 4 = 17); Opsi B (P) gugur karena menambah 3 (13 + 3 = 16); Opsi C (N) gugur karena menambah 1 (13 + 1 = 14), padahal tiap suku melompati satu huruf (naik 2); Opsi E (R) gugur karena menambah 5 (13 + 5 = 18). Jawaban: Opsi D (O). Tips: deret yang melompati satu huruf tiap langkah berarti nomor urutnya bertambah 2; ubah huruf ke nomor urut (A = 1 … Z = 26) dan hafalkan patokan E = 5, J = 10, O = 15, T = 20, lalu cari selisihnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-003",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "MB#1.3",
+    "instruksi": "Tentukan huruf berikutnya dari deret berikut.",
+    "stem": "Z, X, U, Q, L, …",
+    "opsi": {
+      "a": "H",
+      "b": "G",
+      "c": "I",
+      "d": "J",
+      "e": "F"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "String.fromCharCode(64 + 12 - 6)",
+    "nilai_opsi": {
+      "a": "H",
+      "b": "G",
+      "c": "I",
+      "d": "J",
+      "e": "F"
+    },
+    "pembahasan": "Nomor urut: Z(26), X(24), U(21), Q(17), L(12). Selisihnya −2, −3, −4, −5, jadi selisih berikutnya −6: 12 − 6 = 6 → huruf ke-6 adalah F.<br>Opsi A (H) gugur karena mengurangi 4 (12 − 4 = 8), padahal selisih berikutnya −6; Opsi B (G) gugur karena mengulang selisih terakhir −5 (12 − 5 = 7); Opsi C (I) gugur karena mengurangi 3 (12 − 3 = 9); Opsi D (J) gugur karena mengurangi 2 (12 − 2 = 10). Jawaban: Opsi E (F). Tips: pada deret yang menurun, catat selisih tiap pasangan suku; jika selisihnya makin besar, lanjutkan satu langkah lagi.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-004",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "MB#1.4",
+    "instruksi": "Tentukan huruf berikutnya dari deret berikut.",
+    "stem": "A, B, D, G, K, P, V, …",
+    "opsi": {
+      "a": "G",
+      "b": "C",
+      "c": "D",
+      "d": "F",
+      "e": "E"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "String.fromCharCode(64 + ((22 + 7 - 1) % 26) + 1)",
+    "nilai_opsi": {
+      "a": "G",
+      "b": "C",
+      "c": "D",
+      "d": "F",
+      "e": "E"
+    },
+    "pembahasan": "Nomor urut: A(1), B(2), D(4), G(7), K(11), P(16), V(22). Selisihnya +1, +2, +3, +4, +5, +6, jadi selisih berikutnya +7: 22 + 7 = 29. Alfabet hanya 26 huruf, maka 29 − 26 = 3 → huruf ke-3 adalah C.<br>Opsi A (G) gugur karena memakai selisih +11 (22 + 11 = 33, 33 − 26 = 7); Opsi C (D) gugur karena memakai selisih +8 (22 + 8 = 30, 30 − 26 = 4), padahal selisih berikutnya +7; Opsi D (F) gugur karena memakai selisih +10 (22 + 10 = 32, 32 − 26 = 6); Opsi E (E) gugur karena memakai selisih +9 (22 + 9 = 31, 31 − 26 = 5). Jawaban: Opsi B (C). Tips: jika nomor urut melewati 26, kurangi 26 (alfabet berputar kembali ke A).",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-005",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-HURUF",
+    "tier": 2,
+    "sumber": "MB#1.5",
+    "instruksi": "Tentukan huruf berikutnya dari deret berikut.",
+    "stem": "C, F, E, H, G, J, I, …",
+    "opsi": {
+      "a": "O",
+      "b": "K",
+      "c": "L",
+      "d": "N",
+      "e": "M"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "String.fromCharCode(64 + 10 + 2)",
+    "nilai_opsi": {
+      "a": "O",
+      "b": "K",
+      "c": "L",
+      "d": "N",
+      "e": "M"
+    },
+    "pembahasan": "Deret terdiri dari dua jalur selang-seling. Jalur ganjil: C(3), E(5), G(7), I(9) naik 2. Jalur genap: F(6), H(8), J(10) naik 2. Suku ke-8 milik jalur genap: 10 + 2 = 12 → huruf ke-12 adalah L.<br>Opsi A (O) gugur karena menambah 5 dari J (10 + 5 = 15); Opsi B (K) gugur karena melanjutkan jalur ganjil (I + 2 = K), padahal suku ke-8 milik jalur genap; Opsi D (N) gugur karena menambah 4 dari J (10 + 4 = 14); Opsi E (M) gugur karena menambah 3 dari J (10 + 3 = 13), padahal jalur genap naik 2. Jawaban: Opsi C (L). Tips: jika deret naik-turun bergantian, pisahkan suku ganjil dan genap lalu cari pola tiap jalur.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-006",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "MB#2.1",
+    "instruksi": "Tentukan angka berikutnya dari deret berikut.",
+    "stem": "3, 6, 12, 21, 33, …",
+    "opsi": {
+      "a": "52",
+      "b": "45",
+      "c": "50",
+      "d": "48",
+      "e": "55"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "33 + 15",
+    "nilai_opsi": {
+      "a": 52,
+      "b": 45,
+      "c": 50,
+      "d": 48,
+      "e": 55
+    },
+    "pembahasan": "Selisih antarsuku: +3, +6, +9, +12. Selisihnya naik 3 setiap langkah, jadi selisih berikutnya +15: 33 + 15 = 48.<br>Opsi A (52) gugur karena menambah 19 (33 + 19 = 52); Opsi B (45) gugur karena mengulang selisih terakhir +12 (33 + 12 = 45); Opsi C (50) gugur karena menambah 17 (33 + 17 = 50), padahal selisih berikutnya 15; Opsi E (55) gugur karena menambah 22 (33 + 22 = 55). Jawaban: Opsi D (48). Tips: jika selisih antarsuku belum tetap, hitung selisih dari selisihnya (tingkat kedua).",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-007",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 1,
+    "sumber": "MB#2.2",
+    "instruksi": "Tentukan angka berikutnya dari deret berikut.",
+    "stem": "2, 3, 5, 8, 13, 21, …",
+    "opsi": {
+      "a": "34",
+      "b": "36",
+      "c": "40",
+      "d": "31",
+      "e": "29"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "13 + 21",
+    "nilai_opsi": {
+      "a": 34,
+      "b": 36,
+      "c": 40,
+      "d": 31,
+      "e": 29
+    },
+    "pembahasan": "Setiap suku adalah jumlah dua suku sebelumnya (deret Fibonacci): 2 + 3 = 5, 3 + 5 = 8, 5 + 8 = 13, 8 + 13 = 21. Jadi suku berikutnya 13 + 21 = 34.<br>Opsi B (36) gugur karena menambah 15 pada 21, bukan 13; Opsi C (40) gugur karena menambah 19 pada 21, bukan 13; Opsi D (31) gugur karena menambah 10 pada 21, padahal selisihnya mengikuti jumlah dua suku terakhir (13); Opsi E (29) gugur karena menjumlahkan 21 dengan 8, bukan dengan 13 (suku tepat sebelum 21). Jawaban: Opsi A (34). Tips: jika selisih antarsuku sama dengan suku-suku sebelumnya (1, 2, 3, 5, 8), cek apakah itu deret Fibonacci.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-008",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "MB#2.3",
+    "instruksi": "Tentukan angka berikutnya dari deret berikut.",
+    "stem": "80, 40, 42, 21, 23, 11,5, …",
+    "opsi": {
+      "a": "10,5",
+      "b": "13,5",
+      "c": "8,5",
+      "d": "12,5",
+      "e": "9,5"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "11.5 + 2",
+    "nilai_opsi": {
+      "a": 10.5,
+      "b": 13.5,
+      "c": 8.5,
+      "d": 12.5,
+      "e": 9.5
+    },
+    "pembahasan": "Dua operasi bergantian: ÷ 2 lalu + 2. 80 ÷ 2 = 40; 40 + 2 = 42; 42 ÷ 2 = 21; 21 + 2 = 23; 23 ÷ 2 = 11,5. Operasi berikutnya adalah + 2: 11,5 + 2 = 13,5.<br>Opsi A (10,5) gugur karena mengurangi 1 (11,5 − 1 = 10,5); Opsi C (8,5) gugur karena mengurangi 3 (11,5 − 3 = 8,5); Opsi D (12,5) gugur karena menambah 1 (11,5 + 1 = 12,5), padahal operasi berikutnya + 2; Opsi E (9,5) gugur karena mengurangi 2 (11,5 − 2 = 9,5), mengira operasinya − 2. Jawaban: Opsi B (13,5). Tips: deret yang naik-turun bergantian biasanya memakai dua operasi berselang; tulis operasi di antara tiap pasang suku.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-009",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 1,
+    "sumber": "MB#2.4",
+    "instruksi": "Tentukan angka berikutnya dari deret berikut.",
+    "stem": "1, 4, 9, 16, 25, 36, …",
+    "opsi": {
+      "a": "48",
+      "b": "64",
+      "c": "45",
+      "d": "42",
+      "e": "49"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "7 ** 2",
+    "nilai_opsi": {
+      "a": 48,
+      "b": 64,
+      "c": 45,
+      "d": 42,
+      "e": 49
+    },
+    "pembahasan": "Deret bilangan kuadrat: 1² = 1, 2² = 4, 3² = 9, 4² = 16, 5² = 25, 6² = 36. Jadi suku berikutnya 7² = 49.<br>Opsi A (48) gugur karena menambah 12 (36 + 12 = 48), padahal selisih berikutnya 13; Opsi B (64) gugur karena memakai 8² = 64 sehingga melompati 7²; Opsi C (45) gugur karena menambah 9 (36 + 9 = 45), memakai selisih lama; Opsi D (42) gugur karena menambah 6 (36 + 6 = 42), mengira selisihnya tetap; selisih sebenarnya 3, 5, 7, 9, 11, jadi berikutnya +13. Jawaban: Opsi E (49). Tips: angka 1, 4, 9, 16, 25, 36 harus langsung dikenali sebagai kuadrat; selisihnya selalu bilangan ganjil berurutan.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-010",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-1TRACK",
+    "tier": 2,
+    "sumber": "MB#2.5",
+    "instruksi": "Tentukan angka berikutnya dari deret berikut.",
+    "stem": "4, 7, 12, 19, 28, …",
+    "opsi": {
+      "a": "40",
+      "b": "39",
+      "c": "43",
+      "d": "41",
+      "e": "37"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "28 + 11",
+    "nilai_opsi": {
+      "a": 40,
+      "b": 39,
+      "c": 43,
+      "d": 41,
+      "e": 37
+    },
+    "pembahasan": "Selisih antarsuku: +3, +5, +7, +9 (bilangan ganjil berurutan). Selisih berikutnya +11: 28 + 11 = 39.<br>Opsi A (40) gugur karena menambah 12 (28 + 12 = 40), memakai bilangan genap, padahal selisihnya ganjil; Opsi C (43) gugur karena menambah 15 (28 + 15 = 43); Opsi D (41) gugur karena menambah 13 (28 + 13 = 41), melompati +11; Opsi E (37) gugur karena mengulang selisih terakhir +9 (28 + 9 = 37). Jawaban: Opsi B (39). Tips: selisih 3, 5, 7, 9 menandakan deret bilangan ganjil; lanjutkan dengan 11.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-011",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-ALFANUM",
+    "tier": 2,
+    "sumber": "MB#3.1",
+    "stem": "Isilah sel kosong (…) pada baris tabel berikut dengan kombinasi alfanumerik yang tepat.",
+    "tabel": {
+      "kolom": [
+        "Sel 1",
+        "Sel 2",
+        "Sel 3",
+        "Sel 4",
+        "Sel 5"
+      ],
+      "baris": [
+        [
+          "A01",
+          "C04",
+          "E09",
+          "G16",
+          "…"
+        ]
+      ]
+    },
+    "opsi": {
+      "a": "I20",
+      "b": "H20",
+      "c": "J25",
+      "d": "I25",
+      "e": "H25"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "String.fromCharCode(64 + 7 + 2) + 5 ** 2",
+    "nilai_opsi": {
+      "a": "I20",
+      "b": "H20",
+      "c": "J25",
+      "d": "I25",
+      "e": "H25"
+    },
+    "pembahasan": "Pisahkan huruf dan angka. Huruf: A(1), C(3), E(5), G(7) naik 2, jadi berikutnya I(9). Angka: 01, 04, 09, 16 adalah 1², 2², 3², 4², jadi berikutnya 5² = 25. Hasilnya I25.<br>Opsi A (I20) gugur karena huruf benar, tetapi angka dikira naik 4 (16 + 4 = 20), padahal berikutnya 5² = 25; Opsi B (H20) gugur karena huruf hanya naik 1 (G → H) dan angka dikira naik 4 (16 + 4 = 20), keduanya salah; Opsi C (J25) gugur karena angka benar, tetapi huruf naik 3 (G → J), padahal naik 2; Opsi E (H25) gugur karena angka benar, tetapi huruf hanya naik 1 (G → H). Jawaban: Opsi D (I25). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-012",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-ALFANUM",
+    "tier": 2,
+    "sumber": "MB#3.2",
+    "stem": "Tentukan kode alfanumerik pada sel X dan Y pada tabel berpola teratur berikut.",
+    "tabel": {
+      "kolom": [
+        "Sel 1",
+        "Sel 2",
+        "Sel 3",
+        "Sel 4",
+        "Sel 5",
+        "Sel 6"
+      ],
+      "baris": [
+        [
+          "B02",
+          "D04",
+          "F08",
+          "H16",
+          "X",
+          "Y"
+        ]
+      ]
+    },
+    "opsi": {
+      "a": "K32, M64",
+      "b": "J32, K64",
+      "c": "I32, K64",
+      "d": "J30, L60",
+      "e": "J32, L64"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "String.fromCharCode(64 + 8 + 2) + 32 + ', ' + String.fromCharCode(64 + 8 + 4) + 64",
+    "nilai_opsi": {
+      "a": "K32, M64",
+      "b": "J32, K64",
+      "c": "I32, K64",
+      "d": "J30, L60",
+      "e": "J32, L64"
+    },
+    "pembahasan": "Huruf: B, D, F, H naik 2, jadi X berhuruf J dan Y berhuruf L. Angka: 02, 04, 08, 16 dikali 2, jadi X = 32 dan Y = 64. Hasilnya X = J32 dan Y = L64.<br>Opsi A (K32, M64) gugur karena huruf X naik 3 dari H (menjadi K), padahal naik 2; Opsi B (J32, K64) gugur karena huruf Y hanya naik 1 dari J (menjadi K), padahal naik 2; Opsi C (I32, K64) gugur karena huruf X hanya naik 1 dari H (menjadi I), padahal tiap huruf naik 2; Opsi D (J30, L60) gugur karena angka 30 dan 60 bukan hasil kali 2 (16 × 2 = 32, 32 × 2 = 64). Jawaban: Opsi E (J32, L64). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-013",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-ALFANUM",
+    "tier": 1,
+    "sumber": "MB#3.3",
+    "stem": "Isilah nilai sel kosong pada baris tabel berikut.",
+    "tabel": {
+      "kolom": [
+        "Sel 1",
+        "Sel 2",
+        "Sel 3",
+        "Sel 4",
+        "Sel 5"
+      ],
+      "baris": [
+        [
+          "Z99",
+          "X88",
+          "V77",
+          "T66",
+          "…"
+        ]
+      ]
+    },
+    "opsi": {
+      "a": "R55",
+      "b": "S55",
+      "c": "R44",
+      "d": "R66",
+      "e": "Q55"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "String.fromCharCode(64 + 20 - 2) + (66 - 11)",
+    "nilai_opsi": {
+      "a": "R55",
+      "b": "S55",
+      "c": "R44",
+      "d": "R66",
+      "e": "Q55"
+    },
+    "pembahasan": "Huruf: Z(26), X(24), V(22), T(20) turun 2, jadi berikutnya R(18). Angka: 99, 88, 77, 66 turun 11, jadi berikutnya 55. Hasilnya R55.<br>Opsi B (S55) gugur karena huruf hanya turun 1 dari T (menjadi S), padahal turun 2; Opsi C (R44) gugur karena angka turun 22 (66 − 22 = 44), padahal turun 11 per sel; Opsi D (R66) gugur karena angka tidak berubah (mengulang 66), padahal turun 11 per sel; Opsi E (Q55) gugur karena huruf turun 3 dari T (menjadi Q), padahal turun 2. Jawaban: Opsi A (R55). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-014",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-ALFANUM",
+    "tier": 1,
+    "sumber": "MB#3.4",
+    "stem": "Tentukan isi dari dua sel terakhir (P dan Q) pada deret tabel berikut.",
+    "tabel": {
+      "kolom": [
+        "Sel 1",
+        "Sel 2",
+        "Sel 3",
+        "Sel 4",
+        "Sel 5",
+        "Sel 6"
+      ],
+      "baris": [
+        [
+          "A10",
+          "D20",
+          "G30",
+          "J40",
+          "P",
+          "Q"
+        ]
+      ]
+    },
+    "opsi": {
+      "a": "L50, P60",
+      "b": "M50, O60",
+      "c": "M50, P60",
+      "d": "M45, P55",
+      "e": "N50, Q60"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "String.fromCharCode(64 + 13) + 50 + ', ' + String.fromCharCode(64 + 16) + 60",
+    "nilai_opsi": {
+      "a": "L50, P60",
+      "b": "M50, O60",
+      "c": "M50, P60",
+      "d": "M45, P55",
+      "e": "N50, Q60"
+    },
+    "pembahasan": "Huruf: A(1), D(4), G(7), J(10) naik 3, jadi P berhuruf M(13) dan Q berhuruf P(16). Angka: 10, 20, 30, 40 naik 10, jadi P = 50 dan Q = 60. Hasilnya P = M50 dan Q = P60.<br>Opsi A (L50, P60) gugur karena huruf naik 2 dari J (menjadi L), padahal naik 3; Opsi B (M50, O60) gugur karena huruf sel Q hanya naik 2 dari M (menjadi O), padahal naik 3; Opsi D (M45, P55) gugur karena angka naik 5 (40 + 5 = 45), padahal naik 10; Opsi E (N50, Q60) gugur karena huruf naik 4 dari J (menjadi N), padahal tiap huruf naik 3. Jawaban: Opsi C (M50, P60). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K09-MB-015",
+    "kartu": "K09",
+    "sub_type": "ANL-DRT-ALFANUM",
+    "tier": 2,
+    "sumber": "MB#3.5",
+    "stem": "Tentukan nilai gabungan alfanumerik pada kolom terakhir.",
+    "tabel": {
+      "kolom": [
+        "Sel 1",
+        "Sel 2",
+        "Sel 3",
+        "Sel 4",
+        "Sel 5"
+      ],
+      "baris": [
+        [
+          "K03",
+          "M09",
+          "O27",
+          "Q81",
+          "…"
+        ]
+      ]
+    },
+    "opsi": {
+      "a": "S250",
+      "b": "S243",
+      "c": "S162",
+      "d": "R243",
+      "e": "T243"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "String.fromCharCode(64 + 17 + 2) + 81 * 3",
+    "nilai_opsi": {
+      "a": "S250",
+      "b": "S243",
+      "c": "S162",
+      "d": "R243",
+      "e": "T243"
+    },
+    "pembahasan": "Huruf: K(11), M(13), O(15), Q(17) naik 2, jadi berikutnya S(19). Angka: 03, 09, 27, 81 dikali 3, jadi berikutnya 81 × 3 = 243. Hasilnya S243.<br>Opsi A (S250) gugur karena angka dibulatkan menjadi 250, padahal hasil pasti 81 × 3 = 243; Opsi C (S162) gugur karena angka dikali 2 (81 × 2 = 162), padahal dikali 3; Opsi D (R243) gugur karena huruf hanya naik 1 dari Q (menjadi R), padahal naik 2; Opsi E (T243) gugur karena huruf naik 3 dari Q (menjadi T), padahal naik 2. Jawaban: Opsi B (S243). Tips: pisahkan huruf dan angka, cari pola masing-masing, lalu gabungkan hasilnya.",
+    "status_kunci": "resmi"
   }
 ]

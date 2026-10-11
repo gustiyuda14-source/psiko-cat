@@ -12,7 +12,7 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
   "kartu": "K05",                  // K01..K16 (daftar di lib/drill-cards.ts)
   "sub_type": "NUM-HIT-TEORI",     // kode taksonomi docs/rencana/drilling/02, harus milik kartunya
   "tier": 3,                       // 1 Dasar · 2 Menengah · 3 Lanjut
-  "sumber": "B3#41",               // asal struktur soal (P1, B2, B3, A3, KD, R + nomor); "baru" bila original
+  "sumber": "B3#41",               // asal struktur soal (P1, B2, B3, A3, KD, R, MB + nomor); "baru" bila original
   "instruksi": "…",                // opsional
   "stem": "…",                     // teks soal (Unicode: −, ×, √, ∛, ², ⅓)
   "rumus": "<math display=\"block\">…</math>",  // opsional, MathML murni untuk bentuk bertingkat
@@ -40,6 +40,7 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
 ## Aturan isi
 
 - **Adaptasi ringan**: angka, kata, dan gambar diubah dari sumber; struktur, sub-task, dan tingkat kesulitan dipertahankan. Wacana ditulis ulang. Tanpa logo/merek/foto asli.
+- **Pengecualian `MB`** (soal Mr Badrun, mentor utama psikologi): dimasukkan apa adanya, tanpa adaptasi dan tanpa cek buta (keabsahan dijamin mentor), status `resmi`. Yang disesuaikan hanya format (koma desimal, pembahasan 2 paragraf) dan posisi opsi diacak supaya kunci tersebar.
 - Soal simulasi Paket 1 (`soal.json`) tidak boleh masuk drill (dicek otomatis).
 - Tepat satu jawaban benar; opsi a–e tidak kembar; posisi kunci tersebar.
 - Setiap pengecoh mewakili satu kesalahan nyata (salah urutan operasi, salah konversi, salah tanda, …).

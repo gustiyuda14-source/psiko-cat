@@ -112,6 +112,7 @@ So the "level" column in the tables means **which package family uses the format
 | NUM-CRT-LINIER | Soal cerita → linear growth meeting point, digit puzzle, rooms/people equation | P87; B68,69 (3) | B68/69 are multi-constraint puzzles (Lanjut) |
 | NUM-CRT-PENCACAHAN | Banyak rute → rule of product, rule of sum, round trip with or without repeats, paths in a directed graph | R1–R10 (10) | Separate PDF; not in B or A |
 | NUM-CRT-ALOKASI | Alokasi waktu & delegasi → time window minus total workload; pick the task(s) that cover the excess, max tasks that fit, two workers in parallel | AK26#1 (1) | Reported from Akpol 2026 test-takers. Order/deadline variants go to ANL-WCN-JADWAL |
+| NUM-CRT-BULAT | Soal cerita → signed integers: depth/height below–above sea level after several moves, rate × time then position | MB#4.1–4.5 (5) | Mr Badrun module. Trap: sign of the answer ("di bawah" vs "di atas" laut) |
 | NUM-SMA (out of profile) | Limit, inverse function, integral, linear programming from a graph | KD9–12 (4) | Not a psikotes POLRI type. **Exclude from drills** |
 
 ### 1.3 PENALARAN LOGIS (aspek_resmi: logis)
@@ -129,6 +130,7 @@ So the "level" column in the tables means **which package family uses the format
 | ANL-DRT-2BARIS | Two-row / two-track series with 2 blanks, one blank per track | Containers: rings with arrows (P51), 2-row tables (P52,53,54,56,57,59,60,61; A55), triangle strip (P55), diamond strip with halves (P58,62). Tokens are alphanumeric (H31J), letter pairs, numbers with letters, expressions (`11−2²`) | 2K | P51–63 (13); A55 (1) |
 | ANL-DRT-1TRACK | Number series, 1 next term | Interleaved, two-step, ×/+ alternating (B71,72; A51–53; KD14,15) | 1K or PAIR | B71,72; A51–53; KD14,15 (7) |
 | ANL-DRT-HURUF | Letter series | Interleaved letter tracks (B73–75; A54) | 1K / PAIR | B73–75; A54 (4) |
+| ANL-DRT-ALFANUM | One-row table of alphanumeric cells (letter + 2-digit number) | Letter track and number track solved separately, then combined: letter +k / −k, number ×k / +k / squares; blank cells X, Y or P, Q | 1K / PAIR | MB#3.1–3.5 (5) |
 | ANL-ANGKA-GAMBAR | Numbers in a figure | Two figures with "=": find the operation linking the numbers on the edges/corners to the centre (square, triangle, cart, nested parallelograms, arrow box, circles on a triangle or rectangle) | 1K | B76–80; A56–58 (8) |
 | ANL-OPERASI-SIMBOL | Redefined operation | "Jika 2×3=36, 5×6=900 maka 4×7=…" | 1K | A59,60 (2) |
 | ANL-KODE | Letter cipher / artificial language | A74 letter-string arithmetic; A75 morpheme decoding (ilmya/elmya/atropo/kase) | 1K | A74,75 (2) |

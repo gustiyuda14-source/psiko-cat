@@ -1598,5 +1598,285 @@
     },
     "pembahasan": "Langkah 1 (waktu tersedia): Tiara 13.25–15.10 = 105 menit; Fikri 14.20–14.57 = 37 menit. Langkah 2 (beban total): 38 + 16 + 28 + 24 + 19 = 125 menit. Langkah 3 (kelebihan): 125 − 105 = 20 menit, jadi tugas yang diserahkan minimal 20 menit (syarat Tiara); syarat Fikri: 1,5 × durasi ≤ 37, artinya durasi ≤ 37 ÷ 1,5 ≈ 24,7 menit. Langkah 4 (pilih): tugas berdurasi antara 20 dan 24,7 menit hanya merekap absensi personel (24 menit). Cek: Tiara mengerjakan 38 + 16 + 28 + 19 = 101 menit ≤ 105 menit; Fikri butuh 1,5 × 24 = 36 menit ≤ 37 menit.<br>Opsi A (surat perintah) gugur karena 16 < 20: Tiara masih harus mengerjakan 38 + 28 + 24 + 19 = 109 menit, lewat 4 menit; Opsi B (laporan kegiatan) gugur karena lupa faktor 1,5: 28 menit memang muat dalam 37 menit, tetapi Fikri butuh 1,5 × 28 = 42 menit, lewat 5 menit; Opsi D (rencana pengamanan) gugur karena memilih tugas terlama: Fikri butuh 1,5 × 38 = 57 menit, jauh melebihi 37 menit; Opsi E (peta rawan) gugur karena 19 kurang 1 menit dari kelebihan 20: Tiara mengerjakan 38 + 16 + 28 + 24 = 106 menit, lewat 1 menit. Jawaban: Opsi C (merekap absensi personel). Tips: ubah dua syarat menjadi satu rentang durasi — batas bawah = kelebihan, batas atas = waktu rekan ÷ faktor lambat — lalu cari tugas di dalam rentang itu, target di bawah 75 detik.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-MB-016",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-BULAT",
+    "tier": 1,
+    "sumber": "MB#4.1",
+    "stem": "Seorang penyelam berada pada kedalaman 18 meter di bawah permukaan laut. Kemudian ia naik sejauh 7 meter untuk mengamati terumbu karang. Pada kedalaman berapa meter posisi penyelam tersebut sekarang?",
+    "opsi": {
+      "a": "12 m di bawah laut",
+      "b": "25 m di bawah laut",
+      "c": "13 m di bawah laut",
+      "d": "11 m di atas laut",
+      "e": "11 m di bawah laut"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "-18 + 7",
+    "nilai_opsi": {
+      "a": -12,
+      "b": -25,
+      "c": -13,
+      "d": 11,
+      "e": -11
+    },
+    "pembahasan": "Anggap permukaan laut = 0, sehingga posisi di bawah laut bernilai negatif. Posisi awal −18 m, naik 7 m berarti +7. Posisi sekarang = −18 + 7 = −11 m, yaitu 11 meter di bawah permukaan laut.<br>Opsi A (12 m di bawah laut) gugur karena salah menghitung 18 − 7 menjadi 12; Opsi B (25 m di bawah laut) gugur karena menjumlahkan 18 + 7, seolah naik menambah kedalaman; Opsi C (13 m di bawah laut) gugur karena salah menghitung 18 − 7 menjadi 13; Opsi D (11 m di atas laut) gugur karena angkanya benar, tetapi tandanya salah: −11 berarti di bawah laut, bukan di atas. Jawaban: Opsi E (11 m di bawah laut). Tips: anggap permukaan laut = 0: di bawah laut negatif, naik = plus, turun = minus.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-017",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-BULAT",
+    "tier": 1,
+    "sumber": "MB#4.2",
+    "stem": "Kapal selam berada pada kedalaman 120 meter di bawah permukaan laut. Kapal tersebut menyelam lagi sejauh 45 meter, lalu bergerak naik sejauh 60 meter. Di manakah posisi kapal selam sekarang?",
+    "opsi": {
+      "a": "105 m di bawah laut",
+      "b": "95 m di bawah laut",
+      "c": "165 m di bawah laut",
+      "d": "135 m di bawah laut",
+      "e": "105 m di atas laut"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "-120 - 45 + 60",
+    "nilai_opsi": {
+      "a": -105,
+      "b": -95,
+      "c": -165,
+      "d": -135,
+      "e": 105
+    },
+    "pembahasan": "Posisi awal −120 m. Menyelam lagi berarti −45, naik berarti +60. Posisi akhir = −120 − 45 + 60 = −165 + 60 = −105 m, yaitu 105 meter di bawah laut.<br>Opsi B (95 m di bawah laut) gugur karena salah menghitung −165 + 60 menjadi −95; Opsi C (165 m di bawah laut) gugur karena lupa memperhitungkan naik 60 m (hanya −120 − 45 = −165); Opsi D (135 m di bawah laut) gugur karena menukar arah gerak: −120 + 45 − 60 = −135; Opsi E (105 m di atas laut) gugur karena angkanya benar, tetapi tandanya salah: −105 berarti di bawah laut. Jawaban: Opsi A (105 m di bawah laut). Tips: anggap permukaan laut = 0: di bawah laut negatif, naik = plus, turun = minus.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-018",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-BULAT",
+    "tier": 1,
+    "sumber": "MB#4.3",
+    "stem": "Penyelam TNI AL bergerak dari kedalaman 25 meter di bawah permukaan laut. Ia naik 12 meter, lalu menyelam kembali sejauh 8 meter. Berapa meter posisi penyelam dari permukaan laut sekarang?",
+    "opsi": {
+      "a": "29 m di bawah laut",
+      "b": "21 m di atas laut",
+      "c": "15 m di bawah laut",
+      "d": "17 m di bawah laut",
+      "e": "21 m di bawah laut"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "-25 + 12 - 8",
+    "nilai_opsi": {
+      "a": -29,
+      "b": 21,
+      "c": -15,
+      "d": -17,
+      "e": -21
+    },
+    "pembahasan": "Persamaan posisi: −25 + 12 − 8 = −13 − 8 = −21 m. Penyelam berada 21 meter di bawah permukaan laut.<br>Opsi A (29 m di bawah laut) gugur karena menghitung 25 + 12 − 8 = 29, seolah naik menambah kedalaman dan menyelam mengurangi kedalaman; Opsi B (21 m di atas laut) gugur karena angkanya benar, tetapi tandanya salah: −21 berarti di bawah laut; Opsi C (15 m di bawah laut) gugur karena tidak muncul dari urutan −25, +12, −8 (hasil antara −13, lalu −21); Opsi D (17 m di bawah laut) gugur karena mengabaikan naik 12 m dan menganggap menyelam 8 m mengurangi kedalaman (25 − 8 = 17). Jawaban: Opsi E (21 m di bawah laut). Tips: anggap permukaan laut = 0: di bawah laut negatif, naik = plus, turun = minus.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-019",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-BULAT",
+    "tier": 2,
+    "sumber": "MB#4.4",
+    "stem": "Drone bawah laut berada pada kedalaman 50 meter di bawah laut. Jika drone dinaikkan 35 meter lalu dinaikkan lagi 20 meter, berada di manakah posisi drone sekarang dari permukaan laut?",
+    "opsi": {
+      "a": "Tepat di permukaan",
+      "b": "5 m di bawah laut",
+      "c": "10 m di atas laut",
+      "d": "5 m di atas laut",
+      "e": "15 m di atas laut"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "-50 + 35 + 20",
+    "nilai_opsi": {
+      "a": 0,
+      "b": -5,
+      "c": 10,
+      "d": 5,
+      "e": 15
+    },
+    "pembahasan": "Persamaan posisi: −50 + 35 + 20 = −15 + 20 = +5 m. Nilai positif berarti drone berada 5 meter di atas permukaan laut (di udara).<br>Opsi A (Tepat di permukaan) gugur karena mengira total kenaikan pas sama dengan kedalaman, padahal naik 35 + 20 = 55 m, lebih dari 50 m; Opsi B (5 m di bawah laut) gugur karena angkanya benar, tetapi tandanya salah: +5 berarti di atas laut; Opsi C (10 m di atas laut) gugur karena salah menghitung −15 + 20 menjadi +10; Opsi E (15 m di atas laut) gugur karena berhenti pada −50 + 35 = −15 lalu salah membaca tandanya, tanpa menambah kenaikan 20 m. Jawaban: Opsi D (5 m di atas laut). Tips: anggap permukaan laut = 0: di bawah laut negatif, naik = plus, turun = minus; hasil positif berarti drone sudah melewati permukaan.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-020",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-BULAT",
+    "tier": 2,
+    "sumber": "MB#4.5",
+    "stem": "Penyelam berada pada kedalaman 30 meter di bawah laut. Penyelam bergerak naik dengan kecepatan 3 meter/menit selama 6 menit. Berapa kedalaman penyelam tersebut sekarang?",
+    "opsi": {
+      "a": "12 m di atas laut",
+      "b": "48 m di bawah laut",
+      "c": "18 m di bawah laut",
+      "d": "24 m di bawah laut",
+      "e": "12 m di bawah laut"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "-30 + 3 * 6",
+    "nilai_opsi": {
+      "a": 12,
+      "b": -48,
+      "c": -18,
+      "d": -24,
+      "e": -12
+    },
+    "pembahasan": "Jarak naik = 3 m/menit × 6 menit = 18 m. Posisi akhir = −30 + 18 = −12 m, yaitu 12 meter di bawah laut.<br>Opsi A (12 m di atas laut) gugur karena angkanya benar, tetapi tandanya salah: −12 berarti di bawah laut; Opsi B (48 m di bawah laut) gugur karena menjumlahkan 30 + 18, seolah naik menambah kedalaman; Opsi C (18 m di bawah laut) gugur karena hanya memakai jarak naik 18 m tanpa menggabungkannya dengan posisi awal −30 m; Opsi D (24 m di bawah laut) gugur karena mengurangi 30 dengan 6 menit (30 − 6 = 24), lupa mengalikan dengan kecepatan 3 m/menit. Jawaban: Opsi E (12 m di bawah laut). Tips: anggap permukaan laut = 0: di bawah laut negatif, naik = plus, turun = minus; untuk gerak beraturan hitung dulu jarak = kecepatan × waktu.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-046",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 1,
+    "sumber": "MB#10.1",
+    "stem": "Perbandingan uang Andi dan Budi adalah 3 : 5. Jika jumlah uang mereka berdua adalah Rp800.000, berapakah uang Budi?",
+    "opsi": {
+      "a": "Rp350.000",
+      "b": "Rp450.000",
+      "c": "Rp400.000",
+      "d": "Rp500.000",
+      "e": "Rp300.000"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "5 / 8 * 800000",
+    "nilai_opsi": {
+      "a": 350000,
+      "b": 450000,
+      "c": 400000,
+      "d": 500000,
+      "e": 300000
+    },
+    "pembahasan": "Jumlah bagian = 3 + 5 = 8. Uang Budi = 5/8 × Rp800.000 = Rp500.000.<br>Opsi A (Rp350.000) gugur karena tidak sama dengan 5/8 × Rp800.000 (hasilnya Rp500.000); Opsi B (Rp450.000) gugur karena tidak sama dengan 5/8 × Rp800.000 (hasilnya Rp500.000); Opsi C (Rp400.000) gugur karena membagi sama rata (Rp800.000 ÷ 2), mengabaikan perbandingan 3 : 5; Opsi E (Rp300.000) gugur karena memakai bagian Andi (3/8 × Rp800.000), padahal yang ditanya uang Budi. Jawaban: Opsi D (Rp500.000). Tips: uang satu pihak = bagiannya ÷ jumlah semua bagian × total.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-047",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "MB#10.2",
+    "stem": "Perbandingan uang Chika dan Dini adalah 4 : 7. Selisih uang mereka adalah Rp150.000. Berapakah jumlah uang gabungan mereka?",
+    "opsi": {
+      "a": "Rp650.000",
+      "b": "Rp550.000",
+      "c": "Rp450.000",
+      "d": "Rp500.000",
+      "e": "Rp600.000"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "(4 + 7) * 150000 / (7 - 4)",
+    "nilai_opsi": {
+      "a": 650000,
+      "b": 550000,
+      "c": 450000,
+      "d": 500000,
+      "e": 600000
+    },
+    "pembahasan": "Selisih bagian = 7 − 4 = 3 bagian = Rp150.000, jadi 1 bagian = Rp50.000. Jumlah bagian = 4 + 7 = 11, maka jumlah uang = 11 × Rp50.000 = Rp550.000.<br>Opsi A (Rp650.000) gugur karena menjumlah 13 bagian (13 × Rp50.000); Opsi C (Rp450.000) gugur karena mengalikan selisih Rp150.000 dengan 3 (bagian selisih), bukan mencari nilai 1 bagian lebih dulu; Opsi D (Rp500.000) gugur karena menjumlah 10 bagian (10 × Rp50.000), padahal 4 + 7 = 11 bagian; Opsi E (Rp600.000) gugur karena menjumlah 12 bagian (12 × Rp50.000). Jawaban: Opsi B (Rp550.000). Tips: nilai 1 bagian = selisih uang ÷ selisih bagian; jumlah uang = 1 bagian × jumlah semua bagian.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-048",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "MB#10.3",
+    "stem": "Roni : Siska = 2 : 3, sedangkan Siska : Tono = 4 : 5. Jika total uang mereka bertiga Rp700.000, berapakah uang Siska?",
+    "opsi": {
+      "a": "Rp240.000",
+      "b": "Rp200.000",
+      "c": "Rp300.000",
+      "d": "Rp160.000",
+      "e": "Rp280.000"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "12 / 35 * 700000",
+    "nilai_opsi": {
+      "a": 240000,
+      "b": 200000,
+      "c": 300000,
+      "d": 160000,
+      "e": 280000
+    },
+    "pembahasan": "Samakan bagian Siska: 3 dan 4 → KPK 12. Roni : Siska = 2 : 3 = 8 : 12 dan Siska : Tono = 4 : 5 = 12 : 15, jadi Roni : Siska : Tono = 8 : 12 : 15. Jumlah bagian = 35. Uang Siska = 12/35 × Rp700.000 = Rp240.000.<br>Opsi B (Rp200.000) gugur karena tidak sama dengan 12/35 × Rp700.000 (hasilnya Rp240.000); Opsi C (Rp300.000) gugur karena memakai bagian Tono (15/35 × Rp700.000), padahal yang ditanya uang Siska; Opsi D (Rp160.000) gugur karena memakai bagian Roni (8/35 × Rp700.000), padahal yang ditanya uang Siska; Opsi E (Rp280.000) gugur karena tidak sama dengan 12/35 × Rp700.000 (hasilnya Rp240.000). Jawaban: Opsi A (Rp240.000). Tips: jika dua perbandingan berbagi satu pihak, samakan dulu bagian pihak itu (pakai KPK) sebelum digabung.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-049",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-RASIO",
+    "tier": 2,
+    "sumber": "MB#10.4",
+    "stem": "Perbandingan uang Alif, Bima, dan Candra adalah 2 : 3 : 5. Jika uang Candra lebih banyak Rp120.000 dari Bima, berapakah uang Alif?",
+    "opsi": {
+      "a": "Rp100.000",
+      "b": "Rp120.000",
+      "c": "Rp90.000",
+      "d": "Rp80.000",
+      "e": "Rp60.000"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "2 * (120000 / (5 - 3))",
+    "nilai_opsi": {
+      "a": 100000,
+      "b": 120000,
+      "c": 90000,
+      "d": 80000,
+      "e": 60000
+    },
+    "pembahasan": "Selisih Candra dan Bima = 5 − 3 = 2 bagian = Rp120.000, jadi 1 bagian = Rp60.000. Uang Alif = 2 bagian = 2 × Rp60.000 = Rp120.000.<br>Opsi A (Rp100.000) gugur karena tidak sama dengan 2 × Rp60.000 (hasilnya Rp120.000); Opsi C (Rp90.000) gugur karena tidak sama dengan 2 × Rp60.000 (hasilnya Rp120.000); Opsi D (Rp80.000) gugur karena membagi Rp120.000 dengan 3 bagian (Rp40.000) lalu mengalikan 2, padahal selisih 5 − 3 adalah 2 bagian; Opsi E (Rp60.000) gugur karena berhenti pada nilai 1 bagian (Rp60.000), belum dikalikan 2 bagian milik Alif. Jawaban: Opsi B (Rp120.000). Tips: nilai 1 bagian = selisih uang ÷ selisih bagian; uang yang ditanya = bagiannya × nilai 1 bagian.",
+    "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-MB-050",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-UANG",
+    "tier": 1,
+    "sumber": "MB#10.5",
+    "stem": "Uang Eko bertambah 25%, sehingga uangnya menjadi Rp625.000. Berapakah jumlah uang Eko sebelum mengalami pertambahan?",
+    "opsi": {
+      "a": "Rp450.000",
+      "b": "Rp550.000",
+      "c": "Rp480.000",
+      "d": "Rp525.000",
+      "e": "Rp500.000"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "625000 * 100 / 125",
+    "nilai_opsi": {
+      "a": 450000,
+      "b": 550000,
+      "c": 480000,
+      "d": 525000,
+      "e": 500000
+    },
+    "pembahasan": "Uang sekarang adalah 125% dari uang awal: 125% × uang awal = Rp625.000, jadi uang awal = Rp625.000 × 100/125 = Rp500.000.<br>Opsi A (Rp450.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi B (Rp550.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi C (Rp480.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi D (Rp525.000) gugur karena mengurangi Rp100.000 dari Rp625.000, padahal 25% dihitung dari uang awal, bukan dari uang sekarang. Jawaban: Opsi E (Rp500.000). Tips: kenaikan 25% berarti uang akhir = 125% uang awal; cari uang awal dengan membagi 125%, bukan mengurangi 25%.",
+    "status_kunci": "resmi"
   }
 ]

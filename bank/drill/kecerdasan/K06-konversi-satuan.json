@@ -642,5 +642,425 @@
   },
   "pembahasan": "¼ gros = ¼ × 144 = 36 buku. 2 kodi = 40 buku. Total 76 buku. Sisa 76 − 37 = 39 buku.<br>Opsi A (41) gugur karena menganggap ¼ gros = 38 buku; Opsi B (35) gugur karena menganggap 2 kodi = 36 buku (3 lusin); Opsi C (113) gugur karena menjumlahkan buku yang terjual, padahal harus dikurangkan; Opsi D (3) gugur karena menganggap 2 kodi = 4 buku. Jawaban: Opsi E (39). Tips: pecahan dari gros: ¼ gros = 36, ½ gros = 72, ¾ gros = 108.",
   "status_kunci": "ganda"
+ },
+ {
+  "id": "K06-MB-021",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 1,
+  "sumber": "MB#5.1",
+  "stem": "3,5 kg + 12 hg = … gram",
+  "opsi": {
+   "a": "3.700 g",
+   "b": "5.700 g",
+   "c": "4.500 g",
+   "d": "4.700 g",
+   "e": "4.200 g"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "3.5 * 1000 + 12 * 100",
+  "nilai_opsi": {
+   "a": 3700,
+   "b": 5700,
+   "c": 4500,
+   "d": 4700,
+   "e": 4200
+  },
+  "pembahasan": "Ubah ke gram: 3,5 kg = 3,5 × 1.000 = 3.500 g; 12 hg = 12 × 100 = 1.200 g. Jumlahnya 3.500 + 1.200 = 4.700 g.<br>Opsi A (3.700 g) gugur karena menganggap 12 hg = 200 g (3.500 + 200 = 3.700); Opsi B (5.700 g) gugur karena salah mengubah 3,5 kg menjadi 4.500 g (4.500 + 1.200 = 5.700); Opsi C (4.500 g) gugur karena menganggap 12 hg = 1.000 g (3.500 + 1.000 = 4.500); Opsi E (4.200 g) gugur karena mengubah 3,5 kg menjadi 3.000 g (membuang 0,5 kg) lalu menambah 1.200 g. Jawaban: Opsi D (4.700 g). Tips: tangga massa: 1 kg = 10 hg = 1.000 g, jadi 1 hg = 100 g; ubah semuanya ke gram sebelum menghitung.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-022",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 1,
+  "sumber": "MB#5.2",
+  "stem": "Dua buah paket logistik masing-masing memiliki berat 2,4 kg dan 15 hg. Berapakah total berat kedua paket tersebut dalam satuan gram?",
+  "opsi": {
+   "a": "3.900 g",
+   "b": "3.800 g",
+   "c": "3.700 g",
+   "d": "3.600 g",
+   "e": "4.100 g"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "2.4 * 1000 + 15 * 100",
+  "nilai_opsi": {
+   "a": 3900,
+   "b": 3800,
+   "c": 3700,
+   "d": 3600,
+   "e": 4100
+  },
+  "pembahasan": "Ubah ke gram: 2,4 kg = 2.400 g; 15 hg = 1.500 g. Total = 2.400 + 1.500 = 3.900 g.<br>Opsi B (3.800 g) gugur karena menganggap 15 hg = 1.400 g (2.400 + 1.400 = 3.800); Opsi C (3.700 g) gugur karena menganggap 15 hg = 1.300 g (2.400 + 1.300 = 3.700); Opsi D (3.600 g) gugur karena menganggap 15 hg = 1.200 g (2.400 + 1.200 = 3.600); Opsi E (4.100 g) gugur karena menganggap 15 hg = 1.700 g (2.400 + 1.700 = 4.100). Jawaban: Opsi A (3.900 g). Tips: tangga massa: 1 kg = 10 hg = 1.000 g, jadi 1 hg = 100 g; ubah semuanya ke gram sebelum menghitung.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-023",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 1,
+  "sumber": "MB#5.3",
+  "stem": "Seorang pedagang membeli 5 kg gula pasir. Sebanyak 18 hg digunakan untuk bahan adonan. Sisa gula pasir pedagang tersebut adalah … gram.",
+  "opsi": {
+   "a": "3.800 g",
+   "b": "3.200 g",
+   "c": "3.500 g",
+   "d": "3.000 g",
+   "e": "2.800 g"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "5 * 1000 - 18 * 100",
+  "nilai_opsi": {
+   "a": 3800,
+   "b": 3200,
+   "c": 3500,
+   "d": 3000,
+   "e": 2800
+  },
+  "pembahasan": "Ubah ke gram: 5 kg = 5.000 g; 18 hg = 1.800 g. Sisa = 5.000 − 1.800 = 3.200 g.<br>Opsi A (3.800 g) gugur karena menganggap 18 hg = 1.200 g (5.000 − 1.200 = 3.800); Opsi C (3.500 g) gugur karena menganggap 18 hg = 1.500 g (5.000 − 1.500 = 3.500); Opsi D (3.000 g) gugur karena membulatkan 18 hg menjadi 2.000 g (5.000 − 2.000 = 3.000); Opsi E (2.800 g) gugur karena menganggap 18 hg = 2.200 g (5.000 − 2.200 = 2.800). Jawaban: Opsi B (3.200 g). Tips: tangga massa: 1 kg = 10 hg = 1.000 g, jadi 1 hg = 100 g; ubah semuanya ke gram sebelum menghitung.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-024",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 2,
+  "sumber": "MB#5.4",
+  "stem": "0,75 kg + 8,5 hg − 250 g = … gram",
+  "opsi": {
+   "a": "1.350 g",
+   "b": "1.250 g",
+   "c": "1.600 g",
+   "d": "1.450 g",
+   "e": "1.150 g"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "0.75 * 1000 + 8.5 * 100 - 250",
+  "nilai_opsi": {
+   "a": 1350,
+   "b": 1250,
+   "c": 1600,
+   "d": 1450,
+   "e": 1150
+  },
+  "pembahasan": "Ubah ke gram: 0,75 kg = 750 g; 8,5 hg = 850 g. Hitung 750 + 850 − 250 = 1.350 g.<br>Opsi B (1.250 g) gugur karena menganggap 8,5 hg = 750 g (750 + 750 − 250 = 1.250); Opsi C (1.600 g) gugur karena lupa mengurangi 250 g (750 + 850 = 1.600); Opsi D (1.450 g) gugur karena menganggap 8,5 hg = 950 g (750 + 950 − 250 = 1.450); Opsi E (1.150 g) gugur karena menganggap 8,5 hg = 650 g (750 + 650 − 250 = 1.150). Jawaban: Opsi A (1.350 g). Tips: tangga massa: 1 kg = 10 hg = 1.000 g, jadi 1 hg = 100 g; ubah semuanya ke gram sebelum menghitung.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-025",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 1,
+  "sumber": "MB#5.5",
+  "stem": "Ibu memasok bahan baku berupa 4 1/2 kg tepung terigu dan 25 hg gula halus. Berat total bahan baku tersebut dalam gram adalah …",
+  "opsi": {
+   "a": "6.500 g",
+   "b": "8.000 g",
+   "c": "7.500 g",
+   "d": "6.000 g",
+   "e": "7.000 g"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "4.5 * 1000 + 25 * 100",
+  "nilai_opsi": {
+   "a": 6500,
+   "b": 8000,
+   "c": 7500,
+   "d": 6000,
+   "e": 7000
+  },
+  "pembahasan": "Ubah ke gram: 4 1/2 kg = 4,5 × 1.000 = 4.500 g; 25 hg = 25 × 100 = 2.500 g. Total = 4.500 + 2.500 = 7.000 g.<br>Opsi A (6.500 g) gugur karena membuang 1/2 kg dari 4 1/2 kg (4.000 + 2.500 = 6.500); Opsi B (8.000 g) gugur karena membaca 4 1/2 kg sebagai 5.500 g (5.500 + 2.500 = 8.000); Opsi C (7.500 g) gugur karena membulatkan 4 1/2 kg menjadi 5 kg (5.000 + 2.500 = 7.500); Opsi D (6.000 g) gugur karena menganggap 25 hg = 1.500 g (4.500 + 1.500 = 6.000). Jawaban: Opsi E (7.000 g). Tips: tangga massa: 1 kg = 10 hg = 1.000 g, jadi 1 hg = 100 g; ubah semuanya ke gram sebelum menghitung.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-026",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 1,
+  "sumber": "MB#6.1",
+  "stem": "Diketahui persamaan: 2 jam = X menit − 1.200 detik. Nilai X yang memenuhi adalah …",
+  "opsi": {
+   "a": "120 mnt",
+   "b": "160 mnt",
+   "c": "150 mnt",
+   "d": "140 mnt",
+   "e": "130 mnt"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "2 * 60 + 1200 / 60",
+  "nilai_opsi": {
+   "a": 120,
+   "b": 160,
+   "c": 150,
+   "d": 140,
+   "e": 130
+  },
+  "pembahasan": "Ubah ke menit: 2 jam = 120 mnt; 1.200 detik = 20 mnt. Persamaan: 120 = X − 20, sehingga X = 120 + 20 = 140 mnt.<br>Opsi A (120 mnt) gugur karena mengabaikan 1.200 detik sehingga X = 120; Opsi B (160 mnt) gugur karena menganggap 1.200 detik = 40 mnt (120 + 40 = 160); Opsi C (150 mnt) gugur karena menganggap 1.200 detik = 30 mnt (120 + 30 = 150); Opsi E (130 mnt) gugur karena menganggap 1.200 detik = 10 mnt (120 + 10 = 130). Jawaban: Opsi D (140 mnt). Tips: ubah semuanya ke menit dulu (1 jam = 60 menit, 60 detik = 1 menit), lalu pindahkan suku ke ruas lain dengan tanda berlawanan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-027",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 1,
+  "sumber": "MB#6.2",
+  "stem": "Diketahui persamaan: 3 jam = X menit − 3.600 detik. Berapakah nilai X?",
+  "opsi": {
+   "a": "180 mnt",
+   "b": "300 mnt",
+   "c": "240 mnt",
+   "d": "210 mnt",
+   "e": "270 mnt"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "3 * 60 + 3600 / 60",
+  "nilai_opsi": {
+   "a": 180,
+   "b": 300,
+   "c": 240,
+   "d": 210,
+   "e": 270
+  },
+  "pembahasan": "Ubah ke menit: 3 jam = 180 mnt; 3.600 detik = 60 mnt. Persamaan: 180 = X − 60, sehingga X = 180 + 60 = 240 mnt.<br>Opsi A (180 mnt) gugur karena mengabaikan 3.600 detik sehingga X = 180; Opsi B (300 mnt) gugur karena menganggap 3.600 detik = 120 mnt (180 + 120 = 300); Opsi D (210 mnt) gugur karena menganggap 3.600 detik = 30 mnt (180 + 30 = 210); Opsi E (270 mnt) gugur karena menganggap 3.600 detik = 90 mnt (180 + 90 = 270). Jawaban: Opsi C (240 mnt). Tips: ubah semuanya ke menit dulu (1 jam = 60 menit, 60 detik = 1 menit), lalu pindahkan suku ke ruas lain dengan tanda berlawanan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-028",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 2,
+  "sumber": "MB#6.3",
+  "stem": "Persamaan waktu: 1,5 jam = X menit − 900 detik. Nilai X adalah …",
+  "opsi": {
+   "a": "105 mnt",
+   "b": "120 mnt",
+   "c": "115 mnt",
+   "d": "100 mnt",
+   "e": "90 mnt"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "1.5 * 60 + 900 / 60",
+  "nilai_opsi": {
+   "a": 105,
+   "b": 120,
+   "c": 115,
+   "d": 100,
+   "e": 90
+  },
+  "pembahasan": "Ubah ke menit: 1,5 jam = 90 mnt; 900 detik = 15 mnt. Persamaan: 90 = X − 15, sehingga X = 90 + 15 = 105 mnt.<br>Opsi B (120 mnt) gugur karena menganggap 900 detik = 30 mnt (90 + 30 = 120); Opsi C (115 mnt) gugur karena menganggap 900 detik = 25 mnt (90 + 25 = 115); Opsi D (100 mnt) gugur karena menganggap 900 detik = 10 mnt (90 + 10 = 100); Opsi E (90 mnt) gugur karena mengabaikan 900 detik sehingga X = 90. Jawaban: Opsi A (105 mnt). Tips: ubah semuanya ke menit dulu (1 jam = 60 menit, 60 detik = 1 menit), lalu pindahkan suku ke ruas lain dengan tanda berlawanan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-029",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 1,
+  "sumber": "MB#6.4",
+  "stem": "Jika 4 jam = Y menit − 2.400 detik, maka nilai Y adalah …",
+  "opsi": {
+   "a": "320 mnt",
+   "b": "280 mnt",
+   "c": "240 mnt",
+   "d": "260 mnt",
+   "e": "300 mnt"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "4 * 60 + 2400 / 60",
+  "nilai_opsi": {
+   "a": 320,
+   "b": 280,
+   "c": 240,
+   "d": 260,
+   "e": 300
+  },
+  "pembahasan": "Ubah ke menit: 4 jam = 240 mnt; 2.400 detik = 40 mnt. Persamaan: 240 = Y − 40, sehingga Y = 240 + 40 = 280 mnt.<br>Opsi A (320 mnt) gugur karena menganggap 2.400 detik = 80 mnt (240 + 80 = 320); Opsi C (240 mnt) gugur karena mengabaikan 2.400 detik sehingga Y = 240; Opsi D (260 mnt) gugur karena menganggap 2.400 detik = 20 mnt (240 + 20 = 260); Opsi E (300 mnt) gugur karena menganggap 2.400 detik = 60 mnt (240 + 60 = 300). Jawaban: Opsi B (280 mnt). Tips: ubah semuanya ke menit dulu (1 jam = 60 menit, 60 detik = 1 menit), lalu pindahkan suku ke ruas lain dengan tanda berlawanan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-030",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-KONVERSI",
+  "tier": 2,
+  "sumber": "MB#6.5",
+  "stem": "Persamaan waktu: 2,5 jam = Z menit − 1.800 detik. Berapakah nilai Z?",
+  "opsi": {
+   "a": "150 mnt",
+   "b": "210 mnt",
+   "c": "190 mnt",
+   "d": "180 mnt",
+   "e": "160 mnt"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "2.5 * 60 + 1800 / 60",
+  "nilai_opsi": {
+   "a": 150,
+   "b": 210,
+   "c": 190,
+   "d": 180,
+   "e": 160
+  },
+  "pembahasan": "Ubah ke menit: 2,5 jam = 150 mnt; 1.800 detik = 30 mnt. Persamaan: 150 = Z − 30, sehingga Z = 150 + 30 = 180 mnt.<br>Opsi A (150 mnt) gugur karena mengabaikan 1.800 detik sehingga Z = 150; Opsi B (210 mnt) gugur karena menganggap 1.800 detik = 60 mnt (150 + 60 = 210); Opsi C (190 mnt) gugur karena menganggap 1.800 detik = 40 mnt (150 + 40 = 190); Opsi E (160 mnt) gugur karena menganggap 1.800 detik = 10 mnt (150 + 10 = 160). Jawaban: Opsi D (180 mnt). Tips: ubah semuanya ke menit dulu (1 jam = 60 menit, 60 detik = 1 menit), lalu pindahkan suku ke ruas lain dengan tanda berlawanan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-036",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 1,
+  "sumber": "MB#8.1",
+  "stem": "Ibu memiliki 1.500 g tepung terigu dan 800 g gula pasir. Untuk membuat roti, terpakai 900 g tepung terigu dan 500 g gula. Berapa gram total sisa gabungan bahan kue Ibu?",
+  "opsi": {
+   "a": "950 g",
+   "b": "1.000 g",
+   "c": "900 g",
+   "d": "850 g",
+   "e": "800 g"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "(1500 - 900) + (800 - 500)",
+  "nilai_opsi": {
+   "a": 950,
+   "b": 1000,
+   "c": 900,
+   "d": 850,
+   "e": 800
+  },
+  "pembahasan": "Sisa tepung = 1.500 − 900 = 600 g. Sisa gula = 800 − 500 = 300 g. Total sisa = 600 + 300 = 900 g.<br>Opsi A (950 g) gugur karena lebih 50 g dari 600 + 300; salah menghitung salah satu sisa; Opsi B (1.000 g) gugur karena lebih 100 g dari 600 + 300; salah menghitung salah satu sisa; Opsi D (850 g) gugur karena kurang 50 g dari 600 + 300; salah menghitung salah satu sisa; Opsi E (800 g) gugur karena kurang 100 g dari 600 + 300; salah menghitung salah satu sisa. Jawaban: Opsi C (900 g). Tips: hitung sisa tiap bahan terpisah (stok − pemakaian), baru jumlahkan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-037",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 2,
+  "sumber": "MB#8.2",
+  "stem": "Stok awal bahan 2 kg gula pasir dan 3,5 kg tepung terigu. Jika 1.200 g gula dan 2.100 g tepung terpakai, berapa gram sisa keseluruhan bahan kue?",
+  "opsi": {
+   "a": "2.500 g",
+   "b": "2.400 g",
+   "c": "1.800 g",
+   "d": "2.000 g",
+   "e": "2.200 g"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "(2 * 1000 + 3.5 * 1000) - (1200 + 2100)",
+  "nilai_opsi": {
+   "a": 2500,
+   "b": 2400,
+   "c": 1800,
+   "d": 2000,
+   "e": 2200
+  },
+  "pembahasan": "Awal = 2.000 + 3.500 = 5.500 g. Terpakai = 1.200 + 2.100 = 3.300 g. Sisa = 5.500 − 3.300 = 2.200 g.<br>Opsi A (2.500 g) gugur karena lebih 300 g dari 5.500 − 3.300; salah menghitung stok atau pemakaian; Opsi B (2.400 g) gugur karena lebih 200 g dari 5.500 − 3.300; salah menghitung stok atau pemakaian; Opsi C (1.800 g) gugur karena kurang 400 g dari 5.500 − 3.300; salah menghitung stok atau pemakaian; Opsi D (2.000 g) gugur karena kurang 200 g dari 5.500 − 3.300; salah menghitung stok atau pemakaian. Jawaban: Opsi E (2.200 g). Tips: ubah semua bahan ke gram lebih dulu, lalu jumlahkan stok awal dan pemakaian secara terpisah sebelum dikurangkan.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-038",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 2,
+  "sumber": "MB#8.3",
+  "stem": "Koki punya stok 2,5 kg tepung, 1,2 kg mentega, dan 800 g gula. Sisa akhir: tepung 600 g, mentega 400 g, gula 200 g. Berapa gram total bahan yang terpakai?",
+  "opsi": {
+   "a": "3.500 g",
+   "b": "3.300 g",
+   "c": "3.400 g",
+   "d": "3.100 g",
+   "e": "3.200 g"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "(2.5 * 1000 + 1.2 * 1000 + 800) - (600 + 400 + 200)",
+  "nilai_opsi": {
+   "a": 3500,
+   "b": 3300,
+   "c": 3400,
+   "d": 3100,
+   "e": 3200
+  },
+  "pembahasan": "Awal = 2.500 + 1.200 + 800 = 4.500 g. Sisa = 600 + 400 + 200 = 1.200 g. Terpakai = 4.500 − 1.200 = 3.300 g.<br>Opsi A (3.500 g) gugur karena lebih 200 g dari 4.500 − 1.200; salah menjumlah stok atau sisa; Opsi C (3.400 g) gugur karena lebih 100 g dari 4.500 − 1.200; salah menjumlah stok atau sisa; Opsi D (3.100 g) gugur karena kurang 200 g dari 4.500 − 1.200; salah menjumlah stok atau sisa; Opsi E (3.200 g) gugur karena kurang 100 g dari 4.500 − 1.200; salah menjumlah stok atau sisa. Jawaban: Opsi B (3.300 g). Tips: ubah semua bahan ke gram lebih dulu, lalu jumlahkan stok awal dan pemakaian secara terpisah sebelum dikurangkan; yang ditanya terpakai, jadi stok awal dikurangi sisa akhir.",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-039",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 2,
+  "sumber": "MB#8.4",
+  "stem": "Satu adonan butuh 250 g gula dan 400 g tepung. Stok Ibu: 1 kg gula dan 1,5 kg tepung. Jika dibuat 3 adonan, berapa gram sisa tepung terigu Ibu?",
+  "opsi": {
+   "a": "400 g",
+   "b": "250 g",
+   "c": "350 g",
+   "d": "300 g",
+   "e": "200 g"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "1.5 * 1000 - 3 * 400",
+  "nilai_opsi": {
+   "a": 400,
+   "b": 250,
+   "c": 350,
+   "d": 300,
+   "e": 200
+  },
+  "pembahasan": "Tepung awal = 1,5 kg = 1.500 g. Terpakai untuk 3 adonan = 3 × 400 = 1.200 g. Sisa tepung = 1.500 − 1.200 = 300 g.<br>Opsi A (400 g) gugur karena mengambil kebutuhan tepung satu adonan (400 g) sebagai jawaban, tanpa dikurangkan dari stok; Opsi B (250 g) gugur karena menghitung sisa gula (1.000 − 3 × 250 = 250 g), padahal yang ditanya sisa tepung; Opsi C (350 g) gugur karena lebih 50 g dari 1.500 − 1.200; salah menghitung pemakaian tepung; Opsi E (200 g) gugur karena kurang 100 g dari 1.500 − 1.200; salah menghitung pemakaian tepung. Jawaban: Opsi D (300 g). Tips: baca bahan yang ditanya (tepung atau gula); abaikan data bahan lain, lalu hitung stok − (jumlah adonan × kebutuhan).",
+  "status_kunci": "resmi"
+ },
+ {
+  "id": "K06-MB-040",
+  "kartu": "K06",
+  "sub_type": "NUM-SAT-CERITA",
+  "tier": 2,
+  "sumber": "MB#8.5",
+  "stem": "Toko menyimpan 50 hg tepung dan 30 hg gula. Hari ini terpakai 3,2 kg tepung dan 1,8 kg gula. Berapa gram total sisa bahan?",
+  "opsi": {
+   "a": "3.500 g",
+   "b": "2.800 g",
+   "c": "3.200 g",
+   "d": "2.500 g",
+   "e": "3.000 g"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "(50 * 100 + 30 * 100) - (3.2 * 1000 + 1.8 * 1000)",
+  "nilai_opsi": {
+   "a": 3500,
+   "b": 2800,
+   "c": 3200,
+   "d": 2500,
+   "e": 3000
+  },
+  "pembahasan": "Awal = 50 hg + 30 hg = 5.000 + 3.000 = 8.000 g. Terpakai = 3,2 kg + 1,8 kg = 3.200 + 1.800 = 5.000 g. Sisa = 8.000 − 5.000 = 3.000 g.<br>Opsi A (3.500 g) gugur karena lebih 500 g dari 8.000 − 5.000; salah mengubah hg atau kg ke gram; Opsi B (2.800 g) gugur karena kurang 200 g dari 8.000 − 5.000; salah mengubah hg atau kg ke gram; Opsi C (3.200 g) gugur karena mengambil pemakaian tepung (3.200 g) sebagai jawaban, bukan total sisa; Opsi D (2.500 g) gugur karena kurang 500 g dari 8.000 − 5.000; salah mengubah hg atau kg ke gram. Jawaban: Opsi E (3.000 g). Tips: ubah semua bahan ke gram lebih dulu, lalu jumlahkan stok awal dan pemakaian secara terpisah sebelum dikurangkan; ingat 1 hg = 100 g.",
+  "status_kunci": "resmi"
  }
 ]
