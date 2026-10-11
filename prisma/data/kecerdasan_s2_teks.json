@@ -1,0 +1,1221 @@
+{
+  "catatan": "Simulasi Kecerdasan Paket 2 (package_number 12) — 79 soal teks. Pedoman: docs/pedoman/PEDOMAN_SIMULASI_KECERDASAN.md. Field: s nomor, t tipe, q stem, w wacana, i instruksi/pertanyaan, c opsi A-E, k kunci, d tingkat (1 mudah, 2 sedang, 3 sulit), h ekspresi cek kunci numerik, p pembahasan (tidak dikirim ke browser).",
+  "wacana": {
+    "SAMPAH": "Bank sampah mulai bermunculan di banyak desa dalam lima tahun terakhir. Cara kerjanya sederhana: warga memilah sampah rumah tangga menjadi plastik, kertas, logam, dan sampah organik, lalu menyetorkan sampah kering ke bank sampah. Setiap setoran ditimbang dan dicatat di buku tabungan sebagai saldo rupiah. Saldo itu dapat diambil sebagai uang tunai, ditukar dengan bahan pokok, atau dipakai untuk membayar iuran kebersihan.\n\nManfaatnya tidak hanya ekonomis. Di Desa Sukamaju, volume sampah yang diangkut ke tempat pembuangan akhir turun hampir sepertiga setelah bank sampah berjalan dua tahun. Pengurus mencatat bahwa jenis sampah yang paling banyak disetor adalah botol plastik, sedangkan setoran kertas justru menurun karena warga lebih sering memakainya kembali untuk membungkus.\n\nMeski begitu, bank sampah menghadapi kendala. Harga jual plastik ke pengepul naik turun mengikuti pasar sehingga pengurus kadang menunda pembayaran kepada warga. Selain itu, sampah organik belum dapat diterima karena desa belum memiliki tempat pengomposan. Tanpa dukungan pemerintah desa untuk kedua hal tersebut, semangat warga dikhawatirkan meredup.",
+    "TIDUR": "Banyak pelajar menganggap begadang sebagai cara jitu mengejar materi menjelang ujian. Padahal, berbagai penelitian tentang tidur menunjukkan hal sebaliknya. Saat tidur, otak tidak beristirahat total. Otak justru memilah informasi yang diterima sepanjang hari dan memperkuat ingatan yang dianggap penting. Proses ini disebut konsolidasi memori.\n\nRemaja usia 13–18 tahun dianjurkan tidur delapan sampai sepuluh jam setiap malam. Ketika jatah itu dipangkas, dampaknya tidak selalu terasa pada hari pertama. Kekurangan tidur menumpuk seperti utang: dua atau tiga malam tidur lima jam sudah cukup untuk menurunkan kecepatan bereaksi dan ketelitian, terutama pada soal yang menuntut konsentrasi panjang.\n\nKebiasaan menatap layar gawai sebelum tidur memperparah keadaan. Cahaya terang dari layar menunda rasa kantuk sehingga jam tidur bergeser makin larut. Karena itu, para ahli menyarankan pelajar menjauhkan gawai setidaknya tiga puluh menit sebelum tidur dan mencicil belajar sejak jauh hari, bukan menumpuknya pada malam terakhir.",
+    "RUMAH": "Enam orang, yaitu Adi, Beni, Cika, Dewi, Eko, dan Fani, masing-masing tinggal di satu dari enam rumah yang berjajar dari barat ke timur. Rumah-rumah itu bernomor 1 sampai 6, dan rumah nomor 1 berada paling barat.\n• Dewi tinggal di rumah paling timur.\n• Cika tinggal tepat di sebelah barat rumah Eko.\n• Rumah Adi bersebelahan dengan rumah Fani.\n• Rumah Beni tidak bersebelahan dengan rumah Adi.\n• Fani tinggal di rumah bernomor genap.\n• Jika Eko tinggal di rumah bernomor genap, maka Adi tinggal di rumah nomor 1.",
+    "JADWAL": "Sebuah satuan menjadwalkan lima materi pelatihan, yaitu Menembak, Bela Diri, Renang, Lari, dan Baris-berbaris, pada hari Senin sampai Jumat. Setiap hari hanya ada satu materi, dan setiap materi dilaksanakan satu kali.\n• Renang dilaksanakan sehari setelah Lari.\n• Menembak tidak dilaksanakan pada hari Senin maupun Jumat.\n• Bela Diri dilaksanakan lebih awal daripada Menembak.\n• Jika Baris-berbaris dilaksanakan pada hari Senin, maka Renang dilaksanakan pada hari Kamis.",
+    "CALON": "Empat calon anggota, yaitu Galih, Hana, Indra, dan Joko, berasal dari kota yang berbeda (Medan, Bandung, Makassar, dan Ambon) dan memilih satuan yang berbeda (Lalu Lintas, Reskrim, Samapta, dan Intelkam).\n• Hana tidak berasal dari Medan dan tidak memilih Reskrim.\n• Calon yang berasal dari Ambon memilih Samapta.\n• Galih berasal dari Bandung.\n• Joko memilih Intelkam.\n• Indra tidak berasal dari Ambon.\n• Calon yang berasal dari Medan tidak memilih Lalu Lintas."
+  },
+  "soal": [
+    {
+      "s": 1,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Lahiriah",
+        "Hakiki",
+        "Formal",
+        "Esensial",
+        "Sementara"
+      ],
+      "k": "BD",
+      "p": "Hakiki berarti sebenarnya atau mendasar, sama dengan esensial. Lahiriah (yang tampak di luar) dan formal justru dekat dengan lawan maknanya, sedangkan sementara tidak berhubungan. Jawaban: Hakiki (B) dan Esensial (D)."
+    },
+    {
+      "s": 2,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Mutlak",
+        "Luas",
+        "Nisbi",
+        "Kabur",
+        "Relatif"
+      ],
+      "k": "CE",
+      "p": "Nisbi berarti tidak mutlak, bergantung pada pembanding; maknanya sama dengan relatif. Mutlak adalah lawan kata nisbi, sedangkan luas dan kabur tidak berpasangan. Jawaban: Nisbi (C) dan Relatif (E)."
+    },
+    {
+      "s": 3,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Parsial",
+        "Paripurna",
+        "Darurat",
+        "Utama",
+        "Lengkap"
+      ],
+      "k": "BE",
+      "p": "Paripurna berarti lengkap, sempurna, atau menyeluruh (misalnya rapat paripurna dihadiri seluruh anggota). Parsial justru lawan katanya (sebagian). Utama adalah jebakan karena rapat paripurna sering dianggap rapat utama, padahal maknanya lengkap. Jawaban: Paripurna (B) dan Lengkap (E)."
+    },
+    {
+      "s": 4,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Galat",
+        "Pasti",
+        "Ralat",
+        "Kekeliruan",
+        "Catatan"
+      ],
+      "k": "AD",
+      "p": "Galat berarti kesalahan atau kekeliruan. Ralat adalah jebakan: artinya pembetulan atas kekeliruan, bukan kekeliruan itu sendiri. Jawaban: Galat (A) dan Kekeliruan (D)."
+    },
+    {
+      "s": 5,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Hemat",
+        "Lambat",
+        "Mangkus",
+        "Cepat",
+        "Efektif"
+      ],
+      "k": "CE",
+      "p": "Mangkus berarti berhasil guna, yaitu efektif. Jangan tertukar dengan sangkil (efisien, berdaya guna), yang dekat dengan hemat. Jawaban: Mangkus (C) dan Efektif (E)."
+    },
+    {
+      "s": 6,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Inklusif",
+        "Konklusif",
+        "Eksklusif",
+        "Ekspansif",
+        "Persuasif"
+      ],
+      "k": "AC",
+      "p": "Inklusif berarti terbuka dan mengikutsertakan semua pihak; eksklusif berarti tertutup atau hanya untuk kalangan tertentu. Ketiga pengecoh berakhiran -if sehingga harus dibedakan dari maknanya: konklusif (bersifat menyimpulkan atau meyakinkan), ekspansif (bersifat meluas), dan persuasif (bersifat membujuk). Tidak satu pun berlawanan makna dengan kata lain di pilihan. Jawaban: Inklusif (A) dan Eksklusif (C)."
+    },
+    {
+      "s": 7,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Laten",
+        "Kronis",
+        "Manifes",
+        "Endemis",
+        "Steril"
+      ],
+      "k": "AC",
+      "p": "Laten berarti tersembunyi atau belum tampak; manifes berarti nyata atau sudah tampak. Kronis berlawanan dengan akut, tetapi akut tidak ada di pilihan. Endemis dan steril tidak berpasangan dengan kata lain di pilihan. Jawaban: Laten (A) dan Manifes (C)."
+    },
+    {
+      "s": 8,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Lugas",
+        "Mewah",
+        "Sporadis",
+        "Hening",
+        "Kontinu"
+      ],
+      "k": "CE",
+      "p": "Sporadis berarti kadang-kadang dan tidak tetap; kontinu berarti terus-menerus tanpa putus. Lugas, mewah, dan hening tidak punya lawan kata di antara pilihan. Jawaban: Sporadis (C) dan Kontinu (E)."
+    },
+    {
+      "s": 9,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Filantrop",
+        "Altruis",
+        "Optimis",
+        "Skeptis",
+        "Egois"
+      ],
+      "k": "BE",
+      "p": "Altruis berarti mementingkan orang lain; egois berarti mementingkan diri sendiri. Filantrop (dermawan) adalah jebakan karena maknanya dekat dengan altruis, bukan lawannya. Optimis berlawanan dengan pesimis, yang tidak ada di pilihan. Jawaban: Altruis (B) dan Egois (E)."
+    },
+    {
+      "s": 10,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Simetris",
+        "Sentrifugal",
+        "Sentimen",
+        "Sentripetal",
+        "Sinkron"
+      ],
+      "k": "BD",
+      "p": "Gaya sentrifugal mengarah menjauhi pusat, gaya sentripetal mengarah menuju pusat. Simetris berlawanan dengan asimetris dan sinkron dengan asinkron, yang keduanya tidak ada di pilihan. Jawaban: Sentrifugal (B) dan Sentripetal (D)."
+    },
+    {
+      "s": 11,
+      "t": "ANA",
+      "d": 2,
+      "q": "Embun : Kondensasi = ….. : …..",
+      "c": [
+        "Es",
+        "Pencairan",
+        "Uap",
+        "Penguapan",
+        "Awan"
+      ],
+      "k": "CD",
+      "p": "Embun adalah hasil proses kondensasi (pengembunan). Pasangan yang setara: uap adalah hasil proses penguapan. Es : Pencairan adalah jebakan, karena es bukan hasil pencairan melainkan bahan yang mencair (hasil pencairan adalah air). Jawaban: Uap (C) dan Penguapan (D)."
+    },
+    {
+      "s": 12,
+      "t": "ANA",
+      "d": 2,
+      "q": "….. : Arsitek = Partitur : …..",
+      "c": [
+        "Cetak biru",
+        "Fondasi",
+        "Komponis",
+        "Orkestra",
+        "Penyanyi"
+      ],
+      "k": "AC",
+      "p": "Arsitek membuat cetak biru (rancangan) sebelum bangunan didirikan; komponis menulis partitur sebelum musik dimainkan. Hubungannya rancangan dan pembuatnya, dengan urutan rancangan : pembuat. Fondasi adalah bagian bangunan yang dikerjakan pekerja konstruksi, sedangkan orkestra dan penyanyi adalah pemain, bukan pembuat partitur. Jawaban: Cetak biru (A) dan Komponis (C)."
+    },
+    {
+      "s": 13,
+      "t": "ANA",
+      "d": 2,
+      "q": "Rem : Kecepatan = ….. : …..",
+      "c": [
+        "Lensa",
+        "Peredam",
+        "Cahaya",
+        "Pengeras",
+        "Bunyi"
+      ],
+      "k": "BE",
+      "p": "Rem berfungsi mengurangi kecepatan. Pasangan yang setara: peredam berfungsi mengurangi bunyi. Pengeras justru memperbesar bunyi, dan lensa memusatkan atau menyebarkan cahaya, bukan menguranginya. Jawaban: Peredam (B) dan Bunyi (E)."
+    },
+    {
+      "s": 14,
+      "t": "ANA",
+      "d": 2,
+      "q": "Klorofil : Fotosintesis = ….. : …..",
+      "c": [
+        "Enzim",
+        "Pencernaan",
+        "Lambung",
+        "Darah",
+        "Usus"
+      ],
+      "k": "AB",
+      "p": "Klorofil adalah zat yang berperan menjalankan proses fotosintesis. Pasangan yang setara: enzim adalah zat yang berperan menjalankan proses pencernaan. Lambung dan usus adalah jebakan karena keduanya organ tempat pencernaan, bukan zat yang menjalankannya. Jawaban: Enzim (A) dan Pencernaan (B)."
+    },
+    {
+      "s": 15,
+      "t": "ANA",
+      "d": 2,
+      "q": "….. : Gempa = Anemometer : …..",
+      "c": [
+        "Seismograf",
+        "Angin",
+        "Barometer",
+        "Hujan",
+        "Tekanan"
+      ],
+      "k": "AB",
+      "p": "Hubungannya alat ukur dan yang diukurnya. Kotak pertama adalah alat yang merekam getaran gempa (gelombang seismik), yaitu seismograf. Kotak kedua adalah yang diukur anemometer, yaitu angin (kecepatan angin). Barometer mengukur tekanan, tetapi tidak cocok dengan posisi kotak. Jawaban: Seismograf (A) dan Angin (B)."
+    },
+    {
+      "s": 16,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Kanker",
+        "Diabetes",
+        "Hipertensi",
+        "Influenza",
+        "Stroke"
+      ],
+      "k": "D",
+      "p": "Kanker, diabetes, hipertensi, dan stroke adalah penyakit tidak menular. Influenza adalah penyakit menular yang disebabkan virus. Jawaban: Influenza (D)."
+    },
+    {
+      "s": 17,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Kilogram",
+        "Meter",
+        "Detik",
+        "Ampere",
+        "Liter"
+      ],
+      "k": "E",
+      "p": "Kilogram, meter, detik, dan ampere adalah satuan pokok Sistem Internasional (SI). Liter bukan satuan pokok SI; liter adalah satuan volume di luar SI yang diterima untuk dipakai bersama SI (1 L = 1 dm³). Jawaban: Liter (E)."
+    },
+    {
+      "s": 18,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Sedimentasi",
+        "Abrasi",
+        "Erosi",
+        "Korasi",
+        "Eksarasi"
+      ],
+      "k": "A",
+      "p": "Abrasi (oleh ombak laut), erosi (oleh air atau angin), korasi (oleh angin yang membawa pasir), dan eksarasi (oleh gletser) adalah proses pengikisan. Sedimentasi justru proses pengendapan. Jawaban: Sedimentasi (A)."
+    },
+    {
+      "s": 19,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Air",
+        "Garam dapur",
+        "Gula",
+        "Karbon dioksida",
+        "Udara"
+      ],
+      "k": "E",
+      "p": "Air, garam dapur, gula, dan karbon dioksida adalah senyawa: tersusun dari unsur-unsur yang terikat secara kimia dengan perbandingan tetap. Udara adalah campuran berbagai gas (nitrogen, oksigen, dan lain-lain) yang tidak terikat secara kimia. Karbon dioksida adalah jebakan karena sama-sama berwujud gas seperti udara. Jawaban: Udara (E)."
+    },
+    {
+      "s": 20,
+      "t": "BAC",
+      "d": 3,
+      "w": "SAMPAH",
+      "i": "Hubungan isi paragraf ketiga dengan paragraf kedua adalah …..",
+      "c": [
+        "Paragraf ketiga menjelaskan penyebab manfaat yang disebut di paragraf kedua.",
+        "Paragraf ketiga memberi batasan atas keberhasilan yang dipaparkan di paragraf kedua.",
+        "Paragraf ketiga mengulang data paragraf kedua dengan kalimat lain.",
+        "Paragraf ketiga menyimpulkan seluruh isi bacaan.",
+        "Paragraf ketiga menambahkan contoh manfaat ekonomi bank sampah."
+      ],
+      "k": "B",
+      "p": "Paragraf kedua memaparkan manfaat dan data keberhasilan. Paragraf ketiga dibuka dengan \"Meski begitu\" lalu menyebut kendala harga dan sampah organik, jadi fungsinya membatasi atau mengimbangi keberhasilan tersebut. A salah karena kendala bukan penyebab manfaat. C dan E salah karena paragraf ketiga membawa informasi baru berupa kendala. D salah karena paragraf ketiga tidak merangkum seluruh bacaan. Jawaban: B."
+    },
+    {
+      "s": 21,
+      "t": "BAC",
+      "d": 3,
+      "w": "SAMPAH",
+      "i": "Pernyataan berikut yang paling melemahkan anggapan bahwa bank sampah adalah penyebab turunnya volume sampah Desa Sukamaju ke tempat pembuangan akhir adalah …..",
+      "c": [
+        "Botol plastik merupakan jenis sampah yang paling banyak disetor warga.",
+        "Harga jual plastik ke pengepul naik turun mengikuti pasar.",
+        "Sebagian warga menukar saldo tabungan sampah dengan bahan pokok.",
+        "Pada dua tahun yang sama, jumlah penduduk Desa Sukamaju berkurang hampir sepertiga karena banyak warga pindah ke kota.",
+        "Bank sampah belum dapat menerima sampah organik."
+      ],
+      "k": "D",
+      "p": "Anggapan dalam bacaan: volume sampah turun karena bank sampah berjalan. Anggapan ini melemah jika ada penyebab lain yang juga dapat menjelaskan penurunan tersebut. Berkurangnya penduduk hampir sepertiga pada periode yang sama dapat menurunkan volume sampah tanpa peran bank sampah (D). A dan C justru menunjukkan bank sampah berjalan. B dan E adalah kendala yang tidak menjelaskan penurunan volume. Jawaban: D."
+    },
+    {
+      "s": 22,
+      "t": "BAC",
+      "d": 3,
+      "w": "SAMPAH",
+      "i": "Jika pemerintah desa membangun tempat pengomposan, tetapi harga plastik tetap naik turun, keadaan yang paling mungkin terjadi menurut bacaan adalah …..",
+      "c": [
+        "Semua kendala bank sampah teratasi.",
+        "Volume sampah yang diangkut ke tempat pembuangan akhir kembali naik.",
+        "Warga berhenti menyetor botol plastik.",
+        "Pengepul menolak membeli plastik dari bank sampah.",
+        "Sampah organik dapat diterima, tetapi pembayaran kepada warga masih mungkin tertunda."
+      ],
+      "k": "E",
+      "p": "Bacaan menyebut dua kendala: sampah organik belum diterima karena tidak ada tempat pengomposan, dan harga plastik yang naik turun membuat pembayaran kadang tertunda. Jika hanya kendala pertama yang diatasi, sampah organik dapat diterima, tetapi kendala kedua tetap ada (E). A salah karena satu kendala masih tersisa. B, C, dan D tidak didukung bacaan. Jawaban: E."
+    },
+    {
+      "s": 23,
+      "t": "BAC",
+      "d": 3,
+      "w": "TIDUR",
+      "i": "Ungkapan \"kekurangan tidur menumpuk seperti utang\" dalam bacaan tersebut bermakna …..",
+      "c": [
+        "Dampak kurang tidur bertambah dari malam ke malam dan baru terasa kemudian.",
+        "Kekurangan tidur harus diganti dengan biaya pengobatan.",
+        "Tidur siang yang lama selalu dapat melunasi kekurangan tidur.",
+        "Tidur yang berlebihan sama buruknya dengan kurang tidur.",
+        "Kekurangan tidur hanya dialami pelajar menjelang ujian."
+      ],
+      "k": "A",
+      "p": "Kalimat sesudahnya menjelaskan bahwa dampak kurang tidur tidak selalu terasa pada hari pertama, tetapi dua atau tiga malam tidur lima jam sudah menurunkan kecepatan dan ketelitian. Seperti utang, kekurangannya terkumpul lalu ditagih belakangan (A). Pilihan lain tidak dibahas dalam bacaan. Jawaban: A."
+    },
+    {
+      "s": 24,
+      "t": "BAC",
+      "d": 3,
+      "w": "TIDUR",
+      "i": "Asumsi yang mendasari saran penulis agar pelajar tidak begadang menjelang ujian adalah …..",
+      "c": [
+        "Mengerjakan soal ujian menuntut kecepatan bereaksi dan ketelitian yang dapat terganggu oleh kurang tidur.",
+        "Semua pelajar memiliki gawai di kamar tidurnya.",
+        "Materi ujian selalu dapat dikuasai dalam satu malam.",
+        "Belajar pada malam hari tidak pernah efektif.",
+        "Tidur lebih dari sepuluh jam pasti menaikkan nilai ujian."
+      ],
+      "k": "A",
+      "p": "Saran penulis hanya masuk akal jika ujian memang menuntut kemampuan yang dirusak oleh kurang tidur, yaitu kecepatan bereaksi dan ketelitian (A). Tanpa asumsi ini, argumen penulis tidak berlaku. B terlalu luas dan tidak diperlukan. C bertentangan dengan arah argumen. D dan E berlebihan: penulis tidak melarang belajar malam dan tidak menjanjikan nilai dari tidur panjang. Jawaban: A."
+    },
+    {
+      "s": 25,
+      "t": "BAC",
+      "d": 3,
+      "w": "TIDUR",
+      "i": "Seorang pelajar tidur lima jam selama tiga malam berturut-turut sebelum ujian, tetapi merasa segar pada pagi hari ujian. Berdasarkan bacaan, penilaian yang paling tepat adalah …..",
+      "c": [
+        "Ia pasti tidak mengalami penurunan ketelitian.",
+        "Bacaan keliru karena pelajar tersebut tetap merasa segar.",
+        "Rasa segar belum menjamin ketelitiannya tidak menurun, karena dampak kurang tidur menumpuk dan tidak selalu terasa.",
+        "Ia pasti tertidur ketika mengerjakan ujian.",
+        "Ia cukup menjauhkan gawai pada malam ujian untuk memulihkan ketelitiannya."
+      ],
+      "k": "C",
+      "p": "Bacaan menyatakan dampak kurang tidur tidak selalu terasa dan dua atau tiga malam tidur lima jam sudah cukup menurunkan ketelitian. Jadi perasaan segar tidak membuktikan ketelitiannya utuh (C). A dan B mengabaikan pernyataan bahwa dampaknya tidak selalu terasa. D berlebihan. E keliru karena menjauhkan gawai hanya mencegah jam tidur bergeser, bukan melunasi kekurangan tidur. Jawaban: C."
+    },
+    {
+      "s": 41,
+      "t": "SIL",
+      "d": 3,
+      "q": "Semua peserta yang lolos ke tahap akhir telah lulus tes kesehatan dan tes jasmani.\nDimas lulus tes kesehatan, tetapi tidak lulus tes jasmani.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Dimas lolos ke tahap akhir karena lulus tes kesehatan.",
+        "Dimas cukup mengulang tes jasmani agar pasti lolos ke tahap akhir.",
+        "Sebagian peserta tahap akhir tidak lulus tes jasmani.",
+        "Dimas tidak lolos ke tahap akhir.",
+        "Tidak dapat ditarik kesimpulan."
+      ],
+      "k": "D",
+      "p": "Lolos tahap akhir mensyaratkan lulus kedua tes. Dimas tidak lulus tes jasmani, sehingga ia pasti tidak lolos ke tahap akhir (D). B adalah jebakan: lulus kedua tes adalah syarat perlu, bukan jaminan lolos. A dan C bertentangan dengan premis. Jawaban: D."
+    },
+    {
+      "s": 42,
+      "t": "SIL",
+      "d": 3,
+      "q": "Jika hujan turun, jalan menjadi licin.\nJika jalan licin, kecepatan kendaraan dibatasi.\nHari ini kecepatan kendaraan tidak dibatasi.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Hari ini hujan tidak turun.",
+        "Hari ini hujan turun.",
+        "Hari ini jalan licin, tetapi hujan tidak turun.",
+        "Kecepatan kendaraan dibatasi hanya jika hujan turun.",
+        "Tidak dapat ditarik kesimpulan."
+      ],
+      "k": "A",
+      "p": "Rantai: hujan → licin → dibatasi. Kecepatan tidak dibatasi, maka jalan tidak licin (modus tollens); karena jalan tidak licin, hujan tidak turun. C salah karena jalan pasti tidak licin. D membalik arah implikasi. Kesimpulan sah dapat ditarik, jadi E salah. Jawaban: A."
+    },
+    {
+      "s": 43,
+      "t": "SIL",
+      "d": 3,
+      "q": "Semua anggota tim SAR mahir berenang.\nSebagian relawan tidak mahir berenang.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Semua relawan bukan anggota tim SAR.",
+        "Sebagian relawan adalah anggota tim SAR.",
+        "Tidak ada relawan yang mahir berenang.",
+        "Semua anggota tim SAR adalah relawan.",
+        "Sebagian relawan bukan anggota tim SAR."
+      ],
+      "k": "E",
+      "p": "Siapa pun yang tidak mahir berenang pasti bukan anggota tim SAR. Karena sebagian relawan tidak mahir berenang, sebagian relawan pasti bukan anggota tim SAR (E). A berlebihan: relawan yang mahir berenang bisa saja anggota SAR. B mungkin, tetapi tidak pasti. C dan D tidak didukung premis. Jawaban: E."
+    },
+    {
+      "s": 44,
+      "t": "SIL",
+      "d": 3,
+      "q": "Tidak ada pegawai yang terlambat mendapat tunjangan kehadiran penuh.\nSemua pegawai bagian arsip mendapat tunjangan kehadiran penuh bulan ini.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Semua pegawai yang tidak terlambat mendapat tunjangan kehadiran penuh.",
+        "Sebagian pegawai bagian arsip terlambat bulan ini.",
+        "Pegawai yang mendapat tunjangan kehadiran penuh pasti pegawai bagian arsip.",
+        "Sebagian pegawai bagian arsip tidak mendapat tunjangan kehadiran penuh.",
+        "Tidak ada pegawai bagian arsip yang terlambat bulan ini."
+      ],
+      "k": "E",
+      "p": "Mendapat tunjangan penuh berarti tidak terlambat (kontraposisi premis 1). Semua pegawai arsip mendapat tunjangan penuh, sehingga tidak ada pegawai arsip yang terlambat (E). A adalah jebakan pembalikan: premis tidak menyatakan semua yang tepat waktu pasti mendapat tunjangan penuh. B dan D bertentangan dengan premis. C tidak dapat dipastikan. Jawaban: E."
+    },
+    {
+      "s": 45,
+      "t": "SIL",
+      "d": 3,
+      "q": "Jika Rina lulus seleksi akademik dan lulus tes kesehatan, ia mengikuti tes psikologi.\nRina tidak mengikuti tes psikologi.\nRina lulus tes kesehatan.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Rina tidak lulus seleksi akademik.",
+        "Rina lulus seleksi akademik.",
+        "Rina tidak lulus tes kesehatan.",
+        "Rina lulus seleksi akademik, tetapi tidak hadir pada tes psikologi.",
+        "Tidak dapat ditarik kesimpulan."
+      ],
+      "k": "A",
+      "p": "Rina tidak mengikuti tes psikologi, berarti syarat \"lulus akademik dan lulus kesehatan\" tidak terpenuhi (modus tollens): paling sedikit satu tidak lulus. Rina lulus tes kesehatan, jadi yang tidak lulus pasti seleksi akademik (A). C bertentangan dengan premis 3. D bertentangan dengan premis 1, karena jika Rina lulus keduanya ia pasti mengikuti tes psikologi. Jawaban: A."
+    },
+    {
+      "s": 46,
+      "t": "SIL",
+      "d": 2,
+      "q": "Pada hari Sabtu, Arif berlatih menembak atau berlatih renang, tetapi tidak keduanya.\nSabtu ini Arif berlatih renang.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Sabtu ini Arif tidak berlatih menembak.",
+        "Sabtu ini Arif juga berlatih menembak.",
+        "Sabtu ini Arif mungkin berlatih menembak.",
+        "Arif tidak pernah berlatih menembak pada hari Sabtu.",
+        "Tidak dapat ditarik kesimpulan."
+      ],
+      "k": "A",
+      "p": "Frasa \"tetapi tidak keduanya\" membuat pilihan bersifat eksklusif: tepat satu latihan dilakukan. Arif berlatih renang, jadi ia pasti tidak berlatih menembak (A). C adalah jebakan bagi yang membaca \"atau\" sebagai boleh keduanya, padahal premis menutup kemungkinan itu. D berlebihan karena hanya berlaku untuk Sabtu ini. Jawaban: A."
+    },
+    {
+      "s": 47,
+      "t": "SIL",
+      "d": 3,
+      "q": "Jika sebuah kendaraan melanggar batas kecepatan, kamera ETLE merekamnya.\nKamera ETLE merekam mobil Pak Budi.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Mobil Pak Budi melanggar batas kecepatan.",
+        "Mobil Pak Budi tidak melanggar batas kecepatan.",
+        "Kamera ETLE hanya merekam kendaraan yang melanggar.",
+        "Belum dapat dipastikan mobil Pak Budi melanggar batas kecepatan.",
+        "Pak Budi pasti menerima surat tilang."
+      ],
+      "k": "D",
+      "p": "Premis hanya menyatakan jika melanggar, maka terekam. Terekam tidak berarti pasti melanggar, karena kamera bisa merekam kendaraan lain juga. Menyimpulkan A adalah kesalahan menegaskan konsekuen. B juga tidak pasti. C menambah syarat yang tidak ada. Jawaban: D."
+    },
+    {
+      "s": 48,
+      "t": "SIL",
+      "d": 3,
+      "q": "Semua siswa kelas unggulan mengikuti olimpiade.\nSemua peserta olimpiade mendapat pembinaan khusus.\nTono tidak mendapat pembinaan khusus.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Tono bukan siswa kelas unggulan.",
+        "Tono siswa kelas unggulan.",
+        "Tono mengikuti olimpiade tanpa pembinaan.",
+        "Sebagian siswa kelas unggulan tidak mendapat pembinaan khusus.",
+        "Tono akan mengikuti olimpiade tahun depan."
+      ],
+      "k": "A",
+      "p": "Rantai: kelas unggulan → olimpiade → pembinaan khusus. Tono tidak mendapat pembinaan, jadi ia bukan peserta olimpiade, sehingga ia juga bukan siswa kelas unggulan. C dan D bertentangan dengan premis 2. Jawaban: A."
+    },
+    {
+      "s": 49,
+      "t": "SIL",
+      "d": 3,
+      "q": "Gerbang utama dibuka hanya jika petugas jaga hadir.\nPagi ini gerbang utama dibuka.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Pagi ini petugas jaga tidak hadir.",
+        "Gerbang utama selalu dibuka setiap pagi.",
+        "Jika petugas jaga hadir, gerbang utama pasti dibuka.",
+        "Gerbang utama dibuka oleh petugas cadangan.",
+        "Pagi ini petugas jaga hadir."
+      ],
+      "k": "E",
+      "p": "\"p hanya jika q\" berarti jika p maka q. Di sini: jika gerbang dibuka, maka petugas jaga hadir. Gerbang dibuka pagi ini, jadi petugas jaga hadir. C membalik arah implikasi dan merupakan jebakan umum. Jawaban: E."
+    },
+    {
+      "s": 50,
+      "t": "SIL",
+      "d": 2,
+      "q": "Semua penyidik telah mengikuti pelatihan forensik.\nSemua yang telah mengikuti pelatihan forensik memahami prosedur olah TKP.\nKesimpulan yang paling tepat adalah …..",
+      "c": [
+        "Semua penyidik memahami prosedur olah TKP.",
+        "Semua yang memahami prosedur olah TKP adalah penyidik.",
+        "Sebagian penyidik tidak memahami prosedur olah TKP.",
+        "Hanya penyidik yang mengikuti pelatihan forensik.",
+        "Sebagian yang mengikuti pelatihan forensik bukan penyidik."
+      ],
+      "k": "A",
+      "p": "Jika semua A adalah B dan semua B adalah C, maka semua A adalah C: semua penyidik memahami prosedur olah TKP. B membalik arah. D dan E tidak dapat dipastikan dari premis. Jawaban: A."
+    },
+    {
+      "s": 57,
+      "t": "DER",
+      "d": 3,
+      "q": "1 | 3 | 6 | 11 | 18 | … | 42 | …",
+      "c": [
+        "27",
+        "29",
+        "57",
+        "59",
+        "31"
+      ],
+      "k": "BD",
+      "p": "Selisih antarsuku adalah bilangan prima berurutan: +2, +3, +5, +7, +11, +13, +17. Jadi 18 + 11 = 29, 29 + 13 = 42 (cocok), dan 42 + 17 = 59. Jawaban: 29 (B) dan 59 (D)."
+    },
+    {
+      "s": 58,
+      "t": "DER",
+      "d": 3,
+      "q": "2 | 40 | 5 | 39 | 11 | 37 | … | 34 | 47 | …",
+      "c": [
+        "21",
+        "23",
+        "30",
+        "31",
+        "33"
+      ],
+      "k": "BC",
+      "p": "Ada dua deret berselang-seling. Suku ganjil: 2, 5, 11, 23, 47 dengan aturan ×2 + 1. Suku genap: 40, 39, 37, 34, 30 dengan pengurang yang bertambah: −1, −2, −3, −4. Kotak pertama (suku ke-7) = 11 × 2 + 1 = 23, kotak kedua (suku ke-10) = 34 − 4 = 30. Jawaban: 23 (B) dan 30 (C)."
+    },
+    {
+      "s": 59,
+      "t": "DER",
+      "d": 2,
+      "q": "4 | 5 | 9 | 18 | 34 | … | 95 | …",
+      "c": [
+        "59",
+        "58",
+        "144",
+        "143",
+        "60"
+      ],
+      "k": "AC",
+      "p": "Selisih antarsuku adalah bilangan kuadrat: +1, +4, +9, +16, +25, +36, +49. Jadi 34 + 25 = 59, 59 + 36 = 95 (cocok dengan soal), dan 95 + 49 = 144. Jawaban: 59 (A) dan 144 (C)."
+    },
+    {
+      "s": 60,
+      "t": "DER",
+      "d": 3,
+      "q": "1 | 2 | 4 | 7 | 12 | … | 33 | … | 88",
+      "c": [
+        "20",
+        "19",
+        "21",
+        "53",
+        "54"
+      ],
+      "k": "AE",
+      "p": "Setiap suku = jumlah dua suku sebelumnya + 1: 1 + 2 + 1 = 4, 2 + 4 + 1 = 7, 4 + 7 + 1 = 12, 7 + 12 + 1 = 20, 12 + 20 + 1 = 33, 20 + 33 + 1 = 54, dan 33 + 54 + 1 = 88 (cocok). Jawaban: 20 (A) dan 54 (E)."
+    },
+    {
+      "s": 61,
+      "t": "DER",
+      "d": 3,
+      "q": "B | Y | E | U | H | Q | … | M | N | …",
+      "c": [
+        "J",
+        "K",
+        "H",
+        "I",
+        "L"
+      ],
+      "k": "BD",
+      "p": "Ada dua deret huruf berselang-seling. Suku ganjil maju 3: B, E, H, K, N. Suku genap mundur 4: Y, U, Q, M, I. Kotak pertama (suku ke-7) = K, kotak kedua (suku ke-10) = I. Jawaban: K (B) dan I (D)."
+    },
+    {
+      "s": 62,
+      "t": "DER",
+      "d": 2,
+      "q": "2 | B | 3 | C | 5 | E | … | I | 17 | …",
+      "c": [
+        "8",
+        "9",
+        "P",
+        "Q",
+        "R"
+      ],
+      "k": "BD",
+      "p": "Angka mengikuti aturan ×2 − 1: 2, 3, 5, 9, 17. Setiap huruf menempati urutan alfabet yang sama dengan angka di depannya: 2 = B, 3 = C, 5 = E, 9 = I, 17 = Q. Jawaban: 9 (B) dan Q (D)."
+    },
+    {
+      "s": 63,
+      "t": "DER",
+      "d": 2,
+      "q": "Z | A | X | C | V | E | … | G | R | …",
+      "c": [
+        "S",
+        "H",
+        "T",
+        "U",
+        "I"
+      ],
+      "k": "CE",
+      "p": "Ada dua deret huruf yang berselang-seling. Suku ganjil mundur dua: Z, X, V, T, R. Suku genap maju dua: A, C, E, G, I. Kotak pertama adalah suku ke-7 = T, kotak kedua adalah suku ke-10 = I. Jawaban: T (C) dan I (E)."
+    },
+    {
+      "s": 64,
+      "t": "DER",
+      "d": 3,
+      "q": "A1C | D3F | G5I | … | M9O | …",
+      "c": [
+        "J7L",
+        "K7M",
+        "P10R",
+        "J8L",
+        "P11R"
+      ],
+      "k": "AE",
+      "p": "Setiap blok terdiri atas huruf awal, angka, dan huruf akhir. Huruf awal naik 3 (A, D, G, J, M, P). Angka adalah bilangan ganjil berurutan (1, 3, 5, 7, 9, 11). Huruf akhir = huruf awal + 2 (A→C, D→F, …). Blok ke-4 = J7L, blok ke-6 = P11R. Jawaban: J7L (A) dan P11R (E)."
+    },
+    {
+      "s": 65,
+      "t": "WAC",
+      "d": 3,
+      "w": "RUMAH",
+      "i": "Pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Fani tinggal di rumah nomor 2.",
+        "Adi tinggal di rumah nomor 1.",
+        "Beni tinggal di rumah bernomor ganjil.",
+        "Eko tinggal di rumah nomor 5.",
+        "Cika tinggal di rumah nomor 4."
+      ],
+      "k": "C",
+      "p": "Dewi di rumah 6, jadi rumah 1–5 dibagi untuk lima orang lainnya. Pasangan Cika–Eko dan pasangan Adi–Fani masing-masing menempati dua rumah bersebelahan, dan Fani di rumah genap. Ada empat susunan yang memenuhi: (1) Adi, Fani, Beni, Cika, Eko; (2) Adi, Fani, Cika, Eko, Beni; (3) Beni, Fani, Adi, Cika, Eko; (4) Beni, Cika, Eko, Fani, Adi. Dalam keempat susunan, Beni selalu di rumah 1, 3, atau 5. Opsi lain hanya berlaku di sebagian susunan, misalnya Fani di rumah 4 pada susunan (4). Jawaban: C."
+    },
+    {
+      "s": 66,
+      "t": "WAC",
+      "d": 3,
+      "w": "RUMAH",
+      "i": "Pernyataan berikut mungkin benar, kecuali …..",
+      "c": [
+        "Adi tinggal di rumah nomor 4.",
+        "Cika tinggal di rumah nomor 2.",
+        "Beni tinggal di rumah nomor 3.",
+        "Fani tinggal di rumah nomor 4.",
+        "Eko tinggal di rumah nomor 3."
+      ],
+      "k": "A",
+      "p": "Dari keempat susunan yang memenuhi syarat, Adi hanya bisa di rumah 1, 3, atau 5, tidak pernah di rumah 4. Fani hanya di rumah genap, jadi jika Adi di rumah 4, Fani tidak bisa bersebelahan dengannya. Opsi B, D, dan E terjadi pada susunan Beni, Cika, Eko, Fani, Adi, Dewi. Opsi C terjadi pada susunan Adi, Fani, Beni, Cika, Eko, Dewi. Jawaban: A."
+    },
+    {
+      "s": 67,
+      "t": "WAC",
+      "d": 2,
+      "w": "RUMAH",
+      "i": "Jika Beni tinggal di rumah nomor 5, siapakah yang tinggal di rumah nomor 3?",
+      "c": [
+        "Adi",
+        "Eko",
+        "Fani",
+        "Cika",
+        "Dewi"
+      ],
+      "k": "D",
+      "p": "Beni di rumah 5 dan Dewi di rumah 6. Beni tidak boleh bersebelahan dengan Adi, jadi Adi tidak di rumah 4. Pasangan Adi–Fani dan Cika–Eko harus mengisi rumah 1–4. Fani di rumah genap, maka susunan yang memenuhi hanya Adi (1), Fani (2), Cika (3), Eko (4). Syarat terakhir terpenuhi: Eko di rumah genap dan Adi di rumah 1. Jawaban: Cika (D)."
+    },
+    {
+      "s": 68,
+      "t": "WAC",
+      "d": 3,
+      "w": "RUMAH",
+      "i": "Jika rumah Adi bersebelahan dengan rumah Cika, urutan penghuni dari barat ke timur adalah …..",
+      "c": [
+        "Adi, Fani, Beni, Cika, Eko, Dewi",
+        "Adi, Fani, Cika, Eko, Beni, Dewi",
+        "Beni, Cika, Eko, Fani, Adi, Dewi",
+        "Beni, Fani, Cika, Adi, Eko, Dewi",
+        "Beni, Fani, Adi, Cika, Eko, Dewi"
+      ],
+      "k": "E",
+      "p": "Adi harus bersebelahan dengan Fani dan Cika sekaligus, sedangkan Cika tepat di barat Eko. Jadi urutannya Fani, Adi, Cika, Eko (Fani di rumah genap). Susunan ini menempati rumah 2–5, Beni di rumah 1, dan Dewi di rumah 6. Beni di rumah 1 tidak bersebelahan dengan Adi di rumah 3, dan Eko di rumah 5 (ganjil) tidak memicu syarat terakhir. Opsi A, B, dan C memenuhi syarat dasar, tetapi Adi tidak bersebelahan dengan Cika. Opsi D memisahkan Cika dari Eko. Jawaban: E."
+    },
+    {
+      "s": 69,
+      "t": "WAC",
+      "d": 3,
+      "w": "JADWAL",
+      "i": "Pernyataan berikut mungkin benar, kecuali …..",
+      "c": [
+        "Lari dilaksanakan pada hari Senin.",
+        "Baris-berbaris dilaksanakan pada hari Senin.",
+        "Menembak dilaksanakan pada hari Kamis.",
+        "Renang dilaksanakan pada hari Jumat.",
+        "Bela Diri dilaksanakan pada hari Rabu."
+      ],
+      "k": "B",
+      "p": "Andaikan Baris-berbaris pada hari Senin. Maka Renang hari Kamis, sehingga Lari hari Rabu. Menembak tidak boleh Senin atau Jumat, jadi Menembak hari Selasa. Bela Diri harus lebih awal daripada Menembak, padahal hari Senin sudah terisi. Terjadi kontradiksi, jadi B tidak mungkin. Opsi lain dapat terjadi, misalnya Lari, Renang, Bela Diri, Menembak, Baris-berbaris (A, C, E) atau Bela Diri, Menembak, Baris-berbaris, Lari, Renang (D). Jawaban: B."
+    },
+    {
+      "s": 70,
+      "t": "WAC",
+      "d": 3,
+      "w": "JADWAL",
+      "i": "Pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Bela Diri dilaksanakan pada hari Senin.",
+        "Menembak dilaksanakan pada hari Selasa.",
+        "Lari dilaksanakan lebih awal daripada Menembak.",
+        "Bela Diri dilaksanakan lebih awal daripada Baris-berbaris.",
+        "Renang dilaksanakan pada hari Jumat."
+      ],
+      "k": "D",
+      "p": "Ada lima jadwal yang memenuhi: (1) Bela Diri, Menembak, Lari, Renang, Baris-berbaris; (2) Bela Diri, Menembak, Baris-berbaris, Lari, Renang; (3) Bela Diri, Baris-berbaris, Menembak, Lari, Renang; (4) Bela Diri, Lari, Renang, Menembak, Baris-berbaris; (5) Lari, Renang, Bela Diri, Menembak, Baris-berbaris. Pada kelima jadwal, Bela Diri selalu lebih awal daripada Baris-berbaris. A gugur oleh jadwal (5), B oleh (3), C oleh (1), E oleh (1). Jawaban: D."
+    },
+    {
+      "s": 71,
+      "t": "WAC",
+      "d": 3,
+      "w": "JADWAL",
+      "i": "Jika Baris-berbaris dilaksanakan pada hari Rabu, Lari dilaksanakan pada hari …..",
+      "c": [
+        "Senin",
+        "Selasa",
+        "Kamis",
+        "Jumat",
+        "Tidak dapat ditentukan"
+      ],
+      "k": "C",
+      "p": "Rabu terisi Baris-berbaris. Pasangan Lari–Renang butuh dua hari berurutan, jadi pilihannya Senin–Selasa atau Kamis–Jumat. Jika Lari–Renang di Senin–Selasa, Menembak harus di Kamis, dan Bela Diri tidak punya hari sebelum Menembak yang masih kosong. Maka Lari–Renang di Kamis–Jumat, Bela Diri hari Senin, Menembak hari Selasa. Jawaban: Kamis (C)."
+    },
+    {
+      "s": 72,
+      "t": "WAC",
+      "d": 3,
+      "w": "JADWAL",
+      "i": "Jika Renang dilaksanakan lebih awal daripada Menembak, materi yang dilaksanakan pada hari Jumat adalah …..",
+      "c": [
+        "Baris-berbaris",
+        "Bela Diri",
+        "Lari",
+        "Menembak",
+        "Renang"
+      ],
+      "k": "A",
+      "p": "Menembak hanya bisa Selasa–Kamis, dan Lari–Renang harus berada sebelum Menembak. Menembak hari Selasa atau Rabu tidak menyisakan tempat bagi Lari, Renang, dan Bela Diri sebelumnya. Maka Menembak hari Kamis, dan Senin–Rabu diisi Lari, Renang, dan Bela Diri. Hari Jumat tinggal Baris-berbaris. Jawaban: A."
+    },
+    {
+      "s": 73,
+      "t": "WAC",
+      "d": 2,
+      "w": "CALON",
+      "i": "Calon yang berasal dari Ambon adalah …..",
+      "c": [
+        "Galih",
+        "Hana",
+        "Indra",
+        "Joko",
+        "Tidak dapat ditentukan"
+      ],
+      "k": "B",
+      "p": "Galih berasal dari Bandung, dan Indra tidak berasal dari Ambon. Calon dari Ambon memilih Samapta, sedangkan Joko memilih Intelkam, jadi Joko bukan dari Ambon. Tinggal Hana. Jawaban: Hana (B)."
+    },
+    {
+      "s": 74,
+      "t": "WAC",
+      "d": 3,
+      "w": "CALON",
+      "i": "Jika Galih memilih Reskrim, pernyataan yang benar adalah …..",
+      "c": [
+        "Indra berasal dari Medan dan memilih Lalu Lintas.",
+        "Joko berasal dari Makassar.",
+        "Hana memilih Lalu Lintas.",
+        "Indra memilih Intelkam.",
+        "Indra berasal dari Makassar dan memilih Lalu Lintas."
+      ],
+      "k": "E",
+      "p": "Hana dari Ambon memilih Samapta, dan Joko memilih Intelkam. Jika Galih memilih Reskrim, Indra tinggal memilih Lalu Lintas. Calon dari Medan tidak memilih Lalu Lintas, jadi Indra bukan dari Medan, sehingga Indra dari Makassar dan Joko dari Medan. Jawaban: E."
+    },
+    {
+      "s": 75,
+      "t": "WAC",
+      "d": 3,
+      "w": "CALON",
+      "i": "Jika Joko berasal dari Makassar, satuan yang dipilih Galih adalah …..",
+      "c": [
+        "Intelkam",
+        "Lalu Lintas",
+        "Reskrim",
+        "Samapta",
+        "Tidak dapat ditentukan"
+      ],
+      "k": "B",
+      "p": "Hana dari Ambon (Samapta) dan Galih dari Bandung. Jika Joko dari Makassar, Indra dari Medan. Calon dari Medan tidak memilih Lalu Lintas, jadi Indra memilih Reskrim, dan Galih memilih satuan yang tersisa, yaitu Lalu Lintas. Jawaban: B."
+    },
+    {
+      "s": 76,
+      "t": "HIT",
+      "d": 2,
+      "i": "2.025 × 99 − 2.025 × 98 + 25² = …..",
+      "c": [
+        "2.050",
+        "2.625",
+        "2.650",
+        "2.675",
+        "4.050"
+      ],
+      "k": "C",
+      "h": "2025*99 - 2025*98 + 25**2",
+      "p": "Gunakan sifat distributif: 2.025 × (99 − 98) = 2.025 × 1 = 2.025. Lalu 2.025 + 25² = 2.025 + 625 = 2.650. Jawaban: C."
+    },
+    {
+      "s": 77,
+      "t": "HIT",
+      "d": 2,
+      "i": "Jika a = 3 dan b = −2, nilai (a² − b²) : (a + b) − 2ab adalah …..",
+      "c": [
+        "−7",
+        "5",
+        "7",
+        "17",
+        "25"
+      ],
+      "k": "D",
+      "h": "(9-4)/(3-2) - 2*3*(-2)",
+      "p": "a² − b² = 9 − 4 = 5 dan a + b = 1, jadi 5 : 1 = 5. Lalu 2ab = 2 × 3 × (−2) = −12, sehingga 5 − (−12) = 17. Opsi −7 muncul jika tanda negatif pada 2ab diabaikan. Jawaban: D."
+    },
+    {
+      "s": 78,
+      "t": "HIT",
+      "d": 2,
+      "i": "0,75 × 4/9 + 2/3 : 0,5 = …..",
+      "c": [
+        "1",
+        "1 1/3",
+        "1 1/2",
+        "1 2/3",
+        "2"
+      ],
+      "k": "D",
+      "h": "0.75*4/9 + (2/3)/0.5",
+      "p": "0,75 × 4/9 = 3/4 × 4/9 = 1/3. Lalu 2/3 : 0,5 = 2/3 × 2 = 4/3. Jumlahnya 1/3 + 4/3 = 5/3 = 1 2/3. Jawaban: D."
+    },
+    {
+      "s": 79,
+      "t": "HIT",
+      "d": 3,
+      "i": "Pada soal 36 ○ 4 ○ 3 = 27, setiap ○ diisi satu operasi (+, −, ×, atau :), dan perhitungan mengikuti aturan baku (kali dan bagi dikerjakan lebih dulu, dari kiri ke kanan). Pasangan operasi yang tepat secara berurutan adalah …..",
+      "c": [
+        "× dan :",
+        "− dan ×",
+        "+ dan ×",
+        ": dan ×",
+        ": dan +"
+      ],
+      "k": "D",
+      "p": "Uji setiap pilihan: 36 × 4 : 3 = 48; 36 − 4 × 3 = 24; 36 : 4 × 3 = 9 × 3 = 27; 36 + 4 × 3 = 48; 36 : 4 + 3 = 12. Hanya pasangan : dan × yang menghasilkan 27. Jawaban: D."
+    },
+    {
+      "s": 80,
+      "t": "HIT",
+      "d": 2,
+      "i": "Suatu bilangan ditambah 15% dari bilangan itu sendiri, lalu dikurangi 24, hasilnya 91. Bilangan tersebut adalah …..",
+      "c": [
+        "80",
+        "95",
+        "100",
+        "105",
+        "115"
+      ],
+      "k": "C",
+      "h": "(91 + 24) / 1.15",
+      "p": "Misalkan bilangannya x. Maka x + 0,15x − 24 = 91, sehingga 1,15x = 115 dan x = 100. Opsi 115 lupa membagi dengan 1,15. Jawaban: C."
+    },
+    {
+      "s": 81,
+      "t": "HIT",
+      "d": 3,
+      "i": "Bilangan bulat positif terbesar n yang memenuhi n² + 3n < 200 adalah …..",
+      "c": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ],
+      "k": "B",
+      "p": "Coba bilangan di sekitar akar 200: n = 12 memberi 144 + 36 = 180 < 200 (memenuhi), sedangkan n = 13 memberi 169 + 39 = 208 > 200 (tidak memenuhi). Jadi n terbesar adalah 12. Opsi 14 muncul jika hanya memeriksa n² < 200. Jawaban: B."
+    },
+    {
+      "s": 82,
+      "t": "HIT",
+      "d": 2,
+      "i": "Diketahui a bilangan negatif, b bilangan positif, dan nilai mutlak a lebih besar daripada nilai mutlak b. Bentuk yang nilainya PASTI positif adalah …..",
+      "c": [
+        "a + b",
+        "a × b",
+        "2a + b",
+        "a + b²",
+        "a² − b²"
+      ],
+      "k": "E",
+      "p": "Karena |a| > |b|, maka a² > b², sehingga a² − b² pasti positif (E). a + b negatif karena bagian negatifnya lebih besar. a × b negatif (negatif kali positif). 2a + b lebih kecil lagi daripada a + b, jadi negatif. a + b² bisa positif atau negatif: a = −3, b = 2 memberi 1, sedangkan a = −10, b = 2 memberi −6. Jawaban: E."
+    },
+    {
+      "s": 83,
+      "t": "HIT",
+      "d": 3,
+      "i": "Angka satuan dari 7²⁰²⁶ adalah …..",
+      "c": [
+        "1",
+        "3",
+        "5",
+        "7",
+        "9"
+      ],
+      "k": "E",
+      "p": "Angka satuan pangkat 7 berulang setiap 4: 7¹ → 7, 7² → 9, 7³ → 3, 7⁴ → 1, lalu kembali ke 7. Karena 2026 : 4 bersisa 2, angka satuannya sama dengan 7², yaitu 9. Opsi 5 tidak mungkin karena pangkat 7 tidak pernah berakhiran 5. Jawaban: E."
+    },
+    {
+      "s": 84,
+      "t": "HIT",
+      "d": 3,
+      "i": "Jika 2ˣ = 32 dan 3ʸ = 81, nilai xʸ − yˣ adalah …..",
+      "c": [
+        "−399",
+        "−1",
+        "1",
+        "399",
+        "625"
+      ],
+      "k": "A",
+      "h": "5**4 - 4**5",
+      "p": "2ˣ = 32 = 2⁵, jadi x = 5. 3ʸ = 81 = 3⁴, jadi y = 4. Maka xʸ − yˣ = 5⁴ − 4⁵ = 625 − 1.024 = −399. Opsi 399 muncul jika urutan pengurangan dibalik. Jawaban: A."
+    },
+    {
+      "s": 85,
+      "t": "HIT",
+      "d": 2,
+      "i": "(2⁶ × 3⁴) : (6³ × 2²) = …..",
+      "c": [
+        "3",
+        "6",
+        "9",
+        "12",
+        "18"
+      ],
+      "k": "B",
+      "h": "(2**6 * 3**4) / (6**3 * 2**2)",
+      "p": "6³ = 2³ × 3³, jadi penyebutnya 2⁵ × 3³. Hasilnya 2⁶⁻⁵ × 3⁴⁻³ = 2¹ × 3¹ = 6. Jawaban: B."
+    },
+    {
+      "s": 86,
+      "t": "HIT",
+      "d": 2,
+      "i": "Jika 3/5 dari suatu bilangan sama dengan 2/3 dari 63, maka 1/4 dari bilangan tersebut adalah …..",
+      "c": [
+        "10,5",
+        "15",
+        "17,5",
+        "21",
+        "70"
+      ],
+      "k": "C",
+      "h": "(2/3*63) * 5/3 / 4",
+      "p": "2/3 × 63 = 42. Bilangannya = 42 : 3/5 = 70, dan 1/4 × 70 = 17,5. Opsi 70 adalah bilangan itu sendiri, belum dikalikan 1/4. Jawaban: C."
+    },
+    {
+      "s": 87,
+      "t": "CRT",
+      "d": 3,
+      "i": "Harga sebuah barang dinaikkan p%, kemudian harga yang baru diturunkan p%. Harga akhirnya ternyata 4% lebih rendah daripada harga awal. Nilai p adalah …..",
+      "c": [
+        "4",
+        "10",
+        "16",
+        "20",
+        "25"
+      ],
+      "k": "D",
+      "h": "(0.04)**0.5 * 100",
+      "p": "Harga akhir = harga awal × (1 + p/100) × (1 − p/100) = harga awal × (1 − p²/10.000). Turun 4% berarti p²/10.000 = 0,04, sehingga p² = 400 dan p = 20. Cek: naik 20% lalu turun 20% memberi 1,2 × 0,8 = 0,96. Opsi 4 adalah jebakan karena menganggap selisihnya sama dengan p. Jawaban: D."
+    },
+    {
+      "s": 88,
+      "t": "HIT",
+      "d": 3,
+      "i": "Sebuah tangki berisi air 3/8 bagian. Setelah ditambah 30 liter, isinya menjadi 3/4 bagian. Kemudian 1/4 dari isi tangki saat itu dipakai. Sisa air di tangki adalah …..",
+      "c": [
+        "30 liter",
+        "40 liter",
+        "45 liter",
+        "50 liter",
+        "60 liter"
+      ],
+      "k": "C",
+      "h": "(30/(3/4-3/8))*3/4*3/4",
+      "p": "Tambahan 30 liter sama dengan 3/4 − 3/8 = 3/8 kapasitas, jadi kapasitas tangki 30 : 3/8 = 80 liter. Isi setelah ditambah = 3/4 × 80 = 60 liter. Dipakai 1/4 × 60 = 15 liter, sehingga sisa 45 liter. Opsi 60 liter lupa mengurangi pemakaian. Jawaban: C."
+    },
+    {
+      "s": 89,
+      "t": "HIT",
+      "d": 2,
+      "i": "Sebuah tangki berisi 2,4 m³ air. Seluruh air dipindahkan ke jeriken berkapasitas 30 dm³. Banyak jeriken yang terisi penuh adalah …..",
+      "c": [
+        "8 buah",
+        "40 buah",
+        "80 buah",
+        "800 buah",
+        "8.000 buah"
+      ],
+      "k": "C",
+      "h": "2.4*1000/30",
+      "p": "1 m³ = 1.000 dm³, jadi 2,4 m³ = 2.400 dm³, dan 2.400 : 30 = 80 jeriken. Opsi 8 muncul jika 1 m³ dianggap 100 dm³. Jawaban: C."
+    },
+    {
+      "s": 90,
+      "t": "HIT",
+      "d": 3,
+      "i": "Sebuah kereta berangkat pukul 21.45 dan tiba pukul 04.20 keesokan harinya. Selama perjalanan kereta berhenti di beberapa stasiun dengan total waktu berhenti 35 menit. Lama kereta benar-benar berjalan adalah …..",
+      "c": [
+        "5 jam 25 menit",
+        "6 jam",
+        "6 jam 35 menit",
+        "7 jam 10 menit",
+        "17 jam 25 menit"
+      ],
+      "k": "B",
+      "h": "((24*60 - (21*60+45)) + (4*60+20) - 35) / 60",
+      "p": "Dari 21.45 ke 24.00 = 2 jam 15 menit, dan dari 00.00 ke 04.20 = 4 jam 20 menit, total 6 jam 35 menit. Dikurangi waktu berhenti 35 menit, hasilnya 6 jam. Opsi 17 jam 25 menit muncul jika 04.20 dikurangkan langsung dari 21.45 tanpa memperhatikan pergantian hari. Jawaban: B."
+    },
+    {
+      "s": 91,
+      "t": "HIT",
+      "d": 3,
+      "i": "Mobil A melaju 72 km/jam dan sepeda motor B melaju 15 m/detik. Keduanya berangkat bersamaan dari titik yang sama dengan arah yang sama dan kecepatan tetap. Jarak keduanya setelah 2 menit adalah …..",
+      "c": [
+        "300 m",
+        "600 m",
+        "900 m",
+        "1.800 m",
+        "4.200 m"
+      ],
+      "k": "B",
+      "h": "(72*1000/3600 - 15) * 120",
+      "p": "72 km/jam = 72.000 m : 3.600 detik = 20 m/detik. Selisih kecepatan 20 − 15 = 5 m/detik, dan 2 menit = 120 detik, jadi jaraknya 5 × 120 = 600 m. Opsi 4.200 m muncul jika kecepatan dijumlahkan, seolah-olah keduanya berlawanan arah. Jawaban: B."
+    },
+    {
+      "s": 92,
+      "t": "HIT",
+      "d": 3,
+      "i": "Sebuah toko membeli 3 gros pensil seharga Rp 864.000,00, lalu menjualnya Rp 30.000,00 per lusin. Ternyata 2 lusin pensil rusak dan tidak terjual. Keuntungan toko setelah semua pensil yang baik terjual adalah …..",
+      "c": [
+        "Rp 132.000,00",
+        "Rp 156.000,00",
+        "Rp 180.000,00",
+        "Rp 216.000,00",
+        "Rp 240.000,00"
+      ],
+      "k": "B",
+      "h": "(3*144/12 - 2) * 30000 - 864000",
+      "p": "3 gros = 3 × 144 = 432 pensil = 36 lusin. Yang terjual 36 − 2 = 34 lusin, hasilnya 34 × 30.000 = 1.020.000. Untung 1.020.000 − 864.000 = 156.000. Opsi 216.000 muncul jika pensil rusak diabaikan. Jawaban: B."
+    },
+    {
+      "s": 93,
+      "t": "CRT",
+      "d": 3,
+      "i": "Jarak kota P dan kota Q 340 km. Mobil A berangkat dari P menuju Q pukul 07.00 dengan kecepatan tetap 60 km/jam. Mobil B berangkat dari Q menuju P pukul 08.00 dengan kecepatan tetap 80 km/jam. Kedua mobil berpapasan pada pukul …..",
+      "c": [
+        "10.00",
+        "10.15",
+        "10.25",
+        "10.30",
+        "11.00"
+      ],
+      "k": "A",
+      "h": "8 + (340 - 60) / (60 + 80)",
+      "p": "Sampai pukul 08.00, mobil A sudah menempuh 60 km, sehingga sisa jarak 280 km. Sejak itu keduanya saling mendekat dengan kecepatan 60 + 80 = 140 km/jam, jadi waktu yang dibutuhkan 280 : 140 = 2 jam. Keduanya berpapasan pukul 08.00 + 2 jam = 10.00. Jawaban: A."
+    },
+    {
+      "s": 94,
+      "t": "CRT",
+      "d": 3,
+      "i": "Sebuah pekerjaan dapat diselesaikan 12 orang dalam 15 hari. Setelah dikerjakan 5 hari, 4 orang dipindahkan ke tugas lain. Sisa pekerjaan akan selesai dalam ….. hari lagi.",
+      "c": [
+        "9 hari",
+        "10 hari",
+        "12 hari",
+        "15 hari",
+        "20 hari"
+      ],
+      "k": "D",
+      "h": "(12*15 - 12*5) / (12 - 4)",
+      "p": "Beban kerja total 12 × 15 = 180 orang-hari. Dalam 5 hari sudah dikerjakan 12 × 5 = 60 orang-hari, jadi sisanya 120 orang-hari. Sisa pekerja 8 orang, sehingga waktunya 120 : 8 = 15 hari lagi. Jawaban: D."
+    },
+    {
+      "s": 95,
+      "t": "CRT",
+      "d": 3,
+      "i": "Seorang pedagang membeli 50 kg beras dengan harga Rp 10.000,00 per kg. Sebanyak 10% beras ternyata rusak dan tidak dapat dijual. Sisanya dijual Rp 12.500,00 per kg. Persentase keuntungan pedagang tersebut adalah …..",
+      "c": [
+        "10%",
+        "12,5%",
+        "15%",
+        "20%",
+        "25%"
+      ],
+      "k": "B",
+      "h": "(45*12500 - 500000) / 500000 * 100",
+      "p": "Modal 50 × 10.000 = 500.000. Beras yang terjual 50 − 5 = 45 kg, hasilnya 45 × 12.500 = 562.500. Untung 62.500, jadi 62.500 : 500.000 × 100% = 12,5%. Opsi 25% muncul jika beras rusak diabaikan. Jawaban: B."
+    },
+    {
+      "s": 96,
+      "t": "CRT",
+      "d": 3,
+      "i": "Uang Ani, Budi, dan Cici berbanding 2 : 3 : 4. Setelah Cici memberikan Rp 60.000,00 kepada Ani, uang Ani dan Cici menjadi sama banyak. Jumlah uang mereka bertiga adalah …..",
+      "c": [
+        "Rp 360.000,00",
+        "Rp 450.000,00",
+        "Rp 540.000,00",
+        "Rp 600.000,00",
+        "Rp 720.000,00"
+      ],
+      "k": "C",
+      "h": "9 * (120000 / 2)",
+      "p": "Misalkan uang Ani 2n dan Cici 4n. Setelah pemberian: 4n − 60.000 = 2n + 60.000, sehingga 2n = 120.000 dan n = 60.000. Jumlah uang bertiga = 9n = 540.000; jumlah ini tidak berubah karena uang hanya berpindah tangan. Jawaban: C."
+    },
+    {
+      "s": 97,
+      "t": "CRT",
+      "d": 3,
+      "i": "Sebuah kolam berisi 1.200 liter air dikuras dengan pompa A berkecepatan 40 liter per menit, sementara sebuah keran terus mengalirkan air ke kolam 15 liter per menit. Setelah 12 menit, pompa B berkecepatan 35 liter per menit ikut menguras. Kolam kosong setelah ….. menit sejak pompa A mulai bekerja.",
+      "c": [
+        "15 menit",
+        "20 menit",
+        "24 menit",
+        "27 menit",
+        "48 menit"
+      ],
+      "k": "D",
+      "h": "12 + (1200 - 12*(40-15)) / (40+35-15)",
+      "p": "Selama 12 menit pertama air berkurang 40 − 15 = 25 liter per menit, total 300 liter, sehingga tersisa 900 liter. Setelah pompa B bekerja, air berkurang 40 + 35 − 15 = 60 liter per menit, jadi 900 : 60 = 15 menit lagi. Totalnya 12 + 15 = 27 menit. Opsi 15 menit hanya menghitung tahap kedua. Jawaban: D."
+    },
+    {
+      "s": 98,
+      "t": "CRT",
+      "d": 3,
+      "i": "Rata-rata nilai 5 siswa adalah 78. Kemudian satu siswa diganti oleh siswa baru yang nilainya 12 lebih tinggi daripada siswa yang digantikan. Setelah itu, nilai seorang siswa lain ternyata salah catat 6 poin lebih rendah daripada seharusnya, lalu diperbaiki. Rata-rata nilai kelima siswa sekarang adalah …..",
+      "c": [
+        "79,2",
+        "80,4",
+        "81,0",
+        "81,6",
+        "84,0"
+      ],
+      "k": "D",
+      "h": "(5*78 + 12 + 6) / 5",
+      "p": "Jumlah nilai awal 5 × 78 = 390. Penggantian siswa menambah jumlah 12 poin, dan perbaikan salah catat menambah 6 poin, sehingga jumlahnya menjadi 390 + 12 + 6 = 408. Banyak siswa tetap 5, jadi rata-ratanya 408 : 5 = 81,6. Opsi 80,4 hanya menghitung penggantian siswa, dan opsi 84,0 menambahkan 12 dan 6 langsung ke rata-rata. Jawaban: D."
+    },
+    {
+      "s": 99,
+      "t": "KUA",
+      "d": 3,
+      "i": "Perhatikan keterangan berikut.",
+      "q": "x² = 49\ny = 7\nHubungan x dan y yang pasti benar adalah …..",
+      "c": [
+        "x > y",
+        "x < y",
+        "x = y",
+        "x ≤ y",
+        "Hubungan x dan y tidak dapat ditentukan"
+      ],
+      "k": "D",
+      "p": "Dari x² = 49 didapat x = 7 atau x = −7. Jika x = 7, maka x = y. Jika x = −7, maka x < y. Pada kedua kemungkinan, x ≤ y selalu benar. Opsi E adalah jebakan: hubungan pastinya tetap dapat ditentukan, yaitu x ≤ y. Jawaban: D."
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Pertanyaan: Berapakah umur Andi sekarang?\nPernyataan (1): Umur Andi 3 tahun lebih tua daripada umur Budi.\nPernyataan (2): Lima tahun yang lalu, jumlah umur Andi dan Budi adalah 27 tahun.",
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "p": "Pernyataan (1) saja hanya memberi selisih umur, dan pernyataan (2) saja hanya memberi jumlah umur. Masing-masing belum menentukan umur Andi. Jika digabung, A = B + 3 dan (A − 5) + (B − 5) = 27, sehingga A + B = 37 dan A = 20. Kedua pernyataan bersama-sama cukup. Jawaban: C."
+    }
+  ]
+}
