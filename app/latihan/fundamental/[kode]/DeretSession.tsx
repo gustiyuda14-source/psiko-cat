@@ -1,50 +1,85 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useReducer, useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { deretAnswer, rkTier, type FundamentalMeta } from "@/lib/fundamental";
-import { ExamBar, ExamBody, ExamTimer } from "@/app/components/ExamChrome";
+import { KORAN, deretAnswer, kraepelinStats, type FundamentalMeta } from "@/lib/fundamental";
+import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { Button } from "@/app/components/ui-client";
 import Numpad from "./Numpad";
 
-type Phase = "intro" | "run" | "done";
-const BEFORE = 3;
-const AFTER = 4;
+/*
+  Rekening Koran gaya Kraepelin: grid KORAN.kolom × KORAN.baris, dikerjakan per kolom dari atas ke bawah,
+  jawaban ditulis di celah antara dua angka. Mode Tes = batas waktu per kolom, pindah otomatis saat habis,
+  tanpa umpan balik benar/salah. Mode Latihan = tanpa batas, warna benar/salah langsung tampil.
+*/
 
-export default function DeretSession({ meta, digits }: { meta: FundamentalMeta; digits: number[] }) {
+type Phase = "intro" | "run" | "done";
+type Mode = "tes" | "latihan";
+type State = { phase: Phase; mode: Mode; col: number; ans: number[][]; left: number; elapsed: number; colSec: number[]; shake: number };
+type Action = { t: "start"; mode: Mode } | { t: "tick" } | { t: "digit"; n: number; benar: boolean };
+
+const PER = KORAN.baris - 1;
+const fresh = (): State => ({
+  phase: "intro",
+  mode: "tes",
+  col: 0,
+  ans: Array.from({ length: KORAN.kolom }, () => []),
+  left: KORAN.detik,
+  elapsed: 0,
+  colSec: Array(KORAN.kolom).fill(0),
+  shake: 0,
+});
+
+const advance = (s: State): State => (s.col + 1 >= KORAN.kolom ? { ...s, phase: "done" } : { ...s, col: s.col + 1, left: KORAN.detik });
+
+function reducer(s: State, a: Action): State {
+  if (a.t === "start") return { ...fresh(), phase: "run", mode: a.mode };
+  if (s.phase !== "run") return s;
+  if (a.t === "tick") {
+    const colSec = s.colSec.map((v, i) => (i === s.col ? v + 1 : v));
+    const next = { ...s, elapsed: s.elapsed + 1, colSec };
+    if (s.mode === "latihan") return next;
+    return s.left <= 1 ? advance({ ...next, left: 0 }) : { ...next, left: s.left - 1 };
+  }
+  const ans = s.ans.map((col, i) => (i === s.col ? [...col, a.n] : col));
+  const next = { ...s, ans, shake: !a.benar && s.mode === "latihan" ? s.shake + 1 : s.shake };
+  return ans[s.col].length >= PER ? advance(next) : next;
+}
+
+const fmt = (x: number) => (Math.round(x * 10) / 10).toLocaleString("id-ID");
+
+export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; grid: number[][] }) {
   const router = useRouter();
   const op = meta.kode === "rk-kali" ? "kali" : "tambah";
   const sym = op === "kali" ? "×" : "+";
-  const total = digits.length - 1;
-  const [phase, setPhase] = useState<Phase>("intro");
-  const [answers, setAnswers] = useState<number[]>([]);
-  const [elapsed, setElapsed] = useState(0);
-  const [shake, setShake] = useState(0);
+  const [s, dispatch] = useReducer(reducer, undefined, fresh);
+  const activeRef = useRef<HTMLSpanElement>(null);
+  const pos = s.ans[s.col].length;
+  const key = (c: number, r: number) => deretAnswer(op, grid[c][r], grid[c][r + 1]);
 
   useEffect(() => {
-    if (phase !== "run") return;
-    const t = setInterval(() => setElapsed((s) => s + 1), 1000);
+    if (s.phase !== "run") return;
+    const t = setInterval(() => dispatch({ t: "tick" }), 1000);
     return () => clearInterval(t);
-  }, [phase]);
+  }, [s.phase]);
 
-  const pos = answers.length;
-  const key = (i: number) => deretAnswer(op, digits[i], digits[i + 1]);
+  // Grid mengikuti celah aktif (geser vertikal dan horizontal).
+  useEffect(() => {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    activeRef.current?.scrollIntoView({ block: "center", inline: "center", behavior: reduce ? "auto" : "smooth" });
+  }, [s.col, pos, s.phase]);
 
   const onDigit = useCallback(
     (d: string) => {
-      if (phase !== "run" || pos >= total) return;
+      if (s.phase !== "run") return;
       const n = Number(d);
-      if (n !== deretAnswer(op, digits[pos], digits[pos + 1])) {
-        setShake((s) => s + 1);
-        navigator.vibrate?.(60);
-      }
-      setAnswers((a) => [...a, n]);
-      if (pos + 1 >= total) setPhase("done");
+      const benar = n === deretAnswer(op, grid[s.col][pos], grid[s.col][pos + 1]);
+      if (!benar && s.mode === "latihan") navigator.vibrate?.(60);
+      dispatch({ t: "digit", n, benar });
     },
-    [digits, op, phase, pos, total]
+    [grid, op, pos, s.col, s.mode, s.phase]
   );
-  const start = useCallback(() => setPhase("run"), []);
 
   const exit = (
     <Link href="/dashboard/fundamental" className="mbtn">
@@ -52,22 +87,19 @@ export default function DeretSession({ meta, digits }: { meta: FundamentalMeta; 
       Keluar
     </Link>
   );
-  const timer = phase === "intro" ? undefined : <ExamTimer seconds={elapsed} label="Waktu berjalan" muted />;
-  const wrong = answers.map((a, i) => [a, i] as const).filter(([a, i]) => a !== key(i));
-  const ok = answers.length - wrong.length;
 
-  if (phase === "intro") {
+  if (s.phase === "intro") {
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={meta.label} count={`${total} soal`} actions={exit} />
+        <ExamBar title={meta.label} count={`${KORAN.kolom} kolom × ${KORAN.baris} angka`} actions={exit} />
         <div className="app-page">
           <section className="fd-result enter-rise">
-            <p className="section-kicker">Rekening Koran</p>
+            <p className="section-kicker">Rekening Koran · Kraepelin</p>
             <h1 className="fd-result-title">{meta.label}</h1>
             <p className="text-foreground">
-              Deret {total + 1} angka ditampilkan dari atas ke bawah. {op === "kali" ? "Kalikan" : "Jumlahkan"} dua angka yang
-              berdekatan, lalu ketik <b>angka satuannya saja</b>. Jawaban langsung tersimpan dan tidak bisa diubah, jadi jaga
-              ketelitian. Waktu mulai berjalan saat kamu menekan Mulai.
+              Grid berisi {KORAN.kolom} kolom angka. Kerjakan satu kolom dari atas ke bawah: {op === "kali" ? "kalikan" : "jumlahkan"} dua angka
+              yang berdekatan, lalu ketik <b>angka satuannya saja</b>. Jawaban muncul di celah antara kedua angka dan tidak bisa diubah. Kolom
+              penuh = pindah otomatis ke kolom berikutnya.
             </p>
             <div className="fd-example tnum" aria-label="Contoh">
               <span>7</span>
@@ -77,52 +109,86 @@ export default function DeretSession({ meta, digits }: { meta: FundamentalMeta; 
                 7 {sym} 8 = {op === "kali" ? 56 : 15} → tulis {deretAnswer(op, 7, 8)}
               </small>
             </div>
-            <Button variant="accent" size="lg" onClick={start}>
-              Mulai
-            </Button>
+            <div className="kp-modes">
+              <button type="button" className="kp-mode is-tes" onClick={() => dispatch({ t: "start", mode: "tes" })}>
+                <b>Mode Tes</b>
+                <span>
+                  {KORAN.detik} detik per kolom. Waktu habis = pindah kolom walau belum selesai. Benar/salah baru terlihat di hasil, seperti tes
+                  aslinya.
+                </span>
+              </button>
+              <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "latihan" })}>
+                <b>Mode Latihan</b>
+                <span>Tanpa batas waktu per kolom. Jawaban langsung berwarna hijau/merah supaya kamu tahu letak kesalahan.</span>
+              </button>
+            </div>
           </section>
         </div>
       </div>
     );
   }
 
-  if (phase === "done") {
-    const acc = Math.round((ok / total) * 1000) / 10;
-    const tier = rkTier(elapsed, acc);
+  if (s.phase === "done") {
+    const tes = s.mode === "tes";
+    const per = tes ? s.ans.map((a) => a.length) : s.colSec;
+    const st = kraepelinStats(per);
+    const wrong = s.ans.flatMap((a, c) => a.map((n, r) => ({ c, r, n })).filter(({ c, r, n }) => n !== key(c, r)));
+    const dijawab = s.ans.reduce((t, a) => t + a.length, 0);
+    const acc = dijawab ? Math.round(((dijawab - wrong.length) / dijawab) * 1000) / 10 : 0;
+    const max = Math.max(1, ...per);
+    const unit = tes ? "jawaban" : "dtk";
+    const naik = st.ketahanan > 0;
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={meta.label} count="Hasil sesi" timer={timer} actions={exit} />
+        <ExamBar title={meta.label} count="Hasil sesi" timer={<ExamTimer seconds={s.elapsed} label="Total waktu" muted />} actions={exit} />
         <div className="app-page">
-          <section className="fd-result enter-rise">
-            <p className="section-kicker">Hasil sesi</p>
-            <div className="flex items-center gap-4">
-              <span className="fd-tier tnum" data-rank={tier.rank}>{tier.rank}</span>
-              <div>
-                <h1 className="fd-result-title">{tier.label}</h1>
-                <p className="muted">{meta.label}</p>
-              </div>
-            </div>
-            <dl className="fd-stats">
-              <div><dt>Benar</dt><dd className="tnum">{ok}<span>/{total}</span></dd></div>
-              <div><dt>Akurasi</dt><dd className="tnum">{acc}%</dd></div>
-              <div><dt>Waktu</dt><dd className="tnum">{elapsed} dtk</dd></div>
+          <section className="fd-result kp-result enter-rise">
+            <p className="section-kicker">Hasil sesi · {tes ? "Mode Tes" : "Mode Latihan"}</p>
+            <h1 className="fd-result-title">{meta.label}</h1>
+            <dl className="fd-stats is-4">
+              <div><dt>Kecepatan</dt><dd className="tnum">{fmt(st.rata)}<span> {unit}/kolom</span></dd></div>
+              <div><dt>Ketelitian</dt><dd className="tnum">{wrong.length}<span> salah · {fmt(acc)}%</span></dd></div>
+              <div><dt>Keajegan</dt><dd className="tnum">{fmt(st.keajegan)}<span> {unit} selisih</span></dd></div>
+              <div><dt>Ketahanan</dt><dd className="tnum">{naik ? "+" : ""}{fmt(st.ketahanan)}<span> {unit}</span></dd></div>
             </dl>
+            <p className="muted">
+              {dijawab} dari {KORAN.kolom * PER} soal dijawab dalam {s.elapsed} detik. Keajegan = selisih kolom {tes ? "terbanyak dan tersedikit" : "terlama dan tercepat"}
+              , makin kecil makin stabil. Ketahanan = rata-rata paruh akhir dikurangi paruh awal
+              {tes ? " (positif berarti makin cepat)" : " (positif berarti makin lambat)"}.
+            </p>
+
+            <figure className="kp-chart-wrap">
+              <figcaption className="dnav-title !mt-0">{tes ? "Jawaban per kolom" : "Detik per kolom"}</figcaption>
+              <div className="kp-chart" role="list">
+                {per.map((v, i) => (
+                  <div key={i} role="listitem" className="kp-bar" title={`Kolom ${i + 1}: ${v} ${unit}`} aria-label={`Kolom ${i + 1}: ${v} ${unit}`}>
+                    <i style={{ height: `${(v / max) * 100}%` }} />
+                  </div>
+                ))}
+              </div>
+              <div className="kp-axis tnum" aria-hidden="true">
+                <span>Kolom 1</span>
+                <span>{KORAN.kolom}</span>
+              </div>
+            </figure>
+
             {wrong.length > 0 && (
               <div>
                 <h2 className="dnav-title !mt-0">Jawaban salah</h2>
                 <ul className="fd-wrong tnum">
-                  {wrong.map(([a, i]) => (
-                    <li key={i}>
-                      <span>#{i + 1}</span> {digits[i]} {sym} {digits[i + 1]} → <s>{a}</s> <b>{key(i)}</b>
+                  {wrong.slice(0, 60).map(({ c, r, n }) => (
+                    <li key={`${c}-${r}`}>
+                      <span>K{c + 1}·{r + 1}</span> {grid[c][r]} {sym} {grid[c][r + 1]} → <s>{n}</s> <b>{key(c, r)}</b>
                     </li>
                   ))}
+                  {wrong.length > 60 && <li>+{wrong.length - 60} lainnya</li>}
                 </ul>
               </div>
             )}
-            <p className="muted">Tier: S+ ≤80 dtk &gt;99,5% · S ≤90 dtk ≥90% · A ≤100 dtk ≥85% · B ≤130 dtk ≥75% · C ≤180 dtk ≥60%. Hasil belum disimpan ke akun (prototipe).</p>
+            <p className="muted">Nilai mentah tanpa norma. Hasil belum disimpan ke akun (prototipe).</p>
             <div className="flex flex-wrap gap-3">
               <Button variant="accent" size="lg" onClick={() => router.refresh()}>
-                Ulangi dengan deret baru
+                Ulangi dengan grid baru
               </Button>
               <Link href="/dashboard/fundamental" className="mbtn fd-ghost">
                 Kembali ke katalog
@@ -134,37 +200,62 @@ export default function DeretSession({ meta, digits }: { meta: FundamentalMeta; 
     );
   }
 
-  // Jendela tetap BEFORE+AFTER+1 angka supaya tinggi deret tidak berubah di awal/akhir.
-  const to = Math.min(total, Math.max(pos, BEFORE) + AFTER);
-  const from = Math.max(0, to - BEFORE - AFTER);
+  const tes = s.mode === "tes";
+  const done = s.col * PER + pos;
   return (
     <div className="min-h-[100dvh] bg-background">
-      <ExamBar title={meta.label} count={`Soal ${pos + 1} dari ${total}`} timer={timer} actions={exit}>
-        <div className="fd-progress" style={{ ["--p" as string]: `${(pos / total) * 100}%` }} aria-hidden="true" />
+      <ExamBar
+        title={meta.label}
+        count={`Kolom ${s.col + 1} dari ${KORAN.kolom} · ${tes ? "Mode Tes" : "Mode Latihan"}`}
+        timer={
+          tes ? (
+            <ExamTimer seconds={s.left} unit="dtk" label="Sisa waktu kolom" muted={s.left > 10} />
+          ) : (
+            <ExamTimer seconds={s.elapsed} label="Waktu berjalan" muted />
+          )
+        }
+        actions={exit}
+      >
+        <div className="fd-progress" style={{ ["--p" as string]: `${(done / (KORAN.kolom * PER)) * 100}%` }} aria-hidden="true" />
       </ExamBar>
-      <ExamBody>
-        <div className="fd-work is-deret">
-          {/* key = jumlah salah: deret dipasang ulang tiap jawaban salah supaya animasi getar diputar lagi. */}
-          <ol key={shake} className={`fd-strip tnum ${shake ? "is-shake" : ""}`} aria-label="Deret angka">
-            {Array.from({ length: to - from + 1 }, (_, k) => from + k).map((i) => (
-              <li key={i} className={i === pos || i === pos + 1 ? "is-pair" : i < pos ? "is-past" : ""}>
-                <span className="fd-digit">{digits[i]}</span>
-                {i < to && (
-                  <span className={`fd-slot ${i < pos ? (answers[i] === key(i) ? "is-ok" : "is-bad") : i === pos ? "is-active" : ""}`}>
-                    {i < pos ? answers[i] : ""}
-                  </span>
-                )}
-              </li>
+      <div className="kp-run">
+        <div className="kp-board">
+          {/* key = jumlah salah (Mode Latihan): kolom aktif dipasang ulang supaya animasi getar diputar lagi. */}
+          <div className="kp-grid tnum" role="group" aria-label="Grid angka">
+            {grid.map((digits, c) => (
+              <ol
+                key={c === s.col ? `a${s.shake}` : c}
+                className={`kp-col ${c === s.col ? `is-active ${s.shake ? "is-shake" : ""}` : c < s.col ? "is-past" : ""}`}
+                aria-label={`Kolom ${c + 1}`}
+              >
+                <li className="kp-head">{c + 1}</li>
+                {digits.map((d, r) => {
+                  const a = s.ans[c][r];
+                  const active = c === s.col && r === pos;
+                  const state =
+                    a !== undefined ? (tes ? "is-done" : a === key(c, r) ? "is-ok" : "is-bad") : active ? "is-active" : c < s.col ? "is-skip" : "";
+                  return (
+                    <li key={r}>
+                      <span className={`kp-d ${c === s.col && (r === pos || r === pos + 1) ? "is-pair" : ""}`}>{d}</span>
+                      {r < PER && (
+                        <span ref={active ? activeRef : undefined} className={`kp-s ${state}`}>
+                          {a ?? ""}
+                        </span>
+                      )}
+                    </li>
+                  );
+                })}
+              </ol>
             ))}
-          </ol>
-          <div className="space-y-3">
-            <p className="fd-hint">
-              {op === "kali" ? "Kalikan" : "Jumlahkan"} dua angka bertanda, ketik angka satuannya.
-            </p>
-            <Numpad onDigit={onDigit} />
           </div>
         </div>
-      </ExamBody>
+        <div className="kp-side">
+          <p className="fd-hint">
+            {op === "kali" ? "Kalikan" : "Jumlahkan"} dua angka bertanda, ketik angka satuannya. {tes ? "Kolom pindah otomatis saat waktu habis." : ""}
+          </p>
+          <Numpad onDigit={onDigit} />
+        </div>
+      </div>
     </div>
   );
 }

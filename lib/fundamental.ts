@@ -20,8 +20,8 @@ export const FUNDAMENTAL: FundamentalMeta[] = [
   { kode: "cermin", grup: "Penguatan Dasar", label: "Pasangan Cermin Perkalian", desc: "Pakai pasangan jumlah 10 (3↔7, 2↔8, 1↔9, 4↔6) untuk menghitung cepat.", kind: "isian", total: 50, contoh: ["3↔7", "2↔8", "1↔9", "4↔6"] },
   { kode: "dekomposisi", grup: "Penguatan Dasar", label: "Dekomposisi Perkalian", desc: "Pecah perkalian besar jadi bagian kecil yang mudah dihitung di kepala.", kind: "isian", total: 50, contoh: ["8×92", "14×37", "63×81"] },
   { kode: "pecahan", grup: "Penguatan Dasar", label: "Sederhanakan Pecahan", desc: "Cari FPB lalu tulis pecahan dalam bentuk paling sederhana.", kind: "pecahan", total: 50, contoh: ["12/18", "21/42", "65/156"] },
-  { kode: "rk-tambah", grup: "Rekening Koran", label: "Rekening Koran · Tambah", desc: "Jumlahkan dua angka berdekatan, tulis angka satuannya saja.", kind: "deret", total: 99, contoh: ["7+8 → 5", "4+3 → 7"] },
-  { kode: "rk-kali", grup: "Rekening Koran", label: "Rekening Koran · Kali", desc: "Kalikan dua angka berdekatan, tulis angka satuannya saja.", kind: "deret", total: 99, contoh: ["7×8 → 6", "4×3 → 2"] },
+  { kode: "rk-tambah", grup: "Rekening Koran", label: "Rekening Koran · Tambah", desc: "Grid Kraepelin 20 kolom: jumlahkan dua angka berdekatan dari atas ke bawah, tulis angka satuannya.", kind: "deret", total: 580, contoh: ["7+8 → 5", "4+3 → 7"] },
+  { kode: "rk-kali", grup: "Rekening Koran", label: "Rekening Koran · Kali", desc: "Grid Kraepelin 20 kolom: kalikan dua angka berdekatan dari atas ke bawah, tulis angka satuannya.", kind: "deret", total: 580, contoh: ["7×8 → 6", "4×3 → 2"] },
 ];
 
 export const fundamentalMeta = (kode: string) => FUNDAMENTAL.find((m) => m.kode === kode);
@@ -83,17 +83,21 @@ export function generateIsian(kode: string): IsianItem[] {
   return meta && ISIAN[kode] ? ISIAN[kode](meta.total) : [];
 }
 
-/** Deret Rekening Koran: total+1 angka 1..9; soal ke-i = pasangan (d[i], d[i+1]). */
-export const generateDeret = (total: number) => Array.from({ length: total + 1 }, () => rand(1, 9));
+/** Ukuran grid Kraepelin. ponytail: angka awal tanpa sumber resmi; ganti di sini begitu ukuran tes Sekolah Rakyat diketahui. */
+export const KORAN = { kolom: 20, baris: 30, detik: 20 };
+
+/** Grid Rekening Koran/Kraepelin: kolom × baris angka 1..9; soal = pasangan angka berurutan dalam satu kolom. */
+export const generateKoran = () => Array.from({ length: KORAN.kolom }, () => Array.from({ length: KORAN.baris }, () => rand(1, 9)));
 export const deretAnswer = (op: "tambah" | "kali", a: number, b: number) => (op === "tambah" ? a + b : a * b) % 10;
 
-export type Tier = { rank: string; label: string };
-/** Tier Rekening Koran (repo asal), dihitung dari waktu (detik) dan akurasi (%) untuk 99 soal. */
-export function rkTier(sec: number, acc: number): Tier {
-  if (sec <= 80 && acc > 99.5) return { rank: "S+", label: "Nyaris sempurna" };
-  if (sec <= 90 && acc >= 90) return { rank: "S", label: "Sangat cepat dan teliti" };
-  if (sec <= 100 && acc >= 85) return { rank: "A", label: "Cepat" };
-  if (sec <= 130 && acc >= 75) return { rank: "B", label: "Solid" };
-  if (sec <= 180 && acc >= 60) return { rank: "C", label: "Perlu dipercepat" };
-  return { rank: "D", label: "Mulai dari dasar" };
+/** Ukuran Kraepelin dari satu nilai per kolom (jumlah jawaban di Mode Tes, detik di Mode Latihan). Nilai mentah, tanpa norma. */
+export function kraepelinStats(perKolom: number[]) {
+  const avg = (xs: number[]) => (xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0);
+  const half = Math.floor(perKolom.length / 2);
+  return {
+    rata: avg(perKolom),
+    keajegan: perKolom.length ? Math.max(...perKolom) - Math.min(...perKolom) : 0,
+    // Paruh akhir dikurangi paruh awal: Mode Tes positif = makin cepat, Mode Latihan positif = makin lambat.
+    ketahanan: avg(perKolom.slice(perKolom.length - half)) - avg(perKolom.slice(0, half)),
+  };
 }

@@ -22,21 +22,10 @@
 .fd-key.is-enter { background: var(--gold-grad); border-color: transparent; color: #16224a; font-size: 1rem }
 @media (max-width: 600px) { .fd-key { min-height: 56px } }
 
-/* Rekening Koran: deret tegak, jawaban ditulis di celah antara dua angka. */
+/* Rekening Koran: bar progres di bawah bar ujian. */
 .fd-progress { height: 4px; background: linear-gradient(90deg, var(--gold) var(--p), rgba(255, 255, 255, .15) 0); transition: background var(--motion) }
-.fd-strip { display: flex; flex-direction: column; align-items: center; margin: 0; padding: var(--space-4) 0; list-style: none; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
-.fd-strip li { display: flex; flex-direction: column; align-items: center }
-.fd-digit { display: grid; place-items: center; width: 64px; height: 48px; color: var(--foreground); font: 700 2rem var(--font-display-src), sans-serif }
-.fd-strip li.is-past .fd-digit { color: var(--muted-foreground); opacity: .55 }
-.fd-strip li.is-pair .fd-digit { border-radius: var(--r-md); background: var(--brand-ink); color: var(--gold-hi) }
-.fd-slot { display: grid; place-items: center; min-width: 44px; height: 30px; margin-left: 110px; color: var(--muted-foreground); font: 700 1.1rem var(--font-display-src), sans-serif }
-.fd-slot.is-ok { color: var(--success) }
-.fd-slot.is-bad { color: var(--destructive); text-decoration: line-through }
-.fd-slot.is-active { border: 1.5px solid var(--ok); border-radius: 8px; background: var(--surface-inset) }
-.fd-slot.is-active::after { content: ''; width: 2px; height: 16px; background: var(--ok); animation: fd-caret 1s steps(1) infinite }
 .fd-hint { margin: 0; color: var(--muted-foreground); font-size: .9rem }
 @keyframes fd-caret { 50% { opacity: 0 } }
-@media (prefers-reduced-motion: no-preference) { .fd-strip.is-shake { animation: fd-shake .28s ease-in-out } }
 @keyframes fd-shake { 20%, 60% { translate: -6px 0 } 40%, 80% { translate: 6px 0 } }
 
 .fd-example { display: inline-grid; grid-template-columns: auto auto; align-items: center; gap: 2px var(--space-4); width: fit-content; padding: var(--space-3) var(--space-5); border: 1.5px dashed var(--border); border-radius: var(--r-md); font: 700 1.6rem var(--font-display-src), sans-serif }
@@ -63,10 +52,48 @@
 .mbtn.fd-ghost { border-color: var(--border); color: var(--foreground) }
 .mbtn.fd-ghost:hover { background: var(--surface-inset) }
 @media (max-width: 600px) { .fd-result { padding: var(--space-4) } .fd-stats dd { font-size: 1.35rem } }
-/* HP: deret dipadatkan supaya numpad tetap terlihat tanpa gulir; judul bar dipotong, bukan mendorong tombol Keluar. */
-@media (max-width: 600px) {
-  .fd-strip { padding: var(--space-2) 0 }
-  .fd-digit { width: 52px; height: 34px; font-size: 1.6rem }
-  .fd-slot { height: 22px; margin-left: 96px; font-size: 1rem }
-  .mbar .mbar-title { min-width: 0; overflow: hidden; text-overflow: ellipsis }
-}
+/* HP: judul bar dipotong, bukan mendorong tombol Keluar. */
+@media (max-width: 600px) { .mbar .mbar-title { min-width: 0; overflow: hidden; text-overflow: ellipsis } }
+
+/* ===== Grid Kraepelin (DeretSession). Tinggi layar = bar 62px; papan grid bergulir sendiri, numpad tetap terlihat. ===== */
+.kp-run { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--space-3); height: calc(100dvh - 62px); padding: var(--space-3) }
+@media (min-width: 900px) { .kp-run { grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr); gap: var(--space-5); padding: var(--space-5) } .kp-side { align-self: start } }
+.kp-board { overflow: auto; overscroll-behavior: contain; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
+.kp-grid { display: flex; width: max-content; padding: var(--space-2) var(--space-4) 50vh }
+.kp-col { display: flex; flex-direction: column; align-items: center; width: 44px; margin: 0; padding: 0 0 var(--space-2); list-style: none; border-radius: 8px }
+.kp-col li { display: flex; flex-direction: column; align-items: center }
+.kp-head { position: sticky; top: 0; z-index: 1; width: 100%; padding: 4px 0; background: var(--surface-card); color: var(--muted-foreground); font: 700 .7rem var(--font-display-src), sans-serif }
+.kp-d { display: grid; place-items: center; width: 26px; height: 22px; color: var(--foreground); font: 600 1.05rem var(--font-display-src), sans-serif }
+.kp-s { display: grid; place-items: center; width: 18px; height: 16px; margin-left: 24px; color: #2f5bd3; font: 700 .78rem var(--font-display-src), sans-serif }
+.kp-col.is-past .kp-d { color: var(--muted-foreground) }
+.kp-col.is-active { background: var(--surface-inset) }
+.kp-col.is-active .kp-head { background: var(--brand-ink); color: var(--gold-hi); border-radius: 8px 8px 0 0 }
+.kp-d.is-pair { border-radius: 5px; background: rgba(47, 91, 211, .14); color: #1d3f9e }
+.kp-s.is-active { border: 1.5px solid #2f5bd3; border-radius: 4px; background: var(--surface-card) }
+.kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: #2f5bd3; animation: fd-caret 1s steps(1) infinite }
+.kp-s.is-ok { color: var(--success) }
+.kp-s.is-bad { color: var(--destructive); text-decoration: line-through }
+.kp-s.is-skip::after { content: '·'; color: var(--muted-foreground) }
+@media (prefers-reduced-motion: no-preference) { .kp-col.is-shake { animation: fd-shake .28s ease-in-out } }
+@keyframes fd-shake { 20%, 60% { translate: -4px 0 } 40%, 80% { translate: 4px 0 } }
+@media (max-width: 899px) { .kp-side .fd-hint { display: none } .kp-side .fd-key { min-height: 46px } .kp-side .fd-pad { padding: var(--space-2) } }
+
+.kp-modes { display: grid; gap: var(--space-3) }
+@media (min-width: 640px) { .kp-modes { grid-template-columns: 1fr 1fr } }
+.kp-mode { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-4) var(--space-5); border: 1.5px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); color: var(--foreground); text-align: left; transition: border-color var(--motion), transform var(--motion), box-shadow var(--motion) }
+.kp-mode b { font: 700 1.2rem var(--font-display-src), sans-serif }
+.kp-mode span { color: var(--muted-foreground); font-size: .9rem; line-height: 1.5 }
+.kp-mode:hover { border-color: var(--ok); transform: translateY(-1px); box-shadow: var(--elev-2) }
+.kp-mode.is-tes { border-color: transparent; background: var(--gold-grad); color: #16224a }
+.kp-mode.is-tes span { color: #2b3555 }
+
+.kp-result { max-width: 860px }
+.fd-stats.is-4 { grid-template-columns: repeat(4, 1fr) }
+.fd-stats.is-4 dd span { font-size: .8rem }
+@media (max-width: 700px) { .fd-stats.is-4 { grid-template-columns: 1fr 1fr } .fd-stats.is-4 div:nth-child(3) { border-left: 0 } .fd-stats.is-4 div:nth-child(n+3) { border-top: 1.5px dashed var(--border) } }
+.kp-chart-wrap { margin: 0 }
+.kp-chart { display: flex; align-items: flex-end; gap: 2px; height: 140px; margin-top: var(--space-2); border-bottom: 1px solid var(--border) }
+.kp-bar { flex: 1; display: flex; align-items: flex-end; height: 100% }
+.kp-bar i { width: 100%; min-height: 2px; border-radius: 4px 4px 0 0; background: var(--brand-ink); transition: background var(--motion) }
+.kp-bar:hover i { background: var(--gold) }
+.kp-axis { display: flex; justify-content: space-between; margin-top: 4px; color: var(--muted-foreground); font-size: .75rem }

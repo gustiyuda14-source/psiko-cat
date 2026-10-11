@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { connection } from "next/server";
-import { fundamentalMeta, generateDeret, generateIsian } from "@/lib/fundamental";
+import { fundamentalMeta, generateKoran, generateIsian } from "@/lib/fundamental";
 import "@/app/fundamental.css";
 import IsianSession from "./IsianSession";
 import DeretSession from "./DeretSession";
@@ -16,7 +16,7 @@ export default async function FundamentalSessionPage({ params }: { params: Promi
   const key = crypto.randomUUID();
 
   return meta.kind === "deret" ? (
-    <DeretSession key={key} meta={meta} digits={generateDeret(meta.total)} />
+    <DeretSession key={key} meta={meta} grid={generateKoran()} />
   ) : (
     <IsianSession key={key} meta={meta} items={generateIsian(kode)} />
   );

@@ -5,7 +5,7 @@ import "@/app/fundamental.css";
 
 const GROUPS = [
   { grup: "Penguatan Dasar", tone: "tone-green", note: "50 soal isian per sesi, pembahasan langsung setelah menjawab." },
-  { grup: "Rekening Koran", tone: "tone-cyan", note: "99 pasangan angka berturut-turut, waktu dan akurasi menentukan tier." },
+  { grup: "Rekening Koran", tone: "tone-cyan", note: "Grid Kraepelin: Mode Tes dengan batas waktu per kolom, atau Mode Latihan tanpa batas waktu." },
 ] as const;
 
 export default function FundamentalPage() {
