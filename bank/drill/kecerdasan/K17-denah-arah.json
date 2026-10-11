@@ -1148,5 +1148,1385 @@
     "pembahasan": "Langkah 1: Wulan keluar dari R. Gita ke Jl. Pahlawan, menghadap Timur.\nLangkah 2: Di Jl. Gajah Mada belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Diponegoro belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 4: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: R. Putu.<br>Kenapa yang lain salah:\nOpsi A (R. Nur): itu kalau Wulan lupa belok di Jl. Diponegoro dan jalan lurus terus.\nOpsi B (Kantor Polisi): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi C (R. Ita): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi E (Rumah Sakit): itu kalau belokan terakhir salah arah (belok kanan).\nJawaban: R. Putu.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
     "gambar_pembahasan": "K17-N-050.svg",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-051",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Nisa berjalan dari Bank ke Pasar melalui Jl. Diponegoro, Jl. Melati lalu Jl. Gajah Mada. Banyaknya bangunan yang dilalui Nisa adalah …",
+    "gambar": "drill/img/K17-peta-11.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Nisa: Jl. Diponegoro → Jl. Melati → Jl. Gajah Mada. Bank (awal) dan Pasar (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Diponegoro: Kantor Pos (1).\nLangkah 3: Di Jl. Melati: Rumah Sakit, Puskesmas, SMP Bangsa (3).\nLangkah 4: Di Jl. Gajah Mada: R. Budi (1).\nLangkah 5: Jumlahkan: 1 + 3 + 1 = 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (3): hanya menghitung sisi kiri jalan.\nOpsi D (6): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (7): Bank dan Pasar ikut dihitung.\nJawaban: 5.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 5 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-051.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-052",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Lina berjalan dari R. Dewi ke R. Yudi melalui Jl. Melati. Banyaknya bangunan yang dilalui Lina adalah …",
+    "gambar": "drill/img/K17-peta-11.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "6"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Lina: Jl. Melati. R. Dewi (awal) dan R. Yudi (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Melati: Kantor Pos, Rumah Sakit, Puskesmas, SMP Bangsa (4).\nLangkah 3: Total: 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (1): ada bangunan yang terlewat.\nOpsi B (2): hanya menghitung sisi kiri jalan.\nOpsi C (3): ada bangunan yang terlewat.\nOpsi E (6): R. Dewi dan R. Yudi ikut dihitung.\nJawaban: 4.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-052.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-053",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Fajar berjalan dari R. Yudi ke Pasar melalui Jl. Melati lalu Jl. Gajah Mada. Banyaknya bangunan yang dilalui Fajar adalah …",
+    "gambar": "drill/img/K17-peta-11.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Fajar: Jl. Melati → Jl. Gajah Mada. R. Yudi (awal) dan Pasar (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Melati: Kantor Pos, Rumah Sakit, Puskesmas, SMP Bangsa (4).\nLangkah 3: Di Jl. Gajah Mada: R. Budi (1).\nLangkah 4: Jumlahkan: 4 + 1 = 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (3): hanya menghitung sisi kiri jalan.\nOpsi D (6): bangunan di pojok belokan terhitung dua kali.\nOpsi E (7): R. Yudi dan Pasar ikut dihitung.\nJawaban: 5.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 5 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-053.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-054",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Diponegoro dan Jl. Gajah Mada serta berbatasan langsung dengan sisi Barat Jl. Sudirman adalah …",
+    "gambar": "drill/img/K17-peta-11.svg",
+    "opsi": {
+      "a": "Bank",
+      "b": "Pasar",
+      "c": "Rumah Sakit",
+      "d": "Kantor Pos",
+      "e": "Kantor Camat"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Diponegoro dan Jl. Gajah Mada; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Sudirman = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Sudirman: Bank.<br>Kenapa yang lain salah:\nOpsi B (Pasar): sisi Barat Jl. Sudirman, tapi tidak di antara Jl. Diponegoro dan Jl. Gajah Mada.\nOpsi C (Rumah Sakit): sisi Timur Jl. Sudirman; sisinya tertukar.\nOpsi D (Kantor Pos): sisi Timur Jl. Sudirman; sisinya tertukar.\nOpsi E (Kantor Camat): sisi Barat Jl. Sudirman, tapi tidak di antara Jl. Diponegoro dan Jl. Gajah Mada.\nJawaban: Bank.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Diponegoro dan Jl. Gajah Mada, sisi Barat Jl. Sudirman\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-054.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-055",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Sudirman dan Jl. Diponegoro adalah …",
+    "gambar": "drill/img/K17-peta-11.svg",
+    "opsi": {
+      "a": "R. Budi",
+      "b": "Kantor Pos",
+      "c": "Rumah Sakit",
+      "d": "Puskesmas",
+      "e": "Bank"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Sudirman dan Jl. Diponegoro.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (R. Budi): pojok Tenggara persimpangan lain (Jl. Sudirman dan Jl. Gajah Mada).\nOpsi C (Rumah Sakit): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi D (Puskesmas): pojok Tenggara persimpangan lain (Jl. Melati dan Jl. Diponegoro).\nOpsi E (Bank): pojok Barat Daya simpang yang sama; kiri-kanan tertukar.\nJawaban: Kantor Pos.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Sudirman–Jl. Diponegoro\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-055.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-056",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Lina berjalan dari R. Oki ke R. Ita melalui Jl. Pemuda. Banyaknya bangunan yang dilalui Lina adalah …",
+    "gambar": "drill/img/K17-peta-12.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "6"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Lina: Jl. Pemuda. R. Oki (awal) dan R. Ita (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pemuda: Balai Desa, R. Hadi, Puskesmas, R. Putu (4).\nLangkah 3: Total: 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (1): ada bangunan yang terlewat.\nOpsi B (2): hanya menghitung sisi kiri jalan.\nOpsi C (3): ada bangunan yang terlewat.\nOpsi E (6): R. Oki dan R. Ita ikut dihitung.\nJawaban: 4.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-056.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-057",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Bayu berjalan dari Kantor Camat ke R. Ita melalui Jl. Merdeka lalu Jl. Pemuda. Banyaknya bangunan yang dilalui Bayu adalah …",
+    "gambar": "drill/img/K17-peta-12.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "5"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Bayu: Jl. Merdeka → Jl. Pemuda. Kantor Camat (awal) dan R. Ita (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Merdeka: Balai Desa, R. Hadi (2).\nLangkah 3: Di Jl. Pemuda: R. Putu (1).\nLangkah 4: Jumlahkan: 2 + 1 = 3 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): hanya menghitung sisi kiri jalan.\nOpsi C (2): hanya menghitung sisi kanan jalan.\nOpsi E (5): Kantor Camat dan R. Ita ikut dihitung.\nJawaban: 3.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 3 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-057.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-058",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Pemuda dan Jl. Veteran serta berbatasan langsung dengan sisi Timur Jl. Merdeka adalah …",
+    "gambar": "drill/img/K17-peta-12.svg",
+    "opsi": {
+      "a": "Kantor Pos",
+      "b": "Puskesmas",
+      "c": "R. Putu",
+      "d": "Kantor Camat",
+      "e": "R. Hadi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Pemuda dan Jl. Veteran; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Timur Jl. Merdeka = sebelah kanan jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Merdeka: R. Putu.<br>Kenapa yang lain salah:\nOpsi A (Kantor Pos): sisi Barat Jl. Merdeka; sisinya tertukar.\nOpsi B (Puskesmas): sisi Barat Jl. Merdeka; sisinya tertukar.\nOpsi D (Kantor Camat): sisi Timur Jl. Merdeka, tapi tidak di antara Jl. Pemuda dan Jl. Veteran.\nOpsi E (R. Hadi): sisi Timur Jl. Merdeka, tapi tidak di antara Jl. Pemuda dan Jl. Veteran.\nJawaban: R. Putu.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Pemuda dan Jl. Veteran, sisi Timur Jl. Merdeka\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-058.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-059",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Sudirman dan Jl. Pemuda adalah …",
+    "gambar": "drill/img/K17-peta-12.svg",
+    "opsi": {
+      "a": "Kantor Pos",
+      "b": "R. Oki",
+      "c": "R. Lia",
+      "d": "Balai Desa",
+      "e": "Puskesmas"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Sudirman dan Jl. Pemuda.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: Puskesmas.<br>Kenapa yang lain salah:\nOpsi A (Kantor Pos): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi B (R. Oki): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi C (R. Lia): pojok Tenggara persimpangan lain (Jl. Sudirman dan Jl. Veteran).\nOpsi D (Balai Desa): pojok Timur Laut simpang yang sama; atas-bawah tertukar.\nJawaban: Puskesmas.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Sudirman–Jl. Pemuda\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-059.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-060",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Sudirman dan Jl. Merdeka serta berbatasan langsung dengan sisi Utara Jl. Pemuda adalah …",
+    "gambar": "drill/img/K17-peta-12.svg",
+    "opsi": {
+      "a": "R. Oki",
+      "b": "Puskesmas",
+      "c": "R. Hadi",
+      "d": "Balai Desa",
+      "e": "R. Ita"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Sudirman dan Jl. Merdeka; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Utara Jl. Pemuda = sebelah atas jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Pemuda: Balai Desa.<br>Kenapa yang lain salah:\nOpsi A (R. Oki): sisi Utara Jl. Pemuda, tapi tidak di antara Jl. Sudirman dan Jl. Merdeka.\nOpsi B (Puskesmas): sisi Selatan Jl. Pemuda; sisinya tertukar.\nOpsi C (R. Hadi): sisi Utara Jl. Pemuda, tapi tidak di antara Jl. Sudirman dan Jl. Merdeka.\nOpsi E (R. Ita): sisi Utara Jl. Pemuda, tapi tidak di antara Jl. Sudirman dan Jl. Merdeka.\nJawaban: Balai Desa.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Sudirman dan Jl. Merdeka, sisi Utara Jl. Pemuda\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-060.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-061",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Sinta berjalan dari R. Yudi ke R. Joko melalui Jl. Veteran lalu Jl. Sudirman. Banyaknya bangunan yang dilalui Sinta adalah …",
+    "gambar": "drill/img/K17-peta-13.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Sinta: Jl. Veteran → Jl. Sudirman. R. Yudi (awal) dan R. Joko (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Veteran: R. Budi (1).\nLangkah 3: Di Jl. Sudirman: R. Rudi, Bank, Minimarket, R. Dewi (4).\nLangkah 4: Jumlahkan: 1 + 4 = 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (3): hanya menghitung sisi kiri jalan.\nOpsi D (6): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (7): R. Yudi dan R. Joko ikut dihitung.\nJawaban: 5.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-061.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-062",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Galih berjalan dari R. Yudi ke R. Lia melalui Jl. Veteran, Jl. Sudirman lalu Jl. Kartini. Banyaknya bangunan yang dilalui Galih adalah …",
+    "gambar": "drill/img/K17-peta-13.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Galih: Jl. Veteran → Jl. Sudirman → Jl. Kartini. R. Yudi (awal) dan R. Lia (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Veteran: R. Budi (1).\nLangkah 3: Di Jl. Sudirman: Minimarket, R. Dewi (2).\nLangkah 4: Di Jl. Kartini: R. Rudi (1).\nLangkah 5: Jumlahkan: 1 + 2 + 1 = 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): ada bangunan yang terlewat.\nOpsi C (2): hanya menghitung sisi kiri jalan.\nOpsi D (3): ruas Jl. Kartini terlupa.\nJawaban: 4.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 4 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-062.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-063",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Reza berjalan dari R. Joko ke R. Dewi melalui Jl. Sudirman. Banyaknya bangunan yang dilalui Reza adalah …",
+    "gambar": "drill/img/K17-peta-13.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Reza: Jl. Sudirman. R. Joko (awal) dan R. Dewi (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Sudirman: R. Rudi, Bank (2).\nLangkah 3: Total: 2 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): hanya menghitung sisi kiri jalan.\nOpsi D (3): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (4): R. Joko dan R. Dewi ikut dihitung.\nJawaban: 2.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-063.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-064",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Melati dan Jl. Sudirman serta berbatasan langsung dengan sisi Selatan Jl. Kartini adalah …",
+    "gambar": "drill/img/K17-peta-13.svg",
+    "opsi": {
+      "a": "R. Dewi",
+      "b": "Minimarket",
+      "c": "R. Lia",
+      "d": "R. Rudi",
+      "e": "R. Eko"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Melati dan Jl. Sudirman; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Selatan Jl. Kartini = sebelah bawah jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Kartini: R. Lia.<br>Kenapa yang lain salah:\nOpsi A (R. Dewi): sisi Selatan Jl. Kartini, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi B (Minimarket): di antara kedua jalan, tapi tidak menempel ke Jl. Kartini.\nOpsi D (R. Rudi): sisi Utara Jl. Kartini; sisinya tertukar.\nOpsi E (R. Eko): menempel ke Jl. Veteran, bukan Jl. Kartini.\nJawaban: R. Lia.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Melati dan Jl. Sudirman, sisi Selatan Jl. Kartini\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-064.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-065",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Sudirman dan Jl. Kartini adalah …",
+    "gambar": "drill/img/K17-peta-13.svg",
+    "opsi": {
+      "a": "R. Dewi",
+      "b": "R. Yudi",
+      "c": "R. Rudi",
+      "d": "Bank",
+      "e": "R. Lia"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Sudirman dan Jl. Kartini.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Dewi.<br>Kenapa yang lain salah:\nOpsi B (R. Yudi): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi C (R. Rudi): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi D (Bank): pojok Timur Laut simpang yang sama; atas-bawah tertukar.\nOpsi E (R. Lia): pojok Tenggara persimpangan lain (Jl. Melati dan Jl. Kartini).\nJawaban: R. Dewi.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Sudirman–Jl. Kartini\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-065.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-066",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Lina berjalan dari R. Gita ke R. Zul melalui Jl. Diponegoro, Jl. Sudirman lalu Jl. Kartini. Banyaknya bangunan yang dilalui Lina adalah …",
+    "gambar": "drill/img/K17-peta-14.svg",
+    "opsi": {
+      "a": "5",
+      "b": "6",
+      "c": "7",
+      "d": "8",
+      "e": "9"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Jalur Lina: Jl. Diponegoro → Jl. Sudirman → Jl. Kartini. R. Gita (awal) dan R. Zul (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Diponegoro: R. Mira, R. Budi (2).\nLangkah 3: Di Jl. Sudirman: Bank, Pura (2).\nLangkah 4: Di Jl. Kartini: R. Ita (1).\nLangkah 5: Jumlahkan: 2 + 2 + 1 = 5 bangunan. Lapangan bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi B (6): Lapangan ikut dihitung, padahal bukan bangunan.\nOpsi C (7): R. Gita dan R. Zul ikut dihitung.\nOpsi D (8): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (9): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 5.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 5 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-066.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-067",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Dimas berjalan dari R. Zul ke Pasar melalui Jl. Kartini. Banyaknya bangunan yang dilalui Dimas adalah …",
+    "gambar": "drill/img/K17-peta-14.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "6"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Jalur Dimas: Jl. Kartini. R. Zul (awal) dan Pasar (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Kartini: Pura, R. Ita (2).\nLangkah 3: Total: 2 bangunan. Lapangan bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi B (3): Lapangan ikut dihitung, padahal bukan bangunan.\nOpsi C (4): R. Zul dan Pasar ikut dihitung.\nOpsi D (5): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (6): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 2.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-067.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-068",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Diponegoro dan Jl. Kartini serta berbatasan langsung dengan sisi Timur Jl. Pemuda adalah …",
+    "gambar": "drill/img/K17-peta-14.svg",
+    "opsi": {
+      "a": "R. Ita",
+      "b": "Gereja",
+      "c": "Puskesmas",
+      "d": "R. Oki",
+      "e": "Pura"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Diponegoro dan Jl. Kartini; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Timur Jl. Pemuda = sebelah kanan jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Pemuda: Gereja.<br>Kenapa yang lain salah:\nOpsi A (R. Ita): sisi Timur Jl. Pemuda, tapi tidak di antara Jl. Diponegoro dan Jl. Kartini.\nOpsi C (Puskesmas): sisi Timur Jl. Pemuda, tapi tidak di antara Jl. Diponegoro dan Jl. Kartini.\nOpsi D (R. Oki): sisi Timur Jl. Pemuda, tapi tidak di antara Jl. Diponegoro dan Jl. Kartini.\nOpsi E (Pura): sisi Barat Jl. Pemuda; sisinya tertukar.\nJawaban: Gereja.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Diponegoro dan Jl. Kartini, sisi Timur Jl. Pemuda\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-068.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-069",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Sudirman dan Jl. Diponegoro adalah …",
+    "gambar": "drill/img/K17-peta-14.svg",
+    "opsi": {
+      "a": "R. Kiki",
+      "b": "R. Mira",
+      "c": "Bank",
+      "d": "R. Budi",
+      "e": "Pura"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Sudirman dan Jl. Diponegoro.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Budi.<br>Kenapa yang lain salah:\nOpsi A (R. Kiki): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi B (R. Mira): pojok Timur Laut simpang yang sama; atas-bawah tertukar.\nOpsi C (Bank): pojok Barat Daya simpang yang sama; kiri-kanan tertukar.\nOpsi E (Pura): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nJawaban: R. Budi.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Sudirman–Jl. Diponegoro\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-069.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-070",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Diponegoro dan Jl. Kartini serta berbatasan langsung dengan sisi Barat Jl. Pemuda adalah …",
+    "gambar": "drill/img/K17-peta-14.svg",
+    "opsi": {
+      "a": "Kantor Polisi",
+      "b": "R. Budi",
+      "c": "R. Gita",
+      "d": "Pura",
+      "e": "Gereja"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Diponegoro dan Jl. Kartini; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Pemuda = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Pemuda: Pura.<br>Kenapa yang lain salah:\nOpsi A (Kantor Polisi): sisi Barat Jl. Pemuda, tapi tidak di antara Jl. Diponegoro dan Jl. Kartini.\nOpsi B (R. Budi): di antara kedua jalan, tapi tidak menempel ke Jl. Pemuda.\nOpsi C (R. Gita): sisi Barat Jl. Pemuda, tapi tidak di antara Jl. Diponegoro dan Jl. Kartini.\nOpsi E (Gereja): sisi Timur Jl. Pemuda; sisinya tertukar.\nJawaban: Pura.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Diponegoro dan Jl. Kartini, sisi Barat Jl. Pemuda\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-070.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-071",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Dimas berjalan dari Puskesmas ke Balai Desa melalui Jl. Cempaka. Banyaknya bangunan yang dilalui Dimas adalah …",
+    "gambar": "drill/img/K17-peta-15.svg",
+    "opsi": {
+      "a": "4",
+      "b": "5",
+      "c": "6",
+      "d": "7",
+      "e": "8"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Jalur Dimas: Jl. Cempaka. Puskesmas (awal) dan Balai Desa (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Cempaka: R. Joko, Pasar, R. Mira, Kantor Camat (4).\nLangkah 3: Total: 4 bangunan. Lapangan bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi B (5): Lapangan ikut dihitung, padahal bukan bangunan.\nOpsi C (6): Puskesmas dan Balai Desa ikut dihitung.\nOpsi D (7): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (8): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 4.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 4 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-071.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-072",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Galih berjalan dari R. Oki ke Balai Desa melalui Jl. Pahlawan lalu Jl. Cempaka. Banyaknya bangunan yang dilalui Galih adalah …",
+    "gambar": "drill/img/K17-peta-15.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "5"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Galih: Jl. Pahlawan → Jl. Cempaka. R. Oki (awal) dan Balai Desa (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pahlawan: R. Mira (1).\nLangkah 3: Di Jl. Cempaka: R. Joko, Pasar (2).\nLangkah 4: Jumlahkan: 1 + 2 = 3 bangunan. Lapangan bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (1): hanya menghitung sisi kanan jalan.\nOpsi B (2): hanya menghitung sisi kiri jalan.\nOpsi D (4): Lapangan ikut dihitung, padahal bukan bangunan.\nOpsi E (5): R. Oki dan Balai Desa ikut dihitung.\nJawaban: 3.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-072.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-073",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Sinta berjalan dari R. Yudi ke Balai Desa melalui Jl. Anggrek, Jl. Pahlawan lalu Jl. Cempaka. Banyaknya bangunan yang dilalui Sinta adalah …",
+    "gambar": "drill/img/K17-peta-15.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "6"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Sinta: Jl. Anggrek → Jl. Pahlawan → Jl. Cempaka. R. Yudi (awal) dan Balai Desa (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Anggrek: Minimarket, R. Dewi (2).\nLangkah 3: Di Jl. Pahlawan: R. Mira, R. Oki (2).\nLangkah 4: Di Jl. Cempaka: R. Joko, Pasar (2).\nLangkah 5: Jumlahkan: 2 + 2 + 2 = 6 bangunan. Lapangan bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (2): ada bangunan yang terlewat.\nOpsi B (3): hanya menghitung sisi kiri jalan.\nOpsi C (4): ruas Jl. Cempaka terlupa.\nOpsi D (5): ada bangunan yang terlewat.\nJawaban: 6.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 6 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-073.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-074",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Anggrek dan Jl. Cempaka serta berbatasan langsung dengan sisi Selatan Jl. Pahlawan adalah …",
+    "gambar": "drill/img/K17-peta-15.svg",
+    "opsi": {
+      "a": "R. Oki",
+      "b": "R. Mira",
+      "c": "Puskesmas",
+      "d": "Masjid",
+      "e": "Kantor Camat"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Anggrek dan Jl. Cempaka; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Selatan Jl. Pahlawan = sebelah bawah jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Pahlawan: R. Oki.<br>Kenapa yang lain salah:\nOpsi B (R. Mira): sisi Utara Jl. Pahlawan; sisinya tertukar.\nOpsi C (Puskesmas): di antara kedua jalan, tapi tidak menempel ke Jl. Pahlawan.\nOpsi D (Masjid): sisi Selatan Jl. Pahlawan, tapi tidak di antara Jl. Anggrek dan Jl. Cempaka.\nOpsi E (Kantor Camat): sisi Selatan Jl. Pahlawan, tapi tidak di antara Jl. Anggrek dan Jl. Cempaka.\nJawaban: R. Oki.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Anggrek dan Jl. Cempaka, sisi Selatan Jl. Pahlawan\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-074.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-075",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Anggrek dan Jl. Diponegoro adalah …",
+    "gambar": "drill/img/K17-peta-15.svg",
+    "opsi": {
+      "a": "R. Mira",
+      "b": "Minimarket",
+      "c": "R. Yudi",
+      "d": "R. Dewi",
+      "e": "R. Oki"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Anggrek dan Jl. Diponegoro.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Dewi.<br>Kenapa yang lain salah:\nOpsi A (R. Mira): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi B (Minimarket): pojok Barat Daya simpang yang sama; kiri-kanan tertukar.\nOpsi C (R. Yudi): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi E (R. Oki): pojok Tenggara persimpangan lain (Jl. Anggrek dan Jl. Pahlawan).\nJawaban: R. Dewi.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Anggrek–Jl. Diponegoro\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-075.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-076",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Bayu berjalan dari R. Oki ke R. Ita melalui Jl. Flamboyan lalu Jl. Diponegoro. Banyaknya bangunan yang dilalui Bayu adalah …",
+    "gambar": "drill/img/K17-peta-16.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "5"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Bayu: Jl. Flamboyan → Jl. Diponegoro. R. Oki (awal) dan R. Ita (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Flamboyan: R. Dewi, R. Tia (2).\nLangkah 3: Di Jl. Diponegoro: Kantor Camat, Rumah Sakit, R. Gita (3).\nLangkah 4: Jumlahkan: 2 + 3 = 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (1): hanya menghitung sisi kiri jalan.\nOpsi B (2): ruas Jl. Diponegoro terlupa.\nOpsi C (3): ada bangunan yang terlewat.\nOpsi D (4): hanya menghitung sisi kanan jalan.\nJawaban: 5.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 5 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-076.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-077",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Sinta berjalan dari R. Yudi ke R. Budi melalui Jl. Gajah Mada, Jl. Diponegoro lalu Jl. Flamboyan. Banyaknya bangunan yang dilalui Sinta adalah …",
+    "gambar": "drill/img/K17-peta-16.svg",
+    "opsi": {
+      "a": "4",
+      "b": "6",
+      "c": "7",
+      "d": "8",
+      "e": "9"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Jalur Sinta: Jl. Gajah Mada → Jl. Diponegoro → Jl. Flamboyan. R. Yudi (awal) dan R. Budi (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Gajah Mada: Kantor Camat (1).\nLangkah 3: Di Jl. Diponegoro: Rumah Sakit, R. Gita (2).\nLangkah 4: Di Jl. Flamboyan: R. Oki, R. Dewi, R. Tia (3).\nLangkah 5: Jumlahkan: 1 + 2 + 3 = 6 bangunan.<br>Kenapa yang lain salah:\nOpsi A (4): hanya menghitung sisi kiri jalan.\nOpsi C (7): bangunan di pojok belokan terhitung dua kali.\nOpsi D (8): R. Yudi dan R. Budi ikut dihitung.\nOpsi E (9): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 6.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-077.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-078",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Melati dan Jl. Diponegoro serta berbatasan langsung dengan sisi Selatan Jl. Gajah Mada adalah …",
+    "gambar": "drill/img/K17-peta-16.svg",
+    "opsi": {
+      "a": "R. Tia",
+      "b": "Kantor Camat",
+      "c": "R. Dewi",
+      "d": "Rumah Sakit",
+      "e": "R. Ani"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Melati dan Jl. Diponegoro; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Selatan Jl. Gajah Mada = sebelah bawah jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Gajah Mada: Kantor Camat.<br>Kenapa yang lain salah:\nOpsi A (R. Tia): menempel ke Jl. Flamboyan, bukan Jl. Gajah Mada.\nOpsi C (R. Dewi): menempel ke Jl. Flamboyan, bukan Jl. Gajah Mada.\nOpsi D (Rumah Sakit): sisi Selatan Jl. Gajah Mada, tapi tidak di antara Jl. Melati dan Jl. Diponegoro.\nOpsi E (R. Ani): sisi Selatan Jl. Gajah Mada, tapi tidak di antara Jl. Melati dan Jl. Diponegoro.\nJawaban: Kantor Camat.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Melati dan Jl. Diponegoro, sisi Selatan Jl. Gajah Mada\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-078.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-079",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Barat Daya persimpangan Jl. Diponegoro dan Jl. Flamboyan adalah …",
+    "gambar": "drill/img/K17-peta-16.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "R. Tia",
+      "c": "R. Gita",
+      "d": "R. Dewi",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Diponegoro dan Jl. Flamboyan.\nLangkah 2: Pojok Barat Daya = blok di kiri-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Tia.<br>Kenapa yang lain salah:\nOpsi A (Pasar): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi C (R. Gita): pojok Timur Laut simpang yang sama; pojok yang berseberangan.\nOpsi D (R. Dewi): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi E (Kantor Pos): pojok Tenggara simpang yang sama; kiri-kanan tertukar.\nJawaban: R. Tia.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Barat Daya simpang Jl. Diponegoro–Jl. Flamboyan\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-079.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-080",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Gajah Mada dan Jl. Flamboyan serta berbatasan langsung dengan sisi Barat Jl. Diponegoro adalah …",
+    "gambar": "drill/img/K17-peta-16.svg",
+    "opsi": {
+      "a": "Pura",
+      "b": "Kantor Camat",
+      "c": "R. Tia",
+      "d": "Rumah Sakit",
+      "e": "R. Gita"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Gajah Mada dan Jl. Flamboyan; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Diponegoro = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Diponegoro: Kantor Camat.<br>Kenapa yang lain salah:\nOpsi A (Pura): sisi Barat Jl. Diponegoro, tapi tidak di antara Jl. Gajah Mada dan Jl. Flamboyan.\nOpsi C (R. Tia): sisi Barat Jl. Diponegoro, tapi tidak di antara Jl. Gajah Mada dan Jl. Flamboyan.\nOpsi D (Rumah Sakit): sisi Timur Jl. Diponegoro; sisinya tertukar.\nOpsi E (R. Gita): sisi Timur Jl. Diponegoro; sisinya tertukar.\nJawaban: Kantor Camat.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Gajah Mada dan Jl. Flamboyan, sisi Barat Jl. Diponegoro\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-080.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-081",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Fajar berjalan dari R. Oki ke R. Ani melalui Jl. Kartini, Jl. Kenanga lalu Jl. Pahlawan. Banyaknya bangunan yang dilalui Fajar adalah …",
+    "gambar": "drill/img/K17-peta-17.svg",
+    "opsi": {
+      "a": "2",
+      "b": "4",
+      "c": "6",
+      "d": "7",
+      "e": "8"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Fajar: Jl. Kartini → Jl. Kenanga → Jl. Pahlawan. R. Oki (awal) dan R. Ani (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Kartini: R. Gita (1).\nLangkah 3: Di Jl. Kenanga: Minimarket (1).\nLangkah 4: Di Jl. Pahlawan: R. Dewi, Masjid, Gereja, R. Ita (4).\nLangkah 5: Jumlahkan: 1 + 1 + 4 = 6 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (4): hanya menghitung sisi kiri jalan.\nOpsi D (7): bangunan di pojok belokan terhitung dua kali.\nOpsi E (8): R. Oki dan R. Ani ikut dihitung.\nJawaban: 6.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-081.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-082",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Wulan berjalan dari R. Ani ke Balai Desa melalui Jl. Pahlawan. Banyaknya bangunan yang dilalui Wulan adalah …",
+    "gambar": "drill/img/K17-peta-17.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "7"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Wulan: Jl. Pahlawan. R. Ani (awal) dan Balai Desa (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pahlawan: R. Dewi, Masjid, Gereja, R. Ita, Minimarket (5).\nLangkah 3: Total: 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kiri jalan.\nOpsi B (3): hanya menghitung sisi kanan jalan.\nOpsi C (4): ada bangunan yang terlewat.\nOpsi E (7): R. Ani dan Balai Desa ikut dihitung.\nJawaban: 5.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 5 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-082.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-083",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Dimas berjalan dari R. Mira ke R. Ani melalui Jl. Mawar lalu Jl. Pahlawan. Banyaknya bangunan yang dilalui Dimas adalah …",
+    "gambar": "drill/img/K17-peta-17.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Dimas: Jl. Mawar → Jl. Pahlawan. R. Mira (awal) dan R. Ani (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Mawar: R. Ita (1).\nLangkah 3: Di Jl. Pahlawan: R. Dewi (1).\nLangkah 4: Jumlahkan: 1 + 1 = 2 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): hanya menghitung sisi kanan jalan.\nOpsi B (1): ruas Jl. Pahlawan terlupa.\nOpsi D (3): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (4): R. Mira dan R. Ani ikut dihitung.\nJawaban: 2.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-083.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-084",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Pahlawan dan Jl. Kartini serta berbatasan langsung dengan sisi Selatan Jl. Kenanga adalah …",
+    "gambar": "drill/img/K17-peta-17.svg",
+    "opsi": {
+      "a": "R. Eko",
+      "b": "Minimarket",
+      "c": "R. Gita",
+      "d": "Perpustakaan",
+      "e": "R. Mira"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Pahlawan dan Jl. Kartini; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Selatan Jl. Kenanga = sebelah bawah jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Kenanga: Minimarket.<br>Kenapa yang lain salah:\nOpsi A (R. Eko): sisi Selatan Jl. Kenanga, tapi tidak di antara Jl. Pahlawan dan Jl. Kartini.\nOpsi C (R. Gita): sisi Utara Jl. Kenanga; sisinya tertukar.\nOpsi D (Perpustakaan): sisi Selatan Jl. Kenanga, tapi tidak di antara Jl. Pahlawan dan Jl. Kartini.\nOpsi E (R. Mira): menempel ke Jl. Mawar, bukan Jl. Kenanga.\nJawaban: Minimarket.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Pahlawan dan Jl. Kartini, sisi Selatan Jl. Kenanga\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-084.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-085",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Pahlawan dan Jl. Kenanga adalah …",
+    "gambar": "drill/img/K17-peta-17.svg",
+    "opsi": {
+      "a": "Minimarket",
+      "b": "R. Oki",
+      "c": "Gereja",
+      "d": "R. Ita",
+      "e": "Perpustakaan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Pahlawan dan Jl. Kenanga.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: Minimarket.<br>Kenapa yang lain salah:\nOpsi B (R. Oki): pojok Tenggara persimpangan lain (Jl. Kartini dan Jl. Mawar).\nOpsi C (Gereja): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi D (R. Ita): pojok Tenggara persimpangan lain (Jl. Pahlawan dan Jl. Mawar).\nOpsi E (Perpustakaan): pojok Tenggara persimpangan lain (Jl. Kartini dan Jl. Kenanga).\nJawaban: Minimarket.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Pahlawan–Jl. Kenanga\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-085.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-086",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Nisa berjalan dari SMP Bangsa ke Puskesmas melalui Jl. Pahlawan. Banyaknya bangunan yang dilalui Nisa adalah …",
+    "gambar": "drill/img/K17-peta-18.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Nisa: Jl. Pahlawan. SMP Bangsa (awal) dan Puskesmas (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pahlawan: Masjid, SD Harapan (2).\nLangkah 3: Total: 2 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): hanya menghitung sisi kiri jalan.\nOpsi D (3): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (4): SMP Bangsa dan Puskesmas ikut dihitung.\nJawaban: 2.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 2 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-086.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-087",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Bayu berjalan dari Puskesmas ke R. Gita melalui Jl. Pahlawan lalu Jl. Diponegoro. Banyaknya bangunan yang dilalui Bayu adalah …",
+    "gambar": "drill/img/K17-peta-18.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "5"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Bayu: Jl. Pahlawan → Jl. Diponegoro. Puskesmas (awal) dan R. Gita (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pahlawan: Masjid, SD Harapan, Perpustakaan, SMP Bangsa (4).\nLangkah 3: Di Jl. Diponegoro: R. Budi (1).\nLangkah 4: Jumlahkan: 4 + 1 = 5 bangunan. Taman bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (1): ada bangunan yang terlewat.\nOpsi B (2): hanya menghitung sisi kiri jalan.\nOpsi C (3): hanya menghitung sisi kanan jalan.\nOpsi D (4): ruas Jl. Diponegoro terlupa.\nJawaban: 5.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-087.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-088",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Merdeka dan Jl. Diponegoro serta berbatasan langsung dengan sisi Barat Jl. Anggrek adalah …",
+    "gambar": "drill/img/K17-peta-18.svg",
+    "opsi": {
+      "a": "SMP Bangsa",
+      "b": "SD Harapan",
+      "c": "Puskesmas",
+      "d": "R. Putu",
+      "e": "Perpustakaan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Merdeka dan Jl. Diponegoro; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Anggrek = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Anggrek: SMP Bangsa.<br>Kenapa yang lain salah:\nOpsi B (SD Harapan): sisi Barat Jl. Anggrek, tapi tidak di antara Jl. Merdeka dan Jl. Diponegoro.\nOpsi C (Puskesmas): sisi Barat Jl. Anggrek, tapi tidak di antara Jl. Merdeka dan Jl. Diponegoro.\nOpsi D (R. Putu): sisi Timur Jl. Anggrek; sisinya tertukar.\nOpsi E (Perpustakaan): menempel ke Jl. Pahlawan, bukan Jl. Anggrek.\nJawaban: SMP Bangsa.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Merdeka dan Jl. Diponegoro, sisi Barat Jl. Anggrek\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-088.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-089",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Barat Daya persimpangan Jl. Anggrek dan Jl. Merdeka adalah …",
+    "gambar": "drill/img/K17-peta-18.svg",
+    "opsi": {
+      "a": "SMP Bangsa",
+      "b": "R. Putu",
+      "c": "SD Harapan",
+      "d": "Pura",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Anggrek dan Jl. Merdeka.\nLangkah 2: Pojok Barat Daya = blok di kiri-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: SMP Bangsa.<br>Kenapa yang lain salah:\nOpsi B (R. Putu): pojok Tenggara simpang yang sama; kiri-kanan tertukar.\nOpsi C (SD Harapan): pojok Barat Laut simpang yang sama; atas-bawah tertukar.\nOpsi D (Pura): pojok Timur Laut simpang yang sama; pojok yang berseberangan.\nOpsi E (Pasar): pojok Barat Daya persimpangan lain (Jl. Pahlawan dan Jl. Diponegoro).\nJawaban: SMP Bangsa.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Barat Daya simpang Jl. Anggrek–Jl. Merdeka\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-089.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-090",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Pahlawan dan Jl. Anggrek serta berbatasan langsung dengan sisi Utara Jl. Merdeka adalah …",
+    "gambar": "drill/img/K17-peta-18.svg",
+    "opsi": {
+      "a": "Pura",
+      "b": "Masjid",
+      "c": "SMP Bangsa",
+      "d": "SD Harapan",
+      "e": "Puskesmas"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Pahlawan dan Jl. Anggrek; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Utara Jl. Merdeka = sebelah atas jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Merdeka: SD Harapan.<br>Kenapa yang lain salah:\nOpsi A (Pura): sisi Utara Jl. Merdeka, tapi tidak di antara Jl. Pahlawan dan Jl. Anggrek.\nOpsi B (Masjid): sisi Utara Jl. Merdeka, tapi tidak di antara Jl. Pahlawan dan Jl. Anggrek.\nOpsi C (SMP Bangsa): sisi Selatan Jl. Merdeka; sisinya tertukar.\nOpsi E (Puskesmas): di antara kedua jalan, tapi tidak menempel ke Jl. Merdeka.\nJawaban: SD Harapan.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Pahlawan dan Jl. Anggrek, sisi Utara Jl. Merdeka\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-090.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-091",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Lina berjalan dari Balai Desa ke R. Ani melalui Jl. Merdeka lalu Jl. Kenanga. Banyaknya bangunan yang dilalui Lina adalah …",
+    "gambar": "drill/img/K17-peta-19.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "6"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Lina: Jl. Merdeka → Jl. Kenanga. Balai Desa (awal) dan R. Ani (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Merdeka: Pasar, R. Rudi, R. Kiki (3).\nLangkah 3: Di Jl. Kenanga: Gereja (1).\nLangkah 4: Jumlahkan: 3 + 1 = 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (1): hanya menghitung sisi kiri jalan.\nOpsi B (2): ada bangunan yang terlewat.\nOpsi C (3): hanya menghitung sisi kanan jalan.\nOpsi E (6): Balai Desa dan R. Ani ikut dihitung.\nJawaban: 4.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 4 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-091.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-092",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Sinta berjalan dari R. Ani ke Rumah Sakit melalui Jl. Kenanga, Jl. Merdeka lalu Jl. Diponegoro. Banyaknya bangunan yang dilalui Sinta adalah …",
+    "gambar": "drill/img/K17-peta-19.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "6"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Sinta: Jl. Kenanga → Jl. Merdeka → Jl. Diponegoro. R. Ani (awal) dan Rumah Sakit (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Kenanga: Pasar, Gereja (2).\nLangkah 3: Di Jl. Merdeka: R. Rudi, R. Kiki (2).\nLangkah 4: Di Jl. Diponegoro: Kantor Camat, R. Dewi (2).\nLangkah 5: Jumlahkan: 2 + 2 + 2 = 6 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (3): ada bangunan yang terlewat.\nOpsi C (4): hanya menghitung sisi kiri jalan.\nOpsi D (5): ada bangunan yang terlewat.\nJawaban: 6.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-092.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-093",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Galih berjalan dari Pasar ke Masjid melalui Jl. Diponegoro. Banyaknya bangunan yang dilalui Galih adalah …",
+    "gambar": "drill/img/K17-peta-19.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Jalur Galih: Jl. Diponegoro. Pasar (awal) dan Masjid (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Diponegoro: Balai Desa, R. Rudi (2).\nLangkah 3: Total: 2 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): hanya menghitung sisi kiri jalan.\nOpsi D (3): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi E (4): Pasar dan Masjid ikut dihitung.\nJawaban: 2.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 2 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-093.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-094",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Diponegoro dan Jl. Kenanga serta berbatasan langsung dengan sisi Utara Jl. Merdeka adalah …",
+    "gambar": "drill/img/K17-peta-19.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "R. Dewi",
+      "c": "R. Rudi",
+      "d": "R. Kiki",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Diponegoro dan Jl. Kenanga; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Utara Jl. Merdeka = sebelah atas jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Merdeka: Pasar.<br>Kenapa yang lain salah:\nOpsi A (Gereja): sisi Utara Jl. Merdeka, tapi tidak di antara Jl. Diponegoro dan Jl. Kenanga.\nOpsi B (R. Dewi): di antara kedua jalan, tapi tidak menempel ke Jl. Merdeka.\nOpsi C (R. Rudi): sisi Selatan Jl. Merdeka; sisinya tertukar.\nOpsi D (R. Kiki): sisi Selatan Jl. Merdeka; sisinya tertukar.\nJawaban: Pasar.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Diponegoro dan Jl. Kenanga, sisi Utara Jl. Merdeka\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-094.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-095",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Barat Daya persimpangan Jl. Diponegoro dan Jl. Pahlawan adalah …",
+    "gambar": "drill/img/K17-peta-19.svg",
+    "opsi": {
+      "a": "R. Dewi",
+      "b": "R. Kiki",
+      "c": "Balai Desa",
+      "d": "Rumah Sakit",
+      "e": "Kantor Camat"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Diponegoro dan Jl. Pahlawan.\nLangkah 2: Pojok Barat Daya = blok di kiri-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: Kantor Camat.<br>Kenapa yang lain salah:\nOpsi A (R. Dewi): pojok Tenggara simpang yang sama; kiri-kanan tertukar.\nOpsi B (R. Kiki): pojok Barat Daya persimpangan lain (Jl. Kenanga dan Jl. Merdeka).\nOpsi C (Balai Desa): pojok Barat Daya persimpangan lain (Jl. Diponegoro dan Jl. Merdeka).\nOpsi D (Rumah Sakit): pojok Barat Laut simpang yang sama; atas-bawah tertukar.\nJawaban: Kantor Camat.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Barat Daya simpang Jl. Diponegoro–Jl. Pahlawan\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-095.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-096",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Galih berjalan dari Minimarket ke Bank melalui Jl. Pemuda, Jl. Cempaka lalu Jl. Diponegoro. Banyaknya bangunan yang dilalui Galih adalah …",
+    "gambar": "drill/img/K17-peta-20.svg",
+    "opsi": {
+      "a": "2",
+      "b": "4",
+      "c": "5",
+      "d": "6",
+      "e": "7"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Jalur Galih: Jl. Pemuda → Jl. Cempaka → Jl. Diponegoro. Minimarket (awal) dan Bank (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pemuda: Kantor Polisi, Pura (2).\nLangkah 3: Di Jl. Cempaka: Kantor Pos (1).\nLangkah 4: Di Jl. Diponegoro: Kantor Camat (1).\nLangkah 5: Jumlahkan: 2 + 1 + 1 = 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kiri jalan.\nOpsi C (5): ada bangunan yang terhitung dua kali atau bukan di jalur.\nOpsi D (6): Minimarket dan Bank ikut dihitung.\nOpsi E (7): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 4.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-096.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-097",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Wulan berjalan dari Minimarket ke SD Harapan melalui Jl. Pemuda. Banyaknya bangunan yang dilalui Wulan adalah …",
+    "gambar": "drill/img/K17-peta-20.svg",
+    "opsi": {
+      "a": "0",
+      "b": "1",
+      "c": "2",
+      "d": "3",
+      "e": "4"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Wulan: Jl. Pemuda. Minimarket (awal) dan SD Harapan (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Pemuda: Kantor Polisi, Pura, Kantor Pos, R. Nur (4).\nLangkah 3: Total: 4 bangunan.<br>Kenapa yang lain salah:\nOpsi A (0): ada bangunan yang terlewat.\nOpsi B (1): ada bangunan yang terlewat.\nOpsi C (2): hanya menghitung sisi kiri jalan.\nOpsi D (3): ada bangunan yang terlewat.\nJawaban: 4.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 4 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-097.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-098",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Kenanga dan Jl. Cempaka serta berbatasan langsung dengan sisi Barat Jl. Pemuda adalah …",
+    "gambar": "drill/img/K17-peta-20.svg",
+    "opsi": {
+      "a": "Kantor Polisi",
+      "b": "Minimarket",
+      "c": "Pura",
+      "d": "Pasar",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Kenanga dan Jl. Cempaka; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Pemuda = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Pemuda: Kantor Polisi.<br>Kenapa yang lain salah:\nOpsi B (Minimarket): sisi Timur Jl. Pemuda; sisinya tertukar.\nOpsi C (Pura): sisi Timur Jl. Pemuda; sisinya tertukar.\nOpsi D (Pasar): sisi Barat Jl. Pemuda, tapi tidak di antara Jl. Kenanga dan Jl. Cempaka.\nOpsi E (Kantor Pos): sisi Barat Jl. Pemuda, tapi tidak di antara Jl. Kenanga dan Jl. Cempaka.\nJawaban: Kantor Polisi.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Kenanga dan Jl. Cempaka, sisi Barat Jl. Pemuda\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-098.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-099",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Diponegoro dan Jl. Kenanga adalah …",
+    "gambar": "drill/img/K17-peta-20.svg",
+    "opsi": {
+      "a": "Kantor Pos",
+      "b": "R. Zul",
+      "c": "Pasar",
+      "d": "Kantor Polisi",
+      "e": "R. Ita"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Diponegoro dan Jl. Kenanga.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Zul.<br>Kenapa yang lain salah:\nOpsi A (Kantor Pos): pojok Tenggara persimpangan lain (Jl. Diponegoro dan Jl. Cempaka).\nOpsi C (Pasar): pojok Timur Laut simpang yang sama; atas-bawah tertukar.\nOpsi D (Kantor Polisi): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi E (R. Ita): pojok Barat Daya simpang yang sama; kiri-kanan tertukar.\nJawaban: R. Zul.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Diponegoro–Jl. Kenanga\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-099.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-100",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Diponegoro dan Jl. Pemuda serta berbatasan langsung dengan sisi Utara Jl. Cempaka adalah …",
+    "gambar": "drill/img/K17-peta-20.svg",
+    "opsi": {
+      "a": "Kantor Pos",
+      "b": "Pura",
+      "c": "Kantor Polisi",
+      "d": "R. Zul",
+      "e": "Balai Desa"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Diponegoro dan Jl. Pemuda; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Utara Jl. Cempaka = sebelah atas jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Cempaka: Kantor Polisi.<br>Kenapa yang lain salah:\nOpsi A (Kantor Pos): sisi Selatan Jl. Cempaka; sisinya tertukar.\nOpsi B (Pura): sisi Utara Jl. Cempaka, tapi tidak di antara Jl. Diponegoro dan Jl. Pemuda.\nOpsi D (R. Zul): di antara kedua jalan, tapi tidak menempel ke Jl. Cempaka.\nOpsi E (Balai Desa): sisi Utara Jl. Cempaka, tapi tidak di antara Jl. Diponegoro dan Jl. Pemuda.\nJawaban: Kantor Polisi.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Diponegoro dan Jl. Pemuda, sisi Utara Jl. Cempaka\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-100.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-101",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Bayu berjalan dari R. Tia ke SD Harapan melalui Jl. Merdeka. Banyaknya bangunan yang dilalui Bayu adalah …",
+    "gambar": "drill/img/K17-peta-21.svg",
+    "opsi": {
+      "a": "1",
+      "b": "2",
+      "c": "3",
+      "d": "4",
+      "e": "5"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Bayu: Jl. Merdeka. R. Tia (awal) dan SD Harapan (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Merdeka: R. Zul, Rumah Sakit, Balai Desa, Kantor Camat, Kantor Polisi (5).\nLangkah 3: Total: 5 bangunan. Taman bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (1): ada bangunan yang terlewat.\nOpsi B (2): hanya menghitung sisi kanan jalan.\nOpsi C (3): hanya menghitung sisi kiri jalan.\nOpsi D (4): ada bangunan yang terlewat.\nJawaban: 5.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-101.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-102",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Reza berjalan dari R. Tia ke R. Lia melalui Jl. Merdeka lalu Jl. Mawar. Banyaknya bangunan yang dilalui Reza adalah …",
+    "gambar": "drill/img/K17-peta-21.svg",
+    "opsi": {
+      "a": "3",
+      "b": "4",
+      "c": "5",
+      "d": "6",
+      "e": "8"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Reza: Jl. Merdeka → Jl. Mawar. R. Tia (awal) dan R. Lia (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Merdeka: R. Zul, Rumah Sakit, Balai Desa, Kantor Camat (4).\nLangkah 3: Di Jl. Mawar: R. Ita, R. Budi (2).\nLangkah 4: Jumlahkan: 4 + 2 = 6 bangunan. Taman bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (3): hanya menghitung sisi kiri jalan.\nOpsi B (4): ruas Jl. Mawar terlupa.\nOpsi C (5): ada bangunan yang terlewat.\nOpsi E (8): R. Tia dan R. Lia ikut dihitung.\nJawaban: 6.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 6 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-102.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-103",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Fajar berjalan dari R. Tia ke R. Dewi melalui Jl. Merdeka, Jl. Mawar lalu Jl. Kartini. Banyaknya bangunan yang dilalui Fajar adalah …",
+    "gambar": "drill/img/K17-peta-21.svg",
+    "opsi": {
+      "a": "4",
+      "b": "6",
+      "c": "7",
+      "d": "8",
+      "e": "9"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Jalur Fajar: Jl. Merdeka → Jl. Mawar → Jl. Kartini. R. Tia (awal) dan R. Dewi (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Merdeka: R. Zul, Rumah Sakit, Balai Desa, Kantor Camat (4).\nLangkah 3: Di Jl. Mawar: R. Budi (1).\nLangkah 4: Di Jl. Kartini: R. Ita (1).\nLangkah 5: Jumlahkan: 4 + 1 + 1 = 6 bangunan. Taman bukan bangunan, jadi tidak dihitung.<br>Kenapa yang lain salah:\nOpsi A (4): hanya menghitung sisi kiri jalan.\nOpsi C (7): Taman ikut dihitung, padahal bukan bangunan.\nOpsi D (8): R. Tia dan R. Dewi ikut dihitung.\nOpsi E (9): ada bangunan yang terhitung dua kali atau bukan di jalur.\nJawaban: 6.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-103.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-104",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Kartini dan Jl. Merdeka serta berbatasan langsung dengan sisi Utara Jl. Kenanga adalah …",
+    "gambar": "drill/img/K17-peta-21.svg",
+    "opsi": {
+      "a": "R. Zul",
+      "b": "Rumah Sakit",
+      "c": "R. Dewi",
+      "d": "R. Kiki",
+      "e": "R. Hadi"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Kartini dan Jl. Merdeka; daerah di antaranya adalah kolom tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Utara Jl. Kenanga = sebelah atas jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Kenanga: R. Zul.<br>Kenapa yang lain salah:\nOpsi B (Rumah Sakit): sisi Utara Jl. Kenanga, tapi tidak di antara Jl. Kartini dan Jl. Merdeka.\nOpsi C (R. Dewi): sisi Utara Jl. Kenanga, tapi tidak di antara Jl. Kartini dan Jl. Merdeka.\nOpsi D (R. Kiki): sisi Utara Jl. Kenanga, tapi tidak di antara Jl. Kartini dan Jl. Merdeka.\nOpsi E (R. Hadi): di antara kedua jalan, tapi tidak menempel ke Jl. Kenanga.\nJawaban: R. Zul.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Kartini dan Jl. Merdeka, sisi Utara Jl. Kenanga\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-104.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-105",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Barat Laut persimpangan Jl. Kartini dan Jl. Mawar adalah …",
+    "gambar": "drill/img/K17-peta-21.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "R. Ita",
+      "c": "R. Budi",
+      "d": "R. Nur",
+      "e": "R. Dewi"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Kartini dan Jl. Mawar.\nLangkah 2: Pojok Barat Laut = blok di kiri-atas persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: R. Ita.<br>Kenapa yang lain salah:\nOpsi A (Balai Desa): pojok Timur Laut simpang yang sama; kiri-kanan tertukar.\nOpsi C (R. Budi): pojok Tenggara simpang yang sama; pojok yang berseberangan.\nOpsi D (R. Nur): satu blok, tapi tidak di sudut yang menempel ke persimpangan.\nOpsi E (R. Dewi): pojok Barat Laut persimpangan lain (Jl. Kartini dan Jl. Kenanga).\nJawaban: R. Ita.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Barat Laut simpang Jl. Kartini–Jl. Mawar\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-105.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-106",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Galih berjalan dari SD Harapan ke Masjid melalui Jl. Flamboyan lalu Jl. Melati. Banyaknya bangunan yang dilalui Galih adalah …",
+    "gambar": "drill/img/K17-peta-22.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "7"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Jalur Galih: Jl. Flamboyan → Jl. Melati. SD Harapan (awal) dan Masjid (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Flamboyan: Minimarket, Kantor Pos, Gereja, Rumah Sakit (4).\nLangkah 3: Di Jl. Melati: Perpustakaan (1).\nLangkah 4: Jumlahkan: 4 + 1 = 5 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kanan jalan.\nOpsi B (3): hanya menghitung sisi kiri jalan.\nOpsi C (4): ruas Jl. Melati terlupa.\nOpsi E (7): SD Harapan dan Masjid ikut dihitung.\nJawaban: 5.<br>Gambaran nyata: saat patroli jalan kaki, petugas mencatat bangunan yang dilewati untuk laporan wilayah. Hitungan yang meleset membuat laporan tidak bisa dipercaya.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-106.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-107",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-LEWAT",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Bangunan yang dilalui = bangunan yang berbatasan langsung dengan ruas jalan yang ditempuh, di kedua sisi jalan, tanpa bangunan awal dan tujuan; bangunan di pojok belokan dihitung sekali.",
+    "stem": "Tono berjalan dari Kantor Camat ke SD Harapan melalui Jl. Mawar, Jl. Melati lalu Jl. Flamboyan. Banyaknya bangunan yang dilalui Tono adalah …",
+    "gambar": "drill/img/K17-peta-22.svg",
+    "opsi": {
+      "a": "2",
+      "b": "3",
+      "c": "4",
+      "d": "5",
+      "e": "6"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Jalur Tono: Jl. Mawar → Jl. Melati → Jl. Flamboyan. Kantor Camat (awal) dan SD Harapan (tujuan) tidak dihitung.\nLangkah 2: Di Jl. Mawar: Kantor Pos, Masjid (2).\nLangkah 3: Di Jl. Melati: Perpustakaan (1).\nLangkah 4: Di Jl. Flamboyan: Minimarket, Gereja, Rumah Sakit (3).\nLangkah 5: Jumlahkan: 2 + 1 + 3 = 6 bangunan.<br>Kenapa yang lain salah:\nOpsi A (2): hanya menghitung sisi kiri jalan.\nOpsi B (3): ruas Jl. Flamboyan terlupa.\nOpsi C (4): hanya menghitung sisi kanan jalan.\nOpsi D (5): ada bangunan yang terlewat.\nJawaban: 6.<br>Gambaran nyata: saksi berkata \"pelaku berjalan melewati 6 bangunan, lalu menghilang\". Petugas yang menghitung bangunan di jalur dengan benar bisa menemukan titik terakhir pelaku.\nTips: hitung per ruas jalan, sisi kiri dan kanan sekaligus, lalu jumlahkan. Bangunan awal dan tujuan tidak dihitung, dan bangunan di pojok belokan cukup dihitung sekali.",
+    "gambar_pembahasan": "K17-N-107.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-108",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Melati dan Jl. Sudirman serta berbatasan langsung dengan sisi Barat Jl. Flamboyan adalah …",
+    "gambar": "drill/img/K17-peta-22.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "Minimarket",
+      "c": "SD Harapan",
+      "d": "R. Putu",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Melati dan Jl. Sudirman; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Flamboyan = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Flamboyan: Minimarket.<br>Kenapa yang lain salah:\nOpsi A (Gereja): sisi Barat Jl. Flamboyan, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi C (SD Harapan): sisi Barat Jl. Flamboyan, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi D (R. Putu): sisi Barat Jl. Flamboyan, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi E (Kantor Pos): sisi Timur Jl. Flamboyan; sisinya tertukar.\nJawaban: Minimarket.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Melati dan Jl. Sudirman, sisi Barat Jl. Flamboyan\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-108.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-109",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang berada di pojok Tenggara persimpangan Jl. Flamboyan dan Jl. Melati adalah …",
+    "gambar": "drill/img/K17-peta-22.svg",
+    "opsi": {
+      "a": "Kantor Pos",
+      "b": "Rumah Sakit",
+      "c": "Perpustakaan",
+      "d": "R. Putu",
+      "e": "Masjid"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Temukan titik persimpangan Jl. Flamboyan dan Jl. Melati.\nLangkah 2: Pojok Tenggara = blok di kanan-bawah persimpangan itu.\nLangkah 3: Bangunan di sudut blok itu yang paling dekat ke persimpangan: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi B (Rumah Sakit): pojok Tenggara persimpangan lain (Jl. Flamboyan dan Jl. Sudirman).\nOpsi C (Perpustakaan): pojok Timur Laut simpang yang sama; atas-bawah tertukar.\nOpsi D (R. Putu): pojok Barat Laut simpang yang sama; pojok yang berseberangan.\nOpsi E (Masjid): pojok Tenggara persimpangan lain (Jl. Mawar dan Jl. Melati).\nJawaban: Kantor Pos.<br>Gambaran nyata: laporan kejadian sering menyebut lokasi seperti \"pojok Tenggara simpang Jl. Flamboyan–Jl. Melati\". Petugas harus langsung menemukan titiknya tanpa salah blok.\nTips: berdiri di titik persimpangan, lalu pakai kompas: kanan-atas = Timur Laut, kanan-bawah = Tenggara, kiri-bawah = Barat Daya, kiri-atas = Barat Laut.",
+    "gambar_pembahasan": "K17-N-109.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-110",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RELASI",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan. Pojok Timur Laut persimpangan = bangunan di sudut blok kanan-atas persimpangan yang paling dekat ke persimpangan (begitu juga pojok lain). Di antara Jl. A dan Jl. B = di blok yang diapit kedua jalan itu.",
+    "stem": "Bangunan yang terletak di antara Jl. Melati dan Jl. Sudirman serta berbatasan langsung dengan sisi Barat Jl. Mawar adalah …",
+    "gambar": "drill/img/K17-peta-22.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "Perpustakaan",
+      "c": "Masjid",
+      "d": "Kantor Camat",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Cari Jl. Melati dan Jl. Sudirman; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Mawar = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Mawar: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (Balai Desa): sisi Barat Jl. Mawar, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi B (Perpustakaan): sisi Barat Jl. Mawar, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi C (Masjid): sisi Timur Jl. Mawar; sisinya tertukar.\nOpsi D (Kantor Camat): sisi Timur Jl. Mawar; sisinya tertukar.\nJawaban: Kantor Pos.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Melati dan Jl. Sudirman, sisi Barat Jl. Mawar\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
+    "gambar_pembahasan": "K17-N-110.svg",
+    "status_kunci": "ganda"
   }
 ]
