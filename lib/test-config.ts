@@ -19,14 +19,18 @@ export function latihanHref(type: ModuleType): string {
   return `/dashboard/latihan/${MODULE_CONFIG[type].slug}`;
 }
 
-export const KECERMATAN_PACKAGES = [3, 4, 5, 6, 7, 8];
+// Pool ujian/tryout Kecermatan. Paket 9 (siluet ikon, scripts/generate-kecermatan-simbol.ts)
+// latihan saja, jadi tidak ada di sini.
+const KECERMATAN_UJIAN_PACKAGES = [3, 4, 5, 6, 7, 8];
+
+export const KECERMATAN_PACKAGES = [...KECERMATAN_UJIAN_PACKAGES, 9];
 
 export const KECERMATAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KECERMATAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
 export function pickRandomKecermatanPackage(): number {
-  return KECERMATAN_PACKAGES[Math.floor(Math.random() * KECERMATAN_PACKAGES.length)];
+  return KECERMATAN_UJIAN_PACKAGES[Math.floor(Math.random() * KECERMATAN_UJIAN_PACKAGES.length)];
 }
 
 // Aspek kedua Kecermatan: angka-huruf, bukan emoji/gambar. Masih type
@@ -47,6 +51,15 @@ export const KECERMATAN_SPASIAL_PACKAGES = [201, 202, 203, 204, 205, 206];
 
 export const KECERMATAN_SPASIAL_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KECERMATAN_SPASIAL_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
+// Aspek keempat Kecermatan: Simbol Hilang (huruf Yunani mirip, aturan dari
+// contoh soal Polri — lihat scripts/generate-kecermatan-simbol.ts). Latihan saja,
+// tidak masuk pool ujian.
+export const KECERMATAN_SIMBOL_PACKAGES = [301, 302, 303, 304, 305];
+
+export const KECERMATAN_SIMBOL_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_SIMBOL_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
 // Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)

@@ -7,22 +7,25 @@ const ASPECTS = [
   { id: "emoji", label: "Emoji & Gambar", hrefBase: "/latihan/kecermatan" },
   { id: "angka", label: "Angka & Huruf", hrefBase: "/latihan/kecermatan-angka" },
   { id: "spasial", label: "Spasial", hrefBase: "/latihan/kecermatan-spasial" },
+  { id: "simbol", label: "Simbol Hilang", hrefBase: "/latihan/kecermatan-simbol" },
 ] as const;
 
-// Satu tile "Kecermatan" di sidebar, tiga sub-tile aspek di dalamnya — bukan
+// Satu tile "Kecermatan" di sidebar, empat sub-tile aspek di dalamnya — bukan
 // tile latihan terpisah. package_number tiap aspek tidak overlap
-// (3-8, 101-105, 201+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
+// (3-9, 101-105, 201-206, 301+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
 export function KecermatanAspectPicker({
   emojiPackages,
   angkaPackages,
   spasialPackages,
+  simbolPackages,
 }: {
   emojiPackages: PackageOption[];
   angkaPackages: PackageOption[];
   spasialPackages: PackageOption[];
+  simbolPackages: PackageOption[];
 }) {
   const [aspect, setAspect] = useState<(typeof ASPECTS)[number]["id"]>("emoji");
-  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasial: spasialPackages };
+  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasial: spasialPackages, simbol: simbolPackages };
   const active = ASPECTS.find((a) => a.id === aspect)!;
 
   return (

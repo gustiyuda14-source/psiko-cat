@@ -5,6 +5,8 @@ import {
   KECERMATAN_ANGKA_PACKAGE_LABELS,
   KECERMATAN_SPASIAL_PACKAGES,
   KECERMATAN_SPASIAL_PACKAGE_LABELS,
+  KECERMATAN_SIMBOL_PACKAGES,
+  KECERMATAN_SIMBOL_PACKAGE_LABELS,
   KECERMATAN_PACKAGES,
   KECERMATAN_PACKAGE_LABELS,
   KEPRIBADIAN_PACKAGES,
@@ -25,13 +27,14 @@ const DESC = {
   KEPRIBADIAN: "Kepribadian + Substansi Khusus, 111 butir per paket",
 } as const;
 
-// Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya tiga aspek.
+// Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya empat aspek.
 const ROWS: { module: ModuleType; label: string; route: string; ids: number[]; labels: Record<number, string>; per: number }[] = [
   { module: "KECERDASAN", label: "Kecerdasan", route: "/latihan/kecerdasan", ids: KECERDASAN_PACKAGES, labels: KECERDASAN_PACKAGE_LABELS, per: 100 },
   { module: "KEPRIBADIAN", label: "Kepribadian", route: "/latihan/kepribadian", ids: KEPRIBADIAN_PACKAGES, labels: KEPRIBADIAN_PACKAGE_LABELS, per: PRIBADI_PACKAGE_SIZE },
   { module: "KECERMATAN", label: "Kecermatan Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Kecermatan Angka & Huruf", route: "/latihan/kecermatan-angka", ids: KECERMATAN_ANGKA_PACKAGES, labels: KECERMATAN_ANGKA_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Kecermatan Spasial", route: "/latihan/kecermatan-spasial", ids: KECERMATAN_SPASIAL_PACKAGES, labels: KECERMATAN_SPASIAL_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Kecermatan Simbol Hilang", route: "/latihan/kecermatan-simbol", ids: KECERMATAN_SIMBOL_PACKAGES, labels: KECERMATAN_SIMBOL_PACKAGE_LABELS, per: 500 },
 ];
 
 export default async function LatihanIndexPage() {

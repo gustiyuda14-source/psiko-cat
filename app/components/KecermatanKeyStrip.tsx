@@ -1,10 +1,10 @@
 import { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 export { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 
-// Aspek Spasial menyimpan simbol sebagai path SVG di public/, aspek lain
-// menyimpan glyph teks. Ukuran gambar ikut font-size wadahnya (em).
+// Aspek Spasial & sebagian Simbol Hilang menyimpan simbol sebagai path SVG di
+// public/, aspek lain menyimpan glyph teks. Ukuran gambar ikut font-size wadahnya (em).
 export function KecermatanSymbol({ symbol }: { symbol: string }) {
-  if (!symbol.startsWith("/kecermatan-spasial/")) return <>{symbol}</>;
+  if (!symbol.endsWith(".svg")) return <>{symbol}</>;
   // eslint-disable-next-line @next/next/no-img-element
   return <img src={symbol} alt="" draggable={false} className="h-[1.5em] w-[1.5em]" />;
 }

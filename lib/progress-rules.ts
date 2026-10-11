@@ -6,6 +6,7 @@ import {
   KECERMATAN_ANGKA_PACKAGES,
   KECERMATAN_PACKAGES,
   KECERMATAN_SPASIAL_PACKAGES,
+  KECERMATAN_SIMBOL_PACKAGES,
   KEPRIBADIAN_PACKAGES,
   PRIBADI_PACKAGE_SIZE,
 } from "@/lib/test-config";
@@ -16,6 +17,7 @@ const LATIHAN_ROUTES: [string, number[], number][] = [
   ["/latihan/kecermatan/", KECERMATAN_PACKAGES, 500],
   ["/latihan/kecermatan-angka/", KECERMATAN_ANGKA_PACKAGES, 500],
   ["/latihan/kecermatan-spasial/", KECERMATAN_SPASIAL_PACKAGES, 500],
+  ["/latihan/kecermatan-simbol/", KECERMATAN_SIMBOL_PACKAGES, 500],
 ];
 
 /** Batas butir untuk kunci latihan yang dikenal; null = kunci tidak sah. */

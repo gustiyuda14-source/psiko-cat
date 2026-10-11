@@ -3,6 +3,9 @@ import { cleanDrill, cleanLatihan, latihanKeyMax } from "./progress-rules";
 
 assert.equal(latihanKeyMax("/latihan/kecerdasan/2"), 100);
 assert.equal(latihanKeyMax("/latihan/kepribadian/11"), 111);
+assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/301"), 500);
+assert.equal(latihanKeyMax("/latihan/kecermatan/9"), 500);
+assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/306"), null);
 assert.equal(latihanKeyMax("/latihan/kecermatan-angka/101"), 500);
 assert.equal(latihanKeyMax("/latihan/kecermatan/101"), null); // paket angka bukan di rute simbol
 assert.equal(latihanKeyMax("/latihan/kecerdasan/1"), null); // paket simulasi, bukan latihan

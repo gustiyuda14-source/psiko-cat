@@ -1,0 +1,5138 @@
+{
+  "nomor": 9,
+  "nama": "Paket Siluet Gambar",
+  "kategori": "SILUET",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "/kecermatan-siluet/motorcycle.svg",
+        "B": "/kecermatan-siluet/bus.svg",
+        "C": "/kecermatan-siluet/bicycle.svg",
+        "D": "/kecermatan-siluet/truck.svg",
+        "E": "/kecermatan-siluet/car-profile.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/bus.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/truck.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/bus.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/truck.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/bus.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/car-profile.svg",
+            "/kecermatan-siluet/motorcycle.svg",
+            "/kecermatan-siluet/bicycle.svg",
+            "/kecermatan-siluet/bus.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "simbol": {
+        "A": "/kecermatan-siluet/dog.svg",
+        "B": "/kecermatan-siluet/cat.svg",
+        "C": "/kecermatan-siluet/fish.svg",
+        "D": "/kecermatan-siluet/bird.svg",
+        "E": "/kecermatan-siluet/rabbit.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/dog.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/fish.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/rabbit.svg",
+            "/kecermatan-siluet/bird.svg",
+            "/kecermatan-siluet/cat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/rabbit.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/cat.svg",
+            "/kecermatan-siluet/dog.svg",
+            "/kecermatan-siluet/fish.svg",
+            "/kecermatan-siluet/bird.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "simbol": {
+        "A": "/kecermatan-siluet/bug-beetle.svg",
+        "B": "/kecermatan-siluet/horse.svg",
+        "C": "/kecermatan-siluet/butterfly.svg",
+        "D": "/kecermatan-siluet/cow.svg",
+        "E": "/kecermatan-siluet/shrimp.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/bug-beetle.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/horse.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/cow.svg",
+            "/kecermatan-siluet/shrimp.svg",
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/butterfly.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/bug-beetle.svg",
+            "/kecermatan-siluet/horse.svg",
+            "/kecermatan-siluet/butterfly.svg",
+            "/kecermatan-siluet/cow.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "simbol": {
+        "A": "/kecermatan-siluet/rocket.svg",
+        "B": "/kecermatan-siluet/tractor.svg",
+        "C": "/kecermatan-siluet/sailboat.svg",
+        "D": "/kecermatan-siluet/airplane.svg",
+        "E": "/kecermatan-siluet/train.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/rocket.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/sailboat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/airplane.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/tractor.svg",
+            "/kecermatan-siluet/train.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/train.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/rocket.svg",
+            "/kecermatan-siluet/sailboat.svg",
+            "/kecermatan-siluet/airplane.svg",
+            "/kecermatan-siluet/tractor.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "simbol": {
+        "A": "/kecermatan-siluet/hamburger.svg",
+        "B": "/kecermatan-siluet/carrot.svg",
+        "C": "/kecermatan-siluet/cake.svg",
+        "D": "/kecermatan-siluet/pizza.svg",
+        "E": "/kecermatan-siluet/ice-cream.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/carrot.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/cake.svg",
+            "/kecermatan-siluet/carrot.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/ice-cream.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/pizza.svg",
+            "/kecermatan-siluet/ice-cream.svg",
+            "/kecermatan-siluet/hamburger.svg",
+            "/kecermatan-siluet/cake.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "simbol": {
+        "A": "/kecermatan-siluet/flower-tulip.svg",
+        "B": "/kecermatan-siluet/tree-palm.svg",
+        "C": "/kecermatan-siluet/leaf.svg",
+        "D": "/kecermatan-siluet/tree.svg",
+        "E": "/kecermatan-siluet/cactus.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/cactus.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/cactus.svg",
+            "/kecermatan-siluet/flower-tulip.svg",
+            "/kecermatan-siluet/tree.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/tree.svg",
+            "/kecermatan-siluet/tree-palm.svg",
+            "/kecermatan-siluet/leaf.svg",
+            "/kecermatan-siluet/flower-tulip.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "simbol": {
+        "A": "/kecermatan-siluet/bell.svg",
+        "B": "/kecermatan-siluet/headphones.svg",
+        "C": "/kecermatan-siluet/piano-keys.svg",
+        "D": "/kecermatan-siluet/guitar.svg",
+        "E": "/kecermatan-siluet/microphone.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/headphones.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/guitar.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/bell.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/microphone.svg",
+            "/kecermatan-siluet/piano-keys.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/bell.svg",
+            "/kecermatan-siluet/headphones.svg",
+            "/kecermatan-siluet/piano-keys.svg",
+            "/kecermatan-siluet/guitar.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "simbol": {
+        "A": "/kecermatan-siluet/screwdriver.svg",
+        "B": "/kecermatan-siluet/hammer.svg",
+        "C": "/kecermatan-siluet/scissors.svg",
+        "D": "/kecermatan-siluet/axe.svg",
+        "E": "/kecermatan-siluet/wrench.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/axe.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/wrench.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/hammer.svg",
+            "/kecermatan-siluet/scissors.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/scissors.svg",
+            "/kecermatan-siluet/axe.svg",
+            "/kecermatan-siluet/wrench.svg",
+            "/kecermatan-siluet/screwdriver.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "simbol": {
+        "A": "/kecermatan-siluet/sun.svg",
+        "B": "/kecermatan-siluet/moon.svg",
+        "C": "/kecermatan-siluet/lightning.svg",
+        "D": "/kecermatan-siluet/snowflake.svg",
+        "E": "/kecermatan-siluet/cloud-rain.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/snowflake.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg",
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/lightning.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/moon.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/cloud-rain.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/lightning.svg",
+            "/kecermatan-siluet/sun.svg",
+            "/kecermatan-siluet/snowflake.svg",
+            "/kecermatan-siluet/moon.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "simbol": {
+        "A": "/kecermatan-siluet/pants.svg",
+        "B": "/kecermatan-siluet/baseball-cap.svg",
+        "C": "/kecermatan-siluet/t-shirt.svg",
+        "D": "/kecermatan-siluet/dress.svg",
+        "E": "/kecermatan-siluet/sneaker.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/baseball-cap.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/t-shirt.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/t-shirt.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/pants.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg",
+            "/kecermatan-siluet/sneaker.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/sneaker.svg",
+            "/kecermatan-siluet/pants.svg",
+            "/kecermatan-siluet/baseball-cap.svg",
+            "/kecermatan-siluet/dress.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    }
+  ]
+}
