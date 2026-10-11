@@ -6,6 +6,7 @@ import type { SafeQuestion, KepribadianOptionsPayload } from "@/lib/types/safe-q
 import { Badge } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { Check } from "@/app/components/icons";
+import AttemptSaver from "./AttemptSaver";
 import { ExamBody, ExamDock, QuestionNavigator } from "@/app/components/ExamChrome";
 import { PribadiReview, type PribadiReviewItem, type PribadiReviewSummary } from "@/app/components/PribadiReview";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
@@ -129,10 +130,8 @@ export default function LatihanKepribadian({
             <Check className="size-7" strokeWidth={2.5} />
           </span>
           <h2 className="font-heading mt-3 text-2xl text-foreground">Latihan selesai</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Jawaban latihan hanya tersimpan selama halaman ini terbuka.
-          </p>
         </div>
+        <AttemptSaver progressKey={progressKey} answers={Object.fromEntries(result.items.map((r) => [r.question_id, r.selected_key]))} />
         <PribadiReview summary={result.summary} items={result.items} />
         <Button
           variant="primary"

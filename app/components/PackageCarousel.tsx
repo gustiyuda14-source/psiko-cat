@@ -8,7 +8,8 @@ import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { fillY, wavePath } from "@/lib/honey";
-import { resetProgress, useLatihanProgress } from "@/lib/practice-progress";
+import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
+import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
 
 /*
   Pemilih paket latihan: kartu "Lanjutkan" (satu ketukan ke paket yang sedang
@@ -91,6 +92,7 @@ export function PackageCarousel({
   moduleLabel: string;
 }) {
   const progress = useLatihanProgress();
+  const { attempts } = useLatihanAttempts();
   const firstReady = packages.find((p) => p.questionCount === expectedCount);
   const [selected, setSelected] = useState(firstReady?.id ?? packages[0]?.id);
   const [timedMode, setTimedMode] = useState(false);
@@ -247,6 +249,21 @@ export function PackageCarousel({
                 </div>
               </div>
             </>
+          )}
+
+          {(attempts[current.key]?.length ?? 0) > 0 && (
+            <div className="mt-5 space-y-2">
+              <p className="text-sm font-semibold text-foreground">Pembahasan tersimpan</p>
+              {attempts[current.key].map((a, k) => (
+                <Link key={a.id} href={`/latihan/pembahasan/${a.id}`} className={buttonStyles({ variant: "secondary", block: true })}>
+                  {k === 0 ? "Terbaru" : "Sebelumnya"} ·{" "}
+                  {new Date(a.at).toLocaleDateString("id-ID", { day: "numeric", month: "short" })}
+                </Link>
+              ))}
+              <p className="text-xs text-muted-foreground">
+                Maksimal {MAX_LATIHAN_ATTEMPTS} pembahasan tersimpan per paket. Menyimpan percobaan berikutnya menghapus yang paling lama, setelah kamu setujui.
+              </p>
+            </div>
           )}
 
           <div className="hc-actions">

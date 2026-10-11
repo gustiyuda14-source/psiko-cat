@@ -9,6 +9,7 @@ import {
   KECERMATAN_SIMBOL_PACKAGES,
   KEPRIBADIAN_PACKAGES,
   PRIBADI_PACKAGE_SIZE,
+  type ModuleType,
 } from "@/lib/test-config";
 
 const LATIHAN_ROUTES: [string, number[], number][] = [
@@ -40,6 +41,37 @@ export function cleanLatihan(input: unknown): Record<string, number> {
   }
   return out;
 }
+
+/** Modul dan nomor paket bank soal dari kunci latihan sah; null = bukan kunci latihan. */
+export function latihanPackageOf(key: string): { module: ModuleType; pkg: number } | null {
+  if (latihanKeyMax(key) === null) return null;
+  const moduleType: ModuleType = key.startsWith("/latihan/kecerdasan/")
+    ? "KECERDASAN"
+    : key.startsWith("/latihan/kepribadian/")
+      ? "KEPRIBADIAN"
+      : "KECERMATAN";
+  return { module: moduleType, pkg: Number(key.slice(key.lastIndexOf("/") + 1)) };
+}
+
+/** Jawaban percobaan latihan {id soal: pilihan | null}; null = bentuk tidak sah atau kosong. */
+export function cleanAttemptAnswers(input: unknown, max: number): Record<string, string | null> | null {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return null;
+  const entries = Object.entries(input);
+  if (!entries.length || entries.length > max) return null;
+  const out: Record<string, string | null> = {};
+  for (const [id, pick] of entries) {
+    if (id.length > 64) return null;
+    if (pick !== null && (typeof pick !== "string" || !/^[A-Za-z0-9]{1,4}$/.test(pick))) return null;
+    out[id] = pick;
+  }
+  return out;
+}
+
+/** Batas pembahasan latihan tersimpan per paket; sama dengan LIMIT di record_latihan_attempt. */
+export const MAX_LATIHAN_ATTEMPTS = 2;
+
+/** Rute paket → percobaan latihan tersimpan (terbaru dulu, maks 2), tabel latihan_attempts. */
+export type AttemptList = Record<string, { id: number; at: string }[]>;
 
 export type DrillRow = [correct: number, attempts: number, ms: number];
 export const MAX_DRILL_ATTEMPTS = 1000;

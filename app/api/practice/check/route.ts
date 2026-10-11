@@ -8,32 +8,11 @@ import type {
   KecermatanScoringRule,
 } from "@/lib/types/safe-question";
 import { isSimulasiPackage } from "@/lib/test-config";
+import { hasLiveModuleOfType } from "@/lib/latihan-review";
 
 // Latihan dan ujian membaca dari bank soal yang sama (belum ada bank terpisah,
-// lihat F11 di AUDIT_CAT_2026-09-12.md). Peserta bisa tahu question_id dari
-// soal ujian yang sedang dikerjakan lalu mengirimkannya ke endpoint ini untuk
-// membocorkan kunci jawaban ujian aktifnya sendiri. Kunci itu dengan menolak
-// permintaan saat peserta punya module aktif (IN_PROGRESS) bertipe sama.
-async function hasLiveModuleOfType(userId: string, moduleType: string): Promise<boolean> {
-  const { data: sessions } = await supabaseAdmin
-    .from("test_sessions")
-    .select("id")
-    .eq("user_id", userId)
-    .in("status", ["PENDING", "IN_PROGRESS"]);
-  const sessionIds = (sessions ?? []).map((s) => s.id);
-  if (!sessionIds.length) return false;
-
-  const { data: liveModule } = await supabaseAdmin
-    .from("module_sessions")
-    .select("id")
-    .in("test_session_id", sessionIds)
-    .eq("module_type", moduleType)
-    .eq("status", "IN_PROGRESS")
-    .limit(1)
-    .maybeSingle();
-  return Boolean(liveModule);
-}
-
+// lihat F11 di AUDIT_CAT_2026-09-12.md): kunci ditolak selama peserta punya
+// module ujian aktif bertipe sama (hasLiveModuleOfType, juga dipakai halaman pembahasan).
 function normalizeSelection(value: unknown, allowedKeys: string[], requiredCount: number): string | null {
   if (typeof value !== "string") return null;
   const allowed = new Set(allowedKeys);

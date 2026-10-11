@@ -6,15 +6,16 @@
 // perangkat yang sama tidak melihat progres akun sebelumnya.
 
 import { useSyncExternalStore } from "react";
-import type { DrillRow } from "@/lib/progress-rules";
+import type { AttemptList, DrillRow } from "@/lib/progress-rules";
 
 /** id soal → [benar, percobaan, ms terakhir]. */
 export type DrillProgress = Record<string, DrillRow>;
 /** Rute sesi paket → butir terjauh yang pernah dijawab dalam satu sesi. */
 export type LatihanProgress = Record<string, number>;
-type State = { drill: DrillProgress; latihan: LatihanProgress };
+/** ready = data server sudah termuat sekali (sebelum itu daftar percobaan belum bisa dipercaya). */
+type State = { drill: DrillProgress; latihan: LatihanProgress; attempts: AttemptList; ready: boolean };
 
-const EMPTY: State = { drill: {}, latihan: {} };
+const EMPTY: State = { drill: {}, latihan: {}, attempts: {}, ready: false };
 // Kunci localStorage versi lama (sebelum progres pindah ke server); diimpor sekali lalu dihapus.
 const LEGACY = { drill: "psiko_drill_res", latihan: "psiko_latihan_res" } as const;
 const FLUSH_MS = 3000;
@@ -68,7 +69,7 @@ function load() {
       // Capaian latihan yang belum terkirim tetap menang atas data server yang lebih lama.
       const latihan = { ...data.latihan };
       for (const [k, n] of pending) latihan[k] = Math.max(latihan[k] ?? 0, n);
-      emit({ drill: data.drill ?? {}, latihan });
+      emit({ drill: data.drill ?? {}, latihan, attempts: data.attempts ?? {}, ready: true });
     } catch {
       // offline: tampil kosong, coba lagi saat tab difokuskan
     } finally {
@@ -102,6 +103,26 @@ export function useDrillProgress(): DrillProgress {
 
 export function useLatihanProgress(): LatihanProgress {
   return useState_().latihan;
+}
+
+/** Pembahasan latihan tersimpan per rute paket (terbaru dulu, maks 2). */
+export function useLatihanAttempts(): { attempts: AttemptList; ready: boolean } {
+  const s = useState_();
+  return { attempts: s.attempts, ready: s.ready };
+}
+
+/**
+  Simpan jawaban latihan yang sudah dikumpulkan supaya pembahasannya bisa dibuka lagi.
+  Server menyisakan 2 percobaan terbaru per paket; pemanggil wajib minta persetujuan
+  peserta dulu bila sudah ada 2 (lihat AttemptSaver).
+*/
+export async function saveLatihanAttempt(key: string, answers: Record<string, string | null>, timed = false): Promise<boolean> {
+  const gen = generation;
+  const res = await post({ action: "attempt", key, answers, timed }).catch(() => null);
+  if (!res?.ok) return false;
+  const data = (await res.json().catch(() => null)) as { attempts?: AttemptList[string] } | null;
+  if (gen === generation && data?.attempts) emit({ ...state, attempts: { ...state.attempts, [key]: data.attempts } });
+  return true;
 }
 
 /** Cerminkan percobaan yang sudah dicatat server oleh /api/drill/check. */

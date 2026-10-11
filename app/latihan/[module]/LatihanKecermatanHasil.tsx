@@ -112,13 +112,21 @@ export default function LatihanKecermatanHasil({
   score,
   scoreFailed,
   onRestart,
+  restartHref,
+  title = "Latihan selesai",
+  notice,
 }: {
   sorted: SafeQuestion[];
   answers: Record<string, LatihanFeedback>;
   timedMode: boolean;
   score: KecermatanScoreResult | null;
   scoreFailed: boolean;
-  onRestart: () => void;
+  /** Layar selesai latihan: ulang di tempat. Halaman pembahasan memakai restartHref. */
+  onRestart?: () => void;
+  restartHref?: string;
+  title?: string;
+  /** Baris status di atas tombol, mis. AttemptSaver. */
+  notice?: React.ReactNode;
 }) {
   const cols = buildColumns(sorted, answers);
   const answered = cols.reduce((s, c) => s + c.total, 0);
@@ -133,7 +141,7 @@ export default function LatihanKecermatanHasil({
         <span className="hc-tag">Kecermatan</span>
         <span className="hc-code">{timedMode ? "60 detik per kolom" : "Tanpa batas waktu"}</span>
       </div>
-      <h2 className="hc-panel-title">Latihan selesai</h2>
+      <h2 className="hc-panel-title">{title}</h2>
       <p className="hc-panel-desc tnum">
         {answered} dari {sorted.length} butir dicoba · {correct} benar
       </p>
@@ -202,11 +210,20 @@ export default function LatihanKecermatanHasil({
         {timedMode && <p>Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi.</p>}
       </figure>
 
+      {notice}
+
       <div className="hc-actions">
-        <button type="button" onClick={onRestart} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
-          <Repeat className="size-4" />
-          Ulangi latihan
-        </button>
+        {restartHref ? (
+          <Link href={restartHref} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+            <Repeat className="size-4" />
+            Ulangi latihan
+          </Link>
+        ) : (
+          <button type="button" onClick={onRestart} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+            <Repeat className="size-4" />
+            Ulangi latihan
+          </button>
+        )}
         <Link href="/dashboard/latihan/kecermatan" className={buttonStyles({ variant: "ghost", block: true })}>
           Pilih paket lain
         </Link>

@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { getDrillItem } from "@/lib/drill-bank";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { cleanDrill, cleanLatihan, type DrillRow } from "@/lib/progress-rules";
+import { cleanAttemptAnswers, cleanDrill, cleanLatihan, latihanKeyMax, latihanPackageOf, type AttemptList, type DrillRow } from "@/lib/progress-rules";
+import { packageQuestions } from "@/lib/latihan-review";
 
 // Progres drill + latihan per peserta (tabel practice_progress, docs/rencana/sql/practice-progress.sql).
 // user_id SELALU dari token sesi; browser tidak pernah menentukan milik siapa sebuah baris.
@@ -26,6 +27,16 @@ async function readAll(userId: string) {
   }
 }
 
+async function readAttempts(userId: string, key?: string): Promise<AttemptList> {
+  let query = supabaseAdmin.from("latihan_attempts").select("id, item_key, submitted_at").eq("user_id", userId);
+  if (key) query = query.eq("item_key", key);
+  const { data, error } = await query.order("submitted_at", { ascending: false });
+  if (error) throw error;
+  const out: AttemptList = {};
+  for (const r of data ?? []) (out[r.item_key] ??= []).push({ id: r.id, at: r.submitted_at });
+  return out;
+}
+
 function shape(rows: Row[]) {
   const drill: Record<string, DrillRow> = {};
   const latihan: Record<string, number> = {};
@@ -40,7 +51,12 @@ export async function GET() {
   const session = await getSession();
   if (!session) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   try {
-    return NextResponse.json(shape(await readAll(session.sub)), { headers: { "Cache-Control": "no-store" } });
+    // Pembahasan tersimpan dibaca terpisah: kalau tabelnya bermasalah, progres tetap tampil.
+    const attempts = await readAttempts(session.sub).catch((e) => {
+      console.error("progress GET attempts", e);
+      return {};
+    });
+    return NextResponse.json({ ...shape(await readAll(session.sub)), attempts }, { headers: { "Cache-Control": "no-store" } });
   } catch (e) {
     console.error("progress GET", e);
     return NextResponse.json({ error: "Progres belum bisa dimuat" }, { status: 500 });
@@ -52,6 +68,8 @@ export async function GET() {
   { action: "latihan", items: { "/latihan/kecerdasan/2": 37 } }   capaian sesi, hanya naik
   { action: "reset", kind: "drill" | "latihan", keys: string[] }  hapus progres kartu/paket
   { action: "import", drill: {...}, latihan: {...} }               sekali, dari localStorage lama
+  { action: "attempt", key, answers: { id soal: pilihan | null }, timed }  jawaban yang dikumpulkan;
+    server menyisakan 2 percobaan terbaru per paket (peserta setuju di layar selesai)
 */
 export async function POST(req: NextRequest) {
   const session = await getSession();
@@ -68,6 +86,27 @@ export async function POST(req: NextRequest) {
         if (error) throw error;
       }
       return NextResponse.json({ ok: true });
+    }
+
+    if (body.action === "attempt") {
+      const key = typeof body.key === "string" ? body.key : "";
+      const max = latihanKeyMax(key);
+      const route = latihanPackageOf(key);
+      const answers = max === null ? null : cleanAttemptAnswers(body.answers, max);
+      if (!route || !answers) return NextResponse.json({ error: "Percobaan tidak valid" }, { status: 400 });
+      // Setiap id soal harus milik paket itu, supaya baris tidak bisa diisi soal paket lain (mis. simulasi).
+      const bank = new Set((await packageQuestions(route.module, route.pkg)).map((q) => q.id));
+      if (Object.keys(answers).some((id) => !bank.has(id))) {
+        return NextResponse.json({ error: "Soal tidak cocok dengan paket" }, { status: 400 });
+      }
+      const { error } = await supabaseAdmin.rpc("record_latihan_attempt", {
+        p_user: userId,
+        p_key: key,
+        p_answers: answers,
+        p_timed: body.timed === true,
+      });
+      if (error) throw error;
+      return NextResponse.json({ ok: true, attempts: (await readAttempts(userId, key))[key] ?? [] });
     }
 
     if (body.action === "reset") {

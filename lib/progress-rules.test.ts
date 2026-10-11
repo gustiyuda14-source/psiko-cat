@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { cleanDrill, cleanLatihan, latihanKeyMax } from "./progress-rules";
+import { cleanAttemptAnswers, cleanDrill, cleanLatihan, latihanKeyMax, latihanPackageOf } from "./progress-rules";
 
 assert.equal(latihanKeyMax("/latihan/kecerdasan/2"), 100);
 assert.equal(latihanKeyMax("/latihan/kepribadian/10"), 111);
@@ -25,3 +25,15 @@ assert.deepEqual(
 assert.deepEqual(cleanDrill({ "K01-001": [0, 5000, 0] }, (id) => bank.has(id)), {});
 
 console.log("progress-rules ok");
+
+assert.deepEqual(latihanPackageOf("/latihan/kecerdasan/2"), { module: "KECERDASAN", pkg: 2 });
+assert.deepEqual(latihanPackageOf("/latihan/kecermatan-angka/101"), { module: "KECERMATAN", pkg: 101 });
+assert.deepEqual(latihanPackageOf("/latihan/kepribadian/10"), { module: "KEPRIBADIAN", pkg: 10 });
+assert.equal(latihanPackageOf("/latihan/kecerdasan/1"), null);
+
+assert.deepEqual(cleanAttemptAnswers({ a: "B", b: null, c: "AC" }, 100), { a: "B", b: null, c: "AC" });
+assert.equal(cleanAttemptAnswers({}, 100), null);
+assert.equal(cleanAttemptAnswers({ a: "B", b: "C" }, 1), null); // lebih dari isi paket
+assert.equal(cleanAttemptAnswers({ a: "<script>" }, 100), null);
+assert.equal(cleanAttemptAnswers({ a: 3 }, 100), null);
+assert.equal(cleanAttemptAnswers(["B"], 100), null);

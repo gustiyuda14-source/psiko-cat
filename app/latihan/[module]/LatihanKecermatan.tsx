@@ -12,6 +12,7 @@ import { COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
 import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { scoreLatihanKecermatan } from "./actions";
 import LatihanKecermatanHasil, { type LatihanFeedback } from "./LatihanKecermatanHasil";
+import AttemptSaver from "./AttemptSaver";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const INTRO_SECONDS = 5;
@@ -233,6 +234,13 @@ export default function LatihanKecermatan({
         score={score}
         scoreFailed={scoreFailed}
         onRestart={resetPractice}
+        notice={
+          <AttemptSaver
+            progressKey={progressKey}
+            answers={Object.fromEntries(Object.entries(answers).map(([id, a]) => [id, a.selected]))}
+            timed={timedMode}
+          />
+        }
       />
     );
   }

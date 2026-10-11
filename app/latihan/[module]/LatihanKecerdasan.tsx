@@ -7,6 +7,7 @@ import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-qu
 import { Badge } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
 import { Check } from "@/app/components/icons";
+import AttemptSaver from "./AttemptSaver";
 import { ExamBody, ExamDock, QuestionNavigator, SubmitDialog } from "@/app/components/ExamChrome";
 import { KecerdasanReview, type KecerdasanReviewItem } from "@/app/components/PembahasanSection";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
@@ -155,10 +156,8 @@ export default function LatihanKecerdasan({
             <Check className="size-7" strokeWidth={2.5} />
           </span>
           <h2 className="font-heading mt-3 text-2xl text-foreground">Latihan selesai</h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Jawaban latihan hanya tersimpan selama halaman ini terbuka.
-          </p>
         </div>
+        <AttemptSaver progressKey={progressKey} answers={Object.fromEntries(results.map((r) => [r.question_id, r.selected_key]))} />
         <KecerdasanReview items={results} />
         <Button
           variant="primary"
