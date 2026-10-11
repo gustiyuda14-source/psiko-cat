@@ -307,3 +307,91 @@
 .hc-cats .hc-level::before { opacity: .6 }
 .hc-cats .hc-level[data-hit] { border-color: var(--honey-bot); background: color-mix(in srgb, var(--honey-top) 28%, var(--surface-inset)) }
 .hc-cats .hc-level[data-hit]::before { opacity: 1 }
+
+/* ── Hasil latihan Kecermatan: panel madu kanan (sticky) + rincian kolom kiri ── */
+.lr-stage { display: grid; gap: 20px; align-items: start; max-width: 1080px; margin: 0 auto }
+@media (min-width: 960px) {
+  .lr-stage { grid-template-columns: minmax(0, 1fr) 360px; gap: 28px }
+  .lr-stage > .lr-panel { grid-column: 2; grid-row: 1; position: sticky; top: 24px }
+  .lr-stage > .lr-main { grid-column: 1; grid-row: 1 }
+}
+.lr-panel { padding: 22px }
+.lr-panel .hc-panel-title { margin-top: 12px }
+.lr-meter { margin: 18px 0 4px }
+.lr-meter > div { display: grid; gap: 2px }
+.lr-meter-lab { font: 600 .72rem/1 var(--font-display-src), sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink) }
+.lr-meter .hc-meter-pct { font-size: 2.25rem }
+.lr-meter .hc-meter-of { font-size: .8rem }
+.lr-wait { margin: 18px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--surface-inset); font-size: .875rem; color: var(--muted-foreground) }
+
+.lr-idx { display: grid; gap: 10px; margin: 16px 0 0 }
+.lr-idx > div { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 5px 10px }
+.lr-idx dt { font-size: .82rem; color: var(--muted-foreground) }
+.lr-idx dd { margin: 0; font: 700 .95rem/1 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-idx i { grid-column: 1 / -1; height: 6px; overflow: hidden; border-radius: 3px; background: var(--border) }
+.lr-idx i span { display: block; height: 100%; background: linear-gradient(90deg, var(--honey-top), var(--honey-bot)); transform-origin: left; transition: transform 1100ms var(--e-out) }
+.lr-sum { margin: 14px 0 0; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-card) }
+.lr-sum > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px }
+.lr-sum dt { font-size: .82rem; color: var(--muted-foreground) }
+.lr-sum dd { margin: 0; font: 700 1.05rem/1 var(--font-display-src), sans-serif; color: var(--brand-ink); white-space: nowrap }
+.lr-sum small { font-size: .8rem; font-weight: 600; color: var(--muted-foreground) }
+.lr-warn { margin: 10px 0 0; padding: 8px 12px; border-radius: 10px; background: var(--destructive-soft); font-size: .82rem; font-weight: 600; color: var(--destructive) }
+
+/* Grafik klik per kolom: tinggi = jumlah dijawab (maks 50), madu = benar, merah = salah. */
+.lr-chart { margin: 18px 0 0; padding: 12px 12px 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface-card) }
+.lr-chart figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .75rem; color: var(--muted-foreground) }
+.lr-chart figcaption b { font: 600 .8rem var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-chart figcaption span { display: inline-flex; align-items: center; gap: 4px }
+.lr-chart figcaption i { width: 8px; height: 8px; margin-left: 6px; border-radius: 2px }
+.lr-chart ol { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; height: 112px; margin: 10px 0 0; padding: 0; list-style: none }
+.lr-chart li { display: flex; flex-direction: column; gap: 4px; min-width: 0 }
+.lr-chart-track { display: flex; flex: 1; flex-direction: column; justify-content: flex-end; gap: 3px; min-height: 0 }
+.lr-chart-n { text-align: center; font: 600 10px/1 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-chart-bar { display: flex; flex-direction: column; min-height: 2px; overflow: hidden; border-radius: 4px 4px 2px 2px; background: var(--border); transform-origin: bottom; animation: lr-grow 700ms var(--e-out) both }
+@keyframes lr-grow { from { transform: scaleY(0) } }
+.lr-chart-x { text-align: center; font: 600 10px/1 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-chart .is-ok { background: linear-gradient(180deg, var(--honey-top), var(--honey-bot)) }
+.lr-chart .is-bad { background: color-mix(in oklab, var(--destructive) 70%, var(--surface-card)) }
+.lr-chart p { margin: 8px 0 0; font-size: .75rem; color: var(--muted-foreground) }
+
+/* Rincian per kolom: baris ringkas, buka untuk melihat butir yang salah. */
+.lr-title { margin: 0 0 12px; font: 700 1.25rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-empty { padding: 14px 16px; border: 1px dashed var(--border-strong); border-radius: 14px; color: var(--muted-foreground) }
+.lr-cols { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none }
+.lr-col { overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); transition: border-color var(--motion), box-shadow 260ms }
+.lr-col[open] { border-color: var(--border-strong); box-shadow: 0 12px 28px -20px rgb(27 42 92 / .4) }
+.lr-col summary { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 10px 14px; cursor: pointer; list-style: none; transition: background-color var(--motion) }
+.lr-col summary::-webkit-details-marker { display: none }
+.lr-col summary:hover { background: var(--surface-inset) }
+.lr-col summary:focus-visible { outline: 3px solid var(--ring); outline-offset: -3px }
+.lr-col .pk-hex b { font-size: 11px }
+.lr-col-main { display: grid; flex: 1; min-width: 0; gap: 7px }
+.lr-col-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px }
+.lr-col-top b { font: 600 .95rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-col-top span { font-size: .82rem; font-weight: 600; color: var(--muted-foreground) }
+.lr-col-bar { display: flex; height: 5px; overflow: hidden; border-radius: 3px; background: var(--border) }
+.lr-col-bar .is-ok { background: var(--honey-bot) }
+.lr-col-bar .is-bad { background: color-mix(in oklab, var(--destructive) 70%, var(--surface-card)) }
+.lr-pill { flex: none; padding: 4px 9px; border-radius: 999px; background: var(--destructive-soft); font: 600 .75rem/1.2 var(--font-display-src), sans-serif; color: var(--destructive) }
+.lr-pill.is-clean { background: var(--success-soft); color: var(--success) }
+.lr-chev { flex: none; color: var(--border-strong); transition: transform 240ms var(--e-out) }
+.lr-col[open] .lr-chev { transform: rotate(90deg); color: var(--brand-ink) }
+.lr-clean { margin: 0; padding: 12px 16px; border-top: 1px solid var(--border); font-size: .875rem; color: var(--success) }
+.lr-wrong { display: grid; gap: 6px; margin: 0; padding: 10px; border-top: 1px solid var(--border); background: var(--surface-inset); list-style: none }
+.lr-wrong li { display: grid; grid-template-columns: 4.25rem auto 1fr; align-items: center; gap: 12px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-card) }
+.lr-no { font: 600 .75rem/1.2 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-sym { display: grid; grid-template-columns: repeat(4, 2.5rem); gap: 4px }
+.lr-sym span { display: grid; place-items: center; height: 2.5rem; border-radius: 7px; background: var(--surface-inset); font-size: 1.25rem }
+.lr-ans { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; font-size: .8rem; font-weight: 600 }
+.lr-ans span { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 999px; font-size: .8rem }
+.lr-ans .is-bad { background: var(--destructive-soft); color: var(--destructive) }
+.lr-ans .is-ok { background: var(--success-soft); color: var(--success) }
+@media (max-width: 559px) {
+  .lr-wrong li { grid-template-columns: 1fr auto; }
+  .lr-wrong .lr-sym { grid-column: 1 / -1; grid-row: 2 }
+  .lr-ans { justify-content: flex-end }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lr-chart-bar { animation: none }
+  .lr-idx i span, .lr-chev { transition: none }
+}

@@ -1,56 +1,21 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { recordLatihanProgress } from "@/lib/practice-progress";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
-import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
-import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";
 import { KecermatanKeyStrip, KecermatanSymbol, KECERMATAN_KEYS } from "@/app/components/KecermatanKeyStrip";
-import { buttonStyles, Meter } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { Repeat, Timer } from "@/app/components/icons";
+import { Timer } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
+import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
+import { scoreLatihanKecermatan } from "./actions";
+import LatihanKecermatanHasil, { type LatihanFeedback } from "./LatihanKecermatanHasil";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const INTRO_SECONDS = 5;
-type Feedback = { selected: string; is_correct: boolean; correct_key: string };
-
-function buildLocalGroups(
-  sorted: SafeQuestion[],
-  answers: Record<string, Feedback>
-): KecermatanColumnGroup[] {
-  const byColumn = new Map<number, { total: number; correct: number; wrong: KecermatanDetailItem[] }>();
-
-  for (const q of sorted) {
-    const fb = answers[q.id];
-    if (!fb) continue; // belum dicoba — tidak dihitung sebagai salah, cuma dilewati dari ringkasan
-    const col = q.column_index ?? 1;
-    if (!byColumn.has(col)) byColumn.set(col, { total: 0, correct: 0, wrong: [] });
-    const g = byColumn.get(col)!;
-    g.total++;
-    if (fb.is_correct) {
-      g.correct++;
-    } else {
-      const payload = q.options_payload as unknown as KecermatanOptionsPayload;
-      g.wrong.push({
-        question_id: q.id,
-        sequence_number: q.sequence_number,
-        shown: payload.shown,
-        selected_key: fb.selected,
-        selected_symbol: payload.symbol_map[fb.selected as keyof typeof payload.symbol_map] ?? "?",
-        correct_key: fb.correct_key,
-        correct_symbol: payload.symbol_map[fb.correct_key as keyof typeof payload.symbol_map] ?? "?",
-      });
-    }
-  }
-
-  return Array.from(byColumn.entries())
-    .map(([column_index, g]) => ({ column_index, ...g }))
-    .sort((a, b) => a.column_index - b.column_index);
-}
+type Feedback = LatihanFeedback;
 
 export default function LatihanKecermatan({
   questions,
@@ -90,6 +55,10 @@ export default function LatihanKecermatan({
   const [introSeconds, setIntroSeconds] = useState(INTRO_SECONDS);
   const [showSkip, setShowSkip] = useState(false);
   const pendingIdxRef = useRef<number | null>(null);
+  // Skor engine ujian (Ke/Kt/Kh) — cuma mode timer, karena tanpa batas 60 detik
+  // per kolom angka Kecepatan & Ketahanan tidak bermakna.
+  const [score, setScore] = useState<KecermatanScoreResult | null>(null);
+  const [scoreFailed, setScoreFailed] = useState(false);
   const nextColRef = useRef<number | null>(null);
 
   const q = sorted[idx];
@@ -98,7 +67,6 @@ export default function LatihanKecermatan({
   const symbolMap = payload?.symbol_map ?? { A: "?", B: "?", C: "?", D: "?", E: "?" };
   const fb = q ? answers[q.id] : undefined;
   const answeredCount = Object.keys(answers).length;
-  const correctCount = Object.values(answers).filter((a) => a.is_correct).length;
   const colIdx = (q?.column_index ?? 1) - 1;
   const rowInCol = q ? sorted.slice(0, idx).filter((s) => s.column_index === q.column_index).length : 0;
 
@@ -149,6 +117,8 @@ export default function LatihanKecermatan({
     setFinished(false);
     setShowColIntro(false);
     setRemainingMs(COLUMN_DURATION_MS);
+    setScore(null);
+    setScoreFailed(false);
   }
 
   const pick = useCallback(
@@ -227,47 +197,43 @@ export default function LatihanKecermatan({
     return () => clearInterval(interval);
   }, [timedMode, colIdx, showColIntro, finished, sorted.length]);
 
+  // Statistik per kolom sama seperti scoreKecermatan di lib/scoring/runner.ts:
+  // klik = butir yang dijawab di kolom itu, kolom yang tak tersentuh = 0.
+  useEffect(() => {
+    if (!finished || !timedMode) return;
+    const stats = Array.from({ length: 10 }, (_, i) => ({ column_index: i + 1, total_klik: 0, total_benar: 0 }));
+    for (const s of sorted) {
+      const a = answers[s.id];
+      const col = stats[(s.column_index ?? 0) - 1];
+      if (!a || !col) continue;
+      col.total_klik++;
+      if (a.is_correct) col.total_benar++;
+    }
+    let cancelled = false;
+    scoreLatihanKecermatan(stats)
+      .then((result) => {
+        if (cancelled) return;
+        setScore(result);
+        setScoreFailed(!result);
+      })
+      .catch(() => !cancelled && setScoreFailed(true));
+    return () => {
+      cancelled = true;
+    };
+  }, [finished, timedMode, sorted, answers]);
+
   if (!q) return null;
 
   if (finished) {
-    const groups = buildLocalGroups(sorted, answers);
-    const accuracy = answeredCount ? Math.round((correctCount / answeredCount) * 100) : 0;
-
     return (
-      <div className="mx-auto max-w-2xl space-y-4">
-        <div className="surface-card px-5 py-6 text-center sm:px-7">
-          <p className="text-sm text-muted-foreground">Latihan Kecermatan selesai</p>
-          <p className="tnum font-heading mt-1 text-4xl text-foreground">
-            {correctCount}
-            <span className="text-2xl text-muted-foreground">/{answeredCount}</span>
-          </p>
-          <p className="tnum mt-1 text-sm text-muted-foreground">
-            {accuracy}% tepat · {answeredCount} dari {sorted.length} butir dicoba
-          </p>
-          <Meter
-            value={correctCount}
-            max={Math.max(1, answeredCount)}
-            tone={accuracy >= 80 ? "success" : accuracy >= 60 ? "accent" : "danger"}
-            className="mx-auto mt-4 max-w-xs"
-            label={`${accuracy} persen jawaban tepat`}
-          />
-        </div>
-
-        <section className="space-y-2">
-          <h2 className="text-sm font-semibold text-foreground">Pembahasan per kolom</h2>
-          <KecermatanDetailReview groups={groups} />
-        </section>
-
-        <div className="grid gap-3 sm:grid-cols-2">
-          <Link href="/dashboard/latihan/kecermatan" className={buttonStyles({ size: "lg", block: true })}>
-            Pilih paket lain
-          </Link>
-          <Button variant="accent" size="lg" block onClick={resetPractice}>
-            <Repeat className="size-4" />
-            Ulangi latihan
-          </Button>
-        </div>
-      </div>
+      <LatihanKecermatanHasil
+        sorted={sorted}
+        answers={answers}
+        timedMode={timedMode}
+        score={score}
+        scoreFailed={scoreFailed}
+        onRestart={resetPractice}
+      />
     );
   }
 
