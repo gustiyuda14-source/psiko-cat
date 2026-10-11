@@ -49,7 +49,6 @@ function check(label: string, fg: Color, bg: Color, minimum: number) {
   console.log(`${label}: ${actual.toFixed(2)}:1`);
 }
 
-const page = token("--surface-page");
 const card = token("--surface-card");
 const inset = token("--surface-inset");
 const nav = token("--surface-nav");

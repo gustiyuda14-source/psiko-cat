@@ -158,7 +158,7 @@ export default function LatihanGate({
             <div>
               <dt className="text-xs text-muted-foreground">Batas waktu</dt>
               <dd className="font-heading text-lg text-foreground">
-                {moduleType === "KECERDASAN" ? timeLabel : "Tidak ada"}
+                {moduleType === "KECERDASAN" || timedMode ? timeLabel : "Tidak ada"}
               </dd>
             </div>
             <div>

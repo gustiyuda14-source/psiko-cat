@@ -8,6 +8,7 @@ import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { fillY, wavePath } from "@/lib/honey";
+import { MODULE_CONFIG } from "@/lib/test-config";
 import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
 import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
 
@@ -125,6 +126,8 @@ export function PackageCarousel({
   const hrefOf = (id: number, timed: boolean) =>
     pkg.sections ? `${hrefBase}/${id}?autostart=1${timed ? "&timed=1" : ""}` : `${hrefBase}/${id}`;
   const href = hrefOf(pkg.id, timedMode);
+  // Sama dengan label di LatihanGate: Kecerdasan 90 menit, Kecermatan ikut pilihan timer.
+  const timeNote = moduleLabel === "kecerdasan" ? `${MODULE_CONFIG.KECERDASAN.time_limit_seconds / 60} menit` : pkg.sections && timedMode ? "60 detik/kolom" : "tanpa timer";
   // Kartu "Lanjutkan": paket yang sedang berjalan, kalau tidak ada paket siap pertama yang belum selesai.
   const next = view.find((v) => v.ready && v.p > 0 && v.p < 1) ?? view.find((v) => v.ready && v.p < 1);
 
@@ -132,7 +135,7 @@ export function PackageCarousel({
     <>
       <div className="hc-panel-top">
         <span className="hc-tag">{moduleLabel.split(" ")[0]}</span>
-        <span className="hc-code tnum">{ready ? `${completeLabel} · tanpa timer` : "Belum tersedia"}</span>
+        <span className="hc-code tnum">{ready ? `${completeLabel} · ${timeNote}` : "Belum tersedia"}</span>
       </div>
       <h2 className="hc-panel-title">{pkg.label}</h2>
       <p className="hc-panel-desc tnum">

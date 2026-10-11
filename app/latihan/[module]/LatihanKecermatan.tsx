@@ -60,7 +60,7 @@ export default function LatihanKecermatan({
   // per kolom angka Kecepatan & Ketahanan tidak bermakna.
   const [score, setScore] = useState<KecermatanScoreResult | null>(null);
   const [scoreFailed, setScoreFailed] = useState(false);
-  const nextColRef = useRef<number | null>(null);
+  const [nextCol, setNextCol] = useState<number | null>(null);
 
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KecermatanOptionsPayload | undefined;
@@ -87,7 +87,7 @@ export default function LatihanKecermatan({
       return;
     }
     pendingIdxRef.current = nextStart;
-    nextColRef.current = currentCol + 1;
+    setNextCol(currentCol + 1);
     setShowColIntro(true);
     setIntroSeconds(INTRO_SECONDS);
   }, [q, sorted]);
@@ -111,7 +111,7 @@ export default function LatihanKecermatan({
   function resetPractice() {
     answeredIds.current.clear();
     pendingIdxRef.current = null;
-    nextColRef.current = null;
+    setNextCol(null);
     setError("");
     setIdx(0);
     setAnswers({});
@@ -249,7 +249,7 @@ export default function LatihanKecermatan({
     return (
       <div className="mx-auto max-w-md">
         <div className="surface-card space-y-2 px-6 py-12 text-center">
-          <p className="text-sm text-muted-foreground">Kolom {ROMAN[(nextColRef.current ?? 1) - 1]}</p>
+          <p className="text-sm text-muted-foreground">Kolom {ROMAN[(nextCol ?? 1) - 1]}</p>
           <p className="tnum font-heading text-6xl text-foreground">{introSeconds}</p>
           <p className="text-sm text-muted-foreground">Kolom berikutnya akan dimulai…</p>
         </div>

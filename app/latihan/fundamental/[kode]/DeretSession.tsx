@@ -130,13 +130,15 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
 
   if (s.phase === "done") {
     const tes = s.mode === "tes";
-    const per = tes ? s.ans.map((a) => a.length) : s.colSec;
+    // Mode Tes: jawaban BENAR per kolom (Panker Kraepelin), bukan semua ketikan —
+    // angka asal tidak boleh menaikkan Kecepatan (arah yang sama dengan Kecermatan v2).
+    const per = tes ? s.ans.map((a, c) => a.filter((n, r) => n === key(c, r)).length) : s.colSec;
     const st = kraepelinStats(per);
     const wrong = s.ans.flatMap((a, c) => a.map((n, r) => ({ c, r, n })).filter(({ c, r, n }) => n !== key(c, r)));
     const dijawab = s.ans.reduce((t, a) => t + a.length, 0);
     const acc = dijawab ? Math.round(((dijawab - wrong.length) / dijawab) * 1000) / 10 : 0;
     const max = Math.max(1, ...per);
-    const unit = tes ? "jawaban" : "dtk";
+    const unit = tes ? "benar" : "dtk";
     const naik = st.ketahanan > 0;
     return (
       <div className="min-h-[100dvh] bg-background">

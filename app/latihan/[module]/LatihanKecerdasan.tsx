@@ -70,7 +70,8 @@ export default function LatihanKecerdasan({
           ? value.replace(key, "")
           : (value + key).split("").sort().join("");
         if (!next) {
-          const { [q.id]: _drop, ...rest } = current;
+          const rest = { ...current };
+          delete rest[q.id];
           return rest;
         }
         return { ...current, [q.id]: next };
