@@ -1,7 +1,7 @@
 "use client";
 
 import QuestionPassage from "@/app/components/QuestionPassage";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { recordLatihanProgress } from "@/lib/practice-progress";
 import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
@@ -10,6 +10,10 @@ import { Check } from "@/app/components/icons";
 import { ExamBody, ExamDock, QuestionNavigator, SubmitDialog } from "@/app/components/ExamChrome";
 import { KecerdasanReview, type KecerdasanReviewItem } from "@/app/components/PembahasanSection";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+import { MODULE_CONFIG } from "@/lib/test-config";
+
+// Batas waktu sama dengan sub-tes Kecerdasan di simulasi (90 menit).
+const TIME_LIMIT_MS = MODULE_CONFIG.KECERDASAN.time_limit_seconds * 1000;
 
 // Alur ini sengaja dibikin sama kayak sub-tes Kecerdasan di simulasi asli
 // (lihat EngineKecerdasan.tsx): pilih dulu, tidak ada koreksi per butir,
@@ -19,9 +23,12 @@ import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 export default function LatihanKecerdasan({
   questions,
   progressKey,
+  onSecondsLeft,
 }: {
   questions: SafeQuestion[];
   progressKey?: string;
+  /** Sisa detik untuk timer di ExamBar milik LatihanGate; null = sembunyikan. */
+  onSecondsLeft?: (seconds: number | null) => void;
 }) {
   const sorted = useMemo(
     () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
@@ -38,6 +45,9 @@ export default function LatihanKecerdasan({
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [results, setResults] = useState<KecerdasanReviewItem[] | null>(null);
+  // Deadline wall-clock (tahan tab-throttling), pola sama dengan EngineKecermatan.
+  const [deadline, setDeadline] = useState(() => Date.now() + TIME_LIMIT_MS);
+  const [timeUp, setTimeUp] = useState(false);
 
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KecerdasanOptionsPayload | undefined;
@@ -47,7 +57,7 @@ export default function LatihanKecerdasan({
 
   const choose = useCallback(
     (key: string) => {
-      if (!q) return;
+      if (!q || timeUp) return;
       if (!multi) {
         setPicks((current) => ({ ...current, [q.id]: key }));
         return;
@@ -65,7 +75,7 @@ export default function LatihanKecerdasan({
         return { ...current, [q.id]: next };
       });
     },
-    [multi, q]
+    [multi, q, timeUp]
   );
 
   const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
@@ -111,6 +121,32 @@ export default function LatihanKecerdasan({
     }
   }, [picks, sorted]);
 
+  const submitRef = useRef(handleSubmit);
+  useEffect(() => {
+    submitRef.current = handleSubmit;
+  });
+
+  // Waktu habis: kunci jawaban dan kumpulkan sekali. Kalau gagal (jaringan),
+  // peserta kumpulkan manual lewat tombol, tidak di-retry otomatis.
+  useEffect(() => {
+    if (results || timeUp) return;
+    const interval = setInterval(tick, 250);
+    function tick() {
+      const left = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+      onSecondsLeft?.(left);
+      if (left > 0) return;
+      clearInterval(interval);
+      setTimeUp(true);
+      void submitRef.current();
+    }
+    tick();
+    return () => clearInterval(interval);
+  }, [deadline, results, timeUp, onSecondsLeft]);
+
+  useEffect(() => {
+    if (results) onSecondsLeft?.(null);
+  }, [results, onSecondsLeft]);
+
   if (results) {
     return (
       <section className="surface-card mx-auto my-6 w-[calc(100%-2rem)] max-w-3xl space-y-5 px-6 py-8 sm:px-8">
@@ -132,6 +168,8 @@ export default function LatihanKecerdasan({
             setPicks({});
             setIdx(0);
             setResults(null);
+            setTimeUp(false);
+            setDeadline(Date.now() + TIME_LIMIT_MS);
           }}
         >
           Mulai ulang latihan
@@ -210,6 +248,11 @@ export default function LatihanKecerdasan({
             })}
           </div>
 
+          {timeUp && (
+            <p role="alert" className="text-sm font-semibold text-destructive">
+              Waktu habis. Jawaban dikunci dan dikumpulkan otomatis.
+            </p>
+          )}
           {submitError && (
             <p role="alert" className="text-sm text-destructive">
               {submitError}

@@ -6,7 +6,7 @@ import { useSearchParams } from "next/navigation";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
 import { EmptyState } from "@/app/components/ui";
-import { ExamBar } from "@/app/components/ExamChrome";
+import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { KecermatanKeyStrip } from "@/app/components/KecermatanKeyStrip";
 import { Button } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
@@ -63,8 +63,16 @@ export default function LatihanGate({
   const timedMode = searchParams.get("timed") === "1";
   const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
-  const practiceRef = useRef<HTMLDivElement>(null);
   const meta = MODULE_CONFIG[moduleType];
+  // Hanya Kecerdasan yang berbatas waktu penuh (90 menit, sama dengan simulasi).
+  const [secondsLeft, setSecondsLeft] = useState<number | null>(null);
+  const timeLabel =
+    moduleType === "KECERDASAN"
+      ? `${meta.time_limit_seconds / 60} menit`
+      : timedMode
+        ? "60 detik/kolom"
+        : "Tanpa batas waktu";
+  const practiceRef = useRef<HTMLDivElement>(null);
   const noun = "butir";
   const firstQuestion = moduleType === "KECERMATAN"
     ? [...questions].sort((a, b) => (a.column_index ?? 0) - (b.column_index ?? 0) || a.sequence_number - b.sequence_number)[0]
@@ -88,9 +96,8 @@ export default function LatihanGate({
     <div className="min-h-[100dvh] bg-background">
       <ExamBar
         title={`Latihan ${meta.label}`}
-        count={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${
-          timedMode ? "60 detik/kolom" : "Tanpa batas waktu"
-        }`}
+        count={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${timeLabel}`}
+        timer={secondsLeft !== null && <ExamTimer seconds={secondsLeft} />}
         actions={
           <Link href={exitHref} className="mbtn">
             <span aria-hidden="true">←</span>
@@ -103,7 +110,7 @@ export default function LatihanGate({
       {started ? (
         <div ref={practiceRef}>
           {moduleType === "KECERDASAN" ? (
-            <LatihanKecerdasan questions={questions} progressKey={progressKey} />
+            <LatihanKecerdasan questions={questions} progressKey={progressKey} onSecondsLeft={setSecondsLeft} />
           ) : moduleType === "KEPRIBADIAN" ? (
             <LatihanKepribadian questions={questions} progressKey={progressKey} />
           ) : (
@@ -150,7 +157,9 @@ export default function LatihanGate({
             </div>
             <div>
               <dt className="text-xs text-muted-foreground">Batas waktu</dt>
-              <dd className="font-heading text-lg text-foreground">Tidak ada</dd>
+              <dd className="font-heading text-lg text-foreground">
+                {moduleType === "KECERDASAN" ? timeLabel : "Tidak ada"}
+              </dd>
             </div>
             <div>
               <dt className="text-xs text-muted-foreground">Masuk riwayat</dt>
