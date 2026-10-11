@@ -96,6 +96,9 @@
 .hc-wheel .hc-aspek { fill: var(--brand-ink); font-weight: 700 }
 .hc-wheel .hc-wedge.is-sel .hc-wedge-base { fill: var(--surface-nav) }
 .hc-wheel .hc-wedge.is-sel .hc-wedge-sep { stroke: rgb(255 255 255 / .28) }
+/* Halo sewarna latar irisan: nomor/persen tetap terbaca saat madu mengisi cincin tengah. */
+.hc-wedge-label text { paint-order: stroke; stroke: var(--surface-card); stroke-width: 4px; stroke-linejoin: round }
+.hc-wedge-label.is-sel text { stroke: var(--surface-nav) }
 .hc-wedge-label.is-sel .hc-wedge-no { fill: var(--gold-hi) }
 .hc-wedge-label.is-sel .hc-wedge-pct { fill: #fff }
 .hc-wheel .hc-core-base { fill: var(--surface-nav) }
