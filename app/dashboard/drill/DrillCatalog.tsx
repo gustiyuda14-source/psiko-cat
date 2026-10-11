@@ -6,8 +6,8 @@ import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
 import { SectorCards, type Sector } from "@/app/components/SectorCards";
 import { fillY, hexPoints, wavePath } from "@/lib/honey";
-import { DRILL_ASPEK, DRILL_TIERS, readDrillProgress, writeDrillProgress, type DrillCard, type DrillProgress } from "@/lib/drill-cards";
-import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
+import { DRILL_ASPEK, DRILL_TIERS, type DrillCard } from "@/lib/drill-cards";
+import { resetProgress, useDrillProgress, type DrillProgress } from "@/lib/practice-progress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
 
 type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[] };
@@ -116,9 +116,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const start = (kartu: string) => router.push(`/latihan/drill/${kartu}`);
 
   const resetCard = () => {
-    const next = { ...readDrillProgress() };
-    for (const id of card.tiers.flat()) delete next[id];
-    writeDrillProgress(next);
+    void resetProgress("drill", card.tiers.flat());
     setResetStep(0);
   };
 
@@ -303,7 +301,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
         confirmLabel="Ya, lanjut"
         tone="danger"
       >
-        <p className="text-muted-foreground">Semua hasil {card.label} di perangkat ini akan dihapus. Kartu lain tidak terpengaruh.</p>
+        <p className="text-muted-foreground">Semua hasil {card.label} di akunmu akan dihapus. Kartu lain tidak terpengaruh.</p>
       </ConfirmDialog>
       <ConfirmDialog
         open={resetStep === 2}

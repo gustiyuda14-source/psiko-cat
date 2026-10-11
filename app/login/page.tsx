@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/app/components/ui-client";
 import { AlertTriangle, ArrowRight } from "@/app/components/icons";
+import { clearProgressCache } from "@/lib/practice-progress";
 
 const FIELD_CLASS =
   "min-h-12 w-full rounded-md border border-border-strong bg-card px-3.5 text-base text-foreground placeholder:text-faint-foreground transition-colors duration-200 hover:border-border-strong focus:border-primary";
@@ -30,6 +31,7 @@ export default function LoginPage() {
         setError(data.error ?? "Login gagal");
         return;
       }
+      clearProgressCache(); // cache progres milik akun sebelumnya di tab ini (sesi habis tanpa logout)
       router.push("/dashboard");
     } catch {
       setError("Gagal terhubung ke server. Periksa koneksi lalu coba lagi.");

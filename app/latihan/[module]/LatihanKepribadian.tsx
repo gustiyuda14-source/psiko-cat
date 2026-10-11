@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { recordLatihanProgress } from "@/lib/latihan-progress";
+import { recordLatihanProgress } from "@/lib/practice-progress";
 import type { SafeQuestion, KepribadianOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";

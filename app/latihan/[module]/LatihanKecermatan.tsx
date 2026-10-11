@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { recordLatihanProgress } from "@/lib/latihan-progress";
+import { recordLatihanProgress } from "@/lib/practice-progress";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { KecermatanDetailReview } from "@/app/components/PembahasanSection";
 import type { KecermatanColumnGroup, KecermatanDetailItem } from "@/app/components/PembahasanSection";

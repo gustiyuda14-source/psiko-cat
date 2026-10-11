@@ -77,24 +77,3 @@ export const DRILL_TIERS = [
   { tier: 3, label: "Lanjut" },
 ] as const;
 
-/** Progres drill di localStorage: id soal → [benar, percobaan, ms terakhir]. Global per peserta, bukan per paket. */
-export const DRILL_PROGRESS_KEY = "psiko_drill_res";
-export type DrillProgress = Record<string, [number, number, number]>;
-
-export function readDrillProgress(): DrillProgress {
-  try {
-    const raw = localStorage.getItem(DRILL_PROGRESS_KEY);
-    return raw ? (JSON.parse(raw) as DrillProgress) : {};
-  } catch {
-    return {};
-  }
-}
-
-export function writeDrillProgress(progress: DrillProgress) {
-  try {
-    localStorage.setItem(DRILL_PROGRESS_KEY, JSON.stringify(progress));
-    window.dispatchEvent(new Event("drill-progress"));
-  } catch {
-    // localStorage penuh/diblokir (mode privat): progres hilang saat tab ditutup, latihan tetap jalan.
-  }
-}

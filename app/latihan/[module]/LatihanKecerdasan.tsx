@@ -2,7 +2,7 @@
 
 import QuestionPassage from "@/app/components/QuestionPassage";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { recordLatihanProgress } from "@/lib/latihan-progress";
+import { recordLatihanProgress } from "@/lib/practice-progress";
 import type { SafeQuestion, KecerdasanOptionsPayload } from "@/lib/types/safe-question";
 import { Badge } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";

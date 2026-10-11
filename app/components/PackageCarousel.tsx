@@ -8,13 +8,13 @@ import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { fillY, wavePath } from "@/lib/honey";
-import { clearLatihanProgress, useLatihanProgress } from "@/lib/latihan-progress";
+import { resetProgress, useLatihanProgress } from "@/lib/practice-progress";
 
 /*
   Pemilih paket latihan: kartu "Lanjutkan" (satu ketukan ke paket yang sedang
   berjalan) di atas daftar semua paket. Tiap baris = nomor dalam heks kecil, status,
   dan bar segmen (10 per kolom untuk Kecermatan, 4 seperempat untuk modul lain) yang
-  terisi madu sesuai capaian terjauh dari lib/latihan-progress.ts.
+  terisi madu sesuai capaian terjauh dari lib/practice-progress.ts.
   Rincian paket + tombol mulai: panel samping di desktop, lembar dari bawah di HP
   (<dialog> native — focus trap, Esc, dan top layer gratis). Nama komponen
   dipertahankan supaya pemanggilnya tidak berubah. CSS di app/honey.css.
@@ -350,14 +350,14 @@ export function PackageCarousel({
         open={confirmReset}
         onClose={() => setConfirmReset(false)}
         onConfirm={() => {
-          clearLatihanProgress(current.key);
+          void resetProgress("latihan", [current.key]);
           setConfirmReset(false);
         }}
         title="Hapus progres paket ini?"
         confirmLabel="Hapus progres"
         tone="danger"
       >
-        <p className="text-muted-foreground">Capaian {pkg.label} di perangkat ini dihapus. Paket lain tidak terpengaruh.</p>
+        <p className="text-muted-foreground">Capaian {pkg.label} di akunmu dihapus. Paket lain tidak terpengaruh.</p>
       </ConfirmDialog>
     </section>
   );

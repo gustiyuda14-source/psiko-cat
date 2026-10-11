@@ -4,8 +4,8 @@ import QuestionPassage from "@/app/components/QuestionPassage";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { SafeDrillItem } from "@/lib/drill-bank";
-import { DRILL_TIERS, drillCategory, readDrillProgress, writeDrillProgress, type DrillProgress } from "@/lib/drill-cards";
-import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
+import { DRILL_TIERS, drillCategory } from "@/lib/drill-cards";
+import { noteDrillAttempt, useDrillProgress, type DrillProgress } from "@/lib/practice-progress";
 import { ExamBar, ExamBody, ExamDock } from "@/app/components/ExamChrome";
 import { Badge, EmptyState } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
@@ -44,7 +44,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
     return out;
   }, [items]);
   const progress = useDrillProgress();
-  // null = belum memilih soal sendiri; ikut startIndex sampai progres localStorage terbaca.
+  // null = belum memilih soal sendiri; ikut startIndex sampai progres akun terbaca.
   const [chosen, setChosen] = useState<number | null>(null);
   const [picks, setPicks] = useState<Record<string, string>>({});
   const [results, setResults] = useState<Record<string, Result>>({});
@@ -96,16 +96,15 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
       const res = await fetch("/api/drill/check", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ item_id: q.id, pilihan: picked }),
+        body: JSON.stringify({ item_id: q.id, pilihan: picked, ms }),
       });
       if (!res.ok) throw new Error("Jawaban belum bisa diperiksa. Coba lagi.");
-      const data = (await res.json()) as Omit<Result, "ms">;
+      const data = (await res.json()) as Omit<Result, "ms"> & { tersimpan?: boolean };
       revealNext.current = true;
       setResults((cur) => ({ ...cur, [q.id]: { ...data, ms } }));
-      const progress = readDrillProgress();
-      const prev = progress[q.id] ?? [0, 0, 0];
-      progress[q.id] = [prev[0] + (data.benar ? 1 : 0), prev[1] + 1, ms];
-      writeDrillProgress(progress);
+      // Server sudah mencatat percobaan ke akun peserta; cache tab cukup dicerminkan.
+      if (data.tersimpan) noteDrillAttempt(q.id, data.benar, ms);
+      else setError("Jawaban diperiksa, tetapi progres belum tersimpan. Periksa koneksi lalu lanjutkan.");
     } catch (e) {
       setError(e instanceof Error ? e.message : "Jawaban belum bisa diperiksa. Coba lagi.");
     } finally {
@@ -138,7 +137,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
     );
   }
 
-  // Warna nomor: hasil sesi ini dulu, lalu pilihan yang belum diperiksa, lalu riwayat di perangkat ini.
+  // Warna nomor: hasil sesi ini dulu, lalu pilihan yang belum diperiksa, lalu riwayat akun.
   const stateOf = (id: string): NavState => {
     const r = results[id];
     if (r) return r.benar ? "ok" : "bad";

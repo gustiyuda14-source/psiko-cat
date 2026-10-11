@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation";
 import { SectorCards, type Sector } from "@/app/components/SectorCards";
-import { useLatihanProgress } from "@/lib/latihan-progress";
+import { useLatihanProgress } from "@/lib/practice-progress";
 
 /*
   Katalog Latihan: satu kartu per sub-tes (tujuan = halaman rak paket). Ikon mini
   = deretan tabung paket sub-tes itu, terisi capaian terjauh dari
-  lib/latihan-progress.ts.
+  lib/practice-progress.ts.
 */
 
 export type LatihanModule = {
