@@ -395,3 +395,18 @@
   .lr-chart-bar { animation: none }
   .lr-idx i span, .lr-chev { transition: none }
 }
+
+/* ── Simulasi: kartu pilih paket (langkah 1) ── */
+.sp-grid { display: grid; gap: 12px; margin-top: 20px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)) }
+.sp-card { display: flex; align-items: center; gap: 14px; min-height: 84px; padding: 14px 16px; border: 1px solid var(--border); border-radius: var(--r-xl); background: var(--surface-card); text-align: left; transition: border-color var(--motion), background-color var(--motion); animation: hc-in 600ms var(--e-out) both }
+.sp-card:hover:not(:disabled) { border-color: var(--accent-strong); background: var(--surface-inset) }
+.sp-card:focus-visible { outline: 3px solid var(--ring); outline-offset: 2px }
+.sp-card:disabled { opacity: .55; cursor: default }
+.sp-card:disabled .pk-hex polygon { fill: var(--hatch) }
+.sp-card-main { display: grid; flex: 1; min-width: 0; gap: 4px }
+.sp-card-main b { font: 600 1rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
+.sp-card-main span { font-size: .85rem; color: var(--muted-foreground) }
+.sp-back { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 12px; padding: 0 12px 0 8px; border-radius: 10px; font: 600 .875rem var(--font-display-src), sans-serif; color: var(--brand-ink) }
+.sp-back:hover { background: var(--surface-inset) }
+.sp-back:focus-visible { outline: 3px solid var(--ring) }
+@media (prefers-reduced-motion: reduce) { .sp-card { animation: none } }

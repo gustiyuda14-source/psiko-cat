@@ -7,7 +7,7 @@ import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PACKAGE, type ModuleType } from "
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronDown, ChevronRight } from "@/app/components/icons";
-import SimulasiCatalog, { type LastScores, type SimulasiItem } from "./SimulasiCatalog";
+import SimulasiCatalog, { type LastScores, type SimulasiItem, type SimulasiPackage } from "./SimulasiCatalog";
 import SimulasiProgress, { type SubScores, type TryoutPoint } from "./SimulasiProgress";
 
 function formatDateTime(iso: string): string {
@@ -141,6 +141,14 @@ export default async function SimulasiPage() {
     .map((s) => ({ at: s.completed_at ?? s.created_at, nap: s.nap_score! }));
   const single = done.filter((s) => !isFull(s)).length;
 
+  // 5 slot paket simulasi penuh. Baru paket 1 yang punya bank soal (SIMULASI_PACKAGE);
+  // paket 2-5 tampil "Belum tersedia" sampai soal + pemilihan paket di sesi dibuat.
+  const packages: SimulasiPackage[] = [1, 2, 3, 4, 5].map((id) => ({
+    id,
+    meta: `${totalQuestions} butir · ${totalMinutes} menit`,
+    ready: id === 1,
+  }));
+
   const items: SimulasiItem[] = [
     {
       id: "ALL",
@@ -209,9 +217,9 @@ export default async function SimulasiPage() {
       <section>
         <div className="mb-1">
           <span className="section-kicker">Katalog simulasi</span>
-          <h2 className="mt-1 font-heading text-2xl">Pilih tes</h2>
+          <h2 className="mt-1 font-heading text-2xl">Pilih paket simulasi</h2>
         </div>
-        <SimulasiCatalog items={items} last={last} action={startSession} />
+        <SimulasiCatalog packages={packages} items={items} last={last} action={startSession} />
       </section>
     </div>
   );
