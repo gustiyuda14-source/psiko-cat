@@ -15,7 +15,7 @@ import { ArrowRight } from "@/app/components/icons";
 */
 
 export type SimulasiItem = { id: string; title: string; meta: string; desc: string; faces: ModuleType[] };
-export type LastScores = Partial<Record<ModuleType, { score: number; at: string }>>;
+export type LastScores = Partial<Record<ModuleType, { score: number; at: string; prev?: number }>>;
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const FACES: { type: ModuleType; label: string; side: string; pts: string; y0: number; h: number; shade: number; text: string }[] = [
@@ -136,7 +136,19 @@ export default function SimulasiCatalog({
                 <i className={on ? "" : "is-off"} aria-hidden="true" />
                 <div>
                   <b>{f.label}</b>
-                  <span>{!on ? "Tidak termasuk tes ini" : l ? `Sisi ${f.side} · terakhir ${l.at}` : `Sisi ${f.side} · belum pernah dikerjakan`}</span>
+                  <span>
+                    {!on ? "Tidak termasuk tes ini" : l ? `Sisi ${f.side} · terakhir ${l.at}` : `Sisi ${f.side} · belum pernah dikerjakan`}
+                    {on && l && l.prev !== undefined && Math.round(l.score) !== Math.round(l.prev) && (
+                      <span className={l.score > l.prev ? "pg-up" : "pg-down"}>
+                        {" "}· {l.score > l.prev ? "naik" : "turun"} {Math.abs(Math.round(l.score) - Math.round(l.prev))}
+                      </span>
+                    )}
+                  </span>
+                  {on && l && (
+                    <span className="pg-sbar" role="img" aria-label={`Skor ${Math.round(l.score)} dari 100, batas gugur 40`}>
+                      <span className="pg-grow" style={{ width: `${Math.max(0, Math.min(100, l.score))}%` }} />
+                    </span>
+                  )}
                 </div>
                 <em className={`tnum${on && l ? "" : " is-na"}`}>{on && l ? Math.round(l.score) : "–"}</em>
               </li>

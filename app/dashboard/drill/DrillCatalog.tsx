@@ -7,20 +7,15 @@ import { ArrowRight } from "@/app/components/icons";
 import { SectorCards, type Sector } from "@/app/components/SectorCards";
 import { fillY, hexPoints, wavePath } from "@/lib/honey";
 import { DRILL_ASPEK, DRILL_TIERS, type DrillCard } from "@/lib/drill-cards";
-import { resetProgress, useDrillProgress, type DrillProgress } from "@/lib/practice-progress";
+import { TierStack } from "@/app/components/ProgressTicket";
+import { resetProgress, useDrillProgress } from "@/lib/practice-progress";
+import DrillProgressTicket, { aspekTiers, stats } from "./DrillProgress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
 
 type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[] };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
-
-function stats(ids: string[], progress: DrillProgress) {
-  const done = ids.filter((id) => progress[id]);
-  const right = done.reduce((s, id) => s + progress[id][0], 0);
-  const tries = done.reduce((s, id) => s + progress[id][1], 0);
-  return { done: done.length, total: ids.length, acc: tries ? Math.round((right / tries) * 100) : null };
-}
 
 function MiniHexes({ fills }: { fills: (number | null)[] }) {
   const pts = fills.map((_, i) => [Math.floor(i / 2) * 17 + (i % 2) * 8.5 + 10, (i % 2) * 15 + 11]);
@@ -103,12 +98,14 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
     const own = wheel.filter((w) => a.key === "all" || w.aspek === a.key);
     const own_ = cards.filter((c) => a.key === "all" || c.aspek === a.key);
     const s = stats(own_.flatMap((c) => c.tiers.flat()), progress);
+    const t = aspekTiers(own_, progress);
     return {
       key: a.key,
       label: a.label,
       p: s.total ? s.done / s.total : 0,
       meta: `${own.length} jenis · ${s.total} soal`,
       mini: <MiniHexes fills={own.map((w) => (w.locked ? null : w.p))} />,
+      bar: <TierStack total={t.total} done={t.done} label={`${a.label}: ${s.done} dari ${s.total} soal dikerjakan`} />,
       badge: a.key === "all" ? undefined : modul(a.key),
     };
   });
@@ -122,6 +119,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
   return (
     <>
+      <DrillProgressTicket cards={cards} progress={progress} onStart={start} />
       <div className="hc-dock">
         <SectorCards sectors={sectors} active={filter} onPick={(k) => setFilter(k === filter ? "all" : k)} label="Pilih aspek" />
         <div

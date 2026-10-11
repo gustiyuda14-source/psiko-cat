@@ -6,6 +6,7 @@ import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronRight } from "@/app/components/icons";
 import SimulasiCatalog, { type LastScores, type SimulasiItem } from "./SimulasiCatalog";
+import SimulasiProgress, { type SubScores, type TryoutPoint } from "./SimulasiProgress";
 
 function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString("id-ID", {
@@ -36,7 +37,7 @@ export default async function SimulasiPage() {
   // Kecermatan sekarang punya banyak paket bank soal (masing-masing 500 soal, 1 dipilih
   // random per sesi/latihan) — hitung dari satu paket referensi, bukan total semua paket,
   // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
-  const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }] =
+  const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }, { data: doneSessions }] =
     await Promise.all([
       supabaseAdmin
         .from("questions")
@@ -67,6 +68,13 @@ export default async function SimulasiPage() {
         .not("raw_score", "is", null)
         .order("completed_at", { ascending: false })
         .limit(60),
+      // Tren Nilai Akhir Psikotest: sesi selesai milik peserta ini, sama dengan Beranda.
+      supabaseAdmin
+        .from("test_sessions")
+        .select("nap_score, completed_at, created_at, status, module_sessions(module_type)")
+        .eq("user_id", session.sub)
+        .in("status", ["COMPLETED", "DISQUALIFIED"])
+        .order("created_at", { ascending: true }),
     ]);
 
   const countByType = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
@@ -82,9 +90,15 @@ export default async function SimulasiPage() {
   const running = openSessions ?? [];
 
   const last: LastScores = {};
+  const subScores: SubScores = {};
   for (const row of scoredRows ?? []) {
     const type = row.module_type as ModuleType;
-    if (last[type] || row.raw_score == null) continue;
+    if (row.raw_score == null) continue;
+    (subScores[type] ??= []).unshift(row.raw_score); // baris urut terbaru dulu → simpan lama ke baru
+    if (last[type]) {
+      last[type].prev ??= row.raw_score;
+      continue;
+    }
     last[type] = {
       score: row.raw_score,
       at: row.completed_at
@@ -93,12 +107,20 @@ export default async function SimulasiPage() {
     };
   }
 
+  type Done = { nap_score: number | null; completed_at: string | null; created_at: string; module_sessions: { module_type: string }[] };
+  const done = (doneSessions ?? []) as Done[];
+  const isFull = (s: Done) => MODULE_ORDER.every((t) => s.module_sessions.some((m) => m.module_type === t));
+  const tryouts: TryoutPoint[] = done
+    .filter((s) => isFull(s) && s.nap_score != null)
+    .map((s) => ({ at: s.completed_at ?? s.created_at, nap: s.nap_score! }));
+  const single = done.filter((s) => !isFull(s)).length;
+
   const items: SimulasiItem[] = [
     {
       id: "ALL",
       title: "Tryout Lengkap Paket 1",
       meta: `${totalQuestions} butir · ${totalMinutes} menit`,
-      desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai nilai NAP.",
+      desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai Nilai Akhir Psikotest.",
       faces: [...MODULE_ORDER],
     },
     ...MODULE_ORDER.map((type): SimulasiItem => {
@@ -118,7 +140,7 @@ export default async function SimulasiPage() {
       <PageHeader
         kicker="Simulasi"
         title="Simulasi"
-        description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai nilai NAP. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
+        description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai Nilai Akhir Psikotest. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
       />
 
       {/* Sesi yang belum selesai muncul paling atas: peserta yang browsernya
@@ -150,6 +172,8 @@ export default async function SimulasiPage() {
           </ul>
         </aside>
       )}
+
+      <SimulasiProgress tryouts={tryouts} subScores={subScores} single={single} />
 
       <section>
         <div className="mb-1">

@@ -13,6 +13,8 @@ export type Sector = {
   /** Persen gabungan 0-1; null = tidak ditampilkan. */
   p: number | null;
   mini?: React.ReactNode;
+  /** Bar progres selebar kartu, di bawah nama + persen. */
+  bar?: React.ReactNode;
   /** Label kecil di pojok kanan atas, mis. modul Kecerdasan/Kepribadian. */
   badge?: string;
 };
@@ -48,6 +50,7 @@ export function SectorCards({
           </span>
           <span className="hc-sector-name">{s.label}</span>
           {s.p !== null && <span className="hc-sector-pct tnum">{Math.round(s.p * 100)}%</span>}
+          {s.bar && <span className="hc-sector-bar">{s.bar}</span>}
           <span className="hc-sector-meta tnum">{s.meta}</span>
         </button>
       ))}

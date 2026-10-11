@@ -5,6 +5,7 @@ import "./catalog.css";
 import "./honey.css";
 import "./exam.css";
 import "./report.css";
+import "./progress.css";
 
 // Nama variabel diberi sufiks -src supaya @theme inline di globals.css bisa
 // memetakannya ke --font-sans / --font-display tanpa referensi melingkar

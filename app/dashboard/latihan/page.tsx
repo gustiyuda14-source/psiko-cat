@@ -1,16 +1,23 @@
 import {
   KECERDASAN_PACKAGES,
+  KECERDASAN_PACKAGE_LABELS,
   KECERMATAN_ANGKA_PACKAGES,
+  KECERMATAN_ANGKA_PACKAGE_LABELS,
   KECERMATAN_SPASIAL_PACKAGES,
+  KECERMATAN_SPASIAL_PACKAGE_LABELS,
   KECERMATAN_PACKAGES,
+  KECERMATAN_PACKAGE_LABELS,
   KEPRIBADIAN_PACKAGES,
+  KEPRIBADIAN_PACKAGE_LABELS,
   PRIBADI_PACKAGE_SIZE,
   MODULE_CONFIG,
   MODULE_ORDER,
   latihanHref,
+  type ModuleType,
 } from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
-import LatihanCatalog, { type LatihanModule } from "./LatihanCatalog";
+import { supabaseAdmin } from "@/lib/supabase-admin";
+import LatihanCatalog, { type LatihanModule, type LatihanRow } from "./LatihanCatalog";
 
 const DESC = {
   KECERDASAN: "Soal kognitif dan spasial, 100 butir per paket",
@@ -18,23 +25,46 @@ const DESC = {
   KEPRIBADIAN: "Kepribadian + Substansi Khusus, 111 butir per paket",
 } as const;
 
-// Kunci progres = rute sesi paket (lib/latihan-progress.ts). Kecermatan punya tiga aspek.
-const PACKAGES = {
-  KECERDASAN: KECERDASAN_PACKAGES.map((id) => ({ key: `/latihan/kecerdasan/${id}`, total: 100 })),
-  KEPRIBADIAN: KEPRIBADIAN_PACKAGES.map((id) => ({ key: `/latihan/kepribadian/${id}`, total: PRIBADI_PACKAGE_SIZE })),
-  KECERMATAN: [
-    ...KECERMATAN_PACKAGES.map((id) => ({ key: `/latihan/kecermatan/${id}`, total: 500 })),
-    ...KECERMATAN_ANGKA_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-angka/${id}`, total: 500 })),
-    ...KECERMATAN_SPASIAL_PACKAGES.map((id) => ({ key: `/latihan/kecermatan-spasial/${id}`, total: 500 })),
-  ],
-};
+// Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya tiga aspek.
+const ROWS: { module: ModuleType; label: string; route: string; ids: number[]; labels: Record<number, string>; per: number }[] = [
+  { module: "KECERDASAN", label: "Kecerdasan", route: "/latihan/kecerdasan", ids: KECERDASAN_PACKAGES, labels: KECERDASAN_PACKAGE_LABELS, per: 100 },
+  { module: "KEPRIBADIAN", label: "Kepribadian", route: "/latihan/kepribadian", ids: KEPRIBADIAN_PACKAGES, labels: KEPRIBADIAN_PACKAGE_LABELS, per: PRIBADI_PACKAGE_SIZE },
+  { module: "KECERMATAN", label: "Kecermatan Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Kecermatan Angka & Huruf", route: "/latihan/kecermatan-angka", ids: KECERMATAN_ANGKA_PACKAGES, labels: KECERMATAN_ANGKA_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Kecermatan Spasial", route: "/latihan/kecermatan-spasial", ids: KECERMATAN_SPASIAL_PACKAGES, labels: KECERMATAN_SPASIAL_PACKAGE_LABELS, per: 500 },
+];
 
-export default function LatihanIndexPage() {
+export default async function LatihanIndexPage() {
+  // Paket dianggap tersedia bila isinya lengkap, aturan sama dengan pemilih paket (PackageCarousel).
+  // Hitung per paket dengan head:true: hitung gabungan kena batas 1000 baris PostgREST (lib/kecermatan-packages.ts).
+  const counts = await Promise.all(
+    ROWS.map((r) =>
+      Promise.all(
+        r.ids.map((pkg) =>
+          supabaseAdmin
+            .from("questions")
+            .select("id", { count: "exact", head: true })
+            .eq("type", r.module)
+            .eq("is_active", true)
+            .eq("package_number", pkg)
+        )
+      )
+    )
+  );
+
+  const rows: LatihanRow[] = ROWS.map((r, ri) => ({
+    module: r.module,
+    label: r.label,
+    sub: `${r.ids.length} paket · ${r.per} butir per paket`,
+    per: r.per,
+    packages: r.ids.map((id, i) => ({ key: `${r.route}/${id}`, label: r.labels[id] ?? `Paket ${i + 1}`, ready: counts[ri][i].count === r.per })),
+  }));
+
   const modules: LatihanModule[] = MODULE_ORDER.map((type) => ({
+    module: type,
     href: latihanHref(type),
     label: MODULE_CONFIG[type].label,
     desc: DESC[type],
-    packages: PACKAGES[type],
   }));
 
   return (
@@ -44,13 +74,7 @@ export default function LatihanIndexPage() {
         title="Latihan"
         description="Pilih kemampuan yang ingin dilatih, lalu kerjakan tanpa batas waktu. Latihan tidak dihitung sebagai tes resmi dan tidak masuk riwayat."
       />
-      <section>
-        <div className="mb-1">
-          <span className="section-kicker">Katalog latihan</span>
-          <h2 className="mt-1 font-heading text-2xl">Pilih sub-tes</h2>
-        </div>
-        <LatihanCatalog modules={modules} />
-      </section>
+      <LatihanCatalog modules={modules} rows={rows} />
     </div>
   );
 }

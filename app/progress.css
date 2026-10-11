@@ -1,0 +1,173 @@
+/* Tiket progres (Drill, Latihan, Simulasi): sobekan navy berisi angka utama + badan berisi grafik,
+   motif tiket berlubang yang sama dengan kartu katalog. Komponen di app/components/ProgressTicket.tsx. */
+:root {
+  --pg-t1: #ecd9a3; --pg-t2: #d0a645; --pg-t3: #8a6210;   /* level Dasar / Menengah / Lanjut */
+  --pg-track: #f1ece1; --pg-rule: #ece5d6;
+  --pg-ink2: #2c4384; --pg-mid: #3d4f8f; --pg-soft: #c3cbe4;
+  --pg-weak: #a63d2a; --pg-weak-bg: #fbeae5; --pg-weak-line: #e3a99b;
+  --pg-ease: cubic-bezier(.16, 1, .3, 1);
+}
+
+.pg-tk { display: grid; grid-template-columns: 250px minmax(0, 1fr); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--surface-card); box-shadow: 0 1px 0 var(--pg-rule), 0 18px 40px -28px rgba(27, 42, 92, .35) }
+.pg-tk > * { min-width: 0 }
+.pg-stub { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 24px 24px 22px; color: #fff; background: radial-gradient(120% 80% at 0% 0%, #2a3c78 0%, var(--brand-ink) 45%, var(--surface-nav-deep) 100%) }
+.pg-stub::after { content: ""; position: absolute; top: 22px; bottom: 22px; right: -1px; border-right: 2px dashed rgba(255, 255, 255, .28) }
+.pg-punch { position: absolute; right: -11px; width: 22px; height: 22px; border-radius: 50%; background: var(--surface-page); border: 1px solid var(--border) }
+.pg-punch.is-top { top: -12px } .pg-punch.is-bot { bottom: -12px }
+.pg-label { font: 700 .68rem var(--font-display); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi) }
+.pg-big { display: flex; align-items: baseline; gap: 4px; font: 600 3.6rem/1 var(--font-display); letter-spacing: -.04em; font-variant-numeric: tabular-nums }
+.pg-big small { font-size: 1.3rem; letter-spacing: 0; color: rgba(255, 255, 255, .7) }
+.pg-sub { margin-top: -8px; color: rgba(255, 255, 255, .78); font-size: .9rem }
+.pg-ring { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .14); overflow: hidden }
+.pg-ring i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #c9a24a, var(--gold-hi)); transform-origin: left }
+.pg-chip { align-self: flex-start; padding: 5px 10px; border-radius: 999px; font: 600 .78rem var(--font-display); background: rgba(232, 199, 102, .16); color: var(--gold-hi); border: 1px solid rgba(232, 199, 102, .35) }
+.pg-chip.is-below { background: rgba(255, 255, 255, .08); color: rgba(255, 255, 255, .85); border-color: rgba(255, 255, 255, .25) }
+.pg-facts { display: grid; gap: 10px; margin: auto 0 0; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, .14) }
+.pg-facts div { display: flex; justify-content: space-between; gap: 12px; font-size: .9rem }
+.pg-facts dt { color: rgba(255, 255, 255, .7) } .pg-facts dd { margin: 0; font: 600 .95rem var(--font-display); font-variant-numeric: tabular-nums; text-align: right }
+.pg-facts .is-up { color: #9fd8b4 } .pg-facts .is-down { color: #f2b5a8 }
+
+.pg-foot { grid-column: 1 / -1; min-width: 0; padding: 22px 24px; border-top: 1px dashed var(--border) }
+.pg-body { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr) }
+.pg-body > section { min-width: 0; padding: 22px 24px }
+.pg-body > section + section { border-left: 1px dashed var(--border) }
+.pg-body > section.is-full { grid-column: 1 / -1; border-left: 0 }
+.pg-body > section.is-full + section.is-full, .pg-body > section + section.is-full { border-top: 1px dashed var(--border) }
+.pg-sec-h { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 14px }
+.pg-sec-h h3 { margin: 0; font: 600 1rem var(--font-display) }
+.pg-sec-h > span { color: var(--muted-foreground); font-size: .82rem }
+.pg-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--muted-foreground) }
+.pg-legend i { display: inline-block; width: 10px; height: 10px; margin-right: 5px; border-radius: 3px; vertical-align: -1px }
+.pg-note { margin: 10px 0 0; font-size: .8rem; color: var(--muted-foreground) }
+.pg-empty { margin: 0; color: var(--muted-foreground); font-size: .92rem }
+
+/* bar bertingkat per level */
+.pg-stack { display: flex; gap: 3px; height: 12px }
+.pg-stack span { position: relative; min-width: 6px; border-radius: 3px; background: var(--pg-track); overflow: hidden }
+.pg-stack span i { position: absolute; inset: 0 auto 0 0; border-radius: inherit; transform-origin: left }
+.pg-stack span:nth-child(1) i { background: var(--pg-t1) } .pg-stack span:nth-child(2) i { background: var(--pg-t2) } .pg-stack span:nth-child(3) i { background: var(--pg-t3) }
+
+.pg-asp { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none }
+.pg-asp li { display: grid; grid-template-columns: 96px minmax(0, 1fr) 84px; gap: 6px 14px; align-items: center }
+.pg-nm { font: 600 .92rem var(--font-display) }
+.pg-nm small { display: block; font: 400 .78rem var(--font-sans); color: var(--muted-foreground) }
+.pg-asp .pg-meta { grid-column: 2; display: flex; justify-content: space-between; margin-top: -2px; font-size: .8rem; color: var(--muted-foreground); font-variant-numeric: tabular-nums }
+.pg-acc { display: grid; gap: 4px; justify-items: end }
+.pg-acc b { font: 600 .95rem var(--font-display); font-variant-numeric: tabular-nums }
+.pg-acc small { font-size: .74rem; color: var(--faint-foreground) }
+.pg-acc.is-low b { color: var(--pg-weak) }
+.pg-gauge { position: relative; width: 72px; height: 5px; border-radius: 99px; background: var(--pg-track) }
+.pg-gauge i { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: var(--pg-ink2); transform-origin: left }
+.pg-acc.is-low .pg-gauge i { background: var(--pg-weak) }
+.pg-gauge::after { content: ""; position: absolute; left: 80%; top: -3px; bottom: -3px; width: 2px; border-radius: 1px; background: var(--foreground) }
+
+/* rekomendasi */
+.pg-prio { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; counter-reset: pg }
+.pg-prio button { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 4px 12px; align-items: center; width: 100%; padding: 12px; border: 1px solid var(--pg-rule); border-radius: 12px; background: var(--surface-card); text-align: left; cursor: pointer; transition: border-color .15s, transform .15s var(--pg-ease) }
+.pg-prio button:hover { border-color: var(--border-strong); transform: translateY(-1px) }
+.pg-prio li:first-child button { background: var(--pg-weak-bg); border-color: #f0cfc6 }
+.pg-prio button::before { counter-increment: pg; content: counter(pg); display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: var(--brand-ink); color: #fff; font: 600 .85rem var(--font-display) }
+.pg-prio li:first-child button::before { background: var(--pg-weak) }
+.pg-prio b { display: block; font: 600 .92rem var(--font-display) }
+.pg-prio small { color: var(--muted-foreground); font-size: .8rem }
+.pg-prio em { font: 600 1.05rem var(--font-display); font-style: normal; color: var(--pg-weak); font-variant-numeric: tabular-nums }
+
+/* progress drilling per kartu dan level */
+.pg-heat-scroll { overflow-x: auto; margin-inline: -4px; padding-inline: 4px }
+.pg-heat { display: grid; grid-template-columns: minmax(170px, 1.2fr) repeat(3, minmax(110px, 1fr)); gap: 4px; min-width: 560px }
+.pg-heat .pg-hd { padding: 0 8px 4px; font: 700 .68rem var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground) }
+.pg-heat .pg-grp { grid-column: 1 / -1; padding: 10px 8px 2px; border-top: 1px solid var(--pg-rule); font: 600 .78rem var(--font-display); color: var(--gold) }
+.pg-heat .pg-card { display: flex; align-items: center; gap: 8px; min-width: 0; padding: 0 8px; font-size: .9rem }
+.pg-heat .pg-card code { font: 600 .72rem var(--font-display); color: var(--faint-foreground) }
+.pg-cell { position: relative; display: flex; justify-content: space-between; align-items: center; height: 40px; padding: 5px 9px; border-radius: 8px; overflow: hidden; font-size: .8rem; font-variant-numeric: tabular-nums; transition: transform .15s var(--pg-ease), box-shadow .15s }
+.pg-cell:hover { transform: translateY(-1px); box-shadow: 0 6px 14px -8px rgba(15, 24, 56, .5) }
+.pg-cell b { font: 600 .82rem var(--font-display) }
+.pg-cell .pg-cov { position: absolute; left: 0; bottom: 0; height: 3px; background: currentColor; opacity: .55 }
+.pg-cell.is-a4 { background: var(--brand-ink); color: #fff } .pg-cell.is-a3 { background: var(--pg-mid); color: #fff } .pg-cell.is-a2 { background: var(--pg-soft); color: var(--surface-nav-deep) }
+.pg-cell.is-a1 { background: var(--pg-weak-bg); color: var(--pg-weak); box-shadow: inset 0 0 0 1.5px var(--pg-weak-line) }
+.pg-cell.is-none { background: repeating-linear-gradient(135deg, var(--pg-track) 0 6px, #f8f4ea 6px 12px); color: var(--faint-foreground) }
+.pg-cell.is-na { justify-content: center; border: 1px dashed var(--border); background: transparent; color: var(--faint-foreground) }
+
+/* kotak paket latihan */
+.pg-pk { display: grid; grid-template-columns: repeat(10, 30px); gap: 6px }
+.pg-pk span { position: relative; width: 30px; height: 30px; border-radius: 7px; background: var(--pg-track); overflow: hidden; box-shadow: inset 0 0 0 1px var(--pg-rule) }
+.pg-pk span i { position: absolute; inset: auto 0 0 0; background: linear-gradient(180deg, var(--pg-t2), var(--pg-t3)); transform-origin: bottom }
+.pg-pk span.is-done { background: var(--brand-ink); box-shadow: none }
+.pg-pk span.is-done::after { content: ""; position: absolute; left: calc(50% - 3px); top: 22%; width: 6px; height: 45%; border: solid var(--gold-hi); border-width: 0 2px 2px 0; transform: rotate(45deg) }
+.pg-pk span.is-soon { background: repeating-linear-gradient(135deg, transparent 0 4px, var(--pg-rule) 4px 5px) }
+.pg-pk span.is-next { box-shadow: 0 0 0 2px var(--surface-card), 0 0 0 4px var(--pg-t2) }
+.pg-pk.is-mini { grid-template-columns: repeat(var(--n, 10), minmax(0, 1fr)); gap: 3px; width: 100%; min-width: 120px }
+.pg-pk.is-mini span { width: auto; height: 14px; border-radius: 3px }
+.pg-pk.is-mini span.is-done::after { width: 3px; border-width: 0 1.5px 1.5px 0 }
+
+.pg-mx { display: grid; gap: 10px }
+.pg-mx-row { display: grid; grid-template-columns: minmax(140px, 190px) auto minmax(110px, 1fr); gap: 8px 16px; align-items: center }
+.pg-mx-hd { display: grid; grid-template-columns: repeat(10, 30px); gap: 6px; text-align: center; font: 600 .7rem var(--font-display); color: var(--faint-foreground) }
+.pg-mx-sum { text-align: right; font-size: .82rem; color: var(--muted-foreground); font-variant-numeric: tabular-nums }
+.pg-mx-sum b { color: var(--foreground); font: 600 .92rem var(--font-display) }
+.pg-mx-rule { height: 1px; background: var(--pg-rule) }
+.pg-cont { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: center; padding: 14px; border: 1px solid var(--pg-rule); border-radius: 12px; background: var(--surface-inset) }
+.pg-cont b { display: block; font: 600 .98rem var(--font-display) }
+.pg-cont small { color: var(--muted-foreground) }
+
+/* simulasi */
+.pg-trend svg { display: block; width: 100%; height: auto; overflow: visible }
+.pg-trend text { font: 500 11px var(--font-sans); fill: var(--muted-foreground) }
+.pg-trend .pg-lbl { font: 600 12px var(--font-display); fill: var(--brand-ink) }
+.pg-trend .pg-thr-t { fill: var(--pg-weak); font-weight: 600 }
+.pg-range { display: grid; gap: 18px }
+.pg-rg { display: grid; grid-template-columns: 96px minmax(0, 1fr) 44px; gap: 4px 12px; align-items: center }
+.pg-axis { position: relative; height: 26px }
+.pg-axis::before { content: ""; position: absolute; left: 0; right: 0; top: 12px; height: 2px; border-radius: 2px; background: var(--pg-track) }
+.pg-axis > span { position: absolute }
+.pg-axis .pg-band { top: 9px; height: 8px; border-radius: 99px; background: color-mix(in srgb, var(--pg-t2) 35%, transparent) }
+.pg-axis .pg-pt { top: 10px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--pg-t3); opacity: .45 }
+.pg-axis .pg-best { top: 2px; width: 2px; height: 22px; margin-left: -1px; background: var(--gold) }
+.pg-axis .pg-last { top: 5px; width: 16px; height: 16px; margin-left: -8px; border-radius: 50%; background: var(--brand-ink); box-shadow: 0 0 0 3px var(--surface-card) }
+.pg-axis .pg-thr { top: 0; bottom: 0; border-left: 1.5px dashed var(--pg-weak); opacity: .7 }
+.pg-rg > b { text-align: right; font: 600 1.05rem var(--font-display); font-variant-numeric: tabular-nums }
+.pg-rg .pg-d { grid-column: 1 / -1; display: flex; justify-content: space-between; font-size: .74rem; color: var(--faint-foreground); font-variant-numeric: tabular-nums }
+.pg-up { color: var(--success) } .pg-down { color: var(--pg-weak) }
+
+/* bar skor di panel katalog simulasi (garis merah = batas gugur sub-tes 40) */
+.pg-sbar { position: relative; display: block; height: 5px; margin-top: 6px; border-radius: 99px; background: var(--pg-track) }
+.hc-scores .pg-up { color: var(--success) } .hc-scores .pg-down { color: var(--pg-weak) }
+.pg-sbar > span { position: absolute; inset: 0 auto 0 0; border-radius: inherit; background: var(--brand-ink); transform-origin: left }
+.pg-sbar::after { content: ""; position: absolute; left: 40%; top: -3px; bottom: -3px; width: 1.5px; background: var(--pg-weak); opacity: .6 }
+
+/* bar di kartu pemilih aspek drill */
+.hc-sector-bar { grid-column: 1 / -1; margin: 6px 0 2px }
+.hc-sector-bar .pg-stack { height: 5px; gap: 2px }
+.hc-sector-bar .pg-stack span { min-width: 3px; border-radius: 2px }
+
+@media (prefers-reduced-motion: no-preference) {
+  .pg-grow { animation: pg-grow .9s var(--pg-ease) both; animation-delay: calc(var(--d, 0) * 60ms + 120ms) }
+  .pg-rise { animation: pg-rise .9s var(--pg-ease) both; animation-delay: calc(var(--d, 0) * 40ms + 160ms) }
+  .pg-trend .pg-line { stroke-dasharray: 1200; animation: pg-draw 1.4s var(--pg-ease) both .2s }
+  @keyframes pg-grow { from { transform: scaleX(0) } }
+  @keyframes pg-rise { from { transform: scaleY(0) } }
+  @keyframes pg-draw { from { stroke-dashoffset: 1200 } to { stroke-dashoffset: 0 } }
+}
+
+@media (max-width: 920px) {
+  .pg-tk { grid-template-columns: minmax(0, 1fr) }
+  .pg-stub { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 24px; align-items: end }
+  .pg-stub > .pg-label, .pg-stub > .pg-ring, .pg-stub > .pg-chip, .pg-stub > .pg-facts { grid-column: 1 / -1 }
+  .pg-sub { margin-top: 0 }
+  .pg-stub::after { top: auto; bottom: -1px; left: 22px; right: 22px; border-right: 0; border-bottom: 2px dashed rgba(255, 255, 255, .28) }
+  .pg-punch { display: none }
+  .pg-body { grid-template-columns: minmax(0, 1fr) }
+  .pg-body > section + section { border-left: 0; border-top: 1px dashed var(--border) }
+}
+@media (max-width: 640px) {
+  .pg-stub { grid-template-columns: minmax(0, 1fr); padding: 20px 18px }
+  .pg-big { font-size: 3rem }
+  .pg-body > section, .pg-foot { padding: 18px 16px }
+  .pg-asp li { grid-template-columns: minmax(0, 1fr) 72px }
+  .pg-asp .pg-stack { grid-column: 1 / -1; order: 3 } .pg-asp .pg-meta { grid-column: 1 / -1; order: 4 }
+  .pg-mx-row { grid-template-columns: minmax(0, 1fr) auto } .pg-mx-row.is-hd { display: none }
+  .pg-mx-row > .pg-pk { grid-column: 1 / -1; order: 3; grid-template-columns: repeat(10, minmax(0, 1fr)) }
+  .pg-mx-row > .pg-pk span { width: auto; height: auto; aspect-ratio: 1 }
+  .pg-cont { grid-template-columns: minmax(0, 1fr) }
+  .pg-rg { grid-template-columns: 80px minmax(0, 1fr) 36px }
+}
