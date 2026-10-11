@@ -4,7 +4,7 @@ import QuestionPassage from "@/app/components/QuestionPassage";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { SafeDrillItem } from "@/lib/drill-bank";
-import { DRILL_TIERS, readDrillProgress, writeDrillProgress, type DrillProgress } from "@/lib/drill-cards";
+import { DRILL_TIERS, drillCategory, readDrillProgress, writeDrillProgress, type DrillProgress } from "@/lib/drill-cards";
 import { useDrillProgress } from "@/lib/hooks/use-drill-progress";
 import { ExamBar, ExamBody, ExamDock } from "@/app/components/ExamChrome";
 import { Badge, EmptyState } from "@/app/components/ui";
@@ -29,8 +29,20 @@ function startIndex(items: SafeDrillItem[], progress: DrillProgress) {
 }
 
 export default function DrillSession({ label, items: raw }: { label: string; items: SafeDrillItem[] }) {
-  // Semua soal kartu, urut Dasar → Menengah → Lanjut; nomor soal = posisi di daftar ini.
-  const items = useMemo(() => [...raw].sort((a, b) => a.tier - b.tier), [raw]);
+  // Semua soal kartu, dikelompokkan per kategori (lalu Dasar → Lanjut di dalamnya); nomor soal = posisi di daftar ini.
+  const items = useMemo(
+    () => [...raw].sort((a, b) => drillCategory(a.sub_type)[0] - drillCategory(b.sub_type)[0] || a.tier - b.tier),
+    [raw],
+  );
+  const groups = useMemo(() => {
+    const out: { key: number; label: string; own: [SafeDrillItem, number][] }[] = [];
+    items.forEach((it, i) => {
+      const [key, label] = drillCategory(it.sub_type);
+      if (out.at(-1)?.key !== key) out.push({ key, label, own: [] });
+      out.at(-1)!.own.push([it, i]);
+    });
+    return out;
+  }, [items]);
   const progress = useDrillProgress();
   // null = belum memilih soal sendiri; ikut startIndex sampai progres localStorage terbaca.
   const [chosen, setChosen] = useState<number | null>(null);
@@ -163,11 +175,9 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
                   </li>
                 ))}
             </ul>
-            {DRILL_TIERS.map(({ tier, label: lv }) => {
-              const own = items.map((it, i) => [it, i] as const).filter(([it]) => it.tier === tier);
-              if (!own.length) return null;
+            {groups.map(({ key, label: lv, own }) => {
               return (
-                <section key={tier}>
+                <section key={key}>
                   <h3 className="dnav-title">{lv}</h3>
                   <div className="dnav-grid">
                     {own.map(([it, i]) => (

@@ -35,6 +35,42 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K15: { label: "Sikap Kerja", aspek: "sikap", desc: "Pilihan A/B sesuai kunci latihan nilai kerja institusi", prefix: ["SKJ-"], opsi: 2 },
 };
 
+/** Kategori soal di navigasi sesi drill: awalan sub_type → label, urutan = urutan grup. Awalan terpanjang menang. */
+const DRILL_CATEGORIES: [string, string][] = [
+  ["VRB-SIN", "Sinonim"], ["VRB-ANT", "Antonim"],
+  ["VRB-ANL-1K", "Analogi satu kata"], ["VRB-ANL-2K", "Analogi dua kata"], ["VRB-ANL-PAIR", "Pasangan analogi"],
+  ["VRB-GJL", "Kata ganjil"], ["VRB-GJL-NUM", "Bilangan ganjil"],
+  ["VRB-BACA-TEKS", "Bacaan teks"], ["VRB-BACA-TABEL", "Bacaan tabel"],
+  ["NUM-HIT-PECAHAN", "Pecahan"], ["NUM-HIT-DESIMAL", "Desimal"], ["NUM-HIT-PERSEN", "Persen"],
+  ["NUM-HIT-AKAR-PANGKAT", "Akar & pangkat"], ["NUM-HIT-CAMPUR", "Operasi campuran"], ["NUM-HIT-TEORI", "Teori bilangan"],
+  ["NUM-ALJ", "Aljabar & perbandingan"],
+  ["NUM-SAT-KONVERSI", "Konversi satuan"], ["NUM-SAT-CERITA", "Soal cerita satuan"],
+  ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
+  ["NUM-CRT-PROPORSI", "Proporsi"], ["NUM-CRT-UANG", "Uang"], ["NUM-CRT-UMUR", "Umur"], ["NUM-CRT-LINIER", "Persamaan linier"],
+  ["NUM-CRT-PENCACAHAN", "Pencacahan"], ["NUM-CRT-HIMPUNAN", "Himpunan"], ["NUM-CRT-GEOMETRI", "Geometri"], ["NUM-CRT-BULAT", "Bilangan bulat"],
+  ["LOG-SIL-KATEGORI", "Silogisme kategorikal"], ["LOG-SIL-KONDISIONAL", "Kondisional"], ["LOG-SIL-JEBAKAN", "Jebakan logika"],
+  ["ANL-DRT-1TRACK", "Deret angka"], ["ANL-DRT-HURUF", "Deret huruf"], ["ANL-DRT-ALFANUM", "Alfanumerik"],
+  ["ANL-DRT-2BARIS", "Deret dua baris"], ["ANL-DRT-LINGKARAN", "Deret lingkaran"],
+  ["ANL-ANGKA", "Angka dalam gambar"], ["ANL-OPERASI", "Operasi simbol"], ["ANL-KODE", "Kode"],
+  ["ANL-WCN-URUTAN", "Urutan"], ["ANL-WCN-JADWAL", "Jadwal"],
+  ["FIG-MTX", "Matriks gambar"], ["FIG-SERI", "Deret gambar"], ["FIG-ANALOGI", "Analogi gambar"], ["FIG-ROTASI", "Rotasi & cermin"],
+  ["FIG-IKON", "Ikon kategori"], ["FIG-SUSUN", "Susun potongan"],
+  ["SKJ-MANDIRI", "Kemandirian"], ["SKJ-INOVASI", "Pembaruan"], ["SKJ-RISIKO", "Keberanian bertindak"],
+  ["SKJ-INFORMASI", "Keterbukaan informasi"], ["SKJ-REFLEKSI", "Refleksi diri"], ["SKJ-HASIL", "Orientasi hasil"],
+  ["SKJ-KEBENARAN", "Kebenaran"], ["SKJ-WEWENANG", "Kewenangan"], ["SKJ-TEGAS", "Ketegasan"],
+  ["SKJ-ATURAN", "Penegakan aturan"], ["SKJ-RELIGI", "Makna religius"],
+  ["LOG-KCK-NILAI", "Mencari nilai"], ["LOG-KCK-YATIDAK", "Ya atau tidak"], ["LOG-KCK-URUTAN", "Urutan"], ["LOG-KCK-3P", "Tiga pernyataan"],
+];
+
+/** [urutan grup, label] untuk sub_type; tidak dikenal → grup terakhir "Lainnya". */
+export function drillCategory(subType: string): [number, string] {
+  let best = -1;
+  DRILL_CATEGORIES.forEach(([p], i) => {
+    if (subType.startsWith(p) && (best < 0 || p.length > DRILL_CATEGORIES[best][0].length)) best = i;
+  });
+  return best < 0 ? [DRILL_CATEGORIES.length, "Lainnya"] : [best, DRILL_CATEGORIES[best][1]];
+}
+
 export const DRILL_TIERS = [
   { tier: 1, label: "Dasar" },
   { tier: 2, label: "Menengah" },
