@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
-import { NavAdmin, NavDrill, NavHome, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
+import { NavAdmin, NavDrill, NavHome, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
 
 /*
   Shell navigasi dashboard mengikuti dajiks-cest: sidebar putih tetap di kiri
@@ -29,6 +29,7 @@ const PRIMARY_NAV: NavItem[] = [
 
 const SECONDARY_NAV: NavItem[] = [
   { label: "Drilling", href: "/dashboard/drill", icon: NavDrill },
+  { label: "Kosakata", href: "/dashboard/kosakata", icon: NavKosakata },
   { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
 ];
 

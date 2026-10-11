@@ -70,6 +70,15 @@ export default function HomeView({ name, sessions }: { name: string; sessions: H
             <span className="hub-arrow" aria-hidden="true">→</span>
           </span>
         </Link>
+        <Link href="/dashboard/kosakata" className="hub-card">
+          <span className="cat-tag tone-amber">Kosakata</span>
+          <strong>Perbanyak kosakata</strong>
+          <span className="muted">Kata baku dan serapan untuk soal verbal: arti, sinonim, antonim, contoh kalimat.</span>
+          <span className="hub-cta">
+            Buka kosakata
+            <span className="hub-arrow" aria-hidden="true">→</span>
+          </span>
+        </Link>
         <Link href="/dashboard/review" className="hub-card">
           <span className="cat-tag tone-amber">Review Soal</span>
           <strong>Pembahasan sesi selesai</strong>

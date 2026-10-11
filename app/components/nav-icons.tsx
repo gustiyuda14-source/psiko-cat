@@ -65,6 +65,16 @@ export function NavDrill() {
   );
 }
 
+export function NavKosakata() {
+  return (
+    <NavSvg>
+      <path className="sf" d="M4 6.5c2.8-1 5.5-.7 8 1v12c-2.5-1.7-5.2-2-8-1z" />
+      <path d="M12 7.5c-2.5-1.7-5.2-2-8-1v12c2.8-1 5.5-.7 8 1 2.5-1.7 5.2-2 8-1v-12c-2.8-1-5.5-.7-8 1ZM12 8v11.5M6.5 9c1.3-.2 2.5 0 3.5.5M17.5 9c-1.3-.2-2.5 0-3.5.5" />
+      <path className="ac" d="m17 3 .6 1.4L19 5l-1.4.6L17 7l-.6-1.4L15 5l1.4-.6z" />
+    </NavSvg>
+  );
+}
+
 export function NavReview() {
   return (
     <NavSvg>

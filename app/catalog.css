@@ -128,3 +128,24 @@
 @media (max-width: 760px) { .prog-panel { grid-template-columns: minmax(0, 1fr) } .prog-hero::after { top: auto; bottom: 0; left: 18px; right: 18px; border-right: 0; border-bottom: 2px dashed rgba(255, 255, 255, .3) } }
 .prog-panel.is-stacked { grid-template-columns: minmax(0, 1fr) }
 .prog-panel.is-stacked .prog-hero::after { top: auto; bottom: 0; left: 18px; right: 18px; border-right: 0; border-bottom: 2px dashed rgba(255, 255, 255, .3) }
+/* Kosakata (app/dashboard/kosakata, port cest-vocab.css). Toolbar memakai .cat-bar/.chip di atas. */
+.voc-sticky { position: sticky; top: 76px; z-index: 5; padding: var(--space-3) 0; background: var(--surface-page); box-shadow: 0 10px 14px -12px rgba(27, 42, 92, .25) }
+.voc-tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-3); margin-top: var(--space-4) }.voc-tools p { margin: 0 }
+.voc-hide { min-height: 44px; padding: 0 var(--space-4); border: 1.5px solid var(--border); border-radius: 10px; background: var(--surface-card); color: var(--foreground); font: 600 .85rem var(--font-display-src), sans-serif }
+.voc-hide[aria-pressed="true"] { background: var(--brand-ink); border-color: var(--brand-ink); color: #fff }
+.voc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--space-4); margin-top: var(--space-4) }
+.voc { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border: 1.5px solid var(--border); border-radius: 14px; background: var(--surface-card) }
+.voc.is-known { border-color: rgba(27, 42, 92, .4); background: linear-gradient(var(--surface-inset), var(--surface-card) 70%) }
+.voc-w { font: 700 1.45rem/1.1 var(--font-display-src), sans-serif; letter-spacing: -.02em; overflow-wrap: anywhere }
+.voc-pos { color: var(--muted-foreground); font-size: .875rem; font-style: italic }
+.voc-reveal { display: flex; flex-direction: column; gap: var(--space-2); padding: 0; border: 0; background: none; color: inherit; text-align: left; cursor: default }
+.voc-id { color: var(--brand-ink); font-weight: 600 }
+.voc-forms { display: grid; margin: var(--space-1) 0; border: 1.5px dashed var(--border); border-radius: 10px }
+.voc-forms div { display: flex; align-items: baseline; gap: var(--space-3); padding: 6px 12px }.voc-forms div + div { border-top: 1.5px dashed var(--border) }
+.voc-forms dt { flex: none; width: 30px; color: var(--gold); font: 700 .66rem var(--font-display-src), sans-serif; letter-spacing: .12em }
+.voc-forms dd { min-width: 0; margin: 0; font: 600 .95rem/1.3 var(--font-display-src), sans-serif; overflow-wrap: break-word }
+.voc-grid.is-hide .voc-reveal { cursor: pointer }.voc-grid.is-hide .voc:not(.is-shown) .voc-reveal > * { filter: blur(6px); user-select: none }
+.voc-ex { margin: 0; color: var(--muted-foreground); font-size: .875rem; font-style: italic }
+.voc-known { align-self: flex-start; min-height: 40px; margin-top: auto; padding: 0 var(--space-3); border: 1.5px solid var(--border); border-radius: 10px; background: var(--surface-card); color: var(--foreground); font: 600 .85rem var(--font-display-src), sans-serif }
+.voc-known:hover { border-color: var(--ok) }.voc-known[aria-pressed="true"] { background: var(--brand-ink); border-color: var(--brand-ink); color: #fff }
+@media (max-width: 600px) { .voc-tools p { display: none }.voc-tools { margin-top: var(--space-2) } }
