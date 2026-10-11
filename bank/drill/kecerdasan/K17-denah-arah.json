@@ -1,0 +1,1102 @@
+[
+  {
+    "id": "K17-N-001",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari Kantor Camat adalah …",
+    "gambar": "drill/img/K17-peta-01.svg",
+    "opsi": {
+      "a": "R. Oki",
+      "b": "Gereja",
+      "c": "Masjid",
+      "d": "Pasar",
+      "e": "Balai Desa"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ambil titik tengah Kantor Camat sebagai acuan; atas peta = Utara sesuai kompas. Gereja bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari Kantor Camat, jadi Gereja berada di Timur Laut Kantor Camat.<br>Opsi A gugur karena R. Oki berada di Utara Kantor Camat (arah tetangga). Opsi C gugur karena Masjid berada di Barat Daya Kantor Camat (arah berlawanan, titik acuan tertukar). Opsi D gugur karena Pasar berada di Utara Kantor Camat (arah tetangga). Opsi E gugur karena Balai Desa berada di Tenggara Kantor Camat (cermin atas-bawah, Utara tertukar dengan Selatan). Jawaban: Gereja. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-002",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari R. Oki adalah …",
+    "gambar": "drill/img/K17-peta-01.svg",
+    "opsi": {
+      "a": "R. Budi",
+      "b": "R. Dewi",
+      "c": "Minimarket",
+      "d": "Kantor Camat",
+      "e": "R. Hadi"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ambil titik tengah R. Oki sebagai acuan; atas peta = Utara sesuai kompas. R. Hadi berada hampir lurus di kanan R. Oki, jadi R. Hadi berada di Timur R. Oki.<br>Opsi A gugur karena R. Budi berada di Selatan R. Oki (terputar 90°). Opsi B gugur karena R. Dewi berada di Barat Daya R. Oki (arah lain). Opsi C gugur karena Minimarket berada di Tenggara R. Oki (arah tetangga). Opsi D gugur karena Kantor Camat berada di Selatan R. Oki (terputar 90°). Jawaban: R. Hadi. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-003",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Masjid terletak di arah mana dari Rumah Sakit?",
+    "gambar": "drill/img/K17-peta-01.svg",
+    "opsi": {
+      "a": "Utara",
+      "b": "Timur",
+      "c": "Barat Daya",
+      "d": "Barat",
+      "e": "Barat Laut"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah Rumah Sakit sebagai acuan; atas peta = Utara sesuai kompas. Masjid berada hampir lurus di kiri Rumah Sakit, jadi arahnya Barat.<br>Opsi A gugur karena Utara adalah terputar 90°. Opsi B gugur karena Timur adalah cermin kiri-kanan, Timur tertukar dengan Barat. Opsi C gugur karena Barat Daya adalah arah tetangga. Opsi E gugur karena Barat Laut adalah arah tetangga. Jawaban: Barat. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-004",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Lina keluar dari Bank ke Jl. Cempaka, lalu berjalan ke arah Utara. Di persimpangan Jl. Sudirman ia belok kanan, lalu di persimpangan Jl. Pahlawan ia belok kiri. Bangunan pertama di sebelah kanan Lina setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-01.svg",
+    "opsi": {
+      "a": "R. Hadi",
+      "b": "Minimarket",
+      "c": "Gereja",
+      "d": "Pasar",
+      "e": "R. Rudi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Lina mulai menghadap Utara di Jl. Cempaka. Di Jl. Sudirman belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Sudirman. Di Jl. Pahlawan belok kiri: dari menghadap Timur, kiri = Utara, jadi kini menghadap Utara di Jl. Pahlawan. Menghadap Utara, sisi kanan = Timur; bangunan pertama di sisi Timur Jl. Pahlawan setelah persimpangan adalah Gereja.<br>Opsi A gugur karena R. Hadi adalah bangunan kedua, bukan yang pertama. Opsi B gugur karena Minimarket didapat bila Lina lurus terus tanpa belok di Jl. Pahlawan. Opsi D gugur karena Pasar ada di sisi kiri (kiri dan kanan tertukar). Opsi E gugur karena R. Rudi didapat bila belokan terakhir dibalik ke kanan. Jawaban: Gereja. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-005",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Gereja ke Jl. Pahlawan, lalu berjalan ke arah Selatan. Di persimpangan Jl. Sudirman ia belok kanan, lalu di persimpangan Jl. Cempaka ia belok kiri, lalu di persimpangan Jl. Melati ia belok kiri. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-01.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "Rumah Sakit",
+      "c": "Bank",
+      "d": "Masjid",
+      "e": "Kantor Camat"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Sinta mulai menghadap Selatan di Jl. Pahlawan. Di Jl. Sudirman belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Sudirman. Di Jl. Cempaka belok kiri: dari menghadap Barat, kiri = Selatan, jadi kini menghadap Selatan di Jl. Cempaka. Di Jl. Melati belok kiri: dari menghadap Selatan, kiri = Timur, jadi kini menghadap Timur di Jl. Melati. Menghadap Timur, sisi kiri = Utara; bangunan pertama di sisi Utara Jl. Melati setelah persimpangan adalah Kantor Camat.<br>Opsi A gugur karena Balai Desa adalah bangunan kedua di sisi kanan. Opsi B gugur karena Rumah Sakit ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena Bank didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi D gugur karena Masjid didapat bila belokan terakhir dibalik ke kanan. Jawaban: Kantor Camat. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-006",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari Rumah Sakit adalah …",
+    "gambar": "drill/img/K17-peta-02.svg",
+    "opsi": {
+      "a": "R. Hadi",
+      "b": "R. Lia",
+      "c": "Kantor Camat",
+      "d": "R. Rudi",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ambil titik tengah Rumah Sakit sebagai acuan; atas peta = Utara sesuai kompas. Pasar bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari Rumah Sakit, jadi Pasar berada di Timur Laut Rumah Sakit.<br>Opsi A gugur karena R. Hadi berada di Tenggara Rumah Sakit (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi B gugur karena R. Lia berada di Timur Rumah Sakit (arah tetangga). Opsi C gugur karena Kantor Camat berada di Barat Laut Rumah Sakit (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi D gugur karena R. Rudi berada di Utara Rumah Sakit (arah tetangga). Jawaban: Pasar. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-007",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari R. Yudi adalah …",
+    "gambar": "drill/img/K17-peta-02.svg",
+    "opsi": {
+      "a": "R. Rudi",
+      "b": "Kantor Camat",
+      "c": "Minimarket",
+      "d": "R. Tia",
+      "e": "R. Putu"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah R. Yudi sebagai acuan; atas peta = Utara sesuai kompas. R. Rudi bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari R. Yudi, jadi R. Rudi berada di Timur Laut R. Yudi.<br>Opsi B gugur karena Kantor Camat berada di Utara R. Yudi (arah tetangga). Opsi C gugur karena Minimarket berada di Tenggara R. Yudi (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi D gugur karena R. Tia berada di Tenggara R. Yudi (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi E gugur karena R. Putu berada di Timur R. Yudi (arah tetangga). Jawaban: R. Rudi. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-008",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Putu terletak di arah mana dari R. Tia?",
+    "gambar": "drill/img/K17-peta-02.svg",
+    "opsi": {
+      "a": "Timur Laut",
+      "b": "Barat Daya",
+      "c": "Barat",
+      "d": "Barat Laut",
+      "e": "Utara"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah R. Tia sebagai acuan; atas peta = Utara sesuai kompas. R. Putu bergeser ke kiri (Barat) dan ke atas (Utara) dengan jarak yang hampir sama dari R. Tia, jadi arahnya Barat Laut.<br>Opsi A gugur karena Timur Laut adalah cermin kiri-kanan, Timur tertukar dengan Barat. Opsi B gugur karena Barat Daya adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi C gugur karena Barat adalah arah tetangga. Opsi E gugur karena Utara adalah arah tetangga. Jawaban: Barat Laut. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-009",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Nisa keluar dari Pura ke Jl. Gajah Mada, lalu berjalan ke arah Utara. Di persimpangan Jl. Merdeka ia belok kanan. Bangunan pertama di sebelah kiri Nisa setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-02.svg",
+    "opsi": {
+      "a": "Rumah Sakit",
+      "b": "Gereja",
+      "c": "R. Putu",
+      "d": "Kantor Pos",
+      "e": "R. Lia"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Nisa mulai menghadap Utara di Jl. Gajah Mada. Di Jl. Merdeka belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Merdeka. Menghadap Timur, sisi kiri = Utara; bangunan pertama di sisi Utara Jl. Merdeka setelah persimpangan adalah Gereja.<br>Opsi A gugur karena Rumah Sakit ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena R. Putu didapat bila belokan terakhir dibalik ke kiri. Opsi D gugur karena Kantor Pos didapat bila Nisa lurus terus tanpa belok di Jl. Merdeka. Opsi E gugur karena R. Lia adalah bangunan kedua di sisi kanan. Jawaban: Gereja. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-010",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Rumah Sakit ke Jl. Sudirman, lalu berjalan ke arah Selatan. Di persimpangan Jl. Mawar ia belok kanan, lalu di persimpangan Jl. Gajah Mada ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-02.svg",
+    "opsi": {
+      "a": "R. Kiki",
+      "b": "R. Putu",
+      "c": "Minimarket",
+      "d": "Pura",
+      "e": "R. Mira"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Sinta mulai menghadap Selatan di Jl. Sudirman. Di Jl. Mawar belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Mawar. Di Jl. Gajah Mada belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Gajah Mada. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Gajah Mada setelah persimpangan adalah Pura.<br>Opsi A gugur karena R. Kiki didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi B gugur karena R. Putu adalah bangunan kedua, bukan yang pertama. Opsi C gugur karena Minimarket didapat bila belokan terakhir dibalik ke kiri. Opsi E gugur karena R. Mira didapat bila Sinta lurus terus tanpa belok di Jl. Gajah Mada. Jawaban: Pura. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-011",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Daya dari R. Joko adalah …",
+    "gambar": "drill/img/K17-peta-03.svg",
+    "opsi": {
+      "a": "Kantor Polisi",
+      "b": "Kantor Camat",
+      "c": "Balai Desa",
+      "d": "R. Nur",
+      "e": "R. Budi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah R. Joko sebagai acuan; atas peta = Utara sesuai kompas. Balai Desa bergeser ke kiri (Barat) dan ke bawah (Selatan) dengan jarak yang hampir sama dari R. Joko, jadi Balai Desa berada di Barat Daya R. Joko.<br>Opsi A gugur karena Kantor Polisi berada di Selatan R. Joko (arah tetangga). Opsi B gugur karena Kantor Camat berada di Tenggara R. Joko (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi D gugur karena R. Nur berada di Timur R. Joko (arah lain). Opsi E gugur karena R. Budi berada di Tenggara R. Joko (cermin kiri-kanan, Timur tertukar dengan Barat). Jawaban: Balai Desa. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-012",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Tenggara dari Gereja adalah …",
+    "gambar": "drill/img/K17-peta-03.svg",
+    "opsi": {
+      "a": "Puskesmas",
+      "b": "R. Dewi",
+      "c": "R. Budi",
+      "d": "Balai Desa",
+      "e": "Bank"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah Gereja sebagai acuan; atas peta = Utara sesuai kompas. R. Budi bergeser ke kanan (Timur) dan ke bawah (Selatan) dengan jarak yang hampir sama dari Gereja, jadi R. Budi berada di Tenggara Gereja.<br>Opsi A gugur karena Puskesmas berada di Selatan Gereja (arah tetangga). Opsi B gugur karena R. Dewi berada di Selatan Gereja (arah tetangga). Opsi D gugur karena Balai Desa berada di Selatan Gereja (arah tetangga). Opsi E gugur karena Bank berada di Timur Gereja (arah tetangga). Jawaban: R. Budi. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-013",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Kantor Camat terletak di arah mana dari R. Nur?",
+    "gambar": "drill/img/K17-peta-03.svg",
+    "opsi": {
+      "a": "Timur Laut",
+      "b": "Timur",
+      "c": "Tenggara",
+      "d": "Selatan",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah R. Nur sebagai acuan; atas peta = Utara sesuai kompas. Kantor Camat bergeser ke kanan (Timur) dan ke bawah (Selatan) dengan jarak yang hampir sama dari R. Nur, jadi arahnya Tenggara.<br>Opsi A gugur karena Timur Laut adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi B gugur karena Timur adalah arah tetangga. Opsi D gugur karena Selatan adalah arah tetangga. Opsi E gugur karena Barat Daya adalah cermin kiri-kanan, Timur tertukar dengan Barat. Jawaban: Tenggara. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-014",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Nisa keluar dari Kantor Polisi ke Jl. Sudirman, lalu berjalan ke arah Utara. Di persimpangan Jl. Cempaka ia belok kiri, lalu di persimpangan Jl. Flamboyan ia belok kiri. Bangunan pertama di sebelah kanan Nisa setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-03.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "Gereja",
+      "c": "Puskesmas",
+      "d": "R. Joko",
+      "e": "R. Eko"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Nisa mulai menghadap Utara di Jl. Sudirman. Di Jl. Cempaka belok kiri: dari menghadap Utara, kiri = Barat, jadi kini menghadap Barat di Jl. Cempaka. Di Jl. Flamboyan belok kiri: dari menghadap Barat, kiri = Selatan, jadi kini menghadap Selatan di Jl. Flamboyan. Menghadap Selatan, sisi kanan = Barat; bangunan pertama di sisi Barat Jl. Flamboyan setelah persimpangan adalah Balai Desa.<br>Opsi B gugur karena Gereja didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi C gugur karena Puskesmas adalah bangunan kedua, bukan yang pertama. Opsi D gugur karena R. Joko didapat bila belokan terakhir dibalik ke kanan. Opsi E gugur karena R. Eko adalah bangunan kedua di sisi kiri. Jawaban: Balai Desa. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-015",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari R. Budi ke Jl. Mawar, lalu berjalan ke arah Barat. Di persimpangan Jl. Sudirman ia belok kanan, lalu di persimpangan Jl. Cempaka ia belok kiri, lalu di persimpangan Jl. Flamboyan ia belok kanan. Bangunan pertama di sebelah kanan Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-03.svg",
+    "opsi": {
+      "a": "Kantor Polisi",
+      "b": "Bank",
+      "c": "Balai Desa",
+      "d": "Gereja",
+      "e": "R. Joko"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Dimas mulai menghadap Barat di Jl. Mawar. Di Jl. Sudirman belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Sudirman. Di Jl. Cempaka belok kiri: dari menghadap Utara, kiri = Barat, jadi kini menghadap Barat di Jl. Cempaka. Di Jl. Flamboyan belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Flamboyan. Menghadap Utara, sisi kanan = Timur; bangunan pertama di sisi Timur Jl. Flamboyan setelah persimpangan adalah R. Joko.<br>Opsi A gugur karena Kantor Polisi didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi B gugur karena Bank adalah bangunan kedua, bukan yang pertama. Opsi C gugur karena Balai Desa didapat bila belokan terakhir dibalik ke kiri. Opsi D gugur karena Gereja ada di sisi kiri (kiri dan kanan tertukar). Jawaban: R. Joko. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-016",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat dari R. Joko adalah …",
+    "gambar": "drill/img/K17-peta-04.svg",
+    "opsi": {
+      "a": "Kantor Camat",
+      "b": "Minimarket",
+      "c": "R. Ita",
+      "d": "Gereja",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ambil titik tengah R. Joko sebagai acuan; atas peta = Utara sesuai kompas. Kantor Pos berada hampir lurus di kiri R. Joko, jadi Kantor Pos berada di Barat R. Joko.<br>Opsi A gugur karena Kantor Camat berada di Barat Daya R. Joko (arah tetangga). Opsi B gugur karena Minimarket berada di Selatan R. Joko (terputar 90°). Opsi C gugur karena R. Ita berada di Timur R. Joko (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi D gugur karena Gereja berada di Selatan R. Joko (terputar 90°). Jawaban: Kantor Pos. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-017",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari Minimarket adalah …",
+    "gambar": "drill/img/K17-peta-04.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "Gereja",
+      "c": "Kantor Camat",
+      "d": "R. Mira",
+      "e": "R. Zul"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah Minimarket sebagai acuan; atas peta = Utara sesuai kompas. Pasar bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari Minimarket, jadi Pasar berada di Timur Laut Minimarket.<br>Opsi B gugur karena Gereja berada di Utara Minimarket (arah tetangga). Opsi C gugur karena Kantor Camat berada di Barat Laut Minimarket (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi D gugur karena R. Mira berada di Utara Minimarket (arah tetangga). Opsi E gugur karena R. Zul berada di Barat Minimarket (arah lain). Jawaban: Pasar. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-018",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Pura terletak di arah mana dari R. Zul?",
+    "gambar": "drill/img/K17-peta-04.svg",
+    "opsi": {
+      "a": "Utara",
+      "b": "Timur Laut",
+      "c": "Timur",
+      "d": "Selatan",
+      "e": "Barat Laut"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah R. Zul sebagai acuan; atas peta = Utara sesuai kompas. Pura berada hampir lurus di atas R. Zul, jadi arahnya Utara.<br>Opsi B gugur karena Timur Laut adalah arah tetangga. Opsi C gugur karena Timur adalah terputar 90°. Opsi D gugur karena Selatan adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi E gugur karena Barat Laut adalah arah tetangga. Jawaban: Utara. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-019",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari R. Eko ke Jl. Diponegoro, lalu berjalan ke arah Barat. Di persimpangan Jl. Melati ia belok kanan. Bangunan pertama di sebelah kanan Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-04.svg",
+    "opsi": {
+      "a": "R. Ita",
+      "b": "Perpustakaan",
+      "c": "Gereja",
+      "d": "R. Joko",
+      "e": "R. Kiki"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Sinta mulai menghadap Barat di Jl. Diponegoro. Di Jl. Melati belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Melati. Menghadap Utara, sisi kanan = Timur; bangunan pertama di sisi Timur Jl. Melati setelah persimpangan adalah R. Ita.<br>Opsi B gugur karena Perpustakaan ada di sisi kiri (kiri dan kanan tertukar). Opsi C gugur karena Gereja didapat bila belokan terakhir dibalik ke kiri. Opsi D gugur karena R. Joko adalah bangunan kedua di sisi kiri. Opsi E gugur karena R. Kiki didapat bila belokan terakhir dibalik dan sisi tertukar. Jawaban: R. Ita. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-020",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Wulan keluar dari Perpustakaan ke Jl. Melati, lalu berjalan ke arah Selatan. Di persimpangan Jl. Gajah Mada ia belok kanan, lalu di persimpangan Jl. Kenanga ia belok kanan. Bangunan pertama di sebelah kanan Wulan setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-04.svg",
+    "opsi": {
+      "a": "R. Hadi",
+      "b": "Kantor Camat",
+      "c": "R. Zul",
+      "d": "Gereja",
+      "e": "Pura"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Wulan mulai menghadap Selatan di Jl. Melati. Di Jl. Gajah Mada belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Gajah Mada. Di Jl. Kenanga belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Kenanga. Menghadap Utara, sisi kanan = Timur; bangunan pertama di sisi Timur Jl. Kenanga setelah persimpangan adalah Gereja.<br>Opsi A gugur karena R. Hadi didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi B gugur karena Kantor Camat ada di sisi kiri (kiri dan kanan tertukar). Opsi C gugur karena R. Zul didapat bila belokan terakhir dibalik ke kiri. Opsi E gugur karena Pura adalah bangunan kedua di sisi kiri. Jawaban: Gereja. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-021",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Laut dari R. Dewi adalah …",
+    "gambar": "drill/img/K17-peta-05.svg",
+    "opsi": {
+      "a": "R. Kiki",
+      "b": "Pura",
+      "c": "Balai Desa",
+      "d": "R. Zul",
+      "e": "R. Oki"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah R. Dewi sebagai acuan; atas peta = Utara sesuai kompas. R. Zul bergeser ke kiri (Barat) dan ke atas (Utara) dengan jarak yang hampir sama dari R. Dewi, jadi R. Zul berada di Barat Laut R. Dewi.<br>Opsi A gugur karena R. Kiki berada di Barat Daya R. Dewi (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi B gugur karena Pura berada di Utara R. Dewi (arah tetangga). Opsi C gugur karena Balai Desa berada di Barat Daya R. Dewi (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi E gugur karena R. Oki berada di Barat R. Dewi (arah tetangga). Jawaban: R. Zul. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-022",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Tenggara dari Puskesmas adalah …",
+    "gambar": "drill/img/K17-peta-05.svg",
+    "opsi": {
+      "a": "R. Putu",
+      "b": "R. Oki",
+      "c": "Pura",
+      "d": "Bank",
+      "e": "R. Rudi"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ambil titik tengah Puskesmas sebagai acuan; atas peta = Utara sesuai kompas. R. Rudi bergeser ke kanan (Timur) dan ke bawah (Selatan) dengan jarak yang hampir sama dari Puskesmas, jadi R. Rudi berada di Tenggara Puskesmas.<br>Opsi A gugur karena R. Putu berada di Selatan Puskesmas (arah tetangga). Opsi B gugur karena R. Oki berada di Selatan Puskesmas (arah tetangga). Opsi C gugur karena Pura berada di Timur Puskesmas (arah tetangga). Opsi D gugur karena Bank berada di Barat Puskesmas (arah lain). Jawaban: R. Rudi. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-023",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Yudi terletak di arah mana dari Pasar?",
+    "gambar": "drill/img/K17-peta-05.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Barat Laut",
+      "c": "Utara",
+      "d": "Timur Laut",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ambil titik tengah Pasar sebagai acuan; atas peta = Utara sesuai kompas. R. Yudi bergeser ke kiri (Barat) dan ke atas (Utara) dengan jarak yang hampir sama dari Pasar, jadi arahnya Barat Laut.<br>Opsi A gugur karena Barat adalah arah tetangga. Opsi C gugur karena Utara adalah arah tetangga. Opsi D gugur karena Timur Laut adalah cermin kiri-kanan, Timur tertukar dengan Barat. Opsi E gugur karena Barat Daya adalah cermin atas-bawah, Utara tertukar dengan Selatan. Jawaban: Barat Laut. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-024",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Fajar keluar dari Bank ke Jl. Gajah Mada, lalu berjalan ke arah Selatan. Di persimpangan Jl. Melati ia belok kiri, lalu di persimpangan Jl. Pahlawan ia belok kanan. Bangunan pertama di sebelah kanan Fajar setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-05.svg",
+    "opsi": {
+      "a": "R. Zul",
+      "b": "Balai Desa",
+      "c": "Pura",
+      "d": "Kantor Polisi",
+      "e": "R. Dewi"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Fajar mulai menghadap Selatan di Jl. Gajah Mada. Di Jl. Melati belok kiri: dari menghadap Selatan, kiri = Timur, jadi kini menghadap Timur di Jl. Melati. Di Jl. Pahlawan belok kanan: dari menghadap Timur, kanan = Selatan, jadi kini menghadap Selatan di Jl. Pahlawan. Menghadap Selatan, sisi kanan = Barat; bangunan pertama di sisi Barat Jl. Pahlawan setelah persimpangan adalah Balai Desa.<br>Opsi A gugur karena R. Zul didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi C gugur karena Pura didapat bila belokan terakhir dibalik ke kiri. Opsi D gugur karena Kantor Polisi adalah bangunan kedua, bukan yang pertama. Opsi E gugur karena R. Dewi ada di sisi kiri (kiri dan kanan tertukar). Jawaban: Balai Desa. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-025",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Lina keluar dari R. Kiki ke Jl. Anggrek, lalu berjalan ke arah Timur. Di persimpangan Jl. Gajah Mada ia belok kiri, lalu di persimpangan Jl. Melati ia belok kanan, lalu di persimpangan Jl. Pahlawan ia belok kiri. Bangunan pertama di sebelah kiri Lina setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-05.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "Puskesmas",
+      "c": "Pura",
+      "d": "R. Dewi",
+      "e": "R. Zul"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Lina mulai menghadap Timur di Jl. Anggrek. Di Jl. Gajah Mada belok kiri: dari menghadap Timur, kiri = Utara, jadi kini menghadap Utara di Jl. Gajah Mada. Di Jl. Melati belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Melati. Di Jl. Pahlawan belok kiri: dari menghadap Timur, kiri = Utara, jadi kini menghadap Utara di Jl. Pahlawan. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Pahlawan setelah persimpangan adalah R. Zul.<br>Opsi A gugur karena Balai Desa didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi B gugur karena Puskesmas adalah bangunan kedua, bukan yang pertama. Opsi C gugur karena Pura ada di sisi kanan (kiri dan kanan tertukar). Opsi D gugur karena R. Dewi didapat bila belokan terakhir dibalik ke kanan. Jawaban: R. Zul. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-026",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Daya dari Puskesmas adalah …",
+    "gambar": "drill/img/K17-peta-06.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "R. Kiki",
+      "c": "SD Harapan",
+      "d": "Kantor Polisi",
+      "e": "Kantor Camat"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ambil titik tengah Puskesmas sebagai acuan; atas peta = Utara sesuai kompas. R. Kiki bergeser ke kiri (Barat) dan ke bawah (Selatan) dengan jarak yang hampir sama dari Puskesmas, jadi R. Kiki berada di Barat Daya Puskesmas.<br>Opsi A gugur karena Gereja berada di Barat Puskesmas (arah tetangga). Opsi C gugur karena SD Harapan berada di Selatan Puskesmas (arah tetangga). Opsi D gugur karena Kantor Polisi berada di Utara Puskesmas (arah lain). Opsi E gugur karena Kantor Camat berada di Barat Laut Puskesmas (cermin atas-bawah, Utara tertukar dengan Selatan). Jawaban: R. Kiki. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-027",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari Minimarket adalah …",
+    "gambar": "drill/img/K17-peta-06.svg",
+    "opsi": {
+      "a": "R. Tia",
+      "b": "Puskesmas",
+      "c": "Gereja",
+      "d": "Masjid",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ambil titik tengah Minimarket sebagai acuan; atas peta = Utara sesuai kompas. Puskesmas berada hampir lurus di kanan Minimarket, jadi Puskesmas berada di Timur Minimarket.<br>Opsi A gugur karena R. Tia berada di Tenggara Minimarket (arah tetangga). Opsi C gugur karena Gereja berada di Barat Minimarket (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi D gugur karena Masjid berada di Selatan Minimarket (terputar 90°). Opsi E gugur karena Pasar berada di Timur Laut Minimarket (arah tetangga). Jawaban: Puskesmas. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-028",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Gereja terletak di arah mana dari Puskesmas?",
+    "gambar": "drill/img/K17-peta-06.svg",
+    "opsi": {
+      "a": "Timur",
+      "b": "Barat Daya",
+      "c": "Barat",
+      "d": "Barat Laut",
+      "e": "Utara"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah Puskesmas sebagai acuan; atas peta = Utara sesuai kompas. Gereja berada hampir lurus di kiri Puskesmas, jadi arahnya Barat.<br>Opsi A gugur karena Timur adalah cermin kiri-kanan, Timur tertukar dengan Barat. Opsi B gugur karena Barat Daya adalah arah tetangga. Opsi D gugur karena Barat Laut adalah arah tetangga. Opsi E gugur karena Utara adalah terputar 90°. Jawaban: Barat. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-029",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Kantor Polisi ke Jl. Pahlawan, lalu berjalan ke arah Selatan. Di persimpangan Jl. Veteran ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-06.svg",
+    "opsi": {
+      "a": "Masjid",
+      "b": "SMP Bangsa",
+      "c": "R. Kiki",
+      "d": "SD Harapan",
+      "e": "R. Tia"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Sinta mulai menghadap Selatan di Jl. Pahlawan. Di Jl. Veteran belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Veteran. Menghadap Barat, sisi kiri = Selatan; bangunan pertama di sisi Selatan Jl. Veteran setelah persimpangan adalah R. Kiki.<br>Opsi A gugur karena Masjid ada di sisi kanan (kiri dan kanan tertukar). Opsi B gugur karena SMP Bangsa adalah bangunan kedua, bukan yang pertama. Opsi D gugur karena SD Harapan didapat bila belokan terakhir dibalik ke kiri. Opsi E gugur karena R. Tia didapat bila Sinta lurus terus tanpa belok di Jl. Veteran. Jawaban: R. Kiki. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-030",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari Minimarket ke Jl. Gajah Mada, lalu berjalan ke arah Timur. Di persimpangan Jl. Pahlawan ia belok kanan, lalu di persimpangan Jl. Veteran ia belok kanan. Bangunan pertama di sebelah kiri Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-06.svg",
+    "opsi": {
+      "a": "Masjid",
+      "b": "R. Kiki",
+      "c": "SMP Bangsa",
+      "d": "SD Harapan",
+      "e": "R. Tia"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Dimas mulai menghadap Timur di Jl. Gajah Mada. Di Jl. Pahlawan belok kanan: dari menghadap Timur, kanan = Selatan, jadi kini menghadap Selatan di Jl. Pahlawan. Di Jl. Veteran belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Veteran. Menghadap Barat, sisi kiri = Selatan; bangunan pertama di sisi Selatan Jl. Veteran setelah persimpangan adalah R. Kiki.<br>Opsi A gugur karena Masjid ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena SMP Bangsa adalah bangunan kedua, bukan yang pertama. Opsi D gugur karena SD Harapan didapat bila belokan terakhir dibalik ke kiri. Opsi E gugur karena R. Tia didapat bila Dimas lurus terus tanpa belok di Jl. Veteran. Jawaban: R. Kiki. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-031",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari R. Mira adalah …",
+    "gambar": "drill/img/K17-peta-07.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "Minimarket",
+      "c": "R. Rudi",
+      "d": "SMP Bangsa",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah R. Mira sebagai acuan; atas peta = Utara sesuai kompas. Gereja bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari R. Mira, jadi Gereja berada di Timur Laut R. Mira.<br>Opsi B gugur karena Minimarket berada di Barat Laut R. Mira (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi C gugur karena R. Rudi berada di Utara R. Mira (arah tetangga). Opsi D gugur karena SMP Bangsa berada di Timur R. Mira (arah tetangga). Opsi E gugur karena Kantor Pos berada di Barat Daya R. Mira (arah berlawanan, titik acuan tertukar). Jawaban: Gereja. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-032",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Utara dari Pura adalah …",
+    "gambar": "drill/img/K17-peta-07.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "Kantor Pos",
+      "c": "Gereja",
+      "d": "Puskesmas",
+      "e": "R. Mira"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah Pura sebagai acuan; atas peta = Utara sesuai kompas. Pasar berada hampir lurus di atas Pura, jadi Pasar berada di Utara Pura.<br>Opsi B gugur karena Kantor Pos berada di Selatan Pura (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi C gugur karena Gereja berada di Timur Laut Pura (arah tetangga). Opsi D gugur karena Puskesmas berada di Timur Laut Pura (arah tetangga). Opsi E gugur karena R. Mira berada di Timur Pura (terputar 90°). Jawaban: Pasar. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-033",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Pura terletak di arah mana dari R. Eko?",
+    "gambar": "drill/img/K17-peta-07.svg",
+    "opsi": {
+      "a": "Selatan",
+      "b": "Barat Daya",
+      "c": "Barat",
+      "d": "Utara",
+      "e": "Tenggara"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah R. Eko sebagai acuan; atas peta = Utara sesuai kompas. Pura berada hampir lurus di bawah R. Eko, jadi arahnya Selatan.<br>Opsi B gugur karena Barat Daya adalah arah tetangga. Opsi C gugur karena Barat adalah terputar 90°. Opsi D gugur karena Utara adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi E gugur karena Tenggara adalah arah tetangga. Jawaban: Selatan. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-034",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Kantor Pos ke Jl. Melati, lalu berjalan ke arah Utara. Di persimpangan Jl. Gajah Mada ia belok kanan, lalu di persimpangan Jl. Mawar ia belok kiri. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-07.svg",
+    "opsi": {
+      "a": "SMP Bangsa",
+      "b": "Perpustakaan",
+      "c": "Balai Desa",
+      "d": "Kantor Camat",
+      "e": "R. Yudi"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Sinta mulai menghadap Utara di Jl. Melati. Di Jl. Gajah Mada belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Gajah Mada. Di Jl. Mawar belok kiri: dari menghadap Timur, kiri = Utara, jadi kini menghadap Utara di Jl. Mawar. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Mawar setelah persimpangan adalah Kantor Camat.<br>Opsi A gugur karena SMP Bangsa didapat bila belokan terakhir dibalik ke kanan. Opsi B gugur karena Perpustakaan ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena Balai Desa didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi E gugur karena R. Yudi adalah bangunan kedua, bukan yang pertama. Jawaban: Kantor Camat. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-035",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Lina keluar dari Gereja ke Jl. Mawar, lalu berjalan ke arah Selatan. Di persimpangan Jl. Gajah Mada ia belok kanan, lalu di persimpangan Jl. Melati ia belok kanan, lalu di persimpangan Jl. Veteran ia belok kanan. Bangunan pertama di sebelah kiri Lina setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-07.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "R. Joko",
+      "c": "R. Lia",
+      "d": "R. Yudi",
+      "e": "Minimarket"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Lina mulai menghadap Selatan di Jl. Mawar. Di Jl. Gajah Mada belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Gajah Mada. Di Jl. Melati belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Melati. Di Jl. Veteran belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Veteran. Menghadap Timur, sisi kiri = Utara; bangunan pertama di sisi Utara Jl. Veteran setelah persimpangan adalah R. Lia.<br>Opsi A gugur karena Pasar didapat bila Lina lurus terus tanpa belok di Jl. Veteran. Opsi B gugur karena R. Joko ada di sisi kanan (kiri dan kanan tertukar). Opsi D gugur karena R. Yudi adalah bangunan kedua di sisi kanan. Opsi E gugur karena Minimarket didapat bila belokan terakhir dibalik ke kiri. Jawaban: R. Lia. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-036",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari R. Zul adalah …",
+    "gambar": "drill/img/K17-peta-08.svg",
+    "opsi": {
+      "a": "R. Tia",
+      "b": "SD Harapan",
+      "c": "R. Eko",
+      "d": "Perpustakaan",
+      "e": "R. Kiki"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah R. Zul sebagai acuan; atas peta = Utara sesuai kompas. R. Eko bergeser ke kanan (Timur) dan ke atas (Utara) dengan jarak yang hampir sama dari R. Zul, jadi R. Eko berada di Timur Laut R. Zul.<br>Opsi A gugur karena R. Tia berada di Utara R. Zul (arah tetangga). Opsi B gugur karena SD Harapan berada di Timur R. Zul (arah tetangga). Opsi D gugur karena Perpustakaan berada di Timur R. Zul (arah tetangga). Opsi E gugur karena R. Kiki berada di Barat Laut R. Zul (cermin kiri-kanan, Timur tertukar dengan Barat). Jawaban: R. Eko. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-037",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari R. Ani adalah …",
+    "gambar": "drill/img/K17-peta-08.svg",
+    "opsi": {
+      "a": "R. Kiki",
+      "b": "R. Lia",
+      "c": "Puskesmas",
+      "d": "R. Eko",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ambil titik tengah R. Ani sebagai acuan; atas peta = Utara sesuai kompas. R. Lia berada hampir lurus di kanan R. Ani, jadi R. Lia berada di Timur R. Ani.<br>Opsi A gugur karena R. Kiki berada di Barat R. Ani (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi C gugur karena Puskesmas berada di Timur Laut R. Ani (arah tetangga). Opsi D gugur karena R. Eko berada di Timur Laut R. Ani (arah tetangga). Opsi E gugur karena Pasar berada di Utara R. Ani (terputar 90°). Jawaban: R. Lia. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-038",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Ita terletak di arah mana dari R. Nur?",
+    "gambar": "drill/img/K17-peta-08.svg",
+    "opsi": {
+      "a": "Barat Daya",
+      "b": "Timur Laut",
+      "c": "Timur",
+      "d": "Tenggara",
+      "e": "Selatan"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah R. Nur sebagai acuan; atas peta = Utara sesuai kompas. R. Ita bergeser ke kanan (Timur) dan ke bawah (Selatan) dengan jarak yang hampir sama dari R. Nur, jadi arahnya Tenggara.<br>Opsi A gugur karena Barat Daya adalah cermin kiri-kanan, Timur tertukar dengan Barat. Opsi B gugur karena Timur Laut adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi C gugur karena Timur adalah arah tetangga. Opsi E gugur karena Selatan adalah arah tetangga. Jawaban: Tenggara. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-039",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari R. Ani ke Jl. Merdeka, lalu berjalan ke arah Barat. Di persimpangan Jl. Pahlawan ia belok kanan. Bangunan pertama di sebelah kiri Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-08.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "Gereja",
+      "c": "R. Kiki",
+      "d": "R. Zul",
+      "e": "R. Nur"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Dimas mulai menghadap Barat di Jl. Merdeka. Di Jl. Pahlawan belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Pahlawan. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Pahlawan setelah persimpangan adalah Gereja.<br>Opsi A gugur karena Pasar ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena R. Kiki didapat bila Dimas lurus terus tanpa belok di Jl. Pahlawan. Opsi D gugur karena R. Zul didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi E gugur karena R. Nur adalah bangunan kedua, bukan yang pertama. Jawaban: Gereja. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-040",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari SD Harapan ke Jl. Mawar, lalu berjalan ke arah Utara. Di persimpangan Jl. Merdeka ia belok kiri, lalu di persimpangan Jl. Pahlawan ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-08.svg",
+    "opsi": {
+      "a": "R. Nur",
+      "b": "Gereja",
+      "c": "R. Kiki",
+      "d": "Pasar",
+      "e": "R. Ani"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Sinta mulai menghadap Utara di Jl. Mawar. Di Jl. Merdeka belok kiri: dari menghadap Utara, kiri = Barat, jadi kini menghadap Barat di Jl. Merdeka. Di Jl. Pahlawan belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Pahlawan. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Pahlawan setelah persimpangan adalah Gereja.<br>Opsi A gugur karena R. Nur adalah bangunan kedua, bukan yang pertama. Opsi C gugur karena R. Kiki didapat bila Sinta lurus terus tanpa belok di Jl. Pahlawan. Opsi D gugur karena Pasar ada di sisi kanan (kiri dan kanan tertukar). Opsi E gugur karena R. Ani didapat bila belokan terakhir dibalik ke kiri. Jawaban: Gereja. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-041",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Utara dari Masjid adalah …",
+    "gambar": "drill/img/K17-peta-09.svg",
+    "opsi": {
+      "a": "Balai Desa",
+      "b": "Kantor Camat",
+      "c": "R. Yudi",
+      "d": "Rumah Sakit",
+      "e": "R. Kiki"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah Masjid sebagai acuan; atas peta = Utara sesuai kompas. Rumah Sakit berada hampir lurus di atas Masjid, jadi Rumah Sakit berada di Utara Masjid.<br>Opsi A gugur karena Balai Desa berada di Timur Laut Masjid (arah tetangga). Opsi B gugur karena Kantor Camat berada di Selatan Masjid (cermin atas-bawah, Utara tertukar dengan Selatan). Opsi C gugur karena R. Yudi berada di Barat Laut Masjid (arah tetangga). Opsi E gugur karena R. Kiki berada di Timur Masjid (terputar 90°). Jawaban: Rumah Sakit. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-042",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Daya dari Minimarket adalah …",
+    "gambar": "drill/img/K17-peta-09.svg",
+    "opsi": {
+      "a": "R. Yudi",
+      "b": "R. Hadi",
+      "c": "Rumah Sakit",
+      "d": "Balai Desa",
+      "e": "Puskesmas"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah Minimarket sebagai acuan; atas peta = Utara sesuai kompas. R. Yudi bergeser ke kiri (Barat) dan ke bawah (Selatan) dengan jarak yang hampir sama dari Minimarket, jadi R. Yudi berada di Barat Daya Minimarket.<br>Opsi B gugur karena R. Hadi berada di Tenggara Minimarket (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi C gugur karena Rumah Sakit berada di Selatan Minimarket (arah tetangga). Opsi D gugur karena Balai Desa berada di Tenggara Minimarket (cermin kiri-kanan, Timur tertukar dengan Barat). Opsi E gugur karena Puskesmas berada di Barat Minimarket (arah tetangga). Jawaban: R. Yudi. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-043",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Kiki terletak di arah mana dari R. Ita?",
+    "gambar": "drill/img/K17-peta-09.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Utara",
+      "c": "Tenggara",
+      "d": "Selatan",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ambil titik tengah R. Ita sebagai acuan; atas peta = Utara sesuai kompas. R. Kiki berada hampir lurus di bawah R. Ita, jadi arahnya Selatan.<br>Opsi A gugur karena Barat adalah terputar 90°. Opsi B gugur karena Utara adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi C gugur karena Tenggara adalah arah tetangga. Opsi E gugur karena Barat Daya adalah arah tetangga. Jawaban: Selatan. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-044",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Tono keluar dari Balai Desa ke Jl. Pahlawan, lalu berjalan ke arah Utara. Di persimpangan Jl. Merdeka ia belok kiri, lalu di persimpangan Jl. Melati ia belok kanan. Bangunan pertama di sebelah kiri Tono setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-09.svg",
+    "opsi": {
+      "a": "R. Nur",
+      "b": "Rumah Sakit",
+      "c": "Pura",
+      "d": "Puskesmas",
+      "e": "Minimarket"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Tono mulai menghadap Utara di Jl. Pahlawan. Di Jl. Merdeka belok kiri: dari menghadap Utara, kiri = Barat, jadi kini menghadap Barat di Jl. Merdeka. Di Jl. Melati belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Melati. Menghadap Utara, sisi kiri = Barat; bangunan pertama di sisi Barat Jl. Melati setelah persimpangan adalah Pura.<br>Opsi A gugur karena R. Nur didapat bila Tono lurus terus tanpa belok di Jl. Melati. Opsi B gugur karena Rumah Sakit didapat bila belokan terakhir dibalik ke kiri. Opsi D gugur karena Puskesmas adalah bangunan kedua, bukan yang pertama. Opsi E gugur karena Minimarket ada di sisi kanan (kiri dan kanan tertukar). Jawaban: Pura. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-045",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Balai Desa ke Jl. Pahlawan, lalu berjalan ke arah Selatan. Di persimpangan Jl. Sudirman ia belok kanan, lalu di persimpangan Jl. Melati ia belok kanan, lalu di persimpangan Jl. Merdeka ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-09.svg",
+    "opsi": {
+      "a": "R. Nur",
+      "b": "Rumah Sakit",
+      "c": "R. Hadi",
+      "d": "Pura",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Sinta mulai menghadap Selatan di Jl. Pahlawan. Di Jl. Sudirman belok kanan: dari menghadap Selatan, kanan = Barat, jadi kini menghadap Barat di Jl. Sudirman. Di Jl. Melati belok kanan: dari menghadap Barat, kanan = Utara, jadi kini menghadap Utara di Jl. Melati. Di Jl. Merdeka belok kanan: dari menghadap Utara, kanan = Timur, jadi kini menghadap Timur di Jl. Merdeka. Menghadap Timur, sisi kiri = Utara; bangunan pertama di sisi Utara Jl. Merdeka setelah persimpangan adalah Kantor Pos.<br>Opsi A gugur karena R. Nur didapat bila belokan terakhir dibalik ke kiri. Opsi B gugur karena Rumah Sakit ada di sisi kanan (kiri dan kanan tertukar). Opsi C gugur karena R. Hadi adalah bangunan kedua di sisi kanan. Opsi D gugur karena Pura didapat bila Sinta lurus terus tanpa belok di Jl. Merdeka. Jawaban: Kantor Pos. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-046",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Utara dari Balai Desa adalah …",
+    "gambar": "drill/img/K17-peta-10.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "Kantor Camat",
+      "c": "R. Tia",
+      "d": "R. Joko",
+      "e": "R. Ita"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ambil titik tengah Balai Desa sebagai acuan; atas peta = Utara sesuai kompas. R. Ita berada hampir lurus di atas Balai Desa, jadi R. Ita berada di Utara Balai Desa.<br>Opsi A gugur karena Gereja berada di Barat Balai Desa (terputar 90°). Opsi B gugur karena Kantor Camat berada di Barat Laut Balai Desa (arah tetangga). Opsi C gugur karena R. Tia berada di Barat Laut Balai Desa (arah tetangga). Opsi D gugur karena R. Joko berada di Barat Laut Balai Desa (arah tetangga). Jawaban: R. Ita. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-047",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari R. Nur adalah …",
+    "gambar": "drill/img/K17-peta-10.svg",
+    "opsi": {
+      "a": "R. Tia",
+      "b": "R. Ita",
+      "c": "SMP Bangsa",
+      "d": "Gereja",
+      "e": "Masjid"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ambil titik tengah R. Nur sebagai acuan; atas peta = Utara sesuai kompas. SMP Bangsa berada hampir lurus di bawah R. Nur, jadi SMP Bangsa berada di Selatan R. Nur.<br>Opsi A gugur karena R. Tia berada di Barat Daya R. Nur (arah tetangga). Opsi B gugur karena R. Ita berada di Tenggara R. Nur (arah tetangga). Opsi D gugur karena Gereja berada di Barat Daya R. Nur (arah tetangga). Opsi E gugur karena Masjid berada di Barat R. Nur (terputar 90°). Jawaban: SMP Bangsa. Tips: tarik garis dari titik tengah bangunan acuan; arah diagonal butuh pergeseran mendatar dan tegak yang hampir sama.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-048",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Balai Desa terletak di arah mana dari R. Nur?",
+    "gambar": "drill/img/K17-peta-10.svg",
+    "opsi": {
+      "a": "Selatan",
+      "b": "Barat Daya",
+      "c": "Barat",
+      "d": "Utara",
+      "e": "Tenggara"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ambil titik tengah R. Nur sebagai acuan; atas peta = Utara sesuai kompas. Balai Desa berada hampir lurus di bawah R. Nur, jadi arahnya Selatan.<br>Opsi B gugur karena Barat Daya adalah arah tetangga. Opsi C gugur karena Barat adalah terputar 90°. Opsi D gugur karena Utara adalah cermin atas-bawah, Utara tertukar dengan Selatan. Opsi E gugur karena Tenggara adalah arah tetangga. Jawaban: Selatan. Tips: tentukan dulu komponen Utara/Selatan, lalu Timur/Barat, baru gabungkan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-049",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Kantor Polisi ke Jl. Diponegoro, lalu berjalan ke arah Timur. Di persimpangan Jl. Gajah Mada ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-10.svg",
+    "opsi": {
+      "a": "R. Nur",
+      "b": "R. Gita",
+      "c": "SMP Bangsa",
+      "d": "R. Ita",
+      "e": "Rumah Sakit"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Sinta mulai menghadap Timur di Jl. Diponegoro. Di Jl. Gajah Mada belok kanan: dari menghadap Timur, kanan = Selatan, jadi kini menghadap Selatan di Jl. Gajah Mada. Menghadap Selatan, sisi kiri = Timur; bangunan pertama di sisi Timur Jl. Gajah Mada setelah persimpangan adalah Rumah Sakit.<br>Opsi A gugur karena R. Nur didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi B gugur karena R. Gita adalah bangunan kedua di sisi kanan. Opsi C gugur karena SMP Bangsa adalah bangunan kedua, bukan yang pertama. Opsi D gugur karena R. Ita didapat bila Sinta lurus terus tanpa belok di Jl. Gajah Mada. Jawaban: Rumah Sakit. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-050",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Wulan keluar dari R. Gita ke Jl. Pahlawan, lalu berjalan ke arah Timur. Di persimpangan Jl. Gajah Mada ia belok kiri, lalu di persimpangan Jl. Diponegoro ia belok kiri. Bangunan pertama di sebelah kanan Wulan setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-10.svg",
+    "opsi": {
+      "a": "R. Nur",
+      "b": "Kantor Polisi",
+      "c": "R. Ita",
+      "d": "R. Putu",
+      "e": "Rumah Sakit"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Wulan mulai menghadap Timur di Jl. Pahlawan. Di Jl. Gajah Mada belok kiri: dari menghadap Timur, kiri = Utara, jadi kini menghadap Utara di Jl. Gajah Mada. Di Jl. Diponegoro belok kiri: dari menghadap Utara, kiri = Barat, jadi kini menghadap Barat di Jl. Diponegoro. Menghadap Barat, sisi kanan = Utara; bangunan pertama di sisi Utara Jl. Diponegoro setelah persimpangan adalah R. Putu.<br>Opsi A gugur karena R. Nur didapat bila Wulan lurus terus tanpa belok di Jl. Diponegoro. Opsi B gugur karena Kantor Polisi ada di sisi kiri (kiri dan kanan tertukar). Opsi C gugur karena R. Ita didapat bila belokan terakhir dibalik dan sisi tertukar. Opsi E gugur karena Rumah Sakit didapat bila belokan terakhir dibalik ke kanan. Jawaban: R. Putu. Tips: perbarui arah hadap di setiap belokan; saat menghadap Selatan, kiri = Timur dan kanan = Barat.",
+    "status_kunci": "ganda"
+  }
+]
