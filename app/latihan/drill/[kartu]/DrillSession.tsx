@@ -194,15 +194,17 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
             <p className="qnum tnum">Soal {idx + 1}</p>
             <Badge tone="neutral">{tierLabel(q.tier)}</Badge>
           </div>
-          <div className="q-card">
-            {q.instruksi && <p className="q-ins">{q.instruksi}</p>}
-            <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
-            <p className="q-stem whitespace-pre-line">{q.stem}</p>
-            {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
-            {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
+          <div className={`q-card ${q.gambar ? "q-card-fig" : ""}`}>
+            <div className="q-body">
+              {q.instruksi && <p className="q-ins">{q.instruksi}</p>}
+              <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
+              <p className="q-stem whitespace-pre-line">{q.stem}</p>
+              {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
+              {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
+            </div>
             {q.gambar && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/${q.gambar}`} alt="" className="q-figure" />
+              <img src={`/${q.gambar}`} alt="" className="q-figure q-figure-side" />
             )}
           </div>
 

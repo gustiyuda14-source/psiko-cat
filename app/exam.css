@@ -82,5 +82,13 @@
 
 /* Gambar soal: dibatasi tinggi layar supaya soal + opsi muat tanpa banyak gulir; gambar kecil tidak diperbesar. */
 .q-figure { display: block; width: auto; height: auto; max-width: min(100%, 520px); max-height: min(30vh, 260px); margin-inline: auto; padding: .375rem; border: 1px solid var(--border); border-radius: var(--r-md); background: #fff; object-fit: contain }
+/* Drill bergambar: teks kiri (dibungkus, tidak memanjang), gambar kanan sebesar kolomnya; ditumpuk di layar sempit. */
+.q-body { display: grid; gap: .875rem; align-content: start; min-width: 0 }
+.q-figure-side { width: 100%; max-width: 440px; max-height: none }
+@media (min-width: 900px) {
+  .q-card-fig { grid-template-columns: minmax(0, 1fr) minmax(0, 440px); gap: clamp(1.25rem, 3vw, 2.5rem); align-items: center }
+  .q-card-fig .q-stem { max-width: 34ch }
+  .q-figure-side { margin: 0 }
+}
 .opt-figure { width: auto; height: auto; max-width: 100%; max-height: 96px; object-fit: contain }
 @media (min-width: 640px) { .opt-figure { max-height: 120px } }
