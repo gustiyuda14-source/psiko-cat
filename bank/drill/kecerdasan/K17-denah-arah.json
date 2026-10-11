@@ -2528,5 +2528,1385 @@
     "pembahasan": "Langkah 1: Cari Jl. Melati dan Jl. Sudirman; daerah di antaranya adalah baris tengah peta (diarsir biru di gambar).\nLangkah 2: Sisi Barat Jl. Mawar = sebelah kiri jalan itu.\nLangkah 3: Bangunan di daerah itu yang menempel ke Jl. Mawar: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (Balai Desa): sisi Barat Jl. Mawar, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi B (Perpustakaan): sisi Barat Jl. Mawar, tapi tidak di antara Jl. Melati dan Jl. Sudirman.\nOpsi C (Masjid): sisi Timur Jl. Mawar; sisinya tertukar.\nOpsi D (Kantor Camat): sisi Timur Jl. Mawar; sisinya tertukar.\nJawaban: Kantor Pos.<br>Gambaran nyata: petugas menerima pesan \"titik kumpul di gedung antara Jl. Melati dan Jl. Sudirman, sisi Barat Jl. Mawar\". Dua patokan jalan dipakai supaya lokasinya tidak tertukar dengan blok sebelah.\nTips: tandai dulu daerah di antara dua jalan yang disebut, baru pilih sisi jalannya. Semua syarat harus terpenuhi, bukan salah satu.",
     "gambar_pembahasan": "K17-N-110.svg",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-111",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari R. Farah adalah …",
+    "gambar": "drill/img/K17-peta-23.svg",
+    "opsi": {
+      "a": "KUD",
+      "b": "Pasar",
+      "c": "R. Dina",
+      "d": "R. Kevin",
+      "e": "KUA"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Farah.\nLangkah 2: Lihat kompas: Selatan = lurus ke bawah. Geser jari lurus ke bawah dari R. Farah.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah KUA.<br>Kenapa yang lain salah:\nOpsi A (KUD): letaknya di kiri-bawah R. Farah, jadi Barat Daya; hampir benar, meleset satu langkah di kompas.\nOpsi B (Pasar): letaknya di kiri R. Farah, jadi Barat; meleset seperempat putaran.\nOpsi C (R. Dina): letaknya di kiri-bawah R. Farah, jadi Barat Daya; hampir benar, meleset satu langkah di kompas.\nOpsi D (R. Kevin): letaknya di kiri R. Farah, jadi Barat; meleset seperempat putaran.\nJawaban: KUA.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Selatan!\" Kamu harus tahu arahnya tanpa ragu: lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-111.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-112",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Farah terletak di arah mana dari SMP Tunas?",
+    "gambar": "drill/img/K17-peta-23.svg",
+    "opsi": {
+      "a": "Tenggara",
+      "b": "Selatan",
+      "c": "Barat",
+      "d": "Timur Laut",
+      "e": "Timur"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah SMP Tunas, lalu cari R. Farah.\nLangkah 2: R. Farah ada di kanan SMP Tunas (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: kanan = Timur.<br>Kenapa yang lain salah:\nOpsi A (Tenggara): itu arah kanan-bawah; hampir benar, meleset satu langkah di kompas.\nOpsi B (Selatan): itu arah bawah; meleset seperempat putaran.\nOpsi C (Barat): itu arah kiri; jebakan kiri-kanan tertukar.\nOpsi D (Timur Laut): itu arah kanan-atas; hampir benar, meleset satu langkah di kompas.\nJawaban: Timur.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Timur dari SMP Tunas.\" Rekan yang memegang peta harus langsung tahu itu lurus ke kanan di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-112.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-113",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Bayu keluar dari R. Kirana ke Jl. Nangka, lalu berjalan ke arah Barat. Di persimpangan Jl. Durian ia belok kanan, lalu di persimpangan Jl. Seroja ia belok kanan. Bangunan pertama di sebelah kiri Bayu setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-23.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "R. Dodi",
+      "c": "R. Jihan",
+      "d": "R. Kevin",
+      "e": "R. Indah"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Bayu keluar dari R. Kirana ke Jl. Nangka, menghadap Barat.\nLangkah 2: Di Jl. Durian belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Seroja belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Jihan.<br>Kenapa yang lain salah:\nOpsi A (Pasar): itu kalau belokan terakhir salah arah (belok kiri).\nOpsi B (R. Dodi): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (R. Kevin): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi E (R. Indah): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Jihan.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-113.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-114",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Wulan keluar dari Pasar ke Jl. Durian, lalu berjalan ke arah Selatan. Di persimpangan Jl. Nangka ia belok kiri, lalu di persimpangan Jl. Pattimura ia belok kiri, lalu di persimpangan Jl. Seroja ia belok kiri. Bangunan pertama di sebelah kanan Wulan setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-23.svg",
+    "opsi": {
+      "a": "R. Jihan",
+      "b": "R. Indah",
+      "c": "R. Eka",
+      "d": "SMP Tunas",
+      "e": "R. Farah"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Wulan keluar dari Pasar ke Jl. Durian, menghadap Selatan.\nLangkah 2: Di Jl. Nangka belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Pattimura belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Seroja belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: R. Indah.<br>Kenapa yang lain salah:\nOpsi A (R. Jihan): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Eka): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (SMP Tunas): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi E (R. Farah): itu kalau belokan terakhir salah arah (belok kanan).\nJawaban: R. Indah.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-114.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-115",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Tono keluar dari Pasar ke Jl. Durian, lalu berjalan ke arah Utara. Di persimpangan Jl. Seroja ia belok kanan. Bangunan pertama di sebelah kiri Tono setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-23.svg",
+    "opsi": {
+      "a": "R. Dodi",
+      "b": "R. Kevin",
+      "c": "SMP Tunas",
+      "d": "R. Indah",
+      "e": "R. Jihan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Tono keluar dari Pasar ke Jl. Durian, menghadap Utara.\nLangkah 2: Di Jl. Seroja belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Jihan.<br>Kenapa yang lain salah:\nOpsi A (R. Dodi): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi B (R. Kevin): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi C (SMP Tunas): itu bangunan kedua di sisi kanan.\nOpsi D (R. Indah): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Jihan.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-115.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-116",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat dari R. Dodi adalah …",
+    "gambar": "drill/img/K17-peta-24.svg",
+    "opsi": {
+      "a": "Puskesmas",
+      "b": "R. Hana",
+      "c": "R. Putra",
+      "d": "Kantor Pos",
+      "e": "Pasar"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Dodi.\nLangkah 2: Lihat kompas: Barat = lurus ke kiri. Geser jari lurus ke kiri dari R. Dodi.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Hana.<br>Kenapa yang lain salah:\nOpsi A (Puskesmas): letaknya di atas R. Dodi, jadi Utara; meleset seperempat putaran.\nOpsi C (R. Putra): letaknya di atas R. Dodi, jadi Utara; meleset seperempat putaran.\nOpsi D (Kantor Pos): letaknya di atas R. Dodi, jadi Utara; meleset seperempat putaran.\nOpsi E (Pasar): letaknya di kiri-atas R. Dodi, jadi Barat Laut; hampir benar, meleset satu langkah di kompas.\nJawaban: R. Hana.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Barat R. Dodi.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-116.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-117",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Utara dari R. Fikri adalah …",
+    "gambar": "drill/img/K17-peta-24.svg",
+    "opsi": {
+      "a": "R. Dina",
+      "b": "Klinik",
+      "c": "KUD",
+      "d": "R. Galang",
+      "e": "R. Laras"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Fikri.\nLangkah 2: Lihat kompas: Utara = lurus ke atas. Geser jari lurus ke atas dari R. Fikri.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Galang.<br>Kenapa yang lain salah:\nOpsi A (R. Dina): letaknya di kanan-atas R. Fikri, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nOpsi B (Klinik): letaknya di kiri-atas R. Fikri, jadi Barat Laut; hampir benar, meleset satu langkah di kompas.\nOpsi C (KUD): letaknya di kanan R. Fikri, jadi Timur; meleset seperempat putaran.\nOpsi E (R. Laras): letaknya di bawah R. Fikri, jadi Selatan; jebakan atas-bawah tertukar.\nJawaban: R. Galang.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Utara!\" Kamu harus tahu arahnya tanpa ragu: lurus ke atas di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-117.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-118",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Puskesmas terletak di arah mana dari R. Hana?",
+    "gambar": "drill/img/K17-peta-24.svg",
+    "opsi": {
+      "a": "Tenggara",
+      "b": "Barat Laut",
+      "c": "Utara",
+      "d": "Timur Laut",
+      "e": "Timur"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Hana, lalu cari Puskesmas.\nLangkah 2: Puskesmas ada di kanan-atas R. Hana (geser ke kanan dan ke atas hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kanan-atas = Timur Laut.<br>Kenapa yang lain salah:\nOpsi A (Tenggara): itu arah kanan-bawah; jebakan atas-bawah tertukar.\nOpsi B (Barat Laut): itu arah kiri-atas; jebakan kiri-kanan tertukar.\nOpsi C (Utara): itu arah atas; hampir benar, meleset satu langkah di kompas.\nOpsi E (Timur): itu arah kanan; hampir benar, meleset satu langkah di kompas.\nJawaban: Timur Laut.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Timur Laut dari R. Hana.\" Rekan yang memegang peta harus langsung tahu itu serong ke kanan-atas di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-118.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-119",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Fajar keluar dari Masjid ke Jl. Imam Bonjol, lalu berjalan ke arah Utara. Di persimpangan Jl. Asoka ia belok kanan. Bangunan pertama di sebelah kiri Fajar setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-24.svg",
+    "opsi": {
+      "a": "Bank",
+      "b": "Kantor Pos",
+      "c": "Pasar",
+      "d": "R. Galang",
+      "e": "R. Yoga"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Fajar keluar dari Masjid ke Jl. Imam Bonjol, menghadap Utara.\nLangkah 2: Di Jl. Asoka belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Galang.<br>Kenapa yang lain salah:\nOpsi A (Bank): itu bangunan kedua; yang pertama terlewat.\nOpsi B (Kantor Pos): itu bangunan kedua di sisi kanan.\nOpsi C (Pasar): itu kalau Fajar lupa belok di Jl. Asoka dan jalan lurus terus.\nOpsi E (R. Yoga): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Galang.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-119.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-120",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Bayu keluar dari R. Dina ke Jl. Kenari, lalu berjalan ke arah Barat. Di persimpangan Jl. Kemuning ia belok kanan, lalu di persimpangan Jl. Asoka ia belok kanan. Bangunan pertama di sebelah kanan Bayu setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-24.svg",
+    "opsi": {
+      "a": "Bank",
+      "b": "R. Yoga",
+      "c": "R. Putra",
+      "d": "Kantor Pos",
+      "e": "R. Galang"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Bayu keluar dari R. Dina ke Jl. Kenari, menghadap Barat.\nLangkah 2: Di Jl. Kemuning belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Asoka belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (Bank): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi B (R. Yoga): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi C (R. Putra): itu bangunan kedua di sisi kiri.\nOpsi E (R. Galang): itu kalau belokan terakhir salah arah (belok kiri).\nJawaban: Kantor Pos.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-120.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-121",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari R. Hana adalah …",
+    "gambar": "drill/img/K17-peta-25.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "Bank",
+      "c": "R. Galang",
+      "d": "R. Gilang",
+      "e": "R. Eka"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Hana.\nLangkah 2: Lihat kompas: Selatan = lurus ke bawah. Geser jari lurus ke bawah dari R. Hana.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Galang.<br>Kenapa yang lain salah:\nOpsi A (Gereja): letaknya di kanan-bawah R. Hana, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nOpsi B (Bank): letaknya di kiri R. Hana, jadi Barat; meleset seperempat putaran.\nOpsi D (R. Gilang): letaknya di atas R. Hana, jadi Utara; jebakan atas-bawah tertukar.\nOpsi E (R. Eka): letaknya di kanan R. Hana, jadi Timur; meleset seperempat putaran.\nJawaban: R. Galang.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Selatan dari R. Hana.\" Rekan yang memegang peta harus langsung tahu itu lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-121.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-122",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Galang terletak di arah mana dari R. Laras?",
+    "gambar": "drill/img/K17-peta-25.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Barat Laut",
+      "c": "Tenggara",
+      "d": "Selatan",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Laras, lalu cari R. Galang.\nLangkah 2: R. Galang ada di kiri-bawah R. Laras (geser ke kiri dan ke bawah hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kiri-bawah = Barat Daya.<br>Kenapa yang lain salah:\nOpsi A (Barat): itu arah kiri; hampir benar, meleset satu langkah di kompas.\nOpsi B (Barat Laut): itu arah kiri-atas; jebakan atas-bawah tertukar.\nOpsi C (Tenggara): itu arah kanan-bawah; jebakan kiri-kanan tertukar.\nOpsi D (Selatan): itu arah bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Barat Daya.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Barat Daya R. Laras.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-122.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-123",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari Bank ke Jl. Asoka, lalu berjalan ke arah Selatan. Di persimpangan Jl. Wijaya ia belok kiri. Bangunan pertama di sebelah kanan Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-25.svg",
+    "opsi": {
+      "a": "R. Dodi",
+      "b": "Bengkel",
+      "c": "Koperasi",
+      "d": "Gereja",
+      "e": "R. Dina"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Dimas keluar dari Bank ke Jl. Asoka, menghadap Selatan.\nLangkah 2: Di Jl. Wijaya belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: Koperasi.<br>Kenapa yang lain salah:\nOpsi A (R. Dodi): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi B (Bengkel): itu kalau Dimas lupa belok di Jl. Wijaya dan jalan lurus terus.\nOpsi D (Gereja): itu bangunan kedua di sisi kiri.\nOpsi E (R. Dina): itu bangunan kedua; yang pertama terlewat.\nJawaban: Koperasi.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-123.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-124",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Fajar keluar dari R. Laras ke Jl. Wijaya, lalu berjalan ke arah Barat. Di persimpangan Jl. Asoka ia belok kiri, lalu di persimpangan Jl. Dahlia ia belok kiri. Bangunan pertama di sebelah kiri Fajar setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-25.svg",
+    "opsi": {
+      "a": "R. Citra",
+      "b": "R. Rizky",
+      "c": "Bengkel",
+      "d": "R. Joni",
+      "e": "R. Galang"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Fajar keluar dari R. Laras ke Jl. Wijaya, menghadap Barat.\nLangkah 2: Di Jl. Asoka belok kiri. Menghadap Barat, kirinya adalah Selatan. Sekarang menghadap Selatan.\nLangkah 3: Di Jl. Dahlia belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Citra.<br>Kenapa yang lain salah:\nOpsi B (R. Rizky): itu bangunan kedua di sisi kanan.\nOpsi C (Bengkel): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi D (R. Joni): itu bangunan kedua; yang pertama terlewat.\nOpsi E (R. Galang): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Citra.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-124.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-125",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Bank ke Jl. Asoka, lalu berjalan ke arah Selatan. Di persimpangan Jl. Dahlia ia belok kiri, lalu di persimpangan Jl. Kemuning ia belok kiri, lalu di persimpangan Jl. Wijaya ia belok kiri. Bangunan pertama di sebelah kanan Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-25.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "R. Kevin",
+      "c": "R. Laras",
+      "d": "R. Dodi",
+      "e": "R. Dina"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Sinta keluar dari Bank ke Jl. Asoka, menghadap Selatan.\nLangkah 2: Di Jl. Dahlia belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Kemuning belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Wijaya belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: Gereja.<br>Kenapa yang lain salah:\nOpsi B (R. Kevin): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi C (R. Laras): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (R. Dodi): itu bangunan kedua; yang pertama terlewat.\nOpsi E (R. Dina): ada di sisi kiri; kiri dan kanan tertukar.\nJawaban: Gereja.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-125.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-126",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur Laut dari Bengkel adalah …",
+    "gambar": "drill/img/K17-peta-26.svg",
+    "opsi": {
+      "a": "R. Kirana",
+      "b": "R. Farah",
+      "c": "R. Gilang",
+      "d": "R. Fikri",
+      "e": "Klinik"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Bengkel.\nLangkah 2: Lihat kompas: Timur Laut = serong ke kanan-atas. Geser jari serong ke kanan-atas dari Bengkel.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Gilang.<br>Kenapa yang lain salah:\nOpsi A (R. Kirana): letaknya di kanan-bawah Bengkel, jadi Tenggara; jebakan atas-bawah tertukar.\nOpsi B (R. Farah): letaknya di kanan-bawah Bengkel, jadi Tenggara; jebakan atas-bawah tertukar.\nOpsi D (R. Fikri): letaknya di kanan Bengkel, jadi Timur; hampir benar, meleset satu langkah di kompas.\nOpsi E (Klinik): letaknya di atas Bengkel, jadi Utara; hampir benar, meleset satu langkah di kompas.\nJawaban: R. Gilang.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Timur Laut!\" Kamu harus tahu arahnya tanpa ragu: serong ke kanan-atas di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-126.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-127",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Laut dari R. Indah adalah …",
+    "gambar": "drill/img/K17-peta-26.svg",
+    "opsi": {
+      "a": "R. Kirana",
+      "b": "Koperasi",
+      "c": "Apotek",
+      "d": "Gereja",
+      "e": "Kantor Polisi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Indah.\nLangkah 2: Lihat kompas: Barat Laut = serong ke kiri-atas. Geser jari serong ke kiri-atas dari R. Indah.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Apotek.<br>Kenapa yang lain salah:\nOpsi A (R. Kirana): letaknya di kiri-bawah R. Indah, jadi Barat Daya; jebakan atas-bawah tertukar.\nOpsi B (Koperasi): letaknya di kiri R. Indah, jadi Barat; hampir benar, meleset satu langkah di kompas.\nOpsi D (Gereja): letaknya di atas R. Indah, jadi Utara; hampir benar, meleset satu langkah di kompas.\nOpsi E (Kantor Polisi): letaknya di kiri-bawah R. Indah, jadi Barat Daya; jebakan atas-bawah tertukar.\nJawaban: Apotek.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Barat Laut dari R. Indah.\" Rekan yang memegang peta harus langsung tahu itu serong ke kiri-atas di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-127.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-128",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Laras terletak di arah mana dari R. Gilang?",
+    "gambar": "drill/img/K17-peta-26.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Barat Laut",
+      "c": "Utara",
+      "d": "Timur",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Gilang, lalu cari R. Laras.\nLangkah 2: R. Laras ada di kiri R. Gilang (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: kiri = Barat.<br>Kenapa yang lain salah:\nOpsi B (Barat Laut): itu arah kiri-atas; hampir benar, meleset satu langkah di kompas.\nOpsi C (Utara): itu arah atas; meleset seperempat putaran.\nOpsi D (Timur): itu arah kanan; jebakan kiri-kanan tertukar.\nOpsi E (Barat Daya): itu arah kiri-bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Barat.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Barat R. Gilang.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-128.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-129",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Lina keluar dari Bengkel ke Jl. Cendana, lalu berjalan ke arah Selatan. Di persimpangan Jl. Kenari ia belok kiri, lalu di persimpangan Jl. Asoka ia belok kiri, lalu di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kiri Lina setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-26.svg",
+    "opsi": {
+      "a": "R. Wawan",
+      "b": "R. Irfan",
+      "c": "R. Gilang",
+      "d": "Gereja",
+      "e": "R. Laras"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Lina keluar dari Bengkel ke Jl. Cendana, menghadap Selatan.\nLangkah 2: Di Jl. Kenari belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Asoka belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Imam Bonjol belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: R. Wawan.<br>Kenapa yang lain salah:\nOpsi B (R. Irfan): itu bangunan kedua di sisi kanan.\nOpsi C (R. Gilang): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi D (Gereja): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi E (R. Laras): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Wawan.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-129.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-130",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari Apotek ke Jl. Asoka, lalu berjalan ke arah Utara. Di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kanan Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-26.svg",
+    "opsi": {
+      "a": "R. Laras",
+      "b": "R. Gilang",
+      "c": "R. Irfan",
+      "d": "R. Wawan",
+      "e": "Gereja"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Dimas keluar dari Apotek ke Jl. Asoka, menghadap Utara.\nLangkah 2: Di Jl. Imam Bonjol belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 3: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: R. Laras.<br>Kenapa yang lain salah:\nOpsi B (R. Gilang): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi C (R. Irfan): itu bangunan kedua; yang pertama terlewat.\nOpsi D (R. Wawan): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi E (Gereja): itu kalau belokan terakhir salah arah (belok kanan).\nJawaban: R. Laras.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-130.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-131",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari R. Lutfi adalah …",
+    "gambar": "drill/img/K17-peta-27.svg",
+    "opsi": {
+      "a": "Masjid",
+      "b": "Apotek",
+      "c": "KUA",
+      "d": "Bank",
+      "e": "Gd. Serbaguna"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Lutfi.\nLangkah 2: Lihat kompas: Timur = lurus ke kanan. Geser jari lurus ke kanan dari R. Lutfi.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Apotek.<br>Kenapa yang lain salah:\nOpsi A (Masjid): letaknya di kanan-atas R. Lutfi, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nOpsi C (KUA): letaknya di atas R. Lutfi, jadi Utara; meleset seperempat putaran.\nOpsi D (Bank): letaknya di kanan-bawah R. Lutfi, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nOpsi E (Gd. Serbaguna): letaknya di bawah R. Lutfi, jadi Selatan; meleset seperempat putaran.\nJawaban: Apotek.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Timur R. Lutfi.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-131.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-132",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Gd. Serbaguna terletak di arah mana dari KUA?",
+    "gambar": "drill/img/K17-peta-27.svg",
+    "opsi": {
+      "a": "Utara",
+      "b": "Tenggara",
+      "c": "Selatan",
+      "d": "Barat Daya",
+      "e": "Barat"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah KUA, lalu cari Gd. Serbaguna.\nLangkah 2: Gd. Serbaguna ada di bawah KUA (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: bawah = Selatan.<br>Kenapa yang lain salah:\nOpsi A (Utara): itu arah atas; jebakan atas-bawah tertukar.\nOpsi B (Tenggara): itu arah kanan-bawah; hampir benar, meleset satu langkah di kompas.\nOpsi D (Barat Daya): itu arah kiri-bawah; hampir benar, meleset satu langkah di kompas.\nOpsi E (Barat): itu arah kiri; meleset seperempat putaran.\nJawaban: Selatan.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Selatan!\" Kamu harus tahu arahnya tanpa ragu: lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-132.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-133",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Galih keluar dari Masjid ke Jl. Cendana, lalu berjalan ke arah Selatan. Di persimpangan Jl. Hasanuddin ia belok kanan, lalu di persimpangan Jl. Nangka ia belok kanan, lalu di persimpangan Jl. Pattimura ia belok kanan. Bangunan pertama di sebelah kiri Galih setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-27.svg",
+    "opsi": {
+      "a": "Gereja",
+      "b": "R. Dina",
+      "c": "R. Yoga",
+      "d": "R. Lutfi",
+      "e": "Balai Desa"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Galih keluar dari Masjid ke Jl. Cendana, menghadap Selatan.\nLangkah 2: Di Jl. Hasanuddin belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 3: Di Jl. Nangka belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Pattimura belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 5: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: Balai Desa.<br>Kenapa yang lain salah:\nOpsi A (Gereja): itu kalau Galih lupa belok di Jl. Pattimura dan jalan lurus terus.\nOpsi B (R. Dina): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Yoga): itu bangunan kedua di sisi kanan.\nOpsi D (R. Lutfi): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: Balai Desa.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-133.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-134",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Apotek ke Jl. Cendana, lalu berjalan ke arah Selatan. Di persimpangan Jl. Hasanuddin ia belok kanan. Bangunan pertama di sebelah kanan Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-27.svg",
+    "opsi": {
+      "a": "R. Jihan",
+      "b": "R. Dodi",
+      "c": "Bank",
+      "d": "R. Irfan",
+      "e": "R. Nadia"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Sinta keluar dari Apotek ke Jl. Cendana, menghadap Selatan.\nLangkah 2: Di Jl. Hasanuddin belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 3: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: R. Irfan.<br>Kenapa yang lain salah:\nOpsi A (R. Jihan): itu bangunan kedua; yang pertama terlewat.\nOpsi B (R. Dodi): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi C (Bank): itu kalau belokan terakhir salah arah (belok kiri).\nOpsi E (R. Nadia): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nJawaban: R. Irfan.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-134.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-135",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Nisa keluar dari SMP Tunas ke Jl. Bakti, lalu berjalan ke arah Timur. Di persimpangan Jl. Cendana ia belok kanan, lalu di persimpangan Jl. Hasanuddin ia belok kanan. Bangunan pertama di sebelah kiri Nisa setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-27.svg",
+    "opsi": {
+      "a": "R. Nadia",
+      "b": "R. Irfan",
+      "c": "R. Dodi",
+      "d": "Bank",
+      "e": "Gd. Serbaguna"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Nisa keluar dari SMP Tunas ke Jl. Bakti, menghadap Timur.\nLangkah 2: Di Jl. Cendana belok kanan. Menghadap Timur, kanannya adalah Selatan. Sekarang menghadap Selatan.\nLangkah 3: Di Jl. Hasanuddin belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 4: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: R. Dodi.<br>Kenapa yang lain salah:\nOpsi A (R. Nadia): itu kalau belokan terakhir salah arah (belok kiri).\nOpsi B (R. Irfan): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi D (Bank): itu kalau Nisa lupa belok di Jl. Hasanuddin dan jalan lurus terus.\nOpsi E (Gd. Serbaguna): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Dodi.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-135.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-136",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Utara dari Kantor Kec. adalah …",
+    "gambar": "drill/img/K17-peta-28.svg",
+    "opsi": {
+      "a": "R. Dina",
+      "b": "R. Citra",
+      "c": "R. Eka",
+      "d": "R. Jihan",
+      "e": "KUD"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Kantor Kec..\nLangkah 2: Lihat kompas: Utara = lurus ke atas. Geser jari lurus ke atas dari Kantor Kec..\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Citra.<br>Kenapa yang lain salah:\nOpsi A (R. Dina): letaknya di kiri Kantor Kec., jadi Barat; meleset seperempat putaran.\nOpsi C (R. Eka): letaknya di bawah Kantor Kec., jadi Selatan; jebakan atas-bawah tertukar.\nOpsi D (R. Jihan): letaknya di kanan Kantor Kec., jadi Timur; meleset seperempat putaran.\nOpsi E (KUD): letaknya di kanan-atas Kantor Kec., jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nJawaban: R. Citra.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Utara Kantor Kec..\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-136.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-137",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Tenggara dari R. Nadia adalah …",
+    "gambar": "drill/img/K17-peta-28.svg",
+    "opsi": {
+      "a": "R. Kirana",
+      "b": "SMP Tunas",
+      "c": "Gereja",
+      "d": "KUD",
+      "e": "Kantor Kec."
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Nadia.\nLangkah 2: Lihat kompas: Tenggara = serong ke kanan-bawah. Geser jari serong ke kanan-bawah dari R. Nadia.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah SMP Tunas.<br>Kenapa yang lain salah:\nOpsi A (R. Kirana): letaknya di kiri-bawah R. Nadia, jadi Barat Daya; jebakan kiri-kanan tertukar.\nOpsi C (Gereja): letaknya di kanan-atas R. Nadia, jadi Timur Laut; jebakan atas-bawah tertukar.\nOpsi D (KUD): letaknya di kanan R. Nadia, jadi Timur; hampir benar, meleset satu langkah di kompas.\nOpsi E (Kantor Kec.): letaknya di bawah R. Nadia, jadi Selatan; hampir benar, meleset satu langkah di kompas.\nJawaban: SMP Tunas.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Tenggara!\" Kamu harus tahu arahnya tanpa ragu: serong ke kanan-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-137.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-138",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Kantor Kec. terletak di arah mana dari R. Joni?",
+    "gambar": "drill/img/K17-peta-28.svg",
+    "opsi": {
+      "a": "Barat Daya",
+      "b": "Barat",
+      "c": "Utara",
+      "d": "Tenggara",
+      "e": "Selatan"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Joni, lalu cari Kantor Kec..\nLangkah 2: Kantor Kec. ada di bawah R. Joni (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: bawah = Selatan.<br>Kenapa yang lain salah:\nOpsi A (Barat Daya): itu arah kiri-bawah; hampir benar, meleset satu langkah di kompas.\nOpsi B (Barat): itu arah kiri; meleset seperempat putaran.\nOpsi C (Utara): itu arah atas; jebakan atas-bawah tertukar.\nOpsi D (Tenggara): itu arah kanan-bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Selatan.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Selatan dari R. Joni.\" Rekan yang memegang peta harus langsung tahu itu lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-138.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-139",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Wulan keluar dari R. Dina ke Jl. Cemara, lalu berjalan ke arah Timur. Di persimpangan Jl. Imam Bonjol ia belok kiri, lalu di persimpangan Jl. Dahlia ia belok kiri. Bangunan pertama di sebelah kiri Wulan setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-28.svg",
+    "opsi": {
+      "a": "R. Putra",
+      "b": "R. Fikri",
+      "c": "Klinik",
+      "d": "R. Citra",
+      "e": "R. Dodi"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Wulan keluar dari R. Dina ke Jl. Cemara, menghadap Timur.\nLangkah 2: Di Jl. Imam Bonjol belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Dahlia belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 4: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: R. Citra.<br>Kenapa yang lain salah:\nOpsi A (R. Putra): itu bangunan kedua; yang pertama terlewat.\nOpsi B (R. Fikri): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi C (Klinik): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi E (R. Dodi): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Citra.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-139.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-140",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari Gereja ke Jl. Imam Bonjol, lalu berjalan ke arah Selatan. Di persimpangan Jl. Nangka ia belok kanan, lalu di persimpangan Jl. Durian ia belok kanan, lalu di persimpangan Jl. Dahlia ia belok kanan. Bangunan pertama di sebelah kanan Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-28.svg",
+    "opsi": {
+      "a": "R. Dodi",
+      "b": "R. Citra",
+      "c": "R. Joni",
+      "d": "R. Putra",
+      "e": "R. Fikri"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Sinta keluar dari Gereja ke Jl. Imam Bonjol, menghadap Selatan.\nLangkah 2: Di Jl. Nangka belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 3: Di Jl. Durian belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Dahlia belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 5: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: R. Citra.<br>Kenapa yang lain salah:\nOpsi A (R. Dodi): itu bangunan kedua di sisi kiri.\nOpsi C (R. Joni): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi D (R. Putra): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi E (R. Fikri): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Citra.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-140.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-141",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat Daya dari R. Maya adalah …",
+    "gambar": "drill/img/K17-peta-29.svg",
+    "opsi": {
+      "a": "KUA",
+      "b": "Balai Desa",
+      "c": "Gereja",
+      "d": "Masjid",
+      "e": "R. Eka"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Maya.\nLangkah 2: Lihat kompas: Barat Daya = serong ke kiri-bawah. Geser jari serong ke kiri-bawah dari R. Maya.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah KUA.<br>Kenapa yang lain salah:\nOpsi B (Balai Desa): letaknya di kiri R. Maya, jadi Barat; hampir benar, meleset satu langkah di kompas.\nOpsi C (Gereja): letaknya di kiri R. Maya, jadi Barat; hampir benar, meleset satu langkah di kompas.\nOpsi D (Masjid): letaknya di kanan-bawah R. Maya, jadi Tenggara; jebakan kiri-kanan tertukar.\nOpsi E (R. Eka): letaknya di bawah R. Maya, jadi Selatan; hampir benar, meleset satu langkah di kompas.\nJawaban: KUA.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Barat Daya dari R. Maya.\" Rekan yang memegang peta harus langsung tahu itu serong ke kiri-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-141.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-142",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Balai Desa terletak di arah mana dari R. Tari?",
+    "gambar": "drill/img/K17-peta-29.svg",
+    "opsi": {
+      "a": "Timur",
+      "b": "Selatan",
+      "c": "Barat Laut",
+      "d": "Utara",
+      "e": "Timur Laut"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Tari, lalu cari Balai Desa.\nLangkah 2: Balai Desa ada di atas R. Tari (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: atas = Utara.<br>Kenapa yang lain salah:\nOpsi A (Timur): itu arah kanan; meleset seperempat putaran.\nOpsi B (Selatan): itu arah bawah; jebakan atas-bawah tertukar.\nOpsi C (Barat Laut): itu arah kiri-atas; hampir benar, meleset satu langkah di kompas.\nOpsi E (Timur Laut): itu arah kanan-atas; hampir benar, meleset satu langkah di kompas.\nJawaban: Utara.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Utara R. Tari.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-142.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-143",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Wulan keluar dari Koperasi ke Jl. Imam Bonjol, lalu berjalan ke arah Timur. Di persimpangan Jl. Kemuning ia belok kiri, lalu di persimpangan Jl. Bougenville ia belok kiri. Bangunan pertama di sebelah kanan Wulan setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-29.svg",
+    "opsi": {
+      "a": "Masjid",
+      "b": "Puskesmas",
+      "c": "R. Putra",
+      "d": "R. Yoga",
+      "e": "R. Citra"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Wulan keluar dari Koperasi ke Jl. Imam Bonjol, menghadap Timur.\nLangkah 2: Di Jl. Kemuning belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Bougenville belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 4: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: Puskesmas.<br>Kenapa yang lain salah:\nOpsi A (Masjid): itu kalau Wulan lupa belok di Jl. Bougenville dan jalan lurus terus.\nOpsi C (R. Putra): itu bangunan kedua; yang pertama terlewat.\nOpsi D (R. Yoga): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi E (R. Citra): itu bangunan kedua di sisi kiri.\nJawaban: Puskesmas.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-143.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-144",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Nisa keluar dari KUA ke Jl. Seroja, lalu berjalan ke arah Selatan. Di persimpangan Jl. Imam Bonjol ia belok kiri, lalu di persimpangan Jl. Kemuning ia belok kiri, lalu di persimpangan Jl. Bougenville ia belok kiri. Bangunan pertama di sebelah kanan Nisa setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-29.svg",
+    "opsi": {
+      "a": "R. Yoga",
+      "b": "R. Putra",
+      "c": "R. Citra",
+      "d": "Puskesmas",
+      "e": "Masjid"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Nisa keluar dari KUA ke Jl. Seroja, menghadap Selatan.\nLangkah 2: Di Jl. Imam Bonjol belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Kemuning belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Bougenville belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kanan = Utara. Bangunan pertama di sisi itu: Puskesmas.<br>Kenapa yang lain salah:\nOpsi A (R. Yoga): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi B (R. Putra): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Citra): itu bangunan kedua di sisi kiri.\nOpsi E (Masjid): itu kalau Nisa lupa belok di Jl. Bougenville dan jalan lurus terus.\nJawaban: Puskesmas.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-144.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-145",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari KUA ke Jl. Seroja, lalu berjalan ke arah Utara. Di persimpangan Jl. Bougenville ia belok kanan. Bangunan pertama di sebelah kiri Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-29.svg",
+    "opsi": {
+      "a": "R. Citra",
+      "b": "Puskesmas",
+      "c": "R. Putra",
+      "d": "Gereja",
+      "e": "R. Dodi"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Dimas keluar dari KUA ke Jl. Seroja, menghadap Utara.\nLangkah 2: Di Jl. Bougenville belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Putra.<br>Kenapa yang lain salah:\nOpsi A (R. Citra): itu bangunan kedua di sisi kanan.\nOpsi B (Puskesmas): itu bangunan kedua; yang pertama terlewat.\nOpsi D (Gereja): itu kalau Dimas lupa belok di Jl. Bougenville dan jalan lurus terus.\nOpsi E (R. Dodi): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Putra.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-145.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-146",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari KUA adalah …",
+    "gambar": "drill/img/K17-peta-30.svg",
+    "opsi": {
+      "a": "R. Dina",
+      "b": "R. Fikri",
+      "c": "R. Gilang",
+      "d": "Masjid",
+      "e": "R. Jihan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah KUA.\nLangkah 2: Lihat kompas: Selatan = lurus ke bawah. Geser jari lurus ke bawah dari KUA.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Dina.<br>Kenapa yang lain salah:\nOpsi B (R. Fikri): letaknya di kanan-bawah KUA, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nOpsi C (R. Gilang): letaknya di kanan KUA, jadi Timur; meleset seperempat putaran.\nOpsi D (Masjid): letaknya di kanan-bawah KUA, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nOpsi E (R. Jihan): letaknya di kanan KUA, jadi Timur; meleset seperempat putaran.\nJawaban: R. Dina.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Selatan!\" Kamu harus tahu arahnya tanpa ragu: lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-146.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-147",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari R. Dina adalah …",
+    "gambar": "drill/img/K17-peta-30.svg",
+    "opsi": {
+      "a": "R. Kirana",
+      "b": "R. Gilang",
+      "c": "KUD",
+      "d": "Masjid",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Dina.\nLangkah 2: Lihat kompas: Timur = lurus ke kanan. Geser jari lurus ke kanan dari R. Dina.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (R. Kirana): letaknya di atas R. Dina, jadi Utara; meleset seperempat putaran.\nOpsi B (R. Gilang): letaknya di kanan-atas R. Dina, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nOpsi C (KUD): letaknya di kanan-atas R. Dina, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nOpsi D (Masjid): letaknya di kanan-atas R. Dina, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nJawaban: Kantor Pos.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Timur dari R. Dina.\" Rekan yang memegang peta harus langsung tahu itu lurus ke kanan di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-147.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-148",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Hana terletak di arah mana dari R. Citra?",
+    "gambar": "drill/img/K17-peta-30.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Barat Laut",
+      "c": "Utara",
+      "d": "Timur Laut",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Citra, lalu cari R. Hana.\nLangkah 2: R. Hana ada di kiri-atas R. Citra (geser ke kiri dan ke atas hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kiri-atas = Barat Laut.<br>Kenapa yang lain salah:\nOpsi A (Barat): itu arah kiri; hampir benar, meleset satu langkah di kompas.\nOpsi C (Utara): itu arah atas; hampir benar, meleset satu langkah di kompas.\nOpsi D (Timur Laut): itu arah kanan-atas; jebakan kiri-kanan tertukar.\nOpsi E (Barat Daya): itu arah kiri-bawah; jebakan atas-bawah tertukar.\nJawaban: Barat Laut.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Barat Laut R. Citra.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-148.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-149",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari KUD ke Jl. Bakti, lalu berjalan ke arah Selatan. Di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kanan Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-30.svg",
+    "opsi": {
+      "a": "R. Wawan",
+      "b": "R. Fikri",
+      "c": "R. Kirana",
+      "d": "R. Dina",
+      "e": "Kantor Pos"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Sinta keluar dari KUD ke Jl. Bakti, menghadap Selatan.\nLangkah 2: Di Jl. Imam Bonjol belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (R. Wawan): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi B (R. Fikri): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Kirana): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi D (R. Dina): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nJawaban: Kantor Pos.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-149.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-150",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Fajar keluar dari SMP Tunas ke Jl. Bougenville, lalu berjalan ke arah Timur. Di persimpangan Jl. Teratai ia belok kanan, lalu di persimpangan Jl. Dahlia ia belok kanan. Bangunan pertama di sebelah kiri Fajar setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-30.svg",
+    "opsi": {
+      "a": "KUD",
+      "b": "Koperasi",
+      "c": "R. Maya",
+      "d": "R. Hana",
+      "e": "R. Kevin"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Fajar keluar dari SMP Tunas ke Jl. Bougenville, menghadap Timur.\nLangkah 2: Di Jl. Teratai belok kanan. Menghadap Timur, kanannya adalah Selatan. Sekarang menghadap Selatan.\nLangkah 3: Di Jl. Dahlia belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 4: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: KUD.<br>Kenapa yang lain salah:\nOpsi B (Koperasi): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Maya): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (R. Hana): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi E (R. Kevin): itu kalau belokan terakhir salah arah (belok kiri).\nJawaban: KUD.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-150.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-151",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari R. Dina adalah …",
+    "gambar": "drill/img/K17-peta-31.svg",
+    "opsi": {
+      "a": "Klinik",
+      "b": "KUD",
+      "c": "R. Maya",
+      "d": "R. Nadia",
+      "e": "R. Rizky"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Dina.\nLangkah 2: Lihat kompas: Selatan = lurus ke bawah. Geser jari lurus ke bawah dari R. Dina.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Rizky.<br>Kenapa yang lain salah:\nOpsi A (Klinik): letaknya di kiri-bawah R. Dina, jadi Barat Daya; hampir benar, meleset satu langkah di kompas.\nOpsi B (KUD): letaknya di kiri R. Dina, jadi Barat; meleset seperempat putaran.\nOpsi C (R. Maya): letaknya di kanan R. Dina, jadi Timur; meleset seperempat putaran.\nOpsi D (R. Nadia): letaknya di kanan-bawah R. Dina, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nJawaban: R. Rizky.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Selatan R. Dina.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-151.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-152",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Rizky terletak di arah mana dari R. Wawan?",
+    "gambar": "drill/img/K17-peta-31.svg",
+    "opsi": {
+      "a": "Barat Daya",
+      "b": "Barat",
+      "c": "Barat Laut",
+      "d": "Tenggara",
+      "e": "Selatan"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Wawan, lalu cari R. Rizky.\nLangkah 2: R. Rizky ada di kiri-bawah R. Wawan (geser ke kiri dan ke bawah hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kiri-bawah = Barat Daya.<br>Kenapa yang lain salah:\nOpsi B (Barat): itu arah kiri; hampir benar, meleset satu langkah di kompas.\nOpsi C (Barat Laut): itu arah kiri-atas; jebakan atas-bawah tertukar.\nOpsi D (Tenggara): itu arah kanan-bawah; jebakan kiri-kanan tertukar.\nOpsi E (Selatan): itu arah bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Barat Daya.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Barat Daya!\" Kamu harus tahu arahnya tanpa ragu: serong ke kiri-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-152.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-153",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Tono keluar dari KUA ke Jl. Pattimura, lalu berjalan ke arah Selatan. Di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kanan Tono setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-31.svg",
+    "opsi": {
+      "a": "R. Tari",
+      "b": "SD Cendekia",
+      "c": "Gd. Serbaguna",
+      "d": "R. Nadia",
+      "e": "R. Rizky"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Tono keluar dari KUA ke Jl. Pattimura, menghadap Selatan.\nLangkah 2: Di Jl. Imam Bonjol belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: SD Cendekia.<br>Kenapa yang lain salah:\nOpsi A (R. Tari): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi C (Gd. Serbaguna): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi D (R. Nadia): itu bangunan kedua di sisi kiri.\nOpsi E (R. Rizky): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nJawaban: SD Cendekia.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-153.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-154",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Galih keluar dari R. Lutfi ke Jl. Bougenville, lalu berjalan ke arah Barat. Di persimpangan Jl. Nangka ia belok kiri, lalu di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kanan Galih setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-31.svg",
+    "opsi": {
+      "a": "R. Fikri",
+      "b": "R. Rizky",
+      "c": "R. Eka",
+      "d": "R. Tari",
+      "e": "Gd. Serbaguna"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Galih keluar dari R. Lutfi ke Jl. Bougenville, menghadap Barat.\nLangkah 2: Di Jl. Nangka belok kiri. Menghadap Barat, kirinya adalah Selatan. Sekarang menghadap Selatan.\nLangkah 3: Di Jl. Imam Bonjol belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: R. Fikri.<br>Kenapa yang lain salah:\nOpsi B (R. Rizky): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Eka): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (R. Tari): itu bangunan kedua di sisi kiri.\nOpsi E (Gd. Serbaguna): ada di sisi kiri; kiri dan kanan tertukar.\nJawaban: R. Fikri.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-154.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-155",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Bayu keluar dari KUD ke Jl. Nangka, lalu berjalan ke arah Selatan. Di persimpangan Jl. Hasanuddin ia belok kiri, lalu di persimpangan Jl. Pattimura ia belok kanan, lalu di persimpangan Jl. Imam Bonjol ia belok kiri. Bangunan pertama di sebelah kanan Bayu setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-31.svg",
+    "opsi": {
+      "a": "Gd. Serbaguna",
+      "b": "R. Tari",
+      "c": "R. Nadia",
+      "d": "SD Cendekia",
+      "e": "R. Rizky"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Bayu keluar dari KUD ke Jl. Nangka, menghadap Selatan.\nLangkah 2: Di Jl. Hasanuddin belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Pattimura belok kanan. Menghadap Timur, kanannya adalah Selatan. Sekarang menghadap Selatan.\nLangkah 4: Di Jl. Imam Bonjol belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 5: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: SD Cendekia.<br>Kenapa yang lain salah:\nOpsi A (Gd. Serbaguna): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi B (R. Tari): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi C (R. Nadia): itu bangunan kedua di sisi kiri.\nOpsi E (R. Rizky): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nJawaban: SD Cendekia.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-155.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-156",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Barat dari Koperasi adalah …",
+    "gambar": "drill/img/K17-peta-32.svg",
+    "opsi": {
+      "a": "R. Hana",
+      "b": "Apotek",
+      "c": "R. Citra",
+      "d": "KUA",
+      "e": "R. Putra"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Koperasi.\nLangkah 2: Lihat kompas: Barat = lurus ke kiri. Geser jari lurus ke kiri dari Koperasi.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Apotek.<br>Kenapa yang lain salah:\nOpsi A (R. Hana): letaknya di bawah Koperasi, jadi Selatan; meleset seperempat putaran.\nOpsi C (R. Citra): letaknya di bawah Koperasi, jadi Selatan; meleset seperempat putaran.\nOpsi D (KUA): letaknya di kiri-bawah Koperasi, jadi Barat Daya; hampir benar, meleset satu langkah di kompas.\nOpsi E (R. Putra): letaknya di bawah Koperasi, jadi Selatan; meleset seperempat putaran.\nJawaban: Apotek.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Barat dari Koperasi.\" Rekan yang memegang peta harus langsung tahu itu lurus ke kiri di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-156.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-157",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Tenggara dari Kantor Pos adalah …",
+    "gambar": "drill/img/K17-peta-32.svg",
+    "opsi": {
+      "a": "KUA",
+      "b": "Kantor Kec.",
+      "c": "Puskesmas",
+      "d": "Klinik",
+      "e": "R. Citra"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Kantor Pos.\nLangkah 2: Lihat kompas: Tenggara = serong ke kanan-bawah. Geser jari serong ke kanan-bawah dari Kantor Pos.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Kantor Kec..<br>Kenapa yang lain salah:\nOpsi A (KUA): letaknya di kiri-bawah Kantor Pos, jadi Barat Daya; jebakan kiri-kanan tertukar.\nOpsi C (Puskesmas): letaknya di bawah Kantor Pos, jadi Selatan; hampir benar, meleset satu langkah di kompas.\nOpsi D (Klinik): letaknya di kiri-atas Kantor Pos, jadi Barat Laut; kebalikannya, acuan dan tujuan tertukar.\nOpsi E (R. Citra): letaknya di kanan Kantor Pos, jadi Timur; hampir benar, meleset satu langkah di kompas.\nJawaban: Kantor Kec..<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Tenggara Kantor Pos.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-157.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-158",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Kantor Kec. terletak di arah mana dari R. Citra?",
+    "gambar": "drill/img/K17-peta-32.svg",
+    "opsi": {
+      "a": "Barat",
+      "b": "Utara",
+      "c": "Tenggara",
+      "d": "Selatan",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Citra, lalu cari Kantor Kec..\nLangkah 2: Kantor Kec. ada di bawah R. Citra (hampir lurus).\nLangkah 3: Cocokkan dengan kompas: bawah = Selatan.<br>Kenapa yang lain salah:\nOpsi A (Barat): itu arah kiri; meleset seperempat putaran.\nOpsi B (Utara): itu arah atas; jebakan atas-bawah tertukar.\nOpsi C (Tenggara): itu arah kanan-bawah; hampir benar, meleset satu langkah di kompas.\nOpsi E (Barat Daya): itu arah kiri-bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Selatan.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Selatan!\" Kamu harus tahu arahnya tanpa ragu: lurus ke bawah di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-158.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-159",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Lina keluar dari KUA ke Jl. Mangga, lalu berjalan ke arah Utara. Di persimpangan Jl. Bougenville ia belok kanan, lalu di persimpangan Jl. Nangka ia belok kiri, lalu di persimpangan Jl. Bakti ia belok kiri. Bangunan pertama di sebelah kiri Lina setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-32.svg",
+    "opsi": {
+      "a": "Apotek",
+      "b": "Koperasi",
+      "c": "Bank",
+      "d": "Kantor Pos",
+      "e": "R. Citra"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Lina keluar dari KUA ke Jl. Mangga, menghadap Utara.\nLangkah 2: Di Jl. Bougenville belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Nangka belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Bakti belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: R. Citra.<br>Kenapa yang lain salah:\nOpsi A (Apotek): itu bangunan kedua di sisi kanan.\nOpsi B (Koperasi): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi C (Bank): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (Kantor Pos): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Citra.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Barat melihat Selatan di kirinya dan Utara di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-159.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-160",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Tono keluar dari KUA ke Jl. Mangga, lalu berjalan ke arah Utara. Di persimpangan Jl. Bakti ia belok kanan. Bangunan pertama di sebelah kanan Tono setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-32.svg",
+    "opsi": {
+      "a": "Koperasi",
+      "b": "Apotek",
+      "c": "Kantor Pos",
+      "d": "R. Citra",
+      "e": "Klinik"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Tono keluar dari KUA ke Jl. Mangga, menghadap Utara.\nLangkah 2: Di Jl. Bakti belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kanan = Selatan. Bangunan pertama di sisi itu: Kantor Pos.<br>Kenapa yang lain salah:\nOpsi A (Koperasi): itu bangunan kedua di sisi kiri.\nOpsi B (Apotek): ada di sisi kiri; kiri dan kanan tertukar.\nOpsi D (R. Citra): itu bangunan kedua; yang pertama terlewat.\nOpsi E (Klinik): itu kalau belokan terakhir salah arah (belok kiri).\nJawaban: Kantor Pos.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-160.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-161",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Tenggara dari R. Tari adalah …",
+    "gambar": "drill/img/K17-peta-33.svg",
+    "opsi": {
+      "a": "R. Fikri",
+      "b": "Bank",
+      "c": "R. Eka",
+      "d": "Pasar",
+      "e": "R. Lutfi"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Tari.\nLangkah 2: Lihat kompas: Tenggara = serong ke kanan-bawah. Geser jari serong ke kanan-bawah dari R. Tari.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Bank.<br>Kenapa yang lain salah:\nOpsi A (R. Fikri): letaknya di kanan-atas R. Tari, jadi Timur Laut; jebakan atas-bawah tertukar.\nOpsi C (R. Eka): letaknya di kanan R. Tari, jadi Timur; hampir benar, meleset satu langkah di kompas.\nOpsi D (Pasar): letaknya di atas R. Tari, jadi Utara; bukan arah yang ditanya.\nOpsi E (R. Lutfi): letaknya di kanan-atas R. Tari, jadi Timur Laut; jebakan atas-bawah tertukar.\nJawaban: Bank.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Tenggara!\" Kamu harus tahu arahnya tanpa ragu: serong ke kanan-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-161.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-162",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Maya terletak di arah mana dari R. Eka?",
+    "gambar": "drill/img/K17-peta-33.svg",
+    "opsi": {
+      "a": "Timur Laut",
+      "b": "Timur",
+      "c": "Tenggara",
+      "d": "Selatan",
+      "e": "Barat Daya"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah R. Eka, lalu cari R. Maya.\nLangkah 2: R. Maya ada di kanan-bawah R. Eka (geser ke kanan dan ke bawah hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kanan-bawah = Tenggara.<br>Kenapa yang lain salah:\nOpsi A (Timur Laut): itu arah kanan-atas; jebakan atas-bawah tertukar.\nOpsi B (Timur): itu arah kanan; hampir benar, meleset satu langkah di kompas.\nOpsi D (Selatan): itu arah bawah; hampir benar, meleset satu langkah di kompas.\nOpsi E (Barat Daya): itu arah kiri-bawah; jebakan kiri-kanan tertukar.\nJawaban: Tenggara.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Tenggara dari R. Eka.\" Rekan yang memegang peta harus langsung tahu itu serong ke kanan-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-162.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-163",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Dimas keluar dari Pasar ke Jl. Kemuning, lalu berjalan ke arah Selatan. Di persimpangan Jl. Kenari ia belok kiri, lalu di persimpangan Jl. Nangka ia belok kiri, lalu di persimpangan Jl. Seroja ia belok kanan. Bangunan pertama di sebelah kiri Dimas setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-33.svg",
+    "opsi": {
+      "a": "R. Dina",
+      "b": "R. Dodi",
+      "c": "R. Citra",
+      "d": "R. Rizky",
+      "e": "R. Eka"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Dimas keluar dari Pasar ke Jl. Kemuning, menghadap Selatan.\nLangkah 2: Di Jl. Kenari belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Di Jl. Nangka belok kiri. Menghadap Timur, kirinya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Seroja belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 5: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Citra.<br>Kenapa yang lain salah:\nOpsi A (R. Dina): itu kalau belokan terakhir salah arah (belok kiri).\nOpsi B (R. Dodi): itu bangunan kedua di sisi kanan.\nOpsi D (R. Rizky): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi E (R. Eka): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nJawaban: R. Citra.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-163.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-164",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Fajar keluar dari Pasar ke Jl. Kemuning, lalu berjalan ke arah Selatan. Di persimpangan Jl. Seroja ia belok kiri. Bangunan pertama di sebelah kiri Fajar setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-33.svg",
+    "opsi": {
+      "a": "R. Dina",
+      "b": "R. Citra",
+      "c": "R. Tari",
+      "d": "R. Rizky",
+      "e": "R. Eka"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Fajar keluar dari Pasar ke Jl. Kemuning, menghadap Selatan.\nLangkah 2: Di Jl. Seroja belok kiri. Menghadap Selatan, kirinya adalah Timur. Sekarang menghadap Timur.\nLangkah 3: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Eka.<br>Kenapa yang lain salah:\nOpsi A (R. Dina): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi B (R. Citra): itu bangunan kedua; yang pertama terlewat.\nOpsi C (R. Tari): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (R. Rizky): itu bangunan kedua di sisi kanan.\nJawaban: R. Eka.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-164.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-165",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Sinta keluar dari R. Dina ke Jl. Seroja, lalu berjalan ke arah Barat. Di persimpangan Jl. Kemuning ia belok kanan, lalu di persimpangan Jl. Cemara ia belok kanan. Bangunan pertama di sebelah kiri Sinta setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-33.svg",
+    "opsi": {
+      "a": "Pasar",
+      "b": "R. Fikri",
+      "c": "R. Lutfi",
+      "d": "Kantor Kec.",
+      "e": "R. Gilang"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Langkah 1: Sinta keluar dari R. Dina ke Jl. Seroja, menghadap Barat.\nLangkah 2: Di Jl. Kemuning belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Cemara belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: R. Lutfi.<br>Kenapa yang lain salah:\nOpsi A (Pasar): itu kalau Sinta lupa belok di Jl. Cemara dan jalan lurus terus.\nOpsi B (R. Fikri): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi D (Kantor Kec.): itu bangunan kedua di sisi kanan.\nOpsi E (R. Gilang): itu bangunan kedua; yang pertama terlewat.\nJawaban: R. Lutfi.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-165.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-166",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Selatan dari Koperasi adalah …",
+    "gambar": "drill/img/K17-peta-34.svg",
+    "opsi": {
+      "a": "R. Yoga",
+      "b": "Gereja",
+      "c": "Klinik",
+      "d": "R. Hana",
+      "e": "Puskesmas"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Koperasi.\nLangkah 2: Lihat kompas: Selatan = lurus ke bawah. Geser jari lurus ke bawah dari Koperasi.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah Puskesmas.<br>Kenapa yang lain salah:\nOpsi A (R. Yoga): letaknya di kiri Koperasi, jadi Barat; meleset seperempat putaran.\nOpsi B (Gereja): letaknya di kiri Koperasi, jadi Barat; meleset seperempat putaran.\nOpsi C (Klinik): letaknya di kanan Koperasi, jadi Timur; meleset seperempat putaran.\nOpsi D (R. Hana): letaknya di kanan-bawah Koperasi, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nJawaban: Puskesmas.<br>Gambaran nyata: ada laporan \"Kebakaran di sebelah Selatan Koperasi.\" Petugas yang salah membaca arah akan datang ke tempat yang salah.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-166.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-167",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 1,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Di antara pilihan berikut, bangunan yang terletak di arah Timur dari Puskesmas adalah …",
+    "gambar": "drill/img/K17-peta-34.svg",
+    "opsi": {
+      "a": "R. Hana",
+      "b": "R. Kirana",
+      "c": "R. Farah",
+      "d": "R. Gilang",
+      "e": "Klinik"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Puskesmas.\nLangkah 2: Lihat kompas: Timur = lurus ke kanan. Geser jari lurus ke kanan dari Puskesmas.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah R. Hana.<br>Kenapa yang lain salah:\nOpsi B (R. Kirana): letaknya di kiri Puskesmas, jadi Barat; jebakan kiri-kanan tertukar.\nOpsi C (R. Farah): letaknya di kanan-bawah Puskesmas, jadi Tenggara; hampir benar, meleset satu langkah di kompas.\nOpsi D (R. Gilang): letaknya di bawah Puskesmas, jadi Selatan; meleset seperempat putaran.\nOpsi E (Klinik): letaknya di kanan-atas Puskesmas, jadi Timur Laut; hampir benar, meleset satu langkah di kompas.\nJawaban: R. Hana.<br>Gambaran nyata: saat latihan lapangan, komandan memberi perintah \"Regu 2 bergerak ke Timur!\" Kamu harus tahu arahnya tanpa ragu: lurus ke kanan di peta.\nTips: hafalkan 4 arah utama dulu: atas = Utara, kanan = Timur, bawah = Selatan, kiri = Barat. Arah serong ada di antaranya.",
+    "gambar_pembahasan": "K17-N-167.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-168",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-ARAH",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "R. Eka terletak di arah mana dari Bengkel?",
+    "gambar": "drill/img/K17-peta-34.svg",
+    "opsi": {
+      "a": "Barat Daya",
+      "b": "Timur Laut",
+      "c": "Timur",
+      "d": "Tenggara",
+      "e": "Selatan"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Taruh jari di tengah Bengkel, lalu cari R. Eka.\nLangkah 2: R. Eka ada di kanan-bawah Bengkel (geser ke kanan dan ke bawah hampir sama jauh).\nLangkah 3: Cocokkan dengan kompas: kanan-bawah = Tenggara.<br>Kenapa yang lain salah:\nOpsi A (Barat Daya): itu arah kiri-bawah; jebakan kiri-kanan tertukar.\nOpsi B (Timur Laut): itu arah kanan-atas; jebakan atas-bawah tertukar.\nOpsi C (Timur): itu arah kanan; hampir benar, meleset satu langkah di kompas.\nOpsi E (Selatan): itu arah bawah; hampir benar, meleset satu langkah di kompas.\nJawaban: Tenggara.<br>Gambaran nyata: petugas patroli melapor lewat HT, \"Pelaku lari ke arah Tenggara dari Bengkel.\" Rekan yang memegang peta harus langsung tahu itu serong ke kanan-bawah di peta.\nTips: arah serong (Timur Laut, Tenggara, Barat Daya, Barat Laut) artinya bergeser ke samping DAN ke atas/bawah hampir sama jauh. Kalau gesernya hanya sedikit, itu masih arah lurus.",
+    "gambar_pembahasan": "K17-N-168.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-169",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 2,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Tono keluar dari Puskesmas ke Jl. Kenari, lalu berjalan ke arah Barat. Di persimpangan Jl. Kemuning ia belok kanan, lalu di persimpangan Jl. Bougenville ia belok kanan. Bangunan pertama di sebelah kiri Tono setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-34.svg",
+    "opsi": {
+      "a": "R. Yoga",
+      "b": "R. Dina",
+      "c": "Klinik",
+      "d": "Koperasi",
+      "e": "R. Dodi"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Langkah 1: Tono keluar dari Puskesmas ke Jl. Kenari, menghadap Barat.\nLangkah 2: Di Jl. Kemuning belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 3: Di Jl. Bougenville belok kanan. Menghadap Utara, kanannya adalah Timur. Sekarang menghadap Timur.\nLangkah 4: Menghadap Timur, sisi kiri = Utara. Bangunan pertama di sisi itu: Koperasi.<br>Kenapa yang lain salah:\nOpsi A (R. Yoga): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi B (R. Dina): ada di sisi kanan; kiri dan kanan tertukar.\nOpsi C (Klinik): itu bangunan kedua; yang pertama terlewat.\nOpsi E (R. Dodi): itu kalau belokan terakhir salah arah (belok kiri).\nJawaban: Koperasi.<br>Gambaran nyata: seperti memandu ambulans lewat telepon. Sopir yang menghadap Timur melihat Utara di kirinya dan Selatan di kanannya.\nTips: setiap kali belok, ucapkan dalam hati \"sekarang aku menghadap ...\" supaya arah tidak tertukar.",
+    "gambar_pembahasan": "K17-N-169.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K17-N-170",
+    "kartu": "K17",
+    "sub_type": "FIG-DENAH-RUTE",
+    "tier": 3,
+    "sumber": "baru",
+    "instruksi": "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.",
+    "stem": "Galih keluar dari Bengkel ke Jl. Teratai, lalu berjalan ke arah Selatan. Di persimpangan Jl. Kenari ia belok kanan, lalu di persimpangan Jl. Kemuning ia belok kanan, lalu di persimpangan Jl. Bougenville ia belok kiri. Bangunan pertama di sebelah kiri Galih setelah belokan terakhir adalah …",
+    "gambar": "drill/img/K17-peta-34.svg",
+    "opsi": {
+      "a": "R. Dodi",
+      "b": "Gereja",
+      "c": "R. Dina",
+      "d": "Koperasi",
+      "e": "R. Yoga"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Langkah 1: Galih keluar dari Bengkel ke Jl. Teratai, menghadap Selatan.\nLangkah 2: Di Jl. Kenari belok kanan. Menghadap Selatan, kanannya adalah Barat. Sekarang menghadap Barat.\nLangkah 3: Di Jl. Kemuning belok kanan. Menghadap Barat, kanannya adalah Utara. Sekarang menghadap Utara.\nLangkah 4: Di Jl. Bougenville belok kiri. Menghadap Utara, kirinya adalah Barat. Sekarang menghadap Barat.\nLangkah 5: Menghadap Barat, sisi kiri = Selatan. Bangunan pertama di sisi itu: R. Dodi.<br>Kenapa yang lain salah:\nOpsi B (Gereja): itu bangunan kedua di sisi kanan.\nOpsi C (R. Dina): itu kalau belokan terakhir salah arah dan sisinya juga tertukar.\nOpsi D (Koperasi): itu kalau belokan terakhir salah arah (belok kanan).\nOpsi E (R. Yoga): ada di sisi kanan; kiri dan kanan tertukar.\nJawaban: R. Dodi.<br>Gambaran nyata: kamu memandu mobil patroli lewat HT. Sopir hanya melihat jalan di depannya, jadi perintah belok kiri/kanan harus dihitung dari arah hadap sopir, bukan dari peta.\nTips: putar badan atau HP-mu mengikuti arah jalan. Saat menghadap Selatan (ke bawah peta), kiri jadi Timur dan kanan jadi Barat, kebalikan dari yang terlihat di layar.",
+    "gambar_pembahasan": "K17-N-170.svg",
+    "status_kunci": "ganda"
   }
 ]

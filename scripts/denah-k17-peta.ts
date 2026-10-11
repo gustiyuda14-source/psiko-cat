@@ -10,6 +10,7 @@ export function mulberry32(seed: number) {
 }
 let rnd = mulberry32(17);
 export const reseed = (s: number) => { rnd = mulberry32(s); };
+export const unit = () => rnd();
 export const pick = <T>(a: T[]) => a[Math.floor(rnd() * a.length)];
 export const shuffle = <T>(a: T[]) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
