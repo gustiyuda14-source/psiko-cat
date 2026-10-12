@@ -1,6 +1,6 @@
 # Pedoman Penyusunan Simulasi Penuh — Kecerdasan Paket 2
 
-Versi 1 · 2026-10-11 · Belum ada soal yang disusun · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
+Versi 2 · 2026-10-12 · Kalibrasi Logis/Spasial (denah masuk blok 38–42) · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
 
 > **Catatan sumber.** Perubahan di §2 berasal dari informasi yang beredar dan **belum dikonfirmasi oleh dokumen resmi**. Kerangka 4 subtes × 25 butir tetap dipertahankan supaya nilai per subtes tetap bisa dilaporkan. Yang berubah adalah isi tiap subtes.
 
@@ -52,19 +52,22 @@ Yang belum ada di Paket 1: pola bundar berangka, pola bundar dengan huruf, pemah
 | 16–19 | Kata ganjil | 4 | 1 kunci |
 | 20–25 | **Pemahaman bacaan**: 2 wacana × 3 soal | 6 | 1 kunci |
 
-### Logis / Spasial (26–50)
+### Logis / Spasial (26–50) — kalibrasi 2026-10-12
 
 | No | Tipe | Jml |
 |---|---|---|
-| 26–28 | Pola deret gambar (strip, langkah ke-n) | 3 |
-| 29–32 | Matriks 3×3 | 4 |
-| 33–34 | Rotasi / pencerminan | 2 |
-| 35–37 | Susun potongan gambar | 3 |
-| 38–39 | Analogi gambar (A:B = C:?) | 2 |
-| 40 | Ikon kategori (gambar ganjil / sekelompok) | 1 |
-| 41–50 | Silogisme | 10 |
+| 26–27 | Pola deret gambar (strip, langkah ke-n) | 2 |
+| 28–30 | Matriks 3×3 | 3 |
+| 31–32 | Rotasi / pencerminan | 2 |
+| 33–34 | Susun potongan gambar | 2 |
+| 35–36 | Analogi gambar (A:B = C:?) | 2 |
+| 37 | Ikon kategori (gambar ganjil / sekelompok) | 1 |
+| 38–42 | **Denah & arah mata angin**: peta A Utara di atas (38–39 ARAH, 40–41 RUTE 2 dan 3 belokan), peta B kompas diputar (42 ROTASI) | 5 |
+| 43–50 | Silogisme | 8 |
 
-Figural = 15 butir (Paket 1: 12). Semuanya 1 kunci.
+Figural 12 + denah 5. Semuanya 1 kunci. Denah memakai mesin hitam-putih K17 (`scripts/denah-k17-*.ts`) dengan peta dan seed baru, tanpa tier mudah (arah serong saja), lewat `scripts/generate-kecerdasan-denah-kal.ts`. Jenis INGAT tidak dipakai karena fase hafalan hanya ada di drill.
+
+Versi awal blok ini (sebelum kalibrasi): pola deret 3, matriks 4, rotasi 2, susun 3, analogi 2, ikon 1, silogisme 10.
 
 ### Analitis (51–75)
 
@@ -171,6 +174,19 @@ Figural = 15 butir (Paket 1: 12). Semuanya 1 kunci.
 - **Tanpa konten pihak ketiga:** semua teks, gambar, dan wacana dibuat sendiri.
 
 ## 6. Teknis masuk sistem
+
+**Status 2026-10-12 (kalibrasi Logis/Spasial).** Blok 26–50 di atas berlaku untuk semua paket Kecerdasan:
+
+| Paket | package_number | Isi |
+|---|---|---|
+| Simulasi 1 | **13** | pkg 1 + blok 26–50 baru (pkg 1 tetap aktif untuk review sesi lama) |
+| Simulasi 2 | **14** | pkg 12 + blok 26–50 baru (pkg 12 tetap aktif untuk review sesi lama) |
+| Latihan Paket 1 | 2 | diubah di tempat |
+| Latihan Paket 2 | 3 | 100 soal baru, komposisi penuh pedoman ini |
+
+Simulasi berikutnya memakai package_number 15 ke atas. Seed: `scripts/seed-kecerdasan-kal.ts`. Peta kartu ke paket ada di `SIMULASI_PAKET` dan `simulasiKartuOf` (`lib/test-config.ts`).
+
+Catatan rencana awal (sudah dikerjakan 2026-10-11):
 
 - Rencana `package_number` Kecerdasan Simulasi Paket 2 = **12**. Nomor 2–11 sudah dipakai latihan (`KECERDASAN_PACKAGES`).
 - Saat ini `SIMULASI_PACKAGE` masih satu nilai tetap, jadi Paket 2 **belum bisa dipakai** sampai:

@@ -1,5 +1,6 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { answerFor, enDash, verticalPuzzleSvg } from "./susun-lib";
 
 type Choice = { key: "A" | "B" | "C" | "D" | "E"; text: string };
 type Item = {
@@ -31,42 +32,9 @@ type Puzzle = {
 
 const INSTRUCTION = "Urutkanlah potongan gambar berikut menjadi gambar yang utuh.";
 const CATEGORY_INSTRUCTION = "Pilihlah satu gambar yang tidak termasuk dalam kelompoknya.";
-const enDash = (parts: number[]) => parts.join(" – ");
-const answerFor = (order: number[]) => Array.from({ length: order.length }, (_, sourceIndex) => order.indexOf(sourceIndex + 1) + 1);
 const assert: (condition: unknown, message: string) => asserts condition = (condition, message) => {
   if (!condition) throw new Error(`Self-check gagal: ${message}`);
 };
-
-// The small separation makes each organic cut readable without detached fragments.
-function stripClip(prefix: string, index: number, left: number, right: number, height: number, last: boolean, gap = 1.5) {
-  const l = left + (index === 0 ? 0 : gap);
-  const r = right - (last ? 0 : gap);
-  return `<clipPath id="${prefix}clip${index + 1}"><path d="M ${l} 0 H ${r}
-    C ${r + 6} 24 ${r - 8} 47 ${r + 2} 68 C ${r + 9} 92 ${r - 6} 112 ${r + 4} 137 C ${r + 7} 156 ${r - 4} 175 ${r} ${height}
-    H ${l} C ${l - 4} 175 ${l + 7} 156 ${l + 4} 137 C ${l - 6} 112 ${l + 9} 92 ${l + 2} 68 C ${l - 8} 47 ${l + 6} 24 ${l} 0 Z"/></clipPath>`;
-}
-
-function verticalPositions(count: number) {
-  const start = count === 4 ? 30 : count === 5 ? 25 : 15;
-  const step = count === 4 ? 200 : count === 5 ? 165 : 138;
-  return Array.from({ length: count }, (_, index) => ({ x: start + index * step, y: 22 }));
-}
-
-function verticalPuzzleSvg(puzzle: Puzzle) {
-  const prefix = `s2q${puzzle.sequence}-`;
-  const sourceWidth = 600;
-  const cuts = Array.from({ length: puzzle.pieces + 1 }, (_, index) => index * sourceWidth / puzzle.pieces);
-  const clips = Array.from({ length: puzzle.pieces }, (_, index) => stripClip(prefix, index, cuts[index], cuts[index + 1], 190, index === puzzle.pieces - 1));
-  const pieces = puzzle.order.map((sourcePiece, slot) => {
-    const sourceIndex = sourcePiece - 1;
-    const { x, y } = verticalPositions(puzzle.pieces)[slot];
-    const origin = cuts[sourceIndex];
-    const pieceWidth = cuts[sourceIndex + 1] - origin;
-    return `<g transform="translate(${x - origin} ${y})" clip-path="url(#${prefix}clip${sourcePiece})"><use href="#${prefix}scene"/></g>` +
-      `<text x="${x + pieceWidth / 2}" y="245" fill="#111" font-family="sans-serif" font-size="22" font-weight="bold" text-anchor="middle">${slot + 1}</text>`;
-  }).join("");
-  return `<svg viewBox="0 0 850 300" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/><defs>${clips.join("")}<g id="${prefix}scene" fill="#111">${puzzle.scene}</g></defs>${pieces}</svg>`;
-}
 
 const sailingShip = `
   <path d="M10 143 C92 157 500 159 590 139 L552 176 C433 188 163 188 43 170 Z"/>
@@ -128,7 +96,7 @@ function buildItem(puzzle: Puzzle): Item {
     sequence_number: puzzle.sequence,
     options_payload: {
       instruksi: INSTRUCTION, question_text: null, sub_text: null, is_multi_select: false,
-      svg_content: verticalPuzzleSvg(puzzle),
+      svg_content: verticalPuzzleSvg(`s2q${puzzle.sequence}-`, puzzle),
       choices: letters.map((key, index) => ({ key, text: puzzle.choices[index] })),
     },
     scoring_rule: { type: "dichotomous", correct_key: puzzle.correct },

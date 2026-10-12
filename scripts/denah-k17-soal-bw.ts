@@ -1,7 +1,7 @@
 // Soal K17 bersama: helper arah/pembahasan (dipakai semua fase) + soal di peta hitam-putih
 // (RUTE fase C, ROTASI fase D). Dipakai scripts/generate-denah-k17.ts.
 import { sideOf as side2, meets, type Map2, type St, type Bld } from "./denah-k17-bw";
-import { pick, shuffle, DIR, SHORT, bearing, sectorOf, angDiff, left, right, ERR_SECTOR, W, tag, arrow, f1, rect, FONT, C_OK, C_NO, C_REF, type Obj } from "./denah-k17-peta";
+import { pick, shuffle, DIR, SHORT, bearing, sectorOf, angDiff, left, right, ERR_SECTOR, W, tag, arrow, f1, rect, ring, FONT, C_OK, C_NO, C_REF, type Obj, type Peta } from "./denah-k17-peta";
 
 export type Item = Record<string, unknown>;
 export const LET = ["a", "b", "c", "d", "e"];
@@ -95,6 +95,8 @@ export function rute2(p: Map2, pos: number, turns: number, walker: string): Item
   }
   return null;
 }
+
+export const INSTRUKSI = "Gunakan denah. Utara ditunjukkan kompas (atas peta). Arah diukur dari titik tengah bangunan. Belok kiri/kanan dihitung dari arah hadap pejalan. Bangunan di sebelah kiri/kanan = bangunan yang berbatasan langsung dengan jalan yang sedang dilalui. Lapangan, taman, dan kolam bukan bangunan.";
 
 // ---------- ROTASI ----------
 export const INSTRUKSI_ROT = "Gunakan denah. Arah ditentukan oleh kompas; peta bisa saja tidak menghadap Utara. Arah diukur dari titik tengah bangunan. Lapangan bukan bangunan. Berputar searah jarum jam: Utara → Timur Laut → Timur → Tenggara → Selatan → Barat Daya → Barat → Barat Laut; satu langkah = 45°.";
@@ -223,6 +225,69 @@ export function putar(p: Map2, pos: number, used: Set<string>, form: "b" | "a", 
       stem: form === "b" ? `${base} Di antara pilihan berikut, bangunan yang berada di depannya sekarang (searah hadapnya) adalah …` : `${base} Sekarang ${walker} menghadap ke arah …`,
       opsi: Object.fromEntries(opts.map((o, i) => [LET[i], o.z ? o.z.name : DIR[o.s]])), kunci: [LET[pos]],
       pembahasan: `${lang}${y ? `\nLangkah 3: Dari tengah ${x.name}, arah ${DIR[f]} = ${MOVE[f]} di peta. Bangunan pilihan yang kena arah itu: ${y.name}.` : ""}<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${y ? y.name : DIR[f]}.<br>${nyata}\n${tips}`,
+    };
+  }
+  return null;
+}
+
+// ---------- ARAH (peta grid dan hitam-putih) ----------
+// Cincin penanda: peta grid (label di bawah ikon) vs peta hitam-putih (cincin di badan bangunan saja).
+let ringFn: (o: Obj, c: string, dash?: boolean) => string = ring;
+export const setRing = (f: typeof ringFn) => { ringFn = f; };
+const rg = (o: Obj, c: string, dash = false) => ringFn(o, c, dash);
+
+export function arahBangunan(p: Peta, pos: number, used: Set<string>): Item | null {
+  const B = p.objs.filter((o) => o.building);
+  for (const x of shuffle(B)) for (const y of shuffle(B)) {
+    if (x === y || used.has(x.name + y.name) || used.has(y.name + x.name)) continue;
+    const d = safeKey(x, y);
+    if (d < 0) continue;
+    const pool = B.filter((z) => z !== x && z !== y).map((z) => ({ z, br: bOf(x, z) }))
+      .filter(({ br }) => angDiff(br, d * 45) >= 35 && angDiff(br, sectorOf(br) * 45) <= 15);
+    const ds: { z: Obj; why: string }[] = [];
+    for (const [why, f] of ERR_SECTOR) { const z = pool.find(({ z, br }) => sectorOf(br) === f(d) && !ds.some((q) => q.z === z)); if (z && ds.length < 4) ds.push({ z: z.z, why }); }
+    for (const { z } of shuffle(pool)) if (ds.length < 4 && !ds.some((q) => q.z === z)) ds.push({ z, why: "" });
+    for (const q of ds) q.why = ERR_SECTOR.find(([, f]) => f(d) === sectorOf(bOf(x, q.z)))?.[0] ?? "bukan arah yang ditanya";
+    if (ds.length < 4) continue;
+    used.add(x.name + y.name);
+    const opts = arrange({ z: y, why: "" }, shuffle(ds), pos);
+    const near = ds.filter((q) => angDiff(bOf(x, q.z), d * 45) <= 50).length;
+    const why2 = opts.map((o, i) => { const s = sectorOf(bOf(x, o.z)); return o.z === y ? "" : `Opsi ${LET[i].toUpperCase()} (${o.z.name}): letaknya di ${POS[s]} ${x.name}, jadi ${DIR[s]}; ${o.why}.`; }).filter(Boolean).join("\n");
+    const close = ds.filter((q) => ERR_SECTOR.slice(0, 2).some(([, f]) => f(d) === sectorOf(bOf(x, q.z))))
+      .sort((a, b) => angDiff(bOf(x, a.z), d * 45) - angDiff(bOf(x, b.z), d * 45)).slice(0, 1);
+    return {
+      cap: [`Dari ${x.name} ke ${y.name}:`, `${MOVE[d]} = ${DIR[d]}`],
+      over: rg(x, C_REF) + rg(y, C_OK) + close.map((q) => rg(q.z, C_NO, true) + arrow(x, q.z, C_NO, "no", `${DIR[sectorOf(bOf(x, q.z))]} ✗`, true)).join("") + arrow(x, y, C_OK, "ok", `${DIR[d]} ✓`),
+      sub_type: "FIG-DENAH-ARAH", tier: d % 2 === 0 ? 1 : near >= 2 ? 3 : 2,
+      stem: `Di antara pilihan berikut, bangunan yang terletak di arah ${DIR[d]} dari ${x.name} adalah …`,
+      opsi: Object.fromEntries(opts.map((o, i) => [LET[i], o.z.name])), kunci: [LET[pos]],
+      pembahasan: `Langkah 1: Taruh jari di tengah ${x.name}.\nLangkah 2: Lihat kompas: ${DIR[d]} = ${MOVE[d]}. Geser jari ${MOVE[d]} dari ${x.name}.\nLangkah 3: Bangunan pilihan yang kena arah itu adalah ${y.name}.<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${y.name}.<br>${nyataArah(d, x.name)}\n${tipsArah(d)}`,
+    };
+  }
+  return null;
+}
+
+export function arahArah(p: Peta, pos: number, used: Set<string>): Item | null {
+  const B = p.objs.filter((o) => o.building);
+  for (const x of shuffle(B)) for (const y of shuffle(B)) {
+    if (x === y || used.has(x.name + y.name) || used.has(y.name + x.name)) continue;
+    const d = safeKey(x, y);
+    if (d < 0) continue;
+    used.add(x.name + y.name);
+    const ds: { s: number; why: string }[] = [];
+    for (const [why, f] of ERR_SECTOR) if (f(d) !== d && !ds.some((q) => q.s === f(d)) && ds.length < 4) ds.push({ s: f(d), why });
+    // Urut searah jarum jam mulai dari arah tertentu supaya kunci jatuh di `pos`.
+    const all = [{ s: d, why: "" }, ...ds].sort((a, b) => a.s - b.s);
+    const k = all.findIndex((o) => o.s === d), opts = all.map((_, i) => all[(i + k - pos + 5) % 5]);
+    const why2 = opts.map((o, i) => o.s === d ? "" : `Opsi ${LET[i].toUpperCase()} (${DIR[o.s]}): itu arah ${POS[o.s]}; ${o.why}.`).filter(Boolean).join("\n");
+    const geser = d % 2 ? `geser ke ${d < 4 ? "kanan" : "kiri"} dan ke ${d === 1 || d === 7 ? "atas" : "bawah"} hampir sama jauh` : "hampir lurus";
+    return {
+      cap: [`Dari ${x.name} ke ${y.name}:`, `${MOVE[d]} = ${DIR[d]}`],
+      over: rg(x, C_REF) + rg(y, C_OK) + arrow(x, y, C_OK, "ok", `${DIR[d]} ✓`),
+      sub_type: "FIG-DENAH-ARAH", tier: d % 2 === 0 ? 1 : 2,
+      stem: `${y.name} terletak di arah mana dari ${x.name}?`,
+      opsi: Object.fromEntries(opts.map((o, i) => [LET[i], DIR[o.s]])), kunci: [LET[pos]],
+      pembahasan: `Langkah 1: Taruh jari di tengah ${x.name}, lalu cari ${y.name}.\nLangkah 2: ${y.name} ada di ${POS[d]} ${x.name} (${geser}).\nLangkah 3: Cocokkan dengan kompas: ${POS[d]} = ${DIR[d]}.<br>Kenapa yang lain salah:\n${why2}\nJawaban: ${DIR[d]}.<br>${nyataArah(d, x.name)}\n${tipsArah(d)}`,
     };
   }
   return null;

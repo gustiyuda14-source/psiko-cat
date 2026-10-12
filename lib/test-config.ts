@@ -91,11 +91,22 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // Kartu Simulasi Penuh → package_number bank soal per module. Nomor sesi tersimpan di
 // module_sessions.package_number; sesi lama (null) memakai SIMULASI_PACKAGE (= Paket 1).
 // Nomor simulasi tidak boleh bentrok dengan paket latihan (KECERDASAN_PACKAGES 2-11).
+// Kecerdasan 13/14 = Paket 1/12 setelah kalibrasi Logis/Spasial 2026-10-12 (denah masuk blok
+// 38-42, scripts/seed-kecerdasan-kal.ts). Simulasi berikutnya memakai 15 ke atas.
 // ponytail: Kepribadian Paket 2 belum disusun, sementara memakai paket 11.
 export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number }> = {
-  1: SIMULASI_PACKAGE,
-  2: { KECERDASAN: 12, KEPRIBADIAN: 11 },
+  1: { KECERDASAN: 13, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN },
+  2: { KECERDASAN: 14, KEPRIBADIAN: 11 },
 };
+// Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
+// tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.
+const SIMULASI_KECERDASAN_LAMA: Record<number, number> = { 1: 1, 12: 2 };
+
+/** Kartu Simulasi Penuh dari package_number Kecerdasan sebuah sesi (null = sesi lama = kartu 1). */
+export function simulasiKartuOf(kecerdasanPackage: number | null | undefined): number {
+  const pkg = kecerdasanPackage ?? SIMULASI_PACKAGE.KECERDASAN;
+  return SIMULASI_KECERDASAN_LAMA[pkg] ?? Number(Object.keys(SIMULASI_PAKET).find((id) => SIMULASI_PAKET[Number(id)].KECERDASAN === pkg) ?? 0);
+}
 
 /** Paket bank soal sebuah module simulasi; null (sesi lama) = Paket 1. */
 export function simulasiPackageOf(type: "KECERDASAN" | "KEPRIBADIAN", packageNumber: number | null | undefined): number {
@@ -104,6 +115,7 @@ export function simulasiPackageOf(type: "KECERDASAN" | "KEPRIBADIAN", packageNum
 
 /** Semua package_number milik simulasi — tidak pernah boleh dibuka lewat latihan. */
 export function isSimulasiPackage(type: string, packageNumber: number | null): boolean {
+  if (type === "KECERDASAN" && packageNumber != null && packageNumber in SIMULASI_KECERDASAN_LAMA) return true;
   return Object.values(SIMULASI_PAKET).some((p) => p[type as keyof typeof p] === packageNumber);
 }
 

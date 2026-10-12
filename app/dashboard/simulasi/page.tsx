@@ -3,7 +3,7 @@ import { revalidatePath } from "next/cache";
 import ResetSesiButton from "./ResetSesiButton";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PAKET, type ModuleType } from "@/lib/test-config";
+import { MODULE_CONFIG, MODULE_ORDER, SIMULASI_PAKET, simulasiKartuOf, type ModuleType } from "@/lib/test-config";
 import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronDown, ChevronRight } from "@/app/components/icons";
@@ -148,10 +148,7 @@ export default async function SimulasiPage() {
 
   // Tryout lengkap per kartu paket: kartu dibaca dari package_number Kecerdasan
   // (null = sesi lama = Paket 1). `done` urut lama → baru.
-  const paketOf = (s: Done) => {
-    const pkg = s.module_sessions.find((m) => m.module_type === "KECERDASAN")?.package_number ?? SIMULASI_PAKET[1].KECERDASAN;
-    return Number(Object.keys(SIMULASI_PAKET).find((id) => SIMULASI_PAKET[Number(id)].KECERDASAN === pkg) ?? 0);
-  };
+  const paketOf = (s: Done) => simulasiKartuOf(s.module_sessions.find((m) => m.module_type === "KECERDASAN")?.package_number);
   const runsOf = (id: number) => done.filter((s) => isFull(s) && s.nap_score != null && paketOf(s) === id);
 
   // 5 slot paket simulasi penuh. Kartu terbuka otomatis begitu paketnya terdaftar di

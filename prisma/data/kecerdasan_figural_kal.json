@@ -1,0 +1,1034 @@
+{
+  "2": [
+    {
+      "sequence_number": 31,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang merupakan hasil perputaran (rotasi) dari gambar di atas, bukan pencerminannya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,58 415,58 415,38 435,38 435,78 455,78 455,98 415,98 415,78 395,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"50\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"439,82 451,82 451,94\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"135,188 115,188 115,168 95,168 95,208 75,208 75,228 115,228 115,208 135,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"105\" cy=\"180\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"91,212 79,212 79,224\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"275,228 275,208 295,208 295,188 255,188 255,168 235,168 235,208 255,208 255,228\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"283\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"251,184 251,172 239,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"455,208 435,208 435,228 415,228 415,188 395,188 395,168 435,168 435,188 455,188\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"216\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"411,184 399,184 399,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"555,208 575,208 575,228 595,228 595,188 615,188 615,168 575,168 575,188 555,188\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"585\" cy=\"216\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"599,184 611,184 611,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"735,168 735,188 715,188 715,208 755,208 755,228 775,228 775,188 755,188 755,168\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"727\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"759,212 759,224 771,224\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 2,
+      "pembahasan": "Patokannya titik hitam dan segitiga hitam. Pada gambar soal, segitiga ada di kanan bawah dan titik di bagian atas tengah; bergerak searah jarum jam dari titik, segitiga ditemui setelah melewati sisi kanan. Gambar c adalah gambar soal yang diputar 180°: titik pindah ke bawah, segitiga ke kiri atas, dan urutan searah jarum jamnya tetap. Gambar a, b, d, dan e adalah cerminan (kemudian diputar), sehingga urutannya terbalik. Jawaban: c."
+    },
+    {
+      "sequence_number": 32,
+      "options_payload": {
+        "instruksi": "Gambar di atas dicerminkan terhadap cermin tegak pada garis putus-putus. Pilihlah satu gambar yang merupakan hasil cerminannya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"409\" cy=\"52\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"409\" cy=\"52\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"419\" y1=\"62\" x2=\"451\" y2=\"94\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"437\" y1=\"80\" x2=\"445\" y2=\"72\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"445\" y1=\"88\" x2=\"453\" y2=\"80\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"487\" y1=\"14\" x2=\"487\" y2=\"122\" stroke=\"#111\" stroke-width=\"3\" stroke-dasharray=\"8 6\"/><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"89\" cy=\"214\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"89\" cy=\"214\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"99\" y1=\"204\" x2=\"131\" y2=\"172\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"117\" y1=\"186\" x2=\"125\" y2=\"194\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"125\" y1=\"178\" x2=\"133\" y2=\"186\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"281\" cy=\"214\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"281\" cy=\"214\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"271\" y1=\"204\" x2=\"239\" y2=\"172\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"253\" y1=\"186\" x2=\"245\" y2=\"194\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"245\" y1=\"178\" x2=\"237\" y2=\"186\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"441\" cy=\"182\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"441\" cy=\"182\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"431\" y1=\"192\" x2=\"399\" y2=\"224\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"413\" y1=\"210\" x2=\"421\" y2=\"218\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"405\" y1=\"218\" x2=\"413\" y2=\"226\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"601\" cy=\"182\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"601\" cy=\"182\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"591\" y1=\"192\" x2=\"559\" y2=\"224\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"573\" y1=\"210\" x2=\"565\" y2=\"202\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"565\" y1=\"218\" x2=\"557\" y2=\"210\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"729\" cy=\"182\" r=\"13\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"729\" cy=\"182\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"739\" y1=\"192\" x2=\"771\" y2=\"224\" stroke=\"#111\" stroke-width=\"6\" stroke-linecap=\"round\"/><line x1=\"757\" y1=\"210\" x2=\"749\" y2=\"218\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"765\" y1=\"218\" x2=\"757\" y2=\"226\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "D"
+      },
+      "tingkat": 2,
+      "pembahasan": "Cermin tegak hanya menukar kiri dan kanan; atas dan bawah tetap. Pada gambar soal, kepala kunci ada di kiri atas dan batangnya turun ke kanan bawah, dengan gerigi menghadap ke kanan atas. Pada cerminannya, kepala kunci pindah ke kanan atas, batang turun ke kiri bawah, dan gerigi menghadap ke kiri atas, yaitu gambar d. Opsi a adalah cerminan terhadap cermin mendatar. Opsi b dan c hanya diputar. Opsi e dicerminkan lalu diputar. Jawaban: d."
+    },
+    {
+      "sequence_number": 35,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tepat untuk melengkapi hubungan gambar berikut.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"107\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"131,38 149,38 149,78 181,78 181,98 131,98\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"140\" cy=\"48\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"247\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"265,92 265,74 305,74 305,42 325,42 325,92\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"275\" cy=\"83\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"284\" cy=\"83\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"507\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"537\" y1=\"98\" x2=\"537\" y2=\"38\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"537,38 575,50 537,62\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"563\" cy=\"72\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"563\" cy=\"81\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"647\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"695\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><text x=\"225\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><text x=\"425\" y=\"78\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">=</text><text x=\"625\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"135\" y1=\"216\" x2=\"75\" y2=\"216\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"75,216 87,178 99,216\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"109\" cy=\"190\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"118\" cy=\"190\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"127\" cy=\"190\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"235\" y1=\"180\" x2=\"295\" y2=\"180\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"295,180 283,218 271,180\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"261\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"252\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"243\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"455\" y1=\"216\" x2=\"395\" y2=\"216\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"395,216 407,178 419,216\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"429\" cy=\"190\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"438\" cy=\"190\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"615\" y1=\"180\" x2=\"555\" y2=\"180\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"555,180 567,218 579,180\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"589\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"598\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"607\" cy=\"206\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"727\" y1=\"228\" x2=\"727\" y2=\"168\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"727,168 765,180 727,192\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"753\" cy=\"202\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"753\" cy=\"211\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"753\" cy=\"220\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Dari gambar pertama ke kedua ada dua perubahan: gambar diputar 90° berlawanan arah jarum jam (bagian yang semula di atas pindah ke kiri), dan titiknya bertambah satu (1 menjadi 2). Gambar ketiga adalah bendera dengan 2 titik, jadi jawabannya bendera yang diputar 90° berlawanan arah jarum jam (tiang mendatar, segitiga menunjuk ke bawah) dengan 3 titik. Opsi b diputar searah jarum jam. Opsi c titiknya tidak bertambah. Opsi d adalah cerminan. Opsi e tidak diputar. Jawaban: a."
+    },
+    {
+      "sequence_number": 36,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tepat untuk melengkapi hubungan gambar berikut.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"107\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"155,26 191.4,89 118.6,89\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"155\" cy=\"76\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"247\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"295,32 331,68 295,104 259,68\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"289.5\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"300.5\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"507\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"555,32 589.2,56.9 576.2,97.1 533.8,97.1 520.8,56.9\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"544\" cy=\"68\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"555\" cy=\"68\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"566\" cy=\"68\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"647\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"695\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><text x=\"225\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><text x=\"425\" y=\"78\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">=</text><text x=\"625\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"105,162 136.2,180 136.2,216 105,234 73.8,216 73.8,180\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"88.5\" cy=\"198\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"99.5\" cy=\"198\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"110.5\" cy=\"198\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"121.5\" cy=\"198\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"265,162 299.2,186.9 286.2,227.1 243.8,227.1 230.8,186.9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"248.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"259.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"270.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"281.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"425,162 456.2,180 456.2,216 425,234 393.8,216 393.8,180\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"414\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"436\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"585,162 613.1,175.6 620.1,206 600.6,230.4 569.4,230.4 549.9,206 556.9,175.6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"568.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"579.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"590.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"601.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"745,162 776.2,180 776.2,216 745,234 713.8,216 713.8,180\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"728.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"739.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"750.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"761.5\" cy=\"198\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "E"
+      },
+      "tingkat": 3,
+      "pembahasan": "Dari gambar pertama ke kedua: segitiga menjadi persegi (sisi bertambah satu), warna dibalik (putih menjadi hitam, titik hitam menjadi putih), dan titik bertambah satu (1 menjadi 2). Gambar ketiga segi lima putih dengan 3 titik, jadi jawabannya segi enam hitam dengan 4 titik putih. Opsi a gugur karena warnanya tidak dibalik. Opsi b gugur karena sisinya tidak bertambah. Opsi c gugur karena titiknya tidak bertambah. Opsi d gugur karena sisinya bertambah dua. Jawaban: e."
+    },
+    {
+      "sequence_number": 37,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tidak termasuk dalam kelompoknya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 156\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"57\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"75,50 105,34 135,50 135,86 105,102 75,86\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"237,40 265,40 265,68 293,68 293,96 237,96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,56 433,56 433,38 459,68 433,98 433,80 395,80\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"555,44 585,68 615,44 615,74 585,98 555,74\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"715,48 735,34 775,34 775,88 755,102 715,102\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 2,
+      "pembahasan": "Hitung sisi tiap bangun. Gambar a, b, d, dan e masing-masing dibatasi 6 sisi, meskipun bentuknya berbeda-beda (ada yang cekung, ada yang cembung). Gambar c (panah) dibatasi 7 sisi. Warna bukan pembeda karena hitam dan putih masing-masing muncul lebih dari satu kali, dan bentuk cekung juga muncul lebih dari satu kali. Jawaban: c."
+    }
+  ],
+  "3": [
+    {
+      "sequence_number": 26,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"161\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"209\" y1=\"68\" x2=\"209\" y2=\"42\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"209\" cy=\"38\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"169,28 183,28 169,42\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"209\" cy=\"68\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"317\" y1=\"68\" x2=\"335.4\" y2=\"86.4\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"338.2\" cy=\"89.2\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"277,108 291,108 277,94\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"317\" cy=\"68\" r=\"8\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"68\" x2=\"399\" y2=\"68\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"395\" cy=\"68\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"465,108 451,108 465,94\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"68\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"533\" y1=\"68\" x2=\"551.4\" y2=\"49.6\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"554.2\" cy=\"46.8\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"573,28 559,28 573,42\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"533\" cy=\"68\" r=\"8\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"593\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"641\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"105\" y1=\"198\" x2=\"105\" y2=\"224\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"105\" cy=\"228\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"65,158 79,158 65,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"105\" cy=\"198\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"265\" y1=\"198\" x2=\"265\" y2=\"224\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"265\" cy=\"228\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"305,158 291,158 305,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"265\" cy=\"198\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"198\" x2=\"406.6\" y2=\"216.4\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"403.8\" cy=\"219.2\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"385,158 399,158 385,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"198\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"585\" y1=\"198\" x2=\"585\" y2=\"224\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"585\" cy=\"228\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"545,158 559,158 545,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"585\" cy=\"198\" r=\"8\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"745\" y1=\"198\" x2=\"771\" y2=\"198\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"775\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"705,158 719,158 705,172\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"745\" cy=\"198\" r=\"8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ada tiga aturan yang berjalan bersamaan. (1) Jarum berputar 135° searah jarum jam setiap langkah: atas (0°), kanan bawah (135°), kiri (270°), kanan atas (45°), jadi berikutnya bawah (180°). (2) Segitiga hitam di sudut pindah berlawanan arah jarum jam: kiri atas, kiri bawah, kanan bawah, kanan atas, lalu kembali ke kiri atas. (3) Lingkaran pusat bergantian hitam–putih, jadi gambar ke-5 hitam. Opsi b gugur karena segitiga masih di kanan atas. Opsi c gugur karena jarum menunjuk kiri bawah. Opsi d gugur karena pusatnya putih. Opsi e gugur karena jarum menunjuk kanan. Jawaban: a."
+    },
+    {
+      "sequence_number": 27,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"161\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"209\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"209\" y1=\"68\" x2=\"209\" y2=\"50\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"209\" cy=\"44\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"209\" y1=\"105\" x2=\"209\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"317\" y1=\"68\" x2=\"299\" y2=\"68\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"293\" cy=\"68\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"310\" y1=\"105\" x2=\"310\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"317\" y1=\"105\" x2=\"317\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"324\" y1=\"105\" x2=\"324\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"68\" x2=\"425\" y2=\"86\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"425\" cy=\"92\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"411\" y1=\"105\" x2=\"411\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"418\" y1=\"105\" x2=\"418\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"425\" y1=\"105\" x2=\"425\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"432\" y1=\"105\" x2=\"432\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"439\" y1=\"105\" x2=\"439\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"533\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"533\" y1=\"68\" x2=\"551\" y2=\"68\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"557\" cy=\"68\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"512\" y1=\"105\" x2=\"512\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"519\" y1=\"105\" x2=\"519\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"526\" y1=\"105\" x2=\"526\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"533\" y1=\"105\" x2=\"533\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"540\" y1=\"105\" x2=\"540\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"547\" y1=\"105\" x2=\"547\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"554\" y1=\"105\" x2=\"554\" y2=\"112\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><rect x=\"593\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"641\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"105\" cy=\"198\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"105\" y1=\"198\" x2=\"105\" y2=\"180\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"105\" cy=\"174\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"80.5\" y1=\"235\" x2=\"80.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"87.5\" y1=\"235\" x2=\"87.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"94.5\" y1=\"235\" x2=\"94.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"101.5\" y1=\"235\" x2=\"101.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"108.5\" y1=\"235\" x2=\"108.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"115.5\" y1=\"235\" x2=\"115.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"122.5\" y1=\"235\" x2=\"122.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"129.5\" y1=\"235\" x2=\"129.5\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"265\" cy=\"198\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"265\" y1=\"198\" x2=\"283\" y2=\"198\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"289\" cy=\"198\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"237\" y1=\"235\" x2=\"237\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"244\" y1=\"235\" x2=\"244\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"251\" y1=\"235\" x2=\"251\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"258\" y1=\"235\" x2=\"258\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"265\" y1=\"235\" x2=\"265\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"272\" y1=\"235\" x2=\"272\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"279\" y1=\"235\" x2=\"279\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"286\" y1=\"235\" x2=\"286\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"293\" y1=\"235\" x2=\"293\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"198\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"198\" x2=\"425\" y2=\"216\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"425\" cy=\"222\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"397\" y1=\"235\" x2=\"397\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"404\" y1=\"235\" x2=\"404\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"411\" y1=\"235\" x2=\"411\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"418\" y1=\"235\" x2=\"418\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"425\" y1=\"235\" x2=\"425\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"432\" y1=\"235\" x2=\"432\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"439\" y1=\"235\" x2=\"439\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"446\" y1=\"235\" x2=\"446\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"453\" y1=\"235\" x2=\"453\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"585\" cy=\"198\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"585\" y1=\"198\" x2=\"585\" y2=\"180\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"585\" cy=\"174\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"557\" y1=\"235\" x2=\"557\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"564\" y1=\"235\" x2=\"564\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"571\" y1=\"235\" x2=\"571\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"578\" y1=\"235\" x2=\"578\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"585\" y1=\"235\" x2=\"585\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"592\" y1=\"235\" x2=\"592\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"599\" y1=\"235\" x2=\"599\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"606\" y1=\"235\" x2=\"606\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"613\" y1=\"235\" x2=\"613\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"745\" cy=\"198\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"745\" y1=\"198\" x2=\"745\" y2=\"180\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><circle cx=\"745\" cy=\"174\" r=\"6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"724\" y1=\"235\" x2=\"724\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"731\" y1=\"235\" x2=\"731\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"738\" y1=\"235\" x2=\"738\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"745\" y1=\"235\" x2=\"745\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"752\" y1=\"235\" x2=\"752\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"759\" y1=\"235\" x2=\"759\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"766\" y1=\"235\" x2=\"766\" y2=\"242\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "D"
+      },
+      "tingkat": 2,
+      "pembahasan": "Dua aturan berjalan bersamaan. (1) Jarum berbandul berputar 90° berlawanan arah jarum jam: atas, kiri, bawah, kanan, jadi berikutnya kembali ke atas. (2) Garis kecil di bawah bertambah dua: 1, 3, 5, 7, jadi 9. Opsi a gugur karena garisnya 8. Opsi b gugur karena jarum masih ke kanan. Opsi c gugur karena jarum ke bawah. Opsi e gugur karena garisnya tidak bertambah. Jawaban: d."
+    },
+    {
+      "sequence_number": 28,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"339.6,45.4 335.4,72.2 328.3,65.2 301.4,92 293,83.6 319.8,56.7 312.8,49.6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"457,68 435,84 435,74 397,74 397,62 435,62 435,52\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"555.6,90.6 528.8,86.4 535.8,79.3 509,52.4 517.4,44 544.3,70.8 551.4,63.8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"317,208 301,186 311,186 311,148 323,148 323,186 333,186\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"447.6,198.6 420.8,194.4 427.8,187.3 401,160.4 409.4,152 436.3,178.8 443.4,171.8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"510.4,153.4 537.2,157.6 530.2,164.7 557,191.6 548.6,200 521.7,173.2 514.6,180.2\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"285,284 307,268 307,278 345,278 345,290 307,290 307,300\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"447.6,306.6 420.8,302.4 427.8,295.3 401,268.4 409.4,260 436.3,286.8 443.4,279.8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"82.4,391.4 109.2,395.6 102.2,402.7 129,429.6 120.6,438 93.7,411.2 86.6,418.2\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"287.6,391.4 283.4,418.2 276.3,411.2 249.4,438 241,429.6 267.8,402.7 260.8,395.6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"447.6,436.6 420.8,432.4 427.8,425.3 401,398.4 409.4,390 436.3,416.8 443.4,409.8\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"562.4,436.6 566.6,409.8 573.7,416.8 600.6,390 609,398.4 582.2,425.3 589.2,432.4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"777,414 755,430 755,420 717,420 717,408 755,408 755,398\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "B"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ukur arah panah sebagai sudut searah jarum jam dari arah atas (atas = 0°, kanan atas = 45°, kanan = 90°, dan seterusnya). Pada setiap baris, sudut panah kolom 3 = sudut kolom 1 + sudut kolom 2. Baris 1: 45° + 90° = 135° (kanan bawah). Baris 2: 180° + 135° = 315° (kiri atas). Baris 3: 270° + 135° = 405° = 45°, jadi panah menunjuk kanan atas. Aturan 'kolom 2 ditambah 45°' cocok untuk baris 1 tetapi gugur di baris 2. Opsi a memakai selisih. Opsi c hanya menyalin kolom 2. Opsi d berlawanan dengan jawaban. Opsi e salah hitung satu langkah. Jawaban: b."
+    },
+    {
+      "sequence_number": 29,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"285,36 305,36 305,56 285,56\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,36 327,36 327,56 307,56\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,36 349,36 349,56 329,56\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,58 305,58 305,78 285,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,58 327,58 327,78 307,78\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,58 349,58 349,78 329,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,80 305,80 305,100 285,100\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,80 327,80 327,100 307,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,80 349,80 349,100 329,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"393,36 413,36 413,56 393,56\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,36 435,36 435,56 415,56\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,36 457,36 457,56 437,56\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,58 413,58 413,78 393,78\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,58 435,58 435,78 415,78\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,58 457,58 457,78 437,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,80 413,80 413,100 393,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,80 435,80 435,100 415,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,80 457,80 457,100 437,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"501,36 521,36 521,56 501,56\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,36 543,36 543,56 523,56\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,36 565,36 565,56 545,56\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"501,58 521,58 521,78 501,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,58 543,58 543,78 523,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,58 565,58 565,78 545,78\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"501,80 521,80 521,100 501,100\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,80 543,80 543,100 523,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,80 565,80 565,100 545,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"285,144 305,144 305,164 285,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,144 327,144 327,164 307,164\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,144 349,144 349,164 329,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,166 305,166 305,186 285,186\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,166 327,166 327,186 307,186\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,166 349,166 349,186 329,186\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,188 305,188 305,208 285,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,188 327,188 327,208 307,208\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,188 349,188 349,208 329,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"393,144 413,144 413,164 393,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,144 435,144 435,164 415,164\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,144 457,144 457,164 437,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,166 413,166 413,186 393,186\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,166 435,166 435,186 415,186\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,166 457,166 457,186 437,186\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,188 413,188 413,208 393,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,188 435,188 435,208 415,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,188 457,188 457,208 437,208\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"501,144 521,144 521,164 501,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,144 543,144 543,164 523,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,144 565,144 565,164 545,164\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"501,166 521,166 521,186 501,186\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,166 543,166 543,186 523,186\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,166 565,166 565,186 545,186\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"501,188 521,188 521,208 501,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"523,188 543,188 543,208 523,208\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"545,188 565,188 565,208 545,208\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"285,252 305,252 305,272 285,272\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,252 327,252 327,272 307,272\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,252 349,252 349,272 329,272\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,274 305,274 305,294 285,294\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,274 327,274 327,294 307,294\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,274 349,274 349,294 329,294\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"285,296 305,296 305,316 285,316\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"307,296 327,296 327,316 307,316\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"329,296 349,296 349,316 329,316\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"393,252 413,252 413,272 393,272\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,252 435,252 435,272 415,272\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,252 457,252 457,272 437,272\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,274 413,274 413,294 393,294\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,274 435,274 435,294 415,294\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,274 457,274 457,294 437,294\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,296 413,296 413,316 393,316\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,296 435,296 435,316 415,316\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,296 457,296 457,316 437,316\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"73,382 93,382 93,402 73,402\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"95,382 115,382 115,402 95,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"117,382 137,382 137,402 117,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"73,404 93,404 93,424 73,424\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"95,404 115,404 115,424 95,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"117,404 137,404 137,424 117,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"73,426 93,426 93,446 73,446\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"95,426 115,426 115,446 95,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"117,426 137,426 137,446 117,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"233,382 253,382 253,402 233,402\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"255,382 275,382 275,402 255,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"277,382 297,382 297,402 277,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"233,404 253,404 253,424 233,424\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"255,404 275,404 275,424 255,424\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"277,404 297,404 297,424 277,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"233,426 253,426 253,446 233,446\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"255,426 275,426 275,446 255,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"277,426 297,426 297,446 277,446\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"393,382 413,382 413,402 393,402\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,382 435,382 435,402 415,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,382 457,382 457,402 437,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,404 413,404 413,424 393,424\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,404 435,404 435,424 415,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,404 457,404 457,424 437,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"393,426 413,426 413,446 393,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"415,426 435,426 435,446 415,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"437,426 457,426 457,446 437,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"553,382 573,382 573,402 553,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"575,382 595,382 595,402 575,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"597,382 617,382 617,402 597,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"553,404 573,404 573,424 553,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"575,404 595,404 595,424 575,424\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"597,404 617,404 617,424 597,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"553,426 573,426 573,446 553,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"575,426 595,426 595,446 575,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"597,426 617,426 617,446 597,446\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"713,382 733,382 733,402 713,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"735,382 755,382 755,402 735,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"757,382 777,382 777,402 757,402\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"713,404 733,404 733,424 713,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"735,404 755,404 755,424 735,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"757,404 777,404 777,424 757,424\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"713,426 733,426 733,446 713,446\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"735,426 755,426 755,446 735,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"757,426 777,426 777,446 757,446\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 3,
+      "pembahasan": "Pada setiap baris, petak hitam kolom 3 adalah petak yang hitam di kolom 1 tetapi tidak hitam di kolom 2 (kolom 1 dikurangi kolom 2). Cek baris 1: kolom 1 hitam di kiri atas, kanan atas, tengah, kiri bawah; kolom 2 menutup kanan atas dan tengah; sisa kiri atas dan kiri bawah. Baris 3: kolom 1 hitam di kiri atas, kiri tengah, tengah, kanan bawah; kolom 2 menutup tengah dan kanan bawah; sisa kiri atas dan kiri tengah. Opsi a ikut menghitamkan petak yang hanya hitam di kolom 2. Opsi b menggabungkan semua petak hitam. Opsi d hanya mengambil petak yang sama. Opsi e memakai kolom 2 dikurangi kolom 1. Jawaban: c."
+    },
+    {
+      "sequence_number": 30,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"68\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"317,68 317,38 322.2,38.5 327.3,39.8 332,42 336.3,45 340,48.7 343,53 345.2,57.7 346.5,62.8 347,68\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"317\" y1=\"38\" x2=\"317\" y2=\"98\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"68\" x2=\"347\" y2=\"68\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"317\" cy=\"27\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"68\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"425,68 455,68 454.5,73.2 453.2,78.3 451,83 448,87.3 444.3,91 440,94 435.3,96.2 430.2,97.5 425,98\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"425\" y1=\"38\" x2=\"425\" y2=\"98\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"68\" x2=\"455\" y2=\"68\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"466\" cy=\"68\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"533\" cy=\"68\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"533,68 533,98 527.8,97.5 522.7,96.2 518,94 513.7,91 510,87.3 507,83 504.8,78.3 503.5,73.2 503,68\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"533\" y1=\"38\" x2=\"533\" y2=\"98\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"503\" y1=\"68\" x2=\"563\" y2=\"68\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"533\" cy=\"109\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"176\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"317,176 287,176 287.5,170.8 288.8,165.7 291,161 294,156.7 297.7,153 302,150 306.7,147.8 311.8,146.5 317,146\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"317\" y1=\"146\" x2=\"317\" y2=\"206\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"176\" x2=\"347\" y2=\"176\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"276\" cy=\"176\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"176\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"425,176 425,146 430.2,146.5 435.3,147.8 440,150 444.3,153 448,156.7 451,161 453.2,165.7 454.5,170.8 455,176\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"425\" y1=\"146\" x2=\"425\" y2=\"206\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"176\" x2=\"455\" y2=\"176\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"425\" cy=\"135\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"533\" cy=\"176\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"533,176 563,176 562.5,181.2 561.2,186.3 559,191 556,195.3 552.3,199 548,202 543.3,204.2 538.2,205.5 533,206\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"533\" y1=\"146\" x2=\"533\" y2=\"206\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"503\" y1=\"176\" x2=\"563\" y2=\"176\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"574\" cy=\"176\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"284\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"317,284 347,284 346.5,289.2 345.2,294.3 343,299 340,303.3 336.3,307 332,310 327.3,312.2 322.2,313.5 317,314\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"317\" y1=\"254\" x2=\"317\" y2=\"314\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"284\" x2=\"347\" y2=\"284\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"317\" cy=\"325\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"284\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"425,284 425,314 419.8,313.5 414.7,312.2 410,310 405.7,307 402,303.3 399,299 396.8,294.3 395.5,289.2 395,284\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"425\" y1=\"254\" x2=\"425\" y2=\"314\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"284\" x2=\"455\" y2=\"284\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"384\" cy=\"284\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"105\" cy=\"414\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"105,414 105,444 99.8,443.5 94.7,442.2 90,440 85.7,437 82,433.3 79,429 76.8,424.3 75.5,419.2 75,414\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"105\" y1=\"384\" x2=\"105\" y2=\"444\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"75\" y1=\"414\" x2=\"135\" y2=\"414\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"105\" cy=\"373\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"265\" cy=\"414\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"265,414 265,384 270.2,384.5 275.3,385.8 280,388 284.3,391 288,394.7 291,399 293.2,403.7 294.5,408.8 295,414\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"265\" y1=\"384\" x2=\"265\" y2=\"444\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"235\" y1=\"414\" x2=\"295\" y2=\"414\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"265\" cy=\"373\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"414\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"425,414 395,414 395.5,408.8 396.8,403.7 399,399 402,394.7 405.7,391 410,388 414.7,385.8 419.8,384.5 425,384\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"425\" y1=\"384\" x2=\"425\" y2=\"444\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"414\" x2=\"455\" y2=\"414\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"425\" cy=\"455\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"585\" cy=\"414\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"585,414 555,414 555.5,408.8 556.8,403.7 559,399 562,394.7 565.7,391 570,388 574.7,385.8 579.8,384.5 585,384\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"585\" y1=\"384\" x2=\"585\" y2=\"444\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"555\" y1=\"414\" x2=\"615\" y2=\"414\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"585\" cy=\"373\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"745\" cy=\"414\" r=\"30\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"745,414 715,414 715.5,408.8 716.8,403.7 719,399 722,394.7 725.7,391 730,388 734.7,385.8 739.8,384.5 745,384\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"745\" y1=\"384\" x2=\"745\" y2=\"444\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><line x1=\"715\" y1=\"414\" x2=\"775\" y2=\"414\" stroke=\"#111\" stroke-width=\"2.5\" stroke-linecap=\"round\"/><circle cx=\"786\" cy=\"414\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "D"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ada dua aturan dari arah berbeda. (1) Dibaca mendatar (per baris), juring hitam berputar satu perempat searah jarum jam dari kolom ke kolom. Baris 3: kanan bawah → kiri bawah → berikutnya kiri atas. (2) Dibaca menurun (per kolom), titik hitam di luar lingkaran pindah satu posisi berlawanan arah jarum jam. Kolom 3: bawah → kanan → berikutnya atas. Jadi jawabannya juring kiri atas dengan titik di atas. Opsi a gugur karena juring tidak berputar. Opsi b gugur karena juring berputar dua langkah. Opsi c gugur karena titik tidak pindah. Opsi e gugur karena titik pindah ke arah yang salah. Jawaban: d."
+    },
+    {
+      "sequence_number": 31,
+      "options_payload": {
+        "instruksi": "Gambar di atas diputar 270° searah jarum jam. Pilihlah satu gambar yang merupakan hasilnya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,38 431,38 455,62 455,98 419,98 419,74 395,74\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"441\" cy=\"84\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"403\" y1=\"48\" x2=\"421\" y2=\"48\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"135,168 135,204 111,228 75,228 75,192 99,192 99,168\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"89\" cy=\"214\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"125\" y1=\"176\" x2=\"125\" y2=\"194\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"235,168 235,204 259,228 295,228 295,192 271,192 271,168\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"281\" cy=\"214\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"245\" y1=\"176\" x2=\"245\" y2=\"194\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,228 395,192 419,168 455,168 455,204 431,204 431,228\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"441\" cy=\"182\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"405\" y1=\"220\" x2=\"405\" y2=\"202\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"615,228 579,228 555,204 555,168 591,168 591,192 615,192\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"569\" cy=\"182\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"607\" y1=\"218\" x2=\"589\" y2=\"218\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"775,228 775,192 751,168 715,168 715,204 739,204 739,228\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"729\" cy=\"182\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"765\" y1=\"220\" x2=\"765\" y2=\"202\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 2,
+      "pembahasan": "Putaran 270° searah jarum jam sama dengan putaran 90° berlawanan arah jarum jam. Bagian kanan gambar pindah ke atas dan bagian atas pindah ke kiri: titik hitam yang semula di kanan bawah pindah ke kanan atas, garis kecil yang semula di kiri atas pindah ke kiri bawah, dan sudut terpancung pindah ke kiri atas. Opsi a adalah putaran 90° searah jarum jam (arah terbalik). Opsi b dan e adalah cerminan. Opsi d adalah putaran 180°. Jawaban: c."
+    },
+    {
+      "sequence_number": 32,
+      "options_payload": {
+        "instruksi": "Gambar di atas diputar 90° searah jarum jam, kemudian hasilnya dicerminkan terhadap cermin tegak. Pilihlah satu gambar yang merupakan hasil akhirnya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"411,36 439,36 439,56 455,56 455,72 439,72 439,100 411,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"46\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"411,88 425,100 411,100\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"487\" y1=\"14\" x2=\"487\" y2=\"122\" stroke=\"#111\" stroke-width=\"3\" stroke-dasharray=\"8 6\"/><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"137,212 137,184 117,184 117,168 101,168 101,184 73,184 73,212\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"127\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"85,212 73,198 73,212\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"297,184 297,212 277,212 277,228 261,228 261,212 233,212 233,184\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"287\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"245,184 233,198 233,184\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"439,166 411,166 411,186 395,186 395,202 411,202 411,230 439,230\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"176\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"439,218 425,230 439,230\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"553,212 553,184 573,184 573,168 589,168 589,184 617,184 617,212\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"563\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"605,212 617,198 617,212\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"713,184 713,212 733,212 733,228 749,228 749,212 777,212 777,184\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"723\" cy=\"198\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"765,184 777,198 777,184\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "E"
+      },
+      "tingkat": 3,
+      "pembahasan": "Kerjakan sesuai urutan. Langkah 1 (putar 90° searah jarum jam): tonjolan yang semula di kanan pindah ke bawah, titik hitam yang semula di atas pindah ke kanan, dan segitiga hitam yang semula di kiri bawah pindah ke kiri atas. Langkah 2 (cermin tegak): kiri dan kanan ditukar, jadi tonjolan tetap di bawah, titik hitam pindah ke kiri, dan segitiga hitam pindah ke kanan atas. Opsi a mengerjakan urutan terbalik (cermin dulu, baru putar). Opsi b hanya diputar. Opsi c hanya dicerminkan. Opsi d diputar berlawanan arah tanpa cermin. Jawaban: e."
+    },
+    {
+      "sequence_number": 35,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tepat untuk melengkapi hubungan gambar berikut.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"107\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"123,74 187,74 175,94 129,94\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"151\" y1=\"74\" x2=\"151\" y2=\"36\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><polygon points=\"151,36 151,68 179,68\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"135\" cy=\"84\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"247\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"327,74 263,74 275,94 321,94\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"299\" y1=\"74\" x2=\"299\" y2=\"36\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><polygon points=\"299,36 299,68 271,68\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"315\" cy=\"84\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"507\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"529,64 581,64 581,100 529,100\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"539\" y1=\"64\" x2=\"539\" y2=\"42\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"539\" y1=\"42\" x2=\"565\" y2=\"42\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"565\" y1=\"42\" x2=\"565\" y2=\"54\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"563,76 573,76 573,90 563,90\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"647\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"695\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><text x=\"225\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><text x=\"425\" y=\"78\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">=</text><text x=\"625\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"131,194 79,194 79,230 131,230\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"121\" y1=\"194\" x2=\"121\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"121\" y1=\"172\" x2=\"95\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"95\" y1=\"172\" x2=\"95\" y2=\"184\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"97,206 87,206 87,220 97,220\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"291,194 239,194 239,230 291,230\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"281\" y1=\"194\" x2=\"281\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"281\" y1=\"172\" x2=\"255\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"255\" y1=\"172\" x2=\"255\" y2=\"184\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"257,206 247,206 247,220 257,220\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"451,202 399,202 399,166 451,166\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"441\" y1=\"202\" x2=\"441\" y2=\"224\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"441\" y1=\"224\" x2=\"415\" y2=\"224\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"415\" y1=\"224\" x2=\"415\" y2=\"212\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"417,190 407,190 407,176 417,176\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"559,194 611,194 611,230 559,230\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"569\" y1=\"194\" x2=\"569\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"569\" y1=\"172\" x2=\"595\" y2=\"172\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"595\" y1=\"172\" x2=\"595\" y2=\"184\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"593,206 603,206 603,220 593,220\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"719,202 771,202 771,166 719,166\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"729\" y1=\"202\" x2=\"729\" y2=\"224\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"729\" y1=\"224\" x2=\"755\" y2=\"224\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><line x1=\"755\" y1=\"224\" x2=\"755\" y2=\"212\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"753,190 763,190 763,176 753,176\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "B"
+      },
+      "tingkat": 3,
+      "pembahasan": "Dari gambar pertama ke kedua ada dua perubahan: gambar dicerminkan kiri-kanan (tiang dan layar pindah sisi, atas-bawah tetap), dan warnanya dibalik (badan putih menjadi hitam, bagian hitam menjadi putih). Terapkan pada gembok: lengkung gembok pindah ke sisi kanan, lubang kunci pindah ke kiri, badannya hitam dan lubang kuncinya putih. Opsi a gugur karena warnanya tidak dibalik. Opsi c gugur karena diputar 180°, bukan dicerminkan kiri-kanan. Opsi d gugur karena tidak dicerminkan. Opsi e gugur karena dicerminkan atas-bawah. Jawaban: b."
+    },
+    {
+      "sequence_number": 36,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tepat untuk melengkapi hubungan gambar berikut.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"107\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"155\" y1=\"98\" x2=\"155\" y2=\"50\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"155,34 167,52 143,52\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"147\" y1=\"94\" x2=\"163\" y2=\"94\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"247\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"265\" y1=\"68\" x2=\"313\" y2=\"68\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"329,68 311,80 311,56\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"269\" y1=\"60\" x2=\"269\" y2=\"76\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"276\" y1=\"60\" x2=\"276\" y2=\"76\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"283\" y1=\"60\" x2=\"283\" y2=\"76\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"507\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"585\" y1=\"68\" x2=\"537\" y2=\"68\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"521,82 521,54 535,54 535,82\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"581\" y1=\"76\" x2=\"581\" y2=\"60\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"574\" y1=\"76\" x2=\"574\" y2=\"60\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"567\" y1=\"76\" x2=\"567\" y2=\"60\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><rect x=\"647\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"695\" y=\"82\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><text x=\"225\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><text x=\"425\" y=\"78\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">=</text><text x=\"625\" y=\"76\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"34\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">:</text><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"105\" y1=\"228\" x2=\"105\" y2=\"180\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"91,164 119,164 119,178 91,178\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"97\" y1=\"224\" x2=\"113\" y2=\"224\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"97\" y1=\"217\" x2=\"113\" y2=\"217\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"97\" y1=\"210\" x2=\"113\" y2=\"210\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"97\" y1=\"203\" x2=\"113\" y2=\"203\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"97\" y1=\"196\" x2=\"113\" y2=\"196\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"265\" y1=\"228\" x2=\"265\" y2=\"180\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"251,164 279,164 279,178 251,178\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"257\" y1=\"224\" x2=\"273\" y2=\"224\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"257\" y1=\"217\" x2=\"273\" y2=\"217\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"257\" y1=\"210\" x2=\"273\" y2=\"210\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"168\" x2=\"425\" y2=\"216\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"439,232 411,232 411,218 439,218\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"433\" y1=\"172\" x2=\"417\" y2=\"172\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"433\" y1=\"179\" x2=\"417\" y2=\"179\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"433\" y1=\"186\" x2=\"417\" y2=\"186\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"433\" y1=\"193\" x2=\"417\" y2=\"193\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"433\" y1=\"200\" x2=\"417\" y2=\"200\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"585\" y1=\"228\" x2=\"585\" y2=\"180\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"571,164 599,164 599,178 571,178\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"577\" y1=\"224\" x2=\"593\" y2=\"224\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"577\" y1=\"217\" x2=\"593\" y2=\"217\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"577\" y1=\"210\" x2=\"593\" y2=\"210\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"577\" y1=\"203\" x2=\"593\" y2=\"203\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"775\" y1=\"198\" x2=\"727\" y2=\"198\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"711,212 711,184 725,184 725,212\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><line x1=\"771\" y1=\"206\" x2=\"771\" y2=\"190\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"764\" y1=\"206\" x2=\"764\" y2=\"190\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"757\" y1=\"206\" x2=\"757\" y2=\"190\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"750\" y1=\"206\" x2=\"750\" y2=\"190\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><line x1=\"743\" y1=\"206\" x2=\"743\" y2=\"190\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Dari gambar pertama ke kedua: panah diputar 90° searah jarum jam (dari menghadap atas menjadi menghadap kanan) dan garis melintangnya bertambah dua (1 menjadi 3). Gambar ketiga adalah palu yang menghadap kiri dengan 3 garis, jadi jawabannya palu yang menghadap atas (kiri diputar 90° searah jarum jam) dengan 5 garis. Opsi b sudah diputar tetapi garisnya tidak bertambah. Opsi c diputar berlawanan arah jarum jam. Opsi d garisnya hanya bertambah satu. Opsi e tidak diputar. Jawaban: a."
+    },
+    {
+      "sequence_number": 37,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tidak termasuk dalam kelompoknya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 156\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"57\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"105,34 123,60 113,60 113,98 97,98 97,60 87,60\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"83\" cy=\"90\" r=\"5\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"127\" cy=\"90\" r=\"5\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"289,38 289,98 241,86 241,50\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"265\" cy=\"68\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"271\" y1=\"44\" x2=\"271\" y2=\"92\" stroke=\"#111\" stroke-width=\"3\" stroke-linecap=\"round\"/><text x=\"265\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,42 435,42 455,94 415,94\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"407\" cy=\"50\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"443\" cy=\"86\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"585,34 609,68 585,102 561,68\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><polygon points=\"585,34 597,51 573,51\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"585\" cy=\"80\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"715,98 715,38 731,38 731,60 775,60 775,76 731,76 731,98\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"759\" cy=\"68\" r=\"5\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 3,
+      "pembahasan": "Cari ciri yang sama pada empat gambar. Gambar a, b, d, dan e masing-masing punya sumbu simetri: jika dilipat pada garis tegak (a dan d) atau garis mendatar (b dan e), kedua belahnya tepat berimpit. Gambar c (jajaran genjang dengan dua titik) tidak punya sumbu simetri; ia hanya kembali sama jika diputar 180°, dan putaran bukan lipatan. Warna dan bentuk tidak membedakan karena masing-masing muncul lebih dari satu kali. Jawaban: c."
+    },
+    {
+      "sequence_number": 51,
+      "options_payload": {
+        "instruksi": "Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"425\" cy=\"150\" r=\"130\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"150\" x2=\"375.3\" y2=\"29.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"474.7\" y2=\"29.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"545.1\" y2=\"100.3\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"545.1\" y2=\"199.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"474.7\" y2=\"270.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"375.3\" y2=\"270.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"304.9\" y2=\"199.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"304.9\" y2=\"100.3\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"69.4\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"482\" y=\"93\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">5</text><text x=\"505.6\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">8</text><text x=\"482\" y=\"207\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">10</text><text x=\"425\" y=\"230.6\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">7</text><text x=\"368\" y=\"207\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">11</text><text x=\"344.4\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">17</text><text x=\"368\" y=\"93\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "18"
+          },
+          {
+            "key": "B",
+            "text": "19"
+          },
+          {
+            "key": "C",
+            "text": "20"
+          },
+          {
+            "key": "D",
+            "text": "21"
+          },
+          {
+            "key": "E",
+            "text": "23"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "D"
+      },
+      "tingkat": 2,
+      "pembahasan": "Pasangkan bilangan yang saling berhadapan: 3 ↔ 7, 5 ↔ 11, 8 ↔ 17. Bilangan di seberang = 2 × bilangan + 1 (2 × 3 + 1 = 7, 2 × 5 + 1 = 11, 2 × 8 + 1 = 17). Di hadapan 10: 2 × 10 + 1 = 21. Opsi 20 lupa menambah 1. Jawaban: d."
+    },
+    {
+      "sequence_number": 52,
+      "options_payload": {
+        "instruksi": "Bilangan dibaca searah jarum jam mulai dari tanda panah. Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"425\" cy=\"155\" r=\"125\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"155\" x2=\"362.5\" y2=\"46.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"487.5\" y2=\"46.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"550\" y2=\"155\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"487.5\" y2=\"263.3\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"362.5\" y2=\"263.3\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"300\" y2=\"155\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"77.5\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"492.1\" y=\"116.3\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">5</text><text x=\"492.1\" y=\"193.8\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">9</text><text x=\"425\" y=\"232.5\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">17</text><text x=\"357.9\" y=\"193.8\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">33</text><text x=\"357.9\" y=\"116.3\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text><defs><marker id=\"kal3b-ah-1\" viewBox=\"0 0 10 10\" refX=\"7\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0L10 5L0 10z\" fill=\"#111\"/></marker></defs><path d=\"M364.1 30.1 A139 139 0 0 1 485.9 30.1\" fill=\"none\" stroke=\"#111\" stroke-width=\"3\" marker-end=\"url(#kal3b-ah-1)\"/></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "49"
+          },
+          {
+            "key": "B",
+            "text": "64"
+          },
+          {
+            "key": "C",
+            "text": "65"
+          },
+          {
+            "key": "D",
+            "text": "66"
+          },
+          {
+            "key": "E",
+            "text": "67"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 2,
+      "pembahasan": "Dibaca searah jarum jam mulai dari 3: 3, 5, 9, 17, 33. Setiap bilangan = 2 × bilangan sebelumnya − 1 (2 × 17 − 1 = 33). Cara lain: selisihnya 2, 4, 8, 16, jadi selisih berikutnya 32. Bilangan berikutnya 2 × 33 − 1 = 65. Opsi 64 lupa dikurangi 1, dan opsi 49 hanya menambah selisih 16 lagi. Jawaban: c."
+    },
+    {
+      "sequence_number": 53,
+      "options_payload": {
+        "instruksi": "Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"425\" cy=\"150\" r=\"130\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"379\" y1=\"104\" x2=\"333.1\" y2=\"58.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"471\" y1=\"104\" x2=\"516.9\" y2=\"58.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"471\" y1=\"196\" x2=\"516.9\" y2=\"241.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"379\" y1=\"196\" x2=\"333.1\" y2=\"241.9\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"150\" r=\"65\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"51.2\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">19</text><text x=\"523.8\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"425\" y=\"248.8\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">33</text><text x=\"326.2\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text><line x1=\"425\" y1=\"150\" x2=\"379\" y2=\"104\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"425\" y1=\"150\" x2=\"471\" y2=\"104\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"425\" y1=\"150\" x2=\"471\" y2=\"196\" stroke=\"#111\" stroke-width=\"2\"/><line x1=\"425\" y1=\"150\" x2=\"379\" y2=\"196\" stroke=\"#111\" stroke-width=\"2\"/><text x=\"425\" y=\"112.3\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"462.7\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">1</text><text x=\"425\" y=\"187.7\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">4</text><text x=\"387.3\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">2</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "8"
+          },
+          {
+            "key": "B",
+            "text": "9"
+          },
+          {
+            "key": "C",
+            "text": "10"
+          },
+          {
+            "key": "D",
+            "text": "11"
+          },
+          {
+            "key": "E",
+            "text": "17"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "B"
+      },
+      "tingkat": 3,
+      "pembahasan": "Bandingkan cincin dalam dan luar pada juring yang sama: 3 → 19, 1 → 3, 4 → 33. Aturannya luar = 2 × dalam² + 1 (2 × 9 + 1 = 19, 2 × 1 + 1 = 3, 2 × 16 + 1 = 33). Aturan kali tetap (misalnya × 8 − 5) cocok untuk dua juring pertama tetapi gugur di juring ketiga. Untuk dalam 2: 2 × 4 + 1 = 9. Opsi 17 menghitung 2⁴ + 1. Jawaban: b."
+    },
+    {
+      "sequence_number": 54,
+      "options_payload": {
+        "instruksi": "Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 290\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"155\" cy=\"150\" r=\"112\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"131.2\" y1=\"126.2\" x2=\"75.8\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"178.8\" y1=\"126.2\" x2=\"234.2\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"178.8\" y1=\"173.8\" x2=\"234.2\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"131.2\" y1=\"173.8\" x2=\"75.8\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"155\" cy=\"150\" r=\"33.6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"155\" y=\"76.1\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"228.9\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">6</text><text x=\"155\" y=\"223.9\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">5</text><text x=\"81.1\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">2</text><text x=\"155\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">32</text><circle cx=\"425\" cy=\"150\" r=\"112\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"401.2\" y1=\"126.2\" x2=\"345.8\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"448.8\" y1=\"126.2\" x2=\"504.2\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"448.8\" y1=\"173.8\" x2=\"504.2\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"401.2\" y1=\"173.8\" x2=\"345.8\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"150\" r=\"33.6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"76.1\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">4</text><text x=\"498.9\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">7</text><text x=\"425\" y=\"223.9\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">2</text><text x=\"351.1\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">4</text><text x=\"425\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">18</text><circle cx=\"695\" cy=\"150\" r=\"112\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"671.2\" y1=\"126.2\" x2=\"615.8\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"718.8\" y1=\"126.2\" x2=\"774.2\" y2=\"70.8\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"718.8\" y1=\"173.8\" x2=\"774.2\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"671.2\" y1=\"173.8\" x2=\"615.8\" y2=\"229.2\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"695\" cy=\"150\" r=\"33.6\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"695\" y=\"76.1\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">5</text><text x=\"768.9\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">9</text><text x=\"695\" y=\"223.9\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">3</text><text x=\"621.1\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">6</text><text x=\"695\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "24"
+          },
+          {
+            "key": "B",
+            "text": "27"
+          },
+          {
+            "key": "C",
+            "text": "30"
+          },
+          {
+            "key": "D",
+            "text": "36"
+          },
+          {
+            "key": "E",
+            "text": "46"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Bilangan di pusat = (atas + bawah) × (kanan − kiri). Lingkaran 1: (3 + 5) × (6 − 2) = 32. Lingkaran 2: (4 + 2) × (7 − 4) = 18. Lingkaran 3: (5 + 3) × (9 − 6) = 24. Aturan 'jumlah semua × 2' cocok untuk lingkaran 1 (16 × 2) tetapi gugur di lingkaran 2. Opsi 46 adalah jumlah lingkaran 3 dikali 2. Jawaban: a."
+    },
+    {
+      "sequence_number": 55,
+      "options_payload": {
+        "instruksi": "Huruf mewakili urutannya dalam alfabet (A = 1, B = 2, C = 3, dan seterusnya). Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"425\" cy=\"150\" r=\"130\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"150\" x2=\"375.3\" y2=\"29.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"474.7\" y2=\"29.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"545.1\" y2=\"100.3\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"545.1\" y2=\"199.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"474.7\" y2=\"270.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"375.3\" y2=\"270.1\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"304.9\" y2=\"199.7\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"150\" x2=\"304.9\" y2=\"100.3\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"69.4\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">D</text><text x=\"482\" y=\"93\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">G</text><text x=\"505.6\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">J</text><text x=\"482\" y=\"207\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">M</text><text x=\"425\" y=\"230.6\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">10</text><text x=\"368\" y=\"207\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">19</text><text x=\"344.4\" y=\"150\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">28</text><text x=\"368\" y=\"93\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "35"
+          },
+          {
+            "key": "B",
+            "text": "36"
+          },
+          {
+            "key": "C",
+            "text": "38"
+          },
+          {
+            "key": "D",
+            "text": "39"
+          },
+          {
+            "key": "E",
+            "text": "37"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "E"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ubah huruf menjadi urutannya: D = 4, G = 7, J = 10, M = 13. Pasangan yang berhadapan: 4 ↔ 10, 7 ↔ 19, 10 ↔ 28. Aturannya angka = urutan × 3 − 2 (4 × 3 − 2 = 10). Untuk M: 13 × 3 − 2 = 37. Opsi 39 lupa mengurangi 2, dan opsi 36 memakai urutan L (12) karena salah hitung satu huruf. Jawaban: e."
+    },
+    {
+      "sequence_number": 56,
+      "options_payload": {
+        "instruksi": "Huruf dibaca searah jarum jam mulai dari tanda panah. Huruf mewakili urutannya dalam alfabet (A = 1, B = 2, …, Z = 26); setelah Z, hitungan kembali ke A. Tentukan huruf yang tepat untuk menggantikan tanda tanya (?) pada gambar.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 300\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><circle cx=\"425\" cy=\"155\" r=\"125\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"425\" y1=\"155\" x2=\"351.5\" y2=\"53.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"498.5\" y2=\"53.9\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"543.9\" y2=\"193.6\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"425\" y2=\"280\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"425\" y1=\"155\" x2=\"306.1\" y2=\"193.6\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"77.5\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">B</text><text x=\"498.7\" y=\"131.1\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">D</text><text x=\"470.6\" y=\"217.7\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">H</text><text x=\"379.4\" y=\"217.7\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">P</text><text x=\"351.3\" y=\"131.1\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"26\" font-weight=\"bold\" text-anchor=\"middle\" dominant-baseline=\"central\" fill=\"#111\">?</text><defs><marker id=\"kal3b-ah-2\" viewBox=\"0 0 10 10\" refX=\"7\" refY=\"5\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0L10 5L0 10z\" fill=\"#111\"/></marker></defs><path d=\"M351.3 37.1 A139 139 0 0 1 498.7 37.1\" fill=\"none\" stroke=\"#111\" stroke-width=\"3\" marker-end=\"url(#kal3b-ah-2)\"/></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "F"
+          },
+          {
+            "key": "B",
+            "text": "E"
+          },
+          {
+            "key": "C",
+            "text": "G"
+          },
+          {
+            "key": "D",
+            "text": "Q"
+          },
+          {
+            "key": "E",
+            "text": "Z"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ubah huruf menjadi urutannya: B = 2, D = 4, H = 8, P = 16. Setiap nilai dikali 2, jadi berikutnya 32. Alfabet hanya sampai 26, jadi hitungan kembali ke A: 32 − 26 = 6 = F. Opsi Q hanya maju satu huruf dari P. Opsi Z berhenti di huruf terakhir tanpa kembali ke A. Opsi E dan G salah hitung satu posisi. Jawaban: a."
+    }
+  ],
+  "13": [
+    {
+      "sequence_number": 28,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"317,34 346.4,85 287.6,85\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"317\" cy=\"68\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"317\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"453.3,39.7 453.3,96.3 396.7,96.3 396.7,39.7\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"420\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"430\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"533,36 560.7,52 560.7,84 533,100 505.3,84 505.3,52\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"533\" cy=\"68\" r=\"9\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"523\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"533\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"543\" cy=\"108\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"345.3,147.7 345.3,204.3 288.7,204.3 288.7,147.7\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"317\" cy=\"176\" r=\"9\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"307\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"317\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"327\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"425,144 452.7,160 452.7,192 425,208 397.3,192 397.3,160\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"176\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"533,142 562.4,193 503.6,193\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"528\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"538\" cy=\"216\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"317,252 344.7,268 344.7,300 317,316 289.3,300 289.3,268\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"312\" cy=\"324\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"322\" cy=\"324\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"425,250 454.4,301 395.6,301\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"284\" r=\"9\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"415\" cy=\"324\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"324\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"435\" cy=\"324\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"105,382 132.7,398 132.7,430 105,446 77.3,430 77.3,398\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"105\" cy=\"414\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"105\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"293.3,385.7 293.3,442.3 236.7,442.3 236.7,385.7\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"265\" cy=\"414\" r=\"9\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"265\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"453.3,385.7 453.3,442.3 396.7,442.3 396.7,385.7\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"425\" cy=\"414\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"613.3,385.7 613.3,442.3 556.7,442.3 556.7,385.7\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"585\" cy=\"414\" r=\"9\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"580\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"590\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"745,380 774.4,431 715.6,431\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"745\" cy=\"454\" r=\"3.5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "C"
+      },
+      "tingkat": 3,
+      "pembahasan": "Ada tiga ciri yang masing-masing muncul tepat satu kali di setiap baris dan setiap kolom: (1) bangun luar (segitiga, persegi, segi enam), (2) isi pusat (lingkaran hitam, lingkaran putih, kosong), dan (3) jumlah titik di bawah (1, 2, 3). Baris 3 sudah memuat segi enam dan segitiga, jadi bangunnya persegi. Isi pusat di baris 3 sudah lingkaran putih dan kosong, jadi lingkaran hitam. Titik di baris 3 sudah 2 dan 3, jadi 1 titik. Opsi a gugur karena bangunnya segi enam. Opsi b gugur karena lingkarannya putih. Opsi d gugur karena titiknya 2. Opsi e gugur karena bangun dan isinya salah. Jawaban: c."
+    },
+    {
+      "sequence_number": 29,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"297,40 311,40 311,82 337,82 337,96 297,96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"453,48 453,62 411,62 411,88 397,88 397,48\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"553,96 539,96 539,54 513,54 513,40 553,40\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"317,146 335,168 324,168 324,204 310,204 310,168 299,168\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"455,176 433,194 433,183 397,183 397,169 433,169 433,158\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"533,206 515,184 526,184 526,148 540,148 540,184 551,184\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"301\" y1=\"314\" x2=\"301\" y2=\"254\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"301,254 339,267 301,280\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"325\" cy=\"302\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"395\" y1=\"268\" x2=\"455\" y2=\"268\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"455,268 442,306 429,268\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"407\" cy=\"292\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"75\" y1=\"398\" x2=\"135\" y2=\"398\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"135,398 122,436 109,398\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"87\" cy=\"422\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"281\" y1=\"384\" x2=\"281\" y2=\"444\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"281,444 243,431 281,418\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"257\" cy=\"396\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"441\" y1=\"384\" x2=\"441\" y2=\"444\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"441,444 403,431 441,418\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"417\" cy=\"396\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"615\" y1=\"430\" x2=\"555\" y2=\"430\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"555,430 568,392 581,430\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"603\" cy=\"406\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><line x1=\"729\" y1=\"384\" x2=\"729\" y2=\"444\" stroke=\"#111\" stroke-width=\"5\" stroke-linecap=\"round\"/><polygon points=\"729,444 767,431 729,418\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"753\" cy=\"396\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "B"
+      },
+      "tingkat": 3,
+      "pembahasan": "Pada setiap baris, gambar diputar 90° searah jarum jam dari kolom ke kolom (0°, 90°, 180°), dan warnanya bergantian putih–hitam–putih. Baris 3: bendera tegak, lalu diputar 90° (kolom 2), sehingga kolom 3 adalah bendera yang diputar 180° dengan segitiga putih: tiang di kanan, segitiga menunjuk ke kiri di bagian bawah. Opsi a baru diputar 90°. Opsi c segitiganya hitam. Opsi d diputar ke arah yang salah (270°). Opsi e adalah cerminan, bukan perputaran. Jawaban: b."
+    },
+    {
+      "sequence_number": 30,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar untuk melengkapi pola di bawah ini.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 502\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"269\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"287\" y1=\"38\" x2=\"347\" y2=\"98\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"38\" x2=\"347\" y2=\"38\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"395\" y1=\"38\" x2=\"455\" y2=\"98\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"425\" y1=\"38\" x2=\"425\" y2=\"98\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"485\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"533\" cy=\"68\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"503\" y1=\"38\" x2=\"563\" y2=\"98\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"503\" y1=\"38\" x2=\"563\" y2=\"38\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"533\" y1=\"38\" x2=\"533\" y2=\"98\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"269\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"176\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"287\" y1=\"176\" x2=\"347\" y2=\"176\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"146\" x2=\"287\" y2=\"206\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"377\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"176\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"395\" y1=\"206\" x2=\"455\" y2=\"146\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"176\" x2=\"455\" y2=\"176\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"455\" y1=\"146\" x2=\"455\" y2=\"206\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"485\" y=\"128\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"533\" cy=\"176\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"503\" y1=\"206\" x2=\"563\" y2=\"146\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"503\" y1=\"176\" x2=\"563\" y2=\"176\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"503\" y1=\"146\" x2=\"503\" y2=\"206\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"563\" y1=\"146\" x2=\"563\" y2=\"206\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"269\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"317\" cy=\"284\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"287\" y1=\"314\" x2=\"347\" y2=\"314\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"287\" y1=\"314\" x2=\"347\" y2=\"254\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"317\" y1=\"254\" x2=\"317\" y2=\"314\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"377\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"284\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"395\" y1=\"254\" x2=\"455\" y2=\"254\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"425\" y1=\"254\" x2=\"425\" y2=\"314\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><rect x=\"485\" y=\"236\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><text x=\"533\" y=\"298\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"40\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">?</text><rect x=\"57\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"105\" cy=\"414\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"75\" y1=\"444\" x2=\"135\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"75\" y1=\"444\" x2=\"135\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"75\" y1=\"384\" x2=\"135\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"105\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"265\" cy=\"414\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"235\" y1=\"444\" x2=\"295\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"235\" y1=\"444\" x2=\"295\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"235\" y1=\"384\" x2=\"295\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"265\" y1=\"384\" x2=\"265\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"265\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"425\" cy=\"414\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"395\" y1=\"444\" x2=\"455\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"395\" y1=\"384\" x2=\"455\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"425\" y1=\"384\" x2=\"425\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"425\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"585\" cy=\"414\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"555\" y1=\"444\" x2=\"615\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"555\" y1=\"444\" x2=\"615\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"555\" y1=\"384\" x2=\"555\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"555\" y1=\"384\" x2=\"615\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"585\" y1=\"384\" x2=\"585\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"585\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"366\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><circle cx=\"745\" cy=\"414\" r=\"3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"715\" y1=\"444\" x2=\"775\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"715\" y1=\"444\" x2=\"775\" y2=\"384\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"745\" y1=\"384\" x2=\"745\" y2=\"444\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"745\" y=\"490\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "B"
+      },
+      "tingkat": 2,
+      "pembahasan": "Gambar kolom 3 adalah gabungan semua garis di kolom 1 dan kolom 2; garis yang muncul di keduanya tetap digambar (tidak dihapus). Cek baris 1: garis atas dan diagonal \\ ditambah diagonal \\ dan garis tegak tengah → atas, diagonal \\, tegak tengah. Baris 3: bawah, tegak tengah, diagonal / ditambah tegak tengah dan atas → bawah, tegak tengah, diagonal /, atas. Opsi a menghapus garis yang sama (tegak tengah). Opsi c kehilangan diagonal /. Opsi d menambah sisi kiri. Opsi e hanya menyalin kolom 1. Jawaban: b."
+    },
+    {
+      "sequence_number": 31,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang BUKAN hasil perputaran (rotasi) dari gambar di atas.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 286\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"397,40 453,40 453,62 431,62 431,96 413,96 413,74 397,74\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"442\" cy=\"51\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"403,46 421,46 403,64\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><rect x=\"57\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"133,170 133,226 111,226 111,204 77,204 77,186 99,186 99,170\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"122\" cy=\"215\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"127,176 127,194 109,176\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"105\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"293,226 237,226 237,204 259,204 259,170 277,170 277,192 293,192\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"248\" cy=\"215\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"287,220 269,220 287,202\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"265\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"397,226 397,170 419,170 419,192 453,192 453,210 431,210 431,226\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"408\" cy=\"181\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"403,220 403,202 421,220\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"425\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"624.6,198 585,237.6 569.4,222 585,206.5 561,182.4 573.7,169.7 589.2,185.3 600.6,174\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"585\" cy=\"222\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"616.1,198 603.4,210.7 603.4,185.3\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"585\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"150\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"773,226 773,170 751,170 751,192 717,192 717,210 739,210 739,226\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"762\" cy=\"181\" r=\"6\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><polygon points=\"767,220 767,202 749,220\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><text x=\"745\" y=\"274\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "E"
+      },
+      "tingkat": 2,
+      "pembahasan": "Pakai dua patokan: segitiga hitam dan titik hitam. Pada gambar soal, jika bergerak searah jarum jam dari segitiga hitam (kiri atas), titik hitam (kanan atas) ditemui lebih dulu. Perputaran berapa pun derajatnya mempertahankan urutan ini. Gambar a (90°), b (180°), c (270°), dan d (135°) mempertahankannya. Pada gambar e, titik hitam berada berlawanan arah jarum jam dari segitiga, tanda bahwa gambar itu dicerminkan. Jawaban: e."
+    },
+    {
+      "sequence_number": 32,
+      "options_payload": {
+        "instruksi": "Gambar di atas dicerminkan terhadap cermin mendatar pada garis putus-putus, kemudian hasil cerminannya diputar 90° berlawanan arah jarum jam. Pilihlah satu gambar yang merupakan hasil akhirnya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 296\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"401,38 419,38 419,78 451,78 451,98 401,98\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"410\" cy=\"50\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"429\" y1=\"88\" x2=\"443\" y2=\"88\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><line x1=\"371\" y1=\"130\" x2=\"479\" y2=\"130\" stroke=\"#111\" stroke-width=\"3\" stroke-dasharray=\"8 6\"/><rect x=\"57\" y=\"160\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"135,232 135,214 95,214 95,182 75,182 75,232\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"123\" cy=\"223\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"85\" y1=\"204\" x2=\"85\" y2=\"190\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"105\" y=\"284\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"160\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"241,238 259,238 259,198 291,198 291,178 241,178\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"250\" cy=\"226\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"269\" y1=\"188\" x2=\"283\" y2=\"188\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"265\" y=\"284\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"160\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"395,232 395,214 435,214 435,182 455,182 455,232\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"407\" cy=\"223\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"445\" y1=\"204\" x2=\"445\" y2=\"190\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"425\" y=\"284\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"160\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"555,184 555,202 595,202 595,234 615,234 615,184\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"567\" cy=\"193\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"605\" y1=\"212\" x2=\"605\" y2=\"226\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"585\" y=\"284\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"160\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"769,178 751,178 751,218 719,218 719,238 769,238\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"760\" cy=\"190\" r=\"5\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><line x1=\"741\" y1=\"228\" x2=\"727\" y2=\"228\" stroke=\"#111\" stroke-width=\"4\" stroke-linecap=\"round\"/><text x=\"745\" y=\"284\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 3,
+      "pembahasan": "Kerjakan bertahap. Langkah 1 (cermin mendatar): atas dan bawah terbalik, jadi kaki sepatu pindah ke atas, batang tegak di kiri bawah, titik hitam di kiri bawah, dan garis kecil di kanan atas. Langkah 2 (putar 90° berlawanan arah jarum jam): bagian atas berpindah ke kiri dan bagian kiri berpindah ke bawah, jadi kaki sepatu menjadi tegak di kiri, batang mendatar di bawah, titik hitam di kanan bawah, dan garis kecil di kiri atas. Opsi b hanya dicerminkan. Opsi c hanya diputar. Opsi d diputar searah jarum jam. Opsi e memakai cermin tegak. Jawaban: a."
+    },
+    {
+      "sequence_number": 37,
+      "options_payload": {
+        "instruksi": "Pilihlah satu gambar yang tidak termasuk dalam kelompoknya.",
+        "question_text": null,
+        "sub_text": null,
+        "is_multi_select": false,
+        "svg_content": "<svg viewBox=\"0 0 850 156\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"100%\" height=\"100%\" fill=\"white\"/><rect x=\"57\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"105,30 137.9,49 137.9,87 105,106 72.1,87 72.1,49\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"92\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"105\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"118\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"98.5\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"111.5\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"105\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">a</text><rect x=\"217\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"265,26 301.4,89 228.6,89\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"253\" cy=\"76\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"265\" cy=\"76\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"277\" cy=\"76\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"265\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">b</text><rect x=\"377\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"425,30 461.1,56.3 447.3,98.7 402.7,98.7 388.9,56.3\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"412\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"425\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"438\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"418.5\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"431.5\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"425\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">c</text><rect x=\"537\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"585,30 623,68 585,106 547,68\" fill=\"#111\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"567\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"579\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"591\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"603\" cy=\"68\" r=\"4\" fill=\"white\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"585\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">d</text><rect x=\"697\" y=\"20\" width=\"96\" height=\"96\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\"/><polygon points=\"745,30 774.7,44.3 782,76.5 761.5,102.2 728.5,102.2 708,76.5 715.3,44.3\" fill=\"white\" stroke=\"#111\" stroke-width=\"3\" stroke-linejoin=\"round\"/><circle cx=\"725.5\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"738.5\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"751.5\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"764.5\" cy=\"61\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"732\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"745\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><circle cx=\"758\" cy=\"75\" r=\"4\" fill=\"#111\" stroke=\"#111\" stroke-width=\"2.5\"/><text x=\"745\" y=\"144\" font-family=\"Arial, Helvetica, sans-serif\" font-size=\"22\" font-weight=\"bold\" text-anchor=\"middle\" fill=\"#111\">e</text></svg>",
+        "choices": [
+          {
+            "key": "A",
+            "text": "a"
+          },
+          {
+            "key": "B",
+            "text": "b"
+          },
+          {
+            "key": "C",
+            "text": "c"
+          },
+          {
+            "key": "D",
+            "text": "d"
+          },
+          {
+            "key": "E",
+            "text": "e"
+          }
+        ]
+      },
+      "scoring_rule": {
+        "type": "dichotomous",
+        "correct_key": "A"
+      },
+      "tingkat": 2,
+      "pembahasan": "Hitung sisi bangun dan titik di dalamnya. Segitiga (b) berisi 3 titik, segi lima (c) berisi 5 titik, belah ketupat (d) berisi 4 titik, dan segi tujuh (e) berisi 7 titik: jumlah titik selalu sama dengan jumlah sisi. Segi enam (a) hanya berisi 5 titik. Warna bangun bukan ciri pembeda, karena hitam dan putih sama-sama muncul lebih dari satu kali. Jawaban: a."
+    }
+  ]
+}
