@@ -1,4 +1,5 @@
 import "server-only";
+import { createHash } from "crypto";
 import bank from "@/data/drill-bank.json";
 import { DRILL_ASPEK, DRILL_CARDS, drillCategory } from "@/lib/drill-cards";
 
@@ -60,6 +61,11 @@ export function safeDrillItem(it: DrillItem): SafeDrillItem {
     opsi: it.opsi,
     multi: it.kunci.length > 1,
   };
+}
+
+/** Sidik jari isi soal (stem, opsi, kunci): jawaban di drill_answers hanya dihitung untuk versi yang sama. */
+export function drillVersi(it: DrillItem): string {
+  return createHash("sha1").update(JSON.stringify([it.stem, it.opsi, it.kunci])).digest("hex").slice(0, 10);
 }
 
 export function drillItemsFor(kartu: string): SafeDrillItem[] {

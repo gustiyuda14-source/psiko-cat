@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
-import { getDrillItem } from "@/lib/drill-bank";
+import { drillVersi, getDrillItem } from "@/lib/drill-bank";
 import { MAX_DRILL_MS } from "@/lib/progress-rules";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 
@@ -29,8 +29,13 @@ export async function POST(req: NextRequest) {
   const benar = picked.join("") === kunci.join("");
   const ms = Number.isInteger(body.ms) ? Math.min(Math.max(body.ms as number, 0), MAX_DRILL_MS) : null;
   // Gagal simpan tidak menahan pembahasan; peserta diberi tahu lewat `tersimpan`.
-  const { error } = await supabaseAdmin.rpc("record_drill_attempt", { p_user: session.sub, p_item: item.id, p_correct: benar, p_ms: ms });
+  const [{ error }, log] = await Promise.all([
+    supabaseAdmin.rpc("record_drill_attempt", { p_user: session.sub, p_item: item.id, p_correct: benar, p_ms: ms }),
+    // Opsi yang dipilih, untuk analisis pengecoh (/admin/pengecoh). Gagal tulis tidak memengaruhi `tersimpan`.
+    supabaseAdmin.from("drill_answers").insert({ user_id: session.sub, item_id: item.id, versi: drillVersi(item), pilihan: picked.join(""), correct: benar, ms }),
+  ]);
   if (error) console.error("record_drill_attempt", error);
+  if (log.error) console.error("drill_answers", log.error);
   return NextResponse.json({
     benar,
     tersimpan: !error,

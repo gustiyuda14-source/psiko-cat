@@ -80,6 +80,7 @@ export default async function AdminPage() {
           <div className="flex flex-wrap gap-2">
             <Link href="/dashboard" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Beranda</Link>
             <Link href="/admin/akun" className={buttonStyles({ variant: "primary", size: "sm" })}>Kelola akun</Link>
+            <Link href="/admin/pengecoh" className={buttonStyles({ variant: "secondary", size: "sm" })}>Analisis pengecoh</Link>
             <LogoutButton />
           </div>
         } />
