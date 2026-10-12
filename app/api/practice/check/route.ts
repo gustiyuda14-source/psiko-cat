@@ -38,11 +38,12 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: "question_id wajib" }, { status: 400 });
     }
 
+    // Tanpa filter is_active: halaman latihan yang dibuka sebelum soal dinonaktifkan (mis. kalibrasi
+    // pkg 2) tetap harus bisa dikumpulkan. Soal simulasi tetap ditolak lewat isSimulasiPackage di bawah.
     const { data: question, error } = await supabaseAdmin
       .from("questions")
       .select("type, package_number, scoring_rule, options_payload")
       .eq("id", question_id)
-      .eq("is_active", true)
       .single();
 
     if (error || !question) {
