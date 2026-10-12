@@ -31,7 +31,7 @@ export default async function LatihanKecermatanPackagesPage() {
   return (
     <div className="app-page space-y-6">
       <PageHeader
-        title="Latihan Sikap Kerja"
+        title="Latihan Sikap Kerja / Kecermatan"
         description="Pilih aspek dan paket untuk berlatih dalam 10 kolom. Lihat simbol kolom pertama di bawah; kunci simbol berganti saat berpindah kolom."
       />
 

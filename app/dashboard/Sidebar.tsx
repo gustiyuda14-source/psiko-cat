@@ -247,7 +247,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
                     }`}
                   >
                     <SubIcon className="size-4" />
-                    {meta.label}
+                    {meta.menuLabel ?? meta.label}
                   </Link>
                 </li>
               );

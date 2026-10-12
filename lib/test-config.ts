@@ -4,12 +4,14 @@ export type ModuleConfigEntry = {
   slug: string;
   time_limit_seconds: number;
   label: string;
+  /** Label menu latihan bila beda dari label resmi (pedoman: Sikap Kerja = tes kecermatan). */
+  menuLabel?: string;
   shortDesc: string;
 };
 
 export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
   KECERDASAN: { slug: "kecerdasan", time_limit_seconds: 5400, label: "Kecerdasan", shortDesc: "kognitif & spasial" },
-  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Sikap Kerja", shortDesc: "10 kolom simbol" },
+  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Sikap Kerja", menuLabel: "Sikap Kerja / Kecermatan", shortDesc: "10 kolom simbol" },
   KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert" },
 };
 
