@@ -241,7 +241,7 @@ export default function LatihanKecermatan({
       if (a.is_correct) col.total_benar++;
     }
     let cancelled = false;
-    scoreLatihanKecermatan(stats)
+    scoreLatihanKecermatan(stats, progressKey)
       .then((result) => {
         if (cancelled) return;
         setScore(result);
@@ -251,7 +251,7 @@ export default function LatihanKecermatan({
     return () => {
       cancelled = true;
     };
-  }, [finished, timedMode, sorted, answers]);
+  }, [finished, timedMode, sorted, answers, progressKey]);
 
   if (!q) return null;
 

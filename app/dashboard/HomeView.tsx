@@ -23,8 +23,18 @@ export type HomeSession = {
   module_sessions: Array<{ module_type: string }>;
 };
 
+export type KecermatanLatihanScore = { raw_score: number | string; created_at: string };
+
 /* Tampilan Beranda murni (tanpa akses data) — page.tsx yang mengambil sesi. */
-export default function HomeView({ name, sessions }: { name: string; sessions: HomeSession[] }) {
+export default function HomeView({
+  name,
+  sessions,
+  kecermatanScores = [],
+}: {
+  name: string;
+  sessions: HomeSession[];
+  kecermatanScores?: KecermatanLatihanScore[];
+}) {
   const session = { name };
   const allSessions = sessions;
   const completedSessions = allSessions.filter(
@@ -159,6 +169,24 @@ export default function HomeView({ name, sessions }: { name: string; sessions: H
             </dl>
           </>
         )}
+
+        {/* Latihan Kecermatan mode timer tidak masuk NAP, tapi skornya dicatat supaya kemajuan terlihat. */}
+        <div className="prog-panel is-stacked">
+          <div className="prog-body">
+            <NapTrendChart
+              sessions={kecermatanScores.map((k) => ({
+                status: "COMPLETED",
+                nap_score: Number(k.raw_score),
+                completed_at: k.created_at,
+                created_at: k.created_at,
+              }))}
+              title="Tren skor latihan Kecermatan"
+              label="Skor"
+              threshold={null}
+              emptyText="Selesaikan latihan Kecermatan mode timer per kolom untuk mulai melihat tren skornya."
+            />
+          </div>
+        </div>
       </section>
     </div>
   );

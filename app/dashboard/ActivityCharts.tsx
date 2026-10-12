@@ -125,7 +125,20 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
   );
 }
 
-export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
+export function NapTrendChart({
+  sessions,
+  title = "Tren skor NAP",
+  label = "NAP",
+  threshold = PASSING_NAP,
+  emptyText = "Tren muncul setelah tes resmi pertama selesai dihitung.",
+}: {
+  sessions: SessionRow[];
+  title?: string;
+  label?: string;
+  /** null = tanpa garis ambang (mis. skor latihan). */
+  threshold?: number | null;
+  emptyText?: string;
+}) {
   const points = sessions
     .filter((s) => s.nap_score != null)
     .sort(
@@ -136,9 +149,9 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
 
   if (points.length === 0) {
     return (
-      <ChartFrame title="Tren skor NAP" meta="belum ada data">
+      <ChartFrame title={title} meta="belum ada data">
         <p className="py-6 text-center text-xs text-muted-foreground">
-          Tren muncul setelah tes resmi pertama selesai dihitung.
+          {emptyText}
         </p>
       </ChartFrame>
     );
@@ -160,16 +173,21 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
     .join(" ");
 
   const last = points[points.length - 1];
-  const thresholdY = yFor(PASSING_NAP);
+  const thresholdY = threshold == null ? null : yFor(threshold);
 
   return (
     <ChartFrame
-      title="Tren skor NAP"
+      title={title}
       meta={`${points.length} sesi selesai`}
       footer={
         <p className="text-xs text-muted-foreground">
-          Garis putus-putus menandai ambang lulus{" "}
-          <span className="tnum font-semibold text-foreground">{PASSING_NAP}</span>. Skor terakhir{" "}
+          {threshold != null && (
+            <>
+              Garis putus-putus menandai ambang lulus{" "}
+              <span className="tnum font-semibold text-foreground">{threshold}</span>.{" "}
+            </>
+          )}
+          Skor terakhir{" "}
           <span className="tnum font-semibold text-foreground">{last.nap_score!.toFixed(1)}</span>.
         </p>
       }
@@ -179,10 +197,10 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
         width="100%"
         height={chartH}
         role="img"
-        aria-label={`Tren skor NAP dari ${points.length} sesi selesai. Skor terakhir ${last.nap_score!.toFixed(1)} dari 100, ambang lulus ${PASSING_NAP}.`}
+        aria-label={`${title} dari ${points.length} sesi selesai. Skor terakhir ${last.nap_score!.toFixed(1)} dari 100${threshold != null ? `, ambang lulus ${threshold}` : ""}.`}
       >
         {/* Garis acuan: skor tanpa ambangnya tidak bisa dinilai bagus atau tidak. */}
-        <line
+        {thresholdY != null && <line
           x1={0}
           x2={chartW}
           y1={thresholdY}
@@ -190,7 +208,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
           strokeWidth={1}
           strokeDasharray="3 4"
           className="stroke-border-strong"
-        />
+        />}
 
         {points.length > 1 && (
           <path
@@ -219,7 +237,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
               }
             >
               <title>
-                {`Sesi ${i + 1}: NAP ${p.nap_score!.toFixed(1)}`}
+                {`Sesi ${i + 1}: ${label} ${p.nap_score!.toFixed(1)}`}
               </title>
             </circle>
           );
@@ -238,7 +256,7 @@ export function NapTrendChart({ sessions }: { sessions: SessionRow[] }) {
 
       <ul className="sr-only">
         {points.map((p, i) => (
-          <li key={i}>{`Sesi ${i + 1}: NAP ${p.nap_score!.toFixed(1)}`}</li>
+          <li key={i}>{`Sesi ${i + 1}: ${label} ${p.nap_score!.toFixed(1)}`}</li>
         ))}
       </ul>
     </ChartFrame>
