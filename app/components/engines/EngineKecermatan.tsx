@@ -72,6 +72,9 @@ export default function EngineKecermatan({
   const activeFlush = useRef<Promise<boolean> | null>(null);
   const advancing = useRef(false);
   const completed = useRef(false);
+  // Server sudah menutup modul (409: waktu habis / sudah selesai): log tertahan tidak akan pernah
+  // diterima, jadi jangan minta kirim ulang — tutup sub-tes (TIMED_OUT) supaya peserta tidak macet.
+  const serverClosed = useRef(false);
   const lastHeartbeat = useRef(0);
 
   const columns = useMemo(
@@ -85,6 +88,31 @@ export default function EngineKecermatan({
   );
 
   // ── API helpers ──────────────────────────────────────────────────────────────
+
+  // Satu permintaan selesai sekaligus: flush 409 dan akhir kolom bisa memanggil ini bersamaan.
+  const activeComplete = useRef<Promise<void> | null>(null);
+  const completeModule = useCallback((): Promise<void> => {
+    if (completed.current) return Promise.resolve();
+    if (activeComplete.current) return activeComplete.current;
+    activeComplete.current = (async () => {
+      try {
+        const response = await fetch(
+          `/api/sessions/${sessionId}/modules/${moduleSessionId}/complete`,
+          { method: "POST" }
+        );
+        if (!response.ok) throw new Error(`Gagal menyelesaikan sub-tes (${response.status})`);
+        completed.current = true;
+        useKecermatanStore.getState().setStatus("completed");
+        onComplete?.();
+      } catch (error) {
+        setSaveState("error");
+        setSaveError(error instanceof Error ? error.message : "Sub-tes belum selesai");
+      } finally {
+        activeComplete.current = null;
+      }
+    })();
+    return activeComplete.current;
+  }, [moduleSessionId, onComplete, sessionId]);
 
   const flushLogs = useCallback((): Promise<boolean> => {
     if (activeFlush.current) return activeFlush.current;
@@ -106,6 +134,14 @@ export default function EngineKecermatan({
             logs: batch,
           }),
         });
+        if (response.status === 409) {
+          useKecermatanStore.getState().acknowledgeLogs(batch);
+          serverClosed.current = true;
+          setSaveState("error");
+          setSaveError("Waktu sub-tes di server sudah habis. Jawaban terakhir tidak tercatat; sub-tes ditutup.");
+          void completeModule();
+          return false;
+        }
         if (!response.ok) throw new Error(`Server menolak log (${response.status})`);
         useKecermatanStore.getState().acknowledgeLogs(batch);
         setSaveState(
@@ -122,7 +158,7 @@ export default function EngineKecermatan({
     })();
     activeFlush.current = request;
     return request;
-  }, [moduleSessionId, sessionId]);
+  }, [completeModule, moduleSessionId, sessionId]);
 
   const syncHeartbeat = useCallback(async () => {
     const s = useKecermatanStore.getState();
@@ -152,6 +188,11 @@ export default function EngineKecermatan({
     if (advancing.current || completed.current) return;
     advancing.current = true;
     const saved = await flushLogs();
+    if (serverClosed.current) {
+      await completeModule();
+      advancing.current = false;
+      return;
+    }
     if (!saved || Object.keys(useKecermatanStore.getState().pendingLogs).length) {
       setSaveState("error");
       setSaveError("Klik terakhir belum diterima server. Kirim ulang sebelum melanjutkan.");
@@ -160,26 +201,14 @@ export default function EngineKecermatan({
     }
     const { currentColIdx } = useKecermatanStore.getState();
     if (currentColIdx >= TOTAL_COLS - 1) {
-      try {
-        const response = await fetch(
-          `/api/sessions/${sessionId}/modules/${moduleSessionId}/complete`,
-          { method: "POST" }
-        );
-        if (!response.ok) throw new Error(`Gagal menyelesaikan sub-tes (${response.status})`);
-        completed.current = true;
-        useKecermatanStore.getState().setStatus("completed");
-        onComplete?.();
-      } catch (error) {
-        setSaveState("error");
-        setSaveError(error instanceof Error ? error.message : "Sub-tes belum selesai");
-      }
+      await completeModule();
     } else {
       setNextColIdx(currentColIdx + 1);
       setIntroSeconds(INTRO_SECONDS);
       setShowColIntro(true);
     }
     advancing.current = false;
-  }, [flushLogs, moduleSessionId, onComplete, sessionId]);
+  }, [completeModule, flushLogs]);
 
   const advanceRef = useRef(handleAdvance);
   useEffect(() => { advanceRef.current = handleAdvance; }, [handleAdvance]);
@@ -535,7 +564,7 @@ export default function EngineKecermatan({
         )}
       </ExamBar>
       {saveError && (
-        <SaveErrorNotice message={saveError} onRetry={() => void flushLogs()} />
+        <SaveErrorNotice message={saveError} onRetry={() => void (serverClosed.current ? completeModule() : flushLogs())} />
       )}
 
       {/* ── Layar transisi antar kolom ───────────────────────────────────────── */}

@@ -82,9 +82,11 @@ export function isTerminalModule(status: ModuleAccessRow["status"]): boolean {
 
 export function isModuleExpired(moduleSession: ModuleAccessRow, now = Date.now()): boolean {
   if (!moduleSession.started_at) return false;
-  // Kebijakan resmi (dikonfirmasi 2026-09-14): 5 dtk modul umum, 60 dtk
-  // Kecermatan untuk 10 layar intro. Bukan angka sementara.
-  const graceSeconds = moduleSession.module_type === "KECERMATAN" ? 60 : 5;
+  // Kebijakan resmi: 5 dtk modul umum. Kecermatan 120 dtk (dinaikkan dari 60 pada 2026-10-12,
+  // disetujui pemilik): 9 layar intro × 5 dtk + jeda kirim log tiap pindah kolom membuat kolom 10
+  // selesai ±665 dtk setelah mulai, sehingga batas 660 dtk menolak klik kolom terakhir (409).
+  // Lama tiap kolom tetap dijaga layar peserta (60 dtk) dan withinColumnWindow saat penilaian.
+  const graceSeconds = moduleSession.module_type === "KECERMATAN" ? 120 : 5;
   return (
     now >
     new Date(moduleSession.started_at).getTime() +
