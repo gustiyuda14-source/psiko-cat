@@ -33,7 +33,8 @@
   "scoring_rule": {
    "type": "dichotomous",
    "correct_key": "D"
-  }
+  },
+  "pembahasan": "Kolom ketiga adalah gabungan kolom pertama dan kedua, tetapi kuadran yang hitam di keduanya menjadi putih (hanya kuadran yang hitam di salah satu kolom yang tetap hitam). Baris 3: kolom 1 hitam di kanan atas dan kiri bawah, kolom 2 hitam di kiri atas dan kanan atas. Kanan atas hitam di keduanya sehingga hilang, tersisa kiri atas dan kiri bawah. Jawaban: d."
  },
  {
   "sequence_number": 27,
@@ -141,7 +142,8 @@
   "scoring_rule": {
    "type": "dichotomous",
    "correct_key": "A"
-  }
+  },
+  "pembahasan": "Pada setiap baris, semua tanda (silang dan lingkaran) berputar satu kuadran searah jarum jam dari kolom ke kolom. Baris 3 kolom 1: silang di kiri atas dan kanan atas, lingkaran di kanan bawah. Diputar dua kali (kolom 3): silang pindah ke kanan bawah dan kiri bawah, lingkaran ke kiri atas. Pilihan e tidak punya lingkaran, pilihan c lingkarannya di kanan atas. Jawaban: a."
  },
  {
   "sequence_number": 32,
@@ -177,7 +179,8 @@
   "scoring_rule": {
    "type": "dichotomous",
    "correct_key": "C"
-  }
+  },
+  "pembahasan": "Tiga bangun sepusat. Setiap langkah, bangun paling dalam pindah menjadi paling luar: persegi–lingkaran–segitiga → segitiga–persegi–lingkaran → lingkaran–segitiga–persegi, sehingga gambar ke-4 kembali persegi–lingkaran–segitiga. Warna berselang tiap langkah: putih–hitam–putih, lalu hitam–putih–hitam, dan seterusnya. Gambar ke-4 berwarna hitam–putih–hitam (persegi hitam, lingkaran putih, segitiga hitam). Pilihan a susunannya sama tetapi warnanya salah. Jawaban: c."
  },
  {
   "sequence_number": 33,
@@ -213,7 +216,8 @@
   "scoring_rule": {
    "type": "dichotomous",
    "correct_key": "D"
-  }
+  },
+  "pembahasan": "Tiap kotak berisi kolom 4 sel. Bulatan hitam turun satu sel setiap langkah (setelah sel paling bawah kembali ke atas), sedangkan segitiga naik satu sel (setelah paling atas kembali ke bawah). Gambar ke-6: bulatan di sel ke-2 dan segitiga di sel ke-3 dari atas. Gambar ke-7: bulatan di sel ke-3 dan segitiga di sel ke-2 dari atas. Jawaban: d."
  },
  {
   "sequence_number": 35,
@@ -285,6 +289,7 @@
   "scoring_rule": {
    "type": "dichotomous",
    "correct_key": "E"
-  }
+  },
+  "pembahasan": "Kolom ketiga hanya memuat unsur yang ada di salah satu kolom (pertama atau kedua). Unsur yang ada di keduanya dibuang. Baris 3: kolom 1 = garis mendatar, garis miring /, bulatan kanan bawah. Kolom 2 = garis miring /, garis miring \\, bulatan kanan bawah. Garis / dan bulatan ada di keduanya sehingga dibuang, tersisa garis mendatar dan garis miring \\. Pilihan b masih memuat bulatan. Jawaban: e."
  }
 ]

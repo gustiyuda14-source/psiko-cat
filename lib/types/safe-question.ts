@@ -61,6 +61,8 @@ export type KecerdasanScoringRule = {
   type: "dichotomous";
   // Sebagian butir meminta dua pilihan dan menyimpan kunci kanonis seperti "AC".
   correct_key: string;
+  // Hanya dibaca server untuk layar pembahasan; tidak pernah ikut options_payload.
+  pembahasan?: string;
 };
 
 export type KepribadianScoringRule = {

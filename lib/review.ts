@@ -50,6 +50,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
         selected_key: selectedKey,
         correct_key: rule.correct_key,
         is_correct: selectedKey === rule.correct_key,
+        pembahasan: rule.pembahasan ?? null,
         payload: q.options_payload as unknown as KecerdasanOptionsPayload,
       };
     });

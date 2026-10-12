@@ -15,6 +15,7 @@ export type KecerdasanReviewItem = {
   selected_key: string | null;
   correct_key: string;
   is_correct: boolean;
+  pembahasan?: string | null;
   payload: KecerdasanOptionsPayload;
 };
 
@@ -145,24 +146,50 @@ function KecerdasanItem({ item }: { item: KecerdasanReviewItem }) {
         />
       )}
 
-      <dl className="flex flex-wrap gap-x-6 gap-y-1 border-t border-border/70 pt-2.5 text-xs">
-        <div className="flex gap-1.5">
-          <dt className="text-muted-foreground">Jawaban Anda</dt>
-          <dd
-            className={`font-bold ${
-              skipped ? "text-muted-foreground" : item.is_correct ? "text-success" : "text-destructive"
-            }`}
-          >
-            {item.selected_key ?? "—"}
-          </dd>
-        </div>
-        {!item.is_correct && (
-          <div className="flex gap-1.5">
-            <dt className="text-muted-foreground">Kunci</dt>
-            <dd className="font-bold text-success">{item.correct_key}</dd>
-          </div>
+      {/* Semua pilihan tampil: kunci hijau, pilihan peserta yang salah merah. Kunci dua jawaban berbentuk "AC". */}
+      <ul className="space-y-1.5 border-t border-border/70 pt-2.5">
+        {(item.payload.choices ?? []).map((c) => {
+          const isKey = item.correct_key.includes(c.key);
+          const picked = item.selected_key?.includes(c.key) ?? false;
+          // Pilihan butir gambar ada di dalam SVG; teksnya cuma huruf, jadi tidak diulang.
+          const label = c.text && c.text.trim().toUpperCase() !== c.key ? c.text : null;
+          return (
+            <li
+              key={c.key}
+              className={`flex items-start gap-2.5 rounded-md border px-3 py-2 ${
+                isKey
+                  ? "border-success/50 bg-success-soft"
+                  : picked
+                    ? "border-destructive/50 bg-destructive-soft"
+                    : "border-border bg-card"
+              }`}
+            >
+              <span
+                className={`grid size-6 shrink-0 place-items-center rounded-full text-xs font-bold ${
+                  isKey ? "bg-success text-white" : picked ? "bg-destructive text-white" : "bg-surface-inset text-muted-foreground"
+                }`}
+              >
+                {c.key}
+              </span>
+              <span className="min-w-0 flex-1 leading-relaxed text-foreground">{label}</span>
+              {(isKey || picked) && (
+                <span className={`shrink-0 text-xs font-semibold ${isKey ? "text-success" : "text-destructive"}`}>
+                  {isKey && picked ? "Jawaban Anda · Kunci" : isKey ? "Kunci" : "Jawaban Anda"}
+                </span>
+              )}
+            </li>
+          );
+        })}
+      </ul>
+
+      <div className="rounded-md border border-border bg-card px-3 py-2.5">
+        <p className="text-xs font-semibold text-foreground">Pembahasan</p>
+        {item.pembahasan ? (
+          <p className="mt-1 max-w-[68ch] whitespace-pre-line leading-relaxed text-foreground">{item.pembahasan}</p>
+        ) : (
+          <p className="mt-1 text-xs text-muted-foreground">Pembahasan belum tersedia untuk butir ini.</p>
         )}
-      </dl>
+      </div>
     </article>
   );
 }

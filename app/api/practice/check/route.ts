@@ -69,8 +69,9 @@ export async function POST(req: NextRequest) {
       const payload = question.options_payload as unknown as KecerdasanOptionsPayload;
       // selected_key kosong = butir dilewati: tetap balikin kunci buat pembahasan,
       // tapi jangan lewat normalizeSelection (itu buat validasi jawaban beneran).
+      const pembahasan = rule.pembahasan ?? null;
       if (!selected_key) {
-        return NextResponse.json({ is_correct: false, correct_key: rule.correct_key });
+        return NextResponse.json({ is_correct: false, correct_key: rule.correct_key, pembahasan });
       }
       const normalized = normalizeSelection(
         selected_key,
@@ -78,7 +79,7 @@ export async function POST(req: NextRequest) {
         payload.is_multi_select === true ? 2 : 1
       );
       if (!normalized) return NextResponse.json({ error: "Pilihan tidak valid" }, { status: 400 });
-      return NextResponse.json({ is_correct: normalized === rule.correct_key, correct_key: rule.correct_key });
+      return NextResponse.json({ is_correct: normalized === rule.correct_key, correct_key: rule.correct_key, pembahasan });
     }
 
     if (question.type === "KECERMATAN") {
