@@ -116,7 +116,7 @@
 .hc-wedge-label.is-sel .hc-wedge-pct { fill: #fff }
 .hc-wheel .hc-core-base { fill: var(--surface-nav) }
 .hc-wheel .hc-core-line { stroke: var(--gold-hi); stroke-width: 1.5 }
-.hc-wheel .hc-core-text text { fill: #fff }
+.hc-wheel .hc-core-text text { fill: #fff; paint-order: stroke; stroke: var(--surface-nav); stroke-width: 4px; stroke-linejoin: round }
 .hc-wheel .hc-core-lab, .hc-wheel .hc-core-of { fill: var(--gold-hi) !important }
 
 /* ── Inti madu (total) + meter panel ── */
@@ -131,6 +131,7 @@
 .hc-core-pct { font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums }
 .hc-core-of { font-size: 11.5px; font-weight: 600; fill: var(--muted-foreground) !important; font-variant-numeric: tabular-nums }
 .hc-core-text.is-high text { fill: var(--brand-ink) !important }
+.hc-wheel .hc-core-text.is-high text { stroke: var(--gold-hi) }
 
 /* ── Panel ── */
 /* Panel = satu sel sarang madu milik dial terpilih: bahan hangat berlapis,
