@@ -9,15 +9,17 @@ export const fmt = (n: number) => n.toLocaleString("id-ID");
 /** foot = baris bawah selebar tiket (di bawah sobekan juga), untuk tabel panjang. */
 export function Ticket({ stub, children, label, foot }: { stub: React.ReactNode; children: React.ReactNode; label: string; foot?: React.ReactNode }) {
   return (
-    <article className="pg-tk" aria-label={label}>
-      <aside className="pg-stub">
-        <span className="pg-punch is-top" aria-hidden="true" />
-        <span className="pg-punch is-bot" aria-hidden="true" />
-        {stub}
-      </aside>
-      <div className="pg-body">{children}</div>
-      {foot && <section className="pg-foot">{foot}</section>}
-    </article>
+    <div className="pg-tkq">
+      <article className="pg-tk" aria-label={label}>
+        <aside className="pg-stub">
+          <span className="pg-punch is-top" aria-hidden="true" />
+          <span className="pg-punch is-bot" aria-hidden="true" />
+          {stub}
+        </aside>
+        <div className="pg-body">{children}</div>
+        {foot && <section className="pg-foot">{foot}</section>}
+      </article>
+    </div>
   );
 }
 
