@@ -384,16 +384,28 @@ export default function LatihanKecermatan({
       <div className="surface-card overflow-hidden">
             <div className="mx-auto max-w-lg space-y-5 px-4 py-5 sm:px-6 sm:py-6">
               {hasPelafalan && (
-                <div className="-mb-3 flex justify-end">
-                  <button
-                    type="button"
-                    onClick={togglePelafalan}
-                    aria-pressed={showPelafalan}
-                    className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                <button
+                  type="button"
+                  role="switch"
+                  aria-checked={showPelafalan}
+                  onClick={togglePelafalan}
+                  className="flex w-full items-center gap-3 rounded-md border border-border bg-surface-inset px-3 py-2 text-left transition-colors hover:border-primary"
+                >
+                  <span className="min-w-0 flex-1">
+                    <span className="block text-sm font-semibold text-foreground">Bantuan pelafalan</span>
+                    <span className="block text-xs text-muted-foreground">
+                      Kata di atas tiap kunci untuk dilafalkan sambil membaca soal. Saat ujian bantuan ini tidak ada.
+                    </span>
+                  </span>
+                  <span
+                    aria-hidden
+                    className={`relative h-6 w-11 shrink-0 rounded-full transition-colors ${showPelafalan ? "bg-primary" : "bg-border"}`}
                   >
-                    {showPelafalan ? "Sembunyikan bantuan pelafalan" : "Tampilkan bantuan pelafalan"}
-                  </button>
-                </div>
+                    <span
+                      className={`absolute top-0.5 size-5 rounded-full bg-card shadow transition-transform ${showPelafalan ? "translate-x-5" : "translate-x-0.5"}`}
+                    />
+                  </span>
+                </button>
               )}
               <KecermatanKeyStrip symbolMap={symbolMap} labels={labels} />
 
