@@ -31,17 +31,17 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
     .eq("module_session_id", moduleSessionId),
     supabaseAdmin
       .from("questions")
-      .select("id, sequence_number, options_payload, scoring_rule")
+      .select("id, sequence_number, options_payload, scoring_rule, is_active")
       .eq("type", "KECERDASAN")
       .eq("package_number", pkg)
-      .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);
   if (answerError) throw answerError;
   if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((answer) => [answer.question_id, answer.selected_key]));
-  return (questions ?? []).map((q) => {
+  // Butir yang dinonaktifkan setelah dijawab tetap tampil.
+  return (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id)).map((q) => {
       const rule = q.scoring_rule as unknown as KecerdasanScoringRule;
       const selectedKey = answerMap.get(q.id) ?? null;
       return {
@@ -81,17 +81,17 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
     .eq("module_session_id", moduleSessionId),
     supabaseAdmin
       .from("questions")
-      .select("id, sequence_number, options_payload")
+      .select("id, sequence_number, options_payload, is_active")
       .eq("type", "KEPRIBADIAN")
       .eq("package_number", pkg)
-      .eq("is_active", true)
       .order("sequence_number", { ascending: true }),
   ]);
   if (answerError) throw answerError;
   if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((answer) => [answer.question_id, answer.selected_key]));
-  return (questions ?? []).map((q) => {
+  // Butir yang dinonaktifkan setelah dijawab tetap tampil.
+  return (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id)).map((q) => {
       return {
         question_id: q.id,
         sequence_number: q.sequence_number as number,

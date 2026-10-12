@@ -72,8 +72,7 @@ export async function POST(
       .select("id, type, options_payload")
       .in("id", [...latestByQuestion.keys()])
       .eq("type", access.moduleSession.module_type)
-      .eq("package_number", simulasiPackageOf(access.moduleSession.module_type, access.moduleSession.package_number))
-      .eq("is_active", true);
+      .eq("package_number", simulasiPackageOf(access.moduleSession.module_type, access.moduleSession.package_number));
     if (questionError) throw questionError;
     if (questions?.length !== latestByQuestion.size) {
       return NextResponse.json({ error: "Ada soal yang tidak termasuk module ini" }, { status: 400 });

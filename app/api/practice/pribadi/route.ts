@@ -26,7 +26,6 @@ export async function POST(req: NextRequest) {
       .from("questions")
       .select("id, package_number, options_payload, scoring_rule")
       .eq("type", "KEPRIBADIAN")
-      .eq("is_active", true)
       .in("id", ids);
     if (error) throw error;
     if (!rows || rows.length !== ids.length) {

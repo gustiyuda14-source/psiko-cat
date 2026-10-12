@@ -49,13 +49,16 @@ export async function hasLiveModuleOfType(userId: string, moduleType: string): P
 
 type QuestionRow = SafeQuestion & { scoring_rule: unknown };
 
-/** Semua butir aktif paket (urut seperti layar latihan), termasuk scoring_rule untuk server. */
+/**
+  Semua butir paket (urut seperti layar latihan), termasuk scoring_rule untuk server.
+  Termasuk butir nonaktif: halaman latihan yang dibuka sebelum soal dinonaktifkan
+  (mis. kalibrasi pkg 2) tetap mengirim id lama, sama seperti /api/practice/check.
+*/
 export async function packageQuestions(module: ModuleType, pkg: number): Promise<QuestionRow[]> {
   let query = supabaseAdmin
     .from("questions")
     .select("id, type, sequence_number, column_index, package_number, options_payload, scoring_rule, is_active, created_at, updated_at")
     .eq("type", module)
-    .eq("is_active", true)
     .eq("package_number", pkg);
   if (module === "KECERMATAN") query = query.order("column_index", { ascending: true });
   const { data, error } = await query.order("sequence_number", { ascending: true });
@@ -98,7 +101,7 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
     return { status: "locked", module: route.module };
   }
 
-  const [questions, { data: siblings }] = await Promise.all([
+  const [all, { data: siblings }] = await Promise.all([
     packageQuestions(route.module, route.pkg),
     supabaseAdmin
       .from("latihan_attempts")
@@ -108,6 +111,9 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
       .order("submitted_at", { ascending: false }),
   ]);
   const picks = attempt.answers as Record<string, string | null>;
+  // Tampilkan butir yang dikerjakan peserta saat itu. Kecerdasan/Kepribadian menyimpan semua butir
+  // (dilewati = null); Kecermatan hanya yang diklik, jadi sisanya dari butir yang masih aktif.
+  const questions = all.filter((q) => q.id in picks || (route.module === "KECERMATAN" && q.is_active));
   const base = {
     status: "ok" as const,
     key: attempt.item_key as string,

@@ -67,7 +67,6 @@ export async function POST(req: NextRequest) {
       .select("id, column_index, package_number, options_payload")
       .in("id", questionIds)
       .eq("type", "KECERMATAN")
-      .eq("is_active", true)
       .eq("package_number", access.moduleSession.kecermatan_package_number);
     if (questionError) throw questionError;
     if (questions?.length !== latestByQuestion.size) {

@@ -88,8 +88,7 @@ export async function POST(req: NextRequest) {
       .select("id")
       .in("id", questionIds)
       .eq("type", moduleType)
-      .eq("package_number", simulasiPackageOf(moduleType, ms.package_number))
-      .eq("is_active", true);
+      .eq("package_number", simulasiPackageOf(moduleType, ms.package_number));
     if (questionError || questions?.length !== new Set(questionIds).size) return;
     if (entries.some(([, key]) => !/^[A-E]{1,5}$/.test(key))) return;
 
