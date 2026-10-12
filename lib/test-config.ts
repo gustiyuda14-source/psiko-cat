@@ -9,7 +9,7 @@ export type ModuleConfigEntry = {
 
 export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
   KECERDASAN: { slug: "kecerdasan", time_limit_seconds: 5400, label: "Kecerdasan", shortDesc: "kognitif & spasial" },
-  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Kecermatan", shortDesc: "10 kolom simbol" },
+  KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Sikap Kerja", shortDesc: "10 kolom simbol" },
   KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert" },
 };
 

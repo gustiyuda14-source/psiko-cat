@@ -21,7 +21,7 @@ export default function FundamentalPage() {
           </span>
           <h1>Drilling fundamental</h1>
           <p>
-            Latihan hitung dasar sebelum masuk Numerik dan Kecermatan: perkalian cepat, pecahan, dan rekening koran. Soal dibuat
+            Latihan hitung dasar sebelum masuk Berpikir Praktis dan Sikap Kerja: perkalian cepat, pecahan, dan rekening koran. Soal dibuat
             ulang setiap sesi, jawab dengan numpad atau keyboard.
           </p>
         </div>

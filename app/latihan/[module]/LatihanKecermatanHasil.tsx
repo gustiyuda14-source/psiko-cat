@@ -138,7 +138,7 @@ export default function LatihanKecermatanHasil({
   const panel = (
     <aside className="hc-panel lr-panel" aria-label="Hasil latihan" aria-live="polite">
       <div className="hc-panel-top">
-        <span className="hc-tag">Kecermatan</span>
+        <span className="hc-tag">Sikap Kerja</span>
         <span className="hc-code">{timedMode ? "60 detik per kolom" : "Tanpa batas waktu"}</span>
       </div>
       <h2 className="hc-panel-title">{title}</h2>

@@ -58,7 +58,7 @@ export default function HomeView({ name, sessions }: { name: string; sessions: H
           title="Tryout resmi dengan timer"
           desc={lastActivity ? `Tes terakhir ${formatDate(lastActivity)}` : "Belum ada tes resmi yang diselesaikan"}
           pointsLabel="Di dalamnya"
-          points={["Kecerdasan, Kepribadian, Kecermatan", "Masuk riwayat dan grafik progress"]}
+          points={["Kecerdasan, Kepribadian, Sikap Kerja", "Masuk riwayat dan grafik progress"]}
           cta="Buka simulasi"
         />
         <PaketCard
@@ -66,7 +66,7 @@ export default function HomeView({ name, sessions }: { name: string; sessions: H
           code="Latihan"
           tag="Per sub-tes"
           title="Latihan per sub-tes"
-          desc="Kecerdasan, Kecermatan, Kepribadian. Tidak masuk riwayat."
+          desc="Kecerdasan, Sikap Kerja, Kepribadian. Tidak masuk riwayat."
           pointsLabel="Di dalamnya"
           points={["Paket latihan per sub-tes", "Pembahasan setelah selesai"]}
           cta="Buka latihan"

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
+import { aspekIntegritas } from "../lib/scoring/pribadi";
 
 // Validator bank PRIBADI: Kepribadian (kp-*.json, pedoman §6.1 + §1.1a) dan Substansi Khusus (sk-*.json).
 // Pakai: npx tsx scripts/check-bank-pribadi.ts
@@ -56,7 +57,7 @@ for (const f of files) {
   for (const [a, c] of perAspek) assert.ok(Math.abs(c.fav - c.unfav) <= 1, `${f} ${a}: arah timpang ${c.fav}:${c.unfav}`);
 }
 // --- Substansi Khusus (bank/pribadi/sk-*.json), pedoman §3 + §4.2 ---
-type SkItem = { id: string; dimensi: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
+type SkItem = { id: string; dimensi: string; sub?: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
 // Proporsi dimensi per 63 butir sumber (pedoman §3.1).
 const PROPORSI: Record<string, number> = { D1: 4, D2: 5, D3: 6, D4: 12, D5: 6, D6: 6, D7: 4, D8: 8, D9: 6, D10: 2, D11: 4 };
 let skTotal = 0;
@@ -73,6 +74,7 @@ for (const f of skFiles) {
     assert.ok(!seenId.has(it.id), `${at}: id ganda`);
     seenId.add(it.id);
     assert.ok(bank.dimensi[it.dimensi], `${at}: dimensi tidak dikenal`);
+    assert.doesNotThrow(() => aspekIntegritas(it.dimensi, it.sub), `${at}: tidak terpetakan ke aspek Integritas (D4 wajib sub patuh/inovasi)`);
     assert.ok(it.situasi.startsWith("Hal yang "), `${at}: situasi harus diawali "Hal yang"`);
     assert.ok(it.opsi.A?.trim() && it.opsi.B?.trim() && it.opsi.A !== it.opsi.B, `${at}: opsi tidak valid`);
     assert.ok(it.kunci === "A" || it.kunci === "B", `${at}: kunci harus A/B`);

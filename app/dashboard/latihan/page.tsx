@@ -24,17 +24,17 @@ import LatihanCatalog, { type LatihanModule, type LatihanRow } from "./LatihanCa
 const DESC = {
   KECERDASAN: "Soal kognitif dan spasial, 100 butir per paket",
   KECERMATAN: "Temukan simbol yang tidak muncul, 10 kolom",
-  KEPRIBADIAN: "Kepribadian + Substansi Khusus, 111 butir per paket",
+  KEPRIBADIAN: "Kepribadian + Integritas & Kejujuran, 111 butir per paket",
 } as const;
 
 // Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya empat aspek.
 const ROWS: { module: ModuleType; label: string; route: string; ids: number[]; labels: Record<number, string>; per: number }[] = [
   { module: "KECERDASAN", label: "Kecerdasan", route: "/latihan/kecerdasan", ids: KECERDASAN_PACKAGES, labels: KECERDASAN_PACKAGE_LABELS, per: 100 },
   { module: "KEPRIBADIAN", label: "Kepribadian", route: "/latihan/kepribadian", ids: KEPRIBADIAN_PACKAGES, labels: KEPRIBADIAN_PACKAGE_LABELS, per: PRIBADI_PACKAGE_SIZE },
-  { module: "KECERMATAN", label: "Kecermatan Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
-  { module: "KECERMATAN", label: "Kecermatan Angka & Huruf", route: "/latihan/kecermatan-angka", ids: KECERMATAN_ANGKA_PACKAGES, labels: KECERMATAN_ANGKA_PACKAGE_LABELS, per: 500 },
-  { module: "KECERMATAN", label: "Kecermatan Spasial", route: "/latihan/kecermatan-spasial", ids: KECERMATAN_SPASIAL_PACKAGES, labels: KECERMATAN_SPASIAL_PACKAGE_LABELS, per: 500 },
-  { module: "KECERMATAN", label: "Kecermatan Simbol Hilang", route: "/latihan/kecermatan-simbol", ids: KECERMATAN_SIMBOL_PACKAGES, labels: KECERMATAN_SIMBOL_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja Angka & Huruf", route: "/latihan/kecermatan-angka", ids: KECERMATAN_ANGKA_PACKAGES, labels: KECERMATAN_ANGKA_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja Spasial", route: "/latihan/kecermatan-spasial", ids: KECERMATAN_SPASIAL_PACKAGES, labels: KECERMATAN_SPASIAL_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja Simbol Hilang", route: "/latihan/kecermatan-simbol", ids: KECERMATAN_SIMBOL_PACKAGES, labels: KECERMATAN_SIMBOL_PACKAGE_LABELS, per: 500 },
 ];
 
 export default async function LatihanIndexPage() {

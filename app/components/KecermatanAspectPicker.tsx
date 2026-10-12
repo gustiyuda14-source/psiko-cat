@@ -30,7 +30,7 @@ export function KecermatanAspectPicker({
 
   return (
     <div className="space-y-5">
-      <div role="tablist" aria-label="Aspek Kecermatan" className="inline-flex gap-1 rounded-md border border-border bg-card p-1">
+      <div role="tablist" aria-label="Aspek Sikap Kerja" className="inline-flex gap-1 rounded-md border border-border bg-card p-1">
         {ASPECTS.map((a) => (
           <button
             key={a.id}

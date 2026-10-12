@@ -35,6 +35,20 @@ export type PribadiSkRule = {
 
 export type PribadiRule = PribadiKpRule | PribadiSkRule;
 
+// Substansi Khusus = Aspek Integritas dan Kejujuran, pedoman SPCP 2026 butir 6.b (7 aspek).
+// Butir bank memakai 11 dimensi aturan kunci (pedoman engine §3.1); D4 dibelah lewat `sub`.
+const ASPEK_DIMENSI: Record<string, string> = {
+  D1: "Integritas", D2: "Transparansi", D3: "Integritas", D5: "Kepemimpinan", D6: "Inovasi",
+  D7: "Kepemimpinan", D8: "Produktivitas", D9: "Religiusitas", D10: "Produktivitas", D11: "Profesionalisme",
+};
+
+/** Aspek Integritas dan Kejujuran dari dimensi butir SK; lempar error kalau tidak terpetakan. */
+export function aspekIntegritas(dimensi: string, sub?: string | null): string {
+  const aspek = dimensi === "D4" ? { patuh: "Profesionalisme", inovasi: "Inovasi" }[sub ?? ""] : ASPEK_DIMENSI[dimensi];
+  if (!aspek) throw new Error(`Dimensi SK tanpa aspek Integritas: ${dimensi}${sub ? `/${sub}` : ""}`);
+  return aspek;
+}
+
 const FAV: Record<string, number> = { A: 1, B: 2, C: 3, D: 4 };
 
 /** Nilai sub-tes PRIBADI di simulasi (§5.3): 20% ke Nilai Akhir Psikotest, gugur bila ≤ 40. */

@@ -24,7 +24,7 @@ const MODE_NOTE: Record<ModuleType, string> = {
   KECERDASAN: `Sama seperti simulasi: jawab semua butir dulu, baru kumpulkan untuk melihat kunci dan pembahasan lengkap. ${BANK_NOTE}`,
   KECERMATAN: `Butir berikutnya langsung tampil setelah dijawab. Akurasi dan pembahasan tersedia setelah latihan selesai. ${BANK_NOTE}`,
   KEPRIBADIAN:
-    "Paket berisi Kepribadian (skala 4 tingkat) lalu Substansi Khusus (pilih A atau B). Selesaikan semua butir untuk melihat nilai, kunci, dan pembahasan berdasarkan aspek.",
+    "Paket berisi Kepribadian (skala 4 tingkat) lalu Integritas & Kejujuran (pilih A atau B). Selesaikan semua butir untuk melihat nilai, kunci, dan pembahasan berdasarkan aspek.",
 };
 
 /*

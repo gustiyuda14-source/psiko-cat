@@ -171,7 +171,7 @@ export default async function AdminPage() {
                                     {s.nap_score?.toFixed(1) ?? "—"}
                                   </span>
                                   {needsKecermatanReview(s) && (
-                                    <Badge tone="accent">Cek manual: Kecermatan</Badge>
+                                    <Badge tone="accent">Cek manual: Sikap Kerja</Badge>
                                   )}
                                   <Link
                                     href={`/test/${s.id}/result`}

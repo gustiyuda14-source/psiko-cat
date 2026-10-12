@@ -66,7 +66,7 @@ export function calculateNAP(input: ModuleContributions): NAPResult {
     return {
       nap_score,
       is_passed: false,
-      disqualified_reason: `Kecermatan Kurang Sekali (raw_score=${modules.kecermatan_raw.toFixed(1)})`,
+      disqualified_reason: `Sikap Kerja Kurang Sekali (raw_score=${modules.kecermatan_raw.toFixed(1)})`,
       status: "DISQUALIFIED",
       predikat: null,
     };

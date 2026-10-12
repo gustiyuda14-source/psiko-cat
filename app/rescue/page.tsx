@@ -132,7 +132,7 @@ export default function RescuePage() {
           {[
             { label: "Kecerdasan", data: recoverableKecerdasan, supported: true },
             { label: "Kepribadian", data: recoverableKepribadian, supported: true },
-            { label: "Kecermatan", data: localKecermatan, supported: false },
+            { label: "Sikap Kerja", data: localKecermatan, supported: false },
           ].map(({ label, data, supported }) => (
             <div key={label} className="flex items-center justify-between px-5 py-4">
               <span className="text-sm font-semibold text-foreground">{label}</span>
@@ -150,7 +150,7 @@ export default function RescuePage() {
 
         {localKecermatan && (
           <p className="rounded-md border border-accent/35 bg-accent-soft px-4 py-3 text-sm text-accent-ink">
-            Log Kecermatan tidak dipulihkan dari ringkasan browser karena urutan dan waktu klik harus diverifikasi oleh admin.
+            Log Sikap Kerja tidak dipulihkan dari ringkasan browser karena urutan dan waktu klik harus diverifikasi oleh admin.
           </p>
         )}
 

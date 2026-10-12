@@ -197,21 +197,20 @@ export default function LatihanKepribadian({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="qnum tnum">Butir {idx + 1}</p>
             <div className="flex flex-wrap items-center gap-2">
-              {payload?.subtes === "SK" ? (
-                <Badge tone="accent">Substansi Khusus</Badge>
+              {payload?.subtes === "SK" && <Badge tone="accent">Integritas &amp; Kejujuran</Badge>}
+              {showAspect && payload?.aspect ? (
+                <Badge tone="info">{payload.aspect}</Badge>
               ) : (
-                <>
-                  {showAspect && payload?.aspect ? <Badge tone="info">{payload.aspect}</Badge> : <Badge tone="neutral">Kepribadian</Badge>}
-                  <button
-                    type="button"
-                    onClick={toggleAspect}
-                    aria-pressed={showAspect}
-                    className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
-                  >
-                    {showAspect ? "Sembunyikan aspek" : "Tampilkan aspek"}
-                  </button>
-                </>
+                payload?.subtes !== "SK" && <Badge tone="neutral">Kepribadian</Badge>
               )}
+              <button
+                type="button"
+                onClick={toggleAspect}
+                aria-pressed={showAspect}
+                className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
+              >
+                {showAspect ? "Sembunyikan aspek" : "Tampilkan aspek"}
+              </button>
             </div>
           </div>
 

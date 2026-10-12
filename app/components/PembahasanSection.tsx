@@ -431,7 +431,7 @@ export default function PembahasanSection({
       </Accordion>
 
       <Accordion
-        label="Kecermatan"
+        label="Sikap Kerja"
         summary={
           kecermatan
             ? `Ke ${r1(kecermatan.ke_index)} · Kt ${r1(kecermatan.kt_index)} · Kh ${r1(kecermatan.kh_index)}`
@@ -447,7 +447,7 @@ export default function PembahasanSection({
             </div>
           </div>
         ) : (
-          <p className="text-sm text-muted-foreground">Data kecermatan belum tersedia.</p>
+          <p className="text-sm text-muted-foreground">Data sikap kerja belum tersedia.</p>
         )}
       </Accordion>
     </section>

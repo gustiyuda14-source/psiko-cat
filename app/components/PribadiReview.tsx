@@ -2,7 +2,7 @@ import type { KepribadianOptionsPayload } from "@/lib/types/safe-question";
 import { Accordion, Badge, Meter } from "@/app/components/ui";
 
 /*
-  Hasil + pembahasan latihan PRIBADI (Kepribadian + Substansi Khusus).
+  Hasil + pembahasan latihan PRIBADI (Kepribadian + Integritas & Kejujuran, pedoman SPCP 6.a.2 dan 6.b).
   Format pembahasan KP mengikuti pedoman §7.4: aspek → bedah kalimat → sisi
   yang mencerminkan aspek → kunci → catatan psikologi. Nilai dilabeli
   "kesesuaian dengan kunci latihan", bukan "kepribadian Anda" (pedoman §8).
@@ -111,7 +111,8 @@ function SkItem({ item, no }: { item: Extract<PribadiReviewItem, { subtes: "SK" 
     <li className="space-y-3 py-4">
       <div className="flex flex-wrap items-center gap-2">
         <span className="tnum text-xs text-muted-foreground">{no}</span>
-        <Badge tone="accent">{item.dimensi}</Badge>
+        {item.payload.aspect && <Badge tone="info">{item.payload.aspect}</Badge>}
+        <Badge tone="neutral">{item.dimensi}</Badge>
       </div>
       <p className="leading-relaxed text-foreground">{item.payload.statement}</p>
       <p className="text-sm text-muted-foreground">
@@ -132,9 +133,9 @@ export function PribadiReview({ summary, items }: { summary: PribadiReviewSummar
       <div className="space-y-3">
         <p className="text-center text-xs text-muted-foreground">Kesesuaian dengan kunci latihan D&apos;AJIKS (skala 0–100)</p>
         <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-          <Score label="Nilai PRIBADI" value={summary.pribadi} note="Rata-rata Kepribadian dan Substansi Khusus" />
+          <Score label="Nilai PRIBADI" value={summary.pribadi} note="Rata-rata Kepribadian dan Integritas & Kejujuran" />
           {summary.kp && <Score label="Kepribadian" value={summary.kp.nilai} note={`${summary.kp.butir} pernyataan`} />}
-          {summary.sk && <Score label="Substansi Khusus" value={summary.sk.nilai} note={`${summary.sk.benar}/${summary.sk.butir} sesuai kunci`} />}
+          {summary.sk && <Score label="Integritas & Kejujuran" value={summary.sk.nilai} note={`${summary.sk.benar}/${summary.sk.butir} sesuai kunci`} />}
         </div>
       </div>
 
@@ -163,7 +164,7 @@ export function PribadiReview({ summary, items }: { summary: PribadiReviewSummar
         </Accordion>
       )}
       {sk.length > 0 && (
-        <Accordion label="Pembahasan Substansi Khusus" summary={`${sk.length} butir`}>
+        <Accordion label="Pembahasan Integritas & Kejujuran" summary={`${sk.length} butir`}>
           <ul className="divide-y divide-border">
             {sk.map((item, i) => (
               <SkItem key={item.question_id} item={item} no={i + 1} />

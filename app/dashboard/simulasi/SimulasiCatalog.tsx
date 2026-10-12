@@ -26,7 +26,7 @@ export type LastScores = Partial<Record<ModuleType, { score: number; at: string;
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const FACES: { type: ModuleType; label: string; side: string; pts: string; y0: number; h: number; shade: number; text: string }[] = [
   { type: "KECERDASAN", label: "Kecerdasan", side: "kiri", pts: "0,28.87 50,57.735 50,115.47 0,86.6", y0: 28.87, h: 86.6, shade: 0.07, text: "matrix(1 0.577 0 1 25 74)" },
-  { type: "KECERMATAN", label: "Kecermatan", side: "kanan", pts: "50,57.735 100,28.87 100,86.6 50,115.47", y0: 28.87, h: 86.6, shade: 0.2, text: "matrix(1 -0.577 0 1 75 74)" },
+  { type: "KECERMATAN", label: "Sikap Kerja", side: "kanan", pts: "50,57.735 100,28.87 100,86.6 50,115.47", y0: 28.87, h: 86.6, shade: 0.2, text: "matrix(1 -0.577 0 1 75 74)" },
   { type: "KEPRIBADIAN", label: "Kepribadian", side: "atas", pts: "0,28.87 50,0 100,28.87 50,57.735", y0: 0, h: 57.735, shade: 0, text: "matrix(0.866 0.5 -0.866 0.5 50 31)" },
 ];
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";

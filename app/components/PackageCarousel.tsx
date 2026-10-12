@@ -28,7 +28,7 @@ export type PackageSection = {
   symbols?: string[];
 };
 
-/** Satu bagian isi paket berurutan, mis. aspek Kepribadian atau Substansi Khusus. */
+/** Satu bagian isi paket berurutan, mis. aspek Kepribadian atau Integritas & Kejujuran. */
 export type PackagePart = { label: string; short: string; part: string; count: number };
 
 export type PackageOption = {
@@ -39,7 +39,7 @@ export type PackageOption = {
   symbols?: string[];
   /** Rincian per-bagian (kolom) — cuma dipakai Kecermatan. */
   sections?: PackageSection[];
-  /** Komposisi isi paket berurutan — dipakai Kepribadian (aspek + Substansi Khusus). */
+  /** Komposisi isi paket berurutan — dipakai Kepribadian (aspek + Integritas & Kejujuran). */
   parts?: PackagePart[];
 };
 

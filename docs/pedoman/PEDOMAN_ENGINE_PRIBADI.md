@@ -179,6 +179,21 @@ Setiap butir dipetakan ke satu dimensi nilai. "Aturan kunci" adalah pola yang ko
 
 Jumlah butir per dimensi: 4 + 5 + 6 + 12 + 6 + 6 + 4 + 8 + 6 + 2 + 4 = **63**.
 
+### 3.1a Aspek resmi: Integritas dan Kejujuran (pedoman SPCP 2026, butir 6.b)
+Pedoman SPCP menamai bagian ini **Aspek Integritas dan Kejujuran** dengan 7 aspek. Label "Substansi Khusus" diganti. 11 dimensi di atas tetap dipakai sebagai aturan kunci; badge dan label memakai aspek resmi (`aspekIntegritas()` di `lib/scoring/pribadi.ts`, disimpan di `options_payload.aspect`).
+
+| Aspek SPCP | Dimensi | Butir sumber |
+|---|---|---|
+| Integritas | D1, D3 | 10 |
+| Inovasi | D4 `sub: inovasi`, D6 | 11 |
+| Kepemimpinan | D5, D7 | 10 |
+| Transparansi | D2 | 5 |
+| Produktivitas | D8, D10 | 10 |
+| Profesionalisme | D4 `sub: patuh`, D11 | 9 |
+| Religiusitas | D9 | 6 |
+
+Butir D4 wajib punya `sub` (`patuh`/`inovasi`); validator menolak butir yang tidak terpetakan. Aspek Kepribadian (6.a.2) sudah sama persis dengan 6 aspek §1.
+
 ### 3.2 Butir pemeriksa konsistensi (pasangan kembar di sumber)
 - 14 ↔ 49: opsi sama, kunci sama (B)
 - 32 ↔ 44: sanksi

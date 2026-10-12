@@ -12,15 +12,15 @@ const SHORT: Record<string, string> = {
   "Motif Berprestasi": "MB",
 };
 
-// Kelompokkan butir berurutan: aspek Kepribadian satu per satu, Substansi Khusus satu bagian.
+// Kelompokkan butir berurutan: aspek Kepribadian satu per satu, Integritas & Kejujuran satu bagian (aspeknya acak).
 function toParts(list: { subtes: string | null; aspect: string | null }[]): PackagePart[] {
   const parts: PackagePart[] = [];
   for (const row of list) {
     const sk = row.subtes === "SK";
-    const label = sk ? "Substansi Khusus" : row.aspect ?? "Kepribadian";
+    const label = sk ? "Integritas & Kejujuran" : row.aspect ?? "Kepribadian";
     const last = parts.at(-1);
     if (last?.label === label) last.count++;
-    else parts.push({ label, short: sk ? "SUBSTANSI KHUSUS" : SHORT[label] ?? label.slice(0, 3).toUpperCase(), part: sk ? "Bagian 2 · pilih A/B" : "Bagian 1 · Kepribadian", count: 1 });
+    else parts.push({ label, short: sk ? "INTEGRITAS" : SHORT[label] ?? label.slice(0, 3).toUpperCase(), part: sk ? "Bagian 2 · pilih A/B" : "Bagian 1 · Kepribadian", count: 1 });
   }
   return parts;
 }
@@ -51,7 +51,7 @@ export default async function LatihanKepribadianPackagesPage() {
     <div className="app-page space-y-6">
       <PageHeader
         title="Latihan Kepribadian"
-        description="Pilih paket untuk berlatih. Setiap paket berisi 48 pernyataan Kepribadian dan 63 butir Substansi Khusus."
+        description="Pilih paket untuk berlatih. Setiap paket berisi 48 pernyataan Kepribadian dan 63 butir Integritas & Kejujuran."
       />
 
       <PackageCarousel

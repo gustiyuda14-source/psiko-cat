@@ -174,11 +174,10 @@ export default function EngineKepribadian({
         <article key={q?.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="qnum tnum">Pernyataan {idx + 1}</p>
-            {payload?.subtes === "SK" ? (
-              <Badge tone="info">Substansi Khusus</Badge>
-            ) : (
-              payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>
-            )}
+            <div className="flex flex-wrap items-center gap-2">
+              {payload?.subtes === "SK" && <Badge tone="accent">Integritas &amp; Kejujuran</Badge>}
+              {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
+            </div>
           </div>
 
           {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,

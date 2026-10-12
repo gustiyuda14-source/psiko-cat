@@ -153,7 +153,7 @@ export default function ResultView({
             <div className="rep-mods">
               <ModuleCard label="Kecerdasan" value={ks?.nap_contribution ?? null} max={60} />
               <ModuleCard label="Kepribadian" value={kp?.nap_contribution ?? null} max={20} />
-              <ModuleCard label="Kecermatan" value={kc?.nap_contribution ?? null} max={20}>
+              <ModuleCard label="Sikap Kerja" value={kc?.nap_contribution ?? null} max={20}>
                 {kc && (
                   <dl className="rep-kv">
                     {[

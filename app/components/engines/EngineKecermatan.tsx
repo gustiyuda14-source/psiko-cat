@@ -454,7 +454,7 @@ export default function EngineKecermatan({
   if (status === "completed") {
     return (
       <ExamCompleted
-        title="Sub-Tes Kecermatan selesai"
+        title="Sub-Tes Sikap Kerja selesai"
         note="Sepuluh kolom sudah dikerjakan dan seluruh klik tercatat di server."
       />
     );
@@ -503,7 +503,7 @@ export default function EngineKecermatan({
           soal. Di modul 1,2 detik per butir, chrome itu memakan ruang yang
           seharusnya jadi ruang baca. */}
       <ExamBar
-        title="Sub-Tes Kecermatan"
+        title="Sub-Tes Sikap Kerja"
         count={
           <>
             Kolom {ROMAN[activeColIdx]}

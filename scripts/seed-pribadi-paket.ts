@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
-import { summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/pribadi";
+import { aspekIntegritas, summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/pribadi";
 
 // Seed satu paket latihan PRIBADI dari bank file ke tabel questions.
 //   npx tsx scripts/seed-pribadi-paket.ts 2          → cek komposisi saja (dry run)
@@ -21,7 +21,7 @@ const read = (f: string) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"
 const manifest = read(`paket-${String(PKG).padStart(2, "0")}.json`) as { urutan: string[] };
 
 type Kp = { id: string; aspek: string; arah: "favorable" | "unfavorable"; pernyataan: string; alasan: string; catatan_psikologi?: string; bedah?: KpPembahasan["bedah"] };
-type Sk = { id: string; dimensi: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
+type Sk = { id: string; dimensi: string; sub?: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
 const kp = new Map<string, Kp & { definisi: string }>();
 const sk = new Map<string, Sk & { nama: string; aturan: string }>();
 for (const f of fs.readdirSync(dir)) {
@@ -78,11 +78,11 @@ const rows = ids.map((id, i) => {
   const s = sk.get(id)!;
   return {
     ...base,
-    options_payload: { subtes: "SK", statement: s.situasi, choices: [{ key: "A", text: s.opsi.A }, { key: "B", text: s.opsi.B }], bank_id: id },
+    options_payload: { subtes: "SK", statement: s.situasi, aspect: aspekIntegritas(s.dimensi, s.sub), choices: [{ key: "A", text: s.opsi.A }, { key: "B", text: s.opsi.B }], bank_id: id },
     scoring_rule: { type: "forced_choice", dimensi: s.nama, correct_key: s.kunci, pembahasan: `Aturan: ${s.aturan} ${s.pembahasan}` } satisfies PribadiRule,
   };
 });
-console.log(`Paket ${PKG}: komposisi lolos (48 Kepribadian + 63 Substansi Khusus).`);
+console.log(`Paket ${PKG}: komposisi lolos (48 Kepribadian + 63 Integritas & Kejujuran).`);
 if (!APPLY) process.exit(0);
 
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });
