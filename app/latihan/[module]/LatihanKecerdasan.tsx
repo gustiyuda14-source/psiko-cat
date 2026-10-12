@@ -104,7 +104,7 @@ export default function LatihanKecerdasan({
             body: JSON.stringify({ question_id: question.id, selected_key: selected }),
           });
           if (!res.ok) throw new Error("Pembahasan belum dapat dimuat. Coba kumpulkan lagi.");
-          const data = (await res.json()) as { is_correct: boolean; correct_key: string; pembahasan?: string | null };
+          const data = (await res.json()) as { is_correct: boolean; correct_key: string; pembahasan?: string | null; pembahasan_svg?: string | null };
           return {
             question_id: question.id,
             sequence_number: question.sequence_number,
@@ -112,6 +112,7 @@ export default function LatihanKecerdasan({
             correct_key: data.correct_key,
             is_correct: data.is_correct,
             pembahasan: data.pembahasan ?? null,
+            pembahasan_svg: data.pembahasan_svg ?? null,
             payload: question.options_payload as unknown as KecerdasanOptionsPayload,
           } satisfies KecerdasanReviewItem;
         })

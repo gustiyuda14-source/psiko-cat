@@ -70,8 +70,9 @@ export async function POST(req: NextRequest) {
       // selected_key kosong = butir dilewati: tetap balikin kunci buat pembahasan,
       // tapi jangan lewat normalizeSelection (itu buat validasi jawaban beneran).
       const pembahasan = rule.pembahasan ?? null;
+      const pembahasan_svg = rule.pembahasan_svg ?? null;
       if (!selected_key) {
-        return NextResponse.json({ is_correct: false, correct_key: rule.correct_key, pembahasan });
+        return NextResponse.json({ is_correct: false, correct_key: rule.correct_key, pembahasan, pembahasan_svg });
       }
       const normalized = normalizeSelection(
         selected_key,
@@ -79,7 +80,7 @@ export async function POST(req: NextRequest) {
         payload.is_multi_select === true ? 2 : 1
       );
       if (!normalized) return NextResponse.json({ error: "Pilihan tidak valid" }, { status: 400 });
-      return NextResponse.json({ is_correct: normalized === rule.correct_key, correct_key: rule.correct_key, pembahasan });
+      return NextResponse.json({ is_correct: normalized === rule.correct_key, correct_key: rule.correct_key, pembahasan, pembahasan_svg });
     }
 
     if (question.type === "KECERMATAN") {

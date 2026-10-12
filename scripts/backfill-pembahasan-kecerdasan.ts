@@ -18,11 +18,12 @@ type Payload = Row["options_payload"];
 const fp = (p: Payload, key: string) =>
   JSON.stringify([p.question_text ?? null, p.sub_text ?? null, (p.svg_content ?? "").replace(/p13q\d+-/g, ""), p.choices.map((c) => c.text), key]);
 
-const source = new Map<string, string>();
-const add = (row: Row, text: string | undefined) => {
-  if (text?.trim()) source.set(fp(row.options_payload, row.scoring_rule.correct_key), text.replaceAll("<br>", "\n").trim());
+// Gambar pembahasan (opsional) ikut ke scoring_rule.pembahasan_svg, dicocokkan dengan cara yang sama.
+const source = new Map<string, { text: string; svg?: string }>();
+const add = (row: Row, text: string | undefined, svg?: string) => {
+  if (text?.trim()) source.set(fp(row.options_payload, row.scoring_rule.correct_key), { text: text.replaceAll("<br>", "\n").trim(), svg });
 };
-for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json"]) {
+for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", "kecerdasan_p15_teks.json"]) {
   const teks = data(f) as TeksFile;
   teksRows(teks).forEach((r, i) => add(r, teks.soal[i].p));
 }
@@ -33,7 +34,7 @@ for (const x of (JSON.parse(fs.readFileSync(path.join(root, "soal.json"), "utf8"
   const choices = Object.entries(x.pilihan).map(([k, text]) => ({ key: k.toUpperCase(), text: String(text) }));
   add({ sequence_number: 0, options_payload: { question_text: x.soal ?? null, sub_text: x.wacana ?? null, svg_content: x.gambar ?? null, choices }, scoring_rule: { correct_key } } as unknown as Row, x.pembahasan);
 }
-type Gambar = Row & { pembahasan?: string };
+type Gambar = Row & { pembahasan?: string; pembahasan_svg?: string };
 const gambar: Gambar[] = [
   ...data("kecerdasan_p2_pola.json"),
   ...data("kecerdasan_p2_susun.json"),
@@ -41,7 +42,7 @@ const gambar: Gambar[] = [
   ...data("kecerdasan_s2_susun.json"),
   ...["kecerdasan_figural_kal.json", "kecerdasan_susun_kal.json", "kecerdasan_denah_kal.json"].flatMap((f) => Object.values(data(f) as Record<string, Gambar[]>).flat()),
 ];
-gambar.forEach((g) => add(g, g.pembahasan));
+gambar.forEach((g) => add(g, g.pembahasan, g.pembahasan_svg));
 
 (async () => {
   const { data: rows, error } = await supabase
@@ -50,14 +51,16 @@ gambar.forEach((g) => add(g, g.pembahasan));
     .eq("type", "KECERDASAN");
   if (error) throw error;
 
-  const updates: { id: string; scoring_rule: Row["scoring_rule"] & { pembahasan: string } }[] = [];
+  const updates: { id: string; scoring_rule: Row["scoring_rule"] & { pembahasan: string; pembahasan_svg?: string } }[] = [];
   const cov: Record<number, [number, number]> = {};
   for (const r of rows as unknown as (Row & { id: string; package_number: number })[]) {
-    const text = source.get(fp(r.options_payload, r.scoring_rule.correct_key));
+    const src = source.get(fp(r.options_payload, r.scoring_rule.correct_key));
     (cov[r.package_number] ??= [0, 0])[1]++;
-    if (!text) continue;
+    if (!src) continue;
     cov[r.package_number][0]++;
-    if ((r.scoring_rule as { pembahasan?: string }).pembahasan !== text) updates.push({ id: r.id, scoring_rule: { ...r.scoring_rule, pembahasan: text } });
+    const cur = r.scoring_rule as { pembahasan?: string; pembahasan_svg?: string };
+    if (cur.pembahasan !== src.text || (src.svg && cur.pembahasan_svg !== src.svg))
+      updates.push({ id: r.id, scoring_rule: { ...r.scoring_rule, pembahasan: src.text, ...(src.svg ? { pembahasan_svg: src.svg } : {}) } });
   }
   for (const [pkg, [hit, n]] of Object.entries(cov)) console.log(`pkg ${pkg}: ${hit}/${n} butir punya pembahasan`);
   console.log(`${source.size} pembahasan di file, ${updates.length} baris perlu diperbarui.`);

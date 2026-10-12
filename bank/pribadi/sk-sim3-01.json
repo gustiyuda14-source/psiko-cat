@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sim3-01",
+  "status": "review",
+  "catatan": "63 butir Substansi Khusus baru untuk Simulasi Penuh Paket 3 (package_number 12). Proporsi dimensi sesuai pedoman §3.1, 4 pasang kembar (D1, D2, D3, D5). Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur komando yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-301",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menyusun laporan kejadian di pos jaga",
+      "opsi": {
+        "A": "Uraian sesuai fakta",
+        "B": "Bahasa yang menjaga nama baik satuan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan. Laporan harus sesuai fakta; menjaga nama baik satuan itu baik, tetapi tidak boleh mengaburkan kejadian."
+    },
+    {
+      "id": "SK-D1-302",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika memberi keterangan sebagai saksi",
+      "opsi": {
+        "A": "Menjaga perasaan pihak yang dikenal",
+        "B": "Menyampaikan apa adanya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kebenaran diutamakan di atas perasaan. Keterangan saksi harus apa adanya walaupun pihak yang dikenal bisa tersinggung."
+    },
+    {
+      "id": "SK-D1-303",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menilai hasil kerja rekan satu tim",
+      "opsi": {
+        "A": "Penilaian yang jujur",
+        "B": "Penilaian yang memotivasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-304",
+      "pembahasan": "Kebenaran diutamakan. Penilaian yang jujur menjadi dasar perbaikan; penilaian yang memotivasi itu baik, tetapi tidak boleh menutupi kenyataan. Butir kembar."
+    },
+    {
+      "id": "SK-D1-304",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika memberi umpan balik kepada bawahan",
+      "opsi": {
+        "A": "Penilaian yang memotivasi",
+        "B": "Penilaian yang jujur"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-303",
+      "pembahasan": "Kebenaran diutamakan. Umpan balik tetap harus jujur; nilai yang sama dengan butir kembarnya, posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D2-301",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika masyarakat menanyakan perkembangan laporannya",
+      "opsi": {
+        "A": "Menjelaskan tahap yang sedang berjalan",
+        "B": "Meminta masyarakat menunggu kabar resmi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan informasi diutamakan. Pelapor berhak tahu tahap penanganan; menunggu kabar resmi membuat layanan tertutup."
+    },
+    {
+      "id": "SK-D2-302",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam pengelolaan dana kegiatan organisasi",
+      "opsi": {
+        "A": "Kepercayaan penuh kepada bendahara",
+        "B": "Laporan terbuka kepada anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Transparansi diutamakan. Kepercayaan kepada bendahara baik, tetapi dana bersama harus dilaporkan terbuka."
+    },
+    {
+      "id": "SK-D2-303",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipilih ketika ada kekeliruan data dalam pengumuman resmi",
+      "opsi": {
+        "A": "Ralat secara terbuka",
+        "B": "Perbaikan langsung pada arsip internal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterbukaan diutamakan. Kekeliruan yang sudah diumumkan diralat secara terbuka agar masyarakat menerima data yang benar."
+    },
+    {
+      "id": "SK-D2-304",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika menyampaikan hasil seleksi kepada peserta",
+      "opsi": {
+        "A": "Kerahasiaan nilai peserta",
+        "B": "Keterbukaan kriteria dan nilai"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-305",
+      "pembahasan": "Transparansi diutamakan. Peserta berhak mengetahui kriteria dan nilainya. Butir kembar."
+    },
+    {
+      "id": "SK-D2-305",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipegang ketika mengumumkan pemenang lomba antarsatuan",
+      "opsi": {
+        "A": "Keterbukaan kriteria dan nilai",
+        "B": "Kerahasiaan nilai peserta"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-304",
+      "pembahasan": "Transparansi diutamakan; nilai yang sama dengan butir kembarnya, posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D3-301",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika anggota berulang kali terlambat apel",
+      "opsi": {
+        "A": "Memberi nasihat secara pribadi",
+        "B": "Menerapkan sanksi sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. Pelanggaran berulang ditangani dengan sanksi sesuai aturan; nasihat sudah tidak cukup."
+    },
+    {
+      "id": "SK-D3-302",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menertibkan parkir liar di depan pasar",
+      "opsi": {
+        "A": "Penindakan sesuai ketentuan",
+        "B": "Imbauan berulang kepada juru parkir"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan di atas imbauan."
+    },
+    {
+      "id": "SK-D3-303",
+      "dimensi": "D3",
+      "situasi": "Hal yang diyakini paling efektif menurunkan pelanggaran lalu lintas",
+      "opsi": {
+        "A": "Penyuluhan di sekolah",
+        "B": "Penegakan aturan yang konsisten"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penegakan aturan diutamakan. Penyuluhan penting, tetapi kepatuhan paling terbentuk oleh aturan yang ditegakkan secara konsisten."
+    },
+    {
+      "id": "SK-D3-304",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipilih ketika teman seangkatan melanggar tata tertib asrama",
+      "opsi": {
+        "A": "Melaporkan sesuai tata tertib",
+        "B": "Menegurnya agar tidak mengulangi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kepatuhan pada aturan diutamakan. Pelanggaran tata tertib dilaporkan sesuai ketentuan, bukan cukup ditegur."
+    },
+    {
+      "id": "SK-D3-305",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menangani pengendara tanpa helm",
+      "opsi": {
+        "A": "Tilang sesuai aturan",
+        "B": "Teguran dan pembinaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-306",
+      "pembahasan": "Sanksi sesuai aturan diutamakan di atas teguran. Butir kembar."
+    },
+    {
+      "id": "SK-D3-306",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjumpai pelanggar marka jalan",
+      "opsi": {
+        "A": "Teguran dan pembinaan",
+        "B": "Tilang sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-305",
+      "pembahasan": "Sanksi sesuai aturan diutamakan; nilai yang sama dengan butir kembarnya, posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D4-301",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika menyimpan barang bukti perkara",
+      "opsi": {
+        "A": "Prosedur penyimpanan resmi",
+        "B": "Cara penyimpanan yang lebih praktis"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Untuk barang bukti, prosedur resmi wajib dipatuhi; cara praktis bisa merusak keabsahan bukti."
+    },
+    {
+      "id": "SK-D4-302",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan dalam penggunaan anggaran kegiatan",
+      "opsi": {
+        "A": "Penyesuaian anggaran yang kreatif",
+        "B": "Ketentuan penggunaan anggaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Anggaran termasuk ranah regulasi, jadi ketentuan dipatuhi; kreativitas tidak berlaku untuk aturan keuangan."
+    },
+    {
+      "id": "SK-D4-303",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dilakukan ketika format laporan resmi terasa kurang efisien",
+      "opsi": {
+        "A": "Tetap memakai format baku",
+        "B": "Membuat format sendiri yang ringkas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Laporan resmi mengikuti standar. Usulan perbaikan boleh disampaikan, tetapi format baku tetap dipakai."
+    },
+    {
+      "id": "SK-D4-304",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika memeriksa kelengkapan dokumen pemohon SIM",
+      "opsi": {
+        "A": "Kebijaksanaan petugas",
+        "B": "Standar persyaratan yang berlaku"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pelayanan perizinan berpegang pada standar persyaratan, bukan pertimbangan pribadi petugas."
+    },
+    {
+      "id": "SK-D4-305",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika memakai senjata api dalam latihan",
+      "opsi": {
+        "A": "Standar keselamatan yang ditetapkan",
+        "B": "Teknik yang paling nyaman bagi penembak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Standar keselamatan senjata wajib dipatuhi di atas kenyamanan pribadi."
+    },
+    {
+      "id": "SK-D4-306",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diyakini ketika menangani tahanan",
+      "opsi": {
+        "A": "Cara yang paling cepat",
+        "B": "Prosedur penanganan tahanan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penanganan tahanan diatur hukum, sehingga prosedur dipatuhi walaupun ada cara yang lebih cepat."
+    },
+    {
+      "id": "SK-D4-307",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan untuk meningkatkan minat warga datang ke pos pelayanan",
+      "opsi": {
+        "A": "Membuat program layanan keliling",
+        "B": "Mempertahankan jadwal layanan yang biasa"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Untuk program pelayanan, inovasi diutamakan. Layanan keliling mendekatkan pelayanan kepada warga."
+    },
+    {
+      "id": "SK-D4-308",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika kegiatan penyuluhan kurang diminati remaja",
+      "opsi": {
+        "A": "Melanjutkan materi yang sudah teruji",
+        "B": "Mengemas penyuluhan dengan cara baru"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Cara penyampaian adalah ranah inovasi; penyuluhan yang tidak diminati perlu dikemas dengan cara baru."
+    },
+    {
+      "id": "SK-D4-309",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika merancang kegiatan bakti sosial tahunan",
+      "opsi": {
+        "A": "Konsep kegiatan yang segar",
+        "B": "Susunan acara tahun sebelumnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Konsep kegiatan adalah ranah inovasi, jadi konsep yang segar diutamakan."
+    },
+    {
+      "id": "SK-D4-310",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dibanggakan dari sebuah unit pelayanan publik",
+      "opsi": {
+        "A": "Pelayanan yang konsisten sejak lama",
+        "B": "Terobosan cara melayani"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Cara melayani adalah ranah inovasi; terobosan pelayanan lebih dibanggakan daripada sekadar konsisten."
+    },
+    {
+      "id": "SK-D4-311",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika antrean pengurusan surat selalu panjang",
+      "opsi": {
+        "A": "Menyusun sistem antrean daring",
+        "B": "Meminta warga datang lebih pagi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masalah cara kerja diselesaikan dengan inovasi, bukan dengan membebani warga."
+    },
+    {
+      "id": "SK-D4-312",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipilih dalam membina anggota pramuka binaan",
+      "opsi": {
+        "A": "Metode pembinaan yang sudah biasa",
+        "B": "Metode pembinaan yang kreatif"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Metode pembinaan adalah ranah inovasi, jadi cara yang kreatif diutamakan."
+    },
+    {
+      "id": "SK-D5-301",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipertimbangkan sebelum bertindak di wilayah satuan lain",
+      "opsi": {
+        "A": "Batas kewenangan",
+        "B": "Kemampuan diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kewenangan diutamakan di atas kemampuan. Mampu bertindak belum berarti berwenang bertindak."
+    },
+    {
+      "id": "SK-D5-302",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika ditugaskan menjaga gudang logistik",
+      "opsi": {
+        "A": "Kepercayaan atasan",
+        "B": "Kewenangan yang diberikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Tugas dijalankan sesuai kewenangan yang diberikan, bukan atas dasar kepercayaan pribadi."
+    },
+    {
+      "id": "SK-D5-303",
+      "dimensi": "D5",
+      "situasi": "Hal yang menjadi dasar ketika memberi perintah kepada anggota regu",
+      "opsi": {
+        "A": "Kewenangan jabatan",
+        "B": "Kedekatan dengan anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perintah sah karena kewenangan jabatan, bukan karena kedekatan."
+    },
+    {
+      "id": "SK-D5-304",
+      "dimensi": "D5",
+      "situasi": "Hal yang diperhatikan ketika ingin mempercepat penyelesaian target kerja",
+      "opsi": {
+        "A": "Kecepatan pencapaian target",
+        "B": "Batas kewenangan masing-masing"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kewenangan diutamakan di atas target. Target tidak boleh dikejar dengan melampaui kewenangan."
+    },
+    {
+      "id": "SK-D5-305",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan dalam menangani perkara yang menarik perhatian publik",
+      "opsi": {
+        "A": "Kewenangan penanganan",
+        "B": "Prioritas yang mendesak"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-306",
+      "pembahasan": "Kewenangan diutamakan di atas prioritas. Butir kembar."
+    },
+    {
+      "id": "SK-D5-306",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika atasan tidak di tempat dan ada keputusan penting",
+      "opsi": {
+        "A": "Prioritas yang mendesak",
+        "B": "Kewenangan penanganan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-305",
+      "pembahasan": "Kewenangan diutamakan; nilai yang sama dengan butir kembarnya, posisi pilihan ditukar."
+    },
+    {
+      "id": "SK-D6-301",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika cara kerja tim sudah tidak efektif",
+      "opsi": {
+        "A": "Berani mengusulkan perubahan",
+        "B": "Menyesuaikan diri dengan cara lama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keberanian untuk berubah diutamakan ketika cara lama terbukti tidak efektif."
+    },
+    {
+      "id": "SK-D6-302",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dirasakan ketika mendapat penugasan di daerah terpencil",
+      "opsi": {
+        "A": "Kehati-hatian menghadapi hal baru",
+        "B": "Keberanian menghadapi tantangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penugasan baru dihadapi dengan keberanian. Kehati-hatian baik, tetapi tidak boleh menjadi rasa enggan."
+    },
+    {
+      "id": "SK-D6-303",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipilih ketika ada kesempatan memimpin tim lintas satuan",
+      "opsi": {
+        "A": "Mengambil kesempatan itu",
+        "B": "Menunggu pengalaman bertambah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Berani mengambil kesempatan bertindak dan memimpin."
+    },
+    {
+      "id": "SK-D6-304",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diutamakan ketika menghadapi situasi darurat di lapangan",
+      "opsi": {
+        "A": "Menunggu instruksi lengkap",
+        "B": "Bertindak cepat dan berani"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Situasi darurat menuntut keberanian bertindak segera."
+    },
+    {
+      "id": "SK-D6-305",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika bersaing dalam seleksi pendidikan lanjutan",
+      "opsi": {
+        "A": "Mengukur kemampuan dan peluang",
+        "B": "Langsung mendaftar semua jalur"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam persaingan, kemampuan dan peluang diukur dulu; keberanian tanpa perhitungan membuang kesempatan."
+    },
+    {
+      "id": "SK-D6-306",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika ada peluang usaha koperasi yang menggiurkan",
+      "opsi": {
+        "A": "Segera mengambil peluang",
+        "B": "Menghitung risiko dan peluang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Peluang dihadapi dengan menghitung risiko lebih dulu."
+    },
+    {
+      "id": "SK-D7-301",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika anggota regu membantah perintah di lapangan",
+      "opsi": {
+        "A": "Bertindak tegas",
+        "B": "Membujuk dengan sabar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam tindakan memimpin, ketegasan diutamakan."
+    },
+    {
+      "id": "SK-D7-302",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diperlukan ketika pengemudi menolak diperiksa",
+      "opsi": {
+        "A": "Pendekatan yang lembut",
+        "B": "Tindakan tegas sesuai prosedur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penolakan pemeriksaan ditangani dengan tindakan tegas sesuai prosedur."
+    },
+    {
+      "id": "SK-D7-303",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika menghadapi tekanan tugas yang bertubi-tubi",
+      "opsi": {
+        "A": "Ketenangan",
+        "B": "Semangat yang menggebu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dalam perasaan, ketenangan diutamakan agar tetap jernih di bawah tekanan."
+    },
+    {
+      "id": "SK-D7-304",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dijaga dalam hati ketika menghadapi massa yang emosional",
+      "opsi": {
+        "A": "Kewaspadaan tinggi",
+        "B": "Ketenangan batin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perasaan yang dijaga adalah ketenangan; kewaspadaan penting, tetapi tanpa ketenangan mudah terpancing."
+    },
+    {
+      "id": "SK-D8-301",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika tugas kelompok tertunda karena anggota lain sibuk",
+      "opsi": {
+        "A": "Menyelesaikannya sendiri",
+        "B": "Menunggu semua anggota siap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian: tugas yang bisa dikerjakan diselesaikan sendiri tanpa menunggu."
+    },
+    {
+      "id": "SK-D8-302",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan dari hasil kerja selama pendidikan",
+      "opsi": {
+        "A": "Penghargaan dari pelatih",
+        "B": "Prestasi atas usaha sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Yang dibanggakan adalah prestasi hasil usaha sendiri, bukan pengakuan orang lain."
+    },
+    {
+      "id": "SK-D8-303",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika melihat masalah kerja yang belum ditangani",
+      "opsi": {
+        "A": "Bertindak tanpa menunggu perintah",
+        "B": "Melaporkannya lalu menunggu arahan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif berarti proaktif menangani masalah dalam lingkup tugas sendiri."
+    },
+    {
+      "id": "SK-D8-304",
+      "dimensi": "D8",
+      "situasi": "Hal yang dipilih ketika kesulitan memahami materi latihan",
+      "opsi": {
+        "A": "Meminta teman menjelaskan",
+        "B": "Mencari tahu sendiri dahulu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian tampak dari usaha memahami sendiri lebih dulu."
+    },
+    {
+      "id": "SK-D8-305",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika usaha pertama menemui kegagalan",
+      "opsi": {
+        "A": "Mencoba lagi dengan ulet",
+        "B": "Beralih ke tugas lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan: kegagalan pertama dijawab dengan mencoba lagi."
+    },
+    {
+      "id": "SK-D8-306",
+      "dimensi": "D8",
+      "situasi": "Hal yang diyakini menentukan keberhasilan karier",
+      "opsi": {
+        "A": "Dukungan orang lain",
+        "B": "Kerja keras pribadi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keberhasilan ditentukan terutama oleh usaha sendiri."
+    },
+    {
+      "id": "SK-D8-307",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika keamanan lingkungan rumah mulai terganggu",
+      "opsi": {
+        "A": "Mengajak warga ronda bersama",
+        "B": "Menunggu petugas bertindak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Inisiatif termasuk menggerakkan partisipasi masyarakat, bukan menunggu."
+    },
+    {
+      "id": "SK-D8-308",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika pekerjaan rutin selesai lebih cepat",
+      "opsi": {
+        "A": "Beristirahat sambil menunggu tugas",
+        "B": "Mencari pekerjaan lain yang bermanfaat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Proaktif mencari pekerjaan yang bermanfaat tanpa menunggu diperintah."
+    },
+    {
+      "id": "SK-D9-301",
+      "dimensi": "D9",
+      "situasi": "Hal yang dibanggakan setelah berhasil lulus seleksi",
+      "opsi": {
+        "A": "Rasa syukur kepada Tuhan",
+        "B": "Kebanggaan keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Makna spiritual diutamakan; keberhasilan disyukuri sebagai karunia."
+    },
+    {
+      "id": "SK-D9-302",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika menghadapi cobaan berat",
+      "opsi": {
+        "A": "Dukungan teman",
+        "B": "Kekuatan iman"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pegangan utama saat cobaan adalah kekuatan iman."
+    },
+    {
+      "id": "SK-D9-303",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika memperoleh rezeki lebih",
+      "opsi": {
+        "A": "Titipan yang harus disyukuri",
+        "B": "Hasil kerja keras sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki dipandang sebagai titipan yang disyukuri, bukan semata hasil usaha."
+    },
+    {
+      "id": "SK-D9-304",
+      "dimensi": "D9",
+      "situasi": "Hal yang dijadikan pegangan dalam menjalankan tugas",
+      "opsi": {
+        "A": "Penghargaan dari institusi",
+        "B": "Nilai ibadah dalam bekerja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Makna spiritual bekerja diutamakan di atas penghargaan."
+    },
+    {
+      "id": "SK-D9-305",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika bertugas jaga pada hari raya",
+      "opsi": {
+        "A": "Ikhlas sebagai bagian pengabdian",
+        "B": "Harapan mendapat tambahan insentif"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keikhlasan dalam pengabdian diutamakan di atas imbalan material."
+    },
+    {
+      "id": "SK-D9-306",
+      "dimensi": "D9",
+      "situasi": "Hal yang dicari dari pekerjaan sebagai abdi negara",
+      "opsi": {
+        "A": "Penghasilan yang layak",
+        "B": "Keberkahan dalam bekerja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keberkahan (makna spiritual) diutamakan di atas penghasilan."
+    },
+    {
+      "id": "SK-D10-301",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika dinilai dalam pelaksanaan operasi",
+      "opsi": {
+        "A": "Hasil yang terukur",
+        "B": "Usaha yang telah dilakukan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keberhasilan tugas dinilai dari hasil yang terukur."
+    },
+    {
+      "id": "SK-D10-302",
+      "dimensi": "D10",
+      "situasi": "Hal yang dikejar dalam pelaksanaan program kerja tahunan",
+      "opsi": {
+        "A": "Proses yang dinikmati",
+        "B": "Capaian kuantitas dan kualitas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Program kerja dinilai dari capaian kuantitas dan kualitasnya."
+    },
+    {
+      "id": "SK-D11-301",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan setelah gagal dalam tes kesamaptaan",
+      "opsi": {
+        "A": "Mempelajari penyebab kegagalan",
+        "B": "Melupakan dan memulai yang baru"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Belajar dari kegagalan: penyebabnya dipelajari agar tidak terulang."
+    },
+    {
+      "id": "SK-D11-302",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan ketika menerima evaluasi dari pelatih",
+      "opsi": {
+        "A": "Menjelaskan alasan tindakan",
+        "B": "Menerima masukan untuk perbaikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan diterima untuk perbaikan, bukan dibela."
+    },
+    {
+      "id": "SK-D11-303",
+      "dimensi": "D11",
+      "situasi": "Hal yang dikenali lebih dulu ketika menyusun rencana belajar",
+      "opsi": {
+        "A": "Kelemahan diri",
+        "B": "Kelebihan diri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengenali kelemahan lebih dulu agar rencana belajar tepat sasaran."
+    },
+    {
+      "id": "SK-D11-304",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika strategi tim gagal di babak pertama",
+      "opsi": {
+        "A": "Mempertahankan strategi awal",
+        "B": "Menyesuaikan strategi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Strategi disesuaikan ketika terbukti tidak berhasil."
+    }
+  ]
+}

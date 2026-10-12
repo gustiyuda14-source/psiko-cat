@@ -1,9 +1,9 @@
 import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
-import { makeMap2, renderMap2, clearOfCompass, type Map2 } from "./denah-k17-bw";
+import { makeMap2, renderMap2, clearOfCompass, W, H, TOP, M, type Map2 } from "./denah-k17-bw";
 import { arahBangunan, arahArah, rute2, rotArah, ring2, setRing, INSTRUKSI, type Item } from "./denah-k17-soal-bw";
-import { reseed, shuffle, WALKERS, type Peta } from "./denah-k17-peta";
+import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./denah-k17-peta";
 
 // Blok Denah & Arah Mata Angin (nomor 38-42) untuk kalibrasi Logis/Spasial 2026-10-12:
 // tiap paket = peta A Utara di atas (38-39 ARAH, 40-41 RUTE) + peta B kompas diputar (42 ROTASI).
@@ -13,7 +13,9 @@ import { reseed, shuffle, WALKERS, type Peta } from "./denah-k17-peta";
 // Output: prisma/data/kecerdasan_denah_kal.json ({ [package_number]: Row[] }) + output/denah-kal-preview.html
 
 const root = path.join(__dirname, "..");
-const PKGS = [13, 14, 2, 3];
+const PKGS = [13, 14, 2, 3, 15];
+// Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. Paket lama tetap seperti semula.
+const PB = new Set([15]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 
@@ -30,6 +32,7 @@ type Row = {
   sub_type: string;
   tingkat: 2 | 3;
   pembahasan: string;
+  pembahasan_svg?: string;
 };
 
 /** Peta inline: id clipPath berprefiks per soal, ukuran ikut lebar layar (maks 448px). */
@@ -41,7 +44,40 @@ function inlineMap(bw: Map2, n: number, rot: number, prefix: string) {
   return svg;
 }
 
-const toRow = (seq: number, it: Item, svg: string): Row => {
+/** Gambar pembahasan tanpa atribut id (dirender bersama butir lain): clipPath diganti tutup putih di luar bingkai,
+ *  marker panah diganti segitiga biasa dengan ukuran yang sama (markerWidth 4 × stroke-width, refX 7/10). */
+function pembahasanSvg(bw: Map2, n: number, rot: number, it: Item) {
+  const MKC: Record<string, string> = { ok: C_OK, no: C_NO, ref: C_REF };
+  let svg = renderMap2(bw, n, { cap: it.cap as string[], over: it.over as string, defs: "" }, rot)
+    .replace(' width="448" height="600"', ' style="width:100%;max-width:448px;height:auto"')
+    .replace("<defs></defs>", "")
+    .replace(/<defs><clipPath id="mapclip">.*?<\/clipPath><\/defs><g clip-path="url\(#mapclip\)">(.*?)<\/g>/, (_, roads: string) =>
+      `<g>${roads}</g>` + [[0, 0, W, TOP], [0, H - M, W, M], [0, 0, M, H], [W - M, 0, M, H]].map(([x, y, w, h]) => `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="#fff"/>`).join(""))
+    .replace(/<(line|polyline)\b([^>]*?) marker-end="url\(#(\w+)\)"([^>]*)\/>/g, (_, tg: string, a: string, mk: string, b: string) => {
+      const at = a + b, num = (k: string) => +new RegExp(`\\b${k}="([-\\d.]+)"`).exec(at)![1];
+      const pts = tg === "line" ? [[num("x1"), num("y1")], [num("x2"), num("y2")]] : /points="([^"]+)"/.exec(at)![1].split(" ").map((q) => q.split(",").map(Number));
+      const [[px, py], [qx, qy]] = pts.slice(-2), L = Math.hypot(qx - px, qy - py), ux = (qx - px) / L, uy = (qy - py) / L, u = 0.4 * num("stroke-width");
+      const tip = [qx + ux * 3 * u, qy + uy * 3 * u], bx = qx - ux * 7 * u, by = qy - uy * 7 * u;
+      return `<${tg}${a}${b}/><path d="M${f1(tip[0])} ${f1(tip[1])}L${f1(bx - uy * 5 * u)} ${f1(by + ux * 5 * u)}L${f1(bx + uy * 5 * u)} ${f1(by - ux * 5 * u)}z" fill="${MKC[mk]}"/>`;
+    });
+  // Tag yang keluar bingkai: label belokan yang lewat tepi kanan dipindah ke kiri titik belok, tag lain digeser masuk.
+  svg = svg.replace(/<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="20" fill="#fff" rx="10"([^>]*)\/><text x="([-\d.]+)"([^>]*)>([^<]*)<\/text>/g, (all, x, y, w, ra, tx, ta, t: string) => {
+    const x0 = +x, ww = +w, over = Math.max(0, x0 + ww - (W - M - 2)) - Math.max(0, M + 2 - x0);
+    if (!over) return all;
+    const dx = t.includes("→") && over > 0 ? -92 : -over;
+    return `<rect x="${f1(x0 + dx)}" y="${y}" width="${w}" height="20" fill="#fff" rx="10"${ra}/><text x="${f1(+tx + dx)}"${ta}>${t}</text>`;
+  });
+  assert.ok(!/\bid=|url\(#|<(?:script|image|style)\b|href=/.test(svg), "pembahasan_svg masih memakai id/url/href");
+  return svg;
+}
+
+/** Pembahasan mesin K17 (langkah<br>kenapa salah + jawaban<br>gambaran nyata) → 2 paragraf: cara baca, eliminasi + kunci. */
+const duaParagraf = (t: string) => {
+  const [langkah, salah] = t.split("<br>");
+  return `${langkah.split("\n").join(" ")}\n\n${salah.replace(/^Kenapa yang lain salah:\n/, "").split("\n").join(" ")}`;
+};
+
+const toRow = (seq: number, it: Item, svg: string, pb?: string): Row => {
   const opsi = it.opsi as Record<string, string>, kunci = it.kunci as string[];
   const tier = it.tier as number;
   assert.ok(tier === 2 || tier === 3, `${seq}: tier ${tier}`);
@@ -52,7 +88,8 @@ const toRow = (seq: number, it: Item, svg: string): Row => {
       choices: KEYS.map((key, i) => ({ key, text: opsi["abcde"[i]] })),
     },
     scoring_rule: { type: "dichotomous", correct_key: kunci[0].toUpperCase() },
-    sub_type: it.sub_type as string, tingkat: tier, pembahasan: it.pembahasan as string,
+    sub_type: it.sub_type as string, tingkat: tier, pembahasan: pb ? duaParagraf(it.pembahasan as string) : (it.pembahasan as string),
+    ...(pb ? { pembahasan_svg: pb } : {}),
   };
 };
 
@@ -73,7 +110,9 @@ PKGS.forEach((pkg, pi) => {
     const walkers = shuffle(WALKERS);
     const set = [arahBangunan(p, pos[0], used), arahArah(p, pos[1], used), rute2(bw, pos[2], 2, walkers[0]), rute2(bw, pos[3], 3, walkers[1])];
     if (!fresh(set) || set.some((s) => (s!.tier as number) < 2)) continue;
-    set.forEach((s, i) => rows.push(toRow(38 + i, s!, inlineMap(bw, 1, 0, `dk${pkg}q${38 + i}-`))));
+    // Paket baru: peta A 2 sedang + 2 HOTS, ROTASI 180° = HOTS → 2 sedang / 3 HOTS sesuai rencana.
+    if (PB.has(pkg) && set.filter((s) => s!.tier === 3).length !== 2) continue;
+    set.forEach((s, i) => rows.push(toRow(38 + i, s!, inlineMap(bw, 1, 0, `dk${pkg}q${38 + i}-`), PB.has(pkg) ? pembahasanSvg(bw, 1, 0, s!) : undefined)));
     break;
   }
   // Peta B: kompas diputar 90/180/270° bergilir antarpaket.
@@ -84,7 +123,7 @@ PKGS.forEach((pkg, pi) => {
     if (!clearOfCompass(bw)) continue;
     const s = rotArah(bw, k, pos[4], new Set<string>(), "b");
     if (!fresh([s])) continue;
-    rows.push(toRow(42, s!, inlineMap(bw, 2, k * 90, `dk${pkg}q42-`)));
+    rows.push(toRow(42, s!, inlineMap(bw, 2, k * 90, `dk${pkg}q42-`), PB.has(pkg) ? pembahasanSvg(bw, 2, k * 90, s!) : undefined));
     break;
   }
   for (const r of rows) seen.add(norm(r.options_payload.question_text));
@@ -94,6 +133,10 @@ PKGS.forEach((pkg, pi) => {
 for (const [pkg, rows] of Object.entries(out)) {
   assert.deepEqual(rows.map((r) => r.sequence_number), [38, 39, 40, 41, 42], `pkg ${pkg}: nomor`);
   assert.equal(new Set(rows.map((r) => r.scoring_rule.correct_key)).size, 5, `pkg ${pkg}: kunci harus tersebar A-E`);
+  if (PB.has(+pkg)) {
+    assert.equal(rows.filter((r) => r.tingkat === 3).length, 3, `pkg ${pkg}: harus 2 sedang / 3 HOTS`);
+    for (const r of rows) assert.ok(r.pembahasan_svg && r.pembahasan.split("\n\n").length === 2 && !r.pembahasan.includes("<br>"), `pkg ${pkg} #${r.sequence_number}: pembahasan 2 paragraf + gambar`);
+  } else assert.ok(rows.every((r) => !r.pembahasan_svg), `pkg ${pkg}: paket lama tidak boleh berubah`);
   for (const r of rows) {
     const texts = r.options_payload.choices.map((c) => c.text);
     assert.equal(new Set(texts).size, 5, `pkg ${pkg} #${r.sequence_number}: opsi kembar`);
@@ -106,7 +149,7 @@ fs.writeFileSync(path.join(root, "prisma/data/kecerdasan_denah_kal.json"), `${JS
 fs.mkdirSync(path.join(root, "output"), { recursive: true });
 fs.writeFileSync(path.join(root, "output/denah-kal-preview.html"),
   `<!doctype html><html lang="id"><meta charset="utf-8"><title>Preview Denah Kalibrasi</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111;max-width:900px}section{border:1px solid #aaa;margin:16px 0;padding:12px}p{font-size:13px;line-height:1.5;white-space:pre-line}</style><body>` +
-  Object.entries(out).flatMap(([pkg, rows]) => rows.map((r) => `<section><h3>pkg ${pkg} · soal ${r.sequence_number} · ${r.sub_type} · tier ${r.tingkat} · kunci ${r.scoring_rule.correct_key}</h3><p><b>${r.options_payload.question_text}</b></p>${r.options_payload.svg_content}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p><p>${r.pembahasan.replaceAll("<br>", "\n")}</p></section>`)).join("") +
+  Object.entries(out).flatMap(([pkg, rows]) => rows.map((r) => `<section><h3>pkg ${pkg} · soal ${r.sequence_number} · ${r.sub_type} · tier ${r.tingkat} · kunci ${r.scoring_rule.correct_key}</h3><p><b>${r.options_payload.question_text}</b></p>${r.options_payload.svg_content}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p><p>${r.pembahasan.replaceAll("<br>", "\n")}</p>${r.pembahasan_svg ?? ""}</section>`)).join("") +
   `</body></html>`);
 const tiers = Object.values(out).flat().map((r) => r.tingkat);
 console.log(`OK: ${PKGS.length} paket × 5 soal denah · tier sedang ${tiers.filter((t) => t === 2).length} / HOTS ${tiers.filter((t) => t === 3).length}`);

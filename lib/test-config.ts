@@ -95,10 +95,12 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // Nomor simulasi tidak boleh bentrok dengan paket latihan (KECERDASAN_PACKAGES 2-11).
 // Kecerdasan 13/14 = Paket 1/12 setelah kalibrasi Logis/Spasial 2026-10-12 (denah masuk blok
 // 38-42, scripts/seed-kecerdasan-kal.ts). Simulasi berikutnya memakai 15 ke atas.
-// ponytail: Kepribadian Paket 2 belum disusun, sementara memakai paket 11.
-export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number }> = {
+// Kartu 1-2 memakai Kepribadian paket 11 dan Kecermatan acak per sesi. Kartu 3 (Simulasi 3) punya
+// paket sendiri: Kepribadian 12 dan Kecermatan 10 (siluet, tetap; tidak ada di latihan).
+export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number; KECERMATAN?: number }> = {
   1: { KECERDASAN: 13, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN },
   2: { KECERDASAN: 14, KEPRIBADIAN: 11 },
+  3: { KECERDASAN: 15, KEPRIBADIAN: 12, KECERMATAN: 10 },
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
 // tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.

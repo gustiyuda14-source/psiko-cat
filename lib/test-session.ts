@@ -23,7 +23,8 @@ export async function createTestSessionAndRedirect(userId: string, moduleTypes: 
 
   if (sessionError || !testSession) redirect("/dashboard");
 
-  const kecermatanPackage = moduleTypes.includes("KECERMATAN") ? pickRandomKecermatanPackage() : null;
+  // Kartu dengan paket Kecermatan sendiri memakai paket itu; kartu lain mengacak per sesi.
+  const kecermatanPackage = moduleTypes.includes("KECERMATAN") ? (bank.KECERMATAN ?? pickRandomKecermatanPackage()) : null;
 
   const { error: moduleError } = await supabaseAdmin.from("module_sessions").insert(
     moduleTypes.map((type, i) => ({

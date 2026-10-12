@@ -51,6 +51,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
         correct_key: rule.correct_key,
         is_correct: selectedKey === rule.correct_key,
         pembahasan: rule.pembahasan ?? null,
+        pembahasan_svg: rule.pembahasan_svg ?? null,
         payload: q.options_payload as unknown as KecerdasanOptionsPayload,
       };
     });

@@ -7,6 +7,7 @@ import { answerFor, enDash, verticalPuzzleSvg } from "./susun-lib";
 //   pkg 13: mobil patroli (5 potong), kapal selam (4)   — menggantikan soal persegi 4 segitiga
 //           Paket 1 lama yang ambigu (docs/rencana/drilling/susun-findings.md §2)
 //   pkg 3:  helikopter (4), truk pemadam kebakaran (6)
+//   pkg 15: motor patroli (5), ekskavator (6, tingkat 3)   — Simulasi 3
 // Siluet 600×190 sendiri; setiap potongan memuat ciri unik dan setiap batas potong dilintasi
 // garis/massa yang harus menyambung. Kunci dihitung dari `order`, pengecoh = permutasi sah.
 //   npx tsx scripts/generate-kecerdasan-susun-kal.ts
@@ -66,7 +67,41 @@ const fireTruck = `
   <circle cx="490" cy="150" r="30"/><circle cx="490" cy="150" r="17" fill="white"/><circle cx="490" cy="150" r="7"/>
   <path d="M0 184 H600" stroke="#111" stroke-width="4"/>`;
 
-type Puzzle = { pkg: number; seq: number; objek: string; pieces: number; order: number[]; key: Key; scene: string; pembahasan: string };
+const motorPatroli = `
+  <path d="M0 184 H600" stroke="#111" stroke-width="4"/>
+  <rect x="24" y="52" width="88" height="48" rx="6"/><rect x="34" y="62" width="68" height="8" fill="white"/>
+  <text x="68" y="92" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" text-anchor="middle">POLISI</text>
+  <path d="M40 52 L28 12" stroke="#111" stroke-width="3"/><rect x="12" y="104" width="20" height="12"/>
+  <path d="M80 118 C92 92 168 92 182 118 Z"/><rect x="60" y="104" width="392" height="10"/>
+  <path d="M110 100 C110 88 140 86 170 88 L262 90 C270 90 272 98 266 100 Z"/>
+  <rect x="228" y="114" width="110" height="40" rx="6"/><path d="M248 120 V148 M264 120 V148 M280 120 V148 M296 120 V148 M312 120 V148" stroke="white" stroke-width="4"/>
+  <path d="M262 98 C270 70 340 66 364 94 Z"/><path d="M282 86 H342" stroke="white" stroke-width="4"/>
+  <path d="M168 162 H300" stroke="#111" stroke-width="9" stroke-linecap="round"/>
+  <path d="M362 96 C380 72 420 66 446 80 L456 104 L362 104 Z"/>
+  <path d="M404 72 L418 24 L442 28 L434 78 Z" fill="white" stroke="#111" stroke-width="4"/><rect x="416" y="10" width="30" height="11"/>
+  <path d="M392 56 L422 62" stroke="#111" stroke-width="7" stroke-linecap="round"/><path d="M412 70 L480 146" stroke="#111" stroke-width="10"/>
+  <circle cx="456" cy="90" r="12"/><circle cx="456" cy="90" r="6" fill="white"/>
+  <path d="M446 118 C458 98 508 98 520 118 Z"/>
+  <circle cx="130" cy="146" r="36"/><circle cx="130" cy="146" r="22" fill="white"/><circle cx="130" cy="146" r="8"/>
+  <circle cx="480" cy="146" r="36"/><circle cx="480" cy="146" r="22" fill="white"/><circle cx="480" cy="146" r="8"/>
+  <path d="M554 180 L571 124 L588 180 Z"/><path d="M561 156 H581" stroke="white" stroke-width="6"/><rect x="546" y="176" width="50" height="7"/>`;
+
+const ekskavator = `
+  <path d="M0 184 H600" stroke="#111" stroke-width="4"/><path d="M518 184 C540 150 582 148 600 166 V184 Z"/>
+  <rect x="30" y="140" width="362" height="40" rx="20"/>
+  <circle cx="62" cy="160" r="10" fill="white"/><circle cx="118" cy="160" r="10" fill="white"/><circle cx="174" cy="160" r="10" fill="white"/><circle cx="230" cy="160" r="10" fill="white"/><circle cx="286" cy="160" r="10" fill="white"/><circle cx="350" cy="160" r="10" fill="white"/>
+  <path d="M18 128 C10 110 12 92 26 84 L112 84 L112 128 Z"/><path d="M30 96 L44 120 M50 96 L64 120 M70 96 L84 120" stroke="white" stroke-width="5"/>
+  <rect x="64" y="50" width="10" height="34"/><rect x="60" y="44" width="18" height="8"/>
+  <rect x="106" y="90" width="104" height="38"/><path d="M124 98 V120 M140 98 V120 M156 98 V120 M172 98 V120 M188 98 V120" stroke="white" stroke-width="5"/>
+  <rect x="196" y="36" width="96" height="92" rx="6"/><path d="M210 48 H278 V96 H210 Z" fill="white"/><path d="M244 48 V96" stroke="#111" stroke-width="4"/>
+  <path d="M286 100 L302 122 L470 56 L450 28 Z"/>
+  <path d="M318 128 L404 84" stroke="#111" stroke-width="10"/><path d="M404 84 L432 70" stroke="#111" stroke-width="4"/>
+  <circle cx="460" cy="42" r="13"/><circle cx="460" cy="42" r="5" fill="white"/>
+  <path d="M460 42 L532 118" stroke="#111" stroke-width="16" stroke-linecap="round"/>
+  <path d="M512 110 L556 104 C578 120 576 150 552 160 L520 154 Z"/>
+  <path d="M524 156 L518 172 L534 158 Z M540 158 L536 174 L550 160 Z"/>`;
+
+type Puzzle = { pkg: number; seq: number; objek: string; pieces: number; order: number[]; key: Key; scene: string; pembahasan: string; tingkat?: 2 | 3 };
 
 /** Pengecoh: tukar dua potongan bersebelahan, geser siklis, tukar ujung, dan pindah satu potongan. */
 function choicesFor(order: number[], key: Key): string[] {
@@ -89,15 +124,37 @@ const puzzles: Puzzle[] = [
     pembahasan: "Ujung kiri adalah potongan dengan baling-baling ekor bundar dan sirip ekor. Ujung kanan adalah moncong kabin dengan kaca depan dan ujung landasan yang melengkung ke atas. Di antaranya, potongan batang ekor dengan baling-baling utama datang lebih dulu, lalu potongan kabin bertuliskan POLRI dengan tiang baling-baling. Batang ekor harus menyambung ke kabin dan baling-baling utama harus satu garis lurus." },
   { pkg: 3, seq: 34, objek: "truk pemadam kebakaran", pieces: 6, order: [4, 6, 2, 5, 1, 3], key: "E", scene: fireTruck,
     pembahasan: "Ujung kiri adalah bagian belakang truk dengan ujung tangga. Ujung kanan adalah moncong kabin dengan lampu depan. Urutan dari kiri: belakang truk dengan anak tangga putih dan roda belakang, gulungan selang, pintu lebar, pintu kecil dan lambang belah ketupat di atas roda tengah, kabin belakang dengan lampu sirene, lalu moncong kabin. Tangga di atap, garis putih di badan, dan garis jalan harus lurus menyambung di setiap batas." },
+  { pkg: 15, seq: 33, objek: "motor patroli", pieces: 5, order: [4, 1, 5, 3, 2], key: "A", scene: motorPatroli,
+    pembahasan: "Ujung kiri adalah potongan dengan kotak belakang bertuliskan POLISI dan antena. Ujung kanan adalah potongan dengan setengah roda depan dan kerucut lalu lintas. Setelah kotak belakang, potongan dengan jok dan sisa roda belakang menyambung ke tangki bergaris putih dan mesin bersirip. Kaca depan dengan lampu rotator dan garpu depan berada tepat sebelum ujung kanan. Rangka bawah, jok, knalpot, dan roda harus menyambung di setiap batas." },
+  { pkg: 15, seq: 34, objek: "ekskavator", pieces: 6, order: [3, 6, 1, 5, 2, 4], key: "D", scene: ekskavator, tingkat: 3,
+    pembahasan: "Ujung kiri adalah pemberat belakang yang membulat dengan garis-garis putih miring dan cerobong asap. Ujung kanan adalah bucket bergigi dengan gundukan tanah. Dari kiri: pemberat, kisi-kisi mesin, kabin berjendela, silinder hidrolik dengan ujung depan rantai roda, sendi lengan dengan pin putih, lalu bucket. Rantai roda dengan roller putih, lengan, dan garis tanah harus menyambung di setiap batas; ada enam potongan, jadi periksa setiap sambungan sebelum memilih." },
 ];
+
+/** Gambar pembahasan: gambar utuh, garis potong putus-putus, nomor potongan di atas tiap bagian (tanpa id). */
+function pembahasanSvg(p: Puzzle) {
+  const w = 600 / p.pieces, ans = answerFor(p.order);
+  const cuts = Array.from({ length: p.pieces - 1 }, (_, i) => `<path d="M${(i + 1) * w} 24 V214" stroke="#d32f2f" stroke-width="3" stroke-dasharray="8 6"/>`).join("");
+  const labels = ans.map((n, i) => `<circle cx="${i * w + w / 2}" cy="14" r="13" fill="#1a7f37"/><text x="${i * w + w / 2}" y="20" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">${n}</text>`).join("");
+  return `<svg viewBox="0 -4 600 222" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="-4" width="600" height="222" fill="white"/><g transform="translate(0 26)" fill="#111">${p.scene}</g>${cuts}${labels}</svg>`;
+}
+/** Paragraf eliminasi: setiap opsi salah putus di sambungan pertama yang tidak bersebelahan pada urutan benar. */
+function gugur(p: Puzzle, choices: string[]) {
+  const ans = answerFor(p.order), next = new Map(ans.slice(0, -1).map((n, i) => [n, ans[i + 1]]));
+  return choices.map((c, i) => {
+    if (KEYS[i] === p.key) return "";
+    const seq = c.split(" – ").map(Number), j = seq.findIndex((n, k) => k < seq.length - 1 && next.get(n) !== seq[k + 1]);
+    return `Opsi ${KEYS[i].toLowerCase()} putus di sambungan ${seq[j]}–${seq[j + 1]}.`;
+  }).filter(Boolean).join(" ");
+}
 
 type Row = {
   sequence_number: number;
   options_payload: { instruksi: string; question_text: null; sub_text: null; is_multi_select: false; svg_content: string; choices: { key: Key; text: string }[] };
   scoring_rule: { type: "dichotomous"; correct_key: Key };
-  tingkat: 2;
+  tingkat: 2 | 3;
   objek: string;
   pembahasan: string;
+  pembahasan_svg?: string;
 };
 const out: Record<number, Row[]> = {};
 for (const p of puzzles) {
@@ -114,8 +171,11 @@ for (const p of puzzles) {
     sequence_number: p.seq,
     options_payload: { instruksi: INSTRUKSI, question_text: null, sub_text: null, is_multi_select: false, svg_content: svg, choices: KEYS.map((key, i) => ({ key, text: choices[i] })) },
     scoring_rule: { type: "dichotomous", correct_key: p.key },
-    tingkat: 2, objek: p.objek,
-    pembahasan: `${p.pembahasan} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.`,
+    tingkat: p.tingkat ?? 2, objek: p.objek,
+    // Simulasi 3 (pkg 15) ke atas: aturan 2 paragraf + gambar pembahasan. Paket lama tidak diubah.
+    ...(p.pkg >= 15
+      ? { pembahasan: `${p.pembahasan}\n\n${gugur(p, choices)} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.`, pembahasan_svg: pembahasanSvg(p) }
+      : { pembahasan: `${p.pembahasan} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.` }),
   });
 }
 const ids = Object.values(out).flat().flatMap((r) => [...r.options_payload.svg_content.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]));
@@ -127,6 +187,6 @@ fs.mkdirSync(path.join(root, "output"), { recursive: true });
 const whole = (scene: string) => `<svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="max-width:600px"><rect width="100%" height="100%" fill="white"/><g fill="#111">${scene}</g></svg>`;
 fs.writeFileSync(path.join(root, "output/susun-kal-preview.html"),
   `<!doctype html><html lang="id"><meta charset="utf-8"><title>Preview Susun Kalibrasi</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111;max-width:900px}section{border:1px solid #aaa;margin:16px 0;padding:12px}svg{display:block;max-width:100%;height:auto}p{font-size:13px}</style><body>` +
-  puzzles.map((p, i) => { const r = out[p.pkg].find((x) => x.sequence_number === p.seq)!; return `<section><h3>pkg ${p.pkg} · soal ${p.seq} · ${p.objek} · kunci ${p.key} (${enDash(answerFor(p.order))})</h3>${r.options_payload.svg_content}<h4>Gambar utuh</h4>${whole(puzzles[i].scene)}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p><p>${r.pembahasan}</p></section>`; }).join("") +
+  puzzles.map((p, i) => { const r = out[p.pkg].find((x) => x.sequence_number === p.seq)!; return `<section><h3>pkg ${p.pkg} · soal ${p.seq} · ${p.objek} · kunci ${p.key} (${enDash(answerFor(p.order))})</h3>${r.options_payload.svg_content}<h4>Gambar utuh</h4>${r.pembahasan_svg ?? whole(puzzles[i].scene)}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p><p>${r.pembahasan}</p></section>`; }).join("") +
   `</body></html>`);
 console.log(`OK: ${puzzles.length} soal susun → prisma/data/kecerdasan_susun_kal.json`);

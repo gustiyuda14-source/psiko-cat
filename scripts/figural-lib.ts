@@ -140,3 +140,60 @@ export function pie({ idPrefix = "s2b-ah-", cx, cy, r, outer, inner, center, sta
   return s;
 }
 export const pieSvg = (pies: Pie[], h = 300) => svgWrap(h, pies.map(pie).join(""));
+
+// ── tata letak besar (terbaca di HP) + gambar pembahasan, dipakai pkg 15 ────────
+// Figur digambar dengan draw() lalu diskalakan (transform), jadi sig()/place() tetap berlaku.
+// Gambar pembahasan: jawaban berbingkai hijau, anotasi merah; tanpa id (dirender bersama butir lain).
+export const HL = "#1a7f37", RED = "#d32f2f";
+export const textC = (x: number, y: number, t: string, size: number, fill: string, anchor = "middle") =>
+  `<text x="${r1(x)}" y="${r1(y)}" font-family="Arial, Helvetica, sans-serif" font-size="${size}" font-weight="bold" text-anchor="${anchor}" fill="${fill}">${t}</text>`;
+export const redText = (x: number, y: number, t: string, size = 24, anchor = "middle") => textC(x, y, t, size, RED, anchor);
+export const redRing = (x: number, y: number, r: number, color = RED) => `<circle cx="${r1(x)}" cy="${r1(y)}" r="${r1(r)}" fill="none" stroke="${color}" stroke-width="4"/>`;
+/** Panah merah dari a ke b, kepala berupa poligon (tanpa marker/id). */
+export function redArrow([x1, y1]: Pt, [x2, y2]: Pt, dash = false, color = RED) {
+  const a = Math.atan2(y2 - y1, x2 - x1), h = 16, w = 9, bx = x2 - h * Math.cos(a), by = y2 - h * Math.sin(a);
+  return `<path d="M${r1(x1)} ${r1(y1)} L${r1(bx)} ${r1(by)}" stroke="${color}" stroke-width="4" fill="none"${dash ? ' stroke-dasharray="8 6"' : ""}/>` +
+    `<polygon points="${r1(x2)},${r1(y2)} ${r1(bx + w * Math.sin(a))},${r1(by - w * Math.cos(a))} ${r1(bx - w * Math.sin(a))},${r1(by + w * Math.cos(a))}" fill="${color}"/>`;
+}
+export const drawS = (fig: Fig, cx: number, cy: number, size: number) =>
+  `<g transform="translate(${r1(cx)} ${r1(cy)}) scale(${Math.round((size / BOX) * 1000) / 1000})">${draw(fig, 0, 0)}</g>`;
+/** Kotak berukuran `size` berisi figur (koordinat BOX) atau "?"; hl = bingkai hijau. */
+export const cellS = (f: Fig | null, cx: number, cy: number, size: number, hl = false) =>
+  `<rect x="${r1(cx - size / 2)}" y="${r1(cy - size / 2)}" width="${size}" height="${size}" fill="white" stroke="${hl ? HL : INK}" stroke-width="${hl ? 8 : 3}"/>` +
+  (f ? drawS(f, cx, cy, size) : text(cx, cy + size * 0.15, "?", Math.round(size * 0.42)));
+export function optionsRowS(options: Fig[], top: number, o: { size?: number; hl?: number } = {}) {
+  const size = o.size ?? 140, step = 160, left = (W - 4 * step) / 2, cy = top + size / 2;
+  return {
+    body: options.map((f, i) => cellS(f, left + i * step, cy, size, o.hl === i) + text(left + i * step, cy + size / 2 + 32, "abcde"[i], 28)).join(""),
+    at: (i: number): Pt => [left + i * step, cy], size, bottom: cy + size / 2 + 46,
+  };
+}
+export type Ann = (at: (r: number, c: number) => Pt, size: number) => string;
+/** Grid figur besar (null = "?"), opsional 5 pilihan di bawah. Juga untuk analogi (1×4), soal rotasi (1×1), pembahasan. */
+export function gridS(grid: (Fig | null)[][], options: Fig[] | null, o: { size?: number; gap?: number; hl?: [number, number]; ann?: Ann; top?: number; foot?: number } = {}) {
+  const size = o.size ?? 150, step = size + (o.gap ?? 14), cols = grid[0].length;
+  const left = (W - (cols - 1) * step) / 2, top = (o.top ?? 16) + size / 2;
+  const at = (r: number, c: number): Pt => [left + c * step, top + r * step];
+  let body = "";
+  grid.forEach((row, r) => row.forEach((f, c) => (body += cellS(f, ...at(r, c), size, o.hl?.[0] === r && o.hl?.[1] === c))));
+  if (o.ann) body += o.ann(at, size);
+  let bottom = top + (grid.length - 1) * step + size / 2 + (o.foot ?? 16);
+  if (options) { const op = optionsRowS(options, bottom + 24); body += op.body; bottom = op.bottom; }
+  return svgWrap(Math.ceil(bottom), body);
+}
+/** Analogi besar A : B = C : ? (anotasi tambahan opsional). */
+export const analogyS = (figs: (Fig | null)[], options: Fig[] | null, o: { hl?: boolean; ann?: Ann; foot?: number } = {}) =>
+  gridS([figs], options, {
+    gap: 50, hl: o.hl ? [0, 3] : undefined, foot: o.foot,
+    ann: (at, s) => [":", "=", ":"].map((t, i) => text((at(0, i)[0] + at(0, i + 1)[0]) / 2, at(0, 0)[1] + 12, t, 40)).join("") + (o.ann?.(at, s) ?? ""),
+  });
+/** Koordinat label pie (sama dengan pie()): cincin luar, dalam, atau pusat. */
+export function pieAt({ cx, cy, r, outer, inner, center }: Pie, ring: "outer" | "inner" | "center", i = 0): Pt {
+  const n = outer.length, deg = ((-90 + (360 / n) * i) * Math.PI) / 180;
+  const rr = ring === "center" ? 0 : ring === "inner" ? r * 0.5 * 0.58 : inner ? r * 0.76 : center !== undefined ? r * 0.66 : r * 0.62;
+  return [r1(cx + rr * Math.cos(deg)), r1(cy + rr * Math.sin(deg))];
+}
+/** Titik figur (koordinat BOX) → koordinat SVG pada kotak berpusat `at` berukuran `size`. */
+export const fp = ([x, y]: Pt, [cx, cy]: Pt, size: number): Pt => [cx + (x * size) / BOX, cy + (y * size) / BOX];
+/** Baris keterangan merah di tengah, mulai dari y0. */
+export const foot = (lines: string[], y0: number) => lines.map((t, i) => redText(W / 2, y0 + 34 * i, t, 25)).join("");

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { data } from "./kecerdasan-teks-lib";
 
-// Brute force wacana logika Latihan Paket 2 (package_number 3), soal 65-75 (pedoman §4.5):
+// Brute force wacana logika Latihan Paket 2 (package_number 3) dan Simulasi Paket 3 (package_number 15), soal 65-75 (pedoman §4.5):
 // semua susunan yang memenuhi syarat dihitung, lalu kunci tiap soal diturunkan ulang dan
 // dicocokkan dengan field k di prisma/data/kecerdasan_p3_teks.json. Opsi sah harus tepat satu.
 //   npx tsx scripts/cek-wacana-kal.ts
@@ -11,8 +11,9 @@ function perms<T>(a: T[]): T[][] {
   return a.flatMap((x, i) => perms([...a.slice(0, i), ...a.slice(i + 1)]).map((p) => [x, ...p]));
 }
 type Q<S> = { s: number; kind: "pasti" | "kecuali"; cond?: (x: S) => boolean; opts: ((x: S) => boolean)[] };
-const teks = data("kecerdasan_p3_teks.json") as { soal: { s: number; k: string }[] };
-function check<S>(name: string, sols: S[], qs: Q<S>[]) {
+type KeyFile = { soal: { s: number; k: string }[] };
+const teks = data("kecerdasan_p3_teks.json") as KeyFile;
+function check<S>(name: string, sols: S[], qs: Q<S>[], file: KeyFile = teks) {
   console.log(`${name}: ${sols.length} susunan sah`);
   for (const q of qs) {
     const pool = sols.filter(q.cond ?? (() => true));
@@ -21,7 +22,7 @@ function check<S>(name: string, sols: S[], qs: Q<S>[]) {
     assert.equal(ok.filter(Boolean).length, 1, `soal ${q.s}: opsi sah ${ok.filter(Boolean).length}, harus tepat 1`);
     if (q.kind === "kecuali") q.opts.forEach((f, i) => assert.ok(ok[i] || pool.some(f), `soal ${q.s}: opsi ${"ABCDE"[i]} juga tidak mungkin`));
     const key = "ABCDE"[ok.indexOf(true)];
-    assert.equal(key, teks.soal.find((x) => x.s === q.s)!.k, `soal ${q.s}: kunci file ≠ brute force ${key}`);
+    assert.equal(key, file.soal.find((x) => x.s === q.s)!.k, `soal ${q.s}: kunci file ≠ brute force ${key}`);
   }
 }
 
@@ -78,4 +79,80 @@ function check<S>(name: string, sols: S[], qs: Q<S>[]) {
     { s: 75, kind: "pasti", cond: (x) => x.u.Lukas === "Lantas", opts: [(x) => x.r.Kirana === 2, (x) => x.r.Lukas === 4, (x) => x.r.Nanda === 2, (x) => x.u.Mega === "Tipikor", (x) => x.u.Nanda === "Narkoba"] },
   ]);
 }
-console.log("OK: kunci 65-75 cocok dengan brute force.");
+console.log("OK: kunci 65-75 pkg 3 cocok dengan brute force.");
+
+// ════ Simulasi Paket 3 (package_number 15), soal 65-75: tiap wacana wajib bersolusi tunggal ════
+// Ganti ke "kecerdasan_p15_teks.json" setelah file bagian digabung.
+const P15_FILE = "kecerdasan_p15_teks.json";
+const t15 = data(P15_FILE) as KeyFile;
+const tunggal = <S>(name: string, sols: S[]) => { assert.equal(sols.length, 1, `${name}: solusi harus tunggal, dapat ${sols.length}`); return sols; };
+type Pos = Record<string, number>;
+const assign = (names: string[]) => perms(names.map((_, i) => i + 1)).map((p) => Object.fromEntries(names.map((n, i) => [n, p[i]])) as Pos);
+
+// ── p15wPOS (65-68): pos 1-6 berjajar barat → timur ──
+{
+  const all = assign(["Galih", "Hana", "Irfan", "Jihan", "Kevin", "Laras"]);
+  const adj = (s: Pos, a: string, b: string) => Math.abs(s[a] - s[b]) === 1;
+  const base = (s: Pos) => s.Irfan === s.Kevin + 1 && Math.abs(s.Jihan - s.Laras) === 3 && !adj(s, "Galih", "Hana") && !adj(s, "Galih", "Irfan")
+    && (s.Galih !== 1 || s.Jihan === 6);
+  const sols = tunggal("POS", all.filter((s) => base(s) && s.Laras > s.Jihan));
+  check("POS", sols, [
+    { s: 65, kind: "pasti", opts: ["Galih", "Irfan", "Jihan", "Kevin", "Laras"].map((n) => (s: Pos) => s[n] === 3) },
+    { s: 66, kind: "pasti", opts: [(s) => s.Galih === 1, (s) => s.Laras === s.Irfan + 1, (s) => adj(s, "Jihan", "Irfan"), (s) => adj(s, "Hana", "Kevin"), (s) => Math.abs(s.Hana - s.Laras) === 3] },
+    { s: 67, kind: "kecuali", opts: [(s) => s.Kevin % 2 === 1, (s) => s.Galih === 6, (s) => s.Kevin < s.Irfan && s.Irfan < s.Laras, (s) => s.Kevin === s.Jihan + 1, (s) => adj(s, "Hana", "Laras")] },
+  ], t15);
+  // 68: syarat "Laras di sebelah timur Jihan" dihapus
+  check("POS tanpa syarat Laras-timur-Jihan", all.filter(base), [
+    { s: 68, kind: "pasti", opts: [(s) => s.Galih === 6, (s) => s.Jihan === 2, (s) => adj(s, "Hana", "Laras"), (s) => s.Laras === 5, (s) => adj(s, "Jihan", "Irfan")] },
+  ], t15);
+}
+
+// ── p15wJADWAL (69-72): hari 1-6 = Senin-Sabtu ──
+{
+  const acts = ["Apel", "Bakti", "Donor", "Jalan", "Menembak", "Penyuluhan"];
+  const all = assign(acts);
+  const syarat = [
+    (s: Pos) => s.Menembak !== 1 && s.Menembak !== 6,
+    (s: Pos) => s.Penyuluhan === s.Donor + 2,
+    (s: Pos) => s.Menembak < s.Donor,
+    (s: Pos) => s.Bakti > s.Menembak,
+    (s: Pos) => s.Apel !== 1,
+    (s: Pos) => s.Menembak !== 2 || s.Apel === 1,
+  ];
+  const sols = tunggal("JADWAL", all.filter((s) => syarat.every((f) => f(s))));
+  const on = (s: Pos, d: number) => acts.find((a) => s[a] === d);
+  check("JADWAL", sols, [
+    { s: 69, kind: "pasti", opts: ["Apel", "Bakti", "Donor", "Menembak", "Penyuluhan"].map((a) => (s: Pos) => s[a] === 4) },
+    { s: 70, kind: "pasti", opts: [(s) => s.Jalan === s.Menembak - 1, (s) => s.Donor < s.Bakti && s.Bakti < s.Penyuluhan, (s) => s.Apel === 1, (s) => s.Menembak === 2, (s) => s.Donor === 3] },
+  ], t15);
+  // 71: syarat Bakti > Menembak diganti dengan Bakti hari Senin
+  const ganti = all.filter((s) => syarat.filter((_, i) => i !== 3).every((f) => f(s)) && s.Bakti === 1);
+  check("JADWAL syarat Bakti diganti", ganti, [
+    { s: 71, kind: "pasti", opts: [...["Apel", "Jalan", "Donor", "Menembak"].map((a) => (s: Pos) => s[a] === 2), () => new Set(ganti.map((s) => on(s, 2))).size > 1] },
+  ], t15);
+  // 72: Jalan sehat dan Apel bertukar hari; opsi sah = syarat yang dilanggar (urutan opsi: syarat 0,1,3,4,5)
+  const tukar = sols.map((s) => ({ ...s, Apel: s.Jalan, Jalan: s.Apel }));
+  check("JADWAL Jalan-Apel ditukar", tukar, [{ s: 72, kind: "pasti", opts: [0, 1, 3, 4, 5].map((i) => (s: Pos) => !syarat[i](s)) }], t15);
+}
+
+// ── p15wASAL (73-75): nama × kota × fungsi ──
+{
+  type S = { a: Record<string, string>; f: Record<string, string> };
+  const names = ["Rafi", "Sinta", "Taufik", "Umi", "Wawan"];
+  const all: S[] = [];
+  for (const ap of perms(["Ambon", "Bogor", "Cirebon", "Dumai", "Kupang"])) for (const fp of perms(["Binmas", "Intelkam", "Lantas", "Reskrim", "Sabhara"]))
+    all.push({ a: Object.fromEntries(names.map((n, i) => [n, ap[i]])), f: Object.fromEntries(names.map((n, i) => [n, fp[i]])) });
+  const who = (m: Record<string, string>, v: string) => names.find((n) => m[n] === v)!;
+  const base = ({ a, f }: S) => f[who(a, "Kupang")] === "Binmas" && f[who(a, "Bogor")] === "Reskrim" && f.Rafi === "Sabhara" && ["Ambon", "Cirebon"].includes(a.Rafi)
+    && f.Wawan === "Lantas" && !["Ambon", "Dumai"].includes(a.Wawan) && !["Bogor", "Kupang"].includes(a.Sinta);
+  const sols = tunggal("ASAL", all.filter((x) => base(x) && (x.a.Umi !== "Kupang" || x.f.Taufik === "Intelkam")));
+  check("ASAL", sols, [
+    { s: 73, kind: "pasti", opts: names.map((n) => (x: S) => x.a[n] === "Ambon") },
+    { s: 74, kind: "kecuali", opts: [(x) => x.f.Umi === "Reskrim", (x) => x.a.Taufik === "Bogor", (x) => x.f[who(x.a, "Cirebon")] === "Lantas", (x) => x.a.Rafi === "Ambon", (x) => x.f.Sinta === "Intelkam"] },
+  ], t15);
+  // 75: syarat terakhir diganti "jika Taufik dari Kupang, maka Rafi dari Cirebon"
+  check("ASAL syarat terakhir diganti", all.filter((x) => base(x) && (x.a.Taufik !== "Kupang" || x.a.Rafi === "Cirebon")), [
+    { s: 75, kind: "pasti", opts: names.map((n) => (x: S) => x.f[n] === "Binmas") },
+  ], t15);
+}
+console.log(`OK: kunci 65-75 pkg 15 (${P15_FILE}) cocok dengan brute force.`);

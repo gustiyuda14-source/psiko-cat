@@ -17,7 +17,7 @@ import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 //
 // Pakai: npx tsx scripts/generate-kecermatan-simbol.ts
 // Hasil: prisma/data/bank_soal_p301.json ... p305.json + public/kecermatan-simbol/p30x/*.svg,
-//        prisma/data/bank_soal_p9.json + public/kecermatan-siluet/*.svg (lihat siluetBank)
+//        prisma/data/bank_soal_p9.json, p10.json + public/kecermatan-siluet/*.svg (lihat siluetBank)
 
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
@@ -241,10 +241,33 @@ const NAMA_SILUET: Record<string, string> = {
   hammer: "palu", wrench: "kunci pas", screwdriver: "obeng", scissors: "gunting", axe: "kapak",
   sun: "matahari", moon: "bulan", "cloud-rain": "hujan", snowflake: "salju", lightning: "petir",
   "t-shirt": "kaos", pants: "celana", dress: "gaun", sneaker: "sepatu", "baseball-cap": "topi",
+  // Paket 10 (Simulasi 3)
+  avocado: "alpukat", cherries: "ceri", orange: "jeruk", pepper: "cabai", grains: "gandum",
+  "cooking-pot": "panci", knife: "pisau", jar: "toples", "bowl-steam": "mangkuk", coffee: "cangkir",
+  radio: "radio", television: "televisi", camera: "kamera", laptop: "laptop", printer: "printer",
+  paperclip: "klip", "push-pin": "pines", pencil: "pensil", ruler: "penggaris", stamp: "stempel",
+  "soccer-ball": "sepak bola", basketball: "basket", football: "rugbi", "boxing-glove": "tinju", barbell: "barbel",
+  house: "rumah", factory: "pabrik", lighthouse: "mercusuar", tent: "tenda", "castle-turret": "benteng",
+  hoodie: "jaket", sock: "kaus kaki", "high-heel": "sepatu hak", "cowboy-hat": "topi koboi", watch: "jam tangan",
+  backpack: "ransel", suitcase: "koper", briefcase: "tas kerja", umbrella: "payung", wallet: "dompet",
+  shovel: "sekop", ladder: "tangga", broom: "sapu", "paint-roller": "rol cat", flashlight: "senter",
+  rainbow: "pelangi", tornado: "tornado", planet: "planet", star: "bintang", drop: "tetes air",
 };
+// Paket 10 (Simulasi Penuh Paket 3): kategori & ikon baru, tidak ada yang dipakai ulang dari paket 9 (latihan).
+const SILUET_P10: string[][] = [
+  ["avocado", "cherries", "orange", "pepper", "grains"],
+  ["cooking-pot", "knife", "jar", "bowl-steam", "coffee"],
+  ["radio", "television", "camera", "laptop", "printer"],
+  ["paperclip", "push-pin", "pencil", "ruler", "stamp"],
+  ["soccer-ball", "basketball", "football", "boxing-glove", "barbell"],
+  ["house", "factory", "lighthouse", "tent", "castle-turret"],
+  ["hoodie", "sock", "high-heel", "cowboy-hat", "watch"],
+  ["backpack", "suitcase", "briefcase", "umbrella", "wallet"],
+  ["shovel", "ladder", "broom", "paint-roller", "flashlight"],
+  ["rainbow", "tornado", "planet", "star", "drop"],
+];
 
-async function siluetBank() {
-  const nomor = 9;
+async function siluetBank(nomor: number, nama: string, sets: string[][]) {
   const rand = mulberry32(nomor);
   const dir = new URL("../public/kecermatan-siluet/", import.meta.url);
   mkdirSync(dir, { recursive: true });
@@ -254,7 +277,7 @@ async function siluetBank() {
     assert.ok(license.ok, "Gagal unduh LICENSE Phosphor");
     writeFileSync(new URL("LICENSE-phosphor.txt", dir), await license.text());
   }
-  for (const name of SILUET.flat()) {
+  for (const name of sets.flat()) {
     pelafalan[`/kecermatan-siluet/${name}.svg`] = NAMA_SILUET[name];
     if (existsSync(new URL(`${name}.svg`, dir))) continue;
     const res = await fetch(`${PHOSPHOR}/assets/fill/${name}-fill.svg`);
@@ -267,11 +290,11 @@ async function siluetBank() {
   }
   return {
     nomor,
-    nama: "Paket Siluet Gambar",
+    nama,
     kategori: "SILUET",
     total_soal: 500,
     kolom: ROMAN.map((roman, c) => {
-      const values = shuffle(SILUET[c], rand).map((name) => `/kecermatan-siluet/${name}.svg`);
+      const values = shuffle(sets[c], rand).map((name) => `/kecermatan-siluet/${name}.svg`);
       const simbol = Object.fromEntries(KEYS.map((k, i) => [k, values[i]])) as Record<Key, string>;
       return { nomor: c + 1, roman, simbol, soal: makeColumn(simbol, rand) };
     }),
@@ -279,7 +302,10 @@ async function siluetBank() {
 }
 
 async function main() {
-  for (const bank of [...[0, 1, 2, 3, 4].map(makeBank), await siluetBank()]) {
+  // Anti-bocor: ikon simulasi (p10) tidak boleh sudah dikenal dari latihan (p9).
+  assert.ok(!SILUET_P10.flat().some((n) => SILUET.flat().includes(n)), "Ikon paket 10 dipakai ulang dari paket 9");
+  for (const bank of [...[0, 1, 2, 3, 4].map(makeBank), await siluetBank(9, "Paket Siluet Gambar", SILUET),
+    await siluetBank(10, "Simulasi 3 — Siluet Gambar", SILUET_P10)]) {
     let verified = 0;
     for (const column of bank.kolom) {
       assert.equal(new Set(Object.values(column.simbol)).size, 5);

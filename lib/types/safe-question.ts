@@ -63,6 +63,8 @@ export type KecerdasanScoringRule = {
   correct_key: string;
   // Hanya dibaca server untuk layar pembahasan; tidak pernah ikut options_payload.
   pembahasan?: string;
+  // Gambar pembahasan (SVG sendiri: jawaban terisi / urutan benar), sama aturannya dengan pembahasan.
+  pembahasan_svg?: string;
 };
 
 export type KepribadianScoringRule = {

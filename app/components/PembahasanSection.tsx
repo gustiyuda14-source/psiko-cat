@@ -16,6 +16,7 @@ export type KecerdasanReviewItem = {
   correct_key: string;
   is_correct: boolean;
   pembahasan?: string | null;
+  pembahasan_svg?: string | null;
   payload: KecerdasanOptionsPayload;
 };
 
@@ -184,6 +185,13 @@ function KecerdasanItem({ item }: { item: KecerdasanReviewItem }) {
 
       <div className="rounded-md border border-border bg-card px-3 py-2.5">
         <p className="text-xs font-semibold text-foreground">Pembahasan</p>
+        {/* SVG pembahasan dibuat generator sendiri (dicek tanpa script/href luar), sama seperti svg_content soal. */}
+        {item.pembahasan_svg && (
+          <figure className="my-2">
+            <div className="overflow-x-auto rounded-md border border-border bg-white p-2" dangerouslySetInnerHTML={{ __html: item.pembahasan_svg }} />
+            <figcaption className="mt-1 text-center text-xs text-muted-foreground">Gambar pembahasan</figcaption>
+          </figure>
+        )}
         {item.pembahasan ? (
           <p className="mt-1 max-w-[68ch] whitespace-pre-line leading-relaxed text-foreground">{item.pembahasan}</p>
         ) : (
