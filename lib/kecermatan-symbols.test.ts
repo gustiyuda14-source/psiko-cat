@@ -24,4 +24,20 @@ for (const id of [3, 4, 5, 6, 7, 8, 201, 202, 203, 204, 205, 206]) {
   }
 }
 assert.equal(verified, 6000);
+
+// Bantuan pelafalan latihan: kolom yang berlabel wajib 5 kata unik (kolom tanpa label, mis. angka/huruf, dilewati).
+const pelafalan = JSON.parse(readFileSync(new URL("../data/kecermatan-pelafalan.json", import.meta.url), "utf8")) as Record<string, string>;
+let labelled = 0;
+for (const id of [3, 4, 5, 6, 7, 8, 9, 201, 202, 203, 204, 205, 206, 301]) {
+  const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
+    kolom: { nomor: number; simbol: KecermatanOptionsPayload["symbol_map"] }[];
+  };
+  for (const col of bank.kolom) {
+    const words = KECERMATAN_KEYS.map((k) => pelafalan[col.simbol[k]]);
+    if (!words.some(Boolean)) continue;
+    assert.ok(words.every(Boolean) && new Set(words).size === 5, `p${id} kolom ${col.nomor}: ${words}`);
+    labelled++;
+  }
+}
+assert.equal(labelled, 139);
 console.log(`Kecermatan: ${verified} source answers, all keys, emoji, ordering, and malformed payload checks passed.`);

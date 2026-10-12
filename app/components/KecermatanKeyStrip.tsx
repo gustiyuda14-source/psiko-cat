@@ -24,11 +24,14 @@ export function KecermatanSymbol({ symbol }: { symbol: string }) {
 export function KecermatanKeyStrip({
   symbolMap,
   size = "md",
+  labels,
 }: {
   symbolMap: Partial<Record<KecermatanKey, string>>;
   size?: "md" | "lg";
+  /** Kata bantuan pelafalan (latihan saja), di atas tiap kunci pada grid yang sama. */
+  labels?: Partial<Record<KecermatanKey, string>> | null;
 }) {
-  return (
+  const strip = (
     <div className="grid grid-cols-5 gap-1.5" aria-label="Tabel kunci simbol">
       {KECERMATAN_KEYS.map((k) => (
         <div key={k} className="overflow-hidden rounded-md border border-border bg-card text-center">
@@ -42,6 +45,20 @@ export function KecermatanKeyStrip({
           </div>
         </div>
       ))}
+    </div>
+  );
+  if (!labels) return strip;
+  return (
+    <div className="space-y-1">
+      <div className="grid grid-cols-5 gap-1.5" aria-label="Bantuan pelafalan kunci">
+        {KECERMATAN_KEYS.map((k) => (
+          // "bentuk · posisi" dipecah jadi dua baris; tinggi tetap supaya strip tidak lompat antar kolom.
+          <p key={k} className="flex min-h-[2.75rem] flex-col items-center justify-end text-center text-[11px] font-semibold leading-tight text-accent-ink sm:text-xs">
+            {(labels[k] ?? "").split(" · ").map((part) => <span key={part}>{part}</span>)}
+          </p>
+        ))}
+      </div>
+      {strip}
     </div>
   );
 }

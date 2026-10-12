@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 // Generator Kecermatan Simbol Hilang (huruf Yunani mirip). Aturan diturunkan
 // dari contoh soal Polri (FILE PSIKO POLRI 2026/1_5017529637278843693.pdf):
@@ -24,6 +24,11 @@ const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 type Key = (typeof KEYS)[number];
 
 const GREEK = [..."εξζΠϖΓΦθμΩ"];
+// Kata bantuan pelafalan (latihan) per simbol; ditulis ke data/kecermatan-pelafalan.json.
+const pelafalan: Record<string, string> = {
+  ε: "epsilon", ξ: "ksi", ζ: "zeta", Π: "pi besar", ϖ: "pi lengkung",
+  Γ: "gamma", Φ: "fi", θ: "teta", μ: "mu", Ω: "omega",
+};
 type Style = "garis" | "lengkung" | "titik" | "campur";
 const STYLES: Style[] = ["garis", "lengkung", "titik", "campur"];
 
@@ -225,16 +230,33 @@ const SILUET: string[][] = [
   ["sun", "moon", "cloud-rain", "snowflake", "lightning"],
   ["t-shirt", "pants", "dress", "sneaker", "baseball-cap"],
 ];
+const NAMA_SILUET: Record<string, string> = {
+  "car-profile": "mobil", bus: "bus", motorcycle: "motor", truck: "truk", bicycle: "sepeda",
+  cat: "kucing", dog: "anjing", rabbit: "kelinci", bird: "burung", fish: "ikan",
+  horse: "kuda", cow: "sapi", butterfly: "kupu-kupu", "bug-beetle": "kumbang", shrimp: "udang",
+  airplane: "pesawat", sailboat: "perahu", train: "kereta", tractor: "traktor", rocket: "roket",
+  pizza: "pizza", hamburger: "burger", "ice-cream": "es krim", cake: "kue", carrot: "wortel",
+  tree: "pohon", cactus: "kaktus", "flower-tulip": "bunga", leaf: "daun", "tree-palm": "kelapa",
+  guitar: "gitar", "piano-keys": "piano", headphones: "headset", microphone: "mik", bell: "lonceng",
+  hammer: "palu", wrench: "kunci pas", screwdriver: "obeng", scissors: "gunting", axe: "kapak",
+  sun: "matahari", moon: "bulan", "cloud-rain": "hujan", snowflake: "salju", lightning: "petir",
+  "t-shirt": "kaos", pants: "celana", dress: "gaun", sneaker: "sepatu", "baseball-cap": "topi",
+};
 
 async function siluetBank() {
   const nomor = 9;
   const rand = mulberry32(nomor);
   const dir = new URL("../public/kecermatan-siluet/", import.meta.url);
   mkdirSync(dir, { recursive: true });
-  const license = await fetch(`${PHOSPHOR}/LICENSE`);
-  assert.ok(license.ok, "Gagal unduh LICENSE Phosphor");
-  writeFileSync(new URL("LICENSE-phosphor.txt", dir), await license.text());
+  // Versi Phosphor dipatok, jadi file yang sudah ada di disk tidak diunduh ulang.
+  if (!existsSync(new URL("LICENSE-phosphor.txt", dir))) {
+    const license = await fetch(`${PHOSPHOR}/LICENSE`);
+    assert.ok(license.ok, "Gagal unduh LICENSE Phosphor");
+    writeFileSync(new URL("LICENSE-phosphor.txt", dir), await license.text());
+  }
   for (const name of SILUET.flat()) {
+    pelafalan[`/kecermatan-siluet/${name}.svg`] = NAMA_SILUET[name];
+    if (existsSync(new URL(`${name}.svg`, dir))) continue;
     const res = await fetch(`${PHOSPHOR}/assets/fill/${name}-fill.svg`);
     assert.ok(res.ok, `Ikon Phosphor tidak ada: ${name}`);
     const inner = (await res.text()).replace(/^[\s\S]*?<svg[^>]*>|<\/svg>\s*$/g, "");
@@ -261,6 +283,9 @@ async function main() {
     let verified = 0;
     for (const column of bank.kolom) {
       assert.equal(new Set(Object.values(column.simbol)).size, 5);
+      // Aksara karangan (302-305) sengaja tanpa label: deskripsi goresan terlalu panjang & sering kembar.
+      const words = Object.values(column.simbol).map((sym) => pelafalan[sym]);
+      if (!String(column.simbol.A).startsWith("/kecermatan-simbol/")) assert.ok(words.every(Boolean) && new Set(words).size === 5, `Paket ${bank.nomor} kolom ${column.nomor}: label kosong/kembar ${words}`);
       const counts = Object.fromEntries(KEYS.map((k) => [k, 0])) as Record<Key, number>;
       column.soal.forEach((item, i) => {
         assert.equal(new Set(item.shown).size, 4);
@@ -278,6 +303,10 @@ async function main() {
     writeFileSync(output, `${JSON.stringify(bank, null, 2)}\n`);
     console.log(`Generated ${verified} soal valid: ${output.pathname}`);
   }
+  const labelFile = new URL("../data/kecermatan-pelafalan.json", import.meta.url);
+  const all = existsSync(labelFile) ? JSON.parse(readFileSync(labelFile, "utf8")) : {};
+  Object.assign(all, pelafalan);
+  writeFileSync(labelFile, `${JSON.stringify(Object.fromEntries(Object.entries(all).sort()), null, 2)}\n`);
 }
 
 main().catch((err) => {

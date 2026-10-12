@@ -13,9 +13,12 @@ import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { scoreLatihanKecermatan } from "./actions";
 import LatihanKecermatanHasil, { type LatihanFeedback } from "./LatihanKecermatanHasil";
 import AttemptSaver from "./AttemptSaver";
+import PELAFALAN from "@/data/kecermatan-pelafalan.json";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const INTRO_SECONDS = 5;
+const PELAFALAN_PREF = "kecermatan-show-pelafalan";
+const pelafalanOf = (symbol: unknown) => (PELAFALAN as Record<string, string>)[String(symbol)];
 type Feedback = LatihanFeedback;
 
 export default function LatihanKecermatan({
@@ -67,6 +70,33 @@ export default function LatihanKecermatan({
   const shown = Array.isArray(payload?.shown) ? payload.shown.filter((symbol) => typeof symbol === "string") : [];
   const symbolMap = payload?.symbol_map ?? { A: "?", B: "?", C: "?", D: "?", E: "?" };
   const fb = q ? answers[q.id] : undefined;
+
+  // Bantuan pelafalan: kata per kunci (data/kecermatan-pelafalan.json). Angka/huruf
+  // tidak punya label, jadi toggle cuma muncul kalau paket ini punya label.
+  const hasPelafalan = useMemo(
+    () => sorted.some((s) => pelafalanOf((s.options_payload as unknown as KecermatanOptionsPayload)?.symbol_map?.A)),
+    [sorted]
+  );
+  // Dirender setelah "Mulai" (LatihanGate), jadi selalu di browser.
+  const [showPelafalan, setShowPelafalan] = useState(() => {
+    try {
+      return localStorage.getItem(PELAFALAN_PREF) !== "0";
+    } catch {
+      return true;
+    }
+  });
+  const togglePelafalan = () => {
+    setShowPelafalan((v) => {
+      try {
+        localStorage.setItem(PELAFALAN_PREF, v ? "0" : "1");
+      } catch {}
+      return !v;
+    });
+  };
+  const labels =
+    showPelafalan && KECERMATAN_KEYS.some((k) => pelafalanOf(symbolMap[k]))
+      ? Object.fromEntries(KECERMATAN_KEYS.map((k) => [k, pelafalanOf(symbolMap[k]) ?? ""]))
+      : null;
   const answeredCount = Object.keys(answers).length;
   const colIdx = (q?.column_index ?? 1) - 1;
   const rowInCol = q ? sorted.slice(0, idx).filter((s) => s.column_index === q.column_index).length : 0;
@@ -353,7 +383,19 @@ export default function LatihanKecermatan({
 
       <div className="surface-card overflow-hidden">
             <div className="mx-auto max-w-lg space-y-5 px-4 py-5 sm:px-6 sm:py-6">
-              <KecermatanKeyStrip symbolMap={symbolMap} />
+              {hasPelafalan && (
+                <div className="-mb-3 flex justify-end">
+                  <button
+                    type="button"
+                    onClick={togglePelafalan}
+                    aria-pressed={showPelafalan}
+                    className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                  >
+                    {showPelafalan ? "Sembunyikan bantuan pelafalan" : "Tampilkan bantuan pelafalan"}
+                  </button>
+                </div>
+              )}
+              <KecermatanKeyStrip symbolMap={symbolMap} labels={labels} />
 
               <div key={q.id} className="question-enter grid grid-cols-4 gap-2" aria-label={`Simbol kolom ${colIdx + 1}, butir ${rowInCol + 1}`}>
                 {shown.map((sym, i) => (
