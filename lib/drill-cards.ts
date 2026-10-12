@@ -31,7 +31,7 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K12: { label: "Pola & Matriks Gambar", aspek: "figural", desc: "Matriks 3×3, deret, dan analogi gambar", prefix: ["FIG-MTX-", "FIG-SERI", "FIG-ANALOGI", "FIG-ROTASI-"] },
   K13: { label: "Ikon Kategori", aspek: "figural", desc: "Kelompok gambar berdasarkan kategori", prefix: ["FIG-IKON-"] },
   K14: { label: "Susun Potongan Gambar", aspek: "figural", desc: "Urutkan potongan menjadi gambar utuh", prefix: ["FIG-SUSUN-"] },
-  K17: { label: "Denah & Arah Mata Angin", aspek: "analitis", desc: "Arah 8 mata angin, rute belok kiri/kanan, bangunan yang dilalui, pojok & di antara jalan", prefix: ["FIG-DENAH-"] },
+  K17: { label: "Denah & Arah Mata Angin", aspek: "analitis", desc: "Arah 8 mata angin, rute belok kiri/kanan, bangunan yang dilalui, pojok & di antara jalan, peta diputar", prefix: ["FIG-DENAH-"] },
   K16: { label: "Kecukupan Data", aspek: "logika", desc: "Menilai apakah pernyataan cukup untuk menjawab", prefix: ["LOG-KCK-"] },
   K15: { label: "Sikap Kerja", aspek: "sikap", desc: "Pilihan A/B sesuai kunci latihan nilai kerja institusi", prefix: ["SKJ-"], opsi: 2 },
 };
@@ -60,7 +60,7 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["SKJ-INFORMASI", "Keterbukaan informasi"], ["SKJ-REFLEKSI", "Refleksi diri"], ["SKJ-HASIL", "Orientasi hasil"],
   ["SKJ-KEBENARAN", "Kebenaran"], ["SKJ-WEWENANG", "Kewenangan"], ["SKJ-TEGAS", "Ketegasan"],
   ["SKJ-ATURAN", "Penegakan aturan"], ["SKJ-RELIGI", "Makna religius"],
-  ["FIG-DENAH-ARAH", "Arah mata angin"], ["FIG-DENAH-RUTE", "Rute & belokan"], ["FIG-DENAH-LEWAT", "Bangunan dilalui"], ["FIG-DENAH-RELASI", "Pojok & di antara jalan"],
+  ["FIG-DENAH-ARAH", "Arah mata angin"], ["FIG-DENAH-RUTE", "Rute & belokan"], ["FIG-DENAH-LEWAT", "Bangunan dilalui"], ["FIG-DENAH-RELASI", "Pojok & di antara jalan"], ["FIG-DENAH-ROTASI", "Rotasi peta & badan"],
   ["LOG-KCK-NILAI", "Mencari nilai"], ["LOG-KCK-YATIDAK", "Ya atau tidak"], ["LOG-KCK-URUTAN", "Urutan"], ["LOG-KCK-3P", "Tiga pernyataan"],
 ];
 

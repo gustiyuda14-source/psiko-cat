@@ -59,6 +59,13 @@ export function makeMap2(minB = 16, maxB = 22): Map2 {
   }
 }
 
+// Kotak yang tertutup kompas besar peta diputar; peta ditolak bila ada bangunan/label di sini.
+export const ROT_COMPASS: Box = [W - 112, TOP, W - 8, 104];
+export const clearOfCompass = (p: Map2) => p.objs.every((o) => {
+  const lw = o.building ? labelW(o.name) : 0;
+  return !hit([Math.min(o.x, o.lx - lw / 2), Math.min(o.y, o.ly - 14), Math.max(o.x + o.w, o.lx + lw / 2), Math.max(o.y + o.h, o.ly + 5)], ROT_COMPASS, 4);
+});
+
 export const meets = (a: St, b: St) => b.c >= a.a0 - 1 && b.c <= a.a1 + 1 && a.c >= b.a0 - 1 && a.c <= b.a1 + 1;
 
 function placeBuildings(streets: St[]): Bld[] {
@@ -157,13 +164,17 @@ function star(cx: number, cy: number, R0: number) {
   return Array.from({ length: 10 }, (_, i) => { const a = (-90 + 36 * i) * Math.PI / 180, rr = i % 2 ? R0 * 0.45 : R0; return `${f1(cx + rr * Math.cos(a))},${f1(cy + rr * Math.sin(a))}`; }).join(" ");
 }
 
-function compass2(cx: number, cy: number) {
+// rot = derajat putar searah jarum jam (90 = Utara di kanan peta); huruf tetap tegak.
+function compass2(cx: number, cy: number, rot = 0) {
   const L = ["U", "TL", "T", "TG", "S", "BD", "B", "BL"].map((s, i) => {
-    const a = i * 45 * Math.PI / 180, d = i % 2 ? 22 : 26;
+    const a = (i * 45 + rot) * Math.PI / 180, d = i % 2 ? 22 : 26;
     return `<text x="${f1(cx + d * Math.sin(a))}" y="${f1(cy - d * Math.cos(a) + 4)}" text-anchor="middle" font-size="${i % 2 ? 9.5 : 11}" font-weight="700" fill="${INK}" ${FONT}>${s}</text>`;
   }).join("");
-  return `<circle cx="${cx}" cy="${cy}" r="33" fill="#fff" stroke="${INK}" stroke-width="1.2"/>` + pg([[cx, cy - 16], [cx + 4, cy], [cx - 4, cy]]) + pg([[cx, cy + 16], [cx + 4, cy], [cx - 4, cy]], "#fff")
-    + `<path d="M${cx} ${cy + 16}L${cx + 4} ${cy}L${cx - 4} ${cy}z" fill="none" stroke="${INK}"/>` + L;
+  const needle = pg([[cx, cy - 16], [cx + 4, cy], [cx - 4, cy]]) + pg([[cx, cy + 16], [cx + 4, cy], [cx - 4, cy]], "#fff")
+    + `<path d="M${cx} ${cy + 16}L${cx + 4} ${cy}L${cx - 4} ${cy}z" fill="none" stroke="${INK}"/>`;
+  const all = `<circle cx="${cx}" cy="${cy}" r="33" fill="#fff" stroke="${INK}" stroke-width="1.2"/>` + (rot ? `<g transform="rotate(${rot} ${cx} ${cy})">${needle}</g>` : needle) + L;
+  // Peta diputar: kompas 1,5× supaya huruf terbaca di HP (menutup pojok kanan-atas peta, lihat ROT_COMPASS).
+  return rot ? `<g transform="translate(${cx} ${cy}) scale(1.5) translate(${-cx} ${-cy})">${all}</g>` : all;
 }
 
 /** Nama jalan di tengah ruas terpanjang di antara persimpangan. */
@@ -175,7 +186,7 @@ function streetLabel(s: St, all: St[]) {
   return s.axis === "H" ? `<text x="${f1(m)}" y="${f1(s.c + 4)}" ${t}>${s.name}</text>` : `<text transform="translate(${f1(s.c + 4)} ${f1(m)}) rotate(-90)" ${t}>${s.name}</text>`;
 }
 
-export function renderMap2(p: Map2, n: number, extra?: { cap: string[]; over: string; defs: string }): string {
+export function renderMap2(p: Map2, n: number, extra?: { cap: string[]; over: string; defs: string }, rot = 0): string {
   const line = (s: St, w: number, c: string) => s.axis === "V"
     ? `<line x1="${s.c}" y1="${s.a0}" x2="${s.c}" y2="${s.a1}" stroke="${c}" stroke-width="${w}" stroke-linecap="square"/>`
     : `<line x1="${s.a0}" y1="${s.c}" x2="${s.a1}" y2="${s.c}" stroke="${c}" stroke-width="${w}" stroke-linecap="square"/>`;
@@ -183,9 +194,9 @@ export function renderMap2(p: Map2, n: number, extra?: { cap: string[]; over: st
   const objs = p.objs.map((o) => silhouette(o) + `<text x="${f1(o.lx)}" y="${f1(o.ly)}" text-anchor="middle" font-size="12.5" font-weight="${o.building ? 600 : 700}" fill="${INK}" ${FONT}>${o.name}</text>`).join("");
   const head = extra
     ? `<defs>${extra.defs}</defs><rect x="0" y="${TOP - 4}" width="${W}" height="${H - TOP + 4}" fill="#fff" opacity=".45"/>${extra.over}<text x="${M + 4}" y="30" font-size="14" font-weight="700" fill="${INK}" ${FONT}>${extra.cap[0]}</text><text x="${M + 4}" y="52" font-size="14" font-weight="700" fill="#15803d" ${FONT}>${extra.cap[1]}</text>`
-    : `<text x="${M + 4}" y="30" font-size="15" font-weight="700" fill="${INK}" ${FONT}>Peta ${n}</text><text x="${M + 4}" y="50" font-size="12" fill="#444" ${FONT}>Atas peta = Utara</text>`;
+    : `<text x="${M + 4}" y="30" font-size="15" font-weight="700" fill="${INK}" ${FONT}>Peta ${n}</text><text x="${M + 4}" y="50" font-size="12" fill="#444" ${FONT}>${rot ? "Arah mengikuti kompas" : "Atas peta = Utara"}</text>`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${extra ? "Pembahasan" : "Denah"} peta ${n}">`
     + `<rect width="${W}" height="${H}" fill="#fff"/><defs><clipPath id="mapclip"><rect x="${M}" y="${TOP}" width="${W - 2 * M}" height="${H - TOP - M}"/></clipPath></defs><g clip-path="url(#mapclip)">${roads}</g>`
     + objs + p.streets.map((s) => streetLabel(s, p.streets)).join("")
-    + `<rect x="${M}" y="${TOP}" width="${W - 2 * M}" height="${H - TOP - M}" fill="none" stroke="${INK}" stroke-width="1.5"/>` + compass2(W - 46, 42) + head + "</svg>";
+    + `<rect x="${M}" y="${TOP}" width="${W - 2 * M}" height="${H - TOP - M}" fill="none" stroke="${INK}" stroke-width="1.5"/>` + (rot ? compass2(W - 60, 51, rot) : compass2(W - 46, 42)) + head + "</svg>";
 }
