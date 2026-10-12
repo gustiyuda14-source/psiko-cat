@@ -8,7 +8,7 @@ import LogoutButton from "@/app/components/LogoutButton";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref, type ModuleType } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
 import {
-  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph,
+  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKeswa, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph,
 } from "@/app/components/nav-icons";
 
 /*
@@ -32,6 +32,7 @@ const PRIMARY_NAV: NavItem[] = [
 const SECONDARY_NAV: NavItem[] = [
   { label: "Drilling", href: "/dashboard/drill", icon: NavDrill },
   { label: "Fundamental", href: "/dashboard/fundamental", icon: NavFundamental },
+  { label: "Keswa", href: "/dashboard/keswa", icon: NavKeswa },
   { label: "Kosakata", href: "/dashboard/kosakata", icon: NavKosakata },
   { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
 ];

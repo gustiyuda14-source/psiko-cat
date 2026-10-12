@@ -12,6 +12,7 @@
     "lint": "eslint",
     "check:soal-gambar": "tsx scripts/generate-soal-susun-gambar.ts --check && tsx scripts/generate-soal-pola-gambar.ts --check",
     "build:drill": "tsx scripts/build-drill-bank.ts",
+    "build:keswa": "tsx scripts/build-keswa-bank.ts",
     "check:accounts": "tsx scripts/check-accounts.ts"
   },
   "dependencies": {

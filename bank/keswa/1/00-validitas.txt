@@ -1,0 +1,58 @@
+# Paket 1 — kelompok validitas. Format: lihat scripts/build-keswa-bank.ts.
+# Sok sempurna (15): kekurangan wajar; tag = jawaban yang berarti menyangkal.
+S:T | Aku pernah berpura-pura sibuk agar tidak dimintai tolong.
+S:T | Aku pernah kesal kepada orang yang sebenarnya tidak bersalah.
+S:Y | Aku selalu menepati setiap janji yang pernah kuucapkan, tanpa satu pun yang terlewat.
+S:T | Ada kalanya aku pura-pura tidak mendengar ketika dipanggil.
+S:Y | Aku tidak pernah sekali pun mengeluh tentang makanan yang disajikan untukku.
+S:T | Aku pernah melebih-lebihkan cerita supaya terdengar lebih menarik.
+S:T | Aku pernah merasa senang ketika orang yang tidak kusukai mendapat teguran.
+S:T | Kadang-kadang aku iri melihat keberhasilan orang lain.
+S:Y | Aku tidak pernah merasa malas sedikit pun.
+S:T | Aku pernah datang terlambat karena bangun kesiangan.
+S:Y | Aku selalu mengembalikan uang kembalian yang berlebih kepada penjual, berapa pun jumlahnya.
+S:T | Aku pernah membuang sampah tidak pada tempatnya.
+S:Y | Aku tidak pernah lupa mengucapkan terima kasih kepada siapa pun.
+S:T | Aku pernah menyimpan rasa dendam walau hanya sebentar.
+S:Y | Aku selalu sabar menghadapi siapa saja dalam keadaan apa pun.
+
+# Acak (15): hampir semua orang menjawab sama; tag = jawaban yang menyimpang.
+A:Y | Aku dapat mendengar percakapan orang di kota lain tanpa alat apa pun.
+A:T | Aku pernah merasa lelah setelah bekerja seharian.
+A:Y | Aku belum pernah makan nasi seumur hidupku.
+A:T | Aku dapat membaca tulisan dalam bahasa Indonesia.
+A:Y | Setiap malam tubuhku berpindah ke negeri lain dan kembali sebelum pagi.
+A:T | Aku pernah merasa haus pada siang hari yang panas.
+A:Y | Aku tidak pernah tidur sama sekali sejak masa kecilku.
+A:T | Air terasa basah bila menyentuh kulitku.
+A:Y | Aku mampu mengangkat sebuah rumah dengan satu tangan.
+A:T | Aku pernah melihat hujan turun.
+A:Y | Aku lahir lebih dahulu daripada kakek dan nenekku.
+A:T | Aku pernah mandi menggunakan air.
+A:Y | Aku hafal isi semua buku yang ada di perpustakaan nasional.
+A:T | Aku bisa membedakan waktu siang dan waktu malam.
+A:Y | Aku memiliki seribu saudara kandung.
+
+# Konsistensi, kalimat sama (10 pasangan).
+K= | Aku mudah merasa cemas menghadapi hal-hal baru.
+K= | Aku lebih suka bekerja sendiri daripada bersama banyak orang.
+K= | Tidurku biasanya nyenyak sepanjang malam.
+K= | Aku sering memikirkan kesalahan yang sudah lama berlalu.
+K= | Aku mudah akrab dengan orang yang baru kukenal.
+K= | Aku merasa keluargaku memahami diriku.
+K= | Aku merasa masa depanku cukup cerah.
+K= | Aku suka kegiatan yang menantang keberanian.
+K= | Aku cepat tersinggung oleh candaan teman.
+K= | Aku senang menonton acara tentang penemuan ilmiah.
+
+# Konsistensi, kalimat berlawanan (10 pasangan).
+K~ | Aku jarang merasa pening setelah bekerja keras. | Aku sering merasa pening setelah bekerja keras.
+K~ | Aku biasanya tenang ketika menghadapi masalah. | Bila ada masalah aku mudah menjadi panik.
+K~ | Aku senang berada di tengah keramaian. | Aku merasa tidak nyaman berada di tengah keramaian.
+K~ | Aku mudah mengambil keputusan. | Aku sering ragu-ragu ketika harus mengambil keputusan.
+K~ | Aku makan dengan teratur setiap hari. | Makanku sering tidak teratur karena tidak berselera.
+K~ | Aku percaya kepada kebanyakan orang. | Aku sulit mempercayai orang lain.
+K~ | Aku menikmati pekerjaanku sehari-hari. | Pekerjaanku sehari-hari terasa membosankan bagiku.
+K~ | Aku jarang merasa sedih tanpa sebab. | Aku sering merasa sedih tanpa tahu sebabnya.
+K~ | Pikiranku mudah fokus saat membaca. | Saat membaca, pikiranku sering melayang ke hal lain.
+K~ | Aku merasa cukup percaya diri. | Aku sering merasa rendah diri di hadapan orang lain.

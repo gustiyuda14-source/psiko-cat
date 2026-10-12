@@ -1,0 +1,58 @@
+# Paket 2 — kelompok validitas. Format: lihat scripts/build-keswa-bank.ts.
+# Sok sempurna (15): kekurangan wajar; tag = jawaban yang berarti menyangkal.
+S:T | Aku pernah mengaku sudah mengerjakan tugas padahal belum.
+S:T | Kadang-kadang aku malas membalas pesan dari orang lain.
+S:Y | Aku tidak pernah sekali pun merasa jengkel kepada orang tuaku.
+S:T | Aku pernah mengambil makanan lebih banyak dari bagianku.
+S:Y | Aku selalu bersikap ramah kepada setiap orang, bahkan kepada orang yang menyakitiku.
+S:T | Aku pernah lupa mengembalikan barang yang kupinjam.
+S:T | Ada kalanya aku malas mandi pada hari libur.
+S:Y | Aku tidak pernah sekali pun terlambat mengumpulkan tugas.
+S:T | Aku pernah menyalahkan orang lain atas kesalahanku sendiri.
+S:Y | Aku selalu mendengarkan nasihat orang lain dengan sepenuh hati.
+S:T | Aku pernah menertawakan kesalahan orang lain.
+S:Y | Aku tidak pernah mendahulukan kepentinganku sendiri daripada kepentingan orang lain.
+S:T | Kadang-kadang aku kesal bila harus menunggu lama.
+S:Y | Aku tidak pernah sekali pun kehilangan kesabaran.
+S:T | Aku pernah mengintip pesan atau surat milik orang lain.
+
+# Acak (15): hampir semua orang menjawab sama; tag = jawaban yang menyimpang.
+A:Y | Aku dapat bernapas di dalam air selama satu jam tanpa alat.
+A:T | Aku pernah memakai pakaian.
+A:Y | Matahari terbit di tempat tinggalku pada tengah malam.
+A:T | Aku pernah merasa kenyang setelah makan.
+A:Y | Aku dapat berbicara dengan semua jenis hewan dan mengerti jawabannya.
+A:T | Aku mengetahui namaku sendiri.
+A:Y | Aku pernah berjalan kaki dari Jakarta ke Papua dalam satu hari.
+A:T | Api terasa panas bila didekati.
+A:Y | Aku belum pernah melihat langit seumur hidupku.
+A:T | Aku pernah tertawa.
+A:Y | Aku mampu menghitung jumlah semua bintang di langit dalam semalam.
+A:T | Aku memerlukan makanan untuk hidup.
+A:Y | Rumahku terbuat dari awan.
+A:T | Aku pernah mendengar suara orang berbicara.
+A:Y | Umurku sudah lebih dari tiga ratus tahun.
+
+# Konsistensi, kalimat sama (10 pasangan).
+K= | Aku mudah gugup bila harus tampil di depan umum.
+K= | Aku lebih senang tinggal di rumah pada hari libur.
+K= | Aku sering merasa letih tanpa sebab.
+K= | Aku cepat marah bila diganggu ketika sedang bekerja.
+K= | Aku suka memulai percakapan dengan orang yang duduk di sebelahku.
+K= | Aku merasa orang tuaku sayang kepadaku.
+K= | Aku yakin cita-citaku dapat tercapai.
+K= | Aku suka tantangan yang menguji kekuatan fisikku.
+K= | Aku sering memikirkan pendapat orang lain tentang diriku.
+K= | Aku senang mempelajari cara kerja suatu alat.
+
+# Konsistensi, kalimat berlawanan (10 pasangan).
+K~ | Aku jarang merasa pegal setelah berolahraga. | Aku sering merasa pegal berhari-hari setelah berolahraga.
+K~ | Aku tetap tenang bila dimarahi atasan. | Aku langsung gemetar bila dimarahi atasan.
+K~ | Aku suka menghadiri acara yang ramai. | Aku menghindari acara yang ramai.
+K~ | Aku tahu apa yang kuinginkan dalam hidupku. | Aku sering bingung tentang apa yang kuinginkan dalam hidupku.
+K~ | Aku dapat tidur nyenyak walaupun ada masalah. | Bila ada masalah aku sulit tidur.
+K~ | Aku mudah mempercayai orang yang baru kukenal. | Aku curiga kepada orang yang baru kukenal.
+K~ | Aku bersemangat setiap kali berangkat bekerja atau belajar. | Aku malas setiap kali harus berangkat bekerja atau belajar.
+K~ | Aku jarang merasa khawatir. | Aku hampir selalu merasa khawatir.
+K~ | Aku mudah mengingat pelajaran yang baru kubaca. | Aku cepat lupa pelajaran yang baru kubaca.
+K~ | Aku menyukai diriku sendiri. | Aku sering membenci diriku sendiri.
