@@ -7,6 +7,7 @@ import "./paket.css";
 import "./exam.css";
 import "./report.css";
 import "./progress.css";
+import VersionWatcher from "./components/VersionWatcher";
 
 // Nama variabel diberi sufiks -src supaya @theme inline di globals.css bisa
 // memetakannya ke --font-sans / --font-display tanpa referensi melingkar
@@ -55,7 +56,10 @@ export default function RootLayout({
       lang="id"
       className={`${sourceSans.variable} ${lexend.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">
+        {children}
+        <VersionWatcher />
+      </body>
     </html>
   );
 }

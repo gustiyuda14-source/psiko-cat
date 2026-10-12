@@ -80,7 +80,10 @@ export function isTerminalModule(status: ModuleAccessRow["status"]): boolean {
   return status === "COMPLETED" || status === "TIMED_OUT";
 }
 
-export function isModuleExpired(moduleSession: ModuleAccessRow, now = Date.now()): boolean {
+export function isModuleExpired(
+  moduleSession: Pick<ModuleAccessRow, "module_type" | "started_at" | "time_limit_seconds">,
+  now = Date.now()
+): boolean {
   if (!moduleSession.started_at) return false;
   // Kebijakan resmi: 5 dtk modul umum. Kecermatan 120 dtk (dinaikkan dari 60 pada 2026-10-12,
   // disetujui pemilik): 9 layar intro × 5 dtk + jeda kirim log tiap pindah kolom membuat kolom 10
@@ -98,10 +101,12 @@ export async function isModuleSequenceAvailable(moduleSession: ModuleAccessRow):
   if (moduleSession.sequence_order <= 1) return true;
   const { data, error } = await supabaseAdmin
     .from("module_sessions")
-    .select("status")
+    .select("status, module_type, started_at, time_limit_seconds")
     .eq("test_session_id", moduleSession.test_session_id)
     .eq("sequence_order", moduleSession.sequence_order - 1)
     .maybeSingle();
   if (error) throw error;
-  return data?.status === "COMPLETED" || data?.status === "TIMED_OUT";
+  // Modul sebelumnya yang waktunya sudah habis dianggap selesai walau /complete tidak pernah
+  // terkirim (tab ditutup, sinyal hilang), supaya sub-tes berikutnya tidak terkunci selamanya.
+  return data?.status === "COMPLETED" || data?.status === "TIMED_OUT" || (data?.status === "IN_PROGRESS" && isModuleExpired(data));
 }

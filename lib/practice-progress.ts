@@ -105,6 +105,11 @@ export function useLatihanProgress(): LatihanProgress {
   return useState_().latihan;
 }
 
+/** Muat ulang data server bila pemuatan pertama gagal (mis. sinyal putus); tanpa efek bila sudah termuat. */
+export function retryProgressLoad() {
+  if (!state.ready) void load();
+}
+
 /** Pembahasan latihan tersimpan per rute paket (terbaru dulu, maks 2). */
 export function useLatihanAttempts(): { attempts: AttemptList; ready: boolean } {
   const s = useState_();
@@ -118,7 +123,13 @@ export function useLatihanAttempts(): { attempts: AttemptList; ready: boolean } 
 */
 export async function saveLatihanAttempt(key: string, answers: Record<string, string | null>, timed = false): Promise<boolean> {
   const gen = generation;
-  const res = await post({ action: "attempt", key, answers, timed }).catch(() => null);
+  // Tiga kali dengan jeda: sinyal yang putus sesaat tidak boleh menghilangkan pembahasan.
+  let res: Response | null = null;
+  for (let attempt = 0; attempt < 3 && !res?.ok; attempt++) {
+    if (attempt) await new Promise((resolve) => setTimeout(resolve, 2000 * attempt));
+    res = await post({ action: "attempt", key, answers, timed }).catch(() => null);
+    if (res && res.status >= 400 && res.status < 500) break; // ditolak server: mengulang tidak membantu
+  }
   if (!res?.ok) return false;
   const data = (await res.json().catch(() => null)) as { attempts?: AttemptList[string] } | null;
   if (gen === generation && data?.attempts) emit({ ...state, attempts: { ...state.attempts, [key]: data.attempts } });

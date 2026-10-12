@@ -5,9 +5,9 @@ import { sessionVersion } from "@/lib/account-rules";
 
 export async function POST(req: NextRequest) {
   try {
-    const { username, password } = await req.json() as { username?: string; password?: string };
+    const { username, password } = ((await req.json().catch(() => null)) ?? {}) as { username?: unknown; password?: unknown };
 
-    if (!username || !password) {
+    if (typeof username !== "string" || typeof password !== "string" || !username || !password) {
       return NextResponse.json({ error: "Username dan password wajib diisi" }, { status: 400 });
     }
 

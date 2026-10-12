@@ -1,6 +1,7 @@
 import "server-only";
 
 import { supabaseAdmin } from "@/lib/supabase-admin";
+import { isModuleExpired } from "@/lib/session-access";
 import { isSimulasiPackage, type ModuleType } from "@/lib/test-config";
 import { latihanPackageOf } from "@/lib/progress-rules";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
@@ -36,15 +37,15 @@ export async function hasLiveModuleOfType(userId: string, moduleType: string): P
   const sessionIds = (sessions ?? []).map((s) => s.id);
   if (!sessionIds.length) return false;
 
-  const { data: liveModule } = await supabaseAdmin
+  const { data: liveModules } = await supabaseAdmin
     .from("module_sessions")
-    .select("id")
+    .select("module_type, started_at, time_limit_seconds")
     .in("test_session_id", sessionIds)
     .eq("module_type", moduleType)
-    .eq("status", "IN_PROGRESS")
-    .limit(1)
-    .maybeSingle();
-  return Boolean(liveModule);
+    .eq("status", "IN_PROGRESS");
+  // Modul yang waktunya sudah habis tapi tidak pernah ditutup bukan ujian aktif lagi;
+  // tanpa ini pembahasan latihan peserta terkunci selamanya.
+  return (liveModules ?? []).some((m) => !isModuleExpired(m));
 }
 
 type QuestionRow = SafeQuestion & { scoring_rule: unknown };

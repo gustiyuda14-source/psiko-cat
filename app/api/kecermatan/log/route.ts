@@ -67,7 +67,9 @@ export async function POST(req: NextRequest) {
       .select("id, column_index, package_number, options_payload")
       .in("id", questionIds)
       .eq("type", "KECERMATAN")
-      .eq("package_number", access.moduleSession.kecermatan_package_number);
+      // Sesi lama tanpa nomor paket memakai Paket 7, sama dengan halaman ujian
+      // (app/test/[sessionId]/kecermatan/page.tsx); tanpa ini semua kliknya ditolak.
+      .eq("package_number", access.moduleSession.kecermatan_package_number ?? 7);
     if (questionError) throw questionError;
     if (questions?.length !== latestByQuestion.size) {
       return NextResponse.json({ error: "Ada soal yang tidak termasuk paket sesi" }, { status: 400 });

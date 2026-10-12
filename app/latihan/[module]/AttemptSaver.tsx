@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/app/components/ui-client";
-import { saveLatihanAttempt, useLatihanAttempts } from "@/lib/practice-progress";
+import { retryProgressLoad, saveLatihanAttempt, useLatihanAttempts } from "@/lib/practice-progress";
 import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
 
 /*
@@ -25,7 +25,20 @@ export default function AttemptSaver({
   timed?: boolean;
 }) {
   const { attempts, ready } = useLatihanAttempts();
-  if (!progressKey || !ready || !Object.keys(answers).length) return null;
+  // Data percobaan belum termuat (sinyal putus): coba lagi terus, jangan diam-diam tidak menyimpan.
+  useEffect(() => {
+    if (ready) return;
+    const id = window.setInterval(retryProgressLoad, 4000);
+    return () => window.clearInterval(id);
+  }, [ready]);
+  if (!progressKey || !Object.keys(answers).length) return null;
+  if (!ready) {
+    return (
+      <div className="notice text-sm" role="status">
+        <p className="text-muted-foreground">Menyiapkan penyimpanan pembahasan… Pastikan koneksi internet menyala.</p>
+      </div>
+    );
+  }
   const existing = attempts[progressKey] ?? [];
   // Keputusan awal diambil sekali saat daftar percobaan dari server termuat; setelah itu
   // daftar boleh berubah (termasuk karena simpanan ini sendiri) tanpa mengubah keputusan.

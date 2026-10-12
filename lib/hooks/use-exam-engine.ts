@@ -58,6 +58,13 @@ export function useExamEngine({
   const finishing = useRef(false);
   const completed = useRef(false);
   const lastHeartbeat = useRef(0);
+  // Server sudah menutup modul (409: waktu habis / sudah selesai): jawaban tertahan tidak akan
+  // pernah diterima, jadi tutup sub-tes (TIMED_OUT) daripada macet minta kirim ulang.
+  // Pola sama dengan EngineKecermatan.
+  const serverClosed = useRef(false);
+  // Selisih jam server - jam HP (ms). deadlineTs selalu dalam waktu server (started_at + batas),
+  // jadi jam HP yang telat lebih dari tenggang 5 dtk tidak lagi membuat jawaban terakhir ditolak.
+  const clockOffset = useRef(0);
 
   const flushAnswers = useCallback((): Promise<boolean> => {
     if (activeFlush.current) return activeFlush.current;
@@ -85,6 +92,14 @@ export function useExamEngine({
             body: JSON.stringify({ answers: batch }),
           }
         );
+        if (response.status === 409) {
+          pendingAnswers.current.clear();
+          setPendingCount(0);
+          serverClosed.current = true;
+          setSaveState("error");
+          setSaveError("Waktu sub-tes di server sudah habis. Jawaban terakhir tidak tercatat; sub-tes ditutup.");
+          return true;
+        }
         if (!response.ok) throw new Error(`Server menolak jawaban (${response.status})`);
         for (const answer of batch) {
           if (pendingAnswers.current.get(answer.question_id) === answer.selected_key) {
@@ -109,6 +124,7 @@ export function useExamEngine({
 
   const syncHeartbeat = useCallback(async (): Promise<boolean> => {
     const current = store.getState();
+    const sentAt = Date.now();
     try {
       const response = await fetch(`/api/sessions/${sessionId}/sync`, {
         method: "PATCH",
@@ -120,11 +136,20 @@ export function useExamEngine({
           column_remaining_ms: null,
         }),
       });
-      return response.ok;
+      if (response.status === 409) serverClosed.current = true;
+      if (!response.ok) return false;
+      const data = (await response.json().catch(() => null)) as { synced_at?: number; started_at?: string } | null;
+      if (typeof data?.synced_at === "number") {
+        clockOffset.current = data.synced_at - (sentAt + Date.now()) / 2;
+      }
+      // Sesi baru: deadline awal dihitung dari jam HP; ganti dengan started_at dari server.
+      const started = data?.started_at ? new Date(data.started_at).getTime() : NaN;
+      if (Number.isFinite(started)) store.setState({ deadlineTs: started + timeLimitSeconds * 1000 });
+      return true;
     } catch {
       return false;
     }
-  }, [moduleSessionId, sessionId, store]);
+  }, [moduleSessionId, sessionId, store, timeLimitSeconds]);
 
   const finish = useCallback(async (): Promise<boolean> => {
     if (finishing.current || completed.current) return false;
@@ -134,7 +159,7 @@ export function useExamEngine({
         const saved = await flushAnswers();
         if (!saved) await new Promise((resolve) => setTimeout(resolve, 500));
       }
-      if (pendingAnswers.current.size) {
+      if (pendingAnswers.current.size && !serverClosed.current) {
         setSaveState("error");
         setSaveError("Masih ada jawaban yang belum diterima server. Coba kirim ulang.");
         return false;
@@ -277,20 +302,22 @@ export function useExamEngine({
     const tick = () => {
       const current = store.getState();
       if (current.deadlineTs == null) return;
-      const left = Math.max(0, Math.ceil((current.deadlineTs - Date.now()) / 1000));
+      const left = Math.max(0, Math.ceil((current.deadlineTs - (Date.now() + clockOffset.current)) / 1000));
       setSecondsLeft(left);
 
       const now = Date.now();
       if (now - lastHeartbeat.current >= HEARTBEAT_MS) {
         lastHeartbeat.current = now;
         void syncHeartbeat();
+        // Jawaban di bawah ambang flush jangan menunggu sampai waktu habis.
+        if (pendingAnswers.current.size) void flushAnswers();
       }
-      if (left <= 0) void finish();
+      if (left <= 0 || serverClosed.current) void finish();
     };
     tick();
     const interval = window.setInterval(tick, 500);
     return () => window.clearInterval(interval);
-  }, [finish, showResume, state.status, store, syncHeartbeat]);
+  }, [finish, flushAnswers, showResume, state.status, store, syncHeartbeat]);
 
   const handleAnswer = useCallback(
     (questionId: string, selectedKey: string) => {

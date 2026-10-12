@@ -101,7 +101,8 @@ export async function POST(req: NextRequest) {
           selected_key,
           answered_at: new Date().toISOString(),
         })),
-        { onConflict: "module_session_id,question_id" }
+        // Kepribadian: jawaban pertama yang tersimpan berlaku (pedoman PRIBADI §4), sama dengan /answers.
+        { onConflict: "module_session_id,question_id", ignoreDuplicates: moduleType === "KEPRIBADIAN" }
       );
 
     if (!error) rescued[payload.moduleSessionId] = entries.length;
