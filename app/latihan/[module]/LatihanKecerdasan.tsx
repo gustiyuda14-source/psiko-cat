@@ -20,7 +20,7 @@ const TIME_LIMIT_MS = MODULE_CONFIG.KECERDASAN.time_limit_seconds * 1000;
 // (lihat EngineKecerdasan.tsx): pilih dulu, tidak ada koreksi per butir,
 // baru dikumpulkan di akhir dan dapat pembahasan lengkap. Bedanya cuma
 // jawaban disimpan di state lokal (bukan module_sessions) dan pengecekan
-// lewat /api/practice/check per butir saat submit, bukan sekali jalan di server.
+// lewat /api/practice/check (satu request untuk seluruh paket) saat submit.
 export default function LatihanKecerdasan({
   questions,
   progressKey,
@@ -95,29 +95,24 @@ export default function LatihanKecerdasan({
     setSubmitting(true);
     setSubmitError(null);
     try {
-      const items = await Promise.all(
-        sorted.map(async (question) => {
-          const selected = picks[question.id] ?? null;
-          const res = await fetch("/api/practice/check", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question_id: question.id, selected_key: selected }),
-          });
-          if (!res.ok) throw new Error("Pembahasan belum dapat dimuat. Coba kumpulkan lagi.");
-          const data = (await res.json()) as { is_correct: boolean; correct_key: string; pembahasan?: string | null; pembahasan_svg?: string | null };
-          return {
-            question_id: question.id,
-            sequence_number: question.sequence_number,
-            selected_key: selected,
-            correct_key: data.correct_key,
-            is_correct: data.is_correct,
-            pembahasan: data.pembahasan ?? null,
-            pembahasan_svg: data.pembahasan_svg ?? null,
-            payload: question.options_payload as unknown as KecerdasanOptionsPayload,
-          } satisfies KecerdasanReviewItem;
-        })
+      const res = await fetch("/api/practice/check", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ answers: sorted.map((q) => ({ question_id: q.id, selected_key: picks[q.id] ?? null })) }),
+      });
+      if (!res.ok) throw new Error("Pembahasan belum dapat dimuat. Coba kumpulkan lagi.");
+      const { items: checked } = (await res.json()) as {
+        items: Record<string, { is_correct: boolean; correct_key: string; pembahasan: string | null; pembahasan_svg: string | null }>;
+      };
+      setResults(
+        sorted.map((question) => ({
+          question_id: question.id,
+          sequence_number: question.sequence_number,
+          selected_key: picks[question.id] ?? null,
+          ...checked[question.id],
+          payload: question.options_payload as unknown as KecerdasanOptionsPayload,
+        }) satisfies KecerdasanReviewItem)
       );
-      setResults(items);
     } catch (error) {
       setSubmitError(error instanceof Error ? error.message : "Pembahasan belum dapat dimuat. Coba kumpulkan lagi.");
     } finally {
