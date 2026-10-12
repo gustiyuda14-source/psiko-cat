@@ -8,6 +8,7 @@ import type {
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useKepribadianStore } from "@/lib/stores/exam-store";
 import { useExamEngine } from "@/lib/hooks/use-exam-engine";
+import LeaveConfirm from "@/app/components/LeaveConfirm";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
   ExamBody,
@@ -119,6 +120,7 @@ export default function EngineKepribadian({
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
       {isOffline && <OfflineNotice />}
+      <LeaveConfirm kind="simulasi" step={engine.leaveStep} onStep={engine.setLeaveStep} onLeave={() => void engine.leave()} />
 
       <ResumeDialog
         open={showResume}

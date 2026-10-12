@@ -25,9 +25,12 @@ export default function LatihanKecerdasan({
   questions,
   progressKey,
   onSecondsLeft,
+  onActiveChange,
 }: {
   questions: SafeQuestion[];
   progressKey?: string;
+  /** true selama sudah ada jawaban dan latihan belum selesai: LatihanGate menahan peserta keluar. */
+  onActiveChange?: (active: boolean) => void;
   /** Sisa detik untuk timer di ExamBar milik LatihanGate; null = sembunyikan. */
   onSecondsLeft?: (seconds: number | null) => void;
 }) {
@@ -46,6 +49,10 @@ export default function LatihanKecerdasan({
   const [submitting, setSubmitting] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [results, setResults] = useState<KecerdasanReviewItem[] | null>(null);
+  const active = Object.keys(picks).length > 0 && !results;
+  useEffect(() => {
+    onActiveChange?.(active);
+  }, [active, onActiveChange]);
   // Deadline wall-clock (tahan tab-throttling), pola sama dengan EngineKecermatan.
   const [deadline, setDeadline] = useState(() => Date.now() + TIME_LIMIT_MS);
   const [timeUp, setTimeUp] = useState(false);

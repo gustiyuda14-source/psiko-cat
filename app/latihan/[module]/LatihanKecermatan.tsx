@@ -25,9 +25,12 @@ export default function LatihanKecermatan({
   questions,
   timedMode = false,
   progressKey,
+  onActiveChange,
 }: {
   questions: SafeQuestion[];
   progressKey?: string;
+  /** true selama sudah ada jawaban dan latihan belum selesai: LatihanGate menahan peserta keluar. */
+  onActiveChange?: (active: boolean) => void;
   /** Ya di modal "Aktifkan timer per kolom?" — kunci navigasi sekuensial,
       60 detik/kolom, jeda 5 detik tiap ganti kolom. Default bebas navigasi. */
   timedMode?: boolean;
@@ -50,6 +53,10 @@ export default function LatihanKecermatan({
   const [error, setError] = useState("");
   const [finished, setFinished] = useState(false);
   const [showFinish, setShowFinish] = useState(false);
+  const active = Object.keys(answers).length > 0 && !finished;
+  useEffect(() => {
+    onActiveChange?.(active);
+  }, [active, onActiveChange]);
 
   // Timer per kolom — cuma aktif kalau timedMode. Pola deadline-based sama
   // persis EngineKecermatan.tsx (wall-clock, tahan tab-throttling), tapi

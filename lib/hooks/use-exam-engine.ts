@@ -10,6 +10,8 @@ import {
 import type { UseBoundStore, StoreApi } from "zustand";
 import type { ExamState } from "@/lib/stores/exam-store";
 import type { RecoverySnapshot } from "@/lib/types/safe-question";
+import { useRouter } from "next/navigation";
+import { useLeaveGuard } from "@/lib/hooks/use-leave-guard";
 
 const FLUSH_THRESHOLD = 5;
 const MAX_BATCH = 100;
@@ -198,9 +200,20 @@ export function useExamEngine({
     };
   }, [flushAnswers]);
 
+  // Back HP/browser + tutup tab ditahan selama sub-tes berjalan (useLeaveGuard); keluar lewat
+  // konfirmasi menyetor jawaban tertunda dulu, karena pindah halaman di dalam aplikasi tidak
+  // memicu pagehide/sendBeacon.
+  const router = useRouter();
+  const [leaveStep, setLeaveStep] = useLeaveGuard(state.status === "running");
+  const leave = useCallback(async () => {
+    for (let i = 0; i < 3 && pendingAnswers.current.size; i++) {
+      if (!(await flushAnswers())) break;
+    }
+    router.push(`/test/${sessionId}`);
+  }, [flushAnswers, router, sessionId]);
+
   useEffect(() => {
     if (state.status !== "running") return;
-    const guard = (event: BeforeUnloadEvent) => event.preventDefault();
     const sendPending = () => {
       if (!pendingAnswers.current.size) return;
       const answers = [...pendingAnswers.current].slice(0, MAX_BATCH).map(([question_id, selected_key]) => ({
@@ -212,12 +225,8 @@ export function useExamEngine({
         new Blob([JSON.stringify({ answers })], { type: "application/json" })
       );
     };
-    window.addEventListener("beforeunload", guard);
     window.addEventListener("pagehide", sendPending);
-    return () => {
-      window.removeEventListener("beforeunload", guard);
-      window.removeEventListener("pagehide", sendPending);
-    };
+    return () => window.removeEventListener("pagehide", sendPending);
   }, [moduleSessionId, sessionId, state.status]);
 
   useEffect(() => {
@@ -377,5 +386,8 @@ export function useExamEngine({
     flushAnswers,
     doResume,
     doFreshStart: doRestartAtBeginning,
+    leaveStep,
+    setLeaveStep,
+    leave,
   };
 }

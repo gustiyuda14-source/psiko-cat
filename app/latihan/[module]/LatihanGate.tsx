@@ -2,13 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import { MODULE_CONFIG, type ModuleType } from "@/lib/test-config";
 import { EmptyState } from "@/app/components/ui";
 import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { KecermatanKeyStrip } from "@/app/components/KecermatanKeyStrip";
 import { Button } from "@/app/components/ui-client";
+import LeaveConfirm from "@/app/components/LeaveConfirm";
+import { useLeaveGuard } from "@/lib/hooks/use-leave-guard";
 import { ArrowRight } from "@/app/components/icons";
 import { SparkleIcon, SparkleParticles } from "@/app/components/CtaSparkle";
 import LatihanKecerdasan from "./LatihanKecerdasan";
@@ -83,6 +85,12 @@ export default function LatihanGate({
     if (started) practiceRef.current?.scrollIntoView({ block: "start" });
   }, [started]);
 
+  // Latihan tidak bisa dilanjutkan setelah ditinggal, jadi selama sudah ada jawaban dan belum
+  // dikumpulkan, keluar butuh dua konfirmasi: tombol Keluar, back HP/browser, tutup/refresh tab.
+  const router = useRouter();
+  const [active, setActive] = useState(false);
+  const [exitStep, setExitStep] = useLeaveGuard(active);
+
   useEffect(() => {
     if (countdown === null) return;
     const t = setTimeout(() => {
@@ -94,12 +102,21 @@ export default function LatihanGate({
 
   return (
     <div className="min-h-[100dvh] bg-background">
+      <LeaveConfirm kind="latihan" step={exitStep} onStep={setExitStep} onLeave={() => router.push(exitHref)} />
       <ExamBar
         title={`Latihan ${meta.label}`}
         count={`${packageLabel ? `${packageLabel} · ` : ""}${questions.length} ${noun} · ${timeLabel}`}
         timer={secondsLeft !== null && <ExamTimer seconds={secondsLeft} />}
         actions={
-          <Link href={exitHref} className="mbtn">
+          <Link
+            href={exitHref}
+            className="mbtn"
+            onClick={(e) => {
+              if (!active) return;
+              e.preventDefault();
+              setExitStep(1);
+            }}
+          >
             <span aria-hidden="true">←</span>
             Keluar latihan
           </Link>
@@ -110,11 +127,11 @@ export default function LatihanGate({
       {started ? (
         <div ref={practiceRef}>
           {moduleType === "KECERDASAN" ? (
-            <LatihanKecerdasan questions={questions} progressKey={progressKey} onSecondsLeft={setSecondsLeft} />
+            <LatihanKecerdasan questions={questions} progressKey={progressKey} onSecondsLeft={setSecondsLeft} onActiveChange={setActive} />
           ) : moduleType === "KEPRIBADIAN" ? (
-            <LatihanKepribadian questions={questions} progressKey={progressKey} />
+            <LatihanKepribadian questions={questions} progressKey={progressKey} onActiveChange={setActive} />
           ) : (
-            <LatihanKecermatan questions={questions} timedMode={timedMode} progressKey={progressKey} />
+            <LatihanKecermatan questions={questions} timedMode={timedMode} progressKey={progressKey} onActiveChange={setActive} />
           )}
         </div>
       ) : countdown !== null ? (

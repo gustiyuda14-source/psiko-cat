@@ -18,6 +18,9 @@ import {
 } from "@/app/components/ExamChrome";
 import type { SaveState } from "@/lib/hooks/use-exam-engine";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
+import LeaveConfirm from "@/app/components/LeaveConfirm";
+import { useLeaveGuard } from "@/lib/hooks/use-leave-guard";
+import { useRouter } from "next/navigation";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import {
   KecermatanKeyStrip,
@@ -226,9 +229,17 @@ export default function EngineKecermatan({
     return () => { window.removeEventListener("online", on); window.removeEventListener("offline", off); };
   }, [flushLogs]);
 
+  // Back HP/browser + tutup tab ditahan selama sub-tes berjalan; keluar lewat konfirmasi
+  // menyetor klik tertunda dulu (pindah halaman di aplikasi tidak memicu pagehide).
+  const router = useRouter();
+  const [leaveStep, setLeaveStep] = useLeaveGuard(store.status === "running");
+  const leave = useCallback(async () => {
+    if (Object.keys(useKecermatanStore.getState().pendingLogs).length) await flushLogs();
+    router.push(`/test/${sessionId}`);
+  }, [flushLogs, router, sessionId]);
+
   useEffect(() => {
     if (store.status !== "running") return;
-    const guard = (e: BeforeUnloadEvent) => { e.preventDefault(); };
     const sendPending = () => {
       const logs = Object.values(useKecermatanStore.getState().pendingLogs);
       if (!logs.length) return;
@@ -240,12 +251,8 @@ export default function EngineKecermatan({
         )
       );
     };
-    window.addEventListener("beforeunload", guard);
     window.addEventListener("pagehide", sendPending);
-    return () => {
-      window.removeEventListener("beforeunload", guard);
-      window.removeEventListener("pagehide", sendPending);
-    };
+    return () => window.removeEventListener("pagehide", sendPending);
   }, [moduleSessionId, sessionId, store.status]);
 
   useEffect(() => {
@@ -467,6 +474,7 @@ export default function EngineKecermatan({
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
       {isOffline && <OfflineNotice />}
+      <LeaveConfirm kind="simulasi" step={leaveStep} onStep={setLeaveStep} onLeave={() => void leave()} />
 
       <ResumeDialog
         open={showResume}

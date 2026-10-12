@@ -19,9 +19,12 @@ const ASPECT_PREF = "pribadi-show-aspect";
 export default function LatihanKepribadian({
   questions,
   progressKey,
+  onActiveChange,
 }: {
   questions: SafeQuestion[];
   progressKey?: string;
+  /** true selama sudah ada jawaban dan latihan belum selesai: LatihanGate menahan peserta keluar. */
+  onActiveChange?: (active: boolean) => void;
 }) {
   const sorted = useMemo(
     () => [...questions].sort((a, b) => a.sequence_number - b.sequence_number),
@@ -39,6 +42,10 @@ export default function LatihanKepribadian({
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [result, setResult] = useState<{ summary: PribadiReviewSummary; items: PribadiReviewItem[] } | null>(null);
   const finished = result !== null;
+  const active = Object.keys(answers).length > 0 && !finished;
+  useEffect(() => {
+    onActiveChange?.(active);
+  }, [active, onActiveChange]);
   // Komponen ini baru dirender setelah peserta menekan "Mulai" (LatihanGate),
   // jadi selalu di browser — aman membaca localStorage di initializer.
   const [showAspect, setShowAspect] = useState(() => {
