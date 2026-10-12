@@ -1,5 +1,6 @@
 import type { KepribadianOptionsPayload } from "@/lib/types/safe-question";
-import { Accordion, Badge, Meter } from "@/app/components/ui";
+import { Meter } from "@/app/components/ui";
+import PembahasanNavigator from "@/app/components/pembahasan/PembahasanNavigator";
 
 /*
   Hasil + pembahasan latihan PRIBADI (Kepribadian + Integritas & Kejujuran, pedoman SPCP 6.a.2 dan 6.b).
@@ -33,9 +34,6 @@ export type PribadiReviewSummary = {
   pribadi: number;
 };
 
-const choiceText = (p: KepribadianOptionsPayload, key: string | null) =>
-  key ? p.choices.find((c) => c.key === key)?.text ?? key : null;
-
 function Score({ label, value, note }: { label: string; value: number; note?: string }) {
   return (
     <div className="inset-panel px-4 py-3">
@@ -46,88 +44,7 @@ function Score({ label, value, note }: { label: string; value: number; note?: st
   );
 }
 
-function Answer({ item }: { item: PribadiReviewItem }) {
-  const full = item.skor === item.max;
-  return (
-    <dl className="flex flex-wrap gap-x-6 gap-y-1 text-xs">
-      <div className="flex gap-1.5">
-        <dt className="text-muted-foreground">Jawaban Anda</dt>
-        <dd className={`font-bold ${full ? "text-success" : "text-foreground"}`}>
-          {choiceText(item.payload, item.selected_key) ?? "Dilewati"}
-        </dd>
-      </div>
-      <div className="flex gap-1.5">
-        <dt className="text-muted-foreground">Kunci</dt>
-        <dd className="font-bold text-success">{choiceText(item.payload, item.ideal)}</dd>
-      </div>
-      <div className="flex gap-1.5">
-        <dt className="text-muted-foreground">Skor</dt>
-        <dd className="tnum font-bold text-foreground">
-          {item.skor}/{item.max}
-        </dd>
-      </div>
-    </dl>
-  );
-}
-
-function KpItem({ item, no }: { item: Extract<PribadiReviewItem, { subtes: "KP" }>; no: number }) {
-  const { pembahasan: p } = item;
-  return (
-    <li className="space-y-3 py-4">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="tnum text-xs text-muted-foreground">{no}</span>
-        <Badge tone="info">{item.aspect}</Badge>
-      </div>
-      <p className="leading-relaxed text-foreground">{item.payload.statement}</p>
-      <Answer item={item} />
-      <ol className="space-y-1.5 border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">
-        <li>
-          <b className="text-foreground">Aspek:</b> {item.aspect} — {p.definisi_aspek}
-        </li>
-        {p.bedah && (
-          <li>
-            <b className="text-foreground">Bedah kalimat:</b> X = {p.bedah.sisi_x} · Y = {p.bedah.sisi_y} · pembanding “
-            {p.bedah.pembanding}”{p.bedah.pembalik && " (membalik arah: setuju berarti memihak Y)"}
-          </li>
-        )}
-        <li>
-          <b className="text-foreground">{p.bedah ? `Sisi aspek: ${p.bedah.sisi_aspek.toUpperCase()}.` : "Alasan:"}</b> {p.alasan}
-        </li>
-        <li>
-          <b className="text-foreground">Kunci:</b> {choiceText(item.payload, item.ideal)} ({item.ideal})
-        </li>
-        {p.catatan_psikologi && (
-          <li>
-            <b className="text-foreground">Catatan psikologi:</b> {p.catatan_psikologi}
-          </li>
-        )}
-      </ol>
-    </li>
-  );
-}
-
-function SkItem({ item, no }: { item: Extract<PribadiReviewItem, { subtes: "SK" }>; no: number }) {
-  return (
-    <li className="space-y-3 py-4">
-      <div className="flex flex-wrap items-center gap-2">
-        <span className="tnum text-xs text-muted-foreground">{no}</span>
-        {item.payload.aspect && <Badge tone="info">{item.payload.aspect}</Badge>}
-        <Badge tone="neutral">{item.dimensi}</Badge>
-      </div>
-      <p className="leading-relaxed text-foreground">{item.payload.statement}</p>
-      <p className="text-sm text-muted-foreground">
-        {item.payload.choices.map((c) => `${c.key}. ${c.text}`).join("   ·   ")}
-      </p>
-      <Answer item={item} />
-      <p className="border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">{item.pembahasan}</p>
-    </li>
-  );
-}
-
 export function PribadiReview({ summary, items }: { summary: PribadiReviewSummary; items: PribadiReviewItem[] }) {
-  const kp = items.filter((i): i is Extract<PribadiReviewItem, { subtes: "KP" }> => i.subtes === "KP");
-  const sk = items.filter((i): i is Extract<PribadiReviewItem, { subtes: "SK" }> => i.subtes === "SK");
-
   return (
     <div className="space-y-4">
       <div className="space-y-3">
@@ -154,24 +71,7 @@ export function PribadiReview({ summary, items }: { summary: PribadiReviewSummar
         </div>
       )}
 
-      {kp.length > 0 && (
-        <Accordion label="Pembahasan Kepribadian" summary={`${kp.length} pernyataan`}>
-          <ul className="divide-y divide-border">
-            {kp.map((item, i) => (
-              <KpItem key={item.question_id} item={item} no={i + 1} />
-            ))}
-          </ul>
-        </Accordion>
-      )}
-      {sk.length > 0 && (
-        <Accordion label="Pembahasan Integritas & Kejujuran" summary={`${sk.length} butir`}>
-          <ul className="divide-y divide-border">
-            {sk.map((item, i) => (
-              <SkItem key={item.question_id} item={item} no={i + 1} />
-            ))}
-          </ul>
-        </Accordion>
-      )}
+      <PembahasanNavigator pribadi={items} />
     </div>
   );
 }

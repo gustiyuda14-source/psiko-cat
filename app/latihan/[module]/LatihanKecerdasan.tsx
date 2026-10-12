@@ -148,7 +148,7 @@ export default function LatihanKecerdasan({
 
   if (results) {
     return (
-      <section className="surface-card mx-auto my-6 w-[calc(100%-2rem)] max-w-3xl space-y-5 px-6 py-8 sm:px-8">
+      <section className="mx-auto my-6 w-[calc(100%-2rem)] max-w-6xl space-y-5">
         <div className="text-center">
           <span className="mx-auto flex size-14 items-center justify-center rounded-full bg-success-soft text-success">
             <Check className="size-7" strokeWidth={2.5} />

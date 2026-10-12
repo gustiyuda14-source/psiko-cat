@@ -170,13 +170,6 @@ export default function ResultView({
                 )}
               </ModuleCard>
             </div>
-
-            <PembahasanSection
-              kecerdasan={kecerdasanItems}
-              kepribadian={kepribadianItems}
-              kecermatan={kecermatanSummary}
-              kecermatanDetail={kecermatanDetail}
-            />
           </div>
 
           <aside className="rep-side">
@@ -224,6 +217,16 @@ export default function ResultView({
               </Link>
             </div>
           </aside>
+        </div>
+
+        {/* Di luar rep-grid supaya navigator pembahasan dapat lebar penuh untuk dua kolomnya. */}
+        <div className="mt-8">
+          <PembahasanSection
+            kecerdasan={kecerdasanItems}
+            kepribadian={kepribadianItems}
+            kecermatan={kecermatanSummary}
+            kecermatanDetail={kecermatanDetail}
+          />
         </div>
       </div>
     </div>

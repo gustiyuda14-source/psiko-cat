@@ -127,38 +127,31 @@ export async function fetchKecermatanDetailReview(moduleSessionId: string): Prom
     (logs as unknown as ReviewLog[]).map((log) => [log.question_id, log])
   ).values()];
 
-  const groups = new Map<number, { total: number; correct: number; wrong: KecermatanDetailItem[] }>();
+  const groups = new Map<number, KecermatanDetailItem[]>();
   for (const log of uniqueLogs) {
     const columnIndex = log.question?.column_index;
     const payload = log.question?.options_payload;
     if (!columnIndex || !payload) continue;
     const correctKey = getMissingSymbolKey(payload);
     if (!correctKey) continue;
-    if (!groups.has(columnIndex)) groups.set(columnIndex, { total: 0, correct: 0, wrong: [] });
-    const g = groups.get(columnIndex)!;
-    g.total++;
-    if (log.response_value === correctKey) {
-      g.correct++;
-      continue;
-    }
-    g.wrong.push({
+    if (!groups.has(columnIndex)) groups.set(columnIndex, []);
+    groups.get(columnIndex)!.push({
       question_id: log.question_id,
       sequence_number: log.question.sequence_number,
-      shown: Array.isArray(payload?.shown) ? payload.shown.filter((symbol) => typeof symbol === "string") : [],
+      shown: payload.shown,
+      symbol_map: payload.symbol_map,
       selected_key: log.response_value,
-      selected_symbol: typeof payload?.symbol_map?.[log.response_value as keyof typeof payload.symbol_map] === "string"
-        ? payload.symbol_map[log.response_value as keyof typeof payload.symbol_map] : "?",
       correct_key: correctKey,
-      correct_symbol: payload.symbol_map[correctKey as keyof typeof payload.symbol_map],
+      is_correct: log.response_value === correctKey,
     });
   }
 
   return Array.from(groups.entries())
-    .map(([column_index, g]) => ({
+    .map(([column_index, items]) => ({
       column_index,
-      total: g.total,
-      correct: g.correct,
-      wrong: g.wrong.sort((a, b) => a.sequence_number - b.sequence_number),
+      total: items.length,
+      correct: items.filter((item) => item.is_correct).length,
+      items: items.sort((a, b) => a.sequence_number - b.sequence_number),
     }))
     .sort((a, b) => a.column_index - b.column_index);
 }

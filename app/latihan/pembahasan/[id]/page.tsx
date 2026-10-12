@@ -108,7 +108,7 @@ export default async function LatihanPembahasanPage({ params }: { params: Promis
           />
         </div>
       ) : (
-        <section className="surface-card mx-auto my-6 w-[calc(100%-2rem)] max-w-3xl space-y-5 px-6 py-8 sm:px-8">
+        <section className="mx-auto my-6 w-[calc(100%-2rem)] max-w-6xl space-y-5">
           {review.kecerdasan && <KecerdasanReview items={review.kecerdasan} />}
           {review.pribadi && <PribadiReview summary={review.pribadi.summary} items={review.pribadi.items} />}
           <Link href={review.key} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
