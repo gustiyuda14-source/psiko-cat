@@ -3,7 +3,7 @@
 import { useState, useTransition, type CSSProperties } from "react";
 import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config";
 import { fillY, wavePath } from "@/lib/honey";
-import { Button } from "@/app/components/ui-client";
+import { Button, Dialog } from "@/app/components/ui-client";
 import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
 
 /*
@@ -12,10 +12,10 @@ import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
   terakhir (0-100) dari riwayat. Tryout lengkap menyalakan ketiga sisi; kartu
   sub-tes hanya menyalakan sisinya sendiri. Memulai tes tetap lewat server action
   `startSession` (buat sesi lalu redirect). CSS di app/honey.css.
-  Langkah 1 = pilih paket simulasi: timeline hexagon, paket siap = kartu navy. Paket siap
-  terkecil yang belum pernah ditryout-kan jadi kartu unggulan (border emas berputar +
-  badge); kalau semua sudah, paket siap terakhir. Paket yang pernah ditryout-kan dapat
-  badge hijau. Paket tanpa bank soal tampil "Segera".
+  Langkah 1 = pilih paket simulasi: timeline hexagon, semua paket siap = kartu navy yang sama.
+  Hexagon emas = paket terpilih (awal: paket siap terkecil yang belum pernah ditryout-kan);
+  klik kartu memindahkan emas lalu membuka pratinjau paket sebelum halaman kubus. Paket yang
+  pernah ditryout-kan dapat badge hijau. Paket tanpa bank soal tampil "Segera".
 */
 
 export type SimulasiItem = { id: string; title: string; meta: string; desc: string; faces: ModuleType[] };
@@ -94,7 +94,9 @@ export default function SimulasiCatalog({
   const list = pkg === null ? [] : items[pkg] ?? [];
   const item = list[selected];
   const ready = packages.filter((p) => p.ready);
-  const featured = (ready.find((p) => p.runs === 0) ?? ready.at(-1))?.id;
+  const [sel, setSel] = useState(() => (ready.find((p) => p.runs === 0) ?? ready.at(-1))?.id);
+  const [preview, setPreview] = useState<number | null>(null);
+  const prev = packages.find((p) => p.id === preview);
 
   if (pkg === null || !item) {
     return (
@@ -108,10 +110,9 @@ export default function SimulasiCatalog({
             </linearGradient>
           </defs>
         </svg>
-        <ol className="sp-list" aria-label="Pilih paket simulasi">
+        <ol className="sp-list is-pick" aria-label="Pilih paket simulasi">
           {packages.map((p, i) => {
-            const state = !p.ready ? "is-locked" : `is-ready${p.id === featured ? " is-featured" : ""}${p.runs > 0 ? " is-done" : ""}`;
-            const isFeatured = p.ready && p.id === featured;
+            const state = !p.ready ? "is-locked" : `is-ready${p.runs > 0 ? " is-done" : ""}${p.id === sel ? " is-sel" : ""}`;
             const delta = p.nap !== undefined && p.prev !== undefined ? Math.round(p.nap) - Math.round(p.prev) : 0;
             return (
               <li key={p.id} className={`sp-step ${state}`} style={{ animationDelay: `${i * 70}ms` }}>
@@ -130,26 +131,18 @@ export default function SimulasiCatalog({
                   type="button"
                   className="sp-card"
                   disabled={!p.ready}
+                  aria-haspopup="dialog"
                   onClick={() => {
-                    setSelected(0);
-                    setPkg(p.id);
+                    setSel(p.id);
+                    setPreview(p.id);
                   }}
                 >
-                  {isFeatured && <span className="sp-shine" aria-hidden="true" />}
-                  {(isFeatured || p.runs > 0) && (
+                  {p.runs > 0 && (
                     <span className="sp-badges">
-                      {isFeatured && (
-                        <span className="sp-badge">
-                          <i aria-hidden="true" />
-                          {p.runs > 0 ? "Paket terbaru" : "Lanjutkan di sini"}
-                        </span>
-                      )}
-                      {p.runs > 0 && (
-                        <span className="sp-badge is-ok">
-                          <Check />
-                          Sudah dikerjakan
-                        </span>
-                      )}
+                      <span className="sp-badge is-ok">
+                        <Check />
+                        Sudah dikerjakan
+                      </span>
                     </span>
                   )}
                   <span>
@@ -213,6 +206,51 @@ export default function SimulasiCatalog({
             );
           })}
         </ol>
+        <Dialog open={prev !== undefined} onClose={() => setPreview(null)} labelledBy="sp-prev-title">
+          {prev && (
+            <div className="sp-prev">
+              <span className="section-kicker">Pratinjau paket</span>
+              <h2 id="sp-prev-title" className="sp-prev-title">
+                Simulasi Penuh Paket {prev.id}
+              </h2>
+              <p className="sp-prev-meta tnum">
+                {prev.runs > 0
+                  ? `Selesai ${prev.runs} kali · terakhir ${prev.at}${prev.nap !== undefined ? ` · Nilai Akhir Psikotest ${Math.round(prev.nap)}` : ""}`
+                  : "Belum pernah dikerjakan"}
+              </p>
+              <span className="sp-bar" aria-hidden="true">
+                {MODULE_ORDER.map((t) => (
+                  <i key={t} style={{ flex: MODULE_CONFIG[t].time_limit_seconds, background: `var(${SUB_VAR[t]})` }} />
+                ))}
+              </span>
+              <ul className="sp-prev-list tnum">
+                {(items[prev.id] ?? []).map((it) => (
+                  <li key={it.id} data-full={it.faces.length > 1 ? "true" : undefined}>
+                    <b>{it.title}</b>
+                    <span>{it.meta}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="sp-prev-note">Timer berjalan dan hasil masuk riwayat. Di langkah berikutnya pilih tryout lengkap atau satu sub-tes.</p>
+              <div className="mt-6 flex flex-col-reverse gap-2.5 sm:flex-row sm:justify-end">
+                <Button variant="secondary" onClick={() => setPreview(null)}>
+                  Batal
+                </Button>
+                <Button
+                  variant="accent"
+                  onClick={() => {
+                    setSelected(0);
+                    setPkg(prev.id);
+                    setPreview(null);
+                  }}
+                >
+                  Lanjut pilih tes
+                  <ArrowRight className="size-4" />
+                </Button>
+              </div>
+            </div>
+          )}
+        </Dialog>
       </>
     );
   }

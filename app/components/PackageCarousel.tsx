@@ -2,24 +2,23 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Check, ChevronRight, Close } from "@/app/components/icons";
+import { ArrowRight, Check, Close } from "@/app/components/icons";
 import { buttonStyles } from "@/app/components/ui";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
-import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { fillY, wavePath } from "@/lib/honey";
 import { MODULE_CONFIG } from "@/lib/test-config";
+import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
 import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
 
 /*
-  Pemilih paket latihan: kartu "Lanjutkan" (satu ketukan ke paket yang sedang
-  berjalan) di atas daftar semua paket. Daftar = timeline kartu paket yang sama dengan
-  katalog Simulasi (app/paket.css): kartu navy, paket "Lanjutkan" ber-border emas
-  berputar, paket selesai ber-badge hijau. Bar segmen (10 per kolom untuk Kecermatan,
-  4 seperempat untuk modul lain) terisi sesuai capaian terjauh dari lib/practice-progress.ts.
-  Rincian paket + tombol mulai: panel samping di desktop, lembar dari bawah di HP
-  (<dialog> native — focus trap, Esc, dan top layer gratis). Nama komponen
+  Pemilih paket latihan: timeline kartu paket yang sama dengan katalog Simulasi
+  (app/paket.css, .sp-list.is-pick): semua kartu siap diperlakukan sama dengan tombol emas,
+  hexagon emas = paket terpilih, paket selesai ber-badge hijau. Bar segmen (10 per kolom untuk
+  Kecermatan, 4 seperempat untuk modul lain) terisi sesuai capaian terjauh dari
+  lib/practice-progress.ts. Klik kartu = hexagon emas pindah + rincian paket dan tombol mulai:
+  panel samping di desktop, lembar dari bawah di HP (<dialog> native). Nama komponen
   dipertahankan supaya pemanggilnya tidak berubah. CSS di app/honey.css.
 */
 
@@ -128,8 +127,6 @@ export function PackageCarousel({
   const href = hrefOf(pkg.id, timedMode);
   // Sama dengan label di LatihanGate: Kecerdasan 90 menit, Kecermatan ikut pilihan timer.
   const timeNote = moduleLabel === "kecerdasan" ? `${MODULE_CONFIG.KECERDASAN.time_limit_seconds / 60} menit` : pkg.sections && timedMode ? "60 detik/kolom" : "tanpa timer";
-  // Kartu "Lanjutkan": paket yang sedang berjalan, kalau tidak ada paket siap pertama yang belum selesai.
-  const next = view.find((v) => v.ready && v.p > 0 && v.p < 1) ?? view.find((v) => v.ready && v.p < 1);
 
   const detail = (
     <>
@@ -292,23 +289,6 @@ export function PackageCarousel({
         </h2>
       </div>
 
-      {next && (
-        <div className="pk-hero">
-          <div className="min-w-0">
-            <span className="pk-hero-kicker">{next.p > 0 ? "Lanjutkan" : "Mulai dari sini"}</span>
-            <b className="pk-hero-title">{next.pkg.label}</b>
-            {segs(next)}
-            <span className="pk-hero-sub tnum">
-              {next.p > 0 ? `${next.done} dari ${next.pkg.questionCount} ${unitLabel} · ${Math.round(next.p * 100)}%` : `${next.pkg.questionCount} ${unitLabel}`}
-            </span>
-          </div>
-          <Link href={hrefOf(next.pkg.id, false)} className="pk-hero-cta">
-            {next.p > 0 ? "Lanjut latihan" : "Mulai latihan"}
-            <ArrowRight className="size-4" />
-          </Link>
-        </div>
-      )}
-
       <svg width="0" height="0" className="absolute" aria-hidden="true">
         <defs>
           <linearGradient id="sp-gold" x1="0" y1="0" x2="1" y2="1">
@@ -319,13 +299,9 @@ export function PackageCarousel({
         </defs>
       </svg>
       <div className="hc-stage">
-        <ol className="sp-list" aria-label="Semua paket">
+        <ol className="sp-list is-pick" aria-label="Semua paket">
           {view.map((v, i) => {
-            const sel = wide && v.pkg.id === pkg.id;
-            const featured = v === next;
-            const state = !v.ready
-              ? "is-locked"
-              : `is-ready${featured ? " is-featured" : ""}${v.p >= 1 ? " is-done" : ""}${sel ? " is-sel" : ""}`;
+            const state = !v.ready ? "is-locked" : `is-ready${v.p >= 1 ? " is-done" : ""}${v.pkg.id === pkg.id ? " is-sel" : ""}`;
             return (
               <li key={v.pkg.id} className={`sp-step ${state}`} style={{ animationDelay: `${i * 50}ms` }}>
                 <span className="sp-node" aria-hidden="true">
@@ -343,7 +319,7 @@ export function PackageCarousel({
                   type="button"
                   className="sp-card"
                   disabled={!v.ready}
-                  aria-pressed={wide ? sel : undefined}
+                  aria-pressed={wide ? v.pkg.id === pkg.id : undefined}
                   aria-haspopup={wide ? undefined : "dialog"}
                   aria-label={`${v.pkg.label}, ${status(v)}${v.ready ? `, ${v.done} dari ${v.pkg.questionCount} ${unitLabel}` : ""}`}
                   onClick={() => {
@@ -351,21 +327,12 @@ export function PackageCarousel({
                     if (!wide) setSheetOpen(true);
                   }}
                 >
-                  {featured && <span className="sp-shine" aria-hidden="true" />}
-                  {(featured || v.p >= 1) && (
+                  {v.p >= 1 && (
                     <span className="sp-badges">
-                      {featured && (
-                        <span className="sp-badge">
-                          <i aria-hidden="true" />
-                          {v.p > 0 ? "Lanjutkan di sini" : "Mulai dari sini"}
-                        </span>
-                      )}
-                      {v.p >= 1 && (
-                        <span className="sp-badge is-ok">
-                          <Check />
-                          Selesai
-                        </span>
-                      )}
+                      <span className="sp-badge is-ok">
+                        <Check />
+                        Selesai
+                      </span>
                     </span>
                   )}
                   <span>
@@ -388,14 +355,17 @@ export function PackageCarousel({
                   ) : (
                     <>
                       <span className="sp-side">
-                        {v.p > 0 ? (
+                        {v.p > 0 && (
                           <span className="sp-score tnum">
                             <small>Capaian</small>
                             <strong>{Math.round(v.p * 100)}%</strong>
                           </span>
-                        ) : (
-                          <ChevronRight className="sp-chev size-5" />
                         )}
+                        {/* Sesi latihan tidak bisa dilanjutkan: paket yang pernah dibuka = "Ulangi". */}
+                        <span className="sp-cta">
+                          {v.done > 0 ? "Ulangi paket" : "Pilih paket"}
+                          <ArrowRight className="size-4" />
+                        </span>
                       </span>
                       <span className="sp-mix">{segs(v)}</span>
                     </>

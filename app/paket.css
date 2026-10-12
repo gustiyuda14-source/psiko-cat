@@ -105,3 +105,26 @@
 .is-locked .sp-mix .pk-segs i { background: var(--border) }
 .sp-step.is-sel .sp-card { outline: 2px solid var(--gold-hi); outline-offset: 3px }
 .sp-chev { color: var(--gold-hi) }
+
+/* Simulasi (.sp-list.is-pick): semua kartu siap diperlakukan sama, tombol emas di semua kartu;
+   hexagon emas = paket terpilih (.is-sel), berpindah saat kartu diklik. Latihan tidak terpengaruh. */
+.is-pick .sp-node polygon { transition: fill 300ms var(--e-out), stroke 300ms var(--e-out) }
+.is-pick .is-sel .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 6px 10px rgb(184 137 43 / .45)) }
+.is-pick .is-sel .sp-node b { color: var(--brand-ink) }
+.is-pick .is-sel .sp-node svg { animation: sp-pop 420ms var(--e-out) }
+@keyframes sp-pop { 40% { transform: scale(1.14) } }
+.is-pick .is-ready .sp-cta { border-color: transparent; background: var(--gold-grad); color: var(--brand-ink); box-shadow: 0 8px 20px -8px rgb(232 199 102 / .7) }
+.is-pick .is-ready .sp-card:hover .sp-cta { border-color: transparent; background: var(--gold-grad); filter: brightness(1.05) }
+@media (prefers-reduced-motion: reduce) { .is-pick .is-sel .sp-node svg { animation: none } .is-pick .sp-node polygon { transition: none } }
+
+/* Pratinjau paket (Dialog) sebelum halaman kubus. */
+.sp-prev { --sub-kc: var(--brand-ink); --sub-km: #c9a24a; --sub-kp: #8a9bb8; display: grid; gap: 12px }
+.sp-prev-title { margin: 0; font: 700 1.45rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground) }
+.sp-prev-meta { margin: 0; color: var(--muted-foreground); font-size: .9rem }
+.sp-prev-list { display: grid; margin: 0; padding: 0; list-style: none; border: 1.5px dashed var(--border); border-radius: 12px }
+.sp-prev-list li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 14px; font-size: .92rem }
+.sp-prev-list li + li { border-top: 1.5px dashed var(--border) }
+.sp-prev-list li[data-full] { background: var(--surface-inset); border-radius: 10px 10px 0 0 }
+.sp-prev-list b { font-weight: 600; color: var(--foreground) }
+.sp-prev-list span { color: var(--muted-foreground); white-space: nowrap }
+.sp-prev-note { margin: 0; color: var(--muted-foreground); font-size: .85rem }
