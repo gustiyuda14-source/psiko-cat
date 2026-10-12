@@ -208,8 +208,8 @@ for (const p of puzzles) {
     options_payload: { instruksi: INSTRUKSI, question_text: null, sub_text: null, is_multi_select: false, svg_content: svg, choices: KEYS.map((key, i) => ({ key, text: choices[i] })) },
     scoring_rule: { type: "dichotomous", correct_key: p.key },
     tingkat: p.tingkat ?? 2, objek: p.objek,
-    // Simulasi 3 (pkg 15) ke atas: aturan 2 paragraf + gambar pembahasan. Paket lama tidak diubah.
-    ...(p.pkg >= 15
+    // Simulasi 3 (pkg 15) ke atas + Latihan Paket 2 (pkg 3): aturan 2 paragraf + gambar pembahasan. Pkg 13 tidak diubah.
+    ...(p.pkg >= 15 || p.pkg === 3
       ? { pembahasan: `${p.pembahasan}\n\n${gugur(p, choices)} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.`, pembahasan_svg: pembahasanSvg(p) }
       : { pembahasan: `${p.pembahasan} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.` }),
   });

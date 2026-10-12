@@ -197,3 +197,8 @@ export function pieAt({ cx, cy, r, outer, inner, center }: Pie, ring: "outer" | 
 export const fp = ([x, y]: Pt, [cx, cy]: Pt, size: number): Pt => [cx + (x * size) / BOX, cy + (y * size) / BOX];
 /** Baris keterangan merah di tengah, mulai dari y0. */
 export const foot = (lines: string[], y0: number) => lines.map((t, i) => redText(W / 2, y0 + 34 * i, t, 25)).join("");
+/** Satu titik (koordinat BOX) setelah cermin/putar yang sama dengan tf(). */
+export const ptf = (p: Pt, deg: number, mirror = false): Pt => (tf([{ k: "circ", c: p, r: 1, fill: "b" }], deg, mirror)[0] as { c: Pt }).c;
+/** Garis putus-putus (cermin/sumbu) dari a ke b. */
+export const dashLine = ([x1, y1]: Pt, [x2, y2]: Pt, color = INK) =>
+  `<line x1="${r1(x1)}" y1="${r1(y1)}" x2="${r1(x2)}" y2="${r1(y2)}" stroke="${color}" stroke-width="3" stroke-dasharray="8 6"/>`;

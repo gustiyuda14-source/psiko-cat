@@ -14,9 +14,9 @@ import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./de
 
 const root = path.join(__dirname, "..");
 const PKGS = [13, 14, 2, 3, 15, 16];
-// Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13/2/3 tetap seperti semula.
-// Pkg 14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
-const PB = new Set([14, 15, 16]);
+// Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13 tetap seperti semula.
+// Pkg 2/3/14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
+const PB = new Set([2, 3, 14, 15, 16]);
 // Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
 const NEW = new Set([15, 16]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;

@@ -1,4 +1,4 @@
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 type Choice = { key: "A" | "B" | "C" | "D" | "E"; text: string };
@@ -194,7 +194,7 @@ function check(items: Item[]) {
 function preview(items: Item[]) {
   const cards = items.map((item, index) => {
     const choiceText = item.options_payload.choices.map((choice) => `${choice.key}. ${choice.text}`).join(" &nbsp; ");
-    return `<section><h2>Soal ${item.sequence_number}: ${item.objek}</h2><p class="instruction">${item.options_payload.instruksi}</p><h3>Potongan acak</h3>${item.options_payload.svg_content}<h3>Gambar utuh</h3><div class="whole">${wholeSvg(puzzles[index])}</div><p><strong>Kunci ${item.scoring_rule.correct_key}:</strong> ${item.options_payload.choices.find((choice) => choice.key === item.scoring_rule.correct_key)?.text}</p><p>${choiceText}</p></section>`;
+    return `<section><h2>Soal ${item.sequence_number}: ${item.objek}</h2><p class="instruction">${item.options_payload.instruksi}</p><h3>Potongan acak</h3>${item.options_payload.svg_content}<h3>Gambar utuh</h3><div class="whole">${wholeSvg(puzzles[index])}</div>${PB[item.sequence_number] ? `<h3>Gambar pembahasan</h3><div class="whole">${PB[item.sequence_number].pembahasan_svg}</div><p style="white-space:pre-line">${PB[item.sequence_number].pembahasan}</p>` : ""}<p><strong>Kunci ${item.scoring_rule.correct_key}:</strong> ${item.options_payload.choices.find((choice) => choice.key === item.scoring_rule.correct_key)?.text}</p><p>${choiceText}</p></section>`;
   }).join("\n");
   return `<!doctype html><html lang="id"><meta charset="utf-8"><title>Preview Susun P2</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111}section{border:1px solid #aaa;margin:20px 0;padding:16px}h2{margin:0 0 8px}.instruction{font-weight:bold}.whole{max-width:600px}svg{display:block;max-width:100%;height:auto}p{font-size:14px;line-height:1.6}</style><body><h1>Preview Kecerdasan Paket 2 — Menyusun Potongan Gambar</h1>${cards}</body></html>`;
 }
@@ -203,6 +203,44 @@ const items = puzzles.map(buildItem);
 check(items);
 mkdirSync(resolve("prisma/data"), { recursive: true });
 mkdirSync(resolve("output"), { recursive: true });
-writeFileSync(resolve("prisma/data/kecerdasan_p2_susun.json"), `${JSON.stringify(items, null, 2)}\n`);
+
+// ── Pembahasan (2 paragraf + gambar) untuk butir yang masih aktif di pkg 2 (seed-kecerdasan-kal.ts MOVES[2]: 29, 34) ──
+// Gambar seperti generate-kecerdasan-susun-kal.ts: gambar utuh, garis potong merah putus-putus, nomor potongan hijau; tanpa id.
+function pembahasanSvg(p: Puzzle) {
+  const w = p.sceneWidth ?? 600, cuts = p.cuts ?? Array.from({ length: p.pieces + 1 }, (_, i) => (i * w) / p.pieces), ans = answerFor(p.order);
+  const lines = cuts.slice(1, -1).map((x) => `<path d="M${x} 24 V214" stroke="#d32f2f" stroke-width="3" stroke-dasharray="8 6"/>`).join("");
+  const labels = ans.map((n, i) => { const x = (cuts[i] + cuts[i + 1]) / 2; return `<circle cx="${x}" cy="14" r="13" fill="#1a7f37"/><text x="${x}" y="20" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" text-anchor="middle">${n}</text>`; }).join("");
+  return `<svg viewBox="0 -4 ${w} 222" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="-4" width="${w}" height="222" fill="white"/><g transform="translate(0 26)" fill="#111">${p.scene}</g>${lines}${labels}</svg>`;
+}
+/** Setiap pilihan salah putus di sambungan pertama yang tidak bersebelahan pada urutan benar. */
+function gugur(p: Puzzle) {
+  const ans = answerFor(p.order), next = new Map(ans.slice(0, -1).map((n, i) => [n, ans[i + 1]]));
+  return p.choices.map((c, i) => {
+    if ("ABCDE"[i] === p.correct) return "";
+    const seq = c.split(" – ").map(Number), j = seq.findIndex((n, k) => k < seq.length - 1 && next.get(n) !== seq[k + 1]);
+    return `Pilihan ${"abcde"[i]} putus di sambungan ${seq[j]}–${seq[j + 1]}.`;
+  }).filter(Boolean).join(" ");
+}
+const PB_TEXT: Record<number, string> = {
+  29: "Cari ujung-ujung gambar dulu. Potongan 2 berisi ujung sayap dengan bulu runcing menghadap ke kiri (ujung kiri), dan potongan 3 berisi ujung bulu menghadap ke kanan (ujung kanan). Potongan 4 berisi badan dan kepala elang, lalu disambung potongan 1 (bagian sayap kanan yang melebar) sebelum ujung kanan.",
+  34: "Ikuti badan pesawat dari depan ke belakang. Potongan 4 adalah moncong runcing (ujung kiri), lalu potongan 2 (badan depan polos), potongan 6 (pangkal sayap utama yang melebar), potongan 5 (sambungan sayap dengan badan berjendela), potongan 1 (badan berjendela dengan sayap ekor), dan terakhir potongan 3 (ujung ekor).",
+};
+const PB: Record<number, { pembahasan: string; pembahasan_svg: string }> = {};
+for (const p of puzzles.filter((q) => PB_TEXT[q.sequence])) {
+  const pembahasan = `${PB_TEXT[p.sequence]}\n\n${gugur(p)} Tips: tentukan kedua ujung dulu, lalu periksa setiap sambungan. Urutan: ${enDash(answerFor(p.order))}. Jawaban: ${p.correct.toLowerCase()}.`;
+  const pembahasan_svg = pembahasanSvg(p);
+  assert(/^[^\n]+\n\n[^\n]+$/.test(pembahasan) && gugur(p).split("Pilihan").length === 5, `pembahasan ${p.sequence} harus 2 paragraf dengan 4 pilihan gugur`);
+  assert(!/\bid=|<(?:script|image|style)\b|href=/.test(pembahasan_svg), `pembahasan_svg ${p.sequence} tidak polos`);
+  PB[p.sequence] = { pembahasan, pembahasan_svg };
+}
+
+// Augment: soal di file sudah live, jadi tidak ditulis ulang. Soal hasil generator wajib identik dengan file,
+// lalu hanya `pembahasan` + `pembahasan_svg` yang dipasang. Butir lain disalin apa adanya.
+type Stored = Item & { pembahasan?: string; pembahasan_svg?: string };
+const file = resolve("prisma/data/kecerdasan_p2_susun.json");
+const prev = JSON.parse(readFileSync(file, "utf8")) as Stored[];
+const strip = ({ pembahasan: _p, pembahasan_svg: _s, ...q }: Stored) => q;
+assert(JSON.stringify(prev.map(strip)) === JSON.stringify(items), "soal di generator ≠ soal di file; jangan regenerate soal live");
+writeFileSync(file, `${JSON.stringify(prev.map((r) => (PB[r.sequence_number] ? { ...strip(r), ...PB[r.sequence_number] } : r)), null, 2)}\n`);
 writeFileSync(resolve("output/susun-p2-preview.html"), preview(items));
 console.log("Generated prisma/data/kecerdasan_p2_susun.json and output/susun-p2-preview.html");

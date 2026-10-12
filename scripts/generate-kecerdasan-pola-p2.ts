@@ -189,10 +189,85 @@ for (const it of items) {
   assert.ok(!/<script|<image|href=|<style|\bid=/.test(it.options_payload.svg_content), `soal ${it.sequence_number}: SVG harus polos`);
   assert.equal((it.options_payload.svg_content.match(/<rect x=/g) ?? []).length >= 9, true);
 }
+// ── Pembahasan (2 paragraf + gambar) untuk butir yang masih aktif di pkg 2 (seed-kecerdasan-kal.ts MOVES[2]) ──
+// Gambar: pola lengkap, jawaban mengisi kotak "?" berbingkai hijau, anotasi merah; tanpa id. Kotak besar supaya terbaca di HP.
+const HL = "#1a7f37", RED = "#d32f2f";
+const redT = (x: number, y: number, t: string, size = 26) =>
+  `<text x="${x}" y="${y}" font-family="Arial, Helvetica, sans-serif" font-size="${size}" font-weight="bold" text-anchor="middle" fill="${RED}">${t}</text>`;
+const ring = ([x, y]: number[], r: number) => `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${r.toFixed(1)}" fill="none" stroke="${RED}" stroke-width="4"/>`;
+type At = (r: number, c: number) => [number, number];
+type Pb = { grid: Draw[][]; hl: [number, number]; foot: string[]; ann?: (at: At, k: number, size: number) => string; pad?: number; pb: string };
+function pbLayout({ grid, hl, foot, ann = () => "", pad = 0 }: Pb) {
+  const rows = grid.length, cols = grid[0].length, size = Math.min(150, Math.floor((W - 20) / cols) - 14), step = size + 14, k = size / BOX;
+  const left = (W - (cols - 1) * step) / 2, top = 16 + size / 2;
+  const at: At = (r, c) => [left + c * step, top + r * step];
+  let out = "";
+  grid.forEach((row, r) => row.forEach((d, c) => {
+    const [cx, cy] = at(r, c), h = hl[0] === r && hl[1] === c;
+    out += `<rect x="${cx - size / 2}" y="${cy - size / 2}" width="${size}" height="${size}" fill="white" stroke="${h ? HL : INK}" stroke-width="${h ? 8 : 3}"/>` +
+      `<g transform="translate(${cx} ${cy}) scale(${k.toFixed(3)})">${d(0, 0)}</g>`;
+  }));
+  out += ann(at, k, size);
+  const y0 = top + (rows - 1) * step + size / 2 + 44 + pad;
+  out += foot.map((t, i) => redT(W / 2, y0 + 34 * i, t)).join("");
+  const h = y0 + 34 * (foot.length - 1) + 18;
+  return `<svg viewBox="0 0 ${W} ${h}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>${out}</svg>`;
+}
+const qd = BOX / 4 - 0.75; // pusat kuadran pada kotak quad()
+const PBS: Record<number, Pb> = {
+  26: {
+    grid: q26rows.map(([a, b]) => [quad(a), quad(b), quad(xor(a, b))]), hl: [2, 2], foot: ["Kolom 3 = kuadran yang hitam di SALAH SATU kolom", "Hitam di kedua kolom (lingkar merah) → putih"],
+    ann: (at, k) => [0, 1, 2].map((c) => ring([at(2, c)[0] + qd * k, at(2, c)[1] - qd * k], 21 * k)).join(""),
+    pb: "Kolom ketiga adalah gabungan kolom pertama dan kedua, tetapi kuadran yang hitam di keduanya menjadi putih (hanya kuadran yang hitam di salah satu kolom yang tetap hitam). Baris 3: kolom 1 hitam di kanan atas dan kiri bawah, kolom 2 hitam di kiri atas dan kanan atas. Kanan atas hitam di keduanya sehingga hilang, tersisa kiri atas dan kiri bawah.\n\n" +
+      "Pilihan a hanya menyalin kolom 1. Pilihan b menggabungkan semua kuadran, jadi kanan atas yang hitam di keduanya masih hitam. Pilihan c justru hanya menyisakan kanan atas, kuadran yang seharusnya hilang. Pilihan e menghitamkan kanan atas dan kanan bawah, padahal kanan bawah tidak hitam di kolom mana pun. Tips: bandingkan kuadran satu per satu, hitam + hitam = putih. Jawaban: d.",
+  },
+  31: {
+    grid: q31start.map((m) => [cross(m), cross(rot(m)), cross(rot(rot(m)))]), hl: [2, 2], foot: ["Tiap kolom: semua tanda berputar 1 kuadran", "searah jarum jam (lingkar merah = lingkaran)"],
+    ann: (at, k) => [[20, 20], [-20, 20], [-20, -20]].map(([x, y], c) => ring([at(2, c)[0] + x * k, at(2, c)[1] + y * k], 15 * k)).join(""),
+    pb: "Pada setiap baris, semua tanda (silang dan lingkaran) berputar satu kuadran searah jarum jam dari kolom ke kolom. Baris 3 kolom 1: silang di kiri atas dan kanan atas, lingkaran di kanan bawah. Diputar dua kali (kolom 3): silang pindah ke kanan bawah dan kiri bawah, lingkaran ke kiri atas.\n\n" +
+      "Pilihan b diputar berlawanan arah jarum jam (silang di kiri bawah dan kiri atas, lingkaran di kanan atas). Pilihan c silangnya benar, tetapi lingkarannya di kanan atas. Pilihan d silangnya baru diputar sekali (kanan atas dan kanan bawah). Pilihan e tidak punya lingkaran. Tips: lacak satu tanda yang jumlahnya sedikit (lingkaran) lebih dulu. Jawaban: a.",
+  },
+  32: {
+    grid: [[nest(["sq", "ci", "tr"], WBW), nest(["tr", "sq", "ci"], BWB), nest(["ci", "tr", "sq"], WBW), nest(["sq", "ci", "tr"], BWB)]], hl: [0, 3], pad: 56, foot: ["Bangun terdalam pindah menjadi terluar,", "warna luar berselang putih/hitam"],
+    ann: (at, _k, size) => [["persegi", "putih"], ["segitiga", "hitam"], ["lingkaran", "putih"], ["persegi", "hitam"]].map(([a, b], c) => redT(at(0, c)[0], at(0, c)[1] + size / 2 + 28, a, 22) + redT(at(0, c)[0], at(0, c)[1] + size / 2 + 54, b, 22)).join(""),
+    pb: "Tiga bangun sepusat. Setiap langkah, bangun paling dalam pindah menjadi paling luar: persegi–lingkaran–segitiga → segitiga–persegi–lingkaran → lingkaran–segitiga–persegi, sehingga gambar ke-4 kembali persegi–lingkaran–segitiga. Warna berselang tiap langkah: putih–hitam–putih, lalu hitam–putih–hitam, dan seterusnya. Gambar ke-4 berwarna hitam–putih–hitam (persegi hitam, lingkaran putih, segitiga hitam).\n\n" +
+      "Pilihan a susunannya sama tetapi warnanya salah (putih–hitam–putih). Pilihan b mengulang gambar ke-2. Pilihan d menukar lingkaran dan segitiga di dalam persegi. Pilihan e memakai susunan gambar ke-3. Tips: cek susunan bangun dulu, baru warnanya. Jawaban: c.",
+  },
+  33: {
+    grid: [Array.from({ length: 7 }, (_, k) => column(...frame33(k)))], hl: [0, 6], pad: 30, foot: ["Bulatan turun 1 sel, segitiga naik 1 sel", "Gambar ke-7: bulatan sel 3, segitiga sel 2"],
+    ann: (at, _k, size) => Array.from({ length: 7 }, (_, c) => redT(at(0, c)[0], at(0, c)[1] + size / 2 + 28, `ke-${c + 1}`, 22)).join(""),
+    pb: "Tiap kotak berisi kolom 4 sel. Bulatan hitam turun satu sel setiap langkah (setelah sel paling bawah kembali ke atas), sedangkan segitiga naik satu sel (setelah paling atas kembali ke bawah). Gambar ke-6: bulatan di sel ke-2 dan segitiga di sel ke-3 dari atas. Gambar ke-7: bulatan di sel ke-3 dan segitiga di sel ke-2 dari atas.\n\n" +
+      "Pilihan a sama dengan gambar ke-6 (belum bergeser). Pilihan b menggeser keduanya dua langkah (bulatan sel 4, segitiga sel 1). Pilihan c bulatannya turun dua sel ke sel 4. Pilihan e segitiganya naik dua sel ke sel 1. Tips: lacak bulatan dan segitiga terpisah, satu langkah saja dari gambar terakhir. Jawaban: d.",
+  },
+  36: {
+    grid: q36rows.map(([a, b]) => [parts(a), parts(b), parts(sym(a, b))]), hl: [2, 2], foot: ["Kolom 3 = unsur yang hanya ada di SATU kolom", "Garis / dan bulatan ada di keduanya → dibuang"],
+    ann: (at, k) => [0, 1].map((c) => ring([at(2, c)[0] + 24 * k, at(2, c)[1] + 24 * k], 19 * k)).join(""),
+    pb: "Kolom ketiga hanya memuat unsur yang ada di salah satu kolom (pertama atau kedua). Unsur yang ada di keduanya dibuang. Baris 3: kolom 1 = garis mendatar, garis miring /, bulatan kanan bawah. Kolom 2 = garis miring /, garis miring \\, bulatan kanan bawah. Garis / dan bulatan ada di keduanya sehingga dibuang, tersisa garis mendatar dan garis miring \\.\n\n" +
+      "Pilihan a menggabungkan semua unsur tanpa membuang yang sama. Pilihan b masih memuat bulatan. Pilihan c hanya berisi garis /, padahal garis itu ada di keduanya. Pilihan d memuat garis / dan kehilangan garis \\. Tips: coret unsur yang muncul di kedua kolom, sisanya adalah jawaban. Jawaban: e.",
+  },
+};
+const OPTS: Record<number, Draw> = { 26: quad("1010"), 31: cross({ x: [2, 3], o: [0] }), 32: nest(["sq", "ci", "tr"], BWB), 33: column(...frame33(6)), 36: parts(["H", "\\"]) };
+const PB: Record<number, { pb: string; svg: string }> = {};
+for (const [seq, p] of Object.entries(PBS)) {
+  assert.equal(p.grid[p.hl[0]][p.hl[1]](0, 0), OPTS[+seq](0, 0), `soal ${seq}: isi gambar pembahasan ≠ pilihan kunci`);
+  PB[+seq] = { pb: p.pb, svg: pbLayout(p) };
+  assert.match(p.pb, /^[^\n]+\n\n[^\n]+ Jawaban: [a-e]\.$/, `soal ${seq}: pembahasan harus 2 paragraf`);
+  assert.equal(p.pb.slice(-2, -1).toUpperCase(), items.find((it) => it.sequence_number === +seq)!.scoring_rule.correct_key, `soal ${seq}: pembahasan ≠ kunci`);
+  assert.ok(!/\bid=|<(?:script|image|style)\b|href=/.test(PB[+seq].svg), `soal ${seq}: pembahasan_svg tidak polos`);
+}
+
+// Augment: soal di file sudah live, jadi tidak ditulis ulang. Pertanyaan hasil generator wajib identik dengan file,
+// lalu hanya `pembahasan` + `pembahasan_svg` yang dipasang. Butir lain disalin apa adanya.
 const root = path.join(__dirname, "..");
-fs.writeFileSync(path.join(root, "prisma/data/kecerdasan_p2_pola.json"), JSON.stringify(items, null, 1));
+const file = path.join(root, "prisma/data/kecerdasan_p2_pola.json");
+type Stored = (typeof items)[number] & { pembahasan?: string; pembahasan_svg?: string };
+const prev = JSON.parse(fs.readFileSync(file, "utf8")) as Stored[];
+const strip = ({ pembahasan: _p, pembahasan_svg: _s, ...q }: Stored) => q;
+assert.equal(JSON.stringify(prev.map(strip)), JSON.stringify(items), "soal di generator ≠ soal di file; jangan regenerate soal live");
+fs.writeFileSync(file, JSON.stringify(prev.map((r) => (PB[r.sequence_number] ? { ...strip(r), pembahasan: PB[r.sequence_number].pb, pembahasan_svg: PB[r.sequence_number].svg } : r)), null, 1));
 fs.mkdirSync(path.join(root, "output"), { recursive: true });
 fs.writeFileSync(path.join(root, "output/pola-p2-preview.html"),
   `<!doctype html><meta charset="utf-8"><body style="font-family:sans-serif;max-width:900px;margin:auto">` +
-  items.map((it) => `<h3>Soal ${it.sequence_number} — kunci ${it.scoring_rule.correct_key}</h3><div style="border:1px solid #ccc">${it.options_payload.svg_content}</div>`).join(""));
+  items.map((it) => `<h3>Soal ${it.sequence_number} — kunci ${it.scoring_rule.correct_key}</h3><div style="border:1px solid #ccc">${it.options_payload.svg_content}</div>` +
+    (PB[it.sequence_number] ? `<h4>Pembahasan</h4><div style="border:1px solid #ccc;max-width:600px">${PB[it.sequence_number].svg}</div><p style="white-space:pre-line">${PB[it.sequence_number].pb}</p>` : "")).join(""));
 console.log(`OK: ${items.length} soal pola → prisma/data/kecerdasan_p2_pola.json`);
