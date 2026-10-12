@@ -5,9 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
-import { MODULE_CONFIG, MODULE_ORDER, latihanHref } from "@/lib/test-config";
+import { MODULE_CONFIG, MODULE_ORDER, latihanHref, type ModuleType } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
-import { NavAdmin, NavDrill, NavFundamental, NavHome, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph } from "@/app/components/nav-icons";
+import {
+  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph,
+} from "@/app/components/nav-icons";
 
 /*
   Shell navigasi dashboard mengikuti dajiks-cest: sidebar putih tetap di kiri
@@ -19,12 +21,12 @@ import { NavAdmin, NavDrill, NavFundamental, NavHome, NavKosakata, NavLatihan, N
 type NavItem = {
   label: string;
   href: string;
-  icon: () => React.ReactElement;
+  icon: (props: { className?: string }) => React.ReactElement;
 };
 
 const PRIMARY_NAV: NavItem[] = [
   { label: "Beranda", href: "/dashboard", icon: NavHome },
-  { label: "Simulasi", href: "/dashboard/simulasi", icon: NavSimulasi },
+  { label: "Simulasi Penuh/Tryout", href: "/dashboard/simulasi", icon: NavSimulasi },
 ];
 
 const SECONDARY_NAV: NavItem[] = [
@@ -36,9 +38,15 @@ const SECONDARY_NAV: NavItem[] = [
 
 // Hanya untuk akun admin (seperti tautan "Admin: akun peserta" di dajiks-cest); akses dicek ulang di server.
 const ADMIN_NAV: NavItem[] = [
-  { label: "Admin: akun peserta", href: "/admin/akun", icon: NavAdmin },
-  { label: "Admin: hasil peserta", href: "/admin", icon: NavAdmin },
+  { label: "Akun peserta", href: "/admin/akun", icon: NavAdmin },
+  { label: "Hasil peserta", href: "/admin", icon: NavHasil },
 ];
+
+const SUB_ICON: Record<ModuleType, (props: { className?: string }) => React.ReactElement> = {
+  KECERDASAN: NavKecerdasan,
+  KECERMATAN: NavKecermatan,
+  KEPRIBADIAN: NavKepribadian,
+};
 
 function isActive(pathname: string, href: string): boolean {
   return href === "/dashboard" ? pathname === href : pathname.startsWith(href);
@@ -54,16 +62,23 @@ function backTarget(pathname: string): { href: string; label: string } | null {
   return { href: "/dashboard", label: "Kembali ke Beranda" };
 }
 
-/* Item aktif: latar krem + garis emas kiri; kotak ikon jadi navy (lihat .nav-active di globals.css). */
+/* Gaya bersih: ikon garis polos, item aktif = pill navy tipis + ikon terisi lembut (.nav-active di globals.css). */
 function navItemClass(active: boolean): string {
   return [
-    "flex min-h-12 items-center gap-3 rounded-md border px-3 text-sm font-semibold",
-    "transition-[background-color,border-color,color] duration-200 ease-out",
-    "max-lg:min-h-[52px] max-lg:text-base font-heading",
+    "flex min-h-10 items-center gap-3 rounded-lg px-3 text-[0.9375rem]",
+    "transition-colors duration-150 ease-out max-lg:min-h-12 max-lg:text-base",
     active
-      ? "nav-active border-border bg-surface-inset text-brand-ink shadow-[inset_3px_0_0_var(--gold)]"
-      : "border-transparent text-muted-foreground hover:border-border hover:bg-surface-inset hover:text-brand-ink",
+      ? "nav-active bg-brand-ink/[0.07] font-semibold text-brand-ink"
+      : "font-medium text-muted-foreground hover:bg-foreground/[0.04] hover:text-foreground",
   ].join(" ");
+}
+
+function NavHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <p className="px-3 pb-1.5 pt-5 text-[0.6875rem] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+      {children}
+    </p>
+  );
 }
 
 export default function Sidebar({ name, username, isAdmin = false }: { name: string; username: string; isAdmin?: boolean }) {
@@ -174,8 +189,10 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
         </div>
       )}
 
-      <nav className="grid gap-2 px-3 py-8 max-lg:gap-1 max-lg:py-4" aria-label="Menu utama">
+      <nav className="grid gap-0.5 px-3 py-5 max-lg:py-3" aria-label="Menu utama">
         {PRIMARY_NAV.map(renderLink)}
+
+        <NavHeading>Latihan &amp; belajar</NavHeading>
 
         <div className="flex items-center gap-1">
           <Link
@@ -188,7 +205,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
             className={`${navItemClass(latihanActive)} min-w-0 flex-1`}
           >
             <NavLatihan />
-            Latihan
+            Latihan/Mini Tryout
           </Link>
           <button
             type="button"
@@ -196,7 +213,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
             aria-label={latihanOpen ? "Tutup pilihan latihan" : "Buka pilihan latihan"}
             aria-expanded={latihanOpen}
             aria-controls={`${navigationId}-latihan-submenu`}
-            className="flex size-11 shrink-0 items-center justify-center rounded-md text-muted-foreground transition-colors duration-200 hover:bg-surface-inset hover:text-brand-ink"
+            className="flex size-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-150 hover:bg-foreground/[0.04] hover:text-foreground max-lg:size-12"
           >
             <ChevronDown
               className={`size-4 transition-transform duration-200 ease-out ${
@@ -209,24 +226,26 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
         {latihanOpen && (
           <ul
             id={`${navigationId}-latihan-submenu`}
-            className="ml-[26px] space-y-0.5 border-l border-dashed border-border py-1 pl-3"
+            className="my-1 ml-[21px] border-l border-border"
           >
             {MODULE_ORDER.map((type) => {
               const meta = MODULE_CONFIG[type];
               const href = latihanHref(type);
               const active = isActive(pathname, href);
+              const SubIcon = SUB_ICON[type];
               return (
                 <li key={type}>
                   <Link
                     href={href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    className={`flex min-h-10 items-center rounded-md px-3 text-sm transition-colors duration-200 ${
+                    className={`-ml-px flex min-h-9 items-center gap-2.5 border-l-2 pl-[19px] pr-3 text-sm transition-colors duration-150 max-lg:min-h-11 ${
                       active
-                        ? "bg-surface-inset font-semibold text-brand-ink shadow-[inset_3px_0_0_var(--gold)]"
-                        : "text-muted-foreground hover:bg-surface-inset hover:text-brand-ink"
+                        ? "border-brand-ink font-semibold text-brand-ink"
+                        : "border-transparent text-muted-foreground hover:text-foreground"
                     }`}
                   >
+                    <SubIcon className="size-4" />
                     {meta.label}
                   </Link>
                 </li>
@@ -236,7 +255,12 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
         )}
 
         {SECONDARY_NAV.map(renderLink)}
-        {isAdmin && ADMIN_NAV.map(renderLink)}
+        {isAdmin && (
+          <>
+            <NavHeading>Admin</NavHeading>
+            {ADMIN_NAV.map(renderLink)}
+          </>
+        )}
       </nav>
 
       <p className="mx-6 mb-6 mt-auto border-t border-dashed border-border pt-4 text-sm text-muted-foreground lg:border-t-0 lg:pt-0">

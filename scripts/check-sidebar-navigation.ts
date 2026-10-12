@@ -15,7 +15,7 @@ for (const path of ["/dashboard", "/dashboard/latihan", "/dashboard/latihan/kece
       React.createElement(PathnameContext.Provider, { value: path },
         React.createElement(Sidebar, { name: "QA", username: "qa" }))),
   );
-  assert.match(html, /<a[^>]+href="\/dashboard\/latihan"[^>]*>[\s\S]*?Latihan<\/a>/);
+  assert.match(html, /<a[^>]+href="\/dashboard\/latihan"[^>]*>[\s\S]*?Latihan\/Mini Tryout<\/a>/);
   assert.match(html, /<button[^>]+aria-label="(?:Buka|Tutup) pilihan latihan"/);
   if (path.includes("latihan")) assert.match(html, /id="desktop-latihan-submenu"/);
   console.log("Sidebar navigation passed:", path);

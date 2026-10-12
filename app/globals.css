@@ -215,19 +215,15 @@ b {
   font-weight: 600;
 }
 
-/* Ikon menu duotone (cest): .sf = isian lembut currentColor, .ac = satu aksen emas. */
-.nav-ic .sf {
-  fill: currentColor;
-  fill-opacity: 0.16;
-  stroke: none;
+/* Ikon menu Lucide: garis tipis saat biasa, lebih tebal saat menu/submenu aktif. */
+.nav-ic {
+  stroke-width: 1.6;
+  transition: stroke-width 0.15s ease-out;
 }
 
-.nav-ic .ac {
-  stroke: var(--gold);
-}
-
-.nav-active .nav-ic .ac {
-  stroke: var(--gold-hi);
+.nav-active .nav-ic,
+a[aria-current="page"] .nav-ic {
+  stroke-width: 2.1;
 }
 
 h1,
