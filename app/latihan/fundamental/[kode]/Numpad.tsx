@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-/* Numpad sentuh 3×4 + keyboard fisik (angka, Backspace, Enter). Dipakai kedua sesi fundamental.
+/* Numpad sentuh 3×4 urutan HP (1-2-3 di atas, 0 di bawah) + keyboard fisik (angka, Backspace, Enter). Dipakai kedua sesi fundamental.
    Tanpa onDelete/onEnter tombolnya tidak tampil (Rekening Koran: jawaban tidak bisa dihapus). */
 export default function Numpad({
   onDigit,
@@ -33,7 +33,7 @@ export default function Numpad({
 
   return (
     <div className="fd-pad" role="group" aria-label="Numpad">
-      {["7", "8", "9", "4", "5", "6", "1", "2", "3"].map((d) => (
+      {["1", "2", "3", "4", "5", "6", "7", "8", "9"].map((d) => (
         <button key={d} type="button" className="fd-key tnum" onClick={() => onDigit(d)} disabled={disabled}>
           {d}
         </button>
