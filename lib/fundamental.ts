@@ -10,18 +10,24 @@ export type FundamentalMeta = {
   kode: string;
   grup: "Penguatan Dasar" | "Rekening Koran";
   label: string;
+  kicker: string;
   desc: string;
   kind: FundamentalKind;
   total: number;
+  /** Isi paket di kartu katalog. */
+  points: string[];
   contoh: string[];
+  /** Tingkat 1-3 untuk penanda di kartu. */
+  level: number;
 };
 
+const ISIAN_POINTS = ["50 soal isian angka", "Pembahasan tiap jawaban", "Numpad dan keyboard"];
+
 export const FUNDAMENTAL: FundamentalMeta[] = [
-  { kode: "cermin", grup: "Penguatan Dasar", label: "Pasangan Cermin Perkalian", desc: "Pakai pasangan jumlah 10 (3↔7, 2↔8, 1↔9, 4↔6) untuk menghitung cepat.", kind: "isian", total: 50, contoh: ["3↔7", "2↔8", "1↔9", "4↔6"] },
-  { kode: "dekomposisi", grup: "Penguatan Dasar", label: "Dekomposisi Perkalian", desc: "Pecah perkalian besar jadi bagian kecil yang mudah dihitung di kepala.", kind: "isian", total: 50, contoh: ["8×92", "14×37", "63×81"] },
-  { kode: "pecahan", grup: "Penguatan Dasar", label: "Sederhanakan Pecahan", desc: "Cari FPB lalu tulis pecahan dalam bentuk paling sederhana.", kind: "pecahan", total: 50, contoh: ["12/18", "21/42", "65/156"] },
-  { kode: "rk-tambah", grup: "Rekening Koran", label: "Rekening Koran · Tambah", desc: "Grid Kraepelin 20 kolom: jumlahkan dua angka berdekatan dari atas ke bawah, tulis angka satuannya.", kind: "deret", total: 580, contoh: ["7+8 → 5", "4+3 → 7"] },
-  { kode: "rk-kali", grup: "Rekening Koran", label: "Rekening Koran · Kali", desc: "Grid Kraepelin 20 kolom: kalikan dua angka berdekatan dari atas ke bawah, tulis angka satuannya.", kind: "deret", total: 580, contoh: ["7×8 → 6", "4×3 → 2"] },
+  { kode: "cermin", grup: "Penguatan Dasar", label: "Pasangan Cermin Perkalian", kicker: "Perkalian cepat", desc: "Pakai pasangan jumlah 10 (3↔7, 2↔8, 1↔9, 4↔6) untuk menghitung cepat.", kind: "isian", total: 50, points: ISIAN_POINTS, contoh: ["3↔7", "2↔8", "1↔9", "4↔6"], level: 1 },
+  { kode: "dekomposisi", grup: "Penguatan Dasar", label: "Dekomposisi Perkalian", kicker: "Hitung mental", desc: "Pecah perkalian besar jadi bagian kecil yang mudah dihitung di kepala.", kind: "isian", total: 50, points: ISIAN_POINTS, contoh: ["8×92", "14×37", "63×81"], level: 2 },
+  { kode: "pecahan", grup: "Penguatan Dasar", label: "Sederhanakan Pecahan", kicker: "FPB dan pecahan", desc: "Cari FPB lalu tulis pecahan dalam bentuk paling sederhana.", kind: "pecahan", total: 50, points: ["50 soal pembilang/penyebut", "Pembahasan tiap jawaban", "Numpad dan keyboard"], contoh: ["12/18", "21/42", "65/156"], level: 2 },
+  { kode: "koran", grup: "Rekening Koran", label: "Rekening Koran", kicker: "Tes Kraepelin", desc: "Grid 20 kolom × 30 angka, dikerjakan per kolom dari atas ke bawah. Tulis angka satuan hasil dua angka berdekatan.", kind: "deret", total: 580, points: ["Pilih Tambah atau Kali", "Mode Tes: 20 detik per kolom", "Mode Latihan: tanpa batas waktu"], contoh: ["7+8 → 5", "7×8 → 6"], level: 3 },
 ];
 
 export const fundamentalMeta = (kode: string) => FUNDAMENTAL.find((m) => m.kode === kode);

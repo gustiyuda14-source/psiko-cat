@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useReducer, useRef } from "react";
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { KORAN, deretAnswer, kraepelinStats, type FundamentalMeta } from "@/lib/fundamental";
@@ -51,8 +51,10 @@ const fmt = (x: number) => (Math.round(x * 10) / 10).toLocaleString("id-ID");
 
 export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; grid: number[][] }) {
   const router = useRouter();
-  const op = meta.kode === "rk-kali" ? "kali" : "tambah";
+  // Operasi dipilih di layar awal (switch Tambah/Kali), terkunci begitu sesi dimulai.
+  const [op, setOp] = useState<"tambah" | "kali">("tambah");
   const sym = op === "kali" ? "×" : "+";
+  const title = `${meta.label} · ${op === "kali" ? "Kali" : "Tambah"}`;
   const [s, dispatch] = useReducer(reducer, undefined, fresh);
   const activeRef = useRef<HTMLSpanElement>(null);
   const pos = s.ans[s.col].length;
@@ -91,11 +93,19 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
   if (s.phase === "intro") {
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={meta.label} count={`${KORAN.kolom} kolom × ${KORAN.baris} angka`} actions={exit} />
+        <ExamBar title={title} count={`${KORAN.kolom} kolom × ${KORAN.baris} angka`} actions={exit} />
         <div className="app-page">
           <section className="fd-result enter-rise">
             <p className="section-kicker">Rekening Koran · Kraepelin</p>
-            <h1 className="fd-result-title">{meta.label}</h1>
+            <h1 className="fd-result-title">{title}</h1>
+            <div className="kp-op" role="group" aria-label="Pilih operasi">
+              {(["tambah", "kali"] as const).map((o) => (
+                <button key={o} type="button" aria-pressed={op === o} onClick={() => setOp(o)}>
+                  <b aria-hidden="true">{o === "kali" ? "×" : "+"}</b>
+                  {o === "kali" ? "Perkalian" : "Penjumlahan"}
+                </button>
+              ))}
+            </div>
             <p className="text-foreground">
               Grid berisi {KORAN.kolom} kolom angka. Kerjakan satu kolom dari atas ke bawah: {op === "kali" ? "kalikan" : "jumlahkan"} dua angka
               yang berdekatan, lalu ketik <b>angka satuannya saja</b>. Jawaban muncul di celah antara kedua angka dan tidak bisa diubah. Kolom
@@ -142,11 +152,11 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
     const naik = st.ketahanan > 0;
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={meta.label} count="Hasil sesi" timer={<ExamTimer seconds={s.elapsed} label="Total waktu" muted />} actions={exit} />
+        <ExamBar title={title} count="Hasil sesi" timer={<ExamTimer seconds={s.elapsed} label="Total waktu" muted />} actions={exit} />
         <div className="app-page">
           <section className="fd-result kp-result enter-rise">
             <p className="section-kicker">Hasil sesi · {tes ? "Mode Tes" : "Mode Latihan"}</p>
-            <h1 className="fd-result-title">{meta.label}</h1>
+            <h1 className="fd-result-title">{title}</h1>
             <dl className="fd-stats is-4">
               <div><dt>Kecepatan</dt><dd className="tnum">{fmt(st.rata)}<span> {unit}/kolom</span></dd></div>
               <div><dt>Ketelitian</dt><dd className="tnum">{wrong.length}<span> salah · {fmt(acc)}%</span></dd></div>
@@ -207,7 +217,7 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
   return (
     <div className="min-h-[100dvh] bg-background">
       <ExamBar
-        title={meta.label}
+        title={title}
         count={`Kolom ${s.col + 1} dari ${KORAN.kolom} · ${tes ? "Mode Tes" : "Mode Latihan"}`}
         timer={
           tes ? (

@@ -1,5 +1,5 @@
 /* ===== Katalog tiket level — dipindah dari dajiks-cest (assets/cest.css). Dipakai PackageCarousel. ===== */
-.catalog, .hub-grid, .mini-grid { --tone-green: #7a5710; --tone-green-bg: #f6edd6; --tone-cyan: #1b2a5c; --tone-cyan-bg: #e8ebf5; --tone-amber: #3d4a5c; --tone-amber-bg: #eef0f3 }
+.catalog, .mini-grid { --tone-green: #7a5710; --tone-green-bg: #f6edd6; --tone-cyan: #1b2a5c; --tone-cyan-bg: #e8ebf5; --tone-amber: #3d4a5c; --tone-amber-bg: #eef0f3 }
 .catalog { position: relative; margin-top: var(--space-4); container-type: inline-size }
 /* Konsol katalog: cari + filter dalam satu bingkai; tiap filter sekaligus statistik (jumlah + garis progres). */
 .cat-bar { display: flex; flex-wrap: wrap; border: 1.5px solid var(--border); border-radius: 14px; background: var(--surface-card); overflow: hidden; transition: border-color var(--motion) }.cat-bar:focus-within { border-color: var(--ok) }
@@ -83,18 +83,34 @@
 
 .section-kicker { color: var(--brand-ink); font: 700 .75rem var(--font-display-src), sans-serif; letter-spacing: .1em; text-transform: uppercase }
 
-/* Beranda: kartu pintasan (hub-card) */
-.hub-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--space-4); margin-top: var(--space-5) }
-.hub-card { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--space-2); min-height: 220px; padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--r-xl); color: var(--foreground); text-align: left;
-  padding-bottom: 0; background: radial-gradient(120% 90% at 100% 0%, rgba(227, 180, 72, .14), transparent 55%), var(--surface-card);
-  transition: border-color var(--motion), box-shadow var(--motion), transform var(--motion) }
-.hub-card strong { margin-top: auto; font: 700 clamp(1.4rem, 2.2vw, 1.8rem)/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em }
-.hub-card .muted { font-size: var(--type-base) }
-.hub-card .hub-cta { align-self: stretch; display: flex; justify-content: space-between; align-items: center; height: 56px; margin: var(--space-3) calc(-1 * var(--space-5)) 0; padding: 0 var(--space-5); border-top: 1.5px dashed var(--border); color: var(--brand-ink); font: 700 .85rem var(--font-display-src), sans-serif; letter-spacing: .02em }
-.hub-arrow { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 9px; background: var(--gold-grad); color: #16224a; transition: transform var(--motion) }.hub-card:hover .hub-arrow { transform: translateX(3px) }.hub-card:hover .hub-cta { border-top-color: rgba(27, 42, 92, .35) }
-.hub-card:hover { border-color: var(--ok); box-shadow: 0 18px 40px -14px rgba(27, 42, 92, .28); transform: translateY(-2px) }
-.hub-card .cat-tag { font-size: .72rem }
-@media (prefers-reduced-motion: reduce) { .hub-card { transition: none }.hub-card:hover { transform: none } }
+/* Kartu paket "berkas" (app/components/PaketCard.tsx): Beranda + katalog Fundamental. */
+.pc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: var(--space-5) }
+.pc-card { position: relative; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 16px; background: var(--surface-card); color: var(--foreground); text-decoration: none; transition: transform var(--motion), box-shadow var(--motion), border-color var(--motion) }
+.pc-card:hover { border-color: #c9a24a; transform: translateY(-3px); box-shadow: 0 22px 40px -22px rgba(27, 42, 92, .45) }
+.pc-card:focus-visible { outline: 3px solid var(--ok); outline-offset: 3px }
+.pc-strip { display: flex; align-items: center; gap: var(--space-3); padding: 12px 20px; border-radius: 15px 15px 0 0; background: var(--surface-nav); color: var(--gold-hi) }
+.pc-strip b { font: 800 .8rem var(--font-display-src), sans-serif; letter-spacing: .14em; text-transform: uppercase }
+.pc-pill { margin-left: auto; padding: 5px 10px; border-radius: 7px; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .55); background: rgba(255, 255, 255, .14); color: #fff; font: 700 .68rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap }
+.pc-body { display: flex; flex-direction: column; gap: 14px; flex: 1; padding: 22px 24px 0 }
+.pc-head { display: flex; flex-direction: column; gap: 4px }
+.pc-kicker { color: var(--gold); font: 700 .75rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase }
+.pc-title { font: 700 clamp(1.35rem, 2vw, 1.6rem)/1.12 var(--font-display-src), sans-serif; letter-spacing: -.02em }
+.pc-desc { color: var(--muted-foreground); font-size: .97rem; line-height: 1.5 }
+.pc-points { display: flex; flex-direction: column; gap: 8px; padding: 14px 16px; border: 1.5px dashed var(--border); border-radius: 12px }
+.pc-points-h { color: var(--muted-foreground); font: 700 .68rem var(--font-display-src), sans-serif; letter-spacing: .14em; text-transform: uppercase }
+.pc-point { display: flex; align-items: center; gap: 10px; font-size: .94rem }
+.pc-point svg { flex: none; width: 18px; height: 18px; fill: none; stroke: var(--gold); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round }
+.pc-chips { display: flex; flex-wrap: wrap; gap: 6px }
+.pc-chip { padding: 4px 9px; border: 1px dashed var(--border); border-radius: 6px; background: var(--surface-inset); color: var(--brand-ink); font: 600 .8rem var(--font-display-src), sans-serif }
+.pc-foot { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); margin-top: 18px; padding: 16px 24px; border-top: 1.5px dashed var(--border) }
+.pc-level { display: inline-flex; align-items: center; gap: 8px; color: var(--muted-foreground); font-size: .82rem }
+.pc-level > span { display: inline-flex; gap: 3px }
+.pc-level i { width: 8px; height: 14px; border-radius: 2px; background: #e2dccd }
+.pc-level i[data-on] { background: var(--brand-ink) }
+.pc-cta { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 10px; background: var(--gold-grad); color: #16224a; font: 700 .94rem var(--font-display-src), sans-serif; white-space: nowrap; transition: filter var(--motion) }
+.pc-card:hover .pc-cta { filter: brightness(1.06) }
+@media (max-width: 600px) { .pc-body { padding: 18px 18px 0 } .pc-foot { padding: 14px 18px } .pc-cta { flex: 1; justify-content: center } }
+@media (prefers-reduced-motion: reduce) { .pc-card { transition: none } .pc-card:hover { transform: none } }
 .prog { margin-top: var(--space-7) }
 .prog-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-2) var(--space-4); margin-bottom: var(--space-4) }
 .prog-head h2 { margin: 0 }.prog-head p { margin: 0; color: var(--muted-foreground); font-size: var(--type-sm) }
@@ -122,7 +138,7 @@
 .btn-gold:hover:not(:disabled) { filter: brightness(1.06); box-shadow: var(--elev-2); transform: translateY(-1px) }
 .notice { border: 1px solid var(--border); border-radius: var(--r-md); padding: var(--space-4); background: var(--surface-inset) }
 .notice:hover { border-color: var(--accent) }
-.hub-card .cat-tag, .cat-tag { width: fit-content }
+.cat-tag { width: fit-content }
 .prog-panel { margin-top: var(--space-4) }
 .prog-body { min-width: 0; padding: var(--space-4) var(--space-5) var(--space-5) }
 @media (max-width: 760px) { .prog-panel { grid-template-columns: minmax(0, 1fr) } .prog-hero::after { top: auto; bottom: 0; left: 18px; right: 18px; border-right: 0; border-bottom: 2px dashed rgba(255, 255, 255, .3) } }

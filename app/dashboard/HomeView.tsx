@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { WeeklyFrequencyChart, NapTrendChart } from "./ActivityCharts";
 import { buttonStyles, EmptyState, PageHeader } from "@/app/components/ui";
+import { PaketCard } from "@/app/components/PaketCard";
 
 const PASSING_NAP = 61;
 
@@ -49,45 +50,47 @@ export default function HomeView({ name, sessions }: { name: string; sessions: H
         description="Pilih yang mau kamu kerjakan sekarang. Simulasi memberi skor NAP; latihan untuk berlatih per sub-tes tanpa batas waktu; review untuk membahas sesi yang sudah selesai."
       />
 
-      <div className="hub-grid">
-        <Link href="/dashboard/simulasi" className="hub-card">
-          <span className="cat-tag tone-green">Simulasi</span>
-          <strong>Tryout resmi dengan timer</strong>
-          <span className="muted">
-            {lastActivity ? `Tes terakhir ${formatDate(lastActivity)}` : "Belum ada tes resmi yang diselesaikan"}
-          </span>
-          <span className="hub-cta">
-            Buka simulasi
-            <span className="hub-arrow" aria-hidden="true">→</span>
-          </span>
-        </Link>
-        <Link href="/dashboard/latihan" className="hub-card">
-          <span className="cat-tag tone-cyan">Latihan</span>
-          <strong>Latihan tanpa timer</strong>
-          <span className="muted">Kecerdasan, Kecermatan, Kepribadian. Tanpa batas waktu, tidak masuk riwayat.</span>
-          <span className="hub-cta">
-            Buka latihan
-            <span className="hub-arrow" aria-hidden="true">→</span>
-          </span>
-        </Link>
-        <Link href="/dashboard/kosakata" className="hub-card">
-          <span className="cat-tag tone-amber">Kosakata</span>
-          <strong>Perbanyak kosakata</strong>
-          <span className="muted">Kata baku dan serapan untuk soal verbal: arti, sinonim, antonim, contoh kalimat.</span>
-          <span className="hub-cta">
-            Buka kosakata
-            <span className="hub-arrow" aria-hidden="true">→</span>
-          </span>
-        </Link>
-        <Link href="/dashboard/review" className="hub-card">
-          <span className="cat-tag tone-amber">Review Soal</span>
-          <strong>Pembahasan sesi selesai</strong>
-          <span className="muted">Lihat jawaban, kunci, dan pembahasan per sub-tes dan per butir.</span>
-          <span className="hub-cta">
-            Buka review
-            <span className="hub-arrow" aria-hidden="true">→</span>
-          </span>
-        </Link>
+      <div className="pc-grid mt-5">
+        <PaketCard
+          href="/dashboard/simulasi"
+          code="Simulasi"
+          tag="Skor resmi"
+          title="Tryout resmi dengan timer"
+          desc={lastActivity ? `Tes terakhir ${formatDate(lastActivity)}` : "Belum ada tes resmi yang diselesaikan"}
+          pointsLabel="Di dalamnya"
+          points={["Kecerdasan, Kepribadian, Kecermatan", "Masuk riwayat dan grafik progress"]}
+          cta="Buka simulasi"
+        />
+        <PaketCard
+          href="/dashboard/latihan"
+          code="Latihan"
+          tag="Per sub-tes"
+          title="Latihan per sub-tes"
+          desc="Kecerdasan, Kecermatan, Kepribadian. Tidak masuk riwayat."
+          pointsLabel="Di dalamnya"
+          points={["Paket latihan per sub-tes", "Pembahasan setelah selesai"]}
+          cta="Buka latihan"
+        />
+        <PaketCard
+          href="/dashboard/kosakata"
+          code="Kosakata"
+          tag="Verbal"
+          title="Perbanyak kosakata"
+          desc="Kata baku dan serapan untuk soal verbal: arti, sinonim, antonim, contoh kalimat."
+          pointsLabel="Di dalamnya"
+          points={["Filter kata sifat, benda, kerja", "Tandai kata yang sudah hafal"]}
+          cta="Buka kosakata"
+        />
+        <PaketCard
+          href="/dashboard/review"
+          code="Review Soal"
+          tag="Pembahasan"
+          title="Pembahasan sesi selesai"
+          desc="Lihat jawaban, kunci, dan pembahasan per sub-tes dan per butir."
+          pointsLabel="Di dalamnya"
+          points={["Jawaban dan kunci per butir", "Pembahasan per sub-tes"]}
+          cta="Buka review"
+        />
       </div>
 
       <section className="prog" aria-labelledby="prog-h">

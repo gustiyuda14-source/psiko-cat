@@ -1,47 +1,42 @@
-import Link from "next/link";
-import { PageHeader } from "@/app/components/ui";
 import { FUNDAMENTAL } from "@/lib/fundamental";
 import "@/app/fundamental.css";
+import FundamentalCatalog from "./FundamentalCatalog";
 
-const GROUPS = [
-  { grup: "Penguatan Dasar", tone: "tone-green", note: "50 soal isian per sesi, pembahasan langsung setelah menjawab." },
-  { grup: "Rekening Koran", tone: "tone-cyan", note: "Grid Kraepelin: Mode Tes dengan batas waktu per kolom, atau Mode Latihan tanpa batas waktu." },
-] as const;
+const count = (grup: string) => FUNDAMENTAL.filter((m) => m.grup === grup).length;
 
 export default function FundamentalPage() {
   return (
     <div className="app-page space-y-6">
-      <PageHeader
-        kicker="Fundamental"
-        title="Drilling fundamental"
-        description="Latihan hitung dasar sebelum masuk Numerik dan Kecermatan: perkalian cepat, pecahan, dan rekening koran. Soal dibuat ulang setiap sesi, jawab dengan numpad atau keyboard."
-      />
-      {GROUPS.map(({ grup, tone, note }) => (
-        <section key={grup}>
-          <span className="section-kicker">{grup}</span>
-          <p className="muted mt-1">{note}</p>
-          <div className="hub-grid !mt-3">
-            {FUNDAMENTAL.filter((m) => m.grup === grup).map((m) => (
-              <Link key={m.kode} href={`/latihan/fundamental/${m.kode}`} className="hub-card">
-                <span className={`cat-tag ${tone}`}>{m.total} soal</span>
-                <strong>{m.label}</strong>
-                <span className="muted">{m.desc}</span>
-                <span className="flex flex-wrap gap-1.5">
-                  {m.contoh.map((c) => (
-                    <span key={c} className="fd-chip tnum">
-                      {c}
-                    </span>
-                  ))}
-                </span>
-                <span className="hub-cta">
-                  Mulai drilling
-                  <span className="hub-arrow" aria-hidden="true">→</span>
-                </span>
-              </Link>
-            ))}
+      <header className="fd-hero">
+        <svg className="fd-hero-radar" viewBox="0 0 420 420" aria-hidden="true">
+          <circle cx="210" cy="210" r="200" />
+          <circle cx="210" cy="210" r="140" />
+          <circle cx="210" cy="210" r="80" />
+          <path d="M210 0v420M0 210h420" />
+        </svg>
+        <div className="fd-hero-text">
+          <span className="fd-hero-kicker">
+            <i aria-hidden="true" />
+            Fundamental
+          </span>
+          <h1>Drilling fundamental</h1>
+          <p>
+            Latihan hitung dasar sebelum masuk Numerik dan Kecermatan: perkalian cepat, pecahan, dan rekening koran. Soal dibuat
+            ulang setiap sesi, jawab dengan numpad atau keyboard.
+          </p>
+        </div>
+        <dl className="fd-hero-stats">
+          <div>
+            <dt>Penguatan Dasar</dt>
+            <dd className="tnum">{count("Penguatan Dasar")} paket</dd>
           </div>
-        </section>
-      ))}
+          <div>
+            <dt>Rekening Koran</dt>
+            <dd className="tnum">{count("Rekening Koran")} paket</dd>
+          </div>
+        </dl>
+      </header>
+      <FundamentalCatalog />
     </div>
   );
 }
