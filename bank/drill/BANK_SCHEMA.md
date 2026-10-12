@@ -17,6 +17,7 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
   "stem": "…",                     // teks soal (Unicode: −, ×, √, ∛, ², ⅓)
   "rumus": "<math display=\"block\">…</math>",  // opsional, MathML murni untuk bentuk bertingkat
   "gambar": null,                  // opsional, path relatif public/ (mis. "drill/img/K12-A3-091.png")
+  "tampil_detik": 20,              // opsional (soal INGAT): gambar tampil sekian detik (bulat 5–60), lalu disembunyikan sampai dijawab
   "opsi": {"a": "…", "b": "…", "c": "…", "d": "…", "e": "…"},
   "kunci": ["b"],                  // 1 huruf; 2 huruf untuk format pilih-dua
   "hitung": "…",                   // opsional, ekspresi JS yang menghasilkan nilai opsi benar

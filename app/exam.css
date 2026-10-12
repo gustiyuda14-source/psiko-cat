@@ -93,3 +93,7 @@
 }
 .opt-figure { width: auto; height: auto; max-width: 100%; max-height: 96px; object-fit: contain }
 @media (min-width: 640px) { .opt-figure { max-height: 120px } }
+
+/* Drill INGAT: hitung mundur fase hafal, lalu peta diganti kotak setinggi peta sampai soal dijawab. */
+.memo-count { font-size: clamp(2.25rem, 7vw, 3.25rem); font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; color: var(--brand-ink) }
+.q-figure.q-figure-hidden { display: grid; place-items: center; aspect-ratio: 448 / 600; border-style: dashed; background: var(--surface-inset); color: var(--muted-foreground); font-size: .875rem; text-align: center }

@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import { makeMap2, renderMap2, clearOfCompass, type Map2 } from "./denah-k17-bw";
+import { ingatArah, ingatSisi, ingatSebelah } from "./denah-k17-ingat";
 import { LET, arrange, bOf, safeKey, POS, MOVE, story, tipsArah, nyataArah, ring2, rute2, rotArah, putar, type Item } from "./denah-k17-soal-bw";
 import {
   reseed, pick, shuffle, DIR, SHORT, sectorOf, angDiff, left, right, ERR_SECTOR, W, VX, HY, WALKERS,
@@ -12,6 +13,7 @@ import {
 // Peta 1–10 (5 soal/peta): 2 ARAH pilih bangunan, 1 ARAH pilih arah, 2 RUTE kiri/kanan setelah belokan.
 // Peta 11–22: LEWAT (hitung bangunan dilalui) + RELASI (pojok persimpangan, di antara dua jalan).
 // Peta 23–34: hitam-putih, ARAH + RUTE. Peta 35–39: ROTASI (35–37 peta diputar, 38–39 berputar di tempat).
+// Peta 40–42: INGAT (peta tampil sebentar lalu disembunyikan; tampil_detik per soal).
 // Arah diukur titik tengah ke titik tengah ikon (sektor 45°); kunci wajib ≤ 10° dari pusat
 // sektornya, pengecoh ≥ 35° dari pusat sektor kunci. Tiap pengecoh = satu kesalahan bernama.
 //
@@ -330,7 +332,7 @@ function emit(m: number, p: Peta, set: Item[], bw?: Map2, rot = 0) {
     fs.writeFileSync(path.join(ROOT, "data/drill-pembahasan", pb), bw ? renderMap2(bw, m, { ...ex, defs: DEFS }, rot) : renderSvg(p, m, ex));
     // Status cek buta tetap berlaku selama stem/opsi/kunci tidak berubah; berubah = harus dicek ulang.
     const was = OLD.get(id), same = was && JSON.stringify([was.stem, was.opsi, was.kunci]) === JSON.stringify([s.stem, s.opsi, s.kunci]);
-    items.push({ id, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", instruksi: (s.instruksi as string) ?? INSTRUKSI + ((s.extra as string) ?? ""), stem: s.stem, gambar: img, opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, gambar_pembahasan: pb, status_kunci: same ? was.status_kunci : "tunggal" });
+    items.push({ id, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", instruksi: (s.instruksi as string) ?? INSTRUKSI + ((s.extra as string) ?? ""), stem: s.stem, gambar: img, ...(s.tampil_detik ? { tampil_detik: s.tampil_detik } : {}), opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, gambar_pembahasan: pb, status_kunci: same ? was.status_kunci : "tunggal" });
   }
 }
 
@@ -410,6 +412,21 @@ for (let m = 35; m <= 39; m++) {
     break;
   }
 }
+
+// Peta 40–42: INGAT (batch 17). Makin padat makin singkat: [min, maks bangunan, tier, detik tampil].
+const posE = shuffle(Array.from({ length: 15 }, (_, i) => i % 5));
+const INGAT: [number, number, number, number][] = [[14, 16, 1, 25], [16, 18, 2, 20], [18, 22, 3, 15]];
+for (let m = 40; m <= 42; m++) {
+  const [lo, hi, tier, secs] = INGAT[m - 40];
+  for (let attempt = 0; ; attempt++) {
+    reseed(9900 + m * 97 + attempt);
+    const bw = makeMap2(lo, hi), used = new Set<string>(), base = n - 185;
+    const set = [ingatArah, ingatArah, ingatSisi, ingatSisi, ingatSebelah].map((f, i) => f(bw, posE[base + i], used, tier, secs));
+    if (set.some((s) => !s)) continue;
+    emit(m, bw as unknown as Peta, set as Item[], bw);
+    break;
+  }
+}
 fs.writeFileSync(BANK, JSON.stringify(items, null, 2) + "\n");
 const count = (k: string, v: unknown) => items.filter((i) => i[k] === v).length;
-console.log(`${items.length} soal · ${["ARAH", "RUTE", "LEWAT", "RELASI", "ROTASI"].map((t) => `${t} ${count("sub_type", `FIG-DENAH-${t}`)}`).join(" ")} · tier ${[1, 2, 3].map((t) => count("tier", t)).join("/")} · ${OLD.size ? items.filter((i) => i.status_kunci === "tunggal").length + " perlu cek buta" : ""}`);
+console.log(`${items.length} soal · ${["ARAH", "RUTE", "LEWAT", "RELASI", "ROTASI", "INGAT"].map((t) => `${t} ${count("sub_type", `FIG-DENAH-${t}`)}`).join(" ")} · tier ${[1, 2, 3].map((t) => count("tier", t)).join("/")} · ${OLD.size ? items.filter((i) => i.status_kunci === "tunggal").length + " perlu cek buta" : ""}`);

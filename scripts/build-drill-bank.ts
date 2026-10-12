@@ -27,7 +27,7 @@ type Item = {
   id: string; kartu: string; sub_type: string; tier: number; sumber: string;
   instruksi?: string; bacaan?: string[]; tabel?: { judul?: string; kolom: string[]; baris: string[][] };
   stem: string; rumus?: string; wacana_id?: string | null;
-  gambar?: string | null; opsi_gambar?: Record<string, string> | null;
+  gambar?: string | null; tampil_detik?: number; opsi_gambar?: Record<string, string> | null;
   opsi: Record<string, string>; kunci: string[];
   hitung?: string; nilai_opsi?: Record<string, Value>;
   pembahasan: string; status_kunci: string; gambar_pembahasan?: string;
@@ -128,6 +128,8 @@ function checkItem(it: Item, file: string) {
   }
   for (const img of [it.gambar, ...Object.values(it.opsi_gambar ?? {})])
     if (img && !existsSync(join(ROOT, "public", img))) fail(id, `gambar ${img} tidak ada di public/`);
+  if (it.tampil_detik !== undefined && (!it.gambar || !Number.isInteger(it.tampil_detik) || it.tampil_detik < 5 || it.tampil_detik > 60))
+    fail(id, "tampil_detik harus bilangan bulat 5–60 dan hanya untuk soal bergambar");
   if (it.gambar_pembahasan !== undefined && (!/^[\w.-]+\.(png|svg)$/.test(it.gambar_pembahasan) || !existsSync(join(ROOT, "data/drill-pembahasan", it.gambar_pembahasan))))
     fail(id, `gambar_pembahasan ${it.gambar_pembahasan} tidak ada di data/drill-pembahasan/`);
   checkKey(it);

@@ -53,12 +53,36 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
   const [checking, setChecking] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const shownAt = useRef(0);
+  // Soal INGAT (tampil_detik): fase hafal dulu (peta saja), lalu peta disembunyikan dan soal muncul.
+  // `ready` = soal yang fase jawabnya sudah dimulai; pindah soal mengulang fase hafal soal yang belum dijawab.
+  const [ready, setReady] = useState<string | null>(null);
+  const [elapsed, setElapsed] = useState({ id: "", s: 0 });
 
   const idx = chosen ?? startIndex(items, progress);
   const q = items[idx];
   const picked = q ? picks[q.id] ?? "" : "";
   const result = q ? results[q.id] : undefined;
   const need = q?.multi ? 2 : 1;
+  const memorize = Boolean(q?.tampil_detik) && !result && ready !== q?.id;
+  const hidden = Boolean(q?.tampil_detik) && !result;
+  const left = memorize ? Math.max(0, q!.tampil_detik! - (elapsed.id === q!.id ? elapsed.s : 0)) : 0;
+
+  const startAnswer = useCallback((id: string) => {
+    setReady(id);
+    // Waktu jawab dihitung sejak peta disembunyikan.
+    shownAt.current = performance.now();
+  }, []);
+
+  useEffect(() => {
+    if (!memorize || !q) return;
+    const t0 = performance.now();
+    const timer = setInterval(() => {
+      const s = Math.floor((performance.now() - t0) / 1000);
+      if (s >= q.tampil_detik!) startAnswer(q.id);
+      else setElapsed({ id: q.id, s });
+    }, 250);
+    return () => clearInterval(timer);
+  }, [memorize, q, startAnswer]);
 
   useEffect(() => {
     shownAt.current = performance.now();
@@ -67,12 +91,14 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
   const goTo = useCallback((i: number) => {
     setChosen(i);
     setError(null);
+    setReady(null);
+    setElapsed({ id: "", s: 0 });
     shownAt.current = performance.now();
   }, []);
 
   const choose = useCallback(
     (key: string) => {
-      if (!q || results[q.id]) return;
+      if (!q || results[q.id] || memorize) return;
       const k = key.toLowerCase();
       setPicks((cur) => {
         const v = cur[q.id] ?? "";
@@ -82,7 +108,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
         return { ...cur, [q.id]: (v + k).split("").sort().join("") };
       });
     },
-    [need, q, results]
+    [need, q, results, memorize]
   );
 
   const check = async () => {
@@ -206,37 +232,65 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
           <div className={`q-card ${q.gambar ? "q-card-fig" : ""}`}>
             <div className="q-body">
               {q.instruksi && <p className="q-ins">{q.instruksi}</p>}
-              <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
-              <p className="q-stem whitespace-pre-line">{q.stem}</p>
-              {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
-              {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
+              {memorize ? (
+                <>
+                  <p className="font-heading text-base text-foreground">Hafalkan peta</p>
+                  <p className="memo-count" aria-hidden="true">
+                    {left} <span className="text-base font-normal text-muted-foreground">detik</span>
+                  </p>
+                  {/* Pembaca layar: diumumkan per 5 detik, bukan tiap detik. */}
+                  <p className="sr-only" aria-live="polite">
+                    Sisa waktu menghafal {Math.ceil(left / 5) * 5} detik
+                  </p>
+                  <p className="text-sm text-muted-foreground">Soal dan pilihan jawaban muncul setelah waktu habis, lalu peta disembunyikan.</p>
+                  <Button variant="primary" className="justify-self-start" onClick={() => startAnswer(q.id)}>
+                    Saya sudah hafal
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
+                  <p className="q-stem whitespace-pre-line">{q.stem}</p>
+                  {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
+                  {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
+                </>
+              )}
             </div>
-            {q.gambar && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/${q.gambar}`} alt="" className="q-figure q-figure-side" />
-            )}
+            {q.gambar &&
+              (hidden && !memorize ? (
+                <div className="q-figure q-figure-side q-figure-hidden" role="img" aria-label="Peta disembunyikan">
+                  Peta disembunyikan.
+                  <br />
+                  Jawab dari ingatan.
+                </div>
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={`/${q.gambar}`} alt={memorize ? "Peta yang harus dihafalkan" : ""} className="q-figure q-figure-side" />
+              ))}
           </div>
 
-          <div className={`pt-1 ${q.opsi_gambar ? "opts-fig" : "opts"}`}>
-            {LETTERS.filter((k) => k in q.opsi).map((k) => {
-              const sel = picked.includes(k);
-              const isKey = result?.kunci.includes(k);
-              const state = result ? (isKey ? "is-key" : sel ? "is-wrong" : "") : sel ? "sel" : "";
-              return (
-                <button key={k} type="button" onClick={() => choose(k)} aria-pressed={sel} disabled={Boolean(result)} className={`opt ${q.opsi_gambar ? "opt-fig" : ""} ${state}`}>
-                  <span className={`mark ${q.multi ? "is-square" : ""}`}>{k.toUpperCase()}</span>
-                  {q.opsi_gambar?.[k] ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="opt-figure" />
-                  ) : (
-                    <span className="opt-text">{q.opsi[k]}</span>
-                  )}
-                  {result && isKey && <Check className="ml-auto size-5 text-success" strokeWidth={3} />}
-                  {result && sel && !isKey && <Close className="ml-auto size-5 text-destructive" strokeWidth={3} />}
-                </button>
-              );
-            })}
-          </div>
+          {!memorize && (
+            <div className={`pt-1 ${q.opsi_gambar ? "opts-fig" : "opts"}`}>
+              {LETTERS.filter((k) => k in q.opsi).map((k) => {
+                const sel = picked.includes(k);
+                const isKey = result?.kunci.includes(k);
+                const state = result ? (isKey ? "is-key" : sel ? "is-wrong" : "") : sel ? "sel" : "";
+                return (
+                  <button key={k} type="button" onClick={() => choose(k)} aria-pressed={sel} disabled={Boolean(result)} className={`opt ${q.opsi_gambar ? "opt-fig" : ""} ${state}`}>
+                    <span className={`mark ${q.multi ? "is-square" : ""}`}>{k.toUpperCase()}</span>
+                    {q.opsi_gambar?.[k] ? (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="opt-figure" />
+                    ) : (
+                      <span className="opt-text">{q.opsi[k]}</span>
+                    )}
+                    {result && isKey && <Check className="ml-auto size-5 text-success" strokeWidth={3} />}
+                    {result && sel && !isKey && <Close className="ml-auto size-5 text-destructive" strokeWidth={3} />}
+                  </button>
+                );
+              })}
+            </div>
+          )}
 
           {result ? (
             <div
@@ -273,7 +327,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
                 </Button>
               )}
             </div>
-          ) : (
+          ) : memorize ? null : (
             <Button variant="accent" size="lg" onClick={() => void check()} disabled={picked.length !== need || checking}>
               {checking ? "Memeriksa…" : need === 2 ? "Periksa (pilih 2)" : "Periksa"}
             </Button>
