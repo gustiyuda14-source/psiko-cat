@@ -12,6 +12,7 @@ import { INSTRUKSI, checkNoLeak, checkRows, checkTeks, data, root, teksRows, typ
 //   2  = Latihan Paket 1  (diubah di tempat: butir blok lama dipindah nomor/dinonaktifkan, butir baru ditambah)
 //   3  = Latihan Paket 2  (baru 100 soal: kecerdasan_p3_teks.json + figural/susun/denah kal)
 //   15 = Simulasi 3       (baru 100 soal: kecerdasan_p15_teks.json + figural/mosaik/susun/denah kal, dengan pembahasan_svg)
+//   16 = Simulasi 1 baru  (baru 100 soal, sama seperti 15; menggantikan pkg 13 di kartu 1, pkg 13 tetap untuk riwayat)
 // Sumber gambar baru: generate-kecerdasan-{figural,susun,denah}-kal.ts. Wacana pkg 3: cek-wacana-kal.ts.
 //   Validasi (baca DB saja):  npx tsx scripts/seed-kecerdasan-kal.ts
 //   Tulis satu paket:         npx tsx scripts/seed-kecerdasan-kal.ts --apply 13
@@ -51,10 +52,10 @@ async function fetchPkg(pkg: number): Promise<DbRow[]> {
 async function compose(pkg: number): Promise<{ rows: Row[]; reuse: Map<number, string> }> {
   const reuse = new Map<number, string>();
   // Paket baru penuh (100 soal): teks pkg N + gambar kal pkg N.
-  if (pkg === 3 || pkg === 15) {
+  if (pkg === 3 || pkg === 15 || pkg === 16) {
     const teks = data(`kecerdasan_p${pkg}_teks.json`) as TeksFile;
     checkTeks(teks);
-    checkNoLeak(teks, pkg === 3 ? ["kecerdasan_p2_teks.json", "kecerdasan_s2_teks.json"] : ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json"]);
+    checkNoLeak(teks, pkg === 3 ? ["kecerdasan_p2_teks.json", "kecerdasan_s2_teks.json"] : ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", ...(pkg === 16 ? ["kecerdasan_p15_teks.json"] : [])]);
     const gambar = newRows(pkg);
     const tingkat = [...teks.soal.map((x) => x.d), ...gambar.map((g) => g.tingkat)];
     assert.deepEqual([tingkat.filter((t) => t === 2).length, tingkat.filter((t) => t === 3).length], [40, 60], `pkg ${pkg}: harus 40 sedang + 60 HOTS`);
@@ -134,7 +135,7 @@ async function apply(pkg: number, rows: Row[], reuse: Map<number, string>) {
 
 (async () => {
   const only = process.argv.includes("--apply") ? Number(process.argv[process.argv.indexOf("--apply") + 1]) : null;
-  for (const pkg of only ? [only] : [13, 14, 2, 3, 15]) {
+  for (const pkg of only ? [only] : [13, 14, 2, 3, 15, 16]) {
     // pkg 2 diubah di tempat: setelah dikalibrasi, yang dicek adalah isi DB-nya sekarang.
     const live = pkg === 2 ? await fetchPkg(2) : [];
     if (live.some((r) => (r.options_payload.svg_content ?? "").includes("mapclip")) && !only) {

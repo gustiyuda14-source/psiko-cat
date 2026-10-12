@@ -8,6 +8,7 @@ import { answerFor, enDash, verticalPuzzleSvg } from "./susun-lib";
 //           Paket 1 lama yang ambigu (docs/rencana/drilling/susun-findings.md §2)
 //   pkg 3:  helikopter (4), truk pemadam kebakaran (6)
 //   pkg 15: motor patroli (5), ekskavator (6, tingkat 3)   — Simulasi 3
+//   pkg 16: sepeda (4), mobil derek (6, tingkat 3)          — Simulasi 1 baru
 // Siluet 600×190 sendiri; setiap potongan memuat ciri unik dan setiap batas potong dilintasi
 // garis/massa yang harus menyambung. Kunci dihitung dari `order`, pengecoh = permutasi sah.
 //   npx tsx scripts/generate-kecerdasan-susun-kal.ts
@@ -101,6 +102,37 @@ const ekskavator = `
   <path d="M512 110 L556 104 C578 120 576 150 552 160 L520 154 Z"/>
   <path d="M524 156 L518 172 L534 158 Z M540 158 L536 174 L550 160 Z"/>`;
 
+const sepeda = `
+  <path d="M0 184 H600" stroke="#111" stroke-width="4"/>
+  <circle cx="120" cy="130" r="50" fill="none" stroke="#111" stroke-width="8"/><circle cx="470" cy="130" r="50" fill="none" stroke="#111" stroke-width="8"/>
+  <path d="M120 82 V178 M72 130 H168 M470 82 V178 M422 130 H518" stroke="#111" stroke-width="2"/>
+  <circle cx="120" cy="130" r="7"/><circle cx="470" cy="130" r="7"/>
+  <path d="M120 130 L270 140 L240 70 Z M240 70 L410 64 M270 140 L418 92 M410 58 L470 130" fill="none" stroke="#111" stroke-width="8" stroke-linejoin="round"/>
+  <path d="M120 126 L262 128 M120 136 L262 152" stroke="#111" stroke-width="2"/>
+  <circle cx="270" cy="140" r="16"/><circle cx="270" cy="140" r="6" fill="white"/><path d="M270 140 L292 168" stroke="#111" stroke-width="6"/><rect x="282" y="166" width="22" height="7"/>
+  <path d="M240 70 V58" stroke="#111" stroke-width="6"/><path d="M216 52 C230 44 262 46 270 54 L262 60 L222 60 Z"/>
+  <path d="M70 76 H172 M100 76 L120 126 M160 76 L120 126" stroke="#111" stroke-width="5"/><rect x="78" y="38" width="76" height="38" rx="4"/><rect x="88" y="52" width="56" height="8" fill="white"/>
+  <path d="M410 64 L402 38 M384 38 H432" stroke="#111" stroke-width="7" stroke-linecap="round"/><circle cx="430" cy="27" r="6"/>
+  <rect x="436" y="44" width="66" height="40" rx="3"/><path d="M450 48 V80 M464 48 V80 M478 48 V80 M492 48 V80 M440 64 H498" stroke="white" stroke-width="3"/>
+  <circle cx="512" cy="70" r="8"/><path d="M520 66 L548 58 M520 74 L548 82" stroke="#111" stroke-width="2"/>`;
+
+const mobilDerek = `
+  <path d="M0 184 H600" stroke="#111" stroke-width="4"/>
+  <rect x="20" y="120" width="545" height="16"/><rect x="30" y="100" width="290" height="20"/>
+  <path d="M42 100 L58 120 M78 100 L94 120 M114 100 L130 120 M240 100 L256 120 M276 100 L292 120" stroke="white" stroke-width="5"/>
+  <path d="M160 104 L44 40" stroke="#111" stroke-width="12" stroke-linecap="round"/><path d="M44 40 V88" stroke="#111" stroke-width="3"/>
+  <path d="M44 88 V100 C44 110 58 110 58 100" fill="none" stroke="#111" stroke-width="5"/>
+  <circle cx="160" cy="92" r="16"/><circle cx="160" cy="92" r="6" fill="white"/>
+  <rect x="214" y="66" width="86" height="34" rx="3"/><path d="M240 60 H274" stroke="#111" stroke-width="5"/><rect x="226" y="78" width="62" height="6" fill="white"/>
+  <rect x="330" y="36" width="10" height="84"/>
+  <path d="M344 120 V58 C344 50 350 46 358 46 L470 46 C486 46 494 54 500 66 L520 96 L568 102 C574 104 576 108 576 114 V120 Z"/>
+  <rect x="396" y="34" width="50" height="12" rx="2"/><path d="M420 36 V44" stroke="white" stroke-width="3"/>
+  <path d="M364 58 H410 V92 H364 Z M424 58 H468 C476 58 482 62 486 68 L500 92 H424 Z" fill="white"/><path d="M432 104 H446" stroke="white" stroke-width="4"/>
+  <rect x="508" y="62" width="8" height="20"/><path d="M548 106 V118 M558 106 V118 M568 106 V118" stroke="white" stroke-width="3"/><circle cx="571" cy="110" r="4" fill="white"/>
+  <circle cx="120" cy="150" r="30"/><circle cx="120" cy="150" r="17" fill="white"/><circle cx="120" cy="150" r="7"/>
+  <circle cx="230" cy="150" r="30"/><circle cx="230" cy="150" r="17" fill="white"/><circle cx="230" cy="150" r="7"/>
+  <circle cx="470" cy="150" r="30"/><circle cx="470" cy="150" r="17" fill="white"/><circle cx="470" cy="150" r="7"/>`;
+
 type Puzzle = { pkg: number; seq: number; objek: string; pieces: number; order: number[]; key: Key; scene: string; pembahasan: string; tingkat?: 2 | 3 };
 
 /** Pengecoh: tukar dua potongan bersebelahan, geser siklis, tukar ujung, dan pindah satu potongan. */
@@ -128,7 +160,11 @@ const puzzles: Puzzle[] = [
     pembahasan: "Ujung kiri adalah potongan dengan kotak belakang bertuliskan POLISI dan antena. Ujung kanan adalah potongan dengan setengah roda depan dan kerucut lalu lintas. Setelah kotak belakang, potongan dengan jok dan sisa roda belakang menyambung ke tangki bergaris putih dan mesin bersirip. Kaca depan dengan lampu rotator dan garpu depan berada tepat sebelum ujung kanan. Rangka bawah, jok, knalpot, dan roda harus menyambung di setiap batas." },
   { pkg: 15, seq: 34, objek: "ekskavator", pieces: 6, order: [3, 6, 1, 5, 2, 4], key: "D", scene: ekskavator, tingkat: 3,
     pembahasan: "Ujung kiri adalah pemberat belakang yang membulat dengan garis-garis putih miring dan cerobong asap. Ujung kanan adalah bucket bergigi dengan gundukan tanah. Dari kiri: pemberat, kisi-kisi mesin, kabin berjendela, silinder hidrolik dengan ujung depan rantai roda, sendi lengan dengan pin putih, lalu bucket. Rantai roda dengan roller putih, lengan, dan garis tanah harus menyambung di setiap batas; ada enam potongan, jadi periksa setiap sambungan sebelum memilih." },
-];
+
+  { pkg: 16, seq: 33, objek: "sepeda", pieces: 4, order: [3, 1, 4, 2], key: "B", scene: sepeda,
+    pembahasan: "Ujung kiri adalah potongan dengan boncengan dan kotak bergaris putih di atas roda belakang. Ujung kanan adalah potongan dengan keranjang berkisi, lampu depan, dan separuh kanan roda depan. Potongan dengan sadel, gir, dan pedal menyambung ke sisa roda belakang; potongan dengan setang, bel, dan pipa rangka miring berada sebelum keranjang. Pipa rangka harus menyambung lurus di setiap batas." },
+  { pkg: 16, seq: 34, objek: "mobil derek", pieces: 6, order: [5, 2, 6, 1, 4, 3], key: "E", scene: mobilDerek, tingkat: 3,
+    pembahasan: "Ujung kiri adalah ujung lengan derek dengan tali dan pengait. Ujung kanan adalah moncong kabin dengan kisi-kisi dan lampu depan. Dari kiri: pengait, gulungan tali (drum) dengan roda belakang pertama, kotak perkakas dengan roda belakang kedua, cerobong asap tegak di belakang kabin, jendela pintu dengan lampu rotator dan roda depan, lalu moncong. Lengan derek, bak bergaris miring, sasis, dan kabin harus menyambung di setiap batas; ada enam potongan, jadi periksa setiap sambungan." },];
 
 /** Gambar pembahasan: gambar utuh, garis potong putus-putus, nomor potongan di atas tiap bagian (tanpa id). */
 function pembahasanSvg(p: Puzzle) {

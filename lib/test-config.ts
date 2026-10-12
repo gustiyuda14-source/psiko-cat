@@ -94,17 +94,18 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // module_sessions.package_number; sesi lama (null) memakai SIMULASI_PACKAGE (= Paket 1).
 // Nomor simulasi tidak boleh bentrok dengan paket latihan (KECERDASAN_PACKAGES 2-11).
 // Kecerdasan 13/14 = Paket 1/12 setelah kalibrasi Logis/Spasial 2026-10-12 (denah masuk blok
-// 38-42, scripts/seed-kecerdasan-kal.ts). Simulasi berikutnya memakai 15 ke atas.
+// 38-42, scripts/seed-kecerdasan-kal.ts). Kartu 1 sejak 2026-10-12 = pkg 16 (disusun ulang penuh sesuai
+// pedoman §3); pkg 13 menjadi bank lama. Simulasi berikutnya memakai 17 ke atas.
 // Kartu 1-2 memakai Kepribadian paket 11 dan Kecermatan acak per sesi. Kartu 3 (Simulasi 3) punya
 // paket sendiri: Kepribadian 12 dan Kecermatan 10 (siluet, tetap; tidak ada di latihan).
 export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number; KECERMATAN?: number }> = {
-  1: { KECERDASAN: 13, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN },
+  1: { KECERDASAN: 16, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN },
   2: { KECERDASAN: 14, KEPRIBADIAN: 11 },
   3: { KECERDASAN: 15, KEPRIBADIAN: 12, KECERMATAN: 10 },
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
 // tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.
-const SIMULASI_KECERDASAN_LAMA: Record<number, number> = { 1: 1, 12: 2 };
+const SIMULASI_KECERDASAN_LAMA: Record<number, number> = { 1: 1, 12: 2, 13: 1 };
 
 /** Kartu Simulasi Penuh dari package_number Kecerdasan sebuah sesi (null = sesi lama = kartu 1). */
 export function simulasiKartuOf(kecerdasanPackage: number | null | undefined): number {

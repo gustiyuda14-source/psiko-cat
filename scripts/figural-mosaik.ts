@@ -162,6 +162,24 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     });
   }
 
+  { // LOMPAT (pkg 16) — ring 8 ubin melompat 3 petak searah jarum jam, berputar 90° berlawanan arah; bendera pusat berputar 180°
+    const ring = [0, 1, 2, 5, 8, 7, 6, 3];
+    const T: Tile[] = ["seperempat", "titik", "busur", "bintang", "arsir", "segitiga", "bulat", "daun"];
+    const at = (t: number, step = 3, rot = -90, crot = 180): Frame => {
+      const f: Frame = new Array(9);
+      T.forEach((tile, p) => (f[ring[md(p + step * t, 8)]] = C(tile, false, md(rot * t, 360))));
+      f[4] = C("bendera", true, md(crot * t, 360));
+      return f;
+    };
+    defs.push({
+      pkg: 16, seq: 26, key: "C", n: 3, frames: [at(0), null, at(2), at(3), at(4)],
+      opts: [{ f: at(1) }, { f: at(1, 1) }, { f: at(1, -3) }, { f: at(1, 3, 90) }, { f: at(1, 3, -90, 0) }].map((o, i) => ({ ...o, why: ["", "ubin hanya bergeser 1 petak", "ubin melompat berlawanan arah jarum jam", "ubin berputar searah jarum jam", "bendera di tengah tidak berputar"][i] || undefined })),
+      aturan: "Ada tiga aturan. (1) Delapan ubin tepi melompat 3 petak searah jarum jam setiap langkah, jadi dua tetangga dilewati. (2) Setiap ubin berputar 90° berlawanan arah jarum jam. (3) Bendera di tengah berputar 180° setiap langkah.",
+      tahap: "Gambar (2) satu langkah setelah gambar (1). Tips: ikuti satu ubin yang jelas arahnya, misalnya segitiga, dari (1) ke (3) ke (4); ia selalu berada 3 petak di depan, sehingga posisinya di (2) bisa dicek dari dua arah.",
+      overlay: (c) => arrow(c(ring[5]), c(ring[0])) + arrow(c(ring[0]), c(ring[3]), true),
+    });
+  }
+
   return defs.map((d) => {
     // Opsi berlabel huruf; jawaban di posisi d.key, pengecoh mengisi sisanya berurutan.
     const order: Opt[] = new Array(5), rest = d.opts.slice(1);

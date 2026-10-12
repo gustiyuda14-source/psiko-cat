@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { data } from "./kecerdasan-teks-lib";
 
-// Brute force wacana logika Latihan Paket 2 (package_number 3) dan Simulasi Paket 3 (package_number 15), soal 65-75 (pedoman §4.5):
+// Brute force wacana logika Latihan Paket 2 (package_number 3), Simulasi Paket 3 (package_number 15) dan Simulasi Paket 1 baru (package_number 16), soal 65-75 (pedoman §4.5):
 // semua susunan yang memenuhi syarat dihitung, lalu kunci tiap soal diturunkan ulang dan
 // dicocokkan dengan field k di prisma/data/kecerdasan_p3_teks.json. Opsi sah harus tepat satu.
 //   npx tsx scripts/cek-wacana-kal.ts
@@ -156,3 +156,66 @@ const assign = (names: string[]) => perms(names.map((_, i) => i + 1)).map((p) =>
   ], t15);
 }
 console.log(`OK: kunci 65-75 pkg 15 (${P15_FILE}) cocok dengan brute force.`);
+
+// ════ Simulasi Paket 1 baru (package_number 16), soal 65-75 ════
+// Tiap wacana sengaja punya beberapa susunan sah (jumlahnya dikunci di bawah), supaya soal
+// "pasti/mungkin/tidak mungkin" menuntut penalaran lintas susunan. Tiap soal tetap tepat satu opsi sah.
+// Ganti ke "kecerdasan_p16_teks.json" setelah file bagian digabung.
+const P16_FILE = "kecerdasan_p16_teks.json";
+const t16 = data(P16_FILE) as KeyFile;
+const banyak = <S>(name: string, sols: S[], n: number) => { assert.equal(sols.length, n, `${name}: harus ${n} susunan, dapat ${sols.length}`); return sols; };
+
+// ── p16wRUANG (65-68): ruang U1-U3 (utara) dan S1-S3 (selatan), nomor sama = berhadapan ──
+{
+  type S = Record<string, string>;
+  const names = ["Oka", "Putri", "Rangga", "Sekar", "Tomi", "Vina"];
+  const side = (s: S, a: string) => s[a][0], col = (s: S, a: string) => +s[a][1];
+  const adj = (s: S, a: string, b: string) => side(s, a) === side(s, b) && Math.abs(col(s, a) - col(s, b)) === 1;
+  const face = (s: S, a: string, b: string) => side(s, a) !== side(s, b) && col(s, a) === col(s, b);
+  const sols = banyak("RUANG", perms(["U1", "U2", "U3", "S1", "S2", "S3"]).map((p) => Object.fromEntries(names.map((n, i) => [n, p[i]])) as S).filter((s) =>
+    side(s, "Oka") === "U" && face(s, "Oka", "Vina") && adj(s, "Putri", "Rangga") && col(s, "Rangga") < col(s, "Sekar")
+    && (side(s, "Putri") !== "U" || col(s, "Tomi") === 2)), 3);
+  check("RUANG", sols, [
+    { s: 65, kind: "pasti", cond: (s) => s.Oka === "U3", opts: ["Putri", "Tomi", "Rangga", "Sekar", "Vina"].map((n) => (s: S) => s[n] === "U1") },
+    { s: 66, kind: "pasti", opts: [(s) => col(s, "Tomi") === 2, (s) => side(s, "Putri") === "S", (s) => adj(s, "Oka", "Tomi"), (s) => adj(s, "Sekar", "Tomi"), (s) => col(s, "Rangga") === 1] },
+    { s: 67, kind: "kecuali", opts: [(s) => face(s, "Tomi", "Sekar"), (s) => s.Putri === "U3", (s) => adj(s, "Rangga", "Vina"), (s) => s.Sekar === "S3", (s) => adj(s, "Oka", "Sekar")] },
+    { s: 68, kind: "pasti", cond: (s) => side(s, "Putri") === "S" && side(s, "Rangga") === "S", opts: [(s) => s.Oka === "U1", (s) => s.Vina === "S1", (s) => adj(s, "Tomi", "Oka"), (s) => s.Rangga === "S2", (s) => face(s, "Sekar", "Putri")] },
+  ], t16);
+}
+
+// ── p16wUJI (69-72): giliran uji emisi 1-6 ──
+{
+  const all = assign(["Ambulans", "Bus", "Derek", "Jip", "Pikap", "Truk"]);
+  const dekat = (s: Pos, a: string, b: string) => Math.abs(s[a] - s[b]) === 1;
+  const sols = banyak("UJI", all.filter((s) => s.Truk === s.Bus + 2 && ![1, 6].includes(s.Derek) && dekat(s, "Pikap", "Derek") && !dekat(s, "Ambulans", "Bus")
+    && (s.Derek > s.Bus || s.Ambulans === 6)), 4);
+  const order = (s: Pos) => Object.keys(s).sort((a, b) => s[a] - s[b]).join(", ");
+  check("UJI", sols, [
+    { s: 69, kind: "pasti", cond: (s) => s.Bus === 3, opts: ["Derek, Pikap, Bus, Jip, Truk, Ambulans", "Pikap, Derek, Bus, Ambulans, Truk, Jip", "Pikap, Derek, Bus, Jip, Truk, Ambulans", "Jip, Derek, Bus, Pikap, Truk, Ambulans", "Pikap, Derek, Bus, Jip, Ambulans, Truk"].map((o) => (s: Pos) => order(s) === o) },
+    { s: 70, kind: "pasti", opts: [(s) => s.Bus === 1, (s) => s.Jip === s.Bus + 1, (s) => s.Ambulans === 6, (s) => s.Derek > s.Truk, (s) => s.Pikap > s.Jip] },
+    { s: 71, kind: "kecuali", opts: [(s) => s.Ambulans === 4, (s) => s.Derek === 2, (s) => s.Pikap === 6, (s) => s.Truk === 5, (s) => s.Ambulans === 5] },
+    { s: 72, kind: "pasti", cond: (s) => s.Ambulans < s.Derek, opts: ["Ambulans", "Jip", "Pikap", "Derek", "Truk"].map((k) => (s: Pos) => s[k] === 5) },
+  ], t16);
+}
+
+// ── p16wPOSKO (73-75): relawan × posko × bantuan ──
+{
+  type S = { p: Record<string, string>; b: Record<string, string> };
+  const names = ["Bayu", "Dewi", "Gilang", "Yoga", "Zahra"];
+  const all: S[] = [];
+  for (const pp of perms(["Cemara", "Dahlia", "Kenanga", "Melati", "Teratai"])) for (const bp of perms(["beras", "obat", "selimut", "air", "tenda"]))
+    all.push({ p: Object.fromEntries(names.map((n, i) => [n, pp[i]])), b: Object.fromEntries(names.map((n, i) => [n, bp[i]])) });
+  const who = (m: Record<string, string>, v: string) => names.find((n) => m[n] === v)!;
+  const sols = banyak("POSKO", all.filter(({ p, b }) => b[who(p, "Melati")] === "obat" && ["tenda", "air"].includes(b.Yoga) && !["obat", "beras"].includes(b.Zahra)
+    && p.Bayu === "Kenanga" && b.Gilang === "selimut" && !["Dahlia", "Teratai"].includes(p.Gilang) && (p.Zahra !== "Teratai" || b.Yoga === "air")), 3);
+  const mungkin = (f: (x: S) => boolean) => () => sols.some(f);
+  const memastikan = (f: (x: S) => boolean) => () => sols.filter(f).length === 1;
+  check("POSKO", sols, [
+    { s: 73, kind: "pasti", opts: ["Dewi", "Bayu", "Gilang", "Yoga", "Zahra"].map((n) => (x: S) => x.p[n] === "Melati") },
+    // 74 "mungkin benar": opsi sah = terjadi pada minimal satu susunan
+    { s: 74, kind: "pasti", opts: [(x: S) => x.p.Yoga === "Dahlia" && x.b.Yoga === "tenda", (x: S) => x.p.Zahra === "Teratai" && x.b.Zahra === "air", (x: S) => x.b[who(x.p, "Dahlia")] === "air", (x: S) => x.b.Bayu === "tenda", (x: S) => x.p.Gilang === "Melati"].map(mungkin) },
+    // 75 informasi tambahan yang menyisakan tepat satu susunan
+    { s: 75, kind: "pasti", opts: [(x: S) => x.b.Bayu === "beras", (x: S) => x.b.Zahra === "tenda", (x: S) => x.p.Yoga === "Teratai", (x: S) => x.b[who(x.p, "Dahlia")] === "air", (x: S) => x.b.Yoga === "tenda"].map(memastikan) },
+  ], t16);
+}
+console.log(`OK: kunci 65-75 pkg 16 (${P16_FILE}) cocok dengan brute force.`);

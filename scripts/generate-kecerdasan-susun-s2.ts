@@ -17,6 +17,7 @@ type Item = {
   tingkat: 2 | 3;
   objek: string;
   pembahasan: string;
+  pembahasan_svg: string;
 };
 
 type Puzzle = {
@@ -76,17 +77,17 @@ const puzzles: Puzzle[] = [
   {
     sequence: 35, object: "kapal layar", pieces: 4, order: [3, 1, 4, 2], correct: "E",
     choices: ["2 – 4 – 3 – 1", "3 – 4 – 1 – 2", "1 – 3 – 4 – 2", "2 – 1 – 4 – 3", "2 – 4 – 1 – 3"], scene: sailingShip,
-    pembahasan: "Tentukan kedua ujung dulu. Potongan 2 berisi haluan runcing dengan layar jib (ujung kiri), dan potongan 3 berisi buritan dengan kabin berjendela (ujung kanan). Setelah haluan, potongan 4 memuat tiang pendek dengan layar depan, lalu potongan 1 memuat tiang tinggi dengan dua layar dan bendera. Di setiap batas, potongan layar dan deret lubang jendela lambung harus menyambung. Urutan: 2 – 4 – 1 – 3. Opsi D menukar tiang pendek dan tiang tinggi sehingga layar terputus. Jawaban: E.",
+    pembahasan: "Tentukan kedua ujung dulu. Potongan 2 berisi haluan runcing dengan layar jib (ujung kiri), dan potongan 3 berisi buritan dengan kabin berjendela (ujung kanan). Setelah haluan, potongan 4 memuat tiang pendek dengan layar depan, lalu potongan 1 memuat tiang tinggi dengan dua layar dan bendera. Di setiap batas, potongan layar dan deret lubang jendela lambung harus menyambung.\n\nOpsi A gugur karena buritan (potongan 3) dipasang sebelum tiang tinggi, sehingga layar putus di sambungan 4–3. Opsi B gugur karena buritan dipasang di ujung kiri. Opsi C gugur karena haluan (potongan 2) dipasang di ujung kanan. Opsi D gugur karena tiang pendek dan tiang tinggi tertukar sehingga layar terputus. Tips: cari dua potongan ujung (haluan dan buritan) lebih dulu, lalu isi bagian tengahnya. Urutan: 2 – 4 – 1 – 3. Jawaban: E.",
   },
   {
     sequence: 36, object: "sepeda", pieces: 5, order: [4, 1, 5, 2, 3], correct: "B",
     choices: ["2 – 5 – 4 – 1 – 3", "2 – 4 – 5 – 1 – 3", "3 – 1 – 5 – 4 – 2", "2 – 4 – 5 – 3 – 1", "1 – 3 – 2 – 5 – 4"], scene: bicycle,
-    pembahasan: "Mulai dari roda belakang yang memiliki gir (potongan 2), lalu sadel dan rantai (potongan 4), engkol dan pedal di tengah rangka (potongan 5), tabung atas, garpu, setang, dan lampu (potongan 1), dan terakhir separuh kanan roda depan (potongan 3). Jari-jari roda dan batang rangka harus menyambung di setiap batas. Urutan: 2 – 4 – 5 – 1 – 3. Opsi A menukar sadel dan engkol sehingga rantai terputus. Jawaban: B.",
+    pembahasan: "Mulai dari roda belakang yang memiliki gir (potongan 2), lalu sadel dan rantai (potongan 4), engkol dan pedal di tengah rangka (potongan 5), tabung atas, garpu, setang, dan lampu (potongan 1), dan terakhir separuh kanan roda depan (potongan 3). Jari-jari roda dan batang rangka harus menyambung di setiap batas.\n\nOpsi A gugur karena sadel dan engkol tertukar sehingga rantai terputus. Opsi C gugur karena urutannya terbalik: separuh kanan roda depan (potongan 3) dipasang di ujung kiri. Opsi D gugur karena separuh roda depan dipasang sebelum setang, sehingga putus di sambungan 5–3. Opsi E gugur karena dimulai dari setang (potongan 1), bukan dari roda belakang. Tips: mulai dari potongan yang paling mudah dikenali (roda) lalu ikuti batang rangka yang menyambung. Urutan: 2 – 4 – 5 – 1 – 3. Jawaban: B.",
   },
   {
     sequence: 37, object: "lokomotif kereta uap", pieces: 6, order: [5, 2, 6, 1, 4, 3], correct: "C",
     choices: ["4 – 2 – 6 – 1 – 5 – 3", "3 – 1 – 5 – 6 – 2 – 4", "4 – 2 – 6 – 5 – 1 – 3", "4 – 2 – 6 – 5 – 3 – 1", "5 – 1 – 3 – 4 – 2 – 6"], scene: steamLocomotive,
-    pembahasan: "Bagian belakang lokomotif adalah kabin dengan atap dan jendela (potongan 4), disusul sambungan kabin ke ketel beserta batang penggerak (potongan 2), kubah uap di atas roda penggerak (potongan 6), cerobong berasap (potongan 5), lampu depan dengan roda kecil (potongan 1), dan bajak rel di ujung depan (potongan 3). Batang penggerak dan roda harus menyambung lurus. Urutan: 4 – 2 – 6 – 5 – 1 – 3. Opsi A menukar cerobong dan lampu depan, opsi D meletakkan bajak rel sebelum lampu depan. Jawaban: C.",
+    pembahasan: "Bagian belakang lokomotif adalah kabin dengan atap dan jendela (potongan 4), disusul sambungan kabin ke ketel beserta batang penggerak (potongan 2), kubah uap di atas roda penggerak (potongan 6), cerobong berasap (potongan 5), lampu depan dengan roda kecil (potongan 1), dan bajak rel di ujung depan (potongan 3). Batang penggerak dan roda harus menyambung lurus.\n\nOpsi A gugur karena cerobong dan lampu depan tertukar. Opsi B gugur karena urutannya terbalik: bajak rel (potongan 3) dipasang di ujung kiri. Opsi D gugur karena bajak rel diletakkan sebelum lampu depan. Opsi E gugur karena bajak rel berada di tengah dan langsung disambung ke kabin (sambungan 3–4 putus). Tips: tetapkan kedua ujung (kabin dan bajak rel) dulu, lalu ikuti batang penggerak yang harus lurus. Urutan: 4 – 2 – 6 – 5 – 1 – 3. Jawaban: C.",
   },
 ];
 
@@ -103,18 +104,20 @@ function buildItem(puzzle: Puzzle): Item {
     tingkat: 2,
     objek: puzzle.object,
     pembahasan: puzzle.pembahasan,
+    pembahasan_svg: solvedSvg(puzzle),
   };
 }
 
-function categorySvg() {
-  const box = (x: number, label: string, icon: string) => `<g transform="translate(${x} 0)"><rect x="0" y="16" width="140" height="132" rx="7" fill="none" stroke="#111" stroke-width="3"/>${icon}<text x="70" y="181" fill="#111" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">${label}</text></g>`;
+/** pemb = gambar pembahasan: kotak hiu berbingkai hijau, celah insang dilingkari merah, label ikan/mamalia merah. */
+function categorySvg(pemb = false) {
+  const box = (x: number, label: string, icon: string) => `<g transform="translate(${x} 0)"><rect x="0" y="16" width="140" height="132" rx="7" fill="none" stroke="${pemb && label === "a" ? HL : "#111"}" stroke-width="${pemb && label === "a" ? 7 : 3}"/>${icon}<text x="70" y="181" fill="#111" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">${label}</text>${pemb ? `<text x="70" y="216" fill="${RED}" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="bold" text-anchor="middle">${label === "a" ? "ikan" : "mamalia"}</text>` : ""}</g>`;
   const shark = `<path d="M12 88 C28 68 45 61 70 65 C87 68 99 78 108 84 L124 45 L119 84 L132 92 L119 101 L121 116 L108 99 C93 108 80 116 58 114 C36 112 23 103 12 88 Z" fill="#111"/><path d="M58 67 L72 37 L84 71 Z M65 106 L85 128 L81 104 Z" fill="#111"/><circle cx="30" cy="82" r="3" fill="white"/><path d="M40 76 V86 M45 75 V85 M50 76 V86 M55 77 V87 M60 78 V88" stroke="white" stroke-width="3" stroke-linecap="round"/>`;
   const whale = `<path d="M10 87 C13 67 28 56 51 57 C75 57 94 65 106 76 C114 73 123 69 130 62 C130 73 127 81 122 86 C128 90 132 98 131 107 C123 105 117 101 112 96 C94 108 72 115 48 114 C27 114 13 105 10 87 Z" fill="#111"/><path d="M91 65 L98 48 L104 70 Z" fill="#111"/><circle cx="27" cy="78" r="3" fill="white"/><path d="M34 94 C48 102 63 104 78 101 M37 100 C50 108 64 109 79 105 M42 106 C53 112 65 113 76 109" fill="none" stroke="white" stroke-width="3" stroke-linecap="round"/><path d="M24 55 C19 49 20 43 25 39 M31 54 C29 48 32 44 36 41" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round"/>`;
   const orca = `<path d="M12 91 C13 76 26 67 44 65 C54 57 64 54 76 57 L73 21 L96 62 C105 66 111 73 116 80 C123 75 129 68 135 64 C134 75 131 82 127 87 C133 92 136 99 135 106 C127 104 121 100 116 95 C105 108 90 115 70 116 C47 117 25 109 14 99 C11 97 11 94 12 91 Z" fill="#111"/><path d="M53 103 C59 111 67 117 80 120 L76 103 Z" fill="#111"/><path d="M34 99 C49 108 64 110 80 108 C95 106 104 100 113 91 C108 103 96 112 80 115 C60 118 43 111 34 99 Z" fill="white"/><ellipse cx="42" cy="77" rx="13" ry="7" fill="white"/><circle cx="29" cy="78" r="3" fill="white"/>`;
   // narwal: badan paus diperkecil, tanpa sirip punggung (ciri narwal), bercak putih, gading lurus berulir dari mulut
   const narwhal = `<g transform="translate(30 14) scale(0.8)"><path d="M10 87 C13 67 28 56 51 57 C75 57 94 65 106 76 C114 73 123 69 130 62 C130 73 127 81 122 86 C128 90 132 98 131 107 C123 105 117 101 112 96 C94 108 72 115 48 114 C27 114 13 105 10 87 Z" fill="#111"/><circle cx="27" cy="78" r="3" fill="white"/><g fill="white"><circle cx="60" cy="70" r="3"/><circle cx="74" cy="68" r="2.5"/><circle cx="86" cy="74" r="3"/><circle cx="68" cy="80" r="2"/><circle cx="96" cy="82" r="2.5"/></g></g><path d="M39 83 L4 73" stroke="#111" stroke-width="4" stroke-linecap="round"/><path d="M33 79 L35 84 M26 77 L28 82 M19 75 L21 80 M12 73 L14 78" stroke="white" stroke-width="1.5"/>`;
   const dolphin = `<path d="M13 81 C19 78 25 77 32 78 C34 67 43 60 55 59 C69 58 80 62 88 69 C86 63 89 58 94 57 C98 64 98 71 94 77 C101 80 106 84 112 87 C119 84 124 79 129 75 C129 84 126 90 122 93 C126 97 130 103 130 111 C122 108 117 104 113 99 C102 102 92 102 81 99 L72 112 C69 114 66 112 67 108 L71 98 C57 100 47 98 39 93 C31 91 23 91 15 90 C11 89 10 85 13 81 Z" fill="#111"/><circle cx="38" cy="78" r="3" fill="white"/><circle cx="54" cy="65" r="3" fill="white"/>`;
-  return `<svg viewBox="0 0 850 200" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>${box(20, "a", shark)}${box(187, "b", whale)}${box(354, "c", orca)}${box(521, "d", narwhal)}${box(688, "e", dolphin)}</svg>`;
+  return `<svg viewBox="0 0 850 ${pemb ? 228 : 200}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>${box(20, "a", shark)}${box(187, "b", whale)}${box(354, "c", orca)}${box(521, "d", narwhal)}${box(688, "e", dolphin)}${pemb ? `<circle cx="70" cy="82" r="20" fill="none" stroke="${RED}" stroke-width="4"/>` : ""}</svg>`;
 }
 
 function categoryItem(): Item {
@@ -128,12 +131,24 @@ function categoryItem(): Item {
     scoring_rule: { type: "dichotomous", correct_key: "A" },
     tingkat: 2,
     objek: "hewan laut: mamalia dan ikan (hiu, paus, orca, narwal, lumba-lumba)",
-    pembahasan: "Paus, orca, narwal, dan lumba-lumba adalah mamalia laut: bernapas dengan paru-paru dan menyusui anaknya, meskipun bentuknya mirip ikan (orca sering disebut paus pembunuh, dan narwal adalah paus bergading, keduanya bukan ikan). Hiu adalah ikan: bernapas dengan insang (celah insang tampak di samping kepala) dan sirip ekornya tegak. Jawaban: A.",
+    pembahasan: "Paus, orca, narwal, dan lumba-lumba adalah mamalia laut: bernapas dengan paru-paru dan menyusui anaknya, meskipun bentuknya mirip ikan (orca sering disebut paus pembunuh, dan narwal adalah paus bergading, keduanya bukan ikan). Hiu adalah ikan: bernapas dengan insang (celah insang tampak di samping kepala).\n\nOpsi b (paus) gugur karena paus bernapas lewat lubang sembur di atas kepala (semburannya tampak di gambar). Opsi c (orca) gugur karena orca termasuk keluarga lumba-lumba. Opsi d (narwal) gugur karena narwal adalah paus bergading. Opsi e (lumba-lumba) gugur karena lumba-lumba juga bernapas dengan paru-paru lewat lubang sembur. Keempatnya mamalia, jadi hanya hiu yang tidak termasuk kelompoknya. Tips: jangan tertipu bentuk badan yang mirip; cari ciri pembeda seperti celah insang. Jawaban: A.",
+    pembahasan_svg: categorySvg(true),
   };
 }
 
 function wholeSvg(puzzle: Puzzle) {
   return `<svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/><g fill="#111">${puzzle.scene}</g></svg>`;
+}
+
+const HL = "#1a7f37", RED = "#d32f2f";
+/** Gambar pembahasan: objek utuh (dipotong 0–190 seperti potongan soal, svg bersarang tanpa id), garis potong
+ *  bergelombang merah putus-putus (lengkung yang sama dengan stripClip), dan nomor potongan hijau sesuai urutan benar. */
+function solvedSvg(puzzle: Puzzle) {
+  const w = 600 / puzzle.pieces, labels = answerFor(puzzle.order);
+  const cuts = Array.from({ length: puzzle.pieces - 1 }, (_, i) => { const x = (i + 1) * w;
+    return `<path d="M ${x} 0 C ${x + 6} 24 ${x - 8} 47 ${x + 2} 68 C ${x + 9} 92 ${x - 6} 112 ${x + 4} 137 C ${x + 7} 156 ${x - 4} 175 ${x} 190" fill="none" stroke="${RED}" stroke-width="3" stroke-dasharray="8 6"/>`; }).join("");
+  const nums = labels.map((n, i) => `<circle cx="${(i + 0.5) * w}" cy="17" r="15" fill="${HL}"/><text x="${(i + 0.5) * w}" y="24" fill="white" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">${n}</text>`).join("");
+  return `<svg viewBox="0 0 600 226" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>${nums}<svg x="0" y="36" width="600" height="190" viewBox="0 0 600 190" overflow="hidden"><g fill="#111">${puzzle.scene}</g>${cuts}</svg></svg>`;
 }
 
 function check(items: Item[]) {
@@ -152,6 +167,8 @@ function check(items: Item[]) {
     const ids = [...svg.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
     assert(ids.every((id) => id.startsWith(`s2q${item.sequence_number}-`)), `id SVG ${item.sequence_number} tidak berprefiks`);
     allIds.push(...ids);
+    assert(/^[^\n]+\n\n[^\n]+ Tips: [^\n]+ Jawaban: [A-E]\.$/.test(item.pembahasan) && item.pembahasan.endsWith(`Jawaban: ${item.scoring_rule.correct_key}.`), `pembahasan ${item.sequence_number} harus 2 paragraf + tips + kunci`);
+    assert(!/<(?:script|image|style)\b|href=|\bid="/.test(item.pembahasan_svg), `pembahasan_svg ${item.sequence_number} memakai id/elemen tidak aman`);
     if (item.sequence_number === 40) {
       assert(item.options_payload.instruksi === CATEGORY_INSTRUCTION, "instruksi kategori salah");
       assert(choices.map((choice) => choice.text).join(",") === "a,b,c,d,e", "pilihan kategori salah");
@@ -174,7 +191,7 @@ function preview(items: Item[]) {
     const keyText = item.options_payload.choices.find((choice) => choice.key === item.scoring_rule.correct_key)?.text;
     const choices = item.options_payload.choices.map((choice) => `${choice.key}. ${choice.text}`).join(" &nbsp; ");
     const whole = item.sequence_number === 40 ? "" : `<h3>Gambar utuh</h3><div class="whole">${wholeSvg(puzzles[index])}</div>`;
-    return `<section><h2>Soal ${item.sequence_number}: ${item.objek}</h2><p class="instruction">${item.options_payload.instruksi}</p><h3>${item.sequence_number === 40 ? "Pilihan ikon hewan laut" : "Potongan acak"}</h3>${item.options_payload.svg_content}${whole}<p><strong>Kunci ${item.scoring_rule.correct_key}:</strong> ${keyText}</p><p>${choices}</p></section>`;
+    return `<section><h2>Soal ${item.sequence_number}: ${item.objek}</h2><p class="instruction">${item.options_payload.instruksi}</p><h3>${item.sequence_number === 40 ? "Pilihan ikon hewan laut" : "Potongan acak"}</h3>${item.options_payload.svg_content}${whole}<p><strong>Kunci ${item.scoring_rule.correct_key}:</strong> ${keyText}</p><p>${choices}</p><h3>Gambar pembahasan</h3><div class="whole">${item.pembahasan_svg}</div><p>${item.pembahasan.replace("\n\n", "<br><br>")}</p></section>`;
   }).join("\n");
   return `<!doctype html><html lang="id"><meta charset="utf-8"><title>Preview Susun S2</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111}section{border:1px solid #aaa;margin:20px 0;padding:16px}h2{margin:0 0 8px}.instruction{font-weight:bold}.whole{max-width:600px}svg{display:block;max-width:100%;height:auto}p{font-size:14px;line-height:1.6}</style><body><h1>Preview Kecerdasan Paket 2 — Susun Potongan dan Ikon Kategori</h1>${cards}</body></html>`;
 }

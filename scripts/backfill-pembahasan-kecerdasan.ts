@@ -23,7 +23,7 @@ const source = new Map<string, { text: string; svg?: string }>();
 const add = (row: Row, text: string | undefined, svg?: string) => {
   if (text?.trim()) source.set(fp(row.options_payload, row.scoring_rule.correct_key), { text: text.replaceAll("<br>", "\n").trim(), svg });
 };
-for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", "kecerdasan_p15_teks.json"]) {
+for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json"]) {
   const teks = data(f) as TeksFile;
   teksRows(teks).forEach((r, i) => add(r, teks.soal[i].p));
 }

@@ -13,9 +13,12 @@ import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./de
 // Output: prisma/data/kecerdasan_denah_kal.json ({ [package_number]: Row[] }) + output/denah-kal-preview.html
 
 const root = path.join(__dirname, "..");
-const PKGS = [13, 14, 2, 3, 15];
-// Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. Paket lama tetap seperti semula.
-const PB = new Set([15]);
+const PKGS = [13, 14, 2, 3, 15, 16];
+// Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13/2/3 tetap seperti semula.
+// Pkg 14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
+const PB = new Set([14, 15, 16]);
+// Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
+const NEW = new Set([15, 16]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 
@@ -35,9 +38,13 @@ type Row = {
   pembahasan_svg?: string;
 };
 
+/** Label "Lapangan" duduk di garis tengah lapangan: beri halo putih supaya tidak tercoret.
+ *  Hanya untuk paket baru + pembahasan_svg; svg_content paket live (14) wajib identik byte. */
+const haloLapangan = (svg: string) => svg.replace(/(<text [^>]*)>Lapangan</g, '$1 stroke="#fff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">Lapangan<');
+
 /** Peta inline: id clipPath berprefiks per soal, ukuran ikut lebar layar (maks 448px). */
-function inlineMap(bw: Map2, n: number, rot: number, prefix: string) {
-  const svg = renderMap2(bw, n, undefined, rot)
+function inlineMap(bw: Map2, n: number, rot: number, prefix: string, pkg: number) {
+  const svg = (NEW.has(pkg) ? haloLapangan : (x: string) => x)(renderMap2(bw, n, undefined, rot))
     .replace(' width="448" height="600"', ' style="width:100%;max-width:448px;height:auto"')
     .replaceAll('id="mapclip"', `id="${prefix}mapclip"`).replaceAll("url(#mapclip)", `url(#${prefix}mapclip)`);
   assert.ok(!svg.includes('"mapclip"') && !svg.includes("#mapclip)"), "id clipPath belum berprefiks");
@@ -48,7 +55,7 @@ function inlineMap(bw: Map2, n: number, rot: number, prefix: string) {
  *  marker panah diganti segitiga biasa dengan ukuran yang sama (markerWidth 4 × stroke-width, refX 7/10). */
 function pembahasanSvg(bw: Map2, n: number, rot: number, it: Item) {
   const MKC: Record<string, string> = { ok: C_OK, no: C_NO, ref: C_REF };
-  let svg = renderMap2(bw, n, { cap: it.cap as string[], over: it.over as string, defs: "" }, rot)
+  let svg = haloLapangan(renderMap2(bw, n, { cap: it.cap as string[], over: it.over as string, defs: "" }, rot))
     .replace(' width="448" height="600"', ' style="width:100%;max-width:448px;height:auto"')
     .replace("<defs></defs>", "")
     .replace(/<defs><clipPath id="mapclip">.*?<\/clipPath><\/defs><g clip-path="url\(#mapclip\)">(.*?)<\/g>/, (_, roads: string) =>
@@ -66,6 +73,18 @@ function pembahasanSvg(bw: Map2, n: number, rot: number, it: Item) {
     if (!over) return all;
     const dx = t.includes("→") && over > 0 ? -92 : -over;
     return `<rect x="${f1(x0 + dx)}" y="${y}" width="${w}" height="20" fill="#fff" rx="10"${ra}/><text x="${f1(+tx + dx)}"${ta}>${t}</text>`;
+  });
+  // Dua tag bertumpuk (objek berdekatan, mis. pkg 14 #42): pisahkan vertikal, masing-masing setengah jarak.
+  const PILL = /<rect x="([-\d.]+)" y="([-\d.]+)" width="([\d.]+)" height="20" fill="#fff" rx="10"([^>]*)\/><text x="([-\d.]+)" y="([-\d.]+)"([^>]*)>([^<]*)<\/text>/g;
+  const pills = [...svg.matchAll(PILL)].map((m) => ({ x: +m[1], y: +m[2], w: +m[3], dy: 0 }));
+  for (let i = 0; i < pills.length; i++) for (let j = 0; j < i; j++) {
+    const a = pills[j], b = pills[i], ov = 22 - Math.abs(a.y + a.dy - (b.y + b.dy));
+    if (ov > 0 && a.x < b.x + b.w && b.x < a.x + a.w) { const s = b.y + b.dy >= a.y + a.dy ? 1 : -1; a.dy -= (s * ov) / 2; b.dy += (s * ov) / 2; }
+  }
+  let pi = 0;
+  svg = svg.replace(PILL, (_, x, y, w, ra, tx, ty, ta, t) => {
+    const d = pills[pi++].dy;
+    return `<rect x="${x}" y="${f1(+y + d)}" width="${w}" height="20" fill="#fff" rx="10"${ra}/><text x="${tx}" y="${f1(+ty + d)}"${ta}>${t}</text>`;
   });
   assert.ok(!/\bid=|url\(#|<(?:script|image|style)\b|href=/.test(svg), "pembahasan_svg masih memakai id/url/href");
   return svg;
@@ -110,9 +129,9 @@ PKGS.forEach((pkg, pi) => {
     const walkers = shuffle(WALKERS);
     const set = [arahBangunan(p, pos[0], used), arahArah(p, pos[1], used), rute2(bw, pos[2], 2, walkers[0]), rute2(bw, pos[3], 3, walkers[1])];
     if (!fresh(set) || set.some((s) => (s!.tier as number) < 2)) continue;
-    // Paket baru: peta A 2 sedang + 2 HOTS, ROTASI 180° = HOTS → 2 sedang / 3 HOTS sesuai rencana.
-    if (PB.has(pkg) && set.filter((s) => s!.tier === 3).length !== 2) continue;
-    set.forEach((s, i) => rows.push(toRow(38 + i, s!, inlineMap(bw, 1, 0, `dk${pkg}q${38 + i}-`), PB.has(pkg) ? pembahasanSvg(bw, 1, 0, s!) : undefined)));
+    // Paket baru: ROTASI 180° = HOTS (peta A 2 HOTS), 90/270° = sedang (peta A 3 HOTS) → total 2 sedang / 3 HOTS.
+    if (NEW.has(pkg) && set.filter((s) => s!.tier === 3).length !== (1 + (pi % 3) === 2 ? 2 : 3)) continue;
+    set.forEach((s, i) => rows.push(toRow(38 + i, s!, inlineMap(bw, 1, 0, `dk${pkg}q${38 + i}-`, pkg), PB.has(pkg) ? pembahasanSvg(bw, 1, 0, s!) : undefined)));
     break;
   }
   // Peta B: kompas diputar 90/180/270° bergilir antarpaket.
@@ -123,7 +142,7 @@ PKGS.forEach((pkg, pi) => {
     if (!clearOfCompass(bw)) continue;
     const s = rotArah(bw, k, pos[4], new Set<string>(), "b");
     if (!fresh([s])) continue;
-    rows.push(toRow(42, s!, inlineMap(bw, 2, k * 90, `dk${pkg}q42-`), PB.has(pkg) ? pembahasanSvg(bw, 2, k * 90, s!) : undefined));
+    rows.push(toRow(42, s!, inlineMap(bw, 2, k * 90, `dk${pkg}q42-`, pkg), PB.has(pkg) ? pembahasanSvg(bw, 2, k * 90, s!) : undefined));
     break;
   }
   for (const r of rows) seen.add(norm(r.options_payload.question_text));
@@ -133,8 +152,8 @@ PKGS.forEach((pkg, pi) => {
 for (const [pkg, rows] of Object.entries(out)) {
   assert.deepEqual(rows.map((r) => r.sequence_number), [38, 39, 40, 41, 42], `pkg ${pkg}: nomor`);
   assert.equal(new Set(rows.map((r) => r.scoring_rule.correct_key)).size, 5, `pkg ${pkg}: kunci harus tersebar A-E`);
+  if (NEW.has(+pkg)) assert.equal(rows.filter((r) => r.tingkat === 3).length, 3, `pkg ${pkg}: harus 2 sedang / 3 HOTS`);
   if (PB.has(+pkg)) {
-    assert.equal(rows.filter((r) => r.tingkat === 3).length, 3, `pkg ${pkg}: harus 2 sedang / 3 HOTS`);
     for (const r of rows) assert.ok(r.pembahasan_svg && r.pembahasan.split("\n\n").length === 2 && !r.pembahasan.includes("<br>"), `pkg ${pkg} #${r.sequence_number}: pembahasan 2 paragraf + gambar`);
   } else assert.ok(rows.every((r) => !r.pembahasan_svg), `pkg ${pkg}: paket lama tidak boleh berubah`);
   for (const r of rows) {

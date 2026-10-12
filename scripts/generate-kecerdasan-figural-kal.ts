@@ -4,18 +4,17 @@ import * as path from "path";
 import { type Ann, BOX, INK, KEYS, W, type Fig, type Fill, type Key, type Prim, type Pt, analogyItem, analogyS, box, draw, gridItem, gridS, optionsRow, optionsRowS, place, r1, fp, foot, redArrow, redRing, redText, regular, shape, sig, stimulusItem, svgWrap, tf } from "./figural-lib";
 import { BUNDAR_ITEMS } from "./figural-kal-bundar";
 import { BUNDAR15_ITEMS } from "./figural-kal-bundar-15";
+import { BUNDAR16_ITEMS } from "./figural-kal-bundar-16";
+import { FIG16_ITEMS } from "./figural-kal-16";
 import { buildMosaik } from "./figural-mosaik";
 
-// Figural baru untuk kalibrasi Logis/Spasial 2026-10-12 (blok 26-37):
-//   26-27 deret · 28-30 matriks 3×3 · 31-32 rotasi/cermin · 33-34 susun · 35-36 analogi · 37 ikon kategori
+// Figural kalibrasi Logis/Spasial 2026-10-12: 26-27 deret · 28-30 matriks · 31-32 rotasi · 33-34 susun · 35-36 analogi · 37 ikon
 // pkg 13 (Simulasi 1 baru): 28-30, 31-32, 37 (+ susun 34 dari generate-kecerdasan-susun-kal.ts)
-// pkg 2 (Latihan Paket 1): 31-32, 35-36, 37
-// pkg 3 (Latihan Paket 2): 26-32, 35-37 (+ susun 33-34) + pola bundar 51-56 (figural-kal-bundar.ts)
-// pkg 15 (Simulasi 3): 26-27 deret mosaik (figural-mosaik.ts, tata letak 3+2 supaya terbaca di HP), 28-32 + 35-37 di sini
-//   (tata letak besar gridS/analogyS + gambar pembahasan), pola bundar 51-56 (figural-kal-bundar-15.ts)
+// pkg 2 (Latihan Paket 1): 31-32, 35-36, 37 · pkg 3 (Latihan Paket 2): 26-32, 35-37 (+ susun 33-34) + pola bundar 51-56 (figural-kal-bundar.ts)
+// pkg 15 (Simulasi 3): 26-27 mosaik (figural-mosaik.ts), 28-32 + 35-37 di sini (tata letak besar + gambar pembahasan), bundar 51-56 (figural-kal-bundar-15.ts)
+// pkg 16 (Simulasi 1 baru): 26 mosaik, 27-32 + 35-37 (figural-kal-16.ts), bundar 51-56 (figural-kal-bundar-16.ts)
 // Primitif sama dengan s2 (figural-lib.ts): opsi kembar tertangkap oleh place().
-//   npx tsx scripts/generate-kecerdasan-figural-kal.ts
-// Output: prisma/data/kecerdasan_figural_kal.json ({ [pkg]: Row[] }) + output/figural-kal-preview.html
+//   npx tsx scripts/generate-kecerdasan-figural-kal.ts → prisma/data/kecerdasan_figural_kal.json ({ [pkg]: Row[] }) + output/figural-kal-preview.html
 
 type Built = { pkg: number; seq: number; key: Key; instruksi: string; svg: string; tingkat: 2 | 3; pembahasan: string; choices?: string[]; pembahasan_svg?: string };
 const items: Built[] = [];
@@ -465,7 +464,7 @@ type Row = {
   pembahasan: string;
   pembahasan_svg?: string;
 };
-const all: Built[] = [...items, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS];
+const all: Built[] = [...items, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS];
 const out: Record<number, Row[]> = {};
 for (const it of all) {
   const choices = it.choices ?? ["a", "b", "c", "d", "e"];
@@ -484,6 +483,7 @@ assert.deepEqual(out[13].map((r) => r.sequence_number), [28, 29, 30, 31, 32, 37]
 assert.deepEqual(out[2].map((r) => r.sequence_number), [31, 32, 35, 36, 37]);
 assert.deepEqual(out[3].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.deepEqual(out[15].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
+assert.deepEqual(out[16].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 for (const r of Object.values(out).flat()) {
   for (const svg of [r.options_payload.svg_content, r.pembahasan_svg ?? ""]) assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(svg), `SVG ${r.sequence_number} tidak aman`);
   // Gambar pembahasan dirender bersama butir lain di satu halaman review: tanpa id supaya tidak bentrok.
