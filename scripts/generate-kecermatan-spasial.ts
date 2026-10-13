@@ -302,7 +302,10 @@ const SET: Kolom[] = PKG === 202 ? KOLOM : shuffle([...MAINS]).slice(0, 10).map(
 
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
-const svgDir = path.join(__dirname, `../public/kecermatan-spasial/p${PKG}`);
+// SPASIAL_OUT=<folder>: tulis SVG + bank ke folder itu, tanpa label pelafalan
+// (dipakai scripts/generate-kecermatan-simulasi.ts untuk mengambil beberapa kolom).
+const OUT = process.env.SPASIAL_OUT;
+const svgDir = OUT ? path.join(OUT, `p${PKG}`) : path.join(__dirname, `../public/kecermatan-spasial/p${PKG}`);
 fs.mkdirSync(svgDir, { recursive: true });
 const pelafalan: Record<string, string> = {};
 
@@ -341,8 +344,9 @@ const kolom = SET.map((k, c) => {
   return { nomor: c + 1, roman: ROMAN[c], simbol, soal };
 });
 
-fs.writeFileSync(path.join(__dirname, `../prisma/data/bank_soal_p${PKG}.json`),
+fs.writeFileSync(OUT ? path.join(OUT, `bank_soal_p${PKG}.json`) : path.join(__dirname, `../prisma/data/bank_soal_p${PKG}.json`),
   JSON.stringify({ nomor: PKG, nama: MUDAH ? `Paket Spasial Dasar ${PKG - 500}` : SEDANG ? `Paket Spasial Sedang ${PKG - 400}` : `Paket Spasial ${PKG - 200}`, kategori: "SPASIAL", total_soal: 500, kolom }, null, 2));
+if (OUT) process.exit(0);
 // Kata bantuan pelafalan (latihan), digabung dengan label paket/aspek lain.
 const labelFile = path.join(__dirname, "../data/kecermatan-pelafalan.json");
 const all = fs.existsSync(labelFile) ? JSON.parse(fs.readFileSync(labelFile, "utf8")) : {};

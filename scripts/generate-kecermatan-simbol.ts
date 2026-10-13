@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import { pathToFileURL } from "node:url";
 
 // Generator Kecermatan Simbol Hilang (huruf Yunani mirip). Aturan diturunkan
 // dari contoh soal Polri (FILE PSIKO POLRI 2026/1_5017529637278843693.pdf):
@@ -129,7 +130,7 @@ function variants(base: string[], style: Style, rand: () => number, taken: Set<s
   return out;
 }
 
-function glyphPool(nomor: number, style: Style, rand: () => number): string[] {
+export function glyphPool(nomor: number, style: Style, rand: () => number): string[] {
   const dir = new URL(`../public/kecermatan-simbol/p${nomor}/`, import.meta.url);
   mkdirSync(dir, { recursive: true });
   const taken = new Set<string>();
@@ -141,7 +142,7 @@ function glyphPool(nomor: number, style: Style, rand: () => number): string[] {
   });
 }
 
-function mulberry32(seed: number) {
+export function mulberry32(seed: number) {
   return () => {
     seed = (seed + 0x6d2b79f5) | 0;
     let t = Math.imul(seed ^ (seed >>> 15), 1 | seed);
@@ -150,7 +151,7 @@ function mulberry32(seed: number) {
   };
 }
 
-function shuffle<T>(items: T[], rand: () => number): T[] {
+export function shuffle<T>(items: T[], rand: () => number): T[] {
   const result = [...items];
   for (let i = result.length - 1; i > 0; i--) {
     const j = Math.floor(rand() * (i + 1));
@@ -160,7 +161,7 @@ function shuffle<T>(items: T[], rand: () => number): T[] {
 }
 
 // Panjang selang-seling terpanjang (ABAB = 4). Di atas 4 kelihatan berpola.
-function maxAlternation(items: string[]): number {
+export function maxAlternation(items: string[]): number {
   let best = 2;
   let run = 2;
   for (let i = 2; i < items.length; i++) {
@@ -170,7 +171,7 @@ function maxAlternation(items: string[]): number {
   return best;
 }
 
-function maxRun(items: string[]): number {
+export function maxRun(items: string[]): number {
   let best = 1;
   let run = 1;
   for (let i = 1; i < items.length; i++) {
@@ -180,7 +181,7 @@ function maxRun(items: string[]): number {
   return best;
 }
 
-function makeColumn(simbol: Record<Key, string>, rand: () => number) {
+export function makeColumn(simbol: Record<Key, string>, rand: () => number) {
   let answers: Key[];
   do answers = shuffle(KEYS.flatMap((k) => Array<Key>(10).fill(k)), rand);
   while (maxRun(answers) > 2 || maxAlternation(answers) > 4);
@@ -267,8 +268,8 @@ const SILUET_P10: string[][] = [
   ["rainbow", "tornado", "planet", "star", "drop"],
 ];
 
-async function siluetBank(nomor: number, nama: string, sets: string[][]) {
-  const rand = mulberry32(nomor);
+// Unduh ikon Phosphor (fill) ke public/kecermatan-siluet/ bila belum ada.
+export async function downloadSiluet(names: string[]) {
   const dir = new URL("../public/kecermatan-siluet/", import.meta.url);
   mkdirSync(dir, { recursive: true });
   // Versi Phosphor dipatok, jadi file yang sudah ada di disk tidak diunduh ulang.
@@ -277,8 +278,7 @@ async function siluetBank(nomor: number, nama: string, sets: string[][]) {
     assert.ok(license.ok, "Gagal unduh LICENSE Phosphor");
     writeFileSync(new URL("LICENSE-phosphor.txt", dir), await license.text());
   }
-  for (const name of sets.flat()) {
-    pelafalan[`/kecermatan-siluet/${name}.svg`] = NAMA_SILUET[name];
+  for (const name of names) {
     if (existsSync(new URL(`${name}.svg`, dir))) continue;
     const res = await fetch(`${PHOSPHOR}/assets/fill/${name}-fill.svg`);
     assert.ok(res.ok, `Ikon Phosphor tidak ada: ${name}`);
@@ -288,6 +288,11 @@ async function siluetBank(nomor: number, nama: string, sets: string[][]) {
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><rect width="256" height="256" rx="26" fill="#fff"/>` +
       `<g transform="translate(24 24) scale(0.8125)" fill="#000">${inner}</g></svg>\n`);
   }
+}
+async function siluetBank(nomor: number, nama: string, sets: string[][]) {
+  const rand = mulberry32(nomor);
+  for (const name of sets.flat()) pelafalan[`/kecermatan-siluet/${name}.svg`] = NAMA_SILUET[name];
+  await downloadSiluet(sets.flat());
   return {
     nomor,
     nama,
@@ -335,7 +340,10 @@ async function main() {
   writeFileSync(labelFile, `${JSON.stringify(Object.fromEntries(Object.entries(all).sort()), null, 2)}\n`);
 }
 
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
+// Jalan sebagai skrip saja; diimpor (generate-kecermatan-simulasi.ts) tidak menulis apa pun.
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  main().catch((err) => {
+    console.error(err);
+    process.exit(1);
+  });
+}
