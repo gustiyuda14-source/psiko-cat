@@ -13,6 +13,7 @@ const ROOT = join(__dirname, "..");
 const FILE = join(ROOT, "bank/drill/kecerdasan/K05-hitung-cepat.json");
 const IMG = join(ROOT, "data/drill-pembahasan");
 const LETTERS = ["a", "b", "c", "d", "e"];
+const RILIS = "2026-10-13"; // tanggal push batch; memicu badge NEW di drill sampai peserta menjawab
 const status = process.argv.includes("--status") ? process.argv[process.argv.indexOf("--status") + 1] : "hitung";
 
 const ev = (expr: string): number => Number(new Function(`"use strict"; return (${expr});`)().toPrecision(12));
@@ -51,7 +52,7 @@ const items = SPECS.map((s, idx) => {
   if (!SVG[s.n]) throw new Error(`${id}: SVG belum ada`);
   writeFileSync(join(IMG, `${id}.svg`), SVG[s.n]());
   return {
-    id, kartu: "K05", sub_type: s.st, tier: s.tier, sumber: "baru", stem: s.stem, opsi, kunci: [letter],
+    id, kartu: "K05", sub_type: s.st, tier: s.tier, sumber: "baru", rilis: RILIS, stem: s.stem, opsi, kunci: [letter],
     hitung: s.hitungOut ?? s.hitung, nilai_opsi: Object.fromEntries(all.map((o, i) => [LETTERS[i], o.v])),
     pembahasan: `${p1}<br>${p2}`, status_kunci: status, gambar_pembahasan: `${id}.svg`,
   };

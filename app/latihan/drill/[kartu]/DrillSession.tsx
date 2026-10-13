@@ -5,7 +5,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import type { SafeDrillItem } from "@/lib/drill-bank";
 import { DRILL_TIERS, drillCategory } from "@/lib/drill-cards";
-import { noteDrillAttempt, useDrillProgress, type DrillProgress } from "@/lib/practice-progress";
+import { noteDrillAttempt, useDrillProgress, useDrillProgressReady, type DrillProgress } from "@/lib/practice-progress";
+import { NewBadge } from "@/app/components/NewBadge";
 import { ExamBar, ExamBody, ExamDock } from "@/app/components/ExamChrome";
 import { Badge, EmptyState } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
@@ -45,6 +46,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
     return out;
   }, [items]);
   const progress = useDrillProgress();
+  const progressReady = useDrillProgressReady();
   // null = belum memilih soal sendiri; ikut startIndex sampai progres akun terbaca.
   const [chosen, setChosen] = useState<number | null>(null);
   const [picks, setPicks] = useState<Record<string, string>>({});
@@ -164,6 +166,9 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
     );
   }
 
+  // Badge NEW: butir baru yang belum pernah dijawab (sesi ini maupun riwayat akun); belum tampil sebelum progres termuat.
+  const isFresh = (it: SafeDrillItem) => progressReady && it.baru && !progress[it.id] && !results[it.id];
+  const freshCount = items.filter(isFresh).length;
   // Warna nomor: hasil sesi ini dulu, lalu pilihan yang belum diperiksa, lalu riwayat akun.
   const stateOf = (id: string): NavState => {
     const r = results[id];
@@ -200,6 +205,12 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
                     {NAV_LABEL[k]} <b>{count[k]}</b>
                   </li>
                 ))}
+              {freshCount > 0 && (
+                <li>
+                  <NewBadge small />
+                  Soal baru, belum dikerjakan <b>{freshCount}</b>
+                </li>
+              )}
             </ul>
             {groups.map(({ key, label: lv, own }) => {
               return (
@@ -212,8 +223,8 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
                         type="button"
                         onClick={() => goTo(i)}
                         aria-current={i === idx ? "step" : undefined}
-                        aria-label={`Soal ${i + 1}, ${lv}, ${NAV_LABEL[states[i]].toLowerCase()}`}
-                        className={`dnum is-${states[i]}`}
+                        aria-label={`Soal ${i + 1}, ${lv}, ${NAV_LABEL[states[i]].toLowerCase()}${isFresh(it) ? ", soal baru" : ""}`}
+                        className={`dnum is-${states[i]}${isFresh(it) ? " has-new" : ""}`}
                       >
                         {i + 1}
                       </button>
@@ -227,7 +238,10 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
       >
         <article key={q.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="qnum tnum">Soal {idx + 1}</p>
+            <div className="flex items-center gap-2">
+              <p className="qnum tnum">Soal {idx + 1}</p>
+              {isFresh(q) && <NewBadge />}
+            </div>
             <Badge tone="neutral">{tierLabel(q.tier)}</Badge>
           </div>
           <div className={`q-card ${q.gambar ? "q-card-fig" : ""}`}>

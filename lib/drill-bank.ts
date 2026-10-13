@@ -14,6 +14,8 @@ export type DrillItem = {
   sub_type: string;
   tier: number;
   sumber: string;
+  /** Tanggal push (YYYY-MM-DD). Ada = butir baru: badge NEW tampil sampai peserta menjawabnya (tidak kedaluwarsa). */
+  rilis?: string;
   instruksi?: string;
   /** Paragraf bacaan (K04), tampil dalam kotak di atas pertanyaan. */
   bacaan?: string[];
@@ -35,6 +37,8 @@ export type DrillItem = {
 
 export type SafeDrillItem = Pick<DrillItem, "id" | "kartu" | "sub_type" | "tier" | "instruksi" | "bacaan" | "tabel" | "stem" | "rumus" | "gambar" | "tampil_detik" | "opsi_gambar" | "opsi"> & {
   multi: boolean;
+  /** Butir ber-`rilis`; klien menyembunyikan badge begitu soal ini ada di progres peserta. */
+  baru: boolean;
 };
 
 const ITEMS = bank as DrillItem[];
@@ -60,6 +64,7 @@ export function safeDrillItem(it: DrillItem): SafeDrillItem {
     opsi_gambar: it.opsi_gambar ?? null,
     opsi: it.opsi,
     multi: it.kunci.length > 1,
+    baru: Boolean(it.rilis),
   };
 }
 
@@ -94,6 +99,8 @@ export function drillCatalog() {
       ...card,
       tiers: [1, 2, 3].map((tier) => items.filter((it) => it.tier === tier).map((it) => it.id)),
       kategori: kategoriOf(items),
+      /** Id butir baru (ber-`rilis`); badge NEW kartu = yang belum ada di progres peserta. */
+      baru: items.filter((it) => it.rilis).map((it) => it.id),
     };
   });
 }

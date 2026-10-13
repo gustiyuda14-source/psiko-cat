@@ -13,6 +13,7 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
   "sub_type": "NUM-HIT-TEORI",     // kode taksonomi docs/rencana/drilling/02, harus milik kartunya
   "tier": 3,                       // 1 Dasar · 2 Menengah · 3 Lanjut
   "sumber": "B3#41",               // asal struktur soal (P1, B2, B3, A3, KD, R, MB + nomor); "baru" bila original
+  "rilis": "2026-10-13",           // opsional; tanggal push batch → badge NEW sampai peserta menjawab butir ini (lihat bawah)
   "instruksi": "…",                // opsional
   "stem": "…",                     // teks soal (Unicode: −, ×, √, ∛, ², ⅓)
   "rumus": "<math display=\"block\">…</math>",  // opsional, MathML murni untuk bentuk bertingkat
@@ -28,6 +29,10 @@ Soal tidak di-seed ke tabel `questions`. Ubah soal = edit JSON → build → com
 ```
 
 `hitung` boleh memakai `Math`, `pilih(pred)` (nilai satu-satunya opsi yang memenuhi), `terbesar()`, `terkecil()`.
+
+## Badge NEW (`rilis`)
+
+Butir baru diberi `rilis: "YYYY-MM-DD"` (tanggal push). Di katalog dan sesi drilling butir itu memakai badge NEW: di panel besar kartu (jumlah + chip kategori), irisan roda, ubin nomor di panel navigasi sesi, dan header soal. Badge hilang per butir begitu peserta menjawabnya (benar atau salah) dan **tidak kedaluwarsa karena waktu**. Butir lama yang hanya diberi gambar pembahasan atau perbaikan teks **tidak** diberi `rilis`. Mematikan sorotan satu batch = hapus field `rilis` batch itu. Aturan lengkap: `docs/pedoman/PEDOMAN_UTAMA_PENYUSUNAN_SOAL.md` §3.6.
 
 ## Status kunci
 

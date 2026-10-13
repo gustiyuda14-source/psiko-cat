@@ -88,6 +88,7 @@ Akibatnya, bobot Nilai Akhir Psikotest 60/20/20 [PM 10-10, LmpC §5.3] dan forma
 | `pembahasan` | Wajib, mengikuti §5. | PM 12-10 |
 | `gambar` / `gambar_pembahasan` | Wajib untuk soal figural dan denah, mengikuti §6. | PM 12-10 |
 | `status_kunci` | `resmi` / `ganda` / `hitung` / `tunggal` (§8.3). | LmpD |
+| `rilis` | Tanggal push batch (`YYYY-MM-DD`). **Wajib untuk butir drill baru**; memicu badge NEW (§3.6). Tidak dipakai untuk butir lama yang hanya diberi gambar atau perbaikan teks. | PM 13-10 |
 
 Untuk paket DB (simulasi/latihan), pembahasan disimpan di `scoring_rule.pembahasan` dan `scoring_rule.pembahasan_svg`, **tidak boleh** di `options_payload` karena field itu terkirim ke browser saat ujian. [memory kecerdasan-pembahasan-teks 12-10]
 
@@ -107,6 +108,14 @@ Untuk paket DB (simulasi/latihan), pembahasan disimpan di `scoring_rule.pembahas
 
 ### 3.5 Fundamental
 - **B-9** Soal dibangkitkan dari rumus per sesi (`lib/fundamental.ts`), tanpa bank. Aturan §4 (pengecoh) dan §5 (pembahasan) berlaku untuk keluaran generatornya. Kunci saat ini masih terkirim ke browser; begitu hasil mulai disimpan ke akun, pengecekan wajib pindah ke server. [lib/fundamental.ts; memory fundamental 12-10]
+
+### 3.6 Badge NEW (Drilling)
+Drilling akan terus bertambah, jadi butir yang baru dirilis harus mudah ditemukan peserta. [PM 13-10]
+- **B-10** Setiap butir drill yang baru di-push diisi `rilis: "YYYY-MM-DD"` (tanggal push). Generator yang membangkitkan butir wajib menyetelnya (contoh: konstanta `RILIS` di `scripts/generate-k05-trik-2.ts`). Validator `build-drill-bank.ts` menolak format selain `YYYY-MM-DD`.
+- **B-11** Butir ber-`rilis` memakai badge **NEW** (emas) di tiga tempat: (a) panel besar kartu di katalog (lencana NEW, jumlah soal baru yang belum dikerjakan, dan chip NEW + jumlah di kategori yang memuatnya) beserta irisan roda kartu; (b) panel nomor sesi (pita NEW di ubin nomor, baris legenda "Soal baru, belum dikerjakan"); (c) header soal yang sedang dibuka.
+- **B-12** Badge **hilang per butir begitu peserta menjawabnya** (ada di progres akun atau sudah diperiksa di sesi ini), benar atau salah. Badge **tidak kedaluwarsa karena waktu**: peserta yang baru membuka drilling sebulan kemudian tetap melihat NEW pada butir yang belum ia kerjakan. Badge belum tampil sebelum progres akun selesai dimuat, supaya tidak berkedip.
+- **B-13** Gambar pembahasan baru atau perbaikan teks pada butir lama **bukan** butir baru: jangan beri `rilis`. Butir lama yang diganti total (stem/opsi/kunci berubah, progresnya ikut reset lewat `drillVersi`) boleh diberi `rilis` baru.
+- **B-14** Batch lama tidak diberi `rilis` ulang dan tidak dihapus otomatis. Menonaktifkan sorotan satu batch = hapus field `rilis` batch itu (keputusan pemilik), dicatat di LOG.md. Batch yang masih aktif disebut di LOG.md pada baris "NEW aktif".
 
 ---
 
@@ -274,6 +283,7 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 - [ ] `build:drill` / validator, `tsc`, dan `next build --webpack` lolos
 - [ ] Pemilik sudah cek di localhost; commit hanya path sendiri
 
+- [ ] Butir drill baru: `rilis` terisi (badge NEW, §3.6); butir lama yang hanya diberi gambar/teks tidak ber-`rilis`
 ---
 
 ## 11. Celah yang belum diatur (butuh keputusan nanti)

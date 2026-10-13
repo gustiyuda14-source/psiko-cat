@@ -23,6 +23,8 @@ export type WheelCard = {
   locked: boolean;
   /** Lolos filter aspek + pencarian. */
   match: boolean;
+  /** Jumlah butir baru yang belum dikerjakan peserta (badge NEW). */
+  fresh: number;
 };
 
 const GAP = 7; // derajat jeda antar kelompok aspek
@@ -185,7 +187,7 @@ export function DrillWheel({
                     aria-pressed={sel}
                     aria-disabled={!c.match}
                     aria-label={`${c.label}, ${c.aspekLabel}, ${
-                      c.locked ? "belum tersedia" : `${Math.round(c.p * 100)} persen. Dasar ${Math.round(c.tiers[0] * 100)}, Menengah ${Math.round(c.tiers[1] * 100)}, Lanjut ${Math.round(c.tiers[2] * 100)} persen`
+                      c.locked ? "belum tersedia" : `${c.fresh ? `${c.fresh} soal baru. ` : ""}${Math.round(c.p * 100)} persen. Dasar ${Math.round(c.tiers[0] * 100)}, Menengah ${Math.round(c.tiers[1] * 100)}, Lanjut ${Math.round(c.tiers[2] * 100)} persen`
                     }`}
                     onClick={() => c.match && onSelect(c.kartu, sel)}
                     onKeyDown={(e) => onKey(e, c.kartu)}
@@ -212,6 +214,14 @@ export function DrillWheel({
                       <text className="hc-wedge-pct" y={12} textAnchor="middle">
                         {c.locked ? "Segera" : c.p >= 1 ? "Selesai" : `${Math.round(c.p * 100)}%`}
                       </text>
+                      {c.fresh > 0 && (
+                        <g className="hc-wedge-new" transform="translate(0 27)">
+                          <rect x={-13} y={-7} width={26} height={13} rx={6.5} />
+                          <text y={3} textAnchor="middle">
+                            NEW
+                          </text>
+                        </g>
+                      )}
                     </g>
                   </g>
                 </g>

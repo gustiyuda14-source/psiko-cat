@@ -101,6 +101,11 @@ export function useDrillProgress(): DrillProgress {
   return useState_().drill;
 }
 
+/** Progres drill sudah dimuat dari server? Sebelum itu semua soal tampak "belum dikerjakan", jadi badge NEW belum boleh tampil. */
+export function useDrillProgressReady(): boolean {
+  return useState_().ready;
+}
+
 export function useLatihanProgress(): LatihanProgress {
   return useState_().latihan;
 }

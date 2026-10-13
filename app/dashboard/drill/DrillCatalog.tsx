@@ -8,11 +8,12 @@ import { SectorCards, type Sector } from "@/app/components/SectorCards";
 import { fillY, hexPoints, wavePath } from "@/lib/honey";
 import { DRILL_ASPEK, DRILL_TIERS, type DrillCard } from "@/lib/drill-cards";
 import { TierStack } from "@/app/components/ProgressTicket";
-import { resetProgress, useDrillProgress } from "@/lib/practice-progress";
+import { NewBadge } from "@/app/components/NewBadge";
+import { resetProgress, useDrillProgress, useDrillProgressReady } from "@/lib/practice-progress";
 import DrillProgressTicket, { aspekTiers, stats } from "./DrillProgress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
 
-type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[] };
+type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[]; baru: string[] };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
@@ -37,6 +38,9 @@ function MiniHexes({ fills }: { fills: (number | null)[] }) {
 export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const router = useRouter();
   const progress = useDrillProgress();
+  const ready = useDrillProgressReady();
+  // Butir baru yang belum pernah dijawab peserta. Sebelum progres termuat semua butir tampak belum dikerjakan, jadi tunggu.
+  const freshOf = (ids: string[]) => (ready ? ids.filter((id) => !progress[id]) : []);
   const [filter, setFilter] = useState("all");
   const [query, setQuery] = useState("");
   const [findOpen, setFindOpen] = useState(false);
@@ -82,6 +86,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
       p: all.total ? all.done / all.total : 0,
       locked: all.total === 0,
       match: matches(c),
+      fresh: freshOf(c.baru).length,
     };
   });
   const allStats = stats(cards.flatMap((c) => c.tiers.flat()), progress);
@@ -93,6 +98,8 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   const cardStats = stats(card.tiers.flat(), progress);
   const locked = cardStats.total === 0;
   const p = locked ? 0 : cardStats.done / cardStats.total;
+  const fresh = freshOf(card.baru);
+  const baruSet = new Set(card.baru);
 
   const sectors: Sector[] = [{ key: "all", label: "Semua" }, ...DRILL_ASPEK].map((a) => {
     const own = wheel.filter((w) => a.key === "all" || w.aspek === a.key);
@@ -204,6 +211,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
         <aside ref={panelRef} className="hc-panel" aria-live="polite" key={current}>
           <div className="hc-panel-top">
+            {fresh.length > 0 && <NewBadge />}
             <span className="hc-mod" data-mod={modul(card.aspek).toLowerCase()}>
               Drilling {modul(card.aspek)}
             </span>
@@ -215,6 +223,11 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
           </div>
           <h2 className="hc-panel-title">{card.label}</h2>
           <p className="hc-panel-desc">{card.desc}</p>
+          {fresh.length > 0 && (
+            <p className="hc-fresh">
+              <b className="tnum">{fresh.length}</b> soal baru belum kamu kerjakan. Tanda NEW hilang begitu soalnya kamu jawab.
+            </p>
+          )}
 
           {locked ? (
             <p className="hc-panel-desc mt-4">Soal untuk kartu ini sedang disiapkan. Kartu terbuka otomatis begitu soalnya tersedia.</p>
@@ -250,9 +263,11 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
               <ul className="hc-levels hc-cats" aria-label="Kategori soal di kartu ini">
                 {card.kategori.map(({ label, ids }) => {
                   const s = stats(ids, progress);
+                  const nf = freshOf(ids.filter((id) => baruSet.has(id))).length;
                   return (
                     <li key={label} className="hc-level" data-hit={hit(label) ? "true" : undefined}>
                       <b>{label}</b>
+                      {nf > 0 && <NewBadge small count={nf} />}
                       <span className="tnum">
                         {s.done}/{s.total}
                       </span>

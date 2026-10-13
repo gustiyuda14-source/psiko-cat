@@ -25,6 +25,8 @@ const CARDS = DRILL_CARDS;
 type Value = number | string | boolean;
 type Item = {
   id: string; kartu: string; sub_type: string; tier: number; sumber: string;
+  /** Tanggal push (YYYY-MM-DD); butir ber-`rilis` memakai badge NEW sampai peserta menjawabnya. */
+  rilis?: string;
   instruksi?: string; bacaan?: string[]; tabel?: { judul?: string; kolom: string[]; baris: string[][] };
   stem: string; rumus?: string; wacana_id?: string | null;
   gambar?: string | null; tampil_detik?: number; opsi_gambar?: Record<string, string> | null;
@@ -100,6 +102,7 @@ function checkItem(it: Item, file: string) {
   if (!card.prefix.some((p) => it.sub_type?.startsWith(p))) fail(id, `sub_type ${it.sub_type} bukan milik ${it.kartu}`);
   if (![1, 2, 3].includes(it.tier)) fail(id, "tier harus 1, 2, atau 3");
   if (!it.sumber) fail(id, "sumber kosong");
+  if (it.rilis !== undefined && !/^\d{4}-\d{2}-\d{2}$/.test(it.rilis)) fail(id, "rilis harus berformat YYYY-MM-DD");
   if (!it.stem?.trim()) fail(id, "stem kosong");
   if (it.bacaan !== undefined && (!Array.isArray(it.bacaan) || !it.bacaan.length || it.bacaan.some((p) => typeof p !== "string" || !p.trim())))
     fail(id, "bacaan harus array paragraf tidak kosong");

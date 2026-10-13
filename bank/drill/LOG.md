@@ -162,3 +162,7 @@ Hasil audit: dari 820 butir drill hanya 290 punya gambar pembahasan (K05 trik, K
 - **K07 alokasi (16)** `generate-k07-alokasi-pbh.ts`: batang waktu tersedia vs beban tugas (lepas 1/2 tugas, kekurangan, muat berapa tugas, dua orang, syarat dua pihak).
 - **K10 (13)** `generate-k10-angka-pbh.ts`: gambar soal + aturan + hitungan gambar 1 dan 2; jawaban dicocokkan dengan opsi kunci.
 Tidak dikerjakan (nilai rendah/mahal): K13 ikon (PNG potongan PDF), K06 konversi, K10 bahasa panda, K09 deret 1-jalur/huruf, K07 gerak/pencacahan/rasio kecil. Utang A-7 lama (97 butir bermuatan kepolisian, 83 di K17) belum dibersihkan; "karang taruna" di K08-PR-057 kena grep tetapi itu organisasi pemuda desa, bukan kepolisian. Prototipe gaya belum dilihat pemilik di localhost (G-5 dilewati atas perintah "jalankan").
+
+### Fitur badge NEW (2026-10-13)
+Field `rilis` (YYYY-MM-DD) + badge NEW di katalog (panel kartu, chip kategori, irisan roda) dan sesi (ubin nomor, legenda, header soal); hilang per butir setelah dijawab, tanpa kedaluwarsa waktu. Aturan: PEDOMAN_UTAMA §3.6 (B-10..B-14), skema: BANK_SCHEMA.md.
+NEW aktif: K05-N-001..060 (`rilis` 2026-10-13, batch 18 + 19; 60 butir). Batch 20 hanya gambar pembahasan, tidak ber-`rilis`.
