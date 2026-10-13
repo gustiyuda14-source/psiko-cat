@@ -196,22 +196,26 @@
    ::before/::after-nya sudah jadi sudut bidik. Hanya berputar saat aktif. */
 @property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg }
 .pc-card { --gr-r: 16px } .sp-card { --gr-r: var(--r-xl) } .hc-sector { --gr-r: var(--r-lg) }
+/* panel detail paket/kartu: cincin navy + glow navy di tepinya */
+.hc-panel { --gr-r: var(--r-xl); --gr-head: var(--brand-ink); --gr-mid: rgba(27, 42, 92, .4); --gr-track: rgba(27, 42, 92, .14); transition: box-shadow 220ms ease-out }
 .pg-tkq::before, .pc-card::before, .sp-card::before, .gr {
   content: ""; position: absolute; inset: -6px; padding: 2px; border-radius: calc(var(--gr-r) + 6px); pointer-events: none;
-  background: conic-gradient(from var(--a), transparent 0 50%, rgba(208, 166, 69, .45) 75%, var(--gold) 98%, transparent 100%), linear-gradient(rgba(208, 166, 69, .2), rgba(208, 166, 69, .2));
+  background: conic-gradient(from var(--a), transparent 0 50%, var(--gr-mid, rgba(208, 166, 69, .45)) 75%, var(--gr-head, var(--gold)) 98%, transparent 100%), linear-gradient(var(--gr-track, rgba(208, 166, 69, .2)), var(--gr-track, rgba(208, 166, 69, .2)));
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
   opacity: 0; transition: opacity 160ms ease-out;
-  animation: gr-spin 1.8s linear infinite; animation-play-state: paused;
+  animation: gr-spin 3.5s linear infinite; animation-play-state: paused;
 }
 @keyframes gr-spin { to { --a: 360deg } }
 .pg-tkq:has(:focus-visible)::before, .pg-tkq:active::before,
 .pc-card:is(:focus-visible, :active)::before,
 .sp-card:not(:disabled):is(:focus-visible, :active)::before,
-.hc-sector:is(:focus-visible, :active) > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
+.hc-sector:is(:focus-visible, :active) > .gr,
+.hc-panel:has(:focus-visible) > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
 @media (hover: hover) and (pointer: fine) {
-  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
+  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr, .hc-panel:hover > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
+  .hc-panel:hover { box-shadow: inset 0 1px 0 rgb(255 255 255 / .75), 0 18px 40px -24px rgb(122 87 16 / .38), 0 0 26px -2px rgba(27, 42, 92, .32) }
 }
 @media (prefers-reduced-motion: reduce) {
-  .pg-tkq::before, .pc-card::before, .sp-card::before, .gr { animation: none; background: var(--gold) }
-  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr { opacity: .65 }
+  .pg-tkq::before, .pc-card::before, .sp-card::before, .gr { animation: none; background: var(--gr-head, var(--gold)) }
+  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr, .hc-panel:hover > .gr { opacity: .65 }
 }

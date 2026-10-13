@@ -138,7 +138,7 @@
    motif sarang samar di pojok, dan garis emas yang menelusuri tepi setiap kali
    paket berganti (panel di-remount lewat key, jadi animasinya ikut terulang). */
 .hc-panel {
-  position: relative; isolation: isolate; overflow: hidden; min-width: 0; padding: 24px;
+  position: relative; isolation: isolate; min-width: 0; padding: 24px;
   border: 1px solid var(--border); border-radius: var(--r-xl);
   background:
     radial-gradient(120% 80% at 100% 100%, color-mix(in oklab, var(--honey-top) 16%, transparent), transparent 62%),
@@ -156,10 +156,10 @@
 .hc-panel::after {
   content: ""; position: absolute; right: -8px; bottom: -8px; z-index: -1; width: 220px; height: 220px; pointer-events: none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48' viewBox='0 0 28 48'%3E%3Cpath d='M14 0 28 8v16l-14 8L0 24V8zM14 32v16' fill='none' stroke='%23b8892b' stroke-width='1'/%3E%3C/svg%3E");
-  opacity: .14;
+  opacity: .14; clip-path: inset(0 8px 8px 0 round 0 0 21px 0);
   -webkit-mask: radial-gradient(circle at 100% 100%, #000, transparent 70%); mask: radial-gradient(circle at 100% 100%, #000, transparent 70%);
 }
-.hc-panel > * { animation: hc-swap 320ms var(--e-out) both }
+.hc-panel > :not(.gr) { animation: hc-swap 320ms var(--e-out) both }
 .hc-panel > :nth-child(2) { animation-delay: 30ms }
 .hc-panel > :nth-child(3) { animation-delay: 60ms }
 .hc-panel > :nth-child(n+4) { animation-delay: 90ms }

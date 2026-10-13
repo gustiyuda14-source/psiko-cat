@@ -399,6 +399,7 @@ export function PackageCarousel({
         {wide && (
           <aside className="hc-panel pk-side" aria-live="polite" key={pkg.id}>
             {detail}
+            <i className="gr" aria-hidden="true" />
           </aside>
         )}
       </div>

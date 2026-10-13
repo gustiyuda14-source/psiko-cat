@@ -344,6 +344,7 @@ export default function SimulasiCatalog({
           <p className="sr-only" role="status">
             {pending ? "Membuat sesi…" : ""}
           </p>
+          <i className="gr" aria-hidden="true" />
         </aside>
       </div>
     </>

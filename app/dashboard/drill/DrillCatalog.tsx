@@ -303,6 +303,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
               </div>
             </>
           )}
+          <i className="gr" aria-hidden="true" />
         </aside>
       </div>
 
