@@ -14,7 +14,7 @@ for (const shown of [["◆", "◆", "♫", "✦"], ["◆", "🍀", "♫"], ["◆
 assert.equal(getMissingSymbolKey({ symbol_map: { ...symbol_map, E: "◆" }, shown: ["◆", "🍀", "♫", "✦"], choices: [...KECERMATAN_KEYS] }), null);
 assert.equal(getMissingSymbolKey(null as unknown as KecermatanOptionsPayload), null);
 let verified = 0;
-for (const id of [3, 4, 5, 6, 7, 8, 201, 202, 203, 204, 205, 206, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510]) {
+for (const id of [3, 4, 5, 6, 7, 8, 201, 202, 203, 204, 205, 206, 401, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510]) {
   const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
     kolom: { simbol: KecermatanOptionsPayload["symbol_map"]; soal: { shown: string[]; kunci: string }[] }[];
   };
@@ -23,7 +23,7 @@ for (const id of [3, 4, 5, 6, 7, 8, 201, 202, 203, 204, 205, 206, 501, 502, 503,
     verified++;
   }
 }
-assert.equal(verified, 11000);
+assert.equal(verified, 11500);
 
 // Bantuan pelafalan latihan: kolom yang berlabel wajib 5 kata unik (kolom tanpa label, mis. angka/huruf, dilewati).
 const pelafalan = JSON.parse(readFileSync(new URL("../data/kecermatan-pelafalan.json", import.meta.url), "utf8")) as Record<string, string>;
