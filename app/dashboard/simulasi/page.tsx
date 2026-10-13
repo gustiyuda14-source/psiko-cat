@@ -64,14 +64,16 @@ export default async function SimulasiPage() {
   // Kecermatan sekarang punya banyak paket bank soal (masing-masing 500 soal, 1 dipilih
   // random per sesi/latihan) — hitung dari satu paket referensi, bukan total semua paket,
   // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
-  const [{ data: nonKecermatanRows }, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }, { data: doneSessions }] =
+  // Hitung per type+paket (head count): select baris dipotong PostgREST di 1000, bank simulasi sudah > 1000.
+  const bankKeys = [...new Set(Object.values(SIMULASI_PAKET).flatMap((p) => [`KECERDASAN:${p.KECERDASAN}`, `KEPRIBADIAN:${p.KEPRIBADIAN}`]))];
+  const [bankCounts, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }, { data: doneSessions }] =
     await Promise.all([
-      supabaseAdmin
-        .from("questions")
-        .select("type, package_number")
-        .eq("is_active", true)
-        .in("type", ["KECERDASAN", "KEPRIBADIAN"])
-        .in("package_number", [...new Set(Object.values(SIMULASI_PAKET).flatMap((p) => [p.KECERDASAN, p.KEPRIBADIAN]))]),
+      Promise.all(bankKeys.map(async (k) => {
+        const [type, pkg] = k.split(":");
+        const { count } = await supabaseAdmin.from("questions").select("id", { count: "exact", head: true })
+          .eq("is_active", true).eq("type", type).eq("package_number", Number(pkg));
+        return [k, count ?? 0] as const;
+      })),
       supabaseAdmin
         .from("questions")
         .select("id", { count: "exact", head: true })
@@ -103,11 +105,7 @@ export default async function SimulasiPage() {
     ]);
 
   // Jumlah butir per type+paket bank soal ("KECERDASAN:12" → 100).
-  const bankCount = (nonKecermatanRows ?? []).reduce<Record<string, number>>((acc, row) => {
-    const k = `${row.type}:${row.package_number}`;
-    acc[k] = (acc[k] ?? 0) + 1;
-    return acc;
-  }, {});
+  const bankCount: Record<string, number> = Object.fromEntries(bankCounts);
   /** Butir per sub-tes untuk satu kartu paket; Kecermatan sama untuk semua paket. */
   const countsOf = (paket: number): Record<ModuleType, number> => ({
     KECERDASAN: bankCount[`KECERDASAN:${SIMULASI_PAKET[paket]?.KECERDASAN}`] ?? 0,
