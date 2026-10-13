@@ -44,6 +44,7 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["VRB-BACA-TEKS", "Bacaan teks"], ["VRB-BACA-TABEL", "Bacaan tabel"],
   ["NUM-HIT-PECAHAN", "Pecahan"], ["NUM-HIT-DESIMAL", "Desimal"], ["NUM-HIT-PERSEN", "Persen"],
   ["NUM-HIT-AKAR-PANGKAT", "Akar & pangkat"], ["NUM-HIT-CAMPUR", "Operasi campuran"], ["NUM-HIT-TEORI", "Teori bilangan"],
+  ["NUM-HIT-TRIK-KALI", "Trik perkalian"], ["NUM-HIT-TRIK-PERSEN", "Trik persen & pecahan"], ["NUM-HIT-TRIK-BAGI", "Trik bagi & estimasi"], ["NUM-HIT-TRIK-TAMBAH", "Trik tambah & kurang"],
   ["NUM-ALJ", "Aljabar & perbandingan"],
   ["NUM-SAT-KONVERSI", "Konversi satuan"], ["NUM-SAT-CERITA", "Soal cerita satuan"],
   ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
