@@ -133,14 +133,27 @@ export default function DrillProgressTicket({
       stub={
         <>
           <span className="pg-label">Progress drilling</span>
-          <span className="pg-big">
-            {pct(all.done, all.total)}
-            <small>%</small>
-          </span>
-          <span className="pg-sub tnum">
-            {fmt(all.done)} dari {fmt(all.total)} soal dikerjakan
-          </span>
-          <StubRing p={all.total ? all.done / all.total : 0} />
+          <div>
+            <span className="pg-big is-total">{fmt(all.total)}</span>
+            <span className="pg-cap">total soal drilling</span>
+          </div>
+          <div className="pg-prog">
+            <div className="pg-prog-h">
+              <span>Sudah dikerjakan</span>
+              <b>{pct(all.done, all.total)}%</b>
+            </div>
+            <StubRing p={all.total ? all.done / all.total : 0} />
+          </div>
+          <div className="pg-split tnum">
+            <div className="is-done">
+              <b>{fmt(all.done)}</b>
+              <span>dikerjakan</span>
+            </div>
+            <div className="is-left">
+              <b>{fmt(all.total - all.done)}</b>
+              <span>belum</span>
+            </div>
+          </div>
           <Facts
             rows={[
               ["Akurasi keseluruhan", all.acc === null ? "-" : `${all.acc}%`],

@@ -9,7 +9,7 @@
 }
 
 /* breakpoint ikut lebar tiket, bukan window: sidebar memakan ruang */
-.pg-tkq { container-type: inline-size }
+.pg-tkq { position: relative; container-type: inline-size; --gr-r: 18px }
 .pg-tk { display: grid; grid-template-columns: 250px minmax(0, 1fr); border: 1px solid var(--border); border-radius: 18px; overflow: hidden; background: var(--surface-card); box-shadow: 0 1px 0 var(--pg-rule), 0 18px 40px -28px rgba(27, 42, 92, .35) }
 .pg-tk > * { min-width: 0 }
 .pg-stub { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 24px 24px 22px; color: #fff; background: radial-gradient(120% 80% at 0% 0%, #2a3c78 0%, var(--brand-ink) 45%, var(--surface-nav-deep) 100%) }
@@ -19,6 +19,18 @@
 .pg-label { font: 700 .68rem var(--font-display); letter-spacing: .16em; text-transform: uppercase; color: var(--gold-hi) }
 .pg-big { display: flex; align-items: baseline; gap: 4px; font: 600 3.6rem/1 var(--font-display); letter-spacing: -.04em; font-variant-numeric: tabular-nums }
 .pg-big small { font-size: 1.3rem; letter-spacing: 0; color: rgba(255, 255, 255, .7) }
+.pg-big.is-total { display: block; margin-top: 2px; font-size: 4.4rem; line-height: .95; letter-spacing: -.045em }
+.pg-cap { display: block; margin-top: 4px; color: rgba(255, 255, 255, .78); font-size: .9rem }
+.pg-prog { display: grid; gap: 8px }
+.pg-prog-h { display: flex; justify-content: space-between; align-items: baseline; font-size: .8rem; color: rgba(255, 255, 255, .7) }
+.pg-prog-h b { font: 600 .85rem var(--font-display); color: var(--gold-hi); font-variant-numeric: tabular-nums }
+.pg-prog .pg-ring i { min-width: 6px }
+.pg-split { display: grid; grid-template-columns: 1fr 1fr }
+.pg-split > div { display: grid; gap: 2px; min-width: 0 }
+.pg-split > div + div { padding-left: 16px; border-left: 1px solid rgba(255, 255, 255, .14) }
+.pg-split b { font: 600 1.7rem/1.1 var(--font-display); letter-spacing: -.02em; font-variant-numeric: tabular-nums }
+.pg-split .is-done b { color: var(--gold-hi) } .pg-split .is-left b { color: rgba(255, 255, 255, .88) }
+.pg-split span { font-size: .8rem; color: rgba(255, 255, 255, .7) }
 .pg-sub { margin-top: -8px; color: rgba(255, 255, 255, .78); font-size: .9rem }
 .pg-ring { height: 8px; border-radius: 99px; background: rgba(255, 255, 255, .14); overflow: hidden }
 .pg-ring i { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #c9a24a, var(--gold-hi)); transform-origin: left }
@@ -157,7 +169,8 @@
 @container (max-width: 960px) {
   .pg-tk { grid-template-columns: minmax(0, 1fr) }
   .pg-stub { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px 24px; align-items: end }
-  .pg-stub > .pg-label, .pg-stub > .pg-ring, .pg-stub > .pg-chip, .pg-stub > .pg-facts { grid-column: 1 / -1 }
+  .pg-stub > .pg-label, .pg-stub > .pg-ring, .pg-stub > .pg-chip, .pg-stub > .pg-facts, .pg-stub > .pg-prog { grid-column: 1 / -1 }
+  .pg-stub > .pg-split { grid-row: 2; grid-column: 2 }
   .pg-sub { margin-top: 0 }
   .pg-stub::after { top: auto; bottom: -1px; left: 22px; right: 22px; border-right: 0; border-bottom: 2px dashed rgba(255, 255, 255, .28) }
   .pg-punch { display: none }
@@ -166,7 +179,8 @@
 }
 @container (max-width: 700px) {
   .pg-stub { grid-template-columns: minmax(0, 1fr); padding: 20px 18px }
-  .pg-big { font-size: 3rem }
+  .pg-big { font-size: 3rem } .pg-big.is-total { font-size: 3.6rem }
+  .pg-stub > .pg-split { grid-row: auto; grid-column: 1 / -1 }
   .pg-body > section, .pg-foot { padding: 18px 16px }
   .pg-asp li { grid-template-columns: minmax(0, 1fr) 72px }
   .pg-asp .pg-stack { grid-column: 1 / -1; order: 3 } .pg-asp .pg-meta { grid-column: 1 / -1; order: 4 }
@@ -175,4 +189,29 @@
   .pg-mx-row > .pg-pk span { width: auto; height: auto; aspect-ratio: 1 }
   .pg-cont { grid-template-columns: minmax(0, 1fr) }
   .pg-rg { grid-template-columns: 80px minmax(0, 1fr) 36px }
+}
+
+/* Cincin emas berputar di luar kartu saat kursor di atasnya, fokus keyboard, atau ditekan (sentuh).
+   Pseudo ::before untuk kartu yang ::before-nya kosong; .hc-sector memakai elemen anak .gr karena
+   ::before/::after-nya sudah jadi sudut bidik. Hanya berputar saat aktif. */
+@property --a { syntax: "<angle>"; inherits: false; initial-value: 0deg }
+.pc-card { --gr-r: 16px } .sp-card { --gr-r: var(--r-xl) } .hc-sector { --gr-r: var(--r-lg) }
+.pg-tkq::before, .pc-card::before, .sp-card::before, .gr {
+  content: ""; position: absolute; inset: -6px; padding: 2px; border-radius: calc(var(--gr-r) + 6px); pointer-events: none;
+  background: conic-gradient(from var(--a), transparent 0 50%, rgba(208, 166, 69, .45) 75%, var(--gold) 98%, transparent 100%), linear-gradient(rgba(208, 166, 69, .2), rgba(208, 166, 69, .2));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity 160ms ease-out;
+  animation: gr-spin 1.8s linear infinite; animation-play-state: paused;
+}
+@keyframes gr-spin { to { --a: 360deg } }
+.pg-tkq:has(:focus-visible)::before, .pg-tkq:active::before,
+.pc-card:is(:focus-visible, :active)::before,
+.sp-card:not(:disabled):is(:focus-visible, :active)::before,
+.hc-sector:is(:focus-visible, :active) > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
+@media (hover: hover) and (pointer: fine) {
+  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr { opacity: 1; animation-play-state: running; transition-duration: 220ms }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pg-tkq::before, .pc-card::before, .sp-card::before, .gr { animation: none; background: var(--gold) }
+  .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr { opacity: .65 }
 }

@@ -40,6 +40,7 @@ export function SectorCards({
           aria-pressed={s.key === active}
           onClick={() => onPick(s.key)}
         >
+          <i className="gr" aria-hidden="true" />
           {s.badge && (
             <span className="hc-mod" data-mod={s.badge.toLowerCase()}>
               {s.badge}
