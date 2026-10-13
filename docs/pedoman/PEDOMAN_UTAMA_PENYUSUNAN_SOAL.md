@@ -64,6 +64,13 @@ Akibatnya, bobot Nilai Akhir Psikotest 60/20/20 [PM 10-10, LmpC §5.3] dan forma
   - butir MMPI dan kunci MMPI [PM 12-10, menu Keswa];
   - nama jalan/bangunan yang meniru bank pesaing (ab.school, Pejuang Kedinasan) [D06 §1.3].
 - **A-6 Di luar profil, tidak dibuat:** limit, integral, program linier, tanda fungsi rasional. [b1; b3]
+- **A-7 Konteks netral, tanpa unsur kepolisian.** Platform ini adalah psikotes yang *mengikuti sistem* tes Polri, bukan materi *untuk* Polri. Peserta datang dari berbagai seleksi (Polri, IPDN, kedinasan, CPNS). [PM 13-10]
+  - **Dilarang** di stem, opsi, wacana, tabel, pembahasan (termasuk "Gambaran nyata" dan analogi "Biar gampang diingat"), gambar soal, dan gambar pembahasan:
+    - kata: polisi, Polri, Polres, Polsek, Polda, Bhayangkara, Brimob, Satlantas, Kapolres, bintara, taruna, Akpol, reserse, penyidik;
+    - kegiatan/atribut khas kepolisian: patroli, tilang, razia, Operasi Zebra, TKP, olah TKP, HT patroli, seragam/pangkat/lencana/mobil polisi, tulisan "POLRI" pada gambar.
+  - **Pakai konteks umum:** sekolah, kampus, asrama, kantor, instansi pemerintah umum (kelurahan, puskesmas, perpustakaan, dinas), pelayanan publik, keluarga, komunitas, olahraga, usaha kecil, transportasi umum.
+  - **Masih boleh:** kata "Polri" dalam dokumen internal (pedoman, LOG, nama file sumber), dan kalimat penegasan bahwa kunci platform bukan kunci resmi Polri (N-4).
+  - Soal lama yang masih memuat unsur kepolisian dicatat sebagai utang dan dibersihkan bertahap. Soal baru wajib lolos aturan ini.
 
 ---
 
@@ -127,7 +134,7 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 |---|---|---|
 | Paragraf 1 — Langkah | Aturan atau langkah penyelesaian, bernomor bila lebih dari dua langkah. Soal metode/trik memakai tiga baris: **Cara cepat** / **Kenapa bisa** (aljabar ringan) / **Cara biasa**. | Ya |
 | Paragraf 2 — Kenapa yang lain salah | `Opsi X (isi): alasan` untuk **setiap** opsi salah, memakai nama kesalahan dari D-2, lalu `Jawaban: …` dan `Tips: …` (satu strategi cepat, boleh dengan target waktu). | Ya |
-| Paragraf 3 — Gambaran nyata | Skenario tugas polisi yang memakai keterampilan ini. | Opsional, hanya untuk tipe yang sudah disetujui (K17) |
+| Paragraf 3 — Gambaran nyata | Situasi sehari-hari yang memakai keterampilan ini (memandu tamu ke gedung, membaca denah kampus, menunjukkan arah ke puskesmas). Tidak boleh berupa skenario kepolisian (A-7). | Opsional, hanya untuk tipe yang sudah disetujui (K17) |
 
 [LmpE §3; LmpD; b17 K17 3 paragraf PM 11-10; b18 metode PM 13-10; PM 13-10 "2 inti + 1 opsional"]
 
@@ -240,6 +247,7 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 - [ ] Asal tercatat (`sumber`); adaptasi ringan atau `baru`; MB verbatim
 - [ ] Tidak ada butir simulasi di latihan/drill, tidak ada stem duplikat
 - [ ] Tanpa logo/merek/foto asli, teks pihak ketiga, butir MMPI
+- [ ] Tanpa unsur kepolisian di soal, pembahasan, dan gambar (A-7). Cek dengan grep: `polisi|polri|polres|polsek|polda|bhayangkara|brimob|bintara|taruna|akpol|patroli|tilang|razia|TKP`
 - [ ] Nama aspek sesuai SPCP; "Nilai Akhir Psikotest" tidak disingkat
 
 **Butir**

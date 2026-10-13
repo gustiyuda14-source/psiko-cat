@@ -163,7 +163,7 @@ Komposisi sebelumnya (berlaku untuk paket yang dibuat sebelum 2026-10-13: 1–3 
 Sumber format: `FILE PSIKO POLRI 2026/KECUKUPAN DATA/` (paket 1 dan 2, soal + pembahasan) dan drill K16. Tipe ini dilaporkan muncul di psikotes Akpol 2026.
 
 - **Bentuk:**
-  - konteks singkat, boleh dengan tabel 2–3 baris berisi variabel (p, q, n, t);
+  - konteks singkat dan umum (sekolah, kantor, toko, layanan publik; tanpa unsur kepolisian, pedoman utama A-7), boleh dengan tabel 2–3 baris berisi variabel (p, q, n, t);
   - "Pertanyaan: …";
   - "Pernyataan (1): …" dan "Pernyataan (2): …".
 - **Instruksi baku:** "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya."
@@ -207,7 +207,7 @@ Sumber format: `FILE PSIKO POLRI 2026/KECUKUPAN DATA/` (paket 1 dan 2, soal + pe
   - "sebagian" dibaca "semua";
   - kesimpulan benar menurut akal sehat tetapi tidak mengikuti dari premis;
   - kata "mungkin" yang tidak bisa dipastikan.
-- **Konteks:** tugas Polri/IPDN, sekolah, asrama, pelayanan publik. Premis boleh tidak sesuai kenyataan. Instruksi wajib menyebut "anggap semua premis benar".
+- **Konteks:** sekolah, kampus, asrama, kantor, pelayanan publik, keluarga. Tanpa unsur kepolisian (pedoman utama A-7). Premis boleh tidak sesuai kenyataan. Instruksi wajib menyebut "anggap semua premis benar".
 - **Kunci:** tepat satu kesimpulan yang sah secara formal. Butir dengan kunci "tidak dapat disimpulkan" harus membuktikan bahwa keempat opsi lain bisa salah (beri contoh tandingan untuk tiap opsi).
 - **Pembahasan:** format 2 paragraf umum.
   - Paragraf 1: bentuk premis, aturan yang dipakai, dan diagram atau rantai panah dalam kata-kata.

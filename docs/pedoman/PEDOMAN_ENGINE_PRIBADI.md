@@ -296,7 +296,7 @@ Butir sumber tidak dipakai di latihan (aturan yang sudah berlaku: soal simulasi 
 - **T1:** "Saya [perilaku nyata] [konteks]." Arah ditentukan oleh perilaku.
 - **T2:** "[Perilaku X] lebih [baik / mulia / bijak / terpuji] daripada [perilaku Y]." X dan Y harus satu dimensi (hindari pola X §2).
 - **T3:** "[X] lebih [memalukan / menyebalkan / buruk] daripada [Y]." Setuju berarti memihak Y.
-- Konteks disesuaikan untuk calon taruna/bintara: sekolah, asrama, organisasi, lingkungan rumah.
+- Konteks umum untuk calon peserta seleksi mana pun: sekolah, kampus, asrama, organisasi, tempat kerja, lingkungan rumah. Tanpa unsur kepolisian (pedoman utama A-7, keputusan pemilik 2026-10-13).
 - **Uji aturan aspek (wajib):** satu sisi kalimat harus jelas lebih mencerminkan aspek bloknya. Kalau reviewer tidak bisa menunjuk sisi itu dalam 5 detik, butir ditolak.
 - Hindari pola PL: X dan Y harus berada di satu dimensi perilaku yang sama.
 
@@ -364,7 +364,7 @@ Di ujian asli, nama aspek kemungkinan tidak ditampilkan. Label dikurangi bertaha
 - Urutan belajar: Tebak Aspek → bedah kalimat perbandingan → menjawab dengan label → menjawab tanpa label.
 
 ### 7.3 Definisi aspek (untuk label dan pembahasan)
-| Aspek | Yang dituntut dari calon anggota Polri |
+| Aspek | Perilaku yang dituntut dari peserta |
 |---|---|
 | Prososial | Tulus membantu, aktif di masyarakat, tidak mengharap imbalan, tidak menutupi kesalahan |
 | Pengambilan Keputusan | Cepat, yakin, berani menanggung risiko, memutuskan sendiri berdasarkan informasi |

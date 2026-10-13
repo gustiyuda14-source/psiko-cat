@@ -58,7 +58,9 @@ Aturan tambahan:
 | III | A | SPASIAL_DASAR | menengah | donor 599, kolom 6 |
 | IV | A | SIMBOL | Yunani | λ Λ ψ Ψ χ |
 | V | A | SPASIAL | HOTS | donor 299, kolom 1 |
-| VI | B | GAMBAR | sulit | mobil, taksi, mobil polisi, jip, van (tampak depan/samping) |
+| VI | B | GAMBAR | sulit | mobil, taksi, mobil polisi, jip, van (tampak depan/samping)¹ |
+
+¹ Paket 11 sudah terbit dengan ikon mobil polisi. Paket berikutnya tidak boleh memakai ikon atau teks kepolisian (pedoman utama A-7); ganti dengan benda umum, misalnya ambulans atau bus.
 | VII | B | ANGKA_HURUF | mudah | R4 7M H9 3T W6 |
 | VIII | B | SPASIAL_DASAR | mudah | donor 599, kolom 1 |
 | IX | B | SIMBOL | aksara karangan | gaya "campur", 5 varian satu glyph dasar |
