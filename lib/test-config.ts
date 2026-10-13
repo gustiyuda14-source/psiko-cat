@@ -114,8 +114,8 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // (Spasial Sedang, scripts/generate-kecermatan-spasial.ts 401; sesi lama tetap menyimpan paket
 // acaknya di kecermatan_package_number); kartu 3 tetap paket 10.
 export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number; KECERMATAN?: number }> = {
-  1: { KECERDASAN: 16, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN, KECERMATAN: 11 },
-  2: { KECERDASAN: 14, KEPRIBADIAN: 13, KECERMATAN: 401 },
+  1: { KECERDASAN: 18, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN, KECERMATAN: 11 },
+  2: { KECERDASAN: 17, KEPRIBADIAN: 13, KECERMATAN: 401 },
   3: { KECERDASAN: 15, KEPRIBADIAN: 12, KECERMATAN: 10 },
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
