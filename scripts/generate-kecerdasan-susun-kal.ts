@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
 import { kereta, feri, traktor, pinisi } from "./susun-benda-45";
+import { pesawat, busTingkat } from "./susun-benda-19";
 import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cutProfile, cutPuzzleSvg, cutPembahasanSvg } from "./susun-lib";
 
 // Susun potongan gambar untuk kalibrasi Logis/Spasial 2026-10-12 (nomor 33-34):
@@ -12,6 +13,7 @@ import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cu
 //   pkg 5:  traktor (5), perahu pinisi (grid 2×3, tingkat 3)
 //   pkg 15: motor patroli (5), ekskavator (6, tingkat 3)   — Simulasi 3
 //   pkg 16: sepeda (4), mobil derek (6, tingkat 3)          — Simulasi 1 baru
+//   pkg 19: pesawat baling-baling, bus tingkat (grid 2×3, tingkat 3) — Simulasi 4; adegan di susun-benda-19.ts
 // Pkg 4/5: benda nyata yang dikenali dan asimetris (G-4), potongan memakai profil batas unik (cutLayout) dan tepi bersama tanpa celah.
 // Paket lainnya tetap memakai jalur lama.
 //   node --import tsx scripts/generate-kecerdasan-susun-kal.ts
@@ -183,7 +185,17 @@ const puzzles: Puzzle[] = [
   { pkg: 16, seq: 33, objek: "sepeda", pieces: 4, order: [3, 1, 4, 2], key: "B", scene: sepeda,
     pembahasan: "Ujung kiri adalah potongan dengan boncengan dan kotak bergaris putih di atas roda belakang. Ujung kanan adalah potongan dengan keranjang berkisi, lampu depan, dan separuh kanan roda depan. Potongan dengan sadel, gir, dan pedal menyambung ke sisa roda belakang; potongan dengan setang, bel, dan pipa rangka miring berada sebelum keranjang. Pipa rangka harus menyambung lurus di setiap batas." },
   { pkg: 16, seq: 34, objek: "mobil derek", pieces: 6, order: [5, 2, 6, 1, 4, 3], key: "E", scene: mobilDerek, tingkat: 3,
-    pembahasan: "Ujung kiri adalah ujung lengan derek dengan tali dan pengait. Ujung kanan adalah moncong kabin dengan kisi-kisi dan lampu depan. Dari kiri: pengait, gulungan tali (drum) dengan roda belakang pertama, kotak perkakas dengan roda belakang kedua, cerobong asap tegak di belakang kabin, jendela pintu dengan lampu rotator dan roda depan, lalu moncong. Lengan derek, bak bergaris miring, sasis, dan kabin harus menyambung di setiap batas; ada enam potongan, jadi periksa setiap sambungan." },];
+    pembahasan: "Ujung kiri adalah ujung lengan derek dengan tali dan pengait. Ujung kanan adalah moncong kabin dengan kisi-kisi dan lampu depan. Dari kiri: pengait, gulungan tali (drum) dengan roda belakang pertama, kotak perkakas dengan roda belakang kedua, cerobong asap tegak di belakang kabin, jendela pintu dengan lampu rotator dan roda depan, lalu moncong. Lengan derek, bak bergaris miring, sasis, dan kabin harus menyambung di setiap batas; ada enam potongan, jadi periksa setiap sambungan." },
+  { pkg: 19, seq: 33, objek: "pesawat baling-baling", pieces: 6, order: [4, 1, 6, 2, 5, 3], key: "E", scene: pesawat, tingkat: 3, cut: true,
+    camouflage: "Pesawat bersayap tinggi tampak samping dengan dua mesin baling-baling; deretan jendela, garis putih badan dan landasan melewati seluruh lebar, sehingga tiap batas memotong badan pesawat.",
+    seams: ["ujung sayap kiri, deretan jendela dan tepi atas badan pesawat", "mesin kanan di bawah sayap dan deretan jendela", "roda pendarat utama dan garis putih badan", "garis putih badan dan perut pesawat", "badan ekor yang meruncing dan tepi bawah jendela belakang", "badan pesawat di depan roda pendarat", "pintu penumpang dan tepi bawah jendela", "tepi bawah jendela depan", "kaca kokpit dan hidung pesawat"],
+    pembahasan: "Kenali pesawat baling-baling dari samping: ekor tegak di kiri, hidung dan kokpit di kanan. Baris atas memuat bagian atas pesawat: sirip ekor dan sayap ekor (kiri), sayap panjang dengan mesin kiri dan baling-balingnya (tengah), serta mesin kanan dan kaca kokpit (kanan). Baris bawah memuat badan dan roda: badan ekor yang meruncing (kiri), pintu penumpang dengan roda pendarat utama (tengah), serta perut hidung dengan roda depan (kanan). Deretan jendela, garis putih badan, dan garis landasan harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 19, seq: 34, objek: "bus tingkat", pieces: 6, order: [6, 3, 1, 5, 2, 4], key: "B", scene: busTingkat, tingkat: 3, cut: true,
+    camouflage: "Bus tingkat tampak samping dengan dua dek jendela; atap, garis putih pemisah dek dan jalan melewati seluruh lebar, sehingga tiap batas memotong deretan jendela.",
+    seams: ["jendela atas kedua dan ketiga serta atap", "jendela atas kelima dan atap", "jendela bawah ketiga dan badan di atas roda", "jendela bawah dekat pintu dan badan bawah", "garis putih pemisah dek dan tepi bawah jendela atas kiri", "garis putih pemisah dek", "bagian atas pintu lipat dan garis putih pemisah dek", "garis putih pemisah dek dan ujung garis putus-putus", "kaca depan bawah dan jendela pengemudi"],
+    pembahasan: "Kenali bus tingkat dari samping: belakang di kiri, depan di kanan dengan kaca depan besar dan papan tujuan. Baris atas memuat dek atas: sudut atap belakang dengan jendela pertama (kiri), jendela-jendela dek atas yang lebar (tengah), serta papan tujuan dan jendela depan atas (kanan). Baris bawah memuat dek bawah: sudut belakang dengan dua roda belakang (kiri), pintu lipat di tengah, serta kaca depan, pengemudi, dan roda depan (kanan). Atap, garis putih pemisah dek, garis putus-putus, dan jalan harus menyambung pada tinggi yang sama di setiap batas." },
+];
+
 
 /** Gambar pembahasan: gambar utuh, garis potong putus-putus, nomor potongan di atas tiap bagian (tanpa id). */
 function pembahasanSvg(p: Puzzle) {
@@ -326,7 +338,11 @@ for (const [pkgNo, seq] of TARGETS) {
   const start = block.index + targets[0].index!, replacement = JSON.stringify(out[pkgNo].find((r) => r.sequence_number === seq), null, 2).replace(/^/gm, "    ");
   nextText = nextText.slice(0, start) + replacement + nextText.slice(start + targets[0][0].length);
 }
+// pkg 19 (Simulasi 4): blok baru ditambahkan di akhir, atau diganti utuh kalau sudah ada.
+const p19 = `  "19": ${JSON.stringify(out[19], null, 2).replace(/\n/g, "\n  ")}`, b19 = /^  "19": \[[\s\S]*?^  \]/m.exec(nextText);
+nextText = b19 ? nextText.slice(0, b19.index) + p19 + nextText.slice(b19.index + b19[0].length) : nextText.replace(/\n  \]\n\}\s*$/, `\n  ],\n${p19}\n}\n`);
 const next = JSON.parse(nextText);
+assert.deepEqual(next[19], out[19]);
 const replaced = new Set(TARGETS.map(([k, q]) => `${k}/${q}`));
 for (const pkg of Object.keys(previous)) for (const row of previous[Number(pkg)]) {
   if (!replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);

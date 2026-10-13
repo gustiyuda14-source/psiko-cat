@@ -282,6 +282,47 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     });
   }
 
+  { // PUTAR PAPAN (pkg 19) — seluruh susunan petak berputar 90° ↻, tetapi ubin tetap tegak; warna menempel pada diagonal utama
+    const T: Tile[] = ["bendera", "segitiga", "seperempat", "daun", "busur", "setengah", "bendera", "seperempat", "segitiga"];
+    const DEG = [0, 0, 90, 0, 0, 180, 180, 270, 90];
+    const at = (t: number, o: { spin?: boolean; byTile?: boolean; tr?: boolean; flip?: boolean } = {}): Frame => {
+      const f: Frame = new Array(9);
+      T.forEach((tile, i) => {
+        let r = Math.floor(i / 3), c = i % 3;
+        for (let k = 0; k < t; k++) [r, c] = [c, 2 - r];
+        if (o.flip) c = 2 - c;
+        if (o.tr) [r, c] = [c, r];
+        f[r * 3 + c] = C(tile, o.byTile ? [2, 4, 6].includes(i) : r === c, md(DEG[i] + (o.spin ? 90 * t : 0), 360));
+      });
+      return f;
+    };
+    defs.push({
+      pkg: 19, seq: 26, key: "C", n: 3, st: { mask: "lembut", frame: "panel", gap: 0.07 }, frames: [at(0), at(1), null, at(3), at(4)],
+      opts: [{ f: at(2) }, { f: at(2, { spin: true }), why: "ubin ikut berputar bersama papan, padahal ubin selalu tetap tegak" }, { f: at(2, { byTile: true }), why: "warna ikut ubinnya seperti di gambar (2), padahal warna menempel pada diagonal kiri atas–kanan bawah" }, { f: at(1, { tr: true }), why: "papan dicerminkan pada diagonal kiri atas–kanan bawah, bukan diputar" }, { f: at(1, { flip: true }), why: "papan dibalik kiri–kanan, bukan diputar" }],
+      aturan: "Ada tiga aturan. (1) Seluruh papan berputar 90° searah jarum jam setiap langkah: petak kiri atas pindah ke kanan atas, kanan atas ke kanan bawah, dan seterusnya; ubin di tengah tetap di tengah. (2) Ubin hanya pindah tempat, bentuknya tidak ikut berputar: arah tiang bendera dan arah segitiga tetap sama. (3) Warna menempel pada diagonal kiri atas–kanan bawah: ubin yang sedang berada di diagonal itu putih berisi hitam, ubin lain hitam berisi putih.",
+      tahap: "Gambar (3) satu langkah setelah gambar (2). Tips: setelah 4 langkah papan kembali seperti gambar (1), jadi gambar (3) juga bisa dicek sebagai gambar (1) yang diputar 180°.",
+      overlay: (c) => arrow(c(0), c(2)) + arrow(c(2), c(8)) + arrow(c(8), c(6)) + arrow(c(6), c(0)),
+    });
+  }
+
+  { // SUDUT LAWAN SISI (pkg 19) — ubin sisi melompat 2 petak ↻, ubin sudut 2 petak ↺; yang pindah berputar 180°; pusat berganti warna
+    const ring = [0, 1, 2, 5, 8, 7, 6, 3];
+    const T: Tile[] = ["bendera", "segitiga", "daun", "seperempat", "busur", "bendera", "setengah", "segitiga"];
+    const at = (t: number, o: { side?: number; corner?: number; rot?: number; cInv?: boolean } = {}): Frame => {
+      const f: Frame = new Array(9);
+      T.forEach((tile, p) => (f[ring[md(p + (p % 2 ? o.side ?? 2 : o.corner ?? -2) * t, 8)]] = C(tile, false, md((o.rot ?? 180) * t, 360))));
+      f[4] = C("titik", (o.cInv ?? true) && t % 2 === 1);
+      return f;
+    };
+    defs.push({
+      pkg: 19, seq: 27, key: "A", n: 3, st: { mask: "oktagon", frame: "tipis", gap: 0.06, chevron: true }, frames: [at(0), null, at(2), at(3), at(4)],
+      opts: [{ f: at(1) }, { f: at(1, { corner: 2 }), why: "ubin sudut ikut bergerak searah jarum jam" }, { f: at(1, { side: -2 }), why: "ubin sisi bergerak berlawanan arah jarum jam" }, { f: at(1, { rot: 0 }), why: "ubin yang pindah tidak berputar" }, { f: at(1, { cInv: false }), why: "ubin di tengah tidak berganti warna" }],
+      aturan: "Ada tiga aturan. (1) Empat ubin di sisi tengah (atas, kanan, bawah, kiri) melompat ke sisi berikutnya searah jarum jam, sedangkan empat ubin di sudut melompat ke sudut berikutnya berlawanan arah jarum jam. (2) Setiap ubin yang melompat berputar 180°. (3) Titik di tengah tidak pindah, tetapi warnanya terbalik setiap langkah.",
+      tahap: "Gambar (2) satu langkah setelah gambar (1). Tips: pisahkan dua kelompok; ikuti satu ubin sisi dan satu ubin sudut dari (1) ke (3), karena keduanya sudah bergerak 2 kali dan kembali tegak.",
+      overlay: (c) => arrow(c(1), c(5)) + arrow(c(5), c(7)) + arrow(c(0), c(6), true) + arrow(c(6), c(8), true),
+    });
+  }
+
   return defs.map((d) => {
     // Opsi berlabel huruf; jawaban di posisi d.key, pengecoh mengisi sisanya berurutan.
     const order: Opt[] = new Array(5), rest = d.opts.slice(1);

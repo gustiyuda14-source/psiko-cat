@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import * as fs from "fs";
 import * as path from "path";
 import { createClient } from "@supabase/supabase-js";
 import { INSTRUKSI, LAYOUT_V3, checkA7, checkLayout, checkNoLeak, checkRows, checkTeks, data, root, teksRows, type Row, type TeksFile } from "./kecerdasan-teks-lib";
@@ -15,6 +16,7 @@ import { INSTRUKSI, LAYOUT_V3, checkA7, checkLayout, checkNoLeak, checkRows, che
 //   16 = Simulasi 1 baru  (baru 100 soal, sama seperti 15; menggantikan pkg 13 di kartu 1, pkg 13 tetap untuk riwayat)
 //   4, 5 = Latihan Paket 3 & 4 (pedoman v3: 76-90 HIT · 91-96 CRT · 97-100 KCK, silogisme SIL_V3, kunci ≤ 24/huruf,
 //          cek A-7 tanpa unsur kepolisian). Rencana: docs/rencana/kecerdasan-latihan-paket-3-4.md
+//   19 = Simulasi 4 (v3 seperti 4/5; tingkat 20 sedang + 80 HOTS). Rencana: docs/rencana/simulasi-4.md
 // Sumber gambar baru: generate-kecerdasan-{figural,susun,denah}-kal.ts. Wacana pkg 3: cek-wacana-kal.ts.
 //   Validasi (baca DB saja):  npx tsx scripts/seed-kecerdasan-kal.ts
 //   Cek satu paket saja:      npx tsx scripts/seed-kecerdasan-kal.ts --check 4
@@ -24,7 +26,7 @@ process.loadEnvFile(path.join(root, ".env.local"));
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 type DbRow = Row & { id: string; is_active: boolean };
 type Tiered = Row & { tingkat: 2 | 3 };
-const V3 = new Set([4, 5]);
+const V3 = new Set([4, 5, 19]);
 
 const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 const strip = ({ sequence_number, options_payload, scoring_rule }: Row): Row => ({ sequence_number, options_payload, scoring_rule });
@@ -60,7 +62,7 @@ async function compose(pkg: number): Promise<{ rows: Row[]; reuse: Map<number, s
     let teks = data(`kecerdasan_p${pkg}_teks.json`) as TeksFile;
     const lama = ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json"];
     checkNoLeak(teks, pkg === 3 ? lama.filter((f) => !f.includes("p3")) : V3.has(pkg)
-      ? [...lama, "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_kck_kal.json", ...range(4, pkg - 1).map((n) => `kecerdasan_p${n}_teks.json`)]
+      ? [...lama, "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_kck_kal.json", ...range(4, pkg - 1).map((n) => `kecerdasan_p${n}_teks.json`).filter((f) => fs.existsSync(path.join(root, "prisma/data", f)))]
       : [...lama, ...(pkg === 16 ? ["kecerdasan_p15_teks.json"] : [])]);
     // V3: KCK 97–100 tinggal di kecerdasan_kck_kal.json (keunikan stem dicek check-kecerdasan-kck.ts), digabung setelah cek bocor.
     if (V3.has(pkg)) teks = { ...teks, soal: [...teks.soal, ...data("kecerdasan_kck_kal.json")[pkg]] };
@@ -68,7 +70,9 @@ async function compose(pkg: number): Promise<{ rows: Row[]; reuse: Map<number, s
     const gambar = newRows(pkg);
     if (V3.has(pkg)) { checkA7(`pkg ${pkg} teks`, teks); checkA7(`pkg ${pkg} gambar`, gambar); }
     const tingkat = [...teks.soal.map((x) => x.d), ...gambar.map((g) => g.tingkat)];
-    assert.deepEqual([tingkat.filter((t) => t === 2).length, tingkat.filter((t) => t === 3).length], [40, 60], `pkg ${pkg}: harus 40 sedang + 60 HOTS`);
+    // Simulasi makin jauh makin sulit (pemilik 2026-10-13): pkg 19 (Simulasi 4) 20 sedang + 80 HOTS, paket lain 40 + 60.
+    const [sedang, hots] = pkg === 19 ? [20, 80] : [40, 60];
+    assert.deepEqual([tingkat.filter((t) => t === 2).length, tingkat.filter((t) => t === 3).length], [sedang, hots], `pkg ${pkg}: harus ${sedang} sedang + ${hots} HOTS`);
     const typeOf = new Map(teks.soal.map((x) => [x.s, x.t]));
     const praktis = V3.has(pkg) ? LAYOUT_V3 : [[76, 98, "*"], [99, 99, "KUA"], [100, 100, "KCK"]] as const;
     for (const [a, b, t] of [[1, 5, "SIN"], [6, 10, "ANT"], [11, 15, "ANA"], [16, 19, "ODD"], [20, 25, "BAC"], [43, 50, "SIL"], [57, 64, "DER"], [65, 75, "WAC"], ...praktis] as const)

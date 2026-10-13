@@ -628,5 +628,124 @@
       "p": "Yang sebenarnya ditanya\nSatu nama petugas di loket 2. Kalau masih ada dua susunan sah dengan nama berbeda di loket 2, berarti belum cukup.\n\nCek pernyataan (1) saja\nMaman dan Kurnia selalu berdampingan, Kurnia di kanan. Susunan Maman, Kurnia, Nanda, Lestari memberi Kurnia di loket 2. Susunan Lestari, Nanda, Maman, Kurnia memberi Nanda di loket 2. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nNanda di loket 2 atau 3, sisanya bebas. Susunan Maman, Kurnia, Nanda, Lestari memberi Kurnia di loket 2. Susunan Kurnia, Nanda, Lestari, Maman memberi Nanda. Pernyataan (2) tidak cukup.\n\nKalau digabung\nPasangan Maman–Kurnia bisa di loket 1–2, 2–3, atau 3–4. Di 2–3 tidak mungkin, karena Nanda harus di loket 2 atau 3. Di 1–2, Nanda di loket 3, jadi loket 2 = Kurnia. Di 3–4, Nanda di loket 2. Masih ada dua jawaban. Digabung pun tidak cukup.\n\nJawaban: E\nGabungan kedua pernyataan masih menyisakan dua susunan: loket 2 bisa Kurnia, bisa Nanda.\nOpsi A gugur karena pernyataan (1) masih memberi Kurnia atau Nanda.\nOpsi B gugur karena pernyataan (2) tidak mengatur letak Kurnia dan Maman sama sekali.\nOpsi C gugur karena gabungannya masih memberi dua susunan.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup.\n\nBiar gampang diingat\nPetunjuk \"kursinya di sebelah kanan kursi adiknya, dan bukan di pinggir\" belum tentu cukup untuk menemukan temanmu di bioskop. Kalau masih ada dua kursi yang cocok, kamu tetap harus bertanya lagi.\n\nJebakan di soal ini\nBerhenti setelah menemukan satu susunan yang cocok (Maman, Kurnia, Nanda, Lestari), lalu memilih C. Gabungan baru cukup kalau semua susunan yang mungkin sudah dicoba dan jawabannya sama.",
       "svg": null
     }
+  ],
+  "19": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Sekolah menyiapkan kursi di dua aula untuk acara wisuda. Kursi di tiap aula disusun dalam baris yang sama panjang. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa banyak kursi di Aula Timur?\nPernyataan (1): Aula Timur memiliki 4 baris lebih sedikit daripada Aula Barat, tetapi setiap barisnya berisi 5 kursi lebih banyak.\nPernyataan (2): Jumlah kursi di kedua aula adalah 340.",
+      "tabel": {
+        "kolom": [
+          "Aula",
+          "Banyak baris",
+          "Kursi per baris"
+        ],
+        "baris": [
+          [
+            "Barat",
+            "12",
+            "15"
+          ],
+          [
+            "Timur",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: p = 12 − 4 = 8 dan q = 15 + 5 = 20, jadi kursi Aula Timur 8 × 20 = 160. (2) cukup: Aula Barat 12 × 15 = 180, jadi Aula Timur 340 − 180 = 160 tanpa perlu tahu p dan q.",
+      "p": "Yang sebenarnya ditanya\nJumlah kursi Aula Timur, yaitu p × q. Yang dicari hasil kalinya, bukan harus p dan q satu per satu.\n\nCek pernyataan (1) saja\nBanyak baris p = 12 − 4 = 8 dan kursi per baris q = 15 + 5 = 20. Jumlah kursi 8 × 20 = 160. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nAula Barat berisi 12 × 15 = 180 kursi. Jumlah kedua aula 340, jadi Aula Timur 340 − 180 = 160 kursi. Nilai p dan q tidak diketahui, tetapi hasil kalinya sudah pasti. Pernyataan (2) cukup.\n\nJawaban: D\nMasing-masing pernyataan sendiri sudah memberi 160 kursi.\nOpsi A gugur karena pernyataan (2) juga cukup.\nOpsi B gugur karena pernyataan (1) juga cukup.\nOpsi C gugur karena tidak perlu menggabungkan keduanya.\nOpsi E gugur karena setiap pernyataan sudah memberi jawaban pasti.\n\nBiar gampang diingat\nKalau total belanja dua kantong 340 ribu dan kantong pertama 180 ribu, isi kantong kedua pasti 160 ribu meskipun daftar barangnya tidak diketahui.\n\nJebakan di soal ini\nMenganggap pernyataan (2) tidak cukup karena p dan q tidak ketemu. Pertanyaannya jumlah kursi, bukan susunan barisnya; selisih total sudah mengunci jawaban.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Aula, Banyak baris, Kursi per baris\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"45.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Aula</text><text x=\"187.4\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Banyak baris</text><text x=\"402.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Kursi per baris</text><text x=\"45.2\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Barat</text><text x=\"187.4\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">12</text><text x=\"402.2\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">15</text><text x=\"45.2\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Timur</text><text x=\"187.4\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"402.2\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"90.5\" y1=\"0\" x2=\"90.5\" y2=\"156\"/><line x1=\"284.3\" y1=\"0\" x2=\"284.3\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kantin sekolah mencatat porsi nasi goreng yang terjual selama tiga hari. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah porsi yang terjual hari Rabu lebih dari 60?\nPernyataan (1): Selisih porsi yang terjual hari Rabu dan hari Selasa adalah 5.\nPernyataan (2): Porsi yang terjual hari Rabu lebih banyak daripada rata-rata porsi ketiga hari itu.",
+      "tabel": {
+        "kolom": [
+          "Hari",
+          "Porsi terjual"
+        ],
+        "baris": [
+          [
+            "Senin",
+            "64"
+          ],
+          [
+            "Selasa",
+            "58"
+          ],
+          [
+            "Rabu",
+            "n"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "(1) tidak cukup: n = 63 dan n = 53 sama-sama berselisih 5 dengan 58, tetapi 63 lebih dari 60 (ya) dan 53 tidak (tidak). (2) cukup: n > (122 + n) ÷ 3 berarti 2n > 122, jadi n > 61 dan jawabannya pasti ya.",
+      "p": "Yang sebenarnya ditanya\nJawaban ya atau tidak: apakah n lebih dari 60. Untuk menjawab, cukup tahu n pasti di atas 60 atau pasti tidak.\n\nCek pernyataan (1) saja\nSelisih 5 dengan Selasa (58) bisa ke atas atau ke bawah: n = 63 atau n = 53. Jika 63, jawabannya ya; jika 53, jawabannya tidak. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nRata-rata ketiga hari adalah (64 + 58 + n) ÷ 3 = (122 + n) ÷ 3, dan n ikut dihitung di dalamnya. n > (122 + n) ÷ 3 berarti 3n > 122 + n, jadi 2n > 122 atau n > 61. Nilai di atas 61 pasti lebih dari 60. Jawabannya pasti ya. Pernyataan (2) cukup.\n\nJawaban: B\nPernyataan (2) saja memberi jawaban pasti ya, sedangkan pernyataan (1) saja masih bisa ya atau tidak.\nOpsi A gugur karena selisih 5 bisa berarti 63 atau 53.\nOpsi C gugur karena pernyataan (2) sudah cukup tanpa pernyataan (1).\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) sudah memberi jawaban pasti.\n\nBiar gampang diingat\nNilai ulangan ketiga yang lebih tinggi daripada rata-rata tiga ulangan (termasuk dirinya sendiri) pasti juga lebih tinggi daripada rata-rata dua ulangan lainnya, di sini (64 + 58) ÷ 2 = 61.\n\nJebakan di soal ini\nMemilih C karena rata-rata terasa butuh n lebih dulu. Tuliskan ketidaksamaannya: n muncul di dua sisi dan bisa diselesaikan sendiri. Selain itu, ingat bahwa selisih 5 pada pernyataan (1) berlaku ke dua arah.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Hari, Porsi terjual\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"86.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari</text><text x=\"346.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Porsi terjual</text><text x=\"86.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Senin</text><text x=\"346.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">64</text><text x=\"86.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Selasa</text><text x=\"346.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">58</text><text x=\"86.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Rabu</text><text x=\"346.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">n</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"172.6\" y1=\"0\" x2=\"172.6\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Toko fotokopi membeli map plastik dan amplop cokelat. Harga satu map adalah x rupiah, dan harga satu amplop adalah y rupiah. Semua barang sejenis harganya sama.\nPertanyaan: Berapa biaya membeli 4 map dan 6 amplop, yaitu 4x + 6y?\nPernyataan (1): Harga 2 map dan 3 amplop adalah Rp17.000.\nPernyataan (2): Harga satu map Rp1.000 lebih mahal daripada harga satu amplop.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "A",
+      "bukti": "(1) cukup: 4x + 6y = 2 × (2x + 3y) = 2 × 17.000 = 34.000 untuk semua x dan y yang memenuhi. (2) tidak cukup: x = 4.000, y = 3.000 memberi 4x + 6y = 34.000; x = 5.000, y = 4.000 memberi 44.000.",
+      "p": "Yang sebenarnya ditanya\nBiaya 4 map dan 6 amplop, yaitu 4x + 6y. Harga satu map dan satu amplop tidak harus diketahui.\n\nCek pernyataan (1) saja\n2x + 3y = 17.000. Bentuk yang ditanya, 4x + 6y, tepat dua kali bentuk ini: 4x + 6y = 2 × 17.000 = 34.000. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nx = y + 1.000. Jika y = 3.000 dan x = 4.000, biayanya 16.000 + 18.000 = 34.000. Jika y = 4.000 dan x = 5.000, biayanya 20.000 + 24.000 = 44.000. Hasilnya berbeda, jadi pernyataan (2) tidak cukup.\n\nJawaban: A\nPernyataan (1) saja sudah memberi Rp34.000, sedangkan pernyataan (2) saja hanya memberi selisih harga.\nOpsi B gugur karena selisih harga masih cocok dengan banyak pasangan harga.\nOpsi C gugur karena pernyataan (1) sudah cukup tanpa pernyataan (2).\nOpsi D gugur karena pernyataan (2) tidak cukup.\nOpsi E gugur karena pernyataan (1) sudah memberi jawaban pasti.\n\nBiar gampang diingat\nKalau satu paket berisi 2 map dan 3 amplop seharga 17 ribu, dua paket yang sama pasti 34 ribu, berapa pun harga satuannya.\n\nJebakan di soal ini\nMemilih C karena merasa perlu mencari x dan y dulu. Periksa apakah yang ditanya kelipatan bentuk di pernyataan; jika ya, satu pernyataan sudah cukup.",
+      "svg": null
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Rani dan adiknya, Sinta, memiliki umur berupa bilangan bulat tahun. Rani lebih tua daripada Sinta.\nPertanyaan: Berapa tahun umur Sinta sekarang?\nPernyataan (1): Jumlah umur Rani dan Sinta sekarang adalah 30 tahun.\nPernyataan (2): Lima tahun yang lalu, jumlah umur mereka berdua adalah 20 tahun.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: Rani 18 dan Sinta 12, atau Rani 20 dan Sinta 10, sama-sama berjumlah 30. (2) tidak cukup: pasangan yang sama, lima tahun lalu 13 + 7 = 20 dan 15 + 5 = 20. Gabungan tidak cukup: (2) setara dengan (1), sehingga Sinta tetap bisa 12 atau 10.",
+      "p": "Yang sebenarnya ditanya\nUmur Sinta sekarang, satu bilangan pasti.\n\nCek pernyataan (1) saja\nRani + Sinta = 30. Rani 18 dan Sinta 12 memenuhi, Rani 20 dan Sinta 10 juga memenuhi. Umur Sinta bisa 12 atau 10, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nLima tahun lalu (Rani − 5) + (Sinta − 5) = 20. Pasangan 18 dan 12 memberi 13 + 7 = 20, pasangan 20 dan 10 memberi 15 + 5 = 20. Umur Sinta bisa 12 atau 10, jadi pernyataan (2) tidak cukup.\n\nCek gabungan\nPernyataan (2) diolah menjadi Rani + Sinta − 10 = 20, artinya Rani + Sinta = 30. Ini sama persis dengan pernyataan (1), jadi tidak ada keterangan baru. Sinta masih bisa 12 atau 10. Digabung pun tidak cukup.\n\nJawaban: E\nKedua pernyataan sebenarnya satu persamaan yang sama, sehingga umur Sinta tidak bisa dipastikan.\nOpsi A gugur karena jumlah umur saja cocok dengan banyak pasangan.\nOpsi B gugur karena jumlah umur lima tahun lalu juga cocok dengan banyak pasangan.\nOpsi C gugur karena pernyataan (2) hanya mengulang isi pernyataan (1).\nOpsi D gugur karena masing-masing pernyataan belum cukup.\n\nBiar gampang diingat\nDiberi tahu harga dua barang 30 ribu, lalu diberi tahu lagi harga dua barang itu sebelum naik 5 ribu masing-masing adalah 20 ribu. Kabar kedua tidak menambah apa pun.\n\nJebakan di soal ini\nMelihat dua persamaan dengan dua umur lalu langsung memilih C. Sederhanakan dulu pernyataan (2); jika hasilnya sama dengan pernyataan (1), gabungan tidak menambah informasi.",
+      "svg": null
+    }
   ]
 }

@@ -1,0 +1,5148 @@
+{
+  "nomor": 12,
+  "nama": "Simulasi 4 — Campuran Hitam Putih",
+  "kategori": "CAMPURAN",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "jenis": "GAMBAR",
+      "simbol": {
+        "A": "/kecermatan-siluet/gift.svg",
+        "B": "/kecermatan-siluet/feather.svg",
+        "C": "/kecermatan-siluet/puzzle-piece.svg",
+        "D": "/kecermatan-siluet/hourglass.svg",
+        "E": "/kecermatan-siluet/compass.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/puzzle-piece.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/gift.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/feather.svg",
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/puzzle-piece.svg",
+            "/kecermatan-siluet/hourglass.svg",
+            "/kecermatan-siluet/compass.svg",
+            "/kecermatan-siluet/feather.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "jenis": "ANGKA_HURUF",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k02_5.svg",
+        "B": "/kecermatan-simulasi/p12/k02_3.svg",
+        "C": "/kecermatan-simulasi/p12/k02_1.svg",
+        "D": "/kecermatan-simulasi/p12/k02_4.svg",
+        "E": "/kecermatan-simulasi/p12/k02_2.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_2.svg",
+            "/kecermatan-simulasi/p12/k02_4.svg",
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k02_5.svg",
+            "/kecermatan-simulasi/p12/k02_3.svg",
+            "/kecermatan-simulasi/p12/k02_1.svg",
+            "/kecermatan-simulasi/p12/k02_2.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "jenis": "SPASIAL DASAR MENENGAH",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k03_3.svg",
+        "B": "/kecermatan-simulasi/p12/k03_1.svg",
+        "C": "/kecermatan-simulasi/p12/k03_4.svg",
+        "D": "/kecermatan-simulasi/p12/k03_5.svg",
+        "E": "/kecermatan-simulasi/p12/k03_2.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_1.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k03_5.svg",
+            "/kecermatan-simulasi/p12/k03_4.svg",
+            "/kecermatan-simulasi/p12/k03_2.svg",
+            "/kecermatan-simulasi/p12/k03_3.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "jenis": "SIMBOL",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k04_5.svg",
+        "B": "/kecermatan-simulasi/p12/k04_1.svg",
+        "C": "/kecermatan-simulasi/p12/k04_3.svg",
+        "D": "/kecermatan-simulasi/p12/k04_2.svg",
+        "E": "/kecermatan-simulasi/p12/k04_4.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_1.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k04_3.svg",
+            "/kecermatan-simulasi/p12/k04_2.svg",
+            "/kecermatan-simulasi/p12/k04_5.svg",
+            "/kecermatan-simulasi/p12/k04_4.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "jenis": "SPASIAL HOTS",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k05_1.svg",
+        "B": "/kecermatan-simulasi/p12/k05_5.svg",
+        "C": "/kecermatan-simulasi/p12/k05_2.svg",
+        "D": "/kecermatan-simulasi/p12/k05_3.svg",
+        "E": "/kecermatan-simulasi/p12/k05_4.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_5.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k05_2.svg",
+            "/kecermatan-simulasi/p12/k05_3.svg",
+            "/kecermatan-simulasi/p12/k05_4.svg",
+            "/kecermatan-simulasi/p12/k05_1.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "jenis": "GAMBAR",
+      "simbol": {
+        "A": "/kecermatan-siluet/cloud-lightning.svg",
+        "B": "/kecermatan-siluet/cloud-snow.svg",
+        "C": "/kecermatan-siluet/cloud-sun.svg",
+        "D": "/kecermatan-siluet/cloud-fog.svg",
+        "E": "/kecermatan-siluet/cloud-moon.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-lightning.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-fog.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-snow.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-sun.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-siluet/cloud-sun.svg",
+            "/kecermatan-siluet/cloud-lightning.svg",
+            "/kecermatan-siluet/cloud-moon.svg",
+            "/kecermatan-siluet/cloud-snow.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "jenis": "ANGKA_HURUF",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k07_1.svg",
+        "B": "/kecermatan-simulasi/p12/k07_2.svg",
+        "C": "/kecermatan-simulasi/p12/k07_4.svg",
+        "D": "/kecermatan-simulasi/p12/k07_3.svg",
+        "E": "/kecermatan-simulasi/p12/k07_5.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_5.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k07_1.svg",
+            "/kecermatan-simulasi/p12/k07_4.svg",
+            "/kecermatan-simulasi/p12/k07_3.svg",
+            "/kecermatan-simulasi/p12/k07_2.svg"
+          ],
+          "kunci": "E"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "jenis": "SPASIAL DASAR MUDAH",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k08_3.svg",
+        "B": "/kecermatan-simulasi/p12/k08_1.svg",
+        "C": "/kecermatan-simulasi/p12/k08_5.svg",
+        "D": "/kecermatan-simulasi/p12/k08_4.svg",
+        "E": "/kecermatan-simulasi/p12/k08_2.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_3.svg",
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k08_2.svg",
+            "/kecermatan-simulasi/p12/k08_5.svg",
+            "/kecermatan-simulasi/p12/k08_1.svg",
+            "/kecermatan-simulasi/p12/k08_4.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "jenis": "AKSARA",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k09_1.svg",
+        "B": "/kecermatan-simulasi/p12/k09_4.svg",
+        "C": "/kecermatan-simulasi/p12/k09_5.svg",
+        "D": "/kecermatan-simulasi/p12/k09_2.svg",
+        "E": "/kecermatan-simulasi/p12/k09_3.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_1.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_5.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_5.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k09_4.svg",
+            "/kecermatan-simulasi/p12/k09_3.svg",
+            "/kecermatan-simulasi/p12/k09_2.svg",
+            "/kecermatan-simulasi/p12/k09_1.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "jenis": "SPASIAL SEDANG",
+      "simbol": {
+        "A": "/kecermatan-simulasi/p12/k10_5.svg",
+        "B": "/kecermatan-simulasi/p12/k10_2.svg",
+        "C": "/kecermatan-simulasi/p12/k10_1.svg",
+        "D": "/kecermatan-simulasi/p12/k10_3.svg",
+        "E": "/kecermatan-simulasi/p12/k10_4.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg",
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_5.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-simulasi/p12/k10_1.svg",
+            "/kecermatan-simulasi/p12/k10_2.svg",
+            "/kecermatan-simulasi/p12/k10_3.svg",
+            "/kecermatan-simulasi/p12/k10_4.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    }
+  ]
+}

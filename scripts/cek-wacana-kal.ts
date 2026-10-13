@@ -350,3 +350,74 @@ console.log("OK: kunci 65-75 pkg 4 cocok dengan brute force.");
   ], t5);
 }
 console.log("OK: kunci 65-75 pkg 5 cocok dengan brute force.");
+
+// ════ Simulasi Penuh 4 (package_number 19), soal 65-75: konvensi sama dengan pkg 4/5 ════
+const t19 = data("kecerdasan_p19_teks.json") as KeyFile;
+
+// ── p19wLOKER (65-68): loker 1-3 baris atas, 4-6 baris bawah (kiri → kanan), loker n+3 tepat di bawah loker n ──
+{
+  const all = assign(["Ayu", "Bayu", "Cici", "Doni", "Eka", "Fira"]);
+  const baris = (n: number) => (n <= 3 ? 0 : 1), kolom = (n: number) => (n - 1) % 3;
+  const sebelah = (s: Pos, a: string, b: string) => baris(s[a]) === baris(s[b]) && Math.abs(s[a] - s[b]) === 1;
+  const syarat = [(s: Pos) => [1, 3].includes(s.Ayu), (s: Pos) => s.Doni === s.Bayu + 3, (s: Pos) => sebelah(s, "Cici", "Eka"),
+    (s: Pos) => s.Fira < s.Bayu, (s: Pos) => s.Ayu !== 1 || s.Cici === s.Ayu + 3];
+  perlu("LOKER", all, syarat);
+  const sols = tunggal("LOKER", lolos(all, syarat));
+  check("LOKER", sols, [
+    { s: 65, kind: "pasti", opts: ["Cici", "Doni", "Fira", "Bayu", "Eka"].map((n) => (s: Pos) => s[n] === 5) },
+    { s: 66, kind: "pasti", opts: [(s) => s.Ayu === 3, (s) => s.Doni === 4, (s) => sebelah(s, "Cici", "Doni"), (s) => sebelah(s, "Fira", "Bayu"), (s) => s.Eka === s.Ayu + 3] },
+  ], t19);
+  check("LOKER tanpa syarat 5", lolos(all, syarat, 4), [
+    { s: 67, kind: "kecuali", opts: [(s) => s.Eka === 4, (s) => s.Cici === 6, (s) => s.Cici === 5, (s) => s.Eka === 5, (s) => s.Fira === 2] },
+  ], t19);
+  check("LOKER tanpa syarat 4", lolos(all, syarat, 3), [
+    { s: 68, kind: "pasti", opts: [(s) => s.Ayu === 1, (s) => s.Eka === 5, (s) => s.Doni === 6, (s) => s.Fira === 2, (s) => s.Cici === 4] },
+  ], t19);
+  assert.ok(kolom(sols[0].Cici) === kolom(sols[0].Ayu), "LOKER: Cici di bawah Ayu");
+}
+
+// ── p19wHALTE (69-72): urutan singgah 1-6 ──
+{
+  const all = assign(["KantorPos", "Pasar", "RumahSakit", "Sekolah", "Stasiun", "Taman"]);
+  const syarat = [(s: Pos) => s.Stasiun === s.Pasar + 3, (s: Pos) => s.Taman === s.Sekolah + 1, (s: Pos) => s.Pasar !== 1, (s: Pos) => s.Stasiun !== 6,
+    (s: Pos) => !(s.RumahSakit < s.Pasar) || s.KantorPos === 1];
+  perlu("HALTE", all, syarat);
+  const sols = tunggal("HALTE", lolos(all, syarat));
+  check("HALTE", sols, [
+    { s: 69, kind: "pasti", opts: ["KantorPos", "Stasiun", "Taman", "Pasar", "RumahSakit"].map((n) => (s: Pos) => s[n] === 6) },
+  ], t19);
+  const tanpa4 = lolos(all, syarat, 3); // 70: hitung susunan tanpa syarat 4
+  check("HALTE tanpa syarat 4", tanpa4, [
+    { s: 70, kind: "pasti", opts: [1, 2, 3, 4, 5].map((n) => () => tanpa4.length === n) },
+  ], t19);
+  check("HALTE tanpa syarat 5", lolos(all, syarat, 4), [
+    { s: 71, kind: "pasti", opts: [(s) => s.KantorPos === 1, (s) => s.Sekolah === 3, (s) => s.RumahSakit === 6, (s) => s.KantorPos > s.Stasiun, (s) => s.Pasar === 1] },
+  ], t19);
+  check("HALTE tanpa syarat 3", lolos(all, syarat, 2), [
+    { s: 72, kind: "kecuali", opts: [(s) => s.RumahSakit === 1, (s) => s.KantorPos === 6, (s) => s.Sekolah === 2, (s) => s.RumahSakit === 3, (s) => s.Taman === 6] },
+  ], t19);
+}
+
+// ── p19wPIKET (73-75): guru × hari piket (1 = Senin … 5 = Jumat) × mata pelajaran ──
+{
+  type S = { h: Pos; m: Record<string, string> };
+  const names = ["Hana", "Ilham", "Joko", "Kartika", "Lina"];
+  const all: S[] = [];
+  for (const hp of perms([1, 2, 3, 4, 5])) for (const mp of perms(["Biologi", "Ekonomi", "Fisika", "Geografi", "Sejarah"]))
+    all.push({ h: Object.fromEntries(names.map((n, i) => [n, hp[i]])), m: Object.fromEntries(names.map((n, i) => [n, mp[i]])) });
+  const hari = (x: S, mapel: string) => x.h[names.find((n) => x.m[n] === mapel)!];
+  const syarat = [(x: S) => hari(x, "Geografi") === 1, (x: S) => x.m.Ilham === "Fisika" && x.h.Ilham === 5, (x: S) => x.h.Joko === x.h.Kartika + 1,
+    (x: S) => x.h.Lina < x.h.Hana, (x: S) => x.h.Hana < x.h.Kartika && x.m.Hana !== "Ekonomi", (x: S) => x.m.Lina !== "Geografi" || x.m.Kartika === "Sejarah"];
+  perlu("PIKET", all, syarat);
+  const sols = tunggal("PIKET", lolos(all, syarat));
+  check("PIKET", sols, [
+    { s: 73, kind: "pasti", opts: ["Sejarah", "Geografi", "Fisika", "Biologi", "Ekonomi"].map((m) => (x: S) => x.m[names.find((n) => x.h[n] === hari(x, "Biologi") + 2)!] === m) },
+  ], t19);
+  check("PIKET tanpa syarat 6", lolos(all, syarat, 5), [
+    { s: 74, kind: "kecuali", opts: [(x) => x.m.Hana === "Sejarah", (x) => x.m.Joko === "Biologi", (x) => x.m.Kartika === "Ekonomi", (x) => x.m.Kartika === "Geografi", (x) => x.m.Joko === "Sejarah"] },
+  ], t19);
+  check("PIKET tanpa syarat 3", lolos(all, syarat, 2), [
+    { s: 75, kind: "pasti", opts: [(x) => x.m.Lina === "Geografi", (x) => x.h.Hana === 3, (x) => x.h.Kartika > x.h.Lina, (x) => x.h.Joko === 4, (x) => x.m.Kartika === "Sejarah"] },
+  ], t19);
+}
+console.log("OK: kunci 65-75 pkg 19 cocok dengan brute force.");

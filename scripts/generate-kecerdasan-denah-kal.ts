@@ -13,12 +13,12 @@ import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./de
 // Output: prisma/data/kecerdasan_denah_kal.json ({ [package_number]: Row[] }) + output/denah-kal-preview.html
 
 const root = path.join(__dirname, "..");
-const PKGS = [13, 14, 2, 3, 15, 16, 4, 5];
+const PKGS = [13, 14, 2, 3, 15, 16, 4, 5, 19];
 // Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13 tetap seperti semula.
 // Pkg 2/3/14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
-const PB = new Set([2, 3, 14, 15, 16, 4, 5]);
+const PB = new Set([2, 3, 14, 15, 16, 4, 5, 19]);
 // Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
-const NEW = new Set([15, 16, 4, 5]);
+const NEW = new Set([15, 16, 4, 5, 19]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 
@@ -127,15 +127,19 @@ PKGS.forEach((pkg, pi) => {
     reseed(41000 + pkg * 977 + attempt);
     const bw = makeMap2(), p = bw as unknown as Peta, used = new Set<string>();
     const walkers = shuffle(WALKERS);
-    const set = [arahBangunan(p, pos[0], used), arahArah(p, pos[1], used), rute2(bw, pos[2], 2, walkers[0]), rute2(bw, pos[3], 3, walkers[1])];
+    // pkg 19: arahArah maksimal tier 2, jadi 39 memakai arahBangunan kedua (HOTS bila ≥ 2 pengecoh dekat arah kunci).
+    const set = [arahBangunan(p, pos[0], used), (pkg === 19 ? arahBangunan : arahArah)(p, pos[1], used), rute2(bw, pos[2], 2, walkers[0]), rute2(bw, pos[3], 3, walkers[1])];
     if (!fresh(set) || set.some((s) => (s!.tier as number) < 2)) continue;
+    const arahDari = (s: Item) => /arah (.+) dari (.+) adalah/.exec(s.stem as string)!.slice(1);
+    if (pkg === 19 && arahDari(set[0]!).some((v, i) => v === arahDari(set[1]!)[i])) continue; // 38/39: asal dan arah harus beda
     // Paket baru: ROTASI 180° = HOTS (peta A 2 HOTS), 90/270° = sedang (peta A 3 HOTS) → total 2 sedang / 3 HOTS.
-    if (NEW.has(pkg) && set.filter((s) => s!.tier === 3).length !== (1 + (pi % 3) === 2 ? 2 : 3)) continue;
+    // pkg 19 (keputusan pemilik 2026-10-13: 20 sedang / 80 HOTS): peta A 4 HOTS + ROTASI 180° → 5 HOTS.
+    if (pkg === 19 ? set.some((s) => s!.tier !== 3) : NEW.has(pkg) && set.filter((s) => s!.tier === 3).length !== (1 + (pi % 3) === 2 ? 2 : 3)) continue;
     set.forEach((s, i) => rows.push(toRow(38 + i, s!, inlineMap(bw, 1, 0, `dk${pkg}q${38 + i}-`, pkg), PB.has(pkg) ? pembahasanSvg(bw, 1, 0, s!) : undefined)));
     break;
   }
   // Peta B: kompas diputar 90/180/270° bergilir antarpaket.
-  const k = 1 + (pi % 3);
+  const k = pkg === 19 ? 2 : 1 + (pi % 3);
   for (let attempt = 0; ; attempt++) {
     reseed(43000 + pkg * 977 + attempt);
     const bw = makeMap2();
@@ -152,7 +156,7 @@ PKGS.forEach((pkg, pi) => {
 for (const [pkg, rows] of Object.entries(out)) {
   assert.deepEqual(rows.map((r) => r.sequence_number), [38, 39, 40, 41, 42], `pkg ${pkg}: nomor`);
   assert.equal(new Set(rows.map((r) => r.scoring_rule.correct_key)).size, 5, `pkg ${pkg}: kunci harus tersebar A-E`);
-  if (NEW.has(+pkg)) assert.equal(rows.filter((r) => r.tingkat === 3).length, 3, `pkg ${pkg}: harus 2 sedang / 3 HOTS`);
+  if (NEW.has(+pkg)) assert.equal(rows.filter((r) => r.tingkat === 3).length, +pkg === 19 ? 5 : 3, `pkg ${pkg}: tingkat denah (19: 5 HOTS, lain: 2 sedang / 3 HOTS)`);
   if (PB.has(+pkg)) {
     for (const r of rows) assert.ok(r.pembahasan_svg && r.pembahasan.split("\n\n").length === 2 && !r.pembahasan.includes("<br>"), `pkg ${pkg} #${r.sequence_number}: pembahasan 2 paragraf + gambar`);
   } else assert.ok(rows.every((r) => !r.pembahasan_svg), `pkg ${pkg}: paket lama tidak boleh berubah`);

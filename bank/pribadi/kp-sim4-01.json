@@ -1,0 +1,747 @@
+{
+ "batch": "kp-sim4-01",
+ "status": "review",
+ "catatan": "48 butir Kepribadian baru untuk Simulasi Penuh 4 (package_number 14). Per aspek: 1 L favorable, 1 L unfavorable, 2 K favorable, 2 K unfavorable, 1 KR favorable, 1 KR unfavorable. Konteks netral sesuai pedoman A-7. Belum di-seed.",
+ "definisi_aspek": {
+  "Kepercayaan Diri": "berani tampil dan bicara, yakin pada pendapat sendiri, dan tidak bergantung pada nasib.",
+  "Prososial": "tulus membantu, aktif di masyarakat, tidak mengharap imbalan, dan tidak menutupi kesalahan.",
+  "Pengambilan Keputusan": "cepat, yakin, berani menanggung risiko, dan memutuskan sendiri berdasarkan informasi.",
+  "Penyesuaian Diri": "cepat akrab, langsung terlibat, luwes di lingkungan baru, dan tidak menarik diri.",
+  "Stabilitas Emosi": "emosi terkendali, menerima kritik, berpikir positif, dan tidak meledak.",
+  "Motif Berprestasi": "tekun, ingin unggul, suka tantangan, serta tuntas dan berkualitas."
+ },
+ "items": [
+  {
+   "id": "KP-PRO-501",
+   "aspek": "Prososial",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya meminjamkan catatan pelajaran kepada teman yang sakit seminggu tanpa menunggu ia memintanya.",
+   "alasan": "Membantu dengan tulus tanpa menunggu diminta."
+  },
+  {
+   "id": "KP-PRO-502",
+   "aspek": "Prososial",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya baru bersedia mengurus surat pindah tetangga yang tidak bisa membaca bila ia memberi saya sesuatu.",
+   "alasan": "Bantuan diberikan hanya bila ada imbalan."
+  },
+  {
+   "id": "KP-PRO-503",
+   "aspek": "Prososial",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Membantu tetangga lansia mengangkut belanjaan ke rumahnya lebih baik daripada segera pulang untuk beristirahat.",
+   "bedah": {
+    "sisi_x": "membantu tetangga lansia mengangkut belanjaan",
+    "sisi_y": "segera pulang untuk beristirahat",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Mendahulukan orang yang butuh bantuan di atas kenyamanan sendiri."
+  },
+  {
+   "id": "KP-PRO-504",
+   "aspek": "Prososial",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menegur teman yang menyontek secara empat mata lebih tepat daripada pura-pura tidak melihat demi menjaga pertemanan.",
+   "bedah": {
+    "sisi_x": "menegur teman yang menyontek secara empat mata",
+    "sisi_y": "pura-pura tidak melihat demi pertemanan",
+    "pembanding": "lebih tepat",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Tidak menutupi kesalahan, tetapi tetap menjaga perasaan teman."
+  },
+  {
+   "id": "KP-PRO-505",
+   "aspek": "Prososial",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menyelesaikan urusan pribadi lebih utama daripada mengantar teman yang terkilir ke ruang kesehatan sekolah.",
+   "bedah": {
+    "sisi_x": "menyelesaikan urusan pribadi",
+    "sisi_y": "mengantar teman yang terkilir ke ruang kesehatan",
+    "pembanding": "lebih utama",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti menomorduakan teman yang sedang membutuhkan pertolongan."
+  },
+  {
+   "id": "KP-PRO-506",
+   "aspek": "Prososial",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mengerjakan bagian tugas sendiri sampai selesai lebih penting daripada menjelaskan materi kepada teman sekelompok yang tertinggal.",
+   "bedah": {
+    "sisi_x": "mengerjakan bagian tugas sendiri",
+    "sisi_y": "menjelaskan materi kepada teman yang tertinggal",
+    "pembanding": "lebih penting",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti enggan membantu anggota kelompok yang kesulitan."
+  },
+  {
+   "id": "KP-PRO-507",
+   "aspek": "Prososial",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Membiarkan teman membawa barang berat sendirian lebih memalukan daripada terlambat pulang karena membantunya.",
+   "bedah": {
+    "sisi_x": "membiarkan teman membawa barang berat sendirian",
+    "sisi_y": "terlambat pulang karena membantunya",
+    "pembanding": "lebih memalukan",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti rela berkorban waktu untuk menolong teman."
+  },
+  {
+   "id": "KP-PRO-508",
+   "aspek": "Prososial",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mengajar mengaji anak-anak di musala tanpa dibayar lebih merugikan daripada mengikuti les berbayar untuk diri sendiri.",
+   "bedah": {
+    "sisi_x": "mengajar mengaji anak-anak tanpa dibayar",
+    "sisi_y": "mengikuti les berbayar untuk diri sendiri",
+    "pembanding": "lebih merugikan",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti memandang kegiatan sosial tanpa imbalan sebagai kerugian."
+  },
+  {
+   "id": "KP-PK-501",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya langsung menetapkan pilihan jurusan kuliah setelah membandingkan informasi yang saya kumpulkan sendiri.",
+   "alasan": "Memutuskan dengan yakin berdasarkan informasi."
+  },
+  {
+   "id": "KP-PK-502",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya menunda menentukan ketua kelompok sampai ada teman lain yang lebih dulu mengusulkan nama.",
+   "alasan": "Menunggu orang lain sebelum berani memutuskan."
+  },
+  {
+   "id": "KP-PK-503",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Memutuskan sendiri rute pulang saat jalan utama ditutup lebih baik daripada menunggu arahan dari orang lain.",
+   "bedah": {
+    "sisi_x": "memutuskan sendiri rute pulang",
+    "sisi_y": "menunggu arahan dari orang lain",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Cepat memutuskan sendiri saat keadaan berubah."
+  },
+  {
+   "id": "KP-PK-504",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mendaftar lomba tingkat provinsi dengan risiko kalah lebih bijak daripada menunggu sampai benar-benar yakin menang.",
+   "bedah": {
+    "sisi_x": "mendaftar lomba dengan risiko kalah",
+    "sisi_y": "menunggu sampai yakin menang",
+    "pembanding": "lebih bijak",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Berani menanggung risiko dalam mengambil keputusan."
+  },
+  {
+   "id": "KP-PK-505",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menyerahkan pembagian tugas kepada suara terbanyak lebih aman daripada memutuskannya sendiri sebagai ketua panitia.",
+   "bedah": {
+    "sisi_x": "menyerahkan pembagian tugas kepada suara terbanyak",
+    "sisi_y": "memutuskannya sendiri sebagai ketua",
+    "pembanding": "lebih aman",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti menghindari tanggung jawab memutuskan."
+  },
+  {
+   "id": "KP-PK-506",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menunggu kepastian dari banyak pihak lebih tepat daripada segera memutuskan pemindahan acara ketika hujan turun mendadak.",
+   "bedah": {
+    "sisi_x": "menunggu kepastian dari banyak pihak",
+    "sisi_y": "segera memutuskan pemindahan acara",
+    "pembanding": "lebih tepat",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti lambat memutuskan saat keadaan mendesak."
+  },
+  {
+   "id": "KP-PK-507",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Terus menimbang tanpa memutuskan sampai kesempatan berlalu lebih buruk daripada memilih cepat dengan informasi yang ada.",
+   "bedah": {
+    "sisi_x": "terus menimbang sampai kesempatan berlalu",
+    "sisi_y": "memilih cepat dengan informasi yang ada",
+    "pembanding": "lebih buruk",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti memilih bertindak cepat dengan informasi yang tersedia."
+  },
+  {
+   "id": "KP-PK-508",
+   "aspek": "Pengambilan Keputusan",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Memutuskan sendiri pembelian alat kelompok lebih membingungkan daripada menunggu semua anggota setuju.",
+   "bedah": {
+    "sisi_x": "memutuskan sendiri pembelian alat kelompok",
+    "sisi_y": "menunggu semua anggota setuju",
+    "pembanding": "lebih membingungkan",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti enggan memutuskan tanpa persetujuan semua orang."
+  },
+  {
+   "id": "KP-PD-501",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya cepat akrab dengan teman sekamar baru walaupun kebiasaan kami sehari-hari berbeda.",
+   "alasan": "Luwes dan cepat akrab di lingkungan baru."
+  },
+  {
+   "id": "KP-PD-502",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Selama minggu pertama di rumah kos baru, saya jarang keluar kamar dan menghindari obrolan dengan penghuni lain.",
+   "alasan": "Menarik diri di lingkungan baru."
+  },
+  {
+   "id": "KP-PD-503",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mencoba makanan khas daerah tempat tinggal baru lebih baik daripada terus mencari makanan dari daerah asal.",
+   "bedah": {
+    "sisi_x": "mencoba makanan khas daerah baru",
+    "sisi_y": "terus mencari makanan dari daerah asal",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Terbuka pada kebiasaan di lingkungan baru."
+  },
+  {
+   "id": "KP-PD-504",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Langsung ikut kegiatan pemuda di lingkungan baru lebih bijak daripada menunggu diajak warga.",
+   "bedah": {
+    "sisi_x": "langsung ikut kegiatan pemuda",
+    "sisi_y": "menunggu diajak warga",
+    "pembanding": "lebih bijak",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Langsung terlibat tanpa menunggu diajak."
+  },
+  {
+   "id": "KP-PD-505",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Bergaul hanya dengan teman dari sekolah lama lebih nyaman daripada berkenalan dengan teman baru di kampus.",
+   "bedah": {
+    "sisi_x": "bergaul hanya dengan teman sekolah lama",
+    "sisi_y": "berkenalan dengan teman baru di kampus",
+    "pembanding": "lebih nyaman",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti menghindari lingkungan baru."
+  },
+  {
+   "id": "KP-PD-506",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mempertahankan cara belajar lama lebih baik daripada mengikuti cara belajar kelompok yang dipakai di kelas baru.",
+   "bedah": {
+    "sisi_x": "mempertahankan cara belajar lama",
+    "sisi_y": "mengikuti cara belajar kelompok di kelas baru",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti enggan menyesuaikan diri dengan kebiasaan baru."
+  },
+  {
+   "id": "KP-PD-507",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "tugas",
+   "pernyataan": "Menyendiri saat jam istirahat di tempat kerja baru lebih canggung daripada bergabung dengan obrolan rekan yang belum dikenal.",
+   "bedah": {
+    "sisi_x": "menyendiri saat jam istirahat",
+    "sisi_y": "bergabung dengan obrolan rekan yang belum dikenal",
+    "pembanding": "lebih canggung",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti memilih langsung membaur dengan rekan baru."
+  },
+  {
+   "id": "KP-PD-508",
+   "aspek": "Penyesuaian Diri",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "tugas",
+   "pernyataan": "Pindah tugas ke daerah lain lebih menyusahkan daripada tetap bekerja di kota kelahiran sendiri.",
+   "bedah": {
+    "sisi_x": "pindah tugas ke daerah lain",
+    "sisi_y": "tetap bekerja di kota kelahiran",
+    "pembanding": "lebih menyusahkan",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti memandang lingkungan baru sebagai beban."
+  },
+  {
+   "id": "KP-KD-501",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya mengangkat tangan untuk menjawab pertanyaan dosen walaupun belum tentu jawaban saya benar.",
+   "alasan": "Berani tampil dan bicara."
+  },
+  {
+   "id": "KP-KD-502",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Ketika guru meminta pendapat, saya memilih menunggu jawaban teman lain supaya tidak terlihat keliru.",
+   "alasan": "Ragu menyampaikan pendapat sendiri karena takut keliru."
+  },
+  {
+   "id": "KP-KD-503",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menyampaikan pendapat yang berbeda dalam rapat organisasi lebih baik daripada diam agar tidak dianggap menentang.",
+   "bedah": {
+    "sisi_x": "menyampaikan pendapat yang berbeda",
+    "sisi_y": "diam agar tidak dianggap menentang",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Yakin pada pendapat sendiri dan berani mengungkapkannya."
+  },
+  {
+   "id": "KP-KD-504",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Persiapan yang sungguh-sungguh lebih menentukan kelulusan seleksi daripada keberuntungan pada hari ujian.",
+   "bedah": {
+    "sisi_x": "persiapan yang sungguh-sungguh",
+    "sisi_y": "keberuntungan pada hari ujian",
+    "pembanding": "lebih menentukan",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Tidak bergantung pada nasib."
+  },
+  {
+   "id": "KP-KD-505",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mengikuti pilihan teman saat mengisi formulir pendaftaran lebih aman daripada memilih sesuai keyakinan sendiri.",
+   "bedah": {
+    "sisi_x": "mengikuti pilihan teman",
+    "sisi_y": "memilih sesuai keyakinan sendiri",
+    "pembanding": "lebih aman",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti ragu pada pilihan sendiri."
+  },
+  {
+   "id": "KP-KD-506",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menjadi anggota biasa dalam kepanitiaan lebih tenang daripada mencalonkan diri sebagai ketua.",
+   "bedah": {
+    "sisi_x": "menjadi anggota biasa",
+    "sisi_y": "mencalonkan diri sebagai ketua",
+    "pembanding": "lebih tenang",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti menghindari peran yang menuntut tampil."
+  },
+  {
+   "id": "KP-KD-507",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menolak membawakan presentasi karena gugup lebih merugikan daripada tampil walaupun suara sedikit bergetar.",
+   "bedah": {
+    "sisi_x": "menolak membawakan presentasi karena gugup",
+    "sisi_y": "tampil walaupun suara bergetar",
+    "pembanding": "lebih merugikan",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti memilih tetap tampil meskipun gugup."
+  },
+  {
+   "id": "KP-KD-508",
+   "aspek": "Kepercayaan Diri",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Berbicara di depan warga saat rapat RT lebih memalukan daripada menitipkan usulan lewat tetangga.",
+   "bedah": {
+    "sisi_x": "berbicara di depan warga saat rapat",
+    "sisi_y": "menitipkan usulan lewat tetangga",
+    "pembanding": "lebih memalukan",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti menghindari berbicara di depan umum."
+  },
+  {
+   "id": "KP-SE-501",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "tugas",
+   "pernyataan": "Saya tetap tenang menyelesaikan pekerjaan walaupun dikritik keras di depan rekan lain.",
+   "alasan": "Emosi terkendali saat menerima kritik."
+  },
+  {
+   "id": "KP-SE-502",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya membanting pintu kamar ketika kesal karena rencana saya dibatalkan.",
+   "alasan": "Meluapkan kekesalan secara meledak."
+  },
+  {
+   "id": "KP-SE-503",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menunda membalas pesan yang menyinggung lebih baik daripada langsung membalasnya dengan kata-kata kasar.",
+   "bedah": {
+    "sisi_x": "menunda membalas pesan yang menyinggung",
+    "sisi_y": "langsung membalas dengan kata-kata kasar",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Mengendalikan emosi sebelum bereaksi."
+  },
+  {
+   "id": "KP-SE-504",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menerima koreksi pelatih dengan lapang dada lebih bijak daripada membela diri di depan tim.",
+   "bedah": {
+    "sisi_x": "menerima koreksi pelatih dengan lapang dada",
+    "sisi_y": "membela diri di depan tim",
+    "pembanding": "lebih bijak",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Menerima kritik tanpa defensif."
+  },
+  {
+   "id": "KP-SE-505",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Membentak adik yang merusak barang saya lebih melegakan daripada menjelaskan kesalahannya dengan suara pelan.",
+   "bedah": {
+    "sisi_x": "membentak adik yang merusak barang",
+    "sisi_y": "menjelaskan kesalahannya dengan suara pelan",
+    "pembanding": "lebih melegakan",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti membiarkan emosi meledak."
+  },
+  {
+   "id": "KP-SE-506",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Memikirkan kegagalan seleksi berhari-hari lebih wajar daripada segera menyusun rencana untuk mencoba lagi.",
+   "bedah": {
+    "sisi_x": "memikirkan kegagalan berhari-hari",
+    "sisi_y": "segera menyusun rencana mencoba lagi",
+    "pembanding": "lebih wajar",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti larut dalam kegagalan, bukan berpikir positif."
+  },
+  {
+   "id": "KP-SE-507",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Membalas ejekan teman dengan bentakan lebih memalukan daripada menanggapinya dengan tenang.",
+   "bedah": {
+    "sisi_x": "membalas ejekan dengan bentakan",
+    "sisi_y": "menanggapinya dengan tenang",
+    "pembanding": "lebih memalukan",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti memilih tetap tenang saat diejek."
+  },
+  {
+   "id": "KP-SE-508",
+   "aspek": "Stabilitas Emosi",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "tugas",
+   "pernyataan": "Tetap ramah kepada pelanggan yang marah lebih menyiksa daripada membalas nada tinggi pelanggan itu.",
+   "bedah": {
+    "sisi_x": "tetap ramah kepada pelanggan yang marah",
+    "sisi_y": "membalas nada tinggi pelanggan",
+    "pembanding": "lebih menyiksa",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti memandang pengendalian emosi sebagai siksaan."
+  },
+  {
+   "id": "KP-MB-501",
+   "aspek": "Motif Berprestasi",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya mengulang latihan soal yang salah sampai benar-benar paham cara menyelesaikannya.",
+   "alasan": "Tekun dan tuntas dalam belajar."
+  },
+  {
+   "id": "KP-MB-502",
+   "aspek": "Motif Berprestasi",
+   "jenis": "L",
+   "tier": "T1",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Saya berhenti membaca materi tambahan begitu yakin bahan ujian sudah tercakup seadanya.",
+   "alasan": "Puas dengan usaha minimal."
+  },
+  {
+   "id": "KP-MB-503",
+   "aspek": "Motif Berprestasi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Mengambil topik tugas akhir yang menantang lebih baik daripada memilih topik yang pasti mudah selesai.",
+   "bedah": {
+    "sisi_x": "mengambil topik yang menantang",
+    "sisi_y": "memilih topik yang pasti mudah selesai",
+    "pembanding": "lebih baik",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Menyukai tantangan."
+  },
+  {
+   "id": "KP-MB-504",
+   "aspek": "Motif Berprestasi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "favorable",
+   "konteks": "tugas",
+   "pernyataan": "Memeriksa ulang laporan sampai rapi dan lengkap lebih penting daripada menyerahkannya paling cepat.",
+   "bedah": {
+    "sisi_x": "memeriksa ulang laporan sampai rapi",
+    "sisi_y": "menyerahkannya paling cepat",
+    "pembanding": "lebih penting",
+    "pembalik": false,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Mengutamakan hasil yang tuntas dan berkualitas."
+  },
+  {
+   "id": "KP-MB-505",
+   "aspek": "Motif Berprestasi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Berhenti berlatih setelah lolos tahap pertama lebih masuk akal daripada terus berlatih untuk tahap berikutnya.",
+   "bedah": {
+    "sisi_x": "berhenti berlatih setelah lolos tahap pertama",
+    "sisi_y": "terus berlatih untuk tahap berikutnya",
+    "pembanding": "lebih masuk akal",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti cepat puas dan berhenti berusaha."
+  },
+  {
+   "id": "KP-MB-506",
+   "aspek": "Motif Berprestasi",
+   "jenis": "K",
+   "tier": "T2",
+   "arah": "unfavorable",
+   "konteks": "tugas",
+   "pernyataan": "Mengerjakan tugas sesuai batas minimal lebih efisien daripada menambahkan data pendukung yang tidak diwajibkan.",
+   "bedah": {
+    "sisi_x": "mengerjakan sesuai batas minimal",
+    "sisi_y": "menambahkan data pendukung yang tidak diwajibkan",
+    "pembanding": "lebih efisien",
+    "pembalik": false,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti puas dengan standar minimal."
+  },
+  {
+   "id": "KP-MB-507",
+   "aspek": "Motif Berprestasi",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "favorable",
+   "konteks": "sekarang",
+   "pernyataan": "Menyerahkan karya lomba yang asal jadi lebih mengecewakan daripada begadang menyempurnakannya sebelum batas waktu.",
+   "bedah": {
+    "sisi_x": "menyerahkan karya lomba yang asal jadi",
+    "sisi_y": "begadang menyempurnakannya sebelum batas waktu",
+    "pembanding": "lebih mengecewakan",
+    "pembalik": true,
+    "sisi_aspek": "y"
+   },
+   "alasan": "Setuju berarti ingin hasil terbaik walaupun harus bersusah payah."
+  },
+  {
+   "id": "KP-MB-508",
+   "aspek": "Motif Berprestasi",
+   "jenis": "KR",
+   "tier": "T3",
+   "arah": "unfavorable",
+   "konteks": "sekarang",
+   "pernyataan": "Ikut lomba yang pesertanya lebih unggul lebih menakutkan daripada memilih lomba yang mudah dimenangkan.",
+   "bedah": {
+    "sisi_x": "ikut lomba yang pesertanya lebih unggul",
+    "sisi_y": "memilih lomba yang mudah dimenangkan",
+    "pembanding": "lebih menakutkan",
+    "pembalik": true,
+    "sisi_aspek": "x"
+   },
+   "alasan": "Setuju berarti menghindari tantangan."
+  }
+ ]
+}

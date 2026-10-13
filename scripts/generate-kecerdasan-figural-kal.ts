@@ -12,6 +12,8 @@ import { FIG2_ITEMS } from "./figural-kal-2";
 import { FIG3_ITEMS } from "./figural-kal-3";
 import { FIG4_ITEMS } from "./figural-kal-4";
 import { FIG5_ITEMS } from "./figural-kal-5";
+import { FIG19_ITEMS } from "./figural-kal-19";
+import { BUNDAR19_ITEMS } from "./figural-kal-bundar-19";
 import { buildMosaik } from "./figural-mosaik";
 
 // Figural kalibrasi Logis/Spasial 2026-10-12: 26-27 deret · 28-30 matriks · 31-32 rotasi · 33-34 susun · 35-36 analogi · 37 ikon
@@ -283,7 +285,7 @@ type Row = {
   pembahasan: string;
   pembahasan_svg?: string;
 };
-const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS];
+const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS, ...FIG19_ITEMS, ...BUNDAR19_ITEMS];
 const out: Record<number, Row[]> = {};
 for (const it of all) {
   const choices = it.choices ?? ["a", "b", "c", "d", "e"];
@@ -305,6 +307,8 @@ assert.deepEqual(out[15].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31,
 assert.deepEqual(out[4].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.deepEqual(out[5].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.deepEqual(out[16].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
+assert.deepEqual(out[19].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
+assert.ok(out[19].every((r) => r.tingkat === 3), "pkg 19: semua gambar HOTS");
 for (const r of Object.values(out).flat()) {
   for (const svg of [r.options_payload.svg_content, r.pembahasan_svg ?? ""]) assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(svg), `SVG ${r.sequence_number} tidak aman`);
   // Gambar pembahasan dirender bersama butir lain di satu halaman review: tanpa id supaya tidak bentrok.

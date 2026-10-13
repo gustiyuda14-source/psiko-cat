@@ -3,7 +3,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { checkA7, checkNoLeak, data, root, type TeksFile } from "./kecerdasan-teks-lib";
 
-// Cek KCK 97–100 untuk paket v3 (4/5), dan 97–99 + butir lama #100 untuk paket 3/14/15/16.
+// Cek KCK 97–100 untuk paket v3 (4/5/19), dan 97–99 + butir lama #100 untuk paket 3/14/15/16.
 //   node --import tsx scripts/check-kecerdasan-kck.ts
 // Tiap butir punya model kecil: ruang nilai (brute force), predikat pernyataan (1)/(2), dan jawaban.
 // Klaim cukup/tidak cukup dibuktikan dua arah: brute force (jawaban tunggal ↔ cukup) dan contoh `bukti`
@@ -188,6 +188,35 @@ const MODEL: Record<string, Model[]> = {
       },
     },
   ],
+  "19": [
+    { // 97 TABEL: Aula Timur p × q; Aula Barat 12 × 15
+      ruang: () => grid({ p: steps(1, 40), q: steps(1, 160) }),
+      s1: (v) => v.p === 12 - 4 && v.q === 15 + 5, s2: (v) => 180 + v.p * v.q === 340,
+      jawab: (v) => v.p * v.q,
+      cukup1: true, cukup2: true, cukupGabung: true, bukti: {},
+    },
+    { // 98 YATIDAK HOTS: n > 60 ? (Senin 64, Selasa 58); (1) selisih dua arah, (2) n di dalam rata-rata
+      ruang: () => grid({ n: steps(0, 200) }),
+      s1: (v) => Math.abs(v.n - 58) === 5, s2: (v) => v.n > (64 + 58 + v.n) / 3,
+      jawab: (v) => v.n > 60,
+      cukup1: false, cukup2: true, cukupGabung: true,
+      bukti: { s1: [{ n: 63 }, { n: 53 }] },
+    },
+    { // 99 ALJABAR kelipatan: 4x + 6y (ribu rupiah)
+      ruang: () => grid({ x: steps(0.5, 17, 0.5), y: steps(0.5, 17, 0.5) }),
+      s1: (v) => 2 * v.x + 3 * v.y === 17, s2: (v) => v.x - v.y === 1,
+      jawab: (v) => 4 * v.x + 6 * v.y,
+      cukup1: true, cukup2: false, cukupGabung: true,
+      bukti: { s2: [{ x: 4, y: 3 }, { x: 5, y: 4 }] },
+    },
+    { // 100 GABUNG umur: (2) setara dengan (1), Rani lebih tua
+      ruang: () => grid({ a: steps(6, 40), b: steps(6, 40) }).filter((v) => v.a > v.b),
+      s1: (v) => v.a + v.b === 30, s2: (v) => v.a - 5 + (v.b - 5) === 20,
+      jawab: (v) => v.b,
+      cukup1: false, cukup2: false, cukupGabung: false,
+      bukti: { s1: [{ a: 18, b: 12 }, { a: 20, b: 10 }], s2: [{ a: 18, b: 12 }, { a: 20, b: 10 }], gabung: [{ a: 18, b: 12 }, { a: 20, b: 10 }] },
+    },
+  ],
 };
 
 // Jenis KCK lama #100 (dibaca dari stem; tidak ada field jenis di file teks).
@@ -241,7 +270,7 @@ function cekPembahasan(tag: string, x: Kck, m: Model, v3: boolean) {
 
 const file = data("kecerdasan_kck_kal.json") as Record<string, Kck[]>;
 assert.deepEqual(Object.keys(file).sort(), Object.keys(MODEL).sort(), "paket di file");
-const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE" };
+const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE", "19": "DBAE" };
 const bankTeks = fs.readdirSync(path.join(root, "prisma/data")).filter((f) => /^kecerdasan_p\d+_teks\.json$/.test(f));
 bankTeks.push("kecerdasan_s2_teks.json");
 const stems = new Set<string>();
@@ -252,7 +281,7 @@ for (const [pkg, items] of Object.entries(file)) {
   if (!v3) assert.ok(lama && lama.t === "KCK", `pkg ${pkg}: KCK lama #100 tidak ditemukan`);
   const baku = v3 ? file["15"][0] : lama!;
   assert.deepEqual(items.map((x) => x.s), v3 ? [97, 98, 99, 100] : [97, 98, 99], `pkg ${pkg}: nomor`);
-  assert.deepEqual(items.map((x) => x.d), v3 ? [2, 2, 3, 3] : [2, 3, 3], `pkg ${pkg}: tingkat`);
+  assert.deepEqual(items.map((x) => x.d), v3 ? (pkg === "19" ? [2, 3, 3, 3] : [2, 2, 3, 3]) : [2, 3, 3], `pkg ${pkg}: tingkat`);
   assert.equal(items.length, MODEL[pkg].length, `pkg ${pkg}: jumlah model`);
   if (v3) {
     assert.equal(items.map((x) => x.k).join(""), V3[pkg], `pkg ${pkg}: kunci wajib 97–100`);

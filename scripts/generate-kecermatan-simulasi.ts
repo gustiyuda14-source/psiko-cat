@@ -48,6 +48,23 @@ const BLUEPRINT: Record<number, { nama: string; kolom: Kolom[] }> = {
       { jenis: "SPASIAL", donor: 499, kolom: 1, level: "sedang" },
     ],
   },
+  12: {
+    nama: "Simulasi 4 — Campuran Hitam Putih",
+    kolom: [
+      // Paruh A
+      { jenis: "GAMBAR", ikon: ["hourglass", "compass", "feather", "gift", "puzzle-piece"] },
+      { jenis: "ANGKA_HURUF", token: ["5S2", "S52", "25S", "2S5", "52S"] },
+      { jenis: "SPASIAL", donor: 598, kolom: 7, level: "dasar menengah" },
+      { jenis: "SIMBOL", huruf: ["θ", "Θ", "φ", "Φ", "ω"] },
+      { jenis: "SPASIAL", donor: 298, kolom: 2, level: "HOTS" },
+      // Paruh B
+      { jenis: "GAMBAR", ikon: ["cloud-sun", "cloud-moon", "cloud-lightning", "cloud-snow", "cloud-fog"] },
+      { jenis: "ANGKA_HURUF", token: ["K8", "4P", "N2", "6D", "Y3"] },
+      { jenis: "SPASIAL", donor: 598, kolom: 2, level: "dasar mudah" },
+      { jenis: "AKSARA", gaya: "lengkung", dasar: 1 },
+      { jenis: "SPASIAL", donor: 498, kolom: 2, level: "sedang" },
+    ],
+  },
 };
 
 const PKG = Number(process.argv[2]);

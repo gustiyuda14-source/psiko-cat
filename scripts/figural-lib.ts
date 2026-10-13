@@ -108,9 +108,9 @@ export function place(answer: Fig, distractors: Fig[], key: Key): Fig[] {
 
 export const BUNDAR = "Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.";
 export const BUNDAR_HURUF = "Huruf mewakili urutannya dalam alfabet (A = 1, B = 2, C = 3, dan seterusnya). Tentukan angka yang tepat untuk menggantikan tanda tanya (?) pada gambar.";
-export type Pie = { idPrefix?: string; cx: number; cy: number; r: number; outer: (string | number)[]; inner?: (string | number)[]; center?: string | number; startArrow?: boolean };
+export type Pie = { idPrefix?: string; cx: number; cy: number; r: number; outer: (string | number)[]; inner?: (string | number)[]; center?: string | number; startArrow?: boolean; innerSize?: number };
 let arrowId = 0;
-export function pie({ idPrefix = "s2b-ah-", cx, cy, r, outer, inner, center, startArrow }: Pie) {
+export function pie({ idPrefix = "s2b-ah-", cx, cy, r, outer, inner, center, startArrow, innerSize }: Pie) {
   const n = outer.length, at = (deg: number, rr: number): Pt => [r1(cx + rr * Math.cos((deg * Math.PI) / 180)), r1(cy + rr * Math.sin((deg * Math.PI) / 180))];
   const mid = (i: number) => -90 + (360 / n) * i;
   const fs = r > 90 ? 26 : 22;
@@ -129,7 +129,7 @@ export function pie({ idPrefix = "s2b-ah-", cx, cy, r, outer, inner, center, sta
       const [x2, y2] = at(mid(i) - 180 / n, rIn);
       s += `<line x1="${cx}" y1="${cy}" x2="${x2}" y2="${y2}" stroke="${INK}" stroke-width="2"/>`;
     }
-    inner.forEach((t, i) => (s += label(at(mid(i), rIn * 0.58), t, fs - 4)));
+    inner.forEach((t, i) => (s += label(at(mid(i), rIn * 0.58), t, innerSize ?? fs - 4)));
   } else if (center !== undefined) s += label([cx, cy], center);
   if (startArrow) {
     const id = `${idPrefix}${++arrowId}`;
