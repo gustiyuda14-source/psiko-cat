@@ -665,3 +665,9 @@ summary,
     display: none;
   }
 }
+
+/* Pecahan (MathText): pembilang di atas, penyebut di bawah; bilangan bulat campuran di kiri. */
+.frac { display: inline-flex; align-items: center; gap: .2em; white-space: nowrap; vertical-align: middle; margin: .1em .05em; }
+.frac__f { display: inline-flex; flex-direction: column; align-items: center; font-size: .8em; line-height: 1.15; }
+.frac__f > span { padding: 0 .2em; }
+.frac__f > span:first-child { border-bottom: 1.5px solid currentColor; }

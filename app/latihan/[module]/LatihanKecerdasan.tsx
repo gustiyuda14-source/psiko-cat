@@ -12,6 +12,7 @@ import { ExamBody, ExamDock, QuestionNavigator, SubmitDialog } from "@/app/compo
 import { KecerdasanReview, type KecerdasanReviewItem } from "@/app/components/PembahasanSection";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { MODULE_CONFIG } from "@/lib/test-config";
+import { MathText } from "@/app/components/MathText";
 
 // Batas waktu sama dengan sub-tes Kecerdasan di simulasi (90 menit).
 const TIME_LIMIT_MS = MODULE_CONFIG.KECERDASAN.time_limit_seconds * 1000;
@@ -218,11 +219,11 @@ export default function LatihanKecerdasan({
 
           <div className="q-card">
             {payload?.instruksi && (
-              <p className="q-ins">{payload.instruksi}</p>
+              <p className="q-ins"><MathText text={payload.instruksi} /></p>
             )}
             <QuestionPassage text={payload?.sub_text} />
             {payload?.question_text && (
-              <p className="q-stem">{payload.question_text}</p>
+              <p className="q-stem"><MathText text={payload.question_text} /></p>
             )}
             {payload?.svg_content && (
               <div
@@ -246,7 +247,7 @@ export default function LatihanKecerdasan({
                   <span className={`mark ${multi ? "is-square" : ""}`}>
                     {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
                   </span>
-                  <span className="opt-text">{c.text}</span>
+                  <span className="opt-text"><MathText text={c.text} /></span>
                 </button>
               );
             })}

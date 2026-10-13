@@ -25,6 +25,7 @@ import {
 } from "@/app/components/ExamChrome";
 import { Badge } from "@/app/components/ui";
 import { Check } from "@/app/components/icons";
+import { MathText } from "@/app/components/MathText";
 
 type Props = {
   questions: SafeQuestion[];
@@ -180,14 +181,14 @@ export default function EngineKecerdasan({
 
           <div className="q-card">
             {payload?.instruksi && (
-              <p className="q-ins">{payload.instruksi}</p>
+              <p className="q-ins"><MathText text={payload.instruksi} /></p>
             )}
 
             <QuestionPassage text={payload?.sub_text} />
 
             {payload?.question_text && (
               <p className="q-stem">
-                {payload.question_text}
+                <MathText text={payload.question_text} />
               </p>
             )}
 
@@ -213,7 +214,7 @@ export default function EngineKecerdasan({
                   <span className={`mark ${multi ? "is-square" : ""}`}>
                     {isSelected && multi ? <Check className="size-4" strokeWidth={3} /> : c.key}
                   </span>
-                  <span className="opt-text">{c.text}</span>
+                  <span className="opt-text"><MathText text={c.text} /></span>
                 </button>
               );
             })}

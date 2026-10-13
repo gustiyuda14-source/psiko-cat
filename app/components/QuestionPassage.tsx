@@ -1,3 +1,5 @@
+import { MathText } from "@/app/components/MathText";
+
 // Bacaan/wacana soal (panel di dalam .q-card): paragraf rata kiri-kanan, baris "• …" jadi daftar,
 // tabel opsional. Dipakai simulasi, latihan, drilling, dan pembahasan.
 
@@ -38,11 +40,11 @@ export default function QuestionPassage({
         b.list ? (
           <ul key={i} className={`list-disc space-y-1.5 pl-5 text-justify text-foreground marker:text-muted-foreground ${size}`}>
             {b.items.map((it, j) => (
-              <li key={j} className="hyphens-auto pl-1">{it}</li>
+              <li key={j} className="hyphens-auto pl-1"><MathText text={it} /></li>
             ))}
           </ul>
         ) : (
-          <p key={i} className={`text-justify text-foreground hyphens-auto ${size}`}>{b.text}</p>
+          <p key={i} className={`text-justify text-foreground hyphens-auto ${size}`}><MathText text={b.text} /></p>
         )
       )}
       {table && (
@@ -62,7 +64,7 @@ export default function QuestionPassage({
               {table.baris.map((r, i) => (
                 <tr key={i}>
                   {r.map((c, j) => (
-                    <td key={j} className={`border border-border px-3 py-2 ${j ? "text-right" : "font-medium"}`}>{c}</td>
+                    <td key={j} className={`border border-border px-3 py-2 ${j ? "text-right" : "font-medium"}`}><MathText text={String(c)} /></td>
                   ))}
                 </tr>
               ))}

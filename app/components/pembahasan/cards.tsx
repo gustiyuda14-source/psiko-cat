@@ -8,6 +8,7 @@ import type {
   KepribadianReviewItem,
 } from "@/app/components/PembahasanSection";
 import type { PribadiReviewItem } from "@/app/components/PribadiReview";
+import { MathText } from "@/app/components/MathText";
 
 /*
   Isi kartu soal + kartu pembahasan untuk satu nomor, per jenis butir.
@@ -101,7 +102,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
     hasKey: true,
     soal: (
       <>
-        {p.instruksi && <p className="text-sm font-medium text-muted-foreground">{p.instruksi}</p>}
+        {p.instruksi && <p className="text-sm font-medium text-muted-foreground"><MathText text={p.instruksi} /></p>}
         {p.sub_text && (
           <details>
             <summary className="cursor-pointer text-sm font-semibold text-muted-foreground hover:text-foreground">Lihat bacaan</summary>
@@ -110,7 +111,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
             </div>
           </details>
         )}
-        {p.question_text && <p className="max-w-[72ch] leading-relaxed text-foreground">{p.question_text}</p>}
+        {p.question_text && <p className="max-w-[72ch] leading-relaxed text-foreground"><MathText text={p.question_text} /></p>}
         {p.svg_content && (
           <div className="overflow-x-auto rounded-md border border-border bg-card p-2" dangerouslySetInnerHTML={{ __html: p.svg_content }} />
         )}
@@ -119,7 +120,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
           rows={(p.choices ?? []).map((c) =>
             row(
               c.key,
-              c.text && c.text.trim().toUpperCase() !== c.key ? c.text : null,
+              c.text && c.text.trim().toUpperCase() !== c.key ? <MathText text={c.text} /> : null,
               item.correct_key.includes(c.key),
               item.selected_key?.includes(c.key) ?? false,
               reveal
@@ -144,7 +145,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
           </figure>
         )}
         {item.pembahasan ? (
-          <p className="max-w-[72ch] whitespace-pre-line leading-relaxed text-foreground">{item.pembahasan}</p>
+          <p className="max-w-[72ch] whitespace-pre-line leading-relaxed text-foreground"><MathText text={item.pembahasan} /></p>
         ) : (
           <p className="text-sm text-muted-foreground">Pembahasan belum tersedia untuk butir ini.</p>
         )}

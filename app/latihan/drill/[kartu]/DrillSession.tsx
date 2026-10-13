@@ -11,6 +11,7 @@ import { Badge, EmptyState } from "@/app/components/ui";
 import { Button } from "@/app/components/ui-client";
 import { ArrowRight, Check, Close } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+import { MathText } from "@/app/components/MathText";
 
 type Result = { benar: boolean; kunci: string[]; pembahasan: string; gambar_pembahasan?: string | null; ms: number };
 
@@ -250,7 +251,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
               ) : (
                 <>
                   <QuestionPassage paragraphs={q.bacaan} table={q.tabel} />
-                  <p className="q-stem whitespace-pre-line">{q.stem}</p>
+                  <p className="q-stem whitespace-pre-line"><MathText text={q.stem} /></p>
                   {/* MathML dari bank (divalidasi build: hanya <math>, tanpa script/handler). */}
                   {q.rumus && <div className="drill-math overflow-x-auto" dangerouslySetInnerHTML={{ __html: q.rumus }} />}
                 </>
@@ -282,7 +283,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={`/${q.opsi_gambar[k]}`} alt={q.opsi[k]} className="opt-figure" />
                     ) : (
-                      <span className="opt-text">{q.opsi[k]}</span>
+                      <span className="opt-text"><MathText text={q.opsi[k]} /></span>
                     )}
                     {result && isKey && <Check className="ml-auto size-5 text-success" strokeWidth={3} />}
                     {result && sel && !isKey && <Close className="ml-auto size-5 text-destructive" strokeWidth={3} />}
@@ -317,7 +318,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
               )}
               {result.pembahasan.split("<br>").map((p, i) => (
                 <p key={i} className="mt-2 whitespace-pre-line text-foreground">
-                  {p}
+                  <MathText text={p} />
                 </p>
               ))}
               {idx < items.length - 1 && (
