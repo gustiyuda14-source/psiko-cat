@@ -139,6 +139,7 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
           correct_key: rule.correct_key,
           is_correct: normalized === rule.correct_key,
           pembahasan: rule.pembahasan ?? null,
+          pembahasan_svg: rule.pembahasan_svg ?? null,
           payload: q.options_payload as unknown as KecerdasanOptionsPayload,
         };
       }),
