@@ -27,7 +27,8 @@
       "e": 42
     },
     "pembahasan": "Pada setiap baris, kotak kanan = kotak kiri × 5: 3 × 5 = 15, 6 × 5 = 30, 4 × 5 = 20. Jadi ? = 7 × 5 = 35.<br>Opsi A (28) gugur karena mengalikan 7 dengan 4, padahal pengalinya selalu 5; Opsi C (30) gugur karena menyalin angka dari gambar pertama; Opsi D (21) gugur karena mengalikan dengan 3; Opsi E (42) gugur karena mengalikan dengan 6. Jawaban: Opsi B (35). Tips: cek aturan di dua baris contoh sekaligus sebelum memakainya.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-077.svg"
   },
   {
     "id": "K10-B2-078",
@@ -57,7 +58,8 @@
       "e": 9
     },
     "pembahasan": "Kotak kanan = kuadrat kotak kiri: 2² = 4, 5² = 25, 6² = 36. Maka ?² = 81, sehingga ? = 9.<br>Opsi A (27) gugur karena membagi 81 dengan 3; Opsi B (18) gugur karena menganggap aturannya × 2 (2 → 4), padahal 5 → 25 menunjukkan kuadrat; Opsi C (40,5) gugur karena membagi 81 dengan 2; Opsi D (7) gugur karena menebak urutan 5, 6, 7. Jawaban: Opsi E (9). Tips: pasangan 2 → 4 bisa ×2 atau kuadrat; pakai pasangan lain (5 → 25) untuk memastikan.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-078.svg"
   },
   {
     "id": "K10-B2-079",
@@ -87,7 +89,8 @@
       "e": 5
     },
     "pembahasan": "Kotak kanan atas = (kiri atas + bawah)²: (13 + 4)² = 17² = 289. Pada gambar kedua (11 + ?)² = 196, jadi 11 + ? = 14 dan ? = 3.<br>Opsi A (4) gugur karena menyalin angka bawah gambar pertama; Opsi B (14) gugur karena berhenti di √196 tanpa mengurangkan 11; Opsi D (2) gugur karena salah menganggap √196 = 13; Opsi E (5) gugur karena salah menganggap √196 = 16. Jawaban: Opsi C (3). Tips: bilangan besar seperti 289 atau 196 sering kuadrat; cari akarnya dulu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-079.svg"
   },
   {
     "id": "K10-B3-076",
@@ -117,7 +120,8 @@
       "e": 22
     },
     "pembahasan": "Pada gambar pertama: (atas + bawah) − (kiri + kanan) = (15 + 10) − (6 + 9) = 10, sesuai angka tengah. Gambar kedua: (20 + 13) − (7 + 11) = 33 − 18 = 15.<br>Opsi B (51) gugur karena menjumlahkan keempat angka sisi; Opsi C (11) gugur karena menghitung (atas − kiri) + (kanan − bawah); pada gambar pertama hasilnya 8, bukan 10; Opsi D (3) gugur karena menghitung (atas + kiri) − (kanan + bawah); pada gambar pertama hasilnya 2, bukan 10; Opsi E (22) gugur karena lupa mengurangkan angka sisi kiri. Jawaban: Opsi A (15). Tips: uji calon aturan pada gambar contoh; aturan yang tidak menghasilkan angka tengah langsung dibuang.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B3-076.svg"
   },
   {
     "id": "K10-B3-077",
@@ -147,7 +151,8 @@
       "e": 9
     },
     "pembahasan": "Alas = sisi kiri + sisi kanan (10 + 15 = 25), dan angka tengah = kiri × kanan : alas = 150 : 25 = 6. Gambar kedua: 12 × 24 : 36 = 288 : 36 = 8.<br>Opsi A (12) gugur karena menyalin angka sisi kiri; Opsi B (36) gugur karena menyalin angka alas; Opsi C (18) gugur karena membagi alas dengan 2; Opsi E (9) gugur karena membagi alas dengan 4. Jawaban: Opsi D (8). Tips: jika alas = jumlah kedua sisi, angka tengah sering hasil kali dibagi jumlah.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B3-077.svg"
   },
   {
     "id": "K10-B2-082",
@@ -177,7 +182,8 @@
       "e": 12
     },
     "pembahasan": "Alas = kiri × (tengah + kanan): 6 × (4 + 3) = 42. Gambar kedua: 5 × (? + 3) = 45, jadi ? + 3 = 9 dan ? = 6.<br>Opsi A (9) gugur karena membagi 45 dengan 5 tanpa mengurangkan angka kanan; Opsi C (4) gugur karena menyalin angka tengah gambar pertama; Opsi D (3) gugur karena memakai kiri × kanan × tengah; pada gambar pertama aturan itu menghasilkan 72, bukan 42; Opsi E (12) gugur karena membagi 45 dengan 3 lalu mengurangkan 3. Jawaban: Opsi B (6). Tips: jika alas habis dibagi angka kiri, coba bentuk kiri × (…).",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-082.svg"
   },
   {
     "id": "K10-B3-078",
@@ -207,7 +213,8 @@
       "e": 1296
     },
     "pembahasan": "Kotak besar = (roda kiri + roda kanan) dipangkatkan angka kotak kecil: (4 + 3)² = 49. Gambar kedua: (2 + 4)³ = 6³ = 216.<br>Opsi A (36) gugur karena mengkuadratkan, padahal kotak kecil menunjukkan pangkat 3; Opsi B (72) gugur karena mengalikan (2 + 4)² dengan 2; Opsi D (18) gugur karena mengalikan (2 + 4) dengan 3; Opsi E (1.296) gugur karena memangkatkan 4. Jawaban: Opsi C (216). Tips: angka kecil di samping angka besar sering berperan sebagai pangkat.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B3-078.svg"
   },
   {
     "id": "K10-B3-079",
@@ -237,7 +244,8 @@
       "e": 135
     },
     "pembahasan": "Dari kecil ke besar angkanya dikali tetap: 4 × 3 = 12, 12 × 3 = 36. Pada gambar kedua 5 → ? → 45 dengan pengali yang sama untuk kedua langkah: 5 × 3 = 15 dan 15 × 3 = 45.<br>Opsi B (25) gugur karena mengambil rata-rata 5 dan 45 (aturan selisih tetap), padahal contoh memakai rasio; Opsi C (9) gugur karena membagi 45 dengan 5; Opsi D (12) gugur karena menyalin angka tengah gambar pertama; Opsi E (135) gugur karena mengalikan 45 dengan 3, padahal suku tengah ada di antara 5 dan 45. Jawaban: Opsi A (15). Tips: suku tengah deret kali = akar (kecil × besar): √(5 × 45) = √225 = 15.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B3-079.svg"
   },
   {
     "id": "K10-B3-080",
@@ -267,7 +275,8 @@
       "e": 13
     },
     "pembahasan": "Selisih dua kotak = kuadrat angka di ujung panah: 530 − 386 = 144 = 12². Gambar kedua: 610 − 441 = 169 = 13², jadi ? = 13.<br>Opsi A (169) gugur karena lupa mengakarkan selisih; Opsi B (14) gugur karena salah menghitung √169; Opsi C (12) gugur karena menyalin angka dari gambar pertama; Opsi D (1.051) gugur karena menjumlahkan kedua angka, padahal yang dipakai selisihnya. Jawaban: Opsi E (13). Tips: selisih berupa 100, 121, 144, 169, 196, 225 hampir pasti kuadrat.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B3-080.svg"
   },
   {
     "id": "K10-A3-057",
@@ -297,7 +306,8 @@
       "e": 20
     },
     "pembahasan": "Angka tengah = atas × kiri : kanan: 14 × 18 : 6 = 252 : 6 = 42. Gambar kedua: 9 × 32 : 12 = 288 : 12 = 24.<br>Opsi A (53) gugur karena menjumlahkan ketiga lingkaran; Opsi B (48) gugur karena membagi dengan 6 (angka gambar pertama), bukan dengan 12; Opsi C (12) gugur karena menyalin angka lingkaran kanan; Opsi E (20) gugur karena menghitung 32 − 12. Jawaban: Opsi D (24). Tips: sederhanakan dulu sebelum mengalikan: 9 × 32 : 12 = 3 × 32 : 4 = 3 × 8 = 24.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-A3-057.svg"
   },
   {
     "id": "K10-A3-058",
@@ -327,7 +337,8 @@
       "e": 72
     },
     "pembahasan": "Angka tengah = (kiri atas : kiri bawah) − (kanan atas : kanan bawah): 42 : 6 − 45 : 9 = 7 − 5 = 2. Gambar kedua: 54 : 6 − 40 : 5 = 9 − 8 = 1.<br>Opsi A (2) gugur karena menyalin angka tengah gambar pertama; Opsi B (17) gugur karena menjumlahkan kedua hasil bagi (9 + 8); Opsi D (14) gugur karena hanya mengurangkan kedua lingkaran atas; Opsi E (72) gugur karena mengalikan kedua hasil bagi. Jawaban: Opsi C (1). Tips: pasangkan lingkaran yang segaris (atas–bawah) dulu; biasanya pasangan itu dibagi.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-A3-058.svg"
   },
   {
     "id": "K10-B2-081",
@@ -357,7 +368,8 @@
       "e": 71
     },
     "pembahasan": "Angka tengah = kiri × bawah + atas × kanan: 6 × 9 + 4 × 7 = 54 + 28 = 82. Gambar kedua: 8 × 7 + 3 × 5 = 56 + 15 = 71.<br>Opsi A (23) gugur karena menjumlahkan keempat angka; Opsi B (59) gugur karena memasangkan atas × kiri dan kanan × bawah; pada gambar pertama aturan itu menghasilkan 87, bukan 82; Opsi C (61) gugur karena memasangkan kiri × kanan dan atas × bawah; pada gambar pertama hasilnya 78, bukan 82; Opsi D (56) gugur karena lupa menambahkan atas × kanan. Jawaban: Opsi E (71). Tips: ada tiga cara memasangkan empat angka; uji ketiganya pada gambar contoh.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-081.svg"
   },
   {
     "id": "K10-B2-083",
@@ -387,7 +399,8 @@
       "e": 24
     },
     "pembahasan": "Angka tengah = (kiri atas × kanan bawah) − (kanan atas × kiri bawah): 7 × 5 − 3 × 2 = 35 − 6 = 29. Gambar kedua: 8 × 6 − 4 × 3 = 48 − 12 = 36.<br>Opsi A (21) gugur karena menjumlahkan keempat lingkaran kecil; Opsi C (60) gugur karena menjumlahkan kedua hasil kali, padahal dikurangkan; Opsi D (12) gugur karena hanya mengalikan kanan atas × kiri bawah; Opsi E (24) gugur karena mengalikan kiri atas × kiri bawah. Jawaban: Opsi B (36). Tips: pasangan diagonal (silang) sering dipakai bersama; coba kali silang dulu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K10-B2-083.svg"
   },
   {
     "id": "K10-A3-059",

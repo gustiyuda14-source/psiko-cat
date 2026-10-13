@@ -295,6 +295,11 @@ const ITEMS: Record<string, () => string> = {
   },
 };
 
-const out = process.argv[2] ?? join(process.cwd(), "data/drill-pembahasan");
-for (const [id, fn] of Object.entries(ITEMS)) writeFileSync(join(out, `${id}.svg`), fn());
-console.log(`${Object.keys(ITEMS).length} SVG -> ${out}`);
+export { W, H, INK, MUTED, t, tb, tm, rect, line, curve, digitBox, pill, lines, steps, svg, silang, frac, bar, bagiKali };
+
+// Dipakai sebagai pustaka oleh generate-k05-trik-2.ts; hanya menulis berkas bila dijalankan langsung.
+if (process.argv[1]?.endsWith("generate-k05-trik-svg.ts")) {
+  const out = process.argv[2] ?? join(process.cwd(), "data/drill-pembahasan");
+  for (const [id, fn] of Object.entries(ITEMS)) writeFileSync(join(out, `${id}.svg`), fn());
+  console.log(`${Object.keys(ITEMS).length} SVG -> ${out}`);
+}

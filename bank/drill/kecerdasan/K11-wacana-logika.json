@@ -22,7 +22,8 @@
       "b"
     ],
     "pembahasan": "Uji setiap opsi terhadap tiga syarat: Bougenvil harus kedua, Anggrek sebelum Edelweis, dan Dahlia setelah Cempaka serta Edelweis. Hanya Anggrek, Bougenvil, Edelweis, Cempaka, Dahlia, Flamboyan yang lolos semua syarat.<br>Opsi A (Bougenvil, Anggrek, Cempaka, Edelweis, Dahlia, Flamboyan) gugur karena Bougenvil berada di urutan pertama, padahal harus kedua; Opsi C (Cempaka, Bougenvil, Dahlia, Anggrek, Edelweis, Flamboyan) gugur karena Dahlia dikunjungi sebelum Edelweis; Opsi D (Anggrek, Bougenvil, Dahlia, Cempaka, Edelweis, Flamboyan) gugur karena Dahlia dikunjungi sebelum Cempaka dan Edelweis; Opsi E (Edelweis, Bougenvil, Anggrek, Cempaka, Dahlia, Flamboyan) gugur karena Edelweis dikunjungi sebelum Anggrek. Jawaban: Opsi B (Anggrek, Bougenvil, Edelweis, Cempaka, Dahlia, Flamboyan). Tips: pakai syarat yang paling mudah dicek (posisi tetap) untuk mencoret opsi lebih dulu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-B3-086.svg"
   },
   {
     "id": "K11-B3-087",
@@ -47,7 +48,8 @@
       "a"
     ],
     "pembahasan": "Dahlia harus didahului Cempaka, Edelweis, dan Anggrek (karena Anggrek sebelum Edelweis), ditambah Bougenvil di urutan kedua. Jadi minimal empat pos ada sebelum Dahlia, sehingga Dahlia paling cepat dikunjungi pada urutan kelima. Dahlia tidak mungkin di urutan ketiga.<br>Opsi B (Pos Anggrek pasti dikunjungi pertama.) gugur karena Cempaka atau Flamboyan juga bisa dikunjungi pertama; Opsi C (Pos Flamboyan pasti dikunjungi terakhir.) gugur karena Dahlia juga bisa dikunjungi terakhir; Opsi D (Pos Cempaka pasti dikunjungi sebelum pos Edelweis.) gugur karena Edelweis boleh dikunjungi lebih dulu daripada Cempaka; Opsi E (Pos Edelweis tidak mungkin dikunjungi pada urutan ketiga.) gugur karena urutan Anggrek, Bougenvil, Edelweis, … memenuhi semua syarat. Jawaban: Opsi A (Pos Dahlia tidak mungkin dikunjungi pada urutan ketiga.). Tips: hitung berapa pos yang wajib mendahului suatu pos; itu batas urutan paling awalnya.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-B3-087.svg"
   },
   {
     "id": "K11-B3-088",
@@ -72,7 +74,8 @@
       "a"
     ],
     "pembahasan": "Dengan Flamboyan keenam dan Bougenvil kedua, Dahlia harus kelima (setelah Cempaka, Edelweis, dan Anggrek). Urutan 1, 3, 4 diisi Anggrek, Cempaka, Edelweis dengan Anggrek sebelum Edelweis. Pasangan pertama–ketiga yang mungkin: Anggrek–Edelweis, Anggrek–Cempaka, atau Cempaka–Anggrek. Di antara opsi, hanya Anggrek dan Edelweis.<br>Opsi B (Anggrek dan Dahlia) gugur karena Dahlia paling cepat di urutan kelima; Opsi C (Cempaka dan Dahlia) gugur karena Dahlia paling cepat di urutan kelima; Opsi D (Edelweis dan Cempaka) gugur karena Edelweis tidak boleh pertama karena harus didahului Anggrek; Opsi E (Flamboyan dan Cempaka) gugur karena Flamboyan sudah ditetapkan terakhir. Jawaban: Opsi A (Anggrek dan Edelweis). Tips: setelah satu posisi dikunci, tulis semua kemungkinan yang tersisa; biasanya hanya dua atau tiga.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-B3-088.svg"
   },
   {
     "id": "K11-B3-089",
@@ -97,7 +100,8 @@
       "c"
     ],
     "pembahasan": "Bayu harus sebelum Gita (urutan kedua), jadi Bayu pertama. Fajar harus sebelum Ani (urutan kelima), jadi Fajar di urutan ketiga atau keempat. Urutan ketiga harus Citra atau Eka. Jika Citra ketiga, Dimas harus keempat (urutan kedua sudah Gita) dan Fajar tidak kebagian tempat. Jadi Eka ketiga, Fajar keempat, dan Citra–Dimas mengisi urutan 6–7 dalam urutan mana pun.<br>Opsi A (Citra dijadwalkan pada urutan keenam.) gugur karena Citra bisa juga pada urutan ketujuh; Opsi B (Dimas dijadwalkan pada urutan ketujuh.) gugur karena Dimas bisa juga pada urutan keenam; Opsi D (Citra dijadwalkan pada urutan ketiga.) gugur karena Citra di urutan ketiga memaksa Dimas ke urutan keempat, sehingga Fajar tidak punya tempat sebelum Ani; Opsi E (Dimas dijadwalkan pada urutan keempat.) gugur karena urutan keempat harus diisi Fajar. Jawaban: Opsi C (Fajar dijadwalkan pada urutan keempat.). Tips: posisi yang dikunci soal sering langsung memaksa satu orang lain; cari syarat \"sebelum\" yang berbatasan dengan posisi itu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-B3-089.svg"
   },
   {
     "id": "K11-B3-090",
@@ -122,7 +126,8 @@
       "a"
     ],
     "pembahasan": "Cek setiap opsi: urutan ketiga harus Citra atau Eka, Dimas harus bersebelahan dengan Citra, Bayu sebelum Gita, dan Fajar sebelum Ani. Hanya Bayu, Fajar, Citra, Dimas, Gita, Ani, Eka yang memenuhi keempatnya.<br>Opsi B (Fajar, Bayu, Dimas, Eka, Citra, Gita, Ani) gugur karena urutan ketiga diisi Dimas, bukan Citra atau Eka; Opsi C (Gita, Bayu, Eka, Citra, Dimas, Fajar, Ani) gugur karena Gita dijadwalkan sebelum Bayu; Opsi D (Bayu, Ani, Eka, Fajar, Citra, Dimas, Gita) gugur karena Ani dijadwalkan sebelum Fajar; Opsi E (Fajar, Ani, Citra, Bayu, Dimas, Gita, Eka) gugur karena Dimas tidak bersebelahan dengan Citra. Jawaban: Opsi A (Bayu, Fajar, Citra, Dimas, Gita, Ani, Eka). Tips: mulai dari syarat posisi tetap (urutan ketiga), lalu syarat bersebelahan.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-B3-090.svg"
   },
   {
     "id": "K11-A3-062",
@@ -146,7 +151,8 @@
       "b"
     ],
     "pembahasan": "Rina 95, Sinta 95 − 6 = 89, Tono 89 − 2 = 87, Umar 87 + 3 = 90. Yang di atas 88: Rina, Umar, dan Sinta.<br>Opsi A (Rina dan Umar) gugur karena Sinta (89) juga di atas 88; Opsi C (Rina, Sinta, dan Tono) gugur karena Tono hanya 87, sedangkan Umar (90) terlewat; Opsi D (Umar dan Sinta) gugur karena Rina (95) terlewat; Opsi E (Rina, Umar, Sinta, dan Tono) gugur karena Tono hanya 87. Jawaban: Opsi B (Rina, Umar, dan Sinta). Tips: hitung nilai setiap orang dulu dari orang yang diketahui nilainya.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-062.svg"
   },
   {
     "id": "K11-A3-063",
@@ -170,7 +176,8 @@
       "d"
     ],
     "pembahasan": "Yang suka bersepeda: Gina dan Hana. Yang suka melukis: Fitri dan Hana. Orang yang ada di kedua kelompok hanya Hana.<br>Opsi A (Dewi) gugur karena Dewi hanya suka berenang; Opsi B (Fitri) gugur karena Fitri suka berenang dan melukis, bukan bersepeda; Opsi C (Gina) gugur karena Gina tidak disebut suka melukis; Opsi E (Tidak ada) gugur karena Hana memenuhi keduanya. Jawaban: Opsi D (Hana). Tips: cari nama yang muncul di kedua kelompok.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-063.svg"
   },
   {
     "id": "K11-A3-064",
@@ -194,7 +201,8 @@
       "b"
     ],
     "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Laras) gugur karena Laras juga mengambil cokelat; Opsi C (Raka) gugur karena Raka tidak mengambil kopi; Opsi D (Sinta) gugur karena Sinta hanya mengambil melon; Opsi E (Bima) gugur karena Bima tidak mengambil kopi. Jawaban: Opsi B (Tegar). Tips: susun tabel anak × rasa; isi dari kalimat yang paling pasti (Sinta) lebih dulu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-064.svg"
   },
   {
     "id": "K11-A3-065",
@@ -218,7 +226,8 @@
       "e"
     ],
     "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Raka) gugur karena Raka mengambil dua permen; Opsi B (Sinta) gugur karena Sinta mengambil satu permen; Opsi C (Tegar) gugur karena Tegar mengambil dua permen; Opsi D (Bima) gugur karena Bima mengambil dua permen. Jawaban: Opsi E (Laras). Tips: kalimat \"seperti yang dilakukan anak lainnya\" berarti semua anak sisanya ikut mengambil.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-065.svg"
   },
   {
     "id": "K11-A3-066",
@@ -242,7 +251,8 @@
       "d"
     ],
     "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat.<br>Opsi A (Laras dan Tegar) gugur karena Laras mengambil tiga rasa, Tegar dua; Opsi B (Tegar dan Bima) gugur karena jumlahnya sama (dua), tetapi rasanya berbeda: Tegar kopi, Bima cokelat; Opsi C (Raka dan Laras) gugur karena Laras mengambil kopi, Raka tidak; Opsi E (Sinta dan Raka) gugur karena Sinta hanya mengambil melon. Jawaban: Opsi D (Raka dan Bima). Tips: \"rasa yang persis sama\" berbeda dengan \"jumlah rasa yang sama\"; cek isi, bukan hanya banyaknya.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-066.svg"
   },
   {
     "id": "K11-A3-067",
@@ -266,7 +276,8 @@
       "d"
     ],
     "pembahasan": "Sinta hanya mengambil melon, jadi empat pengambil stroberi adalah Raka, Laras, Tegar, dan Bima. Cokelat diambil semua anak kecuali Sinta dan Tegar: Raka, Laras, Bima. Kopi diambil semua anak kecuali Sinta, Raka, dan Bima: Laras dan Tegar. Hasilnya: Raka = stroberi, cokelat; Sinta = melon; Laras = stroberi, cokelat, kopi; Tegar = stroberi, kopi; Bima = stroberi, cokelat. Jumlahnya 2 + 1 + 3 + 2 + 2 = 10 permen.<br>Opsi A (8) gugur karena lupa permen kopi Tegar dan permen melon Sinta; Opsi B (9) gugur karena lupa permen melon Sinta; Opsi C (11) gugur karena menghitung stroberi lima anak, padahal Sinta tidak mengambil stroberi; Opsi E (7) gugur karena hanya menghitung stroberi dan cokelat. Jawaban: Opsi D (10). Tips: jumlahkan per anak dari tabel, jangan per kalimat (ada kalimat yang menyebut anak yang sama).",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-067.svg"
   },
   {
     "id": "K11-A3-068",
@@ -291,7 +302,8 @@
       "a"
     ],
     "pembahasan": "Pelari 3 pasti keenam. Sisanya diurutkan dengan syarat 6 sebelum 2, 1 sebelum 5, dan 4 berada di antara 2 dan 5. Hanya 6, 1, 2, 4, 5, 3 yang lolos semua syarat.<br>Opsi B (1, 6, 4, 2, 5, 3) gugur karena pelari 4 tidak berada di antara pelari 2 dan 5; Opsi C (6, 2, 1, 4, 3, 5) gugur karena pelari 3 tidak finis paling akhir; Opsi D (2, 6, 1, 4, 5, 3) gugur karena pelari 2 finis sebelum pelari 6; Opsi E (6, 5, 4, 2, 1, 3) gugur karena pelari 5 finis sebelum pelari 1. Jawaban: Opsi A (6, 1, 2, 4, 5, 3). Tips: coret dulu opsi yang tidak menaruh pelari 3 di akhir.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-068.svg"
   },
   {
     "id": "K11-A3-069",
@@ -316,7 +328,8 @@
       "e"
     ],
     "pembahasan": "Pelari 3 pasti keenam. Sisanya diurutkan dengan syarat 6 sebelum 2, 1 sebelum 5, dan 4 berada di antara 2 dan 5. Pada 6, 4, 2, 1, 5, 3 pelari 4 finis sebelum pelari 2 dan 5, jadi tidak berada di antara keduanya.<br>Opsi A (1, 6, 2, 4, 5, 3) gugur karena urutan ini memenuhi semua syarat; Opsi B (6, 2, 1, 4, 5, 3) gugur karena urutan ini memenuhi semua syarat; Opsi C (1, 5, 4, 6, 2, 3) gugur karena urutan ini memenuhi semua syarat; Opsi D (6, 1, 5, 4, 2, 3) gugur karena urutan ini memenuhi semua syarat. Jawaban: Opsi E (6, 4, 2, 1, 5, 3). Tips: untuk soal \"tidak mungkin\", cukup temukan satu syarat yang dilanggar.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-069.svg"
   },
   {
     "id": "K11-A3-070",
@@ -342,7 +355,8 @@
       "c"
     ],
     "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10.<br>Opsi A (Kirana) gugur karena skornya 8; Opsi B (Lestari) gugur karena skornya 7; Opsi D (Nadia) gugur karena skornya 9, walaupun komunikasinya terbaik; Opsi E (Olivia) gugur karena skornya 10, walaupun paling teliti. Jawaban: Opsi C (Mega). Tips: susun dua daftar peringkat terpisah, baru jumlahkan skornya.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-070.svg"
   },
   {
     "id": "K11-A3-071",
@@ -368,7 +382,8 @@
       "b"
     ],
     "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10. Skor terendah dimiliki Lestari (7).<br>Opsi A (Kirana) gugur karena skornya 8; Opsi C (Mega) gugur karena skornya 11, tertinggi; Opsi D (Nadia) gugur karena skornya 9; Opsi E (Olivia) gugur karena skornya 10, walaupun paling teliti. Jawaban: Opsi B (Lestari). Tips: kandidat yang terbawah di satu penilaian belum tentu terendah di skor akhir; jumlahkan dulu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-071.svg"
   },
   {
     "id": "K11-A3-072",
@@ -394,7 +409,8 @@
       "c"
     ],
     "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10.<br>Opsi A (13) gugur karena memakai skor ketelitian terbaik (8) untuk Nadia; Opsi B (10) gugur karena memakai skor ketelitian 5 untuk Nadia; Opsi D (4) gugur karena lupa menambah skor komunikasi 5; Opsi E (11) gugur karena menjawab skor Mega yang tertinggi. Jawaban: Opsi C (9). Tips: Nadia terbaik di komunikasi (5) tetapi paling tidak teliti (4).",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-072.svg"
   },
   {
     "id": "K11-A3-073",
@@ -420,7 +436,8 @@
       "b"
     ],
     "pembahasan": "Urutan komunikasi: Nadia, Mega, Kirana, Olivia, Lestari (skor 5, 4, 3, 2, 1). Urutan ketelitian: Olivia, Mega, Lestari, Kirana, Nadia (skor 8, 7, 6, 5, 4). Skor akhir: Kirana 8, Lestari 7, Mega 11, Nadia 9, Olivia 10. Selisihnya 11 − 7 = 4.<br>Opsi A (3) gugur karena memakai skor terendah kedua (11 − 8); Opsi C (1) gugur karena membandingkan dua skor tertinggi (11 − 10); Opsi D (18) gugur karena menjumlahkan skor tertinggi dan terendah; Opsi E (7) gugur karena menjawab skor terendah. Jawaban: Opsi B (4). Tips: skor tertinggi dan terendah dicari dari skor akhir, bukan dari salah satu penilaian.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-A3-073.svg"
   },
   {
     "id": "K11-PR-054",
@@ -444,7 +461,8 @@
       "b"
     ],
     "pembahasan": "Setelah bertukar: Bima libur Kamis, Citra libur Senin. Dodi tetap Kamis. Jadi Bima dan Dodi libur pada hari yang sama.<br>Opsi A (Bima libur dua kali dalam minggu ini) gugur karena bertukar berarti tetap satu hari libur; Opsi C (Bima dan Citra libur pada hari yang sama) gugur karena Bima Kamis, Citra Senin; Opsi D (Dodi dan Citra libur bersama pada hari Senin) gugur karena Dodi libur Kamis, bukan Senin; Opsi E (Citra libur dua kali dalam minggu ini) gugur karena bertukar berarti tetap satu hari libur. Jawaban: Opsi B (Bima dan Dodi libur pada hari yang sama). Tips: tulis jadwal awal, terapkan pertukaran, baru bandingkan.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-PR-054.svg"
   },
   {
     "id": "K11-PR-064",
@@ -468,7 +486,8 @@
       "c"
     ],
     "pembahasan": "Jambu air < kelapa gading ≤ semua kelapa lain (gading paling rendah di antara kelapa). Jadi setiap jenis kelapa lain, termasuk kelapa hijau, lebih tinggi dari jambu air.<br>Opsi A (Pohon jambu air lebih tinggi dari pohon kelapa gading) gugur karena bertentangan dengan pernyataan pertama; Opsi B (Semua pohon kelapa sama tinggi dengan pohon jambu air) gugur karena kelapa gading lebih tinggi dari jambu air; Opsi D (Pohon jambu air lebih tinggi dari pohon kelapa hijau) gugur karena kelapa hijau lebih tinggi dari gading, apalagi dari jambu; Opsi E (Pohon jambu air sama tinggi dengan pohon kelapa sawit) gugur karena kelapa sawit (jenis kelapa lain) lebih tinggi dari gading. Jawaban: Opsi C (Pohon kelapa hijau lebih tinggi dari pohon jambu air). Tips: susun urutan di garis bilangan; \"paling rendah di kelompoknya\" jadi batas bawah kelompok itu.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-PR-064.svg"
   },
   {
     "id": "K11-AK-001",
@@ -493,7 +512,8 @@
       "c"
     ],
     "pembahasan": "Langkah 1 (fakta tetap): 07.45–10.10 = 145 menit dikurangi arahan 15 menit = 130 menit, terbagi blok pagi 07.45–08.50 (65 menit) dan blok siang 09.05–10.10 (65 menit). Beban 29 + 19 + 40 + 22 + 42 = 152 menit, kelebihan 152 − 130 = 22 menit. Langkah 2 (syarat yang memaksa): laporan harus selesai sebelum 08.50, jadi masuk blok pagi; surat yang dikerjakan setelah arahan paling cepat selesai 09.05 + 40 menit = 09.45, lewat 09.10, jadi bila dipegang Laras surat juga masuk blok pagi. Langkah 3 (eliminasi): laporan + surat = 29 + 40 = 69 menit > 65 menit, jadi surat harus didelegasikan. Cek: 07.45–08.14 laporan, 08.14–08.33 rekap, 08.50–09.05 arahan, 09.05–09.47 materi (sebelum 09.55), 09.47–10.09 buku mutasi (sebelum 10.10).<br>Opsi A (Tidak ada; semua tugas dapat dikerjakan Laras sendiri) gugur karena beban 152 menit > 130 menit waktu kerja; Opsi B (Merekap data kendaraan hilang) gugur karena 19 menit < kelebihan 22 menit: beban Laras masih 152 − 19 = 133 menit > 130 menit, dan surat tetap tidak muat di blok pagi; Opsi D (Memeriksa buku mutasi) gugur meskipun 22 menit tepat menutup kelebihan, karena laporan dan surat tetap harus masuk blok pagi: 29 + 40 = 69 > 65 menit; Opsi E (Menyiapkan materi penyuluhan) gugur karena melepas tugas terpanjang (42 menit) juga tidak mengosongkan blok pagi: 29 + 40 = 69 > 65 menit. Jawaban: Opsi C (Mengetik surat panggilan saksi). Tips: hitung kelebihan hanya untuk menyaring calon, lalu cari tugas yang terkunci di satu blok karena tenggat dan cek apakah blok itu muat; target 90 detik.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-AK-001.svg"
   },
   {
     "id": "K11-AK-002",
@@ -518,7 +538,8 @@
       "e"
     ],
     "pembahasan": "Langkah 1 (fakta tetap): blok pagi 07.45–08.50 dan blok siang 09.05–10.10 masing-masing 65 menit. Laporan (selesai sebelum 08.50) dan surat (setelah arahan paling cepat selesai 09.45, lewat 09.10) terkunci di blok pagi, padahal 29 + 40 = 69 > 65 menit, jadi surat pasti didelegasikan. Langkah 2 (syarat yang memaksa): materi tidak muat di blok pagi bersama laporan (29 + 42 = 71 > 65), jadi harus menjadi tugas pertama setelah arahan: bila didahului tugas lain, materi paling cepat selesai 09.05 + 19 + 42 = 10.06, lewat 09.55. Langkah 3 (kasus): sisa blok siang 65 − 42 = 23 menit hanya muat rekap (19) atau buku mutasi (22); blok pagi tidak muat ketiganya (29 + 19 + 22 = 70 > 65). Urutan sah: (1) laporan, rekap | materi, buku mutasi; (2) laporan, buku mutasi | materi, rekap; (3) buku mutasi, laporan | materi, rekap. Cek urutan (1), misalnya: 07.45–08.14 laporan, 08.14–08.33 rekap, 08.50–09.05 arahan, 09.05–09.47 materi, 09.47–10.09 buku mutasi.<br>Opsi A (rekap sebelum arahan) gugur karena pada urutan (2) rekap dikerjakan setelah arahan, misalnya 09.47–10.06; Opsi B (laporan pertama) gugur karena pada urutan (3) buku mutasi lebih dulu, misalnya 07.45–08.07 lalu laporan 08.07–08.36; Opsi C (surat sebelum arahan) gugur karena surat wajib didelegasikan (69 > 65 menit); Opsi D (rekap terakhir) gugur karena pada urutan (1) tugas terakhirnya buku mutasi. Jawaban: Opsi E (Materi penyuluhan adalah tugas pertama Laras setelah arahan pimpinan.). Tips: untuk PASTI, cari tugas yang posisinya dipaksa tenggat, lalu gugurkan opsi lain dengan satu jadwal tandingan yang sah; target 90 detik.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-AK-002.svg"
   },
   {
     "id": "K11-AK-003",
@@ -543,7 +564,8 @@
       "a"
     ],
     "pembahasan": "Langkah 1 (fakta tetap): Dina 13.00–14.00 = 60 menit, Eko 13.10–14.10 = 60 menit. Daftar hadir (14 menit) harus selesai paling lambat 13.20, jadi mulai paling lambat 13.06, sebelum Eko datang; maka daftar hadir pasti dikerjakan Dina sebagai tugas pertamanya (misalnya 13.00–13.14). Langkah 2 (syarat yang memaksa): pengeras suara dan spanduk dibagi satu ke tiap orang. Bila Dina juga memasang tenda, bebannya paling sedikit 14 + 30 + 24 = 68 > 60 menit; jadi tenda dikerjakan Eko lebih dulu (bila didahului tugas 24 menit, tenda baru selesai 14.04): tenda pasti 13.10–13.40. Langkah 3 (kasus): kursi tidak bisa ke Eko (30 + 20 + 24 = 74 > 60 menit), jadi kursi dikerjakan Dina, mulai paling cepat 13.40 dan selesai paling lambat 14.00: kursi pasti 13.40–14.00. Cek: Dina 13.00–13.14 daftar hadir, 13.14–13.40 pengeras suara, 13.40–14.00 kursi; Eko 13.10–13.40 tenda, 13.40–14.04 spanduk.<br>Opsi B (Dina menguji pengeras suara.) gugur karena pembagian itu bisa ditukar: misalnya Dina memasang spanduk 13.14–13.38 dan Eko menguji pengeras suara 13.40–14.06, juga sah; Opsi C (Daftar hadir disiapkan oleh Eko.) gugur karena Eko paling cepat selesai 13.10 + 14 menit = 13.24, lewat 13.20; Opsi D (Eko selesai bekerja pukul 14.06.) gugur karena pada jadwal Cek Eko selesai 14.04; Opsi E (Dina memasang tenda setelah menyiapkan daftar hadir.) gugur karena beban Dina menjadi paling sedikit 14 + 30 + 24 = 68 > 60 menit. Jawaban: Opsi A (Penataan kursi dimulai tepat pukul 13.40.). Tips: mulai dari tenggat paling ketat untuk mengunci siapa dan kapan, lalu hitung beban tiap orang; target 90 detik.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-AK-003.svg"
   },
   {
     "id": "K11-AK-004",
@@ -568,6 +590,7 @@
       "d"
     ],
     "pembahasan": "Langkah 1 (fakta tetap): Dina 13.00–14.00 = 60 menit, Eko 13.10–14.10 = 60 menit. Daftar hadir (14 menit, selesai paling lambat 13.20) harus mulai paling lambat 13.06, jadi pasti dikerjakan Dina sebagai tugas pertamanya (misalnya 13.00–13.14). Langkah 2 (syarat yang memaksa): pengeras suara dan spanduk dibagi satu ke tiap orang, jadi tiap orang memikul paling sedikit 24 menit dari pasangan ini. Langkah 3 (kasus tenda dan kursi pada orang yang sama): di Dina bebannya 14 + 30 + 20 + 24 = 88 > 60 menit; di Eko 30 + 20 + 24 = 74 > 60 menit. Keduanya gagal; Dina juga tidak bisa memegang tenda saja (14 + 30 + 24 = 68 > 60 menit), jadi Eko memasang tenda dan Dina menata kursi. Cek: Dina 13.00–13.14 daftar hadir, 13.14–13.38 spanduk, menunggu 2 menit, 13.40–14.00 kursi; Eko 13.10–13.40 tenda, 13.40–14.06 pengeras suara (sebelum 14.10).<br>Opsi A (Dina memasang spanduk.) gugur karena mungkin terjadi, seperti pada jadwal Cek; Opsi B (Eko menguji pengeras suara mulai pukul 13.40.) gugur karena mungkin terjadi: 13.40 + 26 menit = 14.06, masih sebelum 14.10; Opsi C (Dina menyelesaikan tugas keduanya pukul 13.38.) gugur karena mungkin terjadi: 13.14 + 24 menit spanduk = 13.38; Opsi E (Eko mulai memasang tenda pukul 13.10.) gugur karena justru pasti benar: tenda harus selesai 13.40 agar kursi sempat dikerjakan 13.40–14.00, sehingga tentu mungkin. Jawaban: Opsi D (Pemasangan tenda dan penataan kursi dikerjakan oleh orang yang sama.). Tips: untuk TIDAK MUNGKIN, susun satu jadwal sah yang memuat sebanyak mungkin opsi sekaligus, lalu uji sisanya dengan hitung beban; target 90 detik.",
-    "status_kunci": "ganda"
+    "status_kunci": "ganda",
+    "gambar_pembahasan": "K11-AK-004.svg"
   }
 ]

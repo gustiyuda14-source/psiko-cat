@@ -1790,5 +1790,1165 @@
   "pembahasan": "Cara cepat (geser bersama): tambahkan 3 ke kedua bilangan. 5.003 − 2.997 = 5.006 − 3.000 = 2.006.\nKenapa bisa: (a + k) − (b + k) = a − b. Selisih dua bilangan tidak berubah bila keduanya digeser sama besar, ibarat dua orang berjalan bersama: jarak mereka tetap. Pilih k supaya pengurangnya bulat.\nCara biasa: 5.003 − 2.997 bersusun dengan meminjam tiga kali berantai. Cara cepat tanpa meminjam.<br>Kenapa yang lain salah:\nOpsi A (1.994) gugur karena menggeser hanya satu bilangan ke arah berlawanan (5.000 − 3.006).\nOpsi B (2.000) gugur karena menganggap 3 dan −3 saling hapus; padahal 2.997 kurang 3, jadi selisihnya bertambah.\nOpsi C (2.016) gugur karena salah pinjam saat mengurangi bersusun.\nOpsi D (2.106) gugur karena salah pinjam pada digit ratusan.\nJawaban: Opsi E (2.006).\nTips: pada pengurangan, geser kedua bilangan searah (bukan berlawanan). Pada penjumlahan, geser berlawanan: 498 + 302 = 500 + 300.",
   "status_kunci": "ganda",
   "gambar_pembahasan": "K05-N-020.svg"
+ },
+ {
+  "id": "K05-N-021",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "85² = …",
+  "opsi": {
+   "a": "7.225",
+   "b": "7.250",
+   "c": "7.425",
+   "d": "8.025",
+   "e": "8.225"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "85*85",
+  "nilai_opsi": {
+   "a": 7225,
+   "b": 7250,
+   "c": 7425,
+   "d": 8025,
+   "e": 8225
+  },
+  "pembahasan": "Cara cepat (kuadrat berakhiran 5): ambil angka depan 8, kalikan dengan angka sesudahnya: 8 × 9 = 72. Tempel 25 di belakang: 7.225.\nKenapa bisa: tulis bilangannya sebagai 10a + 5 (di sini a = 8). (10a + 5)² = 100a² + 100a + 25 = 100 × a(a + 1) + 25. Jadi bagian ratusan selalu a × (a + 1) dan dua digit terakhir selalu 25.\nCara biasa: 85 × 85 bersusun = 425 + 6.800 = 7.225, dua baris perkalian plus penjumlahan berpindah-simpan. Cara cepat cukup satu perkalian satu digit.<br>Kenapa yang lain salah:\nOpsi B (7.250) gugur karena menempel 50 (5 × 10), bukan 5 × 5 = 25.\nOpsi C (7.425) gugur karena 8 × 9 salah dihitung 74.\nOpsi D (8.025) gugur karena angka depan dikali 10 (8 × 10 = 80), bukan 8 × 9.\nOpsi E (8.225) gugur karena 8 × 9 salah dihitung 82.\nJawaban: Opsi A (7.225).\nTips: berlaku untuk semua bilangan berakhiran 5: 95² = 9×10|25 = 9.025, 115² = 11×12|25 = 13.225.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-021.svg"
+ },
+ {
+  "id": "K05-N-022",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "168 × 5 = …",
+  "opsi": {
+   "a": "804",
+   "b": "820",
+   "c": "840",
+   "d": "1.680",
+   "e": "8.400"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "168*5",
+  "nilai_opsi": {
+   "a": 804,
+   "b": 820,
+   "c": 840,
+   "d": 1680,
+   "e": 8400
+  },
+  "pembahasan": "Cara cepat (kali 5 = bagi 2 kali 10): 5 = 10 ÷ 2. Bagi 168 dengan 2 = 84, lalu tempel satu nol: 840.\nKenapa bisa: 168 × 5 = 168 × 10 ÷ 2 = (168 ÷ 2) × 10. Membagi 2 jauh lebih ringan daripada mengalikan dengan 5, dan × 10 hanya menambah nol.\nCara biasa: 168 × 5 bersusun: 8×5 = 40 (simpan 4), 6×5 = 30 + 4 = 34 (simpan 3), 1×5 = 5 + 3 = 8 → 840. Tiga kali simpan-menyimpan.<br>Kenapa yang lain salah:\nOpsi A (804) gugur karena nol disisipkan di tempat yang salah (84 dibelah menjadi 8|0|4).\nOpsi B (820) gugur karena 168 ÷ 2 salah dihitung 82.\nOpsi D (1.680) gugur karena hanya dikali 10, lupa dibagi 2.\nOpsi E (8.400) gugur karena menambah dua nol setelah dibagi 2 (dikali 100).\nJawaban: Opsi C (840).\nTips: bilangan ganjil pun bisa: 137 × 5 = 1.370 ÷ 2 = 685. Kali 10 dulu, baru bagi 2.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-022.svg"
+ },
+ {
+  "id": "K05-N-023",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "76 × 25 = …",
+  "opsi": {
+   "a": "190",
+   "b": "1.520",
+   "c": "1.700",
+   "d": "1.800",
+   "e": "1.900"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "76*25",
+  "nilai_opsi": {
+   "a": 190,
+   "b": 1520,
+   "c": 1700,
+   "d": 1800,
+   "e": 1900
+  },
+  "pembahasan": "Cara cepat (kali 25 = bagi 4 kali 100): 25 = 100 ÷ 4. Bagi 76 dengan 4 = 19, lalu kalikan 100: 1.900.\nKenapa bisa: 25 = 100/4, jadi 76 × 25 = 76 × 100 ÷ 4 = (76 ÷ 4) × 100. Empat koin Rp25 selalu Rp100; setiap 4 satuan menjadi 100.\nCara biasa: 76 × 25 bersusun: 76×5 = 380, 76×20 = 1.520, jumlah 1.900. Dua perkalian plus penjumlahan.<br>Kenapa yang lain salah:\nOpsi A (190) gugur karena dikali 10, bukan 100.\nOpsi B (1.520) gugur karena memakai × 20, lupa tambahan × 5.\nOpsi C (1.700) gugur karena 76 ÷ 4 salah dihitung 17.\nOpsi D (1.800) gugur karena 76 ÷ 4 salah dihitung 18.\nJawaban: Opsi E (1.900).\nTips: bagi 4 = bagi 2 dua kali (76 → 38 → 19). Berlaku juga ke 25 dalam persen: 25% = ¼.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-023.svg"
+ },
+ {
+  "id": "K05-N-024",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "278 × 11 = …",
+  "opsi": {
+   "a": "2.178",
+   "b": "2.780",
+   "c": "2.958",
+   "d": "3.058",
+   "e": "3.068"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "278*11",
+  "nilai_opsi": {
+   "a": 2178,
+   "b": 2780,
+   "c": 2958,
+   "d": 3058,
+   "e": 3068
+  },
+  "pembahasan": "Cara cepat (kali 11 tiga digit): satuan tetap 8. Puluhan = 7 + 8 = 15 → tulis 5, simpan 1. Ratusan = 2 + 7 = 9, tambah simpanan 1 = 10 → tulis 0, simpan 1. Ribuan = 2 + 1 = 3. Hasil 3.058.\nKenapa bisa: 278 × 11 = 278 × 10 + 278 = 2.780 + 278. Menjumlah dua baris itu kolom demi kolom (0 + 8, 8 + 7, 7 + 2, 2) berarti tiap kolom adalah jumlah dua digit yang bertetangga.\nCara biasa: 278 × 11 bersusun: dua baris 2.780 dan 278 lalu dijumlah, hasilnya sama 3.058. Cara cepat tidak perlu menulis dua baris.<br>Kenapa yang lain salah:\nOpsi A (2.178) gugur karena menjumlah semua digit (2 + 7 + 8 = 17) lalu menempel di tengah.\nOpsi B (2.780) gugur karena hanya dikali 10, lupa menambah 278.\nOpsi C (2.958) gugur karena simpanan 1 dari 7 + 8 = 15 tidak ditambahkan ke kolom depan.\nOpsi E (3.068) gugur karena 7 + 8 dihitung 16, bukan 15.\nJawaban: Opsi D (3.058).\nTips: tulis simpanan kecil di atas kolom supaya tidak lupa. 4 digit pun sama: 1.234 × 11 = 13.574.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-024.svg"
+ },
+ {
+  "id": "K05-N-025",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "47 × 99 = …",
+  "opsi": {
+   "a": "4.653",
+   "b": "4.663",
+   "c": "4.700",
+   "d": "4.747",
+   "e": "4.753"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "47*99",
+  "nilai_opsi": {
+   "a": 4653,
+   "b": 4663,
+   "c": 4700,
+   "d": 4747,
+   "e": 4753
+  },
+  "pembahasan": "Cara cepat (kali 99 = kali 100 kurang 1): 99 = 100 − 1. 47 × 100 = 4.700, kurangi satu salinan 47: 4.700 − 47 = 4.653.\nKenapa bisa: 47 × 99 = 47 × (100 − 1) = 4.700 − 47 (sifat distributif). 99 kurang satu dari 100, jadi yang dibuang tepat satu salinan 47.\nCara biasa: 47 × 99 bersusun: 47×9 = 423, 47×90 = 4.230, jumlah 4.653. Dua perkalian plus penjumlahan berpindah-simpan.<br>Kenapa yang lain salah:\nOpsi B (4.663) gugur karena 4.700 − 47 salah pinjam (700 − 47 dihitung 663).\nOpsi C (4.700) gugur karena hanya dikali 100, lupa dikurangi 47.\nOpsi D (4.747) gugur karena 47 ditambah, bukan dikurangi.\nOpsi E (4.753) gugur karena ratusan tidak dikurangi setelah meminjam saat 4.700 − 47.\nJawaban: Opsi A (4.653).\nTips: pola yang sama: × 999 = × 1.000 − 1 salinan, × 9 = × 10 − 1 salinan (47 × 9 = 470 − 47 = 423).",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-025.svg"
+ },
+ {
+  "id": "K05-N-026",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "74 × 66 = …",
+  "opsi": {
+   "a": "4.224",
+   "b": "4.884",
+   "c": "4.896",
+   "d": "4.900",
+   "e": "4.916"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "74*66",
+  "nilai_opsi": {
+   "a": 4224,
+   "b": 4884,
+   "c": 4896,
+   "d": 4900,
+   "e": 4916
+  },
+  "pembahasan": "Cara cepat (selisih kuadrat): 74 dan 66 sama jauh dari 70 (70 + 4 dan 70 − 4). Kuadratkan tengah: 70² = 4.900. Kurangi kuadrat jarak: 4² = 16. 4.900 − 16 = 4.884.\nKenapa bisa: (a + b)(a − b) = a² − b². Di sini a = 70 dan b = 4. Dua suku silang (+70×4 dan −70×4) saling hapus, sisa 70² − 4².\nCara biasa: 74 × 66 bersusun: 74×6 = 444, 74×60 = 4.440, jumlah 4.884. Cara cepat cukup satu kuadrat dan satu kuadrat kecil.<br>Kenapa yang lain salah:\nOpsi A (4.224) gugur karena 7 × 6 = 42 dan 4 × 6 = 24 ditempel tanpa silang.\nOpsi C (4.896) gugur karena 4 dikurangkan, bukan 4² = 16.\nOpsi D (4.900) gugur karena lupa mengurangi 4² = 16.\nOpsi E (4.916) gugur karena 16 ditambah, bukan dikurangi.\nJawaban: Opsi B (4.884).\nTips: syaratnya dua bilangan sama jauh dari angka bulat: 48 × 52 = 50² − 2² = 2.496, 83 × 77 = 80² − 3² = 6.391.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-026.svg"
+ },
+ {
+  "id": "K05-N-027",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "38 × 15 = …",
+  "opsi": {
+   "a": "380",
+   "b": "385",
+   "c": "399",
+   "d": "570",
+   "e": "760"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "38*15",
+  "nilai_opsi": {
+   "a": 380,
+   "b": 385,
+   "c": 399,
+   "d": 570,
+   "e": 760
+  },
+  "pembahasan": "Cara cepat (kali 15 = kali 10 ditambah setengahnya): 15 = 10 + 5, dan × 5 adalah setengah dari × 10. 38 × 10 = 380; setengahnya 190; jumlah 380 + 190 = 570.\nKenapa bisa: 38 × 15 = 38 × 10 + 38 × 5, dan 38 × 5 = (38 × 10) ÷ 2 = 190. Jadi × 15 = × 10 ditambah setengah dari hasil × 10 (= 1,5 × hasil × 10).\nCara biasa: 38 × 15 bersusun: 38×5 = 190, 38×10 = 380, jumlah 570. Cara cepat cukup geser, bagi 2, jumlahkan.<br>Kenapa yang lain salah:\nOpsi A (380) gugur karena hanya dikali 10, lupa tambahan 190.\nOpsi B (385) gugur karena 15 = 10 + 5 dihitung 38 × 10 + 5 (5 tidak dikali 38).\nOpsi C (399) gugur karena setengahnya diambil dari 38 (19), bukan dari 380.\nOpsi E (760) gugur karena dikali 20, bukan 15.\nJawaban: Opsi D (570).\nTips: cek cepat: hasil × 15 selalu 1,5 kali hasil × 10, jadi 570 = 380 × 1,5. Berlaku untuk bilangan apa pun: 64 × 15 = 640 + 320 = 960.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-027.svg"
+ },
+ {
+  "id": "K05-N-028",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "43 × 47 = …",
+  "opsi": {
+   "a": "1.621",
+   "b": "2.010",
+   "c": "2.021",
+   "d": "2.100",
+   "e": "2.421"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "43*47",
+  "nilai_opsi": {
+   "a": 1621,
+   "b": 2010,
+   "c": 2021,
+   "d": 2100,
+   "e": 2421
+  },
+  "pembahasan": "Cara cepat (puluhan sama, satuan berjumlah 10): syaratnya puluhan sama (4) dan satuan berjumlah 10 (3 + 7). Depan: 4 × (4 + 1) = 20. Belakang: 3 × 7 = 21. Tempel: 2.021.\nKenapa bisa: (10a + x)(10a + y) dengan x + y = 10 = 100a² + 10a(x + y) + xy = 100a² + 100a + xy = 100 × a(a + 1) + xy. Trik akhiran 5 hanyalah kasus x = y = 5.\nCara biasa: 43 × 47 bersusun: 43×7 = 301, 43×40 = 1.720, jumlah 2.021. Cara cepat cukup dua perkalian kecil.<br>Kenapa yang lain salah:\nOpsi A (1.621) gugur karena angka depan 4 dikalikan dirinya sendiri (4 × 4 = 16) lalu ditempel 21; yang benar 4 × 5 = 20.\nOpsi B (2.010) gugur karena belakang diisi 3 + 7 = 10, padahal harus 3 × 7 = 21.\nOpsi D (2.100) gugur karena menempel 100 (memakai basis 100).\nOpsi E (2.421) gugur karena 4 × 6 = 24: angka sesudah 4 salah dihitung 6.\nJawaban: Opsi C (2.021).\nTips: cek dulu syaratnya: 62 × 68 (2 + 8 = 10) = 6×7|16 = 4.216, tetapi 63 × 68 bukan karena 3 + 8 = 11.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-028.svg"
+ },
+ {
+  "id": "K05-N-029",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "52² = …",
+  "opsi": {
+   "a": "2.304",
+   "b": "2.504",
+   "c": "2.604",
+   "d": "2.700",
+   "e": "2.704"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "52*52",
+  "nilai_opsi": {
+   "a": 2304,
+   "b": 2504,
+   "c": 2604,
+   "d": 2700,
+   "e": 2704
+  },
+  "pembahasan": "Cara cepat (kuadrat dekat 50): tulis 52 = 50 + 2. 50² = 2.500. Tambah dua pita: 2 × 50 × 2 = 200. Tambah pojok kecil: 2² = 4. Total 2.704.\nKenapa bisa: (a + b)² = a² + 2ab + b². Persegi 52 × 52 terdiri dari persegi 50 × 50, dua pita 50 × 2, dan satu pojok 2 × 2.\nCara biasa: 52 × 52 bersusun: 52×2 = 104, 52×50 = 2.600, jumlah 2.704. Cara cepat memakai angka bulat 50.<br>Kenapa yang lain salah:\nOpsi A (2.304) gugur karena suku tengah dikurangi (memakai rumus (a − b)²).\nOpsi B (2.504) gugur karena hanya 50² + 2²; dua pita 2 × 50 × 2 terlewat.\nOpsi C (2.604) gugur karena dua pita dihitung 100 (50 × 2 saja, bukan dua kali).\nOpsi D (2.700) gugur karena lupa pojok 2² = 4.\nJawaban: Opsi E (2.704).\nTips: untuk yang di bawah 50 tanda suku tengah berubah: 48² = 2.500 − 200 + 4 = 2.304.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-029.svg"
+ },
+ {
+  "id": "K05-N-030",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-KALI",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "102 × 97 = …",
+  "opsi": {
+   "a": "9.794",
+   "b": "9.894",
+   "c": "9.900",
+   "d": "9.906",
+   "e": "9.994"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "102*97",
+  "nilai_opsi": {
+   "a": 9794,
+   "b": 9894,
+   "c": 9900,
+   "d": 9906,
+   "e": 9994
+  },
+  "pembahasan": "Cara cepat (basis 100 beda arah): 102 = 100 + 2 dan 97 = 100 − 3. Silang: 102 − 3 = 99 (atau 97 + 2). Pojok: 2 × (−3) = −6. Hasil 99|00 − 6 = 9.900 − 6 = 9.894.\nKenapa bisa: (100 + 2)(100 − 3) = 10.000 − 300 + 200 − 6 = 10.000 − 100 − 6 = 9.900 − 6. Silang (2 − 3 = −1) dikali 100 memberi −100, lalu pojok 2 × (−3) = −6.\nCara biasa: 102 × 97 = 102 × 100 − 102 × 3 = 10.200 − 306 = 9.894. Cara cepat memakai satu silang dan satu perkalian kecil.<br>Kenapa yang lain salah:\nOpsi A (9.794) gugur karena meminjam dua kali (99 menjadi 97).\nOpsi C (9.900) gugur karena lupa suku kecil 2 × (−3) = −6.\nOpsi D (9.906) gugur karena −6 dibaca +6.\nOpsi E (9.994) gugur karena −6 ditempel sebagai 94 tanpa meminjam 1 dari 99.\nJawaban: Opsi B (9.894).\nTips: beda arah selalu menghasilkan pojok negatif: kurangkan, jangan tempel. Kalau sama-sama di atas 100, pojok positif dan ditempel.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-030.svg"
+ },
+ {
+  "id": "K05-N-031",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "28% dari 50 = …",
+  "opsi": {
+   "a": "14",
+   "b": "22",
+   "c": "28",
+   "d": "78",
+   "e": "140"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "0.28*50",
+  "nilai_opsi": {
+   "a": 14,
+   "b": 22,
+   "c": 28,
+   "d": 78,
+   "e": 140
+  },
+  "pembahasan": "Cara cepat (persen dibalik): tukar: 28% dari 50 = 50% dari 28. 50% = setengah, jadi 28 ÷ 2 = 14.\nKenapa bisa: 28/100 × 50 = 50/100 × 28 karena perkalian boleh ditukar urutannya. Pilih sisi yang persennya mudah (10%, 20%, 25%, 50%).\nCara biasa: 0,28 × 50 = 14,00: perkalian desimal yang rawan salah letak koma.<br>Kenapa yang lain salah:\nOpsi B (22) gugur karena 50 − 28, bukan persen.\nOpsi C (28) gugur karena 28% dari 100 (50 diganti 100).\nOpsi D (78) gugur karena 50 + 28, bukan persen.\nOpsi E (140) gugur karena koma kurang digeser (1.400 ÷ 10).\nJawaban: Opsi A (14).\nTips: persen mudah: 10, 20, 25, 50. 4% dari 75 = 75% dari 4 = 3.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-031.svg"
+ },
+ {
+  "id": "K05-N-032",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "33⅓% dari 450 = …",
+  "opsi": {
+   "a": "90",
+   "b": "112,5",
+   "c": "135",
+   "d": "148,5",
+   "e": "150"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "450/3",
+  "nilai_opsi": {
+   "a": 90,
+   "b": 112.5,
+   "c": 135,
+   "d": 148.5,
+   "e": 150
+  },
+  "pembahasan": "Cara cepat (sepertiga): 33⅓% = ⅓. 450 ÷ 3 = 150.\nKenapa bisa: 33⅓% = (100/3)/100 = 1/3. Persen 'kembar tiga' selalu pecahan per 3 atau per 6: 33⅓% = ⅓, 66⅔% = ⅔, 16⅔% = 1/6, 83⅓% = 5/6.\nCara biasa: 450 × 0,3333… tidak berhenti; kalau dibulatkan 0,33 hasilnya 148,5 yang hampir benar tapi bukan.<br>Kenapa yang lain salah:\nOpsi A (90) gugur karena dianggap ⅕ (20%).\nOpsi B (112,5) gugur karena dianggap 25% (¼).\nOpsi C (135) gugur karena 33⅓% dianggap 30%.\nOpsi D (148,5) gugur karena 33⅓% dibulatkan jadi 33%.\nJawaban: Opsi E (150).\nTips: begitu melihat ⅓ di belakang persen, langsung ganti ke pecahan per 3 atau per 6.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-032.svg"
+ },
+ {
+  "id": "K05-N-033",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "95% dari 480 = …",
+  "opsi": {
+   "a": "24",
+   "b": "456",
+   "c": "470",
+   "d": "475",
+   "e": "504"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "0.95*480",
+  "nilai_opsi": {
+   "a": 24,
+   "b": 456,
+   "c": 470,
+   "d": 475,
+   "e": 504
+  },
+  "pembahasan": "Cara cepat (persen dekat 100): 95% = 100% − 5%. 5% dari 480 = 480 ÷ 20 = 24. 480 − 24 = 456.\nKenapa bisa: 95% × 480 = (100% − 5%) × 480 = 480 − 24. Lebih ringan menghitung bagian kecil yang dibuang daripada 95 bagian yang tersisa.\nCara biasa: 480 × 0,95 = 480 × 0,9 + 480 × 0,05 = 432 + 24 = 456. Dua perkalian lalu penjumlahan.<br>Kenapa yang lain salah:\nOpsi A (24) gugur karena hanya menghitung 5%, tidak dikurangkan dari 480.\nOpsi C (470) gugur karena 5% dari 480 dihitung 10.\nOpsi D (475) gugur karena 480 dikurangi 5 (bukan 5%).\nOpsi E (504) gugur karena menambah 5% (105%).\nJawaban: Opsi B (456).\nTips: persen mendekati 100 (90, 95, 98): hitung sisanya, lalu kurangkan. 98% dari 350 = 350 − 7 = 343.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-033.svg"
+ },
+ {
+  "id": "K05-N-034",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "15% dari 360 = …",
+  "opsi": {
+   "a": "54",
+   "b": "72",
+   "c": "90",
+   "d": "108",
+   "e": "540"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "0.15*360",
+  "nilai_opsi": {
+   "a": 54,
+   "b": 72,
+   "c": 90,
+   "d": 108,
+   "e": 540
+  },
+  "pembahasan": "Cara cepat (10% ditambah setengahnya): 10% dari 360 = 36 (geser koma satu langkah). 5% = setengah dari 10% = 18. 15% = 36 + 18 = 54.\nKenapa bisa: 15% = 10% + 5%, dan 5% = ½ × 10%. Mencari 10% hanya menggeser koma, setengahnya mudah dibagi 2.\nCara biasa: 360 × 15 = 5.400, lalu ÷ 100 = 54: perkalian dua digit lalu geser koma.<br>Kenapa yang lain salah:\nOpsi B (72) gugur karena 5% dihitung 36 (sama dengan 10%).\nOpsi C (90) gugur karena 15% dianggap 25%.\nOpsi D (108) gugur karena 15% dianggap 30%.\nOpsi E (540) gugur karena koma tidak digeser sama sekali.\nJawaban: Opsi A (54).\nTips: kerangka 10% + 5% juga untuk 35% (30% + 5%), 45%, 65%, … Bangun dari 10% dulu.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-034.svg"
+ },
+ {
+  "id": "K05-N-035",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "66⅔% dari 270 = …",
+  "opsi": {
+   "a": "90",
+   "b": "135",
+   "c": "178,2",
+   "d": "180",
+   "e": "189"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "270/3*2",
+  "nilai_opsi": {
+   "a": 90,
+   "b": 135,
+   "c": 178.2,
+   "d": 180,
+   "e": 189
+  },
+  "pembahasan": "Cara cepat (dua pertiga): 66⅔% = ⅔. 270 ÷ 3 = 90, lalu × 2 = 180.\nKenapa bisa: 66⅔% = (200/3)/100 = 2/3. Keluarga 'sepertiga': 33⅓% = ⅓, 66⅔% = ⅔, 16⅔% = 1/6, 83⅓% = 5/6.\nCara biasa: 270 × 0,6666… tidak berhenti; pembulatan 0,67 menghasilkan 180,9 yang bukan jawaban pasti.<br>Kenapa yang lain salah:\nOpsi A (90) gugur karena memakai ⅓ (hanya satu bagian).\nOpsi B (135) gugur karena memakai ½.\nOpsi C (178,2) gugur karena 66⅔% dibulatkan jadi 66%.\nOpsi E (189) gugur karena dianggap 70%.\nJawaban: Opsi D (180).\nTips: kalau ada ⅔ di belakang persen, bagi 3 dulu lalu kalikan banyaknya bagian.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-035.svg"
+ },
+ {
+  "id": "K05-N-036",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "62,5% dari 320 = …",
+  "opsi": {
+   "a": "80",
+   "b": "120",
+   "c": "160",
+   "d": "192",
+   "e": "200"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "0.625*320",
+  "nilai_opsi": {
+   "a": 80,
+   "b": 120,
+   "c": 160,
+   "d": 192,
+   "e": 200
+  },
+  "pembahasan": "Cara cepat (persen jangkar per 8): 62,5% = 5/8. 320 ÷ 8 = 40, lalu 40 × 5 = 200.\nKenapa bisa: 62,5% = 62,5/100 = 625/1.000 = 5/8. Semua kelipatan 12,5% adalah pecahan per 8 (12,5% = 1/8, 37,5% = 3/8, 62,5% = 5/8, 87,5% = 7/8).\nCara biasa: 320 × 0,625 = perkalian tiga digit desimal. Cara cepat: satu pembagian dan satu perkalian satu digit.<br>Kenapa yang lain salah:\nOpsi A (80) gugur karena memakai ¼.\nOpsi B (120) gugur karena memakai 3/8 (37,5%).\nOpsi C (160) gugur karena 62,5% dianggap 50%.\nOpsi D (192) gugur karena 62,5% dianggap 60%.\nJawaban: Opsi E (200).\nTips: hafal jangkar per 8: 1/8 = 12,5%, 3/8 = 37,5%, 5/8 = 62,5%, 7/8 = 87,5%.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-036.svg"
+ },
+ {
+  "id": "K05-N-037",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "Harga barang Rp250.000 mendapat diskon 20%, lalu diskon tambahan 10% dari harga setelah diskon pertama. Harga akhirnya = …",
+  "opsi": {
+   "a": "Rp175.000",
+   "b": "Rp180.000",
+   "c": "Rp200.000",
+   "d": "Rp225.000",
+   "e": "Rp245.000"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "250000*0.8*0.9",
+  "nilai_opsi": {
+   "a": 175000,
+   "b": 180000,
+   "c": 200000,
+   "d": 225000,
+   "e": 245000
+  },
+  "pembahasan": "Cara cepat (diskon berantai): diskon berantai = kalikan sisa harganya. Diskon 20% menyisakan 80% (0,8), diskon 10% menyisakan 90% (0,9). 0,8 × 0,9 = 0,72. 72% × 250.000 = 180.000.\nKenapa bisa: diskon kedua dihitung dari harga yang sudah turun, bukan dari harga awal. Total diskon = 1 − 0,8 × 0,9 = 0,28 = 28%, bukan 30%.\nCara biasa: 250.000 × 20% = 50.000 → 200.000; 200.000 × 10% = 20.000 → 180.000. Dua kali hitung dan dua kali kurang.<br>Kenapa yang lain salah:\nOpsi A (Rp175.000) gugur karena kedua diskon dijumlah (30%) dari harga awal.\nOpsi C (Rp200.000) gugur karena hanya diskon pertama.\nOpsi D (Rp225.000) gugur karena hanya diskon kedua.\nOpsi E (Rp245.000) gugur karena kedua persen dikalikan (20% × 10% = 2%).\nJawaban: Opsi B (Rp180.000).\nTips: diskon berantai selalu lebih kecil dari jumlah kedua diskon. Naik berantai pun sama: kalikan faktornya.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-037.svg"
+ },
+ {
+  "id": "K05-N-038",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "Nilai ujian naik dari 40 menjadi 50. Persentase kenaikannya adalah …",
+  "opsi": {
+   "a": "10%",
+   "b": "20%",
+   "c": "25%",
+   "d": "80%",
+   "e": "125%"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "(50-40)/40*100",
+  "nilai_opsi": {
+   "a": 10,
+   "b": 20,
+   "c": 25,
+   "d": 80,
+   "e": 125
+  },
+  "pembahasan": "Cara cepat (persen naik = selisih ÷ nilai awal): persen naik = selisih ÷ nilai AWAL. Selisih 50 − 40 = 10. 10 ÷ 40 = ¼ = 25%.\nKenapa bisa: persen selalu dihitung terhadap pembanding. Kalimat 'naik dari 40' berarti pembandingnya 40. Dibagi 50 (10 ÷ 50 = 20%) hanya benar untuk penurunan dari 50 kembali ke 40.\nCara biasa: (50 − 40) ÷ 40 × 100% = 25%. Rumusnya sama; yang sering salah adalah memilih pembagi (nilai awal atau nilai akhir).<br>Kenapa yang lain salah:\nOpsi A (10%) gugur karena selisih 10 langsung disebut persen.\nOpsi B (20%) gugur karena selisih dibagi nilai akhir (10 ÷ 50).\nOpsi D (80%) gugur karena nilai awal dibagi nilai akhir (40 ÷ 50).\nOpsi E (125%) gugur karena nilai akhir dibagi nilai awal (50 ÷ 40) disebut kenaikan.\nJawaban: Opsi C (25%).\nTips: naik 25% dan turun 20% adalah pasangan yang saling membatalkan (5/4 dan 4/5).",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-038.svg"
+ },
+ {
+  "id": "K05-N-039",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "Harga barang Rp80.000 naik 25%, kemudian turun 20%. Harga akhirnya = …",
+  "opsi": {
+   "a": "Rp60.000",
+   "b": "Rp64.000",
+   "c": "Rp76.000",
+   "d": "Rp80.000",
+   "e": "Rp84.000"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "80000*1.25*0.8",
+  "nilai_opsi": {
+   "a": 60000,
+   "b": 64000,
+   "c": 76000,
+   "d": 80000,
+   "e": 84000
+  },
+  "pembahasan": "Cara cepat (naik lalu turun, dasar berbeda): naik 25% = × 5/4, turun 20% = × 4/5. 5/4 × 4/5 = 1, jadi harganya kembali ke Rp80.000.\nKenapa bisa: 1,25 × 0,8 = 1. Kenaikan 25% dihitung dari 80.000 (menjadi 100.000), penurunan 20% dihitung dari 100.000 (kembali 80.000). Dasar hitungnya berbeda, jadi naik 25% tidak dibatalkan oleh turun 25%.\nCara biasa: 80.000 × 25% = 20.000 → 100.000; 100.000 × 20% = 20.000 → 80.000. Dua kali hitung.<br>Kenapa yang lain salah:\nOpsi A (Rp60.000) gugur karena kenaikan 25% dibaca penurunan 25%.\nOpsi B (Rp64.000) gugur karena hanya penurunan 20%.\nOpsi C (Rp76.000) gugur karena dikira turun 5% (selisih 25 − 20 dibalik).\nOpsi E (Rp84.000) gugur karena dikira naik 5% (selisih 25 − 20).\nJawaban: Opsi D (Rp80.000).\nTips: naik p% lalu turun q% impas bila (1 + p)(1 − q) = 1: 25% naik pasangannya 20% turun, 50% naik pasangannya 33⅓% turun.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-039.svg"
+ },
+ {
+  "id": "K05-N-040",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-PERSEN",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "Gaji naik 10% setiap tahun selama 2 tahun berturut-turut. Kenaikan gaji total selama 2 tahun adalah …",
+  "opsi": {
+   "a": "11%",
+   "b": "20%",
+   "c": "21%",
+   "d": "22%",
+   "e": "33,1%"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "(1.1*1.1-1)*100",
+  "nilai_opsi": {
+   "a": 11,
+   "b": 20,
+   "c": 21,
+   "d": 22,
+   "e": 33.1
+  },
+  "pembahasan": "Cara cepat (naik berantai (bunga atas bunga)): naik 10% = × 1,1. Dua kali: 1,1 × 1,1 = 1,21. Kenaikan total = 21%.\nKenapa bisa: (1 + p)² = 1 + 2p + p². Dengan p = 0,1: 1 + 0,2 + 0,01 = 1,21. Tambahan p² (1%) adalah kenaikan atas kenaikan tahun pertama.\nCara biasa: 100 → 110 → 121: hitung per tahun lalu bandingkan dengan 100.<br>Kenapa yang lain salah:\nOpsi A (11%) gugur karena 1,1² dibaca 11%.\nOpsi B (20%) gugur karena kedua kenaikan dijumlah (10% + 10%).\nOpsi D (22%) gugur karena 1,1 × 1,1 salah dihitung 1,22.\nOpsi E (33,1%) gugur karena dihitung untuk 3 tahun.\nJawaban: Opsi C (21%).\nTips: kenaikan berantai selalu lebih besar dari penjumlahan persennya; penurunan berantai selalu lebih kecil dari penjumlahan persennya.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-040.svg"
+ },
+ {
+  "id": "K05-N-041",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "6,5 ÷ 0,25 = …",
+  "opsi": {
+   "a": "1,625",
+   "b": "2,6",
+   "c": "6,5",
+   "d": "13",
+   "e": "26"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "6.5/0.25",
+  "nilai_opsi": {
+   "a": 1.625,
+   "b": 2.6,
+   "c": 6.5,
+   "d": 13,
+   "e": 26
+  },
+  "pembahasan": "Cara cepat (bagi seperempat = kali 4): 0,25 = ¼. Membagi dengan ¼ sama dengan mengalikan 4. 6,5 × 4 = 26.\nKenapa bisa: dalam 1 ada 4 buah 0,25, jadi membagi dengan 0,25 berarti menghitung berapa 0,25 yang muat, yaitu 4 kali lipat. ÷ ¼ = × 4 (dibalik).\nCara biasa: 6,5 ÷ 0,25 → kedua bilangan × 100: 650 ÷ 25 = 26, pembagian dua digit bersusun.<br>Kenapa yang lain salah:\nOpsi A (1,625) gugur karena dibagi 4, bukan dikali 4.\nOpsi B (2,6) gugur karena koma digeser ke kiri satu langkah.\nOpsi C (6,5) gugur karena tidak diubah (÷ 0,25 dianggap ÷ 1).\nOpsi D (13) gugur karena dikali 2 (0,25 dianggap ½).\nJawaban: Opsi E (26).\nTips: ÷ 0,5 = × 2, ÷ 0,25 = × 4, ÷ 0,2 = × 5, ÷ 0,1 = × 10.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-041.svg"
+ },
+ {
+  "id": "K05-N-042",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "1.275 ÷ 5 = …",
+  "opsi": {
+   "a": "255",
+   "b": "265",
+   "c": "300",
+   "d": "510",
+   "e": "2.550"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "1275/5",
+  "nilai_opsi": {
+   "a": 255,
+   "b": 265,
+   "c": 300,
+   "d": 510,
+   "e": 2550
+  },
+  "pembahasan": "Cara cepat (bagi 5 = kali 2 geser koma): 5 = 10 ÷ 2. Kalikan 1.275 dengan 2 = 2.550, lalu geser koma satu langkah (÷ 10) = 255.\nKenapa bisa: 1.275/5 = (1.275 × 2)/(5 × 2) = 2.550/10. Pembagi 5 menjadi 10 saat pembilangnya dikali 2, dan membagi 10 hanya menggeser koma.\nCara biasa: 1.275 ÷ 5 bersusun: 12 ÷ 5 = 2 sisa 2, 27 ÷ 5 = 5 sisa 2, 25 ÷ 5 = 5 → 255. Tiga langkah bagi dengan sisa.<br>Kenapa yang lain salah:\nOpsi B (265) gugur karena bagi bersusun salah pada satuan.\nOpsi C (300) gugur karena dibulatkan ke 1.500 lebih dulu.\nOpsi D (510) gugur karena dikali 2 lalu dibagi 5 (÷ 10 dikira ÷ 5).\nOpsi E (2.550) gugur karena hanya dikali 2, lupa ÷ 10.\nJawaban: Opsi A (255).\nTips: bila bilangan genap, bagi 2 dulu lalu geser: 840 ÷ 5 = 84 × 2 = 168 (÷ 10 × 2 sama saja).",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-042.svg"
+ },
+ {
+  "id": "K05-N-043",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "3.600 ÷ 50 = …",
+  "opsi": {
+   "a": "7,2",
+   "b": "72",
+   "c": "120",
+   "d": "720",
+   "e": "7.200"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "3600/50",
+  "nilai_opsi": {
+   "a": 7.2,
+   "b": 72,
+   "c": 120,
+   "d": 720,
+   "e": 7200
+  },
+  "pembahasan": "Cara cepat (bagi 50 = kali 2 bagi 100): 50 = 100 ÷ 2. Kalikan 3.600 dengan 2 = 7.200, lalu ÷ 100 (hilangkan dua nol) = 72.\nKenapa bisa: 3.600/50 = (3.600 × 2)/(50 × 2) = 7.200/100. Pembagi 50 menjadi 100 saat pembilangnya digandakan, dan membagi 100 hanya menghapus dua nol.\nCara biasa: 3.600 ÷ 50 bersusun: 360 ÷ 5 = 72 setelah mencoret satu nol, atau 36 × 100 ÷ 50.<br>Kenapa yang lain salah:\nOpsi A (7,2) gugur karena koma digeser tiga langkah (÷ 500).\nOpsi C (120) gugur karena dibagi 30, bukan 50.\nOpsi D (720) gugur karena dibagi 5, bukan 50.\nOpsi E (7.200) gugur karena hanya dikali 2, lupa ÷ 100.\nJawaban: Opsi B (72).\nTips: ÷ 50 = × 2 ÷ 100, ÷ 25 = × 4 ÷ 100, ÷ 5 = × 2 ÷ 10, ÷ 125 = × 8 ÷ 1.000.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-043.svg"
+ },
+ {
+  "id": "K05-N-044",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "7.250 ÷ 125 = …",
+  "opsi": {
+   "a": "58",
+   "b": "72,5",
+   "c": "580",
+   "d": "725",
+   "e": "5.800"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "7250/125",
+  "nilai_opsi": {
+   "a": 58,
+   "b": 72.5,
+   "c": 580,
+   "d": 725,
+   "e": 5800
+  },
+  "pembahasan": "Cara cepat (bagi 125 = kali 8 bagi 1.000): 125 = 1.000 ÷ 8. Kalikan 7.250 dengan 8 (gandakan tiga kali) = 58.000, lalu ÷ 1.000 = 58.\nKenapa bisa: 7.250/125 = (7.250 × 8)/(125 × 8) = 58.000/1.000. 125 × 8 = 1.000 membuat pembagi menjadi bulat, sehingga membagi cukup menggeser koma tiga langkah.\nCara biasa: 7.250 ÷ 125 bersusun: 725 ÷ 12,5, atau 7.250 ÷ 5 ÷ 5 ÷ 5, beberapa kali sisa dan koma.<br>Kenapa yang lain salah:\nOpsi B (72,5) gugur karena 7.250 ÷ 100 (125 diabaikan).\nOpsi C (580) gugur karena dibagi 100, bukan 1.000.\nOpsi D (725) gugur karena hanya digeser satu langkah (7.250 ÷ 10), 125 diabaikan.\nOpsi E (5.800) gugur karena dibagi 10, bukan 1.000.\nJawaban: Opsi A (58).\nTips: kali 8 = gandakan tiga kali: 7.250 → 14.500 → 29.000 → 58.000.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-044.svg"
+ },
+ {
+  "id": "K05-N-045",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "Manakah bilangan berikut yang habis dibagi 9?",
+  "opsi": {
+   "a": "3.462",
+   "b": "5.217",
+   "c": "6.034",
+   "d": "7.236",
+   "e": "9.371"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "pilih(v => v % 9 === 0)",
+  "nilai_opsi": {
+   "a": 3462,
+   "b": 5217,
+   "c": 6034,
+   "d": 7236,
+   "e": 9371
+  },
+  "pembahasan": "Cara cepat (uji habis dibagi 9): jumlahkan semua digit tiap opsi. Bilangan habis dibagi 9 bila jumlah digitnya kelipatan 9. 7 + 2 + 3 + 6 = 18 = 2 × 9, jadi 7.236 habis dibagi 9.\nKenapa bisa: 10, 100, 1.000 masing-masing lebih satu dari kelipatan 9 (9 + 1, 99 + 1, 999 + 1). Jadi sisa bagi 9 suatu bilangan sama dengan sisa bagi 9 jumlah digitnya.\nCara biasa: membagi tiap opsi dengan 9 bersusun satu per satu, empat sampai lima pembagian panjang.<br>Kenapa yang lain salah:\nOpsi A (3.462) gugur karena jumlah digit 3 + 4 + 6 + 2 = 15, bukan kelipatan 9 (hanya kelipatan 3).\nOpsi B (5.217) gugur karena jumlah digit 5 + 2 + 1 + 7 = 15, bukan kelipatan 9 (hanya kelipatan 3).\nOpsi C (6.034) gugur karena jumlah digit 6 + 0 + 3 + 4 = 13, bukan kelipatan 9.\nOpsi E (9.371) gugur karena jumlah digit 9 + 3 + 7 + 1 = 20, bukan kelipatan 9.\nJawaban: Opsi D (7.236).\nTips: kelipatan 3 hanya perlu jumlah digit kelipatan 3; kelipatan 9 perlu jumlah digit kelipatan 9. 15 lolos uji 3 tetapi tidak lolos uji 9.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-045.svg"
+ },
+ {
+  "id": "K05-N-046",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "593 × 28 = …",
+  "opsi": {
+   "a": "16.601",
+   "b": "16.602",
+   "c": "16.604",
+   "d": "16.606",
+   "e": "16.608"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "593*28",
+  "nilai_opsi": {
+   "a": 16601,
+   "b": 16602,
+   "c": 16604,
+   "d": 16606,
+   "e": 16608
+  },
+  "pembahasan": "Cara cepat (cek angka satuan): lihat opsi dulu: kelimanya sama di semua digit kecuali satuan. Satuan hasil = satuan dari 3 × 8 = 24, yaitu 4. Pilih yang berakhiran 4.\nKenapa bisa: hasil kali = (590 + 3)(20 + 8). Tiga bagian pertama (590 × 20, 590 × 8, 3 × 20) berakhiran 0, jadi angka satuan hanya ditentukan oleh 3 × 8 = 24.\nCara biasa: 593 × 28 bersusun penuh = 4.744 + 11.860 = 16.604, dua baris perkalian plus penjumlahan.<br>Kenapa yang lain salah:\nOpsi A (16.601) gugur karena satuan dijumlah (3 + 8 = 11 → 1).\nOpsi B (16.602) gugur karena angka puluhan hasil 24 yang dipakai (2), bukan satuannya (4).\nOpsi D (16.606) gugur karena satuan dikalikan puluhan (3 × 2 = 6).\nOpsi E (16.608) gugur karena satuan faktor kedua saja (8).\nJawaban: Opsi C (16.604).\nTips: teknik ini hanya aman bila opsi berbeda di satuan. Kalau opsi beda di digit lain, gunakan cek sembilan atau hitung penuh.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-046.svg"
+ },
+ {
+  "id": "K05-N-047",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "3,6 ÷ 0,05 = …",
+  "opsi": {
+   "a": "0,18",
+   "b": "7,2",
+   "c": "18",
+   "d": "36",
+   "e": "72"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "3.6/0.05",
+  "nilai_opsi": {
+   "a": 0.18,
+   "b": 7.2,
+   "c": 18,
+   "d": 36,
+   "e": 72
+  },
+  "pembahasan": "Cara cepat (bagi 0,05 = kali 20): 0,05 = 1/20. Membagi dengan 1/20 sama dengan mengalikan 20. 3,6 × 20 = 72.\nKenapa bisa: dalam 1 ada 20 buah 0,05, jadi membagi dengan 0,05 berarti menghitung berapa 0,05 yang muat: 20 kali lipat. ÷ (1/20) = × 20.\nCara biasa: 3,6 ÷ 0,05 → kedua bilangan × 100: 360 ÷ 5 = 72, pembagian bersusun.<br>Kenapa yang lain salah:\nOpsi A (0,18) gugur karena dibagi 20 (bukan dikali 20).\nOpsi B (7,2) gugur karena dikali 2 (0,05 dianggap 0,5).\nOpsi C (18) gugur karena dikali 5 (0,05 dianggap ⅕).\nOpsi D (36) gugur karena dikali 10 (0,05 dianggap 0,1).\nJawaban: Opsi E (72).\nTips: ÷ 0,05 = × 20, ÷ 0,5 = × 2, ÷ 0,25 = × 4. Hafal pasangannya.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-047.svg"
+ },
+ {
+  "id": "K05-N-048",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "90 ÷ 1,25 = …",
+  "opsi": {
+   "a": "7,2",
+   "b": "72",
+   "c": "80",
+   "d": "112,5",
+   "e": "720"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "90/1.25",
+  "nilai_opsi": {
+   "a": 7.2,
+   "b": 72,
+   "c": 80,
+   "d": 112.5,
+   "e": 720
+  },
+  "pembahasan": "Cara cepat (bagi 1,25 = ambil 80%): 1,25 = 5/4. Membagi dengan 5/4 sama dengan mengalikan 4/5. 90 ÷ 5 = 18, lalu 18 × 4 = 72.\nKenapa bisa: ÷ 5/4 = × 4/5 = × 0,8, artinya ambil 80% dari bilangan itu. Dibagi 1,25 selalu lebih kecil karena pembaginya lebih dari 1.\nCara biasa: 90 ÷ 1,25 → × 100: 9.000 ÷ 125, atau 90 ÷ 5 × 4 setelah mengubah ke pecahan.<br>Kenapa yang lain salah:\nOpsi A (7,2) gugur karena koma salah digeser (hasil dibagi 10).\nOpsi C (80) gugur karena dikurangi 10 (selisih kasar).\nOpsi D (112,5) gugur karena dikali 1,25, bukan dibagi.\nOpsi E (720) gugur karena dibagi 0,125.\nJawaban: Opsi B (72).\nTips: bagi 1,25 = ambil 80%; bagi 1,5 = ambil ⅔; bagi 2,5 = ambil 40%.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-048.svg"
+ },
+ {
+  "id": "K05-N-049",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "4,8 ÷ 0,12 = …",
+  "opsi": {
+   "a": "0,4",
+   "b": "0,576",
+   "c": "4",
+   "d": "40",
+   "e": "48"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "4.8/0.12",
+  "nilai_opsi": {
+   "a": 0.4,
+   "b": 0.576,
+   "c": 4,
+   "d": 40,
+   "e": 48
+  },
+  "pembahasan": "Cara cepat (geser koma dua langkah): geser koma kedua bilangan dua langkah sekaligus: 4,8 menjadi 480 dan 0,12 menjadi 12. 480 ÷ 12 = 40.\nKenapa bisa: 4,8/0,12 = (4,8 × 100)/(0,12 × 100) = 480/12. Pecahan tidak berubah nilainya bila atas dan bawah dikali bilangan yang sama.\nCara biasa: 4,8 ÷ 0,12 bersusun dengan koma: geser dulu baru bagi, rawan salah letak koma.<br>Kenapa yang lain salah:\nOpsi A (0,4) gugur karena koma pembagi digeser ke arah berbeda.\nOpsi B (0,576) gugur karena dikali, bukan dibagi.\nOpsi C (4) gugur karena hanya koma pembagi digeser satu langkah.\nOpsi E (48) gugur karena 0,12 dianggap 0,1.\nJawaban: Opsi D (40).\nTips: banyak langkah geser = jumlah angka desimal pembagi. Dua angka desimal berarti × 100 di kedua sisi.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-049.svg"
+ },
+ {
+  "id": "K05-N-050",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-BAGI",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "720 ÷ 15 = …",
+  "opsi": {
+   "a": "4,8",
+   "b": "24",
+   "c": "48",
+   "d": "72",
+   "e": "144"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "720/15",
+  "nilai_opsi": {
+   "a": 4.8,
+   "b": 24,
+   "c": 48,
+   "d": 72,
+   "e": 144
+  },
+  "pembahasan": "Cara cepat (bagi 15 = kali 2 bagi 30): 15 × 2 = 30. Kalikan kedua bilangan dengan 2: 720 × 2 = 1.440. 1.440 ÷ 30 = 144 ÷ 3 = 48.\nKenapa bisa: 720/15 = (720 × 2)/(15 × 2) = 1.440/30. Pembagi menjadi kelipatan 10 sehingga tinggal geser koma, lalu bagi 3 yang mudah.\nCara biasa: 720 ÷ 15 bersusun: 72 ÷ 15 = 4 sisa 12, 120 ÷ 15 = 8 → 48. Dua langkah bagi dengan sisa.<br>Kenapa yang lain salah:\nOpsi A (4,8) gugur karena dibagi 150 (koma salah digeser).\nOpsi B (24) gugur karena dibagi 30 tanpa dikali 2.\nOpsi D (72) gugur karena dibagi 10, bukan 15.\nOpsi E (144) gugur karena dikali 2 lalu dibagi 10 (15 dianggap 10).\nJawaban: Opsi C (48).\nTips: ÷ 15 = × 2 ÷ 30, ÷ 35 = × 2 ÷ 70, ÷ 45 = × 2 ÷ 90 (pembagi berakhiran 5 menjadi kelipatan 10).",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-050.svg"
+ },
+ {
+  "id": "K05-N-051",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "356 + 198 = …",
+  "opsi": {
+   "a": "354",
+   "b": "536",
+   "c": "544",
+   "d": "552",
+   "e": "554"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "356+198",
+  "nilai_opsi": {
+   "a": 354,
+   "b": 536,
+   "c": 544,
+   "d": 552,
+   "e": 554
+  },
+  "pembahasan": "Cara cepat (kompensasi): 198 = 200 − 2. 356 + 200 = 556, lalu kurangi 2: 554.\nKenapa bisa: 356 + 198 = 356 + (200 − 2) = (356 + 200) − 2. Menambah ratusan bulat tidak ada simpanan, tinggal satu koreksi kecil.\nCara biasa: 356 + 198 bersusun: 6 + 8 = 14 simpan 1, 5 + 9 + 1 = 15 simpan 1, 3 + 1 + 1 = 5 → 554. Dua kali simpan.<br>Kenapa yang lain salah:\nOpsi A (354) gugur karena 200 lupa ditambahkan (hanya − 2).\nOpsi B (536) gugur karena dikurangi 20, bukan 2.\nOpsi C (544) gugur karena salah simpan pada satuan dan puluhan.\nOpsi D (552) gugur karena dikurangi 4, bukan 2.\nJawaban: Opsi E (554).\nTips: angka mendekati bulat: + 99 = + 100 − 1, + 998 = + 1.000 − 2.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-051.svg"
+ },
+ {
+  "id": "K05-N-052",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "724 − 99 = …",
+  "opsi": {
+   "a": "615",
+   "b": "623",
+   "c": "624",
+   "d": "625",
+   "e": "626"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "724-99",
+  "nilai_opsi": {
+   "a": 615,
+   "b": 623,
+   "c": 624,
+   "d": 625,
+   "e": 626
+  },
+  "pembahasan": "Cara cepat (kompensasi): 99 = 100 − 1. 724 − 100 = 624, lalu kembalikan 1: 625.\nKenapa bisa: 724 − 99 = 724 − (100 − 1) = (724 − 100) + 1. Mengurangi 100 itu terlalu banyak satu, jadi dikembalikan 1.\nCara biasa: 724 − 99 bersusun: 4 − 9 pinjam, 2 − 9 pinjam lagi, … dua kali pinjam berantai.<br>Kenapa yang lain salah:\nOpsi A (615) gugur karena dikurangi 109.\nOpsi B (623) gugur karena dikurangi 100 lalu 1 lagi (bukan dikembalikan).\nOpsi C (624) gugur karena lupa mengembalikan 1 setelah dikurangi 100.\nOpsi E (626) gugur karena dikembalikan 2, bukan 1.\nJawaban: Opsi D (625).\nTips: − 98 = − 100 + 2, − 999 = − 1.000 + 1. Kurang berarti kembalikan selisihnya.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-052.svg"
+ },
+ {
+  "id": "K05-N-053",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "10.000 − 3.476 = …",
+  "opsi": {
+   "a": "6.524",
+   "b": "6.534",
+   "c": "6.544",
+   "d": "6.624",
+   "e": "7.524"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "10000-3476",
+  "nilai_opsi": {
+   "a": 6524,
+   "b": 6534,
+   "c": 6544,
+   "d": 6624,
+   "e": 7524
+  },
+  "pembahasan": "Cara cepat (semua dari 9, terakhir dari 10): kurangkan tiap digit dari 9, kecuali digit terakhir dari 10: 9 − 3 = 6, 9 − 4 = 5, 9 − 7 = 2, 10 − 6 = 4. Hasil 6.524.\nKenapa bisa: 10.000 = 9.999 + 1. 9.999 − 3.476 tidak pernah meminjam karena tiap digit ≤ 9: hasilnya 6.523. Tambah 1 yang tadi disisihkan: 6.524. Itulah sebabnya digit terakhir dikurangi dari 10.\nCara biasa: 10.000 − 3.476 bersusun: pinjam berantai empat kali dari digit paling depan.<br>Kenapa yang lain salah:\nOpsi B (6.534) gugur karena puluhan dikurangkan dari 10 (3 bukan 2).\nOpsi C (6.544) gugur karena puluhan salah dihitung 4 (9 − 5).\nOpsi D (6.624) gugur karena ratusan dikurangkan dari 10, bukan 9.\nOpsi E (7.524) gugur karena ribuan dikurangkan dari 10, bukan 9.\nJawaban: Opsi A (6.524).\nTips: uang: Rp100.000 − Rp37.256 = 62.744 (digit 3→6, 7→2, 2→7, 5→4, 6→4).",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-053.svg"
+ },
+ {
+  "id": "K05-N-054",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 1,
+  "sumber": "baru",
+  "stem": "36 + 47 + 64 + 53 = …",
+  "opsi": {
+   "a": "180",
+   "b": "190",
+   "c": "199",
+   "d": "200",
+   "e": "210"
+  },
+  "kunci": [
+   "d"
+  ],
+  "hitung": "36+47+64+53",
+  "nilai_opsi": {
+   "a": 180,
+   "b": 190,
+   "c": 199,
+   "d": 200,
+   "e": 210
+  },
+  "pembahasan": "Cara cepat (pasangan genap): cari pasangan yang berjumlah 100: 36 + 64 = 100 dan 47 + 53 = 100. Total 100 + 100 = 200.\nKenapa bisa: urutan dan pengelompokan penjumlahan boleh diubah. Pasangan satuan 6 + 4 = 10 dan 7 + 3 = 10 membuat hasil antara menjadi bulat, sehingga tidak ada simpanan berantai.\nCara biasa: 36 + 47 = 83, 83 + 64 = 147, 147 + 53 = 200: tiga langkah berurutan dengan simpanan.<br>Kenapa yang lain salah:\nOpsi A (180) gugur karena 47 + 53 dihitung 80.\nOpsi B (190) gugur karena lupa simpan 1.\nOpsi C (199) gugur karena satuan salah dijumlah.\nOpsi E (210) gugur karena simpanan dihitung dobel.\nJawaban: Opsi D (200).\nTips: pasangan 1+9, 2+8, 3+7, 4+6, 5+5 pada satuan menandai pasangan yang cocok.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-054.svg"
+ },
+ {
+  "id": "K05-N-055",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "1 + 2 + 3 + … + 30 = …",
+  "opsi": {
+   "a": "435",
+   "b": "450",
+   "c": "465",
+   "d": "496",
+   "e": "930"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "30*31/2",
+  "nilai_opsi": {
+   "a": 435,
+   "b": 450,
+   "c": 465,
+   "d": 496,
+   "e": 930
+  },
+  "pembahasan": "Cara cepat (jumlah deret 1 sampai n): pasangkan ujung-ujung: 1 + 30 = 31, 2 + 29 = 31, … Ada 30 ÷ 2 = 15 pasangan. 15 × 31 = 465.\nKenapa bisa: tulis deret maju dan mundur: 1 + 2 + … + 30 dan 30 + 29 + … + 1. Tiap kolom berjumlah 31 dan ada 30 kolom, jadi dua kali jumlah = 30 × 31. Jumlahnya n(n + 1)/2.\nCara biasa: menjumlahkan 30 bilangan satu per satu dengan kalkulator kepala: panjang dan rawan salah.<br>Kenapa yang lain salah:\nOpsi A (435) gugur karena memakai n(n − 1)/2 (29 × 30 ÷ 2).\nOpsi B (450) gugur karena 30 × 15 (rata-rata dikira 15).\nOpsi D (496) gugur karena dijumlah sampai 31.\nOpsi E (930) gugur karena 30 × 31 tanpa dibagi 2.\nJawaban: Opsi C (465).\nTips: jumlah 1 sampai n = n(n + 1)/2: 1 sampai 100 = 5.050, 1 sampai 20 = 210.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-055.svg"
+ },
+ {
+  "id": "K05-N-056",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "Jumlah tiga bilangan bulat berurutan adalah 114. Bilangan terbesar dari ketiga bilangan itu adalah …",
+  "opsi": {
+   "a": "19",
+   "b": "36",
+   "c": "37",
+   "d": "38",
+   "e": "39"
+  },
+  "kunci": [
+   "e"
+  ],
+  "hitung": "114/3+1",
+  "nilai_opsi": {
+   "a": 19,
+   "b": 36,
+   "c": 37,
+   "d": 38,
+   "e": 39
+  },
+  "pembahasan": "Cara cepat (tiga bilangan berurutan): tiga bilangan berurutan: n − 1, n, n + 1. Jumlahnya selalu 3n (n = bilangan tengah). 114 ÷ 3 = 38 adalah tengah. Terbesar = 38 + 1 = 39.\nKenapa bisa: (n − 1) + n + (n + 1) = 3n karena −1 dan +1 saling hapus. Jadi jumlah tiga bilangan berurutan selalu 3 × bilangan tengah.\nCara biasa: memisalkan x + (x + 1) + (x + 2) = 114 → 3x + 3 = 114 → x = 37, lalu cari yang terbesar x + 2 = 39. Tiga langkah aljabar.<br>Kenapa yang lain salah:\nOpsi A (19) gugur karena 114 dibagi 6.\nOpsi B (36) gugur karena tengah dikurangi 2.\nOpsi C (37) gugur karena bilangan terkecil, bukan terbesar.\nOpsi D (38) gugur karena bilangan tengah, bukan terbesar.\nJawaban: Opsi E (39).\nTips: tiga bilangan berurutan: terbesar = jumlah ÷ 3 + 1, terkecil = jumlah ÷ 3 − 1.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-056.svg"
+ },
+ {
+  "id": "K05-N-057",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "Jumlah lima bilangan ganjil berurutan adalah 135. Bilangan terbesar dari kelima bilangan itu adalah …",
+  "opsi": {
+   "a": "27",
+   "b": "31",
+   "c": "32",
+   "d": "33",
+   "e": "35"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "135/5+4",
+  "nilai_opsi": {
+   "a": 27,
+   "b": 31,
+   "c": 32,
+   "d": 33,
+   "e": 35
+  },
+  "pembahasan": "Cara cepat (lima ganjil berurutan): lima ganjil berurutan: n − 4, n − 2, n, n + 2, n + 4. Jumlahnya 5n. 135 ÷ 5 = 27 adalah tengah. Terbesar = 27 + 4 = 31.\nKenapa bisa: ganjil berurutan selisihnya 2. Pasangan −4 dengan +4 dan −2 dengan +2 saling hapus, sisa n × 5. Jadi jumlah = 5 × bilangan tengah.\nCara biasa: memisalkan x + (x + 2) + … + (x + 8) = 135 → 5x + 20 = 135 → x = 23, lalu terbesar x + 8 = 31.<br>Kenapa yang lain salah:\nOpsi A (27) gugur karena bilangan tengah, bukan terbesar.\nOpsi C (32) gugur karena tengah ditambah 5 (lupa selisih ganjil berurutan 2).\nOpsi D (33) gugur karena tengah ditambah 6 (tiga lompatan).\nOpsi E (35) gugur karena tengah ditambah 8 (empat lompatan).\nJawaban: Opsi B (31).\nTips: tiap bilangan berurutan (selisih tetap) dengan banyak suku ganjil: jumlah = banyak suku × tengah.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-057.svg"
+ },
+ {
+  "id": "K05-N-058",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 3,
+  "sumber": "baru",
+  "stem": "1 + 3 + 5 + … + 19 = …",
+  "opsi": {
+   "a": "81",
+   "b": "90",
+   "c": "100",
+   "d": "121",
+   "e": "190"
+  },
+  "kunci": [
+   "c"
+  ],
+  "hitung": "10*10",
+  "nilai_opsi": {
+   "a": 81,
+   "b": 90,
+   "c": 100,
+   "d": 121,
+   "e": 190
+  },
+  "pembahasan": "Cara cepat (jumlah bilangan ganjil pertama): banyak suku = (19 + 1) ÷ 2 = 10. Jumlah n bilangan ganjil pertama = n². 10² = 100.\nKenapa bisa: tiap bilangan ganjil berikutnya menambah satu lapis berbentuk L pada persegi: 1, 1 + 3 = 2², 1 + 3 + 5 = 3², dan seterusnya. n bilangan ganjil pertama membentuk persegi n × n.\nCara biasa: menjumlahkan sepuluh bilangan ganjil satu per satu: 1 + 3 = 4, + 5 = 9, + 7 = 16, … sepuluh kali jumlah.<br>Kenapa yang lain salah:\nOpsi A (81) gugur karena dikira ada 9 suku (9²).\nOpsi B (90) gugur karena rata-rata dikira 9, bukan 10.\nOpsi D (121) gugur karena dikira ada 11 suku (11²).\nOpsi E (190) gugur karena semua bilangan 1 sampai 19 dijumlah, bukan hanya ganjil.\nJawaban: Opsi C (100).\nTips: hitung banyak suku dengan (terakhir + 1) ÷ 2, bukan terakhir ÷ 2.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-058.svg"
+ },
+ {
+  "id": "K05-N-059",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "8.005 − 4.998 = …",
+  "opsi": {
+   "a": "3.007",
+   "b": "3.009",
+   "c": "3.017",
+   "d": "3.027",
+   "e": "3.107"
+  },
+  "kunci": [
+   "a"
+  ],
+  "hitung": "8005-4998",
+  "nilai_opsi": {
+   "a": 3007,
+   "b": 3009,
+   "c": 3017,
+   "d": 3027,
+   "e": 3107
+  },
+  "pembahasan": "Cara cepat (geser bersama): tambahkan 2 ke kedua bilangan. 8.005 − 4.998 = 8.007 − 5.000 = 3.007.\nKenapa bisa: (a + k) − (b + k) = a − b. Selisih dua bilangan tidak berubah bila keduanya digeser sama besar, ibarat dua orang berjalan bersama: jarak mereka tetap. Pilih k supaya pengurangnya bulat.\nCara biasa: 8.005 − 4.998 bersusun dengan meminjam berantai tiga kali. Cara cepat tanpa meminjam.<br>Kenapa yang lain salah:\nOpsi B (3.009) gugur karena geser ke dua arah (+ 2 lalu + 2 lagi pada hasil).\nOpsi C (3.017) gugur karena salah meminjam pada puluhan.\nOpsi D (3.027) gugur karena salah meminjam pada puluhan dua kali.\nOpsi E (3.107) gugur karena salah meminjam pada ratusan.\nJawaban: Opsi A (3.007).\nTips: pada pengurangan, geser kedua bilangan searah (bukan berlawanan). Pada penjumlahan, geser berlawanan: 498 + 302 = 500 + 300.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-059.svg"
+ },
+ {
+  "id": "K05-N-060",
+  "kartu": "K05",
+  "sub_type": "NUM-HIT-TRIK-TAMBAH",
+  "tier": 2,
+  "sumber": "baru",
+  "stem": "18 + 22 + 26 + 30 + 34 = …",
+  "opsi": {
+   "a": "110",
+   "b": "130",
+   "c": "132",
+   "d": "140",
+   "e": "150"
+  },
+  "kunci": [
+   "b"
+  ],
+  "hitung": "5*26",
+  "nilai_opsi": {
+   "a": 110,
+   "b": 130,
+   "c": 132,
+   "d": 140,
+   "e": 150
+  },
+  "pembahasan": "Cara cepat (deret beda tetap): selisih antarsuku tetap (4) dan ada 5 suku (ganjil). Suku tengah = 26. Jumlah = 5 × 26 = 130.\nKenapa bisa: pasangan ujung berjumlah sama: 18 + 34 = 22 + 30 = 26 + 26 = 52. Tiap pasangan = 2 × tengah, jadi jumlah seluruhnya = banyak suku × tengah.\nCara biasa: 18 + 22 = 40, + 26 = 66, + 30 = 96, + 34 = 130: empat kali tambah berurutan.<br>Kenapa yang lain salah:\nOpsi A (110) gugur karena 5 × 22 (suku kedua dikira tengah).\nOpsi C (132) gugur karena menjumlah bersusun salah simpan.\nOpsi D (140) gugur karena 5 × 28 (rata-rata dikira 28).\nOpsi E (150) gugur karena 5 × 30 (suku keempat dikira tengah).\nJawaban: Opsi B (130).\nTips: bila banyak suku genap, pakai rata-rata dua suku tengah: 18 + 22 + 26 + 30 = 4 × 24 = 96.",
+  "status_kunci": "ganda",
+  "gambar_pembahasan": "K05-N-060.svg"
  }
 ]
