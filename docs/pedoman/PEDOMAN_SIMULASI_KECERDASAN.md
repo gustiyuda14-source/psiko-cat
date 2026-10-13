@@ -1,6 +1,6 @@
 # Pedoman Penyusunan Simulasi Penuh — Kecerdasan Paket 2
 
-Versi 2 · 2026-10-12 · Kalibrasi Logis/Spasial (denah masuk blok 38–42) · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
+Versi 3 · 2026-10-13 · Kecukupan data 4 butir (97–100) + spesifikasi §4.7 Kecukupan Data dan §4.8 Silogisme · Versi 2 · 2026-10-12 · Kalibrasi Logis/Spasial (denah masuk blok 38–42) · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
 
 > **Catatan sumber.** Perubahan di §2 berasal dari informasi yang beredar dan **belum dikonfirmasi oleh dokumen resmi**. Kerangka 4 subtes × 25 butir tetap dipertahankan supaya nilai per subtes tetap bisa dilaporkan. Yang berubah adalah isi tiap subtes.
 
@@ -81,13 +81,17 @@ Versi awal blok ini (sebelum kalibrasi): pola deret 3, matriks 4, rotasi 2, susu
 
 ### Praktis (76–100)
 
+Revisi 2026-10-13: kecukupan data menjadi blok sendiri sebanyak 4 butir (§4.7). Butir ini keluar di psikotes Akpol 2026 dan kemungkinan juga di IPDN 2026. Perbandingan kuantitatif dikeluarkan dari blueprint dan cukup dilatih di drill.
+
 | No | Tipe | Jml |
 |---|---|---|
-| 76–83 | Hitung cepat (operasi campuran, urutan operasi) | 8 |
-| 84–88 | Pecahan, desimal, persen, akar/pangkat | 5 |
-| 89–92 | Konversi satuan | 4 |
-| 93–98 | Soal cerita (jarak-waktu, untung-rugi, perbandingan, pekerja) | 6 |
-| 99–100 | Perbandingan kuantitatif / kecukupan data | 2 |
+| 76–82 | Hitung cepat (operasi campuran, urutan operasi) | 7 |
+| 83–87 | Pecahan, desimal, persen, akar/pangkat | 5 |
+| 88–90 | Konversi satuan | 3 |
+| 91–96 | Soal cerita (jarak-waktu, untung-rugi, perbandingan, pekerja) | 6 |
+| 97–100 | **Kecukupan data** (§4.7) | 4 |
+
+Komposisi sebelumnya (berlaku untuk paket yang dibuat sebelum 2026-10-13: 1–3 dan 12–16; paket baru, termasuk latihan 4–11, memakai tabel di atas): hitung cepat 8, pecahan dll. 5, konversi 4, soal cerita 6, perbandingan kuantitatif / kecukupan data 2.
 
 ## 4. Spesifikasi tipe
 
@@ -154,6 +158,62 @@ Versi awal blok ini (sebelum kalibrasi): pola deret 3, matriks 4, rotasi 2, susu
 - Tiap wacana punya 3 soal dengan jenis berbeda: ide pokok, informasi tersurat, simpulan, makna kata dalam konteks.
 - Jawaban harus bisa ditunjuk di teks, atau disimpulkan langsung dari teks.
 
+### 4.7 Kecukupan data (97–100) — 2026-10-13
+
+Sumber format: `FILE PSIKO POLRI 2026/KECUKUPAN DATA/` (paket 1 dan 2, soal + pembahasan) dan drill K16. Tipe ini dilaporkan muncul di psikotes Akpol 2026.
+
+- **Bentuk:**
+  - konteks singkat, boleh dengan tabel 2–3 baris berisi variabel (p, q, n, t);
+  - "Pertanyaan: …";
+  - "Pernyataan (1): …" dan "Pernyataan (2): …".
+- **Instruksi baku:** "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya."
+- **Opsi baku A–E**, persis seperti di bawah ini (bunyi yang sama dipakai di semua paket simulasi):
+  - A. Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.
+  - B. Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.
+  - C. DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.
+  - D. Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.
+  - E. Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan.
+
+  Susunan opsi yang tidak baku (3 pernyataan, urutan opsi diacak) hanya untuk drill K16.
+- **4 butir, 4 jenis berbeda:**
+  1. **Tabel nilai**: total = p × q dari tabel. Salah satu pernyataan memberi total lewat "jalan lain" (total gabungan dikurangi bagian yang sudah lengkap).
+  2. **Ya/tidak**: pertanyaan "Apakah …?". Minimal satu pernyataan memberi jawaban "pasti tidak", yang tetap terhitung cukup.
+  3. **Aljabar/persamaan**: yang ditanya bentuk gabungan (x + y, rasio), atau dua persamaan kembar (yang satu kelipatan yang lain) sehingga tidak menambah informasi.
+  4. **Urutan, geometri, atau umur/pekerja**: memerlukan gabungan (1) dan (2), atau tetap tidak cukup walaupun digabung.
+
+  Minimal 2 dari 4 butir memakai tabel.
+- **Kunci:** 4 butir memakai 4 huruf berbeda. Setiap paket wajib punya minimal satu kunci C atau E, karena butir yang perlu digabung atau tetap tidak cukup adalah yang paling membedakan peserta.
+- **Bukti kunci:** untuk setiap pernyataan yang "tidak cukup", tuliskan **dua nilai sah yang menghasilkan jawaban berbeda** (field `bukti` di generator). Untuk yang "cukup", tunjukkan bahwa hasilnya tunggal. Tidak ada butir tanpa bukti ini.
+- **Tingkat:** sedang = satu langkah hitung per pernyataan; HOTS = jalan lain yang tersembunyi, persamaan kembar, akar ganda (x² = 4x), atau "pasti tidak".
+- **Waktu:** target 60 detik per butir. Pernyataan yang cukup tidak perlu dihitung sampai tuntas.
+- **Pembahasan (format khusus, menggantikan 2 paragraf umum):** Yang sebenarnya ditanya → Cek pernyataan (1) saja → Cek pernyataan (2) saja → Cek gabungan (hanya bila keduanya tidak cukup) → Jawaban + satu kalimat kesimpulan → Biar gampang diingat (analogi sehari-hari) → Jebakan di soal ini. Bagian dipisah `<br>`, dan judul tiap bagian ada di baris pertama. Contoh lengkap: PDF pembahasan paket 1 soal 1.
+
+### 4.8 Silogisme (43–50) — 2026-10-13
+
+- **Bentuk:** "P1: …", "P2: …" (tier sulit boleh sampai P3), lalu "Kesimpulan yang sah adalah …". Opsi berupa kalimat lengkap, bukan potongan.
+- **8 butir dengan sebaran jenis:**
+
+| Jenis | Jml | Isi |
+|---|---|---|
+| Kategorikal | 3 | Semua/sebagian/tidak ada. Minimal 1 butir dengan premis negatif (E/O) |
+| Kondisional | 2 | 1 modus ponens + 1 modus tollens |
+| Silogisme hipotetis / rantai | 1 | Jika P maka Q, jika Q maka R ⇒ jika P maka R; atau kontraposisinya |
+| Jebakan | 2 | Kunci "tidak dapat disimpulkan" (1 butir), dan sesat pikir di opsi: membenarkan akibat, menyangkal sebab (1 butir) |
+
+- **Pengecoh wajib** (minimal 2 per butir dari daftar ini, masing-masing diberi nama di pembahasan):
+  - membenarkan akibat (Q maka P);
+  - menyangkal sebab (bukan P maka bukan Q);
+  - konversi tidak sah ("semua A adalah B" dibalik);
+  - "sebagian" dibaca "semua";
+  - kesimpulan benar menurut akal sehat tetapi tidak mengikuti dari premis;
+  - kata "mungkin" yang tidak bisa dipastikan.
+- **Konteks:** tugas Polri/IPDN, sekolah, asrama, pelayanan publik. Premis boleh tidak sesuai kenyataan. Instruksi wajib menyebut "anggap semua premis benar".
+- **Kunci:** tepat satu kesimpulan yang sah secara formal. Butir dengan kunci "tidak dapat disimpulkan" harus membuktikan bahwa keempat opsi lain bisa salah (beri contoh tandingan untuk tiap opsi).
+- **Pembahasan:** format 2 paragraf umum.
+  - Paragraf 1: bentuk premis, aturan yang dipakai, dan diagram atau rantai panah dalam kata-kata.
+  - Paragraf 2: tiap opsi gugur dengan nama kesalahannya, lalu Jawaban dan Tips.
+  - Jangan berhenti di nama modus saja. Contoh yang tidak cukup: "Modus Tollens (P→Q, ~Q ⇒ ~P)" tanpa penjelasan tiap opsi.
+
 ## 5. Aturan umum
 
 - **Opsi:** 5 opsi (A–E). Butir 2 kunci dinilai semua-atau-tidak: benar hanya bila kedua kunci benar.
@@ -202,3 +262,5 @@ Catatan rencana awal (sudah dikerjakan 2026-10-11):
 - [ ] Tidak ada stem duplikat dengan Paket 1 atau bank latihan.
 - [ ] Sebaran kunci A–E dan tingkat kesulitan sesuai §5.
 - [ ] Pembahasan lengkap untuk 100 butir.
+- [ ] Kecukupan data: 4 jenis, 4 huruf kunci berbeda, bukti dua nilai untuk setiap "tidak cukup", pembahasan format §4.7.
+- [ ] Silogisme: sebaran jenis §4.8, pengecoh bernama, instruksi "anggap semua premis benar".

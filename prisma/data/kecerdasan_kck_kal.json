@@ -1,0 +1,398 @@
+{
+  "3": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Sekretariat Polres membeli dua jenis tinta printer. Harga satu botol tinta hitam x rupiah dan harga satu botol tinta warna y rupiah.\nPertanyaan: Berapakah perbandingan x : y?\nPernyataan (1): Harga 5 botol tinta hitam sama dengan harga 3 botol tinta warna.\nPernyataan (2): Harga satu botol tinta hitam ditambah satu botol tinta warna adalah Rp64.000.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "A",
+      "bukti": "(1) cukup: 5x = 3y berarti x : y = 3 : 5 untuk semua x dan y yang memenuhi. (2) tidak cukup: x = 24.000, y = 40.000 (jumlah 64.000, perbandingan 3 : 5); x = 32.000, y = 32.000 (jumlah 64.000, perbandingan 1 : 1).",
+      "p": "Yang sebenarnya ditanya\nPerbandingan harga tinta hitam dan tinta warna, x : y. Yang dicari hanya perbandingannya, bukan harga tiap botol.\n\nCek pernyataan (1) saja\n5x = 3y. Bagi kedua ruas dengan 5y, hasilnya x : y = 3 : 5. Harga persisnya tidak perlu diketahui, perbandingannya sudah pasti. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nx + y = 64.000. Tinta hitam Rp24.000 dan tinta warna Rp40.000 cocok (perbandingan 3 : 5). Keduanya Rp32.000 juga cocok (perbandingan 1 : 1). Pernyataan (2) tidak cukup.\n\nJawaban: A\nHanya pernyataan (1) yang mengunci perbandingan x : y.\nOpsi B gugur karena pernyataan (2) masih memberi perbandingan 3 : 5 atau 1 : 1.\nOpsi C gugur karena pernyataan (1) sudah cukup sendirian, jadi tidak perlu digabung.\nOpsi D gugur karena pernyataan (2) saja tidak cukup.\nOpsi E gugur karena pernyataan (1) sudah memberi jawaban pasti.\n\nBiar gampang diingat\nKalau harga 5 bungkus kopi sama dengan harga 3 bungkus teh, kamu sudah tahu perbandingan harga kopi dan teh 3 : 5, walaupun belum melihat label harganya.\n\nJebakan di soal ini\nMerasa harus tahu harga x dan y dulu, lalu memilih C karena dua persamaan memang bisa memberi x = 24.000 dan y = 40.000. Perbandingan sudah bisa didapat dari satu persamaan berbentuk ax = by, tanpa angka tetap.",
+      "svg": null
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Panitia pengamanan acara membagikan nasi kotak ke dua posko. Setiap personel dalam satu posko menerima jumlah nasi kotak yang sama. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa nasi kotak yang dibagikan untuk Posko Selatan?\nPernyataan (1): Seluruh nasi kotak yang dibagikan ke kedua posko berjumlah 120 kotak.\nPernyataan (2): Personel Posko Selatan 6 orang lebih sedikit daripada personel Posko Utara, dan setiap personel Posko Selatan menerima 2 kotak lebih banyak daripada personel Posko Utara.",
+      "tabel": {
+        "kolom": [
+          "Posko",
+          "Jumlah personel",
+          "Nasi kotak per personel"
+        ],
+        "baris": [
+          [
+            "Utara",
+            "24",
+            "2"
+          ],
+          [
+            "Selatan",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: Posko Utara 24 × 2 = 48, jadi Posko Selatan 120 − 48 = 72, tunggal walau p dan q tidak diketahui (18 × 4 dan 24 × 3 sama-sama 72). (2) cukup: p = 24 − 6 = 18, q = 2 + 2 = 4, jadi p × q = 72 tunggal.",
+      "p": "Yang sebenarnya ditanya\nTotal nasi kotak Posko Selatan, yaitu p × q. Tidak wajib tahu p dan q satu per satu, cukup hasil kalinya.\n\nCek pernyataan (1) saja\nPosko Utara menerima 24 × 2 = 48 kotak. Total kedua posko 120, jadi Posko Selatan menerima 120 − 48 = 72 kotak. Nilai p dan q tetap tidak diketahui (bisa 18 × 4, bisa 24 × 3), tapi totalnya pasti 72. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nPersonel Selatan p = 24 − 6 = 18 orang, dan tiap orang menerima q = 2 + 2 = 4 kotak. Totalnya 18 × 4 = 72 kotak. Pernyataan (2) cukup.\n\nJawaban: D\nPernyataan (1) memberi total lewat jalan lain (total gabungan dikurangi Posko Utara), pernyataan (2) memberi p dan q langsung. Masing-masing cukup.\nOpsi A gugur karena pernyataan (2) juga cukup sendirian.\nOpsi B gugur karena pernyataan (1) juga cukup sendirian.\nOpsi C gugur karena tidak perlu digabung, masing-masing sudah memberi 72.\nOpsi E gugur karena kedua pernyataan sama-sama memberi jawaban pasti.\n\nBiar gampang diingat\nTotal belanja dua kantong 120 ribu dan kantong pertama 48 ribu. Harga isi kantong kedua langsung ketahuan, 72 ribu, tanpa membongkar isinya.\n\nJebakan di soal ini\nMenganggap pernyataan (1) tidak cukup karena p dan q tidak bisa dicari, lalu memilih B. Yang ditanya hanya total p × q, dan total itu bisa didapat dengan mengurangkan bagian Posko Utara yang sudah lengkap di tabel.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 183\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Posko, Jumlah personel, Nasi kotak per personel\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"183\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"55.3\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Posko</text><text x=\"222.9\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Jumlah personel</text><text x=\"427.6\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Nasi kotak</text><text x=\"427.6\" y=\"51.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">per personel</text><text x=\"55.3\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">Utara</text><text x=\"222.9\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">24</text><text x=\"427.6\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">2</text><text x=\"55.3\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\">Selatan</text><text x=\"222.9\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"427.6\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"77\" x2=\"520\" y2=\"77\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"129\" x2=\"520\" y2=\"129\"/><line x1=\"0\" y1=\"181\" x2=\"520\" y2=\"181\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"181\"/><line x1=\"110.6\" y1=\"0\" x2=\"110.6\" y2=\"181\"/><line x1=\"335.2\" y1=\"0\" x2=\"335.2\" y2=\"181\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"181\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Tiga calon taruna mengikuti tes lari 2.400 meter. Waktu tempuh mereka ada pada tabel di bawah.\nPertanyaan: Apakah rata-rata waktu tempuh ketiga calon taruna kurang dari 12 menit?\nPernyataan (1): Tegar lebih lambat daripada Sandi.\nPernyataan (2): Waktu tempuh Tegar 25% lebih lama daripada waktu tempuh Sandi.",
+      "tabel": {
+        "kolom": [
+          "Calon taruna",
+          "Waktu tempuh (menit)"
+        ],
+        "baris": [
+          [
+            "Rio",
+            "11"
+          ],
+          [
+            "Sandi",
+            "12"
+          ],
+          [
+            "Tegar",
+            "t"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "Rata-rata < 12 sama dengan t < 13. (1) tidak cukup: t = 12,5 → rata-rata ≈ 11,83 (ya); t = 15 → rata-rata ≈ 12,67 (tidak). (2) cukup: t = 1,25 × 12 = 15, rata-rata ≈ 12,67, pasti tidak.",
+      "p": "Yang sebenarnya ditanya\nYa atau tidak: apakah rata-ratanya kurang dari 12 menit. Rata-rata kurang dari 12 berarti jumlah ketiganya kurang dari 36 menit. Rio dan Sandi sudah 23 menit, jadi pertanyaannya sama dengan: apakah t kurang dari 13 menit?\n\nCek pernyataan (1) saja\nt lebih dari 12. Kalau t = 12,5, jumlahnya 35,5 dan rata-ratanya sekitar 11,83 menit (ya). Kalau t = 15, jumlahnya 38 dan rata-ratanya sekitar 12,67 menit (tidak). Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nt = 12 + 25% × 12 = 15 menit. 15 tidak kurang dari 13, jadi rata-ratanya pasti tidak kurang dari 12 menit. Jawaban \"tidak\" yang pasti tetap terhitung cukup. Pernyataan (2) cukup.\n\nJawaban: B\nHanya pernyataan (2) yang memberi jawaban pasti, yaitu \"tidak\".\nOpsi A gugur karena pernyataan (1) masih memberi jawaban ya atau tidak.\nOpsi C gugur karena pernyataan (2) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) memberi jawaban pasti.\n\nBiar gampang diingat\nDitanya, \"Apakah kamu datang sebelum jam 7?\" Kalau jawabanmu \"Saya datang jam 8\", penanya sudah dapat kepastian: tidak. Jawaban \"tidak\" juga jawaban.\n\nJebakan di soal ini\nMengira pertanyaan ya/tidak hanya terjawab kalau jawabannya \"ya\", lalu menilai pernyataan (2) tidak cukup dan memilih E. Pernyataan disebut cukup selama jawabannya pasti, entah ya atau tidak.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Calon taruna, Waktu tempuh (menit)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"101.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Calon taruna</text><text x=\"361.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Waktu tempuh (menit)</text><text x=\"101.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Rio</text><text x=\"361.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">11</text><text x=\"101.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Sandi</text><text x=\"361.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">12</text><text x=\"101.0\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Tegar</text><text x=\"361.0\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">t</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"201.9\" y1=\"0\" x2=\"201.9\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    }
+  ],
+  "14": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Dinas pendidikan mengirim buku paket ke dua sekolah. Setiap kelas dalam satu sekolah menerima jumlah buku yang sama. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa eksemplar buku yang dikirim ke SD Harapan?\nPernyataan (1): SD Harapan memiliki 4 kelas lebih sedikit daripada SD Mekar.\nPernyataan (2): Seluruh buku yang dikirim ke kedua sekolah berjumlah 360 eksemplar.",
+      "tabel": {
+        "kolom": [
+          "Sekolah",
+          "Jumlah kelas",
+          "Buku per kelas"
+        ],
+        "baris": [
+          [
+            "SD Mekar",
+            "8",
+            "30"
+          ],
+          [
+            "SD Harapan",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "(1) tidak cukup: p = 4, q = 30 → 120; p = 4, q = 25 → 100. (2) cukup: SD Mekar 8 × 30 = 240, jadi SD Harapan 360 − 240 = 120, tunggal walau p dan q tidak diketahui.",
+      "p": "Yang sebenarnya ditanya\nTotal buku SD Harapan, yaitu p × q (jumlah kelas × buku per kelas).\n\nCek pernyataan (1) saja\np = 8 − 4 = 4 kelas, tapi q belum diketahui. Kalau q = 30, totalnya 120 eksemplar. Kalau q = 25, totalnya 100 eksemplar. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nSD Mekar menerima 8 × 30 = 240 eksemplar. Total kedua sekolah 360, jadi SD Harapan menerima 360 − 240 = 120 eksemplar. p dan q tidak perlu dicari. Pernyataan (2) cukup.\n\nJawaban: B\nPernyataan (2) memberi total SD Harapan lewat jalan lain: total gabungan dikurangi SD Mekar.\nOpsi A gugur karena pernyataan (1) hanya memberi p, sedangkan q tetap kosong.\nOpsi C gugur karena pernyataan (2) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) memberi jawaban pasti.\n\nBiar gampang diingat\nDua kardus beratnya 36 kg, dan kardus pertama 24 kg. Berat kardus kedua langsung ketahuan, 12 kg, tanpa membuka isinya.\n\nJebakan di soal ini\nMenganggap jumlah kelas dan buku per kelas harus diketahui dua-duanya, lalu memilih C atau E. Yang ditanya hanya totalnya, dan baris SD Mekar di tabel sudah lengkap untuk dikurangkan dari total gabungan.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Sekolah, Jumlah kelas, Buku per kelas\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"70.4\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Sekolah</text><text x=\"229.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Jumlah kelas</text><text x=\"418.8\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Buku per kelas</text><text x=\"70.4\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">SD Mekar</text><text x=\"229.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">8</text><text x=\"418.8\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">30</text><text x=\"70.4\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">SD Harapan</text><text x=\"229.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"418.8\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"140.8\" y1=\"0\" x2=\"140.8\" y2=\"156\"/><line x1=\"317.7\" y1=\"0\" x2=\"317.7\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kantor imigrasi mencatat jumlah paspor yang terbit selama tiga hari. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah paspor yang terbit hari Rabu lebih banyak daripada hari Senin?\nPernyataan (1): Rata-rata paspor yang terbit per hari dari Senin sampai Rabu adalah 39.\nPernyataan (2): Paspor yang terbit hari Rabu kurang dari separuh jumlah paspor hari Senin dan Selasa.",
+      "tabel": {
+        "kolom": [
+          "Hari",
+          "Paspor terbit"
+        ],
+        "baris": [
+          [
+            "Senin",
+            "42"
+          ],
+          [
+            "Selasa",
+            "38"
+          ],
+          [
+            "Rabu",
+            "k"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: k = 3 × 39 − 42 − 38 = 37 < 42, pasti tidak. (2) cukup: k < 80 : 2 = 40, jadi setiap k yang mungkin kurang dari 42, pasti tidak.",
+      "p": "Yang sebenarnya ditanya\nYa atau tidak: apakah k lebih dari 42. Tidak perlu tahu k persis, cukup tahu k pasti di atas atau pasti di bawah 42.\n\nCek pernyataan (1) saja\nRata-rata 39 selama 3 hari berarti jumlahnya 117. k = 117 − 42 − 38 = 37. 37 kurang dari 42, jadi jawabannya pasti tidak. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nSeparuh dari 42 + 38 adalah 40, jadi k kurang dari 40. Berapa pun nilainya, k pasti kurang dari 42. Jawabannya pasti tidak. Pernyataan (2) cukup.\n\nJawaban: D\nMasing-masing pernyataan memberi jawaban pasti \"tidak\": pernyataan (1) lewat nilai k yang tepat, pernyataan (2) lewat batas atas k.\nOpsi A gugur karena pernyataan (2) juga cukup walaupun k tidak diketahui persis.\nOpsi B gugur karena pernyataan (1) juga cukup sendirian.\nOpsi C gugur karena tidak perlu digabung.\nOpsi E gugur karena keduanya memberi jawaban pasti.\n\nBiar gampang diingat\nDitanya, \"Apakah uangmu cukup untuk tiket 50 ribu?\" Jawaban \"uangku kurang dari 40 ribu\" sudah memastikan tidak cukup, walaupun jumlah persisnya tidak disebut.\n\nJebakan di soal ini\nMenganggap pernyataan (2) tidak cukup karena k tidak diketahui persis, lalu memilih A. Untuk pertanyaan ya/tidak, batas atas atau batas bawah sudah cukup asalkan semua nilai yang mungkin memberi jawaban yang sama.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Hari, Paspor terbit\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"86.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari</text><text x=\"346.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Paspor terbit</text><text x=\"86.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Senin</text><text x=\"346.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">42</text><text x=\"86.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Selasa</text><text x=\"346.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">38</text><text x=\"86.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Rabu</text><text x=\"346.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">k</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"172.6\" y1=\"0\" x2=\"172.6\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Petugas logistik Polsek mencatat r sebagai banyak rompi dan h sebagai banyak helm di gudang.\nPertanyaan: Berapa banyak helm di gudang?\nPernyataan (1): Banyak rompi 2 buah lebih banyak daripada tiga kali banyak helm.\nPernyataan (2): Dua kali banyak rompi sama dengan enam kali banyak helm ditambah 4.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: h = 5, r = 17; h = 10, r = 32. (2) tidak cukup: h = 5, r = 17 (34 = 30 + 4); h = 10, r = 32 (64 = 60 + 4). Gabungan tidak cukup: (2) dibagi 2 menjadi r = 3h + 2, sama dengan (1), jadi h = 5 dan h = 10 tetap memenuhi keduanya.",
+      "p": "Yang sebenarnya ditanya\nSatu angka: banyak helm (h). Karena r juga belum diketahui, ada dua hal yang dicari, jadi perlu dua persamaan yang benar-benar berbeda.\n\nCek pernyataan (1) saja\nr = 3h + 2. Helm 5 dan rompi 17 cocok. Helm 10 dan rompi 32 juga cocok. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\n2r = 6h + 4. Helm 5 dan rompi 17 cocok (34 = 30 + 4). Helm 10 dan rompi 32 juga cocok (64 = 60 + 4). Pernyataan (2) tidak cukup.\n\nKalau digabung\nBagi pernyataan (2) dengan 2: r = 3h + 2. Itu persis pernyataan (1). Bunyinya berbeda, tapi isinya satu persamaan, jadi h = 5 dan h = 10 tetap sama-sama memenuhi. Digabung pun tidak cukup.\n\nJawaban: E\nPernyataan (2) hanya kelipatan dua dari pernyataan (1), jadi gabungannya tidak menambah informasi.\nOpsi A gugur karena pernyataan (1) masih memberi h = 5 atau h = 10.\nOpsi B gugur karena pernyataan (2) juga masih memberi h = 5 atau h = 10.\nOpsi C gugur karena gabungannya tetap satu persamaan dengan dua hal yang dicari.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup.\n\nBiar gampang diingat\nTemanmu bilang, \"Rumahku dekat masjid.\" Teman lain bilang, \"Masjid itu dekat rumahnya.\" Dua kalimat, satu informasi. Alamatnya tetap belum ketahuan.\n\nJebakan di soal ini\nMelihat dua persamaan untuk dua hal yang dicari, lalu langsung memilih C. Sebelum memilih C, cek dulu apakah persamaan yang satu hanya kelipatan yang lain. Kalau iya, keduanya cuma satu persamaan.",
+      "svg": null
+    }
+  ],
+  "15": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Pagar kantor kecamatan akan dicat oleh Pak Darto dan Pak Wiryo. Kecepatan kerja masing-masing selalu tetap.\nPertanyaan: Berapa hari waktu yang diperlukan Pak Wiryo jika mengecat pagar itu sendirian?\nPernyataan (1): Jika bekerja sendirian, Pak Darto menyelesaikan pengecatan dalam 6 hari.\nPernyataan (2): Jika bekerja bersama-sama, keduanya menyelesaikan pengecatan dalam 4 hari.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1) tidak cukup: Darto 6 hari dengan Wiryo 12 hari, atau Darto 6 hari dengan Wiryo 8 hari (Wiryo tidak disebut). (2) tidak cukup: Darto 6, Wiryo 12 (1/6 + 1/12 = 1/4); Darto 8, Wiryo 8 (1/8 + 1/8 = 1/4). Gabungan cukup: 1/W = 1/4 − 1/6 = 1/12, W = 12 hari tunggal.",
+      "p": "Yang sebenarnya ditanya\nWaktu kerja Pak Wiryo sendirian. Untuk soal pekerja, pikirkan bagian pekerjaan per hari: selesai dalam 6 hari berarti 1/6 pagar per hari.\n\nCek pernyataan (1) saja\nPak Darto mengerjakan 1/6 pagar per hari. Tidak ada keterangan apa pun tentang Pak Wiryo, jadi ia bisa butuh 12 hari, bisa juga 8 hari. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nBerdua mengerjakan 1/4 pagar per hari, tapi pembagiannya belum jelas. Darto 6 hari dan Wiryo 12 hari cocok (1/6 + 1/12 = 1/4). Darto 8 hari dan Wiryo 8 hari juga cocok (1/8 + 1/8 = 1/4). Pernyataan (2) tidak cukup.\n\nKalau digabung\nBagian Wiryo per hari = 1/4 − 1/6 = 3/12 − 2/12 = 1/12. Jadi Wiryo sendirian butuh 12 hari. Digabung cukup.\n\nJawaban: C\nPernyataan (2) memberi kecepatan berdua, pernyataan (1) memberi kecepatan Darto, dan selisihnya adalah kecepatan Wiryo.\nOpsi A gugur karena pernyataan (1) tidak menyebut Pak Wiryo sama sekali.\nOpsi B gugur karena kecepatan berdua bisa dibagi dengan banyak cara.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup sendirian.\nOpsi E gugur karena gabungannya memberi satu jawaban, 12 hari.\n\nBiar gampang diingat\nKamu dan adikmu bersama-sama menghabiskan satu loyang kue. Tahu kecepatan makan berdua saja belum cukup untuk tahu kecepatan adikmu. Begitu kecepatanmu sendiri diketahui, sisanya pasti milik adikmu.\n\nJebakan di soal ini\nMerasa pernyataan (2) sudah cukup karena \"4 hari berdua\" terdengar lengkap, lalu memilih B. Waktu berdua belum memberi tahu siapa yang lebih cepat. Kalau nanti menghitung, jangan mengurangkan hari secara langsung (6 − 4 = 2 hari). Yang dikurangkan adalah bagian pekerjaan per hari, 1/4 − 1/6.",
+      "svg": null
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Satuan lalu lintas mencatat hasil Operasi Zebra di dua pos pemeriksaan. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa total tilang di Pos 2 selama operasi?\nPernyataan (1): Jumlah hari operasi kedua pos adalah 12 hari.\nPernyataan (2): Pada hari pertama operasi, Pos 2 mencatat 18 tilang.",
+      "tabel": {
+        "kolom": [
+          "Pos",
+          "Hari operasi",
+          "Rata-rata tilang per hari"
+        ],
+        "baris": [
+          [
+            "Pos 1",
+            "7",
+            "15"
+          ],
+          [
+            "Pos 2",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: p = 5, q = 18 → 90; p = 5, q = 20 → 100. (2) tidak cukup: p = 5, q = 18 → 90; p = 4, q = 20 → 80 (hari pertama tetap 18). Gabungan tidak cukup: p = 5 dan hari pertama 18, tetapi q = 18 (18 setiap hari) → 90, sedangkan q = 20 (18, 22, 20, 20, 20) → 100.",
+      "p": "Yang sebenarnya ditanya\nTotal tilang Pos 2, yaitu p × q (hari operasi × rata-rata tilang per hari). Butuh p dan q, atau total itu lewat jalan lain.\n\nCek pernyataan (1) saja\nPos 1 beroperasi 7 hari, jadi p = 12 − 7 = 5 hari. Tapi q belum diketahui. Kalau q = 18, totalnya 90. Kalau q = 20, totalnya 100. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nTilang hari pertama hanya satu hari dari seluruh operasi. Jumlah hari dan rata-ratanya masih terbuka: 5 hari dengan rata-rata 18 memberi 90, 4 hari dengan rata-rata 20 memberi 80. Pernyataan (2) tidak cukup.\n\nKalau digabung\nSekarang p = 5 dan hari pertama 18 tilang. Rata-rata lima hari tetap belum terkunci. Kalau tiap hari 18, totalnya 90. Kalau lima harinya 18, 22, 20, 20, 20, rata-ratanya 20 dan totalnya 100. Digabung pun tidak cukup.\n\nJawaban: E\nYang terkunci hanya p. Rata-rata q tidak bisa ditarik dari tilang satu hari.\nOpsi A gugur karena pernyataan (1) hanya memberi p.\nOpsi B gugur karena satu hari tidak menentukan rata-rata.\nOpsi C gugur karena gabungannya masih memberi 90 atau 100.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup.\n\nBiar gampang diingat\nNilai ulangan pertamamu 80 belum memberi tahu rata-rata rapormu. Butuh nilai semua ulangan, atau rata-ratanya langsung.\n\nJebakan di soal ini\nMenganggap tilang hari pertama sama dengan rata-rata per hari, lalu menghitung 5 × 18 = 90 dan memilih C. Satu hari hanya contoh, bukan rata-rata.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 183\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Pos, Hari operasi, Rata-rata tilang per hari\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"183\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"45.2\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Pos</text><text x=\"187.4\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari operasi</text><text x=\"402.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Rata-rata</text><text x=\"402.2\" y=\"51.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">tilang per hari</text><text x=\"45.2\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">Pos 1</text><text x=\"187.4\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">7</text><text x=\"402.2\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">15</text><text x=\"45.2\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\">Pos 2</text><text x=\"187.4\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"402.2\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"77\" x2=\"520\" y2=\"77\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"129\" x2=\"520\" y2=\"129\"/><line x1=\"0\" y1=\"181\" x2=\"520\" y2=\"181\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"181\"/><line x1=\"90.5\" y1=\"0\" x2=\"90.5\" y2=\"181\"/><line x1=\"284.3\" y1=\"0\" x2=\"284.3\" y2=\"181\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"181\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kantor desa mencatat pengeluaran alat tulis kantor (ATK) selama satu triwulan. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah total pengeluaran ATK triwulan itu lebih dari Rp1.300.000?\nPernyataan (1): Pengeluaran bulan September lebih besar daripada pengeluaran bulan Agustus.\nPernyataan (2): Pengeluaran bulan September tidak lebih dari rata-rata pengeluaran bulan Juli dan Agustus.",
+      "tabel": {
+        "kolom": [
+          "Bulan",
+          "Pengeluaran ATK (Rp)"
+        ],
+        "baris": [
+          [
+            "Juli",
+            "450.000"
+          ],
+          [
+            "Agustus",
+            "380.000"
+          ],
+          [
+            "September",
+            "s"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "Total > 1.300.000 sama dengan s > 470.000. (1) tidak cukup: s = 400.000 → total 1.230.000 (tidak); s = 500.000 → total 1.330.000 (ya). (2) cukup: s ≤ 830.000 : 2 = 415.000, total paling besar 1.245.000, pasti tidak.",
+      "p": "Yang sebenarnya ditanya\nYa atau tidak: apakah 450.000 + 380.000 + s lebih dari 1.300.000. Juli dan Agustus sudah 830.000, jadi pertanyaannya sama dengan: apakah s lebih dari 470.000?\n\nCek pernyataan (1) saja\ns lebih dari 380.000. Kalau s = 400.000, totalnya 1.230.000 (tidak). Kalau s = 500.000, totalnya 1.330.000 (ya). Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nRata-rata Juli dan Agustus = 830.000 : 2 = 415.000. Jadi s paling besar 415.000, dan total paling besar 1.245.000. Total pasti tidak lebih dari 1.300.000. Pernyataan (2) cukup.\n\nJawaban: B\nPernyataan (2) memberi batas atas s yang membuat jawabannya pasti \"tidak\".\nOpsi A gugur karena pernyataan (1) masih memberi jawaban ya atau tidak.\nOpsi C gugur karena pernyataan (2) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) memberi jawaban pasti.\n\nBiar gampang diingat\nKalau tasmu paling berat 7 kg dan batas bagasi 10 kg, kamu tidak perlu menimbangnya untuk tahu tasmu lolos.\n\nJebakan di soal ini\nMengira pertanyaan ya/tidak harus dijawab dengan angka s yang tepat, lalu menganggap pernyataan (2) tidak cukup dan memilih E. Batas atas sudah cukup kalau semua nilai di bawah batas itu memberi jawaban yang sama.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Bulan, Pengeluaran ATK (Rp)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"82.4\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Bulan</text><text x=\"342.4\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Pengeluaran ATK (Rp)</text><text x=\"82.4\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Juli</text><text x=\"342.4\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">450.000</text><text x=\"82.4\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Agustus</text><text x=\"342.4\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">380.000</text><text x=\"82.4\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">September</text><text x=\"342.4\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">s</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"164.7\" y1=\"0\" x2=\"164.7\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    }
+  ],
+  "16": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Bagian logistik Polres mencatat pemakaian BBM kendaraan patroli. Setiap unit dalam satu jenis kendaraan memakai BBM sama banyak. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa liter BBM yang dipakai seluruh motor patroli per hari?\nPernyataan (1): Seluruh kendaraan patroli memakai 186 liter BBM per hari.\nPernyataan (2): Jumlah motor patroli dua kali jumlah mobil patroli.",
+      "tabel": {
+        "kolom": [
+          "Kendaraan",
+          "Jumlah unit",
+          "BBM per unit per hari (liter)"
+        ],
+        "baris": [
+          [
+            "Mobil patroli",
+            "6",
+            "20"
+          ],
+          [
+            "Motor patroli",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "A",
+      "bukti": "(1) cukup: mobil 6 × 20 = 120, jadi motor 186 − 120 = 66 liter, tunggal walau p dan q tidak diketahui. (2) tidak cukup: p = 12, q = 5 → 60 liter; p = 12, q = 4 → 48 liter.",
+      "p": "Yang sebenarnya ditanya\nBBM seluruh motor patroli, yaitu p × q (jumlah motor × liter per motor).\n\nCek pernyataan (1) saja\nMobil patroli memakai 6 × 20 = 120 liter. Total 186 liter, jadi motor patroli memakai 186 − 120 = 66 liter. p dan q tidak perlu dicari. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\np = 2 × 6 = 12 motor, tapi pemakaian per motor belum diketahui. Kalau q = 5, totalnya 60 liter. Kalau q = 4, totalnya 48 liter. Pernyataan (2) tidak cukup.\n\nJawaban: A\nPernyataan (1) memberi total motor lewat jalan lain: total semua kendaraan dikurangi bagian mobil.\nOpsi B gugur karena pernyataan (2) hanya memberi p.\nOpsi C gugur karena pernyataan (1) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (2) tidak cukup.\nOpsi E gugur karena pernyataan (1) memberi jawaban pasti.\n\nBiar gampang diingat\nStruk belanjamu total 186 ribu dan bagian sayur 120 ribu. Bagian lauk pasti 66 ribu, walaupun rinciannya tidak terbaca.\n\nJebakan di soal ini\nTerpaku mencari jumlah motor dan liter per motor, lalu menganggap pernyataan (2) penting karena memberi p, dan memilih C. Yang ditanya hanya total, dan baris mobil di tabel sudah lengkap untuk dikurangkan.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 183\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Kendaraan, Jumlah unit, BBM per unit per hari (liter)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"183\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"90.7\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Kendaraan</text><text x=\"233.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Jumlah</text><text x=\"233.2\" y=\"51.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">unit</text><text x=\"402.5\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">BBM per unit</text><text x=\"402.5\" y=\"51.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">per hari (liter)</text><text x=\"90.7\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">Mobil patroli</text><text x=\"233.2\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">6</text><text x=\"402.5\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">20</text><text x=\"90.7\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\">Motor patroli</text><text x=\"233.2\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"402.5\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"77\" x2=\"520\" y2=\"77\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"129\" x2=\"520\" y2=\"129\"/><line x1=\"0\" y1=\"181\" x2=\"520\" y2=\"181\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"181\"/><line x1=\"181.4\" y1=\"0\" x2=\"181.4\" y2=\"181\"/><line x1=\"285.1\" y1=\"0\" x2=\"285.1\" y2=\"181\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"181\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Panitia seleksi bintara mencatat tinggi badan tiga peserta. Syarat tinggi badan minimal 165 cm. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah tinggi badan Fajar memenuhi syarat?\nPernyataan (1): Fajar lebih pendek daripada Galih.\nPernyataan (2): Selisih tinggi badan Fajar dan Hendra lebih dari 7 cm.",
+      "tabel": {
+        "kolom": [
+          "Peserta",
+          "Tinggi badan (cm)"
+        ],
+        "baris": [
+          [
+            "Galih",
+            "168"
+          ],
+          [
+            "Hendra",
+            "172"
+          ],
+          [
+            "Fajar",
+            "f"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1) tidak cukup: f = 166 (ya), f = 160 (tidak). (2) tidak cukup: f = 180 (selisih 8, ya), f = 160 (selisih 12, tidak). Gabungan cukup: (2) berarti f < 165 atau f > 179; (1) mencoret f > 179; sisa f < 165, pasti tidak.",
+      "p": "Yang sebenarnya ditanya\nYa atau tidak: apakah f paling sedikit 165 cm.\n\nCek pernyataan (1) saja\nf kurang dari 168. Fajar 166 cm memenuhi syarat, Fajar 160 cm tidak. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nSelisih dengan 172 lebih dari 7, jadi f kurang dari 165 atau f lebih dari 179. Fajar 180 cm memenuhi syarat, Fajar 160 cm tidak. Pernyataan (2) tidak cukup.\n\nKalau digabung\nPernyataan (1) mencoret kemungkinan f lebih dari 179, karena Fajar lebih pendek dari Galih (168 cm). Yang tersisa hanya f kurang dari 165. Fajar pasti tidak memenuhi syarat. Digabung cukup.\n\nJawaban: C\nPernyataan (2) memberi dua kemungkinan (jauh lebih pendek atau jauh lebih tinggi dari Hendra), dan pernyataan (1) mencoret kemungkinan \"lebih tinggi\". Jawaban pasti: tidak.\nOpsi A gugur karena pernyataan (1) masih memberi ya atau tidak.\nOpsi B gugur karena selisih bisa ke atas atau ke bawah.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup sendirian.\nOpsi E gugur karena gabungannya memberi jawaban pasti, yaitu tidak.\n\nBiar gampang diingat\nTemanmu bilang rumahnya \"lebih dari 7 km dari alun-alun\". Bisa di utara, bisa di selatan. Begitu dia menambahkan \"rumahku di selatan alun-alun\", letaknya baru pasti.\n\nJebakan di soal ini\nMembaca \"selisih lebih dari 7 cm\" hanya ke satu arah (Fajar lebih pendek), lalu memilih B. Selisih bisa ke atas dan ke bawah. Jebakan kedua: menilai gabungan tidak cukup hanya karena jawabannya \"tidak\", lalu memilih E.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Peserta, Tinggi badan (cm)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"83.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Peserta</text><text x=\"343.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Tinggi badan (cm)</text><text x=\"83.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Galih</text><text x=\"343.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">168</text><text x=\"83.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Hendra</text><text x=\"343.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">172</text><text x=\"83.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Fajar</text><text x=\"343.3\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">f</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"166.5\" y1=\"0\" x2=\"166.5\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Empat petugas, yaitu Kurnia, Lestari, Maman, dan Nanda, bertugas di loket 1 sampai 4 kantor Samsat. Loket dinomori berurutan dari kiri ke kanan, dan setiap loket dijaga satu petugas.\nPertanyaan: Siapa yang bertugas di loket 2?\nPernyataan (1): Kurnia bertugas tepat di sebelah kanan Maman.\nPernyataan (2): Nanda tidak bertugas di loket paling ujung.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: Maman-Kurnia-Nanda-Lestari → loket 2 Kurnia; Lestari-Nanda-Maman-Kurnia → loket 2 Nanda. (2) tidak cukup: Maman-Kurnia-Nanda-Lestari → Kurnia; Kurnia-Nanda-Lestari-Maman → Nanda. Gabungan tidak cukup: Maman-Kurnia di loket 1-2 (Nanda di 3) → Kurnia; Maman-Kurnia di loket 3-4 (Nanda di 2) → Nanda; loket 2-3 mustahil karena Nanda harus di 2 atau 3.",
+      "p": "Yang sebenarnya ditanya\nSatu nama petugas di loket 2. Kalau masih ada dua susunan sah dengan nama berbeda di loket 2, berarti belum cukup.\n\nCek pernyataan (1) saja\nMaman dan Kurnia selalu berdampingan, Kurnia di kanan. Susunan Maman, Kurnia, Nanda, Lestari memberi Kurnia di loket 2. Susunan Lestari, Nanda, Maman, Kurnia memberi Nanda di loket 2. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nNanda di loket 2 atau 3, sisanya bebas. Susunan Maman, Kurnia, Nanda, Lestari memberi Kurnia di loket 2. Susunan Kurnia, Nanda, Lestari, Maman memberi Nanda. Pernyataan (2) tidak cukup.\n\nKalau digabung\nPasangan Maman–Kurnia bisa di loket 1–2, 2–3, atau 3–4. Di 2–3 tidak mungkin, karena Nanda harus di loket 2 atau 3. Di 1–2, Nanda di loket 3, jadi loket 2 = Kurnia. Di 3–4, Nanda di loket 2. Masih ada dua jawaban. Digabung pun tidak cukup.\n\nJawaban: E\nGabungan kedua pernyataan masih menyisakan dua susunan: loket 2 bisa Kurnia, bisa Nanda.\nOpsi A gugur karena pernyataan (1) masih memberi Kurnia atau Nanda.\nOpsi B gugur karena pernyataan (2) tidak mengatur letak Kurnia dan Maman sama sekali.\nOpsi C gugur karena gabungannya masih memberi dua susunan.\nOpsi D gugur karena tidak satu pun pernyataan yang cukup.\n\nBiar gampang diingat\nPetunjuk \"kursinya di sebelah kanan kursi adiknya, dan bukan di pinggir\" belum tentu cukup untuk menemukan temanmu di bioskop. Kalau masih ada dua kursi yang cocok, kamu tetap harus bertanya lagi.\n\nJebakan di soal ini\nBerhenti setelah menemukan satu susunan yang cocok (Maman, Kurnia, Nanda, Lestari), lalu memilih C. Gabungan baru cukup kalau semua susunan yang mungkin sudah dicoba dan jawabannya sama.",
+      "svg": null
+    }
+  ]
+}

@@ -27,6 +27,10 @@ for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdas
   const teks = data(f) as TeksFile;
   teksRows(teks).forEach((r, i) => add(r, teks.soal[i].p));
 }
+// Blok kecukupan data 97-99 (seed-kecerdasan-kck.ts): tabel ikut sebagai svg_content.
+if (fs.existsSync(path.join(root, "prisma/data/kecerdasan_kck_kal.json")))
+  for (const soal of Object.values(data("kecerdasan_kck_kal.json") as Record<string, (TeksFile["soal"][number] & { svg?: string | null })[]>))
+    teksRows({ wacana: {}, soal }).forEach((r, i) => add({ ...r, options_payload: { ...r.options_payload, svg_content: soal[i].svg ?? null } }, soal[i].p));
 // Paket 1 lama (soal.json, sumber pkg 1 dan salinannya di pkg 13); bentuk butirnya mengikuti seed-kecerdasan.ts.
 type P1 = { soal?: string | null; wacana?: string | null; gambar?: string | null; pilihan: Record<string, string>; kunci: string[]; ganda?: boolean; pembahasan?: string };
 for (const x of (JSON.parse(fs.readFileSync(path.join(root, "soal.json"), "utf8")) as { soal: P1[] }).soal) {
@@ -45,11 +49,19 @@ const gambar: Gambar[] = [
 gambar.forEach((g) => add(g, g.pembahasan, g.pembahasan_svg));
 
 (async () => {
-  const { data: rows, error } = await supabase
-    .from("questions")
-    .select("id, package_number, sequence_number, options_payload, scoring_rule")
-    .eq("type", "KECERDASAN");
-  if (error) throw error;
+  // Supabase membatasi 1.000 baris per permintaan; baca per halaman supaya semua paket ikut.
+  const rows: unknown[] = [];
+  for (let from = 0; ; from += 1000) {
+    const { data: page, error } = await supabase
+      .from("questions")
+      .select("id, package_number, sequence_number, options_payload, scoring_rule")
+      .eq("type", "KECERDASAN")
+      .order("id")
+      .range(from, from + 999);
+    if (error) throw error;
+    rows.push(...page);
+    if (page.length < 1000) break;
+  }
 
   const updates: { id: string; scoring_rule: Row["scoring_rule"] & { pembahasan: string; pembahasan_svg?: string } }[] = [];
   const cov: Record<number, [number, number]> = {};
