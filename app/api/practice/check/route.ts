@@ -77,13 +77,15 @@ export async function POST(req: NextRequest) {
       // tapi jangan lewat normalizeSelection (itu buat validasi jawaban beneran).
       let isCorrect = false;
       if (a!.selected_key) {
+        if (typeof a!.selected_key !== "string") return NextResponse.json({ error: "Pilihan tidak valid" }, { status: 400 });
+        // Jawaban tidak lengkap (mis. 1 dari 2 pilihan pada butir "Pilih 2 jawaban") dihitung salah;
+        // jangan menggagalkan pengumpulan seluruh paket karena satu butir.
         const normalized = normalizeSelection(
           a!.selected_key,
           (payload.choices ?? []).map((choice) => choice.key),
           payload.is_multi_select === true ? 2 : 1
         );
-        if (!normalized) return NextResponse.json({ error: "Pilihan tidak valid" }, { status: 400 });
-        isCorrect = normalized === rule.correct_key;
+        isCorrect = normalized !== null && normalized === rule.correct_key;
       }
       items[row.id] = {
         is_correct: isCorrect,
