@@ -13,6 +13,7 @@ import { KecerdasanReview, type KecerdasanReviewItem } from "@/app/components/Pe
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { MODULE_CONFIG } from "@/lib/test-config";
 import { MathText } from "@/app/components/MathText";
+import PilihDuaStatus from "@/app/components/PilihDuaStatus";
 
 // Batas waktu sama dengan sub-tes Kecerdasan di simulasi (90 menit).
 const TIME_LIMIT_MS = MODULE_CONFIG.KECERDASAN.time_limit_seconds * 1000;
@@ -213,7 +214,7 @@ export default function LatihanKecerdasan({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="qnum tnum">Butir {idx + 1}</p>
             <Badge tone={multi ? "accent" : "neutral"}>
-              {multi ? "Boleh lebih dari satu jawaban" : "Satu jawaban"}
+              {multi ? "Pilih 2 jawaban" : "Satu jawaban"}
             </Badge>
           </div>
 
@@ -252,6 +253,7 @@ export default function LatihanKecerdasan({
               );
             })}
           </div>
+          {multi && <PilihDuaStatus count={picked?.length ?? 0} />}
 
           {timeUp && (
             <p role="alert" className="text-sm font-semibold text-destructive">

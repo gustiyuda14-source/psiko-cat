@@ -26,6 +26,7 @@ import {
 import { Badge } from "@/app/components/ui";
 import { Check } from "@/app/components/icons";
 import { MathText } from "@/app/components/MathText";
+import PilihDuaStatus from "@/app/components/PilihDuaStatus";
 
 type Props = {
   questions: SafeQuestion[];
@@ -175,7 +176,7 @@ export default function EngineKecerdasan({
           <div className="flex flex-wrap items-center justify-between gap-2">
             <p className="qnum tnum">Soal {idx + 1}</p>
             <Badge tone={multi ? "accent" : "neutral"}>
-              {multi ? "Boleh lebih dari satu jawaban" : "Satu jawaban"}
+              {multi ? "Pilih 2 jawaban" : "Satu jawaban"}
             </Badge>
           </div>
 
@@ -219,6 +220,7 @@ export default function EngineKecerdasan({
               );
             })}
           </div>
+          {multi && <PilihDuaStatus count={picked?.length ?? 0} />}
         </article>
       </ExamBody>
 
