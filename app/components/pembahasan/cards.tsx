@@ -37,7 +37,7 @@ const ROW: Record<Exclude<Tone, null> | "none", { box: string; dot: string; tag:
   key: { box: "border-success/50 bg-success-soft", dot: "bg-success text-white", tag: "text-success" },
   bad: { box: "border-destructive/50 bg-destructive-soft", dot: "bg-destructive text-white", tag: "text-destructive" },
   mid: { box: "border-accent-ink/40 bg-accent-soft", dot: "bg-accent-ink text-white", tag: "text-accent-ink" },
-  pick: { box: "border-primary/40 bg-[#e8ebf5]", dot: "bg-primary text-primary-foreground", tag: "text-brand-ink" },
+  pick: { box: "border-primary/40 bg-primary/10", dot: "bg-primary text-primary-foreground", tag: "text-brand-ink" },
   none: { box: "border-border bg-card", dot: "bg-surface-inset text-muted-foreground", tag: "" },
 };
 

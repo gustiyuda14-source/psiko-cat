@@ -59,7 +59,7 @@ function Sheet({ open, onClose, label, children }: { open: boolean; onClose: () 
     <dialog
       ref={ref}
       aria-label={label}
-      className="pk-sheet"
+      className="pk-sheet gr-host"
       onCancel={(e) => {
         e.preventDefault(); // state React tetap sumber kebenaran
         onClose();
@@ -67,6 +67,7 @@ function Sheet({ open, onClose, label, children }: { open: boolean; onClose: () 
       onClick={(e) => e.target === ref.current && onClose()}
     >
       {children}
+      <i className="gr" aria-hidden="true" />
     </dialog>
   );
 }

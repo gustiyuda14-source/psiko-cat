@@ -61,7 +61,7 @@
 .fd-stats dt { color: var(--muted-foreground); font: 700 .7rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase }
 .fd-stats dd { margin: 0; color: var(--brand-ink); font: 700 1.7rem/1.1 var(--font-display-src), sans-serif }
 .fd-stats dd span { color: var(--muted-foreground); font-size: 1rem }
-.fd-tier { display: grid; place-items: center; flex: none; width: 76px; height: 76px; border-radius: 18px; background: var(--brand-ink); color: var(--gold-hi); font: 800 2rem var(--font-display-src), sans-serif }
+.fd-tier { display: grid; place-items: center; flex: none; width: 76px; height: 76px; border-radius: 18px; background: var(--navy); color: var(--gold-hi); font: 800 2rem var(--font-display-src), sans-serif }
 .fd-tier[data-rank="S+"], .fd-tier[data-rank="S"] { background: var(--gold-grad); color: #16224a }
 .fd-wrong { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; font-size: .9rem }
 .fd-wrong li { padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-inset) }
@@ -86,8 +86,8 @@
 .kp-s { display: grid; place-items: center; width: 18px; height: 16px; margin-left: 24px; color: #2f5bd3; font: 700 .78rem var(--font-display-src), sans-serif }
 .kp-col.is-past .kp-d { color: var(--muted-foreground) }
 .kp-col.is-active { background: var(--surface-inset) }
-.kp-col.is-active .kp-head { background: var(--brand-ink); color: var(--gold-hi); border-radius: 8px 8px 0 0 }
-.kp-d.is-pair { border-radius: 5px; background: rgba(47, 91, 211, .14); color: #1d3f9e }
+.kp-col.is-active .kp-head { background: var(--navy); color: var(--gold-hi); border-radius: 8px 8px 0 0 }
+.kp-d.is-pair { border-radius: 5px; background: rgba(47, 91, 211, .14); color: var(--ok) }
 .kp-s.is-active { border: 1.5px solid #2f5bd3; border-radius: 4px; background: var(--surface-card) }
 .kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: #2f5bd3; animation: fd-caret 1s steps(1) infinite }
 .kp-s.is-ok { color: var(--success) }

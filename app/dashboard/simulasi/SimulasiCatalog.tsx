@@ -206,7 +206,7 @@ export default function SimulasiCatalog({
             );
           })}
         </ol>
-        <Dialog open={prev !== undefined} onClose={() => setPreview(null)} labelledBy="sp-prev-title">
+        <Dialog ring open={prev !== undefined} onClose={() => setPreview(null)} labelledBy="sp-prev-title">
           {prev && (
             <div className="sp-prev">
               <span className="section-kicker">Pratinjau paket</span>

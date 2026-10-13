@@ -49,6 +49,7 @@ export function Dialog({
   onClose,
   labelledBy,
   dismissible = true,
+  ring = false,
   className = "",
   children,
 }: {
@@ -57,6 +58,8 @@ export function Dialog({
   labelledBy: string;
   /** false untuk keputusan yang harus dijawab (mis. lanjut sesi atau mulai ulang). */
   dismissible?: boolean;
+  /** Cincin navy berputar di luar kartu saat kursor di atasnya (modal pemilih paket). */
+  ring?: boolean;
   className?: string;
   children: React.ReactNode;
 }) {
@@ -80,9 +83,12 @@ export function Dialog({
       onClick={(e) => {
         if (dismissible && e.target === ref.current) onClose();
       }}
-      className={`m-auto w-full max-w-[min(30rem,calc(100vw-2rem))] border-0 bg-transparent p-0 backdrop:bg-[var(--surface-nav-deep)]/60 ${className}`}
+      className={`m-auto w-full max-w-[min(30rem,calc(100vw-2rem))] border-0 bg-transparent p-0 backdrop:bg-[var(--surface-nav-deep)]/60${ring ? " overflow-visible" : ""} ${className}`}
     >
-      <div className="surface-panel enter-rise p-6 text-left sm:p-7">{children}</div>
+      <div className={`surface-panel enter-rise p-6 text-left sm:p-7${ring ? " gr-host relative" : ""}`}>
+        {children}
+        {ring && <i className="gr" aria-hidden="true" />}
+      </div>
     </dialog>
   );
 }

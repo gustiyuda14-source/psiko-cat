@@ -12,7 +12,7 @@ export default async function DashboardLayout({
   // Seperti akun admin di dajiks-cest (p002): admin = peserta biasa + menu Admin di sidebar.
 
   return (
-    <div className="min-h-[100dvh] bg-background">
+    <div className="theme-scope min-h-[100dvh] bg-background">
       <Sidebar name={session.name} username={session.username} isAdmin={session.role === "admin"} />
       <main className="lg:ml-[var(--sidebar-width)]">{children}</main>
     </div>

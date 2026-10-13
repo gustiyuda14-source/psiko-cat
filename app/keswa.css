@@ -12,7 +12,7 @@
 .ksw-prose a { color: var(--brand-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px }
 .ksw-tanda { display: grid; gap: var(--space-2); margin: var(--space-2) 0 0; padding: 0; list-style: none; counter-reset: t }
 .ksw-tanda li { display: grid; gap: 2px; padding: var(--space-3) var(--space-4) var(--space-3) 52px; position: relative; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-card); counter-increment: t }
-.ksw-tanda li::before { content: counter(t); position: absolute; left: 14px; top: 13px; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--brand-ink); color: var(--gold-hi); font: 700 .85rem var(--font-display-src), sans-serif }
+.ksw-tanda li::before { content: counter(t); position: absolute; left: 14px; top: 13px; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--navy); color: var(--gold-hi); font: 700 .85rem var(--font-display-src), sans-serif }
 .ksw-tanda b { font: 700 1rem var(--font-display-src), sans-serif }
 .ksw-tanda span { color: var(--muted-foreground); line-height: 1.55 }
 .ksw-callout { padding: var(--space-4) var(--space-5); border: 1.5px solid #e3cf9b; border-radius: var(--r-lg); background: #fbf5e6 }

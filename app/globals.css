@@ -48,7 +48,11 @@
   --border: #ddd3c0;
   --border-strong: #877d66;
 
-  --brand-ink: #1b2a5c;
+  --brand-ink: #1b2a5c;        /* navy sebagai TEKS/garis; berubah terang di tema gelap */
+  --navy: #1b2a5c;             /* navy sebagai LATAR (kolom tiket, strip kartu): sama di dua tema */
+  --gr-n-head: var(--brand-ink); --gr-n-mid: rgba(27, 42, 92, .4); --gr-n-track: rgba(27, 42, 92, .14);
+  --glow-n: 0 0 26px -2px rgba(27, 42, 92, .32);
+  --cube-edge: rgb(27 42 92 / .22);
   --gold: #9a6f12;             /* emas sebagai TEKS di atas putih */
   --gold-hi: #e8c766;          /* emas di atas navy */
   --gold-grad: linear-gradient(120deg, #b8892b, #f3dd8e 48%, #c9a24a);
@@ -94,6 +98,89 @@
   --topbar-height: 76px;
 }
 
+/* ── Tema gelap ─────────────────────────────────────────────────────────────
+   Dipilih lewat atribut data-theme di <html> (tombol di topbar, tersimpan di
+   localStorage, diset sebelum cat pertama oleh skrip di app/layout.tsx).
+   Tanpa atribut = ikut pengaturan perangkat. Dua blok di bawah HARUS sama.
+   Hanya aktif di halaman yang memuat .theme-scope (shell dashboard); layar ujian, login,
+   dan laporan tetap terang sampai disiapkan. */
+@media (prefers-color-scheme: dark) {
+  :root:has(.theme-scope):not([data-theme="light"]) {
+    color-scheme: dark;
+  --surface-page: #0a0f20;
+  --surface-card: #121a34;
+  --surface-inset: #0e1630;
+  --surface-nav: #0d1636;
+  --surface-nav-deep: #070b1b;
+  --foreground: #e8ebf6;
+  --muted-foreground: #a4aeca;
+  --faint-foreground: #7f8bab;
+  --border: #27325a;
+  --border-strong: #56628b;
+  --brand-ink: #c8d3f7;        /* teks/garis navy jadi periwinkle; LATAR navy memakai --navy */
+  --gold: #e8c766;
+  --primary: #3550b0;
+  --primary-hover: #4560c8;
+  --primary-active: #2c4296;
+  --accent-soft: #2a2512;
+  --accent-ink: #efd88f;
+  --success: #46c79c;
+  --success-soft: #10302a;
+  --destructive: #f2778f;
+  --destructive-soft: #3a1722;
+  --ring: #93a9f2;
+  --ok: #8fa5ec;
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.4);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 18px -8px rgb(0 0 0 / 0.55);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.3), 0 16px 34px -12px rgb(0 0 0 / 0.65);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.35), 0 30px 60px -20px rgb(0 0 0 / 0.75);
+  --pg-track: #1a2346; --pg-rule: #222d55; --pg-ink2: #8fa5ec;
+  --pg-t1: #f0dc9b; --pg-t2: #d9ae4a; --pg-t3: #a97c1e;
+  --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20;
+  --hatch: #18214a; --hc-grid: rgb(143 165 236 / 0.1);
+  --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16);
+  --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
+  --cube-edge: rgb(200 211 247 / .28);
+  }
+}
+:root[data-theme="dark"]:has(.theme-scope) {
+  color-scheme: dark;
+  --surface-page: #0a0f20;
+  --surface-card: #121a34;
+  --surface-inset: #0e1630;
+  --surface-nav: #0d1636;
+  --surface-nav-deep: #070b1b;
+  --foreground: #e8ebf6;
+  --muted-foreground: #a4aeca;
+  --faint-foreground: #7f8bab;
+  --border: #27325a;
+  --border-strong: #56628b;
+  --brand-ink: #c8d3f7;        /* teks/garis navy jadi periwinkle; LATAR navy memakai --navy */
+  --gold: #e8c766;
+  --primary: #3550b0;
+  --primary-hover: #4560c8;
+  --primary-active: #2c4296;
+  --accent-soft: #2a2512;
+  --accent-ink: #efd88f;
+  --success: #46c79c;
+  --success-soft: #10302a;
+  --destructive: #f2778f;
+  --destructive-soft: #3a1722;
+  --ring: #93a9f2;
+  --ok: #8fa5ec;
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.4);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 18px -8px rgb(0 0 0 / 0.55);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.3), 0 16px 34px -12px rgb(0 0 0 / 0.65);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.35), 0 30px 60px -20px rgb(0 0 0 / 0.75);
+  --pg-track: #1a2346; --pg-rule: #222d55; --pg-ink2: #8fa5ec;
+  --pg-t1: #f0dc9b; --pg-t2: #d9ae4a; --pg-t3: #a97c1e;
+  --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20;
+  --hatch: #18214a; --hc-grid: rgb(143 165 236 / 0.1);
+  --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16);
+  --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
+  --cube-edge: rgb(200 211 247 / .28);
+}
+
 @theme inline {
   --color-background: var(--surface-page);
   --color-foreground: var(--foreground);
@@ -122,6 +209,7 @@
   --color-destructive-soft: var(--destructive-soft);
   --color-ring: var(--ring);
   --color-brand-ink: var(--brand-ink);
+  --color-navy: var(--navy);
   --color-gold: var(--gold);
   --color-gold-hi: var(--gold-hi);
 

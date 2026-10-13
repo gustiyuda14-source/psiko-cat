@@ -68,7 +68,7 @@ export default function DrillProgressTicket({
           <div className="pg-legend">
             <span><i style={{ background: "var(--success)" }} />Benar</span>
             <span><i style={{ background: "var(--destructive)" }} />Pernah salah</span>
-            <span><i style={{ background: "repeating-linear-gradient(135deg,var(--pg-track) 0 3px,#f8f4ea 3px 6px)" }} />Belum dikerjakan</span>
+            <span><i style={{ background: "repeating-linear-gradient(135deg,var(--pg-track) 0 3px,var(--hatch) 3px 6px)" }} />Belum dikerjakan</span>
           </div>
         </div>
         <div className="pg-heat-scroll">

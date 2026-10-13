@@ -10,7 +10,7 @@
 @container (max-width: 919px) { .rep-side { order: -1 } }  /* satu kolom: skor dulu, baru rincian */
 
 /* --- hero: ITP + CES + CEFR satu ukuran, rel ukur membawa ambang 400 --- */
-.rep-hero { position: relative; overflow: hidden; padding: var(--space-6); border-radius: var(--r-xl); background: var(--brand-ink); color: #fff; box-shadow: var(--elev-2) }
+.rep-hero { position: relative; overflow: hidden; padding: var(--space-6); border-radius: var(--r-xl); background: var(--navy); color: #fff; box-shadow: var(--elev-2) }
 .rep-hero::before { content: ''; position: absolute; inset: -1px; translate: -105% 0; pointer-events: none; background: linear-gradient(100deg, transparent 0%, rgba(243, 221, 142, .05) 26%, rgba(255, 248, 226, .22) 50%, rgba(243, 221, 142, .05) 74%, transparent 100%); animation: prog-glint 1.5s linear .4s both }
 .rep-kicker { margin: 0; color: var(--gold-hi); font: 700 .7rem var(--font-display-src), sans-serif; letter-spacing: .14em; text-transform: uppercase }
 .rep-hero > .rep-kicker span { color: rgba(255, 255, 255, .55) }
@@ -28,7 +28,7 @@
 .rep-rail .r-pass { stroke: var(--gold-hi); stroke-width: 2; stroke-dasharray: 3 3 }
 .rep-rail text { font: 600 20px var(--font-display-src), sans-serif; fill: rgba(255, 255, 255, .62); font-variant-numeric: tabular-nums }
 .rep-rail .r-pass-t { fill: var(--gold-hi); font-weight: 700 }
-.rep-rail .r-dot { fill: #fff; stroke: var(--brand-ink); stroke-width: 3 }
+.rep-rail .r-dot { fill: var(--surface-card); stroke: var(--brand-ink); stroke-width: 3 }
 @keyframes rep-rail-in { from { transform: scaleX(0) } }
 .rep-status { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2); padding-top: var(--space-4); border-top: 2px dashed rgba(255, 255, 255, .25) }
 .rep-status .muted, .rep-status p { max-width: 52ch; margin: 0; color: rgba(255, 255, 255, .78) }
@@ -47,9 +47,9 @@
 .rep-mod-v em { color: var(--muted-foreground); font: 600 .78rem var(--font-display-src), sans-serif; font-style: normal }
 .rep-mod-s { position: relative; display: flex; align-items: center; justify-content: center; border-left: 2px dashed var(--border); background: var(--surface-inset); color: var(--brand-ink) }
 .rep-mod-s span { writing-mode: vertical-rl; transform: rotate(180deg); font: 700 .66rem var(--font-display-src), sans-serif; letter-spacing: .2em; text-transform: uppercase }
-.rep-mod.is-pending .rep-mod-s { background: var(--brand-ink); color: var(--gold-hi) }
+.rep-mod.is-pending .rep-mod-s { background: var(--navy); color: var(--gold-hi) }
 .rep-mod .cat-meter > span { height: 22px; font-size: .6rem }
-.rep-mod .cat-meter .lv-c::after { background: var(--brand-ink) }.rep-mod .cat-meter .lv-c b { position: relative; color: #fff }
+.rep-mod .cat-meter .lv-c::after { background: var(--navy) }.rep-mod .cat-meter .lv-c b { position: relative; color: #fff }
 .rep-mod .btn { align-self: flex-start; min-height: 38px }
 /* --- panel aksi + pemilih paket (kolom kanan) --- */
 .rep-acts { display: grid; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-2) }

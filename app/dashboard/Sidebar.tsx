@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import LogoutButton from "@/app/components/LogoutButton";
+import ThemeToggle from "@/app/components/ThemeToggle";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref, type ModuleType } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
 import {
@@ -178,7 +179,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
       </div>
 
       {mobile && (
-        <div className="mx-4 mt-4 flex items-center gap-3 rounded-lg bg-brand-ink px-4 py-3 text-white">
+        <div className="mx-4 mt-4 flex items-center gap-3 rounded-lg bg-navy px-4 py-3 text-white">
           <UserGlyph className="size-9 shrink-0 rounded-full border border-dashed border-gold-hi/60 p-[7px] text-gold-hi" />
           <span className="grid min-w-0">
             <small className="font-heading text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-gold-hi">
@@ -287,7 +288,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
           aria-label="Menu"
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="group grid size-[46px] shrink-0 place-items-center rounded-xl bg-brand-ink text-gold-hi shadow-[inset_0_0_0_1px_rgb(232_199_102/0.35)] transition-shadow duration-200 hover:shadow-[inset_0_0_0_1.5px_var(--gold-hi)] lg:hidden"
+          className="group grid size-[46px] shrink-0 place-items-center rounded-xl bg-navy text-gold-hi shadow-[inset_0_0_0_1px_rgb(232_199_102/0.35)] transition-shadow duration-200 hover:shadow-[inset_0_0_0_1.5px_var(--gold-hi)] lg:hidden"
         >
           <span className="relative block h-3.5 w-5" aria-hidden="true">
             <i className={`absolute left-0 top-0 h-[2.25px] w-full rounded-sm bg-current transition-transform duration-200 ${open ? "translate-y-[6px] rotate-45" : ""}`} />
@@ -316,7 +317,9 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
           <b className="block truncate text-sm">{name}</b>
         </div>
 
-        <LogoutButton className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset max-lg:ml-auto" />
+        <ThemeToggle className="max-lg:ml-auto" />
+
+        <LogoutButton className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset" />
       </header>
 
       {open && (

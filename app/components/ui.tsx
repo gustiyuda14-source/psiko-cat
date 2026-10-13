@@ -73,11 +73,11 @@ export function buttonStyles({
 type Tone = "neutral" | "info" | "success" | "danger" | "accent";
 
 const TONE: Record<Tone, string> = {
-  neutral: "bg-[#eef0f3] text-[#3d4a5c]",
-  info: "bg-[#e8ebf5] text-brand-ink",
+  neutral: "bg-surface-inset text-muted-foreground",
+  info: "bg-primary/10 text-brand-ink",
   success: "bg-success-soft text-success",
   danger: "bg-destructive-soft text-destructive",
-  accent: "bg-[#f6edd6] text-[#7a5710]",
+  accent: "bg-accent-soft text-accent-ink",
 };
 
 export function Badge({

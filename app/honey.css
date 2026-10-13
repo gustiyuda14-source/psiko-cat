@@ -130,7 +130,7 @@
 .hc-core-lab { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; fill: var(--muted-foreground) !important }
 .hc-core-pct { font-weight: 700; letter-spacing: -.03em; font-variant-numeric: tabular-nums }
 .hc-core-of { font-size: 11.5px; font-weight: 600; fill: var(--muted-foreground) !important; font-variant-numeric: tabular-nums }
-.hc-core-text.is-high text { fill: var(--brand-ink) !important }
+.hc-core-text.is-high text { fill: var(--navy) !important }
 .hc-wheel .hc-core-text.is-high text { stroke: var(--gold-hi) }
 
 /* ── Panel ── */
@@ -210,9 +210,9 @@
 .hc-cube-meta { font-size: .8rem; color: var(--muted-foreground) }
 .hc-cube[aria-pressed="true"] .hc-cube-title { color: var(--accent-ink) }
 .hc-ghost { opacity: .28 }
-.hc-shade { fill: var(--brand-ink); pointer-events: none }
-.hc-face-num { font: 700 15px var(--font-display-src), sans-serif; fill: var(--brand-ink); font-variant-numeric: tabular-nums }
-.hc-cube-edge { fill: none; stroke: rgb(27 42 92 / .22); stroke-width: 1.2; vector-effect: non-scaling-stroke }
+.hc-shade { fill: var(--navy); pointer-events: none }
+.hc-face-num { font: 700 15px var(--font-display-src), sans-serif; fill: var(--navy); font-variant-numeric: tabular-nums }
+.hc-cube-edge { fill: none; stroke: var(--cube-edge); stroke-width: 1.2; vector-effect: non-scaling-stroke }
 .hc-cube-out { fill: none; stroke: var(--border); stroke-width: 1.2; vector-effect: non-scaling-stroke }
 .hc-cube[aria-pressed="true"] .hc-cube-out { stroke: var(--brand-ink); stroke-width: 2.4 }
 .hc-legend-item { display: inline-flex; align-items: center; gap: 8px; margin: 4px 9px }
@@ -249,7 +249,7 @@
 .hc-timer span { font-size: .78rem; color: var(--muted-foreground) }
 .hc-seg { display: inline-flex; gap: 4px; padding: 3px; border: 1px solid var(--border); border-radius: 8px }
 .hc-seg button { min-height: 36px; padding: 0 14px; border-radius: 6px; font: 600 .875rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
-.hc-seg button[aria-checked="true"] { background: var(--brand-ink); color: #fff }
+.hc-seg button[aria-checked="true"] { background: var(--navy); color: #fff }
 @media (max-width: 760px) { .hc-rack { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
 
 /* ── Daftar paket Latihan (PackageCarousel) ──
@@ -268,7 +268,7 @@
 @media (max-width: 959px) { .pk-side { display: none } }
 @media (min-width: 960px) { .pk-side { position: sticky; top: 24px } }
 
-.pk-sheet { width: 100%; max-width: 560px; max-height: 88dvh; margin: auto auto 0; padding: 0; border: 0; background: transparent; overflow: visible }
+.pk-sheet { width: calc(100% - 20px); max-width: 560px; max-height: 88dvh; margin: auto auto 0; padding: 0; border: 0; background: transparent; overflow: visible }
 .pk-sheet::backdrop { background: rgb(15 24 56 / .5) }
 .pk-sheet[open] { animation: pk-up 280ms var(--e-out) }
 @keyframes pk-up { from { transform: translateY(100%) } }

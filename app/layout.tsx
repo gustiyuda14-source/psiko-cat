@@ -43,8 +43,15 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#ffffff",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a0f20" },
+  ],
 };
+
+// Dijalankan sinkron saat HTML di-parse, sebelum cat pertama: pasang pilihan tema yang tersimpan
+// (lihat app/components/ThemeToggle.tsx). Tanpa ini halaman berkedip terang dulu di mode gelap.
+const THEME_INIT = `(function(){try{var t=localStorage.getItem("ajiks-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
 
 export default function RootLayout({
   children,
@@ -55,7 +62,11 @@ export default function RootLayout({
     <html
       lang="id"
       className={`${sourceSans.variable} ${lexend.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT }} />
+      </head>
       <body className="flex min-h-full flex-col">
         {children}
         <VersionWatcher />
