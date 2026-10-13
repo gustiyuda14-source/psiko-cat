@@ -10,19 +10,26 @@ import AttemptSaver from "./AttemptSaver";
 import { ExamBody, ExamDock, QuestionNavigator } from "@/app/components/ExamChrome";
 import { PribadiReview, type PribadiReviewItem, type PribadiReviewSummary } from "@/app/components/PribadiReview";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
+import { MODULE_CONFIG } from "@/lib/test-config";
 
 // Latihan PRIBADI: butir Kepribadian (Likert 4) dan Substansi Khusus (A/B) dalam
 // satu paket, urut sequence_number. Label aspek bisa disembunyikan peserta
 // (pedoman §7.1, tahap tryout mini); preferensinya disimpan per browser.
 const ASPECT_PREF = "pribadi-show-aspect";
+const TIME_LIMIT_MS = MODULE_CONFIG.KEPRIBADIAN.time_limit_seconds * 1000;
 
 export default function LatihanKepribadian({
   questions,
   progressKey,
+  timedMode = false,
+  onSecondsLeft,
   onActiveChange,
 }: {
   questions: SafeQuestion[];
   progressKey?: string;
+  /** Ya di toggle timer (PackageCarousel): 60 menit total seperti ujian, habis = dikumpulkan otomatis. */
+  timedMode?: boolean;
+  onSecondsLeft?: (seconds: number | null) => void;
   /** true selama sudah ada jawaban dan latihan belum selesai: LatihanGate menahan peserta keluar. */
   onActiveChange?: (active: boolean) => void;
 }) {
@@ -64,6 +71,9 @@ export default function LatihanKepribadian({
     });
   };
   const advanceTimer = useRef<number | null>(null);
+  // Deadline wall-clock (tahan tab-throttling), pola sama dengan LatihanKecerdasan.
+  const [deadline, setDeadline] = useState(() => Date.now() + TIME_LIMIT_MS);
+  const [timeUp, setTimeUp] = useState(false);
 
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KepribadianOptionsPayload | undefined;
@@ -81,14 +91,14 @@ export default function LatihanKepribadian({
 
   const pick = useCallback(
     (key: string) => {
-      if (!q) return;
+      if (!q || timeUp) return;
       setAnswers((prev) => ({ ...prev, [q.id]: key }));
       if (idx < sorted.length - 1) {
         if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
         advanceTimer.current = window.setTimeout(() => setIdx((i) => Math.min(sorted.length - 1, i + 1)), 200);
       }
     },
-    [q, idx, sorted.length]
+    [q, idx, sorted.length, timeUp]
   );
 
   const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
@@ -127,6 +137,34 @@ export default function LatihanKepribadian({
     }
   }, [answers, sorted]);
 
+  const submitRef = useRef(submit);
+  useEffect(() => {
+    submitRef.current = submit;
+  });
+
+  // Waktu habis: kunci jawaban dan kumpulkan sekali. Kalau gagal (jaringan),
+  // peserta kumpulkan manual lewat tombol, tidak di-retry otomatis.
+  useEffect(() => {
+    if (!timedMode || finished || timeUp) return;
+    const interval = setInterval(tick, 250);
+    function tick() {
+      const left = Math.max(0, Math.ceil((deadline - Date.now()) / 1000));
+      onSecondsLeft?.(left);
+      if (left > 0) return;
+      clearInterval(interval);
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+      setShowFinish(false);
+      setTimeUp(true);
+      void submitRef.current();
+    }
+    tick();
+    return () => clearInterval(interval);
+  }, [timedMode, deadline, finished, timeUp, onSecondsLeft]);
+
+  useEffect(() => {
+    if (finished) onSecondsLeft?.(null);
+  }, [finished, onSecondsLeft]);
+
   if (!q) return null;
 
   if (result) {
@@ -138,7 +176,7 @@ export default function LatihanKepribadian({
           </span>
           <h2 className="font-heading mt-3 text-2xl text-foreground">Latihan selesai</h2>
         </div>
-        <AttemptSaver progressKey={progressKey} answers={Object.fromEntries(result.items.map((r) => [r.question_id, r.selected_key]))} />
+        <AttemptSaver progressKey={progressKey} timed={timedMode} answers={Object.fromEntries(result.items.map((r) => [r.question_id, r.selected_key]))} />
         <PribadiReview summary={result.summary} items={result.items} />
         <Button
           variant="primary"
@@ -148,6 +186,8 @@ export default function LatihanKepribadian({
             setAnswers({});
             setIdx(0);
             setResult(null);
+            setTimeUp(false);
+            setDeadline(Date.now() + TIME_LIMIT_MS);
           }}
         >
           Mulai ulang latihan
@@ -196,6 +236,11 @@ export default function LatihanKepribadian({
         }
       >
         <article key={q.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
+          {timeUp && !submitError && (
+            <p role="status" className="inset-panel px-3 py-2 text-sm text-muted-foreground">
+              Waktu habis. Jawaban dikunci dan sedang dikumpulkan…
+            </p>
+          )}
           {submitError && (
             <p role="alert" className="rounded-md bg-destructive-soft px-3 py-2 text-sm text-destructive">
               {submitError}

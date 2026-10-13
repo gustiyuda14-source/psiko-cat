@@ -123,10 +123,39 @@ export function PackageCarousel({
     </span>
   );
   const hrefOf = (id: number, timed: boolean) =>
-    pkg.sections ? `${hrefBase}/${id}?autostart=1${timed ? "&timed=1" : ""}` : `${hrefBase}/${id}`;
+    pkg.sections
+      ? `${hrefBase}/${id}?autostart=1${timed ? "&timed=1" : ""}`
+      : pkg.parts && timed
+        ? `${hrefBase}/${id}?timed=1`
+        : `${hrefBase}/${id}`;
   const href = hrefOf(pkg.id, timedMode);
-  // Sama dengan label di LatihanGate: Kecerdasan 90 menit, Kecermatan ikut pilihan timer.
-  const timeNote = moduleLabel === "kecerdasan" ? `${MODULE_CONFIG.KECERDASAN.time_limit_seconds / 60} menit` : pkg.sections && timedMode ? "60 detik/kolom" : "tanpa timer";
+  // Sama dengan label di LatihanGate: Kecerdasan 90 menit, Kecermatan & Kepribadian ikut pilihan timer.
+  const pribadiMinutes = MODULE_CONFIG.KEPRIBADIAN.time_limit_seconds / 60;
+  const timeNote =
+    moduleLabel === "kecerdasan"
+      ? `${MODULE_CONFIG.KECERDASAN.time_limit_seconds / 60} menit`
+      : !timedMode
+        ? "tanpa timer"
+        : pkg.sections
+          ? "60 detik/kolom"
+          : pkg.parts
+            ? `${pribadiMinutes} menit`
+            : "tanpa timer";
+  const timerToggle = (title: string, on: string, off: string) => (
+    <div className="hc-timer">
+      <div>
+        <b>{title}</b>
+        <span>{timedMode ? on : off}</span>
+      </div>
+      <div role="radiogroup" aria-label={`Aktifkan ${title.toLowerCase()}`} className="hc-seg">
+        {[false, true].map((v) => (
+          <button key={String(v)} type="button" role="radio" aria-checked={timedMode === v} onClick={() => setTimedMode(v)}>
+            {v ? "Ya" : "Tidak"}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
 
   const detail = (
     <>
@@ -204,6 +233,7 @@ export function PackageCarousel({
                   ))}
                 </ul>
               </details>
+              {timerToggle("Timer ujian", `${pribadiMinutes} menit untuk semua butir, habis = dikumpulkan otomatis, persis mode ujian.`, "Tanpa batas waktu.")}
             </>
           )}
 
@@ -235,19 +265,7 @@ export function PackageCarousel({
                   ))}
                 </ul>
               </details>
-              <div className="hc-timer">
-                <div>
-                  <b>Timer per kolom</b>
-                  <span>{timedMode ? "60 detik per kolom, urutan terkunci, persis mode ujian." : "Tanpa batas waktu, bebas pindah kolom."}</span>
-                </div>
-                <div role="radiogroup" aria-label="Aktifkan timer per kolom" className="hc-seg">
-                  {[false, true].map((on) => (
-                    <button key={String(on)} type="button" role="radio" aria-checked={timedMode === on} onClick={() => setTimedMode(on)}>
-                      {on ? "Ya" : "Tidak"}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              {timerToggle("Timer per kolom", "60 detik per kolom, urutan terkunci, persis mode ujian.", "Tanpa batas waktu, bebas pindah kolom.")}
             </>
           )}
 

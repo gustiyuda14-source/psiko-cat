@@ -60,19 +60,21 @@ export default function LatihanGate({
   // di modal, nampilin lagi di sini cuma nambah satu klik yang gak perlu.
   const searchParams = useSearchParams();
   const autoStart = searchParams.get("autostart") === "1";
-  // Cuma dipakai LatihanKecermatan (lihat komponen itu) — modul lain gak
-  // punya konsep kolom, prop-nya diabaikan.
+  // Kecermatan: 60 detik/kolom. Kepribadian: 60 menit total seperti ujian.
+  // Kecerdasan selalu berwaktu, param ini diabaikan.
   const timedMode = searchParams.get("timed") === "1";
   const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
   const meta = MODULE_CONFIG[moduleType];
-  // Hanya Kecerdasan yang berbatas waktu penuh (90 menit, sama dengan simulasi).
+  // Kecerdasan selalu berbatas waktu penuh (90 menit); Kepribadian hanya bila timedMode.
   const [secondsLeft, setSecondsLeft] = useState<number | null>(null);
   const timeLabel =
     moduleType === "KECERDASAN"
       ? `${meta.time_limit_seconds / 60} menit`
       : timedMode
-        ? "60 detik/kolom"
+        ? moduleType === "KEPRIBADIAN"
+          ? `${meta.time_limit_seconds / 60} menit`
+          : "60 detik/kolom"
         : "Tanpa batas waktu";
   const practiceRef = useRef<HTMLDivElement>(null);
   const noun = "butir";
@@ -129,7 +131,7 @@ export default function LatihanGate({
           {moduleType === "KECERDASAN" ? (
             <LatihanKecerdasan questions={questions} progressKey={progressKey} onSecondsLeft={setSecondsLeft} onActiveChange={setActive} />
           ) : moduleType === "KEPRIBADIAN" ? (
-            <LatihanKepribadian questions={questions} progressKey={progressKey} onActiveChange={setActive} />
+            <LatihanKepribadian questions={questions} timedMode={timedMode} progressKey={progressKey} onSecondsLeft={setSecondsLeft} onActiveChange={setActive} />
           ) : (
             <LatihanKecermatan questions={questions} timedMode={timedMode} progressKey={progressKey} onActiveChange={setActive} />
           )}
