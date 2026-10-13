@@ -16,12 +16,14 @@ export const INSTRUKSI: Record<string, string> = {
   ANA: "Pilihlah dua kata yang tepat untuk melengkapi soal berikut ini.",
   ODD: "Pilihlah satu kata yang memiliki makna yang paling jauh dari 4 kata lainnya.",
   SIL: "Pilihlah satu jawaban yang tepat untuk menyimpulkan pernyataan berikut.",
+  // Pedoman Kecerdasan v3 §4.8: paket yang disusun mulai 2026-10-13 (pkg 4, 5, …).
+  SIL_V3: "Anggap semua pernyataan berikut benar, lalu pilihlah satu kesimpulan yang tepat.",
   DER: "Pilihlah dua jawaban untuk melengkapi deret berikut.",
 };
 const GANDA = new Set(["SIN", "ANT", "ANA", "DER"]);
 export const KEYS = ["A", "B", "C", "D", "E"] as const;
 
-export type Teks = { s: number; t: string; d: number; q?: string; w?: string; i?: string; c: string[]; k: string; h?: string; p: string };
+export type Teks = { s: number; t: string; d: number; q?: string; w?: string; i?: string; c: string[]; k: string; h?: string; p: string; svg?: string | null };
 export type TeksFile = { wacana: Record<string, string>; soal: Teks[] };
 export type Row = {
   sequence_number: number;
@@ -64,8 +66,9 @@ export function checkTeks(teks: TeksFile): number {
   return numericChecked;
 }
 
-export const teksRows = (teks: TeksFile): Row[] => teks.soal.map((x) => {
-  const instruksi = x.i ?? INSTRUKSI[x.t];
+/** `v3`: silogisme memakai INSTRUKSI.SIL_V3 (paket baru ≥ 4). `svg` = tabel kecukupan data. */
+export const teksRows = (teks: TeksFile, v3 = false): Row[] => teks.soal.map((x) => {
+  const instruksi = x.i ?? INSTRUKSI[v3 && x.t === "SIL" ? "SIL_V3" : x.t];
   assert.ok(instruksi, `soal ${x.s}: instruksi kosong`);
   return {
     sequence_number: x.s,
@@ -73,7 +76,7 @@ export const teksRows = (teks: TeksFile): Row[] => teks.soal.map((x) => {
       instruksi,
       question_text: x.q ?? null,
       sub_text: x.w ? teks.wacana[x.w] : null,
-      svg_content: null,
+      svg_content: x.svg ?? null,
       is_multi_select: GANDA.has(x.t),
       choices: x.c.map((text, n) => ({ key: KEYS[n], text })),
     },
@@ -86,15 +89,15 @@ const GENERIK = new Set(["WAC", "BAC", "KUA", "KCK"]);
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 /**
   Anti-bocor: stem/pilihan tidak boleh sama persis dengan Paket 1 (soal.json), bank teks lain
-  (`others`, nama file di prisma/data), atau bank drill.
+  (`others`, nama file di prisma/data: format { soal } atau { "<pkg>": soal[] } seperti kecerdasan_kck_kal.json), atau bank drill.
 */
 export function checkNoLeak(teks: TeksFile, others: string[]) {
   const seen = new Set<string>();
   const p1 = JSON.parse(fs.readFileSync(path.join(root, "soal.json"), "utf8")) as { soal: { soal?: string | null; instruksi?: string; pilihan: Record<string, string> }[] };
   for (const q of p1.soal) { if (q.soal) seen.add(norm(q.soal)); seen.add(norm(Object.values(q.pilihan).sort().join("|"))); }
   for (const f of others) {
-    const o = data(f) as { soal: { t: string; q?: string; i?: string; c: string[] }[] };
-    for (const q of o.soal) { if (q.q) seen.add(norm(q.q)); if (q.i && !GENERIK.has(q.t)) seen.add(norm(q.i)); if (q.t !== "KCK") seen.add(norm([...q.c].sort().join("|"))); }
+    const o = data(f);
+    for (const q of (o.soal ?? Object.values(o).flat()) as { t: string; q?: string; i?: string; c: string[] }[]) { if (q.q) seen.add(norm(q.q)); if (q.i && !GENERIK.has(q.t)) seen.add(norm(q.i)); if (q.t !== "KCK") seen.add(norm([...q.c].sort().join("|"))); }
   }
   const drill = JSON.parse(fs.readFileSync(path.join(root, "data/drill-bank.json"), "utf8")) as { stem: string; opsi: Record<string, string> }[];
   for (const q of drill) { seen.add(norm(q.stem)); seen.add(norm(Object.values(q.opsi).sort().join("|"))); }
@@ -106,7 +109,7 @@ export function checkNoLeak(teks: TeksFile, others: string[]) {
 }
 
 /** Cek baris satu paket: 5 pilihan unik, format kunci, id SVG unik, SVG aman, sebaran huruf kunci. */
-export function checkRows(rows: Row[], tag: string, legacy = new Set<number>()) {
+export function checkRows(rows: Row[], tag: string, legacy = new Set<number>(), max = 30) {
   for (const r of rows) {
     const { choices, is_multi_select } = r.options_payload;
     const key = r.scoring_rule.correct_key;
@@ -122,6 +125,29 @@ export function checkRows(rows: Row[], tag: string, legacy = new Set<number>()) 
   // `legacy`: salinan butir lama yang sudah tayang (SVG Paket 1 memakai <style>); butir baru tetap wajib bersih.
   for (const r of rows) if (r.options_payload.svg_content && !legacy.has(r.sequence_number)) assert.ok(!/<script|<image|<style|href="(?!#)/.test(r.options_payload.svg_content), `${tag} #${r.sequence_number}: SVG tanpa script/image/style/href luar`);
   const dist = rows.reduce<Record<string, number>>((m, r) => { for (const k of r.scoring_rule.correct_key) m[k] = (m[k] ?? 0) + 1; return m; }, {});
-  assert.ok(Object.values(dist).every((n) => n <= 30), `${tag}: sebaran kunci timpang: ${JSON.stringify(dist)}`);
+  assert.ok(Object.values(dist).every((n) => n <= max), `${tag}: sebaran kunci timpang (maks ${max}/huruf): ${JSON.stringify(dist)}`);
   return dist;
+}
+
+const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
+/** Blok Praktis v3 (pedoman Kecerdasan §3 rev. 2026-10-13). */
+export const LAYOUT_V3: [number, number, string][] = [[76, 90, "HIT"], [91, 96, "CRT"], [97, 100, "KCK"]];
+
+/** Validator layout v3: 76–90 HIT, 91–96 CRT, 97–100 KCK (4 kunci beda, ada C/E), tanpa KUA. `t` kosong = butir di luar blok Praktis. */
+export function checkLayout(pkg: number, final: { row: Row; t: string }[], max = 30) {
+  assert.deepEqual(final.map((f) => f.row.sequence_number), range(1, 100), `pkg ${pkg}: nomor harus 1..100`);
+  for (const [a, b, t] of LAYOUT_V3) for (const s of range(a, b)) assert.equal(final[s - 1].t, t, `pkg ${pkg} #${s}: tipe ${final[s - 1].t} ≠ ${t}`);
+  assert.ok(!final.some((f) => f.t === "KUA"), `pkg ${pkg}: masih ada KUA`);
+  const keys = final.slice(96).map((f) => f.row.scoring_rule.correct_key);
+  assert.equal(new Set(keys).size, 4, `pkg ${pkg}: kunci KCK 97–100 harus 4 huruf beda (${keys})`);
+  assert.ok(keys.some((k) => k === "C" || k === "E"), `pkg ${pkg}: KCK wajib punya kunci C atau E`);
+  return checkRows(final.map((f) => f.row), `pkg ${pkg}`, new Set(), max);
+}
+
+// Pedoman utama A-7: soal baru tanpa unsur kepolisian (stem, opsi, wacana, pembahasan, gambar).
+const A7 = /\b(?:polisi|kepolisian|polri|polres|polsek|polda|bhayangkara|brimob|satlantas|kapolres|kapolsek|kapolda|bintara|taruna|akpol|reserse|penyidik|patroli|tilang|razia|tkp|operasi zebra)\b/gi;
+/** Tolak kata terlarang A-7 di mana pun dalam `value` (seluruh isi di-JSON-kan). Hanya untuk paket baru (≥ 4, mulai 2026-10-13). */
+export function checkA7(tag: string, value: unknown) {
+  const hits = [...new Set([...JSON.stringify(value).matchAll(A7)].map((m) => m[0].toLowerCase()))];
+  assert.equal(hits.length, 0, `${tag}: unsur kepolisian (pedoman A-7): ${hits.join(", ")}`);
 }

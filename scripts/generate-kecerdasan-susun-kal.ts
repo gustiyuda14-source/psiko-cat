@@ -1,17 +1,20 @@
 import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
-import { answerFor, enDash, verticalPuzzleSvg } from "./susun-lib";
+import { kereta, feri, traktor, pinisi } from "./susun-benda-45";
+import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cutProfile, cutPuzzleSvg, cutPembahasanSvg } from "./susun-lib";
 
 // Susun potongan gambar untuk kalibrasi Logis/Spasial 2026-10-12 (nomor 33-34):
 //   pkg 13: mobil patroli (5 potong), kapal selam (4)   — menggantikan soal persegi 4 segitiga
 //           Paket 1 lama yang ambigu (docs/rencana/drilling/susun-findings.md §2)
 //   pkg 3:  helikopter (4), truk pemadam kebakaran (6)
+//   pkg 4:  kereta api (5), kapal feri (grid 2×3, tingkat 3)      — adegan di susun-benda-45.ts
+//   pkg 5:  traktor (5), perahu pinisi (grid 2×3, tingkat 3)
 //   pkg 15: motor patroli (5), ekskavator (6, tingkat 3)   — Simulasi 3
 //   pkg 16: sepeda (4), mobil derek (6, tingkat 3)          — Simulasi 1 baru
-// Siluet 600×190 sendiri; setiap potongan memuat ciri unik dan setiap batas potong dilintasi
-// garis/massa yang harus menyambung. Kunci dihitung dari `order`, pengecoh = permutasi sah.
-//   npx tsx scripts/generate-kecerdasan-susun-kal.ts
+// Pkg 4/5: benda nyata yang dikenali dan asimetris (G-4), potongan memakai profil batas unik (cutLayout) dan tepi bersama tanpa celah.
+// Paket lainnya tetap memakai jalur lama.
+//   node --import tsx scripts/generate-kecerdasan-susun-kal.ts
 // Output: prisma/data/kecerdasan_susun_kal.json ({ [pkg]: Row[] }) + output/susun-kal-preview.html
 
 const INSTRUKSI = "Urutkanlah potongan gambar berikut menjadi gambar yang utuh.";
@@ -133,7 +136,7 @@ const mobilDerek = `
   <circle cx="230" cy="150" r="30"/><circle cx="230" cy="150" r="17" fill="white"/><circle cx="230" cy="150" r="7"/>
   <circle cx="470" cy="150" r="30"/><circle cx="470" cy="150" r="17" fill="white"/><circle cx="470" cy="150" r="7"/>`;
 
-type Puzzle = { pkg: number; seq: number; objek: string; pieces: number; order: number[]; key: Key; scene: string; pembahasan: string; tingkat?: 2 | 3 };
+type Puzzle = { pkg: number; seq: number; objek: string; pieces: number; order: number[]; key: Key; scene: string; pembahasan: string; tingkat?: 2 | 3; cut?: boolean; seams?: string[]; camouflage?: string };
 
 /** Pengecoh: tukar dua potongan bersebelahan, geser siklis, tukar ujung, dan pindah satu potongan. */
 function choicesFor(order: number[], key: Key): string[] {
@@ -156,6 +159,22 @@ const puzzles: Puzzle[] = [
     pembahasan: "Ujung kiri adalah potongan dengan baling-baling ekor bundar dan sirip ekor. Ujung kanan adalah moncong kabin dengan kaca depan dan ujung landasan yang melengkung ke atas. Di antaranya, potongan batang ekor dengan baling-baling utama datang lebih dulu, lalu potongan kabin bertuliskan POLRI dengan tiang baling-baling. Batang ekor harus menyambung ke kabin dan baling-baling utama harus satu garis lurus." },
   { pkg: 3, seq: 34, objek: "truk pemadam kebakaran", pieces: 6, order: [4, 6, 2, 5, 1, 3], key: "E", scene: fireTruck,
     pembahasan: "Ujung kiri adalah bagian belakang truk dengan ujung tangga. Ujung kanan adalah moncong kabin dengan lampu depan. Urutan dari kiri: belakang truk dengan anak tangga putih dan roda belakang, gulungan selang, pintu lebar, pintu kecil dan lambang belah ketupat di atas roda tengah, kabin belakang dengan lampu sirene, lalu moncong kabin. Tangga di atap, garis putih di badan, dan garis jalan harus lurus menyambung di setiap batas." },
+  { pkg: 4, seq: 33, objek: "kereta api listrik", pieces: 5, order: [4, 1, 5, 2, 3], key: "B", scene: kereta, tingkat: 2, cut: true,
+    camouflage: "Gerbong dan lokomotif listrik berada di satu rel; kawat listrik, garis putih hiasan dan rel melewati seluruh lebar bingkai, sehingga tiap batas memotong badan kereta.",
+    seams: ["jendela kecil kedua gerbong, garis putih hiasan dan rangka bogie belakang", "jendela lebar ketiga gerbong, garis putih hiasan serta roda dan rangka bogie depan", "pintu lipat penghubung gerbong, tepi badan lokomotif dan garis putih hiasan", "kisi-kisi sirip lokomotif, kaki pantograf dan garis putih hiasan"],
+    pembahasan: "Kenali bendanya dulu: gerbong penumpang di kiri yang disambung ke lokomotif listrik di kanan, di atas satu rel. Cari kedua ujung: ujung kiri adalah belakang gerbong dengan dua jendela kecil dan sudut atap melengkung; ujung kanan adalah moncong lokomotif dengan lampu depan bulat, kisi-kisi sirip, dan pantograf. Potongan dengan pintu putih dan jendela lebar menyusul ujung kiri; potongan dengan jendela lebar terakhir dan pintu lipat penghubung ada di tengah; potongan dengan kabin berjendela dan pintu lokomotif berada tepat sebelum moncong. Kawat listrik di atas, garis putih hiasan di badan, dan rel di bawah harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 4, seq: 34, objek: "kapal feri penyeberangan", pieces: 6, order: [2, 5, 1, 6, 3, 4], key: "D", scene: feri, tingkat: 3, cut: true,
+    camouflage: "Kapal feri tampak samping: bangunan atas bertingkat, tiang dengan kawat, dan lambung berbukaan dek kendaraan melewati bingkai; garis putih lambung dan gelombang menyambung antarbagian.",
+    seams: ["cerobong bergaris putih dan jendela dek kedua sisi kiri", "sisi miring anjungan, kawat dari tiang radar dan ujung dek kedua", "jendela dek kendaraan lebar, garis putih lambung dan gelombang air", "jendela dek bawah sisi kanan, ujung geladak depan dan bukaan dek kendaraan", "deretan jendela buritan dan sudut kanan badan buritan", "sekoci kiri dan jendela dek pertama", "jendela dek pertama dan lambung di bawah anjungan", "jendela dek pertama paling kanan dan tepi blok dek", "atap geladak depan, tiang haluan dan kawat ke ujung haluan"],
+    pembahasan: "Kenali kapal feri penyeberangan dari samping: haluan runcing di kanan, buritan di kiri. Baris atas memuat bangunan atas kapal: bendera dan tiang buritan dengan tali (kiri), cerobong bergaris putih dan anjungan bertiang radar (tengah), serta tiang haluan dengan kawat ke ujung haluan (kanan). Baris bawah memuat lambung: buritan membulat dengan jendela buritan (kiri), bagian tengah lambung dengan bukaan dek kendaraan yang lebar, dan haluan runcing dengan lubang jangkar putih (kanan). Garis putih lambung, gelombang, dan kawat harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 5, seq: 33, objek: "traktor", pieces: 5, order: [5, 3, 2, 1, 4], key: "A", scene: traktor, tingkat: 2, cut: true,
+    camouflage: "Traktor tampak samping dengan ban belakang besar, kabin berkaca, kap mesin panjang dan ember pemuat; lengan pemuat dan garis tanah melewati seluruh lebar bingkai.",
+    seams: ["sayap roda belakang, ban berbintil kiri dan lengan penarik pembajak", "kaca jendela kabin, jok dan rangka lantai kabin", "saluran udara bergaris di atas kap, garis putih kap mesin dan lengan pemuat", "garis putih kap mesin, lengan pemuat dan bagian atas roda depan"],
+    pembahasan: "Kenali bendanya dulu: traktor tampak samping, ban belakang besar di kiri dan roda depan kecil di kanan. Cari kedua ujung: ujung kiri adalah cincin penarik dan mata bajak dengan setengah kiri ban belakang; ujung kanan adalah kisi-kisi dan lampu depan dengan roda depan kecil dan ember pemuat. Potongan dengan ban belakang berjari-jari dan kabin berkaca menyusul ujung kiri; potongan dengan saluran udara bergaris di atas kap ada di tengah; potongan dengan kap mesin panjang, knalpot dan lengan pemuat berada sebelum ujung kanan. Garis tanah, garis putih kap mesin, dan lengan pemuat harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 5, seq: 34, objek: "perahu pinisi", pieces: 6, order: [3, 6, 4, 1, 2, 5], key: "C", scene: pinisi, tingkat: 3, cut: true,
+    camouflage: "Perahu pinisi dengan dua tiang, layar berusuk, layar depan lebar dan bompres; tali-temali dan gelombang melewati bingkai sehingga tiap batas memotong layar atau lambung.",
+    seams: ["bendera tiang pertama, tali-tali tiang dan tulang layar utama", "tali penyangga ke haluan, tepi layar depan dan tulang layar depan", "dasar tiang pertama, tali tiang yang turun ke geladak dan garis putih papan lambung", "bagian bawah layar depan, garis papan lambung dan gelombang", "atap kabin buritan, tali penyangga belakang dan tepi bawah layar utama", "tiang pertama dan tali yang turun dari tiang ke geladak", "tulang layar kedua, tepi kiri layar kedua dan tali tiang kedua", "tulang layar depan paling bawah", "ujung layar depan, tiang bompres dan tali ke ujung haluan"],
+    pembahasan: "Kenali perahu pinisi dari samping: haluan dengan tiang bompres miring di kanan, buritan berkabin di kiri, dan dua tiang berlayar di tengah. Baris atas memuat layar: layar utama berusuk dengan bendera tiang pertama (kiri), layar kedua yang diapit dua tiang (tengah), dan layar depan yang lebar dengan tali ke ujung haluan (kanan). Baris bawah memuat lambung: kabin buritan berjendela dengan kemudi (kiri), bagian tengah lambung dengan garis papan putih, dan haluan melengkung dengan bompres (kanan). Garis papan, tali-temali, dan gelombang harus menyambung pada tinggi yang sama di setiap batas." },
   { pkg: 15, seq: 33, objek: "motor patroli", pieces: 5, order: [4, 1, 5, 3, 2], key: "A", scene: motorPatroli,
     pembahasan: "Ujung kiri adalah potongan dengan kotak belakang bertuliskan POLISI dan antena. Ujung kanan adalah potongan dengan setengah roda depan dan kerucut lalu lintas. Setelah kotak belakang, potongan dengan jok dan sisa roda belakang menyambung ke tangki bergaris putih dan mesin bersirip. Kaca depan dengan lampu rotator dan garpu depan berada tepat sebelum ujung kanan. Rangka bawah, jok, knalpot, dan roda harus menyambung di setiap batas." },
   { pkg: 15, seq: 34, objek: "ekskavator", pieces: 6, order: [3, 6, 1, 5, 2, 4], key: "D", scene: ekskavator, tingkat: 3,
@@ -183,6 +202,77 @@ function gugur(p: Puzzle, choices: string[]) {
   }).filter(Boolean).join(" ");
 }
 
+function cutJoins(p: Puzzle) {
+  return cutLayout(p.pieces).edges.filter((e) => e.owners.length === 2).sort((a, b) => {
+    const horizontal = (owners: number[]) => Math.floor((owners[0] - 1) / 3) === Math.floor((owners[1] - 1) / 3);
+    return (p.pieces === 6 ? Number(horizontal(b.owners)) - Number(horizontal(a.owners)) : 0) ||
+      a.owners[0] - b.owners[0] || a.owners[1] - b.owners[1];
+  });
+}
+
+/** Each distractor makes exactly one local pair exchange, leaving every other piece in place. */
+function cutChoices(p: Puzzle) {
+  const ans = answerFor(p.order);
+  const pairs = p.pieces === 5 ? [[0, 1], [1, 2], [2, 3], [3, 4]] : [[1, 2], [3, 4], [0, 3], [1, 4]];
+  const choices = pairs.map((slots) => {
+    const [a, b] = slots, sequence = [...ans];
+    [sequence[a], sequence[b]] = [sequence[b], sequence[a]];
+    const across = p.pieces === 6 && a < 3 && b >= 3;
+    return { slots, name: `pasangan ${ans[a]}–${ans[b]} tertukar ${across ? "antarbaris" : "kiri–kanan"}`,
+      near: across ? "tinggi kedua bagian dekat dan garis badan hampir bertemu" : "tinggi kedua bagian sama dan beberapa garis mendatar hampir bertemu", sequence };
+  });
+  choices.splice(KEYS.indexOf(p.key), 0, { slots: [], name: "benar", near: "", sequence: ans });
+  return choices;
+}
+
+/** Inspect the exchanged seam itself, including staggered top/bottom neighbours; never row wrap. */
+function cutGugur(p: Puzzle) {
+  const joins = cutJoins(p);
+  return cutChoices(p).map((c, i) => {
+    if (KEYS[i] === p.key) return "";
+    const [a, b] = c.slots.map((s) => s + 1), j = joins.findIndex((e) => e.owners[0] === a && e.owners[1] === b);
+    assert.ok(j >= 0, "Pasangan pengecoh harus bertetangga");
+    const direction = p.pieces === 6 && a <= 3 && b > 3 ? "atas–bawah" : "kiri–kanan";
+    return `Opsi ${KEYS[i]}: ${c.name}. Tampak hampir pas karena ${c.near}, tetapi lekuk tepi berbeda dan ${p.seams![j]} tidak menerus di sambungan ${direction} ${c.sequence[a - 1]}–${c.sequence[b - 1]}${direction === "atas–bawah" ? "; tepi bingkai juga berpindah ke baris yang salah" : ""}.`;
+  }).filter(Boolean).join(" ");
+}
+
+function assertCut(p: Puzzle, svg: string) {
+  const layout = cutLayout(p.pieces), widths = layout.polygons.map((points) => cutBounds(points).width);
+  assert.ok(Math.max(...widths) - Math.min(...widths) >= 25, "Lebar potongan terlalu seragam");
+  if (p.pieces === 5) assert.equal(new Set(widths).size, 5, "Kelima lebar potongan harus berbeda");
+  assert.ok(Math.abs(layout.polygons.reduce((sum, points) => sum + cutArea(points), 0) - 600 * 190) < 0.001, "Luas tidak menutup gambar");
+  const segments = new Map<string, string[]>();
+  layout.polygons.forEach((points) => points.forEach((a, i) => {
+    const b = points[(i + 1) % points.length], ends = [a.join(","), b.join(",")];
+    const key = ends.slice().sort().join("/"), uses = segments.get(key) ?? [];
+    uses.push(ends.join("/")); segments.set(key, uses);
+  }));
+  for (const [key, uses] of segments) {
+    const ends = key.split("/").map((v) => v.split(",").map(Number));
+    const outside = [0, 1].some((axis) => [0, axis === 0 ? 600 : 190].some((v) => ends.every((pt) => pt[axis] === v)));
+    assert.equal(uses.length, outside ? 1 : 2, "Tepi bersama harus dipakai dua sisi");
+    if (!outside) assert.notEqual(uses[0], uses[1], "Tepi bersama harus berlawanan arah");
+  }
+  const inside = layout.edges.filter((e) => e.owners.length === 2), profiles = inside.map((e) => cutProfile(e.points));
+  assert.equal(new Set(profiles).size, profiles.length, "Profil batas dalam sama setelah digeser ke x/y yang sama");
+  // Unique shared profiles fix every neighbour; a connected graph fixes the whole assembly up to translation.
+  const reached = new Set([1]);
+  for (let i = 0; i < p.pieces; i++) for (const { owners: [a, b] } of inside) {
+    if (reached.has(a)) reached.add(b);
+    if (reached.has(b)) reached.add(a);
+  }
+  assert.equal(reached.size, p.pieces, "Graf sambungan harus terhubung");
+  for (const c of cutChoices(p).filter((c) => c.slots.length)) {
+    assert.equal(c.sequence.filter((label, i) => label !== answerFor(p.order)[i]).length, 2, "Pengecoh hanya satu pertukaran pasangan");
+  }
+  console.log(`ASSERT pkg ${p.pkg}/${p.seq}: ${profiles.length}/${profiles.length} profil unik; luas 114000; tepi bersama dua sisi; graf terhubung; 4 pengecoh satu pertukaran`);
+  assert.equal(cutJoins(p).length, p.seams!.length, "Setiap batas perlu ciri sambungan");
+  assert.ok(!/<text\b|\sid=|\b(?:POLISI|POLRI)\b/i.test(p.scene), "Objek baru tanpa tulisan/atribut id");
+  assert.ok(!/<svg[^>]*\s(?:width|height)=/.test(svg), "SVG harus responsif");
+  assert.ok(!/\sid=/.test(cutPembahasanSvg(p)), "SVG pembahasan tanpa id");
+}
+
 type Row = {
   sequence_number: number;
   options_payload: { instruksi: string; question_text: null; sub_text: null; is_multi_select: false; svg_content: string; choices: { key: Key; text: string }[] };
@@ -198,19 +288,23 @@ for (const p of puzzles) {
   assert.equal(p.order.length, p.pieces);
   assert.deepEqual([...p.order].sort(), Array.from({ length: p.pieces }, (_, i) => i + 1), `${p.objek}: order bukan permutasi`);
   assert.ok(p.order.filter((x, i) => x === i + 1).length <= 1, `${p.objek}: terlalu banyak potongan tetap`);
-  const choices = choicesFor(p.order, p.key);
+  const choices = p.cut ? cutChoices(p).map((c) => enDash(c.sequence)) : choicesFor(p.order, p.key);
   assert.equal(new Set(choices).size, 5);
   for (const c of choices) assert.deepEqual(c.split(" – ").map(Number).sort(), Array.from({ length: p.pieces }, (_, i) => i + 1), `${p.objek}: opsi ${c} bukan permutasi`);
-  const svg = verticalPuzzleSvg(`kal${p.pkg}q${p.seq}-`, p);
+  assert.equal(choices[KEYS.indexOf(p.key)], ans, "Kunci harus sesuai urutan");
+  const prefix = `kal${p.pkg}q${p.seq}-`;
+  const svg = p.cut ? cutPuzzleSvg(prefix, p) : verticalPuzzleSvg(prefix, p);
   assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(svg), `${p.objek}: SVG tidak aman`);
+  assert.ok([...svg.matchAll(/\sid="([^"]+)"/g)].every((m) => m[1].startsWith(prefix)), "Prefix id tidak sesuai soal");
+  if (p.cut) assertCut(p, svg);
   (out[p.pkg] ??= []).push({
     sequence_number: p.seq,
-    options_payload: { instruksi: INSTRUKSI, question_text: null, sub_text: null, is_multi_select: false, svg_content: svg, choices: KEYS.map((key, i) => ({ key, text: choices[i] })) },
+    options_payload: { instruksi: INSTRUKSI + (p.cut && p.pieces === 6 ? " Baca jawaban dari baris atas, kiri ke kanan, lalu baris bawah." : ""), question_text: null, sub_text: null, is_multi_select: false, svg_content: svg, choices: KEYS.map((key, i) => ({ key, text: choices[i] })) },
     scoring_rule: { type: "dichotomous", correct_key: p.key },
     tingkat: p.tingkat ?? 2, objek: p.objek,
-    // Simulasi 3 (pkg 15) ke atas + Latihan Paket 2 (pkg 3): aturan 2 paragraf + gambar pembahasan. Pkg 13 tidak diubah.
-    ...(p.pkg >= 15 || p.pkg === 3
-      ? { pembahasan: `${p.pembahasan}\n\n${gugur(p, choices)} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.`, pembahasan_svg: pembahasanSvg(p) }
+    // Semua paket selain pkg 13: aturan 2 paragraf + gambar pembahasan. Pkg 13 tidak diubah.
+    ...(p.pkg !== 13
+      ? { pembahasan: `${p.pembahasan}\n\n${p.cut ? cutGugur(p) : gugur(p, choices)} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.${p.cut ? " Tips: periksa lekuk dan garis yang melintasi batas; sesudah satu pasangan cocok, cek juga semua sambungan di sekitarnya." : ""}`, pembahasan_svg: p.cut ? cutPembahasanSvg(p) : pembahasanSvg(p) }
       : { pembahasan: `${p.pembahasan} Urutan: ${ans}. Jawaban: ${p.key.toLowerCase()}.` }),
   });
 }
@@ -218,11 +312,34 @@ const ids = Object.values(out).flat().flatMap((r) => [...r.options_payload.svg_c
 assert.equal(new Set(ids).size, ids.length, "id SVG tidak unik");
 
 const root = path.join(__dirname, "..");
-fs.writeFileSync(path.join(root, "prisma/data/kecerdasan_susun_kal.json"), `${JSON.stringify(out, null, 2)}\n`);
+const dataPath = path.join(root, "prisma/data/kecerdasan_susun_kal.json"), previousText = fs.readFileSync(dataPath, "utf8");
+const previous = JSON.parse(previousText) as Record<number, Row[]>;
+for (const pkg of [3, 13, 15, 16]) assert.equal(JSON.stringify(out[pkg]), JSON.stringify(previous[pkg]), `Paket lama ${pkg} berubah`);
+// Ganti hanya entri 4/33, 4/34, 5/33, 5/34; teks asli disambung per entri supaya semua entri lain tetap byte-identik.
+const TARGETS: [number, number][] = [[4, 33], [4, 34], [5, 33], [5, 34]];
+let nextText = previousText;
+for (const [pkgNo, seq] of TARGETS) {
+  const block = new RegExp(`^  "${pkgNo}": \\[[\\s\\S]*?^  \\]`, "m").exec(nextText);
+  assert.ok(block, `Paket ${pkgNo} harus ada`);
+  const targets = [...block[0].matchAll(/^    \{[\s\S]*?^    \}/gm)].filter((m) => JSON.parse(m[0]).sequence_number === seq);
+  assert.equal(targets.length, 1, `Harus mengganti tepat entri ${pkgNo}/${seq}`);
+  const start = block.index + targets[0].index!, replacement = JSON.stringify(out[pkgNo].find((r) => r.sequence_number === seq), null, 2).replace(/^/gm, "    ");
+  nextText = nextText.slice(0, start) + replacement + nextText.slice(start + targets[0][0].length);
+}
+const next = JSON.parse(nextText);
+const replaced = new Set(TARGETS.map(([k, q]) => `${k}/${q}`));
+for (const pkg of Object.keys(previous)) for (const row of previous[Number(pkg)]) {
+  if (!replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);
+}
+fs.writeFileSync(dataPath, nextText);
 fs.mkdirSync(path.join(root, "output"), { recursive: true });
 const whole = (scene: string) => `<svg viewBox="0 0 600 190" xmlns="http://www.w3.org/2000/svg" style="max-width:600px"><rect width="100%" height="100%" fill="white"/><g fill="#111">${scene}</g></svg>`;
+const report = (p: Puzzle) => p.cut ? `<h4>Catatan prototipe</h4><p>${p.pieces} potongan · tingkat ${p.tingkat} · ${p.pieces === 6 ? "grid 2×3" : "satu baris"}. Lebar kotak sumber: ${cutLayout(p.pieces).polygons.map((points) => cutBounds(points).width).join(", ")} px. ${p.camouflage}</p><p>Ciri melintasi setiap batas (nomor mengikuti label soal):</p><ul>${cutJoins(p).map((e, j) => {
+  const ans = answerFor(p.order), [a, b] = e.owners;
+  return `<li>${ans[a - 1]}–${ans[b - 1]} (${p.pieces === 6 && a <= 3 && b > 3 ? "atas–bawah" : "kiri–kanan"}): ${p.seams![j]}.</li>`;
+}).join("")}</ul>` : "";
 fs.writeFileSync(path.join(root, "output/susun-kal-preview.html"),
-  `<!doctype html><html lang="id"><meta charset="utf-8"><title>Preview Susun Kalibrasi</title><style>body{font-family:Arial,sans-serif;margin:24px;color:#111;max-width:900px}section{border:1px solid #aaa;margin:16px 0;padding:12px}svg{display:block;max-width:100%;height:auto}p{font-size:13px}</style><body>` +
-  puzzles.map((p, i) => { const r = out[p.pkg].find((x) => x.sequence_number === p.seq)!; return `<section><h3>pkg ${p.pkg} · soal ${p.seq} · ${p.objek} · kunci ${p.key} (${enDash(answerFor(p.order))})</h3>${r.options_payload.svg_content}<h4>Gambar utuh</h4>${r.pembahasan_svg ?? whole(puzzles[i].scene)}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p><p>${r.pembahasan}</p></section>`; }).join("") +
-  `</body></html>`);
-console.log(`OK: ${puzzles.length} soal susun → prisma/data/kecerdasan_susun_kal.json`);
+  `<!doctype html><html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Preview Susun Kalibrasi — pkg 4/5 benda nyata</title><style>body{font-family:Arial,sans-serif;margin:16px;color:#111;max-width:900px}section{border:1px solid #aaa;margin:16px 0;padding:12px}svg{display:block;width:100%;max-width:100%;height:auto}p,li{font-size:14px;line-height:1.5}h3{overflow-wrap:anywhere}@media(max-width:400px){body{margin:8px}section{padding:8px}}</style><body>` +
+  `<h1>Susun pkg 4/5 — benda nyata</h1><p>Pkg 4: kereta api listrik (5 potongan) dan kapal feri (grid 2×3). Pkg 5: traktor (5) dan perahu pinisi (grid 2×3). Aturan potong putaran 3 dipertahankan (profil batas unik, tepi bersama dua sisi, graf sambungan terhubung, luas tepat 114.000 px²). Hanya entri 4/33, 4/34, 5/33, 5/34 diganti; semua entri lain tetap byte-identik.</p>` +
+  puzzles.map((p, i) => { const r = out[p.pkg].find((x) => x.sequence_number === p.seq)!; return `<section><h3>pkg ${p.pkg} · soal ${p.seq} · ${p.objek} · kunci ${p.key} (${enDash(answerFor(p.order))})</h3><p>${r.options_payload.instruksi}</p>${r.options_payload.svg_content}<h4>Gambar utuh</h4>${r.pembahasan_svg ?? whole(puzzles[i].scene)}<p>${r.options_payload.choices.map((c) => `${c.key}. ${c.text}`).join(" · ")}</p>${r.pembahasan.split("\n\n").map((para) => `<p>${para}</p>`).join("")}${report(p)}</section>`; }).join("") + `</body></html>`);
+console.log(`OK: hanya pkg 4/33-34 dan 5/33-34 diperbarui; ${puzzles.length} soal pada preview; byte semua entri lain tetap`);

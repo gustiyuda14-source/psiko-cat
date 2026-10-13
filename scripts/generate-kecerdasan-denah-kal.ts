@@ -13,12 +13,12 @@ import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./de
 // Output: prisma/data/kecerdasan_denah_kal.json ({ [package_number]: Row[] }) + output/denah-kal-preview.html
 
 const root = path.join(__dirname, "..");
-const PKGS = [13, 14, 2, 3, 15, 16];
+const PKGS = [13, 14, 2, 3, 15, 16, 4, 5];
 // Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13 tetap seperti semula.
 // Pkg 2/3/14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
-const PB = new Set([2, 3, 14, 15, 16]);
+const PB = new Set([2, 3, 14, 15, 16, 4, 5]);
 // Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
-const NEW = new Set([15, 16]);
+const NEW = new Set([15, 16, 4, 5]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 

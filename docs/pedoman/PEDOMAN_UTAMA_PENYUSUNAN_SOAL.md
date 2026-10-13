@@ -186,9 +186,11 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 | Pembahasan hitung cepat | Hitam-putih, landscape 616×260. Kiri: contoh hitungan. Tengah: langkah bernomor + bar hasil hitam. Kanan: "Kenapa bisa?" (model luas / bersusun / pecahan). Versi berwarna tegak **ditolak**. Referensi `scripts/generate-k05-trik-svg.ts` | memory drill-bank 13-10 |
 | Kecermatan | Hitam/putih/abu, `viewBox 0 0 100 100`, teks digambar sebagai SVG | LmpB §2 |
 | Figural Kecerdasan | Kelas `.box/.solid/.outline`, transform eksplisit | LmpE §1 |
+| Mosaik (deret ubin) | Hitam-putih (+ abu untuk papan/panel). Gaya **bervariasi per butir** (G-10); gaya lama (ubin kotak, bingkai ganda) hanya untuk paket live | PM 13-10; `scripts/figural-mosaik.ts` |
 
 - **G-8** SVG yang ditempel langsung ke halaman (`pembahasan_svg`) **tidak boleh memakai `id`**, karena bisa bentrok antar-butir. SVG yang disajikan sebagai file atau `<img>` boleh memakai `id`/`<defs>`. [memory soal-pembahasan-gambar-rule; LmpE §1]
 - **G-9** Render dicek di lebar tampil asli (±520 px) dan di layar HP lewat headless Chrome dari salinan repo di scratchpad, sebelum gambar dipasang. [PM 13-10; memory local-ui-verification]
+- **G-10** **Gaya visual mosaik tidak boleh satu templat.** Tiap butir mosaik dalam satu paket memakai kombinasi bentuk ubin × bingkai × celah yang berbeda dari butir mosaik lain di paket itu dan di paket sebelumnya (bentuk ubin: kotak, bulat, lembut, oktagon; bingkai: ganda, tipis, panel abu, papan abu berlubang; celah antarubin; panah kecil antargambar). Gaya dipilih lewat `Style` per butir di `scripts/figural-mosaik.ts`. Topeng ubin digambar sebagai path (tanpa `id`/`clipPath`, G-8). Kalimat aturan di pembahasan harus cocok dengan gaya (mis. "lubang pada papan", bukan "hitam polos"). Paket yang sudah live **tidak diubah** (byte identik); gaya baru berlaku untuk paket baru, dan tiap gaya baru lewat G-5 (prototipe disetujui). Gaya baru dilarang menambah warna selain hitam, putih, abu. [PM 13-10: "jangan template seperti itu terus, membosankan"]
 
 ---
 
@@ -274,16 +276,17 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 **Gambar**
 - [ ] Dari generator sendiri; prototipe sudah disetujui
 - [ ] Render dicek di ±520 px dan di layar HP; tidak ada elemen meluber; warna sesuai gaya G-7
+- [ ] Mosaik: gaya tiap butir berbeda dari butir lain di paket dan paket sebelumnya (G-10)
 
 **Kunci dan rilis**
 - [ ] `hitung` / brute force lolos
 - [ ] Cek buta selesai, setiap perbedaan diselesaikan dengan bukti
 - [ ] Status `resmi`/`ganda` (drill), atau QA 100% sepakat (paket DB)
 - [ ] LOG.md / dokumen rencana diperbarui
+- [ ] Butir drill baru: `rilis` terisi (badge NEW, §3.6); butir lama yang hanya diberi gambar/teks tidak ber-`rilis`
 - [ ] `build:drill` / validator, `tsc`, dan `next build --webpack` lolos
 - [ ] Pemilik sudah cek di localhost; commit hanya path sendiri
 
-- [ ] Butir drill baru: `rilis` terisi (badge NEW, §3.6); butir lama yang hanya diberi gambar/teks tidak ber-`rilis`
 ---
 
 ## 11. Celah yang belum diatur (butuh keputusan nanti)

@@ -1,0 +1,1130 @@
+{
+  "wacana": {
+    "p4a": "Tiga tahun lalu, SMP Negeri 4 Sukamaju menghabiskan hampir sepertiga anggaran kebersihannya untuk mengangkut sampah ke tempat pembuangan akhir. Kepala sekolah lalu mengajak OSIS membuka bank sampah. Gudang kecil di belakang kantin dikosongkan untuk menampung setoran. Setiap kelas menabung plastik, kertas, dan kaleng yang sudah dipilah; petugas bank sampah menimbang setoran setiap Jumat dan mencatatnya di buku tabungan kelas.\n\nPada bulan-bulan pertama, setoran justru kotor dan bercampur sehingga pengepul menolak membelinya. OSIS kemudian membuat aturan sederhana: setoran yang belum dipilah dikembalikan ke kelasnya. Aturan ini sempat dikeluhkan, tetapi dalam satu semester hampir semua setoran sudah bersih.\n\nKini biaya angkut sampah sekolah turun hampir separuh. Hasil penjualan tabungan sampah dipakai setiap kelas untuk membeli buku bacaan dan alat kebersihan. Menurut pembina OSIS, manfaat terbesarnya bukan uang yang terkumpul. Siswa mulai menghitung sendiri berapa banyak sampah yang mereka hasilkan setiap minggu, dan sebagian kelas sepakat membawa botol minum sendiri agar sampah plastik mereka berkurang. Bank sampah, katanya, ternyata menjadi cermin kebiasaan.",
+    "p4b": "Puskesmas Kecamatan Lembah Hijau dulu dikenal dengan antreannya yang mengular sejak subuh. Banyak warga datang pukul lima pagi hanya untuk mengambil nomor, padahal loket baru dibuka pukul setengah delapan. Warga lanjut usia yang tidak kuat berdiri lama sering pulang sebelum diperiksa. Petugas pun kewalahan karena harus melayani ratusan orang dalam dua jam pertama.\n\nAwal tahun ini, puskesmas mencoba cara baru. Warga cukup mengirim pesan singkat berisi nama dan keluhan, lalu menerima balasan berupa nomor antrean dan perkiraan jam dipanggil. Pendaftaran langsung di loket tetap dibuka bagi warga yang tidak memiliki telepon genggam, dan kader posyandu membantu mendaftarkan tetangga mereka.\n\nHasilnya tidak langsung mulus. Pada pekan pertama, banyak warga tetap datang subuh karena belum percaya pada jam perkiraan itu. Petugas lalu memasang papan berisi nomor yang sedang dilayani di depan gedung dan mengumumkannya lewat pengeras suara di pasar dekat puskesmas. Setelah dua bulan, ruang tunggu tidak lagi penuh sesak, dan keluhan yang paling sering masuk justru berubah: warga meminta agar perkiraan jamnya dibuat lebih tepat.",
+    "p4wKIOS": "Enam pedagang, yaitu Mira, Nanda, Oki, Putri, Rafi, dan Sari, menempati enam kios makanan yang berjajar lurus dari utara ke selatan. Kios diberi nomor 1 sampai 6 mulai dari ujung utara, dan setiap kios ditempati tepat satu pedagang. Dua pedagang disebut bersebelahan jika nomor kiosnya berselisih 1.\n• Oki menempati kios tepat di sebelah selatan kios Mira.\n• Di antara kios Putri dan kios Sari ada tepat satu kios lain.\n• Rafi menempati kios di salah satu ujung, dan kiosnya berada di sebelah utara kios Oki.\n• Kios Mira berada di sebelah selatan kios Nanda (tidak harus bersebelahan).\n• Jika kios Putri berada di sebelah utara kios Sari, maka Mira menempati kios 1.",
+    "p4wPIDATO": "Enam peserta lomba pidato, yaitu Tegar, Umi, Vina, Wahyu, Yoga, dan Zahra, tampil satu per satu dengan urutan 1 sampai 6. Setiap urutan diisi tepat satu peserta.\n• Vina tampil tepat dua giliran setelah Umi.\n• Yoga tampil tepat setelah Wahyu.\n• Jika Tegar tidak tampil terakhir, maka Tegar tampil tepat sebelum Zahra.\n• Yoga tampil sebelum Vina (tidak harus berurutan).",
+    "p4wBAND": "Lima anggota band sekolah, yaitu Gita, Hadi, Intan, Joko, dan Kirana, masing-masing memainkan satu alat musik yang berbeda, yaitu gitar, biola, drum, piano, dan seruling. Mereka juga memakai kaos dengan lima warna yang berbeda, yaitu merah, biru, hijau, kuning, dan putih.\n• Pemain drum memakai kaos merah, sedangkan pemain seruling memakai kaos hijau.\n• Hadi memakai kaos biru, tetapi tidak memainkan biola maupun piano.\n• Gita memainkan piano atau seruling, dan tidak memakai kaos hijau maupun putih.\n• Kirana tidak memainkan gitar, drum, maupun seruling.\n• Jika Joko tidak memainkan drum, maka Joko memakai kaos putih."
+  },
+  "soal": [
+    {
+      "s": 1,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Lekas",
+        "Kerap",
+        "Jarang",
+        "Sering",
+        "Lambat"
+      ],
+      "k": "BD",
+      "p": "Kerap berarti berkali-kali atau sering terjadi. Pasangannya yang bermakna sama adalah sering.<br>Opsi A (Lekas): berarti cepat atau segera, menyangkut kecepatan, bukan frekuensi. Opsi C (Jarang): justru lawan kata kerap. Opsi E (Lambat): lawan kata lekas, tidak berhubungan dengan frekuensi. Jawaban: Kerap (B) dan Sering (D).\nTips: uji dengan kalimat \"Ia … datang terlambat\"; kerap dan sering sama-sama pas tanpa mengubah makna."
+    },
+    {
+      "s": 2,
+      "t": "SIN",
+      "d": 3,
+      "c": [
+        "Inspirasi",
+        "Insinuasi",
+        "Sindiran",
+        "Pujian",
+        "Instruksi"
+      ],
+      "k": "BC",
+      "p": "Insinuasi adalah tuduhan atau sindiran yang disampaikan secara tersembunyi, tidak terang-terangan. Kata yang bermakna sama adalah sindiran.<br>Opsi A (Inspirasi): paronim, bunyinya mirip insinuasi tetapi artinya ilham atau dorongan untuk berkarya. Opsi D (Pujian): berlawanan nilai rasa; sindiran menyindir, pujian memuji. Opsi E (Instruksi): paronim lain yang berarti perintah atau arahan. Jawaban: Insinuasi (B) dan Sindiran (C).\nTips: kata serapan berawalan sama (in-) sering dipasang sebagai jebakan; artikan kata inti dulu, baru cari padanannya, jangan memilih dari kemiripan bunyi."
+    },
+    {
+      "s": 3,
+      "t": "SIN",
+      "d": 2,
+      "c": [
+        "Bilik",
+        "Balai",
+        "Kamar",
+        "Serambi",
+        "Lumbung"
+      ],
+      "k": "AC",
+      "p": "Bilik berarti ruang kecil yang bersekat di dalam rumah, sama dengan kamar.<br>Opsi B (Balai): gedung atau ruang besar untuk pertemuan umum, bukan ruang pribadi. Opsi D (Serambi): bagian depan rumah yang terbuka (teras). Opsi E (Lumbung): bangunan tempat menyimpan padi. Ketiganya sama-sama bagian bangunan, tetapi fungsinya berbeda. Jawaban: Bilik (A) dan Kamar (C).\nTips: untuk kata benda tempat, bayangkan letak dan fungsinya; bilik dan kamar sama-sama ruang tidur di dalam rumah."
+    },
+    {
+      "s": 4,
+      "t": "SIN",
+      "d": 3,
+      "c": [
+        "Diskriminasi",
+        "Disparitas",
+        "Disposisi",
+        "Kesetaraan",
+        "Kesenjangan"
+      ],
+      "k": "BE",
+      "p": "Disparitas berarti perbedaan atau jarak yang lebar antara dua keadaan, misalnya disparitas pendapatan antardaerah. Maknanya sama dengan kesenjangan.<br>Opsi A (Diskriminasi): bermakna dekat tetapi berbeda; diskriminasi adalah perlakuan yang membeda-bedakan, sedangkan disparitas adalah keadaan yang berbeda. Opsi C (Disposisi): paronim yang berarti catatan perintah atasan pada surat masuk. Opsi D (Kesetaraan): justru lawan kata disparitas. Jawaban: Disparitas (B) dan Kesenjangan (E).\nTips: bedakan kata keadaan (disparitas, kesenjangan) dari kata tindakan (diskriminasi); sinonim harus sama jenisnya."
+    },
+    {
+      "s": 5,
+      "t": "SIN",
+      "d": 3,
+      "c": [
+        "Analogi",
+        "Anatomi",
+        "Anomali",
+        "Kelaziman",
+        "Penyimpangan"
+      ],
+      "k": "CE",
+      "p": "Anomali berarti keadaan yang menyimpang dari yang biasa atau normal, sama dengan penyimpangan.<br>Opsi A (Analogi): paronim yang berarti persamaan atau kesesuaian antara dua hal. Opsi B (Anatomi): paronim yang berarti ilmu tentang susunan tubuh. Opsi D (Kelaziman): justru lawan kata anomali, karena lazim berarti biasa. Jawaban: Anomali (C) dan Penyimpangan (E).\nTips: tiga kata berawalan ana- di opsi adalah jebakan bunyi; cukup ingat bahwa anomali selalu dipakai untuk hal yang \"tidak normal\"."
+    },
+    {
+      "s": 6,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Hulu",
+        "Tebing",
+        "Hilir",
+        "Arus",
+        "Lembah"
+      ],
+      "k": "AC",
+      "p": "Hulu adalah bagian sungai yang dekat dengan sumbernya di pegunungan, sedangkan hilir adalah bagian yang dekat dengan muara. Keduanya ujung yang berlawanan pada satu aliran.<br>Opsi B (Tebing): sisi sungai atau jurang yang curam, bukan ujung aliran. Opsi D (Arus): gerakan air, bukan letak. Opsi E (Lembah): tanah rendah di antara bukit, lawannya puncak, bukan hulu. Jawaban: Hulu (A) dan Hilir (C).\nTips: antonim berada di dua ujung satu garis yang sama, di sini garis aliran sungai dari sumber ke muara."
+    },
+    {
+      "s": 7,
+      "t": "ANT",
+      "d": 3,
+      "c": [
+        "Kritis",
+        "Akut",
+        "Kronologis",
+        "Kronis",
+        "Kuratif"
+      ],
+      "k": "BD",
+      "p": "Akut berarti datang mendadak, berlangsung singkat, dan cepat memburuk, misalnya diare akut. Kronis berarti berlangsung lama dan menahun. Keduanya berlawanan dalam hal lamanya penyakit atau keadaan.<br>Opsi A (Kritis): bermakna dekat dengan akut (gawat, genting), jadi bukan lawannya. Opsi C (Kronologis): paronim kronis yang berarti menurut urutan waktu kejadian. Opsi E (Kuratif): bersifat menyembuhkan atau mengobati; lawannya preventif (mencegah). Jawaban: Akut (B) dan Kronis (D).\nTips: pada istilah kesehatan, tentukan dulu aspek yang dibandingkan (lama sakit, bukan tingkat bahaya); kritis dan akut sama-sama menggambarkan bahaya, sedangkan akut dan kronis berlawanan dalam lamanya."
+    },
+    {
+      "s": 8,
+      "t": "ANT",
+      "d": 2,
+      "c": [
+        "Ketus",
+        "Tegas",
+        "Ramah",
+        "Cerewet",
+        "Lugu"
+      ],
+      "k": "AC",
+      "p": "Ketus berarti bicara dengan nada kasar, singkat, dan tidak bersahabat. Lawannya ramah, yaitu manis tutur katanya dan bersahabat.<br>Opsi B (Tegas): berarti jelas dan tidak ragu; orang tegas bisa tetap ramah, jadi bukan lawan ketus. Opsi D (Cerewet): banyak bicara; lawannya pendiam. Opsi E (Lugu): polos atau apa adanya; lawannya licik. Jawaban: Ketus (A) dan Ramah (C).\nTips: lihat aspek yang diukur; ketus dan ramah sama-sama menggambarkan sikap saat berbicara kepada orang lain."
+    },
+    {
+      "s": 9,
+      "t": "ANT",
+      "d": 3,
+      "c": [
+        "Agresif",
+        "Progresif",
+        "Konservatif",
+        "Represif",
+        "Kompetitif"
+      ],
+      "k": "BC",
+      "p": "Progresif berarti ke arah kemajuan dan terbuka pada perubahan. Konservatif berarti cenderung mempertahankan keadaan dan kebiasaan yang ada. Keduanya berlawanan.<br>Opsi A (Agresif): paronim yang berarti cenderung menyerang; lawannya defensif. Opsi D (Represif): bersifat menekan atau mengekang; lawannya preventif atau persuasif. Opsi E (Kompetitif): bersifat bersaing; lawannya kooperatif (bekerja sama), bukan agresif. Jawaban: Progresif (B) dan Konservatif (C).\nTips: semua opsi berakhiran -if sehingga bunyinya mengecoh; tentukan dulu sikap yang diukur (terhadap perubahan), lalu cari dua ujungnya."
+    },
+    {
+      "s": 10,
+      "t": "ANT",
+      "d": 3,
+      "c": [
+        "Responsif",
+        "Reaktif",
+        "Produktif",
+        "Proaktif",
+        "Radikal"
+      ],
+      "k": "BD",
+      "p": "Reaktif berarti baru bertindak setelah ada kejadian atau rangsangan. Proaktif berarti bertindak lebih dulu untuk mengantisipasi sebelum kejadian. Keduanya berlawanan dalam hal waktu bertindak.<br>Opsi A (Responsif): bermakna dekat dengan reaktif (cepat menanggapi), jadi bukan lawannya. Opsi C (Produktif): mampu menghasilkan banyak; lawannya tidak produktif. Opsi E (Radikal): secara mendasar atau keras, tidak berhubungan dengan waktu bertindak. Jawaban: Reaktif (B) dan Proaktif (D).\nTips: pasangan antonim sering dibentuk dari awalan yang berlawanan (re- = sesudah/menanggapi, pro- = sebelum/mendahului)."
+    },
+    {
+      "s": 11,
+      "t": "ANA",
+      "d": 2,
+      "q": "Lebah : Madu = ….. : …..",
+      "c": [
+        "Ulat sutra",
+        "Daun murbei",
+        "Kepompong",
+        "Benang sutra",
+        "Kupu-kupu"
+      ],
+      "k": "AD",
+      "p": "Hubungannya penghasil dan hasilnya: lebah menghasilkan madu. Pasangan yang setara adalah ulat sutra yang menghasilkan benang sutra.<br>Opsi B (Daun murbei): makanan ulat sutra; hubungannya pemakan dan makanan, bukan penghasil dan hasil. Opsi C (Kepompong): tahap pertumbuhan ulat, bukan hasil yang dimanfaatkan. Opsi E (Kupu-kupu): bentuk dewasa ulat, hubungannya tahap perkembangan. Jawaban: Ulat sutra (A) dan Benang sutra (D).\nTips: rumuskan hubungannya dalam kalimat \"X menghasilkan Y\", lalu uji setiap pasangan dengan kalimat yang sama."
+    },
+    {
+      "s": 12,
+      "t": "ANA",
+      "d": 3,
+      "q": "Pena : Penulis = ….. : …..",
+      "c": [
+        "Kain",
+        "Gunting",
+        "Benang",
+        "Penjahit",
+        "Butik"
+      ],
+      "k": "BD",
+      "p": "Hubungannya alat kerja dan pemakainya: pena adalah alat yang dipakai penulis. Pasangan yang setara adalah gunting, alat yang dipakai penjahit.<br>Opsi A (Kain): bahan yang diolah penjahit, setara dengan kertas bagi penulis, bukan pena. Opsi C (Benang): bahan habis pakai, bukan alat. Opsi E (Butik): tempat menjual pakaian, hubungannya tempat. Jebakan soal ini adalah memilih pasangan penjahit yang paling sering disebut (kain), padahal yang dicari harus alat. Jawaban: Gunting (B) dan Penjahit (D).\nTips: pada analogi dua lapis, cocokkan juga jenis bendanya (alat vs bahan), bukan hanya siapa pemakainya."
+    },
+    {
+      "s": 13,
+      "t": "ANA",
+      "d": 2,
+      "q": "Buku : Perpustakaan = ….. : …..",
+      "c": [
+        "Lukisan",
+        "Pelukis",
+        "Galeri",
+        "Bingkai",
+        "Kuas"
+      ],
+      "k": "AC",
+      "p": "Hubungannya benda koleksi dan tempat menyimpan atau memamerkannya: buku dikoleksi di perpustakaan. Pasangan yang setara adalah lukisan yang dipamerkan di galeri.<br>Opsi B (Pelukis): pembuat lukisan, hubungannya pembuat dan karya. Opsi D (Bingkai): pelengkap lukisan, hubungannya bagian. Opsi E (Kuas): alat untuk melukis, hubungannya alat. Jawaban: Lukisan (A) dan Galeri (C).\nTips: ucapkan kalimat \"X disimpan dan dipamerkan di Y\"; hanya lukisan dan galeri yang cocok."
+    },
+    {
+      "s": 14,
+      "t": "ANA",
+      "d": 3,
+      "q": "Gaji : Pegawai = ….. : …..",
+      "c": [
+        "Seminar",
+        "Honorarium",
+        "Peserta",
+        "Tiket",
+        "Narasumber"
+      ],
+      "k": "BE",
+      "p": "Hubungannya imbalan dan penerimanya: gaji adalah imbalan yang diterima pegawai atas pekerjaannya. Pasangan yang setara adalah honorarium yang diterima narasumber atas jasanya.<br>Opsi A (Seminar): acara tempat narasumber bekerja, bukan imbalan. Opsi C dan D (Peserta dan Tiket): jebakan arah terbalik; tiket dibayar oleh peserta, bukan diterima sebagai imbalan, jadi arah uangnya berlawanan dengan gaji. Jawaban: Honorarium (B) dan Narasumber (E).\nTips: pada analogi tentang uang, periksa arahnya: siapa yang menerima dan siapa yang membayar."
+    },
+    {
+      "s": 15,
+      "t": "ANA",
+      "d": 3,
+      "q": "Fondasi : Gedung = ….. : …..",
+      "c": [
+        "Daun",
+        "Tanah",
+        "Batang",
+        "Akar",
+        "Pohon"
+      ],
+      "k": "DE",
+      "p": "Fondasi adalah bagian gedung yang paling bawah, tertanam di dalam tanah, dan menopang seluruh bangunan. Bagian pohon yang setara adalah akar.<br>Opsi A (Daun): bagian pohon di atas, tidak menopang. Opsi B (Tanah): tempat fondasi dan akar tertanam, bukan bagian dari pohon. Opsi C (Batang): memang ikut menopang, tetapi berada di atas tanah, jadi setara dengan tiang atau kolom gedung, bukan fondasi. Jawaban: Akar (D) dan Pohon (E).\nTips: analogi bagian dan keseluruhan dua lapis: cocokkan letaknya (di bawah tanah) dan fungsinya (menopang) sekaligus."
+    },
+    {
+      "s": 16,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Kecapi",
+        "Sasando",
+        "Siter",
+        "Kolintang",
+        "Gambus"
+      ],
+      "k": "D",
+      "p": "Kecapi, sasando, siter, dan gambus adalah alat musik berdawai yang dibunyikan dengan dipetik. Kolintang adalah alat musik pukul dari bilah-bilah kayu.<br>Opsi A, B, C, dan E (kecapi, sasando, siter, gambus) sama-sama alat petik berdawai; daerah asalnya berbeda, tetapi cara memainkannya sama. Jawaban: Kolintang (D).\nTips: kelompokkan alat musik menurut cara memainkannya (petik, gesek, pukul, tiup), lalu cari yang sendirian."
+    },
+    {
+      "s": 17,
+      "t": "ODD",
+      "d": 3,
+      "c": [
+        "Respirasi",
+        "Transpirasi",
+        "Fotosintesis",
+        "Germinasi",
+        "Erosi"
+      ],
+      "k": "E",
+      "p": "Respirasi (pernapasan), transpirasi (penguapan air dari daun), fotosintesis (pembuatan makanan dengan bantuan cahaya), dan germinasi (perkecambahan) adalah proses yang terjadi di dalam tumbuhan. Erosi adalah pengikisan tanah oleh air atau angin, proses alam yang tidak terjadi di dalam makhluk hidup.<br>Opsi B (Transpirasi) adalah jebakannya: kata penguapan terdengar seperti proses alam biasa, padahal transpirasi adalah penguapan dari tubuh tumbuhan. Opsi A, C, dan D jelas proses dalam tumbuhan. Jawaban: Erosi (E).\nTips: untuk istilah ilmiah, tanyakan \"di mana proses ini terjadi?\"; empat kata terjadi di dalam tumbuhan, satu kata terjadi di permukaan tanah."
+    },
+    {
+      "s": 18,
+      "t": "ODD",
+      "d": 2,
+      "c": [
+        "Sepatu",
+        "Kemeja",
+        "Celana",
+        "Rok",
+        "Jaket"
+      ],
+      "k": "A",
+      "p": "Kemeja, celana, rok, dan jaket adalah pakaian yang menutupi badan. Sepatu adalah alas kaki.<br>Opsi B, C, D, dan E sama-sama busana yang dikenakan di badan: kemeja dan jaket di tubuh bagian atas, celana dan rok di bagian bawah. Perbedaan atas-bawah tidak membuat salah satunya keluar dari kelompok, karena keduanya tetap pakaian. Jawaban: Sepatu (A).\nTips: cari kelompok yang paling umum dan berisi empat kata; satu kata yang tersisa adalah jawabannya."
+    },
+    {
+      "s": 19,
+      "t": "ODD",
+      "d": 3,
+      "c": [
+        "Sabit",
+        "Cangkul",
+        "Arit",
+        "Celurit",
+        "Parang"
+      ],
+      "k": "B",
+      "p": "Sabit, arit, celurit, dan parang adalah alat tani bermata tajam untuk memotong atau menebas. Cangkul adalah alat untuk menggali dan membalik tanah.<br>Opsi A, C, dan D (sabit, arit, celurit) sama-sama pisau melengkung untuk memotong rumput atau padi. Opsi E (Parang) bermata lurus, tetapi tetap alat potong, jadi tidak keluar dari kelompok. Jebakan soal ini adalah bentuk: parang terlihat berbeda karena lurus, padahal yang menentukan adalah fungsinya. Jawaban: Cangkul (B).\nTips: pada kelompok alat, bandingkan fungsi lebih dulu daripada bentuk."
+    },
+    {
+      "s": 20,
+      "t": "BAC",
+      "d": 2,
+      "w": "p4a",
+      "i": "Berdasarkan bacaan, pengepul menolak membeli setoran pada bulan-bulan pertama karena …..",
+      "c": [
+        "harga plastik dan kertas sedang turun",
+        "setoran masih kotor dan bercampur",
+        "petugas belum mencatat setoran di buku tabungan",
+        "setoran dari setiap kelas terlalu sedikit",
+        "sekolah belum membayar biaya angkut"
+      ],
+      "k": "B",
+      "p": "Paragraf kedua menyebut langsung: \"setoran justru kotor dan bercampur sehingga pengepul menolak membelinya\" (B).<br>Opsi A: harga barang bekas tidak dibahas sama sekali. Opsi C: pencatatan setiap Jumat sudah disebut di paragraf pertama, bukan alasan penolakan. Opsi D: jumlah setoran tidak pernah dipersoalkan. Opsi E: biaya angkut adalah masalah sebelum bank sampah dibuka, tidak berkaitan dengan pengepul. Jawaban: B.\nTips: pada soal informasi tersurat, cari kata kunci soal (pengepul, menolak) di bacaan, lalu baca kalimat itu utuh."
+    },
+    {
+      "s": 21,
+      "t": "BAC",
+      "d": 3,
+      "w": "p4a",
+      "i": "Ungkapan bank sampah ternyata menjadi cermin kebiasaan dalam bacaan paling tepat dimaknai …..",
+      "c": [
+        "bank sampah membuat lingkungan sekolah tampak lebih bersih dan rapi",
+        "setiap kelas berlomba mengumpulkan setoran sampah paling banyak",
+        "kebiasaan memilah sampah di sekolah ini mulai ditiru oleh sekolah lain",
+        "catatan setoran membuat siswa menyadari sampah yang mereka hasilkan",
+        "hasil penjualan sampah menunjukkan kelas yang paling rajin menabung"
+      ],
+      "k": "D",
+      "p": "Cermin adalah benda untuk melihat diri sendiri. Kalimat sebelumnya menjelaskan kiasan itu: siswa mulai menghitung sendiri berapa banyak sampah yang mereka hasilkan, lalu mengubah kebiasaan dengan membawa botol minum. Jadi bank sampah membuat siswa melihat kebiasaan mereka sendiri (D).<br>Opsi A memakai makna cermin sebagai sesuatu yang bersih mengilap, padahal yang dibahas kebiasaan. Opsi B dan E terdengar masuk akal, tetapi bacaan tidak menyebut lomba atau peringkat kelas. Opsi C membawa sekolah lain yang tidak ada di bacaan. Jawaban: D.\nTips: makna ungkapan kiasan hampir selalu dijelaskan oleh kalimat tepat sebelum atau sesudahnya; baca kalimat di sekitarnya, jangan menebak dari arti harfiah."
+    },
+    {
+      "s": 22,
+      "t": "BAC",
+      "d": 3,
+      "w": "p4a",
+      "i": "Simpulan yang paling tepat berdasarkan bacaan adalah …..",
+      "c": [
+        "Biaya angkut sampah sekolah kini sudah tidak ada lagi.",
+        "Pembina OSIS menilai uang hasil penjualan sebagai manfaat terbesar bank sampah.",
+        "Semua kelas kini membawa botol minum sendiri.",
+        "Bank sampah dibuka atas usul pengepul.",
+        "Aturan pengembalian setoran yang belum dipilah membuat mutu setoran membaik."
+      ],
+      "k": "E",
+      "p": "Paragraf kedua mengurutkan sebab dan akibat: aturan setoran yang belum dipilah dikembalikan, lalu dalam satu semester hampir semua setoran sudah bersih. Simpulan yang didukung bacaan adalah aturan itu memperbaiki mutu setoran (E).<br>Opsi A berlebihan: biaya turun hampir separuh, bukan hilang. Opsi B berkebalikan dengan bacaan, karena pembina justru mengatakan manfaat terbesarnya bukan uang. Opsi C mengubah sebagian kelas menjadi semua kelas. Opsi D salah pelaku: yang mengajak membuka bank sampah adalah kepala sekolah. Jawaban: E.\nTips: waspadai kata mutlak (semua, tidak ada lagi) di opsi; cocokkan dengan kata pembatas di bacaan (sebagian, hampir)."
+    },
+    {
+      "s": 23,
+      "t": "BAC",
+      "d": 2,
+      "w": "p4b",
+      "i": "Gagasan utama bacaan tersebut adalah …..",
+      "c": [
+        "Warga lanjut usia paling dirugikan oleh antrean panjang di puskesmas sejak subuh, sebelum loket dibuka.",
+        "Kader posyandu membantu mendaftarkan tetangga yang tidak memiliki telepon genggam ke puskesmas.",
+        "Pendaftaran lewat pesan singkat mengurangi antrean puskesmas, meski awalnya kurang dipercaya warga.",
+        "Pendaftaran di loket puskesmas dihapus dan seluruh warga diwajibkan memakai pesan singkat.",
+        "Warga mengeluhkan perkiraan jam dipanggil yang masih kurang tepat setelah dua bulan berjalan."
+      ],
+      "k": "C",
+      "p": "Bacaan bergerak dari masalah (antrean sejak subuh), ke cara baru (pendaftaran lewat pesan singkat), ke hasilnya (sempat tidak dipercaya, lalu ruang tunggu tidak lagi penuh). Gagasan yang mencakup ketiga paragraf adalah C.<br>Opsi A hanya rincian paragraf pertama. Opsi B hanya rincian paragraf kedua. Opsi D salah isi, karena loket tetap dibuka bagi warga tanpa telepon genggam. Opsi E hanya rincian kalimat terakhir. Jawaban: C.\nTips: gagasan utama harus mewakili semua paragraf; opsi yang hanya cocok dengan satu paragraf adalah rincian."
+    },
+    {
+      "s": 24,
+      "t": "BAC",
+      "d": 3,
+      "w": "p4b",
+      "i": "Petugas memasang papan nomor dan mengumumkannya di pasar terutama untuk …..",
+      "c": [
+        "meyakinkan warga bahwa mereka tidak perlu datang sejak subuh",
+        "menambah jumlah warga yang berobat ke puskesmas",
+        "menggantikan pendaftaran lewat pesan singkat",
+        "memberi tahu warga jam buka loket",
+        "mengurangi keluhan tentang perkiraan jam yang kurang tepat"
+      ],
+      "k": "A",
+      "p": "Paragraf ketiga menyebut masalahnya lebih dulu: warga tetap datang subuh karena belum percaya pada jam perkiraan. Kata \"lalu\" menunjukkan papan dan pengumuman adalah tanggapan atas masalah itu, yaitu agar warga bisa melihat sendiri nomor yang sedang dilayani dan percaya pada jam perkiraan (A).<br>Opsi B tidak disebut; masalahnya antrean, bukan jumlah pasien. Opsi C keliru karena papan melengkapi pesan singkat, bukan menggantikannya. Opsi D: jam buka loket tidak diumumkan lewat papan itu. Opsi E salah urutan waktu, karena keluhan soal ketepatan jam baru muncul setelah dua bulan. Jawaban: A.\nTips: untuk soal tujuan tindakan, cari masalah yang disebut tepat sebelum tindakan itu; kata sambung seperti lalu dan karena itu menjadi penandanya."
+    },
+    {
+      "s": 25,
+      "t": "BAC",
+      "d": 3,
+      "w": "p4b",
+      "i": "Keluhan warga yang berubah di akhir bacaan menunjukkan bahwa …..",
+      "c": [
+        "cara pendaftaran lewat pesan singkat gagal sehingga perlu segera dihentikan",
+        "warga ternyata lebih suka mendaftar langsung di loket daripada lewat pesan singkat",
+        "ruang tunggu puskesmas masih sempit sehingga perlu diperluas lebih dulu",
+        "warga sudah memakai perkiraan jam itu untuk mengatur waktu kedatangan mereka",
+        "petugas tidak lagi mengumumkan nomor yang dilayani lewat pengeras suara di pasar"
+      ],
+      "k": "D",
+      "p": "Warga hanya akan meminta perkiraan jam dibuat lebih tepat jika mereka sudah memakainya sebagai patokan datang. Bersama keterangan bahwa ruang tunggu tidak lagi penuh, keluhan baru itu menunjukkan warga sudah memercayai dan memakai jam perkiraan (D).<br>Opsi A berkebalikan dengan bacaan, karena antrean justru berkurang. Opsi B tidak didukung; loket hanya disebut untuk warga tanpa telepon genggam. Opsi C bertentangan dengan kalimat bahwa ruang tunggu tidak lagi penuh sesak. Opsi E tidak pernah disebut. Jawaban: D.\nTips: pada soal simpulan, tanyakan \"keadaan apa yang membuat keluhan seperti ini muncul?\"; jawabannya harus sejalan dengan semua fakta di bacaan."
+    },
+    {
+      "s": 43,
+      "t": "SIL",
+      "d": 2,
+      "q": "P1: Semua peserta lomba cerdas cermat adalah siswa kelas XI.\nP2: Sebagian peserta lomba cerdas cermat adalah anggota klub sains.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Semua anggota klub sains adalah siswa kelas XI.",
+        "Semua siswa kelas XI adalah peserta lomba cerdas cermat.",
+        "Sebagian anggota klub sains adalah siswa kelas XI.",
+        "Sebagian anggota klub sains bukan siswa kelas XI.",
+        "Siswa kelas XI lebih pandai daripada siswa kelas lain."
+      ],
+      "k": "C",
+      "p": "Bentuknya: semua peserta (P) termasuk kelas XI, dan sebagian peserta termasuk klub sains. Anggota klub sains yang menjadi peserta pasti siswa kelas XI. Rantainya: sebagian klub sains → peserta → kelas XI. Karena jalurnya hanya lewat \"sebagian\", kesimpulannya juga \"sebagian\".<br>Opsi A: \"sebagian\" dibaca \"semua\"; anggota klub sains yang bukan peserta tidak diketahui kelasnya. Opsi B: konversi tidak sah, premis pertama dibalik arahnya. Opsi D: bentuk \"sebagian … bukan\" tidak pasti; bisa saja semua anggota klub sains adalah siswa kelas XI, dan kedua premis tetap benar. Opsi E: terdengar masuk akal, tetapi kepandaian tidak dibahas di premis. Jawaban: C.\nTips: bila salah satu premis memakai \"sebagian\", kesimpulan yang sah juga memakai \"sebagian\"."
+    },
+    {
+      "s": 44,
+      "t": "SIL",
+      "d": 3,
+      "q": "P1: Tidak ada pegawai bagian keuangan yang boleh menandatangani surat keluar.\nP2: Semua kepala seksi boleh menandatangani surat keluar.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Sebagian kepala seksi adalah pegawai bagian keuangan.",
+        "Semua yang boleh menandatangani surat keluar adalah kepala seksi.",
+        "Sebagian pegawai bagian keuangan mungkin menjadi kepala seksi.",
+        "Pegawai bagian keuangan tidak perlu menandatangani dokumen apa pun.",
+        "Tidak ada kepala seksi yang merupakan pegawai bagian keuangan."
+      ],
+      "k": "E",
+      "p": "Premis 1 negatif: kelompok keuangan dan kelompok penanda tangan tidak beririsan sama sekali. Premis 2: semua kepala seksi masuk kelompok penanda tangan. Jadi kepala seksi berada di dalam kelompok yang sama sekali terpisah dari keuangan: kepala seksi → boleh tanda tangan → bukan keuangan.<br>Opsi A: berlawanan langsung dengan kesimpulan; kalau ada kepala seksi dari keuangan, ia boleh sekaligus tidak boleh tanda tangan. Opsi B: konversi tidak sah, premis 2 dibalik; orang lain selain kepala seksi juga mungkin boleh tanda tangan. Opsi C: kata \"mungkin\" justru tidak mungkin di sini, karena sudah pasti tidak ada irisan. Opsi D: melebihi premis; premis hanya membahas surat keluar, bukan semua dokumen. Jawaban: E.\nTips: premis \"tidak ada A yang B\" memisahkan dua kelompok; apa pun yang pasti masuk B otomatis bukan A."
+    },
+    {
+      "s": 45,
+      "t": "SIL",
+      "d": 2,
+      "q": "P1: Jika hujan turun sebelum pukul 07.00, upacara bendera dipindahkan ke aula.\nP2: Hari Senin ini hujan turun pukul 06.15.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Upacara bendera hari Senin ini dipindahkan ke aula.",
+        "Upacara bendera hari Senin ini dibatalkan.",
+        "Jika upacara bendera dipindahkan ke aula, pasti hujan turun sebelum pukul 07.00.",
+        "Upacara bendera hari Senin ini diadakan di lapangan setelah hujan reda.",
+        "Upacara bendera hari Senin ini mungkin tetap di lapangan."
+      ],
+      "k": "A",
+      "p": "Bentuknya modus ponens: jika P maka Q, dan P terjadi, maka Q pasti terjadi. P = hujan sebelum 07.00 (terpenuhi, karena 06.15 lebih awal), Q = upacara pindah ke aula. Rantainya: hujan 06.15 → sebelum 07.00 → pindah ke aula.<br>Opsi B: premis tidak menyebut pembatalan; upacara hanya dipindahkan. Opsi C: membenarkan akibat; upacara bisa pindah ke aula karena alasan lain. Opsi D: berlawanan dengan premis; syarat sudah terpenuhi, jadi upacara pindah ke aula. Opsi E: kata \"mungkin\" tidak sah, karena kesimpulan sudah pasti. Jawaban: A.\nTips: cek dulu apakah bagian \"jika\" terpenuhi; bila ya, bagian \"maka\" langsung menjadi kesimpulan."
+    },
+    {
+      "s": 46,
+      "t": "SIL",
+      "d": 3,
+      "q": "P1: Jika seorang mahasiswa lulus mata kuliah Statistika, ia boleh mengambil mata kuliah Analisis Data.\nP2: Raka tidak boleh mengambil mata kuliah Analisis Data.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Raka lulus mata kuliah Statistika tetapi belum mendaftar Analisis Data.",
+        "Raka tidak pernah mengambil mata kuliah Statistika.",
+        "Semua mahasiswa yang tidak lulus Statistika tidak boleh mengambil Analisis Data.",
+        "Raka tidak lulus mata kuliah Statistika.",
+        "Raka mungkin sudah lulus mata kuliah Statistika."
+      ],
+      "k": "D",
+      "p": "Bentuknya modus tollens: jika P maka Q, dan Q tidak terjadi, maka P juga tidak terjadi. P = lulus Statistika, Q = boleh mengambil Analisis Data. Raka tidak boleh mengambil Analisis Data (bukan Q), jadi Raka tidak lulus Statistika (bukan P). Kalau ia lulus, ia pasti boleh.<br>Opsi A: bertentangan dengan premis; mahasiswa yang lulus pasti boleh mengambil, jadi \"tidak boleh\" tidak bisa disebabkan belum mendaftar. Opsi B: melebihi premis; tidak lulus belum tentu tidak pernah mengambil, mungkin ia mengambil lalu gagal. Opsi C: menyangkal sebab; premis tidak mengatur mahasiswa yang tidak lulus, mungkin ada jalur lain untuk mengambil Analisis Data. Opsi E: kata \"mungkin\" justru mustahil di sini. Jawaban: D.\nTips: kalau bagian \"maka\" tidak terjadi, coret bagian \"jika\"; jangan menambah keterangan yang tidak disebut premis."
+    },
+    {
+      "s": 47,
+      "t": "SIL",
+      "d": 3,
+      "q": "P1: Jika perpustakaan menambah jam buka, jumlah pengunjung malam bertambah.\nP2: Jika jumlah pengunjung malam bertambah, perpustakaan menambah petugas malam.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Jika perpustakaan menambah petugas malam, perpustakaan menambah jam buka.",
+        "Jika perpustakaan tidak menambah petugas malam, perpustakaan tidak menambah jam buka.",
+        "Jika perpustakaan tidak menambah jam buka, perpustakaan tidak menambah petugas malam.",
+        "Perpustakaan menambah jam buka.",
+        "Pengunjung malam bertambah karena perpustakaan menambah petugas malam."
+      ],
+      "k": "B",
+      "p": "Dua premis membentuk rantai: tambah jam buka → pengunjung malam bertambah → tambah petugas malam, jadi \"jika tambah jam buka, maka tambah petugas malam\". Kontraposisi rantai ini juga sah: jika petugas malam tidak ditambah, jam buka pasti tidak ditambah (kalau jam buka ditambah, petugas pasti ikut ditambah).<br>Opsi A: membenarkan akibat; rantai dibalik dari ujung ke pangkal. Opsi C: menyangkal sebab; dari \"tidak tambah jam buka\" tidak ada yang bisa dipastikan. Opsi D: premis hanya berisi \"jika\"; tidak ada keterangan bahwa jam buka benar-benar ditambah. Opsi E: sebab-akibat terbalik dan tidak mengikuti dari premis; premis menyebut petugas ditambah karena pengunjung bertambah. Jawaban: B.\nTips: dari rantai jika A maka C, kesimpulan sah hanya dua: jika A maka C, atau jika bukan C maka bukan A."
+    },
+    {
+      "s": 48,
+      "t": "SIL",
+      "d": 2,
+      "q": "P1: Semua penghuni Asrama Melati wajib mengikuti piket dapur.\nP2: Semua peserta program beasiswa tinggal di Asrama Melati.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Semua yang wajib mengikuti piket dapur adalah peserta program beasiswa.",
+        "Semua penghuni Asrama Melati adalah peserta program beasiswa.",
+        "Sebagian penghuni Asrama Melati bukan peserta program beasiswa.",
+        "Semua peserta program beasiswa wajib mengikuti piket dapur.",
+        "Sebagian peserta program beasiswa tidak wajib mengikuti piket dapur."
+      ],
+      "k": "D",
+      "p": "Bentuknya dua premis \"semua\" yang bersambung: peserta beasiswa → penghuni Asrama Melati → wajib piket dapur. Karena seluruh peserta beasiswa masuk asrama dan seluruh penghuni asrama wajib piket, seluruh peserta beasiswa wajib piket.<br>Opsi A: konversi tidak sah; rantai dibalik, padahal orang lain juga bisa wajib piket. Opsi B: konversi tidak sah premis 2; asrama bisa dihuni orang selain peserta beasiswa. Opsi C: tidak dapat dipastikan; bisa saja semua penghuni kebetulan peserta beasiswa. Opsi E: berlawanan dengan rantai premis; seluruh peserta beasiswa pasti wajib piket, tidak ada yang dikecualikan. Jawaban: D.\nTips: susun premis \"semua\" menjadi satu rantai dari kelompok terkecil ke terbesar, lalu ambil ujung ke ujung."
+    },
+    {
+      "s": 49,
+      "t": "SIL",
+      "d": 3,
+      "q": "P1: Semua juara lomba pidato mendapat sertifikat.\nP2: Dina mendapat sertifikat.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Dina adalah juara lomba pidato.",
+        "Dina bukan juara lomba pidato.",
+        "Semua yang mendapat sertifikat adalah juara lomba pidato.",
+        "Dina mengikuti lomba pidato.",
+        "Tidak dapat dipastikan apakah Dina juara lomba pidato."
+      ],
+      "k": "E",
+      "p": "Premis 1 hanya menyatakan juara → mendapat sertifikat. Dina berada di kelompok penerima sertifikat, tetapi kelompok itu lebih luas daripada juara. Contoh tandingan: Dina juara dan mendapat sertifikat (kedua premis benar), atau Dina bukan juara tetapi mendapat sertifikat dari pelatihan (kedua premis tetap benar).<br>Opsi A: membenarkan akibat; mendapat sertifikat tidak menjamin juara (contoh: sertifikat pelatihan). Opsi B: juga tidak pasti; Dina bisa saja juara. Opsi C: konversi tidak sah premis 1. Opsi D: tidak pasti; sertifikat Dina bisa dari kegiatan lain, jadi ia mungkin tidak ikut lomba pidato. Jawaban: E.\nTips: kalau tokoh hanya masuk bagian \"maka\" (akibat), hampir pasti tidak ada kesimpulan tentang bagian \"jika\"."
+    },
+    {
+      "s": 50,
+      "t": "SIL",
+      "d": 3,
+      "q": "P1: Laporan kegiatan dapat diunggah ke laman sekolah hanya jika sudah diperiksa bendahara.\nP2: Laporan kegiatan bazar sudah diunggah ke laman sekolah.\nKesimpulan yang sah adalah …..",
+      "c": [
+        "Laporan kegiatan bazar sudah diperiksa bendahara.",
+        "Semua laporan yang sudah diperiksa bendahara diunggah ke laman sekolah.",
+        "Jika sebuah laporan belum diunggah, laporan itu belum diperiksa bendahara.",
+        "Laporan kegiatan bazar diperiksa bendahara setelah diunggah.",
+        "Laporan kegiatan bazar mungkin belum diperiksa bendahara."
+      ],
+      "k": "A",
+      "p": "\"A hanya jika B\" berarti B adalah syarat perlu: kalau A terjadi, B pasti sudah terjadi (diunggah → sudah diperiksa bendahara). Laporan bazar sudah diunggah, jadi laporan itu pasti sudah diperiksa bendahara.<br>Opsi B: membenarkan akibat; syarat perlu dibaca sebagai syarat cukup, padahal laporan yang sudah diperiksa belum tentu diunggah. Opsi C: menyangkal sebab; laporan yang belum diunggah bisa saja sudah diperiksa. Opsi D: berlawanan dengan arti \"hanya jika\"; pemeriksaan harus sudah terjadi sebelum boleh diunggah. Opsi E: kata \"mungkin\" mustahil di sini, karena pemeriksaan sudah pasti. Jawaban: A.\nTips: ubah \"A hanya jika B\" menjadi \"jika A maka B\" sebelum menarik kesimpulan."
+    },
+    {
+      "s": 57,
+      "t": "DER",
+      "d": 2,
+      "q": "83 | 76 | 69 | 62 | … | 48 | …",
+      "c": [
+        "55",
+        "54",
+        "42",
+        "41",
+        "56"
+      ],
+      "k": "AD",
+      "p": "Setiap suku dikurangi 7: 83 − 7 = 76, 76 − 7 = 69, 69 − 7 = 62, 62 − 7 = 55, lalu 55 − 7 = 48 (cocok), dan 48 − 7 = 41.<br>54 muncul jika 62 dikurangi 8 (lompatan terlalu jauh satu). 42 muncul jika 48 dikurangi 6 (lompatan kurang satu). 56 muncul jika 62 dikurangi 6 (lompatan kurang satu). Tips: Cek bahwa selisih semua pasangan yang diketahui adalah −7. Jawaban: 55 (A) dan 41 (D)."
+    },
+    {
+      "s": 58,
+      "t": "DER",
+      "d": 3,
+      "q": "17 | 22 | 29 | 40 | 53 | … | 89 | …",
+      "c": [
+        "66",
+        "70",
+        "112",
+        "108",
+        "72"
+      ],
+      "k": "BC",
+      "p": "Selisihnya adalah bilangan prima berurutan mulai 5: 5, 7, 11, 13, 17, 19, 23. Jadi 17 + 5 = 22, 22 + 7 = 29, 29 + 11 = 40, 40 + 13 = 53, 53 + 17 = 70, lalu 70 + 19 = 89 (cocok), dan 89 + 23 = 112.<br>66 muncul jika selisih 13 dipakai lagi (selisih terakhir dianggap tetap). 108 muncul jika 89 ditambah 19 lagi, bukan prima berikutnya 23. 72 muncul jika prima 17 dilewati dan 53 langsung ditambah 19. Tips: Tulis selisih dahulu, lalu periksa bilangan prima yang berurutan. Jawaban: 70 (B) dan 112 (C)."
+    },
+    {
+      "s": 59,
+      "t": "DER",
+      "d": 2,
+      "q": "1.728 | 864 | 432 | 216 | … | 54 | …",
+      "c": [
+        "216",
+        "54",
+        "108",
+        "13,5",
+        "27"
+      ],
+      "k": "CE",
+      "p": "Setiap suku dibagi 2: 1.728 ÷ 2 = 864, 864 ÷ 2 = 432, 432 ÷ 2 = 216, 216 ÷ 2 = 108, lalu 108 ÷ 2 = 54 (cocok), dan 54 ÷ 2 = 27.<br>216 muncul jika suku terakhir yang diketahui diulang tanpa pembagian. 54 muncul jika 216 dibagi 2 dua kali untuk isian pertama, sehingga melompati 108. 13,5 muncul jika 54 dibagi 2 dua kali untuk isian kedua, sehingga melompati 27. Tips: periksa jawaban pertama dengan menggandakannya: 108 × 2 = 216. Jawaban: 108 (C) dan 27 (E)."
+    },
+    {
+      "s": 60,
+      "t": "DER",
+      "d": 3,
+      "q": "3 | 7 | 16 | 35 | 74 | … | 312 | …",
+      "c": [
+        "153",
+        "148",
+        "631",
+        "630",
+        "152"
+      ],
+      "k": "AC",
+      "p": "Kalikan suku sebelumnya dengan 2, kemudian tambah 1, 2, 3, dan seterusnya: 3 × 2 + 1 = 7, 7 × 2 + 2 = 16, 16 × 2 + 3 = 35, 35 × 2 + 4 = 74, 74 × 2 + 5 = 153, lalu 153 × 2 + 6 = 312 (cocok), dan 312 × 2 + 7 = 631.<br>148 muncul jika tambahan 5 pada 74 × 2 dilupakan. 630 muncul jika tambahan 6 dipakai lagi pada 312 × 2, padahal berikutnya 7. 152 muncul jika tambahan 4 dipakai lagi pada 74 × 2, padahal berikutnya 5. Tips: Pisahkan pengali tetap 2 dari tambahan yang naik satu per langkah. Jawaban: 153 (A) dan 631 (C)."
+    },
+    {
+      "s": 61,
+      "t": "DER",
+      "d": 3,
+      "q": "C2 | F6 | J12 | O20 | … | B42 | …",
+      "c": [
+        "U30",
+        "V30",
+        "J56",
+        "J54",
+        "U28"
+      ],
+      "k": "AC",
+      "p": "Ada dua komponen. Nomor huruf bertambah 3, 4, 5, 6, 7, 8: C(3), F(6), J(10), O(15), U(21), B(2), J(10); setelah Z kembali ke A, sehingga 21 + 7 = 28 menjadi B(2). Angka bertambah 4, 6, 8, 10, 12, 14: 2, 6, 12, 20, 30, 42, 56. Suku lengkapnya C2, F6, J12, O20, U30, lalu B42 (cocok), dan J56.<br>V30 muncul jika O(15) ditambah 7, bukan 6 (satu lompatan huruf terlewat). J54 muncul jika kenaikan angka 12 dipakai lagi: 42 + 12 = 54. U28 muncul jika kenaikan angka 8 dipakai lagi: 20 + 8 = 28. Tips: Kerjakan huruf dan angka secara terpisah, lalu pasangkan hasil pada posisi yang sama. Jawaban: U30 (A) dan J56 (C)."
+    },
+    {
+      "s": 62,
+      "t": "DER",
+      "d": 2,
+      "q": "V | T | R | P | … | L | …",
+      "c": [
+        "O",
+        "N",
+        "K",
+        "J",
+        "M"
+      ],
+      "k": "BD",
+      "p": "Huruf mundur 2 posisi dengan A = 1 sampai Z = 26: V(22), T(20), R(18), P(16), N(14), lalu L(12) (cocok), dan J(10).<br>O muncul jika P mundur hanya 1 posisi. K muncul jika L mundur hanya 1 posisi. M muncul jika P mundur 3 posisi, bukan 2. Tips: Ubah huruf ke nomor urut dan kurangi 2 pada setiap langkah. Jawaban: N (B) dan J (D)."
+    },
+    {
+      "s": 63,
+      "t": "DER",
+      "d": 3,
+      "q": "3 | B | 6 | D | 11 | F | … | H | 27 | …",
+      "c": [
+        "16",
+        "I",
+        "20",
+        "18",
+        "J"
+      ],
+      "k": "DE",
+      "p": "Angka dan huruf muncul selang-seling. Angka mengikuti n² + 2: 1² + 2 = 3, 2² + 2 = 6, 3² + 2 = 11, 4² + 2 = 18, dan 5² + 2 = 27. Huruf maju 2 posisi: B(2), D(4), F(6), H(8), J(10). Deret lengkap: 3, B, 6, D, 11, F, 18, lalu H (cocok), 27 (cocok dengan 5² + 2), J.<br>16 muncul jika tambahan 2 pada 4² + 2 dilupakan. I muncul jika H maju hanya 1 posisi. 20 muncul jika selisih angka 7 dilewati dan 11 langsung ditambah 9. Tips: Pisahkan angka dari huruf sebelum mencari pola masing-masing. Jawaban: 18 (D) dan J (E)."
+    },
+    {
+      "s": 64,
+      "t": "DER",
+      "d": 3,
+      "q": "4 | 2 | 9 | 6 | 19 | 18 | … | 54 | 54 | …",
+      "c": [
+        "34",
+        "29",
+        "108",
+        "57",
+        "162"
+      ],
+      "k": "AE",
+      "p": "Posisi ganjil bertambah 5, 10, 15, 20: 4, 9, 19, 34, 54. Posisi genap dikalikan 3: 2, 6, 18, 54, 162. Jadi 19 + 15 = 34; suku sesudahnya 18 × 3 = 54 (cocok), lalu 34 + 20 = 54 (cocok), dan 54 × 3 = 162. Deret lengkap: 4, 2, 9, 6, 19, 18, 34, 54, 54, 162.<br>29 muncul jika kenaikan 10 pada jalur ganjil dipakai lagi: 19 + 10. 108 muncul jika 54 pada jalur genap dikalikan 2, bukan 3. 57 muncul jika ×3 pada jalur genap dibaca sebagai +3: 54 + 3. Tips: Tandai posisi ganjil dan genap dengan dua baris terpisah. Jawaban: 34 (A) dan 162 (E)."
+    },
+    {
+      "s": 65,
+      "t": "WAC",
+      "d": 2,
+      "w": "p4wKIOS",
+      "i": "Pedagang yang menempati kios 4 adalah …..",
+      "c": [
+        "Nanda",
+        "Putri",
+        "Sari",
+        "Mira",
+        "Oki"
+      ],
+      "k": "B",
+      "p": "Rafi berada di ujung dan di utara Oki, jadi Rafi di kios 1 (kios 6 tidak punya kios di selatannya). Akibatnya Mira tidak mungkin di kios 1, sehingga Putri tidak boleh di utara Sari: Sari di utara Putri dengan satu kios di antaranya. Mira harus di selatan Nanda, jadi pasangan Mira–Oki paling utara di kios 3–4. Jika Mira–Oki di 3–4, Nanda harus di kios 2 dan Sari–Putri tinggal kios 5–6 yang tidak berjarak satu kios. Jika Mira–Oki di 4–5, sisa kios 2, 3, 6 tidak punya dua kios yang berjarak satu kios. Jadi Mira–Oki di kios 5–6, Sari di kios 2, Nanda di kios 3, dan Putri di kios 4. Susunan dari utara: Rafi, Sari, Nanda, Putri, Mira, Oki.<br>Kios 4 ditempati Putri (B). Opsi A (Nanda): Nanda di kios 3; jawaban ini muncul bila Nanda dan Putri tertukar. Opsi C (Sari): Sari di kios 2; ia memang berjarak satu kios dari Putri, tetapi di sisi utara. Opsi D (Mira): Mira di kios 5; jawaban ini muncul bila pasangan Mira–Oki dikira di kios 4–5. Opsi E (Oki): Oki di kios 6, ujung selatan. Tips: mulai dari syarat yang langsung mengunci satu nama (Rafi di ujung dan di utara Oki), lalu coba tempat pasangan berurutan yang tersisa. Jawaban: Putri (B)."
+    },
+    {
+      "s": 66,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wKIOS",
+      "i": "Pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Nanda bersebelahan dengan Mira.",
+        "Sari menempati kios 3.",
+        "Di antara kios Rafi dan kios Nanda ada tepat dua kios lain.",
+        "Oki menempati kios 5.",
+        "Putri bersebelahan dengan Nanda dan dengan Mira."
+      ],
+      "k": "E",
+      "p": "Rafi berada di ujung dan di utara Oki, jadi Rafi di kios 1 (kios 6 tidak punya kios di selatannya). Akibatnya Mira tidak mungkin di kios 1, sehingga Putri tidak boleh di utara Sari: Sari di utara Putri dengan satu kios di antaranya. Mira harus di selatan Nanda, jadi pasangan Mira–Oki paling utara di kios 3–4. Jika Mira–Oki di 3–4, Nanda harus di kios 2 dan Sari–Putri tinggal kios 5–6 yang tidak berjarak satu kios. Jika Mira–Oki di 4–5, sisa kios 2, 3, 6 tidak punya dua kios yang berjarak satu kios. Jadi Mira–Oki di kios 5–6, Sari di kios 2, Nanda di kios 3, dan Putri di kios 4. Susunan dari utara: Rafi, Sari, Nanda, Putri, Mira, Oki.<br>Putri di kios 4 diapit Nanda (kios 3) dan Mira (kios 5), jadi E benar. Opsi A (Nanda–Mira bersebelahan): Nanda (3) dan Mira (5) dipisahkan kios Putri. Opsi B (Sari di kios 3): kios 3 milik Nanda; Sari di kios 2. Opsi C (dua kios di antara Rafi dan Nanda): di antara kios 1 dan kios 3 hanya ada satu kios, yaitu kios Sari; ini salah menghitung kios di antara. Opsi D (Oki di kios 5): Oki di kios 6, karena kios 5 milik Mira. Tips: setelah susunan ditemukan, tulis nomor kios di samping setiap nama, lalu cek tiap opsi dengan nomor itu. Jawaban: E."
+    },
+    {
+      "s": 67,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wKIOS",
+      "i": "Jika syarat ketiga (tentang kios Rafi) dihapus, semua pernyataan berikut mungkin benar, KECUALI …..",
+      "c": [
+        "Nanda menempati kios 1.",
+        "Rafi menempati kios 4.",
+        "Sari menempati kios 3.",
+        "Putri menempati kios 3.",
+        "Rafi bersebelahan dengan Mira."
+      ],
+      "k": "C",
+      "p": "Tanpa syarat ketiga, Mira tetap tidak mungkin di kios 1 karena Nanda harus di utaranya. Jadi syarat jika–maka tetap memaksa Sari berada di utara Putri dengan satu kios di antaranya. Coba Sari di kios 3: Putri di kios 5, sehingga kios kosong tinggal 1, 2, 4, 6. Pasangan Mira–Oki yang berurutan hanya muat di kios 1–2, padahal Mira tidak boleh di kios 1. Jadi Sari tidak mungkin di kios 3.<br>Opsi C adalah satu-satunya yang mustahil. Opsi lain punya contoh susunan sah (dari utara): A — Nanda, Sari, Rafi, Putri, Mira, Oki; B dan D — Sari, Nanda, Putri, Rafi, Mira, Oki (Rafi di kios 4, Putri di kios 3); E — susunan yang sama, karena Rafi (4) bersebelahan dengan Mira (5). Opsi A, B, D, dan E gugur karena ada susunan sah yang membuatnya benar; menolaknya berarti masih memakai syarat Rafi yang sudah dihapus. Tips: untuk soal KECUALI, cari satu contoh susunan untuk tiap opsi; opsi yang tidak punya contoh adalah jawabannya. Jawaban: C."
+    },
+    {
+      "s": 68,
+      "t": "WAC",
+      "d": 2,
+      "w": "p4wKIOS",
+      "i": "Pedagang yang bersebelahan dengan Sari adalah …..",
+      "c": [
+        "Rafi dan Putri",
+        "Nanda dan Putri",
+        "Mira dan Nanda",
+        "Rafi dan Nanda",
+        "Rafi saja"
+      ],
+      "k": "D",
+      "p": "Rafi berada di ujung dan di utara Oki, jadi Rafi di kios 1 (kios 6 tidak punya kios di selatannya). Akibatnya Mira tidak mungkin di kios 1, sehingga Putri tidak boleh di utara Sari: Sari di utara Putri dengan satu kios di antaranya. Mira harus di selatan Nanda, jadi pasangan Mira–Oki paling utara di kios 3–4. Jika Mira–Oki di 3–4, Nanda harus di kios 2 dan Sari–Putri tinggal kios 5–6 yang tidak berjarak satu kios. Jika Mira–Oki di 4–5, sisa kios 2, 3, 6 tidak punya dua kios yang berjarak satu kios. Jadi Mira–Oki di kios 5–6, Sari di kios 2, Nanda di kios 3, dan Putri di kios 4. Susunan dari utara: Rafi, Sari, Nanda, Putri, Mira, Oki.<br>Sari di kios 2, diapit Rafi (kios 1) dan Nanda (kios 3), jadi jawabannya D. Opsi A (Rafi dan Putri): Putri di kios 4, berjarak satu kios dari Sari, bukan bersebelahan. Opsi B (Nanda dan Putri): sama, Putri tidak bersebelahan dengan Sari. Opsi C (Mira dan Nanda): Mira di kios 5, jauh dari Sari. Opsi E (Rafi saja): Sari tidak di ujung, jadi ia punya dua tetangga; tetangga selatan (Nanda) terlupakan. Tips: tetangga sebuah kios adalah nomor dikurangi 1 dan ditambah 1; kios di tengah selalu punya dua tetangga. Jawaban: D."
+    },
+    {
+      "s": 69,
+      "t": "WAC",
+      "d": 2,
+      "w": "p4wPIDATO",
+      "i": "Peserta yang tampil keempat adalah …..",
+      "c": [
+        "Umi",
+        "Vina",
+        "Yoga",
+        "Tegar",
+        "Zahra"
+      ],
+      "k": "E",
+      "p": "Misalkan Tegar tidak tampil terakhir. Maka Tegar–Zahra, Wahyu–Yoga, dan Umi–(satu peserta)–Vina harus masuk ke enam urutan. Peserta yang menyela Umi dan Vina pasti anggota salah satu pasangan, padahal pasangannya harus tepat di sebelahnya, dan kedua sisinya sudah diisi Umi dan Vina. Jadi Tegar tampil terakhir (urutan 6). Urutan 1–5 berisi Wahyu–Yoga dan Umi–?–Vina. Penyelanya bukan Wahyu (Yoga harus tepat setelah Wahyu, padahal tempat itu milik Vina) dan bukan Yoga (Wahyu harus tepat sebelum Yoga, padahal tempat itu milik Umi), jadi penyelanya Zahra: Umi–Zahra–Vina. Yoga harus sebelum Vina, jadi Wahyu–Yoga di urutan 1–2. Urutan tampil: Wahyu, Yoga, Umi, Zahra, Vina, Tegar.<br>Urutan keempat diisi Zahra (E). Opsi A (Umi): Umi tampil ketiga. Opsi B (Vina): Vina tampil kelima; jawaban ini muncul bila Vina dikira tepat setelah Umi, padahal ia dua giliran setelahnya. Opsi C (Yoga): Yoga tampil kedua. Opsi D (Tegar): Tegar tampil terakhir; jawaban ini muncul bila syarat jika–maka dianggap selalu berlaku (Tegar tepat sebelum Zahra). Tips: dalam soal urutan, hitung dulu berapa tempat yang dimakan setiap blok (pasangan, blok bertiga), lalu cek apakah semuanya muat. Jawaban: Zahra (E)."
+    },
+    {
+      "s": 70,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wPIDATO",
+      "i": "Pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Umi tampil tepat sebelum Vina.",
+        "Di antara Yoga dan Vina ada tepat dua peserta.",
+        "Tegar tampil tepat sebelum Zahra.",
+        "Wahyu tampil ketiga.",
+        "Zahra tampil tepat setelah Yoga."
+      ],
+      "k": "B",
+      "p": "Misalkan Tegar tidak tampil terakhir. Maka Tegar–Zahra, Wahyu–Yoga, dan Umi–(satu peserta)–Vina harus masuk ke enam urutan. Peserta yang menyela Umi dan Vina pasti anggota salah satu pasangan, padahal pasangannya harus tepat di sebelahnya, dan kedua sisinya sudah diisi Umi dan Vina. Jadi Tegar tampil terakhir (urutan 6). Urutan 1–5 berisi Wahyu–Yoga dan Umi–?–Vina. Penyelanya bukan Wahyu (Yoga harus tepat setelah Wahyu, padahal tempat itu milik Vina) dan bukan Yoga (Wahyu harus tepat sebelum Yoga, padahal tempat itu milik Umi), jadi penyelanya Zahra: Umi–Zahra–Vina. Yoga harus sebelum Vina, jadi Wahyu–Yoga di urutan 1–2. Urutan tampil: Wahyu, Yoga, Umi, Zahra, Vina, Tegar.<br>Yoga di urutan 2 dan Vina di urutan 5; di antara mereka ada Umi dan Zahra, jadi B benar. Opsi A (Umi tepat sebelum Vina): Umi dan Vina dipisahkan Zahra, karena Vina tampil dua giliran setelah Umi. Opsi C (Tegar tepat sebelum Zahra): syarat itu hanya berlaku jika Tegar tidak tampil terakhir; Tegar tampil terakhir, jadi syaratnya tidak terpakai. Opsi D (Wahyu ketiga): Wahyu tampil pertama. Opsi E (Zahra tepat setelah Yoga): setelah Yoga tampil Umi. Tips: syarat jika–maka hanya mengikat bila bagian \"jika\"-nya terjadi; jangan memakainya sebagai fakta. Jawaban: B."
+    },
+    {
+      "s": 71,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wPIDATO",
+      "i": "Jika syarat terakhir (Yoga tampil sebelum Vina) dihapus, pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Zahra tampil tepat setelah Umi.",
+        "Wahyu tampil pertama.",
+        "Vina tampil kelima.",
+        "Yoga tampil sebelum Umi.",
+        "Tegar tampil tepat sebelum Zahra."
+      ],
+      "k": "A",
+      "p": "Tanpa syarat terakhir, alasan yang sama tetap berlaku: Tegar tampil terakhir dan blok Umi–Zahra–Vina tetap terbentuk. Yang berubah hanya letak blok Wahyu–Yoga, yang kini bisa di depan atau di belakang blok Umi–Zahra–Vina. Ada dua urutan sah: Wahyu, Yoga, Umi, Zahra, Vina, Tegar dan Umi, Zahra, Vina, Wahyu, Yoga, Tegar.<br>Di kedua urutan, Zahra tampil tepat setelah Umi, jadi A pasti benar. Opsi B (Wahyu pertama): pada urutan kedua Wahyu tampil keempat. Opsi C (Vina kelima): pada urutan kedua Vina tampil ketiga. Opsi D (Yoga sebelum Umi): pada urutan kedua Yoga tampil kelima, setelah Umi. Opsi E (Tegar tepat sebelum Zahra): Tegar tetap terakhir di kedua urutan. Opsi B sampai D benar di urutan pertama saja; memilihnya berarti berhenti setelah menemukan satu urutan. Tips: bila syarat dihapus, cari semua urutan yang sah dulu, baru pilih pernyataan yang benar di semuanya. Jawaban: A."
+    },
+    {
+      "s": 72,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wPIDATO",
+      "i": "Jika Zahra dan Vina bertukar urutan tampil, syarat yang dilanggar adalah …..",
+      "c": [
+        "Yoga tampil tepat setelah Wahyu.",
+        "Yoga tampil sebelum Vina.",
+        "Jika Tegar tidak tampil terakhir, maka Tegar tampil tepat sebelum Zahra.",
+        "Tidak ada syarat yang dilanggar.",
+        "Vina tampil tepat dua giliran setelah Umi."
+      ],
+      "k": "E",
+      "p": "Misalkan Tegar tidak tampil terakhir. Maka Tegar–Zahra, Wahyu–Yoga, dan Umi–(satu peserta)–Vina harus masuk ke enam urutan. Peserta yang menyela Umi dan Vina pasti anggota salah satu pasangan, padahal pasangannya harus tepat di sebelahnya, dan kedua sisinya sudah diisi Umi dan Vina. Jadi Tegar tampil terakhir (urutan 6). Urutan 1–5 berisi Wahyu–Yoga dan Umi–?–Vina. Penyelanya bukan Wahyu (Yoga harus tepat setelah Wahyu, padahal tempat itu milik Vina) dan bukan Yoga (Wahyu harus tepat sebelum Yoga, padahal tempat itu milik Umi), jadi penyelanya Zahra: Umi–Zahra–Vina. Yoga harus sebelum Vina, jadi Wahyu–Yoga di urutan 1–2. Urutan tampil: Wahyu, Yoga, Umi, Zahra, Vina, Tegar.<br>Setelah ditukar, urutannya Wahyu, Yoga, Umi, Vina, Zahra, Tegar. Vina kini tepat setelah Umi, bukan dua giliran setelahnya, jadi syarat E dilanggar. Opsi A: Wahyu (1) dan Yoga (2) tidak berubah. Opsi B: Yoga (2) masih sebelum Vina (4). Opsi C: Tegar tetap terakhir, jadi syarat jika–maka tidak terpakai. Opsi D gugur karena syarat E dilanggar. Tips: tulis urutan baru setelah penukaran, lalu cek setiap syarat satu per satu; syarat jika–maka yang bagian \"jika\"-nya tidak terjadi tidak bisa dilanggar. Jawaban: E."
+    },
+    {
+      "s": 73,
+      "t": "WAC",
+      "d": 2,
+      "w": "p4wBAND",
+      "i": "Pemain biola adalah …..",
+      "c": [
+        "Gita",
+        "Hadi",
+        "Kirana",
+        "Intan",
+        "Joko"
+      ],
+      "k": "C",
+      "p": "1. Gita tidak berkaos hijau, padahal pemain seruling berkaos hijau, jadi Gita memainkan piano.\n2. Kirana tinggal biola, karena piano sudah dimainkan Gita.\n3. Hadi berkaos biru, jadi ia bukan pemain drum (merah) dan bukan pemain seruling (hijau); biola dan piano juga dilarang, jadi Hadi memainkan gitar.\n4. Drum dan seruling tersisa untuk Intan dan Joko. Jika Joko memainkan seruling, ia berkaos hijau, padahal syarat jika–maka menuntut kaos putih. Jadi Joko memainkan drum (kaos merah) dan Intan memainkan seruling (kaos hijau).\n5. Kaos kuning dan putih tersisa untuk Gita dan Kirana. Gita tidak berkaos putih, jadi Gita kuning dan Kirana putih.<br>Biola dimainkan Kirana (C). Opsi A (Gita): Gita memainkan piano. Opsi B (Hadi): biola dilarang untuk Hadi oleh syarat kedua. Opsi D (Intan): Intan memainkan seruling. Opsi E (Joko): Joko memainkan drum; jawaban ini muncul bila syarat jika–maka dipakai terbalik (Joko berkaos putih, lalu dikira memainkan alat milik Kirana). Tips: mulai dari orang yang pilihannya paling sedikit (Gita: dua alat, satu langsung gugur karena warna kaos). Jawaban: Kirana (C)."
+    },
+    {
+      "s": 74,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wBAND",
+      "i": "Pernyataan yang pasti benar adalah …..",
+      "c": [
+        "Intan memakai kaos putih.",
+        "Pemain piano memakai kaos kuning.",
+        "Joko memakai kaos putih.",
+        "Hadi memainkan drum.",
+        "Pemain biola memakai kaos kuning."
+      ],
+      "k": "B",
+      "p": "1. Gita tidak berkaos hijau, padahal pemain seruling berkaos hijau, jadi Gita memainkan piano.\n2. Kirana tinggal biola, karena piano sudah dimainkan Gita.\n3. Hadi berkaos biru, jadi ia bukan pemain drum (merah) dan bukan pemain seruling (hijau); biola dan piano juga dilarang, jadi Hadi memainkan gitar.\n4. Drum dan seruling tersisa untuk Intan dan Joko. Jika Joko memainkan seruling, ia berkaos hijau, padahal syarat jika–maka menuntut kaos putih. Jadi Joko memainkan drum (kaos merah) dan Intan memainkan seruling (kaos hijau).\n5. Kaos kuning dan putih tersisa untuk Gita dan Kirana. Gita tidak berkaos putih, jadi Gita kuning dan Kirana putih.<br>Piano dimainkan Gita yang berkaos kuning, jadi B benar. Opsi A (Intan putih): Intan pemain seruling, jadi berkaos hijau. Opsi C (Joko putih): kaos putih hanya wajib bila Joko tidak memainkan drum; Joko memainkan drum, jadi kaosnya merah. Opsi D (Hadi drum): pemain drum berkaos merah, sedangkan Hadi berkaos biru. Opsi E (biola kuning): pemain biola adalah Kirana yang berkaos putih; warna Gita dan Kirana tertukar. Tips: buat tabel kecil nama × alat × kaos dan isi dari syarat yang paling mengikat. Jawaban: B."
+    },
+    {
+      "s": 75,
+      "t": "WAC",
+      "d": 3,
+      "w": "p4wBAND",
+      "i": "Jika syarat tentang Kirana (syarat keempat) dihapus, semua pernyataan berikut mungkin benar, KECUALI …..",
+      "c": [
+        "Joko memainkan biola.",
+        "Kirana memakai kaos merah.",
+        "Intan memakai kaos putih.",
+        "Kirana memainkan piano.",
+        "Intan memainkan drum."
+      ],
+      "k": "D",
+      "p": "Tanpa syarat keempat, langkah 1 dan 3 tetap berlaku: Gita memainkan piano (kaos kuning) dan Hadi memainkan gitar (kaos biru). Biola, drum, dan seruling tersisa untuk Intan, Joko, dan Kirana. Ada empat susunan sah, misalnya Intan biola (putih), Joko drum, Kirana seruling; atau Intan drum, Joko biola (putih), Kirana seruling; atau Intan seruling, Joko biola (putih), Kirana drum (merah).<br>Piano sudah pasti dimainkan Gita, jadi Kirana tidak mungkin memainkan piano (D). Opsi A (Joko biola) mungkin, misalnya Intan drum, Joko biola, Kirana seruling. Opsi B (Kirana merah) mungkin bila Kirana memainkan drum. Opsi C (Intan putih) mungkin bila Intan memainkan biola. Opsi E (Intan drum) mungkin pada susunan kedua. Memilih A, B, C, atau E berarti masih memakai syarat Kirana yang sudah dihapus. Tips: syarat yang dihapus hanya membuka pilihan untuk orang yang disebut di syarat itu; hasil dari syarat lain tetap terkunci. Jawaban: D."
+    },
+    {
+      "s": 76,
+      "t": "HIT",
+      "d": 2,
+      "i": "(2.856 + 1.744) ÷ 8 = …..",
+      "c": [
+        "3.074",
+        "139",
+        "4.600",
+        "575",
+        "36.800"
+      ],
+      "k": "D",
+      "h": "(2856+1744)/8",
+      "p": "Kerjakan kurung dahulu: 2.856 + 1.744 = 4.600, kemudian 4.600 ÷ 8 = 575.<br>3.074 muncul jika kurung diabaikan: 2.856 + 1.744 ÷ 8 = 2.856 + 218. 139 muncul jika tanda tambah dalam kurung diganti kurang: (2.856 − 1.744) ÷ 8 = 1.112 ÷ 8. 4.600 muncul jika berhenti setelah menjumlahkan dan lupa membagi 8. 36.800 muncul jika pembagian 8 diganti perkalian: 4.600 × 8. Tips: Cek 575 × 8 = 4.600. Jawaban: D."
+    },
+    {
+      "s": 77,
+      "t": "HIT",
+      "d": 2,
+      "i": "936 − 24 × 17 = …..",
+      "c": [
+        "528",
+        "15.504",
+        "1.344",
+        "552",
+        "895"
+      ],
+      "k": "A",
+      "h": "936-24*17",
+      "p": "Perkalian lebih dahulu: 24 × 17 = 408. Hasilnya 936 − 408 = 528.<br>15.504 muncul jika pengurangan dikerjakan dahulu: (936 − 24) × 17 = 912 × 17. 1.344 muncul jika tanda kurang diganti tambah: 936 + 408. 552 muncul jika 24 × 17 dihitung hanya sampai 24 × 16 = 384, sehingga 936 − 384. 895 muncul jika perkalian diganti penjumlahan: 936 − (24 + 17). Tips: Hitung 24 × 17 sebagai 24 × (10 + 7) = 240 + 168. Jawaban: A."
+    },
+    {
+      "s": 78,
+      "t": "HIT",
+      "d": 3,
+      "i": "48 × 125 − 48 × 25 ÷ 5 = …..",
+      "c": [
+        "4.800",
+        "960",
+        "5.760",
+        "6.240",
+        "6.000"
+      ],
+      "k": "C",
+      "h": "48*125-48*25/5",
+      "p": "Perkalian dan pembagian dikerjakan sebelum pengurangan: 48 × 125 = 6.000, sedangkan 48 × 25 ÷ 5 = 1.200 ÷ 5 = 240. Jadi 6.000 − 240 = 5.760.<br>4.800 muncul jika pembagian 5 dilupakan: 6.000 − 1.200. 960 muncul jika seluruh selisih dibagi 5: (6.000 − 1.200) ÷ 5. 6.240 muncul jika tanda kurang diganti tambah: 6.000 + 240. 6.000 muncul jika suku kedua 48 × 25 ÷ 5 diabaikan. Tips: Faktorkan 48: 48 × (125 − 25 ÷ 5) = 48 × 120. Jawaban: C."
+    },
+    {
+      "s": 79,
+      "t": "HIT",
+      "d": 2,
+      "i": "7 × (84 ÷ 12 + 9) = …..",
+      "c": [
+        "58",
+        "63",
+        "119",
+        "64",
+        "112"
+      ],
+      "k": "E",
+      "h": "7*(84/12+9)",
+      "p": "Dalam kurung, 84 ÷ 12 = 7 dan 7 + 9 = 16. Kemudian 7 × 16 = 112.<br>58 muncul jika kurung diabaikan: 7 × 84 ÷ 12 + 9 = 49 + 9. 63 muncul jika hasil bagi 84 ÷ 12 dilupakan: 7 × 9. 119 muncul jika 84 ÷ 12 salah dihitung 8 (padahal 12 × 7 = 84): 7 × (8 + 9). 64 muncul jika pembagian dibalik: 7 × (12 ÷ 84 + 9) = 7 × (1/7 + 9). Tips: Selesaikan isi kurung menjadi satu bilangan dahulu. Jawaban: E."
+    },
+    {
+      "s": 80,
+      "t": "HIT",
+      "d": 3,
+      "i": "(125 − 37) × 16 + 12 × 37 = …..",
+      "c": [
+        "1.408",
+        "1.852",
+        "2.444",
+        "3.036",
+        "2.000"
+      ],
+      "k": "B",
+      "h": "(125-37)*16+12*37",
+      "p": "Isi kurung adalah 125 − 37 = 88. Lalu 88 × 16 = 1.408 dan 12 × 37 = 444, sehingga 1.408 + 444 = 1.852. Secara distributif, hasilnya juga 125 × 16 − 37 × (16 − 12) = 2.000 − 148 = 1.852.<br>1.408 muncul jika tambahan 12 × 37 dilupakan. 2.444 muncul jika pengurang 37 dalam kurung diabaikan: 125 × 16 + 12 × 37. 3.036 muncul jika 125 − 37 diganti 125 + 37: 162 × 16 + 444. 2.000 muncul jika kedua suku yang memuat 37 dianggap saling habis, padahal pengalinya 16 dan 12 berbeda. Tips: Gabungkan suku yang sama-sama memuat 37 agar cukup menghitung 37 × 4. Jawaban: B."
+    },
+    {
+      "s": 81,
+      "t": "HIT",
+      "d": 2,
+      "i": "864 ÷ 18 − 7 × 4 = …..",
+      "c": [
+        "164",
+        "76",
+        "41",
+        "20",
+        "−20"
+      ],
+      "k": "D",
+      "h": "864/18-7*4",
+      "p": "Pembagian menghasilkan 864 ÷ 18 = 48, sedangkan 7 × 4 = 28. Jadi 48 − 28 = 20.<br>164 muncul jika dikerjakan dari kiri tanpa mendahulukan perkalian: (48 − 7) × 4. 76 muncul jika tanda kurang diganti tambah: 48 + 28. 41 muncul jika faktor 4 dilupakan: 48 − 7. −20 muncul jika urutan pengurangan dibalik menjadi 28 − 48. Tips: Tuntaskan kedua operasi kali atau bagi sebelum mengurangkan. Jawaban: D."
+    },
+    {
+      "s": 82,
+      "t": "HIT",
+      "d": 3,
+      "i": "999 × 36 + 36 = …..",
+      "c": [
+        "35.964",
+        "36.000",
+        "35.928",
+        "36.963",
+        "36.036"
+      ],
+      "k": "B",
+      "h": "999*36+36",
+      "p": "Faktor 36 sama pada kedua suku: 999 × 36 + 1 × 36 = (999 + 1) × 36 = 1.000 × 36 = 36.000. Perkalian pertama sendiri bernilai 35.964.<br>35.964 muncul jika tambahan 36 dilupakan. 35.928 muncul jika tambahan 36 diganti pengurangan: 35.964 − 36. 36.963 muncul jika pemfaktoran keliru: 36 + 1 dikalikan 999, bukan 999 + 1 dikalikan 36. 36.036 muncul jika 999 dibulatkan menjadi 1.000 tetapi tambahan 36 masih dihitung lagi. Tips: Tambah 1 pada 999 lewat pemfaktoran, bukan pembulatan. Jawaban: B."
+    },
+    {
+      "s": 83,
+      "t": "HIT",
+      "d": 2,
+      "i": "5/6 − 1/4 = …..",
+      "c": [
+        "2/3",
+        "2/5",
+        "3/4",
+        "13/12",
+        "7/12"
+      ],
+      "k": "E",
+      "h": "F(5,6)-F(1,4)",
+      "p": "Samakan penyebut menjadi 12: 5/6 = 10/12 dan 1/4 = 3/12. Jadi 10/12 − 3/12 = 7/12.<br>2/3 muncul jika pembilang langsung dikurangkan dan penyebut pertama dipertahankan: (5 − 1)/6 = 4/6. 2/5 muncul jika pembilang dikurangkan tetapi penyebut dijumlahkan: (5 − 1)/(6 + 4) = 4/10. 3/4 muncul jika 1/4 diubah ke penyebut 12 tanpa mengalikan pembilangnya: 10/12 − 1/12 = 9/12. 13/12 muncul jika pecahan yang sudah disamakan penyebutnya dijumlahkan: 10/12 + 3/12. Tips: Gunakan KPK penyebut sebelum menjumlahkan atau mengurangkan pecahan. Jawaban: E."
+    },
+    {
+      "s": 84,
+      "t": "HIT",
+      "d": 3,
+      "i": "Harga sebuah kotak penyimpanan Rp 320.000,00 naik 25%, lalu harga barunya mendapat diskon 10%. Harga akhirnya adalah …..",
+      "c": [
+        "Rp 360.000,00",
+        "Rp 368.000,00",
+        "Rp 400.000,00",
+        "Rp 288.000,00",
+        "Rp 440.000,00"
+      ],
+      "k": "A",
+      "h": "320000*1.25*0.9",
+      "p": "Setelah naik 25%, harga menjadi 320.000 × 1,25 = 400.000. Diskon dihitung dari harga baru: 400.000 × 10% = 40.000. Harga akhir = 400.000 − 40.000 = Rp 360.000,00.<br>Rp 368.000,00 muncul jika persen dijumlahkan secara langsung menjadi kenaikan 15%: 320.000 × 1,15. Rp 400.000,00 muncul jika berhenti setelah kenaikan dan lupa diskon. Rp 288.000,00 muncul jika hanya menerapkan diskon pada harga awal: 320.000 × 0,9. Rp 440.000,00 muncul jika diskon dianggap kenaikan: 400.000 × 1,1. Tips: Persen berturut-turut memakai faktor pengali 1,25 × 0,9, dengan dasar harga yang berubah. Jawaban: A."
+    },
+    {
+      "s": 85,
+      "t": "HIT",
+      "d": 2,
+      "i": "√1.764 + 6² = …..",
+      "c": [
+        "48",
+        "54",
+        "78",
+        "106",
+        "42"
+      ],
+      "k": "C",
+      "h": "Math.sqrt(1764)+6**2",
+      "p": "Karena 42 × 42 = 1.764, √1.764 = 42. Lalu 6² = 36, sehingga 42 + 36 = 78.<br>48 muncul jika pangkat pada 6² diabaikan: 42 + 6. 54 muncul jika 6² dibaca 6 × 2 = 12, sehingga 42 + 12. 106 muncul jika basis dan pangkat tertukar: 6² dibaca 2⁶ = 64, sehingga 42 + 64. 42 muncul jika suku 6² dilupakan. Tips: Pangkat 2 berarti bilangan dikalikan dirinya sendiri. Jawaban: C."
+    },
+    {
+      "s": 86,
+      "t": "HIT",
+      "d": 3,
+      "i": "(0,75 ÷ 0,15)² − √81 = …..",
+      "c": [
+        "−4",
+        "34",
+        "1",
+        "16",
+        "256"
+      ],
+      "k": "D",
+      "h": "(0.75/0.15)**2-Math.sqrt(81)",
+      "p": "Geser koma kedua bilangan dua tempat: 0,75 ÷ 0,15 = 75 ÷ 15 = 5. Kuadratnya 5² = 25, dan √81 = 9. Jadi 25 − 9 = 16.<br>−4 muncul jika kuadrat dilupakan: 5 − 9. 34 muncul jika tanda kurang diganti tambah: 25 + 9. 1 muncul jika kuadrat dibaca perkalian dua: 5 × 2 − 9. 256 muncul jika hasil akhir dikuadratkan lagi: (25 − 9)². Tips: Tandai batas kurung agar pangkat hanya berlaku pada hasil pembagian. Jawaban: D."
+    },
+    {
+      "s": 87,
+      "t": "HIT",
+      "d": 3,
+      "i": "2 1/4 × (40% + 0,2) = …..",
+      "c": [
+        "1,35",
+        "0,9",
+        "1,5",
+        "9,45",
+        "1,1"
+      ],
+      "k": "A",
+      "h": "(2+F(1,4))*(0.4+0.2)",
+      "p": "Pecahan campuran 2 1/4 = 2 + 1/4 = 2,25. Dalam kurung, 40% = 0,4 sehingga 0,4 + 0,2 = 0,6. Hasilnya 2,25 × 0,6 = 1,35.<br>0,9 muncul jika tambahan 0,2 dilupakan: 2,25 × 0,4. 1,5 muncul jika 2 1/4 dibaca sebagai 2 × (1 + 1/4) = 2,5, lalu dikalikan 0,6. 9,45 muncul jika 40% dikonversi menjadi 4, bukan 0,4: 2,25 × 4,2. 1,1 muncul jika kurung diabaikan: 2,25 × 0,4 + 0,2. Tips: Ubah pecahan campuran dan persen menjadi desimal sebelum menghitung. Jawaban: A."
+    },
+    {
+      "s": 88,
+      "t": "HIT",
+      "d": 2,
+      "i": "Massa tepung 3,6 kg jika dinyatakan dalam gram adalah …..",
+      "c": [
+        "360",
+        "36",
+        "36.000",
+        "3,6",
+        "3.600"
+      ],
+      "k": "E",
+      "h": "3.6*1000",
+      "p": "Konversi 1 kg = 1.000 gram. Jadi 3,6 × 1.000 = 3.600 gram.<br>360 muncul jika memakai faktor 100, sehingga berhenti pada satuan dekagram. 36 muncul jika memakai faktor 10, sehingga berhenti pada satuan hektogram. 36.000 muncul jika memakai faktor 10.000 (geser koma satu tempat terlalu jauh). 3,6 muncul jika angka tidak dikonversi dari kg ke gram. Tips: Dari kg ke gram ada tiga tingkat, jadi kalikan 1.000. Jawaban: E."
+    },
+    {
+      "s": 89,
+      "t": "HIT",
+      "d": 3,
+      "i": "Durasi 2 jam 18 menit dikurangi 0,6 jam. Sisa durasinya adalah ….. menit",
+      "c": [
+        "137,4",
+        "84",
+        "102",
+        "132",
+        "36"
+      ],
+      "k": "C",
+      "h": "2*60+18-0.6*60",
+      "p": "Ubah seluruh durasi ke menit: 2 jam 18 menit = 2 × 60 + 18 = 138 menit, dan 0,6 jam = 0,6 × 60 = 36 menit. Sisa = 138 − 36 = 102 menit.<br>137,4 muncul jika 0,6 jam langsung dikurangkan sebagai 0,6 menit: 138 − 0,6. 84 muncul jika 18 menit pada durasi awal dilupakan: 120 − 36. 132 muncul jika 0,6 jam dibaca sebagai 6 menit: 138 − 6. 36 muncul jika hanya menghitung durasi pengurang, bukan sisanya. Tips: Samakan semua satuan ke menit sebelum mengurangkan. Jawaban: C."
+    },
+    {
+      "s": 90,
+      "t": "HIT",
+      "d": 3,
+      "i": "Luas 1,25 m² ditambah 3.750 cm². Jumlah luasnya adalah ….. dm²",
+      "c": [
+        "128,75",
+        "162,5",
+        "50",
+        "500",
+        "16.250"
+      ],
+      "k": "B",
+      "h": "1.25*100+3750/100",
+      "p": "Karena 1 m² = 100 dm², 1,25 m² = 125 dm². Karena 1 dm² = 100 cm², 3.750 cm² = 37,5 dm². Jumlahnya 125 + 37,5 = 162,5 dm².<br>128,75 muncul jika 3.750 cm² dibagi 1.000, bukan 100: 125 + 3,75. 50 muncul jika m² ke dm² hanya dikali 10: 12,5 + 37,5. 500 muncul jika cm² ke dm² hanya dibagi 10: 125 + 375. 16.250 muncul jika hasil ditulis dalam cm²: 12.500 + 3.750, padahal diminta dm². Tips: Untuk luas, setiap tingkat satuan memakai faktor 100, bukan 10. Jawaban: B."
+    },
+    {
+      "s": 91,
+      "t": "CRT",
+      "d": 2,
+      "i": "Dina bersepeda sejauh 18 km dengan kecepatan tetap 12 km/jam tanpa berhenti. Waktu yang diperlukan adalah …..",
+      "c": [
+        "40 menit",
+        "1 jam",
+        "1 jam 50 menit",
+        "30 menit",
+        "1 jam 30 menit"
+      ],
+      "k": "E",
+      "h": "18/12",
+      "p": "Waktu = jarak ÷ kecepatan = 18 ÷ 12 = 1,5 jam. Bagian 0,5 jam = 0,5 × 60 = 30 menit, sehingga waktunya 1 jam 30 menit.<br>40 menit muncul jika pembagian dibalik: 12 ÷ 18 jam = 2/3 jam. 1 jam muncul jika bagian 0,5 jam dibuang (pembulatan ke bawah). 1 jam 50 menit muncul jika 0,5 jam dibaca langsung sebagai 50 menit, padahal 1 jam = 60 menit. 30 menit muncul jika jarak dan kecepatan dijumlahkan: 18 + 12. Tips: Ingat waktu = jarak ÷ kecepatan dan 0,5 jam = 30 menit. Jawaban: E."
+    },
+    {
+      "s": 92,
+      "t": "CRT",
+      "d": 3,
+      "i": "Sebuah toko membeli 50 buku catatan seharga Rp 8.000,00 per buku. Lima buku rusak dan tidak dapat dijual. Sisanya terjual seharga Rp 10.000,00 per buku. Keuntungan total toko adalah …..",
+      "c": [
+        "Rp 100.000,00",
+        "Rp 90.000,00",
+        "Rp 50.000,00",
+        "Rp −50.000,00",
+        "Rp 450.000,00"
+      ],
+      "k": "C",
+      "h": "(50-5)*10000-50*8000",
+      "p": "Modal seluruh buku = 50 × 8.000 = 400.000. Buku yang terjual = 50 − 5 = 45, sehingga penerimaan = 45 × 10.000 = 450.000. Keuntungan = 450.000 − 400.000 = Rp 50.000,00.<br>Rp 100.000,00 muncul jika semua 50 buku dianggap terjual: 50 × (10.000 − 8.000). Rp 90.000,00 muncul jika modal buku rusak diabaikan: 45 × (10.000 − 8.000). Rp −50.000,00 muncul jika urutan penerimaan dikurangi modal dibalik menjadi 400.000 − 450.000. Rp 450.000,00 muncul jika penerimaan penjualan dianggap keuntungan tanpa mengurangi modal. Tips: Biaya barang rusak tetap termasuk modal. Jawaban: C."
+    },
+    {
+      "s": 93,
+      "t": "CRT",
+      "d": 2,
+      "i": "Dalam sebuah kotak, perbandingan kelereng merah dan biru adalah 3 : 5. Jumlah keduanya 64 buah. Banyak kelereng biru adalah ….. buah",
+      "c": [
+        "24",
+        "40",
+        "8",
+        "64",
+        "16"
+      ],
+      "k": "B",
+      "h": "64*5/(3+5)",
+      "p": "Jumlah bagian = 3 + 5 = 8. Satu bagian = 64 ÷ 8 = 8 buah, sehingga kelereng biru = 5 × 8 = 40 buah.<br>24 muncul jika menghitung kelereng merah: 3 × 8. 8 muncul jika berhenti pada nilai satu bagian. 64 muncul jika seluruh kelereng dianggap berwarna biru. 16 muncul jika menghitung selisih biru dan merah: (5 − 3) × 8. Tips: Pastikan pembilang memakai bagian warna yang ditanyakan. Jawaban: B."
+    },
+    {
+      "s": 94,
+      "t": "CRT",
+      "d": 3,
+      "i": "Dua belas pekerja dapat menyelesaikan pekerjaan dalam 15 hari. Setelah bekerja bersama selama 5 hari, empat pekerja berhenti. Dengan produktivitas setiap pekerja tetap sama, sisa pekerjaan diselesaikan oleh pekerja yang tersisa dalam ….. hari",
+      "c": [
+        "15",
+        "10",
+        "22,5",
+        "7,5",
+        "20"
+      ],
+      "k": "A",
+      "h": "12*(15-5)/(12-4)",
+      "p": "Seluruh pekerjaan = 12 × 15 = 180 hari-orang. Pekerjaan yang selesai = 12 × 5 = 60 hari-orang, jadi sisa = 180 − 60 = 120 hari-orang. Pekerja tersisa = 12 − 4 = 8, sehingga waktu untuk sisa pekerjaan = 120 ÷ 8 = 15 hari.<br>10 muncul jika perubahan jumlah pekerja diabaikan: 15 − 5. 22,5 muncul jika seluruh pekerjaan dihitung ulang untuk 8 pekerja: 180 ÷ 8, tanpa mengurangi pekerjaan yang sudah selesai. 7,5 muncul jika empat pekerja dianggap bergabung, bukan berhenti: 120 ÷ (12 + 4) = 120 ÷ 16. 20 muncul jika 5 hari yang sudah berlalu ditambahkan ke 15 hari, padahal ditanyakan waktu sisa. Tips: Hitung sisa hari-orang terlebih dahulu, baru bagi jumlah pekerja baru. Jawaban: A."
+    },
+    {
+      "s": 95,
+      "t": "CRT",
+      "d": 3,
+      "i": "Sebuah bus berangkat pukul 23.20 dan menempuh perjalanan selama 2 jam 50 menit. Bus tiba keesokan harinya pada pukul …..",
+      "c": [
+        "01.10",
+        "01.50",
+        "02.00",
+        "02.10",
+        "03.10"
+      ],
+      "k": "D",
+      "h": "(23+20/60+2+50/60)%24",
+      "p": "Menit keberangkatan dan perjalanan berjumlah 20 + 50 = 70 menit = 1 jam 10 menit. Jam menjadi 23 + 2 + 1 = 26; melewati tengah malam, 26 − 24 = 2. Jadi bus tiba pukul 02.10 keesokan hari.<br>01.10 muncul jika sisa 10 menit ditulis tetapi tambahan 1 jam dari 70 menit dilupakan. 01.50 muncul jika 20 menit pada waktu berangkat diabaikan: 23.00 + 2 jam 50 menit. 02.00 muncul jika 70 menit dibulatkan menjadi 60 menit dan sisa 10 menit dibuang. 03.10 muncul jika 70 menit membawa tambahan 2 jam, bukan 1 jam. Tips: Saat menit mencapai 60, bawa 1 jam; setelah pukul 24.00, mulai lagi dari 00.00. Jawaban: D."
+    },
+    {
+      "s": 96,
+      "t": "CRT",
+      "d": 3,
+      "i": "Sebuah lampu diberi harga label 20% di atas harga beli. Lampu dijual dengan diskon 10% dari harga label dan menghasilkan keuntungan Rp 16.000,00. Harga jual akhirnya adalah …..",
+      "c": [
+        "Rp 216.000,00",
+        "Rp 176.000,00",
+        "Rp 240.000,00",
+        "Rp 200.000,00",
+        "Rp 220.000,00"
+      ],
+      "k": "A",
+      "h": "16000/(1.2*0.9-1)*1.2*0.9",
+      "p": "Faktor harga jual terhadap modal = 1,20 × 0,90 = 1,08, jadi keuntungan 8% dari modal. Modal = 16.000 ÷ 0,08 = 200.000. Harga label = 200.000 × 1,20 = 240.000 dan harga jual = 240.000 × 0,90 = Rp 216.000,00.<br>Rp 176.000,00 muncul jika keuntungan bersih dianggap 20% − 10% = 10%, sehingga modal 160.000 dan harga jual 160.000 + 16.000. Rp 240.000,00 muncul jika menjawab harga label sebelum diskon. Rp 200.000,00 muncul jika berhenti pada modal, bukan harga jual. Rp 220.000,00 muncul jika diskon dihitung dari modal: 240.000 − 10% × 200.000. Tips: Gabungkan faktor persentase dahulu untuk menemukan persen keuntungan sebenarnya. Jawaban: A."
+    }
+  ]
+}

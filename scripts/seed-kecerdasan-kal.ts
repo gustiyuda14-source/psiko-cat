@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import * as path from "path";
 import { createClient } from "@supabase/supabase-js";
-import { INSTRUKSI, checkNoLeak, checkRows, checkTeks, data, root, teksRows, type Row, type TeksFile } from "./kecerdasan-teks-lib";
+import { INSTRUKSI, LAYOUT_V3, checkA7, checkLayout, checkNoLeak, checkRows, checkTeks, data, root, teksRows, type Row, type TeksFile } from "./kecerdasan-teks-lib";
 
 // Kalibrasi Logis/Spasial 2026-10-12. Blok 26-50 tiap paket:
 //   26-27 deret gambar · 28-30 matriks · 31-32 rotasi/cermin · 33-34 susun · 35-36 analogi · 37 ikon
@@ -13,14 +13,18 @@ import { INSTRUKSI, checkNoLeak, checkRows, checkTeks, data, root, teksRows, typ
 //   3  = Latihan Paket 2  (baru 100 soal: kecerdasan_p3_teks.json + figural/susun/denah kal)
 //   15 = Simulasi 3       (baru 100 soal: kecerdasan_p15_teks.json + figural/mosaik/susun/denah kal, dengan pembahasan_svg)
 //   16 = Simulasi 1 baru  (baru 100 soal, sama seperti 15; menggantikan pkg 13 di kartu 1, pkg 13 tetap untuk riwayat)
+//   4, 5 = Latihan Paket 3 & 4 (pedoman v3: 76-90 HIT · 91-96 CRT · 97-100 KCK, silogisme SIL_V3, kunci ≤ 24/huruf,
+//          cek A-7 tanpa unsur kepolisian). Rencana: docs/rencana/kecerdasan-latihan-paket-3-4.md
 // Sumber gambar baru: generate-kecerdasan-{figural,susun,denah}-kal.ts. Wacana pkg 3: cek-wacana-kal.ts.
 //   Validasi (baca DB saja):  npx tsx scripts/seed-kecerdasan-kal.ts
+//   Cek satu paket saja:      npx tsx scripts/seed-kecerdasan-kal.ts --check 4
 //   Tulis satu paket:         npx tsx scripts/seed-kecerdasan-kal.ts --apply 13
 
 process.loadEnvFile(path.join(root, ".env.local"));
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!);
 type DbRow = Row & { id: string; is_active: boolean };
 type Tiered = Row & { tingkat: 2 | 3 };
+const V3 = new Set([4, 5]);
 
 const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 const strip = ({ sequence_number, options_payload, scoring_rule }: Row): Row => ({ sequence_number, options_payload, scoring_rule });
@@ -52,17 +56,28 @@ async function fetchPkg(pkg: number): Promise<DbRow[]> {
 async function compose(pkg: number): Promise<{ rows: Row[]; reuse: Map<number, string> }> {
   const reuse = new Map<number, string>();
   // Paket baru penuh (100 soal): teks pkg N + gambar kal pkg N.
-  if (pkg === 3 || pkg === 15 || pkg === 16) {
-    const teks = data(`kecerdasan_p${pkg}_teks.json`) as TeksFile;
+  if (pkg === 3 || pkg === 15 || pkg === 16 || V3.has(pkg)) {
+    let teks = data(`kecerdasan_p${pkg}_teks.json`) as TeksFile;
+    const lama = ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json"];
+    checkNoLeak(teks, pkg === 3 ? lama.filter((f) => !f.includes("p3")) : V3.has(pkg)
+      ? [...lama, "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_kck_kal.json", ...range(4, pkg - 1).map((n) => `kecerdasan_p${n}_teks.json`)]
+      : [...lama, ...(pkg === 16 ? ["kecerdasan_p15_teks.json"] : [])]);
+    // V3: KCK 97–100 tinggal di kecerdasan_kck_kal.json (keunikan stem dicek check-kecerdasan-kck.ts), digabung setelah cek bocor.
+    if (V3.has(pkg)) teks = { ...teks, soal: [...teks.soal, ...data("kecerdasan_kck_kal.json")[pkg]] };
     checkTeks(teks);
-    checkNoLeak(teks, pkg === 3 ? ["kecerdasan_p2_teks.json", "kecerdasan_s2_teks.json"] : ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", ...(pkg === 16 ? ["kecerdasan_p15_teks.json"] : [])]);
     const gambar = newRows(pkg);
+    if (V3.has(pkg)) { checkA7(`pkg ${pkg} teks`, teks); checkA7(`pkg ${pkg} gambar`, gambar); }
     const tingkat = [...teks.soal.map((x) => x.d), ...gambar.map((g) => g.tingkat)];
     assert.deepEqual([tingkat.filter((t) => t === 2).length, tingkat.filter((t) => t === 3).length], [40, 60], `pkg ${pkg}: harus 40 sedang + 60 HOTS`);
     const typeOf = new Map(teks.soal.map((x) => [x.s, x.t]));
-    for (const [a, b, t] of [[1, 5, "SIN"], [6, 10, "ANT"], [11, 15, "ANA"], [16, 19, "ODD"], [20, 25, "BAC"], [43, 50, "SIL"], [57, 64, "DER"], [65, 75, "WAC"], [76, 98, "*"], [99, 99, "KUA"], [100, 100, "KCK"]] as const)
+    const praktis = V3.has(pkg) ? LAYOUT_V3 : [[76, 98, "*"], [99, 99, "KUA"], [100, 100, "KCK"]] as const;
+    for (const [a, b, t] of [[1, 5, "SIN"], [6, 10, "ANT"], [11, 15, "ANA"], [16, 19, "ODD"], [20, 25, "BAC"], [43, 50, "SIL"], [57, 64, "DER"], [65, 75, "WAC"], ...praktis] as const)
       for (const s of range(a, b)) assert.ok(t === "*" ? ["HIT", "CRT"].includes(typeOf.get(s)!) : typeOf.get(s) === t, `pkg ${pkg} soal ${s}: tipe ${typeOf.get(s)} ≠ ${t}`);
-    return { rows: [...teksRows(teks), ...gambar.map(strip)].sort((a, b) => a.sequence_number - b.sequence_number), reuse };
+    const rows = [...teksRows(teks, V3.has(pkg)), ...gambar.map(strip)].sort((a, b) => a.sequence_number - b.sequence_number);
+    // Pedoman D-4: maks 24% per huruf. Butir 2 kunci dihitung dua huruf (±123 huruf per paket, jadi batasnya ±29).
+    const letters = rows.reduce((n, r) => n + r.scoring_rule.correct_key.length, 0);
+    if (V3.has(pkg)) checkLayout(pkg, rows.map((row) => ({ row, t: typeOf.get(row.sequence_number) ?? "" })), Math.floor(letters * 0.24));
+    return { rows, reuse };
   }
   const { from, map } = MOVES[pkg];
   const src = await fetchPkg(from);
@@ -97,7 +112,7 @@ function checkBlock(rows: Row[], pkg: number, reuse: Map<number, string>) {
     const svg = r.options_payload.svg_content ?? "", s = r.sequence_number;
     if (s <= 37) assert.ok(svg && !svg.includes("mapclip"), `pkg ${pkg} #${s}: harus figural`);
     else if (s <= 42) assert.ok(svg.includes("mapclip") && r.options_payload.question_text, `pkg ${pkg} #${s}: harus denah`);
-    else assert.equal(r.options_payload.instruksi, INSTRUKSI.SIL, `pkg ${pkg} #${s}: harus silogisme`);
+    else assert.equal(r.options_payload.instruksi, INSTRUKSI[V3.has(pkg) ? "SIL_V3" : "SIL"], `pkg ${pkg} #${s}: harus silogisme`);
   }
   assert.equal(rows.filter((r) => /Urutkanlah potongan/.test(String(r.options_payload.instruksi))).map((r) => r.sequence_number).join(","), "33,34", `pkg ${pkg}: susun harus di 33-34`);
   return checkRows(rows, `pkg ${pkg}`, new Set(pkg === 13 ? reuse.keys() : []));
@@ -134,8 +149,9 @@ async function apply(pkg: number, rows: Row[], reuse: Map<number, string>) {
 }
 
 (async () => {
-  const only = process.argv.includes("--apply") ? Number(process.argv[process.argv.indexOf("--apply") + 1]) : null;
-  for (const pkg of only ? [only] : [13, 14, 2, 3, 15, 16]) {
+  const flag = (f: string) => (process.argv.includes(f) ? Number(process.argv[process.argv.indexOf(f) + 1]) : null);
+  const only = flag("--apply"), check = flag("--check");
+  for (const pkg of only ? [only] : check ? [check] : [13, 14, 2, 3, 15, 16]) {
     // pkg 2 diubah di tempat: setelah dikalibrasi, yang dicek adalah isi DB-nya sekarang.
     const live = pkg === 2 ? await fetchPkg(2) : [];
     if (live.some((r) => (r.options_payload.svg_content ?? "").includes("mapclip")) && !only) {

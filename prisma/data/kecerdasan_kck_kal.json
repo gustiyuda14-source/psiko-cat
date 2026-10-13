@@ -98,6 +98,240 @@
       "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Calon taruna, Waktu tempuh (menit)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"101.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Calon taruna</text><text x=\"361.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Waktu tempuh (menit)</text><text x=\"101.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Rio</text><text x=\"361.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">11</text><text x=\"101.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Sandi</text><text x=\"361.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">12</text><text x=\"101.0\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Tegar</text><text x=\"361.0\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">t</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"201.9\" y1=\"0\" x2=\"201.9\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
     }
   ],
+  "4": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Toko alat tulis mengirim kotak penghapus dan kotak pensil. Semua kotak berisi barang satu jenis, dan isi tiap kotak untuk jenis yang sama selalu sama banyak. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa batang pensil yang dikirim toko itu?\nPernyataan (1): Jumlah seluruh penghapus dan pensil yang dikirim adalah 292 buah.\nPernyataan (2): Toko mengirim 12 kotak pensil, masing-masing berisi 15 batang.",
+      "tabel": {
+        "kolom": [
+          "Barang",
+          "Banyak kotak",
+          "Isi per kotak"
+        ],
+        "baris": [
+          [
+            "Penghapus",
+            "7",
+            "16"
+          ],
+          [
+            "Pensil",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: penghapus 7 × 16 = 112 buah; pensil 292 − 112 = 180 batang, tunggal. (2) cukup: p = 12 dan q = 15, jadi p × q = 180 batang, tunggal. Gabungan juga memberi 180 batang.",
+      "p": "Yang sebenarnya ditanya\nTotal pensil, yaitu p × q. Kita boleh memakai jumlah kotak dan isinya, atau mencari total pensil lewat jumlah semua barang.\n\nCek pernyataan (1) saja\nPenghapus sudah diketahui: 7 × 16 = 112 buah. Dari total 292 buah, bagian pensil adalah 292 − 112 = 180 batang. Jumlah kotaknya boleh belum diketahui; total pensil tetap satu. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nJumlah pensil langsung didapat dari 12 × 15 = 180 batang. Pernyataan (2) cukup.\n\nJawaban: D\nKedua pernyataan masing-masing sudah memberi satu total pensil, yaitu 180 batang.\nOpsi A gugur karena pernyataan (2) juga cukup.\nOpsi B gugur karena pernyataan (1) juga cukup.\nOpsi C gugur karena tidak perlu menggabungkan kedua pernyataan.\nOpsi E gugur karena masing-masing pernyataan memberi jawaban tunggal.\n\nBiar gampang diingat\nTotal belanja dikurangi bagian yang sudah kamu tahu bisa memberi harga sisanya. Membaca rincian barang satu per satu bukan satu-satunya jalan.\n\nJebakan di soal ini\nMengira p dan q harus ditemukan satu per satu, lalu memilih B. Pertanyaan hanya meminta hasil p × q; total gabungan dikurangi penghapus sudah memberi hasil itu.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Barang, Banyak kotak, Isi per kotak\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"67.8\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Barang</text><text x=\"228.3\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Banyak kotak</text><text x=\"420.5\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Isi per kotak</text><text x=\"67.8\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Penghapus</text><text x=\"228.3\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">7</text><text x=\"420.5\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">16</text><text x=\"67.8\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Pensil</text><text x=\"228.3\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"420.5\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"135.5\" y1=\"0\" x2=\"135.5\" y2=\"156\"/><line x1=\"321.1\" y1=\"0\" x2=\"321.1\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Perpustakaan mencatat jumlah pengunjung selama tiga hari. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah pengunjung hari Sabtu lebih banyak daripada hari Jumat?\nPernyataan (1): Pengunjung hari Sabtu 17 orang lebih sedikit daripada hari Jumat.\nPernyataan (2): Pengunjung hari Sabtu lebih banyak daripada hari Kamis.",
+      "tabel": {
+        "kolom": [
+          "Hari",
+          "Pengunjung"
+        ],
+        "baris": [
+          [
+            "Kamis",
+            "58"
+          ],
+          [
+            "Jumat",
+            "86"
+          ],
+          [
+            "Sabtu",
+            "n"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "A",
+      "bukti": "(1) cukup: n = 86 − 17 = 69, sehingga n > 86 pasti tidak. (2) tidak cukup: n = 70 memenuhi n > 58 dan jawabannya tidak; n = 95 juga memenuhi n > 58 dan jawabannya ya. Gabungan tetap memberi n = 69 dan jawaban tidak.",
+      "p": "Yang sebenarnya ditanya\nJawaban ya atau tidak: apakah n lebih dari 86. Kita tidak wajib mengetahui n jika semua kemungkinan sudah memberi jawaban yang sama.\n\nCek pernyataan (1) saja\nPengunjung Sabtu = 86 − 17 = 69 orang. Karena 69 tidak lebih dari 86, jawabannya pasti tidak. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nKita hanya tahu n lebih dari 58. Kalau n = 70, Sabtu tidak lebih ramai daripada Jumat. Kalau n = 95, Sabtu lebih ramai. Keduanya lebih dari 58, tetapi jawabannya berbeda. Pernyataan (2) tidak cukup.\n\nJawaban: A\nPernyataan (1) saja memberi jawaban pasti tidak, sedangkan pernyataan (2) masih memungkinkan ya atau tidak.\nOpsi B gugur karena pernyataan (2) belum memberi jawaban pasti.\nOpsi C gugur karena pernyataan (1) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (2) tidak cukup.\nOpsi E gugur karena pernyataan (1) sudah memberi kepastian.\n\nBiar gampang diingat\nKalau kemarin kamu membawa 86 lembar kertas dan hari ini membawa 17 lembar lebih sedikit, kamu langsung tahu hari ini tidak lebih banyak.\n\nJebakan di soal ini\nMenyamakan jawaban tidak dengan data tidak cukup. Cukup berarti jawabannya pasti, baik pasti ya maupun pasti tidak.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Hari, Pengunjung\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"91.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari</text><text x=\"351.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Pengunjung</text><text x=\"91.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Kamis</text><text x=\"351.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">58</text><text x=\"91.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Jumat</text><text x=\"351.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">86</text><text x=\"91.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Sabtu</text><text x=\"351.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">n</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"183.4\" y1=\"0\" x2=\"183.4\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kelurahan menyimpan x kursi lipat dan y kursi biasa. Kedua jumlah itu adalah bilangan bulat positif.\nPertanyaan: Berapa jumlah seluruh kursi, yaitu x + y?\nPernyataan (1): Dua kali jumlah kursi lipat ditambah jumlah kursi biasa adalah 53.\nPernyataan (2): Enam kali jumlah kursi lipat ditambah tiga kali jumlah kursi biasa adalah 159.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: (x, y) = (9, 35) memberi 2x + y = 53 dan x + y = 44; (19, 15) juga memenuhi dan totalnya 34. (2) tidak cukup: kedua pasangan itu memberi 6x + 3y = 159, tetapi totalnya 44 atau 34. Gabungan tidak cukup: (2) tepat tiga kali (1), sehingga kedua pasangan tetap sah.",
+      "p": "Yang sebenarnya ditanya\nTotal kursi x + y. Mengetahui 2x + y belum tentu sama dengan mengetahui total kursi, karena kursi lipat dihitung dua kali.\n\nCek pernyataan (1) saja\nJika x = 9 dan y = 35, maka 2 × 9 + 35 = 53 dan totalnya 44 kursi. Jika x = 19 dan y = 15, maka 2 × 19 + 15 = 53 dan totalnya 34 kursi. Keduanya sah, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nPasangan x = 9, y = 35 memberi 6 × 9 + 3 × 35 = 159 dan total 44 kursi. Pasangan x = 19, y = 15 juga memberi 6 × 19 + 3 × 15 = 159, tetapi totalnya 34 kursi. Pernyataan (2) tidak cukup.\n\nCek gabungan\nMembagi pernyataan (2) dengan 3 memberi 2x + y = 53, persis pernyataan (1). Pasangan (9, 35) dan (19, 15) tetap memenuhi keduanya, dengan total 44 dan 34 kursi. Digabung pun tidak cukup.\n\nJawaban: E\nPernyataan (2) hanya mengulang informasi (1), sehingga total kursi tetap bisa 44 atau 34.\nOpsi A gugur karena pernyataan (1) memberi dua total berbeda.\nOpsi B gugur karena pernyataan (2) juga memberi dua total berbeda.\nOpsi C gugur karena gabungan tidak menambah informasi.\nOpsi D gugur karena masing-masing pernyataan belum cukup.\n\nBiar gampang diingat\nTiga fotokopi dari catatan belanja yang sama tidak memberi rincian baru. Angka yang lebih besar bisa tetap menceritakan hal yang sama.\n\nJebakan di soal ini\nMenganggap dua kalimat berarti dua informasi berbeda, lalu memilih C. Cek dulu apakah satu persamaan hanya kelipatan persamaan lainnya.",
+      "svg": null
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Lima stan pameran sekolah, yaitu Buku, Musik, Sains, Seni, dan Kebun, menempati lima tempat berurutan dari kiri ke kanan. Setiap tempat diisi satu stan.\nPertanyaan: Stan apa yang berada paling kiri?\nPernyataan (1): Stan Musik tepat di sebelah kanan Buku, dan stan Seni tepat di sebelah kanan Sains.\nPernyataan (2): Stan Kebun berada di tempat tengah, dan posisi stan Buku lebih ke kiri daripada Sains.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1) tidak cukup: urutan Buku–Musik–Kebun–Sains–Seni memberi Buku paling kiri; Sains–Seni–Kebun–Buku–Musik memberi Sains. (2) tidak cukup: Buku–Musik–Kebun–Sains–Seni memberi Buku; Musik–Buku–Kebun–Seni–Sains memberi Musik. Gabungan cukup: Kebun di tempat 3 memisahkan dua pasangan berdampingan; Buku harus di kiri Sains, sehingga satu-satunya urutan adalah Buku–Musik–Kebun–Sains–Seni, paling kiri Buku.",
+      "p": "Yang sebenarnya ditanya\nNama stan paling kiri. Kita perlu memastikan semua urutan yang cocok memberi nama yang sama di tempat pertama.\n\nCek pernyataan (1) saja\nUrutan Buku, Musik, Kebun, Sains, Seni memenuhi kedua pasangan berdampingan dan memberi Buku paling kiri. Urutan Sains, Seni, Kebun, Buku, Musik juga memenuhi, tetapi memberi Sains paling kiri. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nUrutan Buku, Musik, Kebun, Sains, Seni memenuhi Kebun di tengah dan Buku di kiri Sains. Urutan Musik, Buku, Kebun, Seni, Sains juga memenuhi keduanya. Stan paling kiri bisa Buku atau Musik, jadi pernyataan (2) tidak cukup.\n\nCek gabungan\nKebun mengisi tempat 3. Pasangan Buku–Musik dan Sains–Seni tidak bisa melewati tempat itu, sehingga masing-masing harus mengisi tempat 1–2 atau 4–5. Buku di kiri Sains memaksa Buku–Musik di 1–2. Satu urutannya adalah Buku, Musik, Kebun, Sains, Seni. Paling kiri pasti Buku. Digabung cukup.\n\nJawaban: C\nGabungan kedua petunjuk mengunci urutan, sehingga stan paling kiri pasti Buku.\nOpsi A gugur karena pernyataan (1) masih memberi Buku atau Sains paling kiri.\nOpsi B gugur karena pernyataan (2) masih memberi Buku atau Musik paling kiri.\nOpsi D gugur karena kedua pernyataan belum cukup sendiri-sendiri.\nOpsi E gugur karena gabungan memberi satu nama pasti.\n\nBiar gampang diingat\nBayangkan satu vas sudah menempati tengah rak. Dua pasang kotak yang harus berdampingan tinggal masuk di kiri dan kanan vas; petunjuk pasangan mana di kiri mengunci susunannya.\n\nJebakan di soal ini\nBerhenti setelah menemukan satu susunan yang cocok. Satu contoh belum membuktikan cukup; pastikan susunan lain tidak dapat mengubah stan paling kiri.",
+      "svg": null
+    }
+  ],
+  "5": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Koperasi menyimpan beras dan gula dalam karung. Isi tiap karung untuk barang yang sama selalu sama berat. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa kilogram seluruh gula yang disimpan?\nPernyataan (1): Karung gula 3 karung lebih banyak daripada karung beras.\nPernyataan (2): Berat seluruh beras dan gula adalah 486 kg.",
+      "tabel": {
+        "kolom": [
+          "Barang",
+          "Karung",
+          "Isi per karung (kg)"
+        ],
+        "baris": [
+          [
+            "Beras",
+            "8",
+            "25"
+          ],
+          [
+            "Gula",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "(1) tidak cukup: p = 8 + 3 = 11; q = 18 memberi gula 198 kg, sedangkan q = 22 memberi 242 kg. (2) cukup: beras 8 × 25 = 200 kg, sehingga gula 486 − 200 = 286 kg, tunggal. Gabungan cocok dengan p = 11 dan q = 26, tetap 286 kg.",
+      "p": "Yang sebenarnya ditanya\nTotal berat gula, yaitu p × q. Jumlah karung saja belum menentukan beratnya, tetapi total gabungan bisa dipakai untuk mencari bagian gula.\n\nCek pernyataan (1) saja\nKarung gula = 8 + 3 = 11. Jika tiap karung gula berisi 18 kg, totalnya 198 kg. Jika tiap karung berisi 22 kg, totalnya 242 kg. Keduanya memakai 11 karung, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nBeras sudah 8 × 25 = 200 kg. Total gabungan 486 kg, jadi gula 486 − 200 = 286 kg. Hasilnya tunggal walaupun jumlah dan isi karung gula belum diketahui. Pernyataan (2) cukup.\n\nJawaban: B\nPernyataan (2) saja menentukan berat gula, sedangkan pernyataan (1) hanya menentukan jumlah karungnya.\nOpsi A gugur karena pernyataan (1) belum menentukan isi tiap karung.\nOpsi C gugur karena pernyataan (2) sudah cukup sendirian.\nOpsi D gugur karena pernyataan (1) masih memberi 198 atau 242 kg.\nOpsi E gugur karena pernyataan (2) memberi satu total pasti.\n\nBiar gampang diingat\nJika berat seluruh belanjaan sudah diketahui dan berat beras tercatat lengkap, berat barang sisanya tinggal dikurangkan. Tidak perlu membuka tiap kantong.\n\nJebakan di soal ini\nTerpaku pada p dan q, lalu memilih C karena pernyataan (1) memberi p. Yang diminta hasil perkaliannya; total gabungan dikurangi beras sudah cukup.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Barang, Karung, Isi per karung (kg)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"56.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Barang</text><text x=\"167.9\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Karung</text><text x=\"372.0\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Isi per karung (kg)</text><text x=\"56.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Beras</text><text x=\"167.9\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">8</text><text x=\"372.0\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">25</text><text x=\"56.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Gula</text><text x=\"167.9\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"372.0\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"112.0\" y1=\"0\" x2=\"112.0\" y2=\"156\"/><line x1=\"223.9\" y1=\"0\" x2=\"223.9\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kantor mencatat hasil cetak mesin pada dua sesi. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah hasil cetak sesi sore lebih dari 145 lembar?\nPernyataan (1): Hasil cetak sesi sore 24 lembar lebih banyak daripada sesi pagi.\nPernyataan (2): Hasil cetak sesi sore tidak melebihi jumlah hasil sesi pagi ditambah 30 lembar.",
+      "tabel": {
+        "kolom": [
+          "Sesi",
+          "Hasil cetak (lembar)"
+        ],
+        "baris": [
+          [
+            "Pagi",
+            "108"
+          ],
+          [
+            "Sore",
+            "n"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: n = 108 + 24 = 132, maka n > 145 pasti tidak. (2) cukup: n ≤ 108 + 30 = 138, maka seluruh nilai sah memberi jawaban tidak. Gabungan memberi n = 132, sesuai batas 138, tetap tidak.",
+      "p": "Yang sebenarnya ditanya\nJawaban ya atau tidak: apakah n lebih dari 145. Untuk menjawab tidak, cukup tahu hasil sore tidak mungkin melewati batas itu.\n\nCek pernyataan (1) saja\nHasil sore = 108 + 24 = 132 lembar. Nilai ini tidak lebih dari 145, jadi jawabannya pasti tidak. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nHasil sore paling banyak 108 + 30 = 138 lembar. Berapa pun hasil tepatnya, tidak bisa lebih dari 145. Jawabannya pasti tidak. Pernyataan (2) cukup.\n\nJawaban: D\nMasing-masing pernyataan memberi jawaban pasti tidak, sehingga keduanya cukup sendiri-sendiri.\nOpsi A gugur karena pernyataan (2) juga cukup.\nOpsi B gugur karena pernyataan (1) juga cukup.\nOpsi C gugur karena kepastian sudah ada tanpa menggabungkan keduanya.\nOpsi E gugur karena jawaban dari setiap pernyataan sudah pasti.\n\nBiar gampang diingat\nJika uang di dompet paling banyak 138 ribu, kamu pasti tidak punya lebih dari 145 ribu. Jumlah uang tepatnya tidak perlu dihitung untuk menjawab itu.\n\nJebakan di soal ini\nMenganggap kata paling banyak berarti belum cukup karena n belum tepat diketahui. Pertanyaannya hanya ya atau tidak; batas atas yang masih di bawah 145 sudah mengunci jawaban.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Sesi, Hasil cetak (lembar)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"55.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Sesi</text><text x=\"315.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hasil cetak (lembar)</text><text x=\"55.2\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Pagi</text><text x=\"315.2\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">108</text><text x=\"55.2\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Sore</text><text x=\"315.2\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">n</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"110.4\" y1=\"0\" x2=\"110.4\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Klub bulu tangkis membeli kok dan grip raket. Harga satu tabung kok adalah x rupiah, dan harga satu grip adalah y rupiah. Semua barang sejenis harganya sama dan positif.\nPertanyaan: Berapa biaya membeli satu tabung kok dan satu grip, yaitu x + y?\nPernyataan (1): Tiga tabung kok dan dua grip berharga Rp79.000.\nPernyataan (2): Dua tabung kok dan satu grip berharga Rp47.000.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1) tidak cukup: x = 9.000, y = 26.000 memenuhi 3x + 2y = 79.000 dan x + y = 35.000; x = 15.000, y = 17.000 juga memenuhi tetapi totalnya 32.000. (2) tidak cukup: x = 10.000, y = 27.000 memenuhi 2x + y = 47.000 dan totalnya 37.000; x = 15.000, y = 17.000 juga memenuhi tetapi totalnya 32.000. Gabungan cukup: selisih kedua pembelian tepat x + y = 79.000 − 47.000 = 32.000, tunggal.",
+      "p": "Yang sebenarnya ditanya\nHarga gabungan satu tabung kok dan satu grip, yaitu x + y. Harga masing-masing tidak harus dicari jika ada jalan langsung ke jumlah itu.\n\nCek pernyataan (1) saja\nJika x = 9.000 dan y = 26.000, pembelian pertama berharga 27.000 + 52.000 = 79.000, sedangkan x + y = 35.000. Jika x = 15.000 dan y = 17.000, pembelian itu juga 45.000 + 34.000 = 79.000, tetapi x + y = 32.000. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nJika x = 10.000 dan y = 27.000, pembelian kedua berharga 20.000 + 27.000 = 47.000, sedangkan x + y = 37.000. Jika x = 15.000 dan y = 17.000, pembelian itu juga 30.000 + 17.000 = 47.000, tetapi x + y = 32.000. Pernyataan (2) tidak cukup.\n\nCek gabungan\nPembelian pertama memuat tepat satu tabung kok dan satu grip lebih banyak daripada pembelian kedua. Selisih harganya langsung memberi x + y = 79.000 − 47.000 = 32.000. Pasangan x = 15.000 dan y = 17.000 cocok dengan keduanya. Digabung cukup.\n\nJawaban: C\nGabungan kedua catatan memberi satu biaya pasti untuk satu tabung kok dan satu grip, yaitu Rp32.000.\nOpsi A gugur karena pernyataan (1) masih memberi total Rp35.000 atau Rp32.000.\nOpsi B gugur karena pernyataan (2) masih memberi total Rp37.000 atau Rp32.000.\nOpsi D gugur karena kedua pernyataan belum cukup sendirian.\nOpsi E gugur karena selisih kedua pembelian memberi total yang ditanya.\n\nBiar gampang diingat\nDua struk belanja memuat barang yang sama, tetapi salah satunya memiliki satu roti dan satu susu tambahan. Selisih struk langsung menunjukkan harga roti dan susu itu bersama-sama.\n\nJebakan di soal ini\nMerasa harus menemukan x dan y satu per satu. Yang ditanya hanya jumlahnya, dan selisih kedua persamaan sudah langsung memberi jumlah tersebut.",
+      "svg": null
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Gudang kantor berbentuk persegi panjang. Sisi yang menghadap pintu masuk diberi label a, dan sisi di sampingnya diberi label b. Kedua panjang sisi positif.\nPertanyaan: Berapa meter panjang sisi a?\nPernyataan (1): Keliling gudang adalah 62 meter.\nPernyataan (2): Luas gudang adalah 210 meter persegi.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: a = 10, b = 21 dan a = 15, b = 16 sama-sama berkeliling 62, tetapi a bernilai 10 atau 15. (2) tidak cukup: a = 10, b = 21 dan a = 7, b = 30 sama-sama berluas 210, tetapi a bernilai 10 atau 7. Gabungan tidak cukup: a = 10, b = 21 dan a = 21, b = 10 memenuhi keliling 62 serta luas 210, tetapi a bernilai 10 atau 21.",
+      "p": "Yang sebenarnya ditanya\nPanjang sisi tertentu, yaitu a yang menghadap pintu masuk. Mengetahui dua ukuran gudang belum tentu menunjukkan ukuran mana yang berlabel a.\n\nCek pernyataan (1) saja\nKeliling 62 berarti a + b = 31. Jika a = 10 dan b = 21, kelilingnya 62. Jika a = 15 dan b = 16, kelilingnya juga 62. Nilai a bisa 10 atau 15, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nLuas 210 berarti a × b = 210. Pasangan a = 10, b = 21 memberi luas 210. Pasangan a = 7, b = 30 juga memberi luas 210. Nilai a bisa 10 atau 7, jadi pernyataan (2) tidak cukup.\n\nCek gabungan\nDari a + b = 31 dan a × b = 210, kedua ukuran adalah 10 dan 21 meter. Tetapi a = 10, b = 21 maupun a = 21, b = 10 sama-sama berkeliling 62 dan berluas 210. Tidak ada petunjuk sisi a lebih panjang atau lebih pendek. Digabung pun tidak cukup.\n\nJawaban: E\nGabungan menentukan dua ukuran gudang, tetapi sisi a tetap bisa 10 atau 21 meter.\nOpsi A gugur karena keliling saja masih memberi a = 10 atau a = 15.\nOpsi B gugur karena luas saja masih memberi a = 10 atau a = 7.\nOpsi C gugur karena kedua ukuran bisa bertukar label tanpa mengubah keliling dan luas.\nOpsi D gugur karena masing-masing pernyataan belum cukup.\n\nBiar gampang diingat\nTahu dua pita panjangnya 10 dan 21 meter belum memberi tahu pita mana yang ada di tasmu. Perlu petunjuk yang menghubungkan ukuran dengan pita tertentu.\n\nJebakan di soal ini\nOtomatis menyebut a sebagai sisi yang lebih panjang lalu memilih C. Huruf a hanya label sisi yang menghadap pintu; soal tidak mengatakan bahwa sisi itu pasti lebih panjang.",
+      "svg": null
+    }
+  ],
   "14": [
     {
       "s": 97,

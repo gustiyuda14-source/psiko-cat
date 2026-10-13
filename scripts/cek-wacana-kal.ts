@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { data } from "./kecerdasan-teks-lib";
 
-// Brute force wacana logika Latihan Paket 2 (package_number 3), Simulasi Paket 3 (package_number 15) dan Simulasi Paket 1 baru (package_number 16), soal 65-75 (pedoman §4.5):
+// Brute force wacana logika Latihan Paket 2 (package_number 3), Simulasi Paket 3 (package_number 15), Simulasi Paket 1 baru (package_number 16) dan Latihan Paket 3 & 4 (package_number 4 & 5), soal 65-75 (pedoman §4.5):
 // semua susunan yang memenuhi syarat dihitung, lalu kunci tiap soal diturunkan ulang dan
 // dicocokkan dengan field k di prisma/data/kecerdasan_p3_teks.json. Opsi sah harus tepat satu.
 //   npx tsx scripts/cek-wacana-kal.ts
@@ -219,3 +219,134 @@ const banyak = <S>(name: string, sols: S[], n: number) => { assert.equal(sols.le
   ], t16);
 }
 console.log(`OK: kunci 65-75 pkg 16 (${P16_FILE}) cocok dengan brute force.`);
+
+// ════ Latihan Paket 3 & 4 (package_number 4 & 5), soal 65-75: tiap wacana bersolusi tunggal, tiap syarat perlu ════
+// Soal "syarat dihapus" memakai susunan yang memenuhi syarat lain saja.
+const lolos = <S>(all: S[], syarat: ((s: S) => boolean)[], tanpa = -1) => all.filter((s) => syarat.every((f, i) => i === tanpa || f(s)));
+const perlu = <S>(name: string, all: S[], syarat: ((s: S) => boolean)[]) =>
+  syarat.forEach((_, i) => assert.ok(lolos(all, syarat, i).length > 1, `${name}: syarat ke-${i + 1} tidak perlu`));
+const t4 = data("kecerdasan_p4_teks.json") as KeyFile, t5 = data("kecerdasan_p5_teks.json") as KeyFile;
+const adj = (s: Pos, a: string, b: string) => Math.abs(s[a] - s[b]) === 1;
+
+// ── p4wKIOS (65-68): kios 1-6 utara → selatan ──
+{
+  const all = assign(["Mira", "Nanda", "Oki", "Putri", "Rafi", "Sari"]);
+  const syarat = [(s: Pos) => s.Oki === s.Mira + 1, (s: Pos) => Math.abs(s.Putri - s.Sari) === 2, (s: Pos) => [1, 6].includes(s.Rafi) && s.Rafi < s.Oki,
+    (s: Pos) => s.Mira > s.Nanda, (s: Pos) => s.Putri > s.Sari || s.Mira === 1];
+  perlu("KIOS", all, syarat);
+  const sols = tunggal("KIOS", lolos(all, syarat));
+  check("KIOS", sols, [
+    { s: 65, kind: "pasti", opts: ["Nanda", "Putri", "Sari", "Mira", "Oki"].map((n) => (s: Pos) => s[n] === 4) },
+    { s: 66, kind: "pasti", opts: [(s) => adj(s, "Nanda", "Mira"), (s) => s.Sari === 3, (s) => Math.abs(s.Rafi - s.Nanda) === 3, (s) => s.Oki === 5, (s) => adj(s, "Putri", "Nanda") && adj(s, "Putri", "Mira")] },
+    { s: 68, kind: "pasti", opts: [["Rafi", "Putri"], ["Nanda", "Putri"], ["Mira", "Nanda"], ["Rafi", "Nanda"], ["Rafi"]].map((ns) => (s: Pos) =>
+      Object.keys(s).filter((n) => adj(s, n, "Sari")).sort().join() === ns.slice().sort().join()) },
+  ], t4);
+  check("KIOS tanpa syarat 3", lolos(all, syarat, 2), [
+    { s: 67, kind: "kecuali", opts: [(s) => s.Nanda === 1, (s) => s.Rafi === 4, (s) => s.Sari === 3, (s) => s.Putri === 3, (s) => adj(s, "Rafi", "Mira")] },
+  ], t4);
+}
+
+// ── p4wPIDATO (69-72): urutan tampil 1-6 ──
+{
+  const all = assign(["Tegar", "Umi", "Vina", "Wahyu", "Yoga", "Zahra"]);
+  const syarat = [(s: Pos) => s.Vina === s.Umi + 2, (s: Pos) => s.Yoga === s.Wahyu + 1, (s: Pos) => s.Tegar === 6 || s.Zahra === s.Tegar + 1, (s: Pos) => s.Yoga < s.Vina];
+  perlu("PIDATO", all, syarat);
+  const sols = tunggal("PIDATO", lolos(all, syarat));
+  check("PIDATO", sols, [
+    { s: 69, kind: "pasti", opts: ["Umi", "Vina", "Yoga", "Tegar", "Zahra"].map((n) => (s: Pos) => s[n] === 4) },
+    { s: 70, kind: "pasti", opts: [(s) => s.Vina === s.Umi + 1, (s) => s.Vina - s.Yoga === 3, (s) => s.Zahra === s.Tegar + 1, (s) => s.Wahyu === 3, (s) => s.Zahra === s.Yoga + 1] },
+  ], t4);
+  check("PIDATO tanpa syarat 4", lolos(all, syarat, 3), [
+    { s: 71, kind: "pasti", opts: [(s) => s.Zahra === s.Umi + 1, (s) => s.Wahyu === 1, (s) => s.Vina === 5, (s) => s.Yoga < s.Umi, (s) => s.Zahra === s.Tegar + 1] },
+  ], t4);
+  // 72: Zahra–Vina ditukar; opsi sah = syarat yang dilanggar (D = tidak ada yang dilanggar)
+  const tukar = sols.map((s) => ({ ...s, Zahra: s.Vina, Vina: s.Zahra }));
+  check("PIDATO Zahra-Vina ditukar", tukar, [{ s: 72, kind: "pasti", opts: [(s: Pos) => !syarat[1](s), (s: Pos) => !syarat[3](s), (s: Pos) => !syarat[2](s), (s: Pos) => syarat.every((f) => f(s)), (s: Pos) => !syarat[0](s)] }], t4);
+}
+
+// ── p4wBAND (73-75): nama × alat × kaos ──
+{
+  type S = { a: Record<string, string>; w: Record<string, string> };
+  const names = ["Gita", "Hadi", "Intan", "Joko", "Kirana"];
+  const all: S[] = [];
+  for (const ap of perms(["gitar", "biola", "drum", "piano", "seruling"])) for (const wp of perms(["merah", "biru", "hijau", "kuning", "putih"]))
+    all.push({ a: Object.fromEntries(names.map((n, i) => [n, ap[i]])), w: Object.fromEntries(names.map((n, i) => [n, wp[i]])) });
+  const who = (m: Record<string, string>, v: string) => names.find((n) => m[n] === v)!;
+  const syarat = [(x: S) => x.w[who(x.a, "drum")] === "merah" && x.w[who(x.a, "seruling")] === "hijau",
+    (x: S) => x.w.Hadi === "biru" && !["biola", "piano"].includes(x.a.Hadi),
+    (x: S) => ["piano", "seruling"].includes(x.a.Gita) && !["hijau", "putih"].includes(x.w.Gita),
+    (x: S) => !["gitar", "drum", "seruling"].includes(x.a.Kirana),
+    (x: S) => x.a.Joko === "drum" || x.w.Joko === "putih"];
+  perlu("BAND", all, syarat);
+  const sols = tunggal("BAND", lolos(all, syarat));
+  check("BAND", sols, [
+    { s: 73, kind: "pasti", opts: ["Gita", "Hadi", "Kirana", "Intan", "Joko"].map((n) => (x: S) => x.a[n] === "biola") },
+    { s: 74, kind: "pasti", opts: [(x) => x.w.Intan === "putih", (x) => x.w[who(x.a, "piano")] === "kuning", (x) => x.w.Joko === "putih", (x) => x.a.Hadi === "drum", (x) => x.w[who(x.a, "biola")] === "kuning"] },
+  ], t4);
+  check("BAND tanpa syarat 4", lolos(all, syarat, 3), [
+    { s: 75, kind: "kecuali", opts: [(x) => x.a.Joko === "biola", (x) => x.w.Kirana === "merah", (x) => x.w.Intan === "putih", (x) => x.a.Kirana === "piano", (x) => x.a.Intan === "drum"] },
+  ], t4);
+}
+console.log("OK: kunci 65-75 pkg 4 cocok dengan brute force.");
+
+// ── p5wLANTAI (65-68): lantai 1 (bawah) - 6 (atas) ──
+{
+  const all = assign(["Aula", "Arsip", "Kantin", "Klinik", "Koperasi", "Perpustakaan"]);
+  const syarat = [(s: Pos) => [1, 6].includes(s.Aula), (s: Pos) => s.Arsip === s.Klinik + 1, (s: Pos) => s.Perpustakaan === s.Kantin + 4,
+    (s: Pos) => !adj(s, "Koperasi", "Perpustakaan"), (s: Pos) => s.Aula !== 1 || s.Koperasi === 2];
+  perlu("LANTAI", all, syarat);
+  const sols = tunggal("LANTAI", lolos(all, syarat));
+  check("LANTAI", sols, [
+    { s: 65, kind: "pasti", opts: ["Arsip", "Koperasi", "Klinik", "Kantin", "Perpustakaan"].map((n) => (s: Pos) => s[n] === 3) },
+    { s: 66, kind: "pasti", opts: [(s) => s.Perpustakaan === s.Arsip + 1, (s) => adj(s, "Koperasi", "Arsip"), (s) => s.Kantin === 2, (s) => s.Aula === 1, (s) => s.Klinik === 4] },
+  ], t5);
+  check("LANTAI tanpa syarat 5", lolos(all, syarat, 4), [
+    { s: 67, kind: "pasti", opts: [(s) => s.Kantin === 1, (s) => s.Aula === 6, (s) => s.Arsip === 4, (s) => s.Perpustakaan === 5, (s) => s.Koperasi < s.Klinik] },
+  ], t5);
+  check("LANTAI tanpa syarat 1", lolos(all, syarat, 0), [
+    { s: 68, kind: "kecuali", opts: [(s) => s.Aula === 3, (s) => s.Klinik === 2, (s) => s.Kantin === 2, (s) => s.Koperasi === 1, (s) => s.Aula === 5] },
+  ], t5);
+}
+
+// ── p5wGIGI (69-72): hari 1-6 = Senin-Sabtu ──
+{
+  const all = assign(["Cempaka", "Flamboyan", "Kenari", "Matahari", "Pelita", "Rajawali"]);
+  const syarat = [(s: Pos) => s.Kenari === s.Flamboyan + 1, (s: Pos) => s.Pelita <= 2, (s: Pos) => Math.abs(s.Cempaka - s.Rajawali) === 3,
+    (s: Pos) => s.Rajawali === s.Matahari + 1, (s: Pos) => s.Cempaka > s.Rajawali || s.Flamboyan === 1];
+  perlu("GIGI", all, syarat);
+  const sols = tunggal("GIGI", lolos(all, syarat));
+  check("GIGI", sols, [
+    { s: 69, kind: "pasti", opts: ["Kenari", "Rajawali", "Cempaka", "Flamboyan", "Matahari"].map((n) => (s: Pos) => s[n] === 4) },
+    { s: 70, kind: "pasti", opts: [(s) => s.Pelita === 2, (s) => s.Flamboyan === s.Cempaka + 1, (s) => s.Cempaka === s.Kenari + 1, (s) => s.Flamboyan === 1, (s) => s.Rajawali === 4] },
+  ], t5);
+  check("GIGI tanpa syarat 5", lolos(all, syarat, 4), [
+    { s: 71, kind: "pasti", opts: [(s) => s.Matahari === s.Pelita + 1, (s) => s.Cempaka === 6, (s) => s.Flamboyan === 4, (s) => s.Rajawali === 3, (s) => s.Kenari === 5] },
+  ], t5);
+  const tukar = sols.map((s) => ({ ...s, Pelita: s.Matahari, Matahari: s.Pelita }));
+  check("GIGI Pelita-Matahari ditukar", tukar, [{ s: 72, kind: "pasti", opts: [(s: Pos) => !syarat[1](s), (s: Pos) => !syarat[3](s), (s: Pos) => !syarat[2](s), (s: Pos) => syarat.every((f) => f(s)), (s: Pos) => !syarat[0](s)] }], t5);
+}
+
+// ── p5wMASAK (73-75): nama × peringkat (1 = terbaik) × menu ──
+{
+  type S = { r: Pos; m: Record<string, string> };
+  const names = ["Bagas", "Dewi", "Fikri", "Hesti", "Iwan"];
+  const all: S[] = [];
+  for (const rp of perms([1, 2, 3, 4, 5])) for (const mp of perms(["soto", "rendang", "gado-gado", "pecel", "sate"]))
+    all.push({ r: Object.fromEntries(names.map((n, i) => [n, rp[i]])), m: Object.fromEntries(names.map((n, i) => [n, mp[i]])) });
+  const rk = (x: S, menu: string) => x.r[names.find((n) => x.m[n] === menu)!];
+  const syarat = [(x: S) => rk(x, "gado-gado") === 5, (x: S) => rk(x, "rendang") < rk(x, "soto") && rk(x, "sate") === rk(x, "soto") + 1,
+    (x: S) => x.r.Bagas === x.r.Iwan + 1 && x.m.Bagas !== "soto", (x: S) => x.r.Dewi < x.r.Iwan, (x: S) => x.r.Fikri > x.r.Hesti,
+    (x: S) => x.r.Hesti > 2 || x.m.Hesti === "gado-gado"];
+  perlu("MASAK", all, syarat);
+  const sols = tunggal("MASAK", lolos(all, syarat));
+  check("MASAK", sols, [
+    { s: 73, kind: "pasti", opts: ["Iwan", "Hesti", "Dewi", "Fikri", "Bagas"].map((n) => (x: S) => x.m[n] === "sate") },
+    { s: 74, kind: "pasti", opts: [(x) => x.m.Hesti === "gado-gado", (x) => x.r.Iwan === 1, (x) => rk(x, "gado-gado") === rk(x, "pecel") + 1, (x) => x.m.Dewi === "soto", (x) => x.r.Bagas < x.r.Iwan] },
+  ], t5);
+  // 75: hanya bagian "Bagas tidak memasak soto" yang dihapus
+  const longgar = all.filter((x) => syarat.every((f, i) => i === 2 || f(x)) && x.r.Bagas === x.r.Iwan + 1);
+  check("MASAK tanpa larangan soto Bagas", longgar, [
+    { s: 75, kind: "kecuali", opts: [(x) => x.m.Iwan === "sate", (x) => x.m.Iwan === "pecel", (x) => x.m.Hesti === "sate", (x) => x.m.Dewi === "pecel", (x) => x.m.Bagas === "soto"] },
+  ], t5);
+}
+console.log("OK: kunci 65-75 pkg 5 cocok dengan brute force.");

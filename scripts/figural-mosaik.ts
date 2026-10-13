@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { INK, KEYS, W, type Key } from "./figural-lib";
+import { INK, KEYS, W, r1, type Key } from "./figural-lib";
 
 // Deret gambar MOSAIK (FIG-SERI-MOSAIK), uji coba 2026-10-12. Grid ubin hitam berisi bentuk putih;
 // ubin bergerak di lintasan, berputar, bercermin, atau berganti warna menurut 2-3 aturan sekaligus.
@@ -7,7 +7,7 @@ import { INK, KEYS, W, type Key } from "./figural-lib";
 // Kesamaan visual diuji dengan sampling 20x20 per ubin, jadi simetri ubin ikut diperhitungkan.
 // Dipakai generate-kecerdasan-figural-kal.ts (pkg 15 no 26-27).
 
-type Tile = "bulat" | "titik" | "seperempat" | "busur" | "arsir" | "setengah" | "bintang" | "segitiga" | "daun" | "bendera";
+type Tile = "kosong" | "bulat" | "titik" | "seperempat" | "busur" | "arsir" | "setengah" | "bintang" | "segitiga" | "daun" | "bendera";
 type Cell = { tile: Tile; deg: number; mir: boolean; inv: boolean };
 type Frame = Cell[]; // baris demi baris, n x n
 type Pt = [number, number];
@@ -26,6 +26,7 @@ const pip = (P: Pt[], x: number, y: number) => {
 };
 const sq = (a: number, b: number) => a * a + b * b;
 const inside: Record<Tile, (x: number, y: number) => boolean> = {
+  kosong: () => false,
   bulat: (x, y) => sq(x, y) < 0.36 ** 2,
   titik: (x, y) => [-1, 0, 1].some((i) => [-1, 0, 1].some((j) => sq(x - i * 0.28, y - j * 0.28) < 0.075 ** 2)),
   seperempat: (x, y) => sq(x + 0.5, y + 0.5) < 1,
@@ -40,6 +41,7 @@ const inside: Record<Tile, (x: number, y: number) => boolean> = {
 const pts = (P: Pt[]) => P.map(([x, y]) => `${x.toFixed(3)},${y.toFixed(3)}`).join(" ");
 function shapeSvg(t: Tile, f: string): string {
   switch (t) {
+    case "kosong": return "";
     case "bulat": return `<circle r=".36" fill="${f}"/>`;
     case "titik": return [-1, 0, 1].flatMap((i) => [-1, 0, 1].map((j) => `<circle cx="${i * 0.28}" cy="${j * 0.28}" r=".075" fill="${f}"/>`)).join("");
     case "seperempat": return `<path d="M-.5,-.5 L.5,-.5 A1,1 0 0 1 -.5,.5 Z" fill="${f}"/>`;
@@ -72,16 +74,31 @@ const md = (a: number, m: number) => ((a % m) + m) % m;
 const C = (tile: Tile, inv = false, deg = 0, mir = false): Cell => ({ tile, deg, mir, inv });
 
 // ── render ───────────────────────────────────────────────────────────────────
-// Satu bingkai = grid n x n dalam kotak berbingkai ganda. perRow 5 = satu baris; 3 = baris 3 + 2.
+// Satu bingkai = grid n x n. perRow 5 = satu baris; 3 = baris 3 + 2. Tanpa `st` = gaya lama (ubin kotak, bingkai ganda; paket live).
+// Gaya (pkg 4/5, PEDOMAN G-10): tiap butir beda bentuk ubin × bingkai × celah. Topeng ubin digambar sebagai path evenodd berwarna
+// sama dengan bingkai, jadi tanpa id/clipPath (aman untuk pembahasan_svg, G-8).
 type Overlay = (center: (i: number) => Pt, T: number) => string;
-function frameSvg(f: Frame | null, n: number, x: number, y: number, size: number, label: string, mark?: { overlay?: Overlay; hl?: boolean }) {
-  const pad = size * 0.04, grid = size - 2 * pad, gap = grid * 0.02, T = (grid - (n - 1) * gap) / n;
+export type Style = { mask: "kotak" | "bulat" | "lembut" | "oktagon"; frame: "ganda" | "tipis" | "panel" | "papan"; gap?: number; chevron?: boolean };
+const FRAME_BG = { ganda: "white", tipis: "white", panel: "#e8e8e8", papan: "#a8a8a8" } as const;
+const TILE_D: Record<Exclude<Style["mask"], "kotak">, string> = {
+  bulat: "M0,-.485A.485,.485 0 1 0 0,.485A.485,.485 0 1 0 0,-.485Z",
+  lembut: "M-.28,-.485H.28A.205,.205 0 0 1 .485,-.28V.28A.205,.205 0 0 1 .28,.485H-.28A.205,.205 0 0 1 -.485,.28V-.28A.205,.205 0 0 1 -.28,-.485Z",
+  oktagon: "M-.32,-.485H.32L.485,-.32V.32L.32,.485H-.32L-.485,.32V-.32Z",
+};
+function frameSvg(f: Frame | null, n: number, x: number, y: number, size: number, label: string, mark?: { overlay?: Overlay; hl?: boolean }, st?: Style) {
+  const pad = size * (st && st.frame !== "ganda" && st.frame !== "tipis" ? 0.06 : 0.04), grid = size - 2 * pad, gap = grid * (st?.gap ?? 0.02), T = (grid - (n - 1) * gap) / n;
   const center = (i: number): Pt => [x + pad + (i % n) * (T + gap) + T / 2, y + pad + Math.floor(i / n) * (T + gap) + T / 2];
-  let o = `<rect x="${x}" y="${y}" width="${size}" height="${size}" fill="white" stroke="${mark?.hl ? HL : INK}" stroke-width="${mark?.hl ? 9 : 3}"/>`;
+  const hlw = mark?.hl ? 9 : 3, strokeC = mark?.hl ? HL : INK;
+  let o: string;
+  if (!st || st.frame === "ganda") o = `<rect x="${x}" y="${y}" width="${size}" height="${size}" fill="white" stroke="${strokeC}" stroke-width="${hlw}"/>`;
+  else o = `<rect x="${x}" y="${y}" width="${size}" height="${size}" rx="${r1(size * 0.07)}" fill="${FRAME_BG[st.frame]}" stroke="${mark?.hl ? HL : st.frame === "tipis" ? INK : "none"}" stroke-width="${mark?.hl ? 9 : st.frame === "tipis" ? 3 : 0}"/>`;
   if (f) {
     f.forEach((c, i) => {
       const r = Math.floor(i / n), cc = i % n, fg = c.inv ? INK : "white", bg = c.inv ? "white" : INK;
-      o += `<svg x="${(x + pad + cc * (T + gap)).toFixed(1)}" y="${(y + pad + r * (T + gap)).toFixed(1)}" width="${T.toFixed(1)}" height="${T.toFixed(1)}" viewBox="-.5 -.5 1 1" overflow="hidden"><rect x="-.5" y="-.5" width="1" height="1" fill="${bg}" stroke="${INK}" stroke-width=".05"/><g transform="rotate(${c.deg}) scale(${c.mir ? -1 : 1},1)">${shapeSvg(c.tile, fg)}</g></svg>`;
+      const hole = st?.frame === "papan" && c.tile === "kosong", masked = !!st && st.mask !== "kotak";
+      const tileBg = hole ? "#8c8c8c" : bg;
+      const edge = masked ? `<path d="M-.5,-.5H.5V.5H-.5Z${TILE_D[st!.mask as keyof typeof TILE_D]}" fill="${FRAME_BG[st!.frame]}" fill-rule="evenodd"/><path d="${TILE_D[st!.mask as keyof typeof TILE_D]}" fill="none" stroke="${hole ? "#6f6f6f" : INK}" stroke-width=".04"/>` : "";
+      o += `<svg x="${(x + pad + cc * (T + gap)).toFixed(1)}" y="${(y + pad + r * (T + gap)).toFixed(1)}" width="${T.toFixed(1)}" height="${T.toFixed(1)}" viewBox="-.5 -.5 1 1" overflow="hidden"><rect x="-.5" y="-.5" width="1" height="1" fill="${tileBg}" stroke="${masked ? "none" : INK}" stroke-width=".05"/><g transform="rotate(${c.deg}) scale(${c.mir ? -1 : 1},1)">${shapeSvg(c.tile, fg)}</g>${edge}</svg>`;
     });
     if (mark?.overlay) o += mark.overlay(center, T);
   } else o += `<text x="${x + size / 2}" y="${y + size / 2 + size * 0.15}" font-family="Arial, Helvetica, sans-serif" font-size="${size * 0.42}" font-weight="bold" text-anchor="middle" fill="${INK}">?</text>`;
@@ -95,13 +112,13 @@ function arrow([x1, y1]: Pt, [x2, y2]: Pt, dash = false) {
   return `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} L${bx.toFixed(1)} ${by.toFixed(1)}" stroke="${RED}" stroke-width="4" fill="none"${dash ? ' stroke-dasharray="8 6"' : ""}/>` +
     `<polygon points="${x2.toFixed(1)},${y2.toFixed(1)} ${(bx + w * Math.sin(a)).toFixed(1)},${(by - w * Math.cos(a)).toFixed(1)} ${(bx - w * Math.sin(a)).toFixed(1)},${(by + w * Math.cos(a)).toFixed(1)}" fill="${RED}"/>`;
 }
-export function mosaikSvg(frames: (Frame | null)[], options: Frame[], n: number, perRow: 3 | 5 = 5, marks: ({ overlay?: Overlay; hl?: boolean } | undefined)[] = []) {
+export function mosaikSvg(frames: (Frame | null)[], options: Frame[], n: number, perRow: 3 | 5 = 5, marks: ({ overlay?: Overlay; hl?: boolean } | undefined)[] = [], st?: Style) {
   const gx = 18, size = perRow === 5 ? (W - 20 - 4 * gx) / 5 : 230, rowH = size + 48;
   let body = "", y = 10;
   const row = (list: (Frame | null)[], labels: string[]) => {
     for (let s = 0; s < list.length; s += perRow) {
       const chunk = list.slice(s, s + perRow), w = chunk.length * size + (chunk.length - 1) * gx, x0 = (W - w) / 2;
-      chunk.forEach((f, i) => (body += frameSvg(f, n, x0 + i * (size + gx), y, size, labels[s + i], list === frames ? marks[s + i] : undefined)));
+      chunk.forEach((f, i) => { body += frameSvg(f, n, x0 + i * (size + gx), y, size, labels[s + i], list === frames ? marks[s + i] : undefined, st); if (st?.chevron && list === frames && i < chunk.length - 1) body += `<path d="M${r1(x0 + (i + 1) * (size + gx) - gx / 2 - 4)},${r1(y + size / 2 - 9)}L${r1(x0 + (i + 1) * (size + gx) - gx / 2 + 4)},${r1(y + size / 2)}L${r1(x0 + (i + 1) * (size + gx) - gx / 2 - 4)},${r1(y + size / 2 + 9)}" fill="none" stroke="#666" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>`; });
       y += rowH;
     }
   };
@@ -114,7 +131,7 @@ export function mosaikSvg(frames: (Frame | null)[], options: Frame[], n: number,
 export type MosaikItem = { pkg: number; seq: number; key: Key; instruksi: string; svg: string; tingkat: 3; pembahasan: string; pembahasan_svg: string };
 const POLA = "Pilihlah satu gambar untuk melengkapi pola di bawah ini.";
 type Opt = { f: Frame; why?: string }; // opsi pertama = jawaban
-type Def = { pkg: number; seq: number; key: Key; n: number; frames: (Frame | null)[]; opts: Opt[]; aturan: string; tahap: string; overlay: Overlay };
+type Def = { pkg: number; seq: number; key: Key; n: number; frames: (Frame | null)[]; opts: Opt[]; aturan: string; tahap: string; overlay: Overlay; st?: Style };
 
 export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
   const defs: Def[] = [];
@@ -180,13 +197,98 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     });
   }
 
+  { // KONVEYOR (pkg 4) — kolom 1 dan 3 turun, kolom 2 naik (menembus tepi = dicermin kiri-kanan); ubin kolom tengah selalu terbalik warnanya
+    const T: Tile[] = ["bendera", "titik", "seperempat", "bulat", "busur", "segitiga", "arsir", "bintang", "daun"];
+    const DIR = [1, -1, 1];
+    const at = (t: number, o: { dir?: number[]; mir?: boolean; midInv?: boolean } = {}): Frame => {
+      const dir = o.dir ?? DIR, f: Frame = new Array(9);
+      T.forEach((tile, i) => {
+        const c = i % 3; let r = Math.floor(i / 3), wraps = 0;
+        for (let k = 0; k < t; k++) { const nr = r + dir[c]; if (nr < 0 || nr > 2) wraps++; r = md(nr, 3); }
+        f[r * 3 + c] = C(tile, (o.midInv ?? true) && c === 1, 0, (o.mir ?? true) && wraps % 2 === 1);
+      });
+      return f;
+    };
+    defs.push({
+      pkg: 4, seq: 26, key: "C", n: 3, st: { mask: "oktagon", frame: "panel", gap: 0.08, chevron: true }, frames: [at(0), at(1), null, at(3), at(4)],
+      opts: [{ f: at(2) }, { f: at(2, { dir: [1, 0, 1] }), why: "kolom tengah diam, padahal ia naik 1 petak setiap langkah" }, { f: at(2, { mir: false }), why: "ubin yang menembus tepi tidak dicerminkan" }, { f: at(2, { midInv: false }), why: "ubin kolom tengah tidak dibalik warnanya" }, { f: at(2, { dir: [1, 1, 1] }), why: "kolom tengah ikut turun, padahal ia naik" }],
+      aturan: "Ada tiga aturan. (1) Kolom kiri dan kanan bergerak turun 1 petak setiap langkah, sedangkan kolom tengah naik 1 petak; ubin yang keluar dari tepi muncul di sisi seberang kolomnya. (2) Setiap kali menembus tepi, ubin dicerminkan kiri–kanan. (3) Warna menempel pada kolom, bukan pada ubin: semua ubin di kolom tengah selalu putih berisi hitam.",
+      tahap: "Gambar (3) berada satu langkah setelah gambar (2). Tips: kolom berulang tiap 3 langkah, jadi gambar (4) sama dengan gambar (1) tetapi semua ubin sudah dicerminkan satu kali.",
+      overlay: (c) => [0, 2].map((col) => arrow(c(col), c(col + 3)) + arrow(c(col + 3), c(col + 6))).join("") + arrow(c(7), c(4)) + arrow(c(4), c(1)),
+    });
+  }
+
+  { // CINCIN SUDUT (pkg 4) — ring 8 ubin bergeser 1 petak berlawanan arah jarum jam; warna menempel pada sudut; bendera pusat berputar ↺ dan dicermin
+    const ring = [0, 1, 2, 5, 8, 7, 6, 3];
+    const T: Tile[] = ["seperempat", "titik", "busur", "bintang", "arsir", "segitiga", "bulat", "daun"];
+    const at = (t: number, o: { step?: number; byTile?: boolean; crot?: number; cmir?: boolean } = {}): Frame => {
+      const step = o.step ?? -1, f: Frame = new Array(9);
+      T.forEach((tile, p) => {
+        const q = md(p + step * t, 8);
+        f[ring[q]] = C(tile, o.byTile ? p % 2 === 0 : q % 2 === 0, 0, false);
+      });
+      f[4] = C("bendera", false, md((o.crot ?? -90) * t, 360), (o.cmir ?? true) && t % 2 === 1);
+      return f;
+    };
+    defs.push({
+      pkg: 4, seq: 27, key: "E", n: 3, st: { mask: "bulat", frame: "papan", gap: 0.07 }, frames: [at(0), at(1), at(2), null, at(4)],
+      opts: [{ f: at(3) }, { f: at(3, { step: 1 }), why: "ubin tepi bergeser searah jarum jam" }, { f: at(3, { byTile: true }), why: "warna ikut ubinnya, padahal warna menempel pada sudut" }, { f: at(3, { crot: 90 }), why: "bendera di tengah berputar searah jarum jam" }, { f: at(3, { cmir: false }), why: "bendera di tengah tidak dicerminkan" }],
+      aturan: "Ada tiga aturan. (1) Delapan ubin tepi bergeser 1 petak berlawanan arah jarum jam setiap langkah. (2) Warna menempel pada petaknya, bukan pada ubin: ubin yang berada di empat sudut selalu putih berisi hitam, ubin di empat sisi tengah selalu hitam berisi putih. (3) Bendera di tengah berputar 90° berlawanan arah jarum jam dan dicerminkan kiri–kanan setiap langkah ganjil.",
+      tahap: "Gambar (4) satu langkah setelah gambar (3). Tips: ikuti bendera di tengah dan satu ubin yang jelas (misalnya segitiga); warna cukup dicek dari petaknya.",
+      overlay: (c) => ring.slice(0, -1).map((cell, k) => arrow(c(ring[k + 1]), c(cell))).join("") + arrow(c(ring[0]), c(ring[7]), true),
+    });
+  }
+
+  { // SILANG (pkg 5) — kolom tepi bertukar menyilang (titik pusat sebagai poros) dan ubin yang pindah berputar ↻; ubin kolom tengah (diam) berganti warna tiap langkah
+    const T: Tile[] = ["bendera", "segitiga", "busur", "seperempat", "setengah", "arsir", "daun", "titik", "bintang"];
+    const at = (t: number, o: { cross?: boolean; rot?: number; midInv?: boolean; stay?: boolean } = {}): Frame => {
+      const f: Frame = new Array(9), rot = o.rot ?? 90;
+      T.forEach((tile, i) => {
+        if (i % 3 === 1) { f[i] = C(tile, (o.midInv ?? true) && t % 2 === 1); return; }
+        const pos = t % 2 === 0 || o.stay ? i : o.cross === false ? Math.floor(i / 3) * 3 + 2 - (i % 3) : 8 - i;
+        f[pos] = C(tile, false, md(rot * t, 360));
+      });
+      return f;
+    };
+    defs.push({
+      pkg: 5, seq: 26, key: "E", n: 3, st: { mask: "lembut", frame: "tipis", gap: 0.09, chevron: true }, frames: [at(0), at(1), at(2), null, at(4)],
+      opts: [{ f: at(3) }, { f: at(3, { stay: true }), why: "ubin di kolom tepi tidak berpindah tempat, padahal kedua kolom tepi bertukar setiap langkah" }, { f: at(3, { rot: 0 }), why: "ubin yang pindah tidak berputar" }, { f: at(3, { midInv: false }), why: "ubin kolom tengah tidak berganti warna" }, { f: at(3, { cross: false }), why: "ubin hanya bertukar kiri–kanan di barisnya sendiri, tidak menyilang (atas ke bawah)" }],
+      aturan: "Ada tiga aturan. (1) Ubin di kolom kiri dan kolom kanan bertukar tempat secara menyilang setiap langkah: ubin kiri atas pindah ke kanan bawah, kiri tengah ke kanan tengah, kiri bawah ke kanan atas, dan sebaliknya (pusat gambar sebagai poros). (2) Setiap ubin yang pindah berputar 90° searah jarum jam. (3) Ubin di kolom tengah tidak pindah, tetapi warnanya terbalik setiap langkah (ganjil terbalik, genap normal).",
+      tahap: "Gambar (4) berada satu langkah setelah gambar (3). Tips: setelah 2 langkah semua ubin kolom tepi kembali ke tempat semula tetapi sudah berputar 180°; ikuti bendera, karena arah tiangnya menunjukkan jumlah putaran.",
+      overlay: (c) => [[0, 8], [2, 6], [3, 5]].map(([a, b]) => arrow(c(a), c(b)) + arrow(c(b), c(a))).join(""),
+    });
+  }
+
+  { // GESER KOSONG (pkg 5) — satu petak kosong berjalan 8→7→4→5→8; ubin yang menutup petak kosong bergeser 1 petak, berputar 90° ↻, dan warnanya terbalik
+    const T: Tile[] = ["segitiga", "titik", "daun", "arsir", "busur", "seperempat", "bulat", "bendera", "kosong"];
+    const PATH = [7, 4, 5, 8];
+    const at = (t: number, o: { path?: number[]; rot?: number; inv?: boolean } = {}): Frame => {
+      const path = o.path ?? PATH, rot = o.rot ?? 90, f: Frame = T.map((tile) => C(tile));
+      let b = 8;
+      for (let k = 0; k < t; k++) {
+        const nb = path[k], moved = f[nb];
+        f[b] = C(moved.tile, (o.inv ?? true) ? !moved.inv : moved.inv, md(moved.deg + rot, 360));
+        f[nb] = C("kosong");
+        b = nb;
+      }
+      return f;
+    };
+    defs.push({
+      pkg: 5, seq: 27, key: "D", n: 3, st: { mask: "kotak", frame: "papan", gap: 0.05 }, frames: [at(0), at(1), null, at(3), at(4)],
+      opts: [{ f: at(2) }, { f: at(2, { path: [5, 4, 7, 8] }), why: "petak kosong berjalan ke arah sebaliknya (naik dulu, lalu ke kiri)" }, { f: at(2, { rot: 0 }), why: "ubin yang bergeser tidak berputar" }, { f: at(2, { inv: false }), why: "ubin yang bergeser tidak berganti warna" }, { f: at(2, { rot: -90 }), why: "ubin yang bergeser berputar berlawanan arah jarum jam" }],
+      aturan: "Ada tiga aturan. (1) Satu petak kosong (lubang pada papan abu-abu) berjalan 1 petak setiap langkah: dari kanan bawah ke kiri, naik ke tengah, ke kanan, lalu turun kembali ke kanan bawah. Petak kosong bertukar tempat dengan ubin di sebelahnya, sehingga ubin itu bergeser 1 petak ke petak kosong yang lama. (2) Setiap ubin yang bergeser berputar 90° searah jarum jam. (3) Setiap ubin yang bergeser warnanya terbalik. Ubin yang bergeser dua kali (bendera) berputar 180° dan warnanya kembali normal.",
+      tahap: "Gambar (3) berada satu langkah setelah gambar (2): petak kosong pindah dari bawah tengah ke tengah, dan ubin tengah (busur) turun ke bawah tengah. Tips: lacak petak kosongnya dulu, baru ubin yang tepat berada di belakangnya.",
+      overlay: (c) => [[8, 7], [7, 4], [4, 5]].map(([a, b]) => arrow(c(a), c(b))).join("") + arrow(c(5), c(8), true),
+    });
+  }
+
   return defs.map((d) => {
     // Opsi berlabel huruf; jawaban di posisi d.key, pengecoh mengisi sisanya berurutan.
     const order: Opt[] = new Array(5), rest = d.opts.slice(1);
     KEYS.forEach((k, i) => (order[i] = k === d.key ? d.opts[0] : rest.shift()!));
     const b = order.map((o) => bits(o.f));
     for (let i = 0; i < 5; i++) for (let j = i + 1; j < 5; j++) assert.ok(ham(b[i], b[j]) >= 12, `mosaik ${d.seq}: opsi ${i}/${j} terlalu mirip`);
-    for (const o of d.opts.slice(1)) for (const f of d.frames) if (f) assert.notEqual(bits(o.f), bits(f), `mosaik ${d.seq}: pengecoh sama dengan gambar soal`);
+    for (const o of d.opts.slice(1)) for (const f of d.frames) if (f) assert.notEqual(bits(o.f), bits(f), `mosaik ${d.seq}: pengecoh sama dengan gambar soal (${o.why})`);
     const gugur = KEYS.map((k, i) => (k === d.key ? "" : `Opsi ${k.toLowerCase()} gugur karena ${order[i].why}.`)).filter(Boolean).join(" ");
     // Gambar pembahasan: deret lengkap, jawaban mengisi "?" dan berbingkai hijau, panah lintasan di gambar (1).
     const filled = d.frames.map((f) => f ?? d.opts[0].f), at = d.frames.indexOf(null);
@@ -194,9 +296,9 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     // Aturan 2 paragraf (RULES GENERATE SOAL SPASIAL §3): pola, lalu eliminasi.
     return {
       pkg: d.pkg, seq: d.seq, key: d.key, instruksi: POLA, tingkat: 3 as const,
-      svg: mosaikSvg(d.frames, order.map((o) => o.f), d.n, perRow),
+      svg: mosaikSvg(d.frames, order.map((o) => o.f), d.n, perRow, [], d.st),
       pembahasan: `${d.aturan} ${d.tahap}\n\n${gugur} Jawaban: ${d.key.toLowerCase()}.`,
-      pembahasan_svg: mosaikSvg(filled, [], d.n, perRow, marks),
+      pembahasan_svg: mosaikSvg(filled, [], d.n, perRow, marks, d.st),
     };
   });
 }

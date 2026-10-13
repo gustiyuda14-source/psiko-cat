@@ -1,8 +1,10 @@
 import assert from "node:assert/strict";
-import { data, type TeksFile } from "./kecerdasan-teks-lib";
+import * as fs from "node:fs";
+import * as path from "node:path";
+import { checkA7, checkNoLeak, data, root, type TeksFile } from "./kecerdasan-teks-lib";
 
-// Cek butir kecukupan data 97–99 (prisma/data/kecerdasan_kck_kal.json) untuk paket 3, 14, 15, 16.
-//   npx tsx scripts/check-kecerdasan-kck.ts
+// Cek KCK 97–100 untuk paket v3 (4/5), dan 97–99 + butir lama #100 untuk paket 3/14/15/16.
+//   node --import tsx scripts/check-kecerdasan-kck.ts
 // Tiap butir punya model kecil: ruang nilai (brute force), predikat pernyataan (1)/(2), dan jawaban.
 // Klaim cukup/tidak cukup dibuktikan dua arah: brute force (jawaban tunggal ↔ cukup) dan contoh `bukti`
 // (dua nilai sah, jawaban beda). Kunci diturunkan dari klaim lalu dibandingkan dengan `k`.
@@ -17,7 +19,7 @@ type Model = {
   // contoh untuk tiap klaim "tidak cukup": dua nilai sah dengan jawaban berbeda
   bukti: { s1?: [V, V]; s2?: [V, V]; gabung?: [V, V] };
 };
-type Kck = { s: number; t: string; d: number; jenis: string; i: string; q: string; tabel: { kolom: string[]; baris: string[][] } | null; c: string[]; k: string; bukti: string; p: string; svg?: string };
+type Kck = { s: number; t: string; d: number; jenis: string; i: string; q: string; tabel: { kolom: string[]; baris: string[][] } | null; c: string[]; k: string; bukti: string; p: string; svg?: string | null };
 
 const grid = (dims: Record<string, number[]>): V[] =>
   Object.entries(dims).reduce<V[]>((acc, [n, vals]) => acc.flatMap((v) => vals.map((x) => ({ ...v, [n]: x }))), [{}]);
@@ -46,6 +48,67 @@ const MODEL: Record<string, Model[]> = {
       jawab: (v) => (11 + 12 + v.t) / 3 < 12,
       cukup1: false, cukup2: true, cukupGabung: true,
       bukti: { s1: [{ t: 12.5 }, { t: 15 }] },
+    },
+  ],
+  "4": [
+    { // 97 TABEL: pensil p × q; penghapus 7 × 16
+      ruang: () => grid({ p: steps(1, 180), q: steps(1, 180) }),
+      s1: (v) => 112 + v.p * v.q === 292, s2: (v) => v.p === 12 && v.q === 15,
+      jawab: (v) => v.p * v.q,
+      cukup1: true, cukup2: true, cukupGabung: true, bukti: {},
+    },
+    { // 98 YATIDAK: Sabtu n > Jumat 86? (Kamis 58)
+      ruang: () => grid({ n: steps(0, 160) }),
+      s1: (v) => v.n === 86 - 17, s2: (v) => v.n > 58,
+      jawab: (v) => v.n > 86,
+      cukup1: true, cukup2: false, cukupGabung: true,
+      bukti: { s2: [{ n: 70 }, { n: 95 }] },
+    },
+    { // 99 ALJABAR kembar: 2x + y = 53; 6x + 3y = 159; tanya x + y
+      ruang: () => grid({ x: steps(1, 53), y: steps(1, 159) }),
+      s1: (v) => 2 * v.x + v.y === 53, s2: (v) => 6 * v.x + 3 * v.y === 159,
+      jawab: (v) => v.x + v.y,
+      cukup1: false, cukup2: false, cukupGabung: false,
+      bukti: { s1: [{ x: 9, y: 35 }, { x: 19, y: 15 }], s2: [{ x: 9, y: 35 }, { x: 19, y: 15 }], gabung: [{ x: 9, y: 35 }, { x: 19, y: 15 }] },
+    },
+    { // 100 GABUNG urutan stan B(uku), M(usik), S(ains), N(seni), K(ebun)
+      ruang: () => perms([0, 1, 2, 3, 4]).map(([B, M, S, N, K]) => ({ B, M, S, N, K })),
+      s1: (v) => v.M === v.B + 1 && v.N === v.S + 1, s2: (v) => v.K === 2 && v.B < v.S,
+      jawab: (v) => "BMSNK".split("").find((n) => v[n] === 0)!,
+      cukup1: false, cukup2: false, cukupGabung: true,
+      bukti: {
+        s1: [{ B: 0, M: 1, K: 2, S: 3, N: 4 }, { S: 0, N: 1, K: 2, B: 3, M: 4 }],
+        s2: [{ B: 0, M: 1, K: 2, S: 3, N: 4 }, { M: 0, B: 1, K: 2, N: 3, S: 4 }],
+      },
+    },
+  ],
+  "5": [
+    { // 97 TABEL: gula p × q; beras 8 × 25
+      ruang: () => grid({ p: steps(1, 286), q: steps(1, 286) }),
+      s1: (v) => v.p === 8 + 3, s2: (v) => 200 + v.p * v.q === 486,
+      jawab: (v) => v.p * v.q,
+      cukup1: false, cukup2: true, cukupGabung: true,
+      bukti: { s1: [{ p: 11, q: 18 }, { p: 11, q: 22 }] },
+    },
+    { // 98 YATIDAK: hasil cetak sore n > 145? (pagi 108)
+      ruang: () => grid({ n: steps(0, 220) }),
+      s1: (v) => v.n === 108 + 24, s2: (v) => v.n <= 108 + 30,
+      jawab: (v) => v.n > 145,
+      cukup1: true, cukup2: true, cukupGabung: true, bukti: {},
+    },
+    { // 99 ALJABAR: harga dalam ribu rupiah; selisih pembelian tepat x + y
+      ruang: () => grid({ x: steps(1, 47), y: steps(1, 79) }),
+      s1: (v) => 3 * v.x + 2 * v.y === 79, s2: (v) => 2 * v.x + v.y === 47,
+      jawab: (v) => v.x + v.y,
+      cukup1: false, cukup2: false, cukupGabung: true,
+      bukti: { s1: [{ x: 9, y: 26 }, { x: 15, y: 17 }], s2: [{ x: 10, y: 27 }, { x: 15, y: 17 }] },
+    },
+    { // 100 GABUNG geometri: ukuran 10 dan 21 belum menentukan sisi berlabel a
+      ruang: () => grid({ a: steps(1, 210), b: steps(1, 210) }),
+      s1: (v) => 2 * (v.a + v.b) === 62, s2: (v) => v.a * v.b === 210,
+      jawab: (v) => v.a,
+      cukup1: false, cukup2: false, cukupGabung: false,
+      bukti: { s1: [{ a: 10, b: 21 }, { a: 15, b: 16 }], s2: [{ a: 10, b: 21 }, { a: 7, b: 30 }], gabung: [{ a: 10, b: 21 }, { a: 21, b: 10 }] },
     },
   ],
   "14": [
@@ -162,11 +225,11 @@ function cekModel(tag: string, m: Model) {
   }
 }
 
-function cekPembahasan(tag: string, x: Kck, m: Model) {
+function cekPembahasan(tag: string, x: Kck, m: Model, v3: boolean) {
   const bag = x.p.split("\n\n");
   const judul = bag.map((b) => b.split("\n")[0]);
   const gabung = !m.cukup1 && !m.cukup2;
-  const harap = [...JUDUL, ...(gabung ? ["Kalau digabung"] : []), `Jawaban: ${x.k}`, ...TAIL];
+  const harap = [...JUDUL, ...(gabung ? [v3 ? "Cek gabungan" : "Kalau digabung"] : []), `Jawaban: ${x.k}`, ...TAIL];
   assert.deepEqual(judul, harap, `${tag}: urutan bagian pembahasan`);
   const jaw = bag[judul.indexOf(`Jawaban: ${x.k}`)];
   for (const h of "ABCDE") {
@@ -178,19 +241,31 @@ function cekPembahasan(tag: string, x: Kck, m: Model) {
 
 const file = data("kecerdasan_kck_kal.json") as Record<string, Kck[]>;
 assert.deepEqual(Object.keys(file).sort(), Object.keys(MODEL).sort(), "paket di file");
+const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE" };
+const bankTeks = fs.readdirSync(path.join(root, "prisma/data")).filter((f) => /^kecerdasan_p\d+_teks\.json$/.test(f));
+bankTeks.push("kecerdasan_s2_teks.json");
 const stems = new Set<string>();
 const ringkas: string[] = [];
 for (const [pkg, items] of Object.entries(file)) {
-  const lama = (data(LAMA[pkg].file) as TeksFile).soal.find((x) => x.s === 100);
-  assert.ok(lama && lama.t === "KCK", `pkg ${pkg}: KCK lama #100 tidak ditemukan`);
-  assert.deepEqual(items.map((x) => x.s), [97, 98, 99], `pkg ${pkg}: nomor`);
-  assert.deepEqual(items.map((x) => x.d), [2, 3, 3], `pkg ${pkg}: tingkat (1 sedang di 97, 2 HOTS)`);
+  const v3 = pkg in V3;
+  const lama = v3 ? undefined : (data(LAMA[pkg].file) as TeksFile).soal.find((x) => x.s === 100);
+  if (!v3) assert.ok(lama && lama.t === "KCK", `pkg ${pkg}: KCK lama #100 tidak ditemukan`);
+  const baku = v3 ? file["15"][0] : lama!;
+  assert.deepEqual(items.map((x) => x.s), v3 ? [97, 98, 99, 100] : [97, 98, 99], `pkg ${pkg}: nomor`);
+  assert.deepEqual(items.map((x) => x.d), v3 ? [2, 2, 3, 3] : [2, 3, 3], `pkg ${pkg}: tingkat`);
+  assert.equal(items.length, MODEL[pkg].length, `pkg ${pkg}: jumlah model`);
+  if (v3) {
+    assert.equal(items.map((x) => x.k).join(""), V3[pkg], `pkg ${pkg}: kunci wajib 97–100`);
+    checkA7(`pkg ${pkg}`, items);
+    assert.ok(!/\b(?:posko|pos\s+(?:jaga|ronda))\b/i.test(JSON.stringify(items)), `pkg ${pkg}: konteks terlarang dalam brief`);
+    checkNoLeak({ wacana: {}, soal: items }, bankTeks);
+  }
   items.forEach((x, n) => {
     const tag = `pkg ${pkg} #${x.s}`;
     const m = MODEL[pkg][n];
     assert.equal(x.t, "KCK", `${tag}: tipe`);
-    assert.equal(x.i, lama.i, `${tag}: instruksi harus sama dengan KCK lama`);
-    assert.deepEqual(x.c, lama.c, `${tag}: opsi harus sama dengan KCK lama`);
+    assert.equal(x.i, baku.i, `${tag}: instruksi harus sama dengan KCK baku`);
+    assert.deepEqual(x.c, baku.c, `${tag}: opsi harus sama dengan KCK baku`);
     assert.equal(kunci(m), x.k, `${tag}: kunci dari klaim (${kunci(m)}) ≠ k (${x.k})`);
     assert.match(x.q, /\nPertanyaan: .+\nPernyataan \(1\): .+\nPernyataan \(2\): .+$/, `${tag}: bentuk stem`);
     assert.ok(!stems.has(x.q), `${tag}: stem kembar`); stems.add(x.q);
@@ -201,9 +276,10 @@ for (const [pkg, items] of Object.entries(file)) {
     } else assert.ok(!x.svg, `${tag}: svg tanpa tabel`);
     assert.ok(x.bukti.length > 20, `${tag}: bukti kosong`);
     cekModel(tag, m);
-    cekPembahasan(tag, x, m);
+    cekPembahasan(tag, x, m, v3);
   });
-  const semua = [...items.map((x) => ({ s: x.s, jenis: x.jenis, k: x.k, d: x.d, tabel: !!x.tabel })), { s: 100, jenis: LAMA[pkg].jenis, k: lama.k, d: lama.d ?? 0, tabel: false }];
+  const semua = items.map((x) => ({ s: x.s, jenis: x.jenis, k: x.k, d: x.d, tabel: !!x.tabel }));
+  if (lama) semua.push({ s: 100, jenis: LAMA[pkg].jenis, k: lama.k, d: lama.d ?? 0, tabel: false });
   assert.equal(new Set(semua.map((x) => x.jenis)).size, 4, `pkg ${pkg}: 4 jenis berbeda`);
   assert.ok(semua.every((x) => ["TABEL", "YATIDAK", "ALJABAR", "GABUNG"].includes(x.jenis)), `pkg ${pkg}: jenis tidak dikenal`);
   assert.equal(new Set(semua.map((x) => x.k)).size, 4, `pkg ${pkg}: 4 kunci berbeda`);

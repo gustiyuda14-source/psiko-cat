@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import * as fs from "fs";
 import * as path from "path";
 import { createClient } from "@supabase/supabase-js";
-import { checkNoLeak, checkRows, checkTeks, data, root, teksRows, type Row, type Teks, type TeksFile } from "./kecerdasan-teks-lib";
+import { checkLayout, checkNoLeak, checkTeks, data, root, teksRows, type Row, type Teks, type TeksFile } from "./kecerdasan-teks-lib";
 
 // Blok kecukupan data 4 butir (pedoman Simulasi Kecerdasan §3 Praktis rev. 2026-10-13, §4.7) untuk paket live 3, 14, 15, 16.
 // Diubah di tempat, pola pkg 2 di seed-kecerdasan-kal.ts:
@@ -36,7 +36,6 @@ const IN_PLACE = [3, 15];
 //   15: 90 konversi kecepatan · 88 pecahan bertingkat bentuk cerita
 //   16: 89 konversi waktu · 88 pecahan tangki bentuk cerita
 const DROP: Record<number, number[]> = { 3: [84, 92, 99], 14: [89, 87, 99], 15: [90, 88, 99], 16: [89, 88, 99] };
-const LAYOUT: [number, number, string][] = [[76, 90, "HIT"], [91, 96, "CRT"], [97, 100, "KCK"]];
 
 const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 const arg = (flag: string) => (process.argv.includes(flag) ? process.argv[process.argv.indexOf(flag) + 1] : undefined);
@@ -77,17 +76,6 @@ function freshRows(pkg: number, items: Kck[], oldKck: Row): NewRow[] {
       scoring_rule: { ...r.scoring_rule, pembahasan: x.p.replaceAll("<br>", "\n").trim() },
     };
   });
-}
-
-/** Validator layout baru: 76–90 HIT, 91–96 CRT, 97–100 KCK (4 kunci beda, ada C/E), tanpa KUA. */
-function checkLayout(pkg: number, final: { row: Row; t: string }[]) {
-  assert.deepEqual(final.map((f) => f.row.sequence_number), range(1, 100), `pkg ${pkg}: nomor harus 1..100`);
-  for (const [a, b, t] of LAYOUT) for (const s of range(a, b)) assert.equal(final[s - 1].t, t, `pkg ${pkg} #${s}: tipe ${final[s - 1].t} ≠ ${t}`);
-  assert.ok(!final.some((f) => f.t === "KUA"), `pkg ${pkg}: masih ada KUA`);
-  const keys = final.slice(96).map((f) => f.row.scoring_rule.correct_key);
-  assert.equal(new Set(keys).size, 4, `pkg ${pkg}: kunci KCK 97–100 harus 4 huruf beda (${keys})`);
-  assert.ok(keys.some((k) => k === "C" || k === "E"), `pkg ${pkg}: KCK wajib punya kunci C atau E`);
-  return checkRows(final.map((f) => f.row), `pkg ${pkg}`);
 }
 
 type Plan = { moves: [string, number][]; drop: string[]; fresh: NewRow[]; final: { row: Row; t: string }[] };

@@ -67,7 +67,7 @@ Saat ini slot 4–11 sudah terdaftar di `KECERDASAN_PACKAGES`, tetapi isinya kos
 
 Aturan per paket:
 - Tingkat **40 sedang / 60 HOTS**, butir HOTS tidak menumpuk di awal blok.
-- Kunci maksimal 24 per huruf.
+- Kunci maksimal 24% dari total huruf kunci per huruf (butir 2 kunci dihitung dua huruf; ±29 per huruf), sesuai pedoman utama D-4.
 - Silogisme memakai instruksi baru yang memuat "anggap semua premis benar".
 - Semua butir tanpa unsur kepolisian.
 - Pkg 4 dan 5 tidak boleh berbagi stem, peta denah, objek susun, atau aturan figural yang identik.
@@ -76,7 +76,7 @@ Aturan per paket:
 
 | Pekerja | Tugas | Output | Verifikasi |
 |---|---|---|---|
-| **Codex-1** (`workspace-write`) | 52 butir numerik untuk 2 paket (57–64 dan 76–96), dengan pembahasan §5 dan field `h` | `prisma/data/kecerdasan_p4_num.json`, `kecerdasan_p5_num.json` (format `Teks`: `s,t,d,q,i,c,k,h,p`) | Claude: `checkTeks` + `hitung`, baca semua pembahasan, cek A-7 dengan grep |
+| **Codex-1** (`workspace-write`) | 58 butir numerik untuk 2 paket (29 per paket) (57–64 dan 76–96), dengan pembahasan §5 dan field `h` | `prisma/data/kecerdasan_p4_num.json`, `kecerdasan_p5_num.json` (format `Teks`: `s,t,d,q,i,c,k,h,p`) | Claude: `checkTeks` + `hitung`, baca semua pembahasan, cek A-7 dengan grep |
 | **Codex-2** (`workspace-write`) | 4 objek susun (benda, bukan manusia), 2 per paket. Brief wajib: objek memenuhi lebar, setiap strip punya landmark unik, setiap potongan memotong fitur | entri `kecerdasan_susun_kal.json` pkg 4 dan 5 lewat `generate-kecerdasan-susun-kal.ts` | Claude: screenshot headless Chrome tiap putaran, cek lebar 360 px |
 | **Codex-3** (`read-only`) | Cek buta semua butir teks (tanpa kunci): verbal, silogisme, wacana, numerik, kecukupan data | `scratchpad/qa/codex-<pkg>.md` | Claude membandingkan **alasan**, bukan huruf saja |
 | **Claude** | Verbal 25 + silogisme 8 + wacana 11 + kecukupan data 4 per paket; semua gambar (figural, mosaik, bundar, denah) beserta `pembahasan_svg`; integrasi seed; QA visual | `kecerdasan_p4_teks.json`, `kecerdasan_p5_teks.json` (gabungan dengan output Codex-1), `figural-kal-4.ts`, `figural-kal-5.ts`, `figural-kal-bundar-4/5.ts`, entri `PKGS` denah | `cek-wacana-kal.ts`, `check-kecerdasan-kck.ts`, `seed-kecerdasan-kal.ts` |
@@ -127,7 +127,7 @@ lanjutan, tanpa tulis DB, commit hanya setelah "commit dan push".
 | Risiko | Penanganan |
 |---|---|
 | Konteks penuh di tengah gambar | Setiap generator gambar ditulis per paket (`figural-kal-4.ts`) dan divalidasi sebelum pindah ke paket berikutnya, supaya titik henti selalu bersih |
-| Kualitas teks Codex (bahasa kaku, pengecoh lemah) | Brief memuat contoh pembahasan yang baik dan aturan D-2; Claude membaca semua 52 butir dan menolak pengecoh tanpa kesalahan bernama |
+| Kualitas teks Codex (bahasa kaku, pengecoh lemah) | Brief memuat contoh pembahasan yang baik dan aturan D-2; Claude membaca semua 58 butir dan menolak pengecoh tanpa kesalahan bernama |
 | Codex merusak file lain | Codex hanya menulis file output yang disebut di brief; Claude memeriksa `git status` setelah tiap job |
 | Susun butuh banyak putaran | Mulai di sesi 1, paralel |
 | Konteks kepolisian lolos | Cek A-7 otomatis (§4.6) dan grep di checklist |

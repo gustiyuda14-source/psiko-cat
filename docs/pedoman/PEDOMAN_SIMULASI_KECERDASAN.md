@@ -226,7 +226,7 @@ Sumber format: `FILE PSIKO POLRI 2026/KECUKUPAN DATA/` (paket 1 dan 2, soal + pe
   - bacaan: hubungan antarparagraf, makna kiasan, penerapan pada keadaan baru.
   Butir HOTS jangan ditumpuk di awal subtes.
 - **Beban waktu:** rata-rata 54 detik per butir. Wacana logika dan bacaan memakan waktu lebih lama, jadi butir hitung cepat harus benar-benar cepat (≤ 30 detik).
-- **Kunci:** butir numerik diberi field `hitung`. Kunci dicek oleh skrip, bukan hanya dengan mata. Posisi kunci A–E tersebar rata, maksimal 24 per huruf.
+- **Kunci:** butir numerik diberi field `hitung`. Kunci dicek oleh skrip, bukan hanya dengan mata. Posisi kunci A–E tersebar rata, maksimal 24% dari total huruf kunci, sesuai pedoman utama D-4 (butir 2 kunci dihitung dua huruf; ±123 huruf per paket, jadi ±29 per huruf).
 - **Pembahasan:** wajib per butir. Tulis aturannya, alasan tiap distraktor gugur, dan satu tips.
 - **Anti-bocor:**
   - stem tidak boleh sama dengan Paket 1 (`soal.json`) maupun bank latihan; pengecekan memakai pola `scripts/build-drill-bank.ts`;
@@ -260,7 +260,7 @@ Catatan rencana awal (sudah dikerjakan 2026-10-11):
 - [ ] Semua kunci numerik lolos cek `hitung`; semua wacana logika lolos brute force.
 - [ ] Butir figural: tepat 1 jawaban sah, SVG terbaca di HP.
 - [ ] Tidak ada stem duplikat dengan Paket 1 atau bank latihan.
-- [ ] Sebaran kunci A–E dan tingkat kesulitan sesuai §5.
+- [ ] Sebaran kunci A–E maksimal 24% dari total huruf kunci per huruf (pedoman utama D-4), dan tingkat kesulitan sesuai §5.
 - [ ] Pembahasan lengkap untuk 100 butir.
 - [ ] Kecukupan data: 4 jenis, 4 huruf kunci berbeda, bukti dua nilai untuk setiap "tidak cukup", pembahasan format §4.7.
 - [ ] Silogisme: sebaran jenis §4.8, pengecoh bernama, instruksi "anggap semua premis benar".

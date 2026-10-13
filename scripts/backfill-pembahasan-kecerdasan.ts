@@ -23,7 +23,9 @@ const source = new Map<string, { text: string; svg?: string }>();
 const add = (row: Row, text: string | undefined, svg?: string) => {
   if (text?.trim()) source.set(fp(row.options_payload, row.scoring_rule.correct_key), { text: text.replaceAll("<br>", "\n").trim(), svg });
 };
-for (const f of ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json"]) {
+// p4/p5 = Latihan Paket 3 & 4 (pedoman v3), dilewati selama filenya belum ada.
+const TEKS_FILES = ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json", "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_p4_teks.json", "kecerdasan_p5_teks.json"];
+for (const f of TEKS_FILES.filter((f) => fs.existsSync(path.join(root, "prisma/data", f)))) {
   const teks = data(f) as TeksFile;
   teksRows(teks).forEach((r, i) => add(r, teks.soal[i].p));
 }
