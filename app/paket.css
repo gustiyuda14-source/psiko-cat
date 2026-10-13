@@ -12,8 +12,8 @@
 .sp-node b { position: relative; font: 600 .95rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
 .is-done .sp-node polygon { fill: var(--accent-soft); stroke: var(--accent-strong) }
 .is-done .sp-node b { color: var(--accent-ink) }
-.is-featured .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 6px 10px rgb(184 137 43 / .45)) }
-.is-featured .sp-node b { color: var(--brand-ink) }
+.is-featured .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 4px 8px var(--hex-glow)) }
+.is-featured .sp-node b { color: var(--navy) }
 .is-locked .sp-node polygon { fill: var(--surface-inset); stroke-dasharray: 6 6 }
 .sp-tick { position: absolute; right: -2px; bottom: 2px; display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; background: var(--success); color: #fff; box-shadow: 0 0 0 3px var(--surface-page) }
 
@@ -59,7 +59,7 @@
 .is-ready .sp-card:hover:not(:disabled) { border-color: transparent; box-shadow: 0 24px 50px -16px rgb(15 24 56 / .6), 0 0 0 1px rgb(15 24 56 / .4) }
 .sp-card:has(.sp-badges) { margin-top: 14px }
 .sp-badges { position: absolute; top: 0; left: 24px; transform: translateY(-50%); display: flex; gap: 8px }
-.sp-badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px 6px 10px; border-radius: 999px; background: var(--gold-grad); font: 600 .78rem var(--font-display-src), sans-serif; color: var(--brand-ink); box-shadow: 0 6px 16px -4px rgb(184 137 43 / .55), 0 0 0 4px var(--surface-page) }
+.sp-badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px 6px 10px; border-radius: 999px; background: var(--gold-grad); font: 600 .78rem var(--font-display-src), sans-serif; color: var(--navy); box-shadow: 0 0 0 4px var(--surface-page) }
 .sp-badge.is-ok { background: linear-gradient(120deg, #087453, #2fb57c); color: #fff; box-shadow: 0 6px 16px -4px rgb(8 116 83 / .5), 0 0 0 4px var(--surface-page) }
 .sp-badge.is-ok svg { width: 12px; height: 12px }
 .sp-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-ink); animation: sp-pulse 1.8s ease-in-out infinite }
@@ -70,7 +70,7 @@
 .is-ready .sp-legend b, .is-ready .sp-score strong { color: #fff }
 .is-ready .sp-score em.pg-up { color: #7fe0b5 }
 .is-ready .sp-score em.pg-down { color: #ff9fae }
-.is-featured .sp-cta { border-color: transparent; background: var(--gold-grad); box-shadow: 0 8px 20px -8px rgb(232 199 102 / .7) }
+.is-featured .sp-cta { border-color: transparent; background: var(--gold-grad); color: var(--navy); box-shadow: var(--cta-glow) }
 .is-featured .sp-card:hover .sp-cta { background: var(--gold-grad); filter: brightness(1.05) }
 .is-ready:not(.is-featured) .sp-cta { border-color: rgb(232 199 102 / .5); background: transparent; color: #f3dd8e }
 .is-ready:not(.is-featured) .sp-card:hover .sp-cta { border-color: #e8c766; background: rgb(232 199 102 / .1) }
@@ -103,17 +103,17 @@
 /* Latihan (PackageCarousel): bar segmen progres di kartu navy, kartu terpilih di desktop */
 .sp-mix .pk-segs i { height: 6px; background: linear-gradient(90deg, var(--gold-hi) var(--f), rgb(255 255 255 / .16) 0) }
 .is-locked .sp-mix .pk-segs i { background: var(--border) }
-.sp-step.is-sel .sp-card { outline: 2px solid var(--gold-hi); outline-offset: 3px }
+.sp-step.is-sel .sp-card { outline: 1.5px solid var(--sel-line); outline-offset: 3px }
 .sp-chev { color: var(--gold-hi) }
 
 /* Simulasi (.sp-list.is-pick): semua kartu siap diperlakukan sama, tombol emas di semua kartu;
    hexagon emas = paket terpilih (.is-sel), berpindah saat kartu diklik. Latihan tidak terpengaruh. */
 .is-pick .sp-node polygon { transition: fill 300ms var(--e-out), stroke 300ms var(--e-out) }
-.is-pick .is-sel .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 6px 10px rgb(184 137 43 / .45)) }
-.is-pick .is-sel .sp-node b { color: var(--brand-ink) }
+.is-pick .is-sel .sp-node polygon { fill: url(#sp-gold); stroke: var(--accent-strong); filter: drop-shadow(0 4px 8px var(--hex-glow)) }
+.is-pick .is-sel .sp-node b { color: var(--navy) }
 .is-pick .is-sel .sp-node svg { animation: sp-pop 420ms var(--e-out) }
 @keyframes sp-pop { 40% { transform: scale(1.14) } }
-.is-pick .is-ready .sp-cta { border-color: transparent; background: var(--gold-grad); color: var(--brand-ink); box-shadow: 0 8px 20px -8px rgb(232 199 102 / .7) }
+.is-pick .is-ready .sp-cta { border-color: transparent; background: var(--gold-grad); color: var(--navy); box-shadow: var(--cta-glow) }
 .is-pick .is-ready .sp-card:hover .sp-cta { border-color: transparent; background: var(--gold-grad); filter: brightness(1.05) }
 @media (prefers-reduced-motion: reduce) { .is-pick .is-sel .sp-node svg { animation: none } .is-pick .sp-node polygon { transition: none } }
 

@@ -55,7 +55,10 @@
   --cube-edge: rgb(27 42 92 / .22);
   --gold: #9a6f12;             /* emas sebagai TEKS di atas putih */
   --gold-hi: #e8c766;          /* emas di atas navy */
-  --gold-grad: linear-gradient(120deg, #b8892b, #f3dd8e 48%, #c9a24a);
+  --gold-grad: linear-gradient(120deg, #b8892b, #dcc272 48%, #c0983a);   /* sorotan dikalemkan: #f3dd8e -> #dcc272 */
+  --sel-line: #c9a24a;                                   /* garis kartu terpilih */
+  --hex-glow: rgb(184 137 43 / 0.22);                    /* bayangan heksagon terpilih */
+  --cta-glow: 0 6px 14px -8px rgb(184 137 43 / 0.45);    /* bayangan tombol emas */
 
   --primary: #1b2a5c;
   --primary-hover: #24367a;
@@ -65,6 +68,7 @@
   --accent-strong: #b8892b;
   --accent-soft: #f6edd6;
   --accent-ink: #7a5710;
+  --on-accent-ink: #ffffff;
   --success: #087453;
   --success-soft: #eaf6f0;
   --destructive: #b42342;
@@ -102,10 +106,9 @@
    Dipilih lewat atribut data-theme di <html> (tombol di topbar, tersimpan di
    localStorage, diset sebelum cat pertama oleh skrip di app/layout.tsx).
    Tanpa atribut = ikut pengaturan perangkat. Dua blok di bawah HARUS sama.
-   Hanya aktif di halaman yang memuat .theme-scope (shell dashboard); layar ujian, login,
-   dan laporan tetap terang sampai disiapkan. */
+   Berlaku di seluruh aplikasi (dashboard, layar kerja, pembahasan, laporan). */
 @media (prefers-color-scheme: dark) {
-  :root:has(.theme-scope):not([data-theme="light"]) {
+  :root:not([data-theme="light"]) {
     color-scheme: dark;
   --surface-page: #0a0f20;
   --surface-card: #121a34;
@@ -124,12 +127,13 @@
   --primary-active: #2c4296;
   --accent-soft: #2a2512;
   --accent-ink: #efd88f;
-  --success: #46c79c;
+  --on-accent-ink: #16224a;
+  --success: #1f9d74;
   --success-soft: #10302a;
-  --destructive: #f2778f;
+  --destructive: #e8607c;
   --destructive-soft: #3a1722;
   --ring: #93a9f2;
-  --ok: #8fa5ec;
+  --ok: #5f7fe0;
   --elev-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.4);
   --elev-2: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 18px -8px rgb(0 0 0 / 0.55);
   --elev-3: 0 4px 8px rgb(0 0 0 / 0.3), 0 16px 34px -12px rgb(0 0 0 / 0.65);
@@ -138,12 +142,13 @@
   --pg-t1: #f0dc9b; --pg-t2: #d9ae4a; --pg-t3: #a97c1e;
   --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20;
   --hatch: #18214a; --hc-grid: rgb(143 165 236 / 0.1);
+  --sel-line: rgb(232 199 102 / 0.5); --hex-glow: transparent; --cta-glow: none;
   --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16);
   --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
   --cube-edge: rgb(200 211 247 / .28);
   }
 }
-:root[data-theme="dark"]:has(.theme-scope) {
+:root[data-theme="dark"] {
   color-scheme: dark;
   --surface-page: #0a0f20;
   --surface-card: #121a34;
@@ -162,12 +167,13 @@
   --primary-active: #2c4296;
   --accent-soft: #2a2512;
   --accent-ink: #efd88f;
-  --success: #46c79c;
+  --on-accent-ink: #16224a;
+  --success: #1f9d74;
   --success-soft: #10302a;
-  --destructive: #f2778f;
+  --destructive: #e8607c;
   --destructive-soft: #3a1722;
   --ring: #93a9f2;
-  --ok: #8fa5ec;
+  --ok: #5f7fe0;
   --elev-1: 0 1px 2px rgb(0 0 0 / 0.3), 0 1px 3px -1px rgb(0 0 0 / 0.4);
   --elev-2: 0 2px 4px rgb(0 0 0 / 0.3), 0 8px 18px -8px rgb(0 0 0 / 0.55);
   --elev-3: 0 4px 8px rgb(0 0 0 / 0.3), 0 16px 34px -12px rgb(0 0 0 / 0.65);
@@ -176,6 +182,7 @@
   --pg-t1: #f0dc9b; --pg-t2: #d9ae4a; --pg-t3: #a97c1e;
   --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20;
   --hatch: #18214a; --hc-grid: rgb(143 165 236 / 0.1);
+  --sel-line: rgb(232 199 102 / 0.5); --hex-glow: transparent; --cta-glow: none;
   --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16);
   --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
   --cube-edge: rgb(200 211 247 / .28);
@@ -203,6 +210,7 @@
   --color-accent-strong: var(--accent-strong);
   --color-accent-soft: var(--accent-soft);
   --color-accent-ink: var(--accent-ink);
+  --color-on-accent-ink: var(--on-accent-ink);
   --color-success: var(--success);
   --color-success-soft: var(--success-soft);
   --color-destructive: var(--destructive);

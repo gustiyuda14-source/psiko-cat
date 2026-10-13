@@ -48,7 +48,7 @@ const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const CELL: Record<State, string> = {
   ok: "bg-success text-white",
   bad: "bg-destructive text-white",
-  mid: "bg-accent-ink text-white",
+  mid: "bg-accent-ink text-on-accent-ink",
   skip: "border border-dashed border-border-strong bg-card text-muted-foreground",
   plain: "bg-primary text-primary-foreground",
 };

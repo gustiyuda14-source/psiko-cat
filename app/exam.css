@@ -29,7 +29,7 @@
 .dnav-title { margin: var(--space-5) 0 var(--space-2); color: var(--muted-foreground); font: 700 .72rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase }
 .dnum { position: relative; height: 44px; padding: 0; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-card); color: var(--foreground); font: 600 .9rem var(--font-display-src), sans-serif; font-variant-numeric: tabular-nums; transition: border-color var(--motion), background var(--motion), transform var(--motion), box-shadow var(--motion) }
 .dnum:hover { border-color: var(--ok); transform: translateY(-1px); box-shadow: 0 6px 14px -6px rgba(27, 42, 92, .35) }
-.dnum.is-done { border-color: #e3cf9b; background: #f6edd6; color: var(--brand-ink) }
+.dnum.is-done { border-color: var(--border); background: var(--accent-soft); color: var(--brand-ink) }
 .dnum[aria-current] { box-shadow: 0 0 0 2px var(--surface-card), 0 0 0 4px var(--surface-nav); transform: none }
 
 /* Tombol maju/mundur melayang di kanan bawah (cest #m-next). */

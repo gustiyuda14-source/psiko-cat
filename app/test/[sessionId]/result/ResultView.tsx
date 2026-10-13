@@ -23,8 +23,8 @@ function ScoreRail({ score, threshold }: { score: number | null; threshold: numb
         <defs>
           <linearGradient id="rep-gold" x1="0" x2="1">
             <stop offset="0" stopColor="#b8892b" />
-            <stop offset="0.5" stopColor="#f3dd8e" />
-            <stop offset="1" stopColor="#c9a24a" />
+            <stop offset="0.5" stopColor="#dcc272" />
+            <stop offset="1" stopColor="#c0983a" />
           </linearGradient>
         </defs>
         <rect className="r-track" x="0" y="30" width={W} height="14" rx="7" />

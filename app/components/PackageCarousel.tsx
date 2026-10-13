@@ -312,8 +312,8 @@ export function PackageCarousel({
         <defs>
           <linearGradient id="sp-gold" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0" stopColor="#b8892b" />
-            <stop offset=".5" stopColor="#f3dd8e" />
-            <stop offset="1" stopColor="#c9a24a" />
+            <stop offset=".5" stopColor="#dcc272" />
+            <stop offset="1" stopColor="#c0983a" />
           </linearGradient>
         </defs>
       </svg>

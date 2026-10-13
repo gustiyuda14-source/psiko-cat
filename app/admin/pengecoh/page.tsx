@@ -73,7 +73,7 @@ export default async function PengecohPage({ searchParams }: { searchParams: Pro
                     <li key={o.key} className="grid grid-cols-[1.5rem_minmax(0,1fr)_3.5rem] items-center gap-2 text-sm">
                       <span className={`font-bold ${o.kunci ? "text-success" : ""}`}>{o.key.toUpperCase()}</span>
                       <div className="relative min-w-0 overflow-hidden rounded bg-[var(--surface-inset)]">
-                        <div className={`absolute inset-y-0 left-0 ${o.kunci ? "bg-success/25" : o.mati ? "bg-[#d9dde3]" : "bg-destructive/20"}`} style={{ width: `${o.pct}%` }} />
+                        <div className={`absolute inset-y-0 left-0 ${o.kunci ? "bg-success/25" : o.mati ? "bg-border" : "bg-destructive/20"}`} style={{ width: `${o.pct}%` }} />
                         <span className={`relative block truncate px-2 py-1 ${o.kunci ? "font-semibold text-success" : ""}`}>
                           {o.teks}{o.kunci ? " (kunci)" : o.mati ? " · mati" : ""}
                         </span>

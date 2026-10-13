@@ -36,7 +36,7 @@ type Tone = "key" | "bad" | "mid" | "pick" | null;
 const ROW: Record<Exclude<Tone, null> | "none", { box: string; dot: string; tag: string }> = {
   key: { box: "border-success/50 bg-success-soft", dot: "bg-success text-white", tag: "text-success" },
   bad: { box: "border-destructive/50 bg-destructive-soft", dot: "bg-destructive text-white", tag: "text-destructive" },
-  mid: { box: "border-accent-ink/40 bg-accent-soft", dot: "bg-accent-ink text-white", tag: "text-accent-ink" },
+  mid: { box: "border-accent-ink/40 bg-accent-soft", dot: "bg-accent-ink text-on-accent-ink", tag: "text-accent-ink" },
   pick: { box: "border-primary/40 bg-primary/10", dot: "bg-primary text-primary-foreground", tag: "text-brand-ink" },
   none: { box: "border-border bg-card", dot: "bg-surface-inset text-muted-foreground", tag: "" },
 };
@@ -113,7 +113,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
         )}
         {p.question_text && <p className="max-w-[72ch] leading-relaxed text-foreground"><MathText text={p.question_text} /></p>}
         {p.svg_content && (
-          <div className="overflow-x-auto rounded-md border border-border bg-card p-2" dangerouslySetInnerHTML={{ __html: p.svg_content }} />
+          <div className="overflow-x-auto rounded-md border border-border bg-white p-2" dangerouslySetInnerHTML={{ __html: p.svg_content }} />
         )}
         {/* Kunci dua jawaban berbentuk "AC". Pilihan butir gambar ada di dalam SVG; teksnya cuma huruf, jadi tidak diulang. */}
         <Choices

@@ -57,7 +57,7 @@ function Trend({ points }: { points: TryoutPoint[] }) {
         const last = i === points.length - 1;
         return (
           <g key={i}>
-            <circle cx={x(i)} cy={y(p.nap)} r={last ? 6.5 : 4} fill={last ? "var(--brand-ink)" : "#fff"} stroke={p.nap < PASSING ? "var(--pg-weak)" : "var(--brand-ink)"} strokeWidth="2">
+            <circle cx={x(i)} cy={y(p.nap)} r={last ? 6.5 : 4} fill={last ? "var(--brand-ink)" : "var(--surface-card)"} stroke={p.nap < PASSING ? "var(--pg-weak)" : "var(--brand-ink)"} strokeWidth="2">
               <title>{`${day(p.at)}: ${dec(p.nap)}`}</title>
             </circle>
             {(i % every === 0 || last) && (
