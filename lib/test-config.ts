@@ -117,6 +117,8 @@ export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: n
   1: { KECERDASAN: 18, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN, KECERMATAN: 11 },
   2: { KECERDASAN: 17, KEPRIBADIAN: 13, KECERMATAN: 401 },
   3: { KECERDASAN: 15, KEPRIBADIAN: 12, KECERMATAN: 10 },
+  4: { KECERDASAN: 19, KEPRIBADIAN: 14, KECERMATAN: 12 },
+
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
 // tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.
