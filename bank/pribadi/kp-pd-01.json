@@ -83,7 +83,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri dan dipindahtugaskan ke kota lain, saya yakin cepat mengenal lingkungan kerja yang baru.",
+      "pernyataan": "Jika menjadi seorang ASN dan dipindahtugaskan ke kota lain, saya yakin cepat mengenal lingkungan kerja yang baru.",
       "alasan": "Yakin dapat cepat beradaptasi dengan tempat tugas yang baru."
     },
     {
@@ -93,7 +93,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya akan mudah bekerja sama dengan rekan satuan dari berbagai daerah asal.",
+      "pernyataan": "Jika menjadi seorang ASN, saya akan mudah bekerja sama dengan rekan kerja dari berbagai daerah asal.",
       "alasan": "Luwes bergaul dan bekerja dalam tim yang beragam."
     },
     {
@@ -183,7 +183,7 @@
       "tier": "T1",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya merasa akan sulit bertugas di tempat yang kebiasaan warganya berbeda dari daerah asal saya.",
+      "pernyataan": "Jika menjadi seorang ASN, saya merasa akan sulit bertugas di tempat yang kebiasaan warganya berbeda dari daerah asal saya.",
       "alasan": "Merasa sulit menghadapi lingkungan tugas yang berbeda menandakan penyesuaian diri rendah."
     },
     {
@@ -449,10 +449,10 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, berbaur dengan warga di pos ronda lebih bermanfaat daripada hanya berkumpul dengan sesama petugas.",
+      "pernyataan": "Jika menjadi seorang ASN, berbaur dengan warga dalam kegiatan kerja bakti lebih bermanfaat daripada hanya berkumpul dengan sesama pegawai.",
       "bedah": {
         "sisi_x": "berbaur dengan warga",
-        "sisi_y": "berkumpul dengan sesama petugas",
+        "sisi_y": "berkumpul dengan sesama pegawai",
         "pembanding": "lebih bermanfaat",
         "pembalik": false,
         "sisi_aspek": "x"
@@ -466,7 +466,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mempelajari kebiasaan warga di wilayah tugas baru lebih berguna daripada menerapkan cara kerja dari tempat lama.",
+      "pernyataan": "Jika menjadi seorang ASN, mempelajari kebiasaan warga di wilayah tugas baru lebih berguna daripada menerapkan cara kerja dari tempat lama.",
       "bedah": {
         "sisi_x": "mempelajari kebiasaan warga setempat",
         "sisi_y": "menerapkan cara dari tempat lama",
@@ -483,7 +483,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menyapa pedagang dan tukang ojek di sekitar pos lebih tepat daripada menunggu mereka datang melapor.",
+      "pernyataan": "Jika menjadi seorang ASN, menyapa pedagang dan tukang ojek di sekitar kantor lebih tepat daripada menunggu mereka datang ke kantor.",
       "bedah": {
         "sisi_x": "menyapa warga lebih dulu",
         "sisi_y": "menunggu warga datang",
@@ -739,7 +739,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mengajukan pindah kembali ke daerah asal lebih menenangkan daripada bertahan menyesuaikan diri di wilayah tugas baru.",
+      "pernyataan": "Jika menjadi seorang ASN, mengajukan pindah kembali ke daerah asal lebih menenangkan daripada bertahan menyesuaikan diri di wilayah tugas baru.",
       "bedah": {
         "sisi_x": "pindah kembali ke daerah asal",
         "sisi_y": "bertahan di wilayah baru",
@@ -756,10 +756,10 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, bekerja dengan rekan satu angkatan lebih nyaman daripada bergabung dengan tim gabungan dari berbagai satuan.",
+      "pernyataan": "Jika menjadi seorang ASN, bekerja dengan rekan satu angkatan lebih nyaman daripada bergabung dengan tim gabungan dari berbagai instansi.",
       "bedah": {
         "sisi_x": "rekan satu angkatan",
-        "sisi_y": "tim gabungan berbagai satuan",
+        "sisi_y": "tim gabungan berbagai instansi",
         "pembanding": "lebih nyaman",
         "pembalik": false,
         "sisi_aspek": "y"
@@ -773,7 +773,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri yang baru ditempatkan, menunggu rekan sekantor menyapa lebih dulu lebih nyaman daripada lebih dulu berkenalan dengan mereka.",
+      "pernyataan": "Jika menjadi seorang ASN yang baru ditempatkan, menunggu rekan sekantor menyapa lebih dulu lebih nyaman daripada lebih dulu berkenalan dengan mereka.",
       "bedah": {
         "sisi_x": "menunggu disapa rekan",
         "sisi_y": "lebih dulu berkenalan",
@@ -790,9 +790,9 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, bekerja dengan pola jaga yang sudah biasa lebih nyaman daripada beradaptasi dengan sistem piket yang baru diterapkan.",
+      "pernyataan": "Jika menjadi seorang ASN, bekerja dengan pola kerja yang sudah biasa lebih nyaman daripada beradaptasi dengan sistem kerja yang baru diterapkan.",
       "bedah": {
-        "sisi_x": "pola jaga lama",
+        "sisi_x": "pola kerja lama",
         "sisi_y": "beradaptasi dengan sistem baru",
         "pembanding": "lebih nyaman",
         "pembalik": false,
@@ -926,7 +926,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menolak penempatan di daerah terpencil lebih memalukan daripada harus hidup sederhana jauh dari keluarga.",
+      "pernyataan": "Jika menjadi seorang ASN, menolak penempatan di daerah terpencil lebih memalukan daripada harus hidup sederhana jauh dari keluarga.",
       "bedah": {
         "sisi_x": "menolak penempatan",
         "sisi_y": "hidup sederhana jauh dari keluarga",
@@ -943,7 +943,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Bagi anggota Polri, menjaga jarak dari warga yang berbeda kebiasaan lebih menghambat tugas daripada sesekali canggung saat ikut kegiatan mereka.",
+      "pernyataan": "Bagi seorang ASN, menjaga jarak dari warga yang berbeda kebiasaan lebih menghambat tugas daripada sesekali canggung saat ikut kegiatan mereka.",
       "bedah": {
         "sisi_x": "menjaga jarak dari warga",
         "sisi_y": "canggung ikut kegiatan warga",
@@ -1080,10 +1080,10 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menyesuaikan diri dengan pola kerja satuan baru lebih membingungkan daripada menunggu dipindahkan kembali ke satuan lama.",
+      "pernyataan": "Jika menjadi seorang ASN, menyesuaikan diri dengan pola kerja unit kerja baru lebih membingungkan daripada menunggu dipindahkan kembali ke unit kerja lama.",
       "bedah": {
         "sisi_x": "menyesuaikan dengan pola kerja baru",
-        "sisi_y": "menunggu kembali ke satuan lama",
+        "sisi_y": "menunggu kembali ke unit kerja lama",
         "pembanding": "lebih membingungkan",
         "pembalik": true,
         "sisi_aspek": "x"
@@ -1097,7 +1097,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, berkenalan dengan ketua RT dan warga di wilayah tugas baru lebih merepotkan daripada mengerjakan administrasi sendirian di kantor.",
+      "pernyataan": "Jika menjadi seorang ASN, berkenalan dengan ketua RT dan warga di wilayah tugas baru lebih merepotkan daripada mengerjakan administrasi sendirian di kantor.",
       "bedah": {
         "sisi_x": "berkenalan dengan warga",
         "sisi_y": "administrasi sendirian",

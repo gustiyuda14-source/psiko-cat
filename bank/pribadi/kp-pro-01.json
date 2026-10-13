@@ -153,7 +153,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya bersedia memakai hari libur untuk mengajari anak-anak kampung tentang keselamatan berlalu lintas.",
+      "pernyataan": "Jika menjadi seorang ASN, saya bersedia memakai hari libur untuk mengajari warga kampung menggunakan layanan administrasi daring.",
       "alasan": "Rela memberi waktu pribadi untuk kegiatan yang bermanfaat bagi masyarakat."
     },
     {
@@ -163,7 +163,7 @@
       "tier": "T1",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya lebih bersemangat menolong warga yang kelak bisa membalas budi kepada saya.",
+      "pernyataan": "Jika menjadi seorang ASN, saya lebih bersemangat menolong warga yang kelak bisa membalas budi kepada saya.",
       "alasan": "Memilih siapa yang ditolong berdasarkan balasan yang mungkin diterima adalah pamrih."
     },
     {
@@ -183,7 +183,7 @@
       "tier": "T1",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya enggan membagikan pengalaman lapangan kepada rekan baru agar tidak tersaingi.",
+      "pernyataan": "Jika menjadi seorang ASN, saya enggan membagikan pengalaman kerja kepada rekan baru agar tidak tersaingi.",
       "alasan": "Menahan ilmu demi kepentingan sendiri bertentangan dengan sikap berbagi."
     },
     {
@@ -688,15 +688,15 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mengisi penyuluhan bahaya narkoba di sekolah lebih bernilai daripada mengambil libur akhir pekan secara penuh.",
+      "pernyataan": "Jika menjadi seorang ASN, mengisi sosialisasi program pemerintah di sekolah lebih bernilai daripada mengambil libur akhir pekan secara penuh.",
       "bedah": {
-        "sisi_x": "mengisi penyuluhan di sekolah",
+        "sisi_x": "mengisi sosialisasi di sekolah",
         "sisi_y": "libur akhir pekan penuh",
         "pembanding": "lebih bernilai",
         "pembalik": false,
         "sisi_aspek": "x"
       },
-      "alasan": "Memberi waktu untuk kegiatan yang melindungi masyarakat."
+      "alasan": "Memberi waktu untuk kegiatan yang bermanfaat bagi masyarakat."
     },
     {
       "id": "KP-PRO-149",
@@ -705,7 +705,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, melayani warga sebatas jam kerja lebih profesional daripada tetap membantu warga yang datang setelah jam dinas usai.",
+      "pernyataan": "Jika menjadi seorang ASN, melayani warga sebatas jam kerja lebih profesional daripada tetap membantu warga yang datang setelah jam dinas usai.",
       "bedah": {
         "sisi_x": "melayani sebatas jam kerja",
         "sisi_y": "membantu warga setelah jam dinas",
@@ -714,7 +714,7 @@
         "sisi_aspek": "y"
       },
       "alasan": "Kesediaan menolong di luar kewajiban mencerminkan ketulusan membantu.",
-      "catatan_psikologi": "Menjaga batas jam kerja juga penting bagi kesehatan petugas. Yang dinilai adalah kesediaan menolong warga yang membutuhkan, bukan anjuran bekerja tanpa batas."
+      "catatan_psikologi": "Menjaga batas jam kerja juga penting bagi kesehatan pegawai. Yang dinilai adalah kesediaan menolong warga yang membutuhkan, bukan anjuran bekerja tanpa batas."
     },
     {
       "id": "KP-PRO-150",
@@ -740,7 +740,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, diam saat rekan satu unit bersikap kasar kepada warga lebih menjaga kekompakan daripada menegurnya secara langsung.",
+      "pernyataan": "Jika menjadi seorang ASN, diam saat rekan satu unit bersikap kasar kepada warga lebih menjaga kekompakan daripada menegurnya secara langsung.",
       "bedah": {
         "sisi_x": "diam saat rekan bersikap kasar",
         "sisi_y": "menegur rekan secara langsung",
@@ -774,7 +774,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mendampingi rekan mengakui kesalahan prosedur kepada atasan lebih terhormat daripada memperbaikinya diam-diam agar tidak tercatat.",
+      "pernyataan": "Jika menjadi seorang ASN, mendampingi rekan mengakui kesalahan prosedur kepada atasan lebih terhormat daripada memperbaikinya diam-diam agar tidak tercatat.",
       "bedah": {
         "sisi_x": "mendampingi rekan mengaku kepada atasan",
         "sisi_y": "memperbaiki diam-diam",
@@ -791,7 +791,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menyelesaikan pekerjaan di kantor lebih efektif daripada rutin menyapa dan berbincang dengan warga di lingkungan sekitar.",
+      "pernyataan": "Jika menjadi seorang ASN, menyelesaikan pekerjaan di kantor lebih efektif daripada rutin menyapa dan berbincang dengan warga di lingkungan sekitar.",
       "bedah": {
         "sisi_x": "bekerja di kantor",
         "sisi_y": "rutin menyapa warga",
@@ -1064,7 +1064,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mengabaikan lansia yang kebingungan di terminal lebih memalukan daripada menunda jam makan siang untuk mengantarnya.",
+      "pernyataan": "Jika menjadi seorang ASN, mengabaikan lansia yang kebingungan di kantor pelayanan lebih memalukan daripada menunda jam makan siang untuk mengantarnya.",
       "bedah": {
         "sisi_x": "mengabaikan lansia yang kebingungan",
         "sisi_y": "menunda makan siang untuk mengantar",
@@ -1081,7 +1081,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menghadiri pertemuan warga setiap bulan lebih membosankan daripada dianggap kurang dekat dengan masyarakat.",
+      "pernyataan": "Jika menjadi seorang ASN, menghadiri pertemuan warga setiap bulan lebih membosankan daripada dianggap kurang dekat dengan masyarakat.",
       "bedah": {
         "sisi_x": "menghadiri pertemuan warga",
         "sisi_y": "dianggap kurang dekat dengan masyarakat",

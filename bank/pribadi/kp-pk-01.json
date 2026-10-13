@@ -73,7 +73,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "sekarang",
-      "pernyataan": "Saya tetap pada pilihan untuk mendaftar seleksi Polri walaupun beberapa teman meragukannya.",
+      "pernyataan": "Saya tetap pada pilihan untuk mendaftar seleksi ASN walaupun beberapa teman meragukannya.",
       "alasan": "Yakin pada keputusan sendiri dan tidak goyah oleh keraguan orang lain."
     },
     {
@@ -173,7 +173,7 @@
       "tier": "T1",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya cenderung langsung percaya pada laporan pertama tanpa memeriksa keterangan dari pihak lain.",
+      "pernyataan": "Jika menjadi seorang ASN, saya cenderung langsung percaya pada pengaduan pertama tanpa memeriksa keterangan dari pihak lain.",
       "alasan": "Keputusan yang baik berdasar informasi lengkap, bukan hanya satu sumber."
     },
     {
@@ -706,7 +706,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menyusun laporan berdasarkan keterangan saksi dan bukti lebih dapat dipertanggungjawabkan daripada berdasarkan dugaan awal.",
+      "pernyataan": "Jika menjadi seorang ASN, menyusun laporan berdasarkan keterangan para pihak dan bukti lebih dapat dipertanggungjawabkan daripada berdasarkan dugaan awal.",
       "bedah": {
         "sisi_x": "berdasarkan keterangan dan bukti",
         "sisi_y": "berdasarkan dugaan awal",
@@ -740,9 +740,9 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menuruti desakan kerumunan saat menangani perselisihan lebih aman daripada bertindak sesuai fakta yang ditemukan.",
+      "pernyataan": "Jika menjadi seorang ASN, menuruti desakan massa saat menangani sengketa warga lebih aman daripada bertindak sesuai fakta yang ditemukan.",
       "bedah": {
-        "sisi_x": "menuruti desakan kerumunan",
+        "sisi_x": "menuruti desakan massa",
         "sisi_y": "bertindak sesuai fakta",
         "pembanding": "lebih aman",
         "pembalik": false,
@@ -1064,7 +1064,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, bertindak hanya berdasarkan desas-desus warga lebih merugikan daripada meluangkan waktu memeriksa fakta di lapangan.",
+      "pernyataan": "Jika menjadi seorang ASN, bertindak hanya berdasarkan desas-desus warga lebih merugikan daripada meluangkan waktu memeriksa fakta di lapangan.",
       "bedah": {
         "sisi_x": "bertindak berdasarkan desas-desus",
         "sisi_y": "memeriksa fakta di lapangan",
@@ -1081,7 +1081,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, memutuskan langkah dalam tugas yang menjadi tanggung jawab saya lebih menakutkan daripada menunggu rekan lain memutuskannya.",
+      "pernyataan": "Jika menjadi seorang ASN, memutuskan langkah dalam tugas yang menjadi tanggung jawab saya lebih menakutkan daripada menunggu rekan lain memutuskannya.",
       "bedah": {
         "sisi_x": "memutuskan dalam tugas sendiri",
         "sisi_y": "menunggu rekan memutuskan",

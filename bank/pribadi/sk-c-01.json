@@ -44,14 +44,14 @@
     {
       "id": "SK-D5-103",
       "dimensi": "D5",
-      "situasi": "Hal yang dibutuhkan sebelum anggota Polri melakukan penggeledahan",
+      "situasi": "Hal yang dibutuhkan sebelum seorang ASN melakukan pemeriksaan ke tempat usaha warga",
       "opsi": {
         "A": "Pengalaman lapangan",
-        "B": "Surat perintah"
+        "B": "Surat tugas"
       },
       "kunci": "B",
       "kembar_dengan": "SK-D5-134",
-      "pembahasan": "Penggeledahan hanya sah bila dilandasi surat perintah dari pejabat berwenang; pengalaman tidak menggantikan dasar hukum. Butir kembar dengan SK-D5-134; posisi pilihan ditukar."
+      "pembahasan": "Pemeriksaan hanya sah bila dilandasi surat tugas dari pejabat berwenang; pengalaman tidak menggantikan dasar penugasan. Butir kembar dengan SK-D5-134; posisi pilihan ditukar."
     },
     {
       "id": "SK-D5-104",
@@ -140,14 +140,14 @@
     {
       "id": "SK-D5-111",
       "dimensi": "D5",
-      "situasi": "Hal yang dipikirkan sebelum anggota Polri menilang pengendara",
+      "situasi": "Hal yang dipikirkan sebelum seorang ASN menjatuhkan sanksi administratif kepada pelanggar",
       "opsi": {
         "A": "Efek jera",
-        "B": "Kewenangan petugas"
+        "B": "Kewenangan pejabat"
       },
       "kunci": "B",
       "kembar_dengan": null,
-      "pembahasan": "Tilang hanya sah bila dilakukan petugas yang berwenang; efek jera tidak menjadi dasar tindakan."
+      "pembahasan": "Sanksi administratif hanya sah bila dijatuhkan pejabat yang berwenang; efek jera tidak menjadi dasar tindakan."
     },
     {
       "id": "SK-D5-112",
@@ -296,14 +296,14 @@
     {
       "id": "SK-D5-124",
       "dimensi": "D5",
-      "situasi": "Hal yang diutamakan anggota Polri sebelum menahan seseorang",
+      "situasi": "Hal yang diutamakan seorang ASN sebelum menyegel tempat usaha",
       "opsi": {
-        "A": "Dasar hukum penahanan",
+        "A": "Dasar hukum penyegelan",
         "B": "Rasa aman warga"
       },
       "kunci": "A",
       "kembar_dengan": null,
-      "pembahasan": "Penahanan hanya sah bila memiliki dasar hukum dan dilakukan pejabat yang berwenang."
+      "pembahasan": "Penyegelan hanya sah bila memiliki dasar hukum dan dilakukan pejabat yang berwenang."
     },
     {
       "id": "SK-D5-125",
@@ -416,9 +416,9 @@
     {
       "id": "SK-D5-134",
       "dimensi": "D5",
-      "situasi": "Hal yang dipikirkan sebelum memeriksa rumah warga dalam tugas kepolisian",
+      "situasi": "Hal yang dipikirkan sebelum memeriksa tempat usaha warga dalam tugas sebagai ASN",
       "opsi": {
-        "A": "Surat perintah",
+        "A": "Surat tugas",
         "B": "Pengalaman lapangan"
       },
       "kunci": "A",
@@ -488,7 +488,7 @@
     {
       "id": "SK-D5-140",
       "dimensi": "D5",
-      "situasi": "Hal yang dilakukan bila keluhan yang diterima di pos polisi menjadi wewenang instansi lain",
+      "situasi": "Hal yang dilakukan bila keluhan yang diterima di loket pengaduan menjadi wewenang instansi lain",
       "opsi": {
         "A": "Meneruskan ke dinas terkait",
         "B": "Menangani sampai tuntas"
@@ -536,7 +536,7 @@
     {
       "id": "SK-D5-144",
       "dimensi": "D5",
-      "situasi": "Hal yang dilakukan anggota Polri ketika menemukan jalan rusak parah saat patroli",
+      "situasi": "Hal yang dilakukan seorang ASN ketika menemukan jalan rusak parah saat kunjungan lapangan",
       "opsi": {
         "A": "Memperbaiki bersama warga",
         "B": "Melapor ke dinas terkait"
@@ -620,14 +620,14 @@
     {
       "id": "SK-D5-151",
       "dimensi": "D5",
-      "situasi": "Hal yang diutamakan anggota Polri saat diminta warga menagih utang tetangganya",
+      "situasi": "Hal yang diutamakan seorang ASN saat diminta warga menagih utang tetangganya",
       "opsi": {
         "A": "Penyelesaian masalah warga",
-        "B": "Batas tugas kepolisian"
+        "B": "Batas tugas jabatan"
       },
       "kunci": "B",
       "kembar_dengan": null,
-      "pembahasan": "Penagihan utang pribadi berada di luar tugas kepolisian, sehingga batas tugas itu dijaga."
+      "pembahasan": "Penagihan utang pribadi berada di luar tugas ASN, sehingga batas tugas itu dijaga."
     },
     {
       "id": "SK-D5-152",
@@ -760,14 +760,14 @@
       "id": "SK-D6-108",
       "dimensi": "D6",
       "sub": "berani",
-      "situasi": "Hal yang dibutuhkan anggota Polri saat menghadapi pelaku bersenjata tajam",
+      "situasi": "Hal yang dibutuhkan seorang ASN saat mengetahui praktik pungutan liar di kantornya",
       "opsi": {
         "A": "Perlindungan diri",
         "B": "Keberanian bertindak"
       },
       "kunci": "B",
       "kembar_dengan": null,
-      "pembahasan": "Ancaman nyata menuntut keberanian bertindak untuk melindungi masyarakat."
+      "pembahasan": "Pungutan liar merugikan masyarakat dan menuntut keberanian bertindak, bukan sekadar mengamankan diri."
     },
     {
       "id": "SK-D6-109",
@@ -916,7 +916,7 @@
       "id": "SK-D6-120",
       "dimensi": "D6",
       "sub": "berani",
-      "situasi": "Hal yang dibutuhkan anggota Polri ketika diterjunkan ke lokasi bencana gempa",
+      "situasi": "Hal yang dibutuhkan seorang ASN ketika diterjunkan ke lokasi bencana gempa",
       "opsi": {
         "A": "Keberanian",
         "B": "Kelengkapan alat"
@@ -955,7 +955,7 @@
       "id": "SK-D6-123",
       "dimensi": "D6",
       "sub": "berani",
-      "situasi": "Hal yang diyakini ketika teknologi baru dipakai dalam pelayanan kantor polisi",
+      "situasi": "Hal yang diyakini ketika teknologi baru dipakai dalam pelayanan kantor pemerintah",
       "opsi": {
         "A": "Dipelajari bertahap",
         "B": "Segera dikuasai"
@@ -1111,14 +1111,14 @@
       "id": "SK-D6-135",
       "dimensi": "D6",
       "sub": "berani",
-      "situasi": "Hal yang dilakukan anggota Polri ketika sekelompok pemuda mabuk membuat keributan di jalan",
+      "situasi": "Hal yang dilakukan seorang ASN ketika sekelompok warga membuat keributan di kantor pelayanan",
       "opsi": {
         "A": "Mendatangi langsung",
         "B": "Memantau dari jauh"
       },
       "kunci": "A",
       "kembar_dengan": null,
-      "pembahasan": "Gangguan keamanan adalah ancaman yang dihadapi dengan berani, bukan sekadar dipantau."
+      "pembahasan": "Keributan di kantor pelayanan dihadapi dengan berani, bukan sekadar dipantau."
     },
     {
       "id": "SK-D6-136",
@@ -1605,14 +1605,14 @@
       "id": "SK-D7-119",
       "dimensi": "D7",
       "sub": "tegas",
-      "situasi": "Hal yang dibutuhkan anggota Polri dalam mengatur arus lalu lintas yang macet",
+      "situasi": "Hal yang dibutuhkan seorang ASN dalam mengatur antrean warga yang berdesakan",
       "opsi": {
         "A": "Sikap yang ramah",
-        "B": "Isyarat yang tegas"
+        "B": "Arahan yang tegas"
       },
       "kunci": "B",
       "kembar_dengan": null,
-      "pembahasan": "Mengatur arus lalu lintas adalah tindakan mengarahkan yang membutuhkan ketegasan."
+      "pembahasan": "Mengatur antrean adalah tindakan mengarahkan yang membutuhkan ketegasan."
     },
     {
       "id": "SK-D7-120",
@@ -1774,7 +1774,7 @@
       "id": "SK-D7-132",
       "dimensi": "D7",
       "sub": "tenang",
-      "situasi": "Hal yang dibutuhkan anggota Polri setelah menjalani tugas yang menegangkan",
+      "situasi": "Hal yang dibutuhkan seorang ASN setelah menjalani tugas yang menegangkan",
       "opsi": {
         "A": "Bercerita ke rekan",
         "B": "Menenangkan diri"

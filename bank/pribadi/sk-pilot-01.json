@@ -82,8 +82,8 @@
       "pembahasan": "Pembagian tugas mengikuti kewenangan dan tanggung jawab jabatan." },
     { "id": "SK-D5-004", "dimensi": "D5", "situasi": "Hal yang dipikirkan dalam menandatangani dokumen", "opsi": { "A": "Kewenangan", "B": "Kepercayaan rekan" }, "kunci": "A", "kembar_dengan": null,
       "pembahasan": "Tanda tangan hanya sah bila diberikan oleh pihak yang berwenang." },
-    { "id": "SK-D5-005", "dimensi": "D5", "situasi": "Hal yang dilakukan ketika warga meminta bantuan di luar tugas kepolisian", "opsi": { "A": "Mengarahkan ke instansi berwenang", "B": "Menyelesaikan sendiri" }, "kunci": "A", "kembar_dengan": null,
-      "pembahasan": "Urusan di luar tugas kepolisian diarahkan ke instansi yang berwenang." },
+    { "id": "SK-D5-005", "dimensi": "D5", "situasi": "Hal yang dilakukan ketika warga meminta bantuan di luar tugas jabatan", "opsi": { "A": "Mengarahkan ke instansi berwenang", "B": "Menyelesaikan sendiri" }, "kunci": "A", "kembar_dengan": null,
+      "pembahasan": "Urusan di luar tugas jabatan diarahkan ke instansi yang berwenang." },
     { "id": "SK-D5-006", "dimensi": "D5", "situasi": "Hal yang dipikirkan paling tepat sebelum bertindak di luar jam dinas", "opsi": { "A": "Keinginan membantu", "B": "Kewenangan" }, "kunci": "B", "kembar_dengan": "SK-D5-001",
       "pembahasan": "Butir kembar dari SK-D5-001 dengan posisi pilihan ditukar. Jawaban yang konsisten tetap memilih kewenangan." },
 

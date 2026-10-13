@@ -246,14 +246,14 @@
       "id": "SK-D4-402",
       "dimensi": "D4",
       "sub": "patuh",
-      "situasi": "Hal yang diutamakan ketika mencatat laporan polisi dari warga",
+      "situasi": "Hal yang diutamakan ketika mencatat pengaduan resmi dari warga",
       "opsi": {
         "A": "Catatan bebas yang lebih lengkap",
         "B": "Isian sesuai format yang ditetapkan"
       },
       "kunci": "B",
       "kembar_dengan": null,
-      "pembahasan": "Laporan polisi adalah dokumen resmi dengan standar baku, sehingga format yang ditetapkan dipatuhi. Catatan bebas mungkin lebih lengkap, tetapi menyulitkan pemeriksaan dan tidak sesuai standar dokumen."
+      "pembahasan": "Pengaduan resmi adalah dokumen dengan standar baku, sehingga format yang ditetapkan dipatuhi. Catatan bebas mungkin lebih lengkap, tetapi menyulitkan pemeriksaan dan tidak sesuai standar dokumen."
     },
     {
       "id": "SK-D4-403",
@@ -298,7 +298,7 @@
       "id": "SK-D4-406",
       "dimensi": "D4",
       "sub": "patuh",
-      "situasi": "Hal yang diyakini ketika melayani pembuatan surat keterangan catatan kepolisian",
+      "situasi": "Hal yang diyakini ketika melayani pembuatan surat keterangan resmi bagi warga",
       "opsi": {
         "A": "Kemudahan bagi pemohon yang terburu-buru",
         "B": "Persyaratan sesuai ketentuan"

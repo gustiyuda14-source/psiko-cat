@@ -163,7 +163,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, saya siap berdiri di depan kerumunan untuk mengarahkan warga saat terjadi keramaian.",
+      "pernyataan": "Jika menjadi seorang ASN, saya siap berbicara di depan forum warga untuk menjelaskan program pemerintah.",
       "alasan": "Berani tampil dan memimpin di hadapan banyak orang."
     },
     {
@@ -173,7 +173,7 @@
       "tier": "T1",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika bertugas sebagai polisi, saya sanggup menjelaskan aturan lalu lintas di depan ratusan pelajar dengan tenang.",
+      "pernyataan": "Jika bertugas sebagai seorang ASN, saya sanggup menjelaskan program layanan publik di depan ratusan pelajar dengan tenang.",
       "alasan": "Tenang berbicara di depan umum."
     },
     {
@@ -183,7 +183,7 @@
       "tier": "T1",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika kelak bertugas sebagai polisi, saya kira berhasil tidaknya mengungkap kasus sangat bergantung pada nasib baik.",
+      "pernyataan": "Jika kelak bertugas sebagai seorang ASN, saya kira berhasil tidaknya mencapai target program sangat bergantung pada nasib baik.",
       "alasan": "Menggantungkan keberhasilan pada nasib adalah kebalikan dari yakin pada usaha sendiri."
     },
     {
@@ -689,7 +689,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, memberi pengarahan langsung kepada warga di balai desa lebih efektif daripada menitipkan pesan melalui ketua RT.",
+      "pernyataan": "Jika menjadi seorang ASN, memberi pengarahan langsung kepada warga di balai desa lebih efektif daripada menitipkan pesan melalui ketua RT.",
       "bedah": {
         "sisi_x": "pengarahan langsung kepada warga",
         "sisi_y": "menitipkan pesan melalui ketua RT",
@@ -723,7 +723,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi polisi lalu lintas, menegakkan aturan dengan yakin kepada pengendara yang bersikeras lebih tepat daripada mengalah agar tidak berdebat.",
+      "pernyataan": "Jika menjadi seorang ASN di bagian perizinan, menegakkan aturan dengan yakin kepada pemohon yang bersikeras lebih tepat daripada mengalah agar tidak berdebat.",
       "bedah": {
         "sisi_x": "menegakkan aturan dengan yakin",
         "sisi_y": "mengalah agar tidak berdebat",
@@ -740,10 +740,10 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi polisi, keberhasilan pengamanan acara besar lebih ditentukan oleh keberuntungan daripada oleh kesiapan personel.",
+      "pernyataan": "Jika menjadi seorang ASN, keberhasilan penyelenggaraan acara besar lebih ditentukan oleh keberuntungan daripada oleh kesiapan panitia.",
       "bedah": {
         "sisi_x": "keberuntungan",
-        "sisi_y": "kesiapan personel",
+        "sisi_y": "kesiapan panitia",
         "pembanding": "lebih ditentukan",
         "pembalik": false,
         "sisi_aspek": "y"
@@ -774,7 +774,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mendampingi rekan yang memimpin apel pagi lebih nyaman daripada ditugasi memimpinnya sendiri.",
+      "pernyataan": "Jika menjadi seorang ASN, mendampingi rekan yang memimpin apel pagi lebih nyaman daripada ditugasi memimpinnya sendiri.",
       "bedah": {
         "sisi_x": "mendampingi rekan yang memimpin",
         "sisi_y": "memimpin apel sendiri",
@@ -782,7 +782,7 @@
         "pembalik": false,
         "sisi_aspek": "y"
       },
-      "alasan": "Siap memimpin di depan pasukan mencerminkan kepercayaan diri."
+      "alasan": "Siap memimpin di depan rekan kerja mencerminkan kepercayaan diri."
     },
     {
       "id": "KP-KD-154",
@@ -791,7 +791,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi polisi, mempelajari prosedur baru diam-diam agar tidak terlihat kurang lebih menjaga wibawa daripada bertanya terbuka kepada rekan.",
+      "pernyataan": "Jika menjadi seorang ASN, mempelajari prosedur baru diam-diam agar tidak terlihat kurang lebih menjaga wibawa daripada bertanya terbuka kepada rekan.",
       "bedah": {
         "sisi_x": "belajar diam-diam agar tidak terlihat kurang",
         "sisi_y": "bertanya terbuka kepada rekan",
@@ -1047,7 +1047,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menghindari sesi tanya jawab dengan warga lebih merugikan daripada keliru sedikit saat menjawab pertanyaan mereka.",
+      "pernyataan": "Jika menjadi seorang ASN, menghindari sesi tanya jawab dengan warga lebih merugikan daripada keliru sedikit saat menjawab pertanyaan mereka.",
       "bedah": {
         "sisi_x": "menghindari tanya jawab dengan warga",
         "sisi_y": "keliru sedikit saat menjawab",
@@ -1064,10 +1064,10 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi polisi, terlihat canggung saat mengatur lalu lintas di persimpangan ramai lebih memalukan daripada meminta ditempatkan di pos yang sepi.",
+      "pernyataan": "Jika menjadi seorang ASN, terlihat canggung saat melayani di loket yang ramai lebih memalukan daripada meminta ditempatkan di bagian yang sepi.",
       "bedah": {
-        "sisi_x": "canggung di persimpangan ramai",
-        "sisi_y": "meminta pos yang sepi",
+        "sisi_x": "canggung di loket yang ramai",
+        "sisi_y": "meminta bagian yang sepi",
         "pembanding": "lebih memalukan",
         "pembalik": true,
         "sisi_aspek": "x"
@@ -1081,7 +1081,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi polisi, pasrah menunggu keberuntungan dalam mencari orang hilang lebih buruk daripada lelah menyisir lokasi berulang kali.",
+      "pernyataan": "Jika menjadi seorang ASN, pasrah menunggu keberuntungan dalam mendata warga terdampak bencana lebih buruk daripada lelah menyisir lokasi berulang kali.",
       "bedah": {
         "sisi_x": "pasrah menunggu keberuntungan",
         "sisi_y": "lelah menyisir lokasi",
@@ -1098,7 +1098,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, ketahuan belum mahir menggunakan perangkat baru di depan warga lebih memalukan daripada menyerahkan pelayanan kepada rekan yang lebih mahir.",
+      "pernyataan": "Jika menjadi seorang ASN, ketahuan belum mahir menggunakan perangkat baru di depan warga lebih memalukan daripada menyerahkan pelayanan kepada rekan yang lebih mahir.",
       "bedah": {
         "sisi_x": "ketahuan belum mahir di depan warga",
         "sisi_y": "menyerahkan pelayanan kepada rekan",

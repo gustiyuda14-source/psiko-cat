@@ -55,7 +55,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mengantar sendiri anak yang terpisah dari orang tuanya di pasar lebih baik daripada menyuruhnya menunggu di pos keamanan.",
+      "pernyataan": "Jika menjadi seorang ASN, mengantar sendiri anak yang terpisah dari orang tuanya di pasar lebih baik daripada menyuruhnya menunggu di pos pengelola pasar.",
       "bedah": {
         "sisi_x": "mengantar sendiri anak yang terpisah",
         "sisi_y": "menyuruhnya menunggu di pos",
@@ -106,7 +106,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "sekarang",
-      "pernyataan": "Menolak menjadi saksi kecelakaan karena takut repot lebih memalukan daripada kehilangan setengah hari untuk memberi keterangan kepada polisi.",
+      "pernyataan": "Menolak menjadi saksi kecelakaan karena takut repot lebih memalukan daripada kehilangan setengah hari untuk memberi keterangan kepada petugas yang berwenang.",
       "bedah": {
         "sisi_x": "menolak menjadi saksi karena takut repot",
         "sisi_y": "kehilangan setengah hari untuk memberi keterangan",
@@ -160,9 +160,9 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, segera menutup jalan tergenang banjir berdasarkan laporan warga lebih tepat daripada menunggu perintah atasan yang sulit dihubungi.",
+      "pernyataan": "Jika menjadi seorang ASN, segera memasang tanda peringatan di jalan tergenang banjir berdasarkan laporan warga lebih tepat daripada menunggu perintah atasan yang sulit dihubungi.",
       "bedah": {
-        "sisi_x": "segera menutup jalan berdasarkan laporan warga",
+        "sisi_x": "segera memasang tanda peringatan berdasarkan laporan warga",
         "sisi_y": "menunggu perintah atasan yang sulit dihubungi",
         "pembanding": "lebih tepat",
         "pembalik": false,
@@ -245,7 +245,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mengambil keputusan di lapangan tanpa menunggu atasan lebih menakutkan daripada menahan diri sampai petunjuk atasan datang.",
+      "pernyataan": "Jika menjadi seorang ASN, mengambil keputusan di lapangan tanpa menunggu atasan lebih menakutkan daripada menahan diri sampai petunjuk atasan datang.",
       "bedah": {
         "sisi_x": "mengambil keputusan di lapangan",
         "sisi_y": "menahan diri sampai petunjuk datang",
@@ -333,7 +333,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri dan dimutasi ke daerah terpencil, mempertahankan kebiasaan hidup di kota lebih wajar daripada mengikuti pola hidup warga setempat.",
+      "pernyataan": "Jika menjadi seorang ASN dan dimutasi ke daerah terpencil, mempertahankan kebiasaan hidup di kota lebih wajar daripada mengikuti pola hidup warga setempat.",
       "bedah": {
         "sisi_x": "mempertahankan kebiasaan hidup di kota",
         "sisi_y": "mengikuti pola hidup warga setempat",
@@ -350,7 +350,7 @@
       "tier": "T3",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menolak bergaul dengan warga di tempat tugas baru lebih memalukan daripada canggung saat pertama kali menghadiri acara adat mereka.",
+      "pernyataan": "Jika menjadi seorang ASN, menolak bergaul dengan warga di tempat tugas baru lebih memalukan daripada canggung saat pertama kali menghadiri acara adat mereka.",
       "bedah": {
         "sisi_x": "menolak bergaul dengan warga",
         "sisi_y": "canggung saat menghadiri acara adat",
@@ -421,7 +421,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menyampaikan sendiri penyuluhan di depan warga lebih baik daripada menyerahkannya kepada rekan yang lebih senior.",
+      "pernyataan": "Jika menjadi seorang ASN, menyampaikan sendiri penyuluhan di depan warga lebih baik daripada menyerahkannya kepada rekan yang lebih senior.",
       "bedah": {
         "sisi_x": "menyampaikan sendiri penyuluhan",
         "sisi_y": "menyerahkannya kepada rekan senior",
@@ -543,7 +543,7 @@
       "tier": "T2",
       "arah": "favorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, tetap menjelaskan prosedur dengan tenang kepada warga yang menuduh saya mempersulit lebih tepat daripada balas menegurnya dengan keras.",
+      "pernyataan": "Jika menjadi seorang ASN, tetap menjelaskan prosedur dengan tenang kepada warga yang menuduh saya mempersulit lebih tepat daripada balas menegurnya dengan keras.",
       "bedah": {
         "sisi_x": "tetap menjelaskan dengan tenang",
         "sisi_y": "balas menegur dengan keras",
@@ -611,7 +611,7 @@
       "tier": "T3",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, mendengar keluhan warga yang marah tanpa menyela lebih menyebalkan daripada langsung memotong pembicaraannya dengan tegas.",
+      "pernyataan": "Jika menjadi seorang ASN, mendengar keluhan warga yang marah tanpa menyela lebih menyebalkan daripada langsung memotong pembicaraannya dengan tegas.",
       "bedah": {
         "sisi_x": "mendengar keluhan tanpa menyela",
         "sisi_y": "langsung memotong pembicaraan",
@@ -699,7 +699,7 @@
       "tier": "T2",
       "arah": "unfavorable",
       "konteks": "tugas",
-      "pernyataan": "Jika menjadi anggota Polri, menjalankan tugas sebatas perintah lebih aman daripada mengikuti pelatihan tambahan untuk meningkatkan keahlian.",
+      "pernyataan": "Jika menjadi seorang ASN, menjalankan tugas sebatas perintah lebih aman daripada mengikuti pelatihan tambahan untuk meningkatkan keahlian.",
       "bedah": {
         "sisi_x": "menjalankan tugas sebatas perintah",
         "sisi_y": "mengikuti pelatihan tambahan",
