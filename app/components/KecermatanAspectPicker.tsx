@@ -6,31 +6,34 @@ import { PackageCarousel, type PackageOption } from "@/app/components/PackageCar
 const ASPECTS = [
   { id: "emoji", label: "Emoji & Gambar", hrefBase: "/latihan/kecermatan" },
   { id: "angka", label: "Angka & Huruf", hrefBase: "/latihan/kecermatan-angka" },
+  { id: "spasialDasar", label: "Spasial Dasar", hrefBase: "/latihan/kecermatan-spasial-dasar" },
   { id: "spasial", label: "Spasial", hrefBase: "/latihan/kecermatan-spasial" },
   { id: "simbol", label: "Simbol Hilang", hrefBase: "/latihan/kecermatan-simbol" },
 ] as const;
 
-// Satu tile "Kecermatan" di sidebar, empat sub-tile aspek di dalamnya — bukan
+// Satu tile "Kecermatan" di sidebar, lima sub-tile aspek di dalamnya — bukan
 // tile latihan terpisah. package_number tiap aspek tidak overlap
-// (3-9, 101-105, 201-206, 301+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
+// (3-9, 101-105, 201-206, 301+, 501+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
 export function KecermatanAspectPicker({
   emojiPackages,
   angkaPackages,
+  spasialDasarPackages,
   spasialPackages,
   simbolPackages,
 }: {
   emojiPackages: PackageOption[];
   angkaPackages: PackageOption[];
+  spasialDasarPackages: PackageOption[];
   spasialPackages: PackageOption[];
   simbolPackages: PackageOption[];
 }) {
   const [aspect, setAspect] = useState<(typeof ASPECTS)[number]["id"]>("emoji");
-  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasial: spasialPackages, simbol: simbolPackages };
+  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasialDasar: spasialDasarPackages, spasial: spasialPackages, simbol: simbolPackages };
   const active = ASPECTS.find((a) => a.id === aspect)!;
 
   return (
     <div className="space-y-5">
-      <div role="tablist" aria-label="Aspek Sikap Kerja" className="inline-flex gap-1 rounded-md border border-border bg-card p-1">
+      <div role="tablist" aria-label="Aspek Sikap Kerja" className="inline-flex flex-wrap gap-1 rounded-md border border-border bg-card p-1">
         {ASPECTS.map((a) => (
           <button
             key={a.id}

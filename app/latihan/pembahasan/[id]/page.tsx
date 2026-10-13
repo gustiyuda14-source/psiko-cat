@@ -8,6 +8,7 @@ import {
   KECERMATAN_PACKAGE_LABELS,
   KECERMATAN_SIMBOL_PACKAGE_LABELS,
   KECERMATAN_SPASIAL_PACKAGE_LABELS,
+  KECERMATAN_SPASIAL_DASAR_PACKAGE_LABELS,
   KEPRIBADIAN_PACKAGE_LABELS,
   MODULE_CONFIG,
 } from "@/lib/test-config";
@@ -25,6 +26,7 @@ const LABELS: [string, Record<number, string>][] = [
   ["/latihan/kepribadian/", KEPRIBADIAN_PACKAGE_LABELS],
   ["/latihan/kecermatan-angka/", KECERMATAN_ANGKA_PACKAGE_LABELS],
   ["/latihan/kecermatan-spasial/", KECERMATAN_SPASIAL_PACKAGE_LABELS],
+  ["/latihan/kecermatan-spasial-dasar/", KECERMATAN_SPASIAL_DASAR_PACKAGE_LABELS],
   ["/latihan/kecermatan-simbol/", KECERMATAN_SIMBOL_PACKAGE_LABELS],
   ["/latihan/kecermatan/", KECERMATAN_PACKAGE_LABELS],
 ];

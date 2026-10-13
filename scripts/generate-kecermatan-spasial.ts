@@ -15,6 +15,15 @@ import * as path from "path";
 
 const PKG = Number(process.argv[2]);
 if (!Number.isInteger(PKG)) throw new Error("Nomor paket wajib, mis. 202");
+// Paket 401+ = Spasial Sedang: detail lebih besar, tiap pasangan gambar beda
+// tepat 2 detail (bukan 1), tanpa putaran halus / abu-vs-hitam.
+const SEDANG = PKG >= 400;
+// Paket 501+ = Spasial Dasar (latihan dasar), kesulitan naik di dalam paket:
+// kolom I-V mudah — bentuk utama + hiasan pojok sama, tiap gambar cuma beda
+// tanda besar di tengah (5 bentuk); kolom VI-X menengah — tanda tengah cuma 3
+// jenis + 1 detail pojok hitam/putih, jadi sebagian pasangan cuma beda di pojok.
+// Ukuran/warna detail ikut SEDANG.
+const MUDAH = PKG >= 500;
 
 const FILL = { k: "#000", w: "#fff", g: "#9a9a9a" } as const;
 type Fill = keyof typeof FILL;
@@ -47,7 +56,7 @@ const cross = (cx: number, cy: number, s: number, f: Fill) => {
 
 // labels[i] = kata pelafalan untuk gambar yang membalik slot ke-i (ciri yang
 // cuma dimiliki gambar itu dalam kolomnya). Gambar dasar dilafalkan "dasar".
-type Kolom = { main: string; slots: [string, string][]; labels: string[] };
+type Kolom = { main: string; slots: [string, string][]; labels: string[]; figs?: { body: string; label: string }[] };
 
 const KOLOM: Kolom[] = [
   // 1. Gugus panah + segitiga kecil (referensi 2)
@@ -168,7 +177,7 @@ const starN = (n: number, R: number, deg: number, f: Fill) =>
 
 // Bentuk utama: fungsi (rotasi) -> SVG. `inner` = boleh diberi tanda di pusat.
 type Main = { name: string; draw: (deg: number) => string; inner: boolean; step: number };
-const MAINS: Main[] = [
+const MAINS_ALL: Main[] = [
   ...[3, 4, 5, 6, 7, 8].map((n) => ({ name: `ngon${n}`, draw: (d: number) => ngon(C, C, 26, n, d - 90, "k"), inner: true, step: 180 / n })),
   ...[4, 5, 6].map((n) => ({ name: `star${n}`, draw: (d: number) => starN(n, 28, d - 90, "k"), inner: true, step: 180 / n })),
   { name: "panah", draw: (d) => poly(rot([[52, 24], [76, 50], [61, 50], [61, 78], [43, 78], [43, 50], [28, 50]], d), "k"), inner: false, step: 90 },
@@ -193,13 +202,22 @@ const drawEl = (e: El | null) => {
     case "pent": return ngon(e.x, e.y, e.r, 5, -90, e.fill);
   }
 };
-// 8 jangkar di sekeliling bentuk utama (sudut + tengah sisi)
-const ANCHORS: [number, number, number][] = [
-  [20, 20, 7.5], [84, 20, 7.5], [20, 84, 7.5], [84, 84, 7.5],
-  [52, 15, 6], [52, 89, 6], [15, 52, 6], [89, 52, 6],
-];
+// 8 jangkar di sekeliling bentuk utama (sudut + tengah sisi); mode sedang
+// cuma 4 pojok dengan detail lebih besar.
+const ANCHORS: [number, number, number][] = SEDANG
+  ? [[19, 19, 11], [85, 19, 11], [19, 85, 11], [85, 85, 11]]
+  : [[20, 20, 7.5], [84, 20, 7.5], [20, 84, 7.5], [84, 84, 7.5],
+     [52, 15, 6], [52, 89, 6], [15, 52, 6], [89, 52, 6]];
+// Mode sedang: cuma ngon/bintang/bulan (muat di lingkaran r28 sekitar pusat),
+// jadi detail besar di 4 pojok tidak menabrak bentuk utama.
+const MAINS = MUDAH ? MAINS_ALL.filter((m) => /^(ngon|star|silang)/.test(m.name))
+  : SEDANG ? MAINS_ALL.filter((m) => /^(ngon|star|bulan)/.test(m.name)) : MAINS_ALL;
 const KINDS = ["tri", "sq", "dot", "dia", "pent"] as const;
-const otherFill = (f: Fill): Fill => pick((["k", "w", "g"] as Fill[]).filter((x) => x !== f));
+// Mode sedang: cuma warna kontras — hitam<->putih di pojok, putih<->abu di
+// tengah (di atas bentuk hitam). Tidak ada abu-vs-hitam.
+const otherFill = (e: El): Fill =>
+  !SEDANG ? pick((["k", "w", "g"] as Fill[]).filter((x) => x !== e.fill)) :
+  e.x === C ? (e.fill === "w" ? "g" : "w") : (e.fill === "k" ? "w" : "k");
 
 const KIND_NAME = { tri: "segitiga", sq: "kotak", dot: "bulat", dia: "ketupat", pent: "segi lima" } as const;
 const FILL_NAME = { k: "hitam", w: "putih", g: "abu" } as const;
@@ -214,8 +232,8 @@ function slotFor(e: El, allowGone: boolean): [string, string, string] {
   if (allowGone) kinds.push("gone");
   const how = pick(kinds);
   const alt: El | null =
-    how === "fill" ? { ...e, fill: otherFill(e.fill) } :
-    how === "dir" ? { ...e, dir: e.dir + pick([90, 180, -90]) } :
+    how === "fill" ? { ...e, fill: otherFill(e) } :
+    how === "dir" ? { ...e, dir: e.dir + (SEDANG ? 180 : pick([90, 180, -90])) } :
     how === "kind" ? { ...e, kind: pick(KINDS.filter((k) => k !== e.kind)) } : null;
   const at = posisi(e.x, e.y);
   const label =
@@ -235,23 +253,52 @@ function randomKolom(main: Main): Kolom {
   const add = ([a, b, label]: [string, string, string]) => { slots.push([a, b]); labels.push(label); };
   // Kadang bentuk utama sendiri jadi slot: diputar setengah langkah simetri
   // (paling sulit). Bentuk tak beraturan tidak — putaran 90° terlalu mencolok.
-  const mainSlot = free && rng() < 0.35;
+  const mainSlot = !SEDANG && free && rng() < 0.35;
   if (mainSlot) add([main.draw(deg), main.draw(deg + main.step), "bentuk diputar"]);
   if (main.inner && slots.length < 4 && rng() < 0.7) {
-    add(slotFor({ kind: pick(KINDS), x: C, y: C, r: 9, fill: pick(["w", "g"] as Fill[]), dir: pick([-90, 90, 0, 180]) }, false));
+    add(slotFor({ kind: pick(KINDS), x: C, y: C, r: SEDANG ? 12 : 9, fill: pick(["w", "g"] as Fill[]), dir: pick([-90, 90, 0, 180]) }, false));
   }
   let gone = false;
   for (const [x, y, r] of shuffle([...ANCHORS])) {
     if (slots.length === 4) break;
     const allowGone = !gone && rng() < 0.3;
-    const pair = slotFor({ kind: pick(KINDS), x, y, r, fill: pick(["k", "w", "g", "k", "w"] as Fill[]), dir: pick([-90, 90, 0, 180]) }, allowGone);
+    const pair = slotFor({ kind: pick(KINDS), x, y, r, fill: pick((SEDANG ? ["k", "w"] : ["k", "w", "g", "k", "w"]) as Fill[]), dir: pick([-90, 90, 0, 180]) }, allowGone);
     if (pair[1] === "") gone = true;
     add(pair);
   }
   return { main: mainSlot ? "" : main.draw(deg), slots, labels };
 }
 
-const SET: Kolom[] = PKG === 202 ? KOLOM : shuffle([...MAINS]).slice(0, 10).map(randomKolom);
+// z = skala tanda; bentuk utama yang ruang tengahnya sempit (segitiga,
+// bintang) pakai tanda lebih kecil supaya tidak meluber keluar.
+const MUDAH_MARKS = [
+  ["segitiga", (z: number) => tri(C, C + 2 * z, 13 * z, -90, "w")],
+  ["kotak", (z: number) => sq(C, C, r1(17 * z), "w")],
+  ["bulat", (z: number) => dot(C, C, r1(10 * z), "w")],
+  ["ketupat", (z: number) => ngon(C, C, 13 * z, 4, -90, "w")],
+  ["silang", (z: number) => cross(C, C, 22 * z, "w")],
+] as const;
+function mudahKolom(main: Main, menengah: boolean): Kolom {
+  const free = /^(ngon|star)/.test(main.name);
+  const mainSvg = main.draw(free ? pick([0, 15, 30, 45, 60]) : pick([0, 90]));
+  const els: El[] = shuffle([...ANCHORS]).slice(0, 2).map(([x, y, r]) =>
+    ({ kind: pick(KINDS), x, y, r, fill: pick(["k", "w"] as Fill[]), dir: pick([-90, 90, 0, 180]) }));
+  const z = /^(ngon3|star)/.test(main.name) ? 0.7 : 1;
+  if (!menengah) {
+    const base = mainSvg + els.map(drawEl).join("");
+    return { main: "", slots: [], labels: [], figs: MUDAH_MARKS.map(([label, mark]) => ({ body: base + mark(z), label })) };
+  }
+  // 3 tanda x 2 warna pojok = 6 kombinasi, ambil 5.
+  const [fix, vary] = els;
+  const corners = [vary, { ...vary, fill: (vary.fill === "k" ? "w" : "k") as Fill }];
+  const combos = shuffle(shuffle([...MUDAH_MARKS]).slice(0, 3).flatMap((m) => corners.map((c) => [m, c] as const))).slice(0, 5);
+  return { main: "", slots: [], labels: [], figs: combos.map(([[label, mark], c]) => ({
+    body: mainSvg + drawEl(fix) + drawEl(c) + mark(z),
+    label: `${label} · ${KIND_NAME[c.kind]} ${FILL_NAME[c.fill]}`,
+  })) };
+}
+
+const SET: Kolom[] = PKG === 202 ? KOLOM : shuffle([...MAINS]).slice(0, 10).map((m, i) => MUDAH ? mudahKolom(m, i >= 5) : randomKolom(m));
 
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
@@ -259,20 +306,26 @@ const svgDir = path.join(__dirname, `../public/kecermatan-spasial/p${PKG}`);
 fs.mkdirSync(svgDir, { recursive: true });
 const pelafalan: Record<string, string> = {};
 
+// Slot mana yang dibalik tiap varian. HOTS: varian n balik slot n saja (beda
+// 1-2 detail). Sedang: kode berbobot genap, tiap pasangan beda tepat 2 detail.
+const CODES = SEDANG
+  ? [[0, 0, 0, 0], [1, 1, 0, 0], [1, 0, 1, 0], [1, 0, 0, 1], [0, 1, 1, 0]]
+  : [[0, 0, 0, 0], [1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]];
+
 const kolom = SET.map((k, c) => {
-  // varian 0 = dasar, varian 1-4 = balik slot ke-(n-1); urutan huruf diacak
+  // varian 0 = dasar, varian 1-4 = CODES[n]; urutan huruf diacak
   const variants = shuffle([0, 1, 2, 3, 4]);
   const id = String(c + 1).padStart(2, "0");
   const simbol = {} as Record<(typeof KEYS)[number], string>;
   const bodies = new Set<string>();
   KEYS.forEach((key, i) => {
-    const s = [0, 1, 2, 3].map((slot) => (variants[i] === slot + 1 ? 1 : 0));
-    const body = k.main + k.slots.map((pair, slot) => pair[s[slot]]).join("");
+    const s = CODES[variants[i]];
+    const body = k.figs ? k.figs[variants[i]].body : k.main + k.slots.map((pair, slot) => pair[s[slot]]).join("");
     bodies.add(body);
     fs.writeFileSync(path.join(svgDir, `k${id}_${key}.svg`),
       `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="4" y="4" width="92" height="92" fill="#fff" stroke="#000" stroke-width="3"/>${body}</svg>\n`);
     simbol[key] = `/kecermatan-spasial/p${PKG}/k${id}_${key}.svg`;
-    pelafalan[simbol[key]] = variants[i] === 0 ? "dasar" : k.labels[variants[i] - 1];
+    pelafalan[simbol[key]] = k.figs ? k.figs[variants[i]].label : variants[i] === 0 ? "dasar" : k.labels.filter((_, slot) => s[slot]).join(" + ");
   });
   if (bodies.size !== 5) throw new Error(`Kolom ${c + 1}: ada gambar kembar`);
   const words = KEYS.map((key) => pelafalan[simbol[key]]);
@@ -289,7 +342,7 @@ const kolom = SET.map((k, c) => {
 });
 
 fs.writeFileSync(path.join(__dirname, `../prisma/data/bank_soal_p${PKG}.json`),
-  JSON.stringify({ nomor: PKG, nama: `Paket Spasial ${PKG - 200}`, kategori: "SPASIAL", total_soal: 500, kolom }, null, 2));
+  JSON.stringify({ nomor: PKG, nama: MUDAH ? `Paket Spasial Dasar ${PKG - 500}` : SEDANG ? `Paket Spasial Sedang ${PKG - 400}` : `Paket Spasial ${PKG - 200}`, kategori: "SPASIAL", total_soal: 500, kolom }, null, 2));
 // Kata bantuan pelafalan (latihan), digabung dengan label paket/aspek lain.
 const labelFile = path.join(__dirname, "../data/kecermatan-pelafalan.json");
 const all = fs.existsSync(labelFile) ? JSON.parse(fs.readFileSync(labelFile, "utf8")) : {};

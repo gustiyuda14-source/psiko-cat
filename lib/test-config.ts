@@ -55,6 +55,15 @@ export const KECERMATAN_SPASIAL_PACKAGE_LABELS: Record<number, string> = Object.
   KECERMATAN_SPASIAL_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
+// Aspek Spasial Dasar: gambar spasial versi latihan dasar (kolom I-V mudah,
+// VI-X menengah — scripts/generate-kecermatan-spasial.ts 501..510). Latihan
+// saja, tidak masuk pool ujian.
+export const KECERMATAN_SPASIAL_DASAR_PACKAGES = [501, 502, 503, 504, 505, 506, 507, 508, 509, 510];
+
+export const KECERMATAN_SPASIAL_DASAR_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_SPASIAL_DASAR_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
 // Aspek keempat Kecermatan: Simbol Hilang (huruf Yunani mirip, aturan dari
 // contoh soal Polri — lihat scripts/generate-kecermatan-simbol.ts). Latihan saja,
 // tidak masuk pool ujian.

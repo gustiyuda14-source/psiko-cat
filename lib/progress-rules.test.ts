@@ -9,6 +9,8 @@ assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/301"), 500);
 assert.equal(latihanKeyMax("/latihan/kecermatan/9"), 500);
 assert.equal(latihanKeyMax("/latihan/kecermatan-simbol/306"), null);
 assert.equal(latihanKeyMax("/latihan/kecermatan-angka/101"), 500);
+assert.equal(latihanKeyMax("/latihan/kecermatan-spasial-dasar/510"), 500);
+assert.equal(latihanKeyMax("/latihan/kecermatan-spasial/501"), null); // paket dasar punya rute sendiri
 assert.equal(latihanKeyMax("/latihan/kecermatan/101"), null); // paket angka bukan di rute simbol
 assert.equal(latihanKeyMax("/latihan/kecerdasan/1"), null); // paket simulasi, bukan latihan
 assert.equal(latihanKeyMax("/latihan/kecerdasan/2/../3"), null);

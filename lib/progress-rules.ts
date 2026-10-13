@@ -6,6 +6,7 @@ import {
   KECERMATAN_ANGKA_PACKAGES,
   KECERMATAN_PACKAGES,
   KECERMATAN_SPASIAL_PACKAGES,
+  KECERMATAN_SPASIAL_DASAR_PACKAGES,
   KECERMATAN_SIMBOL_PACKAGES,
   KEPRIBADIAN_PACKAGES,
   PRIBADI_PACKAGE_SIZE,
@@ -18,6 +19,7 @@ const LATIHAN_ROUTES: [string, number[], number][] = [
   ["/latihan/kecermatan/", KECERMATAN_PACKAGES, 500],
   ["/latihan/kecermatan-angka/", KECERMATAN_ANGKA_PACKAGES, 500],
   ["/latihan/kecermatan-spasial/", KECERMATAN_SPASIAL_PACKAGES, 500],
+  ["/latihan/kecermatan-spasial-dasar/", KECERMATAN_SPASIAL_DASAR_PACKAGES, 500],
   ["/latihan/kecermatan-simbol/", KECERMATAN_SIMBOL_PACKAGES, 500],
 ];
 
