@@ -124,7 +124,7 @@ export default async function ReviewPage({
     : null;
 
   return (
-    <div className="app-page grid gap-6 lg:grid-cols-[minmax(0,1fr)_15rem]">
+    <div className="app-page app-page-wide grid gap-6 lg:grid-cols-[minmax(0,1fr)_12.5rem]">
       <div className="order-2 space-y-6 lg:order-1">
         <header>
           <span className="section-kicker">Review</span>

@@ -303,6 +303,17 @@ summary,
   }
 }
 
+/* Halaman review: lebar penuh area konten, supaya kartu soal/pembahasan dan panel nomor lebih lega. */
+.app-page-wide {
+  max-width: none;
+}
+
+@media (min-width: 640px) {
+  .app-page-wide {
+    padding-inline: clamp(1rem, 2.5vw, 2.5rem);
+  }
+}
+
 /* Kartu: hairline + elevation 1. Kartu tidak pernah bersarang di dalam kartu —
    kelompok di dalam kartu pakai .inset-panel. */
 .surface-card {
