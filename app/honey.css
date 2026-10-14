@@ -386,8 +386,9 @@
 .hc-cats .hc-level .new-badge { margin-left: 2px }
 /* Nomor di panel navigasi sesi: pita NEW di pojok kanan atas ubin, tidak keluar dari kotaknya. */
 .dnum.has-new::after { content: "NEW"; position: absolute; top: 2px; right: 2px; padding: 2px 4px; border-radius: 999px; background: var(--gold-grad); color: var(--surface-nav); font: 800 .46rem/1 var(--font-display-src), sans-serif; letter-spacing: .06em; pointer-events: none }
-/* Irisan roda: pil NEW di bawah persen. */
-.hc-wedge-new rect { fill: #d9b24c; stroke: #8a6516; stroke-width: .8 }
-.hc-wedge-new text { fill: var(--on-gold); font: 800 7.5px var(--font-display-src), sans-serif; letter-spacing: .06em }
+/* Irisan roda: pita NEW melengkung di ujung luar irisan (teks mengikuti busur). */
+.hc-wedge-new { pointer-events: none }
+.hc-wedge-new > path:first-child { fill: #d9b24c; stroke: #8a6516; stroke-width: .8; stroke-linejoin: round }
+.hc-wedge-new text { fill: var(--on-gold); font: 800 6.5px var(--font-display-src), sans-serif; letter-spacing: .1em }
 @keyframes new-glow { 0%, 100% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .4), 0 2px 6px -2px rgba(184, 137, 43, .6) } 50% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .55), 0 0 0 4px rgba(232, 199, 102, .28) } }
 @media (prefers-reduced-motion: reduce) { .new-badge { animation: none } }
