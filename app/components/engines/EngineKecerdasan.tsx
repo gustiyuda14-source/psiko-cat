@@ -195,13 +195,13 @@ export default function EngineKecerdasan({
 
             {payload?.svg_content && (
               <div
-                className="flex justify-center overflow-x-auto rounded-md border border-border bg-card p-4"
+                className="q-svg overflow-x-auto rounded-md border border-border bg-card p-2"
                 dangerouslySetInnerHTML={{ __html: payload.svg_content }}
               />
             )}
           </div>
 
-          <div className="opts pt-1">
+          <div className={`pt-1 ${payload?.svg_content && payload.choices?.every((c) => c.text.length <= 8) ? "opts opts-row" : "opts"}`}>
             {payload?.choices?.map((c) => {
               const isSelected = multi ? Boolean(picked?.includes(c.key)) : picked === c.key;
               return (
