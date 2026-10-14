@@ -30,7 +30,12 @@
 .dnum { position: relative; height: 44px; padding: 0; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-card); color: var(--foreground); font: 600 .9rem var(--font-display-src), sans-serif; font-variant-numeric: tabular-nums; transition: border-color var(--motion), background var(--motion), transform var(--motion), box-shadow var(--motion) }
 .dnum:hover { border-color: var(--ok); transform: translateY(-1px); box-shadow: 0 6px 14px -6px rgba(27, 42, 92, .35) }
 .dnum.is-done { border-color: var(--border); background: var(--accent-soft); color: var(--brand-ink) }
-.dnum[aria-current] { box-shadow: 0 0 0 2px var(--surface-card), 0 0 0 4px var(--surface-nav); transform: none }
+/* Kotak soal aktif: border emas + latar emas tipis + sinar berdenyut. Selektor digandakan supaya menang atas .is-answered/.is-ok/.is-bad. */
+.dnum.dnum[aria-current] { border-color: var(--gold); color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, var(--surface-card)); transform: none; animation: dnum-glow 2.4s ease-in-out infinite }
+@keyframes dnum-glow {
+  0%, 100% { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 55%, transparent), 0 0 10px 1px color-mix(in srgb, var(--gold) 28%, transparent) }
+  50% { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 90%, transparent), 0 0 18px 4px color-mix(in srgb, var(--gold) 45%, transparent) }
+}
 
 /* Tombol maju/mundur melayang di kanan bawah (cest #m-next). */
 .xdock { position: fixed; z-index: 20; right: max(var(--space-5), env(safe-area-inset-right)); bottom: max(var(--space-5), env(safe-area-inset-bottom)); display: flex; align-items: center; gap: var(--space-3) }
@@ -65,6 +70,7 @@
 .qnum { margin: 0; color: var(--muted-foreground); font-size: .875rem; font-weight: 700 }
 
 @media (prefers-reduced-motion: reduce) { .dnum, .xround, .opt { transition: none } .dnum:hover, .xround:hover:not(:disabled) { transform: none } }
+@media (prefers-reduced-motion: reduce) { .dnum.dnum[aria-current] { animation: none; box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 80%, transparent), 0 0 14px 2px color-mix(in srgb, var(--gold) 40%, transparent) } }
 
 /* Kartu soal: instruksi + bacaan + teks soal + gambar dalam satu kotak, teks tegas dan cukup besar. */
 .q-card { display: grid; grid-template-columns: minmax(0, 1fr); gap: .875rem; padding: clamp(1rem, 2vw, 1.5rem); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
