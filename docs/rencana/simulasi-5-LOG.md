@@ -376,3 +376,6 @@ JANGAN: `output/pribadi-sim2-review.html`, `output/pribadi-sim3-review.html`.
 
 ### Prompt sesi 7
 Selesai: tidak ada pekerjaan pembuatan tersisa. Sesi berikutnya hanya bila pemilik bilang "commit dan push" / izin menjalankan paket perintah di atas.
+
+### Eksekusi paket perintah (2026-10-14, izin pemilik)
+Syarat: tidak ada sesi KECERDASAN IN_PROGRESS untuk pkg 15/19 (11 sesi IN_PROGRESS semuanya pkg 13/18/lama). Commit e1eb0f1 di-push lebih dulu (perbaikan lib/review.ts). Lalu: `--swap 19 --apply` dan `--swap 15 --apply` (masing-masing 8 slot; 100 aktif, 1..100, 73 = Sebab-Akibat, 88 = Alokasi) · seed-kecermatan-packages 13 (500/500) · seed-pribadi-paket 15 --apply (111 baris) · seed-kecerdasan-kal --apply 20 (100 soal) · backfill-pembahasan --apply (216 baris: pkg 15 8, pkg 19 108, pkg 20 100; dry run ulang 0; cakupan pkg 15/19/20 penuh) · `SIMULASI_PAKET[5]` diisi (`lib/test-config.ts`). `rilis` drill sudah 2026-10-14 = tanggal push, tidak diganti.
