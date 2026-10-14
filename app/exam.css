@@ -35,7 +35,7 @@
 /* Tombol maju/mundur melayang di kanan bawah (cest #m-next). */
 .xdock { position: fixed; z-index: 20; right: max(var(--space-5), env(safe-area-inset-right)); bottom: max(var(--space-5), env(safe-area-inset-bottom)); display: flex; align-items: center; gap: var(--space-3) }
 @media (min-width: 1024px) { .xdock { right: calc(300px + var(--space-5)) } .xdock.no-pane { right: max(var(--space-5), env(safe-area-inset-right)) } }
-.xround { display: grid; place-items: center; width: 58px; height: 58px; padding: 0; border: 1px solid transparent; border-radius: 50%; background: var(--gold-grad); color: #16224a; box-shadow: 0 12px 32px rgba(15, 51, 55, .22); transition: filter var(--motion), transform var(--motion), opacity var(--motion) }
+.xround { display: grid; place-items: center; width: 58px; height: 58px; padding: 0; border: 1px solid transparent; border-radius: 50%; background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 12px 32px rgba(15, 51, 55, .22); transition: filter var(--motion), transform var(--motion), opacity var(--motion) }
 .xround:hover:not(:disabled) { filter: brightness(1.06); transform: translateY(-1px) }
 .xround:disabled { opacity: .45; cursor: not-allowed; box-shadow: none }
 .xround.is-prev { width: 48px; height: 48px; border-color: var(--border); background: var(--surface-card); color: var(--foreground); box-shadow: 0 8px 22px rgba(15, 51, 55, .14) }

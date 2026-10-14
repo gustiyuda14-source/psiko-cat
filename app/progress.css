@@ -223,3 +223,7 @@
   .pg-tkq::before, .pc-card::before, .sp-card::before, .gr { animation: none; background: var(--gr-head, var(--gold)) }
   .pg-tkq:hover::before, .pc-card:hover::before, .sp-card:hover:not(:disabled)::before, .hc-sector:hover > .gr, .hc-panel:hover > .gr, .gr-host:hover > .gr { opacity: .65 }
 }
+/* Emas Prada (tema D AJIKS): sobekan tiket tanpa sorot biru, angka utama metalik. */
+:root[data-theme="ajiks"] .pg-stub { background: radial-gradient(120% 80% at 0% 0%, rgb(202 170 79 / .14) 0%, #16130f 45%, var(--surface-nav-deep) 100%) }
+:root[data-theme="ajiks"] .pg-big { background: var(--gold-metal); -webkit-background-clip: text; background-clip: text; color: transparent }
+

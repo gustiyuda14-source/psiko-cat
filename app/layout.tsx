@@ -51,7 +51,7 @@ export const viewport: Viewport = {
 
 // Dijalankan sinkron saat HTML di-parse, sebelum cat pertama: pasang pilihan tema yang tersimpan
 // (lihat app/components/ThemeToggle.tsx). Tanpa ini halaman berkedip terang dulu di mode gelap.
-const THEME_INIT = `(function(){try{var t=localStorage.getItem("ajiks-theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
+const THEME_INIT = `(function(){try{var t=localStorage.getItem("ajiks-theme");if(t==="light"||t==="dark"||t==="ajiks")document.documentElement.setAttribute("data-theme",t)}catch(e){}})()`;
 
 export default function RootLayout({
   children,

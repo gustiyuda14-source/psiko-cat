@@ -3,13 +3,13 @@
 import { useSyncExternalStore } from "react";
 
 /*
-  Pilihan tema: Sistem / Terang / Gelap. Pilihan disimpan di localStorage dan dipasang sebagai
+  Pilihan tema: Sistem / Terang / Gelap (navy) / Gelap D AJIKS (hitam-emas). Pilihan disimpan di localStorage dan dipasang sebagai
   data-theme di <html>; skrip di app/layout.tsx memasangnya sebelum cat pertama. "Sistem" =
   tanpa atribut, jadi CSS mengikuti prefers-color-scheme (token di app/globals.css).
 */
 
 const KEY = "ajiks-theme";
-type Theme = "system" | "light" | "dark";
+type Theme = "system" | "light" | "dark" | "ajiks";
 
 const OPTIONS: { value: Theme; label: string; icon: React.ReactNode }[] = [
   {
@@ -32,7 +32,13 @@ const OPTIONS: { value: Theme; label: string; icon: React.ReactNode }[] = [
       </>
     ),
   },
-  { value: "dark", label: "Mode gelap", icon: <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" /> },
+  { value: "dark", label: "Mode gelap navy", icon: <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" /> },
+  {
+    value: "ajiks",
+    label: "Mode gelap D AJIKS",
+    // Bulan sabit terisi: gelap yang lebih pekat dari mode gelap navy.
+    icon: <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor" />,
+  },
 ];
 
 // Sumber kebenaran = atribut data-theme di <html> (sudah dipasang skrip di layout sebelum cat).

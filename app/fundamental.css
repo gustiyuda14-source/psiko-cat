@@ -18,7 +18,7 @@
 .fd-tabs button:hover { border-color: var(--ok) }
 .fd-tabs button span { display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 7px; background: var(--surface-inset); color: var(--muted-foreground); font: 700 .75rem var(--font-display-src), sans-serif }
 .fd-tabs button[aria-pressed="true"] { border-color: var(--surface-nav); background: var(--surface-nav); color: #fff }
-.fd-tabs button[aria-pressed="true"] span { background: var(--gold-hi); color: #16224a }
+.fd-tabs button[aria-pressed="true"] span { background: var(--gold-hi); color: var(--on-gold) }
 
 /* Area kerja: soal/deret kiri, numpad kanan; bertumpuk di layar sempit. */
 .fd-work { display: grid; gap: var(--space-5); align-items: start }
@@ -38,7 +38,7 @@
 .fd-key:hover:not(:disabled) { border-color: var(--ok) }
 .fd-key:active:not(:disabled) { transform: scale(.95) }
 .fd-key.is-fn { font-size: 1.3rem; color: var(--muted-foreground) }
-.fd-key.is-enter { background: var(--gold-grad); border-color: transparent; color: #16224a; font-size: 1rem }
+.fd-key.is-enter { background: var(--gold-grad); border-color: transparent; color: var(--on-gold); font-size: 1rem }
 @media (max-width: 600px) { .fd-key { min-height: 56px } }
 
 /* Rekening Koran: bar progres di bawah bar ujian. */
@@ -62,7 +62,7 @@
 .fd-stats dd { margin: 0; color: var(--brand-ink); font: 700 1.7rem/1.1 var(--font-display-src), sans-serif }
 .fd-stats dd span { color: var(--muted-foreground); font-size: 1rem }
 .fd-tier { display: grid; place-items: center; flex: none; width: 76px; height: 76px; border-radius: 18px; background: var(--navy); color: var(--gold-hi); font: 800 2rem var(--font-display-src), sans-serif }
-.fd-tier[data-rank="S+"], .fd-tier[data-rank="S"] { background: var(--gold-grad); color: #16224a }
+.fd-tier[data-rank="S+"], .fd-tier[data-rank="S"] { background: var(--gold-grad); color: var(--on-gold) }
 .fd-wrong { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: 0; padding: 0; list-style: none; font-size: .9rem }
 .fd-wrong li { padding: 4px 10px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-inset) }
 .fd-wrong li > span { color: var(--muted-foreground) }
@@ -79,7 +79,7 @@
    Dua blok gelap HARUS sama, pola sama dengan globals.css. */
 :root { --kp-ink: #2f5bd3; --kp-pair: rgba(47, 91, 211, .14) }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --kp-ink: var(--gold-hi); --kp-pair: rgba(232, 199, 102, .16) } }
-:root[data-theme="dark"] { --kp-ink: var(--gold-hi); --kp-pair: rgba(232, 199, 102, .16) }
+:root[data-theme="dark"], :root[data-theme="ajiks"] { --kp-ink: var(--gold-hi); --kp-pair: rgba(232, 199, 102, .16) }
 .kp-run { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--space-3); height: calc(100dvh - 62px); padding: var(--space-3) }
 @media (min-width: 900px) { .kp-run { grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr); gap: var(--space-5); padding: var(--space-5) } .kp-side { align-self: start } }
 .kp-board { overflow: auto; overscroll-behavior: contain; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
@@ -108,7 +108,7 @@
 .kp-mode b { font: 700 1.2rem var(--font-display-src), sans-serif }
 .kp-mode span { color: var(--muted-foreground); font-size: .9rem; line-height: 1.5 }
 .kp-mode:hover { border-color: var(--ok); transform: translateY(-1px); box-shadow: var(--elev-2) }
-.kp-mode.is-tes { border-color: transparent; background: var(--gold-grad); color: #16224a }
+.kp-mode.is-tes { border-color: transparent; background: var(--gold-grad); color: var(--on-gold) }
 .kp-mode.is-tes span { color: #2b3555 }
 
 .kp-result { max-width: 860px }
@@ -126,4 +126,4 @@
 .kp-op button { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border: 0; border-radius: 10px; background: transparent; color: var(--muted-foreground); font: 600 .95rem var(--font-display-src), sans-serif; transition: background var(--motion), color var(--motion) }
 .kp-op button b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: var(--surface-card); color: var(--brand-ink); font: 800 1.05rem var(--font-display-src), sans-serif }
 .kp-op button[aria-pressed="true"] { background: var(--surface-nav); color: #fff }
-.kp-op button[aria-pressed="true"] b { background: var(--gold-grad); color: #16224a }
+.kp-op button[aria-pressed="true"] b { background: var(--gold-grad); color: var(--on-gold) }

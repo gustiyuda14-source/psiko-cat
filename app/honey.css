@@ -388,6 +388,6 @@
 .dnum.has-new::after { content: "NEW"; position: absolute; top: 2px; right: 2px; padding: 2px 4px; border-radius: 999px; background: var(--gold-grad); color: var(--surface-nav); font: 800 .46rem/1 var(--font-display-src), sans-serif; letter-spacing: .06em; pointer-events: none }
 /* Irisan roda: pil NEW di bawah persen. */
 .hc-wedge-new rect { fill: #d9b24c; stroke: #8a6516; stroke-width: .8 }
-.hc-wedge-new text { fill: #16224a; font: 800 7.5px var(--font-display-src), sans-serif; letter-spacing: .06em }
+.hc-wedge-new text { fill: var(--on-gold); font: 800 7.5px var(--font-display-src), sans-serif; letter-spacing: .06em }
 @keyframes new-glow { 0%, 100% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .4), 0 2px 6px -2px rgba(184, 137, 43, .6) } 50% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .55), 0 0 0 4px rgba(232, 199, 102, .28) } }
 @media (prefers-reduced-motion: reduce) { .new-badge { animation: none } }

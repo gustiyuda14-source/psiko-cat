@@ -55,6 +55,7 @@
   --cube-edge: rgb(27 42 92 / .22);
   --gold: #9a6f12;             /* emas sebagai TEKS di atas putih */
   --gold-hi: #e8c766;          /* emas di atas navy */
+  --on-gold: #16224a;          /* teks di atas --gold-grad; hitam di tema D AJIKS */
   --gold-grad: linear-gradient(120deg, #b8892b, #dcc272 48%, #c0983a);   /* sorotan dikalemkan: #f3dd8e -> #dcc272 */
   --sel-line: #c9a24a;                                   /* garis kartu terpilih */
   --hex-glow: rgb(184 137 43 / 0.22);                    /* bayangan heksagon terpilih */
@@ -186,6 +187,61 @@
   --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16);
   --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
   --cube-edge: rgb(200 211 247 / .28);
+}
+
+/* ── Tema gelap D AJIKS: "Emas Prada" ───────────────────────────────────────
+   Tema gelap KEDUA (opsional, dipilih manual). Dasar: lambang Polri (PP 20/1955)
+   hitam + kuning-emas; logo D AJIKS = emas metalik di atas arang. Emas diukur
+   dari piksel logo lambang akademi: #5f4717 #92702c #b49038 #caaa4f #e5cd78.
+   Emas = aksen. Gradien metalik (--gold-metal) hanya untuk angka skor utama,
+   tombol emas, dan bingkai kartu skor (lihat blok "Emas Prada" di bawah).
+   Harus SETELAH blok gelap navy: spesifisitas sama dengan
+   :root:not([data-theme="light"]), jadi urutan yang menentukan. */
+:root[data-theme="ajiks"] {
+  color-scheme: dark;
+  --surface-page: #0f0e0c;
+  --surface-card: #181613;
+  --surface-inset: #0b0a09;
+  --surface-nav: #0b0a09;
+  --surface-nav-deep: #070605;
+  --foreground: #e8e2d6;       /* 14:1 di kartu; bukan putih murni, cegah halation */
+  --muted-foreground: #a39a8a; /* 6.5:1 */
+  --faint-foreground: #8a8273; /* 4.75:1 */
+  --border: #2a2621;
+  --border-strong: #4a4339;
+  --brand-ink: #e0c77f;        /* teks/garis "navy" jadi emas, 10.9:1 */
+  --navy: #1a1712;             /* LATAR navy jadi arang terangkat */
+  --gold: #e0c77f;
+  --gold-hi: #e5cd78;
+  --gold-grad: linear-gradient(135deg, #a07c32 0%, #c9a447 30%, #ead48a 48%, #c9a447 64%, #a07c32 100%);
+  --gold-metal: linear-gradient(180deg, #f3e3a6 0%, #e5cd78 22%, #c9a447 52%, #92702c 78%, #c9a447 100%);
+  --on-gold: #16130e;          /* 7.8:1 di atas emas tengah */
+  --primary: #b49038;
+  --primary-hover: #c09c42;
+  --primary-active: #a07c32;
+  --primary-foreground: #16130e;
+  --accent-soft: #241f14;
+  --accent-ink: #e0c77f;
+  --on-accent-ink: #16130e;
+  --success: #6fb38a;
+  --success-soft: #13201a;
+  --destructive: #e5735f;
+  --destructive-soft: #2b1512;
+  --ring: #caaa4f;
+  --ring-on-nav: #caaa4f;
+  --ok: #caaa4f;
+  --elev-1: 0 1px 2px rgb(0 0 0 / 0.5);
+  --elev-2: 0 2px 4px rgb(0 0 0 / 0.4), 0 12px 28px -12px rgb(0 0 0 / 0.8);
+  --elev-3: 0 4px 8px rgb(0 0 0 / 0.45), 0 16px 34px -12px rgb(0 0 0 / 0.85);
+  --elev-4: 0 10px 20px rgb(0 0 0 / 0.5), 0 30px 60px -20px rgb(0 0 0 / 0.9);
+  --pg-track: #1d1a16; --pg-rule: #24211c; --pg-ink2: #caaa4f;
+  --pg-t1: #ead48a; --pg-t2: #c9a447; --pg-t3: #92702c;
+  --pg-weak: #f0a291; --pg-weak-bg: #2b1512;
+  --hatch: #1d1a16; --hc-grid: rgb(202 170 79 / 0.08);
+  --sel-line: rgb(202 170 79 / 0.5); --hex-glow: transparent; --cta-glow: 0 6px 16px -8px rgb(202 170 79 / 0.45);
+  --gr-n-head: #e0c77f; --gr-n-mid: rgba(202, 170, 79, .42); --gr-n-track: rgba(202, 170, 79, .14);
+  --glow-n: 0 0 30px -2px rgba(202, 170, 79, .26);
+  --cube-edge: rgb(202 170 79 / .26);
 }
 
 @theme inline {
@@ -797,3 +853,18 @@ summary,
 .frac__f { display: inline-flex; flex-direction: column; align-items: center; font-size: .8em; line-height: 1.15; }
 .frac__f > span { padding: 0 .2em; }
 .frac__f > span:first-child { border-bottom: 1.5px solid currentColor; }
+
+/* ── Emas Prada: sentuhan merek (hanya tema D AJIKS) ─────────────────────────
+   Cahaya sorot samar dari atas seperti foto logo + butiran halus di layer tetap
+   (pointer-events none, tidak ikut scroll, tidak memicu repaint saat scroll). */
+:root[data-theme="ajiks"] body {
+  background:
+    radial-gradient(1100px 520px at 50% -180px, rgb(202 170 79 / 0.07), transparent 70%) fixed,
+    var(--surface-page);
+}
+:root[data-theme="ajiks"] body::before {
+  content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .05;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+:root[data-theme="ajiks"] ::selection { background: rgb(202 170 79 / 0.3) }
+

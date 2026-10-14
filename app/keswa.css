@@ -23,7 +23,7 @@
 .ksw-langkah li { display: flex; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card) }
 .ksw-langkah b { font: 700 1.02rem var(--font-display-src), sans-serif }
 .ksw-langkah p { margin-top: 4px; color: var(--muted-foreground); font-size: .95rem }
-.ksw-no { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--gold-grad); color: #16224a; font: 800 1rem var(--font-display-src), sans-serif }
+.ksw-no { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--gold-grad); color: var(--on-gold); font: 800 1rem var(--font-display-src), sans-serif }
 
 /* Katalog simulasi: kartu paket + riwayat hasil. */
 .ksw-paket { display: grid; gap: var(--space-3); align-content: start }
@@ -63,4 +63,4 @@
 .ksw-cek-angka { margin-left: auto; color: var(--muted-foreground); font-size: .88rem }
 .ksw-cek p { margin: 6px 0 0; line-height: 1.55; font-size: .95rem }
 .ksw-disclaimer { margin: 0; color: var(--muted-foreground); font-size: .88rem; line-height: 1.55 }
-.mbtn.ksw-cta { border-color: transparent; background: var(--gold-grad); color: #16224a }
+.mbtn.ksw-cta { border-color: transparent; background: var(--gold-grad); color: var(--on-gold) }
