@@ -1157,11 +1157,11 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 1,
     "sumber": "AK26#1",
-    "stem": "Bripda Sari bertugas piket di SPKT Polsek Bukit Indah. Sebelum serah terima piket, ia memiliki waktu pukul 08.00–09.30 untuk menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: menyusun laporan kejadian semalam (39 menit), mengarsipkan berkas pengaduan (24 menit), memperbarui buku mutasi (31 menit), dan mengecek kelengkapan inventaris (35 menit). Bila waktunya tidak cukup, ia akan meminta seorang rekan mengerjakan satu tugas secara penuh agar tugas sisanya selesai paling lambat pukul 09.30. Tugas mana yang harus diserahkan kepada rekannya?",
+    "stem": "Sari bertugas jaga di meja layanan Puskesmas Bukit Indah. Sebelum pergantian giliran jaga, ia memiliki waktu pukul 08.00–09.30 untuk menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda:\n\n• Menyusun laporan layanan semalam: 39 menit\n• Mengarsipkan berkas pengaduan: 24 menit\n• Memperbarui buku register pasien: 31 menit\n• Mengecek kelengkapan inventaris: 35 menit\n\nBila waktunya tidak cukup, ia akan meminta seorang rekan mengerjakan satu tugas secara penuh agar tugas sisanya selesai paling lambat pukul 09.30.\n\nPertanyaan: Tugas mana yang harus diserahkan kepada rekannya?",
     "opsi": {
-      "a": "Menyusun laporan kejadian semalam",
+      "a": "Menyusun laporan layanan semalam",
       "b": "Mengarsipkan berkas pengaduan",
-      "c": "Memperbarui buku mutasi",
+      "c": "Memperbarui buku register pasien",
       "d": "Mengecek kelengkapan inventaris",
       "e": "Tidak perlu; semua tugas dapat diselesaikan sendiri tepat waktu"
     },
@@ -1176,7 +1176,7 @@
       "d": 35,
       "e": 0
     },
-    "pembahasan": "Langkah 1 (waktu tersedia): 08.00–09.30 = 90 menit. Langkah 2 (beban total): 39 + 24 + 31 + 35 = 129 menit. Langkah 3 (kelebihan): 129 − 90 = 39 menit, jadi tugas yang dilepas minimal 39 menit. Langkah 4 (pilih): hanya menyusun laporan kejadian semalam (39 menit) yang ≥ 39. Cek: 24 + 31 + 35 = 90 menit, tepat sama dengan waktu tersedia.<br>Opsi B (mengarsipkan berkas pengaduan) gugur karena hanya mengurangi sebagian kelebihan: sisa 39 + 31 + 35 = 105 menit, lebih 15 menit; Opsi C (memperbarui buku mutasi) gugur karena dipilih tanpa menghitung kelebihan: sisa 39 + 24 + 35 = 98 menit, lebih 8 menit; Opsi D (mengecek kelengkapan inventaris) gugur karena 35 menit kurang dari kelebihan 39 menit: sisa 39 + 24 + 31 = 94 menit, lebih 4 menit; Opsi E (semua dapat diselesaikan sendiri) gugur karena 09.30 − 08.00 dikurangkan seperti bilangan biasa dan dibaca 130 menit, sehingga 129 menit tampak muat. Jawaban: Opsi A (menyusun laporan kejadian semalam). Tips: hitung kelebihan dulu (total − waktu tersedia), lalu cari tugas yang ≥ kelebihan; jangan mencoba tugas satu per satu — target di bawah 75 detik.",
+    "pembahasan": "Langkah 1 (waktu tersedia): 08.00–09.30 = 90 menit. Langkah 2 (beban total): 39 + 24 + 31 + 35 = 129 menit. Langkah 3 (kelebihan): 129 − 90 = 39 menit, jadi tugas yang dilepas minimal 39 menit. Langkah 4 (pilih): hanya menyusun laporan layanan semalam (39 menit) yang ≥ 39. Cek: 24 + 31 + 35 = 90 menit, tepat sama dengan waktu tersedia.<br>Opsi B (mengarsipkan berkas pengaduan) gugur karena hanya mengurangi sebagian kelebihan: sisa 39 + 31 + 35 = 105 menit, lebih 15 menit; Opsi C (memperbarui buku register pasien) gugur karena dipilih tanpa menghitung kelebihan: sisa 39 + 24 + 35 = 98 menit, lebih 8 menit; Opsi D (mengecek kelengkapan inventaris) gugur karena 35 menit kurang dari kelebihan 39 menit: sisa 39 + 24 + 31 = 94 menit, lebih 4 menit; Opsi E (semua dapat diselesaikan sendiri) gugur karena 09.30 − 08.00 dikurangkan seperti bilangan biasa dan dibaca 130 menit, sehingga 129 menit tampak muat. Jawaban: Opsi A (menyusun laporan layanan semalam). Tips: hitung kelebihan dulu (total − waktu tersedia), lalu cari tugas yang ≥ kelebihan; jangan mencoba tugas satu per satu — target di bawah 75 detik.",
     "status_kunci": "ganda",
     "gambar_pembahasan": "K07-AK-001.svg"
   },
@@ -1186,7 +1186,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 1,
     "sumber": "AK26#1",
-    "stem": "Rini adalah sekretaris panitia lomba baris-berbaris antar-SMA. Pada hari persiapan, ia memiliki waktu pukul 13.30–15.35 untuk empat tugas yang dikerjakan satu per satu tanpa jeda: mencetak sertifikat peserta (34 menit), menyusun daftar regu dan urutan tampil (52 menit), menyiapkan berkas penilaian juri (41 menit), dan menata meja registrasi (38 menit). Bila waktunya tidak cukup, ia akan meminta seorang anggota panitia mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 15.35. Tugas mana yang harus diserahkan?",
+    "stem": "Rini adalah sekretaris panitia lomba baris-berbaris antar-SMA. Pada hari persiapan, ia memiliki waktu pukul 13.30–15.35 untuk empat tugas yang dikerjakan satu per satu tanpa jeda:\n\n• Mencetak sertifikat peserta: 34 menit\n• Menyusun daftar regu dan urutan tampil: 52 menit\n• Menyiapkan berkas penilaian juri: 41 menit\n• Menata meja registrasi: 38 menit\n\nBila waktunya tidak cukup, ia akan meminta seorang anggota panitia mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 15.35.\n\nPertanyaan: Tugas mana yang harus diserahkan?",
     "opsi": {
       "a": "Mencetak sertifikat peserta",
       "b": "Menyusun daftar regu dan urutan tampil",
@@ -1215,7 +1215,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 1,
     "sumber": "AK26#1",
-    "stem": "Wulan menjadi relawan di posko pengungsian Desa Lembah Asri dan bertugas pukul 06.30–08.37. Ada lima tugas yang dikerjakan satu per satu tanpa jeda: mendata pengungsi baru (26 menit), membagikan paket sarapan (33 menit), mengecek stok obat (18 menit), menyusun laporan kebutuhan logistik (47 menit), dan menata gudang bantuan (40 menit). Waktunya tidak cukup untuk semua tugas, sehingga ia meminta seorang relawan lain mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 08.37. Tugas mana yang harus diserahkan?",
+    "stem": "Wulan menjadi relawan di posko pengungsian Desa Lembah Asri dan bertugas pukul 06.30–08.37. Ada lima tugas yang dikerjakan satu per satu tanpa jeda:\n\n• Mendata pengungsi baru: 26 menit\n• Membagikan paket sarapan: 33 menit\n• Mengecek stok obat: 18 menit\n• Menyusun laporan kebutuhan logistik: 47 menit\n• Menata gudang bantuan: 40 menit\n\nWaktunya tidak cukup untuk semua tugas, sehingga ia meminta seorang relawan lain mengerjakan satu tugas secara penuh, yaitu tugas dengan durasi paling singkat yang tetap membuat tugas sisanya selesai paling lambat pukul 08.37.\n\nPertanyaan: Tugas mana yang harus diserahkan?",
     "opsi": {
       "a": "Mendata pengungsi baru",
       "b": "Membagikan paket sarapan",
@@ -1244,7 +1244,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 1,
     "sumber": "AK26#1",
-    "stem": "Hendra adalah ketua regu di asrama siswa. Pada jam kegiatan malam pukul 19.30–21.00, ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: mengisi buku laporan regu (11 menit), menyusun jadwal piket minggu depan (31 menit), merekap absensi apel (28 menit), dan memeriksa kebersihan kamar (18 menit). Bila waktunya tidak cukup, ia akan meminta wakilnya mengerjakan satu tugas secara penuh. Tugas mana yang perlu diserahkan kepada wakilnya agar semua tugas selesai paling lambat pukul 21.00?",
+    "stem": "Hendra adalah ketua regu di asrama siswa. Pada jam kegiatan malam pukul 19.30–21.00, ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda:\n\n• Mengisi buku laporan regu: 11 menit\n• Menyusun jadwal piket minggu depan: 31 menit\n• Merekap absensi apel: 28 menit\n• Memeriksa kebersihan kamar: 18 menit\n\nBila waktunya tidak cukup, ia akan meminta wakilnya mengerjakan satu tugas secara penuh.\n\nPertanyaan: Tugas mana yang perlu diserahkan kepada wakilnya agar semua tugas selesai paling lambat pukul 21.00?",
     "opsi": {
       "a": "Mengisi buku laporan regu",
       "b": "Tidak ada; semua tugas dapat diselesaikan sendiri tepat waktu",
@@ -1273,7 +1273,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 1,
     "sumber": "AK26#1",
-    "stem": "Agus, staf sekretariat kantor kecamatan, memiliki waktu pukul 10.00–11.30 sebelum rapat dimulai. Ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda: mengetik undangan rapat (26 menit), menyusun notula rapat sebelumnya (34 menit), menggandakan bahan rapat (19 menit), dan menata ruang rapat (23 menit). Bila semua tugas dikerjakan sendiri, berapa menit kekurangan waktunya?",
+    "stem": "Agus, staf sekretariat kantor kecamatan, memiliki waktu pukul 10.00–11.30 sebelum rapat dimulai. Ia harus menyelesaikan empat tugas yang dikerjakan satu per satu tanpa jeda:\n\n• Mengetik undangan rapat: 26 menit\n• Menyusun notula rapat sebelumnya: 34 menit\n• Menggandakan bahan rapat: 19 menit\n• Menata ruang rapat: 23 menit\n\nPertanyaan: Bila semua tugas dikerjakan sendiri, berapa menit kekurangan waktunya?",
     "opsi": {
       "a": "22 menit",
       "b": "28 menit",
@@ -1302,12 +1302,12 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Bripda Yusuf bertugas piket di Polsek Sukamaju dan memiliki waktu kosong pukul 14.45–16.25 sebelum apel serah terima. Ada lima tugas yang harus selesai dalam waktu itu: mengarsipkan surat masuk (9 menit), memperbarui papan data kejadian (16 menit), menyusun laporan kegiatan patroli (41 menit), mengetik surat tanda terima laporan polisi (25 menit), dan menyusun rekap laporan harian (31 menit). Ia akan meminta rekan mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 16.25. Tugas mana yang ia serahkan kepada rekannya?",
+    "stem": "Yusuf bertugas di loket Kantor Kecamatan Sukamaju dan memiliki waktu kosong pukul 14.45–16.25 sebelum rapat serah terima. Ada lima tugas yang harus selesai dalam waktu itu:\n\n• Mengarsipkan surat masuk: 9 menit\n• Memperbarui papan data layanan: 16 menit\n• Menyusun laporan kegiatan lapangan: 41 menit\n• Mengetik surat tanda terima berkas warga: 25 menit\n• Menyusun rekap laporan harian: 31 menit\n\nIa akan meminta rekan mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 16.25.\n\nPertanyaan: Tugas mana yang ia serahkan kepada rekannya?",
     "opsi": {
       "a": "Mengarsipkan surat masuk",
-      "b": "Memperbarui papan data kejadian",
-      "c": "Menyusun laporan kegiatan patroli",
-      "d": "Mengetik surat tanda terima laporan polisi",
+      "b": "Memperbarui papan data layanan",
+      "c": "Menyusun laporan kegiatan lapangan",
+      "d": "Mengetik surat tanda terima berkas warga",
       "e": "Menyusun rekap laporan harian"
     },
     "kunci": [
@@ -1321,7 +1321,7 @@
       "d": 25,
       "e": 31
     },
-    "pembahasan": "Langkah 1 (waktu tersedia): 14.45–15.00 = 15 menit, 15.00–16.00 = 60 menit, 16.00–16.25 = 25 menit, jadi 100 menit. Langkah 2 (beban total): 9 + 16 + 41 + 25 + 31 = 122 menit. Langkah 3 (kelebihan): 122 − 100 = 22 menit. Langkah 4 (pilih): tugas yang ≥ 22 menit adalah 25, 31, dan 41 menit; yang paling singkat adalah surat tanda terima (25 menit). Cek: 9 + 16 + 41 + 31 = 97 menit ≤ 100 menit.<br>Opsi A (mengarsipkan surat masuk) gugur karena memilih tugas paling ringan: sisa 113 menit, lebih 13 menit; Opsi B (memperbarui papan data kejadian) gugur karena 16 < 22: sisa 106 menit, lebih 6 menit; Opsi C (menyusun laporan kegiatan patroli) gugur karena 14.45–15.00 terlewat sehingga waktu dikira 85 menit dan kelebihan 37 menit, jadi hanya tugas 41 menit yang tampak cukup; Opsi E (menyusun rekap laporan harian) gugur karena 31 menit memang cukup (sisa 91 menit), tetapi bukan yang paling singkat. Jawaban: Opsi D (mengetik surat tanda terima laporan polisi). Tips: hitung rentang lewat jam bulat terdekat (15 + 60 + 25), cari kelebihan, lalu pilih tugas terkecil yang ≥ kelebihan — target di bawah 75 detik.",
+    "pembahasan": "Langkah 1 (waktu tersedia): 14.45–15.00 = 15 menit, 15.00–16.00 = 60 menit, 16.00–16.25 = 25 menit, jadi 100 menit. Langkah 2 (beban total): 9 + 16 + 41 + 25 + 31 = 122 menit. Langkah 3 (kelebihan): 122 − 100 = 22 menit. Langkah 4 (pilih): tugas yang ≥ 22 menit adalah 25, 31, dan 41 menit; yang paling singkat adalah surat tanda terima (25 menit). Cek: 9 + 16 + 41 + 31 = 97 menit ≤ 100 menit.<br>Opsi A (mengarsipkan surat masuk) gugur karena memilih tugas paling ringan: sisa 113 menit, lebih 13 menit; Opsi B (memperbarui papan data layanan) gugur karena 16 < 22: sisa 106 menit, lebih 6 menit; Opsi C (menyusun laporan kegiatan lapangan) gugur karena 14.45–15.00 terlewat sehingga waktu dikira 85 menit dan kelebihan 37 menit, jadi hanya tugas 41 menit yang tampak cukup; Opsi E (menyusun rekap laporan harian) gugur karena 31 menit memang cukup (sisa 91 menit), tetapi bukan yang paling singkat. Jawaban: Opsi D (mengetik surat tanda terima berkas warga). Tips: hitung rentang lewat jam bulat terdekat (15 + 60 + 25), cari kelebihan, lalu pilih tugas terkecil yang ≥ kelebihan — target di bawah 75 detik.",
     "status_kunci": "ganda",
     "gambar_pembahasan": "K07-AK-006.svg"
   },
@@ -1331,7 +1331,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Gilang, sekretaris panitia lomba lari antarasrama, memiliki waktu pukul 09.50–11.28 sebelum rapat teknis dimulai. Ia harus menyelesaikan lima tugas: mencetak dan menyusun nomor dada (26 menit), merekap formulir pendaftaran (33 menit), membuat denah lintasan (28 menit), menghubungi petugas medis (24 menit), dan menyiapkan daftar hadir juri (12 menit). Ia akan meminta seorang anggota panitia mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 11.28. Tugas mana yang ia serahkan?",
+    "stem": "Gilang, sekretaris panitia lomba lari antarasrama, memiliki waktu pukul 09.50–11.28 sebelum rapat teknis dimulai. Ia harus menyelesaikan lima tugas:\n\n• Mencetak dan menyusun nomor dada: 26 menit\n• Merekap formulir pendaftaran: 33 menit\n• Membuat denah lintasan: 28 menit\n• Menghubungi petugas medis: 24 menit\n• Menyiapkan daftar hadir juri: 12 menit\n\nIa akan meminta seorang anggota panitia mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 11.28.\n\nPertanyaan: Tugas mana yang ia serahkan?",
     "opsi": {
       "a": "Mencetak dan menyusun nomor dada",
       "b": "Merekap formulir pendaftaran",
@@ -1360,7 +1360,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Ratna, relawan di posko banjir Desa Karangsari, bertugas pukul 07.50–09.35. Pada pukul 08.30–08.45 ia wajib mengikuti rapat koordinasi sehingga tidak dapat mengerjakan tugas lain. Pekerjaan yang terpotong oleh rapat koordinasi boleh dilanjutkan sesudahnya. Tugasnya: memperbarui papan informasi (9 menit), mengecek stok air bersih (13 menit), mendata pengungsi baru (28 menit), menyusun laporan kebutuhan logistik untuk kecamatan (44 menit), dan membagikan selimut di tenda B (23 menit). Ia akan meminta relawan lain mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 09.35. Tugas mana yang ia serahkan?",
+    "stem": "Ratna, relawan di posko banjir Desa Karangsari, bertugas pukul 07.50–09.35. Tugasnya:\n\n• Memperbarui papan informasi: 9 menit\n• Mengecek stok air bersih: 13 menit\n• Mendata pengungsi baru: 28 menit\n• Menyusun laporan kebutuhan logistik untuk kecamatan: 44 menit\n• Membagikan selimut di tenda B: 23 menit\n\nPada pukul 08.30–08.45 ia wajib mengikuti rapat koordinasi sehingga tidak dapat mengerjakan tugas lain. Pekerjaan yang terpotong oleh rapat koordinasi boleh dilanjutkan sesudahnya. Ia akan meminta relawan lain mengerjakan tepat satu tugas, yaitu tugas dengan durasi paling singkat yang tetap membuat empat tugas lainnya selesai sendiri paling lambat pukul 09.35.\n\nPertanyaan: Tugas mana yang ia serahkan?",
     "opsi": {
       "a": "Memperbarui papan informasi",
       "b": "Mengecek stok air bersih",
@@ -1389,7 +1389,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Taruna Bayu mendapat giliran piket asrama pukul 11.35–13.10. Pada pukul 12.05–12.30 ia wajib mengikuti istirahat, ibadah, dan makan siang (ishoma) sehingga tidak dapat bekerja. Pekerjaan yang terpotong oleh ishoma boleh dilanjutkan sesudahnya. Tugas piketnya: mencatat buku piket (7 menit), merapikan gudang perlengkapan (33 menit), mengecek kebersihan kamar mandi (17 menit), memeriksa daftar izin bermalam (11 menit), dan menyusun jadwal piket minggu depan (21 menit). Ia akan meminta rekannya mengerjakan tepat satu tugas, dan memilih tugas yang membuat sisa waktu luangnya paling sedikit, dengan syarat empat tugas lainnya tetap selesai sendiri paling lambat pukul 13.10. Tugas mana yang ia serahkan?",
+    "stem": "Bayu, siswa sekolah berasrama, mendapat giliran piket asrama pukul 11.35–13.10. Tugas piketnya:\n\n• Mencatat buku piket: 7 menit\n• Merapikan gudang perlengkapan: 33 menit\n• Mengecek kebersihan kamar mandi: 17 menit\n• Memeriksa daftar izin bermalam: 11 menit\n• Menyusun jadwal piket minggu depan: 21 menit\n\nPada pukul 12.05–12.30 ia wajib mengikuti istirahat, ibadah, dan makan siang (ishoma) sehingga tidak dapat bekerja. Pekerjaan yang terpotong oleh ishoma boleh dilanjutkan sesudahnya. Ia akan meminta rekannya mengerjakan tepat satu tugas, dan memilih tugas yang membuat sisa waktu luangnya paling sedikit, dengan syarat empat tugas lainnya tetap selesai sendiri paling lambat pukul 13.10.\n\nPertanyaan: Tugas mana yang ia serahkan?",
     "opsi": {
       "a": "Mencatat buku piket",
       "b": "Merapikan gudang perlengkapan",
@@ -1418,7 +1418,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Intan, staf Kantor Kelurahan Mekarsari, memiliki waktu pukul 10.40–12.05 sebelum istirahat siang. Daftar tugasnya: memindai berkas surat pengantar (17 menit), menyusun rekap data penduduk pindah (38 menit), mengisi buku agenda surat (8 menit), memverifikasi berkas pengajuan bantuan (25 menit), mengarsipkan surat keluar (13 menit), dan menginput data posyandu (23 menit). Setiap tugas harus diselesaikan utuh dan ia bekerja sendiri tanpa bantuan. Paling banyak berapa tugas yang dapat ia selesaikan dalam waktu tersebut?",
+    "stem": "Intan, staf Kantor Kelurahan Mekarsari, memiliki waktu pukul 10.40–12.05 sebelum istirahat siang. Daftar tugasnya:\n\n• Memindai berkas surat pengantar: 17 menit\n• Menyusun rekap data penduduk pindah: 38 menit\n• Mengisi buku agenda surat: 8 menit\n• Memverifikasi berkas pengajuan bantuan: 25 menit\n• Mengarsipkan surat keluar: 13 menit\n• Menginput data posyandu: 23 menit\n\nSetiap tugas harus diselesaikan utuh dan ia bekerja sendiri tanpa bantuan.\n\nPertanyaan: Paling banyak berapa tugas yang dapat ia selesaikan dalam waktu tersebut?",
     "opsi": {
       "a": "3 tugas",
       "b": "4 tugas",
@@ -1447,7 +1447,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 2,
     "sumber": "AK26#1",
-    "stem": "Yusuf, petugas sekretariat panitia seleksi, memiliki waktu pukul 08.35–10.10 sebelum peserta datang. Daftar tugasnya: mencocokkan nomor peserta (14 menit), menyusun denah ruang ujian (27 menit), menempel pengumuman (8 menit), mengecek kelengkapan berkas (19 menit), merekap daftar hadir pengawas (33 menit), dan menata meja registrasi (22 menit). Setiap tugas harus diselesaikan utuh dan ia bekerja sendiri. Jika ia menyelesaikan sebanyak mungkin tugas, berapa menit waktu yang tersisa sebelum pukul 10.10?",
+    "stem": "Yusuf, petugas sekretariat panitia seleksi, memiliki waktu pukul 08.35–10.10 sebelum peserta datang. Daftar tugasnya:\n\n• Mencocokkan nomor peserta: 14 menit\n• Menyusun denah ruang ujian: 27 menit\n• Menempel pengumuman: 8 menit\n• Mengecek kelengkapan berkas: 19 menit\n• Merekap daftar hadir pengawas: 33 menit\n• Menata meja registrasi: 22 menit\n\nSetiap tugas harus diselesaikan utuh dan ia bekerja sendiri.\n\nPertanyaan: Jika ia menyelesaikan sebanyak mungkin tugas, berapa menit waktu yang tersisa sebelum pukul 10.10?",
     "opsi": {
       "a": "5 menit",
       "b": "27 menit",
@@ -1476,13 +1476,13 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 3,
     "sumber": "AK26#1",
-    "stem": "Bripda Putri bertugas piket di Polsek Cempaka Raya pukul 13.48–15.12. Apel siang berlangsung 13.48–14.00 sehingga waktu itu tidak bisa dipakai bekerja. Tugasnya: merekap laporan pengaduan (24 menit), mengarsipkan berkas perkara (16 menit), menyusun jadwal patroli (32 menit), memperbarui buku mutasi (18 menit), dan menulis notula rapat (28 menit). Ia akan melimpahkan tepat dua tugas kepada rekannya sehingga sisa tugas yang ia kerjakan sendiri tepat mengisi waktu kerjanya, tanpa waktu kosong dan tanpa melewati pukul 15.12. Pasangan tugas mana yang harus dilimpahkan?",
+    "stem": "Putri, staf tata usaha Kantor Kelurahan Cempaka Raya, bekerja pukul 13.48–15.12. Tugasnya:\n\n• Merekap laporan pengaduan: 24 menit\n• Mengarsipkan berkas perizinan: 16 menit\n• Menyusun jadwal pelayanan: 32 menit\n• Memperbarui buku tamu: 18 menit\n• Menulis notula rapat: 28 menit\n\nApel siang berlangsung 13.48–14.00 sehingga waktu itu tidak bisa dipakai bekerja. Ia akan melimpahkan tepat dua tugas kepada rekannya sehingga sisa tugas yang ia kerjakan sendiri tepat mengisi waktu kerjanya, tanpa waktu kosong dan tanpa melewati pukul 15.12.\n\nPertanyaan: Pasangan tugas mana yang harus dilimpahkan?",
     "opsi": {
-      "a": "Mengarsipkan berkas perkara dan memperbarui buku mutasi",
-      "b": "Memperbarui buku mutasi dan menulis notula rapat",
-      "c": "Menyusun jadwal patroli dan menulis notula rapat",
-      "d": "Mengarsipkan berkas perkara dan menyusun jadwal patroli",
-      "e": "Memperbarui buku mutasi dan merekap laporan pengaduan"
+      "a": "Mengarsipkan berkas perizinan dan memperbarui buku tamu",
+      "b": "Memperbarui buku tamu dan menulis notula rapat",
+      "c": "Menyusun jadwal pelayanan dan menulis notula rapat",
+      "d": "Mengarsipkan berkas perizinan dan menyusun jadwal pelayanan",
+      "e": "Memperbarui buku tamu dan merekap laporan pengaduan"
     },
     "kunci": [
       "b"
@@ -1495,7 +1495,7 @@
       "d": 48,
       "e": 42
     },
-    "pembahasan": "Langkah 1 (waktu tersedia): 14.00–15.12 = 72 menit (13.48–15.12 = 84 menit, dikurangi apel 12 menit). Langkah 2 (beban total): 24 + 16 + 32 + 18 + 28 = 118 menit. Langkah 3 (kelebihan): 118 − 72 = 46 menit; tugas terlama hanya 32 menit, jadi perlu dua tugas yang jumlahnya tepat 46 menit. Langkah 4 (pilih): hitung 46 − tugas: 32 butuh 14, 28 butuh 18, 24 butuh 22, 16 butuh 30; hanya 18 yang ada, jadi pasangannya buku mutasi + notula rapat = 18 + 28 = 46 menit. Cek: sisa 24 + 16 + 32 = 72 menit, tepat mengisi waktu kerja.<br>Opsi A (berkas perkara + buku mutasi) gugur karena lupa mengurangi apel: 16 + 18 = 34 = 118 − 84, padahal sisa 24 + 32 + 28 = 84 menit, lewat 12 menit; Opsi C (jadwal patroli + notula rapat) gugur karena asal memilih dua tugas terlama: sisa 24 + 16 + 18 = 58 menit, ada 14 menit kosong; Opsi D (berkas perkara + jadwal patroli) gugur karena mengambil tugas terlama lalu menambah yang terpendek: 32 + 16 = 48, sisa 70 menit, ada 2 menit kosong; Opsi E (buku mutasi + laporan pengaduan) gugur karena hanya menutup sebagian kelebihan: 18 + 24 = 42 < 46, sisa 76 menit, lewat 4 menit. Jawaban: Opsi B (memperbarui buku mutasi dan menulis notula rapat). Tips: setelah kelebihan diketahui, hitung \"kelebihan − tugas\" mulai dari tugas terlama, bukan mencoba pasangan satu per satu — target di bawah 75 detik.",
+    "pembahasan": "Langkah 1 (waktu tersedia): 14.00–15.12 = 72 menit (13.48–15.12 = 84 menit, dikurangi apel 12 menit). Langkah 2 (beban total): 24 + 16 + 32 + 18 + 28 = 118 menit. Langkah 3 (kelebihan): 118 − 72 = 46 menit; tugas terlama hanya 32 menit, jadi perlu dua tugas yang jumlahnya tepat 46 menit. Langkah 4 (pilih): hitung 46 − tugas: 32 butuh 14, 28 butuh 18, 24 butuh 22, 16 butuh 30; hanya 18 yang ada, jadi pasangannya buku tamu + notula rapat = 18 + 28 = 46 menit. Cek: sisa 24 + 16 + 32 = 72 menit, tepat mengisi waktu kerja.<br>Opsi A (berkas perizinan + buku tamu) gugur karena lupa mengurangi apel: 16 + 18 = 34 = 118 − 84, padahal sisa 24 + 32 + 28 = 84 menit, lewat 12 menit; Opsi C (jadwal pelayanan + notula rapat) gugur karena asal memilih dua tugas terlama: sisa 24 + 16 + 18 = 58 menit, ada 14 menit kosong; Opsi D (berkas perizinan + jadwal pelayanan) gugur karena mengambil tugas terlama lalu menambah yang terpendek: 32 + 16 = 48, sisa 70 menit, ada 2 menit kosong; Opsi E (buku tamu + laporan pengaduan) gugur karena hanya menutup sebagian kelebihan: 18 + 24 = 42 < 46, sisa 76 menit, lewat 4 menit. Jawaban: Opsi B (memperbarui buku tamu dan menulis notula rapat). Tips: setelah kelebihan diketahui, hitung \"kelebihan − tugas\" mulai dari tugas terlama, bukan mencoba pasangan satu per satu — target di bawah 75 detik.",
     "status_kunci": "ganda",
     "gambar_pembahasan": "K07-AK-012.svg"
   },
@@ -1505,7 +1505,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 3,
     "sumber": "AK26#1",
-    "stem": "Melati, sekretaris panitia bakti sosial, memiliki waktu kerja pukul 08.35–10.46; rentang itu sudah termasuk istirahat 15 menit yang tidak dipakai bekerja. Pekerjaan yang terpotong oleh istirahat boleh dilanjutkan sesudahnya. Tugasnya: menyusun proposal (37 menit), mendata donatur (26 menit), membuat surat undangan (17 menit), merekap anggaran (32 menit), mendesain spanduk (31 menit), dan mengonfirmasi relawan (15 menit). Ia akan menyerahkan tepat dua tugas kepada rekannya agar sisa tugasnya selesai paling lambat pukul 10.46, dengan jumlah durasi tugas yang diserahkan sekecil mungkin. Pasangan tugas mana yang diserahkan?",
+    "stem": "Melati, sekretaris panitia bakti sosial, memiliki waktu kerja pukul 08.35–10.46. Tugasnya:\n\n• Menyusun proposal: 37 menit\n• Mendata donatur: 26 menit\n• Membuat surat undangan: 17 menit\n• Merekap anggaran: 32 menit\n• Mendesain spanduk: 31 menit\n• Mengonfirmasi relawan: 15 menit\n\nRentang waktu itu sudah termasuk istirahat 15 menit yang tidak dipakai bekerja. Pekerjaan yang terpotong oleh istirahat boleh dilanjutkan sesudahnya. Ia akan menyerahkan tepat dua tugas kepada rekannya agar sisa tugasnya selesai paling lambat pukul 10.46, dengan jumlah durasi tugas yang diserahkan sekecil mungkin.\n\nPertanyaan: Pasangan tugas mana yang diserahkan?",
     "opsi": {
       "a": "Membuat surat undangan dan mengonfirmasi relawan",
       "b": "Mendata donatur dan mengonfirmasi relawan",
@@ -1534,7 +1534,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 3,
     "sumber": "AK26#1",
-    "stem": "Di posko banjir Desa Sumberjati, Fikri dan Danu harus menyelesaikan enam tugas: mendata pengungsi (29 menit), membersihkan dapur umum (12 menit), mendirikan tenda (38 menit), memasang lampu darurat (18 menit), membagikan makanan (36 menit), dan mengecek stok obat (15 menit). Keduanya mulai bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan. Pembagian mana yang membuat seluruh tugas selesai paling cepat?",
+    "stem": "Di posko banjir Desa Sumberjati, Fikri dan Danu harus menyelesaikan enam tugas:\n\n• Mendata pengungsi: 29 menit\n• Membersihkan dapur umum: 12 menit\n• Mendirikan tenda: 38 menit\n• Memasang lampu darurat: 18 menit\n• Membagikan makanan: 36 menit\n• Mengecek stok obat: 15 menit\n\nKeduanya mulai bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan.\n\nPertanyaan: Pembagian mana yang membuat seluruh tugas selesai paling cepat?",
     "opsi": {
       "a": "Fikri: data pengungsi, dapur umum, tenda; Danu: lampu, makanan, obat",
       "b": "Fikri: makanan, data pengungsi; Danu: tenda, lampu, obat, dapur umum",
@@ -1563,7 +1563,7 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 3,
     "sumber": "AK26#1",
-    "stem": "Sabtu pagi pukul 07.50, Taruna Rangga dan Taruna Danu mulai kerja bakti asrama. Tugasnya: mengepel lorong (23 menit), membersihkan kamar mandi (32 menit), merapikan gudang (13 menit), mencuci tirai (31 menit), dan menyapu halaman (21 menit). Mereka bekerja bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan. Jika pembagian tugas diatur sebaik mungkin, pukul berapa paling cepat semua tugas selesai?",
+    "stem": "Sabtu pagi pukul 07.50, Rangga dan Danu, dua penghuni asrama mahasiswa, mulai kerja bakti asrama. Tugasnya:\n\n• Mengepel lorong: 23 menit\n• Membersihkan kamar mandi: 32 menit\n• Merapikan gudang: 13 menit\n• Mencuci tirai: 31 menit\n• Menyapu halaman: 21 menit\n\nMereka bekerja bersamaan, setiap tugas dikerjakan utuh oleh satu orang, dan durasinya sama siapa pun yang mengerjakan.\n\nPertanyaan: Jika pembagian tugas diatur sebaik mungkin, pukul berapa paling cepat semua tugas selesai?",
     "opsi": {
       "a": "08.53",
       "b": "08.50",
@@ -1592,13 +1592,13 @@
     "sub_type": "NUM-CRT-ALOKASI",
     "tier": 3,
     "sumber": "AK26#1",
-    "stem": "Ipda Tiara di Bagian Operasional Polres Tanjung Wangi bekerja pukul 13.25–15.10. Tugasnya: menyusun rencana pengamanan (38 menit), membuat surat perintah (16 menit), memeriksa laporan kegiatan (28 menit), merekap absensi personel (24 menit), dan memperbarui peta rawan (19 menit). Ia akan meminta Bripka Fikri mengerjakan tepat satu tugas. Fikri hanya bisa membantu pukul 14.20–14.57 dan, karena belum terbiasa, membutuhkan 1,5 kali durasi normal. Tugas mana yang harus diserahkan kepada Fikri agar Tiara selesai paling lambat pukul 15.10 dan Fikri paling lambat pukul 14.57?",
+    "stem": "Tiara, staf Bagian Umum Kantor Dinas Pariwisata Tanjung Wangi, bekerja pukul 13.25–15.10. Tugasnya:\n\n• Menyusun rencana kegiatan festival: 38 menit\n• Membuat surat tugas: 16 menit\n• Memeriksa laporan kegiatan: 28 menit\n• Merekap absensi pegawai: 24 menit\n• Memperbarui peta wisata: 19 menit\n\nIa akan meminta Fikri, rekan barunya, mengerjakan tepat satu tugas. Fikri hanya bisa membantu pukul 14.20–14.57 dan, karena belum terbiasa, membutuhkan 1,5 kali durasi normal.\n\nPertanyaan: Tugas mana yang harus diserahkan kepada Fikri agar Tiara selesai paling lambat pukul 15.10 dan Fikri paling lambat pukul 14.57?",
     "opsi": {
-      "a": "Membuat surat perintah",
+      "a": "Membuat surat tugas",
       "b": "Memeriksa laporan kegiatan",
-      "c": "Merekap absensi personel",
-      "d": "Menyusun rencana pengamanan",
-      "e": "Memperbarui peta rawan"
+      "c": "Merekap absensi pegawai",
+      "d": "Menyusun rencana kegiatan festival",
+      "e": "Memperbarui peta wisata"
     },
     "kunci": [
       "c"
@@ -1611,7 +1611,7 @@
       "d": 38,
       "e": 19
     },
-    "pembahasan": "Langkah 1 (waktu tersedia): Tiara 13.25–15.10 = 105 menit; Fikri 14.20–14.57 = 37 menit. Langkah 2 (beban total): 38 + 16 + 28 + 24 + 19 = 125 menit. Langkah 3 (kelebihan): 125 − 105 = 20 menit, jadi tugas yang diserahkan minimal 20 menit (syarat Tiara); syarat Fikri: 1,5 × durasi ≤ 37, artinya durasi ≤ 37 ÷ 1,5 ≈ 24,7 menit. Langkah 4 (pilih): tugas berdurasi antara 20 dan 24,7 menit hanya merekap absensi personel (24 menit). Cek: Tiara mengerjakan 38 + 16 + 28 + 19 = 101 menit ≤ 105 menit; Fikri butuh 1,5 × 24 = 36 menit ≤ 37 menit.<br>Opsi A (surat perintah) gugur karena 16 < 20: Tiara masih harus mengerjakan 38 + 28 + 24 + 19 = 109 menit, lewat 4 menit; Opsi B (laporan kegiatan) gugur karena lupa faktor 1,5: 28 menit memang muat dalam 37 menit, tetapi Fikri butuh 1,5 × 28 = 42 menit, lewat 5 menit; Opsi D (rencana pengamanan) gugur karena memilih tugas terlama: Fikri butuh 1,5 × 38 = 57 menit, jauh melebihi 37 menit; Opsi E (peta rawan) gugur karena 19 kurang 1 menit dari kelebihan 20: Tiara mengerjakan 38 + 16 + 28 + 24 = 106 menit, lewat 1 menit. Jawaban: Opsi C (merekap absensi personel). Tips: ubah dua syarat menjadi satu rentang durasi — batas bawah = kelebihan, batas atas = waktu rekan ÷ faktor lambat — lalu cari tugas di dalam rentang itu, target di bawah 75 detik.",
+    "pembahasan": "Langkah 1 (waktu tersedia): Tiara 13.25–15.10 = 105 menit; Fikri 14.20–14.57 = 37 menit. Langkah 2 (beban total): 38 + 16 + 28 + 24 + 19 = 125 menit. Langkah 3 (kelebihan): 125 − 105 = 20 menit, jadi tugas yang diserahkan minimal 20 menit (syarat Tiara); syarat Fikri: 1,5 × durasi ≤ 37, artinya durasi ≤ 37 ÷ 1,5 ≈ 24,7 menit. Langkah 4 (pilih): tugas berdurasi antara 20 dan 24,7 menit hanya merekap absensi pegawai (24 menit). Cek: Tiara mengerjakan 38 + 16 + 28 + 19 = 101 menit ≤ 105 menit; Fikri butuh 1,5 × 24 = 36 menit ≤ 37 menit.<br>Opsi A (surat tugas) gugur karena 16 < 20: Tiara masih harus mengerjakan 38 + 28 + 24 + 19 = 109 menit, lewat 4 menit; Opsi B (laporan kegiatan) gugur karena lupa faktor 1,5: 28 menit memang muat dalam 37 menit, tetapi Fikri butuh 1,5 × 28 = 42 menit, lewat 5 menit; Opsi D (rencana kegiatan festival) gugur karena memilih tugas terlama: Fikri butuh 1,5 × 38 = 57 menit, jauh melebihi 37 menit; Opsi E (peta wisata) gugur karena 19 kurang 1 menit dari kelebihan 20: Tiara mengerjakan 38 + 16 + 28 + 24 = 106 menit, lewat 1 menit. Jawaban: Opsi C (merekap absensi pegawai). Tips: ubah dua syarat menjadi satu rentang durasi — batas bawah = kelebihan, batas atas = waktu rekan ÷ faktor lambat — lalu cari tugas di dalam rentang itu, target di bawah 75 detik.",
     "status_kunci": "ganda",
     "gambar_pembahasan": "K07-AK-016.svg"
   },
@@ -2410,6 +2410,1566 @@
       }
     },
     "pembahasan": "1. Ubah waktu ke menit: pukul 12.33 hingga 14.15 = 102 menit. Jeda 13.10 hingga 13.30 = 20 menit, jadi waktu kerja = 102 − 20 = 82 menit.\n2. Jumlahkan durasi tugas: 14 + 17 + 33 + 21 + 16 = 101 menit.\n3. Kelebihan: 101 − 82 = 19 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 19 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta guru seni menyusun barisan penyanyi\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 21 menit (≥ 19 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Meminta guru seni mencetak teks lagu) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 17 menit, kurang 2 menit dari kelebihan 19 menit. Opsi ini tampak cukup bila jeda 20 menit lupa dipotong (seolah semua tugas muat). Opsi B (Memakai jam makan siang untuk melanjutkan persiapan) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (makan siang). Hitungannya 20 menit memang menutup kelebihan 19 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi C (Melewatkan melatih bagian suara alto) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 33 menit memang menutup kelebihan, tetapi penampilan paduan suara tidak siap. Opsi E (Merapikan seragam penyanyi setelah acara dimulai) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; penyanyi tampil dengan seragam yang belum rapi. Jawaban: Meminta guru seni menyusun barisan penyanyi (D). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-011",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta pelatihan administrasi memiliki waktu 40 menit untuk menambah poin belajar. Kegiatan yang tersedia:\n\n• Mendengarkan ceramah: 20 menit → 70 poin\n• Membaca buku panduan: 10 menit → 45 poin\n• Mengerjakan kuis: 8 menit → 40 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 40 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membaca buku panduan 5 kali",
+      "b": "Mendengarkan ceramah 2 kali",
+      "c": "Mengerjakan kuis 5 kali",
+      "d": "Membaca buku panduan 4 kali",
+      "e": "Membaca buku panduan 3 kali + Mengerjakan kuis 1 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 50,
+        "poin": 225,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 40,
+        "poin": 140,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "c": {
+        "menit": 40,
+        "poin": 200,
+        "sah": true
+      },
+      "d": {
+        "menit": 40,
+        "poin": 180,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 38,
+        "poin": 175,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Mendengarkan ceramah 70 ÷ 20 = 3,5; Membaca buku panduan 45 ÷ 10 = 4,5; Mengerjakan kuis 40 ÷ 8 = 5.\n2. Poin per menit tertinggi: Mengerjakan kuis (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 40 menit: Mengerjakan kuis 5 kali memakai 40 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 5 × 40 = 200 poin.<br>Opsi A (Membaca buku panduan 5 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 50 menit, melebihi batas 40 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 225 poin. Opsi B (Mendengarkan ceramah 2 kali) gugur karena memilih Mendengarkan ceramah yang poin per kalinya paling besar (70 poin), padahal poin per menitnya hanya 3,5; totalnya 140 poin, 60 poin lebih rendah dari kunci (200 poin). Opsi D (Membaca buku panduan 4 kali) gugur karena memakai waktu 40 dari 40 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 180 poin, 20 poin lebih rendah dari kunci (200 poin). Opsi E (Membaca buku panduan 3 kali + Mengerjakan kuis 1 kali) gugur karena sah dan muat dalam 38 menit, tetapi komposisinya kurang efisien; totalnya 175 poin, 25 poin lebih rendah dari kunci (200 poin). Jawaban: Mengerjakan kuis 5 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-012",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang siswa menjaga stan kerajinan di bazar sekolah selama 36 menit dan mengumpulkan poin kreativitas. Kegiatan yang tersedia:\n\n• Menganyam gelang: 18 menit → 72 poin\n• Membuat bros kain: 9 menit → 45 poin\n• Melukis kipas: 6 menit → 24 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 36 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membuat bros kain 4 kali",
+      "b": "Menganyam gelang 3 kali",
+      "c": "Menganyam gelang 1 kali + Membuat bros kain 2 kali",
+      "d": "Membuat bros kain 2 kali + Melukis kipas 3 kali",
+      "e": "Menganyam gelang 2 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 36,
+        "poin": 180,
+        "sah": true
+      },
+      "b": {
+        "menit": 54,
+        "poin": 216,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 36,
+        "poin": 162,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 36,
+        "poin": 162,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 36,
+        "poin": 144,
+        "sah": true,
+        "kesalahan": "ABS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menganyam gelang 72 ÷ 18 = 4; Membuat bros kain 45 ÷ 9 = 5; Melukis kipas 24 ÷ 6 = 4.\n2. Poin per menit tertinggi: Membuat bros kain (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 36 menit: Membuat bros kain 4 kali memakai 36 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 45 = 180 poin.<br>Opsi B (Menganyam gelang 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 54 menit, melebihi batas 36 menit (lebih 18 menit), jadi tidak sah walau totalnya tampak 216 poin. Opsi C (Menganyam gelang 1 kali + Membuat bros kain 2 kali) gugur karena sah dan muat dalam 36 menit, tetapi komposisinya kurang efisien; totalnya 162 poin, 18 poin lebih rendah dari kunci (180 poin). Opsi D (Membuat bros kain 2 kali + Melukis kipas 3 kali) gugur karena memakai waktu 36 dari 36 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 162 poin, 18 poin lebih rendah dari kunci (180 poin). Opsi E (Menganyam gelang 2 kali) gugur karena memilih Menganyam gelang yang poin per kalinya paling besar (72 poin), padahal poin per menitnya hanya 4; totalnya 144 poin, 36 poin lebih rendah dari kunci (180 poin). Jawaban: Membuat bros kain 4 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-013",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang atlet pemula memiliki sesi latihan 35 menit dan mengumpulkan poin kebugaran. Kegiatan yang tersedia:\n\n• Lari keliling lapangan: 15 menit → 60 poin\n• Lompat tali: 10 menit → 50 poin\n• Peregangan otot: 5 menit → 20 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 35 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Lompat tali 3 kali",
+      "b": "Lari keliling lapangan 2 kali + Peregangan otot 1 kali",
+      "c": "Lompat tali 2 kali + Peregangan otot 3 kali",
+      "d": "Lompat tali 3 kali + Peregangan otot 1 kali",
+      "e": "Lari keliling lapangan 3 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 30,
+        "poin": 150,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "b": {
+        "menit": 35,
+        "poin": 140,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "c": {
+        "menit": 35,
+        "poin": 160,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 35,
+        "poin": 170,
+        "sah": true
+      },
+      "e": {
+        "menit": 45,
+        "poin": 180,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Lari keliling lapangan 60 ÷ 15 = 4; Lompat tali 50 ÷ 10 = 5; Peregangan otot 20 ÷ 5 = 4.\n2. Poin per menit tertinggi: Lompat tali (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 35 menit: Lompat tali 3 kali + Peregangan otot 1 kali memakai 35 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 3 × 50 + 1 × 20 = 170 poin.<br>Opsi A (Lompat tali 3 kali) gugur karena hanya memakai Lompat tali (poin per menit tertinggi) sebanyak mungkin; 5 menit dibiarkan menganggur sehingga totalnya 150 poin, 20 poin lebih rendah dari kunci (170 poin). Opsi B (Lari keliling lapangan 2 kali + Peregangan otot 1 kali) gugur karena memilih Lari keliling lapangan yang poin per kalinya paling besar (60 poin), padahal poin per menitnya hanya 4; totalnya 140 poin, 30 poin lebih rendah dari kunci (170 poin). Opsi C (Lompat tali 2 kali + Peregangan otot 3 kali) gugur karena memakai waktu 35 dari 35 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 160 poin, 10 poin lebih rendah dari kunci (170 poin). Opsi E (Lari keliling lapangan 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 45 menit, melebihi batas 35 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 180 poin. Jawaban: Lompat tali 3 kali + Peregangan otot 1 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-014",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta bimbingan belajar memiliki waktu 75 menit untuk persiapan ulangan dan mengumpulkan poin penguasaan. Kegiatan yang tersedia:\n\n• Menghafal rumus: 9 menit → 50 poin\n• Mengerjakan soal latihan: 10 menit → 55 poin\n• Menonton video pembahasan: 15 menit → 60 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 75 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menonton video pembahasan 5 kali",
+      "b": "Menghafal rumus 8 kali",
+      "c": "Mengerjakan soal latihan 6 kali + Menonton video pembahasan 1 kali",
+      "d": "Mengerjakan soal latihan 8 kali",
+      "e": "Menghafal rumus 5 kali + Mengerjakan soal latihan 3 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 75,
+        "poin": 300,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 72,
+        "poin": 400,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 75,
+        "poin": 390,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 80,
+        "poin": 440,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 75,
+        "poin": 415,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menghafal rumus 50 ÷ 9 = sekitar 5,56; Mengerjakan soal latihan 55 ÷ 10 = 5,5; Menonton video pembahasan 60 ÷ 15 = 4.\n2. Poin per menit tertinggi: Menghafal rumus (sekitar 5,56). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 75 menit: Menghafal rumus 5 kali + Mengerjakan soal latihan 3 kali memakai 75 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 5 × 50 + 3 × 55 = 415 poin.<br>Opsi A (Menonton video pembahasan 5 kali) gugur karena memilih Menonton video pembahasan yang poin per kalinya paling besar (60 poin), padahal poin per menitnya hanya 4; totalnya 300 poin, 115 poin lebih rendah dari kunci (415 poin). Opsi B (Menghafal rumus 8 kali) gugur karena hanya memakai Menghafal rumus (poin per menit tertinggi) sebanyak mungkin; 3 menit dibiarkan menganggur sehingga totalnya 400 poin, 15 poin lebih rendah dari kunci (415 poin). Opsi C (Mengerjakan soal latihan 6 kali + Menonton video pembahasan 1 kali) gugur karena memakai waktu 75 dari 75 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 390 poin, 25 poin lebih rendah dari kunci (415 poin). Opsi D (Mengerjakan soal latihan 8 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 80 menit, melebihi batas 75 menit (lebih 5 menit), jadi tidak sah walau totalnya tampak 440 poin. Jawaban: Menghafal rumus 5 kali + Mengerjakan soal latihan 3 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-015",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang karyawan koperasi simpan pinjam memiliki waktu 50 menit sebelum jam makan siang dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Menginput data anggota: 12 menit → 66 poin\n• Memeriksa laporan setoran: 15 menit → 68 poin\n• Melayani konsultasi pinjaman: 30 menit → 120 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 50 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menginput data anggota 1 kali + Melayani konsultasi pinjaman 1 kali",
+      "b": "Menginput data anggota 4 kali",
+      "c": "Melayani konsultasi pinjaman 1 kali",
+      "d": "Memeriksa laporan setoran 4 kali",
+      "e": "Memeriksa laporan setoran 3 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 42,
+        "poin": 186,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 48,
+        "poin": 264,
+        "sah": true
+      },
+      "c": {
+        "menit": 30,
+        "poin": 120,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 60,
+        "poin": 272,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 45,
+        "poin": 204,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menginput data anggota 66 ÷ 12 = 5,5; Memeriksa laporan setoran 68 ÷ 15 = sekitar 4,53; Melayani konsultasi pinjaman 120 ÷ 30 = 4.\n2. Poin per menit tertinggi: Menginput data anggota (5,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 50 menit: Menginput data anggota 4 kali memakai 48 menit, sisa 2 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 12 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 66 = 264 poin.<br>Opsi A (Menginput data anggota 1 kali + Melayani konsultasi pinjaman 1 kali) gugur karena memilih Melayani konsultasi pinjaman yang poin per kalinya paling besar (120 poin), padahal poin per menitnya hanya 4; totalnya 186 poin, 78 poin lebih rendah dari kunci (264 poin). Opsi C (Melayani konsultasi pinjaman 1 kali) gugur karena sah dan muat dalam 30 menit, tetapi komposisinya kurang efisien; totalnya 120 poin, 144 poin lebih rendah dari kunci (264 poin). Opsi D (Memeriksa laporan setoran 4 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 60 menit, melebihi batas 50 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 272 poin. Opsi E (Memeriksa laporan setoran 3 kali) gugur karena sah dan muat dalam 45 menit, tetapi komposisinya kurang efisien; totalnya 204 poin, 60 poin lebih rendah dari kunci (264 poin). Jawaban: Menginput data anggota 4 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-016",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang relawan taman kota bertugas selama 55 menit dan mengumpulkan poin kontribusi. Kegiatan yang tersedia:\n\n• Memangkas tanaman hias: 8 menit → 40 poin\n• Menyiram kebun bibit: 18 menit → 63 poin\n• Menyapu jalur setapak: 7 menit → 28 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 55 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menyiram kebun bibit 3 kali",
+      "b": "Memangkas tanaman hias 6 kali",
+      "c": "Memangkas tanaman hias 6 kali + Menyapu jalur setapak 1 kali",
+      "d": "Menyiram kebun bibit 4 kali",
+      "e": "Memangkas tanaman hias 2 kali + Menyiram kebun bibit 1 kali + Menyapu jalur setapak 3 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 54,
+        "poin": 189,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 48,
+        "poin": 240,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 55,
+        "poin": 268,
+        "sah": true
+      },
+      "d": {
+        "menit": 72,
+        "poin": 252,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 55,
+        "poin": 227,
+        "sah": true,
+        "kesalahan": "PAS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memangkas tanaman hias 40 ÷ 8 = 5; Menyiram kebun bibit 63 ÷ 18 = 3,5; Menyapu jalur setapak 28 ÷ 7 = 4.\n2. Poin per menit tertinggi: Memangkas tanaman hias (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 55 menit: Memangkas tanaman hias 6 kali + Menyapu jalur setapak 1 kali memakai 55 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 6 × 40 + 1 × 28 = 268 poin.<br>Opsi A (Menyiram kebun bibit 3 kali) gugur karena memilih Menyiram kebun bibit yang poin per kalinya paling besar (63 poin), padahal poin per menitnya hanya 3,5; totalnya 189 poin, 79 poin lebih rendah dari kunci (268 poin). Opsi B (Memangkas tanaman hias 6 kali) gugur karena hanya memakai Memangkas tanaman hias (poin per menit tertinggi) sebanyak mungkin; 7 menit dibiarkan menganggur sehingga totalnya 240 poin, 28 poin lebih rendah dari kunci (268 poin). Opsi D (Menyiram kebun bibit 4 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 55 menit (lebih 17 menit), jadi tidak sah walau totalnya tampak 252 poin. Opsi E (Memangkas tanaman hias 2 kali + Menyiram kebun bibit 1 kali + Menyapu jalur setapak 3 kali) gugur karena memakai waktu 55 dari 55 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 227 poin, 41 poin lebih rendah dari kunci (268 poin). Jawaban: Memangkas tanaman hias 6 kali + Menyapu jalur setapak 1 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-017",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang petugas perpustakaan kampus memiliki waktu 75 menit pada jam sepi dan mengumpulkan poin layanan. Kegiatan yang tersedia:\n\n• Menempel label buku: 4 menit → 10 poin\n• Menyusun koleksi di rak: 30 menit → 120 poin\n• Melayani peminjaman: 10 menit → 60 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 75 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menempel label buku 1 kali + Melayani peminjaman 7 kali",
+      "b": "Menempel label buku 1 kali + Menyusun koleksi di rak 1 kali + Melayani peminjaman 4 kali",
+      "c": "Menempel label buku 1 kali + Menyusun koleksi di rak 2 kali + Melayani peminjaman 1 kali",
+      "d": "Melayani peminjaman 7 kali",
+      "e": "Menyusun koleksi di rak 3 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 74,
+        "poin": 430,
+        "sah": true
+      },
+      "b": {
+        "menit": 74,
+        "poin": 370,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "c": {
+        "menit": 74,
+        "poin": 310,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "d": {
+        "menit": 70,
+        "poin": 420,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "e": {
+        "menit": 90,
+        "poin": 360,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menempel label buku 10 ÷ 4 = 2,5; Menyusun koleksi di rak 120 ÷ 30 = 4; Melayani peminjaman 60 ÷ 10 = 6.\n2. Poin per menit tertinggi: Melayani peminjaman (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 75 menit: Menempel label buku 1 kali + Melayani peminjaman 7 kali memakai 74 menit, sisa 1 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 4 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 1 × 10 + 7 × 60 = 430 poin.<br>Opsi B (Menempel label buku 1 kali + Menyusun koleksi di rak 1 kali + Melayani peminjaman 4 kali) gugur karena memakai waktu 74 dari 75 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 370 poin, 60 poin lebih rendah dari kunci (430 poin). Opsi C (Menempel label buku 1 kali + Menyusun koleksi di rak 2 kali + Melayani peminjaman 1 kali) gugur karena memilih Menyusun koleksi di rak yang poin per kalinya paling besar (120 poin), padahal poin per menitnya hanya 4; totalnya 310 poin, 120 poin lebih rendah dari kunci (430 poin). Opsi D (Melayani peminjaman 7 kali) gugur karena hanya memakai Melayani peminjaman (poin per menit tertinggi) sebanyak mungkin; 5 menit dibiarkan menganggur sehingga totalnya 420 poin, 10 poin lebih rendah dari kunci (430 poin). Opsi E (Menyusun koleksi di rak 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 90 menit, melebihi batas 75 menit (lebih 15 menit), jadi tidak sah walau totalnya tampak 360 poin. Jawaban: Menempel label buku 1 kali + Melayani peminjaman 7 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-018",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang guru memiliki waktu 55 menit di sela jam mengajar dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Memeriksa tugas siswa: 12 menit → 66 poin\n• Menyusun laporan nilai: 24 menit → 72 poin\n• Mengisi daftar hadir: 4 menit → 14 poin\n• Menyiapkan bahan ajar: 15 menit → 90 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 55 menit. Menyusun laporan nilai dan Mengisi daftar hadir wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memeriksa tugas siswa 5 kali",
+      "b": "Menyiapkan bahan ajar 3 kali",
+      "c": "Memeriksa tugas siswa 2 kali + Menyusun laporan nilai 1 kali + Mengisi daftar hadir 1 kali",
+      "d": "Memeriksa tugas siswa 1 kali + Menyusun laporan nilai 1 kali + Mengisi daftar hadir 1 kali + Menyiapkan bahan ajar 1 kali",
+      "e": "Menyusun laporan nilai 1 kali + Mengisi daftar hadir 4 kali + Menyiapkan bahan ajar 1 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 60,
+        "poin": 330,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 45,
+        "poin": 270,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 52,
+        "poin": 218,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 55,
+        "poin": 242,
+        "sah": true
+      },
+      "e": {
+        "menit": 55,
+        "poin": 218,
+        "sah": true,
+        "kesalahan": "PAS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memeriksa tugas siswa 66 ÷ 12 = 5,5; Menyusun laporan nilai 72 ÷ 24 = 3; Mengisi daftar hadir 14 ÷ 4 = 3,5; Menyiapkan bahan ajar 90 ÷ 15 = 6.\n2. Poin per menit tertinggi: Menyiapkan bahan ajar (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Menyusun laporan nilai dan Mengisi daftar hadir masing-masing satu kali memakai 28 menit, sisa 27 menit baru diisi kegiatan terbaik.\n4. Susun waktu 55 menit: Memeriksa tugas siswa 1 kali + Menyusun laporan nilai 1 kali + Mengisi daftar hadir 1 kali + Menyiapkan bahan ajar 1 kali memakai 55 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 1 × 66 + 1 × 72 + 1 × 14 + 1 × 90 = 242 poin.<br>Opsi A (Memeriksa tugas siswa 5 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 60 menit, melebihi batas 55 menit (lebih 5 menit); selain itu Menyusun laporan nilai tidak dilakukan padahal wajib minimal satu kali; Mengisi daftar hadir tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 330 poin. Opsi B (Menyiapkan bahan ajar 3 kali) gugur karena syarat diabaikan: Menyusun laporan nilai tidak dilakukan padahal wajib minimal satu kali; Mengisi daftar hadir tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 270 poin. Opsi C (Memeriksa tugas siswa 2 kali + Menyusun laporan nilai 1 kali + Mengisi daftar hadir 1 kali) gugur karena sah dan muat dalam 52 menit, tetapi komposisinya kurang efisien; totalnya 218 poin, 24 poin lebih rendah dari kunci (242 poin). Opsi E (Menyusun laporan nilai 1 kali + Mengisi daftar hadir 4 kali + Menyiapkan bahan ajar 1 kali) gugur karena memakai waktu 55 dari 55 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 218 poin, 24 poin lebih rendah dari kunci (242 poin). Jawaban: Memeriksa tugas siswa 1 kali + Menyusun laporan nilai 1 kali + Mengisi daftar hadir 1 kali + Menyiapkan bahan ajar 1 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-019",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta bazar kuliner memiliki waktu memasak 55 menit dan mengumpulkan poin penilaian juri. Kegiatan yang tersedia:\n\n• Membuat roti isi: 24 menit → 96 poin\n• Membuat pastel: 8 menit → 40 poin\n• Membuat donat: 12 menit → 54 poin\n• Membuat bolu kukus: 18 menit → 99 poin (hanya tersedia 2 kali)\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 55 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membuat bolu kukus 3 kali",
+      "b": "Membuat pastel 2 kali + Membuat bolu kukus 2 kali",
+      "c": "Membuat pastel 3 kali + Membuat donat 1 kali + Membuat bolu kukus 1 kali",
+      "d": "Membuat roti isi 3 kali",
+      "e": "Membuat roti isi 2 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 54,
+        "poin": 297,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "b": {
+        "menit": 52,
+        "poin": 278,
+        "sah": true
+      },
+      "c": {
+        "menit": 54,
+        "poin": 273,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 72,
+        "poin": 288,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 48,
+        "poin": 192,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Membuat roti isi 96 ÷ 24 = 4; Membuat pastel 40 ÷ 8 = 5; Membuat donat 54 ÷ 12 = 4,5; Membuat bolu kukus 99 ÷ 18 = 5,5.\n2. Poin per menit tertinggi: Membuat bolu kukus (5,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Batas pemakaian dihormati: Membuat bolu kukus paling banyak 2 kali.\n4. Susun waktu 55 menit: Membuat pastel 2 kali + Membuat bolu kukus 2 kali memakai 52 menit, sisa 3 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 8 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 2 × 40 + 2 × 99 = 278 poin.<br>Opsi A (Membuat bolu kukus 3 kali) gugur karena syarat diabaikan: Membuat bolu kukus dilakukan 3 kali padahal hanya tersedia 2 kali, jadi strategi ini tidak sah walau totalnya tampak 297 poin. Opsi C (Membuat pastel 3 kali + Membuat donat 1 kali + Membuat bolu kukus 1 kali) gugur karena memakai waktu 54 dari 55 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 273 poin, 5 poin lebih rendah dari kunci (278 poin). Opsi D (Membuat roti isi 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 55 menit (lebih 17 menit), jadi tidak sah walau totalnya tampak 288 poin. Opsi E (Membuat roti isi 2 kali) gugur karena sah dan muat dalam 48 menit, tetapi komposisinya kurang efisien; totalnya 192 poin, 86 poin lebih rendah dari kunci (278 poin). Jawaban: Membuat pastel 2 kali + Membuat bolu kukus 2 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-020",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pengunjung pameran sains memiliki waktu 50 menit untuk berkeliling dan mengumpulkan poin keaktifan. Kegiatan yang tersedia:\n\n• Mencoba simulasi robot: 10 menit → 70 poin (hanya tersedia 1 kali)\n• Menonton demonstrasi laboratorium: 15 menit → 90 poin (hanya tersedia 1 kali)\n• Mengisi kuis stan: 5 menit → 25 poin\n• Mengikuti diskusi panel: 20 menit → 80 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 50 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Mencoba simulasi robot 1 kali + Mengisi kuis stan 8 kali",
+      "b": "Menonton demonstrasi laboratorium 4 kali",
+      "c": "Mencoba simulasi robot 5 kali",
+      "d": "Mengikuti diskusi panel 2 kali",
+      "e": "Mencoba simulasi robot 1 kali + Menonton demonstrasi laboratorium 1 kali + Mengisi kuis stan 5 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 50,
+        "poin": 270,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "b": {
+        "menit": 60,
+        "poin": 360,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 50,
+        "poin": 350,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "d": {
+        "menit": 40,
+        "poin": 160,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "e": {
+        "menit": 50,
+        "poin": 285,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Mencoba simulasi robot 70 ÷ 10 = 7; Menonton demonstrasi laboratorium 90 ÷ 15 = 6; Mengisi kuis stan 25 ÷ 5 = 5; Mengikuti diskusi panel 80 ÷ 20 = 4.\n2. Poin per menit tertinggi: Mencoba simulasi robot (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Batas pemakaian dihormati: Mencoba simulasi robot paling banyak 1 kali; Menonton demonstrasi laboratorium paling banyak 1 kali.\n4. Susun waktu 50 menit: Mencoba simulasi robot 1 kali + Menonton demonstrasi laboratorium 1 kali + Mengisi kuis stan 5 kali memakai 50 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 1 × 70 + 1 × 90 + 5 × 25 = 285 poin.<br>Opsi A (Mencoba simulasi robot 1 kali + Mengisi kuis stan 8 kali) gugur karena memakai waktu 50 dari 50 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 270 poin, 15 poin lebih rendah dari kunci (285 poin). Opsi B (Menonton demonstrasi laboratorium 4 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 60 menit, melebihi batas 50 menit (lebih 10 menit); selain itu Menonton demonstrasi laboratorium dilakukan 4 kali padahal hanya tersedia 1 kali, jadi tidak sah walau totalnya tampak 360 poin. Opsi C (Mencoba simulasi robot 5 kali) gugur karena syarat diabaikan: Mencoba simulasi robot dilakukan 5 kali padahal hanya tersedia 1 kali, jadi strategi ini tidak sah walau totalnya tampak 350 poin. Opsi D (Mengikuti diskusi panel 2 kali) gugur karena sah dan muat dalam 40 menit, tetapi komposisinya kurang efisien; totalnya 160 poin, 125 poin lebih rendah dari kunci (285 poin). Jawaban: Mencoba simulasi robot 1 kali + Menonton demonstrasi laboratorium 1 kali + Mengisi kuis stan 5 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-021",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta kelas bahasa Inggris memiliki waktu 40 menit untuk mengumpulkan poin keterampilan. Kegiatan yang tersedia:\n\n• Menulis esai pendek: 30 menit → 165 poin\n• Berlatih percakapan: 10 menit → 70 poin\n• Menghafal kosakata: 4 menit → 26 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 40 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Berlatih percakapan 2 kali + Menghafal kosakata 5 kali",
+      "b": "Berlatih percakapan 4 kali",
+      "c": "Menulis esai pendek 1 kali",
+      "d": "Menulis esai pendek 2 kali",
+      "e": "Menulis esai pendek 1 kali + Berlatih percakapan 1 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 40,
+        "poin": 270,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "b": {
+        "menit": 40,
+        "poin": 280,
+        "sah": true
+      },
+      "c": {
+        "menit": 30,
+        "poin": 165,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 60,
+        "poin": 330,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 40,
+        "poin": 235,
+        "sah": true,
+        "kesalahan": "ABS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menulis esai pendek 165 ÷ 30 = 5,5; Berlatih percakapan 70 ÷ 10 = 7; Menghafal kosakata 26 ÷ 4 = 6,5.\n2. Poin per menit tertinggi: Berlatih percakapan (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 40 menit: Berlatih percakapan 4 kali memakai 40 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 70 = 280 poin.<br>Opsi A (Berlatih percakapan 2 kali + Menghafal kosakata 5 kali) gugur karena memakai waktu 40 dari 40 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 270 poin, 10 poin lebih rendah dari kunci (280 poin). Opsi C (Menulis esai pendek 1 kali) gugur karena sah dan muat dalam 30 menit, tetapi komposisinya kurang efisien; totalnya 165 poin, 115 poin lebih rendah dari kunci (280 poin). Opsi D (Menulis esai pendek 2 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 60 menit, melebihi batas 40 menit (lebih 20 menit), jadi tidak sah walau totalnya tampak 330 poin. Opsi E (Menulis esai pendek 1 kali + Berlatih percakapan 1 kali) gugur karena memilih Menulis esai pendek yang poin per kalinya paling besar (165 poin), padahal poin per menitnya hanya 5,5; totalnya 235 poin, 45 poin lebih rendah dari kunci (280 poin). Jawaban: Berlatih percakapan 4 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-022",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang anggota klub catur memiliki waktu latihan 30 menit dan mengumpulkan poin latihan. Kegiatan yang tersedia:\n\n• Memecahkan teka-teki catur: 6 menit → 39 poin\n• Bermain partai cepat: 10 menit → 70 poin\n• Menganalisis partai klasik: 24 menit → 108 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 30 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memecahkan teka-teki catur 1 kali + Menganalisis partai klasik 1 kali",
+      "b": "Memecahkan teka-teki catur 5 kali",
+      "c": "Menganalisis partai klasik 1 kali",
+      "d": "Bermain partai cepat 3 kali",
+      "e": "Memecahkan teka-teki catur 6 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 30,
+        "poin": 147,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 30,
+        "poin": 195,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "c": {
+        "menit": 24,
+        "poin": 108,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 30,
+        "poin": 210,
+        "sah": true
+      },
+      "e": {
+        "menit": 36,
+        "poin": 234,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memecahkan teka-teki catur 39 ÷ 6 = 6,5; Bermain partai cepat 70 ÷ 10 = 7; Menganalisis partai klasik 108 ÷ 24 = 4,5.\n2. Poin per menit tertinggi: Bermain partai cepat (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 30 menit: Bermain partai cepat 3 kali memakai 30 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 3 × 70 = 210 poin.<br>Opsi A (Memecahkan teka-teki catur 1 kali + Menganalisis partai klasik 1 kali) gugur karena memilih Menganalisis partai klasik yang poin per kalinya paling besar (108 poin), padahal poin per menitnya hanya 4,5; totalnya 147 poin, 63 poin lebih rendah dari kunci (210 poin). Opsi B (Memecahkan teka-teki catur 5 kali) gugur karena memakai waktu 30 dari 30 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 195 poin, 15 poin lebih rendah dari kunci (210 poin). Opsi C (Menganalisis partai klasik 1 kali) gugur karena sah dan muat dalam 24 menit, tetapi komposisinya kurang efisien; totalnya 108 poin, 102 poin lebih rendah dari kunci (210 poin). Opsi E (Memecahkan teka-teki catur 6 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 36 menit, melebihi batas 30 menit (lebih 6 menit), jadi tidak sah walau totalnya tampak 234 poin. Jawaban: Bermain partai cepat 3 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-023",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pemain bulu tangkis pemula memiliki sesi latihan 30 menit dan mengumpulkan poin latihan. Kegiatan yang tersedia:\n\n• Berlatih servis: 8 menit → 28 poin\n• Berlatih gerak kaki: 5 menit → 25 poin\n• Bermain pertandingan ganda: 15 menit → 45 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 30 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Berlatih gerak kaki 6 kali",
+      "b": "Bermain pertandingan ganda 3 kali",
+      "c": "Berlatih gerak kaki 3 kali + Bermain pertandingan ganda 1 kali",
+      "d": "Bermain pertandingan ganda 2 kali",
+      "e": "Berlatih servis 1 kali + Berlatih gerak kaki 4 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 30,
+        "poin": 150,
+        "sah": true
+      },
+      "b": {
+        "menit": 45,
+        "poin": 135,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 30,
+        "poin": 120,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 30,
+        "poin": 90,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "e": {
+        "menit": 28,
+        "poin": 128,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Berlatih servis 28 ÷ 8 = 3,5; Berlatih gerak kaki 25 ÷ 5 = 5; Bermain pertandingan ganda 45 ÷ 15 = 3.\n2. Poin per menit tertinggi: Berlatih gerak kaki (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 30 menit: Berlatih gerak kaki 6 kali memakai 30 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 6 × 25 = 150 poin.<br>Opsi B (Bermain pertandingan ganda 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 45 menit, melebihi batas 30 menit (lebih 15 menit), jadi tidak sah walau totalnya tampak 135 poin. Opsi C (Berlatih gerak kaki 3 kali + Bermain pertandingan ganda 1 kali) gugur karena memakai waktu 30 dari 30 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 120 poin, 30 poin lebih rendah dari kunci (150 poin). Opsi D (Bermain pertandingan ganda 2 kali) gugur karena memilih Bermain pertandingan ganda yang poin per kalinya paling besar (45 poin), padahal poin per menitnya hanya 3; totalnya 90 poin, 60 poin lebih rendah dari kunci (150 poin). Opsi E (Berlatih servis 1 kali + Berlatih gerak kaki 4 kali) gugur karena sah dan muat dalam 28 menit, tetapi komposisinya kurang efisien; totalnya 128 poin, 22 poin lebih rendah dari kunci (150 poin). Jawaban: Berlatih gerak kaki 6 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-024",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang anggota pramuka memiliki waktu 30 menit pada latihan rutin dan mengumpulkan poin kecakapan. Kegiatan yang tersedia:\n\n• Mempraktikkan simpul tali: 10 menit → 60 poin\n• Membuat tandu darurat: 20 menit → 100 poin\n• Menghafal sandi semafor: 5 menit → 15 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 30 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menghafal sandi semafor 6 kali",
+      "b": "Mempraktikkan simpul tali 1 kali + Membuat tandu darurat 1 kali",
+      "c": "Mempraktikkan simpul tali 2 kali + Menghafal sandi semafor 2 kali",
+      "d": "Membuat tandu darurat 2 kali",
+      "e": "Mempraktikkan simpul tali 3 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 30,
+        "poin": 90,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "b": {
+        "menit": 30,
+        "poin": 160,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "c": {
+        "menit": 30,
+        "poin": 150,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "d": {
+        "menit": 40,
+        "poin": 200,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 30,
+        "poin": 180,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Mempraktikkan simpul tali 60 ÷ 10 = 6; Membuat tandu darurat 100 ÷ 20 = 5; Menghafal sandi semafor 15 ÷ 5 = 3.\n2. Poin per menit tertinggi: Mempraktikkan simpul tali (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 30 menit: Mempraktikkan simpul tali 3 kali memakai 30 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 3 × 60 = 180 poin.<br>Opsi A (Menghafal sandi semafor 6 kali) gugur karena sah dan muat dalam 30 menit, tetapi komposisinya kurang efisien; totalnya 90 poin, 90 poin lebih rendah dari kunci (180 poin). Opsi B (Mempraktikkan simpul tali 1 kali + Membuat tandu darurat 1 kali) gugur karena memilih Membuat tandu darurat yang poin per kalinya paling besar (100 poin), padahal poin per menitnya hanya 5; totalnya 160 poin, 20 poin lebih rendah dari kunci (180 poin). Opsi C (Mempraktikkan simpul tali 2 kali + Menghafal sandi semafor 2 kali) gugur karena sah dan muat dalam 30 menit, tetapi komposisinya kurang efisien; totalnya 150 poin, 30 poin lebih rendah dari kunci (180 poin). Opsi D (Membuat tandu darurat 2 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 40 menit, melebihi batas 30 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 200 poin. Jawaban: Mempraktikkan simpul tali 3 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-025",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pekerja paruh waktu di toko roti memiliki waktu 40 menit dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Menghias kue mangkuk: 6 menit → 42 poin\n• Membungkus roti tawar: 10 menit → 65 poin\n• Memanggang bolu gulung: 12 menit → 48 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 40 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memanggang bolu gulung 3 kali",
+      "b": "Membungkus roti tawar 5 kali",
+      "c": "Menghias kue mangkuk 5 kali + Membungkus roti tawar 1 kali",
+      "d": "Menghias kue mangkuk 6 kali",
+      "e": "Membungkus roti tawar 4 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 36,
+        "poin": 144,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "b": {
+        "menit": 50,
+        "poin": 325,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 40,
+        "poin": 275,
+        "sah": true
+      },
+      "d": {
+        "menit": 36,
+        "poin": 252,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "e": {
+        "menit": 40,
+        "poin": 260,
+        "sah": true,
+        "kesalahan": "ABS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menghias kue mangkuk 42 ÷ 6 = 7; Membungkus roti tawar 65 ÷ 10 = 6,5; Memanggang bolu gulung 48 ÷ 12 = 4.\n2. Poin per menit tertinggi: Menghias kue mangkuk (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 40 menit: Menghias kue mangkuk 5 kali + Membungkus roti tawar 1 kali memakai 40 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 5 × 42 + 1 × 65 = 275 poin.<br>Opsi A (Memanggang bolu gulung 3 kali) gugur karena sah dan muat dalam 36 menit, tetapi komposisinya kurang efisien; totalnya 144 poin, 131 poin lebih rendah dari kunci (275 poin). Opsi B (Membungkus roti tawar 5 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 50 menit, melebihi batas 40 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 325 poin. Opsi D (Menghias kue mangkuk 6 kali) gugur karena hanya memakai Menghias kue mangkuk (poin per menit tertinggi) sebanyak mungkin; 4 menit dibiarkan menganggur sehingga totalnya 252 poin, 23 poin lebih rendah dari kunci (275 poin). Opsi E (Membungkus roti tawar 4 kali) gugur karena memilih Membungkus roti tawar yang poin per kalinya paling besar (65 poin), padahal poin per menitnya hanya 6,5; totalnya 260 poin, 15 poin lebih rendah dari kunci (275 poin). Jawaban: Menghias kue mangkuk 5 kali + Membungkus roti tawar 1 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-026",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang mahasiswa magang di kantor desain memiliki waktu 45 menit dan mengumpulkan poin tugas. Kegiatan yang tersedia:\n\n• Membuat poster acara: 24 menit → 132 poin\n• Merapikan berkas desain: 5 menit → 15 poin\n• Membuat ikon aplikasi: 8 menit → 52 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 45 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membuat poster acara 2 kali",
+      "b": "Merapikan berkas desain 1 kali + Membuat ikon aplikasi 5 kali",
+      "c": "Membuat ikon aplikasi 5 kali",
+      "d": "Membuat poster acara 1 kali + Merapikan berkas desain 1 kali + Membuat ikon aplikasi 2 kali",
+      "e": "Merapikan berkas desain 9 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 48,
+        "poin": 264,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 45,
+        "poin": 275,
+        "sah": true
+      },
+      "c": {
+        "menit": 40,
+        "poin": 260,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "d": {
+        "menit": 45,
+        "poin": 251,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "e": {
+        "menit": 45,
+        "poin": 135,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Membuat poster acara 132 ÷ 24 = 5,5; Merapikan berkas desain 15 ÷ 5 = 3; Membuat ikon aplikasi 52 ÷ 8 = 6,5.\n2. Poin per menit tertinggi: Membuat ikon aplikasi (6,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 45 menit: Merapikan berkas desain 1 kali + Membuat ikon aplikasi 5 kali memakai 45 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 1 × 15 + 5 × 52 = 275 poin.<br>Opsi A (Membuat poster acara 2 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 48 menit, melebihi batas 45 menit (lebih 3 menit), jadi tidak sah walau totalnya tampak 264 poin. Opsi C (Membuat ikon aplikasi 5 kali) gugur karena hanya memakai Membuat ikon aplikasi (poin per menit tertinggi) sebanyak mungkin; 5 menit dibiarkan menganggur sehingga totalnya 260 poin, 15 poin lebih rendah dari kunci (275 poin). Opsi D (Membuat poster acara 1 kali + Merapikan berkas desain 1 kali + Membuat ikon aplikasi 2 kali) gugur karena memilih Membuat poster acara yang poin per kalinya paling besar (132 poin), padahal poin per menitnya hanya 5,5; totalnya 251 poin, 24 poin lebih rendah dari kunci (275 poin). Opsi E (Merapikan berkas desain 9 kali) gugur karena sah dan muat dalam 45 menit, tetapi komposisinya kurang efisien; totalnya 135 poin, 140 poin lebih rendah dari kunci (275 poin). Jawaban: Merapikan berkas desain 1 kali + Membuat ikon aplikasi 5 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-027",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang siswa kelas musik memiliki waktu latihan 40 menit dan mengumpulkan poin latihan. Kegiatan yang tersedia:\n\n• Berlatih tangga nada: 9 menit → 54 poin\n• Menyetel senar ukulele: 4 menit → 22 poin\n• Memainkan lagu utuh: 15 menit → 75 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 40 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menyetel senar ukulele 10 kali",
+      "b": "Berlatih tangga nada 1 kali + Memainkan lagu utuh 2 kali",
+      "c": "Menyetel senar ukulele 11 kali",
+      "d": "Berlatih tangga nada 4 kali + Menyetel senar ukulele 1 kali",
+      "e": "Berlatih tangga nada 4 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 40,
+        "poin": 220,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "b": {
+        "menit": 39,
+        "poin": 204,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "c": {
+        "menit": 44,
+        "poin": 242,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "d": {
+        "menit": 40,
+        "poin": 238,
+        "sah": true
+      },
+      "e": {
+        "menit": 36,
+        "poin": 216,
+        "sah": true,
+        "kesalahan": "RATE"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Berlatih tangga nada 54 ÷ 9 = 6; Menyetel senar ukulele 22 ÷ 4 = 5,5; Memainkan lagu utuh 75 ÷ 15 = 5.\n2. Poin per menit tertinggi: Berlatih tangga nada (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 40 menit: Berlatih tangga nada 4 kali + Menyetel senar ukulele 1 kali memakai 40 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 54 + 1 × 22 = 238 poin.<br>Opsi A (Menyetel senar ukulele 10 kali) gugur karena memakai waktu 40 dari 40 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 220 poin, 18 poin lebih rendah dari kunci (238 poin). Opsi B (Berlatih tangga nada 1 kali + Memainkan lagu utuh 2 kali) gugur karena memilih Memainkan lagu utuh yang poin per kalinya paling besar (75 poin), padahal poin per menitnya hanya 5; totalnya 204 poin, 34 poin lebih rendah dari kunci (238 poin). Opsi C (Menyetel senar ukulele 11 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 44 menit, melebihi batas 40 menit (lebih 4 menit), jadi tidak sah walau totalnya tampak 242 poin. Opsi E (Berlatih tangga nada 4 kali) gugur karena hanya memakai Berlatih tangga nada (poin per menit tertinggi) sebanyak mungkin; 4 menit dibiarkan menganggur sehingga totalnya 216 poin, 22 poin lebih rendah dari kunci (238 poin). Jawaban: Berlatih tangga nada 4 kali + Menyetel senar ukulele 1 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Lalu pastikan jumlah kegiatan tidak melebihi waktu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-028",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang penjahit rumahan memiliki waktu 30 menit sebelum menjemput anak dan mengumpulkan poin pesanan. Kegiatan yang tersedia:\n\n• Memasang kancing baju: 18 menit → 54 poin\n• Menjahit sarung bantal: 20 menit → 100 poin\n• Memotong pola kemeja: 30 menit → 120 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 30 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memotong pola kemeja 1 kali",
+      "b": "Menjahit sarung bantal 1 kali",
+      "c": "Memasang kancing baju 2 kali",
+      "d": "Memasang kancing baju 1 kali",
+      "e": "Memotong pola kemeja 2 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 30,
+        "poin": 120,
+        "sah": true
+      },
+      "b": {
+        "menit": 20,
+        "poin": 100,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 36,
+        "poin": 108,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "d": {
+        "menit": 18,
+        "poin": 54,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "e": {
+        "menit": 60,
+        "poin": 240,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memasang kancing baju 54 ÷ 18 = 3; Menjahit sarung bantal 100 ÷ 20 = 5; Memotong pola kemeja 120 ÷ 30 = 4.\n2. Poin per menit tertinggi: Menjahit sarung bantal (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 30 menit: Memotong pola kemeja 1 kali memakai 30 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 1 × 120 = 120 poin.<br>Opsi B (Menjahit sarung bantal 1 kali) gugur karena hanya memakai Menjahit sarung bantal (poin per menit tertinggi) sebanyak mungkin; 10 menit dibiarkan menganggur sehingga totalnya 100 poin, 20 poin lebih rendah dari kunci (120 poin). Opsi C (Memasang kancing baju 2 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 36 menit, melebihi batas 30 menit (lebih 6 menit), jadi tidak sah walau totalnya tampak 108 poin. Opsi D (Memasang kancing baju 1 kali) gugur karena sah dan muat dalam 18 menit, tetapi komposisinya kurang efisien; totalnya 54 poin, 66 poin lebih rendah dari kunci (120 poin). Opsi E (Memotong pola kemeja 2 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 60 menit, melebihi batas 30 menit (lebih 30 menit), jadi tidak sah walau totalnya tampak 240 poin. Jawaban: Memotong pola kemeja 1 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-029",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang relawan bank sampah bertugas selama 60 menit dan mengumpulkan poin kontribusi. Kegiatan yang tersedia:\n\n• Memilah botol plastik: 8 menit → 28 poin\n• Menimbang kardus bekas: 12 menit → 54 poin\n• Mengisi buku tabungan sampah: 9 menit → 45 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 60 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memilah botol plastik 7 kali",
+      "b": "Mengisi buku tabungan sampah 6 kali",
+      "c": "Menimbang kardus bekas 6 kali",
+      "d": "Menimbang kardus bekas 5 kali",
+      "e": "Menimbang kardus bekas 2 kali + Mengisi buku tabungan sampah 4 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 56,
+        "poin": 196,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "b": {
+        "menit": 54,
+        "poin": 270,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 72,
+        "poin": 324,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "d": {
+        "menit": 60,
+        "poin": 270,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "e": {
+        "menit": 60,
+        "poin": 288,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memilah botol plastik 28 ÷ 8 = 3,5; Menimbang kardus bekas 54 ÷ 12 = 4,5; Mengisi buku tabungan sampah 45 ÷ 9 = 5.\n2. Poin per menit tertinggi: Mengisi buku tabungan sampah (5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 60 menit: Menimbang kardus bekas 2 kali + Mengisi buku tabungan sampah 4 kali memakai 60 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 2 × 54 + 4 × 45 = 288 poin.<br>Opsi A (Memilah botol plastik 7 kali) gugur karena sah dan muat dalam 56 menit, tetapi komposisinya kurang efisien; totalnya 196 poin, 92 poin lebih rendah dari kunci (288 poin). Opsi B (Mengisi buku tabungan sampah 6 kali) gugur karena hanya memakai Mengisi buku tabungan sampah (poin per menit tertinggi) sebanyak mungkin; 6 menit dibiarkan menganggur sehingga totalnya 270 poin, 18 poin lebih rendah dari kunci (288 poin). Opsi C (Menimbang kardus bekas 6 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 60 menit (lebih 12 menit), jadi tidak sah walau totalnya tampak 324 poin. Opsi D (Menimbang kardus bekas 5 kali) gugur karena memilih Menimbang kardus bekas yang poin per kalinya paling besar (54 poin), padahal poin per menitnya hanya 4,5; totalnya 270 poin, 18 poin lebih rendah dari kunci (288 poin). Jawaban: Menimbang kardus bekas 2 kali + Mengisi buku tabungan sampah 4 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-030",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang fotografer acara wisuda memiliki waktu 70 menit dan mengumpulkan poin pekerjaan. Kegiatan yang tersedia:\n\n• Memotret foto keluarga: 18 menit → 117 poin\n• Menyunting album digital: 25 menit → 150 poin\n• Mencetak foto ukuran kecil: 9 menit → 45 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 70 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memotret foto keluarga 1 kali + Menyunting album digital 2 kali",
+      "b": "Menyunting album digital 3 kali",
+      "c": "Memotret foto keluarga 2 kali + Menyunting album digital 1 kali + Mencetak foto ukuran kecil 1 kali",
+      "d": "Memotret foto keluarga 3 kali",
+      "e": "Memotret foto keluarga 1 kali + Menyunting album digital 1 kali + Mencetak foto ukuran kecil 3 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 68,
+        "poin": 417,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 75,
+        "poin": 450,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 70,
+        "poin": 429,
+        "sah": true
+      },
+      "d": {
+        "menit": 54,
+        "poin": 351,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "e": {
+        "menit": 70,
+        "poin": 402,
+        "sah": true,
+        "kesalahan": "PAS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memotret foto keluarga 117 ÷ 18 = 6,5; Menyunting album digital 150 ÷ 25 = 6; Mencetak foto ukuran kecil 45 ÷ 9 = 5.\n2. Poin per menit tertinggi: Memotret foto keluarga (6,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 70 menit: Memotret foto keluarga 2 kali + Menyunting album digital 1 kali + Mencetak foto ukuran kecil 1 kali memakai 70 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 2 × 117 + 1 × 150 + 1 × 45 = 429 poin.<br>Opsi A (Memotret foto keluarga 1 kali + Menyunting album digital 2 kali) gugur karena memilih Menyunting album digital yang poin per kalinya paling besar (150 poin), padahal poin per menitnya hanya 6; totalnya 417 poin, 12 poin lebih rendah dari kunci (429 poin). Opsi B (Menyunting album digital 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 75 menit, melebihi batas 70 menit (lebih 5 menit), jadi tidak sah walau totalnya tampak 450 poin. Opsi D (Memotret foto keluarga 3 kali) gugur karena hanya memakai Memotret foto keluarga (poin per menit tertinggi) sebanyak mungkin; 16 menit dibiarkan menganggur sehingga totalnya 351 poin, 78 poin lebih rendah dari kunci (429 poin). Opsi E (Memotret foto keluarga 1 kali + Menyunting album digital 1 kali + Mencetak foto ukuran kecil 3 kali) gugur karena memakai waktu 70 dari 70 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 402 poin, 27 poin lebih rendah dari kunci (429 poin). Jawaban: Memotret foto keluarga 2 kali + Menyunting album digital 1 kali + Mencetak foto ukuran kecil 1 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-031",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang karyawan gudang ekspedisi memiliki waktu 80 menit pada satu giliran kerja dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Menyortir paket kiriman: 18 menit → 99 poin\n• Memuat barang ke truk: 30 menit → 135 poin\n• Menempel resi pengiriman: 4 menit → 14 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 80 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menyortir paket kiriman 1 kali + Memuat barang ke truk 2 kali",
+      "b": "Menyortir paket kiriman 4 kali + Menempel resi pengiriman 2 kali",
+      "c": "Memuat barang ke truk 3 kali",
+      "d": "Menyortir paket kiriman 2 kali + Menempel resi pengiriman 11 kali",
+      "e": "Menyortir paket kiriman 4 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 78,
+        "poin": 369,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "b": {
+        "menit": 80,
+        "poin": 424,
+        "sah": true
+      },
+      "c": {
+        "menit": 90,
+        "poin": 405,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "d": {
+        "menit": 80,
+        "poin": 352,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 72,
+        "poin": 396,
+        "sah": true,
+        "kesalahan": "RATE"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menyortir paket kiriman 99 ÷ 18 = 5,5; Memuat barang ke truk 135 ÷ 30 = 4,5; Menempel resi pengiriman 14 ÷ 4 = 3,5.\n2. Poin per menit tertinggi: Menyortir paket kiriman (5,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 80 menit: Menyortir paket kiriman 4 kali + Menempel resi pengiriman 2 kali memakai 80 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 99 + 2 × 14 = 424 poin.<br>Opsi A (Menyortir paket kiriman 1 kali + Memuat barang ke truk 2 kali) gugur karena memilih Memuat barang ke truk yang poin per kalinya paling besar (135 poin), padahal poin per menitnya hanya 4,5; totalnya 369 poin, 55 poin lebih rendah dari kunci (424 poin). Opsi C (Memuat barang ke truk 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 90 menit, melebihi batas 80 menit (lebih 10 menit), jadi tidak sah walau totalnya tampak 405 poin. Opsi D (Menyortir paket kiriman 2 kali + Menempel resi pengiriman 11 kali) gugur karena memakai waktu 80 dari 80 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 352 poin, 72 poin lebih rendah dari kunci (424 poin). Opsi E (Menyortir paket kiriman 4 kali) gugur karena hanya memakai Menyortir paket kiriman (poin per menit tertinggi) sebanyak mungkin; 8 menit dibiarkan menganggur sehingga totalnya 396 poin, 28 poin lebih rendah dari kunci (424 poin). Jawaban: Menyortir paket kiriman 4 kali + Menempel resi pengiriman 2 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-032",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta pelatihan barista memiliki waktu praktik 70 menit dan mengumpulkan poin praktik. Kegiatan yang tersedia:\n\n• Menyangrai biji kopi: 24 menit → 108 poin\n• Membuat latte art: 15 menit → 105 poin\n• Membersihkan mesin kopi: 4 menit → 26 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 70 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membuat latte art 4 kali",
+      "b": "Membersihkan mesin kopi 18 kali",
+      "c": "Membuat latte art 3 kali + Membersihkan mesin kopi 6 kali",
+      "d": "Membuat latte art 4 kali + Membersihkan mesin kopi 2 kali",
+      "e": "Menyangrai biji kopi 2 kali + Membuat latte art 1 kali + Membersihkan mesin kopi 1 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 60,
+        "poin": 420,
+        "sah": true,
+        "kesalahan": "RATE"
+      },
+      "b": {
+        "menit": 72,
+        "poin": 468,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 69,
+        "poin": 471,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 68,
+        "poin": 472,
+        "sah": true
+      },
+      "e": {
+        "menit": 67,
+        "poin": 347,
+        "sah": true,
+        "kesalahan": "ABS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menyangrai biji kopi 108 ÷ 24 = 4,5; Membuat latte art 105 ÷ 15 = 7; Membersihkan mesin kopi 26 ÷ 4 = 6,5.\n2. Poin per menit tertinggi: Membuat latte art (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 70 menit: Membuat latte art 4 kali + Membersihkan mesin kopi 2 kali memakai 68 menit, sisa 2 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 4 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 4 × 105 + 2 × 26 = 472 poin.<br>Opsi A (Membuat latte art 4 kali) gugur karena hanya memakai Membuat latte art (poin per menit tertinggi) sebanyak mungkin; 10 menit dibiarkan menganggur sehingga totalnya 420 poin, 52 poin lebih rendah dari kunci (472 poin). Opsi B (Membersihkan mesin kopi 18 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 70 menit (lebih 2 menit), jadi tidak sah walau totalnya tampak 468 poin. Opsi C (Membuat latte art 3 kali + Membersihkan mesin kopi 6 kali) gugur karena memakai waktu 69 dari 70 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 471 poin, 1 poin lebih rendah dari kunci (472 poin). Opsi E (Menyangrai biji kopi 2 kali + Membuat latte art 1 kali + Membersihkan mesin kopi 1 kali) gugur karena memilih Menyangrai biji kopi yang poin per kalinya paling besar (108 poin), padahal poin per menitnya hanya 4,5; totalnya 347 poin, 125 poin lebih rendah dari kunci (472 poin). Jawaban: Membuat latte art 4 kali + Membersihkan mesin kopi 2 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-033",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pengelola kebun hidroponik memiliki waktu 55 menit dan mengumpulkan poin perawatan. Kegiatan yang tersedia:\n\n• Memanen sawi: 20 menit → 80 poin\n• Mengganti larutan nutrisi: 24 menit → 120 poin\n• Menyemai benih selada: 9 menit → 63 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 55 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menyemai benih selada 6 kali",
+      "b": "Memanen sawi 2 kali",
+      "c": "Mengganti larutan nutrisi 3 kali",
+      "d": "Mengganti larutan nutrisi 2 kali",
+      "e": "Menyemai benih selada 5 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 54,
+        "poin": 378,
+        "sah": true
+      },
+      "b": {
+        "menit": 40,
+        "poin": 160,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "c": {
+        "menit": 72,
+        "poin": 360,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "d": {
+        "menit": 48,
+        "poin": 240,
+        "sah": true,
+        "kesalahan": "ABS"
+      },
+      "e": {
+        "menit": 45,
+        "poin": 315,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memanen sawi 80 ÷ 20 = 4; Mengganti larutan nutrisi 120 ÷ 24 = 5; Menyemai benih selada 63 ÷ 9 = 7.\n2. Poin per menit tertinggi: Menyemai benih selada (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Susun waktu 55 menit: Menyemai benih selada 6 kali memakai 54 menit, sisa 1 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 9 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n4. Hitung poin: 6 × 63 = 378 poin.<br>Opsi B (Memanen sawi 2 kali) gugur karena sah dan muat dalam 40 menit, tetapi komposisinya kurang efisien; totalnya 160 poin, 218 poin lebih rendah dari kunci (378 poin). Opsi C (Mengganti larutan nutrisi 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 55 menit (lebih 17 menit), jadi tidak sah walau totalnya tampak 360 poin. Opsi D (Mengganti larutan nutrisi 2 kali) gugur karena memilih Mengganti larutan nutrisi yang poin per kalinya paling besar (120 poin), padahal poin per menitnya hanya 5; totalnya 240 poin, 138 poin lebih rendah dari kunci (378 poin). Opsi E (Menyemai benih selada 5 kali) gugur karena sah dan muat dalam 45 menit, tetapi komposisinya kurang efisien; totalnya 315 poin, 63 poin lebih rendah dari kunci (378 poin). Jawaban: Menyemai benih selada 6 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-034",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang staf humas kampus memiliki waktu 50 menit dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Menulis siaran pers: 10 menit → 70 poin\n• Mengunggah konten media sosial: 6 menit → 33 poin\n• Membalas pesan pengunjung: 4 menit → 14 poin\n• Menyusun laporan bulanan: 20 menit → 80 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 50 menit. Membalas pesan pengunjung dan Menyusun laporan bulanan wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menulis siaran pers 2 kali + Membalas pesan pengunjung 2 kali + Menyusun laporan bulanan 1 kali",
+      "b": "Mengunggah konten media sosial 9 kali",
+      "c": "Menulis siaran pers 1 kali + Mengunggah konten media sosial 2 kali + Membalas pesan pengunjung 2 kali + Menyusun laporan bulanan 1 kali",
+      "d": "Menulis siaran pers 5 kali",
+      "e": "Menulis siaran pers 2 kali + Mengunggah konten media sosial 1 kali + Membalas pesan pengunjung 1 kali + Menyusun laporan bulanan 1 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 48,
+        "poin": 248,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "b": {
+        "menit": 54,
+        "poin": 297,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 50,
+        "poin": 244,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 50,
+        "poin": 350,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "e": {
+        "menit": 50,
+        "poin": 267,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menulis siaran pers 70 ÷ 10 = 7; Mengunggah konten media sosial 33 ÷ 6 = 5,5; Membalas pesan pengunjung 14 ÷ 4 = 3,5; Menyusun laporan bulanan 80 ÷ 20 = 4.\n2. Poin per menit tertinggi: Menulis siaran pers (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Membalas pesan pengunjung dan Menyusun laporan bulanan masing-masing satu kali memakai 24 menit, sisa 26 menit baru diisi kegiatan terbaik.\n4. Susun waktu 50 menit: Menulis siaran pers 2 kali + Mengunggah konten media sosial 1 kali + Membalas pesan pengunjung 1 kali + Menyusun laporan bulanan 1 kali memakai 50 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 2 × 70 + 1 × 33 + 1 × 14 + 1 × 80 = 267 poin.<br>Opsi A (Menulis siaran pers 2 kali + Membalas pesan pengunjung 2 kali + Menyusun laporan bulanan 1 kali) gugur karena sah dan muat dalam 48 menit, tetapi komposisinya kurang efisien; totalnya 248 poin, 19 poin lebih rendah dari kunci (267 poin). Opsi B (Mengunggah konten media sosial 9 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 54 menit, melebihi batas 50 menit (lebih 4 menit); selain itu Membalas pesan pengunjung tidak dilakukan padahal wajib minimal satu kali; Menyusun laporan bulanan tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 297 poin. Opsi C (Menulis siaran pers 1 kali + Mengunggah konten media sosial 2 kali + Membalas pesan pengunjung 2 kali + Menyusun laporan bulanan 1 kali) gugur karena memakai waktu 50 dari 50 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 244 poin, 23 poin lebih rendah dari kunci (267 poin). Opsi D (Menulis siaran pers 5 kali) gugur karena syarat diabaikan: Membalas pesan pengunjung tidak dilakukan padahal wajib minimal satu kali; Menyusun laporan bulanan tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 350 poin. Jawaban: Menulis siaran pers 2 kali + Mengunggah konten media sosial 1 kali + Membalas pesan pengunjung 1 kali + Menyusun laporan bulanan 1 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-035",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang petugas puskesmas memiliki waktu 70 menit pada jam pelayanan dan mengumpulkan poin layanan. Kegiatan yang tersedia:\n\n• Mengisi kartu berobat: 6 menit → 18 poin\n• Menimbang badan pasien: 4 menit → 16 poin\n• Memberikan penyuluhan gizi: 15 menit → 90 poin\n• Mendata ibu hamil: 18 menit → 90 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 70 menit. Mengisi kartu berobat dan Menimbang badan pasien wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Mendata ibu hamil 4 kali",
+      "b": "Mengisi kartu berobat 2 kali + Menimbang badan pasien 3 kali + Memberikan penyuluhan gizi 3 kali",
+      "c": "Mengisi kartu berobat 1 kali + Menimbang badan pasien 1 kali + Memberikan penyuluhan gizi 4 kali",
+      "d": "Mengisi kartu berobat 1 kali + Menimbang badan pasien 4 kali + Memberikan penyuluhan gizi 2 kali + Mendata ibu hamil 1 kali",
+      "e": "Memberikan penyuluhan gizi 4 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 72,
+        "poin": 360,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 69,
+        "poin": 354,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "c": {
+        "menit": 70,
+        "poin": 394,
+        "sah": true
+      },
+      "d": {
+        "menit": 70,
+        "poin": 352,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 60,
+        "poin": 360,
+        "sah": false,
+        "kesalahan": "RATE"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Mengisi kartu berobat 18 ÷ 6 = 3; Menimbang badan pasien 16 ÷ 4 = 4; Memberikan penyuluhan gizi 90 ÷ 15 = 6; Mendata ibu hamil 90 ÷ 18 = 5.\n2. Poin per menit tertinggi: Memberikan penyuluhan gizi (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Mengisi kartu berobat dan Menimbang badan pasien masing-masing satu kali memakai 10 menit, sisa 60 menit baru diisi kegiatan terbaik.\n4. Susun waktu 70 menit: Mengisi kartu berobat 1 kali + Menimbang badan pasien 1 kali + Memberikan penyuluhan gizi 4 kali memakai 70 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 1 × 18 + 1 × 16 + 4 × 90 = 394 poin.<br>Opsi A (Mendata ibu hamil 4 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 70 menit (lebih 2 menit); selain itu Mengisi kartu berobat tidak dilakukan padahal wajib minimal satu kali; Menimbang badan pasien tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 360 poin. Opsi B (Mengisi kartu berobat 2 kali + Menimbang badan pasien 3 kali + Memberikan penyuluhan gizi 3 kali) gugur karena sah dan muat dalam 69 menit, tetapi komposisinya kurang efisien; totalnya 354 poin, 40 poin lebih rendah dari kunci (394 poin). Opsi D (Mengisi kartu berobat 1 kali + Menimbang badan pasien 4 kali + Memberikan penyuluhan gizi 2 kali + Mendata ibu hamil 1 kali) gugur karena memakai waktu 70 dari 70 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 352 poin, 42 poin lebih rendah dari kunci (394 poin). Opsi E (Memberikan penyuluhan gizi 4 kali) gugur karena syarat diabaikan: Mengisi kartu berobat tidak dilakukan padahal wajib minimal satu kali; Menimbang badan pasien tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 360 poin. Jawaban: Mengisi kartu berobat 1 kali + Menimbang badan pasien 1 kali + Memberikan penyuluhan gizi 4 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-036",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pengurus OSIS memiliki waktu 45 menit saat jam istirahat panjang dan mengumpulkan poin keaktifan. Kegiatan yang tersedia:\n\n• Merancang pamflet lomba: 10 menit → 70 poin\n• Memimpin rapat koordinasi kelas: 18 menit → 54 poin\n• Mengecek kas OSIS: 8 menit → 36 poin\n• Memasang poster di mading: 5 menit → 30 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 45 menit. Memimpin rapat koordinasi kelas dan Mengecek kas OSIS wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Merancang pamflet lomba 4 kali",
+      "b": "Merancang pamflet lomba 1 kali + Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 2 kali",
+      "c": "Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 2 kali + Memasang poster di mading 2 kali",
+      "d": "Memasang poster di mading 10 kali",
+      "e": "Merancang pamflet lomba 1 kali + Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 1 kali + Memasang poster di mading 1 kali"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 40,
+        "poin": 280,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "b": {
+        "menit": 44,
+        "poin": 196,
+        "sah": true
+      },
+      "c": {
+        "menit": 44,
+        "poin": 186,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 50,
+        "poin": 300,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 41,
+        "poin": 190,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Merancang pamflet lomba 70 ÷ 10 = 7; Memimpin rapat koordinasi kelas 54 ÷ 18 = 3; Mengecek kas OSIS 36 ÷ 8 = 4,5; Memasang poster di mading 30 ÷ 5 = 6.\n2. Poin per menit tertinggi: Merancang pamflet lomba (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Memimpin rapat koordinasi kelas dan Mengecek kas OSIS masing-masing satu kali memakai 26 menit, sisa 19 menit baru diisi kegiatan terbaik.\n4. Susun waktu 45 menit: Merancang pamflet lomba 1 kali + Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 2 kali memakai 44 menit, sisa 1 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 5 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 1 × 70 + 1 × 54 + 2 × 36 = 196 poin.<br>Opsi A (Merancang pamflet lomba 4 kali) gugur karena syarat diabaikan: Memimpin rapat koordinasi kelas tidak dilakukan padahal wajib minimal satu kali; Mengecek kas OSIS tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 280 poin. Opsi C (Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 2 kali + Memasang poster di mading 2 kali) gugur karena memakai waktu 44 dari 45 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 186 poin, 10 poin lebih rendah dari kunci (196 poin). Opsi D (Memasang poster di mading 10 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 50 menit, melebihi batas 45 menit (lebih 5 menit); selain itu Memimpin rapat koordinasi kelas tidak dilakukan padahal wajib minimal satu kali; Mengecek kas OSIS tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 300 poin. Opsi E (Merancang pamflet lomba 1 kali + Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 1 kali + Memasang poster di mading 1 kali) gugur karena sah dan muat dalam 41 menit, tetapi komposisinya kurang efisien; totalnya 190 poin, 6 poin lebih rendah dari kunci (196 poin). Jawaban: Merancang pamflet lomba 1 kali + Memimpin rapat koordinasi kelas 1 kali + Mengecek kas OSIS 2 kali (B). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-037",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pemandu museum memiliki waktu 70 menit dan mengumpulkan poin layanan. Kegiatan yang tersedia:\n\n• Memandu rombongan sekolah: 24 menit → 108 poin\n• Menjawab pertanyaan di meja informasi: 4 menit → 24 poin (hanya tersedia 2 kali)\n• Menata ulang vitrin koleksi: 9 menit → 27 poin\n• Membersihkan replika artefak: 5 menit → 20 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 70 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Memandu rombongan sekolah 3 kali",
+      "b": "Menata ulang vitrin koleksi 7 kali",
+      "c": "Menjawab pertanyaan di meja informasi 17 kali",
+      "d": "Memandu rombongan sekolah 2 kali + Menjawab pertanyaan di meja informasi 2 kali + Menata ulang vitrin koleksi 1 kali + Membersihkan replika artefak 1 kali",
+      "e": "Memandu rombongan sekolah 2 kali + Menjawab pertanyaan di meja informasi 1 kali + Menata ulang vitrin koleksi 2 kali"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 72,
+        "poin": 324,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 63,
+        "poin": 189,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "c": {
+        "menit": 68,
+        "poin": 408,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "d": {
+        "menit": 70,
+        "poin": 311,
+        "sah": true
+      },
+      "e": {
+        "menit": 70,
+        "poin": 294,
+        "sah": true,
+        "kesalahan": "PAS"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Memandu rombongan sekolah 108 ÷ 24 = 4,5; Menjawab pertanyaan di meja informasi 24 ÷ 4 = 6; Menata ulang vitrin koleksi 27 ÷ 9 = 3; Membersihkan replika artefak 20 ÷ 5 = 4.\n2. Poin per menit tertinggi: Menjawab pertanyaan di meja informasi (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Batas pemakaian dihormati: Menjawab pertanyaan di meja informasi paling banyak 2 kali.\n4. Susun waktu 70 menit: Memandu rombongan sekolah 2 kali + Menjawab pertanyaan di meja informasi 2 kali + Menata ulang vitrin koleksi 1 kali + Membersihkan replika artefak 1 kali memakai 70 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 2 × 108 + 2 × 24 + 1 × 27 + 1 × 20 = 311 poin.<br>Opsi A (Memandu rombongan sekolah 3 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 72 menit, melebihi batas 70 menit (lebih 2 menit), jadi tidak sah walau totalnya tampak 324 poin. Opsi B (Menata ulang vitrin koleksi 7 kali) gugur karena sah dan muat dalam 63 menit, tetapi komposisinya kurang efisien; totalnya 189 poin, 122 poin lebih rendah dari kunci (311 poin). Opsi C (Menjawab pertanyaan di meja informasi 17 kali) gugur karena syarat diabaikan: Menjawab pertanyaan di meja informasi dilakukan 17 kali padahal hanya tersedia 2 kali, jadi strategi ini tidak sah walau totalnya tampak 408 poin. Opsi E (Memandu rombongan sekolah 2 kali + Menjawab pertanyaan di meja informasi 1 kali + Menata ulang vitrin koleksi 2 kali) gugur karena memakai waktu 70 dari 70 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 294 poin, 17 poin lebih rendah dari kunci (311 poin). Jawaban: Memandu rombongan sekolah 2 kali + Menjawab pertanyaan di meja informasi 2 kali + Menata ulang vitrin koleksi 1 kali + Membersihkan replika artefak 1 kali (D). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-038",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pengrajin keramik memiliki waktu 50 menit sebelum tungku dinyalakan dan mengumpulkan poin produksi. Kegiatan yang tersedia:\n\n• Membuat guci besar: 18 menit → 108 poin (hanya tersedia 1 kali)\n• Mengamplas tatakan: 4 menit → 12 poin\n• Membuat cangkir: 6 menit → 30 poin\n• Mewarnai piring hias: 30 menit → 75 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 50 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membuat guci besar 1 kali + Membuat cangkir 5 kali",
+      "b": "Membuat guci besar 2 kali",
+      "c": "Membuat guci besar 1 kali + Mengamplas tatakan 2 kali + Membuat cangkir 4 kali",
+      "d": "Membuat cangkir 9 kali",
+      "e": "Mewarnai piring hias 1 kali"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 48,
+        "poin": 258,
+        "sah": true
+      },
+      "b": {
+        "menit": 36,
+        "poin": 216,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "c": {
+        "menit": 50,
+        "poin": 252,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "d": {
+        "menit": 54,
+        "poin": 270,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "e": {
+        "menit": 30,
+        "poin": 75,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Membuat guci besar 108 ÷ 18 = 6; Mengamplas tatakan 12 ÷ 4 = 3; Membuat cangkir 30 ÷ 6 = 5; Mewarnai piring hias 75 ÷ 30 = 2,5.\n2. Poin per menit tertinggi: Membuat guci besar (6). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Batas pemakaian dihormati: Membuat guci besar paling banyak 1 kali.\n4. Susun waktu 50 menit: Membuat guci besar 1 kali + Membuat cangkir 5 kali memakai 48 menit, sisa 2 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 4 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n5. Hitung poin: 1 × 108 + 5 × 30 = 258 poin.<br>Opsi B (Membuat guci besar 2 kali) gugur karena syarat diabaikan: Membuat guci besar dilakukan 2 kali padahal hanya tersedia 1 kali, jadi strategi ini tidak sah walau totalnya tampak 216 poin. Opsi C (Membuat guci besar 1 kali + Mengamplas tatakan 2 kali + Membuat cangkir 4 kali) gugur karena memakai waktu 50 dari 50 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 252 poin, 6 poin lebih rendah dari kunci (258 poin). Opsi D (Membuat cangkir 9 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 54 menit, melebihi batas 50 menit (lebih 4 menit), jadi tidak sah walau totalnya tampak 270 poin. Opsi E (Mewarnai piring hias 1 kali) gugur karena sah dan muat dalam 30 menit, tetapi komposisinya kurang efisien; totalnya 75 poin, 183 poin lebih rendah dari kunci (258 poin). Jawaban: Membuat guci besar 1 kali + Membuat cangkir 5 kali (A). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-039",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang editor penerbit buku memiliki waktu 80 menit dan mengumpulkan poin kinerja. Kegiatan yang tersedia:\n\n• Menyunting naskah bab: 30 menit → 120 poin\n• Memeriksa ejaan sampul: 10 menit → 30 poin\n• Menyusun daftar isi: 15 menit → 90 poin\n• Menulis sinopsis: 12 menit → 78 poin (hanya tersedia 1 kali)\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 80 menit. Memeriksa ejaan sampul wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Menyusun daftar isi 6 kali",
+      "b": "Memeriksa ejaan sampul 8 kali",
+      "c": "Menulis sinopsis 6 kali",
+      "d": "Menyunting naskah bab 1 kali + Memeriksa ejaan sampul 2 kali + Menyusun daftar isi 2 kali",
+      "e": "Memeriksa ejaan sampul 2 kali + Menyusun daftar isi 4 kali"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 90,
+        "poin": 540,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "b": {
+        "menit": 80,
+        "poin": 240,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      },
+      "c": {
+        "menit": 72,
+        "poin": 468,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "d": {
+        "menit": 80,
+        "poin": 360,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 80,
+        "poin": 420,
+        "sah": true
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Menyunting naskah bab 120 ÷ 30 = 4; Memeriksa ejaan sampul 30 ÷ 10 = 3; Menyusun daftar isi 90 ÷ 15 = 6; Menulis sinopsis 78 ÷ 12 = 6,5.\n2. Poin per menit tertinggi: Menulis sinopsis (6,5). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Memeriksa ejaan sampul satu kali memakai 10 menit, sisa 70 menit baru diisi kegiatan terbaik.\n4. Batas pemakaian dihormati: Menulis sinopsis paling banyak 1 kali.\n5. Susun waktu 80 menit: Memeriksa ejaan sampul 2 kali + Menyusun daftar isi 4 kali memakai 80 menit (waktu habis terpakai). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n6. Hitung poin: 2 × 30 + 4 × 90 = 420 poin.<br>Opsi A (Menyusun daftar isi 6 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 90 menit, melebihi batas 80 menit (lebih 10 menit); selain itu Memeriksa ejaan sampul tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 540 poin. Opsi B (Memeriksa ejaan sampul 8 kali) gugur karena sah dan muat dalam 80 menit, tetapi komposisinya kurang efisien; totalnya 240 poin, 180 poin lebih rendah dari kunci (420 poin). Opsi C (Menulis sinopsis 6 kali) gugur karena syarat diabaikan: Memeriksa ejaan sampul tidak dilakukan padahal wajib minimal satu kali; Menulis sinopsis dilakukan 6 kali padahal hanya tersedia 1 kali, jadi strategi ini tidak sah walau totalnya tampak 468 poin. Opsi D (Menyunting naskah bab 1 kali + Memeriksa ejaan sampul 2 kali + Menyusun daftar isi 2 kali) gugur karena memakai waktu 80 dari 80 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 360 poin, 60 poin lebih rendah dari kunci (420 poin). Jawaban: Memeriksa ejaan sampul 2 kali + Menyusun daftar isi 4 kali (E). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-040",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-POIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang peserta perkemahan memiliki waktu 50 menit sebelum upacara api unggun dan mengumpulkan poin regu. Kegiatan yang tersedia:\n\n• Membangun gapura bambu: 15 menit → 105 poin (hanya tersedia 1 kali)\n• Mencari jejak: 20 menit → 80 poin\n• Mengikat tali pancang: 5 menit → 25 poin\n• Membersihkan area kemah: 8 menit → 24 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 50 menit. Membersihkan area kemah wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+    "opsi": {
+      "a": "Membangun gapura bambu 3 kali",
+      "b": "Mengikat tali pancang 11 kali",
+      "c": "Membangun gapura bambu 1 kali + Mengikat tali pancang 5 kali + Membersihkan area kemah 1 kali",
+      "d": "Membangun gapura bambu 1 kali + Mencari jejak 1 kali + Mengikat tali pancang 1 kali + Membersihkan area kemah 1 kali",
+      "e": "Membersihkan area kemah 6 kali"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "menit": 45,
+        "poin": 315,
+        "sah": false,
+        "kesalahan": "RATE"
+      },
+      "b": {
+        "menit": 55,
+        "poin": 275,
+        "sah": false,
+        "kesalahan": "LEBIH"
+      },
+      "c": {
+        "menit": 48,
+        "poin": 254,
+        "sah": true
+      },
+      "d": {
+        "menit": 48,
+        "poin": 234,
+        "sah": true,
+        "kesalahan": "PAS"
+      },
+      "e": {
+        "menit": 48,
+        "poin": 144,
+        "sah": true,
+        "kesalahan": "RENDAH"
+      }
+    },
+    "pembahasan": "1. Hitung poin per menit tiap kegiatan: Membangun gapura bambu 105 ÷ 15 = 7; Mencari jejak 80 ÷ 20 = 4; Mengikat tali pancang 25 ÷ 5 = 5; Membersihkan area kemah 24 ÷ 8 = 3.\n2. Poin per menit tertinggi: Membangun gapura bambu (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Membersihkan area kemah satu kali memakai 8 menit, sisa 42 menit baru diisi kegiatan terbaik.\n4. Batas pemakaian dihormati: Membangun gapura bambu paling banyak 1 kali.\n5. Susun waktu 50 menit: Membangun gapura bambu 1 kali + Mengikat tali pancang 5 kali + Membersihkan area kemah 1 kali memakai 48 menit, sisa 2 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 5 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n6. Hitung poin: 1 × 105 + 5 × 25 + 1 × 24 = 254 poin.<br>Opsi A (Membangun gapura bambu 3 kali) gugur karena syarat diabaikan: Membangun gapura bambu dilakukan 3 kali padahal hanya tersedia 1 kali; Membersihkan area kemah tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 315 poin. Opsi B (Mengikat tali pancang 11 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 55 menit, melebihi batas 50 menit (lebih 5 menit); selain itu Membersihkan area kemah tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 275 poin. Opsi D (Membangun gapura bambu 1 kali + Mencari jejak 1 kali + Mengikat tali pancang 1 kali + Membersihkan area kemah 1 kali) gugur karena memakai waktu 48 dari 50 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 234 poin, 20 poin lebih rendah dari kunci (254 poin). Opsi E (Membersihkan area kemah 6 kali) gugur karena sah dan muat dalam 48 menit, tetapi komposisinya kurang efisien; totalnya 144 poin, 110 poin lebih rendah dari kunci (254 poin). Jawaban: Membangun gapura bambu 1 kali + Mengikat tali pancang 5 kali + Membersihkan area kemah 1 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
     "status_kunci": "ganda"
   }
 ]

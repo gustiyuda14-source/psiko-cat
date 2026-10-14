@@ -48,7 +48,7 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["NUM-HIT-TRIK-KALI", "Trik perkalian"], ["NUM-HIT-TRIK-PERSEN", "Trik persen & pecahan"], ["NUM-HIT-TRIK-BAGI", "Trik bagi & estimasi"], ["NUM-HIT-TRIK-TAMBAH", "Trik tambah & kurang"],
   ["NUM-ALJ", "Aljabar & perbandingan"],
   ["NUM-SAT-KONVERSI", "Konversi satuan"], ["NUM-SAT-CERITA", "Soal cerita satuan"],
-  ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-ALOKASI-STRATEGI", "Alokasi · strategi"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
+  ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-ALOKASI-STRATEGI", "Alokasi · strategi"], ["NUM-CRT-ALOKASI-POIN", "Alokasi · poin maksimal"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
   ["NUM-CRT-PROPORSI", "Proporsi"], ["NUM-CRT-UANG", "Uang"], ["NUM-CRT-UMUR", "Umur"], ["NUM-CRT-LINIER", "Persamaan linier"],
   ["NUM-CRT-PENCACAHAN", "Pencacahan"], ["NUM-CRT-HIMPUNAN", "Himpunan"], ["NUM-CRT-GEOMETRI", "Geometri"], ["NUM-CRT-BULAT", "Bilangan bulat"],
   ["LOG-SIL-KATEGORI", "Silogisme kategorikal"], ["LOG-SIL-KONDISIONAL", "Kondisional"], ["LOG-SIL-JEBAKAN", "Jebakan logika"],
