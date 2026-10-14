@@ -326,7 +326,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
         <>
           <button
             type="button"
-            className="fixed inset-0 z-[7] cursor-default bg-[rgb(15_35_43/0.4)] lg:hidden"
+            className="fixed inset-0 z-[7] cursor-default bg-[rgb(15_35_43/0.4)] backdrop-blur-[6px] lg:hidden"
             onClick={() => {
               setOpen(false);
               menuButtonRef.current?.focus();

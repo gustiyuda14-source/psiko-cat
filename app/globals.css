@@ -489,6 +489,19 @@ summary,
 
 /* Shared hero geometry stays outside the timed question surface. */
 
+/* Latar semua modal (<dialog> native: Modal di ui-client, lembar paket): diredupkan
+   + diburamkan supaya mata langsung ke modal. Warna redup tetap dari kelas
+   backdrop: masing-masing; di sini hanya blur dan fade masuk. */
+dialog::backdrop {
+  -webkit-backdrop-filter: blur(8px) saturate(0.85);
+  backdrop-filter: blur(8px) saturate(0.85);
+}
+dialog[open]::backdrop { animation: backdrop-in 200ms ease-out }
+@keyframes backdrop-in { from { opacity: 0 } }
+@media (prefers-reduced-transparency: reduce) {
+  dialog::backdrop { -webkit-backdrop-filter: none; backdrop-filter: none; background-color: rgb(7 6 5 / 0.82) }
+}
+
 .question-enter {
   animation: question-enter 140ms ease-out;
 }
