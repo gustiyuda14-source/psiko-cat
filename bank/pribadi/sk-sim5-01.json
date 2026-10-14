@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sim5-01",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran baru untuk Simulasi Penuh 5 (Kepribadian package_number 15). Komposisi = SK_SLOT compose-pribadi-paket.ts, 4 pasang kembar (D1, D2, D3, D5). Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur resmi yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-601",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menjelaskan keaslian jam antik peninggalan keluarga",
+      "opsi": {
+        "A": "Keterangan asal jam yang ditopang bukti ahli",
+        "B": "Cerita tentang jam yang menghangatkan hati keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterangan asal jam yang ditopang bukti ahli menjaga kebenaran asal benda berdasarkan bukti yang dapat diperiksa. Cerita tentang jam yang menghangatkan hati keluarga juga bernilai, tetapi kedekatan emosional keluarga tidak membuktikan keaslian benda. Tips: untuk menentukan kebenaran suatu klaim, dahulukan bukti daripada perasaan."
+    },
+    {
+      "id": "SK-D1-602",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menjawab pertanyaan penumpang tentang bus yang terlambat tiba",
+      "opsi": {
+        "A": "Ucapan penyemangat agar perjalanan tetap terasa nyaman",
+        "B": "Waktu kedatangan aktual yang tercatat pada layar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu kedatangan aktual yang tercatat pada layar menjaga ketepatan informasi tentang keterlambatan kendaraan. Ucapan penyemangat agar perjalanan tetap terasa nyaman juga bernilai, tetapi kenyamanan penumpang belum menjelaskan keadaan kedatangan yang sebenarnya. Tips: bedakan keterangan keadaan nyata dari dukungan yang menenangkan."
+    },
+    {
+      "id": "SK-D1-603",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menilai kekuatan jembatan stik es krim buatan siswa setelah uji beban",
+      "opsi": {
+        "A": "Apresiasi yang menjaga rasa percaya diri pembuat",
+        "B": "Penilaian yang bertumpu pada bukti pengamatan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-604",
+      "pembahasan": "Penilaian yang bertumpu pada bukti pengamatan menempatkan kebenaran hasil uji sebagai dasar penilaian karya. Apresiasi yang menjaga rasa percaya diri pembuat juga bernilai, tetapi dukungan bagi pembuat tidak menunjukkan kekuatan jembatan yang diuji. Tips: dalam penilaian, pilih bukti hasil kegiatan dibandingkan dorongan membesarkan hati. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D1-604",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menilai ketepatan metronom rakitan klub musik setelah dibandingkan dengan alat pembanding",
+      "opsi": {
+        "A": "Penilaian yang bertumpu pada bukti pengamatan",
+        "B": "Penghargaan yang memelihara keyakinan diri perakit"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-603",
+      "pembahasan": "Penilaian yang bertumpu pada bukti pengamatan menjaga penilaian ketepatan alat sesuai hasil perbandingan yang diamati. Penghargaan yang memelihara keyakinan diri perakit juga bernilai, tetapi penghargaan terhadap perakit tidak menentukan ketepatan bunyi alat. Tips: utamakan hasil yang dapat dibuktikan ketika pembandingnya berupa dukungan perasaan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-601",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika dispenser air ruang tunggu puskesmas sedang diperbaiki",
+      "opsi": {
+        "A": "Merangkum perkembangan perbaikan untuk koordinasi teknisi setempat",
+        "B": "Memajang perkembangan perbaikan agar pengunjung dapat membacanya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memajang perkembangan perbaikan agar pengunjung dapat membacanya membuka informasi fasilitas bersama kepada pengguna yang terdampak. Merangkum perkembangan perbaikan untuk koordinasi teknisi setempat juga bernilai, tetapi catatan koordinasi teknisi membatasi informasi pada pelaksana perbaikan. Tips: untuk kondisi fasilitas bersama, cari akses informasi bagi penggunanya."
+    },
+    {
+      "id": "SK-D2-602",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika perpustakaan merangkum jenis buku sumbangan tanpa mencatat identitas penyumbang",
+      "opsi": {
+        "A": "Daftar sumbangan dipasang pada halaman informasi pengunjung",
+        "B": "Daftar sumbangan disimpan pada berkas inventaris petugas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Daftar sumbangan dipasang pada halaman informasi pengunjung membuat informasi koleksi sumbangan dapat diketahui pengunjung. Daftar sumbangan disimpan pada berkas inventaris petugas juga bernilai, tetapi penyimpanan inventaris saja belum memberi akses kepada pengguna perpustakaan. Tips: keterbukaan terlihat dari siapa yang dapat membaca informasi bersama."
+    },
+    {
+      "id": "SK-D2-603",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika koperasi menyusun rincian tarif penyewaan karpet untuk anggota",
+      "opsi": {
+        "A": "Menyiapkan lembar tarif sebagai pegangan khusus tim penyewaan",
+        "B": "Menyediakan lembar tarif yang bisa dibaca semua penyewa"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menyediakan lembar tarif yang bisa dibaca semua penyewa menjamin anggota memperoleh akses langsung pada informasi biaya. Menyiapkan lembar tarif sebagai pegangan khusus tim penyewaan juga bernilai, tetapi pegangan khusus tim membuat anggota bergantung pada penjelasan petugas. Tips: bedakan informasi biaya yang terbuka dari informasi yang hanya dipegang pengelola."
+    },
+    {
+      "id": "SK-D2-604",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipegang ketika organisasi pemuda mencatat penggunaan gulungan kain dekorasi milik bersama",
+      "opsi": {
+        "A": "Rincian pemakaian dapat dibaca seluruh anggota",
+        "B": "Rincian pemakaian menjadi pegangan khusus pengurus"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-605",
+      "pembahasan": "Rincian pemakaian dapat dibaca seluruh anggota memberikan akses anggota pada penggunaan bahan yang mereka miliki bersama. Rincian pemakaian menjadi pegangan khusus pengurus juga bernilai, tetapi pegangan pengurus saja membatasi keterbukaan tentang penggunaan bahan. Tips: untuk penggunaan milik bersama, utamakan akses anggota daripada arsip terbatas. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-605",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika klub bulu tangkis menyusun catatan habisnya kok dari persediaan bersama",
+      "opsi": {
+        "A": "Rincian pemakaian menjadi bahan koordinasi khusus pengelola",
+        "B": "Rincian pemakaian dapat dibaca seluruh anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-604",
+      "pembahasan": "Rincian pemakaian dapat dibaca seluruh anggota membuka penggunaan persediaan bersama agar diketahui anggota klub. Rincian pemakaian menjadi bahan koordinasi khusus pengelola juga bernilai, tetapi koordinasi khusus pengelola tidak menyediakan akses informasi bagi anggota. Tips: cari penyampaian informasi kepada pemilik bersama dibandingkan pengelolaan terbatas. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-601",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengelola liga lari dan peserta kembali masuk lintasan tanpa nomor wajib",
+      "opsi": {
+        "A": "Mengajak peserta memahami fungsi nomor untuk pencatatan",
+        "B": "Menerapkan pembatasan keikutsertaan menurut peraturan liga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menerapkan pembatasan keikutsertaan menurut peraturan liga menegakkan konsekuensi atas ketentuan keikutsertaan yang telah diketahui peserta. Mengajak peserta memahami fungsi nomor untuk pencatatan juga bernilai, tetapi penjelasan fungsi nomor mengutamakan penyadaran dan belum menerapkan ketentuan liga. Tips: ketika ada pelanggaran, bedakan penerapan aturan dari penjelasan manfaatnya."
+    },
+    {
+      "id": "SK-D3-602",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika mengurus kantin dengan peminjam gelas yang berulang kali tidak mengembalikannya",
+      "opsi": {
+        "A": "Menagih biaya penggantian mengikuti ketentuan peminjaman",
+        "B": "Membimbing peminjam membiasakan pengembalian selesai makan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menagih biaya penggantian mengikuti ketentuan peminjaman menjalankan konsekuensi pengembalian gelas berdasarkan ketentuan kantin. Membimbing peminjam membiasakan pengembalian selesai makan juga bernilai, tetapi pembimbingan kebiasaan belum menjalankan kewajiban penggantian yang ditetapkan. Tips: pilih pelaksanaan konsekuensi dibandingkan pembinaan kebiasaan saja."
+    },
+    {
+      "id": "SK-D3-603",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika mengelola aula kelurahan dan penyewa kembali memasang perekat terlarang hingga cat dinding terkelupas",
+      "opsi": {
+        "A": "Mengenakan biaya pemulihan menurut perjanjian penggunaan aula",
+        "B": "Memberikan penjelasan perawatan dinding kepada penyewa aula"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengenakan biaya pemulihan menurut perjanjian penggunaan aula memberlakukan konsekuensi dalam perjanjian penggunaan ruang. Memberikan penjelasan perawatan dinding kepada penyewa aula juga bernilai, tetapi penjelasan perawatan membangun pengertian tanpa menjalankan konsekuensi perjanjian. Tips: cari ketentuan yang benar-benar diberlakukan ketika alternatifnya berupa penjelasan."
+    },
+    {
+      "id": "SK-D3-604",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika menjadi pembina klub catur dan pemain kembali memakai jam pribadi yang dilarang",
+      "opsi": {
+        "A": "Pendampingan pemain memahami alasan penyeragaman alat pengukur",
+        "B": "Penerapan pembatalan hasil sesuai ketentuan pertandingan klub"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penerapan pembatalan hasil sesuai ketentuan pertandingan klub menjaga berlakunya konsekuensi pertandingan secara konsisten. Pendampingan pemain memahami alasan penyeragaman alat pengukur juga bernilai, tetapi pendampingan memberi pemahaman namun bukan pelaksanaan ketentuan atas pelanggaran. Tips: penerapan aturan berbeda dari upaya membuat pelanggar memahami aturan."
+    },
+    {
+      "id": "SK-D3-605",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus asrama dan penghuni kembali menitipkan cucian di tangga yang dilarang",
+      "opsi": {
+        "A": "Mengajak penghuni memahami pentingnya kelancaran jalan tangga",
+        "B": "Menjalankan konsekuensi yang tercantum dalam tata tertib"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-606",
+      "pembahasan": "Menjalankan konsekuensi yang tercantum dalam tata tertib menegakkan ketentuan asrama terhadap penggunaan tangga yang tidak sesuai. Mengajak penghuni memahami pentingnya kelancaran jalan tangga juga bernilai, tetapi ajakan memahami kenyamanan bersama belum memberlakukan konsekuensi yang ditetapkan. Tips: utamakan pelaksanaan ketentuan dibandingkan ajakan memahami saat aturan dilanggar. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-606",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika mengelola klub renang dan anggota kembali masuk kolam memakai alas kaki terlarang",
+      "opsi": {
+        "A": "Menjalankan konsekuensi yang tercantum dalam tata tertib",
+        "B": "Memberi nasihat tentang kebersihan kepada anggota klub"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-605",
+      "pembahasan": "Menjalankan konsekuensi yang tercantum dalam tata tertib menempatkan ketentuan klub sebagai dasar menangani pelanggaran yang berulang. Memberi nasihat tentang kebersihan kepada anggota klub juga bernilai, tetapi nasihat membantu kesadaran anggota tanpa menerapkan konsekuensi dalam ketentuan. Tips: bedakan penegakan ketentuan dari nasihat kepada pelanggar. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D4-601",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika menyortir arsip kelurahan menggunakan jadwal penyimpanan yang diwajibkan kantor",
+      "opsi": {
+        "A": "Masa simpan arsip mengacu kelonggaran ruang tersedia",
+        "B": "Masa simpan arsip mengacu jadwal retensi wajib"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Masa simpan arsip mengacu jadwal retensi wajib menunjukkan kepatuhan pada pedoman penyimpanan dokumen yang berlaku. Masa simpan arsip mengacu kelonggaran ruang tersedia juga bernilai, tetapi kelonggaran ruang merupakan pertimbangan praktis dan bukan acuan kewajiban penyimpanan. Tips: bila pedoman wajib sudah ada, utamakan kesesuaian dengannya."
+    },
+    {
+      "id": "SK-D4-602",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika membungkus alat layanan di puskesmas menurut prosedur pengemasan yang diwajibkan",
+      "opsi": {
+        "A": "Susunan pembungkus mengikuti petunjuk pengemasan yang ditetapkan",
+        "B": "Susunan pembungkus mengikuti keterampilan praktis pegawai berpengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Susunan pembungkus mengikuti petunjuk pengemasan yang ditetapkan menjaga pelaksanaan standar pengemasan yang wajib digunakan. Susunan pembungkus mengikuti keterampilan praktis pegawai berpengalaman juga bernilai, tetapi keterampilan pegawai memberi pengalaman praktis tanpa menjadi pengganti prosedur wajib. Tips: kenali pekerjaan dengan prosedur wajib lalu pilih kepatuhan pada prosedur itu."
+    },
+    {
+      "id": "SK-D4-603",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika guru menyiapkan percobaan bahan kimia dengan petunjuk keselamatan wajib dari sekolah",
+      "opsi": {
+        "A": "Penataan bahan berpatokan pada kemudahan demonstrasi kelas",
+        "B": "Penataan bahan berpatokan pada panduan keselamatan wajib"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penataan bahan berpatokan pada panduan keselamatan wajib mendahulukan kepatuhan terhadap standar keselamatan percobaan. Penataan bahan berpatokan pada kemudahan demonstrasi kelas juga bernilai, tetapi kemudahan demonstrasi mendukung pembelajaran namun tidak menetapkan standar keselamatan. Tips: untuk standar keselamatan, cari acuan yang diwajibkan."
+    },
+    {
+      "id": "SK-D4-604",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika menghitung lembur pegawai toko dengan ketentuan pembayaran yang berlaku",
+      "opsi": {
+        "A": "Dasar hitungan mengikuti ketentuan pembayaran lembur yang berlaku",
+        "B": "Dasar hitungan mengikuti kebiasaan pembayaran toko sebelumnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Dasar hitungan mengikuti ketentuan pembayaran lembur yang berlaku menempatkan kepatuhan terhadap ketentuan pembayaran sebagai dasar kerja. Dasar hitungan mengikuti kebiasaan pembayaran toko sebelumnya juga bernilai, tetapi kebiasaan toko mencerminkan pengalaman dan belum memastikan kesesuaian dengan ketentuan. Tips: bedakan aturan yang berlaku dari kebiasaan yang sudah akrab."
+    },
+    {
+      "id": "SK-D4-605",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengirim daftar inventaris dinas melalui aplikasi dengan panduan isian wajib",
+      "opsi": {
+        "A": "Pengisian kode barang merujuk panduan isian wajib",
+        "B": "Pengisian kode barang merujuk kebiasaan pencatatan manual"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pengisian kode barang merujuk panduan isian wajib memenuhi standar isian yang ditetapkan untuk aplikasi dinas. Pengisian kode barang merujuk kebiasaan pencatatan manual juga bernilai, tetapi kebiasaan manual membantu pekerjaan lama tanpa menjadi acuan isian yang diwajibkan. Tips: untuk format yang diwajibkan, dahulukan panduannya daripada kebiasaan sendiri."
+    },
+    {
+      "id": "SK-D4-606",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dilakukan ketika mengemas cairan pembersih buatan usaha kecil dengan ketentuan label wajib",
+      "opsi": {
+        "A": "Menyusun informasi kemasan berdasarkan kesukaan pelanggan lama",
+        "B": "Menyusun informasi kemasan berdasarkan persyaratan label wajib"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menyusun informasi kemasan berdasarkan persyaratan label wajib mendahulukan kepatuhan terhadap persyaratan informasi produk. Menyusun informasi kemasan berdasarkan kesukaan pelanggan lama juga bernilai, tetapi kesukaan pelanggan membantu penyajian tanpa menjadi dasar pemenuhan persyaratan label. Tips: saat informasi produk diwajibkan, pilih pemenuhan ketentuannya."
+    },
+    {
+      "id": "SK-D4-607",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika merancang pengenalan benda langit untuk kunjungan anak ke planetarium kampus",
+      "opsi": {
+        "A": "Meneruskan pemaparan rasi memakai urutan ceramah rutin",
+        "B": "Membuat petualangan mencari rasi memakai kartu misi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membuat petualangan mencari rasi memakai kartu misi menawarkan pembaruan konsep kegiatan melalui pengalaman berbasis misi. Meneruskan pemaparan rasi memakai urutan ceramah rutin juga bernilai, tetapi ceramah rutin memberi materi teratur dengan pola kegiatan yang sudah biasa. Tips: pada rancangan program, cari cara baru melibatkan peserta."
+    },
+    {
+      "id": "SK-D4-608",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika menyusun pencocokan kaus kaki pelanggan dalam usaha laundry tanpa prosedur wajib",
+      "opsi": {
+        "A": "Menguji klip berwarna untuk memasangkan setiap pasang",
+        "B": "Meneruskan pengelompokan di meja seperti kebiasaan sebelumnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menguji klip berwarna untuk memasangkan setiap pasang mengembangkan cara kerja baru untuk mengenali pasangan cucian. Meneruskan pengelompokan di meja seperti kebiasaan sebelumnya juga bernilai, tetapi pengelompokan di meja menjaga cara yang sudah dikenal tanpa menawarkan pembaruan. Tips: untuk cara kerja yang bebas dikembangkan, pilih percobaan pendekatan baru."
+    },
+    {
+      "id": "SK-D4-609",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dibanggakan ketika membuat pengenalan topeng daerah dalam sanggar seni",
+      "opsi": {
+        "A": "Konsep cerita bergerak yang menghidupkan tokoh topeng",
+        "B": "Konsep penjelasan berurutan yang digunakan sanggar sejak dahulu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Konsep cerita bergerak yang menghidupkan tokoh topeng menonjolkan inovasi konsep pengenalan seni melalui cerita bergerak. Konsep penjelasan berurutan yang digunakan sanggar sejak dahulu juga bernilai, tetapi penjelasan berurutan menghargai pola penyajian yang sudah mapan. Tips: bedakan kebaruan konsep dari kelanjutan cara yang telah digunakan."
+    },
+    {
+      "id": "SK-D4-610",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika menyiapkan pengenalan pecahan uang dalam kegiatan belanja keluarga",
+      "opsi": {
+        "A": "Melanjutkan penjelasan nominal memakai daftar harga biasa",
+        "B": "Mencoba permainan toko mini memakai uang tiruan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba permainan toko mini memakai uang tiruan mengembangkan konsep belajar melalui pengalaman bermain belanja. Melanjutkan penjelasan nominal memakai daftar harga biasa juga bernilai, tetapi daftar harga memberi contoh terarah dengan pola penjelasan yang sudah akrab. Tips: untuk pengembangan kegiatan belajar, cari pengalaman yang diperbarui."
+    },
+    {
+      "id": "SK-D4-611",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika merancang sesi perkenalan anggota baru komunitas penggemar film",
+      "opsi": {
+        "A": "Perkenalan lewat potongan cerita film yang mewakili diri",
+        "B": "Perkenalan lewat urutan nama dan hobi seperti biasanya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perkenalan lewat potongan cerita film yang mewakili diri memperbarui konsep perkenalan agar memakai pengalaman bercerita yang berbeda. Perkenalan lewat urutan nama dan hobi seperti biasanya juga bernilai, tetapi urutan nama dan hobi mendukung keteraturan melalui format yang sudah biasa. Tips: kenali pembaruan format ketika konteksnya berupa konsep kegiatan."
+    },
+    {
+      "id": "SK-D4-612",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika mengembangkan penandaan tanaman koleksi sekolah tanpa format label wajib",
+      "opsi": {
+        "A": "Mempertahankan papan nama yang sudah dipakai sejak awal",
+        "B": "Mencoba label pindai yang menampilkan kisah tiap tanaman"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba label pindai yang menampilkan kisah tiap tanaman mengembangkan cara baru menyajikan informasi tanaman melalui media berbeda. Mempertahankan papan nama yang sudah dipakai sejak awal juga bernilai, tetapi papan nama menjaga cara informasi yang sudah dikenal tanpa memperbarui penyajiannya. Tips: untuk media yang boleh dikembangkan, utamakan pembaruan cara penyampaian."
+    },
+    {
+      "id": "SK-D5-601",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi pencatat pemesanan aula dan diminta menghapus biaya oleh pelanggan",
+      "opsi": {
+        "A": "Persetujuan pembebasan biaya dari pengelola pemegang mandat",
+        "B": "Pertimbangan pembebasan biaya dari pelanggan yang sudah akrab"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Persetujuan pembebasan biaya dari pengelola pemegang mandat menempatkan keputusan biaya pada pihak yang memiliki kewenangan. Pertimbangan pembebasan biaya dari pelanggan yang sudah akrab juga bernilai, tetapi keakraban pelanggan membangun hubungan baik tanpa memberikan hak mengubah biaya. Tips: untuk mengesahkan keputusan, cari pemegang mandat dibandingkan kedekatan pribadi."
+    },
+    {
+      "id": "SK-D5-602",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menjadi petugas katalog perpustakaan dan diminta segera mencoret buku rusak dari daftar koleksi",
+      "opsi": {
+        "A": "Penetapan penghapusan oleh pegawai yang paling memahami isi",
+        "B": "Penetapan penghapusan oleh pejabat koleksi yang berwenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penetapan penghapusan oleh pejabat koleksi yang berwenang mengikuti batas kewenangan dalam menentukan penghapusan koleksi. Penetapan penghapusan oleh pegawai yang paling memahami isi juga bernilai, tetapi pemahaman isi menunjukkan kecakapan namun tidak memberikan mandat penghapusan. Tips: pisahkan kemampuan menilai dari hak menetapkan keputusan."
+    },
+    {
+      "id": "SK-D5-603",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika menjadi penerima surat di dinas dan diminta menjawab undangan atas nama kepala",
+      "opsi": {
+        "A": "Jawaban segera dari penerima surat agar pengundang tidak menunggu",
+        "B": "Jawaban melalui pejabat perwakilan yang ditunjuk secara sah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Jawaban melalui pejabat perwakilan yang ditunjuk secara sah menjaga perwakilan dinas berada pada pihak yang menerima mandat sah. Jawaban segera dari penerima surat agar pengundang tidak menunggu juga bernilai, tetapi jawaban segera menjaga kecepatan tanpa menjadi pemberian kewenangan mewakili kepala. Tips: kecepatan menjawab tidak menggantikan mandat mewakili lembaga."
+    },
+    {
+      "id": "SK-D5-604",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi penjaga toko koperasi dan pelanggan meminta perubahan batas kredit",
+      "opsi": {
+        "A": "Perubahan batas kredit disahkan pengurus pemegang wewenang",
+        "B": "Perubahan batas kredit diprioritaskan demi kelancaran penjualan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perubahan batas kredit disahkan pengurus pemegang wewenang menempatkan pengesahan kredit pada pemilik hak keputusan di koperasi. Perubahan batas kredit diprioritaskan demi kelancaran penjualan juga bernilai, tetapi kelancaran penjualan memberi alasan bisnis tanpa menentukan siapa yang berhak mengesahkan. Tips: bedakan manfaat keputusan dari kewenangan untuk membuatnya."
+    },
+    {
+      "id": "SK-D5-605",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menjadi penata barang museum kampus dan diminta melepas koleksi untuk dipinjam",
+      "opsi": {
+        "A": "Persetujuan pelepasan berdasarkan pengetahuan teknis penata barang",
+        "B": "Persetujuan pelepasan oleh pemegang mandat pengelolaan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-606",
+      "pembahasan": "Persetujuan pelepasan oleh pemegang mandat pengelolaan menjaga keputusan peminjaman koleksi pada pemilik kewenangan pengelolaan. Persetujuan pelepasan berdasarkan pengetahuan teknis penata barang juga bernilai, tetapi pengetahuan penata barang menunjukkan kecakapan tanpa memberi hak mengizinkan pelepasan. Tips: untuk pelepasan barang lembaga, pilih mandat daripada kemampuan teknis. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D5-606",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi teknisi studio komunitas dan pemohon meminta membawa kamera ke lokasi luar",
+      "opsi": {
+        "A": "Persetujuan pelepasan oleh pemegang mandat pengelolaan",
+        "B": "Persetujuan pelepasan berdasarkan keahlian perawatan teknisi setempat"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-605",
+      "pembahasan": "Persetujuan pelepasan oleh pemegang mandat pengelolaan mengikuti jalur resmi persetujuan penggunaan kamera di luar studio. Persetujuan pelepasan berdasarkan keahlian perawatan teknisi setempat juga bernilai, tetapi keahlian perawatan tidak sama dengan mandat memberikan izin membawa peralatan. Tips: kemampuan merawat barang tidak otomatis memberi kewenangan mengizinkan penggunaannya. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D6-601",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika diminta memandu praktik lipatan kertas sederhana untuk pemula setelah dinilai siap oleh pemandu lama",
+      "opsi": {
+        "A": "Menyanggupi memandu praktik meski pengalaman memandu masih baru",
+        "B": "Mendampingi pemandu lama dahulu untuk menambah jam terbang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyanggupi memandu praktik meski pengalaman memandu masih baru menunjukkan keberanian mengambil peran baru dengan bekal yang sudah tersedia. Mendampingi pemandu lama dahulu untuk menambah jam terbang juga bernilai, tetapi pilihan itu menunda kesempatan memandu yang sudah ditawarkan. Tips: cari kesediaan menjalani peran baru dibandingkan menunda dengan alasan persiapan."
+    },
+    {
+      "id": "SK-D6-602",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang diutamakan ketika kantor mengganti penggunaan telepon meja dengan aplikasi percakapan yang sudah dilatihkan",
+      "opsi": {
+        "A": "Kenyamanan meneruskan penggunaan sarana lama yang sudah akrab",
+        "B": "Kesediaan beralih menggunakan sarana baru dalam pekerjaan harian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesediaan beralih menggunakan sarana baru dalam pekerjaan harian menunjukkan keberanian menjalani perubahan setelah bekal penggunaannya diberikan. Kenyamanan meneruskan penggunaan sarana lama yang sudah akrab juga bernilai, tetapi keakraban sarana lama menekankan kenyamanan dan bukan kesediaan beralih. Tips: dalam perubahan kerja, pilih kesediaan mencoba yang baru."
+    },
+    {
+      "id": "SK-D6-603",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika memiliki usulan jalur wisata yang berbeda dari rencana yang disukai banyak anggota komunitas",
+      "opsi": {
+        "A": "Memilih mencatat rangkuman diskusi pada pertemuan komunitas tersebut",
+        "B": "Bersedia menyampaikan usulan berbeda dalam diskusi perjalanan komunitas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Bersedia menyampaikan usulan berbeda dalam diskusi perjalanan komunitas menunjukkan keberanian mengemukakan pandangan yang berbeda dengan bekal pengetahuan yang tersedia. Memilih mencatat rangkuman diskusi pada pertemuan komunitas tersebut juga bernilai, tetapi peran pencatat membantu kegiatan tanpa menghadapi tantangan menyampaikan pandangan berbeda. Tips: cari kesediaan menyuarakan pandangan sendiri dibandingkan memilih peran pendukung yang nyaman."
+    },
+    {
+      "id": "SK-D6-604",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipegang ketika berganti tugas dari meja penerimaan ke meja informasi kelurahan setelah mendapat pembekalan",
+      "opsi": {
+        "A": "Kesediaan menjalani peran layanan yang berbeda dari sebelumnya",
+        "B": "Kenyamanan menangani peran layanan yang telah lama dikuasai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesediaan menjalani peran layanan yang berbeda dari sebelumnya mengutamakan keberanian menghadapi perubahan peran dengan bekal yang tersedia. Kenyamanan menangani peran layanan yang telah lama dikuasai juga bernilai, tetapi peran yang akrab memberi kenyamanan tanpa menunjukkan kesediaan menjalani perubahan. Tips: keberanian berubah terlihat dari kesediaan meninggalkan peran yang sudah nyaman."
+    },
+    {
+      "id": "SK-D6-605",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika ada tawaran memasok seratus kotak bekal untuk acara kampus",
+      "opsi": {
+        "A": "Perbandingan kapasitas dapur dan risiko bahan tersisa",
+        "B": "Antusiasme menerima pesanan besar demi perluasan usaha"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perbandingan kapasitas dapur dan risiko bahan tersisa mengukur kemampuan dan risiko sebelum mengambil peluang pesanan. Antusiasme menerima pesanan besar demi perluasan usaha juga bernilai, tetapi antusiasme memperluas usaha belum menilai kapasitas maupun kemungkinan kerugian. Tips: ketika ada peluang, cari penilaian beban dan risiko sebelum dorongan menerima."
+    },
+    {
+      "id": "SK-D6-606",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika tim futsal sekolah memilih mengikuti dua turnamen yang jadwalnya berdekatan",
+      "opsi": {
+        "A": "Semangat mengejar prestasi tinggi pada kedua turnamen sekaligus",
+        "B": "Penilaian daya pulih pemain dan beban jadwal pertandingan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penilaian daya pulih pemain dan beban jadwal pertandingan mengukur risiko beban pemain dalam menghadapi persaingan turnamen. Semangat mengejar prestasi tinggi pada kedua turnamen sekaligus juga bernilai, tetapi semangat berprestasi belum memperhitungkan kemampuan pemulihan dan benturan beban jadwal. Tips: dalam persaingan, pilih hitungan kemampuan dan risiko dibandingkan antusiasme saja."
+    },
+    {
+      "id": "SK-D7-601",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin pengepakan bantuan dan dua kelompok mempertahankan label berbeda yang sama-sama tepat",
+      "opsi": {
+        "A": "Mengundang pembicaraan tambahan agar kedua kelompok semakin akrab",
+        "B": "Memutuskan satu label akhir agar pengepakan dapat dilanjutkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memutuskan satu label akhir agar pengepakan dapat dilanjutkan menunjukkan ketegasan tindakan pemimpin dengan menetapkan keputusan yang bisa dijalankan. Mengundang pembicaraan tambahan agar kedua kelompok semakin akrab juga bernilai, tetapi pembicaraan keakraban merawat hubungan tanpa menetapkan label akhir. Tips: ketegasan dalam tindakan terlihat dari keputusan yang memberi arah kerja."
+    },
+    {
+      "id": "SK-D7-602",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang diutamakan ketika memimpin pengumpulan karya majalah kampus dan anggota terus meminta penundaan tenggat tanpa kendala yang jelas",
+      "opsi": {
+        "A": "Menetapkan batas penyerahan akhir dan menegaskannya kepada anggota",
+        "B": "Melanjutkan percakapan pribadi untuk menumbuhkan kesepahaman para anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menetapkan batas penyerahan akhir dan menegaskannya kepada anggota memberi kepastian tindakan melalui batas akhir yang diputuskan pemimpin. Melanjutkan percakapan pribadi untuk menumbuhkan kesepahaman para anggota juga bernilai, tetapi percakapan membantu hubungan namun belum memberi batas akhir untuk pengumpulan karya. Tips: saat memimpin, bedakan penetapan langkah akhir dari perbincangan untuk membujuk."
+    },
+    {
+      "id": "SK-D7-603",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika pesanan kue untuk perayaan keluarga terlambat diantar",
+      "opsi": {
+        "A": "Hati tetap tenteram menghadapi perubahan waktu kedatangan",
+        "B": "Kepedulian besar agar tamu tidak ikut menunggu lama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hati tetap tenteram menghadapi perubahan waktu kedatangan menjaga ketenangan perasaan saat rencana perayaan mengalami gangguan. Kepedulian besar agar tamu tidak ikut menunggu lama juga bernilai, tetapi kepedulian itu masih berupa kegelisahan memikirkan tamu, bukan ketenteraman menghadapi gangguan. Tips: bila yang ditanya perasaan, cari ketenteraman dibandingkan rasa cemas yang dibungkus kepedulian."
+    },
+    {
+      "id": "SK-D7-604",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika menjalani konsultasi tugas akhir dan dosen mengajukan banyak pertanyaan mendadak",
+      "opsi": {
+        "A": "Gairah besar untuk membuktikan penguasaan isi penelitian",
+        "B": "Batin tetap teduh selama mendengarkan pertanyaan dosen"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Batin tetap teduh selama mendengarkan pertanyaan dosen menunjukkan ketenangan emosi dalam menghadapi tekanan pertanyaan. Gairah besar untuk membuktikan penguasaan isi penelitian juga bernilai, tetapi dorongan membuktikan kemampuan lebih menekankan gairah daripada kestabilan perasaan. Tips: bedakan rasa tenang dari semangat membuktikan diri."
+    },
+    {
+      "id": "SK-D8-601",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika menyusun kalender pengumpulan tugas sekolah yang seluruh tanggalnya sudah diketahui",
+      "opsi": {
+        "A": "Dukungan orang tua dalam mengatur susunan kalender yang dibutuhkan",
+        "B": "Kemampuan menyusun kalender memakai keterampilan yang dimiliki sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kemampuan menyusun kalender memakai keterampilan yang dimiliki sendiri mengutamakan kemandirian menangani pekerjaan dengan bekal yang sudah cukup. Dukungan orang tua dalam mengatur susunan kalender yang dibutuhkan juga bernilai, tetapi bantuan orang tua menekankan dukungan luar dan bukan kemampuan mengatur sendiri. Tips: untuk pekerjaan yang sudah dikuasai, cari peran usaha pribadi."
+    },
+    {
+      "id": "SK-D8-602",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika menjadi relawan puskesmas yang sudah ditugasi mengisi ulang rak lembar informasi dan melihat rak mulai kosong",
+      "opsi": {
+        "A": "Kesiapan mengisi persediaan sebelum pengunjung berikutnya datang",
+        "B": "Kesediaan menunggu arahan petugas sebelum mengisi rak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesiapan mengisi persediaan sebelum pengunjung berikutnya datang menunjukkan inisiatif mengantisipasi kebutuhan pengunjung sebelum diminta. Kesediaan menunggu arahan petugas sebelum mengisi rak juga bernilai, tetapi menunggu arahan membuat rak tetap kosong padahal menjaga rak itu memang tugasnya. Tips: bedakan langkah yang dimulai lebih dahulu dari menunggu disuruh."
+    },
+    {
+      "id": "SK-D8-603",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika akhirnya menguasai bagian piano yang lama sulit dimainkan",
+      "opsi": {
+        "A": "Kegigihan mengulang bagian sulit sampai gerak jari lancar",
+        "B": "Bimbingan guru yang menunjukkan cara menyusun latihan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegigihan mengulang bagian sulit sampai gerak jari lancar menempatkan keuletan usaha pribadi sebagai sumber pencapaian keterampilan. Bimbingan guru yang menunjukkan cara menyusun latihan juga bernilai, tetapi bimbingan guru adalah dukungan dari luar, sedangkan bagian sulit itu akhirnya dikuasai lewat ketekunan sendiri. Tips: keuletan terlihat dari usaha bertahan pada bagian yang sulit."
+    },
+    {
+      "id": "SK-D8-604",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika mengembangkan kegiatan pertukaran resep bagi keluarga di lingkungan rumah",
+      "opsi": {
+        "A": "Kelengkapan perlengkapan sajian agar pertemuan terlihat lebih meriah",
+        "B": "Keterlibatan tiap keluarga untuk menyumbang dan mencoba resep"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keterlibatan tiap keluarga untuk menyumbang dan mencoba resep menggerakkan partisipasi warga sebagai inti kegiatan bersama. Kelengkapan perlengkapan sajian agar pertemuan terlihat lebih meriah juga bernilai, tetapi kelengkapan sajian memperindah kegiatan tanpa menunjukkan keterlibatan warga. Tips: untuk kegiatan lingkungan, cari dorongan partisipasi dibandingkan kelengkapan fasilitas."
+    },
+    {
+      "id": "SK-D8-605",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika menyiapkan forum cerita pengalaman magang bagi mahasiswa satu angkatan",
+      "opsi": {
+        "A": "Kenyamanan ruang pertemuan bagi mahasiswa yang menghadiri forum",
+        "B": "Kesediaan mahasiswa bergiliran berbagi dan menanggapi pengalaman"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesediaan mahasiswa bergiliran berbagi dan menanggapi pengalaman mengutamakan partisipasi aktif peserta dalam kegiatan bersama. Kenyamanan ruang pertemuan bagi mahasiswa yang menghadiri forum juga bernilai, tetapi kenyamanan ruangan mendukung suasana tanpa menunjukkan keaktifan berbagi pengalaman. Tips: bedakan keterlibatan peserta dari kondisi tempat kegiatan."
+    },
+    {
+      "id": "SK-D8-606",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika berhasil membuat catatan pengeluaran bulanan dengan aplikasi keuangan",
+      "opsi": {
+        "A": "Kecakapan mencatat yang dibangun lewat usaha pribadi",
+        "B": "Kemudahan antarmuka aplikasi yang memberi pengalaman pakai nyaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kecakapan mencatat yang dibangun lewat usaha pribadi menempatkan kemampuan mandiri sebagai sumber keberhasilan mengerjakan catatan. Kemudahan antarmuka aplikasi yang memberi pengalaman pakai nyaman juga bernilai, tetapi kemudahan antarmuka menunjukkan dukungan alat dan bukan usaha mandiri pengguna. Tips: kenali kebanggaan terhadap usaha sendiri dibandingkan kelebihan sarana."
+    },
+    {
+      "id": "SK-D8-607",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika mencoba menyelesaikan teka-teki silang buku dengan petunjuk yang menantang",
+      "opsi": {
+        "A": "Bantuan teman yang gemar teka-teki saat menemui bagian sulit",
+        "B": "Keuletan menelusuri petunjuk sampai bagian sulit terisi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keuletan menelusuri petunjuk sampai bagian sulit terisi menunjukkan ketekunan menghadapi kesulitan sampai pekerjaan terselesaikan. Bantuan teman yang gemar teka-teki saat menemui bagian sulit juga bernilai, tetapi bertanya kepada teman memindahkan kesulitan kepada orang lain, bukan kegigihan menyelesaikannya sendiri. Tips: cari usaha bertahan menghadapi kesulitan dibandingkan mencari bantuan lebih dahulu."
+    },
+    {
+      "id": "SK-D8-608",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika berhasil menyiapkan perlengkapan untuk perjalanan pertama ke luar kota",
+      "opsi": {
+        "A": "Kemandirian memilih dan menata perlengkapan sesuai kebutuhan pribadi",
+        "B": "Daftar bawaan dari keluarga yang memastikan tidak ada barang tertinggal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemandirian memilih dan menata perlengkapan sesuai kebutuhan pribadi menempatkan kemampuan menangani kebutuhan sendiri sebagai nilai utama. Daftar bawaan dari keluarga yang memastikan tidak ada barang tertinggal juga bernilai, tetapi daftar dari keluarga adalah bantuan orang lain dan bukan kemampuan menyiapkan sendiri. Tips: pisahkan pencapaian mandiri dari manfaat bantuan orang lain."
+    },
+    {
+      "id": "SK-D9-601",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika keluarga mendapat bantuan biaya untuk memasang alat bantu dengar anggota lansia",
+      "opsi": {
+        "A": "Syukur kepada Tuhan atas karunia kemudahan bagi keluarga",
+        "B": "Kepuasan atas berkurangnya beban biaya perlengkapan untuk keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur kepada Tuhan atas karunia kemudahan bagi keluarga mengutamakan rasa syukur atas karunia yang diterima keluarga. Kepuasan atas berkurangnya beban biaya perlengkapan untuk keluarga juga bernilai, tetapi berkurangnya biaya merupakan manfaat material dan bukan pemaknaan spiritual bantuan. Tips: bedakan syukur atas pemberian dari kepuasan atas penghematan uang."
+    },
+    {
+      "id": "SK-D9-602",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika membuka kios jahit baru setelah lama bekerja dari ruang sempit",
+      "opsi": {
+        "A": "Kesempatan berkarya sebagai sarana meningkatkan nilai aset usaha",
+        "B": "Kesempatan berkarya sebagai karunia yang patut disyukuri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan berkarya sebagai karunia yang patut disyukuri menempatkan kesempatan bekerja dalam makna spiritual berupa karunia. Kesempatan berkarya sebagai sarana meningkatkan nilai aset usaha juga bernilai, tetapi kenaikan nilai aset menekankan manfaat material dari pengembangan usaha. Tips: cari pemaknaan karunia ketika pembandingnya berupa pertambahan aset."
+    },
+    {
+      "id": "SK-D9-603",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika menerima kendaraan pinjaman untuk mengantar paket makanan bagi tetangga sakit",
+      "opsi": {
+        "A": "Ketersediaan kendaraan sebagai penghematan ongkos pengantaran paket makanan",
+        "B": "Kesempatan melayani sebagai jalan ibadah yang menumbuhkan syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan melayani sebagai jalan ibadah yang menumbuhkan syukur memaknai kesempatan membantu sebagai pengabdian spiritual yang disyukuri. Ketersediaan kendaraan sebagai penghematan ongkos pengantaran paket makanan juga bernilai, tetapi penghematan ongkos berpusat pada manfaat biaya dan bukan nilai ibadah. Tips: bedakan makna ibadah dari keuntungan praktis berupa penghematan."
+    },
+    {
+      "id": "SK-D9-604",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika memaknai hadiah berupa alat gambar dari kerabat saat ulang tahun",
+      "opsi": {
+        "A": "Pemberian sebagai rezeki yang mengingatkan pada kemurahan Tuhan",
+        "B": "Pemberian sebagai pelengkap koleksi yang meningkatkan mutu perlengkapan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pemberian sebagai rezeki yang mengingatkan pada kemurahan Tuhan menempatkan makna spiritual pemberian sebagai rezeki yang disyukuri. Pemberian sebagai pelengkap koleksi yang meningkatkan mutu perlengkapan juga bernilai, tetapi mutu koleksi menitikberatkan manfaat barang dan bukan rasa syukur kepada Tuhan. Tips: untuk pemaknaan hadiah, cari hubungan dengan syukur dibandingkan kualitas barang."
+    },
+    {
+      "id": "SK-D9-605",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika hujan mengisi kembali penampungan air keluarga setelah musim kering",
+      "opsi": {
+        "A": "Rasa puas atas cadangan air yang mengurangi belanja",
+        "B": "Rasa syukur atas rahmat Tuhan yang mencukupkan kebutuhan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Rasa syukur atas rahmat Tuhan yang mencukupkan kebutuhan mengutamakan makna spiritual kecukupan air sebagai rahmat. Rasa puas atas cadangan air yang mengurangi belanja juga bernilai, tetapi cadangan yang mengurangi belanja merupakan keuntungan material dari hujan. Tips: pisahkan rasa syukur atas rahmat dari kepuasan mengurangi pengeluaran."
+    },
+    {
+      "id": "SK-D9-606",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipikirkan ketika menerima hasil pembagian keuntungan koperasi pada akhir tahun",
+      "opsi": {
+        "A": "Rezeki sebagai titipan Tuhan yang patut disyukuri",
+        "B": "Rezeki sebagai tambahan dana untuk memperkuat simpanan keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Rezeki sebagai titipan Tuhan yang patut disyukuri menempatkan penerimaan dana dalam makna spiritual sebagai titipan Tuhan. Rezeki sebagai tambahan dana untuk memperkuat simpanan keluarga juga bernilai, tetapi tambahan simpanan berpusat pada penggunaan material dan bukan pemaknaan spiritual rezeki. Tips: cari pemaknaan rezeki sebagai karunia dibandingkan besarnya manfaat keuangan."
+    },
+    {
+      "id": "SK-D10-601",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika mengevaluasi layanan pemesanan obat rutin di loket puskesmas",
+      "opsi": {
+        "A": "Petugas menjalani alur pencatatan dengan penuh ketelitian harian",
+        "B": "Pesanan pasien terpenuhi tepat waktu dan sesuai jumlah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pesanan pasien terpenuhi tepat waktu dan sesuai jumlah menilai keberhasilan lewat ketercapaian layanan dalam waktu dan jumlah yang dibutuhkan. Petugas menjalani alur pencatatan dengan penuh ketelitian harian juga bernilai, tetapi ketelitian pencatatan menggambarkan mutu proses tanpa memastikan pesanan pasien terpenuhi. Tips: untuk evaluasi keberhasilan, cari kebutuhan akhir yang sudah terpenuhi."
+    },
+    {
+      "id": "SK-D10-602",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika menilai pekerjaan digitalisasi foto keluarga untuk album elektronik",
+      "opsi": {
+        "A": "Semua foto tersimpan tajam dan mudah dibuka kembali",
+        "B": "Semua langkah pemindaian dilakukan cermat dengan jadwal teratur"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Semua foto tersimpan tajam dan mudah dibuka kembali menunjukkan hasil akhir dalam kelengkapan dan kegunaan album. Semua langkah pemindaian dilakukan cermat dengan jadwal teratur juga bernilai, tetapi kecermatan langkah merupakan mutu proses dan belum menunjukkan kualitas file yang dihasilkan. Tips: bedakan fungsi hasil yang dapat diperiksa dari keteraturan proses pengerjaan."
+    },
+    {
+      "id": "SK-D11-601",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika cetakan poster percobaan menghasilkan warna berbeda dari rancangan",
+      "opsi": {
+        "A": "Menelusuri sumber perbedaan warna untuk perbaikan percobaan berikutnya",
+        "B": "Menyiapkan kertas tambahan agar percobaan berikutnya dapat segera dimulai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menelusuri sumber perbedaan warna untuk perbaikan percobaan berikutnya menggunakan kegagalan hasil cetak sebagai bahan pembelajaran sebelum mencoba kembali. Menyiapkan kertas tambahan agar percobaan berikutnya dapat segera dimulai juga bernilai, tetapi kesiapan kertas mendukung percobaan baru tanpa memahami penyebab perbedaan sebelumnya. Tips: belajar dari kegagalan berarti mencari sebabnya sebelum mengulangi kegiatan."
+    },
+    {
+      "id": "SK-D11-602",
+      "dimensi": "D11",
+      "situasi": "Hal yang dipikirkan ketika menyiapkan latihan setelah kesulitan memahami aksen dalam rekaman bahasa",
+      "opsi": {
+        "A": "Bagian kosakata yang sudah kuat untuk dijadikan modal latihan",
+        "B": "Bagian pemahaman bunyi yang masih lemah untuk dibenahi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Bagian pemahaman bunyi yang masih lemah untuk dibenahi mengenali kelemahan pribadi agar latihan berikutnya menyasar kebutuhan perbaikan. Bagian kosakata yang sudah kuat untuk dijadikan modal latihan juga bernilai, tetapi bertumpu pada kekuatan kosakata membantu keyakinan diri tanpa menunjukkan bagian yang perlu dibenahi. Tips: untuk refleksi, cari pengenalan kekurangan yang dapat ditindaklanjuti."
+    },
+    {
+      "id": "SK-D11-603",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika anggota komunitas berpengalaman memberi koreksi yang tepat pada petunjuk merawat ikan hias yang ditulis",
+      "opsi": {
+        "A": "Menerima koreksi pembaca sebagai bahan menyempurnakan petunjuk perawatan",
+        "B": "Menjelaskan alasan pemilihan kalimat pada petunjuk perawatan sebelumnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menerima koreksi pembaca sebagai bahan menyempurnakan petunjuk perawatan menunjukkan keterbukaan belajar dari masukan pembaca untuk memperbaiki tulisan. Menjelaskan alasan pemilihan kalimat pada petunjuk perawatan sebelumnya juga bernilai, tetapi penjelasan alasan menjaga pemahaman rancangan lama tanpa menunjukkan penerimaan koreksi. Tips: bedakan kesediaan memakai masukan dari menjelaskan pilihan sendiri."
+    },
+    {
+      "id": "SK-D11-604",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan ketika promosi kelas tari lewat pesan massal berulang kali sepi tanggapan",
+      "opsi": {
+        "A": "Menambah frekuensi pesan massal untuk memperluas jangkauan promosi",
+        "B": "Mengubah pendekatan ajakan berdasarkan penelaahan respons calon peserta"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengubah pendekatan ajakan berdasarkan penelaahan respons calon peserta menyesuaikan strategi berdasarkan evaluasi cara yang belum berhasil. Menambah frekuensi pesan massal untuk memperluas jangkauan promosi juga bernilai, tetapi penambahan pesan meningkatkan usaha namun mempertahankan pendekatan yang belum efektif. Tips: cari perubahan cara berdasarkan evaluasi dibandingkan penambahan usaha yang sama."
+    }
+  ]
+}

@@ -49,6 +49,8 @@ Aturan tambahan:
 - Dua kolom yang berurutan tidak boleh berjenis sama. Peserta harus berganti "mode melihat" setiap kolom.
 - Kolom I adalah pemanasan (versi mudah), supaya peserta tidak gagal hanya karena belum paham tampilan.
 
+**Pengecualian kartu 5 (paket 13).** Paket 13 tidak mengikuti aturan 5 jenis dan paruh seimbang. Kesepuluh kolomnya satu jenis, yaitu Spasial Dasar menengah: salinan apa adanya kolom VI–X paket latihan 509 (kolom I–V) dan 510 (kolom VI–X). Keputusan pemilik 2026-10-14.
+
 ### Blueprint paket 11 (Simulasi kartu 1)
 
 | Kolom | Paruh | Jenis | Versi | Isi |
@@ -85,12 +87,14 @@ Aturan ini dipakai bersama lewat fungsi `makeColumn` di `scripts/generate-kecerm
   - dasar = 610 − N (kolom 1–5 mudah, 6–10 menengah)
 
   Untuk N = 11 hasilnya 299, 499, 599. Donor ditulis ke folder sementara (`SPASIAL_OUT`). Hanya 5 SVG terpilih yang disalin ke `public/kecermatan-simulasi/p<N>/`.
+- **Pengecualian paket 13.** Simbol paket 13 **sama** dengan latihan p509/p510 dan path SVG-nya tetap menunjuk ke `/kecermatan-spasial/p509|p510/`. Sumber dipilih dari paket terakhir carousel Spasial Dasar supaya paling jarang dikerjakan peserta (keputusan pemilik 2026-10-14). Nomor 13 dipakai kartu 5.
 - Aksara karangan memakai seed nomor paket simulasi sendiri, sehingga glyph-nya tidak sama dengan 302–305.
 
 ## 6. Catatan skoring
 
 - Ke (benar bersih) dan Kt (ketelitian) tidak terpengaruh campuran jenis.
 - **Kh (keajegan) memakai CV benar per kolom.** Kolom yang kesulitannya berbeda-beda menaikkan CV untuk semua peserta, jadi nilai Kh paket campuran **tidak setara** dengan Kh paket satu jenis. Bandingkan Kh antar-sesi hanya untuk paket yang sama. Parameter v2 (150 dan 0,5) masih sementara, sesuai `kecermatan-scoring-v2`.
+- Kh paket 13 (kartu 5, satu jenis) hanya dibandingkan dengan sesi paket 13.
 - Aturan paruh seimbang (§3) menjaga perbandingan paruh 1 dengan paruh 2 tetap bermakna sebagai indikator ketahanan.
 
 ## 7. Prosedur penyusunan paket baru
@@ -113,3 +117,5 @@ Aturan ini dipakai bersama lewat fungsi `makeColumn` di `scripts/generate-kecerm
 | 1 | 11 — campuran 5 jenis hitam-putih | Ya |
 | 2 | 401 — Spasial Sedang | Belum (satu jenis) |
 | 3 | 10 — Siluet gambar | Belum (satu jenis) |
+| 4 | 12 — campuran 5 jenis hitam-putih | Ya |
+| 5 | 13 — salinan Spasial Dasar menengah p509/p510 kolom VI–X | Pengecualian (keputusan pemilik 2026-10-14; simbol sama dengan latihan) |

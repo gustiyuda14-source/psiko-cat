@@ -112,6 +112,7 @@ So the "level" column in the tables means **which package family uses the format
 | NUM-CRT-LINIER | Soal cerita → linear growth meeting point, digit puzzle, rooms/people equation | P87; B68,69 (3) | B68/69 are multi-constraint puzzles (Lanjut) |
 | NUM-CRT-PENCACAHAN | Banyak rute → rule of product, rule of sum, round trip with or without repeats, paths in a directed graph | R1–R10 (10) | Separate PDF; not in B or A |
 | NUM-CRT-ALOKASI | Alokasi waktu & delegasi → time window minus total workload; pick the task(s) that cover the excess, max tasks that fit, two workers in parallel | AK26#1 (1) | Reported from Akpol 2026 test-takers. Order/deadline variants go to ANL-WCN-JADWAL |
+| NUM-CRT-ALOKASI-STRATEGI | Alokasi waktu, bentuk "delegasi terbaik" → options are strategies (delegate X / skip X / postpone X past the deadline / skip a meal or rest / idle activity); valid = really delegates + saves ≥ excess + sacrifices nothing | baru (10), K07-N-001..010 | Reported from test-takers (Andi 120 menit screenshot). Brute-forced by `scripts/cek-alokasi.ts` (simulasi-5 §2.4b) |
 | NUM-CRT-BULAT | Soal cerita → signed integers: depth/height below–above sea level after several moves, rate × time then position | MB#4.1–4.5 (5) | Mr Badrun module. Trap: sign of the answer ("di bawah" vs "di atas" laut) |
 | NUM-SMA (out of profile) | Limit, inverse function, integral, linear programming from a graph | KD9–12 (4) | Not a psikotes POLRI type. **Exclude from drills** |
 
@@ -122,6 +123,9 @@ So the "level" column in the tables means **which package family uses the format
 | LOG-SIL-KATEGORI | Silogisme kategorikal | 2–3 premises with semua / sebagian / tidak ada; choose the valid conclusion | P39–43,45–50; B81,83,84; A78,80,82–85; KD18,21(=A78) (25) | A uses 3-premise chains (A84,85) and some **contrary-to-fact premises** (A80 "Semua virus tidak berbahaya", A83 "Semua vaksin adalah antibiotik"): the student must reason formally, not from world knowledge |
 | LOG-SIL-KONDISIONAL | Kondisional | Modus ponens/tollens, hypothetical chain, contrapositive | P38,44; A76,77; KD17 (5) | A76 = chain + contrapositive options |
 | LOG-SIL-JEBAKAN | Fallacy traps | Affirming the consequent (A81 petinju), "tidak dapat disimpulkan" (B85), a premise that contradicts a fact (A79), time reasoning (B82 Senin/Rabu) | A79,81; B82,85 (4) | Teach as a separate skill: knowing when *no* conclusion follows |
+| LOG-SBA-LANGSUNG | Sebab-akibat, sebab ditulis lebih dulu | Two numbered statements, fixed 5 options (simulasi-5 §2.5); key A: (1) causes (2) in one step, the reverse "karena" test is odd | baru (10), K18 | Keys only A/B/E; C/D are distractors only |
+| LOG-SBA-TERBALIK | Sebab-akibat, akibat ditulis lebih dulu | Same format; key B: (2) causes (1), the trap is the numbering order | baru (10), K18 | |
+| LOG-SBA-BERSAMA | Sebab-akibat, satu sebab bersama | Same format; key E: neither causes the other, both follow from one unstated cause implied by same time/place | baru (10), K18 | |
 
 ### 1.4 ANALITIS (aspek_resmi: analitis)
 

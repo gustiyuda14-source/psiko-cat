@@ -19,11 +19,22 @@ export const INSTRUKSI: Record<string, string> = {
   // Pedoman Kecerdasan v3 §4.8: paket yang disusun mulai 2026-10-13 (pkg 4, 5, …).
   SIL_V3: "Anggap semua pernyataan berikut benar, lalu pilihlah satu kesimpulan yang tepat.",
   DER: "Pilihlah dua jawaban untuk melengkapi deret berikut.",
+  // Layout v4 (rencana simulasi-5 §2.5): Sebab-Akibat di slot 73–75, dua pernyataan di wacana per butir.
+  SBA: "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
 };
+/** 5 opsi baku Sebab-Akibat (sama persis di setiap butir SBA). C dan D hanya pengecoh. */
+export const SBA_OPSI = [
+  "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+  "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+  "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+  "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+  "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama",
+];
 const GANDA = new Set(["SIN", "ANT", "ANA", "DER"]);
 export const KEYS = ["A", "B", "C", "D", "E"] as const;
 
-export type Teks = { s: number; t: string; d: number; q?: string; w?: string; i?: string; c: string[]; k: string; h?: string; p: string; svg?: string | null };
+// `sub` (mis. "ALOKASI"), `bentuk`, `data`: penanda/data pemeriksa saja, tidak ikut ke baris DB (teksRows memilih field sendiri).
+export type Teks = { s: number; t: string; sub?: string; d: number; q?: string; w?: string; i?: string; c: string[]; k: string; h?: string; p: string; svg?: string | null };
 export type TeksFile = { wacana: Record<string, string>; soal: Teks[] };
 export type Row = {
   sequence_number: number;
@@ -53,6 +64,7 @@ export function checkTeks(teks: TeksFile): number {
     // Pembahasan menyebut kunci yang sama dengan field k (huruf, atau isi opsi kunci).
     const keyTexts = [...x.k].map((l) => x.c[KEYS.indexOf(l as (typeof KEYS)[number])]);
     assert.ok([...x.k].every((l, n) => x.p.includes(`(${l})`) || x.p.includes(`Jawaban: ${l}`) || x.p.includes(keyTexts[n])), `soal ${x.s}: pembahasan tidak menyebut kunci ${x.k}`);
+    if (x.t === "SBA") checkSBA(teks, x);
   }
   let numericChecked = 0;
   for (const x of teks.soal.filter((x) => x.h)) {
@@ -64,6 +76,17 @@ export function checkTeks(teks: TeksFile): number {
     numericChecked++;
   }
   return numericChecked;
+}
+
+/** Sebab-Akibat: opsi baku, kunci tunggal A/B/E, dua pernyataan di wacana per butir ("(1) …\n(2) …"; q-stem tidak memecah \n). */
+function checkSBA(teks: TeksFile, x: Teks) {
+  assert.deepEqual(x.c, SBA_OPSI, `soal ${x.s}: opsi SBA harus 5 teks baku`);
+  assert.match(x.k, /^[ABE]$/, `soal ${x.s}: kunci SBA harus satu huruf A/B/E`);
+  assert.ok(!x.i || x.i === INSTRUKSI.SBA, `soal ${x.s}: instruksi SBA harus INSTRUKSI.SBA`);
+  assert.match((x.w && teks.wacana[x.w]) || "", /^\(1\) [^\n]+\n\(2\) [^\n]+$/, `soal ${x.s}: wacana SBA harus dua baris "(1) …\\n(2) …"`);
+  assert.match(x.q ?? "", /^Pertanyaan: .+\?$/, `soal ${x.s}: q SBA harus "Pertanyaan: …?"`);
+  for (const part of ["<br>", "Jawaban: ", "Tips: "]) assert.ok(x.p.includes(part), `soal ${x.s}: pembahasan SBA tanpa ${part}`);
+  for (const l of KEYS.filter((l) => l !== x.k)) assert.ok(x.p.includes(`Opsi ${l} (`), `soal ${x.s}: pembahasan tidak membahas Opsi ${l}`);
 }
 
 /** `v3`: silogisme memakai INSTRUKSI.SIL_V3 (paket baru ≥ 4). `svg` = tabel kecukupan data. */
@@ -84,27 +107,32 @@ export const teksRows = (teks: TeksFile, v3 = false): Row[] => teks.soal.map((x)
   };
 });
 
-// Field i tipe ini adalah pertanyaan wacana atau instruksi baku (KUA/KCK), bukan stem.
-const GENERIK = new Set(["WAC", "BAC", "KUA", "KCK"]);
+// Field i tipe ini adalah pertanyaan wacana atau instruksi baku (KUA/KCK/SBA, Alokasi), bukan stem.
+const GENERIK = new Set(["WAC", "BAC", "KUA", "KCK", "SBA"]);
+const generik = (q: { t: string; sub?: string }) => GENERIK.has(q.t) || q.sub === "ALOKASI";
+// Opsi baku (KCK, SBA) dan "Pertanyaan:" SBA sama di semua butir; isi SBA ada di wacana.
+const BAKU = new Set(["KCK", "SBA"]);
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 /**
   Anti-bocor: stem/pilihan tidak boleh sama persis dengan Paket 1 (soal.json), bank teks lain
   (`others`, nama file di prisma/data: format { soal } atau { "<pkg>": soal[] } seperti kecerdasan_kck_kal.json), atau bank drill.
 */
+// "Pertanyaan: …" SBA/Alokasi memakai kalimat baku; keunikan butir ada di wacana (anti-bocor Alokasi: cek-alokasi.ts).
+const qBaku = (x: { t: string; sub?: string }) => x.t === "SBA" || x.sub === "ALOKASI";
 export function checkNoLeak(teks: TeksFile, others: string[]) {
   const seen = new Set<string>();
   const p1 = JSON.parse(fs.readFileSync(path.join(root, "soal.json"), "utf8")) as { soal: { soal?: string | null; instruksi?: string; pilihan: Record<string, string> }[] };
   for (const q of p1.soal) { if (q.soal) seen.add(norm(q.soal)); seen.add(norm(Object.values(q.pilihan).sort().join("|"))); }
   for (const f of others) {
     const o = data(f);
-    for (const q of (o.soal ?? Object.values(o).flat()) as { t: string; q?: string; i?: string; c: string[] }[]) { if (q.q) seen.add(norm(q.q)); if (q.i && !GENERIK.has(q.t)) seen.add(norm(q.i)); if (q.t !== "KCK") seen.add(norm([...q.c].sort().join("|"))); }
+    for (const q of (o.soal ?? Object.values(o).flat()) as { t: string; sub?: string; q?: string; i?: string; c: string[] }[]) { if (q.q && !qBaku(q)) seen.add(norm(q.q)); if (q.i && !generik(q)) seen.add(norm(q.i)); if (!BAKU.has(q.t)) seen.add(norm([...q.c].sort().join("|"))); }
   }
   const drill = JSON.parse(fs.readFileSync(path.join(root, "data/drill-bank.json"), "utf8")) as { stem: string; opsi: Record<string, string> }[];
   for (const q of drill) { seen.add(norm(q.stem)); seen.add(norm(Object.values(q.opsi).sort().join("|"))); }
   for (const x of teks.soal) {
-    for (const s of [x.q, GENERIK.has(x.t) ? undefined : x.i].filter(Boolean) as string[]) assert.ok(!seen.has(norm(s)), `soal ${x.s}: stem sama dengan soal lain`);
-    // opsi baku kecukupan data memang sama di semua soal KCK
-    if (x.t !== "KCK") assert.ok(!seen.has(norm([...x.c].sort().join("|"))), `soal ${x.s}: pilihan sama persis dengan soal lain`);
+    for (const s of [qBaku(x) ? undefined : x.q, generik(x) ? undefined : x.i].filter(Boolean) as string[]) assert.ok(!seen.has(norm(s)), `soal ${x.s}: stem sama dengan soal lain`);
+    // opsi baku kecukupan data / sebab-akibat memang sama di semua soal KCK / SBA
+    if (!BAKU.has(x.t)) assert.ok(!seen.has(norm([...x.c].sort().join("|"))), `soal ${x.s}: pilihan sama persis dengan soal lain`);
   }
 }
 
@@ -132,11 +160,17 @@ export function checkRows(rows: Row[], tag: string, legacy = new Set<number>(), 
 const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 /** Blok Praktis v3 (pedoman Kecerdasan §3 rev. 2026-10-13). */
 export const LAYOUT_V3: [number, number, string][] = [[76, 90, "HIT"], [91, 96, "CRT"], [97, 100, "KCK"]];
+/** Layout v4 (rencana simulasi-5 §2.1): 76–87 HIT, 88–96 CRT (88–92 Alokasi Waktu), 97–100 KCK; 73–75 Sebab-Akibat. */
+export const LAYOUT_V4: [number, number, string][] = [[76, 87, "HIT"], [88, 96, "CRT"], [97, 100, "KCK"]];
 
-/** Validator layout v3: 76–90 HIT, 91–96 CRT, 97–100 KCK (4 kunci beda, ada C/E), tanpa KUA. `t` kosong = butir di luar blok Praktis. */
-export function checkLayout(pkg: number, final: { row: Row; t: string }[], max = 30) {
+/** Validator layout v3/v4: blok Praktis sesuai `layout`, 97–100 KCK (4 kunci beda, ada C/E), tanpa KUA. `t` kosong = butir di luar blok Praktis. */
+export function checkLayout(pkg: number, final: { row: Row; t: string; sub?: string }[], max = 30, layout = LAYOUT_V3) {
   assert.deepEqual(final.map((f) => f.row.sequence_number), range(1, 100), `pkg ${pkg}: nomor harus 1..100`);
-  for (const [a, b, t] of LAYOUT_V3) for (const s of range(a, b)) assert.equal(final[s - 1].t, t, `pkg ${pkg} #${s}: tipe ${final[s - 1].t} ≠ ${t}`);
+  for (const [a, b, t] of layout) for (const s of range(a, b)) assert.equal(final[s - 1].t, t, `pkg ${pkg} #${s}: tipe ${final[s - 1].t} ≠ ${t}`);
+  if (layout === LAYOUT_V4) {
+    for (const s of range(73, 75)) assert.equal(final[s - 1].t, "SBA", `pkg ${pkg} #${s}: harus Sebab-Akibat`);
+    for (const s of range(88, 92)) assert.equal(final[s - 1].sub, "ALOKASI", `pkg ${pkg} #${s}: harus CRT Alokasi Waktu`);
+  }
   assert.ok(!final.some((f) => f.t === "KUA"), `pkg ${pkg}: masih ada KUA`);
   const keys = final.slice(96).map((f) => f.row.scoring_rule.correct_key);
   assert.equal(new Set(keys).size, 4, `pkg ${pkg}: kunci KCK 97–100 harus 4 huruf beda (${keys})`);

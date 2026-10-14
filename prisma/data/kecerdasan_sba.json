@@ -1,0 +1,182 @@
+{
+  "15": {
+    "wacana": {
+      "p15sba73": "(1) Pipa air di dapur rumah Bu Sari bocor sepanjang malam.\n(2) Pada pagi harinya lantai dapur rumah Bu Sari tergenang air.",
+      "p15sba74": "(1) Panen cabai di Desa Sukadana tahun ini turun hampir setengahnya.\n(2) Sejak awal musim tanam, hama ulat menyerang sebagian besar kebun cabai di Desa Sukadana.",
+      "p15sba75": "(1) Pukul 10.00 tadi, lampu di semua ruang kelas SD Harapan padam serentak.\n(2) Pukul 10.00 tadi, kipas angin di ruang guru SD Harapan berhenti berputar."
+    },
+    "soal": [
+      {
+        "s": 73,
+        "t": "SBA",
+        "d": 2,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p15sba73",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "A",
+        "p": "Uji arah pertama: \"Lantai dapur tergenang air karena pipa bocor sepanjang malam\" wajar, air yang keluar dari pipa jatuh ke lantai. Uji kebalikannya: \"Pipa bocor karena lantai tergenang\" janggal, genangan di lantai tidak membuat pipa bocor. Tidak perlu mencari sebab lain karena (1) sudah langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): membalik arah; genangan tidak bisa membuat pipa bocor. Opsi C (keduanya sebab, tidak berhubungan): genangan di lantai bukan sebab apa pun di sini, dan kedua pernyataan jelas berhubungan. Opsi D (akibat dari dua sebab berbeda): kebocoran pipa bukan akibat, justru kejadian yang menimbulkan genangan. Opsi E (akibat dari satu sebab yang sama): tidak ada kejadian ketiga yang dibutuhkan; (1) sendiri sudah menjelaskan (2). Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: uji kedua arah dengan kata \"karena\": arah yang wajar menunjukkan mana sebab dan mana akibat."
+      },
+      {
+        "s": 74,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p15sba74",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "B",
+        "p": "Uji arah (1) ke (2): \"Hama ulat menyerang kebun karena panen turun\" janggal, hama datang lebih dulu, saat tanaman masih tumbuh. Uji arah (2) ke (1): \"Panen cabai turun karena hama ulat menyerang kebun sejak awal musim tanam\" wajar, tanaman yang dimakan ulat menghasilkan buah lebih sedikit. Jadi sebabnya ditulis di nomor (2) dan akibatnya di nomor (1).<br>Opsi A ((1) sebab, (2) akibat): tertipu urutan nomor; panen yang turun tidak bisa mendatangkan hama yang sudah ada sejak awal musim tanam. Opsi C (keduanya sebab, tidak berhubungan): panen turun adalah hasil akhir, bukan sebab, dan kedua kejadian saling berhubungan. Opsi D (akibat dari dua sebab berbeda): serangan hama bukan akibat dalam pasangan ini, melainkan penyebab turunnya panen. Opsi E (akibat dari satu sebab yang sama): tidak perlu sebab ketiga; serangan hama sendiri sudah menjelaskan panen yang turun. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor, uji kedua arah dengan kata \"karena\"."
+      },
+      {
+        "s": 75,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p15sba75",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "E",
+        "p": "Uji arah (1) ke (2): \"Kipas berhenti karena lampu kelas padam\" janggal, lampu dan kipas adalah alat yang terpisah. Uji kebalikannya: \"Lampu padam karena kipas berhenti\" juga janggal. Keduanya terjadi di sekolah yang sama pada pukul yang sama, dan keduanya alat listrik. Sebab bersama yang paling masuk akal: aliran listrik ke sekolah terputus, sehingga lampu padam dan kipas berhenti.<br>Opsi A ((1) sebab, (2) akibat): lampu yang padam tidak membuat kipas di ruangan lain berhenti. Opsi B ((2) sebab, (1) akibat): kipas yang berhenti tidak membuat lampu di kelas padam. Opsi C (keduanya sebab, tidak berhubungan): keduanya adalah kejadian yang ditimbulkan, bukan penyebab. Opsi D (akibat dari dua sebab berbeda): dua alat listrik di sekolah yang sama berhenti tepat pada pukul yang sama; jauh lebih masuk akal satu sebab (listrik terputus) daripada dua kerusakan kebetulan. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau dua kejadian terjadi di tempat dan waktu yang sama tetapi tidak saling menimbulkan, cari satu kejadian di luar keduanya yang menimbulkan keduanya."
+      }
+    ]
+  },
+  "19": {
+    "wacana": {
+      "p19sba73": "(1) Sekitar pukul 02.15 dini hari, lampu gantung di banyak rumah warga Desa Lembah Asri berayun-ayun sendiri, padahal pintu dan jendela tertutup rapat.\n(2) Sekitar pukul 02.15 dini hari itu juga, air di kolam-kolam ikan milik warga Desa Lembah Asri bergelombang hingga meluap melewati tepi kolam, padahal malam itu tidak ada angin.",
+      "p19sba74": "(1) Nilai rata-rata ulangan matematika kelas VIII B turun tajam dibanding ulangan sebelumnya.\n(2) Selama tiga minggu sebelum ulangan, kelas VIII B tidak mendapat pelajaran matematika karena gurunya cuti sakit.",
+      "p19sba75": "(1) Sejak Senin, pengelola gedung mematikan pendingin ruangan di lantai tiga untuk perbaikan.\n(2) Sepanjang minggu itu, banyak karyawan lantai tiga membawa kipas angin kecil dari rumah."
+    },
+    "soal": [
+      {
+        "s": 73,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p19sba73",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "E",
+        "p": "Uji arah (1) ke (2): \"Air kolam bergelombang karena lampu gantung di dalam rumah berayun\" janggal, lampu di dalam rumah tidak menyentuh kolam di luar. Uji kebalikannya: \"Lampu gantung berayun karena air kolam bergelombang\" juga janggal, rumahnya tertutup rapat dan kolam ada di luar. Angin juga tidak bisa menjadi sebabnya karena pintu dan jendela tertutup dan malam itu tidak ada angin. Keduanya terjadi di desa yang sama pada pukul yang sama, di banyak rumah dan banyak kolam sekaligus. Sebab bersama yang tersirat: tanah di desa itu bergoyang (gempa), sehingga lampu gantung berayun dan air kolam bergelombang.<br>Opsi A ((1) sebab, (2) akibat): lampu yang berayun di dalam rumah tidak punya daya untuk menggoyang air kolam di luar rumah. Opsi B ((2) sebab, (1) akibat): air kolam yang bergelombang tidak bisa menggerakkan lampu di dalam rumah yang tertutup rapat. Opsi C (keduanya sebab, tidak berhubungan): keduanya adalah kejadian yang ditimbulkan oleh sesuatu, bukan penyebab, dan keduanya berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): banyak lampu dan banyak kolam bergerak sendiri pada menit yang sama di satu desa tanpa angin; menganggapnya dua kebetulan terpisah mengabaikan petunjuk waktu dan tempat itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau dua kejadian terjadi di tempat dan waktu yang sama tetapi tidak saling menimbulkan, cari satu kejadian di luar keduanya yang menimbulkan keduanya."
+      },
+      {
+        "s": 74,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p19sba74",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "B",
+        "p": "Uji arah (1) ke (2): \"Kelas tidak mendapat pelajaran karena nilai ulangannya turun\" janggal, gurunya tidak mengajar karena cuti sakit, dan itu terjadi sebelum ulangan. Uji arah (2) ke (1): \"Nilai ulangan turun karena tiga minggu tidak ada pelajaran matematika\" wajar, materi yang diujikan belum dipelajari. Akibatnya ditulis lebih dulu di nomor (1).<br>Opsi A ((1) sebab, (2) akibat): tertipu urutan nomor; nilai ulangan yang turun terjadi sesudah masa tanpa pelajaran, jadi tidak bisa menjadi penyebabnya. Opsi C (keduanya sebab, tidak berhubungan): nilai yang turun adalah hasil, bukan sebab, dan keduanya jelas berhubungan. Opsi D (akibat dari dua sebab berbeda): tidak adanya pelajaran justru menjelaskan turunnya nilai; menganggap keduanya akibat dari dua hal berbeda mengabaikan hubungan itu. Opsi E (akibat dari satu sebab yang sama): cuti sakit guru memang ada di balik (2), tetapi tidak menimbulkan (1) secara terpisah; (1) terjadi lewat (2). Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor, uji kedua arah dengan kata \"karena\"."
+      },
+      {
+        "s": 75,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p19sba75",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "A",
+        "p": "Uji arah (1) ke (2): \"Karyawan membawa kipas dari rumah karena pendingin ruangan di lantainya dimatikan\" wajar, ruangan menjadi panas. Uji kebalikannya: \"Pendingin ruangan dimatikan karena karyawan membawa kipas\" janggal, pernyataan (1) menyebut alasannya sendiri, yaitu perbaikan, dan terjadi sejak Senin.<br>Opsi B ((2) sebab, (1) akibat): membalik arah; pendingin dimatikan untuk perbaikan, bukan karena ada kipas. Opsi C (keduanya sebab, tidak berhubungan): membawa kipas adalah tanggapan atas ruangan yang panas, bukan sebab yang berdiri sendiri. Opsi D (akibat dari dua sebab berbeda): mematikan pendingin ruangan bukan akibat dalam pasangan ini, melainkan penyebab karyawan membawa kipas. Opsi E (akibat dari satu sebab yang sama): tidak ada kejadian ketiga yang menimbulkan keduanya; (1) langsung menimbulkan (2). Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: uji kedua arah dengan kata \"karena\": arah yang wajar menunjukkan mana sebab dan mana akibat."
+      }
+    ]
+  },
+  "20": {
+    "wacana": {
+      "p20sba73": "(1) Pada Sabtu pagi, lapangan sepak bola Desa Wanasari tergenang air setinggi mata kaki.\n(2) Hujan deras mengguyur Desa Wanasari tiga hari berturut-turut hingga Jumat malam.",
+      "p20sba74": "(1) Belasan siswa Asrama Putra Bangsa mengeluh mual dan sakit perut setelah menyantap makan siang dari dapur asrama.\n(2) Juru masak dan dua pengasuh Asrama Putra Bangsa yang ikut menyantap makan siang itu juga mengeluh mual dan sakit perut.",
+      "p20sba75": "(1) Selama bulan Mei, koperasi sekolah memberi potongan harga 30% untuk semua buku tulis.\n(2) Persediaan buku tulis di koperasi sekolah habis sebelum pertengahan Mei."
+    },
+    "soal": [
+      {
+        "s": 73,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p20sba73",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "B",
+        "p": "Uji arah (1) ke (2): \"Hujan turun tiga hari karena lapangan tergenang\" janggal, genangan tidak bisa mendatangkan hujan, dan hujannya terjadi lebih dulu. Uji arah (2) ke (1): \"Lapangan tergenang pada Sabtu pagi karena hujan deras tiga hari hingga Jumat malam\" wajar, air hujan belum sempat meresap. Sebabnya ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): tertipu urutan nomor; genangan pada Sabtu terjadi sesudah hujan, jadi tidak bisa menjadi penyebabnya. Opsi C (keduanya sebab, tidak berhubungan): genangan adalah hasil, bukan sebab, dan kedua pernyataan saling berhubungan. Opsi D (akibat dari dua sebab berbeda): hujan deras bukan akibat dalam pasangan ini, melainkan penyebab genangan. Opsi E (akibat dari satu sebab yang sama): tidak perlu sebab ketiga; hujan itu sendiri sudah menjelaskan genangan, dan hujan tidak bisa sekaligus menjadi akibat dari sebab yang sama. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor, uji kedua arah dengan kata \"karena\"."
+      },
+      {
+        "s": 74,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p20sba74",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "E",
+        "p": "Uji arah (1) ke (2): \"Juru masak dan pengasuh sakit perut karena siswa sakit perut\" terdengar wajar sekilas, tetapi mual dan sakit perut tidak berpindah dari orang ke orang dalam satu jam yang sama. Kebalikannya juga janggal. Keduanya terjadi di asrama yang sama, setelah menyantap makan siang yang sama dari dapur asrama. Sebab bersama yang tersirat: makanan siang di asrama itu tercemar, sehingga siswa dan petugas yang memakannya sama-sama sakit.<br>Opsi A ((1) sebab, (2) akibat): jebakan berbarengan; dua kejadian yang muncul bersamaan belum tentu yang satu menimbulkan yang lain, dan sakit perut siswa tidak membuat petugas sakit. Opsi B ((2) sebab, (1) akibat): sama janggalnya dengan arah sebaliknya; petugas yang sakit tidak membuat siswa sakit. Opsi C (keduanya sebab, tidak berhubungan): keduanya adalah keluhan yang ditimbulkan, bukan penyebab. Opsi D (akibat dari dua sebab berbeda): tempat dan waktunya sama dan keluhannya sama persis; satu sebab (makan siang yang sama) jauh lebih masuk akal daripada dua kebetulan. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau dua kejadian terjadi di tempat dan waktu yang sama tetapi tidak saling menimbulkan, cari satu kejadian di luar keduanya yang menimbulkan keduanya."
+      },
+      {
+        "s": 75,
+        "t": "SBA",
+        "d": 3,
+        "i": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+        "w": "p20sba75",
+        "q": "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?",
+        "c": [
+          "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+          "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+          "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+          "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+        ],
+        "k": "A",
+        "p": "Uji arah (1) ke (2): \"Persediaan buku tulis cepat habis karena ada potongan harga 30%\" wajar, harga murah membuat siswa membeli lebih banyak. Uji kebalikannya: \"Koperasi memberi potongan harga karena persediaan habis\" janggal, toko justru memberi potongan saat barang masih banyak, bukan saat barang habis; lagi pula potongan berlaku sejak awal Mei, sebelum persediaan habis.<br>Opsi B ((2) sebab, (1) akibat): membalik arah; barang yang sudah habis tidak perlu didiskon, dan potongan berlaku lebih dulu. Opsi C (keduanya sebab, tidak berhubungan): habisnya persediaan adalah hasil, bukan sebab yang berdiri sendiri. Opsi D (akibat dari dua sebab berbeda): potongan harga sudah cukup menjelaskan persediaan yang cepat habis; tidak perlu dua sebab terpisah. Opsi E (akibat dari satu sebab yang sama): tidak ada kejadian ketiga yang menimbulkan keduanya; potongan harga adalah keputusan koperasi yang langsung menimbulkan (2). Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: uji kedua arah dengan kata \"karena\": arah yang wajar menunjukkan mana sebab dan mana akibat."
+      }
+    ]
+  }
+}

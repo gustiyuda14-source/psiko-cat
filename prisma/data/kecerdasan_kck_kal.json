@@ -747,5 +747,124 @@
       "p": "Yang sebenarnya ditanya\nUmur Sinta sekarang, satu bilangan pasti.\n\nCek pernyataan (1) saja\nRani + Sinta = 30. Rani 18 dan Sinta 12 memenuhi, Rani 20 dan Sinta 10 juga memenuhi. Umur Sinta bisa 12 atau 10, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nLima tahun lalu (Rani − 5) + (Sinta − 5) = 20. Pasangan 18 dan 12 memberi 13 + 7 = 20, pasangan 20 dan 10 memberi 15 + 5 = 20. Umur Sinta bisa 12 atau 10, jadi pernyataan (2) tidak cukup.\n\nCek gabungan\nPernyataan (2) diolah menjadi Rani + Sinta − 10 = 20, artinya Rani + Sinta = 30. Ini sama persis dengan pernyataan (1), jadi tidak ada keterangan baru. Sinta masih bisa 12 atau 10. Digabung pun tidak cukup.\n\nJawaban: E\nKedua pernyataan sebenarnya satu persamaan yang sama, sehingga umur Sinta tidak bisa dipastikan.\nOpsi A gugur karena jumlah umur saja cocok dengan banyak pasangan.\nOpsi B gugur karena jumlah umur lima tahun lalu juga cocok dengan banyak pasangan.\nOpsi C gugur karena pernyataan (2) hanya mengulang isi pernyataan (1).\nOpsi D gugur karena masing-masing pernyataan belum cukup.\n\nBiar gampang diingat\nDiberi tahu harga dua barang 30 ribu, lalu diberi tahu lagi harga dua barang itu sebelum naik 5 ribu masing-masing adalah 20 ribu. Kabar kedua tidak menambah apa pun.\n\nJebakan di soal ini\nMelihat dua persamaan dengan dua umur lalu langsung memilih C. Sederhanakan dulu pernyataan (2); jika hasilnya sama dengan pernyataan (1), gabungan tidak menambah informasi.",
       "svg": null
     }
+  ],
+  "20": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Panitia bazar buku sekolah menata buku di dua meja. Buku di tiap meja disusun dalam tumpukan yang sama tinggi. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa banyak buku di Meja Selatan?\nPernyataan (1): Banyak buku per tumpukan di Meja Selatan 1 lebih banyak daripada banyak tumpukan di Meja Utara.\nPernyataan (2): Jika dari setiap tumpukan di Meja Utara diambil 2 buku lalu semuanya ditaruh di Meja Selatan, banyak buku di kedua meja menjadi sama.",
+      "tabel": {
+        "kolom": [
+          "Meja",
+          "Banyak tumpukan",
+          "Buku per tumpukan"
+        ],
+        "baris": [
+          [
+            "Utara",
+            "9",
+            "14"
+          ],
+          [
+            "Selatan",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "(1) tidak cukup: q = 9 + 1 = 10, tetapi p belum diketahui; p = 8 memberi 80 buku, p = 9 memberi 90 buku. (2) cukup: Meja Utara 9 × 14 = 126 buku; 9 × 2 = 18 buku pindah, Meja Utara tinggal 108, jadi buku Meja Selatan + 18 = 108 dan Meja Selatan = 90 buku.",
+      "p": "Yang sebenarnya ditanya\nBanyak buku di Meja Selatan, yaitu p × q. Yang dicari hasil kalinya, bukan harus p dan q satu per satu.\n\nCek pernyataan (1) saja\nBuku per tumpukan Meja Selatan q = 9 + 1 = 10 (9 adalah banyak tumpukan Meja Utara). Banyak tumpukan p tidak diketahui. Jika p = 8, bukunya 80; jika p = 9, bukunya 90. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nMeja Utara berisi 9 × 14 = 126 buku. Dari 9 tumpukan diambil 2 buku, jadi 18 buku pindah. Meja Utara tinggal 126 − 18 = 108 buku, dan Meja Selatan menjadi (buku semula) + 18. Keduanya sama, jadi buku semula Meja Selatan = 108 − 18 = 90. Pernyataan (2) cukup.\n\nJawaban: B\nPernyataan (2) saja memberi 90 buku, sedangkan pernyataan (1) saja baru memberi isi per tumpukan.\nOpsi A gugur karena pernyataan (1) tidak memberi banyak tumpukan.\nOpsi C gugur karena pernyataan (2) sudah cukup tanpa pernyataan (1).\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) sudah memberi jawaban pasti.\n\nBiar gampang diingat\nKalau kakak memberi adik 18 kelereng lalu kelereng mereka jadi sama banyak, selisih awal mereka pasti 36. Jumlah awal adik bisa dihitung tanpa tahu cara kelereng itu disusun.\n\nJebakan di soal ini\nMenganggap pernyataan (2) tidak cukup karena p dan q tidak ketemu, atau lupa bahwa 18 buku yang pindah juga menambah Meja Selatan. Tulis dulu keadaan sesudah pemindahan untuk kedua meja.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 183\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Meja, Banyak tumpukan, Buku per tumpukan\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"183\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"61.6\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Meja</text><text x=\"248.3\" y=\"38.5\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Banyak tumpukan</text><text x=\"446.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Buku per</text><text x=\"446.7\" y=\"51.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">tumpukan</text><text x=\"61.6\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">Utara</text><text x=\"248.3\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">9</text><text x=\"446.7\" y=\"103\" text-anchor=\"middle\" dominant-baseline=\"central\">14</text><text x=\"61.6\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\">Selatan</text><text x=\"248.3\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"446.7\" y=\"155\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"77\" x2=\"520\" y2=\"77\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"129\" x2=\"520\" y2=\"129\"/><line x1=\"0\" y1=\"181\" x2=\"520\" y2=\"181\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"181\"/><line x1=\"123.2\" y1=\"0\" x2=\"123.2\" y2=\"181\"/><line x1=\"373.4\" y1=\"0\" x2=\"373.4\" y2=\"181\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"181\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Pengelola kolam renang umum mencatat banyak pengunjung selama tiga hari. Datanya ada pada tabel di bawah.\nPertanyaan: Apakah pengunjung hari Minggu lebih dari 200 orang?\nPernyataan (1): Pengunjung hari Minggu lebih sedikit daripada rata-rata pengunjung ketiga hari itu.\nPernyataan (2): Selisih pengunjung hari Minggu dan hari Sabtu sama dengan selisih pengunjung hari Sabtu dan hari Jumat, dan hari Minggu bukan hari yang paling ramai.",
+      "tabel": {
+        "kolom": [
+          "Hari",
+          "Pengunjung"
+        ],
+        "baris": [
+          [
+            "Jumat",
+            "140"
+          ],
+          [
+            "Sabtu",
+            "215"
+          ],
+          [
+            "Minggu",
+            "m"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1) cukup: m < (355 + m) ÷ 3 berarti 2m < 355, jadi m < 177,5 dan jawabannya pasti tidak. (2) cukup: selisih Sabtu dan Jumat 75, jadi m = 290 atau m = 140; m = 290 membuat Minggu paling ramai, jadi m = 140 dan jawabannya pasti tidak.",
+      "p": "Yang sebenarnya ditanya\nJawaban ya atau tidak: apakah m lebih dari 200. Jawaban \"pasti tidak\" juga terhitung cukup.\n\nCek pernyataan (1) saja\nRata-rata ketiga hari adalah (140 + 215 + m) ÷ 3 = (355 + m) ÷ 3, dan m ikut dihitung. m < (355 + m) ÷ 3 berarti 3m < 355 + m, jadi 2m < 355 atau m < 177,5. Nilai di bawah 177,5 pasti tidak lebih dari 200. Jawabannya pasti tidak. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\nSelisih Sabtu dan Jumat adalah 215 − 140 = 75. Selisih Minggu dan Sabtu juga 75, jadi m = 215 + 75 = 290 atau m = 215 − 75 = 140. Jika m = 290, Minggu menjadi hari paling ramai, padahal pernyataan menyebut bukan. Jadi m = 140, dan jawabannya pasti tidak. Pernyataan (2) cukup.\n\nJawaban: D\nMasing-masing pernyataan sendiri memberi jawaban pasti tidak.\nOpsi A gugur karena pernyataan (2) juga cukup.\nOpsi B gugur karena pernyataan (1) juga cukup.\nOpsi C gugur karena tidak perlu menggabungkan keduanya.\nOpsi E gugur karena setiap pernyataan sudah memberi jawaban pasti.\n\nBiar gampang diingat\nNilai yang lebih kecil daripada rata-rata kelompoknya sendiri pasti juga lebih kecil daripada rata-rata anggota lainnya, di sini (140 + 215) ÷ 2 = 177,5.\n\nJebakan di soal ini\nMenganggap pernyataan (2) tidak cukup karena selisih 75 bisa ke atas atau ke bawah. Kalimat kedua di pernyataan itu (Minggu bukan hari paling ramai) membuang kemungkinan 290. Ingat juga bahwa \"pasti tidak\" tetap jawaban yang cukup.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Hari, Pengunjung\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"99.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari</text><text x=\"359.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Pengunjung</text><text x=\"99.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Jumat</text><text x=\"359.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">140</text><text x=\"99.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Sabtu</text><text x=\"359.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">215</text><text x=\"99.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Minggu</text><text x=\"359.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">m</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"199.4\" y1=\"0\" x2=\"199.4\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Panitia lomba membeli piala kecil dan medali. Harga satu piala adalah x rupiah, dan harga satu medali adalah y rupiah. Semua piala harganya sama, begitu pula semua medali.\nPertanyaan: Berapa harga satu piala?\nPernyataan (1): Perbandingan harga satu piala dan harga satu medali adalah 3 : 2.\nPernyataan (2): Harga 2 piala sama dengan harga 3 medali.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1) tidak cukup: x = 30.000 dan y = 20.000, atau x = 45.000 dan y = 30.000, sama-sama berbanding 3 : 2. (2) tidak cukup: pasangan yang sama, 2 × 30.000 = 3 × 20.000 dan 2 × 45.000 = 3 × 30.000. Gabungan tidak cukup: (1) dan (2) sama-sama berarti 2x = 3y, sehingga x tetap bisa 30.000 atau 45.000.",
+      "p": "Yang sebenarnya ditanya\nHarga satu piala, yaitu x, satu bilangan pasti.\n\nCek pernyataan (1) saja\nx : y = 3 : 2. Harga Rp30.000 dan Rp20.000 memenuhi, harga Rp45.000 dan Rp30.000 juga memenuhi. Harga piala bisa Rp30.000 atau Rp45.000, jadi pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\n2x = 3y. Pasangan Rp30.000 dan Rp20.000 memberi 60.000 = 60.000, pasangan Rp45.000 dan Rp30.000 memberi 90.000 = 90.000. Harga piala masih bisa Rp30.000 atau Rp45.000, jadi pernyataan (2) tidak cukup.\n\nCek gabungan\nPerbandingan x : y = 3 : 2 jika dikali silang menjadi 2x = 3y, sama persis dengan pernyataan (2). Tidak ada keterangan baru, jadi x masih bisa Rp30.000 atau Rp45.000. Digabung pun tidak cukup.\n\nJawaban: E\nKedua pernyataan sebenarnya satu persamaan yang sama, sehingga harga piala tidak bisa dipastikan.\nOpsi A gugur karena perbandingan saja cocok dengan banyak pasangan harga.\nOpsi B gugur karena persamaan 2x = 3y saja juga cocok dengan banyak pasangan harga.\nOpsi C gugur karena pernyataan (2) hanya mengulang isi pernyataan (1) dalam bentuk lain.\nOpsi D gugur karena masing-masing pernyataan belum cukup.\n\nBiar gampang diingat\nDiberi tahu bahwa harga baju dan celana berbanding 3 : 2, lalu diberi tahu lagi bahwa dua baju seharga tiga celana. Kabar kedua tidak menambah apa pun.\n\nJebakan di soal ini\nMelihat dua pernyataan yang bentuknya berbeda (perbandingan dan persamaan) lalu langsung memilih C. Ubah perbandingan menjadi persamaan dengan kali silang; jika hasilnya sama, gabungan tidak menambah informasi.",
+      "svg": null
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Empat kelas, yaitu VII-A, VII-B, VII-C, dan VII-D, tampil satu per satu dalam lomba yel-yel. Setiap kelas tampil tepat satu kali.\nPertanyaan: Kelas mana yang tampil ketiga?\nPernyataan (1): VII-B tampil tepat setelah VII-D.\nPernyataan (2): VII-A tampil lebih dahulu daripada VII-C, dan VII-C tidak tampil terakhir.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1) tidak cukup: urutan VII-D, VII-B, VII-A, VII-C memberi VII-A ketiga; urutan VII-A, VII-C, VII-D, VII-B memberi VII-D ketiga. (2) tidak cukup: urutan VII-A, VII-C, VII-D, VII-B memberi VII-D; urutan VII-A, VII-B, VII-C, VII-D memberi VII-C. Gabungan cukup: VII-C ketiga membuat VII-D dan VII-B tidak punya dua urutan berdampingan, jadi VII-C kedua, VII-A pertama, VII-D ketiga, VII-B keempat.",
+      "p": "Yang sebenarnya ditanya\nKelas yang tampil di urutan ketiga, satu kelas pasti.\n\nCek pernyataan (1) saja\nVII-D dan VII-B berdampingan dengan VII-B di belakang. Urutan VII-D, VII-B, VII-A, VII-C memberi VII-A ketiga; urutan VII-A, VII-C, VII-D, VII-B memberi VII-D ketiga. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nVII-C tidak pertama (ada VII-A sebelumnya) dan tidak terakhir, jadi VII-C kedua atau ketiga. Urutan VII-A, VII-C, VII-D, VII-B memberi VII-D ketiga; urutan VII-A, VII-B, VII-C, VII-D memberi VII-C ketiga. Pernyataan (2) tidak cukup.\n\nCek gabungan\nJika VII-C ketiga, VII-A di urutan 1 atau 2, dan dua urutan sisanya adalah 2 dan 4 atau 1 dan 4. Keduanya tidak berdampingan, jadi VII-D dan VII-B tidak bisa ditempatkan. Maka VII-C kedua, VII-A pertama, dan VII-D–VII-B mengisi urutan 3–4. Urutan tunggal: VII-A, VII-C, VII-D, VII-B. Kelas ketiga adalah VII-D. Gabungan cukup.\n\nJawaban: C\nMasing-masing pernyataan saja masih memberi beberapa urutan, tetapi gabungan keduanya hanya menyisakan satu urutan.\nOpsi A gugur karena pernyataan (1) saja masih memberi lebih dari satu kelas ketiga.\nOpsi B gugur karena pernyataan (2) saja masih menyisakan VII-C atau VII-D di urutan ketiga.\nOpsi D gugur karena tidak ada pernyataan yang cukup sendirian.\nOpsi E gugur karena gabungan keduanya sudah memberi satu urutan.\n\nBiar gampang diingat\nDua orang yang harus antre berdampingan butuh dua tempat yang bersebelahan. Kalau tempat kosong yang tersisa terpisah, susunan itu langsung gugur.\n\nJebakan di soal ini\nMemilih E karena masing-masing pernyataan terlihat lemah. Uji gabungannya dengan kasus: syarat \"tepat setelah\" butuh dua urutan berdampingan, dan itu yang menutup kasus VII-C ketiga.",
+      "svg": null
+    }
   ]
 }

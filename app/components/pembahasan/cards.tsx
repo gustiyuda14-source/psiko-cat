@@ -111,7 +111,7 @@ function kecerdasan(item: KecerdasanReviewItem, reveal: boolean): CardView {
             </div>
           </details>
         )}
-        {p.question_text && <p className="max-w-[72ch] leading-relaxed text-foreground"><MathText text={p.question_text} /></p>}
+        {p.question_text && <p className="max-w-[72ch] whitespace-pre-line leading-relaxed text-foreground"><MathText text={p.question_text} /></p>}
         {p.svg_content && (
           <div className="overflow-x-auto rounded-md border border-border bg-white p-2" dangerouslySetInnerHTML={{ __html: p.svg_content }} />
         )}

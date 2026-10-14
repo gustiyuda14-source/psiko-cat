@@ -1,6 +1,6 @@
 # Pedoman Penyusunan Simulasi Penuh — Kecerdasan Paket 2
 
-Versi 3 · 2026-10-13 · Kecukupan data 4 butir (97–100) + spesifikasi §4.7 Kecukupan Data dan §4.8 Silogisme · Versi 2 · 2026-10-12 · Kalibrasi Logis/Spasial (denah masuk blok 38–42) · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
+Versi 4 · 2026-10-14 · Layout v4 (Sebab-Akibat 73–75, Alokasi Waktu 88–92) + §4.9 Sebab-Akibat dan §4.10 Alokasi Waktu · Versi 3 · 2026-10-13 · Kecukupan data 4 butir (97–100) + spesifikasi §4.7 Kecukupan Data dan §4.8 Silogisme · Versi 2 · 2026-10-12 · Kalibrasi Logis/Spasial (denah masuk blok 38–42) · Dasar: Pedoman Rancangan Sistem §2.1, `soal.json` (Simulasi Paket 1), `docs/rencana/drilling/02-kecerdasan-drill-taxonomy.md`, `04-paket2-bitara.md`, dan informasi yang beredar tentang psikotes 2026.
 
 > **Catatan sumber.** Perubahan di §2 berasal dari informasi yang beredar dan **belum dikonfirmasi oleh dokumen resmi**. Kerangka 4 subtes × 25 butir tetap dipertahankan supaya nilai per subtes tetap bisa dilaporkan. Yang berubah adalah isi tiap subtes.
 
@@ -92,6 +92,21 @@ Revisi 2026-10-13: kecukupan data menjadi blok sendiri sebanyak 4 butir (§4.7).
 | 97–100 | **Kecukupan data** (§4.7) | 4 |
 
 Komposisi sebelumnya (berlaku untuk paket yang dibuat sebelum 2026-10-13: 1–3 dan 12–16; paket baru, termasuk latihan 4–11, memakai tabel di atas): hitung cepat 8, pecahan dll. 5, konversi 4, soal cerita 6, perbandingan kuantitatif / kecukupan data 2.
+
+### Layout v4 (Simulasi 5 / pkg 20; pkg 15 dan 19 setelah `--swap`) — 2026-10-14
+
+Layout v3 di atas tetap berlaku untuk paket yang tidak di-reshape. Layout v4 (`LAYOUT_V4` di `scripts/kecerdasan-teks-lib.ts`) mengubah dua blok:
+
+| No | Tipe | Jml | Catatan |
+|---|---|---|---|
+| 65–72 | Wacana logika A (4) + B (4) | 8 | wacana C dilepas utuh |
+| 73–75 | **Sebab-Akibat** (§4.9) | 3 | kode tipe `SBA`, tetap di blok Analitis |
+| 76–87 | Hitung (aritmetika 76–85, konversi 86–87) | 12 | v3: 76–90 (15 butir) |
+| 88–92 | **Alokasi Waktu** (§4.10) | 5 | kode tipe `CRT`, penanda `"sub": "ALOKASI"` |
+| 93–96 | Soal cerita lain | 4 | v3: 91–96 (6 butir) |
+| 97–100 | Kecukupan data | 4 | tidak berubah |
+
+Kode tipe, aspek, dan skoring tidak berubah. Pkg 20 bertingkat 10/90 (sedang hanya di verbal dan deret). Pkg 15/19 mewarisi tingkat dan kunci butir lama di slot yang diganti; hanya slot `SBA` boleh berganti kunci (hanya ke A/B/E).
 
 ## 4. Spesifikasi tipe
 
@@ -214,6 +229,35 @@ Sumber format: `FILE PSIKO POLRI 2026/KECUKUPAN DATA/` (paket 1 dan 2, soal + pe
   - Paragraf 2: tiap opsi gugur dengan nama kesalahannya, lalu Jawaban dan Tips.
   - Jangan berhenti di nama modus saja. Contoh yang tidak cukup: "Modus Tollens (P→Q, ~Q ⇒ ~P)" tanpa penjelasan tiap opsi.
 
+### 4.9 Sebab-Akibat (73–75) — 2026-10-14
+
+- **Bentuk:** dua pernyataan bernomor ("(1) …\n(2) …" di wacana), pertanyaan baku "Pertanyaan: Bagaimana hubungan antara pernyataan (1) dan pernyataan (2)?", dan **5 opsi baku** yang teksnya sama persis di setiap butir (`SBA_OPSI`; diasersi `checkSBA`):
+  - A. Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat
+  - B. Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat
+  - C. Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan
+  - D. Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan
+  - E. Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama
+- **Instruksi baku:** "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya."
+- **Kunci hanya A, B, atau E.** C dan D hanya pengecoh: kedua kategori itu paling sering diperdebatkan sehingga sulit lolos D-1. Per paket 3 butir dengan 3 huruf berbeda, minimal 1 butir akibat ditulis lebih dulu (kunci B, jebakan urutan) dan 1 butir sebab bersama (kunci E).
+- **Aturan D-1 per butir:**
+  - Kunci A/B: mekanisme sebab satu langkah, umum diterima, tidak bisa dibaca dua arah (hindari lingkaran seperti "kurang tidur ↔ sulit konsentrasi"). Uji kalimat: "(akibat) terjadi karena (sebab)" wajar, kebalikannya janggal.
+  - Kunci E: sebab bersama jelas tersirat dari kedua pernyataan (waktu dan tempat sama, mis. sama-sama sejak listrik padam); (1) tidak menyebabkan (2) atau sebaliknya.
+  - Tidak ada pernyataan yang bisa dibaca sebagai sebab tidak langsung dari yang lain lewat 2 langkah.
+- **Progresi:** kartu 3 = sebab langsung terlihat; kartu 4 = urutan terbalik + sebab bersama tersirat lewat waktu/tempat; kartu 5 = pengecoh A yang terasa wajar (dua kejadian yang hanya berbarengan) + sebab bersama yang tidak disebut.
+- **Konteks:** sekolah, rumah, kantor, pasar, lingkungan, cuaca. Tanpa unsur kepolisian (A-7) dan tanpa topik pelanggaran lalu lintas (topik contoh peserta). Pasangan pernyataan tidak boleh sama dengan butir simulasi lain maupun drill K18.
+- **Pembahasan:** 2 paragraf umum. Paragraf 1: uji "apakah (1) membuat (2) terjadi?", lalu kebalikannya, lalu cari sebab bersama, dengan uji kalimat "karena". Paragraf 2: tiap opsi gugur dengan alasannya, lalu `Jawaban:` dan `Tips:` ("akibat sering ditulis lebih dulu; jangan tertipu urutan nomor"). Dipisah `<br>`.
+- **Data:** `prisma/data/kecerdasan_sba.json`. Tidak ada skrip pembuktian (kunci bukan hitungan); mutu dijaga lewat aturan D-1 dan cek buta tanpa kunci.
+
+### 4.10 Alokasi Waktu (88–92) — 2026-10-14
+
+- **Bentuk inti:** jendela waktu dalam jam ("pukul 08.15 hingga 09.25") dan daftar tugas dengan durasi menit; total durasi melebihi jendela. Peserta memilih tugas yang dilepas/didelegasikan, atau menghitung kekurangan atau jam selesai.
+- **Susunan teks** (field `q`, dipisah `\n`, dirender `QuestionPassage`), 4 bagian berurutan: (1) konteks + jendela waktu, diakhiri titik dua; (2) daftar tugas, satu per baris `Nama tugas: N menit` (kata kerja me-); (3) satu paragraf kendala (delegasi/jeda/rekan/tenggat); (4) `Pertanyaan:` satu kalimat. Opsi: frasa tindakan pendek tanpa titik.
+- **5 butir per paket**, termasuk 1 butir **"delegasi terbaik"**: opsi berupa strategi, bukan nama tugas. Kunci tunggal = satu-satunya opsi yang (a) benar-benar meminta bantuan orang lain, (b) menutup kekurangan waktu secara hitungan, (c) tidak mengorbankan kebutuhan dasar atau tujuan utama. Pengecoh bernama: melewatkan kebutuhan dasar, melewatkan tugas inti tanpa delegasi, menunda ke setelah tenggat, ganti kegiatan tidak produktif, delegasi yang tidak cukup menutup kekurangan.
+- **Pembuktian wajib:** data terstruktur di `prisma/data/kecerdasan_alokasi.json`; `scripts/cek-alokasi.ts` menghitung ulang semua opsi dan memastikan tepat satu yang memenuhi (D-1). Tanpa lolos skrip ini, butir tidak boleh masuk.
+- **Progresi per kartu (arah rencana Simulasi 5):** kartu 3 (jendela bulat, delegasi 1 tugas, tugas terpendek yang cukup, paling banyak tugas selesai, 1 jeda) → kartu 4 (jendela tidak bulat, jeda + delegasi, sepasang tugas dilepas, satu tugas wajib selesai sebelum pukul tertentu) → kartu 5 (2 jeda, dua orang paralel, rekan 1,5× lebih lambat, dua opsi bantuan hanya satu yang cukup, delegasi sepasang tugas + jeda).
+- **Anti-bocor:** cerita, nama, tugas, dan angka berbeda dari drill K07-AK, K11-AK, dan butir alokasi paket lain; latar netral (kantor, sekolah, panitia, posko, rumah); tanpa unsur kepolisian (A-7).
+- **Pembahasan:** ubah jam ke menit → jumlahkan daftar → hitung kelebihan → cek tiap opsi (sebut kesalahan pengecoh) → Jawaban → Tips (hitung kelebihan dulu, lalu cari tugas yang menutupinya).
+
 ## 5. Aturan umum
 
 - **Opsi:** 5 opsi (A–E). Butir 2 kunci dinilai semua-atau-tidak: benar hanya bila kedua kunci benar.
@@ -264,3 +308,4 @@ Catatan rencana awal (sudah dikerjakan 2026-10-11):
 - [ ] Pembahasan lengkap untuk 100 butir.
 - [ ] Kecukupan data: 4 jenis, 4 huruf kunci berbeda, bukti dua nilai untuk setiap "tidak cukup", pembahasan format §4.7.
 - [ ] Silogisme: sebaran jenis §4.8, pengecoh bernama, instruksi "anggap semua premis benar".
+- [ ] Layout v4: 73–75 = `SBA` (opsi baku, kunci A/B/E), 88–92 = Alokasi (`sub: "ALOKASI"`, lolos `cek-alokasi.ts`), pembahasan lengkap (§4.9, §4.10).

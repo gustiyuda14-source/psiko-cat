@@ -217,6 +217,26 @@ const MODEL: Record<string, Model[]> = {
       bukti: { s1: [{ a: 18, b: 12 }, { a: 20, b: 10 }], s2: [{ a: 18, b: 12 }, { a: 20, b: 10 }], gabung: [{ a: 18, b: 12 }, { a: 20, b: 10 }] },
     },
   ],
+  "20": [ // Simulasi 5, semua HOTS
+    { // 97 TABEL: Meja Selatan p × q; Utara 9 × 14
+      ruang: () => grid({ p: steps(1, 60), q: steps(1, 60) }),
+      s1: (v) => v.q === 9 + 1, s2: (v) => 9 * 14 - 9 * 2 === v.p * v.q + 9 * 2, jawab: (v) => v.p * v.q,
+      cukup1: false, cukup2: true, cukupGabung: true, bukti: { s1: [{ p: 8, q: 10 }, { p: 9, q: 10 }] } },
+    { // 98 YATIDAK: m > 200 ? (Jumat 140, Sabtu 215)
+      ruang: () => grid({ m: steps(0, 500) }),
+      s1: (v) => v.m < (140 + 215 + v.m) / 3, s2: (v) => Math.abs(v.m - 215) === 215 - 140 && v.m < Math.max(140, 215), jawab: (v) => v.m > 200,
+      cukup1: true, cukup2: true, cukupGabung: true, bukti: {} },
+    { // 99 ALJABAR kembar terselubung: x : y = 3 : 2 dan 2x = 3y (ribu rupiah)
+      ruang: () => grid({ x: steps(1, 150), y: steps(1, 150) }),
+      s1: (v) => v.x * 2 === v.y * 3, s2: (v) => 2 * v.x === 3 * v.y, jawab: (v) => v.x,
+      cukup1: false, cukup2: false, cukupGabung: false,
+      bukti: { s1: [{ x: 30, y: 20 }, { x: 45, y: 30 }], s2: [{ x: 30, y: 20 }, { x: 45, y: 30 }], gabung: [{ x: 30, y: 20 }, { x: 45, y: 30 }] } },
+    { // 100 GABUNG urutan: indeks 0-3 untuk A, B, C, D; siapa ketiga (indeks 2)?
+      ruang: () => perms([0, 1, 2, 3]).map(([A, B, C, D]) => ({ A, B, C, D })),
+      s1: (v) => v.B === v.D + 1, s2: (v) => v.A < v.C && v.C !== 3, jawab: (v) => "ABCD".split("").find((n) => v[n] === 2)!,
+      cukup1: false, cukup2: false, cukupGabung: true,
+      bukti: { s1: [{ D: 0, B: 1, A: 2, C: 3 }, { A: 0, C: 1, D: 2, B: 3 }], s2: [{ A: 0, C: 1, D: 2, B: 3 }, { A: 0, B: 1, C: 2, D: 3 }] } },
+  ],
 };
 
 // Jenis KCK lama #100 (dibaca dari stem; tidak ada field jenis di file teks).
@@ -270,7 +290,7 @@ function cekPembahasan(tag: string, x: Kck, m: Model, v3: boolean) {
 
 const file = data("kecerdasan_kck_kal.json") as Record<string, Kck[]>;
 assert.deepEqual(Object.keys(file).sort(), Object.keys(MODEL).sort(), "paket di file");
-const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE", "19": "DBAE" };
+const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE", "19": "DBAE", "20": "BDEC" };
 const bankTeks = fs.readdirSync(path.join(root, "prisma/data")).filter((f) => /^kecerdasan_p\d+_teks\.json$/.test(f));
 bankTeks.push("kecerdasan_s2_teks.json");
 const stems = new Set<string>();
@@ -281,7 +301,7 @@ for (const [pkg, items] of Object.entries(file)) {
   if (!v3) assert.ok(lama && lama.t === "KCK", `pkg ${pkg}: KCK lama #100 tidak ditemukan`);
   const baku = v3 ? file["15"][0] : lama!;
   assert.deepEqual(items.map((x) => x.s), v3 ? [97, 98, 99, 100] : [97, 98, 99], `pkg ${pkg}: nomor`);
-  assert.deepEqual(items.map((x) => x.d), v3 ? (pkg === "19" ? [2, 3, 3, 3] : [2, 2, 3, 3]) : [2, 3, 3], `pkg ${pkg}: tingkat`);
+  assert.deepEqual(items.map((x) => x.d), v3 ? (pkg === "20" ? [3, 3, 3, 3] : pkg === "19" ? [2, 3, 3, 3] : [2, 2, 3, 3]) : [2, 3, 3], `pkg ${pkg}: tingkat`);
   assert.equal(items.length, MODEL[pkg].length, `pkg ${pkg}: jumlah model`);
   if (v3) {
     assert.equal(items.map((x) => x.k).join(""), V3[pkg], `pkg ${pkg}: kunci wajib 97–100`);

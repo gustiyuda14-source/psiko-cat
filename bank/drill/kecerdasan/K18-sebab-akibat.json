@@ -1,0 +1,662 @@
+[
+  {
+    "id": "K18-N-001",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Rina lupa menutup toples kerupuk di meja makan semalaman.\n(2) Pagi harinya, kerupuk di toples itu sudah melempem.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Kerupuk melempem karena toplesnya terbuka semalaman\" wajar, udara lembap masuk dan membuat kerupuk tidak renyah lagi. Uji kebalikannya: \"Toples terbuka karena kerupuknya melempem\" janggal, kerupuk yang melempem tidak bisa membuka tutup toples. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; kerupuk yang melempem tidak bisa membuka tutup toples. Opsi C (keduanya sebab, tidak berhubungan): Kerupuk yang melempem adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Toples yang terbuka semalaman bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan kerupuk yang melempem. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; toples yang terbuka semalaman sendiri sudah menjelaskan kerupuk yang melempem. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-002",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Sore itu hujan turun ketika jemuran Bu Ani masih tergantung di halaman.\n(2) Pakaian di jemuran Bu Ani basah kuyup.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pakaian basah kuyup karena kehujanan di jemuran\" wajar, air hujan langsung membasahi pakaian yang tergantung. Uji kebalikannya: \"Hujan turun karena pakaian basah\" janggal, pakaian basah tidak bisa mendatangkan hujan. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; pakaian basah tidak bisa mendatangkan hujan. Opsi C (keduanya sebab, tidak berhubungan): Pakaian yang basah kuyup adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Hujan yang mengenai jemuran bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan pakaian yang basah kuyup. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; hujan yang mengenai jemuran sendiri sudah menjelaskan pakaian yang basah kuyup. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-003",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Ponsel Tono terjatuh dari atas meja ke lantai keramik.\n(2) Layar ponsel Tono retak.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Layar ponsel retak karena terjatuh ke lantai keramik\" wajar, benturan keras dengan lantai memecahkan kaca layar. Uji kebalikannya: \"Ponsel terjatuh karena layarnya retak\" janggal, layar yang retak tidak membuat ponsel bergeser dari meja. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; layar yang retak tidak membuat ponsel bergeser dari meja. Opsi C (keduanya sebab, tidak berhubungan): Layar yang retak adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Ponsel yang terjatuh ke lantai keramik bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan layar yang retak. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; ponsel yang terjatuh ke lantai keramik sendiri sudah menjelaskan layar yang retak. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-004",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Gas elpiji di dapur rumah Bu Wati habis pada Minggu pagi.\n(2) Pagi itu Bu Wati tidak bisa memasak sarapan di kompornya.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bu Wati tidak bisa memasak di kompor karena gasnya habis\" wajar, kompor gas tidak menyala tanpa gas. Uji kebalikannya: \"Gas habis karena Bu Wati tidak bisa memasak\" janggal, tidak memasak justru membuat gas tidak terpakai. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; tidak memasak justru membuat gas tidak terpakai. Opsi C (keduanya sebab, tidak berhubungan): Kompor yang tidak bisa dipakai memasak adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Gas yang habis bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan kompor yang tidak bisa dipakai memasak. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; gas yang habis sendiri sudah menjelaskan kompor yang tidak bisa dipakai memasak. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-005",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Sejak awal bulan, pengelola Pasar Sentosa menutup gerbang timur pasar untuk renovasi.\n(2) Sejak awal bulan itu pula, pedagang di dekat gerbang timur mengeluh dagangannya sepi pembeli.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Kios dekat gerbang timur sepi karena gerbang itu ditutup\" wajar, pembeli tidak lagi lewat di depan kios mereka (sebab ini tidak ditulis, harus disimpulkan sendiri). Uji kebalikannya: \"Gerbang ditutup karena kios sepi\" janggal, gerbang ditutup untuk renovasi, bukan karena sepinya pembeli. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; gerbang ditutup untuk renovasi, bukan karena sepinya pembeli. Opsi C (keduanya sebab, tidak berhubungan): Kios dekat gerbang timur yang sepi pembeli adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Gerbang timur yang ditutup bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan kios dekat gerbang timur yang sepi pembeli. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; gerbang timur yang ditutup sendiri sudah menjelaskan kios dekat gerbang timur yang sepi pembeli. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-006",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Bu Lina menyimpan sesisir pisang yang masih hijau di dalam karung beras yang tertutup rapat.\n(2) Dua hari kemudian, pisang itu sudah menguning dan matang.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pisang cepat matang karena diperam di karung beras tertutup\" wajar, pisang yang diperam dalam wadah tertutup matang lebih cepat (cara memeram buah yang umum di rumah). Uji kebalikannya: \"Pisang disimpan di karung karena sudah matang\" janggal, pisang itu masih hijau saat disimpan; matangnya baru dua hari kemudian. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; pisang itu masih hijau saat disimpan; matangnya baru dua hari kemudian. Opsi C (keduanya sebab, tidak berhubungan): Pisang yang cepat matang adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Pisang yang diperam di karung tertutup bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan pisang yang cepat matang. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; pisang yang diperam di karung tertutup sendiri sudah menjelaskan pisang yang cepat matang. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-007",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Petugas kebersihan mengepel lantai lobi kantor dengan air sabun tepat sebelum jam masuk.\n(2) Pagi itu beberapa karyawan terpeleset saat melewati lobi kantor.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Karyawan terpeleset karena lantai lobi baru dipel dengan air sabun\" wajar, lantai yang masih basah dan bersabun menjadi licin. Uji kebalikannya: \"Lantai dipel karena karyawan terpeleset\" janggal, lantai sudah dipel sebelum jam masuk, sebelum ada yang terpeleset. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; lantai sudah dipel sebelum jam masuk, sebelum ada yang terpeleset. Opsi C (keduanya sebab, tidak berhubungan): Karyawan yang terpeleset adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Lantai lobi yang baru dipel bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan karyawan yang terpeleset. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; lantai lobi yang baru dipel sendiri sudah menjelaskan karyawan yang terpeleset. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-008",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Minggu lalu, pohon ketapang besar yang menaungi halaman SD Melati ditebang.\n(2) Sejak minggu ini, ruang kelas di sisi halaman SD Melati terasa jauh lebih panas pada siang hari.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Kelas di sisi halaman lebih panas karena pohon peneduhnya ditebang\" wajar, sinar matahari kini langsung mengenai dinding dan atap kelas. Uji kebalikannya: \"Pohon ditebang karena kelas terasa panas\" janggal, panasnya baru terasa sesudah pohon ditebang, jadi tidak mungkin menjadi alasan penebangan. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; panasnya baru terasa sesudah pohon ditebang, jadi tidak mungkin menjadi alasan penebangan. Opsi C (keduanya sebab, tidak berhubungan): Ruang kelas yang lebih panas adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Pohon peneduh yang ditebang bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan ruang kelas yang lebih panas. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; pohon peneduh yang ditebang sendiri sudah menjelaskan ruang kelas yang lebih panas. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-009",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Mulai Senin, perpustakaan SMP Harapan Bangsa yang biasanya tutup pukul 13.30 buka sampai pukul 17.00.\n(2) Pada minggu itu, jumlah siswa yang meminjam buku sepulang sekolah meningkat dibanding minggu-minggu sebelumnya.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Peminjaman sepulang sekolah meningkat karena perpustakaan kini buka sampai sore\" wajar, dulu perpustakaan sudah tutup saat sekolah usai, sekarang siswa sempat datang. Uji kebalikannya: \"Jam buka diperpanjang karena peminjaman meningkat\" janggal, peningkatan itu baru terjadi setelah jam buka diubah pada Senin. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; peningkatan itu baru terjadi setelah jam buka diubah pada Senin. Opsi C (keduanya sebab, tidak berhubungan): Peminjaman sepulang sekolah yang meningkat adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Jam buka yang diperpanjang bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan peminjaman sepulang sekolah yang meningkat. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; jam buka yang diperpanjang sendiri sudah menjelaskan peminjaman sepulang sekolah yang meningkat. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-010",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-LANGSUNG",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pagi itu Pak Rudi menyalakan mesin pemotong rumput yang bising di halaman belakang rumahnya.\n(2) Bayi tetangga sebelah rumah Pak Rudi yang sedang tidur langsung terbangun dan menangis.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bayi tetangga langsung terbangun karena suara bising mesin pemotong rumput\" wajar, suara keras dari rumah sebelah membangunkan bayi yang sedang tidur. Uji kebalikannya: \"Pak Rudi menyalakan mesin karena bayi tetangga menangis\" janggal, tangis bayi tidak menyuruh orang memotong rumput, dan tangisnya baru muncul sesudah mesin menyala. Tidak perlu mencari sebab ketiga karena (1) langsung menimbulkan (2).<br>Opsi B ((2) sebab, (1) akibat): Membalik arah; tangis bayi tidak menyuruh orang memotong rumput, dan tangisnya baru muncul sesudah mesin menyala. Opsi C (keduanya sebab, tidak berhubungan): Bayi tetangga yang terbangun adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Suara mesin pemotong rumput bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan bayi tetangga yang terbangun. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; suara mesin pemotong rumput sendiri sudah menjelaskan bayi tetangga yang terbangun. Jawaban: Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat (A). Tips: ucapkan \"(2) terjadi karena (1)\" lalu kebalikannya; arah yang terdengar wajar adalah jawabannya. Opsi C dan D hanya benar bila kedua kejadian tidak saling terkait, jadi gugur begitu satu arah \"karena\" terbukti wajar.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-011",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Roti tawar di meja makan rumah Sinta berjamur.\n(2) Roti tawar itu dibiarkan di meja makan selama seminggu.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Roti dibiarkan seminggu karena berjamur\" janggal, rotinya dibiarkan lebih dulu, jamurnya muncul belakangan. Uji arah (2) ke (1): \"Roti berjamur karena dibiarkan seminggu\" wajar, roti yang terlalu lama disimpan di udara terbuka ditumbuhi jamur. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; rotinya dibiarkan lebih dulu, jamurnya muncul belakangan. Opsi C (keduanya sebab, tidak berhubungan): Roti yang berjamur adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Roti yang dibiarkan seminggu bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan roti yang berjamur. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; roti yang dibiarkan seminggu sendiri sudah menjelaskan roti yang berjamur. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-012",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Es krim di lemari pembeku warung Pak Darno mencair semua.\n(2) Lemari pembeku di warung Pak Darno rusak dan berhenti mendingin sejak kemarin siang.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Lemari pembeku rusak karena es krim mencair\" janggal, es krim yang mencair tidak bisa merusak mesin pendingin. Uji arah (2) ke (1): \"Es krim mencair karena lemari pembekunya rusak\" wajar, tanpa pendingin, es krim berubah cair. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; es krim yang mencair tidak bisa merusak mesin pendingin. Opsi C (keduanya sebab, tidak berhubungan): Es krim yang mencair adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Lemari pembeku yang rusak bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan es krim yang mencair. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; lemari pembeku yang rusak sendiri sudah menjelaskan es krim yang mencair. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-013",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Jari tangan Sinta melepuh.\n(2) Sinta tidak sengaja memegang panci yang baru diangkat dari kompor.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Sinta memegang panci karena jarinya melepuh\" janggal, jari yang melepuh tidak membuat orang memegang panci panas. Uji arah (2) ke (1): \"Jari Sinta melepuh karena memegang panci yang baru diangkat dari kompor\" wajar, panas panci melukai kulit jari. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; jari yang melepuh tidak membuat orang memegang panci panas. Opsi C (keduanya sebab, tidak berhubungan): Jari yang melepuh adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Panci panas yang terpegang bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan jari yang melepuh. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; panci panas yang terpegang sendiri sudah menjelaskan jari yang melepuh. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-014",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Antrean pembeli di kasir Toko Swalayan Sejahtera mengular sampai ke pintu masuk.\n(2) Siang itu hanya satu dari empat kasir di Toko Swalayan Sejahtera yang bertugas.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Kasir tinggal satu karena antreannya panjang\" janggal, antrean panjang justru membuat toko menambah kasir, bukan menguranginya. Uji arah (2) ke (1): \"Antrean mengular karena hanya satu kasir yang bertugas\" wajar, pembeli yang biasanya dilayani empat kasir kini menunggu di satu meja. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; antrean panjang justru membuat toko menambah kasir, bukan menguranginya. Opsi C (keduanya sebab, tidak berhubungan): Antrean yang mengular adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Kasir yang tinggal satu bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan antrean yang mengular. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; kasir yang tinggal satu sendiri sudah menjelaskan antrean yang mengular. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-015",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Ikan hias di akuarium ruang tamu keluarga Hasan banyak yang mati.\n(2) Selama tiga hari, pompa udara akuarium itu rusak dan tidak menyala.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pompa rusak karena ikannya mati\" janggal, ikan yang mati tidak bisa merusak pompa. Uji arah (2) ke (1): \"Ikan banyak yang mati karena pompa udaranya rusak tiga hari\" wajar, air akuarium kekurangan udara (sebab matinya tidak ditulis, harus disimpulkan sendiri). Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; ikan yang mati tidak bisa merusak pompa. Opsi C (keduanya sebab, tidak berhubungan): Ikan yang mati adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Pompa udara yang rusak bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan ikan yang mati. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; pompa udara yang rusak sendiri sudah menjelaskan ikan yang mati. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-016",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pada Senin pagi, suara Bu Ani, guru olahraga, serak dan hampir hilang.\n(2) Sepanjang Sabtu dan Minggu, Bu Ani berteriak-teriak memberi aba-aba dalam lomba voli antarkelas.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bu Ani berteriak karena suaranya serak\" janggal, suara serak justru membuat orang sulit berteriak, dan seraknya baru muncul Senin. Uji arah (2) ke (1): \"Suara Bu Ani serak karena dua hari berteriak memberi aba-aba\" wajar, pita suara yang dipakai berteriak terus-menerus menjadi lelah. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; suara serak justru membuat orang sulit berteriak, dan seraknya baru muncul Senin. Opsi C (keduanya sebab, tidak berhubungan): Suara yang serak adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Berteriak dua hari penuh bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan suara yang serak. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; berteriak dua hari penuh sendiri sudah menjelaskan suara yang serak. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-017",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Sebulan terakhir, harga telur ayam di Pasar Cempaka naik tajam.\n(2) Sebulan terakhir, pasokan telur dari peternak ke Pasar Cempaka berkurang hampir separuh.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pasokan berkurang karena harga naik\" janggal, harga yang naik justru membuat peternak ingin menjual lebih banyak, bukan lebih sedikit. Uji arah (2) ke (1): \"Harga telur naik karena pasokannya berkurang separuh\" wajar, barang yang langka sementara pembelinya tetap banyak menjadi lebih mahal. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; harga yang naik justru membuat peternak ingin menjual lebih banyak, bukan lebih sedikit. Opsi C (keduanya sebab, tidak berhubungan): Harga telur yang naik adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Pasokan telur yang berkurang bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan harga telur yang naik. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; pasokan telur yang berkurang sendiri sudah menjelaskan harga telur yang naik. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-018",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pada Senin pagi, halaman SMP Cendana dipenuhi sampah plastik dan kertas.\n(2) Pada Minggu sore, halaman SMP Cendana dipakai untuk bazar warga yang ramai pengunjung.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bazar diadakan karena halaman penuh sampah\" janggal, sampahnya baru terlihat Senin, sesudah bazar selesai. Uji arah (2) ke (1): \"Halaman penuh sampah pada Senin pagi karena dipakai bazar ramai pada Minggu sore\" wajar, pengunjung bazar meninggalkan bungkus makanan dan kertas. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; sampahnya baru terlihat Senin, sesudah bazar selesai. Opsi C (keduanya sebab, tidak berhubungan): Halaman yang penuh sampah adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Bazar yang ramai pada Minggu sore bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan halaman yang penuh sampah. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; bazar yang ramai pada Minggu sore sendiri sudah menjelaskan halaman yang penuh sampah. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-019",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Bulan ini, tagihan listrik warung Bu Sri naik jauh dibanding bulan-bulan sebelumnya.\n(2) Pada awal bulan ini, Bu Sri membeli lemari pendingin besar untuk minuman dagangannya yang menyala siang dan malam.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bu Sri membeli lemari pendingin karena tagihan listriknya naik\" janggal, tagihan yang naik justru membuat orang menghemat, bukan menambah alat listrik. Uji arah (2) ke (1): \"Tagihan listrik naik karena ada lemari pendingin baru yang menyala siang dan malam\" wajar, alat yang menyala terus menambah pemakaian listrik. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; tagihan yang naik justru membuat orang menghemat, bukan menambah alat listrik. Opsi C (keduanya sebab, tidak berhubungan): Tagihan listrik yang naik adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Lemari pendingin baru yang menyala terus bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan tagihan listrik yang naik. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; lemari pendingin baru yang menyala terus sendiri sudah menjelaskan tagihan listrik yang naik. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-020",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-TERBALIK",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Bakso dagangan Pak Min di depan SD Tunas Bangsa, yang biasanya baru habis menjelang sore, sudah habis terjual sebelum pukul 10.00.\n(2) Sejak pukul 07.00 pagi itu, ratusan orang tua yang menunggu anaknya di halaman SD Tunas Bangsa bergantian membeli bakso Pak Min.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Orang tua membeli bakso karena baksonya sudah habis\" janggal, bakso yang sudah habis justru tidak bisa dibeli lagi, dan pembeliannya dimulai sejak pukul 07.00. Uji arah (2) ke (1): \"Bakso habis sebelum pukul 10.00 karena ratusan orang tua membelinya sejak pukul 07.00\" wajar, pembelinya jauh lebih banyak dari hari biasa. Sebabnya justru ditulis di nomor (2).<br>Opsi A ((1) sebab, (2) akibat): Tertipu urutan nomor; bakso yang sudah habis justru tidak bisa dibeli lagi, dan pembeliannya dimulai sejak pukul 07.00. Opsi C (keduanya sebab, tidak berhubungan): Bakso yang cepat habis adalah hasil, bukan sebab, dan kedua pernyataan jelas berhubungan lewat kata \"karena\" tadi. Opsi D (akibat dari dua sebab berbeda): Ratusan orang tua yang membeli sejak pagi bukan akibat dari sesuatu dalam pasangan ini; justru itulah yang menimbulkan bakso yang cepat habis. Opsi E (akibat dari satu sebab yang sama): Tidak perlu kejadian ketiga; ratusan orang tua yang membeli sejak pagi sendiri sudah menjelaskan bakso yang cepat habis. Jawaban: Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat (B). Tips: akibat sering ditulis lebih dulu; jangan tertipu urutan nomor. Uji kedua arah dengan kata \"karena\", lalu lihat mana yang terjadi lebih dulu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-021",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Saat angin puting beliung melanda Desa Sidomulyo semalam, atap seng gudang Pak Dodi terlepas dan terlempar ke halaman depan.\n(2) Saat angin puting beliung yang sama melanda desa itu, beberapa batang pohon pisang di kebun belakang rumah Pak Dodi tumbang.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pohon pisang di kebun belakang tumbang karena atap seng gudang terlepas\" janggal, atap terlempar ke halaman depan, sedangkan pohon pisang ada di kebun belakang. Uji kebalikannya: \"Atap seng gudang terlepas karena pohon pisang di kebun belakang tumbang\" juga janggal, pohon pisang yang tumbang di belakang tidak bisa mengangkat atap gudang. Petunjuknya: kedua pernyataan menyebut angin puting beliung yang sama, di rumah yang sama. Sebab bersamanya: angin puting beliung yang melanda desa semalam. Sebab inilah yang membuat atap seng gudang terlepas dan sekaligus pohon pisang di kebun belakang tumbang.<br>Opsi A ((1) sebab, (2) akibat): Atap terlempar ke halaman depan, sedangkan pohon pisang ada di kebun belakang. Opsi B ((2) sebab, (1) akibat): Pohon pisang yang tumbang di belakang tidak bisa mengangkat atap gudang. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan menyebut angin puting beliung yang sama, di rumah yang sama; satu sebab (angin puting beliung yang melanda desa semalam) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-022",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Selama kemarau panjang tahun ini, sumur-sumur warga Desa Tegalrejo mengering.\n(2) Selama kemarau panjang tahun ini, pohon-pohon jati di hutan Desa Tegalrejo meranggas.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pohon jati di hutan meranggas karena sumur warga mengering\" janggal, pohon jati di hutan tidak disiram dari sumur warga. Uji kebalikannya: \"Sumur warga mengering karena pohon jati di hutan meranggas\" juga janggal, daun jati yang gugur tidak menyedot air sumur warga. Petunjuknya: keduanya terjadi di desa yang sama selama kemarau yang sama. Sebab bersamanya: kemarau panjang yang membuat hujan tidak turun. Sebab inilah yang membuat sumur warga mengering dan sekaligus pohon jati di hutan meranggas.<br>Opsi A ((1) sebab, (2) akibat): Pohon jati di hutan tidak disiram dari sumur warga. Opsi B ((2) sebab, (1) akibat): Daun jati yang gugur tidak menyedot air sumur warga. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Keduanya terjadi di desa yang sama selama kemarau yang sama; satu sebab (kemarau panjang yang membuat hujan tidak turun) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-023",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Selama libur kenaikan kelas, kantin SMA Bakti Mulia tutup.\n(2) Selama libur kenaikan kelas, bus antar-jemput SMA Bakti Mulia berhenti melayani siswa.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Bus antar-jemput berhenti melayani siswa karena kantin sekolah tutup\" janggal, kantin yang tutup tidak menghentikan bus. Uji kebalikannya: \"Kantin sekolah tutup karena bus antar-jemput berhenti melayani siswa\" juga janggal, bus yang berhenti tidak membuat kantin tutup. Petunjuknya: keduanya terjadi di sekolah yang sama selama libur yang sama. Sebab bersamanya: libur sekolah (tidak ada siswa yang datang). Sebab inilah yang membuat kantin sekolah tutup dan sekaligus bus antar-jemput berhenti melayani siswa.<br>Opsi A ((1) sebab, (2) akibat): Kantin yang tutup tidak menghentikan bus. Opsi B ((2) sebab, (1) akibat): Bus yang berhenti tidak membuat kantin tutup. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Keduanya terjadi di sekolah yang sama selama libur yang sama; satu sebab (libur sekolah) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-024",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pada hari Pak Udin, satu-satunya pemegang kunci ruangan di SMA Nusa Indah, tidak masuk karena sakit, ruang kelas X-2 tetap terkunci saat bel masuk berbunyi.\n(2) Pada hari Pak Udin tidak masuk itu, ruang guru SMA Nusa Indah juga tetap terkunci sepanjang pagi.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Ruang guru masih terkunci karena kelas X-2 masih terkunci\" janggal, kelas yang terkunci tidak mengunci ruang guru. Uji kebalikannya: \"Kelas X-2 masih terkunci karena ruang guru masih terkunci\" juga janggal, ruang guru yang terkunci tidak mengunci kelas X-2. Petunjuknya: kedua pernyataan terjadi pada hari yang sama ketika satu-satunya pemegang kunci tidak masuk. Sebab bersamanya: Pak Udin, satu-satunya pemegang kunci, tidak masuk sehingga tidak ada yang membuka ruangan. Sebab inilah yang membuat kelas X-2 masih terkunci dan sekaligus ruang guru masih terkunci.<br>Opsi A ((1) sebab, (2) akibat): Kelas yang terkunci tidak mengunci ruang guru. Opsi B ((2) sebab, (1) akibat): Ruang guru yang terkunci tidak mengunci kelas X-2. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan terjadi pada hari yang sama ketika satu-satunya pemegang kunci tidak masuk; satu sebab (Pak Udin, satu-satunya pemegang kunci, tidak masuk sehingga tidak ada yang membuka ruangan) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-025",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pada siang hari pertama bulan Ramadan, warung-warung makan di sekitar Kantor Dinas Pertanian tutup.\n(2) Pada hari yang sama, Kantor Dinas Pertanian memulangkan pegawainya satu jam lebih awal dari biasanya.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Pegawai dipulangkan lebih awal karena warung makan tutup pada siang hari\" janggal, kantor tidak memajukan jam pulang karena warung di sekitarnya tutup. Uji kebalikannya: \"Warung makan tutup pada siang hari karena pegawai dipulangkan lebih awal\" juga janggal, pegawai yang pulang lebih awal pada sore hari tidak membuat warung tutup sejak siang. Petunjuknya: keduanya terjadi pada hari pertama Ramadan di tempat yang sama. Sebab bersamanya: bulan Ramadan yang baru dimulai (orang berpuasa dan jam kerja disesuaikan). Sebab inilah yang membuat warung makan tutup pada siang hari dan sekaligus pegawai dipulangkan lebih awal.<br>Opsi A ((1) sebab, (2) akibat): Kantor tidak memajukan jam pulang karena warung di sekitarnya tutup. Opsi B ((2) sebab, (1) akibat): Pegawai yang pulang lebih awal pada sore hari tidak membuat warung tutup sejak siang. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Keduanya terjadi pada hari pertama Ramadan di tempat yang sama; satu sebab (bulan Ramadan yang baru dimulai) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-026",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Pagi ini, kaca jendela ruang kelas SMP Bina Karya tertutup debu abu-abu yang tipis.\n(2) Pagi ini juga, daun-daun tanaman di halaman SMP Bina Karya tertutup debu abu-abu yang sama.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Daun tanaman di halaman tertutup debu karena kaca jendela kelas tertutup debu\" janggal, debu di kaca jendela tidak berpindah menutupi seluruh tanaman di halaman. Uji kebalikannya: \"Kaca jendela kelas tertutup debu karena daun tanaman di halaman tertutup debu\" juga janggal, debu di daun tidak naik menutupi kaca jendela semua kelas. Petunjuknya: debunya sama, terjadi pada pagi yang sama, di sekolah yang sama. Sebab bersamanya: hujan abu atau debu yang turun dan menyelimuti sekolah itu semalam. Sebab inilah yang membuat kaca jendela kelas tertutup debu dan sekaligus daun tanaman di halaman tertutup debu.<br>Opsi A ((1) sebab, (2) akibat): Debu di kaca jendela tidak berpindah menutupi seluruh tanaman di halaman. Opsi B ((2) sebab, (1) akibat): Debu di daun tidak naik menutupi kaca jendela semua kelas. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Debunya sama, terjadi pada pagi yang sama, di sekolah yang sama; satu sebab (hujan abu atau debu yang turun dan menyelimuti sekolah itu semalam) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-027",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Selama musim hujan bulan Desember, penjualan jas hujan di toko-toko sekitar Pasar Baru meningkat tajam.\n(2) Selama musim hujan bulan Desember itu, para pedagang es di sekitar Pasar Baru mengeluh dagangannya kurang laku.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Es kurang laku karena penjualan jas hujan naik\" janggal, orang yang membeli jas hujan tidak membuat orang lain berhenti membeli es. Uji kebalikannya: \"Penjualan jas hujan naik karena es kurang laku\" juga janggal, es yang kurang laku tidak membuat orang membeli jas hujan. Petunjuknya: kedua pernyataan menyebut musim hujan yang sama di daerah yang sama. Sebab bersamanya: musim hujan (hujan turun hampir setiap hari dan udara terasa dingin). Sebab inilah yang membuat penjualan jas hujan naik dan sekaligus es kurang laku.<br>Opsi A ((1) sebab, (2) akibat): Orang yang membeli jas hujan tidak membuat orang lain berhenti membeli es. Opsi B ((2) sebab, (1) akibat): Es yang kurang laku tidak membuat orang membeli jas hujan. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan menyebut musim hujan yang sama di daerah yang sama; satu sebab (musim hujan) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-028",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Begitu langit mulai terang menjelang matahari terbit, ayam-ayam di kandang Pak Salim mulai berkokok.\n(2) Beberapa saat kemudian, ketika langit pagi itu makin terang, burung-burung di pohon belakang rumah Pak Salim mulai berkicau.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Burung berkicau karena ayam berkokok\" janggal, burung berkicau saat pagi tiba, termasuk di tempat yang tidak ada ayamnya; urutan waktu yang berdekatan belum berarti sebab. Uji kebalikannya: \"Ayam berkokok karena burung berkicau\" juga janggal, kicau burung muncul belakangan, jadi tidak mungkin membuat ayam berkokok. Petunjuknya: kedua pernyataan menyebut langit pagi yang mulai terang, di tempat yang sama. Sebab bersamanya: pagi yang mulai terang (matahari terbit). Sebab inilah yang membuat ayam berkokok dan sekaligus burung berkicau.<br>Opsi A ((1) sebab, (2) akibat): Burung berkicau saat pagi tiba, termasuk di tempat yang tidak ada ayamnya; urutan waktu yang berdekatan belum berarti sebab. Opsi B ((2) sebab, (1) akibat): Kicau burung muncul belakangan, jadi tidak mungkin membuat ayam berkokok. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan menyebut langit pagi yang mulai terang, di tempat yang sama; satu sebab (pagi yang mulai terang) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-029",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Begitu bel istirahat berbunyi pukul 09.30, kantin SMP Nusantara mendadak penuh siswa.\n(2) Begitu bel istirahat yang sama berbunyi, lapangan SMP Nusantara mendadak ramai siswa yang bermain bola.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Lapangan mendadak ramai karena kantin mendadak penuh\" janggal, keduanya terjadi pada detik yang sama; kantin yang penuh tidak sempat mengusir siswa ke lapangan. Uji kebalikannya: \"Kantin mendadak penuh karena lapangan mendadak ramai\" juga janggal, siswa yang bermain bola tidak membuat kantin penuh. Petunjuknya: kedua pernyataan menyebut bel istirahat yang sama, di sekolah yang sama. Sebab bersamanya: bel istirahat yang berbunyi pukul 09.30 (siswa keluar kelas bersamaan). Sebab inilah yang membuat kantin mendadak penuh dan sekaligus lapangan mendadak ramai.<br>Opsi A ((1) sebab, (2) akibat): Keduanya terjadi pada detik yang sama; kantin yang penuh tidak sempat mengusir siswa ke lapangan. Opsi B ((2) sebab, (1) akibat): Siswa yang bermain bola tidak membuat kantin penuh. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan menyebut bel istirahat yang sama, di sekolah yang sama; satu sebab (bel istirahat yang berbunyi pukul 09.30) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K18-N-030",
+    "kartu": "K18",
+    "sub_type": "LOG-SBA-BERSAMA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "instruksi": "Bacalah dua pernyataan berikut, lalu tentukan hubungan sebab-akibat di antara keduanya.",
+    "stem": "(1) Menjelang tahun ajaran baru pada pertengahan Juli, toko buku di dekat SMP Cendekia ramai pembeli buku tulis.\n(2) Menjelang tahun ajaran baru itu juga, para penjahit di sekitar SMP Cendekia menerima banyak sekali pesanan seragam sekolah.",
+    "opsi": {
+      "a": "Pernyataan (1) adalah sebab dan pernyataan (2) adalah akibat",
+      "b": "Pernyataan (2) adalah sebab dan pernyataan (1) adalah akibat",
+      "c": "Pernyataan (1) dan (2) adalah sebab, tetapi tidak saling berhubungan",
+      "d": "Pernyataan (1) dan (2) adalah akibat dari dua sebab yang tidak saling berhubungan",
+      "e": "Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Uji arah (1) ke (2): \"Penjahit menerima banyak pesanan seragam karena toko buku ramai pembeli buku tulis\" janggal, membeli buku tulis tidak membuat orang memesan seragam. Uji kebalikannya: \"Toko buku ramai pembeli buku tulis karena penjahit menerima banyak pesanan seragam\" juga janggal, memesan seragam tidak membuat orang membeli buku tulis. Petunjuknya: kedua pernyataan menyebut tahun ajaran baru yang sama, di sekitar sekolah yang sama. Sebab bersamanya: tahun ajaran baru yang dimulai bulan Juli (siswa menyiapkan perlengkapan sekolah). Sebab inilah yang membuat toko buku ramai pembeli buku tulis dan sekaligus penjahit menerima banyak pesanan seragam.<br>Opsi A ((1) sebab, (2) akibat): Membeli buku tulis tidak membuat orang memesan seragam. Opsi B ((2) sebab, (1) akibat): Memesan seragam tidak membuat orang membeli buku tulis. Opsi C (keduanya sebab, tidak berhubungan): Kedua kejadian itu adalah hasil dari sesuatu, bukan penyebab; keduanya juga berhubungan lewat waktu dan tempat yang sama. Opsi D (akibat dari dua sebab berbeda): Kedua pernyataan menyebut tahun ajaran baru yang sama, di sekitar sekolah yang sama; satu sebab (tahun ajaran baru yang dimulai bulan Juli) sudah menjelaskan keduanya, jadi menganggapnya dua sebab terpisah mengabaikan petunjuk itu. Jawaban: Pernyataan (1) dan (2) adalah akibat dari satu sebab yang sama (E). Tips: kalau kedua arah \"karena\" sama-sama janggal tetapi kedua kejadian terjadi di tempat dan waktu yang sama, cari satu kejadian di luar keduanya yang menimbulkan keduanya.",
+    "status_kunci": "ganda"
+  }
+]

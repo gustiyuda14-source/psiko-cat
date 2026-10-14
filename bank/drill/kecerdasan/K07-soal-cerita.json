@@ -1894,5 +1894,522 @@
     },
     "pembahasan": "Uang sekarang adalah 125% dari uang awal: 125% × uang awal = Rp625.000, jadi uang awal = Rp625.000 × 100/125 = Rp500.000.<br>Opsi A (Rp450.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi B (Rp550.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi C (Rp480.000) gugur karena tidak sama dengan Rp625.000 × 100/125 (hasilnya Rp500.000); Opsi D (Rp525.000) gugur karena mengurangi Rp100.000 dari Rp625.000, padahal 25% dihitung dari uang awal, bukan dari uang sekarang. Jawaban: Opsi E (Rp500.000). Tips: kenaikan 25% berarti uang akhir = 125% uang awal; cari uang awal dengan membagi 125%, bukan mengurangi 25%.",
     "status_kunci": "resmi"
+  },
+  {
+    "id": "K07-N-001",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Pemilik warung makan menerima pesanan nasi kotak untuk acara arisan. Ia memiliki waktu persiapan dari pukul 09.00 hingga 10.30 dan harus menyelesaikan pekerjaan berikut:\n\n• Menggoreng ayam bumbu kuning: 34 menit\n• Menanak nasi liwet: 28 menit\n• Memotong lalapan: 9 menit\n• Mengemas nasi kotak: 41 menit\n\nPemesan akan mengambil pesanan pukul 10.30, jadi semua pekerjaan harus selesai sebelum itu. Seorang karyawannya bersedia membantu. Ia mengerjakan pekerjaannya satu per satu, dan setiap pekerjaan harus ditunggui sampai selesai.\n\nPertanyaan: Langkah manakah yang paling tepat agar pesanan siap tepat waktu?",
+    "opsi": {
+      "a": "Meminta karyawannya menanak nasi liwet",
+      "b": "Melewatkan menggoreng ayam bumbu kuning",
+      "c": "Meminta karyawannya memotong lalapan",
+      "d": "Beristirahat sambil menonton televisi",
+      "e": "Mengemas nasi kotak setelah pemesan datang"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 28,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menanak nasi liwet"
+      },
+      "b": {
+        "hemat": 34,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Menggoreng ayam bumbu kuning"
+      },
+      "c": {
+        "hemat": 9,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Memotong lalapan"
+      },
+      "d": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      },
+      "e": {
+        "hemat": 41,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Mengemas nasi kotak"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 09.00 hingga 10.30 = 90 menit.\n2. Jumlahkan durasi tugas: 34 + 28 + 9 + 41 = 112 menit.\n3. Kelebihan: 112 − 90 = 22 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 22 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta karyawannya menanak nasi liwet\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 28 menit (≥ 22 menit), dan tidak ada yang dikorbankan.<br>Opsi B (Melewatkan menggoreng ayam bumbu kuning) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 34 menit memang menutup kelebihan, tetapi nasi kotak dikirim tanpa lauk utama. Opsi C (Meminta karyawannya memotong lalapan) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 9 menit, kurang 13 menit dari kelebihan 22 menit. Opsi D (Beristirahat sambil menonton televisi) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 22 menit tetap ada. Opsi E (Mengemas nasi kotak setelah pemesan datang) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; pemesan harus menunggu karena pesanan belum siap pukul 10.30. Jawaban: Meminta karyawannya menanak nasi liwet (A). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-002",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang staf tata usaha sekolah menyiapkan rapat komite sekolah. Waktu persiapannya dari pukul 13.00 hingga 14.20, dan ia harus menyelesaikan pekerjaan berikut:\n\n• Menyusun daftar hadir komite: 9 menit\n• Mencetak bahan paparan kepala sekolah: 26 menit\n• Merapikan meja-kursi ruang rapat: 30 menit\n• Menyiapkan hidangan rapat: 31 menit\n\nRapat dimulai pukul 14.20, sehingga semua persiapan harus selesai sebelum itu. Seorang rekan staf sedang tidak sibuk dan bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar rapat dapat dimulai tepat waktu?",
+    "opsi": {
+      "a": "Menyiapkan hidangan rapat setelah rapat dimulai",
+      "b": "Meminta rekan staf menyusun daftar hadir komite",
+      "c": "Meminta rekan staf mencetak bahan paparan kepala sekolah",
+      "d": "Melewatkan merapikan meja-kursi ruang rapat",
+      "e": "Mengobrol di kantin sambil menunggu tamu datang"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 31,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Menyiapkan hidangan rapat"
+      },
+      "b": {
+        "hemat": 9,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyusun daftar hadir komite"
+      },
+      "c": {
+        "hemat": 26,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Mencetak bahan paparan kepala sekolah"
+      },
+      "d": {
+        "hemat": 30,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Merapikan meja-kursi ruang rapat"
+      },
+      "e": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 13.00 hingga 14.20 = 80 menit.\n2. Jumlahkan durasi tugas: 9 + 26 + 30 + 31 = 96 menit.\n3. Kelebihan: 96 − 80 = 16 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 16 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta rekan staf mencetak bahan paparan kepala sekolah\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 26 menit (≥ 16 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Menyiapkan hidangan rapat setelah rapat dimulai) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; tamu rapat datang sebelum hidangan siap. Opsi B (Meminta rekan staf menyusun daftar hadir komite) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 9 menit, kurang 7 menit dari kelebihan 16 menit. Opsi D (Melewatkan merapikan meja-kursi ruang rapat) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 30 menit memang menutup kelebihan, tetapi rapat dimulai di ruangan yang belum siap. Opsi E (Mengobrol di kantin sambil menunggu tamu datang) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 16 menit tetap ada. Jawaban: Meminta rekan staf mencetak bahan paparan kepala sekolah (C). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-003",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang bapak sedang bersiap pindah rumah. Ia memiliki waktu dari pukul 15.00 hingga 16.10 untuk menyelesaikan pekerjaan berikut:\n\n• Mengemas buku ke kardus: 24 menit\n• Membongkar lemari pakaian: 31 menit\n• Menggulung kabel elektronik: 7 menit\n• Membungkus piring keramik: 19 menit\n\nMobil pengangkut barang datang pukul 16.10, sehingga semua barang harus siap diangkut sebelum itu. Anak sulungnya sedang di rumah dan bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar semua barang siap sebelum mobil pengangkut datang?",
+    "opsi": {
+      "a": "Melewatkan membongkar lemari pakaian",
+      "b": "Bermain gawai sejenak untuk melepas penat",
+      "c": "Meminta anaknya menggulung kabel elektronik",
+      "d": "Mengemas buku ke kardus setelah mobil pengangkut tiba",
+      "e": "Meminta anaknya membungkus piring keramik"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 31,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Membongkar lemari pakaian"
+      },
+      "b": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      },
+      "c": {
+        "hemat": 7,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menggulung kabel elektronik"
+      },
+      "d": {
+        "hemat": 24,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Mengemas buku ke kardus"
+      },
+      "e": {
+        "hemat": 19,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Membungkus piring keramik"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 15.00 hingga 16.10 = 70 menit.\n2. Jumlahkan durasi tugas: 24 + 31 + 7 + 19 = 81 menit.\n3. Kelebihan: 81 − 70 = 11 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 11 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta anaknya membungkus piring keramik\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 19 menit (≥ 11 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Melewatkan membongkar lemari pakaian) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 31 menit memang menutup kelebihan, tetapi lemari tidak bisa diangkut. Opsi B (Bermain gawai sejenak untuk melepas penat) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 11 menit tetap ada. Opsi C (Meminta anaknya menggulung kabel elektronik) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 7 menit, kurang 4 menit dari kelebihan 11 menit. Opsi D (Mengemas buku ke kardus setelah mobil pengangkut tiba) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; mobil pengangkut harus menunggu. Jawaban: Meminta anaknya membungkus piring keramik (E). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-004",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang kader posyandu menyiapkan kegiatan posyandu balita. Ia memiliki waktu persiapan dari pukul 07.35 hingga 09.05 dan harus menyelesaikan pekerjaan berikut:\n\n• Menyiapkan kartu menuju sehat: 17 menit\n• Memasang timbangan bayi: 13 menit\n• Merebus bubur kacang hijau: 34 menit\n• Menata meja pendaftaran: 22 menit\n\nPukul 08.10 hingga 08.30 ia sarapan agar kuat melayani warga sampai siang; pekerjaan yang terpotong dilanjutkan sesudahnya. Posyandu dibuka pukul 09.05, jadi semua persiapan harus selesai sebelum itu. Seorang kader lain bersedia membantu. Ia mengerjakan pekerjaannya satu per satu, dan setiap pekerjaan harus ditunggui sampai selesai.\n\nPertanyaan: Langkah manakah yang paling tepat agar posyandu dapat dibuka tepat waktu?",
+    "opsi": {
+      "a": "Tidak sarapan agar bisa terus bekerja",
+      "b": "Meminta kader lain menyiapkan kartu menuju sehat",
+      "c": "Meminta kader lain memasang timbangan bayi",
+      "d": "Merebus bubur kacang hijau setelah posyandu dibuka",
+      "e": "Melewatkan menata meja pendaftaran"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 20,
+        "delegasi": false,
+        "korban": true
+      },
+      "b": {
+        "hemat": 17,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyiapkan kartu menuju sehat"
+      },
+      "c": {
+        "hemat": 13,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Memasang timbangan bayi"
+      },
+      "d": {
+        "hemat": 34,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Merebus bubur kacang hijau"
+      },
+      "e": {
+        "hemat": 22,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Menata meja pendaftaran"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 07.35 hingga 09.05 = 90 menit. Jeda 08.10 hingga 08.30 = 20 menit, jadi waktu kerja = 90 − 20 = 70 menit.\n2. Jumlahkan durasi tugas: 17 + 13 + 34 + 22 = 86 menit.\n3. Kelebihan: 86 − 70 = 16 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 16 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta kader lain menyiapkan kartu menuju sehat\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 17 menit (≥ 16 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Tidak sarapan agar bisa terus bekerja) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (sarapan). Hitungannya 20 menit memang menutup kelebihan 16 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi C (Meminta kader lain memasang timbangan bayi) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 13 menit, kurang 3 menit dari kelebihan 16 menit. Opsi ini tampak cukup bila jeda 20 menit lupa dipotong (seolah semua tugas muat). Opsi D (Merebus bubur kacang hijau setelah posyandu dibuka) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; bubur untuk balita belum siap saat posyandu dibuka. Opsi E (Melewatkan menata meja pendaftaran) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 22 menit memang menutup kelebihan, tetapi warga tidak bisa mendaftar dengan tertib. Jawaban: Meminta kader lain menyiapkan kartu menuju sehat (B). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-005",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang staf administrasi bengkel motor memiliki waktu kerja dari pukul 10.25 hingga 12.05 pada hari Sabtu. Ia harus menyelesaikan pekerjaan berikut:\n\n• Mencatat suku cadang yang terjual: 27 menit\n• Menghubungi pelanggan yang motornya selesai: 11 menit\n• Menyusun nota servis: 33 menit\n• Menyapu area servis: 19 menit\n\nPukul 11.30 hingga 11.55 ia makan siang dan beristirahat; pekerjaan yang terpotong dilanjutkan sesudahnya. Bengkel tutup pukul 12.05, jadi semua pekerjaan harus selesai sebelum itu. Seorang montir sedang tidak ada pekerjaan dan bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar semua pekerjaan selesai sebelum bengkel tutup?",
+    "opsi": {
+      "a": "Melewatkan menyusun nota servis",
+      "b": "Meminta montir menghubungi pelanggan yang motornya selesai",
+      "c": "Tetap bekerja selama jam makan siang",
+      "d": "Meminta montir menyapu area servis",
+      "e": "Mengobrol dengan pelanggan yang sedang menunggu"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 33,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Menyusun nota servis"
+      },
+      "b": {
+        "hemat": 11,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menghubungi pelanggan yang motornya selesai"
+      },
+      "c": {
+        "hemat": 25,
+        "delegasi": false,
+        "korban": true
+      },
+      "d": {
+        "hemat": 19,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyapu area servis"
+      },
+      "e": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 10.25 hingga 12.05 = 100 menit. Jeda 11.30 hingga 11.55 = 25 menit, jadi waktu kerja = 100 − 25 = 75 menit.\n2. Jumlahkan durasi tugas: 27 + 11 + 33 + 19 = 90 menit.\n3. Kelebihan: 90 − 75 = 15 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 15 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta montir menyapu area servis\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 19 menit (≥ 15 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Melewatkan menyusun nota servis) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 33 menit memang menutup kelebihan, tetapi pelanggan tidak mendapat bukti pembayaran servis. Opsi B (Meminta montir menghubungi pelanggan yang motornya selesai) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 11 menit, kurang 4 menit dari kelebihan 15 menit. Opsi ini tampak cukup bila jeda 25 menit lupa dipotong (seolah semua tugas muat). Opsi C (Tetap bekerja selama jam makan siang) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (makan siang dan istirahat). Hitungannya 25 menit memang menutup kelebihan 15 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi E (Mengobrol dengan pelanggan yang sedang menunggu) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 15 menit tetap ada. Jawaban: Meminta montir menyapu area servis (D). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-006",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pengelola taman baca anak memiliki waktu persiapan dari pukul 08.12 hingga 09.40 pada Minggu pagi. Ia harus menyelesaikan pekerjaan berikut:\n\n• Menata buku di rak baca: 23 menit\n• Menggelar karpet baca: 9 menit\n• Menyiapkan alat mewarnai: 16 menit\n• Membaca ulang naskah dongeng: 37 menit\n\nPukul 08.50 hingga 09.05 ia sarapan bersama relawan lain; pekerjaan yang terpotong dilanjutkan sesudahnya. Anak-anak mulai datang pukul 09.40, jadi semua persiapan harus selesai sebelum itu. Seorang relawan bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar taman baca siap sebelum anak-anak datang?",
+    "opsi": {
+      "a": "Meminta relawan menyiapkan alat mewarnai",
+      "b": "Tidak ikut sarapan dan terus bekerja",
+      "c": "Meminta relawan menggelar karpet baca",
+      "d": "Membaca ulang naskah dongeng setelah anak-anak datang",
+      "e": "Berbincang di teras sambil menunggu anak-anak datang"
+    },
+    "kunci": [
+      "a"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 16,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyiapkan alat mewarnai"
+      },
+      "b": {
+        "hemat": 15,
+        "delegasi": false,
+        "korban": true
+      },
+      "c": {
+        "hemat": 9,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menggelar karpet baca"
+      },
+      "d": {
+        "hemat": 37,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Membaca ulang naskah dongeng"
+      },
+      "e": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 08.12 hingga 09.40 = 88 menit. Jeda 08.50 hingga 09.05 = 15 menit, jadi waktu kerja = 88 − 15 = 73 menit.\n2. Jumlahkan durasi tugas: 23 + 9 + 16 + 37 = 85 menit.\n3. Kelebihan: 85 − 73 = 12 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 12 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta relawan menyiapkan alat mewarnai\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 16 menit (≥ 12 menit), dan tidak ada yang dikorbankan.<br>Opsi B (Tidak ikut sarapan dan terus bekerja) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (sarapan). Hitungannya 15 menit memang menutup kelebihan 12 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi C (Meminta relawan menggelar karpet baca) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 9 menit, kurang 3 menit dari kelebihan 12 menit. Opsi ini tampak cukup bila jeda 15 menit lupa dipotong (seolah semua tugas muat). Opsi D (Membaca ulang naskah dongeng setelah anak-anak datang) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; dongeng dibawakan tanpa persiapan. Opsi E (Berbincang di teras sambil menunggu anak-anak datang) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 12 menit tetap ada. Jawaban: Meminta relawan menyiapkan alat mewarnai (A). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-007",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Pemilik toko bunga menyiapkan pesanan pelanggan. Ia memiliki waktu dari pukul 13.46 hingga 15.20 dan harus menyelesaikan pekerjaan berikut:\n\n• Merangkai buket mawar: 38 menit\n• Menulis kartu ucapan: 8 menit\n• Membungkus pot anggrek: 21 menit\n• Menempel alamat pada kotak kiriman: 26 menit\n\nPukul 14.30 hingga 14.45 ia makan siang; pekerjaan yang terpotong dilanjutkan sesudahnya. Kurir datang pukul 15.20 untuk mengantar semua pesanan, jadi semuanya harus siap sebelum itu. Karyawan barunya bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar semua pesanan siap sebelum kurir datang?",
+    "opsi": {
+      "a": "Melewatkan makan siang dan terus bekerja",
+      "b": "Meminta karyawannya menulis kartu ucapan",
+      "c": "Melewatkan merangkai buket mawar",
+      "d": "Menempel alamat pada kotak kiriman setelah kurir datang",
+      "e": "Meminta karyawannya membungkus pot anggrek"
+    },
+    "kunci": [
+      "e"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 15,
+        "delegasi": false,
+        "korban": true
+      },
+      "b": {
+        "hemat": 8,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menulis kartu ucapan"
+      },
+      "c": {
+        "hemat": 38,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Merangkai buket mawar"
+      },
+      "d": {
+        "hemat": 26,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Menempel alamat pada kotak kiriman"
+      },
+      "e": {
+        "hemat": 21,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Membungkus pot anggrek"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 13.46 hingga 15.20 = 94 menit. Jeda 14.30 hingga 14.45 = 15 menit, jadi waktu kerja = 94 − 15 = 79 menit.\n2. Jumlahkan durasi tugas: 38 + 8 + 21 + 26 = 93 menit.\n3. Kelebihan: 93 − 79 = 14 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 14 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta karyawannya membungkus pot anggrek\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 21 menit (≥ 14 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Melewatkan makan siang dan terus bekerja) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (makan siang). Hitungannya 15 menit memang menutup kelebihan 14 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi B (Meminta karyawannya menulis kartu ucapan) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 8 menit, kurang 6 menit dari kelebihan 14 menit. Opsi ini tampak cukup bila jeda 15 menit lupa dipotong (seolah semua tugas muat). Opsi C (Melewatkan merangkai buket mawar) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 38 menit memang menutup kelebihan, tetapi pelanggan tidak menerima buket yang dipesan. Opsi D (Menempel alamat pada kotak kiriman setelah kurir datang) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; kurir harus menunggu dan pengiriman terlambat. Jawaban: Meminta karyawannya membungkus pot anggrek (E). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-008",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang staf kantor konsultan pajak memiliki waktu kerja dari pukul 09.47 hingga 11.30. Ia harus menyelesaikan pekerjaan berikut:\n\n• Menyusun jadwal temu klien: 18 menit\n• Memindai berkas pajak klien: 31 menit\n• Menjawab surel klien: 22 menit\n• Mengetik ulang daftar tagihan: 25 menit\n• Memfotokopi formulir isian: 12 menit\n\nPukul 10.40 hingga 10.55 ia beristirahat untuk minum dan meregangkan badan; pekerjaan yang terpotong dilanjutkan sesudahnya. Pukul 11.30 ia harus berangkat bersama atasannya menemui klien, sehingga semua pekerjaan harus selesai sebelum itu. Seorang rekan kerjanya bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar semua pekerjaan selesai sebelum ia berangkat?",
+    "opsi": {
+      "a": "Meminta rekan kerjanya menyusun jadwal temu klien",
+      "b": "Meminta rekan kerjanya menjawab surel klien",
+      "c": "Tidak beristirahat dan langsung melanjutkan pekerjaan",
+      "d": "Melewatkan memindai berkas pajak klien",
+      "e": "Mengetik ulang daftar tagihan sepulang menemui klien"
+    },
+    "kunci": [
+      "b"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 18,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyusun jadwal temu klien"
+      },
+      "b": {
+        "hemat": 22,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menjawab surel klien"
+      },
+      "c": {
+        "hemat": 15,
+        "delegasi": false,
+        "korban": true
+      },
+      "d": {
+        "hemat": 31,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Memindai berkas pajak klien"
+      },
+      "e": {
+        "hemat": 25,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Mengetik ulang daftar tagihan"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 09.47 hingga 11.30 = 103 menit. Jeda 10.40 hingga 10.55 = 15 menit, jadi waktu kerja = 103 − 15 = 88 menit.\n2. Jumlahkan durasi tugas: 18 + 31 + 22 + 25 + 12 = 108 menit.\n3. Kelebihan: 108 − 88 = 20 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 20 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta rekan kerjanya menjawab surel klien\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 22 menit (≥ 20 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Meminta rekan kerjanya menyusun jadwal temu klien) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 18 menit, kurang 2 menit dari kelebihan 20 menit. Opsi ini tampak cukup bila jeda 15 menit lupa dipotong (kelebihan dikira 5 menit). Opsi C (Tidak beristirahat dan langsung melanjutkan pekerjaan) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (istirahat). Hitungannya hanya 15 menit, belum menutup kelebihan 20 menit, dan tubuh yang tidak beristirahat membuat kerja berikutnya tidak optimal. Opsi D (Melewatkan memindai berkas pajak klien) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 31 menit memang menutup kelebihan, tetapi berkas yang dibutuhkan klien tidak tersedia. Opsi E (Mengetik ulang daftar tagihan sepulang menemui klien) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; daftar tagihan belum selesai sebelum pukul 11.30. Jawaban: Meminta rekan kerjanya menjawab surel klien (B). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-009",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pedagang kue basah menyiapkan dagangannya di rumah sebelum berangkat ke pasar. Ia memiliki waktu dari pukul 04.52 hingga 06.40 dan harus menyelesaikan pekerjaan berikut:\n\n• Mengukus kue lapis: 36 menit\n• Membungkus kue dengan daun pisang: 24 menit\n• Menata tampah dagangan: 15 menit\n• Menghitung uang kembalian: 9 menit\n• Memotong kue talam: 20 menit\n\nPukul 05.25 hingga 05.40 ia sarapan; pekerjaan yang terpotong dilanjutkan sesudahnya. Ia harus berangkat pukul 06.40 agar tiba sebelum pasar ramai, jadi semua pekerjaan harus selesai sebelum itu. Anaknya sudah bangun dan bersedia membantu. Ia mengerjakan pekerjaannya satu per satu, dan setiap pekerjaan harus ditunggui sampai selesai.\n\nPertanyaan: Langkah manakah yang paling tepat agar ia dapat berangkat tepat waktu?",
+    "opsi": {
+      "a": "Tidak sarapan agar pekerjaan cepat selesai",
+      "b": "Meminta anaknya menghitung uang kembalian",
+      "c": "Meminta anaknya memotong kue talam",
+      "d": "Melewatkan mengukus kue lapis",
+      "e": "Membuka media sosial sejenak sebelum mulai bekerja"
+    },
+    "kunci": [
+      "c"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 15,
+        "delegasi": false,
+        "korban": true
+      },
+      "b": {
+        "hemat": 9,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menghitung uang kembalian"
+      },
+      "c": {
+        "hemat": 20,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Memotong kue talam"
+      },
+      "d": {
+        "hemat": 36,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Mengukus kue lapis"
+      },
+      "e": {
+        "hemat": 0,
+        "delegasi": false,
+        "korban": false
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 04.52 hingga 06.40 = 108 menit. Jeda 05.25 hingga 05.40 = 15 menit, jadi waktu kerja = 108 − 15 = 93 menit.\n2. Jumlahkan durasi tugas: 36 + 24 + 15 + 9 + 20 = 104 menit.\n3. Kelebihan: 104 − 93 = 11 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 11 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta anaknya memotong kue talam\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 20 menit (≥ 11 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Tidak sarapan agar pekerjaan cepat selesai) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (sarapan). Hitungannya 15 menit memang menutup kelebihan 11 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi B (Meminta anaknya menghitung uang kembalian) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 9 menit, kurang 2 menit dari kelebihan 11 menit. Opsi ini tampak cukup bila jeda 15 menit lupa dipotong (seolah semua tugas muat). Opsi D (Melewatkan mengukus kue lapis) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 36 menit memang menutup kelebihan, tetapi kue lapis tidak ikut dijual. Opsi E (Membuka media sosial sejenak sebelum mulai bekerja) gugur karena kegiatan tidak produktif yang tidak menghemat waktu sedikit pun; kekurangan 11 menit tetap ada. Jawaban: Meminta anaknya memotong kue talam (C). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-010",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-ALOKASI-STRATEGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-14",
+    "stem": "Seorang pembina paduan suara sekolah menyiapkan penampilan siswa di acara perpisahan kelas IX. Ia memiliki waktu dari pukul 12.33 hingga 14.15 dan harus menyelesaikan pekerjaan berikut:\n\n• Menyetem gitar pengiring: 14 menit\n• Mencetak teks lagu: 17 menit\n• Melatih bagian suara alto: 33 menit\n• Menyusun barisan penyanyi: 21 menit\n• Merapikan seragam penyanyi: 16 menit\n\nPukul 13.10 hingga 13.30 ia makan siang; pekerjaan yang terpotong dilanjutkan sesudahnya. Paduan suara tampil pukul 14.15, jadi semua persiapan harus selesai sebelum itu. Seorang guru seni bersedia membantu.\n\nPertanyaan: Langkah manakah yang paling tepat agar paduan suara siap tampil tepat waktu?",
+    "opsi": {
+      "a": "Meminta guru seni mencetak teks lagu",
+      "b": "Memakai jam makan siang untuk melanjutkan persiapan",
+      "c": "Melewatkan melatih bagian suara alto",
+      "d": "Meminta guru seni menyusun barisan penyanyi",
+      "e": "Merapikan seragam penyanyi setelah acara dimulai"
+    },
+    "kunci": [
+      "d"
+    ],
+    "nilai_opsi": {
+      "a": {
+        "hemat": 17,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Mencetak teks lagu"
+      },
+      "b": {
+        "hemat": 20,
+        "delegasi": false,
+        "korban": true
+      },
+      "c": {
+        "hemat": 33,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Melatih bagian suara alto"
+      },
+      "d": {
+        "hemat": 21,
+        "delegasi": true,
+        "korban": false,
+        "tugas": "Menyusun barisan penyanyi"
+      },
+      "e": {
+        "hemat": 16,
+        "delegasi": false,
+        "korban": true,
+        "tugas": "Merapikan seragam penyanyi"
+      }
+    },
+    "pembahasan": "1. Ubah waktu ke menit: pukul 12.33 hingga 14.15 = 102 menit. Jeda 13.10 hingga 13.30 = 20 menit, jadi waktu kerja = 102 − 20 = 82 menit.\n2. Jumlahkan durasi tugas: 14 + 17 + 33 + 21 + 16 = 101 menit.\n3. Kelebihan: 101 − 82 = 19 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 19 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan. Hanya \"meminta guru seni menyusun barisan penyanyi\" yang memenuhi ketiganya: pekerjaan tetap dikerjakan, waktunya hemat 21 menit (≥ 19 menit), dan tidak ada yang dikorbankan.<br>Opsi A (Meminta guru seni mencetak teks lagu) gugur karena sudah delegasi, tetapi delegasi tidak cukup: hanya menghemat 17 menit, kurang 2 menit dari kelebihan 19 menit. Opsi ini tampak cukup bila jeda 20 menit lupa dipotong (seolah semua tugas muat). Opsi B (Memakai jam makan siang untuk melanjutkan persiapan) gugur karena bukan delegasi dan mengorbankan kebutuhan dasar (makan siang). Hitungannya 20 menit memang menutup kelebihan 19 menit, tetapi tubuh yang tidak makan membuat kerja berikutnya tidak optimal. Opsi C (Melewatkan melatih bagian suara alto) gugur karena bukan delegasi; tugas inti ditinggalkan. Hemat 33 menit memang menutup kelebihan, tetapi penampilan paduan suara tidak siap. Opsi E (Merapikan seragam penyanyi setelah acara dimulai) gugur karena menunda tugas sampai lewat tenggat, jadi bukan delegasi; penyanyi tampil dengan seragam yang belum rapi. Jawaban: Meminta guru seni menyusun barisan penyanyi (D). Tips: hitung kelebihan dulu, lalu saring opsi yang benar-benar delegasi (melewatkan atau menunda bukan delegasi), baru bandingkan menit yang dihemat dengan kelebihan.",
+    "status_kunci": "ganda"
   }
 ]

@@ -4,6 +4,7 @@ import * as path from "path";
 import { makeMap2, renderMap2, clearOfCompass, W, H, TOP, M, type Map2 } from "./denah-k17-bw";
 import { arahBangunan, arahArah, rute2, rotArah, ring2, setRing, INSTRUKSI, type Item } from "./denah-k17-soal-bw";
 import { reseed, shuffle, WALKERS, f1, C_OK, C_NO, C_REF, type Peta } from "./denah-k17-peta";
+import { DENAH20_ROWS } from "./generate-kecerdasan-denah-20";
 
 // Blok Denah & Arah Mata Angin (nomor 38-42) untuk kalibrasi Logis/Spasial 2026-10-12:
 // tiap paket = peta A Utara di atas (38-39 ARAH, 40-41 RUTE) + peta B kompas diputar (42 ROTASI).
@@ -16,7 +17,7 @@ const root = path.join(__dirname, "..");
 const PKGS = [13, 14, 2, 3, 15, 16, 4, 5, 19];
 // Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13 tetap seperti semula.
 // Pkg 2/3/14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
-const PB = new Set([2, 3, 14, 15, 16, 4, 5, 19]);
+const PB = new Set([2, 3, 14, 15, 16, 4, 5, 19, 20]);
 // Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
 const NEW = new Set([15, 16, 4, 5, 19]);
 const KEYS = ["A", "B", "C", "D", "E"] as const;
@@ -153,10 +154,12 @@ PKGS.forEach((pkg, pi) => {
   out[pkg] = rows;
 });
 
+// pkg 20 (Simulasi 5): dibuat generate-kecerdasan-denah-20.ts (peta A 38-41, peta B 42), semua HOTS.
+out[20] = DENAH20_ROWS;
 for (const [pkg, rows] of Object.entries(out)) {
   assert.deepEqual(rows.map((r) => r.sequence_number), [38, 39, 40, 41, 42], `pkg ${pkg}: nomor`);
   assert.equal(new Set(rows.map((r) => r.scoring_rule.correct_key)).size, 5, `pkg ${pkg}: kunci harus tersebar A-E`);
-  if (NEW.has(+pkg)) assert.equal(rows.filter((r) => r.tingkat === 3).length, +pkg === 19 ? 5 : 3, `pkg ${pkg}: tingkat denah (19: 5 HOTS, lain: 2 sedang / 3 HOTS)`);
+  if (NEW.has(+pkg) || +pkg === 20) assert.equal(rows.filter((r) => r.tingkat === 3).length, +pkg === 19 || +pkg === 20 ? 5 : 3, `pkg ${pkg}: tingkat denah (19, 20: 5 HOTS, lain: 2 sedang / 3 HOTS)`);
   if (PB.has(+pkg)) {
     for (const r of rows) assert.ok(r.pembahasan_svg && r.pembahasan.split("\n\n").length === 2 && !r.pembahasan.includes("<br>"), `pkg ${pkg} #${r.sequence_number}: pembahasan 2 paragraf + gambar`);
   } else assert.ok(rows.every((r) => !r.pembahasan_svg), `pkg ${pkg}: paket lama tidak boleh berubah`);
@@ -164,7 +167,7 @@ for (const [pkg, rows] of Object.entries(out)) {
     const texts = r.options_payload.choices.map((c) => c.text);
     assert.equal(new Set(texts).size, 5, `pkg ${pkg} #${r.sequence_number}: opsi kembar`);
     assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(r.options_payload.svg_content), `pkg ${pkg} #${r.sequence_number}: SVG tidak aman`);
-    assert.ok(r.pembahasan.includes(`Jawaban: ${texts[KEYS.indexOf(r.scoring_rule.correct_key as (typeof KEYS)[number])]}.`), `pkg ${pkg} #${r.sequence_number}: pembahasan ≠ kunci`);
+    assert.ok(r.pembahasan.includes(+pkg === 20 ? `Jawaban: ${r.scoring_rule.correct_key.toLowerCase()}.` : `Jawaban: ${texts[KEYS.indexOf(r.scoring_rule.correct_key as (typeof KEYS)[number])]}.`), `pkg ${pkg} #${r.sequence_number}: pembahasan ≠ kunci`); // pkg 20 menyebut huruf opsi
   }
 }
 

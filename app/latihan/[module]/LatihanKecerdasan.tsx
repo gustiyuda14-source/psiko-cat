@@ -224,7 +224,7 @@ export default function LatihanKecerdasan({
             )}
             <QuestionPassage text={payload?.sub_text} />
             {payload?.question_text && (
-              <p className="q-stem"><MathText text={payload.question_text} /></p>
+              <p className="q-stem whitespace-pre-line"><MathText text={payload.question_text} /></p>
             )}
             {payload?.svg_content && (
               <div

@@ -14,6 +14,7 @@ import type {
 
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { simulasiPackageOf } from "@/lib/test-config";
+import { pickReviewRows } from "@/lib/review-pick";
 
 /** Paket bank soal yang dipakai sebuah module simulasi (null di sesi lama = Paket 1). */
 export async function modulePackageOf(moduleSessionId: string, type: "KECERDASAN" | "KEPRIBADIAN"): Promise<number> {
@@ -23,7 +24,10 @@ export async function modulePackageOf(moduleSessionId: string, type: "KECERDASAN
 }
 
 export async function fetchKecerdasanReview(moduleSessionId: string): Promise<KecerdasanReviewItem[]> {
-  const pkg = await modulePackageOf(moduleSessionId, "KECERDASAN");
+  const { data: moduleSession, error: moduleError } = await supabaseAdmin
+    .from("module_sessions").select("package_number, started_at").eq("id", moduleSessionId).maybeSingle();
+  if (moduleError) throw moduleError;
+  const pkg = simulasiPackageOf("KECERDASAN", moduleSession?.package_number);
   const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
     supabaseAdmin
     .from("answers")
@@ -31,7 +35,7 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
     .eq("module_session_id", moduleSessionId),
     supabaseAdmin
       .from("questions")
-      .select("id, sequence_number, options_payload, scoring_rule, is_active")
+      .select("id, sequence_number, options_payload, scoring_rule, is_active, created_at")
       .eq("type", "KECERDASAN")
       .eq("package_number", pkg)
       .order("sequence_number", { ascending: true }),
@@ -40,8 +44,8 @@ export async function fetchKecerdasanReview(moduleSessionId: string): Promise<Ke
   if (questionError) throw questionError;
 
   const answerMap = new Map((answers ?? []).map((answer) => [answer.question_id, answer.selected_key]));
-  // Butir yang dinonaktifkan setelah dijawab tetap tampil.
-  return (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id)).map((q) => {
+  // Butir yang dinonaktifkan setelah dijawab/dilihat tetap tampil, satu per nomor.
+  return pickReviewRows(questions ?? [], new Set(answerMap.keys()), moduleSession?.started_at ?? null).map((q) => {
       const rule = q.scoring_rule as unknown as KecerdasanScoringRule;
       const selectedKey = answerMap.get(q.id) ?? null;
       return {

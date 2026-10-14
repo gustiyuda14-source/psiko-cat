@@ -188,7 +188,7 @@ export default function EngineKecerdasan({
             <QuestionPassage text={payload?.sub_text} />
 
             {payload?.question_text && (
-              <p className="q-stem">
+              <p className="q-stem whitespace-pre-line">
                 <MathText text={payload.question_text} />
               </p>
             )}

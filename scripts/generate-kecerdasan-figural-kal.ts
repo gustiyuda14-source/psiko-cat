@@ -15,6 +15,10 @@ import { FIG5_ITEMS } from "./figural-kal-5";
 import { FIG19_ITEMS } from "./figural-kal-19";
 import { BUNDAR19_ITEMS } from "./figural-kal-bundar-19";
 import { buildMosaik } from "./figural-mosaik";
+import { FIG20_ITEMS } from "./figural-kal-20";
+import { FIG20B_ITEMS } from "./figural-kal-20b";
+import { BUNDAR20_ITEMS } from "./figural-kal-bundar-20";
+import { MOSAIK20_ITEMS } from "./figural-mosaik-20";
 
 // Figural kalibrasi Logis/Spasial 2026-10-12: 26-27 deret · 28-30 matriks · 31-32 rotasi · 33-34 susun · 35-36 analogi · 37 ikon
 // pkg 13 (Simulasi 1 baru): 28-30, 31-32, 37 (+ susun 34 dari generate-kecerdasan-susun-kal.ts)
@@ -285,7 +289,7 @@ type Row = {
   pembahasan: string;
   pembahasan_svg?: string;
 };
-const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS, ...FIG19_ITEMS, ...BUNDAR19_ITEMS];
+const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS, ...FIG19_ITEMS, ...BUNDAR19_ITEMS, ...MOSAIK20_ITEMS, ...FIG20_ITEMS, ...FIG20B_ITEMS, ...BUNDAR20_ITEMS];
 const out: Record<number, Row[]> = {};
 for (const it of all) {
   const choices = it.choices ?? ["a", "b", "c", "d", "e"];
@@ -309,6 +313,10 @@ assert.deepEqual(out[5].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 
 assert.deepEqual(out[16].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.deepEqual(out[19].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.ok(out[19].every((r) => r.tingkat === 3), "pkg 19: semua gambar HOTS");
+// pkg 20 (Simulasi 5): susun 33-34 dan denah 38-42 dibuat generator susun/denah; di sini mosaik, matriks, rotasi, analogi, ikon, bundar (semua HOTS)
+assert.deepEqual(out[20].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
+assert.ok(out[20].every((r) => r.tingkat === 3 && r.pembahasan_svg), "pkg 20: semua gambar HOTS + pembahasan_svg");
+assert.equal(out[20].map((r) => r.scoring_rule.correct_key).join(""), "DBDCABEBAEDCAECE", "pkg 20: rencana huruf kunci");
 for (const r of Object.values(out).flat()) {
   for (const svg of [r.options_payload.svg_content, r.pembahasan_svg ?? ""]) assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(svg), `SVG ${r.sequence_number} tidak aman`);
   // Gambar pembahasan dirender bersama butir lain di satu halaman review: tanpa id supaya tidak bentrok.

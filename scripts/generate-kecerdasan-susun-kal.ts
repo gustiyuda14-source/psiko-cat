@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { kereta, feri, traktor, pinisi } from "./susun-benda-45";
 import { pesawat, busTingkat } from "./susun-benda-19";
+import { SUSUN20_ROWS } from "./generate-kecerdasan-susun-20";
 import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cutProfile, cutPuzzleSvg, cutPembahasanSvg } from "./susun-lib";
 
 // Susun potongan gambar untuk kalibrasi Logis/Spasial 2026-10-12 (nomor 33-34):
@@ -341,11 +342,16 @@ for (const [pkgNo, seq] of TARGETS) {
 // pkg 19 (Simulasi 4): blok baru ditambahkan di akhir, atau diganti utuh kalau sudah ada.
 const p19 = `  "19": ${JSON.stringify(out[19], null, 2).replace(/\n/g, "\n  ")}`, b19 = /^  "19": \[[\s\S]*?^  \]/m.exec(nextText);
 nextText = b19 ? nextText.slice(0, b19.index) + p19 + nextText.slice(b19.index + b19[0].length) : nextText.replace(/\n  \]\n\}\s*$/, `\n  ],\n${p19}\n}\n`);
+// pkg 20 (Simulasi 5): 33-34 dari generate-kecerdasan-susun-20.ts, blok ditambahkan di akhir atau diganti utuh.
+assert.deepEqual(SUSUN20_ROWS.map((r) => r.sequence_number), [33, 34], "pkg 20: susun 33-34");
+const p20 = `  "20": ${JSON.stringify(SUSUN20_ROWS, null, 2).replace(/\n/g, "\n  ")}`, b20 = /^  "20": \[[\s\S]*?^  \]/m.exec(nextText);
+nextText = b20 ? nextText.slice(0, b20.index) + p20 + nextText.slice(b20.index + b20[0].length) : nextText.replace(/\n  \]\n\}\s*$/, `\n  ],\n${p20}\n}\n`);
 const next = JSON.parse(nextText);
 assert.deepEqual(next[19], out[19]);
+assert.deepEqual(next[20], JSON.parse(JSON.stringify(SUSUN20_ROWS)));
 const replaced = new Set(TARGETS.map(([k, q]) => `${k}/${q}`));
 for (const pkg of Object.keys(previous)) for (const row of previous[Number(pkg)]) {
-  if (!replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);
+  if (pkg !== "20" && !replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);
 }
 fs.writeFileSync(dataPath, nextText);
 fs.mkdirSync(path.join(root, "output"), { recursive: true });

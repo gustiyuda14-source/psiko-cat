@@ -7,15 +7,22 @@ import { INK, KEYS, W, r1, type Key } from "./figural-lib";
 // Kesamaan visual diuji dengan sampling 20x20 per ubin, jadi simetri ubin ikut diperhitungkan.
 // Dipakai generate-kecerdasan-figural-kal.ts (pkg 15 no 26-27).
 
-type Tile = "kosong" | "bulat" | "titik" | "seperempat" | "busur" | "arsir" | "setengah" | "bintang" | "segitiga" | "daun" | "bendera";
-type Cell = { tile: Tile; deg: number; mir: boolean; inv: boolean };
-type Frame = Cell[]; // baris demi baris, n x n
-type Pt = [number, number];
+export type Tile = "kosong" | "bulat" | "titik" | "seperempat" | "busur" | "arsir" | "setengah" | "bintang" | "segitiga" | "daun" | "bendera" | "tangga" | "panah" | "sabit" | "tetes" | "tau" | "lolipop" | "kail" | "ikan";
+export type Cell = { tile: Tile; deg: number; mir: boolean; inv: boolean };
+export type Frame = Cell[]; // baris demi baris, n x n
+export type Pt = [number, number];
 
 const star: Pt[] = Array.from({ length: 16 }, (_, i) => { const a = (Math.PI * i) / 8, r = i % 2 ? 0.3 : 0.4; return [r * Math.sin(a), -r * Math.cos(a)]; });
 const tri: Pt[] = [[0, -0.36], [0.34, 0.3], [-0.34, 0.3]];
 const pole: Pt[] = [[-0.3, -0.38], [-0.18, -0.38], [-0.18, 0.38], [-0.3, 0.38]];
 const flag: Pt[] = [[-0.18, -0.38], [0.34, -0.22], [-0.18, -0.04]];
+const stair: Pt[] = [[-0.4, 0.4], [-0.4, 0.12], [0, 0.12], [0, -0.2], [0.4, -0.2], [0.4, 0.4]]; // pkg 20
+const upArrow: Pt[] = [[0, -0.4], [0.3, -0.02], [0.1, -0.02], [0.1, 0.4], [-0.1, 0.4], [-0.1, -0.02], [-0.3, -0.02]]; // pkg 20
+// pkg 20 (butir bukti-tunggal): ubin tebal, tak simetris terhadap putaran 90°, tetap terbaca bila warnanya dibalik
+const drop: Pt[] = [[0, -0.42], ...Array.from({ length: 25 }, (_, i): Pt => { const a = (Math.PI * (60 + i * 10)) / 180; return [0.27 * Math.sin(a), 0.12 - 0.27 * Math.cos(a)]; })];
+const tau: Pt[] = [[-0.38, -0.38], [0.38, -0.38], [0.38, -0.16], [0.12, -0.16], [0.12, 0.4], [-0.12, 0.4], [-0.12, -0.16], [-0.38, -0.16]];
+const hook: Pt[] = [[0.04, -0.4], [0.3, -0.4], [0.3, 0.14], [0.2, 0.36], [0.02, 0.42], [-0.2, 0.4], [-0.36, 0.26], [-0.4, 0.04], [-0.16, 0.04], [-0.12, 0.17], [0.04, 0.2]];
+const fish: Pt[] = [...Array.from({ length: 21 }, (_, i): Pt => { const a = (Math.PI * (30 + i * 15)) / 180; return [-0.1 + 0.3 * Math.cos(a), 0.2 * Math.sin(a)]; }), [0.4, -0.22], [0.2, 0], [0.4, 0.22]];
 const pip = (P: Pt[], x: number, y: number) => {
   let c = false;
   for (let i = 0, j = P.length - 1; i < P.length; j = i++) {
@@ -37,6 +44,14 @@ const inside: Record<Tile, (x: number, y: number) => boolean> = {
   segitiga: (x, y) => pip(tri, x, y),
   daun: (x, y) => sq(x - 0.5, y + 0.5) < 1 && sq(x + 0.5, y - 0.5) < 1,
   bendera: (x, y) => pip(pole, x, y) || pip(flag, x, y),
+  tangga: (x, y) => pip(stair, x, y),
+  panah: (x, y) => pip(upArrow, x, y),
+  sabit: (x, y) => sq(x, y) < 0.4 ** 2 && sq(x - 0.2, y) >= 0.32 ** 2,
+  tetes: (x, y) => pip(drop, x, y),
+  tau: (x, y) => pip(tau, x, y),
+  lolipop: (x, y) => sq(x, y + 0.14) < 0.24 ** 2 || (Math.abs(x) < 0.08 && y > 0.05 && y < 0.4),
+  kail: (x, y) => pip(hook, x, y),
+  ikan: (x, y) => pip(fish, x, y),
 };
 const pts = (P: Pt[]) => P.map(([x, y]) => `${x.toFixed(3)},${y.toFixed(3)}`).join(" ");
 function shapeSvg(t: Tile, f: string): string {
@@ -52,6 +67,14 @@ function shapeSvg(t: Tile, f: string): string {
     case "segitiga": return `<polygon points="${pts(tri)}" fill="${f}"/>`;
     case "daun": return `<path d="M-.5,-.5 A1,1 0 0 0 .5,.5 A1,1 0 0 0 -.5,-.5 Z" fill="${f}"/>`;
     case "bendera": return `<polygon points="${pts(pole)}" fill="${f}"/><polygon points="${pts(flag)}" fill="${f}"/>`;
+    case "tangga": return `<polygon points="${pts(stair)}" fill="${f}"/>`;
+    case "panah": return `<polygon points="${pts(upArrow)}" fill="${f}"/>`;
+    case "sabit": return `<path d="M.244,-.317A.4,.4 0 1 0 .244,.317A.32,.32 0 1 1 .244,-.317Z" fill="${f}"/>`;
+    case "tetes": return `<polygon points="${pts(drop)}" fill="${f}"/>`;
+    case "tau": return `<polygon points="${pts(tau)}" fill="${f}"/>`;
+    case "lolipop": return `<circle cy="-.14" r=".24" fill="${f}"/><rect x="-.08" y=".05" width=".16" height=".35" fill="${f}"/>`;
+    case "kail": return `<polygon points="${pts(hook)}" fill="${f}"/>`;
+    case "ikan": return `<polygon points="${pts(fish)}" fill="${f}"/>`;
   }
 }
 
@@ -68,22 +91,25 @@ function cellBits(c: Cell): string {
   }
   return s;
 }
-const bits = (f: Frame) => f.map(cellBits).join("");
-const ham = (a: string, b: string) => { let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++; return d; };
-const md = (a: number, m: number) => ((a % m) + m) % m;
-const C = (tile: Tile, inv = false, deg = 0, mir = false): Cell => ({ tile, deg, mir, inv });
+export const bits = (f: Frame) => f.map(cellBits).join("");
+export const ham = (a: string, b: string) => { let d = 0; for (let i = 0; i < a.length; i++) if (a[i] !== b[i]) d++; return d; };
+export const md = (a: number, m: number) => ((a % m) + m) % m;
+export const C = (tile: Tile, inv = false, deg = 0, mir = false): Cell => ({ tile, deg, mir, inv });
 
 // ── render ───────────────────────────────────────────────────────────────────
 // Satu bingkai = grid n x n. perRow 5 = satu baris; 3 = baris 3 + 2. Tanpa `st` = gaya lama (ubin kotak, bingkai ganda; paket live).
 // Gaya (pkg 4/5, PEDOMAN G-10): tiap butir beda bentuk ubin × bingkai × celah. Topeng ubin digambar sebagai path evenodd berwarna
 // sama dengan bingkai, jadi tanpa id/clipPath (aman untuk pembahasan_svg, G-8).
-type Overlay = (center: (i: number) => Pt, T: number) => string;
-export type Style = { mask: "kotak" | "bulat" | "lembut" | "oktagon"; frame: "ganda" | "tipis" | "panel" | "papan"; gap?: number; chevron?: boolean };
+export type Overlay = (center: (i: number) => Pt, T: number) => string;
+export type Style = { mask: "kotak" | "bulat" | "lembut" | "oktagon" | "tab" | "perisai"; frame: "ganda" | "tipis" | "panel" | "papan"; gap?: number; chevron?: boolean };
 const FRAME_BG = { ganda: "white", tipis: "white", panel: "#e8e8e8", papan: "#a8a8a8" } as const;
 const TILE_D: Record<Exclude<Style["mask"], "kotak">, string> = {
   bulat: "M0,-.485A.485,.485 0 1 0 0,.485A.485,.485 0 1 0 0,-.485Z",
   lembut: "M-.28,-.485H.28A.205,.205 0 0 1 .485,-.28V.28A.205,.205 0 0 1 .28,.485H-.28A.205,.205 0 0 1 -.485,.28V-.28A.205,.205 0 0 1 -.28,-.485Z",
   oktagon: "M-.32,-.485H.32L.485,-.32V.32L.32,.485H-.32L-.485,.32V-.32Z",
+  // pkg 20: tab = dua sudut diagonal membulat besar, dua sudut lain nyaris siku; perisai = sisi atas datar, bawah melengkung
+  tab: "M-.185,-.485H.455A.03,.03 0 0 1 .485,-.455V.185A.3,.3 0 0 1 .185,.485H-.455A.03,.03 0 0 1 -.485,.455V-.185A.3,.3 0 0 1 -.185,-.485Z",
+  perisai: "M-.405,-.485H.405A.08,.08 0 0 1 .485,-.405V.05C.485,.3 .25,.485 0,.485C-.25,.485 -.485,.3 -.485,.05V-.405A.08,.08 0 0 1 -.405,-.485Z",
 };
 function frameSvg(f: Frame | null, n: number, x: number, y: number, size: number, label: string, mark?: { overlay?: Overlay; hl?: boolean }, st?: Style) {
   const pad = size * (st && st.frame !== "ganda" && st.frame !== "tipis" ? 0.06 : 0.04), grid = size - 2 * pad, gap = grid * (st?.gap ?? 0.02), T = (grid - (n - 1) * gap) / n;
@@ -106,7 +132,7 @@ function frameSvg(f: Frame | null, n: number, x: number, y: number, size: number
 }
 const HL = "#1a7f37", RED = "#d32f2f";
 /** Panah merah dari a ke b (tanpa id, aman dirender berulang di satu halaman). */
-function arrow([x1, y1]: Pt, [x2, y2]: Pt, dash = false) {
+export function arrow([x1, y1]: Pt, [x2, y2]: Pt, dash = false) {
   const a = Math.atan2(y2 - y1, x2 - x1), h = 14, w = 8;
   const bx = x2 - h * Math.cos(a), by = y2 - h * Math.sin(a);
   return `<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} L${bx.toFixed(1)} ${by.toFixed(1)}" stroke="${RED}" stroke-width="4" fill="none"${dash ? ' stroke-dasharray="8 6"' : ""}/>` +
@@ -122,7 +148,7 @@ export function mosaikSvg(frames: (Frame | null)[], options: Frame[], n: number,
       y += rowH;
     }
   };
-  row(frames, ["(1)", "(2)", "(3)", "(4)", "(5)"]);
+  row(frames, ["(1)", "(2)", "(3)", "(4)", "(5)", "(6)"]);
   if (options.length) { y += 16; row(options, ["a", "b", "c", "d", "e"]); }
   return `<svg viewBox="0 0 ${W} ${Math.ceil(y)}" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/>${body}</svg>`;
 }
@@ -130,8 +156,8 @@ export function mosaikSvg(frames: (Frame | null)[], options: Frame[], n: number,
 // ── butir ────────────────────────────────────────────────────────────────────
 export type MosaikItem = { pkg: number; seq: number; key: Key; instruksi: string; svg: string; tingkat: 3; pembahasan: string; pembahasan_svg: string };
 const POLA = "Pilihlah satu gambar untuk melengkapi pola di bawah ini.";
-type Opt = { f: Frame; why?: string }; // opsi pertama = jawaban
-type Def = { pkg: number; seq: number; key: Key; n: number; frames: (Frame | null)[]; opts: Opt[]; aturan: string; tahap: string; overlay: Overlay; st?: Style };
+export type Opt = { f: Frame; why?: string }; // opsi pertama = jawaban
+export type Def = { pkg: number; seq: number; key: Key; n: number; frames: (Frame | null)[]; opts: Opt[]; aturan: string; tahap: string; overlay: Overlay; st?: Style; kunci?: string };
 
 export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
   const defs: Def[] = [];
@@ -323,6 +349,11 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     });
   }
 
+  return finishMosaik(defs, perRow);
+}
+
+/** Opsi diacak ke posisi kunci, asersi keunikan visual, lalu rakit butir (dipakai buildMosaik dan figural-mosaik-20.ts). */
+export function finishMosaik(defs: Def[], perRow: 3 | 5 = 5): MosaikItem[] {
   return defs.map((d) => {
     // Opsi berlabel huruf; jawaban di posisi d.key, pengecoh mengisi sisanya berurutan.
     const order: Opt[] = new Array(5), rest = d.opts.slice(1);
@@ -338,7 +369,7 @@ export function buildMosaik(perRow: 3 | 5 = 5): MosaikItem[] {
     return {
       pkg: d.pkg, seq: d.seq, key: d.key, instruksi: POLA, tingkat: 3 as const,
       svg: mosaikSvg(d.frames, order.map((o) => o.f), d.n, perRow, [], d.st),
-      pembahasan: `${d.aturan} ${d.tahap}\n\n${gugur} Jawaban: ${d.key.toLowerCase()}.`,
+      pembahasan: `${d.aturan} ${d.tahap}\n\n${gugur}${d.kunci ? ` ${d.kunci}` : ""} Jawaban: ${d.key.toLowerCase()}.`,
       pembahasan_svg: mosaikSvg(filled, [], d.n, perRow, marks, d.st),
     };
   });

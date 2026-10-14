@@ -33,6 +33,7 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K14: { label: "Susun Potongan Gambar", aspek: "analitis", desc: "Urutkan potongan menjadi gambar utuh", prefix: ["FIG-SUSUN-"] },
   K17: { label: "Denah & Arah Mata Angin", aspek: "analitis", desc: "Arah 8 mata angin, rute belok kiri/kanan, bangunan yang dilalui, pojok & di antara jalan, peta diputar, ingat denah", prefix: ["FIG-DENAH-"] },
   K16: { label: "Kecukupan Data", aspek: "logis", desc: "Menilai apakah pernyataan cukup untuk menjawab", prefix: ["LOG-KCK-"] },
+  K18: { label: "Sebab-Akibat", aspek: "logis", desc: "Hubungan sebab-akibat dua pernyataan: sebab lebih dulu, akibat lebih dulu, satu sebab bersama", prefix: ["LOG-SBA-"] },
   K15: { label: "Integritas & Kejujuran", aspek: "integritas", desc: "Pilihan A/B: integritas, inovasi, kepemimpinan, transparansi, produktivitas, profesionalisme, religiusitas", prefix: ["SKJ-"], opsi: 2 },
 };
 
@@ -47,7 +48,7 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["NUM-HIT-TRIK-KALI", "Trik perkalian"], ["NUM-HIT-TRIK-PERSEN", "Trik persen & pecahan"], ["NUM-HIT-TRIK-BAGI", "Trik bagi & estimasi"], ["NUM-HIT-TRIK-TAMBAH", "Trik tambah & kurang"],
   ["NUM-ALJ", "Aljabar & perbandingan"],
   ["NUM-SAT-KONVERSI", "Konversi satuan"], ["NUM-SAT-CERITA", "Soal cerita satuan"],
-  ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
+  ["NUM-CRT-ALOKASI", "Alokasi waktu"], ["NUM-CRT-ALOKASI-STRATEGI", "Alokasi · strategi"], ["NUM-CRT-GERAK", "Jarak & kecepatan"], ["NUM-CRT-RASIO", "Rasio"],
   ["NUM-CRT-PROPORSI", "Proporsi"], ["NUM-CRT-UANG", "Uang"], ["NUM-CRT-UMUR", "Umur"], ["NUM-CRT-LINIER", "Persamaan linier"],
   ["NUM-CRT-PENCACAHAN", "Pencacahan"], ["NUM-CRT-HIMPUNAN", "Himpunan"], ["NUM-CRT-GEOMETRI", "Geometri"], ["NUM-CRT-BULAT", "Bilangan bulat"],
   ["LOG-SIL-KATEGORI", "Silogisme kategorikal"], ["LOG-SIL-KONDISIONAL", "Kondisional"], ["LOG-SIL-JEBAKAN", "Jebakan logika"],
@@ -67,6 +68,7 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["SKJ-RELIGI", "Religiusitas · Makna religius"],
   ["FIG-DENAH-ARAH", "Arah mata angin"], ["FIG-DENAH-RUTE", "Rute & belokan"], ["FIG-DENAH-LEWAT", "Bangunan dilalui"], ["FIG-DENAH-RELASI", "Pojok & di antara jalan"], ["FIG-DENAH-ROTASI", "Rotasi peta & badan"], ["FIG-DENAH-INGAT", "Ingat denah"],
   ["LOG-KCK-NILAI", "Mencari nilai"], ["LOG-KCK-YATIDAK", "Ya atau tidak"], ["LOG-KCK-URUTAN", "Urutan"], ["LOG-KCK-3P", "Tiga pernyataan"],
+  ["LOG-SBA-LANGSUNG", "Sebab ditulis lebih dulu"], ["LOG-SBA-TERBALIK", "Akibat ditulis lebih dulu"], ["LOG-SBA-BERSAMA", "Satu sebab bersama"],
 ];
 
 /** [urutan grup, label] untuk sub_type; tidak dikenal → grup terakhir "Lainnya". */

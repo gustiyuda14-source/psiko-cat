@@ -1,0 +1,1091 @@
+{
+  "19": {
+    "wacana": {
+      "p19alok88": "Seorang petugas perpustakaan kota memiliki waktu luang pada siang hari, yaitu dari pukul 13.37 hingga 14.52. Ia ingin memanfaatkan waktu tersebut untuk menyelesaikan beberapa pekerjaan berikut:\n\n• Memeriksa buku yang dikembalikan: 21 menit\n• Menyampul buku baru: 26 menit\n• Menyusun katalog digital: 33 menit\n• Mengatur ulang rak majalah: 17 menit\n\nKarena keterbatasan waktu, ia mempertimbangkan untuk meminta bantuan rekan kerja dalam menyelesaikan salah satu tugas. Katalog digital hanya dapat diisi melalui akun miliknya sendiri, sehingga tugas itu tidak dapat diserahkan kepada orang lain.",
+      "p19alok89": "Bendahara koperasi sekolah memiliki waktu kerja pada pagi hari, yaitu dari pukul 07.45 hingga 09.10. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Menghitung uang kas: 31 menit\n• Mencatat barang masuk: 27 menit\n• Menata etalase: 12 menit\n• Memperbarui daftar harga: 11 menit\n• Menyusun pesanan alat tulis: 9 menit\n\nPada pukul 08.20 hingga 08.35 ia wajib mengikuti rapat singkat pengurus koperasi, sehingga waktu itu tidak dapat dipakai bekerja; pekerjaan yang terpotong rapat dilanjutkan sesudahnya. Uang kas hanya boleh dihitung oleh bendahara. Ia dapat meminta bantuan seorang anggota pengurus untuk satu tugas lainnya.",
+      "p19alok90": "Ketua panitia lomba cerdas cermat antarkelas memiliki waktu persiapan dari pukul 12.55 hingga 14.03. Ada enam pekerjaan yang harus selesai sebelum lomba dimulai:\n\n• Mencetak lembar soal: 18 menit\n• Menyiapkan bel penilai: 13 menit\n• Memasang papan skor: 24 menit\n• Mengatur kursi peserta: 21 menit\n• Memeriksa mikrofon juri: 16 menit\n• Menulis daftar hadir: 11 menit\n\nDua anggota panitia masing-masing dapat mengambil alih satu tugas. Ketua ingin mengerjakan sendiri sisa tugasnya satu per satu sehingga seluruh waktu persiapannya terpakai tanpa sisa.",
+      "p19alok91": "Seorang mahasiswa panitia seminar himpunan memiliki waktu persiapan dari pukul 13.10 hingga 15.00. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Mencetak sertifikat peserta seminar: 28 menit\n• Menyiapkan meja pendaftaran ulang: 22 menit\n• Menguji proyektor: 12 menit\n• Merapikan naskah pembawa acara: 46 menit\n\nPukul 13.50 hingga 14.10 adalah waktu makan siang dan istirahatnya. Seminar dimulai pukul 15.00, sehingga semua persiapan harus sudah selesai sebelum itu. Beberapa rekan panitia bersedia membantu.",
+      "p19alok92": "Staf pendaftaran sebuah puskesmas memiliki waktu kerja sebelum rapat bulanan, yaitu dari pukul 07.25 hingga 08.48. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Menyiapkan berkas antrean pasien: 33 menit\n• Menyusun laporan stok obat: 27 menit\n• Mengentri data kunjungan kemarin: 16 menit\n• Membalas surat undangan: 12 menit\n• Menyortir rekam medis: 19 menit\n\nBerkas antrean pasien harus sudah siap pukul 08.00 karena loket dibuka pada jam itu. Seorang rekan bersedia membantu satu tugas, tetapi ia baru tiba pukul 08.05; tugas yang dibantu rekan juga harus selesai sebelum rapat."
+    },
+    "soal": [
+      {
+        "s": 88,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "contoh",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p19alok88",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya didelegasikan agar tugas lainnya dapat diselesaikan dalam waktu yang tersedia?",
+        "c": [
+          "Memeriksa buku yang dikembalikan",
+          "Menyampul buku baru",
+          "Menyusun katalog digital",
+          "Mengatur ulang rak majalah",
+          "Semua tugas dapat diselesaikan tanpa bantuan"
+        ],
+        "k": "B",
+        "p": "1. Ubah waktu luang ke menit: pukul 13.37 hingga 14.52 = 1 jam 15 menit = 75 menit.\n2. Jumlahkan durasi tugas: 21 + 26 + 33 + 17 = 97 menit.\n3. Kelebihan: 97 − 75 = 22 menit. Tugas yang diserahkan ke rekan harus berdurasi minimal 22 menit dan boleh dikerjakan orang lain.\n4. Cek opsi: yang durasinya minimal 22 menit hanya menyampul buku baru (26 menit) dan menyusun katalog digital (33 menit), tetapi katalog hanya dapat diisi dari akunnya sendiri. Jadi tugas yang diserahkan adalah menyampul buku baru; sisa tugasnya 21 + 33 + 17 = 71 menit, masih muat dalam 75 menit.<br>Opsi A (Memeriksa buku yang dikembalikan): terkecoh selisih tipis tanpa mengecek angkanya; hanya menghemat 21 menit, kurang 1 menit dari kelebihan 22 menit; sisa tugasnya 76 menit. Opsi C (Menyusun katalog digital): melepas tugas terpanjang tanpa membaca kendala; katalog tidak dapat diserahkan karena memakai akun pribadinya. Opsi D (Mengatur ulang rak majalah): memilih tugas ringan agar tidak merepotkan rekan, tanpa menghitung kelebihan; hanya menghemat 17 menit, sisa tugasnya 80 menit. Opsi E (Semua tugas dapat diselesaikan tanpa bantuan): muncul jika jam dikurangkan seperti bilangan biasa, 1452 − 1337 = 115 menit; padahal 1 jam = 60 menit, sehingga waktunya hanya 75 menit. Jawaban: Menyampul buku baru (B). Tips: hitung kelebihan dulu, lalu cari tugas yang menutupinya dan boleh diserahkan; baca kendala sebelum memilih tugas terpanjang.",
+        "data": {
+          "jendela": [
+            "13.37",
+            "14.52"
+          ],
+          "tugas": [
+            {
+              "nama": "Memeriksa buku yang dikembalikan",
+              "menit": 21
+            },
+            {
+              "nama": "Menyampul buku baru",
+              "menit": 26
+            },
+            {
+              "nama": "Menyusun katalog digital",
+              "menit": 33,
+              "sendiri": true
+            },
+            {
+              "nama": "Mengatur ulang rak majalah",
+              "menit": 17
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Memeriksa buku yang dikembalikan"
+            ],
+            [
+              "Menyampul buku baru"
+            ],
+            [
+              "Menyusun katalog digital"
+            ],
+            [
+              "Mengatur ulang rak majalah"
+            ],
+            []
+          ]
+        }
+      },
+      {
+        "s": 89,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "jeda-delegasi",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p19alok89",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya diserahkan kepada anggota pengurus agar semua pekerjaan selesai pukul 09.10?",
+        "c": [
+          "Menghitung uang kas",
+          "Menata etalase",
+          "Memperbarui daftar harga",
+          "Mencatat barang masuk",
+          "Menyusun pesanan alat tulis"
+        ],
+        "k": "D",
+        "p": "1. Ubah waktu kerja ke menit: pukul 07.45 hingga 09.10 = 85 menit. Rapat pukul 08.20 hingga 08.35 memakan 15 menit, jadi waktu yang benar-benar dapat dipakai bekerja = 85 − 15 = 70 menit.\n2. Jumlahkan durasi tugas: 31 + 27 + 12 + 11 + 9 = 90 menit.\n3. Kelebihan: 90 − 70 = 20 menit. Tugas yang diserahkan harus berdurasi minimal 20 menit dan bukan tugas khusus bendahara.\n4. Cek opsi: tugas berdurasi minimal 20 menit hanya menghitung uang kas (31 menit) dan mencatat barang masuk (27 menit). Uang kas hanya boleh dihitung bendahara, jadi yang diserahkan adalah mencatat barang masuk; sisa tugasnya 31 + 12 + 11 + 9 = 63 menit, muat dalam 70 menit.<br>Opsi A (Menghitung uang kas): tugas terpanjang, tetapi kendala menyebut uang kas hanya boleh dihitung bendahara. Opsi B (Menata etalase): hanya menghemat 12 menit; cukup hanya jika rapat 15 menit dilupakan (kelebihan dikira 90 − 85 = 5 menit), padahal sisa tugasnya 78 menit melebihi 70 menit. Opsi C (Memperbarui daftar harga): sama-sama lupa memotong waktu rapat; sisa tugasnya 79 menit. Opsi E (Menyusun pesanan alat tulis): memilih tugas teringan agar tidak merepotkan, juga hanya cukup jika rapat dilupakan; sisa tugasnya 81 menit. Jawaban: Mencatat barang masuk (D). Tips: kurangi waktu kerja dengan jeda lebih dulu, baru hitung kelebihan; tugas yang lebih pendek dari kelebihan tidak pernah cukup.",
+        "data": {
+          "jendela": [
+            "07.45",
+            "09.10"
+          ],
+          "jeda": [
+            [
+              "08.20",
+              "08.35"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Menghitung uang kas",
+              "menit": 31,
+              "sendiri": true
+            },
+            {
+              "nama": "Mencatat barang masuk",
+              "menit": 27
+            },
+            {
+              "nama": "Menata etalase",
+              "menit": 12
+            },
+            {
+              "nama": "Memperbarui daftar harga",
+              "menit": 11
+            },
+            {
+              "nama": "Menyusun pesanan alat tulis",
+              "menit": 9
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Menghitung uang kas"
+            ],
+            [
+              "Menata etalase"
+            ],
+            [
+              "Memperbarui daftar harga"
+            ],
+            [
+              "Mencatat barang masuk"
+            ],
+            [
+              "Menyusun pesanan alat tulis"
+            ]
+          ]
+        }
+      },
+      {
+        "s": 90,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "pasangan-pas",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p19alok90",
+        "q": "Pertanyaan: Dua tugas manakah yang harus diserahkan kepada anggota panitia agar sisa tugas ketua selesai tepat pukul 14.03?",
+        "c": [
+          "Memasang papan skor dan menulis daftar hadir",
+          "Mencetak lembar soal dan memeriksa mikrofon juri",
+          "Memasang papan skor dan mengatur kursi peserta",
+          "Menyiapkan bel penilai dan menulis daftar hadir",
+          "Mencetak lembar soal dan menyiapkan bel penilai"
+        ],
+        "k": "A",
+        "p": "1. Ubah waktu persiapan ke menit: pukul 12.55 hingga 14.03 = 1 jam 8 menit = 68 menit.\n2. Jumlahkan durasi tugas: 18 + 13 + 24 + 21 + 16 + 11 = 103 menit.\n3. Kelebihan: 103 − 68 = 35 menit. Supaya sisa tugas ketua tepat 68 menit, dua tugas yang diserahkan harus berjumlah tepat 35 menit, tidak kurang dan tidak lebih.\n4. Cek opsi: papan skor + daftar hadir = 24 + 11 = 35 menit, sehingga sisa tugas ketua 103 − 35 = 68 menit, pas. Tidak ada pasangan lain yang berjumlah 35 menit.<br>Opsi B (Mencetak lembar soal dan memeriksa mikrofon juri): menaksir tanpa menjumlahkan teliti; 18 + 16 = 34 menit terlihat hampir pas, tetapi sisa tugasnya 69 menit, lewat 1 menit. Opsi C (Memasang papan skor dan mengatur kursi peserta): memilih dua tugas terpanjang, 24 + 21 = 45 menit; semua tugas memang selesai, tetapi ketua masih menganggur 10 menit, jadi tidak tepat pukul 14.03. Opsi D (Menyiapkan bel penilai dan menulis daftar hadir): memilih dua tugas terpendek, 13 + 11 = 24 menit; sisa tugasnya 79 menit, lewat 11 menit. Opsi E (Mencetak lembar soal dan menyiapkan bel penilai): mengambil dua tugas teratas dalam daftar tanpa menghitung; 18 + 13 = 31 menit; sisa tugasnya 72 menit, lewat 4 menit. Jawaban: Memasang papan skor dan menulis daftar hadir (A). Tips: ubah pertanyaan menjadi \"pasangan mana yang jumlahnya sama dengan kelebihan\", lalu cukup jumlahkan dua angka di tiap opsi.",
+        "data": {
+          "jendela": [
+            "12.55",
+            "14.03"
+          ],
+          "tugas": [
+            {
+              "nama": "Mencetak lembar soal",
+              "menit": 18
+            },
+            {
+              "nama": "Menyiapkan bel penilai",
+              "menit": 13
+            },
+            {
+              "nama": "Memasang papan skor",
+              "menit": 24
+            },
+            {
+              "nama": "Mengatur kursi peserta",
+              "menit": 21
+            },
+            {
+              "nama": "Memeriksa mikrofon juri",
+              "menit": 16
+            },
+            {
+              "nama": "Menulis daftar hadir",
+              "menit": 11
+            }
+          ],
+          "tanya": "pas",
+          "opsi": [
+            [
+              "Memasang papan skor",
+              "Menulis daftar hadir"
+            ],
+            [
+              "Mencetak lembar soal",
+              "Memeriksa mikrofon juri"
+            ],
+            [
+              "Memasang papan skor",
+              "Mengatur kursi peserta"
+            ],
+            [
+              "Menyiapkan bel penilai",
+              "Menulis daftar hadir"
+            ],
+            [
+              "Mencetak lembar soal",
+              "Menyiapkan bel penilai"
+            ]
+          ]
+        }
+      },
+      {
+        "s": 91,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "strategi",
+        "d": 2,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p19alok91",
+        "q": "Pertanyaan: Langkah manakah yang paling tepat agar semua persiapan selesai sebelum seminar dimulai?",
+        "c": [
+          "Memakai waktu makan siang untuk tetap bekerja",
+          "Melewatkan uji proyektor",
+          "Meminta rekan panitia mencetak sertifikat peserta seminar",
+          "Meminta rekan panitia menguji proyektor",
+          "Menyiapkan meja pendaftaran ulang setelah seminar dimulai"
+        ],
+        "k": "C",
+        "p": "1. Ubah waktu persiapan ke menit: pukul 13.10 hingga 15.00 = 110 menit. Waktu makan siang 13.50 hingga 14.10 = 20 menit, jadi waktu kerja = 110 − 20 = 90 menit.\n2. Jumlahkan durasi tugas: 28 + 22 + 12 + 46 = 108 menit.\n3. Kelebihan: 108 − 90 = 18 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 18 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan acara. Hanya meminta rekan mencetak sertifikat peserta seminar yang memenuhi ketiganya: tugas tetap dikerjakan, waktunya hemat 28 menit (≥ 18 menit), dan ia tetap makan siang.<br>Opsi A (Memakai waktu makan siang untuk tetap bekerja): hitungannya cukup (20 menit), tetapi bukan delegasi dan mengorbankan kebutuhan dasar makan dan istirahat. Opsi B (Melewatkan uji proyektor): bukan delegasi; tugas inti ditinggalkan, hanya hemat 12 menit sehingga tetap kurang 6 menit, dan proyektor berisiko gagal saat acara. Opsi D (Meminta rekan panitia menguji proyektor): sudah delegasi, tetapi hanya menghemat 12 menit, kurang dari kelebihan 18 menit. Opsi E (Menyiapkan meja pendaftaran ulang setelah seminar dimulai): menunda tugas sampai lewat tenggat; peserta datang sebelum meja pendaftaran ulang siap. Jawaban: Meminta rekan panitia mencetak sertifikat peserta seminar (C). Tips: delegasi berarti pekerjaan tetap berjalan oleh orang lain; melewatkan atau menunda tugas bukan delegasi. Setelah itu cek angkanya: waktu yang dihemat harus menutup kelebihan.",
+        "data": {
+          "jendela": [
+            "13.10",
+            "15.00"
+          ],
+          "jeda": [
+            [
+              "13.50",
+              "14.10"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Mencetak sertifikat peserta seminar",
+              "menit": 28
+            },
+            {
+              "nama": "Menyiapkan meja pendaftaran ulang",
+              "menit": 22
+            },
+            {
+              "nama": "Menguji proyektor",
+              "menit": 12
+            },
+            {
+              "nama": "Merapikan naskah pembawa acara",
+              "menit": 46
+            }
+          ],
+          "tanya": "strategi",
+          "opsi": [
+            {
+              "hemat": 20,
+              "delegasi": false,
+              "korban": true
+            },
+            {
+              "hemat": 12,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Menguji proyektor"
+            },
+            {
+              "hemat": 28,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Mencetak sertifikat peserta seminar"
+            },
+            {
+              "hemat": 12,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Menguji proyektor"
+            },
+            {
+              "hemat": 22,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Menyiapkan meja pendaftaran ulang"
+            }
+          ]
+        }
+      },
+      {
+        "s": 92,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "tenggat",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p19alok92",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya diserahkan kepada rekan agar semua tugas selesai tepat waktu?",
+        "c": [
+          "Menyiapkan berkas antrean pasien",
+          "Menyortir rekam medis",
+          "Mengentri data kunjungan kemarin",
+          "Menyusun laporan stok obat",
+          "Semua tugas dapat diselesaikan tanpa bantuan"
+        ],
+        "k": "D",
+        "p": "1. Ubah waktu kerja ke menit: pukul 07.25 hingga 08.48 = 1 jam 23 menit = 83 menit.\n2. Jumlahkan durasi tugas: 33 + 27 + 16 + 12 + 19 = 107 menit.\n3. Kelebihan: 107 − 83 = 24 menit. Tugas yang diserahkan harus berdurasi minimal 24 menit, dan rekan harus sempat menyelesaikannya: rekan baru mulai pukul 08.05.\n4. Cek opsi: tugas berdurasi minimal 24 menit hanya berkas antrean (33 menit) dan laporan stok obat (27 menit). Berkas antrean harus siap pukul 08.00, sebelum rekan tiba, jadi harus dikerjakan sendiri lebih dulu: 07.25 + 33 menit = 07.58. Yang diserahkan adalah laporan stok obat; rekan mengerjakannya pukul 08.05 hingga 08.32, dan sisa tugasnya sendiri 33 + 16 + 12 + 19 = 80 menit, selesai pukul 08.45.<br>Opsi A (Menyiapkan berkas antrean pasien): melepas tugas terpanjang tanpa memperhatikan tenggat; rekan baru mulai 08.05 sehingga berkas selesai 08.38, lewat dari 08.00. Opsi B (Menyortir rekam medis): menaksir tanpa menghitung kelebihan; hanya menghemat 19 menit, sisa tugasnya 88 menit, lewat 5 menit. Opsi C (Mengentri data kunjungan kemarin): memilih tugas ringan agar rekan yang datang terlambat pasti sempat; hanya menghemat 16 menit, sisa tugasnya 91 menit, lewat 8 menit. Opsi E (Semua tugas dapat diselesaikan tanpa bantuan): muncul jika jam dikurangkan seperti bilangan biasa, 848 − 725 = 123 menit; padahal waktunya hanya 83 menit. Jawaban: Menyusun laporan stok obat (D). Tips: setelah menemukan tugas yang cukup panjang, cek juga kapan penolong mulai bekerja dan tenggat tugas itu.",
+        "data": {
+          "jendela": [
+            "07.25",
+            "08.48"
+          ],
+          "rekan_mulai": "08.05",
+          "tugas": [
+            {
+              "nama": "Menyiapkan berkas antrean pasien",
+              "menit": 33,
+              "tenggat": "08.00"
+            },
+            {
+              "nama": "Menyusun laporan stok obat",
+              "menit": 27
+            },
+            {
+              "nama": "Mengentri data kunjungan kemarin",
+              "menit": 16
+            },
+            {
+              "nama": "Membalas surat undangan",
+              "menit": 12
+            },
+            {
+              "nama": "Menyortir rekam medis",
+              "menit": 19
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Menyiapkan berkas antrean pasien"
+            ],
+            [
+              "Menyortir rekam medis"
+            ],
+            [
+              "Mengentri data kunjungan kemarin"
+            ],
+            [
+              "Menyusun laporan stok obat"
+            ],
+            []
+          ]
+        }
+      }
+    ]
+  },
+  "15": {
+    "wacana": {
+      "p15alok88": "Sekretaris RT memiliki waktu luang pada malam hari, yaitu dari pukul 18.40 hingga 19.45. Ia ingin memakai waktu itu untuk menyelesaikan beberapa pekerjaan berikut:\n\n• Menulis undangan kerja bakti: 24 menit\n• Merekap iuran kebersihan: 19 menit\n• Menggandakan daftar hadir warga: 13 menit\n• Memasang pengumuman di papan warga: 9 menit\n• Menghubungi pemilik sewa tenda: 15 menit\n\nWaktunya tidak cukup untuk mengerjakan semuanya. Seorang pengurus RT bersedia membantu mengerjakan satu tugas, tetapi sekretaris ingin menyerahkan tugas yang sesingkat mungkin agar pengurus itu tidak terlalu terbebani.",
+      "p15alok89": "Seorang ibu memiliki waktu untuk pekerjaan rumah pada siang hari, yaitu dari pukul 14.05 hingga 15.35. Ia berencana menyelesaikan beberapa pekerjaan berikut:\n\n• Memasak sayur bening: 21 menit\n• Mencuci seragam sekolah: 24 menit\n• Membersihkan akuarium: 18 menit\n• Mengganti sprei kamar: 16 menit\n• Merapikan rak sepatu: 13 menit\n\nPada pukul 14.45 hingga 15.05 ia harus mengantar anak bungsunya ke tempat les, sehingga waktu itu tidak dapat dipakai bekerja; pekerjaan yang terpotong dilanjutkan sepulangnya. Anak sulungnya yang tetap di rumah dapat mengerjakan satu tugas sejak pukul 14.05.",
+      "p15alok90": "Koordinator bank sampah RW memiliki waktu kerja pada sore hari, yaitu dari pukul 15.20 hingga 16.35. Ada beberapa pekerjaan yang menunggu:\n\n• Menimbang sampah plastik: 16 menit\n• Menghitung saldo tabungan nasabah: 25 menit\n• Mengikat kardus bekas: 9 menit\n• Mencatat setoran nasabah: 21 menit\n• Menempel label karung: 12 menit\n• Membersihkan timbangan gantung: 8 menit\n• Menyapu gudang penampungan: 5 menit\n\nPada pukul 15.50 hingga 16.05 ia menerima setoran sampah dari warga, sehingga waktu itu tidak dapat dipakai untuk pekerjaan di atas. Tidak ada yang membantunya, dan setiap tugas hanya dihitung bila selesai utuh.",
+      "p15alok91": "Ketua panitia lomba kampung memiliki waktu persiapan pada pagi hari, yaitu dari pukul 06.30 hingga 07.40. Sebelum lomba dimulai pukul 07.40, ia harus menyelesaikan pekerjaan berikut:\n\n• Memompa bola voli: 14 menit\n• Menggaris lapangan lomba: 26 menit\n• Menyiapkan hadiah pemenang: 18 menit\n• Mengecek pengeras suara: 12 menit\n\nPada pukul 07.00 hingga 07.15 ia sarapan bersama panitia lain agar kuat bertugas seharian. Seorang rekan panitia sudah datang dan bersedia membantu.",
+      "p15alok92": "Seorang staf keuangan kantor desa memiliki waktu luang pada siang hari, yaitu dari pukul 10.48 hingga 12.03. Ia ingin memanfaatkan waktu tersebut untuk menyelesaikan beberapa pekerjaan berikut:\n\n• Memverifikasi kuitansi belanja: 34 menit\n• Merekap daftar lembur pegawai: 22 menit\n• Menyusun map arsip surat: 15 menit\n• Mengisi buku tamu kantor: 13 menit\n• Menjilid laporan triwulan: 9 menit\n\nKarena keterbatasan waktu, ia mempertimbangkan untuk meminta bantuan rekan kerja dalam menyelesaikan salah satu tugas. Kuitansi belanja hanya boleh diverifikasi oleh staf keuangan sendiri."
+    },
+    "soal": [
+      {
+        "s": 88,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "terpendek",
+        "d": 2,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p15alok88",
+        "q": "Pertanyaan: Tugas terpendek manakah yang jika diserahkan sudah membuat semua tugas lainnya selesai pukul 19.45?",
+        "c": [
+          "Menulis undangan kerja bakti",
+          "Menggandakan daftar hadir warga",
+          "Merekap iuran kebersihan",
+          "Memasang pengumuman di papan warga",
+          "Menghubungi pemilik sewa tenda"
+        ],
+        "k": "E",
+        "p": "1. Ubah waktu luang ke menit: pukul 18.40 hingga 19.45 = 20 + 45 = 65 menit.\n2. Jumlahkan durasi tugas: 24 + 19 + 13 + 9 + 15 = 80 menit.\n3. Kelebihan: 80 − 65 = 15 menit. Tugas yang diserahkan harus berdurasi minimal 15 menit.\n4. Tugas yang cukup: menulis undangan (24 menit), merekap iuran (19 menit), dan menghubungi pemilik sewa tenda (15 menit). Yang terpendek di antara ketiganya adalah menghubungi pemilik sewa tenda, 15 menit; sisa tugasnya 24 + 19 + 13 + 9 = 65 menit, pas dengan waktu luang.<br>Opsi A (Menulis undangan kerja bakti): cukup, tetapi 24 menit bukan yang terpendek; memilih tugas terpanjang tanpa membaca syarat \"terpendek\". Opsi B (Menggandakan daftar hadir warga): menebak tugas pendek tanpa menghitung kelebihan; 13 menit kurang 2 menit dari kelebihan 15 menit, sehingga sisa tugasnya 67 menit. Opsi C (Merekap iuran kebersihan): berhenti pada tugas pertama yang cukup tanpa membandingkannya dengan tugas cukup lain; 19 menit masih lebih panjang dari 15 menit. Opsi D (Memasang pengumuman di papan warga): tugas paling singkat, tetapi 9 menit jauh di bawah kelebihan; syarat \"cukup\" dilupakan. Jawaban: Menghubungi pemilik sewa tenda (E). Tips: hitung kelebihan dulu, buang semua tugas yang lebih pendek darinya, lalu ambil yang terkecil dari sisanya.",
+        "data": {
+          "jendela": [
+            "18.40",
+            "19.45"
+          ],
+          "tanya": "terpendek",
+          "opsi": [
+            [
+              "Menulis undangan kerja bakti"
+            ],
+            [
+              "Menggandakan daftar hadir warga"
+            ],
+            [
+              "Merekap iuran kebersihan"
+            ],
+            [
+              "Memasang pengumuman di papan warga"
+            ],
+            [
+              "Menghubungi pemilik sewa tenda"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Menulis undangan kerja bakti",
+              "menit": 24
+            },
+            {
+              "nama": "Merekap iuran kebersihan",
+              "menit": 19
+            },
+            {
+              "nama": "Menggandakan daftar hadir warga",
+              "menit": 13
+            },
+            {
+              "nama": "Memasang pengumuman di papan warga",
+              "menit": 9
+            },
+            {
+              "nama": "Menghubungi pemilik sewa tenda",
+              "menit": 15
+            }
+          ]
+        }
+      },
+      {
+        "s": 89,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "jeda-tengah",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p15alok89",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya diserahkan kepada anak sulung agar semua pekerjaan selesai pukul 15.35?",
+        "c": [
+          "Memasak sayur bening",
+          "Mencuci seragam sekolah",
+          "Membersihkan akuarium",
+          "Mengganti sprei kamar",
+          "Semua tugas dapat diselesaikan tanpa bantuan"
+        ],
+        "k": "B",
+        "p": "1. Ubah waktu ke menit: pukul 14.05 hingga 15.35 = 90 menit. Mengantar les pukul 14.45 hingga 15.05 memakan 20 menit, jadi waktu kerja ibu = 90 − 20 = 70 menit.\n2. Jumlahkan durasi tugas: 21 + 24 + 18 + 16 + 13 = 92 menit.\n3. Kelebihan: 92 − 70 = 22 menit. Tugas yang diserahkan harus berdurasi minimal 22 menit.\n4. Hanya mencuci seragam sekolah (24 menit) yang mencapai 22 menit. Sisa tugas ibu 21 + 18 + 16 + 13 = 68 menit, muat dalam 70 menit; anak sulung selesai pukul 14.29.<br>Opsi A (Memasak sayur bening): 21 menit, kurang 1 menit; cukup hanya jika waktu mengantar les tidak dipotong. Opsi C (Membersihkan akuarium): 18 menit, juga hanya cukup kalau jeda 20 menit dilupakan (kelebihan dikira 92 − 90 = 2 menit). Opsi D (Mengganti sprei kamar): 16 menit, kesalahan yang sama; sisa tugasnya 76 menit melebihi 70 menit. Opsi E (Semua tugas dapat diselesaikan tanpa bantuan): menebak tanpa menjumlahkan durasi; total 92 menit melebihi waktu kerja 70 menit, bahkan melebihi seluruh 90 menit. Jawaban: Mencuci seragam sekolah (B). Tips: potong jeda dari waktu yang tersedia sebelum menghitung kelebihan.",
+        "data": {
+          "jendela": [
+            "14.05",
+            "15.35"
+          ],
+          "jeda": [
+            [
+              "14.45",
+              "15.05"
+            ]
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Memasak sayur bening"
+            ],
+            [
+              "Mencuci seragam sekolah"
+            ],
+            [
+              "Membersihkan akuarium"
+            ],
+            [
+              "Mengganti sprei kamar"
+            ],
+            []
+          ],
+          "tugas": [
+            {
+              "nama": "Memasak sayur bening",
+              "menit": 21
+            },
+            {
+              "nama": "Mencuci seragam sekolah",
+              "menit": 24
+            },
+            {
+              "nama": "Membersihkan akuarium",
+              "menit": 18
+            },
+            {
+              "nama": "Mengganti sprei kamar",
+              "menit": 16
+            },
+            {
+              "nama": "Merapikan rak sepatu",
+              "menit": 13
+            }
+          ]
+        }
+      },
+      {
+        "s": 90,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "maks",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p15alok90",
+        "q": "Pertanyaan: Paling banyak berapa tugas yang dapat ia selesaikan secara utuh dalam waktu tersebut?",
+        "c": [
+          "2 tugas utuh",
+          "3 tugas utuh",
+          "4 tugas utuh",
+          "5 tugas utuh",
+          "6 tugas utuh"
+        ],
+        "k": "D",
+        "p": "1. Ubah waktu ke menit: pukul 15.20 hingga 16.35 = 75 menit. Menerima setoran 15.50 hingga 16.05 = 15 menit, jadi waktu kerja = 75 − 15 = 60 menit.\n2. Jumlahkan durasi tugas: 16 + 25 + 9 + 21 + 12 + 8 + 5 = 96 menit. Kelebihan 96 − 60 = 36 menit, jadi tidak semua tugas muat.\n3. Agar jumlah tugas paling banyak, kerjakan dari yang tersingkat: 5 + 8 + 9 + 12 + 16 = 50 menit (5 tugas). Tugas berikutnya yang tersingkat 21 menit, dan 50 + 21 = 71 menit melebihi 60 menit.\n4. Jadi paling banyak 5 tugas.<br>Opsi A (2 tugas utuh): mengambil dari yang terlama (25 + 21 = 46 menit, lalu 46 + 16 = 62 menit sudah lewat). Opsi B (3 tugas utuh): mengerjakan sesuai urutan daftar (16 + 25 + 9 = 50 menit, lalu 21 menit tidak muat) tanpa memilih yang tersingkat. Opsi C (4 tugas utuh): jeda dipotong dua kali sehingga waktu kerja dikira 45 menit (5 + 8 + 9 + 12 = 34 menit, lalu 16 menit tidak muat). Opsi E (6 tugas utuh): lupa memotong jeda, waktu kerja dikira 75 menit (5 + 8 + 9 + 12 + 16 + 21 = 71 menit). Jawaban: 5 tugas utuh (D). Tips: untuk \"paling banyak tugas\", urutkan dari yang tersingkat lalu jumlahkan sampai hampir melewati waktu kerja.",
+        "data": {
+          "jendela": [
+            "15.20",
+            "16.35"
+          ],
+          "jeda": [
+            [
+              "15.50",
+              "16.05"
+            ]
+          ],
+          "tanya": "maks",
+          "opsi": [
+            "2 tugas utuh",
+            "3 tugas utuh",
+            "4 tugas utuh",
+            "5 tugas utuh",
+            "6 tugas utuh"
+          ],
+          "tugas": [
+            {
+              "nama": "Menimbang sampah plastik",
+              "menit": 16
+            },
+            {
+              "nama": "Menghitung saldo tabungan nasabah",
+              "menit": 25
+            },
+            {
+              "nama": "Mengikat kardus bekas",
+              "menit": 9
+            },
+            {
+              "nama": "Mencatat setoran nasabah",
+              "menit": 21
+            },
+            {
+              "nama": "Menempel label karung",
+              "menit": 12
+            },
+            {
+              "nama": "Membersihkan timbangan gantung",
+              "menit": 8
+            },
+            {
+              "nama": "Menyapu gudang penampungan",
+              "menit": 5
+            }
+          ]
+        }
+      },
+      {
+        "s": 91,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "strategi",
+        "d": 2,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p15alok91",
+        "q": "Pertanyaan: Langkah manakah yang paling tepat agar semua persiapan selesai sebelum lomba dimulai?",
+        "c": [
+          "Melewatkan sarapan agar bisa terus bekerja",
+          "Meminta rekan panitia memompa bola voli",
+          "Mengecek pengeras suara setelah lomba dimulai",
+          "Beristirahat sejenak sambil menunggu peserta datang",
+          "Meminta rekan panitia menggaris lapangan lomba"
+        ],
+        "k": "E",
+        "p": "1. Ubah waktu persiapan ke menit: pukul 06.30 hingga 07.40 = 70 menit. Sarapan 07.00 hingga 07.15 = 15 menit, jadi waktu kerja = 70 − 15 = 55 menit.\n2. Jumlahkan durasi tugas: 14 + 26 + 18 + 12 = 70 menit.\n3. Kelebihan: 70 − 55 = 15 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan, apakah menghemat minimal 15 menit, dan apakah tidak mengorbankan kebutuhan dasar atau acara. Hanya meminta rekan menggaris lapangan yang memenuhi ketiganya: hemat 26 menit (≥ 15 menit) dan ia tetap sarapan.<br>Opsi A (Melewatkan sarapan agar bisa terus bekerja): hemat 15 menit, tetapi bukan delegasi dan mengorbankan kebutuhan dasar makan. Opsi B (Meminta rekan panitia memompa bola voli): sudah delegasi, tetapi hanya hemat 14 menit, kurang 1 menit dari kelebihan. Opsi C (Mengecek pengeras suara setelah lomba dimulai): menunda tugas sampai lewat tenggat; acara bisa terganggu bila pengeras suara rusak. Opsi D (Beristirahat sejenak sambil menunggu peserta datang): kegiatan tidak produktif yang justru menambah kekurangan waktu. Jawaban: Meminta rekan panitia menggaris lapangan lomba (E). Tips: delegasi berarti tugas tetap dikerjakan orang lain; lalu cek angkanya, waktu yang dihemat harus menutup kelebihan.",
+        "data": {
+          "jendela": [
+            "06.30",
+            "07.40"
+          ],
+          "jeda": [
+            [
+              "07.00",
+              "07.15"
+            ]
+          ],
+          "tanya": "strategi",
+          "opsi": [
+            {
+              "hemat": 15,
+              "delegasi": false,
+              "korban": true
+            },
+            {
+              "hemat": 14,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Memompa bola voli"
+            },
+            {
+              "hemat": 12,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Mengecek pengeras suara"
+            },
+            {
+              "hemat": 0,
+              "delegasi": false,
+              "korban": false
+            },
+            {
+              "hemat": 26,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Menggaris lapangan lomba"
+            }
+          ],
+          "tugas": [
+            {
+              "nama": "Memompa bola voli",
+              "menit": 14
+            },
+            {
+              "nama": "Menggaris lapangan lomba",
+              "menit": 26
+            },
+            {
+              "nama": "Menyiapkan hadiah pemenang",
+              "menit": 18
+            },
+            {
+              "nama": "Mengecek pengeras suara",
+              "menit": 12
+            }
+          ]
+        }
+      },
+      {
+        "s": 92,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "contoh",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p15alok92",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya didelegasikan agar tugas lainnya dapat diselesaikan dalam waktu yang tersedia?",
+        "c": [
+          "Merekap daftar lembur pegawai",
+          "Memverifikasi kuitansi belanja",
+          "Menyusun map arsip surat",
+          "Mengisi buku tamu kantor",
+          "Semua tugas dapat diselesaikan tanpa bantuan"
+        ],
+        "k": "A",
+        "p": "1. Ubah waktu luang ke menit: dari 10.48 ke 11.00 = 12 menit, dari 11.00 ke 12.03 = 63 menit, jadi 12 + 63 = 75 menit.\n2. Jumlahkan durasi tugas: 34 + 22 + 15 + 13 + 9 = 93 menit.\n3. Kelebihan: 93 − 75 = 18 menit. Tugas yang didelegasikan harus berdurasi minimal 18 menit dan bukan tugas yang wajib dikerjakan staf keuangan sendiri.\n4. Tugas berdurasi minimal 18 menit hanya memverifikasi kuitansi belanja (34 menit) dan merekap daftar lembur (22 menit). Kuitansi wajib diverifikasi sendiri, jadi yang didelegasikan adalah merekap daftar lembur; sisa tugasnya 34 + 15 + 13 + 9 = 71 menit, muat dalam 75 menit.<br>Opsi B (Memverifikasi kuitansi belanja): tugas terpanjang, tetapi kendala menyebut kuitansi hanya boleh diverifikasi staf keuangan. Opsi C (Menyusun map arsip surat): 15 menit; cukup hanya jika jendela dibulatkan menjadi 10.45 hingga 12.05 (80 menit, kelebihan dikira 13 menit), padahal kelebihannya 18 menit. Opsi D (Mengisi buku tamu kantor): kesalahan pembulatan jendela yang sama (kelebihan dikira 13 menit); padahal 13 menit kurang 5 menit dari kelebihan 18 menit. Opsi E (Semua tugas dapat diselesaikan tanpa bantuan): salah menghitung jam, 12.03 − 10.48 dibaca seperti bilangan biasa menjadi 1 jam 55 menit (115 menit), padahal hanya 75 menit. Jawaban: Merekap daftar lembur pegawai (A). Tips: hitung jendela yang melewati jam penuh dalam dua potong (ke jam bulat, lalu sisanya), dan coret dulu tugas yang wajib dikerjakan sendiri.",
+        "data": {
+          "jendela": [
+            "10.48",
+            "12.03"
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Merekap daftar lembur pegawai"
+            ],
+            [
+              "Memverifikasi kuitansi belanja"
+            ],
+            [
+              "Menyusun map arsip surat"
+            ],
+            [
+              "Mengisi buku tamu kantor"
+            ],
+            []
+          ],
+          "tugas": [
+            {
+              "nama": "Memverifikasi kuitansi belanja",
+              "menit": 34,
+              "sendiri": true
+            },
+            {
+              "nama": "Merekap daftar lembur pegawai",
+              "menit": 22
+            },
+            {
+              "nama": "Menyusun map arsip surat",
+              "menit": 15
+            },
+            {
+              "nama": "Mengisi buku tamu kantor",
+              "menit": 13
+            },
+            {
+              "nama": "Menjilid laporan triwulan",
+              "menit": 9
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "20": {
+    "wacana": {
+      "p20alok88": "Seorang guru wali kelas memiliki jam kosong di sekolah, yaitu dari pukul 08.20 hingga 10.06. Ia ingin memanfaatkan waktu tersebut untuk menyelesaikan beberapa pekerjaan berikut:\n\n• Menilai lembar ulangan harian: 38 menit\n• Merekap nilai rapor bayangan: 24 menit\n• Menyusun soal remedial: 19 menit\n• Memeriksa jurnal kelas: 13 menit\n• Menempel jadwal kebersihan kelas: 8 menit\n\nPada pukul 08.55 hingga 09.10 ia wajib mengawasi siswa yang sedang praktik di laboratorium, dan pada pukul 09.35 hingga 09.45 ia sudah berjanji menerima seorang wali murid. Kedua waktu itu tidak dapat dipakai bekerja; pekerjaan yang terpotong dilanjutkan sesudahnya. Lembar ulangan harian hanya boleh dinilai oleh guru mata pelajarannya sendiri. Seorang guru lain bersedia membantu satu tugas.",
+      "p20alok89": "Seorang relawan posko pengungsian banjir mendapat giliran kerja dari pukul 13.25 hingga 15.40. Pada giliran itu ada beberapa pekerjaan yang harus diselesaikan:\n\n• Mendata pengungsi yang baru tiba: 34 menit\n• Membagikan tikar tidur: 22 menit\n• Menyusun kardus logistik: 27 menit\n• Merebus air minum: 18 menit\n• Memasang terpal dapur umum: 25 menit\n\nSeorang rekan relawan ikut bekerja sejak pukul 13.25. Mereka bekerja bersamaan, dan masing-masing mengerjakan tugasnya satu per satu. Setiap tugas harus dikerjakan utuh oleh satu orang; satu tugas tidak dapat dibagi dua atau dikerjakan berdua.",
+      "p20alok90": "Seorang staf administrasi kantor kelurahan memiliki waktu kerja di kantor dari pukul 09.38 hingga 11.04. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Menyalin notulen musyawarah warga: 36 menit\n• Menginput data penerima bantuan: 30 menit\n• Mengarsip surat pengantar: 22 menit\n• Merapikan papan informasi: 14 menit\n• Mengisi buku tamu harian: 10 menit\n\nSeorang staf magang bersedia membantu satu tugas, tetapi ia baru dapat mulai pukul 10.16 karena masih melayani warga di loket. Staf magang belum terbiasa dengan pekerjaan ini sehingga ia memerlukan waktu 1,5 kali lebih lama daripada staf administrasi untuk tugas yang sama. Semua tugas, termasuk yang dibantu, harus selesai pukul 11.04.",
+      "p20alok91": "Seorang kakak sulung menyiapkan acara syukuran keluarga di rumah. Waktu persiapannya dari pukul 10.50 hingga 12.56, karena tamu mulai datang pukul 12.56. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Memasak nasi kuning: 48 menit\n• Membersihkan ruang tamu: 26 menit\n• Menata kursi tamu: 17 menit\n• Membungkus bingkisan untuk tamu: 21 menit\n• Menghias meja tumpeng: 14 menit\n\nPukul 11.45 hingga 12.05 adalah waktu makan siang dan istirahatnya; pekerjaan yang terpotong dilanjutkan sesudahnya. Semua persiapan harus selesai sebelum tamu datang. Adik-adiknya bersedia membantu.",
+      "p20alok92": "Pemilik kios sembako di pasar memiliki waktu sebelum kios ramai pembeli, yaitu dari pukul 06.40 hingga 08.05. Ia harus menyelesaikan beberapa pekerjaan berikut:\n\n• Menimbang gula pasir: 26 menit\n• Mengemas minyak goreng curah: 18 menit\n• Mencatat utang pelanggan: 33 menit\n• Menyusun karung beras: 21 menit\n• Menempel label harga: 14 menit\n\nPada pukul 07.15 hingga 07.30 ia harus menerima dan memeriksa kiriman dari pemasok, sehingga waktu itu tidak dapat dipakai bekerja; pekerjaan yang terpotong dilanjutkan sesudahnya. Catatan utang pelanggan hanya boleh diisi oleh pemilik kios. Anak pemilik kios bersedia mengerjakan dua tugas satu per satu, tetapi ia baru datang pukul 07.20; tugas yang dibantunya juga harus selesai pukul 08.05."
+    },
+    "soal": [
+      {
+        "s": 88,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "dua-jeda",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p20alok88",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya didelegasikan agar tugas lainnya dapat diselesaikan dalam waktu yang tersedia?",
+        "c": [
+          "Menyusun soal remedial",
+          "Menilai lembar ulangan harian",
+          "Merekap nilai rapor bayangan",
+          "Menempel jadwal kebersihan kelas",
+          "Semua tugas dapat diselesaikan tanpa bantuan"
+        ],
+        "k": "C",
+        "p": "1. Ubah jam kosong ke menit: pukul 08.20 hingga 10.06 = 1 jam 46 menit = 106 menit. Ada dua jeda: 08.55 hingga 09.10 = 15 menit dan 09.35 hingga 09.45 = 10 menit, jadi waktu kerja = 106 − 15 − 10 = 81 menit.\n2. Jumlahkan durasi tugas: 38 + 24 + 19 + 13 + 8 = 102 menit.\n3. Kelebihan: 102 − 81 = 21 menit. Tugas yang diserahkan harus berdurasi minimal 21 menit dan boleh dikerjakan orang lain.\n4. Cek opsi: tugas berdurasi minimal 21 menit hanya menilai lembar ulangan harian (38 menit) dan merekap nilai rapor bayangan (24 menit). Lembar ulangan hanya boleh dinilai guru mata pelajarannya, jadi yang diserahkan adalah merekap nilai rapor bayangan; sisa tugasnya 38 + 19 + 13 + 8 = 78 menit, muat dalam 81 menit.<br>Opsi A (Menyusun soal remedial): lupa jeda kedua (10 menit), sehingga waktu kerja dikira 91 menit dan kelebihan 11 menit; padahal soal remedial hanya menghemat 19 menit dan sisa tugasnya 83 menit, lewat 2 menit. Opsi B (Menilai lembar ulangan harian): melepas tugas terpanjang tanpa membaca kendala; lembar ulangan hanya boleh dinilai guru mata pelajarannya sendiri. Opsi D (Menempel jadwal kebersihan kelas): lupa jeda pertama (15 menit), sehingga waktu kerja dikira 96 menit dan kelebihan hanya 6 menit; padahal tugas ini hanya menghemat 8 menit dan sisa tugasnya 94 menit. Opsi E (Semua tugas dapat diselesaikan tanpa bantuan): lupa kedua jeda; total 102 menit memang muat dalam 106 menit, tetapi waktu kerja sebenarnya hanya 81 menit. Jawaban: Merekap nilai rapor bayangan (C). Tips: coret semua jeda dari jendela lebih dulu (jumlahkan semua jeda, bukan hanya satu), baru hitung kelebihan dan cari tugas yang menutupinya.",
+        "data": {
+          "jendela": [
+            "08.20",
+            "10.06"
+          ],
+          "jeda": [
+            [
+              "08.55",
+              "09.10"
+            ],
+            [
+              "09.35",
+              "09.45"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Menilai lembar ulangan harian",
+              "menit": 38,
+              "sendiri": true
+            },
+            {
+              "nama": "Merekap nilai rapor bayangan",
+              "menit": 24
+            },
+            {
+              "nama": "Menyusun soal remedial",
+              "menit": 19
+            },
+            {
+              "nama": "Memeriksa jurnal kelas",
+              "menit": 13
+            },
+            {
+              "nama": "Menempel jadwal kebersihan kelas",
+              "menit": 8
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Menyusun soal remedial"
+            ],
+            [
+              "Menilai lembar ulangan harian"
+            ],
+            [
+              "Merekap nilai rapor bayangan"
+            ],
+            [
+              "Menempel jadwal kebersihan kelas"
+            ],
+            []
+          ]
+        }
+      },
+      {
+        "s": 89,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "paralel",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p20alok89",
+        "q": "Pertanyaan: Jika keduanya membagi tugas sebaik mungkin, paling cepat pukul berapa semua tugas selesai?",
+        "c": [
+          "14.28",
+          "14.30",
+          "14.35",
+          "14.48",
+          "15.31"
+        ],
+        "k": "B",
+        "p": "1. Jumlahkan durasi tugas: 34 + 22 + 27 + 18 + 25 = 126 menit. Jika bisa dibagi persis rata, masing-masing 63 menit.\n2. Karena tugas tidak dapat dipecah, cari pembagian yang beban terberatnya paling kecil. Agar selesai lebih cepat dari 65 menit, beban tiap orang harus 62, 63, atau 64 menit, padahal tidak ada gabungan tugas yang berjumlah sebesar itu (yang terdekat 61 dan 65 menit).\n3. Pembagian terbaik: relawan mengerjakan mendata pengungsi yang baru tiba + menyusun kardus logistik = 34 + 27 = 61 menit; rekan mengerjakan membagikan tikar tidur + merebus air minum + memasang terpal dapur umum = 22 + 18 + 25 = 65 menit.\n4. Semua tugas selesai saat beban terberat selesai: 13.25 + 65 menit = 14.30.<br>Opsi A (14.28): membagi total sama rata padahal tugas tidak bisa dipecah; 126 ÷ 2 = 63 menit tidak dapat dicapai oleh gabungan tugas mana pun. Opsi C (14.35): pembagian rakus, yaitu tugas diambil dari yang terpanjang dan selalu diberikan kepada orang yang bebannya lebih ringan; hasilnya 34 + 22 = 56 menit dan 27 + 25 + 18 = 70 menit, selesai 13.25 + 70 menit. Opsi D (14.48): membagi rata jumlah tugas, bukan durasinya; tiga tugas pertama (34 + 22 + 27 = 83 menit) untuk satu orang dan dua sisanya untuk yang lain, selesai 13.25 + 83 menit. Opsi E (15.31): menghitung seolah-olah semua tugas dikerjakan seorang diri, 13.25 + 126 menit. Jawaban: 14.30 (B). Tips: hitung separuh total sebagai batas bawah, lalu cari gabungan tugas yang paling dekat ke angka itu; jawaban tidak mungkin lebih cepat dari separuh total.",
+        "data": {
+          "jendela": [
+            "13.25",
+            "15.40"
+          ],
+          "tugas": [
+            {
+              "nama": "Mendata pengungsi yang baru tiba",
+              "menit": 34
+            },
+            {
+              "nama": "Membagikan tikar tidur",
+              "menit": 22
+            },
+            {
+              "nama": "Menyusun kardus logistik",
+              "menit": 27
+            },
+            {
+              "nama": "Merebus air minum",
+              "menit": 18
+            },
+            {
+              "nama": "Memasang terpal dapur umum",
+              "menit": 25
+            }
+          ],
+          "tanya": "paralel",
+          "opsi": [
+            "14.28",
+            "14.30",
+            "14.35",
+            "14.48",
+            "15.31"
+          ]
+        }
+      },
+      {
+        "s": 90,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "rekan-lambat",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p20alok90",
+        "q": "Pertanyaan: Tugas manakah yang sebaiknya diserahkan kepada staf magang agar semua tugas selesai tepat waktu?",
+        "c": [
+          "Menyalin notulen musyawarah warga",
+          "Mengarsip surat pengantar",
+          "Merapikan papan informasi",
+          "Semua tugas dapat diselesaikan tanpa bantuan",
+          "Menginput data penerima bantuan"
+        ],
+        "k": "E",
+        "p": "1. Ubah waktu kerja ke menit: pukul 09.38 hingga 11.04 = 1 jam 26 menit = 86 menit.\n2. Jumlahkan durasi tugas: 36 + 30 + 22 + 14 + 10 = 112 menit.\n3. Kelebihan: 112 − 86 = 26 menit. Tugas yang diserahkan harus berdurasi minimal 26 menit. Staf magang hanya punya waktu 10.16 hingga 11.04 = 48 menit dan bekerja 1,5 kali lebih lama, jadi durasi tugas itu paling banyak 48 ÷ 1,5 = 32 menit.\n4. Cek opsi: tugas berdurasi 26 sampai 32 menit hanya menginput data penerima bantuan (30 menit). Staf magang mengerjakannya 30 × 1,5 = 45 menit, pukul 10.16 hingga 11.01; sisa tugas staf administrasi 36 + 22 + 14 + 10 = 82 menit, muat dalam 86 menit.<br>Opsi A (Menyalin notulen musyawarah warga): durasinya memang cukup (36 menit ≥ 26 menit), tetapi lupa bahwa staf magang 1,5 kali lebih lambat; ia memerlukan 54 menit, mulai 10.16 dan baru selesai 11.10, lewat 6 menit. Opsi B (Mengarsip surat pengantar): mengalikan 1,5 pada waktu yang dihemat (22 × 1,5 = 33 menit) seolah-olah bantuan yang lambat menghemat lebih banyak; padahal yang dihemat hanya 22 menit, sehingga sisa tugasnya 90 menit, lewat 4 menit. Opsi C (Merapikan papan informasi): memilih tugas pendek agar staf magang yang lambat pasti sempat; ia memang selesai, tetapi hemat 14 menit tidak menutup kelebihan 26 menit. Opsi D (Semua tugas dapat diselesaikan tanpa bantuan): muncul jika jam dikurangkan seperti bilangan biasa, 1104 − 938 = 166 menit; padahal 1 jam = 60 menit, sehingga waktunya hanya 86 menit. Jawaban: Menginput data penerima bantuan (E). Tips: tugas yang diserahkan harus lolos dua batas, yaitu batas bawah (minimal sama dengan kelebihan) dan batas atas (waktu penolong dibagi faktor lambatnya).",
+        "data": {
+          "jendela": [
+            "09.38",
+            "11.04"
+          ],
+          "rekan_mulai": "10.16",
+          "rekan_faktor": 1.5,
+          "tugas": [
+            {
+              "nama": "Menyalin notulen musyawarah warga",
+              "menit": 36
+            },
+            {
+              "nama": "Menginput data penerima bantuan",
+              "menit": 30
+            },
+            {
+              "nama": "Mengarsip surat pengantar",
+              "menit": 22
+            },
+            {
+              "nama": "Merapikan papan informasi",
+              "menit": 14
+            },
+            {
+              "nama": "Mengisi buku tamu harian",
+              "menit": 10
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Menyalin notulen musyawarah warga"
+            ],
+            [
+              "Mengarsip surat pengantar"
+            ],
+            [
+              "Merapikan papan informasi"
+            ],
+            [],
+            [
+              "Menginput data penerima bantuan"
+            ]
+          ]
+        }
+      },
+      {
+        "s": 91,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "strategi",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p20alok91",
+        "q": "Pertanyaan: Langkah delegasi manakah yang paling tepat agar semua persiapan selesai sebelum tamu datang?",
+        "c": [
+          "Meminta adiknya membungkus bingkisan untuk tamu",
+          "Meminta adiknya menata kursi tamu",
+          "Memakai waktu makan siang untuk tetap bekerja",
+          "Melewatkan membersihkan ruang tamu",
+          "Menata kursi tamu setelah tamu mulai datang"
+        ],
+        "k": "A",
+        "p": "1. Ubah waktu persiapan ke menit: pukul 10.50 hingga 12.56 = 2 jam 6 menit = 126 menit. Waktu makan siang 11.45 hingga 12.05 = 20 menit, jadi waktu kerja = 126 − 20 = 106 menit.\n2. Jumlahkan durasi tugas: 48 + 26 + 17 + 21 + 14 = 126 menit.\n3. Kelebihan: 126 − 106 = 20 menit.\n4. Cek tiap langkah: apakah benar-benar meminta bantuan orang lain, apakah menghemat minimal 20 menit, dan apakah tidak mengorbankan kebutuhan dasar atau tujuan acara. Hanya meminta adik membungkus bingkisan untuk tamu yang memenuhi ketiganya: bingkisan tetap dibuat, waktunya hemat 21 menit (≥ 20 menit), dan ia tetap makan siang.<br>Opsi B (Meminta adiknya menata kursi tamu): sudah delegasi, tetapi delegasi tidak cukup; hanya menghemat 17 menit, kurang 3 menit dari kelebihan. Opsi ini terlihat cukup jika waktu makan siang lupa dipotong (total 126 menit dikira pas dengan 126 menit). Opsi C (Memakai waktu makan siang untuk tetap bekerja): hitungannya pas 20 menit, tetapi bukan delegasi dan mengorbankan kebutuhan dasar makan dan istirahat. Opsi D (Melewatkan membersihkan ruang tamu): hemat 26 menit, tetapi bukan delegasi; tugas inti ditinggalkan dan tamu disambut di ruang yang kotor. Opsi E (Menata kursi tamu setelah tamu mulai datang): menunda tugas sampai lewat tenggat; tamu datang sebelum tempat duduknya siap. Jawaban: Meminta adiknya membungkus bingkisan untuk tamu (A). Tips: saring dulu opsi yang benar-benar delegasi, lalu bandingkan menit yang dihemat dengan kelebihan; dua opsi delegasi bisa sama-sama terdengar baik, tetapi hanya satu yang angkanya cukup.",
+        "data": {
+          "jendela": [
+            "10.50",
+            "12.56"
+          ],
+          "jeda": [
+            [
+              "11.45",
+              "12.05"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Memasak nasi kuning",
+              "menit": 48
+            },
+            {
+              "nama": "Membersihkan ruang tamu",
+              "menit": 26
+            },
+            {
+              "nama": "Menata kursi tamu",
+              "menit": 17
+            },
+            {
+              "nama": "Membungkus bingkisan untuk tamu",
+              "menit": 21
+            },
+            {
+              "nama": "Menghias meja tumpeng",
+              "menit": 14
+            }
+          ],
+          "tanya": "strategi",
+          "opsi": [
+            {
+              "hemat": 21,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Membungkus bingkisan untuk tamu"
+            },
+            {
+              "hemat": 17,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Menata kursi tamu"
+            },
+            {
+              "hemat": 20,
+              "delegasi": false,
+              "korban": true
+            },
+            {
+              "hemat": 26,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Membersihkan ruang tamu"
+            },
+            {
+              "hemat": 17,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Menata kursi tamu"
+            }
+          ]
+        }
+      },
+      {
+        "s": 92,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "pasangan-jeda",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p20alok92",
+        "q": "Pertanyaan: Dua tugas manakah yang sebaiknya diserahkan kepada anaknya agar semua tugas selesai pukul 08.05?",
+        "c": [
+          "Mencatat utang pelanggan dan menimbang gula pasir",
+          "Menimbang gula pasir dan menyusun karung beras",
+          "Mengemas minyak goreng curah dan menyusun karung beras",
+          "Menimbang gula pasir dan mengemas minyak goreng curah",
+          "Mengemas minyak goreng curah dan menempel label harga"
+        ],
+        "k": "D",
+        "p": "1. Ubah waktu ke menit: pukul 06.40 hingga 08.05 = 1 jam 25 menit = 85 menit. Jeda 07.15 hingga 07.30 = 15 menit, jadi waktu kerja pemilik kios = 85 − 15 = 70 menit.\n2. Jumlahkan durasi tugas: 26 + 18 + 33 + 21 + 14 = 112 menit.\n3. Kelebihan: 112 − 70 = 42 menit. Dua tugas yang diserahkan harus berjumlah minimal 42 menit. Anaknya hanya punya waktu 07.20 hingga 08.05 = 45 menit, jadi jumlahnya juga paling banyak 45 menit, dan catatan utang tidak boleh diserahkan.\n4. Cek opsi: hanya menimbang gula pasir + mengemas minyak goreng curah = 26 + 18 = 44 menit yang berada di antara 42 dan 45 menit. Anaknya selesai pukul 08.04, dan sisa tugas pemilik kios 33 + 21 + 14 = 68 menit, muat dalam 70 menit.<br>Opsi A (Mencatat utang pelanggan dan menimbang gula pasir): memilih dua tugas terpanjang tanpa membaca kendala; catatan utang hanya boleh diisi pemilik kios, dan 59 menit juga melebihi waktu anaknya. Opsi B (Menimbang gula pasir dan menyusun karung beras): menghemat 47 menit, cukup untuk pemilik kios, tetapi lupa jam datang penolong; anaknya mulai 07.20 dan baru selesai 08.07, lewat 2 menit. Opsi C (Mengemas minyak goreng curah dan menyusun karung beras): lupa jeda 15 menit sehingga kelebihan dikira 112 − 85 = 27 menit; padahal hemat 39 menit masih kurang 3 menit dari kelebihan 42 menit. Opsi E (Mengemas minyak goreng curah dan menempel label harga): memilih dua tugas teringan agar tidak merepotkan penolong; hanya menghemat 32 menit, sisa tugasnya 80 menit, lewat 10 menit. Jawaban: Menimbang gula pasir dan mengemas minyak goreng curah (D). Tips: tentukan batas bawah (kelebihan setelah jeda) dan batas atas (waktu penolong), lalu cari pasangan yang jumlahnya jatuh di antara keduanya.",
+        "data": {
+          "jendela": [
+            "06.40",
+            "08.05"
+          ],
+          "jeda": [
+            [
+              "07.15",
+              "07.30"
+            ]
+          ],
+          "rekan_mulai": "07.20",
+          "tugas": [
+            {
+              "nama": "Menimbang gula pasir",
+              "menit": 26
+            },
+            {
+              "nama": "Mengemas minyak goreng curah",
+              "menit": 18
+            },
+            {
+              "nama": "Mencatat utang pelanggan",
+              "menit": 33,
+              "sendiri": true
+            },
+            {
+              "nama": "Menyusun karung beras",
+              "menit": 21
+            },
+            {
+              "nama": "Menempel label harga",
+              "menit": 14
+            }
+          ],
+          "tanya": "delegasi",
+          "opsi": [
+            [
+              "Mencatat utang pelanggan",
+              "Menimbang gula pasir"
+            ],
+            [
+              "Menimbang gula pasir",
+              "Menyusun karung beras"
+            ],
+            [
+              "Mengemas minyak goreng curah",
+              "Menyusun karung beras"
+            ],
+            [
+              "Menimbang gula pasir",
+              "Mengemas minyak goreng curah"
+            ],
+            [
+              "Mengemas minyak goreng curah",
+              "Menempel label harga"
+            ]
+          ]
+        }
+      }
+    ]
+  }
+}
