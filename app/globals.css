@@ -442,6 +442,25 @@ summary,
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Tombol opsi Kecermatan yang baru dipilih: denyut singkat + kilat warna
+   primer. Netral, tidak membocorkan benar/salah. */
+.option-picked {
+  animation: option-picked 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes option-picked {
+  0% { transform: scale(0.92); background-color: var(--primary); color: var(--primary-foreground); border-color: var(--primary); }
+  45% { transform: scale(1.04); }
+  100% { transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .option-picked { animation-name: option-picked-fade; }
+  @keyframes option-picked-fade {
+    from { background-color: var(--primary); color: var(--primary-foreground); }
+  }
+}
+
 /* ─────────────────────────────────────────────────────────────────────────────
    Dots loader
    ───────────────────────────────────────────────────────────────────────────── */

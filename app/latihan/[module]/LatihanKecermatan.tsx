@@ -71,6 +71,9 @@ export default function LatihanKecermatan({
   const [score, setScore] = useState<KecermatanScoreResult | null>(null);
   const [scoreFailed, setScoreFailed] = useState(false);
   const [nextCol, setNextCol] = useState<number | null>(null);
+  // Soal langsung maju setelah dijawab, jadi animasi "terpilih" ditempel ke
+  // tombol, bukan ke soal. n naik tiap pilih supaya animasi diputar ulang.
+  const [flash, setFlash] = useState<{ key: string; n: number } | null>(null);
 
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KecermatanOptionsPayload | undefined;
@@ -174,6 +177,7 @@ export default function LatihanKecermatan({
         [q.id]: { selected: key, is_correct: key === correctKey, correct_key: correctKey },
       }));
       setError("");
+      setFlash((prev) => ({ key, n: (prev?.n ?? 0) + 1 }));
       if (idx >= sorted.length - 1) {
         setFinished(true);
         return;
@@ -436,14 +440,15 @@ export default function LatihanKecermatan({
                     if (isPicked) cls = "border-2 border-primary bg-primary text-primary-foreground";
                     else cls = "bg-surface-inset text-faint-foreground";
                   }
+                  const flashing = flash?.key === ch;
                   return (
                     <button
-                      key={ch}
+                      key={flashing ? `${ch}-${flash.n}` : ch}
                       type="button"
                       onClick={() => pick(ch)}
                       disabled={Boolean(fb)}
                       aria-label={`Jawab ${ch}`}
-                      className={`flex h-14 items-center justify-center rounded-md text-base font-bold transition-[background-color,border-color,transform] duration-100 ease-out disabled:cursor-default ${cls}`}
+                      className={`flex h-14 items-center justify-center rounded-md text-base font-bold transition-[background-color,border-color,transform] duration-100 ease-out disabled:cursor-default ${cls} ${flashing ? "option-picked" : ""}`}
                     >
                       {ch}
                     </button>
