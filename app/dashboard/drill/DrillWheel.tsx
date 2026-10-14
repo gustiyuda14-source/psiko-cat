@@ -155,6 +155,10 @@ export function DrillWheel({
           <clipPath id="dw-core">
             <polygon points={CORE_HEX} />
           </clipPath>
+          {/* Glow pita NEW: filter SVG, bukan CSS drop-shadow (Safari tidak merender filter CSS pada elemen di dalam SVG). */}
+          <filter id="dw-new-blur" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur stdDeviation="5" />
+          </filter>
         </defs>
 
         <circle className="hc-dial-ring" r={Ri - 8} />
@@ -227,7 +231,8 @@ export function DrillWheel({
                     const id = `dw-new-${c.kartu}`;
                     return (
                       <g className="hc-wedge-new" aria-hidden="true">
-                        <path d={annularSector(Ro - 8, Ro + 10, -tw, tw)} />
+                        <path className="hc-wedge-glow" d={annularSector(Ro - 10, Ro + 12, -tw * 1.08, tw * 1.08)} filter="url(#dw-new-blur)" />
+                        <path className="hc-wedge-pita" d={annularSector(Ro - 8, Ro + 10, -tw, tw)} />
                         <path id={id} d={flip ? `M${P(tw)} A${r} ${r} 0 0 0 ${P(-tw)}` : `M${P(-tw)} A${r} ${r} 0 0 1 ${P(tw)}`} fill="none" stroke="none" />
                         <text dy="0.35em">
                           <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">

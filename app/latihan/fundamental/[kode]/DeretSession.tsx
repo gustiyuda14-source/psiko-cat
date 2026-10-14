@@ -84,7 +84,7 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
   );
 
   const exit = (
-    <Link href="/dashboard/fundamental" className="mbtn">
+    <Link href="/dashboard/kraepelin" className="mbtn">
       <span aria-hidden="true">←</span>
       Keluar
     </Link>
@@ -202,7 +202,7 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
               <Button variant="accent" size="lg" onClick={() => router.refresh()}>
                 Ulangi dengan grid baru
               </Button>
-              <Link href="/dashboard/fundamental" className="mbtn fd-ghost">
+              <Link href="/dashboard/kraepelin" className="mbtn fd-ghost">
                 Kembali ke katalog
               </Link>
             </div>

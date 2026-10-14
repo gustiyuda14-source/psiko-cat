@@ -9,7 +9,7 @@ import ThemeToggle from "@/app/components/ThemeToggle";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref, type ModuleType } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
 import {
-  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKeswa, NavKosakata, NavLatihan, NavReview, NavSimulasi, UserGlyph,
+  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKeswa, NavKosakata, NavKraepelin, NavLatihan, NavReview, NavSimulasi, UserGlyph,
 } from "@/app/components/nav-icons";
 
 /*
@@ -34,6 +34,7 @@ const SECONDARY_NAV: NavItem[] = [
   { label: "Drilling", href: "/dashboard/drill", icon: NavDrill },
   { label: "Fundamental", href: "/dashboard/fundamental", icon: NavFundamental },
   { label: "Keswa", href: "/dashboard/keswa", icon: NavKeswa },
+  { label: "Kraepelin / Tes Koran", href: "/dashboard/kraepelin", icon: NavKraepelin },
   { label: "Kosakata", href: "/dashboard/kosakata", icon: NavKosakata },
   { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
 ];

@@ -387,13 +387,12 @@
 /* Nomor di panel navigasi sesi: pita NEW di pojok kanan atas ubin, tidak keluar dari kotaknya. */
 .dnum.has-new::after { content: "NEW"; position: absolute; top: 2px; right: 2px; padding: 2px 4px; border-radius: 999px; background: var(--gold-grad); color: var(--surface-nav); font: 800 .46rem/1 var(--font-display-src), sans-serif; letter-spacing: .06em; pointer-events: none }
 /* Irisan roda: pita NEW melengkung di ujung luar irisan (teks mengikuti busur). */
-.hc-wedge-new { pointer-events: none; animation: wedge-new-glow 1.8s ease-in-out infinite }
-.hc-wedge-new > path:first-child { fill: #e6bf55; stroke: #8a6516; stroke-width: 1; stroke-linejoin: round }
+.hc-wedge-new { pointer-events: none }
+/* Glow = lapisan blur di belakang pita (filter SVG #dw-new-blur); yang berdenyut opacity-nya, jalan juga di Safari. */
+.hc-wedge-new > .hc-wedge-glow { fill: #ffd86a; animation: wedge-new-glow 1.8s ease-in-out infinite }
+.hc-wedge-new > .hc-wedge-pita { fill: #e6bf55; stroke: #8a6516; stroke-width: 1; stroke-linejoin: round }
 .hc-wedge-new text { fill: var(--on-gold); font: 900 10px var(--font-display-src), sans-serif; letter-spacing: .14em }
-@keyframes wedge-new-glow {
-  0%, 100% { filter: drop-shadow(0 0 3px rgb(232 199 102 / .65)) drop-shadow(0 0 7px rgb(232 199 102 / .35)) }
-  50% { filter: drop-shadow(0 0 6px rgb(255 224 130 / 1)) drop-shadow(0 0 16px rgb(232 199 102 / .75)) }
-}
-@media (prefers-reduced-motion: reduce) { .hc-wedge-new { animation: none; filter: drop-shadow(0 0 5px rgb(232 199 102 / .9)) drop-shadow(0 0 12px rgb(232 199 102 / .5)) } }
+@keyframes wedge-new-glow { 0%, 100% { opacity: .45 } 50% { opacity: 1 } }
+@media (prefers-reduced-motion: reduce) { .hc-wedge-new > .hc-wedge-glow { animation: none; opacity: .8 } }
 @keyframes new-glow { 0%, 100% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .4), 0 2px 6px -2px rgba(184, 137, 43, .6) } 50% { box-shadow: 0 0 0 1px rgba(184, 137, 43, .55), 0 0 0 4px rgba(232, 199, 102, .28) } }
 @media (prefers-reduced-motion: reduce) { .new-badge { animation: none } }

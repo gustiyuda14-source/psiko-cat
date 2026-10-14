@@ -21,18 +21,14 @@ export default function FundamentalPage() {
           </span>
           <h1>Drilling fundamental</h1>
           <p>
-            Latihan hitung dasar sebelum masuk Berpikir Praktis dan Sikap Kerja: perkalian cepat, pecahan, dan rekening koran. Soal dibuat
-            ulang setiap sesi, jawab dengan numpad atau keyboard.
+            Latihan hitung dasar sebelum masuk Berpikir Praktis dan Sikap Kerja: perkalian cepat dan pecahan. Soal dibuat ulang setiap
+            sesi, jawab dengan numpad atau keyboard.
           </p>
         </div>
         <dl className="fd-hero-stats">
           <div>
             <dt>Penguatan Dasar</dt>
             <dd className="tnum">{count("Penguatan Dasar")} paket</dd>
-          </div>
-          <div>
-            <dt>Rekening Koran</dt>
-            <dd className="tnum">{count("Rekening Koran")} paket</dd>
           </div>
         </dl>
       </header>
