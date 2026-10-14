@@ -75,6 +75,11 @@
 @media (max-width: 600px) { .mbar .mbar-title { min-width: 0; overflow: hidden; text-overflow: ellipsis } }
 
 /* ===== Grid Kraepelin (DeretSession). Tinggi layar = bar 62px; papan grid bergulir sendiri, numpad tetap terlihat. ===== */
+/* Warna angka jawaban & pasangan aktif. Terang: biru; gelap: emas (biru tenggelam di latar navy).
+   Dua blok gelap HARUS sama, pola sama dengan globals.css. */
+:root { --kp-ink: #2f5bd3; --kp-pair: rgba(47, 91, 211, .14) }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --kp-ink: var(--gold-hi); --kp-pair: rgba(232, 199, 102, .16) } }
+:root[data-theme="dark"] { --kp-ink: var(--gold-hi); --kp-pair: rgba(232, 199, 102, .16) }
 .kp-run { display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--space-3); height: calc(100dvh - 62px); padding: var(--space-3) }
 @media (min-width: 900px) { .kp-run { grid-template-columns: minmax(0, 1fr) 300px; grid-template-rows: minmax(0, 1fr); gap: var(--space-5); padding: var(--space-5) } .kp-side { align-self: start } }
 .kp-board { overflow: auto; overscroll-behavior: contain; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-1) }
@@ -83,13 +88,13 @@
 .kp-col li { display: flex; flex-direction: column; align-items: center }
 .kp-head { position: sticky; top: 0; z-index: 1; width: 100%; padding: 4px 0; background: var(--surface-card); color: var(--muted-foreground); font: 700 .7rem var(--font-display-src), sans-serif }
 .kp-d { display: grid; place-items: center; width: 26px; height: 22px; color: var(--foreground); font: 600 1.05rem var(--font-display-src), sans-serif }
-.kp-s { display: grid; place-items: center; width: 18px; height: 16px; margin-left: 24px; color: #2f5bd3; font: 700 .78rem var(--font-display-src), sans-serif }
+.kp-s { display: grid; place-items: center; width: 18px; height: 16px; margin-left: 24px; color: var(--kp-ink); font: 700 .78rem var(--font-display-src), sans-serif }
 .kp-col.is-past .kp-d { color: var(--muted-foreground) }
 .kp-col.is-active { background: var(--surface-inset) }
 .kp-col.is-active .kp-head { background: var(--navy); color: var(--gold-hi); border-radius: 8px 8px 0 0 }
-.kp-d.is-pair { border-radius: 5px; background: rgba(47, 91, 211, .14); color: var(--ok) }
-.kp-s.is-active { border: 1.5px solid #2f5bd3; border-radius: 4px; background: var(--surface-card) }
-.kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: #2f5bd3; animation: fd-caret 1s steps(1) infinite }
+.kp-d.is-pair { border-radius: 5px; background: var(--kp-pair); color: var(--kp-ink) }
+.kp-s.is-active { border: 1.5px solid var(--kp-ink); border-radius: 4px; background: var(--surface-card) }
+.kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: var(--kp-ink); animation: fd-caret 1s steps(1) infinite }
 .kp-s.is-ok { color: var(--success) }
 .kp-s.is-bad { color: var(--destructive); text-decoration: line-through }
 .kp-s.is-skip::after { content: '·'; color: var(--muted-foreground) }
