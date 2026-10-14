@@ -166,6 +166,7 @@ Tidak dikerjakan (nilai rendah/mahal): K13 ikon (PNG potongan PDF), K06 konversi
 ### Fitur badge NEW (2026-10-13)
 Field `rilis` (YYYY-MM-DD) + badge NEW di katalog (panel kartu, chip kategori, irisan roda) dan sesi (ubin nomor, legenda, header soal); hilang per butir setelah dijawab, tanpa kedaluwarsa waktu. Aturan: PEDOMAN_UTAMA §3.6 (B-10..B-14), skema: BANK_SCHEMA.md.
 NEW aktif: K05-N-001..060 (`rilis` 2026-10-13, batch 18 + 19; 60 butir). Batch 20 hanya gambar pembahasan, tidak ber-`rilis`.
+NEW aktif (tambahan 2026-10-14, keputusan pemilik: soal drill 2 hari terakhir ikut berlabel NEW): K17-N butir baru 2026-10-12 (ARAH 30, RUTE 30, ROTASI 15, INGAT 15; 90 butir, `rilis` 2026-10-12 = tanggal push cb8f053/fc879f2/76edfea) dan K18 + K07 strategi (40 butir, `rilis` 2026-10-14). Generator `scripts/generate-denah-k17.ts` mempertahankan `rilis` butir yang sudah ada. Aturan tetap: tiap push butir drill baru wajib ber-`rilis` tanggal push.
 
 ## Batch 21 — Sebab-Akibat: K18 LOG-SBA-* (30) + strategi delegasi: K07 NUM-CRT-ALOKASI-STRATEGI (10) · 2026-10-14
 

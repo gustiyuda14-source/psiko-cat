@@ -221,13 +221,13 @@ export function DrillWheel({
                     // Di separuh bawah roda busur teks dibalik supaya huruf tetap tegak (sama dengan label aspek).
                     const v = (((ang + spin) % 360) + 360) % 360;
                     const flip = v > 0 && v < 180;
-                    const tw = half * 0.62;
-                    const r = Ro + 4.5;
+                    const tw = half * 0.9;
+                    const r = Ro + 1;
                     const P = (a: number) => `${(r * Math.cos(a)).toFixed(2)} ${(r * Math.sin(a)).toFixed(2)}`;
                     const id = `dw-new-${c.kartu}`;
                     return (
                       <g className="hc-wedge-new" aria-hidden="true">
-                        <path d={annularSector(Ro - 2, Ro + 11, -tw, tw)} />
+                        <path d={annularSector(Ro - 8, Ro + 10, -tw, tw)} />
                         <path id={id} d={flip ? `M${P(tw)} A${r} ${r} 0 0 0 ${P(-tw)}` : `M${P(-tw)} A${r} ${r} 0 0 1 ${P(tw)}`} fill="none" stroke="none" />
                         <text dy="0.35em">
                           <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">

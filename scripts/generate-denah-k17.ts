@@ -270,7 +270,7 @@ function emit(m: number, p: Peta, set: Item[], bw?: Map2, rot = 0) {
     fs.writeFileSync(path.join(ROOT, "data/drill-pembahasan", pb), bw ? renderMap2(bw, m, { ...ex, defs: DEFS }, rot) : renderSvg(p, m, ex));
     // Status cek buta tetap berlaku selama stem/opsi/kunci tidak berubah; berubah = harus dicek ulang.
     const was = OLD.get(id), same = was && JSON.stringify([was.stem, was.opsi, was.kunci]) === JSON.stringify([s.stem, s.opsi, s.kunci]);
-    items.push({ id, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", instruksi: (s.instruksi as string) ?? INSTRUKSI + ((s.extra as string) ?? ""), stem: s.stem, gambar: img, ...(s.tampil_detik ? { tampil_detik: s.tampil_detik } : {}), opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, gambar_pembahasan: pb, status_kunci: same ? was.status_kunci : "tunggal" });
+    items.push({ id, kartu: "K17", sub_type: s.sub_type, tier: s.tier, sumber: "baru", ...(was?.rilis ? { rilis: was.rilis } : {}), instruksi: (s.instruksi as string) ?? INSTRUKSI + ((s.extra as string) ?? ""), stem: s.stem, gambar: img, ...(s.tampil_detik ? { tampil_detik: s.tampil_detik } : {}), opsi: s.opsi, kunci: s.kunci, pembahasan: s.pembahasan, gambar_pembahasan: pb, status_kunci: same ? was.status_kunci : "tunggal" });
   }
 }
 
