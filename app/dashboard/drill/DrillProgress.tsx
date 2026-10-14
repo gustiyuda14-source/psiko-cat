@@ -62,9 +62,21 @@ export default function DrillProgressTicket({
     <Ticket
       label="Progress drilling"
       foot={
-        <>
+        <details className="pg-drop">
+        {/* Tabel per kartu panjang: dilipat supaya roda drilling tidak terdorong jauh ke bawah. */}
+        <summary>
+          <span className="pg-drop-t">
+            <h3>Progress drilling per kartu dan level</h3>
+            <small>
+              {open.length} kartu · {fmt(all.done)} dari {fmt(all.total)} soal dikerjakan
+            </small>
+          </span>
+          <span className="pg-drop-hint" aria-hidden="true">Ketuk untuk lihat progress tiap kartu</span>
+          <svg className="pg-drop-chev" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="m6 9 6 6 6-6" />
+          </svg>
+        </summary>
         <div className="pg-sec-h">
-          <h3>Progress drilling per kartu dan level</h3>
           <div className="pg-legend">
             <span><i style={{ background: "var(--success)" }} />Benar</span>
             <span><i style={{ background: "var(--destructive)" }} />Pernah salah</span>
@@ -128,7 +140,7 @@ export default function DrillProgressTicket({
           </div>
         </div>
         <p className="pg-note">Bar di dasar sel: hijau = soal dijawab benar, merah = soal pernah dijawab salah, arsir = belum dikerjakan (sama dengan warna nomor soal di sesi drill).</p>
-        </>
+        </details>
       }
       stub={
         <>

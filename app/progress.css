@@ -88,6 +88,24 @@
 
 /* progress drilling per kartu dan level */
 .pg-heat-scroll { overflow-x: auto; margin-inline: -4px; padding-inline: 4px }
+/* Progress per kartu dilipat (details/summary): bar emas berdenyut + gelembung petunjuk sampai dibuka. */
+.pg-drop > summary { position: relative; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border: 1px solid rgb(232 199 102 / .55); border-radius: 12px; background: var(--surface-inset); cursor: pointer; list-style: none; animation: pg-drop-glow 2.2s ease-in-out infinite; transition: border-color var(--motion), background var(--motion) }
+.pg-drop > summary::-webkit-details-marker { display: none }
+.pg-drop > summary:hover { border-color: rgb(232 199 102 / .9) }
+.pg-drop > summary:focus-visible { outline: 2px solid var(--gold-hi); outline-offset: 3px }
+.pg-drop-t { display: grid; gap: 2px; min-width: 0 }
+.pg-drop-t h3 { margin: 0; font: 600 1rem var(--font-display) }
+.pg-drop-t small { color: var(--muted-foreground); font-size: .8rem }
+.pg-drop-chev { width: 22px; height: 22px; flex: none; fill: none; stroke: var(--gold-hi); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; transition: transform var(--motion) }
+.pg-drop-hint { position: absolute; right: 48px; bottom: calc(100% + 8px); padding: 5px 11px; border-radius: 999px; background: var(--gold-grad); color: var(--on-gold); font: 700 .74rem var(--font-display-src), sans-serif; white-space: nowrap; pointer-events: none; box-shadow: 0 6px 16px -6px rgb(0 0 0 / .45); animation: pg-drop-bob 1.8s ease-in-out infinite }
+.pg-drop-hint::after { content: ""; position: absolute; right: 18px; top: 100%; border: 6px solid transparent; border-top-color: #c9a447 }
+.pg-drop[open] > summary { margin-bottom: 14px; animation: none; border-color: var(--border) }
+.pg-drop[open] .pg-drop-chev { transform: rotate(180deg) }
+.pg-drop[open] .pg-drop-hint { display: none }
+@keyframes pg-drop-glow { 0%, 100% { box-shadow: 0 0 0 0 rgb(232 199 102 / 0), 0 0 6px rgb(232 199 102 / .18) } 50% { box-shadow: 0 0 0 3px rgb(232 199 102 / .18), 0 0 18px rgb(232 199 102 / .45) } }
+@keyframes pg-drop-bob { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-3px) } }
+@media (prefers-reduced-motion: reduce) { .pg-drop > summary, .pg-drop-hint { animation: none } .pg-drop > summary { box-shadow: 0 0 14px rgb(232 199 102 / .35) } }
+@media (max-width: 560px) { .pg-drop-hint { right: 12px } }
 .pg-heat { display: grid; grid-template-columns: minmax(170px, 1.2fr) repeat(3, minmax(110px, 1fr)); gap: 4px; min-width: 560px }
 .pg-heat .pg-hd { padding: 0 8px 4px; font: 700 .68rem var(--font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--muted-foreground) }
 .pg-heat .pg-grp { grid-column: 1 / -1; padding: 10px 8px 2px; border-top: 1px solid var(--pg-rule); font: 600 .78rem var(--font-display); color: var(--gold) }
