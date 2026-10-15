@@ -212,6 +212,9 @@ export function DrillCluster({
             <rect width="7" height="7" fill="var(--surface-card)" />
             <rect width="2.5" height="7" fill="var(--hatch)" />
           </pattern>
+          <filter id="hk-soft" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" />
+          </filter>
         </defs>
       </svg>
 
@@ -251,8 +254,10 @@ export function DrillCluster({
               onClick={() => onSelect(c.kartu, isSel)}
               onKeyDown={(e) => onKey(e, c.kartu)}
             >
+              <span className="hk-glow" aria-hidden="true" />
               <span className="hk-inner">
                 <svg className="hk-hex" viewBox="0 0 100 115.47" aria-hidden="true">
+                  <polygon className="hk-edge" points={HEX} filter="url(#hk-soft)" />
                   <polygon className="hk-base" points={HEX} />
                   <g clipPath="url(#hk-clip)">
                     {c.locked && <rect width="100" height="116" fill="url(#hk-hatch)" />}
@@ -264,6 +269,7 @@ export function DrillCluster({
                   </g>
                   <polyline className="hk-hi" points="1.5,29.7 50,1.7 98.5,29.7" />
                   <polygon className="hk-line" points={HEX} />
+                  <polygon className="hk-trace" points={HEX} pathLength={100} />
                 </svg>
                 <span className="hk-body">
                   <span className="hk-no tnum">{c.no}</span>

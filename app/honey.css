@@ -7,6 +7,10 @@
   --hatch: #ece4d2;
   --hc-grid: rgb(27 42 92 / 0.08);
   --hc-glow: rgb(184 137 43 / 0.28);
+  /* Jejak Tepi sel Kluster: navy lembut di tema terang; emas di tema gelap (globals.css). */
+  --hk-trace: #1b2a5c;
+  --hk-edge: rgb(47 78 168 / 0.4);
+  --hk-halo: rgb(27 42 92 / 0.22);
   --hc-ease: cubic-bezier(0.22, 0.9, 0.24, 1);
 }
 
@@ -431,6 +435,16 @@
 .hk-name { font: 600 max(11px, calc(var(--s) * .2))/1.18 var(--font-display-src), sans-serif; text-wrap: balance }
 .hk-pct { font: 600 max(11px, calc(var(--s) * .2))/1 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
 .hk-cell.is-high .hk-body, .hk-cell.is-high .hk-no, .hk-cell.is-high .hk-pct { color: var(--on-gold) }
+/* Jejak Tepi: hover/fokus = garis menelusuri tepi heksagon, tepi berpendar, halo tipis di belakang sel. */
+.hk-cell { isolation: isolate }
+.hk-glow { position: absolute; inset: -14%; z-index: -1; pointer-events: none; opacity: 0; filter: blur(16px); transition: opacity 320ms var(--e-out) }
+.hk-glow::before { content: ""; position: absolute; inset: 0; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: radial-gradient(circle at 50% 45%, var(--hk-halo), transparent 85%) }
+.hk-edge { fill: none; stroke: var(--hk-edge); stroke-width: 10; opacity: 0; transition: opacity 400ms 200ms }
+.hk-trace { fill: none; stroke: var(--hk-trace); stroke-width: 2.5; vector-effect: non-scaling-stroke; stroke-dasharray: 100; stroke-dashoffset: 100; opacity: 0; transition: stroke-dashoffset 650ms var(--e-out), opacity 200ms }
+.hk-cell:not(:disabled):is(:hover, :focus-visible) .hk-trace { stroke-dashoffset: 0; opacity: 1 }
+.hk-cell:not(:disabled):is(:hover, :focus-visible) .hk-edge { opacity: .9 }
+.hk-cell:not(:disabled):is(:hover, :focus-visible) .hk-glow { opacity: 1 }
+.hk-cell.is-sel .hk-glow { opacity: .6 }
 .hk-new { position: absolute; top: calc(var(--s) * -.1); left: 50%; transform: translateX(-50%) }
 /* Reticle: bidikan heksagon putus-putus yang mengikuti sel terpilih. */
 .hk-reticle { position: absolute; left: 50%; top: 50%; z-index: 2; pointer-events: none; transition: transform 820ms var(--hc-ease), width 820ms var(--hc-ease), height 820ms var(--hc-ease), opacity 300ms }
@@ -446,4 +460,5 @@
 @media (prefers-reduced-motion: reduce) {
   .hk-field, .hk-cell, .hk-inner, .hk-reticle, .hk-label { transition-duration: 1ms !important; transition-delay: 0ms !important }
   .hk-reticle polygon, .hk-link path { animation: none }
+  .hk-glow, .hk-edge, .hk-trace { transition-duration: 1ms !important }
 }
