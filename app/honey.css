@@ -408,7 +408,7 @@
 
 .hk-box { position: relative; min-width: 0 }
 .hk-field { position: relative; overflow: clip; transition: height 700ms var(--hc-ease) }
-.hk-cell { position: absolute; left: 50%; top: 50%; z-index: 1; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 820ms var(--hc-ease), opacity 420ms; will-change: transform }
+.hk-cell { position: absolute; left: 50%; top: 50%; z-index: 1; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; transition: transform 820ms var(--hc-ease), width 820ms var(--hc-ease), height 820ms var(--hc-ease), opacity 420ms }
 .hk-cell.is-enter { opacity: 0; transition: none }
 .hk-cell:focus-visible { outline: none }
 .hk-cell.is-sel { z-index: 3 }
@@ -433,7 +433,7 @@
 .hk-cell.is-high .hk-body, .hk-cell.is-high .hk-no, .hk-cell.is-high .hk-pct { color: var(--on-gold) }
 .hk-new { position: absolute; top: calc(var(--s) * -.1); left: 50%; transform: translateX(-50%) }
 /* Reticle: bidikan heksagon putus-putus yang mengikuti sel terpilih. */
-.hk-reticle { position: absolute; left: 50%; top: 50%; z-index: 2; pointer-events: none; transition: transform 820ms var(--hc-ease), opacity 300ms }
+.hk-reticle { position: absolute; left: 50%; top: 50%; z-index: 2; pointer-events: none; transition: transform 820ms var(--hc-ease), width 820ms var(--hc-ease), height 820ms var(--hc-ease), opacity 300ms }
 .hk-reticle polygon { fill: none; stroke: var(--accent-strong); stroke-width: 1.5; vector-effect: non-scaling-stroke; stroke-dasharray: 10 8; animation: hk-flow 2.4s linear infinite }
 .hk-reticle path { fill: none; stroke: var(--accent-strong); stroke-width: 2.5; vector-effect: non-scaling-stroke }
 @keyframes hk-flow { to { stroke-dashoffset: -22 } }

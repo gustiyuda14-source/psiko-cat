@@ -179,7 +179,8 @@ export function DrillCluster({
   const at = ([x, y]: Pt): Pt => [(x - fx) * Z, (y - fy) * Z];
   const move = (p: Pt, k: number) => `translate(-50%, -50%) translate(${p[0].toFixed(1)}px, ${p[1].toFixed(1)}px) scale(${k.toFixed(3)})`;
   const START = "translate(-50%, -50%) scale(0.2)";
-  const size = { width: SQ3 * S, height: 2 * S, "--s": `${S}px` } as CSSProperties;
+  // Zoom mengubah ukuran sel langsung (bukan scale), supaya teks dan garis dirender tajam di ukuran akhir.
+  const size = { width: SQ3 * S * Z, height: 2 * S * Z, "--s": `${S * Z}px` } as CSSProperties;
 
   function onKey(e: React.KeyboardEvent, kartu: string) {
     const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
@@ -233,7 +234,7 @@ export function DrillCluster({
 
         {cards.map((c, i) => {
           const isSel = c.kartu === selected;
-          const k = Z * (isSel ? 1.06 : 1);
+          const k = isSel ? 1.06 : 1;
           return (
             <button
               key={c.kartu}
@@ -281,7 +282,7 @@ export function DrillCluster({
             style={{
               ...size,
               opacity: sel.match && entered ? 1 : 0,
-              transform: entered ? move(at(pos[sel.kartu]), Z * 1.06 * 1.17) : START,
+              transform: entered ? move(at(pos[sel.kartu]), 1.06 * 1.17) : START,
               transitionDelay: settling && entered ? `${selIndex * 38}ms` : undefined,
             }}
             aria-hidden="true"
