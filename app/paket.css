@@ -3,7 +3,7 @@
    emas berputar (conic-gradient/@property) + kilau + badge emas; is-done = badge hijau. */
 .sp-list { --sub-kc: var(--brand-ink); --sub-km: #c9a24a; --sub-kp: #8a9bb8; display: grid; gap: 18px; max-width: 880px; margin: 24px 0 0; padding: 0; list-style: none }
 .sp-step { position: relative; display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 18px; animation: sp-in 700ms var(--e-out) both }
-@keyframes sp-in { from { opacity: 0; transform: translateY(14px); filter: blur(4px) } }
+@keyframes sp-in { from { opacity: 0; transform: translateY(14px) } }
 .sp-step:not(:last-child)::before { content: ""; position: absolute; left: 27px; top: 34px; bottom: -52px; width: 2px; background: linear-gradient(var(--accent-strong), var(--accent)) }
 .sp-step.is-locked::before, .sp-step:has(+ .is-locked)::before { background: repeating-linear-gradient(var(--border-strong) 0 4px, transparent 4px 9px); opacity: .5 }
 .sp-node { position: relative; z-index: 1; display: grid; place-items: center; width: 56px; height: 64px; margin-top: 6px }
@@ -51,18 +51,20 @@
   background: conic-gradient(from var(--sp-ang), rgb(232 199 102 / .12) 0deg, var(--accent-strong) 50deg, #f8e7a8 80deg, rgb(232 199 102 / .12) 130deg,
     rgb(232 199 102 / .12) 180deg, var(--accent-strong) 230deg, #f8e7a8 260deg, rgb(232 199 102 / .12) 310deg);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
-  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); animation: sp-spin 7s linear infinite }
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); animation: sp-spin 7s linear 1 }
 .sp-shine { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; pointer-events: none }
-.sp-shine::after { content: ""; position: absolute; top: 0; left: -60%; width: 34%; height: 100%; background: linear-gradient(105deg, transparent, rgb(255 255 255 / .10), transparent); transform: skewX(-18deg); animation: sp-sweep 6s ease-in-out infinite }
+.sp-shine::after { content: ""; position: absolute; top: 0; left: -60%; width: 34%; height: 100%; background: linear-gradient(105deg, transparent, rgb(255 255 255 / .10), transparent); transform: skewX(-18deg); animation: sp-sweep 6s ease-in-out 2 }
+/* Hemat GPU: cincin berputar 1x + kilau 2x + titik badge 4x saat muncul, lalu diam; kilau + titik jalan terus saat hover; cincin tidak (conic + mask = paint termahal). Kilau pakai translate (bukan left = layout tiap frame); 559% = jarak -60%..130% kartu dibagi lebar kilau 34%. */
+@media (hover: hover) { .sp-card:hover .sp-shine::after, .sp-card:hover .sp-badge i { animation-iteration-count: infinite } }
 @keyframes sp-spin { to { --sp-ang: 360deg } }
-@keyframes sp-sweep { 0%, 60% { left: -60% } 100% { left: 130% } }
+@keyframes sp-sweep { 0%, 60% { translate: 0 } 100% { translate: 559% 0 } }
 .is-ready .sp-card:hover:not(:disabled) { border-color: transparent; box-shadow: 0 24px 50px -16px rgb(15 24 56 / .6), 0 0 0 1px rgb(15 24 56 / .4) }
 .sp-card:has(.sp-badges) { margin-top: 14px }
 .sp-badges { position: absolute; top: 0; left: 24px; transform: translateY(-50%); display: flex; gap: 8px }
 .sp-badge { white-space: nowrap; display: inline-flex; align-items: center; gap: 7px; padding: 6px 13px 6px 10px; border-radius: 999px; background: var(--gold-grad); font: 600 .78rem var(--font-display-src), sans-serif; color: var(--navy); box-shadow: 0 0 0 4px var(--surface-page) }
 .sp-badge.is-ok { background: linear-gradient(120deg, #087453, #2fb57c); color: #fff; box-shadow: 0 6px 16px -4px rgb(8 116 83 / .5), 0 0 0 4px var(--surface-page) }
 .sp-badge.is-ok svg { width: 12px; height: 12px }
-.sp-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-ink); animation: sp-pulse 1.8s ease-in-out infinite }
+.sp-badge i { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-ink); animation: sp-pulse 1.8s ease-in-out 4 }
 @keyframes sp-pulse { 50% { opacity: .3 } }
 .is-ready .sp-title { font-size: 1.3rem; color: #fff }
 .is-ready .sp-meta, .is-ready .sp-legend, .is-ready .sp-score small { color: #c4cde3 }

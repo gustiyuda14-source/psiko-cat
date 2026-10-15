@@ -31,7 +31,7 @@
 .dnum:hover { border-color: var(--ok); transform: translateY(-1px); box-shadow: 0 6px 14px -6px rgba(27, 42, 92, .35) }
 .dnum.is-done { border-color: var(--border); background: var(--accent-soft); color: var(--brand-ink) }
 /* Kotak soal aktif: border emas + latar emas tipis + sinar berdenyut. Selektor digandakan supaya menang atas .is-answered/.is-ok/.is-bad. */
-.dnum.dnum[aria-current] { border-color: var(--gold); color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, var(--surface-card)); transform: none; animation: dnum-glow 2.4s ease-in-out infinite }
+.dnum.dnum[aria-current] { border-color: var(--gold); color: var(--gold); background: color-mix(in srgb, var(--gold) 12%, var(--surface-card)); transform: none; animation: dnum-glow 2.4s ease-in-out 3 }
 @keyframes dnum-glow {
   0%, 100% { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 55%, transparent), 0 0 10px 1px color-mix(in srgb, var(--gold) 28%, transparent) }
   50% { box-shadow: 0 0 0 1px color-mix(in srgb, var(--gold) 90%, transparent), 0 0 18px 4px color-mix(in srgb, var(--gold) 45%, transparent) }

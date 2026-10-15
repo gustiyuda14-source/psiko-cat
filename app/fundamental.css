@@ -94,7 +94,7 @@
 .kp-col.is-active .kp-head { background: var(--navy); color: var(--gold-hi); border-radius: 8px 8px 0 0 }
 .kp-d.is-pair { border-radius: 5px; background: var(--kp-pair); color: var(--kp-ink) }
 .kp-s.is-active { border: 1.5px solid var(--kp-ink); border-radius: 4px; background: var(--surface-card) }
-.kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: var(--kp-ink); animation: fd-caret 1s steps(1) infinite }
+.kp-s.is-active::after { content: ''; width: 1.5px; height: 10px; background: var(--kp-ink); animation: fd-caret 1s steps(1) 8 }
 .kp-s.is-ok { color: var(--success) }
 .kp-s.is-bad { color: var(--destructive); text-decoration: line-through }
 .kp-s.is-skip::after { content: '·'; color: var(--muted-foreground) }

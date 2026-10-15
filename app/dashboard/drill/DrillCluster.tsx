@@ -200,8 +200,9 @@ export function DrillCluster({
   const at = ([x, y]: Pt): Pt => [(x - fx) * Z, (y - fy) * Z];
   const move = (p: Pt, k: number) => `translate(-50%, -50%) translate(${p[0].toFixed(1)}px, ${p[1].toFixed(1)}px) scale(${k.toFixed(3)})`;
   const START = "translate(-50%, -50%) scale(0.2)";
-  // Zoom mengubah ukuran sel langsung (bukan scale), supaya teks dan garis dirender tajam di ukuran akhir.
-  const size = { width: SQ3 * S * Z, height: 2 * S * Z, "--s": `${S * Z}px` } as CSSProperties;
+  // Zoom lewat scale di transform (GPU), bukan width/height: transisi ukuran = layout + gambar ulang 18 sel tiap frame.
+  // Teks sedikit lunak selama transisi, tajam lagi setelah selesai. --z menjaga batas font min 11px tetap 11px di layar.
+  const size = { width: SQ3 * S, height: 2 * S, "--s": `${S}px`, "--z": Z } as CSSProperties;
 
   function onKey(e: React.KeyboardEvent, kartu: string) {
     const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
@@ -267,7 +268,7 @@ export function DrillCluster({
               }}
               type="button"
               className={`hk-cell${isSel ? " is-sel" : ""}${c.match ? "" : " is-out"}${c.locked ? " is-locked" : ""}${c.p >= 0.62 ? " is-high" : ""}${entered ? "" : " is-enter"}`}
-              style={{ ...size, transform: entered ? move(at(pos[c.kartu]), k) : START, transitionDelay: settling && entered ? `${i * 38}ms` : undefined }}
+              style={{ ...size, transform: entered ? move(at(pos[c.kartu]), k * Z) : START, transitionDelay: settling && entered ? `${i * 38}ms` : undefined }}
               disabled={!c.match}
               tabIndex={isSel && c.match ? 0 : -1}
               aria-pressed={isSel}
@@ -309,7 +310,7 @@ export function DrillCluster({
             style={{
               ...size,
               opacity: sel.match && entered ? 1 : 0,
-              transform: entered ? move(at(pos[sel.kartu]), 1.06 * 1.17) : START,
+              transform: entered ? move(at(pos[sel.kartu]), 1.06 * 1.17 * Z) : START,
               transitionDelay: settling && entered ? `${selIndex * 38}ms` : undefined,
             }}
             aria-hidden="true"

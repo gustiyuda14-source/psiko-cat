@@ -873,10 +873,11 @@ dialog[open]::backdrop { animation: backdrop-in 200ms ease-out }
 /* ── Emas Prada: sentuhan merek (hanya tema D AJIKS) ─────────────────────────
    Cahaya sorot samar dari atas seperti foto logo + butiran halus di layer tetap
    (pointer-events none, tidak ikut scroll, tidak memicu repaint saat scroll). */
-:root[data-theme="ajiks"] body {
-  background:
-    radial-gradient(1100px 520px at 50% -180px, rgb(202 170 79 / 0.07), transparent 70%) fixed,
-    var(--surface-page);
+:root[data-theme="ajiks"] body { background: var(--surface-page) }
+/* Sorot di layer fixed sendiri, bukan background-attachment: fixed (itu memaksa repaint seluruh layar tiap frame scroll). z -2 = di bawah butiran. */
+:root[data-theme="ajiks"] body::after {
+  content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
+  background: radial-gradient(1100px 520px at 50% -180px, rgb(202 170 79 / 0.07), transparent 70%);
 }
 :root[data-theme="ajiks"] body::before {
   content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .05;
