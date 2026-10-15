@@ -314,7 +314,8 @@ export function DrillCluster({
             }}
             aria-hidden="true"
           >
-            <svg className="hk-hex" viewBox="0 0 100 115.47">
+            {/* key: animasi alir garis (honey.css) diulang tiap ganti kartu; div reticle tetap, transisinya tidak putus. */}
+            <svg key={selected} className="hk-hex" viewBox="0 0 100 115.47">
               <polygon points={HEX} />
               <path d="M50 -9 V-2 M50 117.5 V124.5 M-9 57.7 H-2 M102 57.7 H109" />
             </svg>
@@ -323,7 +324,7 @@ export function DrillCluster({
       </div>
 
       <svg ref={linkRef} className="hk-link" aria-hidden="true">
-        <path />
+        <path key={selected} />
         <circle r="3" />
         <circle r="3.5" />
       </svg>
