@@ -418,7 +418,8 @@
 .hk-cell.is-sel { z-index: 3 }
 .hk-cell:disabled { cursor: default }
 /* Gerak naik-turun saat disentuh/hover; tekan = mengecil sedikit. */
-.hk-inner { position: absolute; inset: 0; display: grid; place-items: center; filter: drop-shadow(0 4px 6px rgb(27 42 92 / .07)) drop-shadow(0 10px 18px rgb(27 42 92 / .06)); transition: transform 260ms var(--e-out), opacity 420ms var(--e-out), filter 420ms }
+.hk-inner { position: absolute; inset: 0; display: grid; place-items: center; filter: drop-shadow(0 4px 6px rgb(27 42 92 / .07)) drop-shadow(0 10px 18px rgb(27 42 92 / .06)); transition: transform 260ms var(--e-out), opacity 420ms var(--e-out) }
+/* filter sengaja tidak ditransisikan: drop-shadow/blur dihitung ulang tiap frame = berat saat ganti kartu. */
 .hk-cell:not(:disabled):hover .hk-inner { transform: translateY(-3px) scale(1.035) }
 .hk-cell:not(:disabled):active .hk-inner { transform: scale(.97) }
 .hk-cell.is-sel .hk-inner { filter: drop-shadow(0 8px 10px rgb(27 42 92 / .14)) drop-shadow(0 0 22px var(--hc-glow)) }

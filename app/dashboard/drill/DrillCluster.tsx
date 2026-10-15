@@ -125,10 +125,13 @@ export function DrillCluster({
 
   const matchKey = cards.map((c) => (c.match ? 1 : 0)).join("");
 
-  // Jalur sinyal sel → judul panel. Digambar per frame selama sel/panel masih beranimasi.
+  // Jalur sinyal sel → judul panel. Per frame hanya selama sel berpindah (masuk, zoom, lebar
+  // berubah); ganti kartu saja = sel diam, jalur disembunyikan lalu digambar sekali setelah
+  // isi panel selesai masuk (hc-swap), tanpa ukur getBoundingClientRect tiap frame.
+  const layoutKey = `${W}|${wide}|${matchKey}|${settling}`;
+  const drawnLayout = useRef("");
+  const movingUntil = useRef(0);
   useEffect(() => {
-    let raf = 0;
-    const until = performance.now() + (settling ? 2400 : 1000);
     const draw = () => {
       const svg = linkRef.current, box = boxRef.current, cell = cellRefs.current[selected], title = panel.current?.querySelector("h2");
       if (!svg) return;
@@ -150,11 +153,29 @@ export function DrillCluster({
         z.setAttribute("cx", String(ex));
         z.setAttribute("cy", String(ey));
       }
-      if (performance.now() < until) raf = requestAnimationFrame(draw);
     };
-    draw();
-    return () => cancelAnimationFrame(raf);
-  }, [selected, W, wide, matchKey, settling, panel, boxRef]);
+
+    if (drawnLayout.current !== layoutKey) {
+      drawnLayout.current = layoutKey;
+      movingUntil.current = performance.now() + (settling ? 2400 : 1000);
+    }
+    if (performance.now() < movingUntil.current) {
+      let raf = 0;
+      const tick = () => {
+        draw();
+        if (performance.now() < movingUntil.current) raf = requestAnimationFrame(tick);
+      };
+      tick();
+      return () => cancelAnimationFrame(raf);
+    }
+
+    const svg = linkRef.current, pnl = panel.current;
+    if (!svg || !pnl || matchMedia("(prefers-reduced-motion: reduce)").matches) return draw();
+    svg.style.opacity = "0";
+    const onEnd = (e: AnimationEvent) => e.animationName === "hc-swap" && draw();
+    pnl.addEventListener("animationend", onEnd);
+    return () => pnl.removeEventListener("animationend", onEnd);
+  }, [selected, layoutKey, wide, settling, panel, boxRef]);
 
   if (!W) return <div ref={boxRef} className="hk-box" style={{ minHeight: 420 }} />;
 

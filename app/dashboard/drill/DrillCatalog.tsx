@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Fragment, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
@@ -276,100 +276,103 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
           )}
         </div>
 
-        <aside ref={panelRef} className="hc-panel" aria-live="polite" key={current}>
-          <div className="hc-panel-top">
-            {fresh.length > 0 && <NewBadge />}
-            <span className="hc-mod" data-mod={modul(card.aspek).toLowerCase()}>
-              Drilling {modul(card.aspek)}
-            </span>
-            <span className="hc-tag">{aspekLabel(card.aspek)}</span>
-            <span className="hc-code tnum">
-              Kartu {String(cards.indexOf(card) + 1).padStart(2, "0")}
-              {locked ? "" : ` · ${cardStats.total} soal`}
-            </span>
-          </div>
-          <h2 className="hc-panel-title">{card.label}</h2>
-          <p className="hc-panel-desc">{card.desc}</p>
-          {fresh.length > 0 && (
-            <p className="hc-fresh">
-              <b className="tnum">{fresh.length}</b> soal baru belum kamu kerjakan. Tanda NEW hilang begitu soalnya kamu jawab.
-            </p>
-          )}
+        <aside ref={panelRef} className="hc-panel" aria-live="polite">
+          {/* Isi saja yang di-remount per kartu (animasi hc-swap); aside + bingkai emasnya tetap, supaya ganti kartu tidak membangun ulang panel. */}
+          <Fragment key={current}>
+            <div className="hc-panel-top">
+              {fresh.length > 0 && <NewBadge />}
+              <span className="hc-mod" data-mod={modul(card.aspek).toLowerCase()}>
+                Drilling {modul(card.aspek)}
+              </span>
+              <span className="hc-tag">{aspekLabel(card.aspek)}</span>
+              <span className="hc-code tnum">
+                Kartu {String(cards.indexOf(card) + 1).padStart(2, "0")}
+                {locked ? "" : ` · ${cardStats.total} soal`}
+              </span>
+            </div>
+            <h2 className="hc-panel-title">{card.label}</h2>
+            <p className="hc-panel-desc">{card.desc}</p>
+            {fresh.length > 0 && (
+              <p className="hc-fresh">
+                <b className="tnum">{fresh.length}</b> soal baru belum kamu kerjakan. Tanda NEW hilang begitu soalnya kamu jawab.
+              </p>
+            )}
 
-          {locked ? (
-            <p className="hc-panel-desc mt-4">Soal untuk kartu ini sedang disiapkan. Kartu terbuka otomatis begitu soalnya tersedia.</p>
-          ) : (
-            <>
-              <div className="hc-meter">
-                <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
-                  <defs>
-                    <clipPath id="dp-hex">
-                      <polygon points={HEX} />
-                    </clipPath>
-                    <linearGradient id="dp-honey" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0" stopColor="var(--honey-top)" />
-                      <stop offset="1" stopColor="var(--honey-bot)" />
-                    </linearGradient>
-                  </defs>
-                  <polygon points={HEX} className="hc-core-base" />
-                  <g clipPath="url(#dp-hex)">
-                    <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
-                      <path d={WAVE} fill="url(#dp-honey)" className="hc-honey" />
+            {locked ? (
+              <p className="hc-panel-desc mt-4">Soal untuk kartu ini sedang disiapkan. Kartu terbuka otomatis begitu soalnya tersedia.</p>
+            ) : (
+              <>
+                <div className="hc-meter">
+                  <svg viewBox="0 0 100 115.47" className="hc-meter-hex" aria-hidden="true">
+                    <defs>
+                      <clipPath id="dp-hex">
+                        <polygon points={HEX} />
+                      </clipPath>
+                      <linearGradient id="dp-honey" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0" stopColor="var(--honey-top)" />
+                        <stop offset="1" stopColor="var(--honey-bot)" />
+                      </linearGradient>
+                    </defs>
+                    <polygon points={HEX} className="hc-core-base" />
+                    <g clipPath="url(#dp-hex)">
+                      <g className="hc-honey-y" style={{ transform: `translateY(${fillY(0, 115.47, p)}px)` }}>
+                        <path d={WAVE} fill="url(#dp-honey)" className="hc-honey" />
+                      </g>
                     </g>
-                  </g>
-                  <polygon points={HEX} className="hc-core-line" />
-                </svg>
-                <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
-                <span className="hc-meter-of tnum">
-                  {cardStats.done} dari {cardStats.total} soal
-                  <br />
-                  {cardStats.acc !== null ? `Akurasi ${cardStats.acc}%` : "Belum ada jawaban"}
-                </span>
-              </div>
+                    <polygon points={HEX} className="hc-core-line" />
+                  </svg>
+                  <span className="hc-meter-pct tnum">{Math.round(p * 100)}%</span>
+                  <span className="hc-meter-of tnum">
+                    {cardStats.done} dari {cardStats.total} soal
+                    <br />
+                    {cardStats.acc !== null ? `Akurasi ${cardStats.acc}%` : "Belum ada jawaban"}
+                  </span>
+                </div>
 
-              <ul className="hc-levels hc-cats" aria-label="Kategori soal di kartu ini">
-                {card.kategori.map(({ label, ids }) => {
-                  const s = stats(ids, progress);
-                  const nf = freshOf(ids.filter((id) => baruSet.has(id))).length;
-                  return (
-                    <li key={label} className="hc-level" data-hit={hit(label) ? "true" : undefined}>
-                      <b>{label}</b>
-                      {nf > 0 && <NewBadge small count={nf} />}
-                      <span className="tnum">
-                        {s.done}/{s.total}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
+                <ul className="hc-levels hc-cats" aria-label="Kategori soal di kartu ini">
+                  {card.kategori.map(({ label, ids }) => {
+                    const s = stats(ids, progress);
+                    const nf = freshOf(ids.filter((id) => baruSet.has(id))).length;
+                    return (
+                      <li key={label} className="hc-level" data-hit={hit(label) ? "true" : undefined}>
+                        <b>{label}</b>
+                        {nf > 0 && <NewBadge small count={nf} />}
+                        <span className="tnum">
+                          {s.done}/{s.total}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
 
-              <ul className="hc-levels" aria-label="Level soal di kartu ini">
-                {DRILL_TIERS.map(({ tier, label }) => {
-                  const ids = card.tiers[tier - 1];
-                  if (!ids.length) return null;
-                  const s = stats(ids, progress);
-                  return (
-                    <li key={tier} className="hc-level" data-tier={tier}>
-                      <b>{label}</b>
-                      <span className="tnum">
-                        {s.done}/{s.total}
-                      </span>
-                    </li>
-                  );
-                })}
-              </ul>
+                <ul className="hc-levels" aria-label="Level soal di kartu ini">
+                  {DRILL_TIERS.map(({ tier, label }) => {
+                    const ids = card.tiers[tier - 1];
+                    if (!ids.length) return null;
+                    const s = stats(ids, progress);
+                    return (
+                      <li key={tier} className="hc-level" data-tier={tier}>
+                        <b>{label}</b>
+                        <span className="tnum">
+                          {s.done}/{s.total}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
 
-              <div className="hc-actions">
-                <Button variant="primary" size="lg" block onClick={() => start(card.kartu)}>
-                  {cardStats.done ? "Lanjutkan drilling" : "Mulai drilling"}
-                  <ArrowRight className="size-4" />
-                </Button>
-                <Button variant="ghost" onClick={() => setResetStep(1)} disabled={!cardStats.done}>
-                  Ulang kartu ini dari nol
-                </Button>
-              </div>
-            </>
-          )}
+                <div className="hc-actions">
+                  <Button variant="primary" size="lg" block onClick={() => start(card.kartu)}>
+                    {cardStats.done ? "Lanjutkan drilling" : "Mulai drilling"}
+                    <ArrowRight className="size-4" />
+                  </Button>
+                  <Button variant="ghost" onClick={() => setResetStep(1)} disabled={!cardStats.done}>
+                    Ulang kartu ini dari nol
+                  </Button>
+                </div>
+              </>
+            )}
+          </Fragment>
           <i className="gr" aria-hidden="true" />
         </aside>
       </div>
