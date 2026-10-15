@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { useRouter } from "next/navigation";
 import { Button, ConfirmDialog } from "@/app/components/ui-client";
 import { ArrowRight } from "@/app/components/icons";
@@ -12,11 +12,56 @@ import { NewBadge } from "@/app/components/NewBadge";
 import { resetProgress, useDrillProgress, useDrillProgressReady } from "@/lib/practice-progress";
 import DrillProgressTicket, { aspekTiers, stats } from "./DrillProgress";
 import { DrillWheel, type WheelCard } from "./DrillWheel";
+import { DrillCluster } from "./DrillCluster";
 
 type CatalogCard = DrillCard & { kartu: string; tiers: string[][]; kategori: { label: string; ids: string[] }[]; baru: string[] };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
+
+/** Tampilan katalog pilihan peserta (Roda/Kluster), diingat per perangkat. */
+const VIEW_KEY = "psiko_drill_view";
+type View = "roda" | "kluster";
+// localStorage sebagai external store; server (dan storage diblokir) = Roda.
+function subscribeView(onChange: () => void) {
+  window.addEventListener("storage", onChange);
+  window.addEventListener(VIEW_KEY, onChange);
+  return () => {
+    window.removeEventListener("storage", onChange);
+    window.removeEventListener(VIEW_KEY, onChange);
+  };
+}
+function readView(): View {
+  try {
+    return localStorage.getItem(VIEW_KEY) === "kluster" ? "kluster" : "roda";
+  } catch {
+    return "roda";
+  }
+}
+const VIEWS: { key: View; label: string; icon: React.ReactNode }[] = [
+  {
+    key: "kluster",
+    label: "Kluster",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinejoin="round" aria-hidden="true">
+        <path d="M7 3.5l3.5 2v4L7 11.5l-3.5-2v-4z" />
+        <path d="M14 3.5l3.5 2v4L14 11.5l-3.5-2" />
+        <path d="M10.5 9.5l3.5 2v4l-3.5 2-3.5-2v-4" />
+      </svg>
+    ),
+  },
+  {
+    key: "roda",
+    label: "Roda",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="8" />
+        <circle cx="12" cy="12" r="3" />
+        <path d="M12 4v5M12 15v5M4 12h5M15 12h5" />
+      </svg>
+    ),
+  },
+];
 
 function MiniHexes({ fills }: { fills: (number | null)[] }) {
   const pts = fills.map((_, i) => [Math.floor(i / 2) * 17 + (i % 2) * 8.5 + 10, (i % 2) * 15 + 11]);
@@ -63,6 +108,15 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   useEffect(() => {
     if (findOpen) searchRef.current?.focus();
   }, [findOpen]);
+  const view = useSyncExternalStore(subscribeView, readView, () => "roda" as View);
+  const pickView = (v: View) => {
+    try {
+      localStorage.setItem(VIEW_KEY, v);
+    } catch {
+      // localStorage diblokir: tampilan tetap Roda.
+    }
+    window.dispatchEvent(new Event(VIEW_KEY));
+  };
 
   const aspekLabel = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.label ?? key;
   const modul = (key: string) => DRILL_ASPEK.find((a) => a.key === key)?.modul ?? "Kecerdasan";
@@ -118,6 +172,11 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
   });
 
   const start = (kartu: string) => router.push(`/latihan/drill/${kartu}`);
+  const onSelect = (kartu: string, again?: boolean) => {
+    setSelected(kartu);
+    // Ketuk kartu yang sudah terpilih = lanjut ke aksi utama di panel.
+    if (again) panelRef.current?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus();
+  };
 
   const resetCard = () => {
     void resetProgress("drill", card.tiers.flat());
@@ -180,17 +239,25 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
 
       <div className="hc-stage">
         <div className="hc-field">
+          <div className="hc-views" role="group" aria-label="Tampilan kartu">
+            {VIEWS.map((v) => (
+              <button key={v.key} type="button" aria-pressed={view === v.key} aria-label={v.label} title={v.label} onClick={() => pickView(v.key)}>
+                {v.icon}
+                <span>{v.label}</span>
+              </button>
+            ))}
+          </div>
           {visible.length ? (
-            <DrillWheel
-              cards={wheel}
-              selected={current}
-              overall={{ p: allStats.total ? allStats.done / allStats.total : 0, done: allStats.done, total: allStats.total }}
-              onSelect={(kartu, again) => {
-                setSelected(kartu);
-                // Ketuk irisan yang sudah terpilih = lanjut ke aksi utama di panel.
-                if (again) panelRef.current?.querySelector<HTMLButtonElement>("button:not(:disabled)")?.focus();
-              }}
-            />
+            view === "kluster" ? (
+              <DrillCluster cards={wheel} selected={current} panel={panelRef} onSelect={onSelect} />
+            ) : (
+              <DrillWheel
+                cards={wheel}
+                selected={current}
+                overall={{ p: allStats.total ? allStats.done / allStats.total : 0, done: allStats.done, total: allStats.total }}
+                onSelect={onSelect}
+              />
+            )
           ) : (
             <div className="hc-empty">
               <p>
