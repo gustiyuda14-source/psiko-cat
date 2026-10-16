@@ -137,6 +137,9 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
               <span>8</span>
               <small>7 + 8 = 15 → tulis 5</small>
             </div>
+            <p className="fd-source">
+              <b>Sumber</b> Mengacu pedoman Arnold, <i>Der Pauli-Test</i> (Springer, 1975): prosedur pelaksanaan dan rumus Schwankung.
+            </p>
             <p className="muted">Aturan saat tanda garis berbeda antarinstansi. Pilih yang sesuai tes kamu:</p>
             <div className="kp-modes">
               <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "pindah", now: Date.now() })}>

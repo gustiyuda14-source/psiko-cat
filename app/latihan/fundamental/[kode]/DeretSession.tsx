@@ -119,6 +119,10 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
                 7 {sym} 8 = {op === "kali" ? 56 : 15} → tulis {deretAnswer(op, 7, 8)}
               </small>
             </div>
+            <p className="fd-source">
+              <b>Sumber metode</b> Penjumlahan berkelanjutan dari Kraepelin, <i>Die Arbeitscurve</i> (Philosophische Studien 19, 1902). Format{" "}
+              {KORAN.kolom} kolom × {KORAN.detik} detik dan cara skor adalah format latihan kami, bukan pedoman baku.
+            </p>
             <div className="kp-modes">
               <button type="button" className="kp-mode is-tes" onClick={() => dispatch({ t: "start", mode: "tes" })}>
                 <b>Mode Tes</b>
