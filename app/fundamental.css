@@ -138,3 +138,4 @@
 .pl-stop { width: 100%; margin-top: var(--space-3); justify-content: center }
 .fd-source { margin: 0; padding: var(--space-3) var(--space-4); border-left: 3px solid var(--gold); border-radius: 0 var(--r-md, 10px) var(--r-md, 10px) 0; background: var(--surface-inset); color: var(--muted-foreground); font-size: .88rem; line-height: 1.55 }
 .fd-source b { display: block; margin-bottom: 2px; color: var(--foreground); font: 700 .72rem var(--font-display-src), sans-serif; letter-spacing: .08em; text-transform: uppercase }
+.pl-jenis button b { width: auto; min-width: 26px; padding: 0 6px }

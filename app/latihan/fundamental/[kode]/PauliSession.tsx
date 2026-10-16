@@ -1,9 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useReducer, useRef } from "react";
+import { useCallback, useEffect, useReducer, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { PAULI, deretAnswer, pauliStats, type FundamentalMeta } from "@/lib/fundamental";
+import { PAULI, PAULI_LATIHAN, deretAnswer, pauliStats, type FundamentalMeta } from "@/lib/fundamental";
 import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { Button } from "@/app/components/ui-client";
 import Numpad from "./Numpad";
@@ -12,14 +12,17 @@ import Numpad from "./Numpad";
   Tes Pauli (Arnold 1975): jumlahkan dua angka berdekatan dari atas ke bawah tanpa henti, PAULI.periode × PAULI.detik.
   Tiap periode habis = tanda garis di posisi terakhir. Aturan instansi berbeda, jadi peserta memilih di awal:
   "pindah" = garis lalu pindah ke kolom baru (1 kolom = 1 periode); "lanjut" = garis lalu lanjut di kolom sama (teks Arnold).
-  Kolom penuh = pindah kolom di kedua mode. Tanpa umpan balik benar/salah sampai hasil.
+  Kolom penuh = pindah kolom di kedua mode. Tes = 20 × 3 menit tanpa umpan balik benar/salah sampai hasil;
+  Latihan = PAULI_LATIHAN (pendek) dengan warna hijau/merah langsung.
 */
 
 type Mode = "pindah" | "lanjut";
+type Jenis = "tes" | "latihan";
 type Mark = { c: number; r: number };
 type State = {
   phase: "intro" | "run" | "done";
   mode: Mode;
+  jenis: Jenis;
   col: number;
   ans: number[][];
   startAt: number;
@@ -31,13 +34,15 @@ type State = {
   /** Diakhiri peserta sebelum waktu habis: periode berjalan belum penuh. */
   stopped: boolean;
 };
-type Action = { t: "start"; mode: Mode; now: number } | { t: "tick"; now: number } | { t: "digit"; n: number; benar: boolean } | { t: "stop" };
+type Action = { t: "start"; mode: Mode; jenis: Jenis; now: number } | { t: "tick"; now: number } | { t: "digit"; n: number; benar: boolean } | { t: "stop" };
 
 const PER = PAULI.baris - 1;
-const DURASI = PAULI.periode * PAULI.detik;
+const CFG = { tes: { periode: PAULI.periode, detik: PAULI.detik }, latihan: PAULI_LATIHAN };
+const durasi = (j: Jenis) => CFG[j].periode * CFG[j].detik;
 const fresh = (): State => ({
   phase: "intro",
   mode: "lanjut",
+  jenis: "tes",
   col: 0,
   ans: Array.from({ length: PAULI.kolom }, () => []),
   startAt: 0,
@@ -52,16 +57,17 @@ const fresh = (): State => ({
 const nextCol = (s: State): State => (s.col + 1 >= PAULI.kolom ? { ...s, phase: "done" } : { ...s, col: s.col + 1 });
 
 function reducer(s: State, a: Action): State {
-  if (a.t === "start") return { ...fresh(), phase: "run", mode: a.mode, startAt: a.now };
+  if (a.t === "start") return { ...fresh(), phase: "run", mode: a.mode, jenis: a.jenis, startAt: a.now };
   if (s.phase !== "run") return s;
   if (a.t === "stop") return { ...s, phase: "done", stopped: true };
   if (a.t === "tick") {
     // Waktu dari selisih jam, bukan hitungan tick: setInterval melambat di tab latar selama 60 menit.
-    const elapsed = Math.min(DURASI, Math.floor((a.now - s.startAt) / 1000));
+    const cfg = CFG[s.jenis];
+    const elapsed = Math.min(durasi(s.jenis), Math.floor((a.now - s.startAt) / 1000));
     let next: State = { ...s, elapsed };
-    while (next.phase === "run" && next.periode < Math.floor(elapsed / PAULI.detik)) {
+    while (next.phase === "run" && next.periode < Math.floor(elapsed / cfg.detik)) {
       next = { ...next, periode: next.periode + 1, marks: [...next.marks, { c: next.col, r: next.ans[next.col].length }] };
-      if (next.periode >= PAULI.periode) next = { ...next, phase: "done" };
+      if (next.periode >= cfg.periode) next = { ...next, phase: "done" };
       else if (next.mode === "pindah") next = nextCol(next);
     }
     return next;
@@ -81,6 +87,11 @@ const fmt = (x: number) => (Math.round(x * 10) / 10).toLocaleString("id-ID");
 export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; grid: number[][] }) {
   const router = useRouter();
   const [s, dispatch] = useReducer(reducer, undefined, fresh);
+  // Tes/Latihan dipilih di layar awal, terkunci begitu sesi dimulai.
+  const [pilih, setPilih] = useState<Jenis>("tes");
+  const jenis = s.phase === "intro" ? pilih : s.jenis;
+  const latihan = jenis === "latihan";
+  const cfg = CFG[jenis];
   const activeRef = useRef<HTMLSpanElement>(null);
   const pos = s.ans[s.col].length;
   const key = (c: number, r: number) => deretAnswer("tambah", grid[c][r], grid[c][r + 1]);
@@ -105,9 +116,11 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
     (d: string) => {
       if (s.phase !== "run") return;
       const n = Number(d);
-      dispatch({ t: "digit", n, benar: n === deretAnswer("tambah", grid[s.col][pos], grid[s.col][pos + 1]) });
+      const benar = n === deretAnswer("tambah", grid[s.col][pos], grid[s.col][pos + 1]);
+      if (!benar && s.jenis === "latihan") navigator.vibrate?.(60);
+      dispatch({ t: "digit", n, benar });
     },
-    [grid, pos, s.col, s.phase]
+    [grid, pos, s.col, s.jenis, s.phase]
   );
 
   const exit = (
@@ -116,20 +129,30 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
       Keluar
     </Link>
   );
+  const DURASI = durasi(jenis);
   const menit = DURASI / 60;
-  const tiap = PAULI.detik / 60;
+  const tiap = cfg.detik / 60;
 
   if (s.phase === "intro") {
     return (
       <div className="min-h-[100dvh] bg-background">
-        <ExamBar title={meta.label} count={`${PAULI.periode} periode × ${tiap} menit`} actions={exit} />
+        <ExamBar title={meta.label} count={`${cfg.periode} periode × ${tiap} menit`} actions={exit} />
         <div className="app-page">
           <section className="fd-result enter-rise">
             <p className="section-kicker">Tes Koran · Pauli</p>
             <h1 className="fd-result-title">{meta.label}</h1>
+            <div className="kp-op pl-jenis" role="group" aria-label="Pilih jenis sesi">
+              {(["tes", "latihan"] as const).map((j) => (
+                <button key={j} type="button" aria-pressed={pilih === j} onClick={() => setPilih(j)}>
+                  <b>{durasi(j) / 60}</b>
+                  menit · {j === "tes" ? "Tes" : "Latihan"}
+                </button>
+              ))}
+            </div>
             <p className="text-foreground">
               Jumlahkan dua angka yang berdekatan dari atas ke bawah, lalu ketik <b>angka satuannya saja</b>. Kerjakan tanpa henti selama {menit} menit.
               Tiap {tiap} menit muncul tanda <b>garis</b> di posisi terakhirmu. Jawaban tidak bisa diubah, jangan memeriksa ulang.
+              {latihan ? " Mode Latihan: durasi pendek dan jawaban langsung berwarna hijau/merah." : " Benar/salah baru terlihat di hasil, seperti tes aslinya."}
             </p>
             <div className="fd-example tnum" aria-label="Contoh">
               <span>7</span>
@@ -142,13 +165,13 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
             </p>
             <p className="muted">Aturan saat tanda garis berbeda antarinstansi. Pilih yang sesuai tes kamu:</p>
             <div className="kp-modes">
-              <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "pindah", now: Date.now() })}>
+              <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "pindah", jenis: pilih, now: Date.now() })}>
                 <b>Pindah kolom</b>
                 <span>
-                  Satu kolom = satu periode {tiap} menit. Saat tanda garis, langsung pindah ke kolom berikutnya. {PAULI.periode} kolom = {menit} menit.
+                  Satu kolom = satu periode {tiap} menit. Saat tanda garis, langsung pindah ke kolom berikutnya. {cfg.periode} kolom = {menit} menit.
                 </span>
               </button>
-              <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "lanjut", now: Date.now() })}>
+              <button type="button" className="kp-mode" onClick={() => dispatch({ t: "start", mode: "lanjut", jenis: pilih, now: Date.now() })}>
                 <b>Lanjut di kolom sama</b>
                 <span>Sesuai pedoman Arnold: saat tanda garis, lanjut tanpa jeda di kolom yang sama. Pindah kolom hanya saat kolom penuh.</span>
               </button>
@@ -159,14 +182,14 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
     );
   }
 
-  const modeLabel = s.mode === "pindah" ? "Pindah kolom" : "Lanjut kolom";
+  const modeLabel = `${latihan ? "Latihan" : "Tes"} · ${s.mode === "pindah" ? "Pindah kolom" : "Lanjut kolom"}`;
 
   if (s.phase === "done") {
     // Kurva dari jawaban BENAR per periode (arah sama dengan Kecepatan Kraepelin): angka asal tidak menaikkan kurva.
     // Diakhiri lebih awal: periode berjalan ikut tampil di kurva (bar pudar), tapi tidak dihitung ke ukuran kurva
     // karena waktunya lebih pendek dan akan terlihat seperti penurunan.
     const penuh = s.benar.slice(0, s.periode);
-    const sisa = s.stopped && s.periode < PAULI.periode ? 1 : 0;
+    const sisa = s.stopped && s.periode < cfg.periode ? 1 : 0;
     const per = s.benar.slice(0, s.periode + sisa);
     const st = pauliStats(penuh.length ? penuh : per);
     const total = per.reduce((a, b) => a + b, 0);
@@ -257,7 +280,7 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
     <div className="min-h-[100dvh] bg-background">
       <ExamBar
         title={meta.label}
-        count={`Periode ${s.periode + 1} dari ${PAULI.periode} · ${modeLabel}`}
+        count={`Periode ${s.periode + 1} dari ${cfg.periode} · ${modeLabel}`}
         timer={<ExamTimer seconds={DURASI - s.elapsed} label="Sisa waktu" muted />}
         actions={exit}
       >
@@ -279,7 +302,7 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
                   {digits.map((d, r) => {
                     const a = s.ans[c][r];
                     const active = c === s.col && r === pos;
-                    const state = a !== undefined ? "is-done" : active ? "is-active" : c < s.col ? "is-skip" : "";
+                    const state = a !== undefined ? (latihan ? (a === key(c, r) ? "is-ok" : "is-bad") : "is-done") : active ? "is-active" : c < s.col ? "is-skip" : "";
                     return (
                       <li key={r} className={marked.has(`${c}-${r}`) ? "pl-mark" : undefined}>
                         <span className={`kp-d ${c === s.col && (r === pos || r === pos + 1) ? "is-pair" : ""}`}>{d}</span>

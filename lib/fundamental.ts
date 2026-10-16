@@ -111,6 +111,8 @@ export function kraepelinStats(perKolom: number[]) {
 
 /** Tes Pauli (Arnold 1975, Merkblatt hlm. 171): 20 periode × 3 menit, hanya penjumlahan. Grid cukup untuk >3.916 soal (skor tertinggi studi Polandia). */
 export const PAULI = { periode: 20, detik: 180, kolom: 40, baris: 200 };
+/** Mode Latihan Pauli: durasi pendek untuk pemanasan, garis dan kurva tetap ada. */
+export const PAULI_LATIHAN = { periode: 5, detik: 60 };
 export const generatePauli = () => Array.from({ length: PAULI.kolom }, () => Array.from({ length: PAULI.baris }, () => rand(1, 9)));
 
 /** Ukuran Pauli dari jumlah benar per periode 3 menit. Nilai mentah, tanpa norma. */
