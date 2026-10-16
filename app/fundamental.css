@@ -127,3 +127,12 @@
 .kp-op button b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: var(--surface-card); color: var(--brand-ink); font: 800 1.05rem var(--font-display-src), sans-serif }
 .kp-op button[aria-pressed="true"] { background: var(--surface-nav); color: #fff }
 .kp-op button[aria-pressed="true"] b { background: var(--gold-grad); color: var(--on-gold) }
+
+/* Tes Pauli: garis tanda periode di posisi terakhir + kilasan "Garis!" sekali putar. */
+.kp-col li.pl-mark { position: relative }
+.kp-col li.pl-mark::before { content: ''; position: absolute; top: -2px; left: 4px; right: 4px; height: 2px; border-radius: 1px; background: var(--destructive) }
+.pl-flash { position: fixed; top: 76px; left: 50%; z-index: 20; margin: 0; padding: 8px 18px; border-radius: 999px; background: var(--surface-nav); color: #fff; font: 700 .95rem var(--font-display-src), sans-serif; translate: -50% 0; opacity: 0; pointer-events: none; animation: pl-flash 1.6s ease-out 1 }
+@keyframes pl-flash { 0%, 70% { opacity: 1 } 100% { opacity: 0 } }
+@media (prefers-reduced-motion: reduce) { .pl-flash { animation-duration: 2.4s; animation-timing-function: steps(1, end) } }
+.kp-bar.is-partial i { opacity: .4 }
+.pl-stop { width: 100%; margin-top: var(--space-3); justify-content: center }

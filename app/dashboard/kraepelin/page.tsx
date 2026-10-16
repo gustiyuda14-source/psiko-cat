@@ -17,17 +17,17 @@ export default function KraepelinPage() {
         <div className="fd-hero-text">
           <span className="fd-hero-kicker">
             <i aria-hidden="true" />
-            Kraepelin
+            Kraepelin · Pauli
           </span>
           <h1>Tes Koran</h1>
           <p>
-            Latihan tes Kraepelin (rekening koran): jumlahkan atau kalikan dua angka berdekatan, tulis angka satuannya, kolom demi kolom.
-            Grid dibuat ulang setiap sesi, jawab dengan numpad atau keyboard.
+            Latihan tes koran: jumlahkan dua angka berdekatan, tulis angka satuannya. Kraepelin pindah kolom tiap beberapa detik, Pauli
+            dikerjakan tanpa henti 60 menit dengan tanda garis tiap 3 menit. Grid dibuat ulang setiap sesi, jawab dengan numpad atau keyboard.
           </p>
         </div>
         <dl className="fd-hero-stats">
           <div>
-            <dt>Rekening Koran</dt>
+            <dt>Tes Koran</dt>
             <dd className="tnum">{PAKET.length} paket</dd>
           </div>
         </dl>
@@ -38,7 +38,7 @@ export default function KraepelinPage() {
             key={m.kode}
             href={`/latihan/fundamental/${m.kode}`}
             code={`Paket ${String(i + 1).padStart(2, "0")}`}
-            tag="Tambah · Kali"
+            tag={m.kind === "pauli" ? "Tambah · 60 menit" : "Tambah · Kali"}
             kicker={m.kicker}
             title={m.label}
             desc={m.desc}

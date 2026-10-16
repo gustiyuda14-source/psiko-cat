@@ -5,7 +5,7 @@
   hasil mulai dicatat ke akun.
 */
 
-export type FundamentalKind = "isian" | "pecahan" | "deret";
+export type FundamentalKind = "isian" | "pecahan" | "deret" | "pauli";
 export type FundamentalMeta = {
   kode: string;
   grup: "Penguatan Dasar" | "Rekening Koran";
@@ -28,6 +28,7 @@ export const FUNDAMENTAL: FundamentalMeta[] = [
   { kode: "dekomposisi", grup: "Penguatan Dasar", label: "Dekomposisi Perkalian", kicker: "Hitung mental", desc: "Pecah perkalian besar jadi bagian kecil yang mudah dihitung di kepala.", kind: "isian", total: 50, points: ISIAN_POINTS, contoh: ["8×92", "14×37", "63×81"], level: 2 },
   { kode: "pecahan", grup: "Penguatan Dasar", label: "Sederhanakan Pecahan", kicker: "FPB dan pecahan", desc: "Cari FPB lalu tulis pecahan dalam bentuk paling sederhana.", kind: "pecahan", total: 50, points: ["50 soal pembilang/penyebut", "Pembahasan tiap jawaban", "Numpad dan keyboard"], contoh: ["12/18", "21/42", "65/156"], level: 2 },
   { kode: "koran", grup: "Rekening Koran", label: "Rekening Koran", kicker: "Tes Kraepelin", desc: "Grid 20 kolom × 30 angka, dikerjakan per kolom dari atas ke bawah. Tulis angka satuan hasil dua angka berdekatan.", kind: "deret", total: 580, points: ["Pilih Tambah atau Kali", "Mode Tes: 20 detik per kolom", "Mode Latihan: tanpa batas waktu"], contoh: ["7+8 → 5", "7×8 → 6"], level: 3 },
+  { kode: "pauli", grup: "Rekening Koran", label: "Tes Pauli", kicker: "Tes Pauli", desc: "Jumlahkan dua angka berdekatan dari atas ke bawah tanpa henti selama 60 menit. Tiap 3 menit ada tanda garis.", kind: "pauli", total: 0, points: ["20 periode × 3 menit", "Pilih: pindah kolom atau lanjut (Arnold)", "Kurva kerja per periode"], contoh: ["7+8 → 5", "garis tiap 3 mnt"], level: 3 },
 ];
 
 export const fundamentalMeta = (kode: string) => FUNDAMENTAL.find((m) => m.kode === kode);
@@ -105,5 +106,30 @@ export function kraepelinStats(perKolom: number[]) {
     keajegan: perKolom.length ? Math.max(...perKolom) - Math.min(...perKolom) : 0,
     // Paruh akhir dikurangi paruh awal: Mode Tes positif = makin cepat, Mode Latihan positif = makin lambat.
     ketahanan: avg(perKolom.slice(perKolom.length - half)) - avg(perKolom.slice(0, half)),
+  };
+}
+
+/** Tes Pauli (Arnold 1975, Merkblatt hlm. 171): 20 periode × 3 menit, hanya penjumlahan. Grid cukup untuk >3.916 soal (skor tertinggi studi Polandia). */
+export const PAULI = { periode: 20, detik: 180, kolom: 40, baris: 200 };
+export const generatePauli = () => Array.from({ length: PAULI.kolom }, () => Array.from({ length: PAULI.baris }, () => rand(1, 9)));
+
+/** Ukuran Pauli dari jumlah benar per periode 3 menit. Nilai mentah, tanpa norma. */
+export function pauliStats(per: number[]) {
+  const total = per.reduce((a, b) => a + b, 0);
+  const mean = per.length ? total / per.length : 0;
+  const pct = (x: number) => (mean ? (x / mean) * 100 : 0);
+  // Schwankung = rata-rata |selisih periode berurutan| ("Fluctuation M.A.C"); cocok dengan contoh Arnold Abb. 4: ±5,2 (2,9%).
+  const diffs = per.slice(1).map((v, i) => Math.abs(v - per[i]));
+  const schwankung = diffs.length ? diffs.reduce((a, b) => a + b, 0) / diffs.length : 0;
+  const hi = per.indexOf(Math.max(...per));
+  const lo = per.indexOf(Math.min(...per));
+  return {
+    total,
+    schwankung,
+    schwankungPct: pct(schwankung),
+    // Gipfellage = periode puncak (Abb. 4: puncak 195 di periode 13). Steighöhe: rekonstruksi dari indeks Arnold
+    // ("negative Form = Tief- dan Hochpunkt tertukar"), bab rumus aslinya tidak ada di PDF.
+    gipfel: hi + 1,
+    steighohe: per.length ? pct(per[hi] - per[lo]) * (hi >= lo ? 1 : -1) : 0,
   };
 }
