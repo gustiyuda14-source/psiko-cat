@@ -1,4 +1,5 @@
 import PembahasanNavigator from "@/app/components/pembahasan/PembahasanNavigator";
+import type { PribadiReviewItem } from "@/app/components/PribadiReview";
 import type {
   KecerdasanOptionsPayload,
   KecermatanOptionsPayload,
@@ -52,6 +53,8 @@ export type KecermatanColumnGroup = {
 type Props = {
   kecerdasan: KecerdasanReviewItem[];
   kepribadian: KepribadianReviewItem[];
+  /** Simulasi paket PRIBADI (11+): kunci + pembahasan per aspek. */
+  pribadi?: PribadiReviewItem[];
   kecermatan: KecermatanSummary | null;
   kecermatanDetail: KecermatanColumnGroup[];
 };
@@ -62,13 +65,14 @@ export function KecerdasanReview({ items }: { items: KecerdasanReviewItem[] }) {
 }
 
 /** Pembahasan simulasi: tiga sub-tes dalam satu navigator (halaman hasil + Ruang Review). */
-export default function PembahasanSection({ kecerdasan, kepribadian, kecermatan, kecermatanDetail }: Props) {
+export default function PembahasanSection({ kecerdasan, kepribadian, pribadi, kecermatan, kecermatanDetail }: Props) {
   return (
     <section className="space-y-3">
       <h2 className="text-sm font-semibold text-foreground">Pembahasan per sub-tes</h2>
       <PembahasanNavigator
         kecerdasan={kecerdasan}
         kepribadian={kepribadian}
+        pribadi={pribadi}
         kecermatan={{ summary: kecermatan, groups: kecermatanDetail }}
       />
     </section>

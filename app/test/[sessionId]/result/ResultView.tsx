@@ -1,10 +1,10 @@
 import Link from "next/link";
 import PembahasanSection, {
   type KecerdasanReviewItem,
-  type KepribadianReviewItem,
   type KecermatanSummary,
   type KecermatanColumnGroup,
 } from "@/app/components/PembahasanSection";
+import type { KepribadianReview } from "@/lib/review";
 import { Meter, buttonStyles } from "@/app/components/ui";
 import { ExamBar } from "@/app/components/ExamChrome";
 import { ChevronRight } from "@/app/components/icons";
@@ -104,7 +104,7 @@ export type ResultViewProps = {
   kp: ResultModule;
   kc: ResultModule;
   kecerdasanItems: KecerdasanReviewItem[];
-  kepribadianItems: KepribadianReviewItem[];
+  kepribadianItems: KepribadianReview;
   kecermatanSummary: KecermatanSummary | null;
   kecermatanDetail: KecermatanColumnGroup[];
   psikogram: HasilPsikogram[] | null;
@@ -296,7 +296,8 @@ export default function ResultView({
         <div className="mt-8">
           <PembahasanSection
             kecerdasan={kecerdasanItems}
-            kepribadian={kepribadianItems}
+            kepribadian={kepribadianItems.kepribadian}
+            pribadi={kepribadianItems.pribadi}
             kecermatan={kecermatanSummary}
             kecermatanDetail={kecermatanDetail}
           />

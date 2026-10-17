@@ -8,7 +8,6 @@ import {
 } from "@/lib/review";
 import {
   type KecerdasanReviewItem,
-  type KepribadianReviewItem,
   type KecermatanSummary,
   type KecermatanColumnGroup,
 } from "@/app/components/PembahasanSection";
@@ -78,7 +77,7 @@ export default async function ResultPage({
   // Fetch pembahasan data in parallel
   const [kecerdasanItems, kepribadianItems, kecermatanDetail, psikogram, aspekSubtes] = await Promise.all([
     ks ? fetchKecerdasanReview(ks.id) : Promise.resolve([] as KecerdasanReviewItem[]),
-    kp ? fetchKepribadianReview(kp.id) : Promise.resolve([] as KepribadianReviewItem[]),
+    kp ? fetchKepribadianReview(kp.id) : Promise.resolve({ kepribadian: [], pribadi: [] }),
     kc ? fetchKecermatanDetailReview(kc.id) : Promise.resolve([] as KecermatanColumnGroup[]),
     // Psikogram butuh ketiga sub-tes; sesi satu sub-tes tetap memakai nilai sub-tes.
     isStandalone ? Promise.resolve(null) : psikogramSesi(moduleSessions),

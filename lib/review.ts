@@ -15,6 +15,8 @@ import type {
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { simulasiPackageOf } from "@/lib/test-config";
 import { pickReviewRows } from "@/lib/review-pick";
+import { itemScore, type PribadiRule } from "@/lib/scoring/pribadi";
+import type { PribadiReviewItem } from "@/app/components/PribadiReview";
 
 /** Paket bank soal yang dipakai sebuah module simulasi (null di sesi lama = Paket 1). */
 export async function modulePackageOf(moduleSessionId: string, type: "KECERDASAN" | "KEPRIBADIAN"): Promise<number> {
@@ -76,7 +78,10 @@ export async function kepribadianPackageOf(moduleSessionId: string): Promise<num
   return pkg ?? modulePackageOf(moduleSessionId, "KEPRIBADIAN");
 }
 
-export async function fetchKepribadianReview(moduleSessionId: string): Promise<KepribadianReviewItem[]> {
+export type KepribadianReview = { kepribadian: KepribadianReviewItem[]; pribadi: PribadiReviewItem[] };
+
+/** Paket PRIBADI (11+) dapat pembahasan per aspek seperti latihan; sesi lama Paket 1 Likert 5 tetap kartu tanpa kunci. */
+export async function fetchKepribadianReview(moduleSessionId: string): Promise<KepribadianReview> {
   const pkg = await kepribadianPackageOf(moduleSessionId);
   const [{ data: answers, error: answerError }, { data: questions, error: questionError }] = await Promise.all([
     supabaseAdmin
@@ -85,7 +90,7 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
     .eq("module_session_id", moduleSessionId),
     supabaseAdmin
       .from("questions")
-      .select("id, sequence_number, options_payload, is_active")
+      .select("id, sequence_number, options_payload, scoring_rule, is_active")
       .eq("type", "KEPRIBADIAN")
       .eq("package_number", pkg)
       .order("sequence_number", { ascending: true }),
@@ -95,14 +100,38 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
 
   const answerMap = new Map((answers ?? []).map((answer) => [answer.question_id, answer.selected_key]));
   // Butir yang dinonaktifkan setelah dijawab tetap tampil.
-  return (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id)).map((q) => {
-      return {
-        question_id: q.id,
-        sequence_number: q.sequence_number as number,
-        selected_key: answerMap.get(q.id) ?? null,
-        payload: q.options_payload as unknown as KepribadianOptionsPayload,
-      };
-    });
+  const rows = (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id));
+  const isPribadi = (r: unknown) => {
+    const t = (r as PribadiRule | null)?.type;
+    return t === "likert4" || t === "forced_choice";
+  };
+  if (rows.length && rows.every((q) => isPribadi(q.scoring_rule))) {
+    return {
+      kepribadian: [],
+      pribadi: rows.map((q) => {
+        const rule = q.scoring_rule as unknown as PribadiRule;
+        const selected = answerMap.get(q.id) ?? null;
+        return {
+          question_id: q.id,
+          selected_key: selected,
+          payload: q.options_payload as unknown as KepribadianOptionsPayload,
+          ...itemScore(rule, selected),
+          ...(rule.type === "likert4"
+            ? { subtes: "KP", aspect: rule.aspect, polarity: rule.polarity, pembahasan: rule.pembahasan }
+            : { subtes: "SK", dimensi: rule.dimensi, pembahasan: rule.pembahasan }),
+        };
+      }) as PribadiReviewItem[],
+    };
+  }
+  return {
+    kepribadian: rows.map((q) => ({
+      question_id: q.id,
+      sequence_number: q.sequence_number as number,
+      selected_key: answerMap.get(q.id) ?? null,
+      payload: q.options_payload as unknown as KepribadianOptionsPayload,
+    })),
+    pribadi: [],
+  };
 }
 
 // Kunci jawaban benar untuk Kecermatan diturunkan dari options_payload saja (shown vs symbol_map),

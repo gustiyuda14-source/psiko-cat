@@ -8,7 +8,6 @@ import {
 } from "@/lib/review";
 import PembahasanSection, {
   type KecerdasanReviewItem,
-  type KepribadianReviewItem,
   type KecermatanSummary,
   type KecermatanColumnGroup,
 } from "@/app/components/PembahasanSection";
@@ -138,7 +137,7 @@ export default async function ReviewPage({
 
   const [kecerdasanItems, kepribadianItems, kecermatanDetail, profil, aspek] = await Promise.all([
     ks ? fetchKecerdasanReview(ks.id) : Promise.resolve([] as KecerdasanReviewItem[]),
-    kp ? fetchKepribadianReview(kp.id) : Promise.resolve([] as KepribadianReviewItem[]),
+    kp ? fetchKepribadianReview(kp.id) : Promise.resolve({ kepribadian: [], pribadi: [] }),
     kc ? fetchKecermatanDetailReview(kc.id) : Promise.resolve([] as KecermatanColumnGroup[]),
     info.jenis === "simulasi" ? psikogramSesi(moduleSessions) : Promise.resolve(null),
     info.jenis === "mini" ? wsSesi(moduleSessions).then(aspekSesi) : Promise.resolve(null),
@@ -222,7 +221,8 @@ export default async function ReviewPage({
 
         <PembahasanSection
           kecerdasan={kecerdasanItems}
-          kepribadian={kepribadianItems}
+          kepribadian={kepribadianItems.kepribadian}
+          pribadi={kepribadianItems.pribadi}
           kecermatan={kecermatanSummary}
           kecermatanDetail={kecermatanDetail}
         />
