@@ -7,6 +7,7 @@ import { PAULI, PAULI_LATIHAN, deretAnswer, pauliStats, type FundamentalMeta } f
 import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { Button } from "@/app/components/ui-client";
 import Numpad from "./Numpad";
+import SaveNote from "./SaveNote";
 
 /*
   Tes Pauli (Arnold 1975): jumlahkan dua angka berdekatan dari atas ke bawah tanpa henti, PAULI.periode × PAULI.detik.
@@ -196,6 +197,8 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
     const dijawab = s.dijawab.reduce((a, b) => a + b, 0);
     const salah = dijawab - total;
     const fehler = dijawab ? (salah / dijawab) * 100 : 0;
+    // Riwayat hanya memuat periode penuh, jadi salahnya juga dihitung dari periode penuh saja.
+    const salahPenuh = s.dijawab.slice(0, penuh.length).reduce((a, b) => a + b, 0) - penuh.reduce((a, b) => a + b, 0);
     const wrong = s.ans.flatMap((a, c) => a.map((n, r) => ({ c, r, n })).filter(({ c, r, n }) => n !== key(c, r)));
     const max = Math.max(1, ...per);
     return (
@@ -257,7 +260,10 @@ export default function PauliSession({ meta, grid }: { meta: FundamentalMeta; gr
                 </ul>
               </div>
             )}
-            <p className="muted">Nilai mentah tanpa norma. Hasil belum disimpan ke akun (prototipe).</p>
+            <SaveNote
+              payload={penuh.length ? { kode: "pauli", mode: s.jenis, operasi: null, per_periode: penuh, salah: salahPenuh } : null}
+              skip="Belum ada periode penuh, jadi sesi ini tidak disimpan ke riwayat."
+            />
             <div className="flex flex-wrap gap-3">
               <Button variant="accent" size="lg" onClick={() => router.refresh()}>
                 Ulangi dengan grid baru

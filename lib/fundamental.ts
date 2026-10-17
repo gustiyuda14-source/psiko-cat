@@ -1,8 +1,8 @@
 /*
   Drilling Fundamental: soal hitung dasar yang dibangkitkan dari rumus tiap sesi (port dari repo
   PENGUATAN-DASAR js/soal-bank.js dan REKENING-KORAN- src/logic.js). Tanpa bank soal, tanpa DB.
-  ponytail: kunci ikut terkirim ke browser (soal dibangkitkan di klien); pindah ke server kalau
-  hasil mulai dicatat ke akun.
+  ponytail: kunci ikut terkirim ke browser (soal dibangkitkan di klien). Hasil Tes Koran dicatat ke akun
+  (parseKoranResult) sebagai progres latihan, bukan nilai resmi; pindah penilaian ke server kalau jadi resmi.
 */
 
 export type FundamentalKind = "isian" | "pecahan" | "deret" | "pauli";
@@ -134,4 +134,42 @@ export function pauliStats(per: number[]) {
     gipfel: hi + 1,
     steighohe: per.length ? pct(per[hi] - per[lo]) * (hi >= lo ? 1 : -1) : 0,
   };
+}
+
+/** Satu hasil Tes Koran yang layak disimpan ke riwayat (tabel latihan_koran_results). */
+export type KoranResultInput = {
+  kode: "koran" | "pauli";
+  mode: "tes" | "latihan";
+  operasi: "tambah" | "kali" | null;
+  /** Kraepelin: jawaban benar per kolom. Pauli: jawaban benar per periode penuh. */
+  per_periode: number[];
+  salah: number;
+};
+
+const isInt = (x: unknown, lo: number, hi: number): x is number => Number.isInteger(x) && (x as number) >= lo && (x as number) <= hi;
+
+/**
+ * Validasi hasil dari browser sebelum disimpan; input rusak = null. Kraepelin hanya Mode Tes
+ * (Mode Latihan mencatat detik, bukan jawaban, jadi tidak sebanding). Statistik dihitung ulang di server.
+ */
+export function parseKoranResult(x: unknown): (Omit<KoranResultInput, "salah"> & { stats: Record<string, number> }) | null {
+  if (!x || typeof x !== "object") return null;
+  const { kode, mode, operasi, per_periode: per, salah } = x as Record<string, unknown>;
+  if (!Array.isArray(per)) return null;
+  if (kode === "koran") {
+    if (mode !== "tes" || (operasi !== "tambah" && operasi !== "kali")) return null;
+    const maks = KORAN.baris - 1;
+    if (per.length !== KORAN.kolom || !per.every((v) => isInt(v, 0, maks)) || !isInt(salah, 0, KORAN.kolom * maks)) return null;
+    return { kode, mode, operasi, per_periode: per, stats: { ...kraepelinStats(per), salah } };
+  }
+  if (kode === "pauli") {
+    if (mode !== "tes" && mode !== "latihan") return null;
+    if (operasi !== null && operasi !== undefined) return null;
+    const cfg = mode === "tes" ? PAULI : PAULI_LATIHAN;
+    // ponytail: batas 5 jawaban/detik per periode, cukup menolak angka mustahil tanpa menebak rekor manusia.
+    if (per.length < 1 || per.length > cfg.periode || !per.every((v) => isInt(v, 0, cfg.detik * 5))) return null;
+    if (!isInt(salah, 0, PAULI.kolom * (PAULI.baris - 1))) return null;
+    return { kode, mode, operasi: null, per_periode: per, stats: { ...pauliStats(per), salah } };
+  }
+  return null;
 }

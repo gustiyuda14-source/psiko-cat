@@ -7,6 +7,7 @@ import { KORAN, deretAnswer, kraepelinStats, type FundamentalMeta } from "@/lib/
 import { ExamBar, ExamTimer } from "@/app/components/ExamChrome";
 import { Button } from "@/app/components/ui-client";
 import Numpad from "./Numpad";
+import SaveNote from "./SaveNote";
 
 /*
   Rekening Koran gaya Kraepelin: grid KORAN.kolom × KORAN.baris, dikerjakan per kolom dari atas ke bawah,
@@ -201,7 +202,10 @@ export default function DeretSession({ meta, grid }: { meta: FundamentalMeta; gr
                 </ul>
               </div>
             )}
-            <p className="muted">Nilai mentah tanpa norma. Hasil belum disimpan ke akun (prototipe).</p>
+            <SaveNote
+              payload={tes ? { kode: "koran", mode: "tes", operasi: op, per_periode: per, salah: wrong.length } : null}
+              skip="Mode Latihan tidak disimpan ke riwayat karena yang dicatat detik, bukan jumlah jawaban."
+            />
             <div className="flex flex-wrap gap-3">
               <Button variant="accent" size="lg" onClick={() => router.refresh()}>
                 Ulangi dengan grid baru
