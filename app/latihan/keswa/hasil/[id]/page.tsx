@@ -25,6 +25,8 @@ export default async function KeswaHasilPage({ params }: { params: Promise<{ id:
   const bank = keswaPaket(a.paket);
   const bahas = bank && a.jawaban?.length === bank.soal.length ? pembahasanKeswa(a.jawaban, bank.soal, bank.kunci) : [];
   const cek = bahas.map((d, i) => ({ ...d, ...baris[i] }));
+  const k = bank?.kunci;
+  const butirValid = k ? new Set([...k.sok.map(([i]) => i), ...k.acak.map(([i]) => i), ...k.sama.flat(), ...k.lawan.flat()]).size : 0;
   const lolos = baris.filter((b) => b.lolos).length;
   const ya = a.hasil.pola.nilai;
   const persenYa = terjawab ? Math.round((ya / terjawab) * 100) : 0;
@@ -60,6 +62,8 @@ export default async function KeswaHasilPage({ params }: { params: Promise<{ id:
             paket={a.paket}
             baris={baris}
             cek={cek}
+            totalSoal={a.hasil.kosong.dari}
+            butirValid={butirValid}
             stats={[
               { label: "Dijawab", value: terjawab },
               { label: "Kosong", value: a.hasil.kosong.nilai, tone: a.hasil.kosong.lolos ? undefined : "bad" },

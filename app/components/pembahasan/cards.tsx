@@ -369,6 +369,10 @@ function keswa(cek: KeswaCekData, item?: BahasItem): CardView {
               ]}
             />
             <p className="max-w-[72ch] leading-relaxed text-foreground">{sorot(item.catatan)}</p>
+            <p className="max-w-[72ch] text-sm leading-relaxed text-muted-foreground">
+              Di Keswa tidak ada jawaban benar atau salah. Status di atas hanya menunjukkan apakah jawaban ini ikut membuat
+              cek tidak lolos.
+            </p>
           </>
         )}
         <div className={`max-w-[72ch] space-y-1.5 text-sm leading-relaxed text-foreground ${item ? "border-t border-border pt-3" : ""}`}>
