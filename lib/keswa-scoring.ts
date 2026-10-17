@@ -37,25 +37,44 @@ export type KeswaHasil = {
 /** "Y" / "T" / "-" per soal, panjang KESWA_TOTAL. */
 export const JAWABAN_RE = new RegExp(`^[YT-]{${KESWA_TOTAL}}$`);
 
-export function nilaiKeswa(jawaban: string, kunci: KeswaKunci): KeswaHasil {
+/** Indeks soal yang memicu tiap cek (0-based). Satu sumber aturan untuk skor dan pembahasan. */
+export type KeswaPemicu = {
+  kosong: number[];
+  /** Pasangan bertentangan; sama = seharusnya selaras, lawan = seharusnya berlawanan. */
+  bentrok: { a: number; b: number; jenis: "sama" | "lawan" }[];
+  sok: number[];
+  acak: number[];
+  dijawab: number;
+  ya: number;
+};
+
+export function pemicuKeswa(jawaban: string, kunci: KeswaKunci): KeswaPemicu {
   const at = (i: number) => (jawaban[i] === "Y" || jawaban[i] === "T" ? (jawaban[i] as Jawab) : null);
 
-  let dijawab = 0;
+  const kosong: number[] = [];
   let ya = 0;
   for (let i = 0; i < jawaban.length; i++) {
-    if (at(i)) dijawab++;
+    if (!at(i)) kosong.push(i);
     if (at(i) === "Y") ya++;
   }
-  const kosongN = jawaban.length - dijawab;
 
-  let bentrok = 0;
-  for (const [a, b] of kunci.sama) if (at(a) && at(b) && at(a) !== at(b)) bentrok++;
-  for (const [a, b] of kunci.lawan) if (at(a) && at(b) && at(a) === at(b)) bentrok++;
+  const bentrok: KeswaPemicu["bentrok"] = [];
+  for (const [a, b] of kunci.sama) if (at(a) && at(b) && at(a) !== at(b)) bentrok.push({ a, b, jenis: "sama" });
+  for (const [a, b] of kunci.lawan) if (at(a) && at(b) && at(a) === at(b)) bentrok.push({ a, b, jenis: "lawan" });
+
+  const kena = (list: [number, Jawab][]) => list.filter(([i, j]) => at(i) === j).map(([i]) => i);
+  return { kosong, bentrok, sok: kena(kunci.sok), acak: kena(kunci.acak), dijawab: jawaban.length - kosong.length, ya };
+}
+
+export function nilaiKeswa(jawaban: string, kunci: KeswaKunci): KeswaHasil {
+  const p = pemicuKeswa(jawaban, kunci);
+  const kosongN = p.kosong.length;
+  const bentrok = p.bentrok.length;
   const pasangan = kunci.sama.length + kunci.lawan.length;
-
-  const hitung = (list: [number, Jawab][]) => list.filter(([i, j]) => at(i) === j).length;
-  const sokN = hitung(kunci.sok);
-  const acakN = hitung(kunci.acak);
+  const sokN = p.sok.length;
+  const acakN = p.acak.length;
+  const dijawab = p.dijawab;
+  const ya = p.ya;
   const rasio = dijawab ? ya / dijawab : 0;
 
   const kosong = { nilai: kosongN, dari: jawaban.length, lolos: kosongN < KESWA_AMBANG.kosong };
