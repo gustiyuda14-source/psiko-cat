@@ -11,6 +11,7 @@ import { MODULE_CONFIG } from "@/lib/test-config";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
 import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
+import { NewBadge } from "@/app/components/NewBadge";
 
 /*
   Pemilih paket latihan: timeline kartu paket yang sama dengan katalog Simulasi
@@ -41,6 +42,8 @@ export type PackageOption = {
   sections?: PackageSection[];
   /** Komposisi isi paket berurutan — dipakai Kepribadian (aspek + Integritas & Kejujuran). */
   parts?: PackagePart[];
+  /** Paket baru dirilis: badge NEW tampil selama peserta belum mengerjakannya. */
+  isNew?: boolean;
 };
 
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
@@ -346,13 +349,19 @@ export function PackageCarousel({
                     if (!wide) setSheetOpen(true);
                   }}
                 >
-                  {v.p >= 1 && (
+                  {v.p >= 1 ? (
                     <span className="sp-badges">
                       <span className="sp-badge is-ok">
                         <Check />
                         Selesai
                       </span>
                     </span>
+                  ) : (
+                    v.ready && v.pkg.isNew && v.done === 0 && (
+                      <span className="sp-badges">
+                        <NewBadge small />
+                      </span>
+                    )
                   )}
                   <span>
                     <span className="sp-title">{v.pkg.label}</span>

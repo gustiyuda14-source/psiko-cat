@@ -1,4 +1,4 @@
-import { KECERDASAN_PACKAGES, KECERDASAN_PACKAGE_LABELS } from "@/lib/test-config";
+import { KECERDASAN_PACKAGES, KECERDASAN_PACKAGES_NEW, KECERDASAN_PACKAGE_LABELS } from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { PackageCarousel } from "@/app/components/PackageCarousel";
@@ -21,6 +21,7 @@ export default async function LatihanKecerdasanPackagesPage() {
     id: pkg,
     label: KECERDASAN_PACKAGE_LABELS[pkg],
     questionCount: counts[index].count,
+    isNew: KECERDASAN_PACKAGES_NEW.includes(pkg),
   }));
 
   return (

@@ -78,6 +78,8 @@ export const KECERMATAN_SIMBOL_PACKAGE_LABELS: Record<number, string> = Object.f
 // soal simulasi tidak bocor lewat latihan (pola dajiks-cest). Slot 2-11 tampil
 // "Belum tersedia" sampai bank soalnya di-insert dengan package_number tsb.
 export const KECERDASAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
+// Paket baru dirilis: kartu ber-badge NEW sampai peserta mengerjakannya. Kosongkan saat tidak lagi baru.
+export const KECERDASAN_PACKAGES_NEW = [6]; // Paket 5, rilis 2026-10-17
 export const KECERDASAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KECERDASAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
