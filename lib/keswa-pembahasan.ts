@@ -1,13 +1,14 @@
 import { KESWA_AMBANG, KESWA_DURASI_DETIK, pemicuKeswa, type KeswaKunci } from "@/lib/keswa-scoring";
 
 // Pembahasan per cek untuk halaman hasil. Dipanggil di server; keluarannya hanya butir milik percobaan ini
-// (nomor, kalimat, jawaban peserta), tanpa daftar kunci. Hanya ~50 soal validitas; soal umum tidak pernah dinilai.
-// diukur/alasan/analogi/catatan/saran memakai **kata kunci** untuk sorotan (dirender jadi <mark> di KeswaCek); kalimat soal tidak pernah disorot.
+// (nomor, kalimat, jawaban peserta) yang memicu cek, tanpa daftar kunci; butir wajar tidak dikirim supaya nomor soal validitas tidak bocor. Hanya ~50 soal validitas; soal umum tidak pernah dinilai.
+// diukur/alasan/analogi/catatan/saran memakai **kata kunci** untuk sorotan (dirender jadi <mark> di kartu pembahasan); kalimat soal tidak pernah disorot.
 
-export type Butir = { no: number; teks: string; jawab: string; tandai: boolean };
+export type Butir = { no: number; teks: string; jawab: string };
+/** Satu petak di daftar soal: satu soal (atau sepasang untuk konsistensi) yang memicu cek. */
 export type BahasItem = { butir: Butir[]; catatan: string };
 /** Pola sama untuk 5 cek: apa yang diukur → kenapa terdeteksi (data peserta) → analogi → saran. */
-export type Bahas = { judul: string; ringkas: string; diukur: string; alasan: string; analogi: string; items: BahasItem[]; nomor?: string; saran: string[] };
+export type Bahas = { judul: string; tab: string; ringkas: string; diukur: string; alasan: string; analogi: string; items: BahasItem[]; nomor?: string; saran: string[] };
 
 const LABEL: Record<string, string> = { Y: "Ya", T: "Tidak" };
 
@@ -32,7 +33,7 @@ const vonis = (n: number, ambang: number, catatanLolos: string) =>
 export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKunci): Bahas[] {
   const p = pemicuKeswa(jawaban, kunci);
   const A = KESWA_AMBANG;
-  const butir = (i: number, tandai = true): Butir => ({ no: i + 1, teks: soal[i], jawab: LABEL[jawaban[i]] ?? "Tidak dijawab", tandai });
+  const butir = (i: number): Butir => ({ no: i + 1, teks: soal[i], jawab: LABEL[jawaban[i]] ?? "Tidak dijawab" });
   const jw = (i: number) => LABEL[jawaban[i]];
   const lawanArah = (j: string) => (j === "Y" ? "Tidak" : "Ya");
   const persenYa = p.dijawab ? Math.round((p.ya / p.dijawab) * 100) : 0;
@@ -41,10 +42,12 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
   const pasangan = kunci.sama.length + kunci.lawan.length;
   // Contoh dua arah dari soal validitas paket ini: soal yang hampir semua orang jawab Ya, dan yang dijawab Tidak.
   const contoh = [...kunci.acak.filter(([, j]) => j === "T").slice(0, 2), ...kunci.acak.filter(([, j]) => j === "Y").slice(0, 2)];
+  const polaLolos = rasio >= A.yaMin && rasio <= A.yaMaks;
 
   return [
     {
       judul: "Soal kosong",
+      tab: "Kosong",
       ringkas: p.kosong.length ? `${p.kosong.length} soal kosong, ${batas(p.kosong.length, A.kosong)}.` : "Semua soal dijawab.",
       diukur:
         "Cek ini menghitung soal yang **tidak dijawab**. Tes kepribadian menyimpulkan dari banyak jawaban sekaligus, jadi jawaban yang hilang membuat gambaran dirimu **tidak lengkap**.",
@@ -52,7 +55,10 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
         ? `Kamu mengosongkan **${p.kosong.length} soal**, sedangkan aplikasi ini menandai tidak lolos mulai **${A.kosong} soal kosong**. ${vonis(p.kosong.length, A.kosong, "tetap saja, tiap soal kosong mengurangi bahan yang bisa dibaca.")}${ekor >= 10 ? ` **${ekor} soal terakhir** kosong berurutan; pola ini biasanya tanda **waktu habis**, bukan soal yang sengaja dilewati.` : ""}`
         : `Semua ${jawaban.length} soal kamu jawab, jadi **tidak ada bagian yang hilang** dari gambaran dirimu.`,
       analogi: "Seperti **rapor** yang banyak nilainya kosong: wali kelas tidak bisa menyimpulkan kemampuan siswa, sebagus apa pun nilai yang terisi.",
-      items: [],
+      items: p.kosong.map((i) => ({
+        butir: [butir(i)],
+        catatan: `Nomor ${i + 1} **tidak dijawab**, jadi menambah hitungan soal kosong.`,
+      })),
       nomor: p.kosong.length ? ringkasNomor(p.kosong) : undefined,
       saran: [
         "Jawab **semua soal**. Tidak ada pilihan ragu-ragu, jadi pilih yang **paling mendekati** dirimu.",
@@ -63,6 +69,7 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
     },
     {
       judul: "Konsistensi",
+      tab: "Konsistensi",
       ringkas: p.bentrok.length ? `${p.bentrok.length} pasangan bertentangan, ${batas(p.bentrok.length, A.konsistensi)}.` : "Semua pasangan selaras.",
       diukur:
         "Cek ini melihat apakah kamu menjawab **selaras** pada pasangan soal yang diulang atau dibalik artinya. Tes kepribadian memakainya untuk memastikan jawaban diberikan sambil **membaca sungguh-sungguh**, bukan asal pilih.",
@@ -86,6 +93,7 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
     },
     {
       judul: "Pola Ya/Tidak",
+      tab: "Pola Ya/Tidak",
       ringkas: `${persenYa}% Ya, rentang wajar ${A.yaMin * 100}–${A.yaMaks * 100}%.`,
       diukur:
         "Cek ini melihat **kecenderungan** menjawab Ya terus atau Tidak terus, apa pun isi soalnya. Kebiasaan ini disebut **bias jawaban**: yang menentukan jawaban adalah kebiasaan, bukan isi kalimat.",
@@ -93,10 +101,15 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
         rasio < A.yaMin ? "proporsimu **di bawah batas**, jadi cek ini tidak lolos." : rasio > A.yaMaks ? "proporsimu **di atas batas**, jadi cek ini tidak lolos." : "proporsimu masih di **rentang wajar**."
       }`,
       analogi: "Seperti orang yang **mengangguk** pada setiap pertanyaan, termasuk \"Kamu suka pedas?\" dan \"Kamu tidak suka pedas?\": anggukannya tidak lagi memberi informasi.",
-      items: contoh.map(([i, j]) => ({
-        butir: [butir(i, false)],
-        catatan: `Pernyataan ini wajarnya dijawab **${lawanArah(j)}** oleh kebanyakan orang, jadi soal di tes ini memang **tidak searah** semua.`,
-      })),
+      // Contoh dua arah hanya ditampilkan bila cek pola tidak lolos.
+      items: polaLolos
+        ? []
+        : contoh.map(([i, j]) => ({
+            butir: [butir(i)],
+            catatan: `Pernyataan ini wajarnya dijawab **${lawanArah(j)}** oleh kebanyakan orang, jadi soal di tes ini memang **tidak searah** semua.${
+              jw(i) ? ` Kamu menjawab ${jw(i)}.` : " Nomor ini tidak kamu jawab."
+            }`,
+          })),
       saran: [
         "Putuskan **satu per satu**: untuk setiap kalimat, tanyakan \"apakah ini benar tentang aku?\"",
         "Ingat soal disusun **dua arah**, seperti contoh di atas; jawaban yang seragam hampir pasti tidak sesuai isi.",
@@ -105,6 +118,7 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
     },
     {
       judul: "Sok sempurna",
+      tab: "Sok sempurna",
       ringkas: p.sok.length ? `${p.sok.length} kekurangan kecil disangkal, ${batas(p.sok.length, A.sokSempurna)}.` : "Kamu mengakui kekurangan kecil yang wajar.",
       diukur:
         "Cek ini melihat kecenderungan **menampilkan diri terlalu baik**, misalnya menyangkal kekurangan kecil yang wajar dimiliki manusia. Tes kepribadian memakainya karena dalam seleksi orang mudah tergoda menjawab yang terlihat ideal, bukan yang **sebenarnya**.",
@@ -125,6 +139,7 @@ export function pembahasanKeswa(jawaban: string, soal: string[], kunci: KeswaKun
     },
     {
       judul: "Jawaban acak",
+      tab: "Acak",
       ringkas: p.acak.length ? `${p.acak.length} jawaban menyimpang, ${batas(p.acak.length, A.acak)}.` : "Jawabanmu wajar.",
       diukur:
         "Cek ini melihat apakah kamu **memperhatikan** isi soal. Pernyataannya dibuat sangat jelas, sehingga jawaban yang menyimpang biasanya menandakan **kurang teliti**, bukan perbedaan kepribadian.",
