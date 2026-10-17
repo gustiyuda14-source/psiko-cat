@@ -1,0 +1,172 @@
+/* ===== "Potongan Lembar": menu Fundamental, Keswa, Tes Koran. Prefix lb-. Token dari globals.css.
+   Kartu paket = potongan lembar soal asli: spesimen bergaris di atas, garis sobek, identitas paket di bawah.
+   Prototipe: output/layout-fundamental-keswa-kraepelin-prototype.html. ===== */
+.lb {
+  --lb-paper: color-mix(in srgb, var(--surface-card) 60%, var(--surface-inset));
+  --lb-rule: color-mix(in srgb, var(--brand-ink) 9%, transparent);
+  --lb-digit: color-mix(in srgb, var(--brand-ink) 78%, transparent);
+  --lb-display: var(--font-display-src), ui-sans-serif, system-ui, sans-serif;
+}
+.lb .tnum { font-variant-numeric: tabular-nums }
+
+/* Kepala halaman: judul editorial, satu kalimat, baris meta. */
+.lb-head { padding-bottom: 4px }
+.lb-head h1 { margin: 0; color: var(--brand-ink); font: 700 clamp(2rem, 4.2vw, 3rem)/1.05 var(--lb-display); letter-spacing: -.03em }
+.lb-head p { margin: 12px 0 0; max-width: 64ch; color: var(--muted-foreground); font-size: 1.06rem; line-height: 1.6 }
+.lb-meta { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 14px; font: 500 .9rem var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-meta span { color: var(--muted-foreground); font-weight: 400 }
+
+/* Grid lembar: bentang kolom lewat --c / --r (inline), satu kolom di layar sempit. */
+.lb-sheets { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px; margin-top: 36px }
+.lb-sheets > :not(dialog) { grid-column: span var(--c, 6); grid-row: span var(--r, 1) }
+@media (max-width: 760px) { .lb-sheets { grid-template-columns: minmax(0, 1fr) } .lb-sheets > :not(dialog) { grid-column: auto; grid-row: auto } }
+.lb-sheet { position: relative; display: flex; flex-direction: column; width: 100%; min-width: 0; padding: 0; border: 1px solid var(--border); border-radius: 4px; background: var(--lb-paper); color: var(--foreground); font: inherit; text-align: left; text-decoration: none; cursor: pointer; transition: transform 220ms var(--e-out), box-shadow 220ms var(--e-out), border-color 220ms ease }
+.lb-sheet:active { transform: scale(.985) }
+@media (hover: hover) and (pointer: fine) { .lb-sheet:hover { transform: translateY(-3px); box-shadow: var(--elev-3); border-color: var(--border-strong) } }
+.lb-sheet:focus-visible { box-shadow: var(--elev-3) }
+.lb-spec { position: relative; display: block; flex: 1; width: 100%; padding: 22px 22px 18px; overflow: hidden; background-image: linear-gradient(var(--lb-rule) 1px, transparent 1px); background-size: 100% 28px; background-position: 0 21px }
+.lb-tear { position: relative; display: block; height: 0; margin: 0 14px; border-top: 1.5px dashed var(--border-strong) }
+.lb-tear::before, .lb-tear::after { content: ""; position: absolute; top: -9px; width: 16px; height: 16px; border: 1px solid var(--border); border-radius: 50%; background: var(--surface-page) }
+.lb-tear::before { left: -23px; clip-path: inset(0 0 0 50%) }
+.lb-tear::after { right: -23px; clip-path: inset(0 50% 0 0) }
+.lb-id { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; align-items: end; width: 100%; padding: 16px 22px 18px }
+.lb-code { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 12px; color: var(--faint-foreground); font: 500 .78rem var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-title { margin: 6px 0 0; font: 700 1.18rem/1.25 var(--lb-display); letter-spacing: -.01em; text-wrap: balance }
+.lb-line { grid-column: 1; margin: 4px 0 0; color: var(--muted-foreground); font-size: .93rem; line-height: 1.5 }
+.lb-go { grid-column: 2; grid-row: 2 / span 2; align-self: end; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--gold-grad); color: var(--on-gold); font: 600 .9rem var(--lb-display); white-space: nowrap }
+.lb-go svg { width: 15px; height: 15px; transition: transform 220ms var(--e-out) }
+@media (hover: hover) and (pointer: fine) { .lb-sheet:hover .lb-go svg { transform: translateX(3px) } }
+.lb-sheet.is-quiet .lb-go { background: none; box-shadow: inset 0 0 0 1.5px var(--border-strong); color: var(--foreground) }
+/* Kartu sempit (span kecil atau HP): tombol turun ke bawah teks. */
+.lb-sheet { container-type: inline-size }
+@container (max-width: 440px) { .lb-id { grid-template-columns: minmax(0, 1fr) } .lb-go { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 12px } }
+
+/* Kunci spesimen: muncul saat hover/fokus (sekali transisi), selalu tampil di layar sentuh. */
+.lb-key { color: var(--gold); opacity: 0; transform: translateY(4px); transition: opacity 200ms ease, transform 220ms var(--e-out) }
+.lb-sheet:hover .lb-key, .lb-sheet:focus-visible .lb-key { opacity: 1; transform: none }
+@media (hover: none) { .lb-key { opacity: 1; transform: none } }
+.lb-spec .lb-key { display: block; margin-top: 10px; font: 500 1rem var(--lb-display) }
+
+/* Spesimen Fundamental. */
+.lb-big { display: block; color: var(--brand-ink); font: 600 clamp(3.4rem, 9vw, 6.2rem)/1 var(--lb-display); letter-spacing: -.04em; font-variant-numeric: tabular-nums }
+.lb-big.is-md { font-size: clamp(2.8rem, 6vw, 4.2rem) }
+.lb-row { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 14px; color: var(--lb-digit); font: 500 1.25rem var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-spec.is-tall { display: flex; flex-direction: column; justify-content: space-between; gap: 28px }
+.lb-stem { display: grid; color: var(--foreground); font: 500 clamp(1.3rem, 2.4vw, 1.75rem)/1.45 var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-spec .lb-stem .lb-key { display: inline; margin: 0; font: inherit; font-weight: 700 }
+.lb-frac-wrap { display: flex; align-items: center; gap: 22px }
+.lb-frac { display: inline-grid; justify-items: center; color: var(--brand-ink); font: 600 clamp(2.4rem, 5vw, 3.4rem)/1 var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-frac i { width: 100%; height: 3px; margin: 6px 0; border-radius: 2px; background: currentColor }
+.lb-spec .lb-frac-wrap .lb-key { margin: 0; font: 600 clamp(1.6rem, 3vw, 2.2rem)/1 var(--lb-display) }
+
+/* Spesimen Tes Koran: kolom angka Kraepelin dan strip Pauli. */
+.lb-cols { display: flex; gap: clamp(10px, 2.4vw, 22px); color: var(--lb-digit); font: 500 1.05rem/28px var(--lb-display); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent) }
+.lb-col { position: relative; display: grid; justify-items: center }
+.lb-col.is-on { margin-right: 12px; color: var(--brand-ink); font-weight: 700 }
+.lb-spec .lb-col .lb-key { position: absolute; top: 0; left: calc(100% + 1px); margin: 0; font-size: .8rem; line-height: 28px }
+.lb-col .lb-key span { display: block; transform: translateY(14px) }
+.lb-pauli { display: grid; grid-template-columns: auto 1fr; gap: 0 14px; color: var(--lb-digit); font: 500 1.05rem/26px var(--lb-display); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent) }
+.lb-pauli .d { display: block; width: 1.4em; text-align: center }
+.lb-pauli .mk { position: relative; display: block; height: 0; margin: 3px 0 2px -6px; border-top: 2px solid var(--gold) }
+.lb-pauli .mk[data-t]::after { content: attr(data-t); position: absolute; right: 0; top: -17px; color: var(--gold); font: 500 .72rem var(--lb-display); white-space: nowrap }
+
+/* Spesimen Keswa: lembar jawab Y/T (nomor + bulatan saja, tanpa pernyataan) + stempel hasil terakhir. */
+.lb-ans { display: grid; color: var(--faint-foreground); font: 500 .9rem/28px var(--lb-display); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 72%, transparent); mask-image: linear-gradient(#000 72%, transparent) }
+.lb-ans > span { display: grid; grid-template-columns: 2.6em auto auto 1fr; align-items: center; gap: 10px }
+.lb-bub { display: inline-grid; place-items: center; width: 22px; height: 22px; border: 1.5px solid var(--border-strong); border-radius: 50%; color: var(--muted-foreground); font: 600 .66rem var(--lb-display) }
+.lb-bub.is-f { border-color: var(--brand-ink); background: var(--brand-ink); color: var(--surface-page) }
+.lb-stamp { position: absolute; right: 18px; top: 18px; padding: 4px 10px; border: 2px solid currentColor; border-radius: 4px; font: 700 .8rem var(--lb-display); letter-spacing: .08em; transform: rotate(-6deg) }
+.lb-stamp.is-ok { color: var(--success) }
+.lb-stamp.is-no { color: var(--destructive) }
+
+/* Keswa: lembar + slot hasil dalam satu bingkai. */
+.lb-wrap { display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--border); border-radius: 4px; background: var(--lb-paper); transition: box-shadow 220ms var(--e-out), border-color 220ms ease }
+.lb-wrap .lb-sheet { border: 0; background: none }
+@media (hover: hover) and (pointer: fine) { .lb-wrap .lb-sheet:hover { box-shadow: none; transform: none } .lb-wrap:has(.lb-sheet:hover) { box-shadow: var(--elev-3); border-color: var(--border-strong) } }
+.lb-slots-h { margin: 0; padding: 0 22px 8px; color: var(--muted-foreground); font: 500 .8rem var(--lb-display) }
+.lb-slots { display: grid; gap: 6px; margin: 0; padding: 0 22px 18px; list-style: none }
+.lb-slot { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 4px; background: var(--surface-inset); color: var(--foreground); font-size: .9rem; text-decoration: none; transition: background-color 160ms ease }
+a.lb-slot:hover { background: var(--accent-soft) }
+.lb-slot.is-empty { border: 1.5px dashed var(--border); background: none; color: var(--faint-foreground) }
+.lb-badge { padding: 3px 7px; border-radius: 4px; font: 700 .7rem var(--lb-display); letter-spacing: .06em }
+.lb-badge.is-ok { background: var(--success-soft); color: var(--success) }
+.lb-badge.is-no { background: var(--destructive-soft); color: var(--destructive) }
+
+/* Keswa: tab berkas (tautan ?tab=). */
+.lb-ftabs { display: flex; gap: 4px; margin-top: 32px; border-bottom: 1px solid var(--border-strong); overflow-x: auto; scrollbar-width: none }
+.lb-ftabs a { display: inline-flex; flex: none; align-items: center; min-height: 46px; margin-bottom: -1px; padding: 0 18px; border: 1px solid transparent; border-bottom: 0; border-radius: 8px 8px 0 0; color: var(--muted-foreground); font: 600 .95rem var(--lb-display); text-decoration: none; white-space: nowrap; transition: color 160ms ease, background-color 160ms ease }
+.lb-ftabs a:hover { color: var(--foreground) }
+.lb-ftabs a[aria-current="page"] { border-color: var(--border-strong); background: var(--lb-paper); color: var(--brand-ink) }
+.lb-ftabs small { margin-left: 8px; color: var(--faint-foreground); font: 500 .78rem var(--lb-display) }
+@media (max-width: 480px) { .lb-ftabs small { display: none } .lb-ftabs a { padding: 0 14px } }
+.lb-fbody { padding-top: 32px }
+.lb-fbody > .lb-sheets { margin-top: 0 }
+.lb-next { display: inline-flex; align-items: center; gap: 8px; width: fit-content; min-height: 44px; margin-top: 12px; padding: 0 18px; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--border-strong); color: var(--foreground); font: 600 .92rem var(--lb-display); text-decoration: none }
+.lb-next svg { width: 15px; height: 15px }
+.lb-next:active { transform: scale(.97) }
+
+/* Tes Koran: perkembangan. */
+.lb-sect { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--border) }
+.lb-sect-h { margin: 0; color: var(--brand-ink); font: 700 1.35rem/1.2 var(--lb-display) }
+.lb-sect-p { margin: 8px 0 0; max-width: 64ch; color: var(--muted-foreground) }
+.lb-grp { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 22px }
+.lb-chip { display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 999px; color: var(--muted-foreground); font: 500 .88rem var(--lb-display); text-decoration: none; transition: border-color 160ms ease, color 160ms ease }
+.lb-chip:hover { color: var(--foreground) }
+.lb-chip[aria-current="true"] { border-color: var(--brand-ink); background: var(--surface-inset); color: var(--brand-ink) }
+.lb-prog { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 24px 48px; align-items: start; margin-top: 28px }
+@media (max-width: 760px) { .lb-prog { grid-template-columns: minmax(0, 1fr) } }
+.lb-prog-val { font: 700 3.4rem/1 var(--lb-display); letter-spacing: -.03em; font-variant-numeric: tabular-nums }
+.lb-prog-unit { margin-top: 6px; color: var(--muted-foreground) }
+.lb-prog-meta { margin-top: 4px; color: var(--faint-foreground); font-size: .9rem }
+.lb-prog-dl { display: grid; gap: 18px; margin: 26px 0 0 }
+.lb-prog-dl dt { color: var(--muted-foreground); font: 500 .85rem var(--lb-display) }
+.lb-prog-dl dd { margin: 2px 0 0; color: var(--brand-ink); font: 600 1.4rem/1.2 var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-prog-dl dd span { display: block; color: var(--muted-foreground); font: 400 .85rem/1.4 var(--font-sans-src), sans-serif }
+.lb-empty { max-width: 52ch; margin-top: 26px }
+.lb-empty b { font-family: var(--lb-display) }
+.lb-empty p { margin: 6px 0 0; color: var(--muted-foreground) }
+
+/* Lembar petunjuk (modal sebelum mulai). <dialog> native: fokus terkunci, Escape menutup. */
+.lb-dialog { width: min(560px, calc(100vw - 32px)); max-height: calc(100dvh - 32px); margin: auto; padding: 0; overflow-x: hidden; border: 1px solid var(--border-strong); border-radius: 4px; background: var(--lb-paper); color: var(--foreground); box-shadow: var(--elev-4); opacity: 0; transform: translateY(12px) scale(.98); transition: opacity 200ms ease, transform 260ms var(--e-out), overlay 260ms allow-discrete, display 260ms allow-discrete }
+.lb-dialog[open] { opacity: 1; transform: none }
+.lb-dialog .lb-tear { margin: 0 }
+.lb-dialog .lb-tear::before, .lb-dialog .lb-tear::after { display: none }
+@starting-style { .lb-dialog[open] { opacity: 0; transform: translateY(12px) scale(.98) } }
+.lb-dialog::backdrop { background: rgb(10 15 32 / 0); transition: background-color 200ms ease, overlay 260ms allow-discrete, display 260ms allow-discrete }
+.lb-dialog[open]::backdrop { background: rgb(10 15 32 / .55) }
+@starting-style { .lb-dialog[open]::backdrop { background: rgb(10 15 32 / 0) } }
+.lb-dlg-top { padding: 24px 24px 20px; border-top: 4px solid var(--brand-ink) }
+.lb-dlg-kicker { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 12px; color: var(--faint-foreground); font: 500 .78rem var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-dlg-top h2 { margin: 10px 0 0; color: var(--brand-ink); font: 700 clamp(1.4rem, 4vw, 1.75rem)/1.2 var(--lb-display); letter-spacing: -.02em; text-wrap: balance }
+.lb-dlg-top p { margin: 6px 0 0; color: var(--muted-foreground); font-size: .95rem; line-height: 1.5 }
+.lb-dlg-body { padding: 20px 24px 24px }
+.lb-fakta { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 110px), 1fr)); margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: 4px; background: var(--surface-card) }
+.lb-fakta div { margin-bottom: -1px; padding: 10px 14px; border-bottom: 1px dashed var(--border) }
+.lb-fakta dt { color: var(--muted-foreground); font: 500 .78rem var(--lb-display) }
+.lb-fakta dd { margin: 2px 0 0; font: 600 1rem/1.35 var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-aturan-h { margin: 20px 0 0; color: var(--muted-foreground); font: 500 .8rem var(--lb-display) }
+.lb-aturan { display: grid; gap: 10px; margin: 8px 0 0; padding: 0; list-style: none; counter-reset: a }
+.lb-aturan li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 10px; line-height: 1.55; counter-increment: a }
+.lb-aturan li::before { content: counter(a); color: var(--gold); font: 600 1rem/1.55 var(--lb-display); font-variant-numeric: tabular-nums }
+.lb-aturan kbd { padding: 1px 6px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 4px; background: var(--surface-inset); font: 600 .82rem var(--lb-display) }
+.lb-catatan { margin: 16px 0 0; padding: 12px 14px; border-radius: 4px; background: var(--accent-soft); color: var(--accent-ink); font-size: .92rem; line-height: 1.5 }
+.lb-dlg-act { display: flex; flex-wrap: wrap-reverse; justify-content: flex-end; gap: 10px; margin-top: 24px }
+.lb-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 20px; border: 0; border-radius: 999px; font: 600 .92rem var(--lb-display); text-decoration: none; white-space: nowrap; cursor: pointer }
+.lb-btn svg { width: 15px; height: 15px }
+.lb-btn.is-gold { background: var(--gold-grad); color: var(--on-gold) }
+.lb-btn.is-ghost { background: none; box-shadow: inset 0 0 0 1.5px var(--border-strong); color: var(--foreground) }
+.lb-btn:active { transform: scale(.97) }
+@media (max-width: 420px) { .lb-dlg-top, .lb-dlg-body { padding-left: 18px; padding-right: 18px } .lb-dlg-act { flex-direction: column-reverse } .lb-btn { width: 100% } }
+
+/* Masuk halaman: lembar diletakkan satu per satu (sekali). */
+.lb-sheets > :not(dialog) { animation: lb-lay 420ms var(--e-out) both; animation-delay: calc(var(--i, 0) * 60ms) }
+@keyframes lb-lay { from { opacity: 0; transform: translateY(10px) } }
+
+@media (prefers-reduced-motion: reduce) {
+  .lb-sheets > :not(dialog) { animation: lb-fade 160ms ease both }
+  @keyframes lb-fade { from { opacity: 0 } }
+  .lb-sheet, .lb-key, .lb-go svg, .lb-dialog { transition: opacity 160ms ease }
+  .lb-sheet:hover, .lb-sheet:active, .lb-btn:active, .lb-next:active { transform: none !important }
+  .lb-key, .lb-dialog { transform: none }
+  @starting-style { .lb-dialog[open] { transform: none } }
+}

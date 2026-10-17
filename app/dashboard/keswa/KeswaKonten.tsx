@@ -26,6 +26,17 @@ const TANDA = [
   },
 ];
 
+function Lanjut({ tab, children }: { tab: string; children: string }) {
+  return (
+    <Link className="lb-next" href={`/dashboard/keswa?tab=${tab}`}>
+      {children}
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <path d="M3 8h10M9 4l4 4-4 4" />
+      </svg>
+    </Link>
+  );
+}
+
 export function KeswaEdukasi() {
   return (
     <div className="ksw-prose">
@@ -75,6 +86,7 @@ export function KeswaEdukasi() {
           <Link href="/dashboard/keswa?tab=simulasi">Simulasi</Link>.
         </p>
       </section>
+      <Lanjut tab="panduan">Lanjut ke Panduan</Lanjut>
     </div>
   );
 }
@@ -115,6 +127,7 @@ export function KeswaPanduan() {
           <li>Setelah dikirim, hasil (VALID / TIDAK VALID + rincian 5 cek) tersimpan di akunmu. Maksimal 2 hasil per paket.</li>
         </ul>
       </section>
+      <Lanjut tab="simulasi">Lanjut ke Simulasi</Lanjut>
     </div>
   );
 }

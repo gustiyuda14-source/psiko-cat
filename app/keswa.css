@@ -1,42 +1,28 @@
-/* ===== Keswa (app/dashboard/keswa, app/latihan/keswa). Token dari globals.css, prefix ksw-; hero/tab/hasil memakai fd-* (fundamental.css). ===== */
-/* Tab berupa tautan (?tab=), gaya sama dengan tombol .fd-tabs. */
-.ksw-tabs a { display: inline-flex; flex: none; align-items: center; min-height: 46px; padding: 0 16px; border: 1.5px solid var(--border); border-radius: 12px; background: var(--surface-card); color: var(--foreground); font: 600 .94rem var(--font-display-src), sans-serif; white-space: nowrap; text-decoration: none; transition: border-color var(--motion), background var(--motion) }
-.ksw-tabs a:hover { border-color: var(--ok) }
-.ksw-tabs a[aria-current="page"] { border-color: var(--surface-nav); background: var(--surface-nav); color: #fff }
+/* ===== Keswa (app/dashboard/keswa, app/latihan/keswa). Token dari globals.css, prefix ksw-; menu memakai lb-* (lembar.css), hasil memakai fd-* (fundamental.css). ===== */
 
-/* Teks edukasi / panduan. */
-.ksw-prose { display: grid; gap: var(--space-5); max-width: 860px }
+/* Teks edukasi / panduan (gaya "lembar": tanpa kotak, garis dan nomor emas). */
+.ksw-prose { display: grid; gap: var(--space-7, 40px); max-width: 860px }
 .ksw-prose section { display: grid; gap: var(--space-2) }
-.ksw-prose h2 { margin: 0; color: var(--brand-ink); font: 700 1.25rem/1.25 var(--font-display-src), sans-serif }
-.ksw-prose p { margin: 0; color: var(--foreground); font-size: 1rem; line-height: 1.65 }
+.ksw-prose h2 { margin: 0; color: var(--brand-ink); font: 700 1.2rem/1.3 var(--font-display-src), sans-serif }
+.ksw-prose p { margin: 0; max-width: 72ch; color: var(--foreground); font-size: 1rem; line-height: 1.7 }
 .ksw-prose a { color: var(--brand-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 3px }
-.ksw-tanda { display: grid; gap: var(--space-2); margin: var(--space-2) 0 0; padding: 0; list-style: none; counter-reset: t }
-.ksw-tanda li { display: grid; gap: 2px; padding: var(--space-3) var(--space-4) var(--space-3) 52px; position: relative; border: 1px solid var(--border); border-radius: var(--r-md); background: var(--surface-card); counter-increment: t }
-.ksw-tanda li::before { content: counter(t); position: absolute; left: 14px; top: 13px; display: grid; place-items: center; width: 26px; height: 26px; border-radius: 8px; background: var(--navy); color: var(--gold-hi); font: 700 .85rem var(--font-display-src), sans-serif }
+.ksw-prose a.lb-next { margin-top: 0; color: var(--foreground); font-weight: 600; text-decoration: none }
+.ksw-tanda { display: grid; gap: 18px; margin: var(--space-3) 0 0; padding: 0; list-style: none }
+.ksw-tanda li { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4px 24px }
+@media (max-width: 600px) { .ksw-tanda li { grid-template-columns: minmax(0, 1fr) } }
 .ksw-tanda b { font: 700 1rem var(--font-display-src), sans-serif }
-.ksw-tanda span { color: var(--muted-foreground); line-height: 1.55 }
-.ksw-callout { padding: var(--space-4) var(--space-5); border: 1.5px solid #e3cf9b; border-radius: var(--r-lg); background: #fbf5e6 }
+.ksw-tanda span { color: var(--muted-foreground); line-height: 1.6 }
+.ksw-callout { padding: 20px 22px; border-radius: 4px; background: var(--accent-soft) }
+.ksw-callout h2 { color: var(--accent-ink) }
 .ksw-list { display: grid; gap: var(--space-2); margin: 0; padding-left: 1.2rem; line-height: 1.6 }
 .ksw-list kbd, .ksw-prose kbd { padding: 1px 7px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 6px; background: var(--surface-inset); font: 700 .85rem var(--font-display-src), sans-serif }
-.ksw-langkah { display: grid; gap: var(--space-3); margin: 0; padding: 0; list-style: none }
-@media (min-width: 760px) { .ksw-langkah { grid-template-columns: 1fr 1fr } }
-.ksw-langkah li { display: flex; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card) }
+.ksw-langkah { display: grid; gap: 22px; margin: 0; padding: 0; list-style: none }
+@media (min-width: 760px) { .ksw-langkah { grid-template-columns: 1fr 1fr; gap: 28px 48px } }
+.ksw-langkah li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0 12px }
 .ksw-langkah b { font: 700 1.02rem var(--font-display-src), sans-serif }
-.ksw-langkah p { margin-top: 4px; color: var(--muted-foreground); font-size: .95rem }
-.ksw-no { display: grid; flex: none; place-items: center; width: 34px; height: 34px; border-radius: 10px; background: var(--gold-grad); color: var(--on-gold); font: 800 1rem var(--font-display-src), sans-serif }
+.ksw-langkah p { margin-top: 4px; color: var(--muted-foreground); font-size: .96rem; line-height: 1.6 }
+.ksw-no { color: var(--gold); font: 600 1.35rem/1.2 var(--font-display-src), sans-serif }
 
-/* Katalog simulasi: kartu paket + riwayat hasil. */
-.ksw-paket { display: grid; gap: var(--space-3); align-content: start }
-.ksw-riwayat { padding: var(--space-4); border: 1px dashed var(--border); border-radius: var(--r-lg); background: var(--surface-card) }
-.ksw-riwayat h3 { margin: 0 0 var(--space-2); color: var(--muted-foreground); font: 700 .72rem var(--font-display-src), sans-serif; letter-spacing: .12em; text-transform: uppercase }
-.ksw-riwayat ul { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none }
-.ksw-riwayat a { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; padding: 8px 10px; border-radius: 10px; color: var(--foreground); text-decoration: none; font-size: .9rem }
-.ksw-riwayat a:hover { background: var(--surface-inset) }
-.ksw-riwayat a .tnum { margin-left: auto; color: var(--muted-foreground) }
-.ksw-riwayat p { margin: 0; color: var(--muted-foreground); font-size: .9rem }
-.ksw-badge { padding: 2px 8px; border-radius: 6px; font: 700 .72rem var(--font-display-src), sans-serif; letter-spacing: .06em }
-.ksw-badge.is-valid { background: var(--success-soft); color: var(--success) }
-.ksw-badge.is-invalid { background: var(--destructive-soft); color: var(--destructive) }
 
 /* Sesi. */
 .q-stem.ksw-stem { font-size: clamp(1.25rem, 2.2vw, 1.65rem); line-height: 1.45 }

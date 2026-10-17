@@ -1,10 +1,12 @@
-import { PaketCard } from "@/app/components/PaketCard";
-import { EmptyState } from "@/app/components/ui";
+import type { ReactNode } from "react";
+import Link from "next/link";
+import { LembarSheet, type Petunjuk } from "@/app/components/LembarSheet";
+import { KoranCols, LembarHead, PauliStrip } from "@/app/components/LembarSpesimen";
 import { NapTrendChart } from "@/app/dashboard/ActivityCharts";
 import { getSession } from "@/lib/auth";
-import { FUNDAMENTAL, KORAN } from "@/lib/fundamental";
+import { FUNDAMENTAL, KORAN, PAULI, PAULI_LATIHAN } from "@/lib/fundamental";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import "@/app/fundamental.css";
+import "@/app/lembar.css";
 
 const PAKET = FUNDAMENTAL.filter((m) => m.grup === "Rekening Koran");
 
@@ -20,8 +22,51 @@ const GRUP = [
 
 const fmt = (x: number) => (Math.round(x * 10) / 10).toLocaleString("id-ID");
 const tanggal = (iso: string) => new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "long", year: "numeric" });
+const menit = (detik: number) => detik / 60;
 
-function GrupPanel({ label, rows }: { label: string; rows: Row[] }) {
+// Kartu + lembar petunjuk per paket. Operasi dan mode tetap dipilih di layar awal sesi.
+const SHEET: Record<string, { side: string; c: number; spec: ReactNode; petunjuk: Petunjuk }> = {
+  koran: {
+    side: "Tambah atau Kali",
+    c: 8,
+    spec: <KoranCols n={20} rows={13} on={2} />,
+    petunjuk: {
+      ringkas: `Grid ${KORAN.kolom} kolom × ${KORAN.baris} angka, dikerjakan per kolom dari atas ke bawah.`,
+      fakta: [
+        ["Mode Tes", `${KORAN.detik} detik per kolom`],
+        ["Mode Latihan", "Tanpa batas waktu"],
+        ["Operasi", "Tambah atau Kali"],
+        ["Jawab", "Numpad atau keyboard"],
+      ],
+      aturan: [
+        "Jumlahkan (atau kalikan) dua angka berdekatan, lalu ketik angka satuannya saja. Contoh: 7 + 8 = 15, tulis 5.",
+        "Jawaban tidak bisa diubah. Kolom penuh atau waktu kolom habis = pindah ke kolom berikutnya.",
+        "Operasi dan mode (Tes atau Latihan) dipilih di layar berikutnya. Hanya Mode Tes yang tercatat di Perkembangan.",
+      ],
+    },
+  },
+  pauli: {
+    side: `Tambah, ${menit(PAULI.periode * PAULI.detik)} menit`,
+    c: 4,
+    spec: <PauliStrip />,
+    petunjuk: {
+      ringkas: `${PAULI.periode} periode × ${menit(PAULI.detik)} menit tanpa henti, dengan kurva kerja per periode.`,
+      fakta: [
+        ["Tes", `${PAULI.periode} × ${menit(PAULI.detik)} menit`],
+        ["Latihan", `${PAULI_LATIHAN.periode} × ${menit(PAULI_LATIHAN.detik)} menit`],
+        ["Operasi", "Tambah"],
+        ["Jawab", "Numpad atau keyboard"],
+      ],
+      aturan: [
+        "Jumlahkan dua angka berdekatan dari atas ke bawah, ketik angka satuannya saja. Kerjakan tanpa henti.",
+        `Tiap ${menit(PAULI.detik)} menit muncul tanda garis di posisi terakhirmu. Jangan memeriksa ulang.`,
+        "Tes atau Latihan, dan aturan saat garis (pindah kolom atau lanjut), dipilih di layar berikutnya. Keduanya tercatat di Perkembangan.",
+      ],
+    },
+  },
+};
+
+function GrupPanel({ rows }: { rows: Row[] }) {
   const last = rows[0];
   const st = last.stats;
   const koran = last.kode === "koran";
@@ -29,41 +74,29 @@ function GrupPanel({ label, rows }: { label: string; rows: Row[] }) {
   const maks = koran ? KORAN.baris - 1 : Math.max(1, ...rows.map(utama)) * 1.15;
   const sessions = rows.slice(0, 30).map((r) => ({ status: "COMPLETED", nap_score: utama(r), completed_at: r.created_at, created_at: r.created_at }));
   return (
-    <div className="prog-panel">
-      <div className="prog-hero">
-        <span className="prog-label">{label}</span>
-        <span className="prog-num">
-          <strong>{fmt(utama(last))}</strong>
-        </span>
-        <span className="prog-status">{koran ? "benar per kolom, rata-rata" : `jawaban benar · ${last.per_periode.length} periode`}</span>
-        <span className="prog-meta">
-          Terakhir {tanggal(last.created_at)} · {rows.length} sesi
-        </span>
-      </div>
-      <div className="prog-body">
-        <NapTrendChart
-          sessions={sessions}
-          title={koran ? "Tren rata-rata benar per kolom" : "Tren jumlah benar"}
-          label={koran ? "Rata-rata" : "Benar"}
-          max={maks}
-          threshold={null}
-        />
-        <dl className="prog-strip">
+    <div className="lb-prog">
+      <div>
+        <div className="lb-prog-val">{fmt(utama(last))}</div>
+        <div className="lb-prog-unit">{koran ? "benar per kolom, rata-rata" : `jawaban benar dari ${last.per_periode.length} periode`}</div>
+        <div className="lb-prog-meta">
+          Terakhir {tanggal(last.created_at)}, {rows.length} sesi
+        </div>
+        <dl className="lb-prog-dl">
           {koran ? (
             <>
               <div>
                 <dt>Keajegan</dt>
-                <dd className="prog-big">
+                <dd>
                   {fmt(st.keajegan)}
-                  <span> selisih kolom, makin kecil makin stabil</span>
+                  <span>selisih kolom, makin kecil makin stabil</span>
                 </dd>
               </div>
               <div>
                 <dt>Ketahanan</dt>
-                <dd className="prog-big">
+                <dd>
                   {st.ketahanan > 0 ? "+" : ""}
                   {fmt(st.ketahanan)}
-                  <span> paruh akhir − awal, positif = makin cepat</span>
+                  <span>paruh akhir − awal, positif = makin cepat</span>
                 </dd>
               </div>
             </>
@@ -71,27 +104,33 @@ function GrupPanel({ label, rows }: { label: string; rows: Row[] }) {
             <>
               <div>
                 <dt>Schwankung</dt>
-                <dd className="prog-big">
-                  ±{fmt(st.schwankung)}
-                  <span> ({fmt(st.schwankungPct)}%) makin kecil makin stabil</span>
+                <dd>
+                  ±{fmt(st.schwankung)} ({fmt(st.schwankungPct)}%)<span>makin kecil makin stabil</span>
                 </dd>
               </div>
               <div>
                 <dt>Puncak</dt>
-                <dd className="prog-big">
+                <dd>
                   P{st.gipfel}
-                  <span> periode benar terbanyak · naik {fmt(st.steighohe)}%</span>
+                  <span>periode benar terbanyak, naik {fmt(st.steighohe)}%</span>
                 </dd>
               </div>
             </>
           )}
         </dl>
       </div>
+      <NapTrendChart
+        sessions={sessions}
+        title={koran ? "Tren rata-rata benar per kolom" : "Tren jumlah benar"}
+        label={koran ? "Rata-rata" : "Benar"}
+        max={maks}
+        threshold={null}
+      />
     </div>
   );
 }
 
-export default async function KraepelinPage() {
+export default async function KraepelinPage({ searchParams }: { searchParams: Promise<{ grup?: string }> }) {
   const session = (await getSession())!;
   // Tabel belum dibuat (migrasi belum dijalankan) = error; diperlakukan sama dengan riwayat kosong.
   const { data, error } = await supabaseAdmin
@@ -103,67 +142,63 @@ export default async function KraepelinPage() {
   if (error) console.error("[KraepelinPage] riwayat", error);
   const rows = (data ?? []) as Row[];
   const grup = GRUP.map((g) => ({ ...g, rows: rows.filter(g.match) })).filter((g) => g.rows.length);
+  const { grup: raw } = await searchParams;
+  const aktif = grup.find((g) => g.key === raw) ?? grup[0];
 
   return (
-    <div className="app-page space-y-6">
-      <header className="fd-hero">
-        <svg className="fd-hero-radar" viewBox="0 0 420 420" aria-hidden="true">
-          <circle cx="210" cy="210" r="200" />
-          <circle cx="210" cy="210" r="140" />
-          <circle cx="210" cy="210" r="80" />
-          <path d="M210 0v420M0 210h420" />
-        </svg>
-        <div className="fd-hero-text">
-          <span className="fd-hero-kicker">
-            <i aria-hidden="true" />
-            Kraepelin · Pauli
-          </span>
-          <h1>Tes Koran</h1>
-          <p>
-            Latihan tes koran: jumlahkan dua angka berdekatan, tulis angka satuannya. Kraepelin pindah kolom tiap beberapa detik, Pauli
-            dikerjakan tanpa henti 60 menit dengan tanda garis tiap 3 menit. Grid dibuat ulang setiap sesi, jawab dengan numpad atau keyboard.
-          </p>
-        </div>
-        <dl className="fd-hero-stats">
-          <div>
-            <dt>Tes Koran</dt>
-            <dd className="tnum">{PAKET.length} paket</dd>
-          </div>
-        </dl>
-      </header>
+    <div className="app-page lb">
+      <LembarHead
+        title="Tes Koran"
+        desc="Latihan tes koran: jumlahkan dua angka berdekatan, tulis angka satuannya. Kraepelin pindah kolom tiap beberapa detik, Pauli dikerjakan tanpa henti 60 menit dengan tanda garis tiap 3 menit. Grid dibuat ulang setiap sesi, jawab dengan numpad atau keyboard."
+        meta={[`${PAKET.length} paket`, "Kraepelin dan Pauli"]}
+      />
 
-      <section className="prog !mt-0" aria-labelledby="koran-prog-h">
-        <div className="prog-head">
-          <h2 id="koran-prog-h">Perkembangan</h2>
-          <p>Nilai mentah, tanpa norma: untuk membandingkan dirimu dengan sesi sebelumnya, bukan tanda lulus atau tidak.</p>
-        </div>
-        {grup.length === 0 ? (
-          <EmptyState
-            title="Belum ada riwayat Tes Koran"
-            description="Selesaikan Rekening Koran Mode Tes atau Tes Pauli (Tes maupun Latihan). Hasilnya tercatat di sini supaya perkembanganmu terlihat."
-          />
+      <div className="lb-sheets">
+        {PAKET.map((m, i) => {
+          const s = SHEET[m.kode];
+          return (
+            <LembarSheet
+              key={m.kode}
+              href={`/latihan/fundamental/${m.kode}`}
+              code={`Paket ${String(i + 1).padStart(2, "0")}`}
+              side={s?.side ?? m.kicker}
+              title={m.label}
+              line={m.desc}
+              cta="Mulai latihan"
+              layout={{ c: s?.c ?? 6, i }}
+              spec={s?.spec ?? <KoranCols n={12} rows={6} />}
+              petunjuk={s?.petunjuk ?? { ringkas: m.desc, fakta: [["Jawab", "Numpad atau keyboard"]], aturan: m.points }}
+            />
+          );
+        })}
+      </div>
+
+      <section className="lb-sect" aria-labelledby="koran-prog-h">
+        <h2 className="lb-sect-h" id="koran-prog-h">
+          Perkembangan
+        </h2>
+        <p className="lb-sect-p">Nilai mentah, tanpa norma: untuk membandingkan dirimu dengan sesi sebelumnya, bukan tanda lulus atau tidak.</p>
+        {!aktif ? (
+          <div className="lb-empty">
+            <b>Belum ada riwayat Tes Koran</b>
+            <p>Selesaikan Rekening Koran Mode Tes atau Tes Pauli (Tes maupun Latihan). Hasilnya tercatat di sini supaya perkembanganmu terlihat.</p>
+          </div>
         ) : (
-          grup.map((g) => <GrupPanel key={g.key} label={g.label} rows={g.rows} />)
+          <>
+            {grup.length > 1 && (
+              <nav className="lb-grp" aria-label="Kelompok hasil">
+                {grup.map((g) => (
+                  <Link key={g.key} className="lb-chip" href={`/dashboard/kraepelin?grup=${g.key}`} scroll={false} aria-current={g === aktif ? "true" : undefined}>
+                    {g.label}
+                  </Link>
+                ))}
+              </nav>
+            )}
+            {grup.length === 1 && <p className="lb-prog-meta">{aktif.label}</p>}
+            <GrupPanel rows={aktif.rows} />
+          </>
         )}
       </section>
-
-      <div className="pc-grid">
-        {PAKET.map((m, i) => (
-          <PaketCard
-            key={m.kode}
-            href={`/latihan/fundamental/${m.kode}`}
-            code={`Paket ${String(i + 1).padStart(2, "0")}`}
-            tag={m.kind === "pauli" ? "Tambah · 60 menit" : "Tambah · Kali"}
-            kicker={m.kicker}
-            title={m.label}
-            desc={m.desc}
-            points={m.points}
-            chips={m.contoh}
-            level={m.level}
-            cta="Mulai latihan"
-          />
-        ))}
-      </div>
     </div>
   );
 }
