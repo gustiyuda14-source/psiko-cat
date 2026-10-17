@@ -1,28 +1,28 @@
 import { Facts, Ticket } from "@/app/components/ProgressTicket";
 import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config";
+import { ASPEK_LABEL, JALUR_LABEL, JALUR_SETARA, type Aspek, type Jalur, type Kategori } from "@/lib/scoring/psikogram";
+import ProfilPicker from "@/app/components/ProfilPicker";
 
 /*
-  Tiket progres simulasi: perkembangan Nilai Akhir Psikotest tiap tryout lengkap terhadap
-  ambang kelulusan, dan distribusi skor tiap sub-tes dari seluruh percobaan. Komponen server;
+  Tiket progres simulasi: nilai akhir psikogram (1–85) profil pilihan peserta tiap tryout
+  lengkap terhadap ambang 61, dan kategori aspek terakhir tiap sub-tes. Komponen server;
   data dari page.tsx (riwayat milik peserta sesi ini saja).
 */
 
 export const PASSING = 61;
-/** Skor murni sub-tes <= 40 = gugur mutlak (lib/scoring/nap.ts). */
-export const GUGUR = 40;
 
-export type TryoutPoint = { at: string; nap: number };
-/** Skor murni per sub-tes, urut lama → baru. */
-export type SubScores = Partial<Record<ModuleType, number[]>>;
+export type TryoutPoint = { at: string; nap: number; ms: boolean };
+/** Kategori per aspek dari percobaan terakhir tiap sub-tes. */
+export type AspekTerakhir = Partial<Record<ModuleType, { at: string; aspek: { aspek: Aspek; kategori: Kategori }[] }>>;
 
-const dec = (n: number) => n.toFixed(1).replace(".", ",");
+const dec = (n: number) => String(Math.round(n));
 const day = (iso: string) => new Date(iso).toLocaleDateString("id-ID", { day: "numeric", month: "short" });
 
 function Trend({ points }: { points: TryoutPoint[] }) {
   const W = 520, H = 230, L = 34, R = 20, T = 24, B = 30;
   const vals = points.map((p) => p.nap);
   const lo = Math.max(0, Math.floor((Math.min(...vals, PASSING) - 6) / 5) * 5);
-  const hi = Math.min(100, Math.ceil((Math.max(...vals, PASSING) + 6) / 5) * 5);
+  const hi = Math.min(85, Math.ceil((Math.max(...vals, PASSING) + 6) / 5) * 5);
   const x = (i: number) => (points.length === 1 ? (L + W - R) / 2 : L + (i * (W - L - R)) / (points.length - 1));
   const y = (v: number) => T + ((hi - v) * (H - T - B)) / (hi - lo);
   const step = hi - lo > 30 ? 10 : 5;
@@ -57,7 +57,7 @@ function Trend({ points }: { points: TryoutPoint[] }) {
         const last = i === points.length - 1;
         return (
           <g key={i}>
-            <circle cx={x(i)} cy={y(p.nap)} r={last ? 6.5 : 4} fill={last ? "var(--brand-ink)" : "var(--surface-card)"} stroke={p.nap < PASSING ? "var(--pg-weak)" : "var(--brand-ink)"} strokeWidth="2">
+            <circle cx={x(i)} cy={y(p.nap)} r={last ? 6.5 : 4} fill={last ? "var(--brand-ink)" : "var(--surface-card)"} stroke={p.ms ? "var(--brand-ink)" : "var(--pg-weak)"} strokeWidth="2">
               <title>{`${day(p.at)}: ${dec(p.nap)}`}</title>
             </circle>
             {(i % every === 0 || last) && (
@@ -76,28 +76,40 @@ function Trend({ points }: { points: TryoutPoint[] }) {
   );
 }
 
-export default function SimulasiProgress({ tryouts, subScores, single }: { tryouts: TryoutPoint[]; subScores: SubScores; single: number }) {
+export default function SimulasiProgress({
+  tryouts,
+  aspekTerakhir,
+  single,
+  profil,
+  belumLengkap,
+}: {
+  tryouts: TryoutPoint[];
+  aspekTerakhir: AspekTerakhir;
+  single: number;
+  profil: Jalur | null;
+  /** Tryout lengkap yang belum punya nilai untuk profil ini (aspeknya belum diuji). */
+  belumLengkap: number;
+}) {
   const vals = tryouts.map((t) => t.nap);
   const best = vals.length ? Math.max(...vals) : null;
+  const bestMs = tryouts.some((t) => t.nap === best && t.ms);
   const last = vals.at(-1);
   const prev = vals.at(-2);
-  const passed = vals.filter((v) => v >= PASSING).length;
+  const passed = tryouts.filter((t) => t.ms).length;
   const delta = last !== undefined && prev !== undefined ? last - prev : null;
-  const anySub = MODULE_ORDER.some((t) => subScores[t]?.length);
+  const anySub = MODULE_ORDER.some((t) => aspekTerakhir[t]);
 
   return (
     <Ticket
       label="Progress simulasi"
       stub={
         <>
-          <span className="pg-label">Nilai Akhir Psikotest terbaik</span>
+          <span className="pg-label">Nilai akhir terbaik{profil ? ` · ${JALUR_LABEL[profil]}` : ""}</span>
           <span className="pg-big">{best === null ? "-" : dec(best)}</span>
           {best !== null ? (
-            <span className={`pg-chip${best >= PASSING ? "" : " is-below"}`}>
-              {best >= PASSING ? "Memenuhi" : "Belum memenuhi"} ambang kelulusan {PASSING}
-            </span>
+            <span className={`pg-chip${bestMs ? "" : " is-below"}`}>{bestMs ? "Memenuhi Syarat" : "Belum Memenuhi Syarat"} · skala 1–85, lulus 61</span>
           ) : (
-            <span className="pg-sub">Belum ada tryout lengkap</span>
+            <span className="pg-sub">{profil ? "Belum ada nilai untuk profil ini" : "Pilih profil tujuan untuk melihat nilai"}</span>
           )}
           <Facts
             rows={[
@@ -114,8 +126,8 @@ export default function SimulasiProgress({ tryouts, subScores, single }: { tryou
                   </>
                 ),
               ],
-              ["Tryout lengkap", `${vals.length} selesai`],
-              ["Memenuhi ambang", vals.length ? `${passed} dari ${vals.length}` : "-"],
+              ["Tryout lengkap", `${vals.length + belumLengkap} selesai`],
+              ["Memenuhi Syarat", vals.length ? `${passed} dari ${vals.length}` : "-"],
               ["Sesi satu sub-tes", String(single)],
             ]}
           />
@@ -124,63 +136,58 @@ export default function SimulasiProgress({ tryouts, subScores, single }: { tryou
     >
       <section className="pg-trend">
         <div className="pg-sec-h">
-          <h3>Perkembangan Nilai Akhir Psikotest</h3>
-          {tryouts.length > 0 && (
-            <span>
-              {tryouts.length} tryout lengkap{tryouts.length > 1 ? `, ${day(tryouts[0].at)} sampai ${day(tryouts.at(-1)!.at)}` : ""}
-            </span>
-          )}
+          <h3>Perkembangan nilai akhir</h3>
+          <ProfilPicker value={profil} />
         </div>
-        {tryouts.length ? <Trend points={tryouts} /> : <p className="pg-empty">Grafik muncul setelah kamu menyelesaikan satu tryout lengkap (ketiga sub-tes).</p>}
+        {!profil ? (
+          <p className="pg-empty">Pilih profil tujuanmu dulu. Nilai akhir dihitung dengan bobot profil itu (Peraturan As SDM Kapolri No. 3/2017), dan bisa diganti kapan saja.</p>
+        ) : tryouts.length ? (
+          <>
+            <Trend points={tryouts} />
+            <p className="pg-empty" style={{ fontSize: ".8rem" }}>
+              {JALUR_SETARA[profil]}.{belumLengkap > 0 ? ` ${belumLengkap} tryout lama belum punya nilai profil ini karena aspeknya belum diuji.` : ""}
+            </p>
+          </>
+        ) : (
+          <p className="pg-empty">
+            {belumLengkap > 0
+              ? `${belumLengkap} tryout lengkapmu belum punya nilai profil ${JALUR_LABEL[profil]} karena ada aspek yang belum diuji. Kerjakan simulasi terbaru untuk nilai lengkap.`
+              : "Grafik muncul setelah kamu menyelesaikan satu tryout lengkap (ketiga sub-tes)."}
+          </p>
+        )}
       </section>
       <section>
         <div className="pg-sec-h">
-          <h3>Distribusi skor per sub-tes</h3>
-          <span>Skala 0 sampai 100</span>
+          <h3>Kategori aspek terakhir</h3>
+          <span>B · CB · C · K · KS</span>
         </div>
         {anySub ? (
-          <>
-            <div className="pg-range">
-              {MODULE_ORDER.map((type) => {
-                const s = subScores[type] ?? [];
-                const label = MODULE_CONFIG[type].label;
-                if (!s.length)
-                  return (
-                    <div key={type} className="pg-rg">
-                      <span className="pg-nm">{label}<small>Belum dikerjakan</small></span>
-                      <span className="pg-axis" aria-hidden="true"><span className="pg-thr" style={{ left: `${GUGUR}%` }} /></span>
-                      <b>-</b>
-                    </div>
-                  );
-                const r = s.map(Math.round), mn = Math.min(...r), mx = Math.max(...r), lv = r.at(-1)!, d = r.length > 1 ? lv - r.at(-2)! : null;
-                return (
-                  <div key={type} className="pg-rg">
-                    <span className="pg-nm">{label}<small>{r.length} percobaan</small></span>
-                    <span className="pg-axis" role="img" aria-label={`${label}: terakhir ${lv}, terbaik ${mx}, rentang ${mn} sampai ${mx}`}>
-                      <span className="pg-thr" style={{ left: `${GUGUR}%` }} />
-                      <span className="pg-band" style={{ left: `${mn}%`, width: `${mx - mn}%` }} />
-                      {r.map((v, i) => <span key={i} className="pg-pt" style={{ left: `${v}%` }} />)}
-                      <span className="pg-best" style={{ left: `${mx}%` }} />
-                      <span className="pg-last" style={{ left: `${lv}%` }} />
-                    </span>
-                    <b>{lv}</b>
-                    <span className="pg-d">
-                      <span>Rentang {mn} sampai {mx}</span>
-                      {d !== null && <span className={d >= 0 ? "pg-up" : "pg-down"}>{d === 0 ? "tetap" : `${d > 0 ? "naik" : "turun"} ${Math.abs(d)}`}</span>}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="pg-legend" style={{ marginTop: 16 }}>
-              <span><i style={{ background: "var(--brand-ink)", borderRadius: "50%" }} />Terakhir</span>
-              <span><i style={{ background: "var(--gold)", width: 2 }} />Terbaik</span>
-              <span><i style={{ background: "color-mix(in srgb,var(--pg-t2) 35%,transparent)" }} />Rentang skor</span>
-              <span><i style={{ borderLeft: "1.5px dashed var(--pg-weak)", width: 0, borderRadius: 0 }} />Batas gugur {GUGUR}</span>
-            </div>
-          </>
+          <div className="pg-range">
+            {MODULE_ORDER.map((type) => {
+              const a = aspekTerakhir[type];
+              const label = MODULE_CONFIG[type].label;
+              const ks = a?.aspek.filter((x) => x.kategori === "KS").length ?? 0;
+              return (
+                <div key={type} className="pg-asp">
+                  <span className="pg-nm">
+                    {label}
+                    <small>{a ? `${day(a.at)} · ${ks ? `${ks} aspek Kurang Sekali` : "aman dari KS"}` : "Belum dikerjakan"}</small>
+                  </span>
+                  {a && (
+                    <ul className="pg-kats" aria-label={`Kategori aspek ${label}`}>
+                      {a.aspek.map((x) => (
+                        <li key={x.aspek} className={`k-${x.kategori.toLowerCase()}`} title={ASPEK_LABEL[x.aspek]}>
+                          {ASPEK_LABEL[x.aspek].replace("Kemampuan Berpikir ", "")} <b>{x.kategori}</b>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         ) : (
-          <p className="pg-empty">Distribusi muncul setelah kamu menyelesaikan satu sub-tes simulasi.</p>
+          <p className="pg-empty">Kategori muncul setelah kamu menyelesaikan satu sub-tes simulasi.</p>
         )}
       </section>
     </Ticket>

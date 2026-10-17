@@ -2,6 +2,8 @@ import Link from "next/link";
 import { WeeklyFrequencyChart, NapTrendChart } from "./ActivityCharts";
 import { buttonStyles, EmptyState, PageHeader } from "@/app/components/ui";
 import { PaketCard } from "@/app/components/PaketCard";
+import ProfilPicker from "@/app/components/ProfilPicker";
+import { JALUR_LABEL, JALUR_SETARA, type Jalur } from "@/lib/scoring/psikogram";
 
 const PASSING_NAP = 61;
 
@@ -28,10 +30,12 @@ export type KecermatanLatihanScore = { raw_score: number | string; created_at: s
 /* Tampilan Beranda murni (tanpa akses data) — page.tsx yang mengambil sesi. */
 export default function HomeView({
   name,
+  profil,
   sessions,
   kecermatanScores = [],
 }: {
   name: string;
+  profil: Jalur | null;
   sessions: HomeSession[];
   kecermatanScores?: KecermatanLatihanScore[];
 }) {
@@ -45,19 +49,18 @@ export default function HomeView({
     return types.size === 3 && ["KECERDASAN", "KEPRIBADIAN", "KECERMATAN"].every((type) => types.has(type));
   });
   const standaloneCount = completedSessions.length - fullSessions.length;
-  const bestScore = fullSessions.length
-    ? Math.max(...fullSessions.map((s) => s.nap_score ?? 0))
-    : null;
+  const scored = fullSessions.filter((s) => s.nap_score != null);
+  const bestScore = scored.length ? Math.max(...scored.map((s) => s.nap_score!)) : null;
   const passedCount = fullSessions.filter((s) => s.is_passed).length;
   const lastActivity = completedSessions[0]?.completed_at ?? completedSessions[0]?.created_at;
-  const above = bestScore != null && bestScore >= PASSING_NAP;
+  const above = scored.some((s) => s.nap_score === bestScore && s.is_passed);
 
   return (
     <div className="app-page">
       <PageHeader
         kicker="Beranda"
         title={`Halo, ${session.name}`}
-        description="Pilih yang mau kamu kerjakan sekarang. Simulasi memberi skor NAP; latihan untuk berlatih per sub-tes tanpa batas waktu; review untuk membahas sesi yang sudah selesai."
+        description="Pilih yang mau kamu kerjakan sekarang. Simulasi memberi nilai akhir psikotes per profil; latihan untuk berlatih per sub-tes tanpa batas waktu; review untuk membahas sesi yang sudah selesai."
       />
 
       <div className="pc-grid mt-5">
@@ -106,13 +109,14 @@ export default function HomeView({
       <section className="prog" aria-labelledby="prog-h">
         <div className="prog-head">
           <h2 id="prog-h">Progress</h2>
-          <p>Perkembangan skor NAP dari semua tryout lengkap</p>
+          <p>Nilai akhir psikogram (1–85) dari tryout lengkap{profil ? `, profil ${JALUR_LABEL[profil]} (${JALUR_SETARA[profil]})` : ""}</p>
+          <ProfilPicker value={profil} className="mt-2" />
         </div>
 
         {completedSessions.length === 0 ? (
           <EmptyState
             title="Belum ada riwayat tes"
-            description="Selesaikan satu simulasi resmi untuk mulai melihat skor NAP, tren, dan pembahasan soal di sini. Latihan tidak dihitung ke riwayat."
+            description="Selesaikan satu simulasi resmi untuk mulai melihat nilai akhir, tren, dan pembahasan soal di sini. Latihan tidak dihitung ke riwayat."
             action={
               <Link href="/dashboard/simulasi" className={buttonStyles({ variant: "primary" })}>
                 Mulai simulasi
@@ -123,14 +127,16 @@ export default function HomeView({
           <>
             <div className="prog-panel">
               <div className="prog-hero">
-                <span className="prog-label">Skor NAP terbaik</span>
+                <span className="prog-label">Nilai akhir terbaik{profil ? ` · ${JALUR_LABEL[profil]}` : ""}</span>
                 <span className="prog-num">
-                  <strong>{bestScore != null ? bestScore.toFixed(1) : "—"}</strong>
+                  <strong>{bestScore != null ? String(bestScore) : "—"}</strong>
                 </span>
-                {bestScore != null && (
+                {bestScore != null ? (
                   <span className={`prog-status${above ? " is-above" : ""}`}>
-                    {above ? "Di atas" : "Di bawah"} ambang lulus {PASSING_NAP}
+                    {above ? "Memenuhi Syarat" : "Belum Memenuhi Syarat"} · lulus {PASSING_NAP} dari 85
                   </span>
+                ) : (
+                  <span className="prog-status">{profil ? "Belum ada nilai untuk profil ini" : "Pilih profil tujuan untuk melihat nilai"}</span>
                 )}
                 <span className="prog-meta">
                   {lastActivity ? `Tes terakhir ${formatDate(lastActivity)}` : ""}
@@ -142,7 +148,7 @@ export default function HomeView({
                   <WeeklyFrequencyChart sessions={allSessions} />
                 </div>
                 <div className="lg:pl-5">
-                  <NapTrendChart sessions={fullSessions} />
+                  <NapTrendChart sessions={fullSessions} title="Tren nilai akhir" label="Nilai" max={85} />
                 </div>
               </div>
             </div>
@@ -156,7 +162,7 @@ export default function HomeView({
                 </dd>
               </div>
               <div>
-                <dt>Lulus tryout</dt>
+                <dt>Memenuhi Syarat</dt>
                 <dd className="prog-big">
                   {passedCount}
                   <span>

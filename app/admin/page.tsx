@@ -5,6 +5,10 @@ import { supabaseAdmin } from "@/lib/supabase-admin";
 import LogoutButton from "@/app/components/LogoutButton";
 import { Accordion, Badge, EmptyState, PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronRight } from "@/app/components/icons";
+import ProfilPicker from "@/app/components/ProfilPicker";
+import { JALUR_LABEL, type HasilPsikogram } from "@/lib/scoring/psikogram";
+import { profilPilihan, psikogramBanyak } from "@/lib/scoring/psikogram-sesi";
+import type { ModuleRow } from "@/lib/scoring/psikogram-rs";
 
 function formatDate(iso: string | null) {
   if (!iso) return "—";
@@ -28,7 +32,7 @@ export default async function AdminPage() {
       id, name, username, gender,
       test_sessions (
         id, status, nap_score, is_passed, completed_at, created_at,
-        module_sessions ( module_type, ke_index, kh_index )
+        module_sessions ( id, module_type, package_number, ke_index, kt_index, kh_index )
       )
     `)
     .eq("role", "peserta")
@@ -46,11 +50,7 @@ export default async function AdminPage() {
       is_passed: boolean | null;
       completed_at: string | null;
       created_at: string;
-      module_sessions: Array<{
-        module_type: string;
-        ke_index: number | null;
-        kh_index: number | null;
-      }>;
+      module_sessions: ModuleRow[];
     }>;
   };
 
@@ -66,10 +66,20 @@ export default async function AdminPage() {
     );
   }
 
+  // Nilai = psikogram profil pilihan admin (Peraturan As SDM Kapolri No. 3/2017), dihitung saat dibaca.
+  const profil = await profilPilihan();
+  const selesai = (t: UserRow["test_sessions"][number]) => t.status === "COMPLETED" || t.status === "DISQUALIFIED";
+  const lengkap = (t: UserRow["test_sessions"][number]) => selesai(t) && new Set(t.module_sessions.map((m) => m.module_type)).size === 3;
+  const hasil = profil
+    ? await psikogramBanyak(peserta.flatMap((u) => u.test_sessions ?? []).filter(lengkap))
+    : new Map<string, HasilPsikogram[]>();
+  const nilaiOf = (t: UserRow["test_sessions"][number]) => (profil ? hasil.get(t.id)?.find((h) => h.jalur === profil) : undefined);
+  const ms = (t: UserRow["test_sessions"][number]) => nilaiOf(t)?.status === "MS";
+
   const totalPeserta = peserta.length;
   const totalTes = peserta.reduce((s, u) => s + (u.test_sessions?.length ?? 0), 0);
   const totalLulus = peserta.reduce(
-    (s, u) => s + (u.test_sessions?.filter((t) => t.is_passed).length ?? 0),
+    (s, u) => s + (u.test_sessions?.filter(ms).length ?? 0),
     0
   );
 
@@ -89,7 +99,7 @@ export default async function AdminPage() {
           {[
             { label: "Peserta terdaftar", value: totalPeserta, tone: "" },
             { label: "Total attempt", value: totalTes, tone: "" },
-            { label: "Total lulus", value: totalLulus, tone: "!text-success" },
+            { label: profil ? `Memenuhi Syarat · ${JALUR_LABEL[profil]}` : "Memenuhi Syarat", value: profil ? totalLulus : "—", tone: "!text-success" },
           ].map((s) => (
             <div key={s.label}>
               <dt>{s.label}</dt>
@@ -99,7 +109,11 @@ export default async function AdminPage() {
         </dl>
 
         <section className="mt-6 space-y-2">
-          <h2 className="section-kicker">Daftar peserta</h2>
+          <div className="flex flex-wrap items-end justify-between gap-3">
+            <h2 className="section-kicker">Daftar peserta</h2>
+            <ProfilPicker value={profil} />
+          </div>
+          {!profil && <p className="text-sm text-muted-foreground">Pilih profil untuk menampilkan nilai akhir psikogram tiap tryout lengkap.</p>}
 
           {peserta.length === 0 ? (
             <EmptyState
@@ -114,10 +128,12 @@ export default async function AdminPage() {
               const completed = sessions.filter(
                 (s) => s.status === "COMPLETED" || s.status === "DISQUALIFIED"
               );
-              const best = completed.length
-                ? completed.reduce((p, c) => ((c.nap_score ?? 0) > (p.nap_score ?? 0) ? c : p))
+              const bernilai = completed.filter((s) => nilaiOf(s)?.nilai_akhir != null);
+              const best = bernilai.length
+                ? bernilai.reduce((p, c) => (nilaiOf(c)!.nilai_akhir! > nilaiOf(p)!.nilai_akhir! ? c : p))
                 : null;
-              const lulusCount = completed.filter((s) => s.is_passed).length;
+              const bestNilai = best ? nilaiOf(best)!.nilai_akhir! : null;
+              const lulusCount = completed.filter(ms).length;
 
               return (
                 <Accordion
@@ -125,14 +141,14 @@ export default async function AdminPage() {
                   label={u.name}
                   summary={
                     <span className="tnum">
-                      @{u.username} · {sessions.length} attempt · {lulusCount} lulus
-                      {best?.nap_score != null && ` · terbaik ${best.nap_score.toFixed(1)}`}
+                      @{u.username} · {sessions.length} attempt · {lulusCount} Memenuhi Syarat
+                      {bestNilai != null && ` · terbaik ${bestNilai}/85`}
                     </span>
                   }
                   trailing={
-                    best?.nap_score != null ? (
-                      <Badge tone={best.is_passed ? "success" : "danger"}>
-                        {best.nap_score.toFixed(1)}
+                    best && bestNilai != null ? (
+                      <Badge tone={ms(best) ? "success" : "danger"}>
+                        {bestNilai}
                       </Badge>
                     ) : (
                       <Badge tone="neutral">belum ada</Badge>
@@ -156,20 +172,22 @@ export default async function AdminPage() {
                             <div className="flex items-center gap-3">
                               {done ? (
                                 <>
-                                  <span
-                                    className={`text-xs font-semibold ${
-                                      s.is_passed ? "text-success" : "text-destructive"
-                                    }`}
-                                  >
-                                    {s.is_passed
-                                      ? "Lulus"
-                                      : s.status === "DISQUALIFIED"
-                                        ? "Gugur"
-                                        : "Tidak Lulus"}
-                                  </span>
-                                  <span className="tnum font-semibold text-foreground">
-                                    {s.nap_score?.toFixed(1) ?? "—"}
-                                  </span>
+                                  {lengkap(s) ? (
+                                    <>
+                                      <span
+                                        className={`text-xs font-semibold ${
+                                          !nilaiOf(s)?.status ? "text-muted-foreground" : ms(s) ? "text-success" : "text-destructive"
+                                        }`}
+                                      >
+                                        {!profil ? "Simulasi Penuh" : !nilaiOf(s)?.status ? "Belum lengkap" : ms(s) ? "Memenuhi Syarat" : "Tidak Memenuhi Syarat"}
+                                      </span>
+                                      <span className="tnum font-semibold text-foreground">
+                                        {nilaiOf(s)?.nilai_akhir ?? "—"}
+                                      </span>
+                                    </>
+                                  ) : (
+                                    <span className="text-xs font-semibold text-muted-foreground">Mini Tryout</span>
+                                  )}
                                   {needsKecermatanReview(s) && (
                                     <Badge tone="accent">Cek manual: Sikap Kerja</Badge>
                                   )}

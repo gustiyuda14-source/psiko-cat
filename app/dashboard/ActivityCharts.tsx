@@ -127,8 +127,9 @@ export function WeeklyFrequencyChart({ sessions }: { sessions: SessionRow[] }) {
 
 export function NapTrendChart({
   sessions,
-  title = "Tren skor NAP",
-  label = "NAP",
+  title = "Tren nilai akhir",
+  label = "Nilai",
+  max = 100,
   threshold = PASSING_NAP,
   emptyText = "Tren muncul setelah tes resmi pertama selesai dihitung.",
 }: {
@@ -138,6 +139,8 @@ export function NapTrendChart({
   /** null = tanpa garis ambang (mis. skor latihan). */
   threshold?: number | null;
   emptyText?: string;
+  /** Batas atas sumbu: 85 untuk nilai akhir psikogram, 100 untuk skor latihan. */
+  max?: number;
 }) {
   const points = sessions
     .filter((s) => s.nap_score != null)
@@ -161,7 +164,9 @@ export function NapTrendChart({
   const chartH = 76;
   const padX = 10;
   const padY = 12;
-  const domainMax = 100;
+  const domainMax = max;
+  // Nilai akhir psikogram bilangan bulat; skor latihan satu desimal.
+  const fmt = (v: number) => (max === 100 ? v.toFixed(1) : String(Math.round(v)));
 
   const xFor = (i: number) =>
     points.length === 1 ? chartW / 2 : padX + (i / (points.length - 1)) * (chartW - padX * 2);
@@ -188,7 +193,7 @@ export function NapTrendChart({
             </>
           )}
           Skor terakhir{" "}
-          <span className="tnum font-semibold text-foreground">{last.nap_score!.toFixed(1)}</span>.
+          <span className="tnum font-semibold text-foreground">{fmt(last.nap_score!)}</span>.
         </p>
       }
     >
@@ -197,7 +202,7 @@ export function NapTrendChart({
         width="100%"
         height={chartH}
         role="img"
-        aria-label={`${title} dari ${points.length} sesi selesai. Skor terakhir ${last.nap_score!.toFixed(1)} dari 100${threshold != null ? `, ambang lulus ${threshold}` : ""}.`}
+        aria-label={`${title} dari ${points.length} sesi selesai. Skor terakhir ${fmt(last.nap_score!)} dari ${max}${threshold != null ? `, ambang lulus ${threshold}` : ""}.`}
       >
         {/* Garis acuan: skor tanpa ambangnya tidak bisa dinilai bagus atau tidak. */}
         {thresholdY != null && <line
@@ -237,7 +242,7 @@ export function NapTrendChart({
               }
             >
               <title>
-                {`Sesi ${i + 1}: ${label} ${p.nap_score!.toFixed(1)}`}
+                {`Sesi ${i + 1}: ${label} ${fmt(p.nap_score!)}`}
               </title>
             </circle>
           );
@@ -250,13 +255,13 @@ export function NapTrendChart({
           textAnchor="end"
           className="tnum fill-foreground text-[10px] font-semibold"
         >
-          {last.nap_score!.toFixed(1)}
+          {fmt(last.nap_score!)}
         </text>
       </svg>
 
       <ul className="sr-only">
         {points.map((p, i) => (
-          <li key={i}>{`Sesi ${i + 1}: ${label} ${p.nap_score!.toFixed(1)}`}</li>
+          <li key={i}>{`Sesi ${i + 1}: ${label} ${fmt(p.nap_score!)}`}</li>
         ))}
       </ul>
     </ChartFrame>

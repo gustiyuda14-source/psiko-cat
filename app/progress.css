@@ -245,3 +245,10 @@
 :root[data-theme="ajiks"] .pg-stub { background: radial-gradient(120% 80% at 0% 0%, rgb(202 170 79 / .14) 0%, #16130f 45%, var(--surface-nav-deep) 100%) }
 :root[data-theme="ajiks"] .pg-big { background: var(--gold-metal); -webkit-background-clip: text; background-clip: text; color: transparent }
 
+.pg-asp { display: grid; gap: 8px }
+.pg-kats { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none }
+.pg-kats li { display: inline-flex; gap: 4px; align-items: baseline; width: auto; padding: 3px 8px; border-radius: 6px; background: var(--surface-inset); color: var(--foreground); font-size: .78rem }
+.pg-kats li b { font-weight: 800 }
+.pg-kats li.k-b { background: var(--success-soft); color: var(--success) }
+.pg-kats li.k-ks { background: var(--destructive-soft); color: var(--destructive) }
+.pg-sec-h select { min-height: 36px }

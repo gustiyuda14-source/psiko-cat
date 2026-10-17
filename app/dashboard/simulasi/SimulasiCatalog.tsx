@@ -170,7 +170,7 @@ export default function SimulasiCatalog({
                       <span className="sp-side">
                         {p.nap !== undefined && (
                           <span className="sp-score tnum">
-                            <small>Nilai Akhir Psikotest</small>
+                            <small>Nilai akhir profil · /85</small>
                             <strong>{Math.round(p.nap)}</strong>
                             {delta !== 0 && (
                               <em className={delta > 0 ? "pg-up" : "pg-down"}>
@@ -215,7 +215,7 @@ export default function SimulasiCatalog({
               </h2>
               <p className="sp-prev-meta tnum">
                 {prev.runs > 0
-                  ? `Selesai ${prev.runs} kali · terakhir ${prev.at}${prev.nap !== undefined ? ` · Nilai Akhir Psikotest ${Math.round(prev.nap)}` : ""}`
+                  ? `Selesai ${prev.runs} kali · terakhir ${prev.at}${prev.nap !== undefined ? ` · nilai akhir profil ${Math.round(prev.nap)}/85` : ""}`
                   : "Belum pernah dikerjakan"}
               </p>
               <span className="sp-bar" aria-hidden="true">

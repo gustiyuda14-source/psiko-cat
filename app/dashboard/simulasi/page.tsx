@@ -8,7 +8,10 @@ import { createTestSessionAndRedirect } from "@/lib/test-session";
 import { PageHeader, buttonStyles } from "@/app/components/ui";
 import { ChevronDown, ChevronRight } from "@/app/components/icons";
 import SimulasiCatalog, { type LastScores, type SimulasiItem, type SimulasiPackage } from "./SimulasiCatalog";
-import SimulasiProgress, { type SubScores, type TryoutPoint } from "./SimulasiProgress";
+import SimulasiProgress, { type AspekTerakhir, type TryoutPoint } from "./SimulasiProgress";
+import { aspekSesi, type HasilPsikogram } from "@/lib/scoring/psikogram";
+import { profilPilihan, psikogramBanyak, wsModul } from "@/lib/scoring/psikogram-sesi";
+import type { ModuleRow } from "@/lib/scoring/psikogram-rs";
 
 function formatDateTime(iso: string): string {
   return new Date(iso).toLocaleString("id-ID", {
@@ -98,7 +101,7 @@ export default async function SimulasiPage() {
       // Tren Nilai Akhir Psikotest: sesi selesai milik peserta ini, sama dengan Beranda.
       supabaseAdmin
         .from("test_sessions")
-        .select("nap_score, completed_at, created_at, status, module_sessions(module_type, package_number)")
+        .select("id, nap_score, completed_at, created_at, status, module_sessions(id, module_type, package_number, ke_index, kt_index, kh_index)")
         .eq("user_id", session.sub)
         .in("status", ["COMPLETED", "DISQUALIFIED"])
         .order("created_at", { ascending: true }),
@@ -119,11 +122,9 @@ export default async function SimulasiPage() {
   const running = openSessions ?? [];
 
   const last: LastScores = {};
-  const subScores: SubScores = {};
   for (const row of scoredRows ?? []) {
     const type = row.module_type as ModuleType;
     if (row.raw_score == null) continue;
-    (subScores[type] ??= []).unshift(row.raw_score); // baris urut terbaru dulu → simpan lama ke baru
     if (last[type]) {
       last[type].prev ??= row.raw_score;
       continue;
@@ -136,18 +137,37 @@ export default async function SimulasiPage() {
     };
   }
 
-  type Done = { nap_score: number | null; completed_at: string | null; created_at: string; module_sessions: { module_type: string; package_number: number | null }[] };
-  const done = (doneSessions ?? []) as Done[];
+  type Done = { id: string; completed_at: string | null; created_at: string; module_sessions: ModuleRow[] };
+  const done = (doneSessions ?? []) as unknown as Done[];
   const isFull = (s: Done) => MODULE_ORDER.every((t) => s.module_sessions.some((m) => m.module_type === t));
-  const tryouts: TryoutPoint[] = done
-    .filter((s) => isFull(s) && s.nap_score != null)
-    .map((s) => ({ at: s.completed_at ?? s.created_at, nap: s.nap_score! }));
-  const single = done.filter((s) => !isFull(s)).length;
+  const full = done.filter(isFull);
+  const single = done.length - full.length;
+
+  // Psikogram profil pilihan peserta (Peraturan As SDM Kapolri No. 3/2017), dihitung saat dibaca.
+  // Modul terakhir per sub-tes ikut dihitung untuk ringkasan kategori aspek.
+  const profil = await profilPilihan();
+  const terakhirPer = MODULE_ORDER.map((t) => {
+    const s = [...done].reverse().find((x) => x.module_sessions.some((m) => m.module_type === t));
+    return s ? { type: t, at: s.completed_at ?? s.created_at, m: s.module_sessions.find((m) => m.module_type === t)! } : null;
+  }).filter((x) => x !== null);
+  const [hasil, wsTerakhir] = await Promise.all([
+    profil ? psikogramBanyak(full) : Promise.resolve(new Map<string, HasilPsikogram[]>()),
+    wsModul(terakhirPer.map((x) => x.m)),
+  ]);
+  const nilaiOf = (s: Done) => (profil ? hasil.get(s.id)?.find((h) => h.jalur === profil) : undefined);
+  const tryouts: TryoutPoint[] = full.flatMap((s) => {
+    const h = nilaiOf(s);
+    return h?.nilai_akhir != null ? [{ at: s.completed_at ?? s.created_at, nap: h.nilai_akhir, ms: h.status === "MS" }] : [];
+  });
+  const belumLengkap = profil ? full.length - tryouts.length : 0;
+  const aspekTerakhir: AspekTerakhir = Object.fromEntries(
+    terakhirPer.map((x) => [x.type, { at: x.at, aspek: aspekSesi(wsTerakhir.get(x.m.id) ?? {}) }]).filter(([, v]) => (v as { aspek: unknown[] }).aspek.length),
+  );
 
   // Tryout lengkap per kartu paket: kartu dibaca dari package_number Kecerdasan
   // (null = sesi lama = Paket 1). `done` urut lama → baru.
   const paketOf = (s: Done) => simulasiKartuOf(s.module_sessions.find((m) => m.module_type === "KECERDASAN")?.package_number);
-  const runsOf = (id: number) => done.filter((s) => isFull(s) && s.nap_score != null && paketOf(s) === id);
+  const runsOf = (id: number) => full.filter((s) => paketOf(s) === id);
 
   // 5 slot paket simulasi penuh. Kartu terbuka otomatis begitu paketnya terdaftar di
   // SIMULASI_PAKET dan bank soal Kecerdasan + Kepribadiannya sudah ada di DB.
@@ -160,8 +180,8 @@ export default async function SimulasiPage() {
       const last = runs.at(-1);
       return {
         runs: runs.length,
-        nap: last?.nap_score ?? undefined,
-        prev: runs.at(-2)?.nap_score ?? undefined,
+        nap: (last && nilaiOf(last)?.nilai_akhir) ?? undefined,
+        prev: (runs.at(-2) && nilaiOf(runs.at(-2)!)?.nilai_akhir) ?? undefined,
         at: last ? new Date(last.completed_at ?? last.created_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" }) : undefined,
       };
     })(),
@@ -172,7 +192,7 @@ export default async function SimulasiPage() {
       id: "ALL",
       title: `Tryout Lengkap Paket ${paket}`,
       meta: `${totalOf(paket)} butir · ${totalMinutes} menit`,
-      desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai Nilai Akhir Psikotest.",
+      desc: "Ketiga sub-tes berurutan dengan timer berjalan. Hasil dihitung sebagai nilai akhir per profil (1–85).",
       faces: [...MODULE_ORDER],
     },
     ...MODULE_ORDER.map((type): SimulasiItem => {
@@ -192,10 +212,10 @@ export default async function SimulasiPage() {
       <PageHeader
         kicker="Simulasi"
         title="Simulasi"
-        description="Tes resmi dengan timer berjalan. Hasilnya masuk ke riwayat dan dihitung sebagai Nilai Akhir Psikotest. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
+        description="Tes resmi dengan timer berjalan. Tryout lengkap dinilai dengan psikogram Peraturan As SDM Kapolri No. 3/2017 (nilai akhir 1–85) sesuai profil tujuanmu. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
       />
 
-      <SimulasiProgress tryouts={tryouts} subScores={subScores} single={single} />
+      <SimulasiProgress tryouts={tryouts} aspekTerakhir={aspekTerakhir} single={single} profil={profil} belumLengkap={belumLengkap} />
 
       {/* Sesi yang belum selesai: jalan kembali kalau browser tertutup di tengah
           ujian (timer tetap jalan di server). Dilipat supaya tidak memenuhi layar. */}
