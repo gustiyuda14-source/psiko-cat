@@ -65,9 +65,12 @@ assert.equal(ringkasNomor([2, 3, 4, 8]), "3–5, 9");
 const soal = Array.from({ length: KESWA_TOTAL }, (_, i) => `Soal ${i + 1}.`);
 const bahas = pembahasanKeswa(c, soal, kunci);
 assert.deepEqual(bahas.map((b) => b.judul), cekBaris(nilaiKeswa(c, kunci)).map((b) => b.judul));
-// Hanya butir yang memicu cek yang dikirim; jawaban jujur tidak memunculkan satu butir pun.
-assert.equal(bahas[1].items.length, 6);
-assert.equal(pembahasanKeswa(jujur, soal, kunci).filter((b) => b.items.length).length, 0);
+// Semua butir validitas dikirim dengan tanda; jawaban jujur tidak menandai satu butir pun.
+assert.equal(bahas[1].items.filter((x) => x.tandai).length, 6);
+assert.equal(bahas[1].items.length, kunci.sama.length + kunci.lawan.length);
+assert.equal(bahas[3].items.length, kunci.sok.length);
+assert.equal(bahas[4].items.length, kunci.acak.length);
+assert.equal(pembahasanKeswa(jujur, soal, kunci).filter((b) => b.items.some((x) => x.tandai)).length, 0);
 
 // Penanda sorotan **...** selalu berpasangan.
 for (const b of [...bahas, ...pembahasanKeswa(a, soal, kunci), ...pembahasanKeswa(s, soal, kunci)])

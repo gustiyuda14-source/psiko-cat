@@ -325,14 +325,17 @@ function SimbolJawaban({ k, symbol }: { k: string; symbol: string }) {
 const sorot = (t: string) => t.split(/\*\*(.+?)\*\*/).map((x, i) => (i % 2 ? <mark key={i} className="ksw-kunci">{x}</mark> : x));
 const LABEL_KECIL = "text-xs font-semibold uppercase tracking-[0.08em] text-accent-ink";
 
-/* Keswa tidak punya kunci: hanya butir yang memicu cek yang tampil; baris jawaban ditandai "Jawaban kamu", tidak pernah "Kunci". */
+/* Keswa tidak punya kunci: baris jawaban hanya ditandai "Jawaban kamu" (merah bila memicu cek), tidak pernah "Kunci". */
 function keswa(cek: KeswaCekData, item?: BahasItem): CardView {
+  const kosong = !!item && !item.tandai && item.butir.some((b) => b.jawab !== "Ya" && b.jawab !== "Tidak");
   return {
     title: item ? `${cek.tab} · nomor ${item.butir.map((b) => b.no).join(" & ")}` : cek.judul,
-    status: item ? (
-      <Badge tone="danger">
-        <Close className="size-3.5" strokeWidth={3} />
-        Terdeteksi
+    status: kosong ? (
+      <Badge tone="neutral">Tidak dijawab</Badge>
+    ) : item ? (
+      <Badge tone={item.tandai ? "danger" : "success"}>
+        {item.tandai ? <Close className="size-3.5" strokeWidth={3} /> : <Check className="size-3.5" strokeWidth={3} />}
+        {item.tandai ? "Terdeteksi" : "Wajar"}
       </Badge>
     ) : null,
     hasKey: false,
@@ -346,12 +349,12 @@ function keswa(cek: KeswaCekData, item?: BahasItem): CardView {
             rows={[
               ["Y", "Ya"],
               ["T", "Tidak"],
-            ].map(([k, text]) => (b.jawab === text ? { k, text, tone: "bad", tag: "Jawaban kamu" } : { k, text, tone: null }))}
+            ].map(([k, text]) => (b.jawab === text ? { k, text, tone: item.tandai ? "bad" : "pick", tag: "Jawaban kamu" } : { k, text, tone: null }))}
           />
         </div>
       ))
     ) : (
-      <p className="text-sm text-muted-foreground">Tidak ada butir yang terdeteksi di cek ini.</p>
+      <p className="text-sm text-muted-foreground">Tidak ada butir di cek ini.</p>
     ),
     pembahasan: (
       <>
@@ -360,7 +363,9 @@ function keswa(cek: KeswaCekData, item?: BahasItem): CardView {
             <AnswerLine
               items={[
                 ["Jawaban kamu", item.butir.map((b) => b.jawab).join(" · ")],
-                ["Status", "Terdeteksi", "text-destructive"],
+                kosong
+                  ? ["Status", "Tidak dihitung"]
+                  : ["Status", item.tandai ? "Terdeteksi" : "Wajar", item.tandai ? "text-destructive" : "text-success"],
               ]}
             />
             <p className="max-w-[72ch] leading-relaxed text-foreground">{sorot(item.catatan)}</p>

@@ -45,7 +45,7 @@ export type PembahasanNavigatorProps = {
   kepribadian?: KepribadianReviewItem[];
   pribadi?: PribadiReviewItem[];
   kecermatan?: { summary: KecermatanSummary | null; groups: KecermatanColumnGroup[] };
-  /** Keswa: 5 cek validitas sebagai "kolom"; petak = hanya butir yang memicu cek. */
+  /** Keswa: 5 cek validitas sebagai "kolom"; petak = butir validitas, merah = memicu cek. */
   keswa?: { label: string; cek: KeswaCekData[]; stats: Stat[]; extra: [string, string][] };
 };
 
@@ -202,7 +202,8 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: 
               id: item.butir.map((b) => b.no).join("-"),
               no: item.butir[0].no,
               pick: item.butir.map((b) => huruf(b.jawab)).join("") || null,
-              state: "bad",
+              // Butir validitas yang tidak dijawab tidak dihitung: bukan "wajar", bukan "terdeteksi".
+              state: item.tandai ? "bad" : item.butir.some((b) => !huruf(b.jawab)) ? "skip" : "ok",
               card: { kind: "keswa", cek, item },
             })
           )
@@ -210,9 +211,9 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: 
       })),
       stats: keswa.stats,
       extra: keswa.extra,
-      words: { bad: "terdeteksi" },
-      filters: [["all", "Semua"], ["bad", "Terdeteksi"]],
-      legend: [["bad", "Terdeteksi (memicu cek)"]],
+      words: { ok: "wajar", bad: "terdeteksi" },
+      filters: [["all", "Semua"], ["bad", "Terdeteksi"], ["ok", "Wajar"], ["skip", "Tidak dijawab"]],
+      legend: [["ok", "Wajar"], ["bad", "Terdeteksi (memicu cek)"], ["skip", "Tidak dijawab"]],
     });
   }
 
@@ -415,6 +416,8 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
             <h3 className="hidden font-heading text-sm font-semibold text-foreground @3xl:block">Daftar soal</h3>
 
             <div className={`${gridOpen ? "block" : "hidden"} mt-3 space-y-3 @3xl:block`}>
+              {/* Freeze pane: tab kolom + saring tetap terlihat saat daftar nomor di-scroll. */}
+              <div className="space-y-3 @3xl:sticky @3xl:-top-px @3xl:z-10 @3xl:-mx-4 @3xl:border-b @3xl:border-border @3xl:bg-card @3xl:px-4 @3xl:pb-3 @3xl:pt-2">
               {section.groups.length > 1 && (
                 <div className={section.groups.some((g) => g.tone) ? "flex flex-wrap gap-1" : "grid grid-cols-5 gap-1"} role="group" aria-label="Pilih kolom">
                   {section.groups.map((g, i) => (
@@ -457,6 +460,7 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
                     </button>
                   );
                 })}
+              </div>
               </div>
 
               <div className="grid grid-cols-[repeat(auto-fill,minmax(2.75rem,1fr))] gap-1.5 @3xl:grid-cols-6">
