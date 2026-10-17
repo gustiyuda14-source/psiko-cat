@@ -39,9 +39,9 @@ const ids = manifest.urutan;
 assert.equal(new Set(ids).size, ids.length, "ada butir ganda di manifest");
 const kpIds = ids.filter((id) => kp.has(id)), skIds = ids.filter((id) => sk.has(id));
 assert.equal(kpIds.length + skIds.length, ids.length, "ada id yang tidak ada di bank");
-assert.equal(kpIds.length, 48, "Kepribadian harus 48 butir");
+assert.ok(kpIds.length === 48 || kpIds.length === 64, "Kepribadian harus 48 butir (64 bila + Loyalitas & Kerja Sama)");
 assert.equal(skIds.length, 63, "Substansi Khusus harus 63 butir");
-assert.deepEqual(ids.slice(0, 48), kpIds, "Kepribadian harus di Bagian 1");
+assert.deepEqual(ids.slice(0, kpIds.length), kpIds, "Kepribadian harus di Bagian 1");
 const perAspek = new Map<string, number[]>();
 for (const id of kpIds) {
   const it = kp.get(id)!;
@@ -49,7 +49,7 @@ for (const id of kpIds) {
   c[it.arah === "favorable" ? 0 : 1]++;
   perAspek.set(it.aspek, c);
 }
-assert.equal(perAspek.size, 6, "harus 6 aspek");
+assert.equal(perAspek.size, kpIds.length / 8, "tiap aspek 8 butir");
 for (const [a, [f, u]] of perAspek) assert.ok(f === 4 && u === 4, `${a}: harus 4 favorable + 4 unfavorable, dapat ${f}:${u}`);
 for (const id of skIds) {
   const t = sk.get(id)!.kembar_dengan;
@@ -82,7 +82,7 @@ const rows = ids.map((id, i) => {
     scoring_rule: { type: "forced_choice", dimensi: s.nama, correct_key: s.kunci, pembahasan: `Aturan: ${s.aturan} ${s.pembahasan}` } satisfies PribadiRule,
   };
 });
-console.log(`Paket ${PKG}: komposisi lolos (48 Kepribadian + 63 Integritas & Kejujuran).`);
+console.log(`Paket ${PKG}: komposisi lolos (${kpIds.length} Kepribadian + 63 Integritas & Kejujuran).`);
 if (!APPLY) process.exit(0);
 
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });
@@ -96,12 +96,12 @@ async function main() {
   // Verifikasi dari DB: jumlah, urutan, dan penilaian jawaban ideal = 100.
   const { data } = await supabase.from("questions").select("sequence_number, options_payload, scoring_rule")
     .eq("type", "KEPRIBADIAN").eq("package_number", PKG).order("sequence_number");
-  assert.equal(data?.length, 111);
+  assert.equal(data?.length, ids.length);
   const rules = data!.map((r) => r.scoring_rule as unknown as PribadiRule);
   const ideal = summarize(rules.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? rule.correct_key : rule.polarity === "favorable" ? "D" : "A" })));
   assert.equal(ideal.pribadi, 100);
   const allC = summarize(rules.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? "A" : "C" })));
-  console.log(`Paket ${PKG}: 111 baris tertulis. Jawaban ideal = ${ideal.pribadi}; semua "Sesuai" + semua A = ${allC.pribadi} (KP ${allC.kp?.nilai}, SK ${allC.sk?.nilai}).`);
+  console.log(`Paket ${PKG}: ${ids.length} baris tertulis. Jawaban ideal = ${ideal.pribadi}; semua "Sesuai" + semua A = ${allC.pribadi} (KP ${allC.kp?.nilai}, SK ${allC.sk?.nilai}).`);
 }
 main().catch((err) => {
   console.error("FATAL:", err);

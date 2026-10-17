@@ -14,6 +14,8 @@ import {
 } from "@/app/components/PembahasanSection";
 import ResultView from "./ResultView";
 import { getSessionAccess } from "@/lib/session-access";
+import { psikogramSesi } from "@/lib/scoring/psikogram-sesi";
+import { JALUR, type Jalur } from "@/lib/scoring/psikogram";
 
 const PASSING_NAP = 61;
 const STANDALONE_PASSING = 40;
@@ -30,10 +32,14 @@ type ModuleSessionRow = {
 
 export default async function ResultPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ sessionId: string }>;
+  searchParams: Promise<{ jalur?: string }>;
 }) {
   const { sessionId } = await params;
+  const pilih = (await searchParams).jalur;
+  const jalur: Jalur = JALUR.includes(pilih as Jalur) ? (pilih as Jalur) : "BINTARA";
   const access = await getSessionAccess(sessionId);
   if (!access.ok) notFound();
 
@@ -66,10 +72,12 @@ export default async function ResultPage({
   const kc = moduleSessions.find((m) => m.module_type === "KECERMATAN");
 
   // Fetch pembahasan data in parallel
-  const [kecerdasanItems, kepribadianItems, kecermatanDetail] = await Promise.all([
+  const [kecerdasanItems, kepribadianItems, kecermatanDetail, psikogram] = await Promise.all([
     ks ? fetchKecerdasanReview(ks.id) : Promise.resolve([] as KecerdasanReviewItem[]),
     kp ? fetchKepribadianReview(kp.id) : Promise.resolve([] as KepribadianReviewItem[]),
     kc ? fetchKecermatanDetailReview(kc.id) : Promise.resolve([] as KecermatanColumnGroup[]),
+    // Psikogram butuh ketiga sub-tes; sesi satu sub-tes tetap memakai nilai sub-tes.
+    isStandalone ? Promise.resolve(null) : psikogramSesi(moduleSessions),
   ]);
 
   const kecermatanSummary: KecermatanSummary | null = kc
@@ -100,6 +108,8 @@ export default async function ResultPage({
       kepribadianItems={kepribadianItems}
       kecermatanSummary={kecermatanSummary}
       kecermatanDetail={kecermatanDetail}
+      psikogram={psikogram}
+      jalur={jalur}
     />
   );
 }

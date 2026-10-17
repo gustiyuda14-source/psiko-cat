@@ -113,17 +113,21 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // docs/pedoman/PEDOMAN_SIMULASI_KECERMATAN.md); kartu 2 tetap paket 401
 // (Spasial Sedang, scripts/generate-kecermatan-spasial.ts 401; sesi lama tetap menyimpan paket
 // acaknya di kecermatan_package_number); kartu 3 tetap paket 10.
+// Sejak 2026-10-17 Kepribadian tiap kartu = paket lama + Loyalitas & Kerja Sama (psikogram Bintara/Tamtama,
+// scripts/extend-pribadi-paket.ts): 11→16, 13→18, 12→17, 14→19, 15→20. Paket 11–15 menjadi bank lama.
 export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number; KECERMATAN?: number }> = {
-  1: { KECERDASAN: 18, KEPRIBADIAN: SIMULASI_PACKAGE.KEPRIBADIAN, KECERMATAN: 11 },
-  2: { KECERDASAN: 17, KEPRIBADIAN: 13, KECERMATAN: 401 },
-  3: { KECERDASAN: 15, KEPRIBADIAN: 12, KECERMATAN: 10 },
-  4: { KECERDASAN: 19, KEPRIBADIAN: 14, KECERMATAN: 12 },
-  5: { KECERDASAN: 20, KEPRIBADIAN: 15, KECERMATAN: 13 },
+  1: { KECERDASAN: 18, KEPRIBADIAN: 16, KECERMATAN: 11 },
+  2: { KECERDASAN: 17, KEPRIBADIAN: 18, KECERMATAN: 401 },
+  3: { KECERDASAN: 15, KEPRIBADIAN: 17, KECERMATAN: 10 },
+  4: { KECERDASAN: 19, KEPRIBADIAN: 19, KECERMATAN: 12 },
+  5: { KECERDASAN: 20, KEPRIBADIAN: 20, KECERMATAN: 13 },
 
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
 // tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.
 const SIMULASI_KECERDASAN_LAMA: Record<number, number> = { 1: 1, 12: 2, 13: 1, 14: 2, 16: 1 };
+// Bank Kepribadian simulasi sebelum Loyalitas & Kerja Sama: tetap aktif untuk sesi lama, tetap terlarang di latihan.
+const SIMULASI_KEPRIBADIAN_LAMA = [11, 12, 13, 14, 15];
 
 /** Kartu Simulasi Penuh dari package_number Kecerdasan sebuah sesi (null = sesi lama = kartu 1). */
 export function simulasiKartuOf(kecerdasanPackage: number | null | undefined): number {
@@ -139,6 +143,7 @@ export function simulasiPackageOf(type: "KECERDASAN" | "KEPRIBADIAN", packageNum
 /** Semua package_number milik simulasi — tidak pernah boleh dibuka lewat latihan. */
 export function isSimulasiPackage(type: string, packageNumber: number | null): boolean {
   if (type === "KECERDASAN" && packageNumber != null && packageNumber in SIMULASI_KECERDASAN_LAMA) return true;
+  if (type === "KEPRIBADIAN" && packageNumber != null && SIMULASI_KEPRIBADIAN_LAMA.includes(packageNumber)) return true;
   return Object.values(SIMULASI_PAKET).some((p) => p[type as keyof typeof p] === packageNumber);
 }
 

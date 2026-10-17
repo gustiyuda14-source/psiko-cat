@@ -1,0 +1,1112 @@
+{
+  "batch": "kp-ks-01",
+  "status": "review",
+  "catatan": "72 butir latihan Kepribadian aspek Kerja Sama (18 L/T1, 36 K/T2, 18 KR/T3; 36 favorable : 36 unfavorable). Belum di-seed. Aspek wajib Bintara dan Tamtama (Per As SDM Kapolri 3/2017). Kunci mengikuti aturan aspek (pedoman 1.1a): favorable = D ideal, unfavorable = A ideal. Sub-segi: pembagian tugas, mendengar dan menghargai pendapat, membantu anggota tim, mengutamakan tujuan tim di atas ego, berbagi informasi, mengelola konflik dalam tim.",
+  "definisi_aspek": {
+    "Kerja Sama": "kesediaan bekerja bersama orang lain demi tujuan bersama: berbagi tugas dan informasi, mendengar dan menghargai pendapat, membantu anggota tim, mengutamakan hasil tim di atas ego, serta mengelola perbedaan secara konstruktif."
+  },
+  "items": [
+    {
+      "id": "KP-KS-101",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membagi tugas kelompok dengan adil agar setiap anggota mendapat bagian sesuai kemampuannya.",
+      "alasan": "Pembagian tugas yang adil membuat semua anggota terlibat dan hasil kelompok lebih baik."
+    },
+    {
+      "id": "KP-KS-102",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya lebih suka mengerjakan tugas kelompok sendirian karena merasa hasil kerja anggota lain pasti kurang bagus.",
+      "alasan": "Tidak mempercayakan bagian kepada anggota lain menghambat kerja sama dan membuat tim tidak berkembang."
+    },
+    {
+      "id": "KP-KS-103",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya mendengarkan usul teman satu tim sampai selesai sebelum menyampaikan pendapat saya.",
+      "alasan": "Mendengarkan lebih dulu adalah dasar komunikasi yang sehat dalam tim."
+    },
+    {
+      "id": "KP-KS-104",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya memotong pembicaraan anggota kelompok yang usulnya berbeda dari rencana saya.",
+      "alasan": "Memotong pendapat anggota lain menutup ruang diskusi dan merusak suasana kerja sama."
+    },
+    {
+      "id": "KP-KS-105",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menawarkan bantuan kepada panitia lain yang bagiannya belum selesai setelah bagian saya rampung.",
+      "alasan": "Membantu setelah tugas sendiri selesai menunjukkan kepedulian pada keberhasilan seluruh tim."
+    },
+    {
+      "id": "KP-KS-106",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya langsung pulang setelah bagian saya selesai tanpa peduli panitia lain masih kerepotan.",
+      "alasan": "Hanya peduli pada bagian sendiri menandakan rendahnya orientasi pada tujuan bersama."
+    },
+    {
+      "id": "KP-KS-107",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menyebut nama teman-teman yang ikut berperan ketika kelompok kami dipuji guru.",
+      "alasan": "Mengakui kontribusi anggota lain menumbuhkan rasa saling menghargai dalam tim."
+    },
+    {
+      "id": "KP-KS-108",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membiarkan guru mengira hasil kerja kelompok kami sepenuhnya buatan saya.",
+      "alasan": "Mengambil pujian bersama untuk diri sendiri merusak kepercayaan antaranggota."
+    },
+    {
+      "id": "KP-KS-109",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mengingatkan teman sekamar tentang jadwal piket kelompok agar tugas kami tidak terlambat.",
+      "alasan": "Saling mengingatkan menjaga tanggung jawab bersama tetap berjalan."
+    },
+    {
+      "id": "KP-KS-110",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya membiarkan kelompok piket kami gagal karena menurut saya itu bukan bagian tugas saya.",
+      "alasan": "Mengabaikan tugas bersama karena merasa bukan bagian sendiri melemahkan kerja sama."
+    },
+    {
+      "id": "KP-KS-111",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya ikut menyiapkan perlengkapan seluruh kelompok sebelum latihan dimulai walaupun bukan giliran saya.",
+      "alasan": "Membantu di luar giliran sendiri mencerminkan kesediaan bekerja demi kepentingan kelompok."
+    },
+    {
+      "id": "KP-KS-112",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya duduk menunggu rekan sekelompok selesai menyiapkan perlengkapan karena giliran saya sudah lewat.",
+      "alasan": "Membiarkan rekan bekerja sendirian meskipun bisa membantu menunjukkan kerja sama yang lemah."
+    },
+    {
+      "id": "KP-KS-113",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menerima peran pendukung dalam lomba kebersihan asrama demi keberhasilan kelompok.",
+      "alasan": "Bersedia mengambil peran apa pun yang dibutuhkan tim adalah inti kerja sama."
+    },
+    {
+      "id": "KP-KS-114",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menolak peran pendukung dalam lomba kelompok kalau tidak diberi posisi paling menonjol.",
+      "alasan": "Menuntut posisi menonjol di atas kebutuhan tim menunjukkan ego yang menghambat kerja sama."
+    },
+    {
+      "id": "KP-KS-115",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya berkoordinasi dengan bagian lain sebelum mengambil keputusan yang menyangkut pekerjaan mereka.",
+      "alasan": "Koordinasi lintas bagian mencegah salah paham dan menjaga kerja sama antarunit."
+    },
+    {
+      "id": "KP-KS-116",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya memutuskan sendiri hal yang menyangkut bagian lain tanpa memberi tahu mereka.",
+      "alasan": "Keputusan sepihak mengabaikan bagian lain dan merusak koordinasi."
+    },
+    {
+      "id": "KP-KS-117",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, saya bersedia bergantian jaga dengan relawan lain agar tidak ada yang kelelahan.",
+      "alasan": "Berbagi beban kerja secara bergiliran menjaga tim tetap kuat dan bekerja berkelanjutan."
+    },
+    {
+      "id": "KP-KS-118",
+      "aspek": "Kerja Sama",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, saya enggan berbagi tugas dengan relawan lain karena merasa lebih cepat bekerja sendiri.",
+      "alasan": "Menolak berbagi tugas membuat beban tidak merata dan melemahkan tim."
+    },
+    {
+      "id": "KP-KS-119",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menerima keputusan kelompok yang disepakati lewat musyawarah lebih baik daripada memaksakan usul sendiri sampai semua orang lelah.",
+      "bedah": {
+        "sisi_x": "menerima keputusan kelompok yang disepakati lewat musyawarah",
+        "sisi_y": "memaksakan usul sendiri sampai semua orang lelah",
+        "pembanding": "lebih baik",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menghargai keputusan bersama lebih mencerminkan kerja sama daripada mendahulukan usul pribadi."
+    },
+    {
+      "id": "KP-KS-120",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mempertahankan rencana sendiri sampai akhir diskusi lebih tegas daripada menyesuaikannya dengan masukan seluruh anggota kelompok.",
+      "bedah": {
+        "sisi_x": "mempertahankan rencana sendiri sampai akhir diskusi",
+        "sisi_y": "menyesuaikannya dengan masukan seluruh anggota kelompok",
+        "pembanding": "lebih tegas",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bersedia menyesuaikan rencana dengan masukan anggota lain adalah inti kerja sama.",
+      "catatan_psikologi": "Ketegasan juga berharga dalam memimpin. Yang dinilai adalah kesediaan memadukan pendapat bersama, bukan larangan mempertahankan gagasan."
+    },
+    {
+      "id": "KP-KS-121",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyerahkan bagian tugas kelompok tepat waktu agar anggota lain bisa melanjutkan lebih penting daripada menyempurnakan bagian sendiri sampai larut malam.",
+      "bedah": {
+        "sisi_x": "menyerahkan bagian tugas kelompok tepat waktu agar anggota lain bisa melanjutkan",
+        "sisi_y": "menyempurnakan bagian sendiri sampai larut malam",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Kerja kelompok saling bergantung: bagian yang terlambat menghambat semua anggota sesudahnya. Menyerahkan tepat waktu menunjukkan bahwa hasil tim lebih diutamakan daripada kesempurnaan bagian sendiri.",
+      "catatan_psikologi": "Dalam tugas berurutan, ketepatan waktu satu orang menentukan waktu kerja seluruh tim. Menyempurnakan bagian sendiri sampai larut terlihat rajin, tetapi berpusat pada diri sendiri. Sikap kerja sama yang matang: serahkan yang sudah layak sesuai jadwal, lalu tawarkan perbaikan bersama setelah semua bagian terkumpul."
+    },
+    {
+      "id": "KP-KS-122",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyempurnakan bagian sendiri sampai larut malam lebih bermanfaat daripada menyerahkannya sesuai jadwal supaya yang lain bisa melanjutkan pekerjaan.",
+      "bedah": {
+        "sisi_x": "menyempurnakan bagian sendiri sampai larut malam",
+        "sisi_y": "menyerahkannya sesuai jadwal supaya yang lain bisa melanjutkan pekerjaan",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mengutamakan alur kerja bersama lebih mencerminkan kerja sama daripada kesempurnaan pribadi."
+    },
+    {
+      "id": "KP-KS-123",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Meminta pendapat teman yang lebih paham sebelum mengerjakan proyek bersama lebih bijak daripada mengerjakannya sendiri berdasarkan dugaan.",
+      "bedah": {
+        "sisi_x": "meminta pendapat teman yang lebih paham sebelum mengerjakan proyek bersama",
+        "sisi_y": "mengerjakannya sendiri berdasarkan dugaan",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Bertanya kepada anggota yang lebih ahli memanfaatkan kekuatan tim."
+    },
+    {
+      "id": "KP-KS-124",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengambil alih proyek bersama supaya cepat selesai lebih efisien daripada menunggu semua anggota menyelesaikan bagiannya.",
+      "bedah": {
+        "sisi_x": "mengambil alih proyek bersama supaya cepat selesai",
+        "sisi_y": "menunggu semua anggota menyelesaikan bagiannya",
+        "pembanding": "lebih efisien",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menunggu dan memberi kesempatan kepada semua anggota menjaga kerja sama, walaupun lebih lambat."
+    },
+    {
+      "id": "KP-KS-125",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengakui kontribusi teman dalam presentasi kelompok lebih terpuji daripada menonjolkan jasa sendiri.",
+      "bedah": {
+        "sisi_x": "mengakui kontribusi teman dalam presentasi kelompok",
+        "sisi_y": "menonjolkan jasa sendiri",
+        "pembanding": "lebih terpuji",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menghargai kontribusi anggota lain membangun kepercayaan dalam tim."
+    },
+    {
+      "id": "KP-KS-126",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjadi satu-satunya pembicara presentasi demi nilai bagus lebih menguntungkan daripada membagi giliran bicara kepada seluruh anggota kelompok.",
+      "bedah": {
+        "sisi_x": "menjadi satu-satunya pembicara presentasi demi nilai bagus",
+        "sisi_y": "membagi giliran bicara kepada seluruh anggota kelompok",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Membagi giliran bicara melibatkan semua anggota dan mencerminkan kerja sama."
+    },
+    {
+      "id": "KP-KS-127",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyusun jadwal kerja kelompok yang cocok bagi semua anggota lebih adil daripada menetapkan sendiri jadwal lalu meminta yang lain menyesuaikan.",
+      "bedah": {
+        "sisi_x": "menyusun jadwal kerja kelompok yang cocok bagi semua anggota",
+        "sisi_y": "menetapkan sendiri jadwal lalu meminta yang lain menyesuaikan",
+        "pembanding": "lebih adil",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Jadwal yang mempertimbangkan semua anggota membuat tim mau dan mampu bekerja bersama."
+    },
+    {
+      "id": "KP-KS-128",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menetapkan jadwal kerja kelompok sendiri lalu meminta yang lain menyesuaikan lebih cepat daripada berunding dulu dengan seluruh anggota soal waktu yang cocok.",
+      "bedah": {
+        "sisi_x": "menetapkan jadwal kerja kelompok sendiri lalu meminta yang lain menyesuaikan",
+        "sisi_y": "berunding dulu dengan seluruh anggota soal waktu yang cocok",
+        "pembanding": "lebih cepat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berunding dengan seluruh anggota menunjukkan kerja sama, walaupun memakan waktu lebih lama."
+    },
+    {
+      "id": "KP-KS-129",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menanyakan kesulitan anggota yang diam saja saat kerja kelompok lebih tepat daripada membiarkannya sampai ia bicara sendiri.",
+      "bedah": {
+        "sisi_x": "menanyakan kesulitan anggota yang diam saja saat kerja kelompok",
+        "sisi_y": "membiarkannya sampai ia bicara sendiri",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mengajak anggota yang diam ikut terlibat membuat seluruh tim bisa berkontribusi."
+    },
+    {
+      "id": "KP-KS-130",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menegur anggota yang terlambat di depan semua orang lebih mendidik daripada membicarakannya empat mata setelah rapat.",
+      "bedah": {
+        "sisi_x": "menegur anggota yang terlambat di depan semua orang",
+        "sisi_y": "membicarakannya empat mata setelah rapat",
+        "pembanding": "lebih mendidik",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menegur secara empat mata menjaga harga diri anggota dan suasana kerja sama dalam kelompok. Teguran di depan umum mempermalukan dan bisa merusak hubungan.",
+      "catatan_psikologi": "Prinsip lama kepemimpinan: puji di depan umum, tegur secara pribadi. Penelitian tentang rasa aman dalam tim (psychological safety, Edmondson) menunjukkan anggota yang dipermalukan cenderung menutup diri dan enggan terbuka soal kesalahan berikutnya. Teguran tetap perlu disampaikan, karena keterlambatan memang masalah, tetapi caranya menentukan apakah tim tetap kompak."
+    },
+    {
+      "id": "KP-KS-131",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Meredakan perdebatan dua teman satu tim dengan mencari titik temu lebih berguna daripada memihak salah satunya.",
+      "bedah": {
+        "sisi_x": "meredakan perdebatan dua teman satu tim dengan mencari titik temu",
+        "sisi_y": "memihak salah satunya",
+        "pembanding": "lebih berguna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menengahi dengan mencari titik temu menjaga kerja sama tim tetap utuh."
+    },
+    {
+      "id": "KP-KS-132",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memihak teman yang pendapatnya sama dengan saya saat tim berselisih lebih wajar daripada mencari titik temu antara kedua pihak.",
+      "bedah": {
+        "sisi_x": "memihak teman yang pendapatnya sama dengan saya saat tim berselisih",
+        "sisi_y": "mencari titik temu antara kedua pihak",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mencari titik temu antara kedua pihak lebih mencerminkan kerja sama daripada memihak."
+    },
+    {
+      "id": "KP-KS-133",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ikut turun mengangkat sampah saat kerja bakti kelas walaupun tidak tercatat sebagai petugas lebih berarti daripada hanya mengawasi dari pinggir.",
+      "bedah": {
+        "sisi_x": "ikut turun mengangkat sampah saat kerja bakti kelas walaupun tidak tercatat sebagai petugas",
+        "sisi_y": "hanya mengawasi dari pinggir",
+        "pembanding": "lebih berarti",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Ikut mengerjakan bersama menunjukkan kesediaan berbagi beban kelompok."
+    },
+    {
+      "id": "KP-KS-134",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengawasi jalannya kerja bakti dari pinggir lebih efektif daripada ikut mengangkat sampah bersama yang lain.",
+      "bedah": {
+        "sisi_x": "mengawasi jalannya kerja bakti dari pinggir",
+        "sisi_y": "ikut mengangkat sampah bersama yang lain",
+        "pembanding": "lebih efektif",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Turun tangan bersama menunjukkan kerja sama, sedangkan hanya mengawasi membuat beban tidak terbagi."
+    },
+    {
+      "id": "KP-KS-135",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendengarkan kritik anggota tim terhadap rencana saya lebih bermanfaat daripada membelanya mati-matian.",
+      "bedah": {
+        "sisi_x": "mendengarkan kritik anggota tim terhadap rencana saya",
+        "sisi_y": "membelanya mati-matian",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Terbuka pada masukan membantu tim menghasilkan rencana yang lebih baik."
+    },
+    {
+      "id": "KP-KS-136",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memilih tim yang semua anggotanya sependapat dengan saya lebih nyaman daripada bergabung dengan tim yang pendapatnya beragam.",
+      "bedah": {
+        "sisi_x": "memilih tim yang semua anggotanya sependapat dengan saya",
+        "sisi_y": "bergabung dengan tim yang pendapatnya beragam",
+        "pembanding": "lebih nyaman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bersedia bekerja dengan orang yang berbeda pendapat adalah inti kerja sama."
+    },
+    {
+      "id": "KP-KS-137",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyesuaikan langkah dengan anggota kelompok yang paling lambat lebih terpuji daripada melaju sendiri ke depan.",
+      "bedah": {
+        "sisi_x": "menyesuaikan langkah dengan anggota kelompok yang paling lambat",
+        "sisi_y": "melaju sendiri ke depan",
+        "pembanding": "lebih terpuji",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menjaga kelompok tetap bersama lebih mencerminkan kerja sama daripada kecepatan pribadi."
+    },
+    {
+      "id": "KP-KS-138",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Melaju lebih dulu mencapai pos tujuan lebih membanggakan daripada menunggu anggota kelompok yang tertinggal.",
+      "bedah": {
+        "sisi_x": "melaju lebih dulu mencapai pos tujuan",
+        "sisi_y": "menunggu anggota kelompok yang tertinggal",
+        "pembanding": "lebih membanggakan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menunggu anggota yang tertinggal menunjukkan kebersamaan dalam mencapai tujuan."
+    },
+    {
+      "id": "KP-KS-139",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saling mengoreksi perlengkapan teman sebelum apel lebih berguna daripada hanya memeriksa perlengkapan sendiri.",
+      "bedah": {
+        "sisi_x": "saling mengoreksi perlengkapan teman sebelum apel",
+        "sisi_y": "hanya memeriksa perlengkapan sendiri",
+        "pembanding": "lebih berguna",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Saling memeriksa membuat seluruh kelompok siap dan terhindar dari kesalahan."
+    },
+    {
+      "id": "KP-KS-140",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memeriksa perlengkapan sendiri dengan teliti sebelum apel lebih penting daripada ikut memeriksa perlengkapan teman sekamar.",
+      "bedah": {
+        "sisi_x": "memeriksa perlengkapan sendiri dengan teliti sebelum apel",
+        "sisi_y": "ikut memeriksa perlengkapan teman sekamar",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memeriksa perlengkapan sendiri itu wajib, tetapi tidak cukup. Ikut memeriksa perlengkapan teman memastikan seluruh kelompok siap, karena kesalahan satu orang saat apel menjadi tanggung jawab bersama.",
+      "catatan_psikologi": "Pernyataan ini membandingkan dua hal yang sama-sama baik, lalu menanyakan mana yang lebih penting. Untuk aspek kerja sama, kesiapan kelompok lebih penting daripada kesiapan pribadi saja. Dalam satuan berasrama atau kedinasan, yang dinilai saat apel adalah kesiapan barisan, bukan perorangan. Orang yang kooperatif menyelesaikan bagiannya lalu memastikan rekannya juga siap."
+    },
+    {
+      "id": "KP-KS-141",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Berbagi tugas bersih-bersih asrama sesuai jadwal yang disepakati lebih adil daripada mengerjakan semuanya sendiri untuk mendapat pujian.",
+      "bedah": {
+        "sisi_x": "berbagi tugas bersih-bersih asrama sesuai jadwal yang disepakati",
+        "sisi_y": "mengerjakan semuanya sendiri untuk mendapat pujian",
+        "pembanding": "lebih adil",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Pembagian tugas bersama menjaga kerja sama dan keadilan antaranggota."
+    },
+    {
+      "id": "KP-KS-142",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengerjakan seluruh kebersihan kamar sendirian supaya cepat beres lebih praktis daripada menunggu rekan sekamar mengerjakan bagian yang sudah dibagi.",
+      "bedah": {
+        "sisi_x": "mengerjakan seluruh kebersihan kamar sendirian supaya cepat beres",
+        "sisi_y": "menunggu rekan sekamar mengerjakan bagian yang sudah dibagi",
+        "pembanding": "lebih praktis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memberi ruang kepada rekan menjalankan bagiannya menjaga prinsip kerja sama."
+    },
+    {
+      "id": "KP-KS-143",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Meneruskan pengumuman pengasuh kepada semua teman sekamar lebih penting daripada menyimpannya karena merasa bukan tugas saya.",
+      "bedah": {
+        "sisi_x": "meneruskan pengumuman pengasuh kepada semua teman sekamar",
+        "sisi_y": "menyimpannya karena merasa bukan tugas saya",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menyebarkan informasi kepada seluruh anggota membuat tim bergerak serentak."
+    },
+    {
+      "id": "KP-KS-144",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengabarkan pengumuman hanya kepada teman dekat lebih praktis daripada meneruskannya kepada seluruh anggota kelompok.",
+      "bedah": {
+        "sisi_x": "mengabarkan pengumuman hanya kepada teman dekat",
+        "sisi_y": "meneruskannya kepada seluruh anggota kelompok",
+        "pembanding": "lebih praktis",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menyampaikan informasi kepada semua anggota adalah dasar kerja sama dalam kelompok."
+    },
+    {
+      "id": "KP-KS-145",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Bergantian memakai alat latihan yang terbatas lebih adil daripada memakainya terus sampai target pribadi tercapai.",
+      "bedah": {
+        "sisi_x": "bergantian memakai alat latihan yang terbatas",
+        "sisi_y": "memakainya terus sampai target pribadi tercapai",
+        "pembanding": "lebih adil",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Berbagi sumber daya secara bergilir adalah wujud kerja sama dalam kelompok."
+    },
+    {
+      "id": "KP-KS-146",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memakai alat latihan terus sampai target pribadi tercapai lebih produktif daripada bergantian dengan anggota kelompok lain.",
+      "bedah": {
+        "sisi_x": "memakai alat latihan terus sampai target pribadi tercapai",
+        "sisi_y": "bergantian dengan anggota kelompok lain",
+        "pembanding": "lebih produktif",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bergantian memberi kesempatan yang sama kepada anggota lain dan menjaga kebersamaan."
+    },
+    {
+      "id": "KP-KS-147",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, melibatkan rekan dari bagian lain dalam penyusunan laporan lebih bijak daripada menyusunnya sendiri.",
+      "bedah": {
+        "sisi_x": "melibatkan rekan dari bagian lain dalam penyusunan laporan",
+        "sisi_y": "menyusunnya sendiri",
+        "pembanding": "lebih bijak",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Melibatkan bagian lain memperkaya laporan dan memperkuat kerja sama antarunit."
+    },
+    {
+      "id": "KP-KS-148",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, menyimpan data penting sendiri agar terlihat paling tahu lebih menguntungkan daripada membaginya kepada seluruh tim.",
+      "bedah": {
+        "sisi_x": "menyimpan data penting sendiri agar terlihat paling tahu",
+        "sisi_y": "membaginya kepada seluruh tim",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Berbagi data dengan tim membuat pekerjaan berjalan lancar dan menunjukkan kerja sama."
+    },
+    {
+      "id": "KP-KS-149",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, mengakui kesalahan bagian saya dalam rapat tim lebih baik daripada menyalahkan bagian lain.",
+      "bedah": {
+        "sisi_x": "mengakui kesalahan bagian saya dalam rapat tim",
+        "sisi_y": "menyalahkan bagian lain",
+        "pembanding": "lebih baik",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mengakui kesalahan sendiri membuat tim fokus mencari solusi bersama."
+    },
+    {
+      "id": "KP-KS-150",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, menyalahkan bagian lain atas keterlambatan lebih aman daripada bersama-sama mencari penyebabnya.",
+      "bedah": {
+        "sisi_x": "menyalahkan bagian lain atas keterlambatan",
+        "sisi_y": "bersama-sama mencari penyebabnya",
+        "pembanding": "lebih aman",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Mencari penyebab bersama menjaga hubungan kerja, sedangkan saling menyalahkan merusaknya."
+    },
+    {
+      "id": "KP-KS-151",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, mengikuti pembagian giliran yang disusun koordinator lebih penting daripada memilih jam kerja sendiri.",
+      "bedah": {
+        "sisi_x": "mengikuti pembagian giliran yang disusun koordinator",
+        "sisi_y": "memilih jam kerja sendiri",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mengikuti pembagian yang disepakati membuat tim bekerja teratur."
+    },
+    {
+      "id": "KP-KS-152",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, memilih sendiri tugas yang paling mudah lebih masuk akal daripada menerima pembagian tugas dari koordinator.",
+      "bedah": {
+        "sisi_x": "memilih sendiri tugas yang paling mudah",
+        "sisi_y": "menerima pembagian tugas dari koordinator",
+        "pembanding": "lebih masuk akal",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima pembagian tugas dari koordinator menunjukkan kesediaan bekerja demi tim."
+    },
+    {
+      "id": "KP-KS-153",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, mengadakan rapat singkat setiap pagi dengan tim lebih bermanfaat daripada membiarkan tiap orang bekerja sendiri-sendiri.",
+      "bedah": {
+        "sisi_x": "mengadakan rapat singkat setiap pagi dengan tim",
+        "sisi_y": "membiarkan tiap orang bekerja sendiri-sendiri",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Rapat singkat menyamakan arah kerja dan mempererat koordinasi tim."
+    },
+    {
+      "id": "KP-KS-154",
+      "aspek": "Kerja Sama",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, bekerja sendiri-sendiri tanpa rapat koordinasi lebih hemat waktu daripada mengadakan rapat singkat bersama tim.",
+      "bedah": {
+        "sisi_x": "bekerja sendiri-sendiri tanpa rapat koordinasi",
+        "sisi_y": "mengadakan rapat singkat bersama tim",
+        "pembanding": "lebih hemat waktu",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Koordinasi rutin mencegah tumpang tindih pekerjaan, walau memakan waktu singkat."
+    },
+    {
+      "id": "KP-KS-155",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menghilang saat kerja kelompok lebih menyebalkan daripada ikut bekerja bersama anggota yang cerewet.",
+      "bedah": {
+        "sisi_x": "menghilang saat kerja kelompok",
+        "sisi_y": "ikut bekerja bersama anggota yang cerewet",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih tetap ikut bekerja bersama anggota yang sulit daripada menghilang."
+    },
+    {
+      "id": "KP-KS-156",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ikut rapat kelompok yang berlarut-larut lebih membosankan daripada memutuskan sendiri agar cepat selesai.",
+      "bedah": {
+        "sisi_x": "ikut rapat kelompok yang berlarut-larut",
+        "sisi_y": "memutuskan sendiri agar cepat selesai",
+        "pembanding": "lebih membosankan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih memutuskan sendiri daripada bermusyawarah dengan kelompok."
+    },
+    {
+      "id": "KP-KS-157",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengambil semua pujian atas kerja kelompok lebih memalukan daripada berbagi pujian dengan seluruh anggota.",
+      "bedah": {
+        "sisi_x": "mengambil semua pujian atas kerja kelompok",
+        "sisi_y": "berbagi pujian dengan seluruh anggota",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih berbagi pujian dengan seluruh anggota."
+    },
+    {
+      "id": "KP-KS-158",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Berbagi pujian kelompok dengan seluruh anggota lebih merugikan daripada menerimanya sendiri.",
+      "bedah": {
+        "sisi_x": "berbagi pujian kelompok dengan seluruh anggota",
+        "sisi_y": "menerimanya sendiri",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menerima pujian sendiri daripada berbagi dengan tim."
+    },
+    {
+      "id": "KP-KS-159",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyembunyikan informasi penting dari anggota satu tim lebih buruk daripada berbagi informasi walau orang lain bisa melebihi saya.",
+      "bedah": {
+        "sisi_x": "menyembunyikan informasi penting dari anggota satu tim",
+        "sisi_y": "berbagi informasi walau orang lain bisa melebihi saya",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih berbagi informasi walau berisiko disaingi anggota lain."
+    },
+    {
+      "id": "KP-KS-160",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membagikan seluruh informasi kepada tim lebih berisiko daripada menyimpan sebagian demi unggul.",
+      "bedah": {
+        "sisi_x": "membagikan seluruh informasi kepada tim",
+        "sisi_y": "menyimpan sebagian demi unggul",
+        "pembanding": "lebih berisiko",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menyimpan sebagian informasi demi keunggulan pribadi."
+    },
+    {
+      "id": "KP-KS-161",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menolak membantu teman satu kelompok yang tertinggal lebih memalukan daripada terlambat pulang karena menolongnya.",
+      "bedah": {
+        "sisi_x": "menolak membantu teman satu kelompok yang tertinggal",
+        "sisi_y": "terlambat pulang karena menolongnya",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menolong teman satu kelompok walau waktu pulang tertunda."
+    },
+    {
+      "id": "KP-KS-162",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menolong teman satu kelompok yang tertinggal lebih memberatkan daripada mengerjakan bagian sendiri saja.",
+      "bedah": {
+        "sisi_x": "menolong teman satu kelompok yang tertinggal",
+        "sisi_y": "mengerjakan bagian sendiri saja",
+        "pembanding": "lebih memberatkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mengerjakan bagian sendiri saja daripada menolong tim."
+    },
+    {
+      "id": "KP-KS-163",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyabot kerja kelompok karena tidak cocok dengan pembagian tugas lebih tercela daripada mengerjakan bagian yang kurang disukai.",
+      "bedah": {
+        "sisi_x": "menyabot kerja kelompok karena tidak cocok dengan pembagian tugas",
+        "sisi_y": "mengerjakan bagian yang kurang disukai",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih mengerjakan bagian yang tidak disukai daripada merusak kerja kelompok."
+    },
+    {
+      "id": "KP-KS-164",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menerima usul teman yang berbeda dari rencana awal lebih memalukan daripada mempertahankan rencana awal sendiri.",
+      "bedah": {
+        "sisi_x": "menerima usul teman yang berbeda dari rencana awal",
+        "sisi_y": "mempertahankan rencana awal sendiri",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mempertahankan rencana sendiri daripada menerima usul anggota lain."
+    },
+    {
+      "id": "KP-KS-165",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Meninggalkan teman sekelompok yang kelelahan di tengah perjalanan lebih tercela daripada terlambat tiba di tujuan.",
+      "bedah": {
+        "sisi_x": "meninggalkan teman sekelompok yang kelelahan di tengah perjalanan",
+        "sisi_y": "terlambat tiba di tujuan",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menemani teman yang kelelahan walau tiba terlambat."
+    },
+    {
+      "id": "KP-KS-166",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menunggu teman sekelompok yang kelelahan lebih menyebalkan daripada melanjutkan perjalanan lebih dulu.",
+      "bedah": {
+        "sisi_x": "menunggu teman sekelompok yang kelelahan",
+        "sisi_y": "melanjutkan perjalanan lebih dulu",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih melanjutkan perjalanan sendiri daripada menunggu teman."
+    },
+    {
+      "id": "KP-KS-167",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyalahkan satu orang atas kegagalan lomba kebersihan asrama lebih memalukan daripada menanggung kegagalan itu bersama-sama.",
+      "bedah": {
+        "sisi_x": "menyalahkan satu orang atas kegagalan lomba kebersihan asrama",
+        "sisi_y": "menanggung kegagalan itu bersama-sama",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menanggung kegagalan bersama daripada mencari kambing hitam."
+    },
+    {
+      "id": "KP-KS-168",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menanggung kegagalan lomba bersama seluruh kelompok lebih menyakitkan daripada mengetahui siapa yang paling bersalah.",
+      "bedah": {
+        "sisi_x": "menanggung kegagalan lomba bersama seluruh kelompok",
+        "sisi_y": "mengetahui siapa yang paling bersalah",
+        "pembanding": "lebih menyakitkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mencari siapa yang bersalah daripada menanggung bersama."
+    },
+    {
+      "id": "KP-KS-169",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, enggan memberi tahu rekan baru cara kerja tim lebih tercela daripada meluangkan waktu mengajarinya.",
+      "bedah": {
+        "sisi_x": "enggan memberi tahu rekan baru cara kerja tim",
+        "sisi_y": "meluangkan waktu mengajarinya",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih meluangkan waktu mengajari rekan baru agar tim kuat."
+    },
+    {
+      "id": "KP-KS-170",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, mengajari rekan baru cara kerja tim lebih menjengkelkan daripada membiarkannya belajar sendiri.",
+      "bedah": {
+        "sisi_x": "mengajari rekan baru cara kerja tim",
+        "sisi_y": "membiarkannya belajar sendiri",
+        "pembanding": "lebih menjengkelkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih membiarkan rekan baru belajar sendiri."
+    },
+    {
+      "id": "KP-KS-171",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, bekerja tanpa berkoordinasi dengan relawan lain lebih berbahaya daripada menunggu arahan koordinator beberapa menit.",
+      "bedah": {
+        "sisi_x": "bekerja tanpa berkoordinasi dengan relawan lain",
+        "sisi_y": "menunggu arahan koordinator beberapa menit",
+        "pembanding": "lebih berbahaya",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih berkoordinasi daripada bekerja sendiri-sendiri."
+    },
+    {
+      "id": "KP-KS-172",
+      "aspek": "Kerja Sama",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bertugas di posko bencana, berkoordinasi lebih dulu dengan relawan lain lebih menjengkelkan daripada langsung bekerja sendiri.",
+      "bedah": {
+        "sisi_x": "berkoordinasi lebih dulu dengan relawan lain",
+        "sisi_y": "langsung bekerja sendiri",
+        "pembanding": "lebih menjengkelkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih langsung bekerja sendiri daripada berkoordinasi dengan tim."
+    }
+  ]
+}

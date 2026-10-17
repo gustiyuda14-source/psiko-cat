@@ -1,0 +1,1116 @@
+{
+  "batch": "kp-loy-01",
+  "status": "review",
+  "catatan": "72 butir latihan Kepribadian aspek Loyalitas (18 L/T1, 36 K/T2, 18 KR/T3; 36 favorable : 36 unfavorable). Belum di-seed. Aspek wajib Bintara dan Tamtama (Per As SDM Kapolri 3/2017). Kunci mengikuti aturan aspek (pedoman 1.1a): favorable = D ideal, unfavorable = A ideal. Sub-segi: komitmen pada organisasi dan tujuan bersama, menjalankan keputusan yang sah dengan jalur keberatan yang benar, menjaga nama baik dan kerahasiaan, bertahan di masa sulit, menepati kesanggupan.",
+  "definisi_aspek": {
+    "Loyalitas": "komitmen dan kesetiaan pada institusi, tim, serta tujuan bersama: menjalankan keputusan dan arahan yang sah, menjaga nama baik dan kerahasiaan organisasi, bertahan di masa sulit, dan menyampaikan keberatan lewat jalur yang benar. Berbeda dari kepatuhan buta."
+  },
+  "items": [
+    {
+      "id": "KP-LOY-101",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya tetap mengikuti latihan tim futsal sekolah dengan rajin meskipun kami berkali-kali kalah di turnamen.",
+      "alasan": "Bertahan bersama tim di masa sulit menunjukkan komitmen yang tidak bergantung pada hasil."
+    },
+    {
+      "id": "KP-LOY-102",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya langsung keluar dari ekstrakurikuler yang saya ikuti begitu ada kelompok lain yang lebih populer.",
+      "alasan": "Mudah berpindah ke tempat yang lebih ramai menandakan komitmen yang dangkal terhadap kelompok sendiri."
+    },
+    {
+      "id": "KP-LOY-103",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menepati kesanggupan menjadi petugas upacara yang sudah saya setujui, walaupun ada ajakan berlibur di hari yang sama.",
+      "alasan": "Menepati kesanggupan kepada organisasi berarti komitmen lebih kuat daripada godaan sesaat."
+    },
+    {
+      "id": "KP-LOY-104",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membatalkan kesanggupan menjadi panitia acara sekolah di hari terakhir karena ada acara lain yang lebih seru.",
+      "alasan": "Meninggalkan tanggung jawab pada saat dibutuhkan menandakan rendahnya kesetiaan pada komitmen."
+    },
+    {
+      "id": "KP-LOY-105",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya membela nama baik sekolah ketika ada orang yang menjelekkannya dengan informasi yang keliru.",
+      "alasan": "Menjaga nama baik lembaga tempat bernaung adalah bagian dari rasa memiliki."
+    },
+    {
+      "id": "KP-LOY-106",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya ikut menjelekkan organisasi saya di media sosial setiap kali ada keputusan pengurus yang tidak saya sukai.",
+      "alasan": "Merendahkan organisasi di depan publik merusak nama baik yang seharusnya dijaga bersama."
+    },
+    {
+      "id": "KP-LOY-107",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menjalankan keputusan rapat kelas dengan sungguh-sungguh walaupun usul saya sendiri tidak terpilih.",
+      "alasan": "Setia pada keputusan bersama yang sah berarti menempatkan tujuan kelompok di atas preferensi pribadi.",
+      "catatan_psikologi": "Loyalitas tidak melarang berbeda pendapat. Yang dinilai adalah kesediaan menjalankan keputusan yang sudah diambil secara sah setelah pendapat disampaikan."
+    },
+    {
+      "id": "KP-LOY-108",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Saya menolak melaksanakan keputusan rapat organisasi hanya karena usul saya tidak diterima.",
+      "alasan": "Menolak keputusan sah karena kecewa pribadi melemahkan kesatuan organisasi."
+    },
+    {
+      "id": "KP-LOY-109",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya bertahan menjalani pendidikan di asrama walaupun banyak teman seangkatan yang mengeluh dan ingin berhenti.",
+      "alasan": "Bertahan pada komitmen yang sudah dipilih, terutama saat banyak yang goyah, mencerminkan kesetiaan."
+    },
+    {
+      "id": "KP-LOY-110",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mulai mencari-cari alasan untuk mundur dari pendidikan begitu kegiatan asrama terasa berat.",
+      "alasan": "Mencari jalan keluar saat menghadapi kesulitan menandakan komitmen yang rapuh."
+    },
+    {
+      "id": "KP-LOY-111",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya merahasiakan pembahasan internal pengurus asrama dan tidak menceritakannya kepada orang di luar organisasi.",
+      "alasan": "Menjaga kerahasiaan internal adalah bentuk kesetiaan pada kepercayaan yang diberikan organisasi."
+    },
+    {
+      "id": "KP-LOY-112",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menceritakan perdebatan tertutup rapat pengurus kepada teman dari luar organisasi karena menurut saya seru.",
+      "alasan": "Membuka pembicaraan internal demi cerita menunjukkan lemahnya kesetiaan menjaga kepercayaan."
+    },
+    {
+      "id": "KP-LOY-113",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya menyampaikan keberatan atas jadwal piket langsung kepada pengasuh, lalu tetap menjalankan keputusan yang diberikan.",
+      "alasan": "Keberatan disalurkan lewat jalur yang benar, dan keputusan sah tetap dijalankan. Itu setia tanpa patuh buta."
+    },
+    {
+      "id": "KP-LOY-114",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Saya mengeluh ke banyak teman soal jadwal piket, tetapi tidak pernah menyampaikannya kepada pengasuh.",
+      "alasan": "Mengeluh di belakang tanpa menempuh jalur resmi memecah barisan dan tidak membantu organisasi."
+    },
+    {
+      "id": "KP-LOY-115",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya tetap bangga menyebut instansi saya meskipun penghasilannya tidak sebesar perusahaan swasta.",
+      "alasan": "Rasa bangga dan memiliki terhadap tempat kerja adalah dasar komitmen afektif."
+    },
+    {
+      "id": "KP-LOY-116",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya malu menyebut tempat kerja saya karena orang menganggapnya biasa saja.",
+      "alasan": "Malu pada institusi sendiri menunjukkan rendahnya rasa memiliki."
+    },
+    {
+      "id": "KP-LOY-117",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya menjalankan kebijakan instansi yang sudah ditetapkan walaupun cara saya sendiri berbeda.",
+      "alasan": "Mengikuti kebijakan yang sah, sambil mengusulkan perbaikan lewat jalur resmi, menunjukkan loyalitas pada institusi.",
+      "catatan_psikologi": "Loyalitas pada institusi tidak sama dengan mengikuti perintah yang melanggar hukum. Yang dinilai adalah sikap menjalankan kebijakan yang sah."
+    },
+    {
+      "id": "KP-LOY-118",
+      "aspek": "Loyalitas",
+      "jenis": "L",
+      "tier": "T1",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, saya akan memberikan data internal instansi kepada pihak luar bila ditawari imbalan.",
+      "alasan": "Menjual informasi internal adalah pengkhianatan terhadap kepercayaan institusi."
+    },
+    {
+      "id": "KP-LOY-119",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyelesaikan tugas kepanitiaan yang sudah disanggupi lebih terhormat daripada berpindah ke acara lain yang lebih menyenangkan.",
+      "bedah": {
+        "sisi_x": "menyelesaikan tugas kepanitiaan yang sudah disanggupi",
+        "sisi_y": "berpindah ke acara lain yang lebih menyenangkan",
+        "pembanding": "lebih terhormat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menepati komitmen kepada kepanitiaan lebih mencerminkan kesetiaan daripada mengejar acara yang lebih menarik."
+    },
+    {
+      "id": "KP-LOY-120",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Pindah ke kelompok belajar yang lebih terkenal lebih menguntungkan daripada tetap membantu kelompok belajar lama yang kekurangan anggota.",
+      "bedah": {
+        "sisi_x": "pindah ke kelompok belajar yang lebih terkenal",
+        "sisi_y": "tetap membantu kelompok belajar lama yang kekurangan anggota",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Bertahan membantu kelompok sendiri saat kesulitan mencerminkan kesetiaan, bukan hanya mencari keuntungan."
+    },
+    {
+      "id": "KP-LOY-121",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membela klub futsal kampung saat dicela suporter lawan lebih penting daripada ikut mencela klub sendiri yang sedang kalah terus.",
+      "bedah": {
+        "sisi_x": "membela klub futsal kampung saat dicela suporter lawan",
+        "sisi_y": "ikut mencela klub sendiri yang sedang kalah terus",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Membela kelompok sendiri ketika diserang adalah wujud rasa memiliki."
+    },
+    {
+      "id": "KP-LOY-122",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengkritik habis-habisan organisasi sendiri di grup percakapan terbuka lebih jujur daripada membahas kekurangannya dalam rapat internal.",
+      "bedah": {
+        "sisi_x": "mengkritik habis-habisan organisasi sendiri di grup percakapan terbuka",
+        "sisi_y": "membahas kekurangannya dalam rapat internal",
+        "pembanding": "lebih jujur",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menyalurkan kritik lewat jalur internal menjaga nama baik organisasi sekaligus tetap memperbaikinya.",
+      "catatan_psikologi": "Kritik itu sehat dan boleh disampaikan. Yang dinilai adalah jalurnya: di dalam organisasi, bukan di depan umum."
+    },
+    {
+      "id": "KP-LOY-123",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menghadiri rapat evaluasi organisasi sampai selesai lebih berharga daripada pulang lebih awal karena rapatnya terasa bertele-tele.",
+      "bedah": {
+        "sisi_x": "menghadiri rapat evaluasi organisasi sampai selesai",
+        "sisi_y": "pulang lebih awal karena rapatnya terasa bertele-tele",
+        "pembanding": "lebih berharga",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Konsisten hadir dan terlibat sampai tuntas menunjukkan kepedulian pada organisasi."
+    },
+    {
+      "id": "KP-LOY-124",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mencari organisasi baru begitu organisasi lama mengalami masalah keuangan lebih masuk akal daripada ikut mencari jalan keluarnya.",
+      "bedah": {
+        "sisi_x": "mencari organisasi baru begitu organisasi lama mengalami masalah keuangan",
+        "sisi_y": "ikut mencari jalan keluarnya",
+        "pembanding": "lebih masuk akal",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Ikut menolong organisasi saat sulit lebih mencerminkan kesetiaan daripada pergi saat keadaan memburuk."
+    },
+    {
+      "id": "KP-LOY-125",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyampaikan kekecewaan atas strategi pelatih secara pribadi lebih baik daripada menyalahkannya di depan seluruh pemain.",
+      "bedah": {
+        "sisi_x": "menyampaikan kekecewaan atas strategi pelatih secara pribadi",
+        "sisi_y": "menyalahkannya di depan seluruh pemain",
+        "pembanding": "lebih baik",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Keberatan yang disampaikan secara terhormat menjaga wibawa dan kesatuan tim."
+    },
+    {
+      "id": "KP-LOY-126",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyebarkan kabar pergantian pengurus yang belum diumumkan lebih bermanfaat daripada menunggu pengumuman resmi dari ketua.",
+      "bedah": {
+        "sisi_x": "menyebarkan kabar pergantian pengurus yang belum diumumkan",
+        "sisi_y": "menunggu pengumuman resmi dari ketua",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menunggu pengumuman resmi menghormati prosedur dan kepercayaan organisasi."
+    },
+    {
+      "id": "KP-LOY-127",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengikuti tata tertib sekolah yang baru lebih tepat daripada terus memakai kebiasaan lama yang lebih nyaman.",
+      "bedah": {
+        "sisi_x": "mengikuti tata tertib sekolah yang baru",
+        "sisi_y": "terus memakai kebiasaan lama yang lebih nyaman",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menyesuaikan diri dengan aturan sah lembaga menunjukkan kesetiaan pada institusi."
+    },
+    {
+      "id": "KP-LOY-128",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mengabaikan kebijakan baru sekolah yang kurang saya setujui lebih wajar daripada menjalankannya dulu sambil mengajukan usul perbaikan.",
+      "bedah": {
+        "sisi_x": "mengabaikan kebijakan baru sekolah yang kurang saya setujui",
+        "sisi_y": "menjalankannya dulu sambil mengajukan usul perbaikan",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kebijakan yang sudah ditetapkan sah tetap dijalankan selama belum diubah, sementara ketidaksetujuan disalurkan lewat usul perbaikan. Dengan begitu keteraturan terjaga dan pendapat pribadi tetap punya tempat.",
+      "catatan_psikologi": "Dalam kajian organisasi dikenal pola keluar, bersuara, dan setia (Hirschman). Orang yang loyal tidak diam, tetapi memilih bersuara dari dalam sambil tetap menjalankan aturan. Mengabaikan aturan yang tidak disukai adalah bentuk keluar diam-diam: kesetiaannya hanya berlaku pada aturan yang cocok dengan dirinya."
+    },
+    {
+      "id": "KP-LOY-129",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Tetap mewakili sekolah asal dalam lomba lebih membanggakan daripada menerima tawaran mewakili sekolah lain yang lebih bergengsi.",
+      "bedah": {
+        "sisi_x": "tetap mewakili sekolah asal dalam lomba",
+        "sisi_y": "menerima tawaran mewakili sekolah lain yang lebih bergengsi",
+        "pembanding": "lebih membanggakan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Tetap membela lembaga asal meskipun ada tawaran lebih menggiurkan menunjukkan kesetiaan."
+    },
+    {
+      "id": "KP-LOY-130",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mendaftar mewakili sekolah lain demi hadiah yang lebih besar lebih menguntungkan daripada tetap membela sekolah tempat saya belajar.",
+      "bedah": {
+        "sisi_x": "mendaftar mewakili sekolah lain demi hadiah yang lebih besar",
+        "sisi_y": "tetap membela sekolah tempat saya belajar",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kesetiaan pada lembaga asal lebih mengutamakan komitmen daripada keuntungan pribadi."
+    },
+    {
+      "id": "KP-LOY-131",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Merahasiakan isi rapat tertutup pengurus lebih terhormat daripada membagikannya kepada teman agar dianggap orang dalam.",
+      "bedah": {
+        "sisi_x": "merahasiakan isi rapat tertutup pengurus",
+        "sisi_y": "membagikannya kepada teman agar dianggap orang dalam",
+        "pembanding": "lebih terhormat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menjaga kepercayaan organisasi lebih penting daripada gengsi sebagai orang yang tahu segalanya."
+    },
+    {
+      "id": "KP-LOY-132",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menceritakan strategi lomba tim kepada kelompok lawan lebih mengasyikkan daripada merahasiakannya sampai pertandingan usai.",
+      "bedah": {
+        "sisi_x": "menceritakan strategi lomba tim kepada kelompok lawan",
+        "sisi_y": "merahasiakannya sampai pertandingan usai",
+        "pembanding": "lebih mengasyikkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Merahasiakan strategi tim sampai waktunya adalah bentuk kesetiaan pada tim."
+    },
+    {
+      "id": "KP-LOY-133",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Hadir di latihan paduan suara walaupun sedang tidak bersemangat lebih penting daripada beristirahat di rumah.",
+      "bedah": {
+        "sisi_x": "hadir di latihan paduan suara walaupun sedang tidak bersemangat",
+        "sisi_y": "beristirahat di rumah",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Hadir saat kelompok membutuhkan, bukan hanya saat bersemangat, menunjukkan komitmen."
+    },
+    {
+      "id": "KP-LOY-134",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membolos latihan wajib kelompok bersama teman lebih seru daripada hadir tepat waktu.",
+      "bedah": {
+        "sisi_x": "membolos latihan wajib kelompok bersama teman",
+        "sisi_y": "hadir tepat waktu",
+        "pembanding": "lebih seru",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kehadiran tepat waktu pada kegiatan wajib mencerminkan komitmen pada kelompok."
+    },
+    {
+      "id": "KP-LOY-135",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membuat anggota baru merasa menjadi bagian dari organisasi lebih bermanfaat daripada hanya mengurus kegiatan sendiri.",
+      "bedah": {
+        "sisi_x": "membuat anggota baru merasa menjadi bagian dari organisasi",
+        "sisi_y": "hanya mengurus kegiatan sendiri",
+        "pembanding": "lebih bermanfaat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Merangkul anggota baru menumbuhkan rasa memiliki dan menjaga keberlangsungan organisasi."
+    },
+    {
+      "id": "KP-LOY-136",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Memanfaatkan organisasi sekadar untuk menambah daftar prestasi diri lebih cerdas daripada ikut menjaga kemajuannya dalam jangka panjang.",
+      "bedah": {
+        "sisi_x": "memanfaatkan organisasi sekadar untuk menambah daftar prestasi diri",
+        "sisi_y": "ikut menjaga kemajuannya dalam jangka panjang",
+        "pembanding": "lebih cerdas",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Kesetiaan berarti peduli pada kemajuan organisasi, bukan hanya pada manfaat bagi diri sendiri."
+    },
+    {
+      "id": "KP-LOY-137",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Melaksanakan arahan pengasuh yang sah dengan sungguh-sungguh walaupun belum paham tujuannya lebih baik daripada menunda sampai semua alasannya dijelaskan.",
+      "bedah": {
+        "sisi_x": "melaksanakan arahan pengasuh yang sah dengan sungguh-sungguh walaupun belum paham tujuannya",
+        "sisi_y": "menunda sampai semua alasannya dijelaskan",
+        "pembanding": "lebih baik",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Arahan yang sah dari pengasuh dijalankan dengan sungguh-sungguh walau tujuannya belum dipahami, lalu alasannya boleh ditanyakan sesudahnya. Sikap ini menunjukkan kepercayaan pada organisasi.",
+      "catatan_psikologi": "Di lembaga berjenjang seperti asrama, kedinasan, dan kepolisian, banyak arahan menyangkut waktu, keselamatan, atau koordinasi orang banyak, sehingga tidak semua alasan bisa dijelaskan di depan. Batasnya kata 'sah': arahan yang melanggar hukum, agama, atau etika tidak wajib dituruti dan justru harus dilaporkan. Yang diukur bukan kepatuhan buta, tetapi kesediaan memberi kepercayaan pada atasan yang bertindak dalam kewenangannya, dengan tetap boleh bertanya sesudahnya."
+    },
+    {
+      "id": "KP-LOY-138",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mempertanyakan setiap arahan pelatih sebelum melaksanakannya lebih cerdas daripada melaksanakannya dahulu lalu bertanya setelah selesai.",
+      "bedah": {
+        "sisi_x": "mempertanyakan setiap arahan pelatih sebelum melaksanakannya",
+        "sisi_y": "melaksanakannya dahulu lalu bertanya setelah selesai",
+        "pembanding": "lebih cerdas",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Melaksanakan arahan lebih dulu lalu bertanya setelah selesai menjaga kelancaran kerja bersama dan kepercayaan pada atasan. Mempertanyakan setiap arahan sebelum bergerak membuat tugas tertunda.",
+      "catatan_psikologi": "Bertanya tidak salah, dan setelah tugas selesai justru dianjurkan agar paham alasannya. Yang membedakan adalah urutan dan kebiasaan. Menunda setiap arahan sampai semua alasannya dijelaskan menunjukkan kepercayaan yang bersyarat pada organisasi. Pengecualiannya tetap sama: arahan yang jelas melanggar hukum atau etika boleh ditolak sejak awal."
+    },
+    {
+      "id": "KP-LOY-139",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ikut bertanggung jawab atas nama baik angkatan lebih penting daripada hanya menjaga nama baik sendiri.",
+      "bedah": {
+        "sisi_x": "ikut bertanggung jawab atas nama baik angkatan",
+        "sisi_y": "hanya menjaga nama baik sendiri",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Rasa memiliki terhadap kelompok membuat nama baik bersama ikut dijaga."
+    },
+    {
+      "id": "KP-LOY-140",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memanfaatkan celah aturan asrama untuk keuntungan sendiri lebih cerdik daripada menaati aturan yang sudah disepakati bersama.",
+      "bedah": {
+        "sisi_x": "memanfaatkan celah aturan asrama untuk keuntungan sendiri",
+        "sisi_y": "menaati aturan yang sudah disepakati bersama",
+        "pembanding": "lebih cerdik",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menaati aturan bersama menunjukkan kesetiaan pada lembaga, bukan sekadar mencari celah."
+    },
+    {
+      "id": "KP-LOY-141",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menegur dengan sopan rekan yang menjelekkan pengasuh di belakangnya lebih tepat daripada ikut tertawa agar diterima dalam obrolan.",
+      "bedah": {
+        "sisi_x": "menegur dengan sopan rekan yang menjelekkan pengasuh di belakangnya",
+        "sisi_y": "ikut tertawa agar diterima dalam obrolan",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menolak ikut merendahkan pimpinan menunjukkan penghargaan pada institusi."
+    },
+    {
+      "id": "KP-LOY-142",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Ikut berkumpul dalam obrolan yang menjelekkan pembina lebih mengakrabkan daripada menolak bergabung.",
+      "bedah": {
+        "sisi_x": "ikut berkumpul dalam obrolan yang menjelekkan pembina",
+        "sisi_y": "menolak bergabung",
+        "pembanding": "lebih mengakrabkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menolak ikut merendahkan pembina lebih mencerminkan kesetiaan daripada demi keakraban semata."
+    },
+    {
+      "id": "KP-LOY-143",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Bertahan sampai pelatihan berakhir meskipun jadwalnya melelahkan lebih terpuji daripada mengajukan mundur di tengah jalan.",
+      "bedah": {
+        "sisi_x": "bertahan sampai pelatihan berakhir meskipun jadwalnya melelahkan",
+        "sisi_y": "mengajukan mundur di tengah jalan",
+        "pembanding": "lebih terpuji",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menuntaskan komitmen walau berat adalah ciri kesetiaan."
+    },
+    {
+      "id": "KP-LOY-144",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Pindah ke program pelatihan yang lebih ringan lebih masuk akal daripada menuntaskan program yang sudah diikuti.",
+      "bedah": {
+        "sisi_x": "pindah ke program pelatihan yang lebih ringan",
+        "sisi_y": "menuntaskan program yang sudah diikuti",
+        "pembanding": "lebih masuk akal",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menuntaskan program yang sudah dipilih lebih menunjukkan komitmen daripada mencari jalan yang lebih mudah."
+    },
+    {
+      "id": "KP-LOY-145",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengutamakan jadwal kegiatan resmi asrama lebih penting daripada memenuhi undangan ulang tahun teman di luar.",
+      "bedah": {
+        "sisi_x": "mengutamakan jadwal kegiatan resmi asrama",
+        "sisi_y": "memenuhi undangan ulang tahun teman di luar",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Kegiatan resmi yang sudah menjadi kewajiban didahulukan daripada urusan pribadi."
+    },
+    {
+      "id": "KP-LOY-146",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Memenuhi undangan teman di luar pada jadwal kegiatan wajib asrama lebih berkesan daripada menghadiri kegiatan wajib tersebut.",
+      "bedah": {
+        "sisi_x": "memenuhi undangan teman di luar pada jadwal kegiatan wajib asrama",
+        "sisi_y": "menghadiri kegiatan wajib tersebut",
+        "pembanding": "lebih berkesan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menghadiri kegiatan wajib berarti menghormati komitmen terhadap lembaga."
+    },
+    {
+      "id": "KP-LOY-147",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, menjelaskan kebijakan instansi kepada warga dengan sabar lebih tepat daripada menyerahkan penjelasan kepada rekan karena kebijakan itu bukan buatan saya.",
+      "bedah": {
+        "sisi_x": "menjelaskan kebijakan instansi kepada warga dengan sabar",
+        "sisi_y": "menyerahkan penjelasan kepada rekan karena kebijakan itu bukan buatan saya",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Ikut menjelaskan kebijakan instansi menunjukkan rasa memiliki terhadap keputusan lembaga."
+    },
+    {
+      "id": "KP-LOY-148",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, menyalahkan pimpinan di depan warga atas kebijakan yang tidak populer lebih jujur daripada menjelaskan alasan kebijakan itu.",
+      "bedah": {
+        "sisi_x": "menyalahkan pimpinan di depan warga atas kebijakan yang tidak populer",
+        "sisi_y": "menjelaskan alasan kebijakan itu",
+        "pembanding": "lebih jujur",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menjelaskan alasan kebijakan yang sudah sah kepada warga menjaga wibawa instansi. Menyalahkan pimpinan di depan umum merusak kepercayaan publik dan tidak menyelesaikan masalahnya.",
+      "catatan_psikologi": "Komitmen pada organisasi (Meyer & Allen) terlihat dari sikap ke luar: membela keputusan yang sah di depan publik. Keberatan tetap boleh, tetapi disampaikan ke dalam lewat atasan atau rapat. Jujur kepada warga berarti menjelaskan alasan kebijakan apa adanya, bukan melempar tanggung jawab kepada pimpinan."
+    },
+    {
+      "id": "KP-LOY-149",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, merahasiakan data kepegawaian lebih penting daripada menunjukkannya kepada kenalan yang ingin tahu.",
+      "bedah": {
+        "sisi_x": "merahasiakan data kepegawaian",
+        "sisi_y": "menunjukkannya kepada kenalan yang ingin tahu",
+        "pembanding": "lebih penting",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menjaga kerahasiaan data internal adalah wujud kesetiaan pada kepercayaan instansi."
+    },
+    {
+      "id": "KP-LOY-150",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, membagikan dokumen internal yang belum dipublikasikan kepada kerabat lebih ringan daripada menunggu izin atasan.",
+      "bedah": {
+        "sisi_x": "membagikan dokumen internal yang belum dipublikasikan kepada kerabat",
+        "sisi_y": "menunggu izin atasan",
+        "pembanding": "lebih ringan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menunggu izin menghormati kepercayaan instansi dan prosedur penyebaran dokumen."
+    },
+    {
+      "id": "KP-LOY-151",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika ditempatkan di daerah terpencil, menerima penempatan itu dengan lapang dada lebih membanggakan daripada terus meminta dipindahkan ke kota.",
+      "bedah": {
+        "sisi_x": "menerima penempatan itu dengan lapang dada",
+        "sisi_y": "terus meminta dipindahkan ke kota",
+        "pembanding": "lebih membanggakan",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Menerima penugasan lembaga dengan lapang dada menunjukkan kesetiaan pada institusi."
+    },
+    {
+      "id": "KP-LOY-152",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Setelah beberapa bulan ditugaskan di pelosok, mengajukan permohonan pindah ke kota besar lebih wajar daripada menuntaskan masa penugasan di tempat semula.",
+      "bedah": {
+        "sisi_x": "mengajukan permohonan pindah ke kota besar",
+        "sisi_y": "menuntaskan masa penugasan di tempat semula",
+        "pembanding": "lebih wajar",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Menerima penugasan menunjukkan komitmen pada tujuan lembaga di atas kenyamanan pribadi."
+    },
+    {
+      "id": "KP-LOY-153",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, menjalankan prosedur yang ditetapkan atasan lebih tepat daripada memakai cara sendiri tanpa memberi tahu siapa pun.",
+      "bedah": {
+        "sisi_x": "menjalankan prosedur yang ditetapkan atasan",
+        "sisi_y": "memakai cara sendiri tanpa memberi tahu siapa pun",
+        "pembanding": "lebih tepat",
+        "pembalik": false,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Mengikuti prosedur resmi menunjukkan kesetiaan pada sistem kerja organisasi."
+    },
+    {
+      "id": "KP-LOY-154",
+      "aspek": "Loyalitas",
+      "jenis": "K",
+      "tier": "T2",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, mengerjakan usaha sampingan yang bersaing dengan tugas instansi lebih menguntungkan daripada memusatkan tenaga pada tugas kantor.",
+      "bedah": {
+        "sisi_x": "mengerjakan usaha sampingan yang bersaing dengan tugas instansi",
+        "sisi_y": "memusatkan tenaga pada tugas kantor",
+        "pembanding": "lebih menguntungkan",
+        "pembalik": false,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Memusatkan tenaga pada tugas instansi mencerminkan kesetiaan, bukan sekadar mencari penghasilan tambahan."
+    },
+    {
+      "id": "KP-LOY-155",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjelekkan kelompok sendiri di depan kelompok lain lebih memalukan daripada mengakui kekurangan kelompok dalam rapat internal.",
+      "bedah": {
+        "sisi_x": "menjelekkan kelompok sendiri di depan kelompok lain",
+        "sisi_y": "mengakui kekurangan kelompok dalam rapat internal",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih membahas kekurangan secara internal daripada mempermalukan kelompok di depan orang lain."
+    },
+    {
+      "id": "KP-LOY-156",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membela nama baik sekolah di depan orang yang mencelanya lebih melelahkan daripada diam saja ketika sekolah dijelekkan.",
+      "bedah": {
+        "sisi_x": "membela nama baik sekolah di depan orang yang mencelanya",
+        "sisi_y": "diam saja ketika sekolah dijelekkan",
+        "pembanding": "lebih melelahkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti membiarkan nama baik sekolah dijelekkan demi menghindari kerepotan."
+    },
+    {
+      "id": "KP-LOY-157",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Meninggalkan tim tepat sebelum final lebih tercela daripada kalah di final bersama tim.",
+      "bedah": {
+        "sisi_x": "meninggalkan tim tepat sebelum final",
+        "sisi_y": "kalah di final bersama tim",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih tetap bersama tim walaupun hasilnya buruk."
+    },
+    {
+      "id": "KP-LOY-158",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Tetap setia pada organisasi yang hampir bubar lebih memalukan daripada pindah ke organisasi yang sedang naik daun.",
+      "bedah": {
+        "sisi_x": "tetap setia pada organisasi yang hampir bubar",
+        "sisi_y": "pindah ke organisasi yang sedang naik daun",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih meninggalkan organisasi yang sedang kesulitan."
+    },
+    {
+      "id": "KP-LOY-159",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Membocorkan keputusan rapat tertutup lebih menyebalkan daripada menunggu pengumuman resmi meskipun penasaran.",
+      "bedah": {
+        "sisi_x": "membocorkan keputusan rapat tertutup",
+        "sisi_y": "menunggu pengumuman resmi meskipun penasaran",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menunggu pengumuman resmi demi menjaga kepercayaan organisasi."
+    },
+    {
+      "id": "KP-LOY-160",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Merahasiakan keputusan rapat tertutup dari teman dekat lebih menyebalkan daripada membocorkannya sedikit.",
+      "bedah": {
+        "sisi_x": "merahasiakan keputusan rapat tertutup dari teman dekat",
+        "sisi_y": "membocorkannya sedikit",
+        "pembanding": "lebih menyebalkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih membocorkan keputusan yang seharusnya dirahasiakan."
+    },
+    {
+      "id": "KP-LOY-161",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Mangkir dari kegiatan yang sudah disepakati lebih memalukan daripada hadir dengan wajah lelah.",
+      "bedah": {
+        "sisi_x": "mangkir dari kegiatan yang sudah disepakati",
+        "sisi_y": "hadir dengan wajah lelah",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih tetap hadir memenuhi komitmen walau sedang letih."
+    },
+    {
+      "id": "KP-LOY-162",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menjalankan keputusan bersama yang tidak saya setujui lebih menyakitkan daripada menolaknya terang-terangan.",
+      "bedah": {
+        "sisi_x": "menjalankan keputusan bersama yang tidak saya setujui",
+        "sisi_y": "menolaknya terang-terangan",
+        "pembanding": "lebih menyakitkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih menolak keputusan bersama yang sudah sah."
+    },
+    {
+      "id": "KP-LOY-163",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "sekarang",
+      "pernyataan": "Ikut mencela pengurus di grup percakapan angkatan lebih tercela daripada menyampaikan kritik langsung kepada pengurus.",
+      "bedah": {
+        "sisi_x": "ikut mencela pengurus di grup percakapan angkatan",
+        "sisi_y": "menyampaikan kritik langsung kepada pengurus",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menyampaikan kritik lewat jalur langsung daripada mencela di depan umum."
+    },
+    {
+      "id": "KP-LOY-164",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "sekarang",
+      "pernyataan": "Menyampaikan keberatan langsung kepada ketua lebih canggung daripada membicarakannya bersama teman di belakang.",
+      "bedah": {
+        "sisi_x": "menyampaikan keberatan langsung kepada ketua",
+        "sisi_y": "membicarakannya bersama teman di belakang",
+        "pembanding": "lebih canggung",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih membicarakan keberatan di belakang daripada lewat jalur yang benar."
+    },
+    {
+      "id": "KP-LOY-165",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Mengkhianati kesepakatan kelompok asrama demi keuntungan sendiri lebih tercela daripada kehilangan peringkat.",
+      "bedah": {
+        "sisi_x": "mengkhianati kesepakatan kelompok asrama demi keuntungan sendiri",
+        "sisi_y": "kehilangan peringkat",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menepati kesepakatan kelompok walau harus kehilangan peringkat."
+    },
+    {
+      "id": "KP-LOY-166",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menaati kesepakatan kelompok asrama yang merugikan peringkat sendiri lebih merugikan daripada melanggarnya diam-diam.",
+      "bedah": {
+        "sisi_x": "menaati kesepakatan kelompok asrama yang merugikan peringkat sendiri",
+        "sisi_y": "melanggarnya diam-diam",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih melanggar kesepakatan demi peringkat pribadi."
+    },
+    {
+      "id": "KP-LOY-167",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Membuka kelemahan pelatihan asrama kepada orang luar lebih buruk daripada menyampaikannya langsung kepada pengasuh.",
+      "bedah": {
+        "sisi_x": "membuka kelemahan pelatihan asrama kepada orang luar",
+        "sisi_y": "menyampaikannya langsung kepada pengasuh",
+        "pembanding": "lebih buruk",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menyampaikan kelemahan lewat pengasuh daripada kepada orang luar."
+    },
+    {
+      "id": "KP-LOY-168",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "kedinasan",
+      "pernyataan": "Menyampaikan kekurangan asrama langsung kepada pengasuh lebih memalukan daripada mengeluh kepada orang tua teman.",
+      "bedah": {
+        "sisi_x": "menyampaikan kekurangan asrama langsung kepada pengasuh",
+        "sisi_y": "mengeluh kepada orang tua teman",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih mengeluh di luar lembaga daripada memakai jalur resmi."
+    },
+    {
+      "id": "KP-LOY-169",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, mengunggah keluhan tentang instansi dengan membuka data internal lebih memalukan daripada menyampaikan keluhan lewat kanal pengaduan pegawai.",
+      "bedah": {
+        "sisi_x": "mengunggah keluhan tentang instansi dengan membuka data internal",
+        "sisi_y": "menyampaikan keluhan lewat kanal pengaduan pegawai",
+        "pembanding": "lebih memalukan",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih jalur pengaduan resmi daripada membuka data internal ke publik. Keluhan tetap tersampaikan dan kerahasiaan instansi tetap terjaga.",
+      "catatan_psikologi": "Loyalitas tidak berarti dilarang mengeluh. Keluhan pegawai sah dan berguna untuk perbaikan. Yang dinilai adalah jalur dan cara: kanal pengaduan resmi menjaga data dan memberi kesempatan instansi memperbaiki diri, sedangkan membuka data internal di media sosial melanggar kewajiban menjaga rahasia jabatan. Pengecualian: pelanggaran hukum yang ditutupi tetap boleh dilaporkan ke lembaga berwenang."
+    },
+    {
+      "id": "KP-LOY-170",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika menjadi seorang ASN, membela kebijakan instansi di depan warga lebih menjengkelkan daripada ikut mengeluhkan kebijakan itu.",
+      "bedah": {
+        "sisi_x": "membela kebijakan instansi di depan warga",
+        "sisi_y": "ikut mengeluhkan kebijakan itu",
+        "pembanding": "lebih menjengkelkan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih ikut mengeluh daripada membela kebijakan instansi."
+    },
+    {
+      "id": "KP-LOY-171",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "favorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, pindah ke instansi lain tepat saat tim sedang menyelesaikan proyek penting lebih tercela daripada menunda kepindahan beberapa bulan.",
+      "bedah": {
+        "sisi_x": "pindah ke instansi lain tepat saat tim sedang menyelesaikan proyek penting",
+        "sisi_y": "menunda kepindahan beberapa bulan",
+        "pembanding": "lebih tercela",
+        "pembalik": true,
+        "sisi_aspek": "y"
+      },
+      "alasan": "Setuju berarti lebih memilih menuntaskan komitmen pada tim sebelum pindah."
+    },
+    {
+      "id": "KP-LOY-172",
+      "aspek": "Loyalitas",
+      "jenis": "KR",
+      "tier": "T3",
+      "arah": "unfavorable",
+      "konteks": "tugas",
+      "pernyataan": "Jika bekerja di sebuah dinas, menunda pindah ke instansi lain demi menuntaskan proyek tim lebih merugikan daripada langsung pindah.",
+      "bedah": {
+        "sisi_x": "menunda pindah ke instansi lain demi menuntaskan proyek tim",
+        "sisi_y": "langsung pindah",
+        "pembanding": "lebih merugikan",
+        "pembalik": true,
+        "sisi_aspek": "x"
+      },
+      "alasan": "Setuju berarti lebih memilih langsung pindah tanpa menuntaskan proyek tim."
+    }
+  ]
+}

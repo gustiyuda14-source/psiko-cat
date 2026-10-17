@@ -78,3 +78,38 @@
 /* Pil status di panel navy (menimpa .pill dasar di atas) */
 .rep-status .pill.ok, .rep-status .pill.bad { background: rgba(255, 255, 255, .08) }
 .rep-status .pill.warn-pill { border-color: var(--gold-hi); background: rgba(232, 199, 102, .16); color: var(--gold-hi) }
+
+/* Psikogram per jalur */
+.psg { display: grid; gap: var(--space-3); margin-top: var(--space-6) }
+.psg-note { margin: var(--space-2) 0 0; max-width: 68ch; font-size: .9rem }
+.psg-tag { display: inline-block; padding: 0 var(--space-2); border: 1px solid var(--gold); border-radius: 99px; color: var(--gold); font-size: .75rem; font-weight: 700 }
+.psg-list { display: grid; gap: var(--space-2) }
+.psg-row { overflow: hidden; border: 2px solid var(--border); border-left-width: 6px; border-radius: var(--r-lg); background: var(--surface-card); box-shadow: var(--elev-2); transition: border-color .15s ease, box-shadow .15s ease }
+.psg-row.is-ms { border-left-color: var(--success) }.psg-row.is-tms { border-left-color: var(--destructive) }.psg-row.is-na { border-left-color: var(--muted-foreground) }
+.psg-row:hover, .psg-row[open] { border-color: var(--gold); box-shadow: var(--elev-3, var(--elev-2)) }
+.psg-row.is-ms:hover, .psg-row.is-ms[open] { border-left-color: var(--success) }.psg-row.is-tms:hover, .psg-row.is-tms[open] { border-left-color: var(--destructive) }
+.psg-row summary::-webkit-details-marker { display: none }
+.psg-row summary { list-style: none }
+.psg-row summary:focus-visible { outline: 3px solid var(--ring); outline-offset: -3px }
+.psg-toggle { display: grid; place-items: center; width: 40px; height: 40px; border: 2px solid var(--border); border-radius: 99px; color: var(--gold); transition: transform .2s ease, background-color .15s ease }
+.psg-row:hover .psg-toggle { background: var(--surface-inset) }
+.psg-row[open] .psg-toggle { transform: rotate(180deg); border-color: var(--gold) }
+@media (prefers-reduced-motion: reduce) { .psg-toggle, .psg-row { transition: none } }
+.psg-row summary { display: grid; grid-template-columns: minmax(0, 1fr) auto auto auto; align-items: center; gap: var(--space-3); padding: var(--space-3) var(--space-4); cursor: pointer }
+.psg-row summary .pill { margin: 0 }
+.psg-j { display: grid; gap: 2px; font: 800 1.15rem var(--font-display-src), sans-serif }
+.psg-j small { color: var(--muted-foreground); font: 500 .8rem var(--font-sans) }
+.psg-v { font: 700 1.5rem/1 var(--font-display-src), sans-serif }
+.psg-v em { margin-left: 4px; color: var(--muted-foreground); font-size: .8rem; font-style: normal; font-weight: 600 }
+.psg-why { margin: 0 var(--space-4) var(--space-2); color: var(--destructive); font-size: .875rem }
+.psg-t { width: calc(100% - 2 * var(--space-4)); margin: 0 var(--space-4) var(--space-4); border-collapse: collapse; font-size: .875rem }
+.psg-t th, .psg-t td { padding: var(--space-1) var(--space-2); border-bottom: 1px solid var(--border); text-align: left }
+.psg-t th { color: var(--muted-foreground); font-weight: 600 }
+.psg-t tr.is-ks td { color: var(--destructive); font-weight: 700 }
+.psg-t tfoot td { font-weight: 700; border-bottom: 0 }
+@media (max-width: 640px) { .psg-row summary { grid-template-columns: minmax(0, 1fr) auto auto } .psg-row summary .pill { grid-column: 1 / -1; grid-row: 2 } .psg-t { font-size: .8rem } }
+.psg.is-main { margin-top: 0 }
+.psg-tabs { display: flex; flex-wrap: wrap; gap: var(--space-1); margin: var(--space-2) 0 var(--space-3) }
+.psg-tabs a { padding: 4px var(--space-3); border: 1px solid rgba(255, 255, 255, .25); border-radius: 99px; color: inherit; font-size: .85rem; font-weight: 600; text-decoration: none }
+.psg-tabs a[aria-current="page"] { border-color: var(--gold-hi); background: rgba(232, 199, 102, .16); color: var(--gold-hi) }
+.psg-tabs a:focus-visible { outline: 3px solid var(--ring) }

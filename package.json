@@ -13,6 +13,7 @@
     "check:soal-gambar": "tsx scripts/generate-soal-susun-gambar.ts --check && tsx scripts/generate-soal-pola-gambar.ts --check",
     "build:drill": "tsx scripts/build-drill-bank.ts",
     "build:keswa": "tsx scripts/build-keswa-bank.ts",
+    "build:norma": "node --env-file=.env.local --import tsx scripts/build-norma-psikogram.ts",
     "check:accounts": "tsx scripts/check-accounts.ts",
     "check:backend": "node --env-file=.env.local scripts/check-backend.mjs"
   },

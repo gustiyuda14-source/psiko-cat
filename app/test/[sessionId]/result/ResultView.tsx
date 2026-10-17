@@ -8,18 +8,20 @@ import PembahasanSection, {
 import { Meter, buttonStyles } from "@/app/components/ui";
 import { ExamBar } from "@/app/components/ExamChrome";
 import { ChevronRight } from "@/app/components/icons";
+import { ASPEK_LABEL, JALUR, JALUR_LABEL, JALUR_SETARA, type HasilPsikogram, type Jalur } from "@/lib/scoring/psikogram";
+import PsikogramSection from "./PsikogramSection";
 
 function round1(n: number | null) {
   return n == null ? "—" : n.toFixed(1);
 }
 
 /* Rel ukur 0–100: isian emas sampai skor, garis putus di ambang lulus (gaya rep-rail cest). */
-function ScoreRail({ score, threshold }: { score: number | null; threshold: number }) {
+function ScoreRail({ score, threshold, min = 0, max = 100, ticks = [0, 25, 50, 75, 100] }: { score: number | null; threshold: number; min?: number; max?: number; ticks?: number[] }) {
   const W = 640;
-  const x = (v: number) => (Math.min(100, Math.max(0, v)) / 100) * W;
+  const x = (v: number) => ((Math.min(max, Math.max(min, v)) - min) / (max - min)) * W;
   return (
     <div className="rep-rail">
-      <svg viewBox={`0 0 ${W} 74`} role="img" aria-label={`Skor ${round1(score)} dari 100, ambang lulus ${threshold}`}>
+      <svg viewBox={`0 0 ${W} 74`} role="img" aria-label={`Skor ${round1(score)} dari ${max}, ambang lulus ${threshold}`}>
         <defs>
           <linearGradient id="rep-gold" x1="0" x2="1">
             <stop offset="0" stopColor="#b8892b" />
@@ -30,7 +32,7 @@ function ScoreRail({ score, threshold }: { score: number | null; threshold: numb
         <rect className="r-track" x="0" y="30" width={W} height="14" rx="7" />
         <rect className="r-band" x={x(threshold)} y="30" width={W - x(threshold)} height="14" rx="7" />
         {score != null && <rect className="r-fill" x="0" y="30" width={Math.max(14, x(score))} height="14" rx="7" />}
-        {[0, 25, 50, 75, 100].map((t) => (
+        {ticks.map((t) => (
           <g key={t}>
             <line className="r-tick" x1={x(t)} x2={x(t)} y1="48" y2="56" />
             <text x={Math.min(W - 12, Math.max(12, x(t)))} y="72" textAnchor="middle">{t}</text>
@@ -105,6 +107,8 @@ export type ResultViewProps = {
   kepribadianItems: KepribadianReviewItem[];
   kecermatanSummary: KecermatanSummary | null;
   kecermatanDetail: KecermatanColumnGroup[];
+  psikogram: HasilPsikogram[] | null;
+  jalur: Jalur;
 };
 
 /* Tampilan hasil murni (tanpa akses data) — page.tsx yang mengambil sesi. */
@@ -125,9 +129,13 @@ export default function ResultView({
   kepribadianItems,
   kecermatanSummary,
   kecermatanDetail,
+  psikogram,
+  jalur,
 }: ResultViewProps) {
-  const outcome = disqualified ? "Gugur mutlak" : passed ? "Lulus" : "Tidak lulus";
+  const outcome = passed ? "Memenuhi Syarat" : "Tidak Memenuhi Syarat";
   const pill = disqualified ? "bad" : passed ? "ok" : "warn-pill";
+  // Tryout lengkap: hasil utama = psikogram jalur terpilih (Peraturan As SDM Kapolri No. 3/2017).
+  const utama = psikogram?.find((h) => h.jalur === jalur) ?? null;
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
@@ -145,6 +153,7 @@ export default function ResultView({
       <div className="rep-page mx-auto w-full max-w-[1160px] px-4 py-8 sm:px-8 sm:py-12">
         <div className="rep-grid">
           <div className="rep-main">
+            {psikogram ? <PsikogramSection hasil={psikogram} jalur={jalur} /> : <>
             <div>
               <span className="section-kicker">Rincian nilai</span>
               <h1 className="mt-1">Kontribusi per sub-tes</h1>
@@ -170,15 +179,51 @@ export default function ResultView({
                 )}
               </ModuleCard>
             </div>
+            </>}
           </div>
 
           <aside className="rep-side">
+            {utama ? (
+            <section className="rep-hero" aria-label="Nilai akhir">
+              <p className="rep-kicker">Nilai akhir psikotes</p>
+              <nav className="psg-tabs" aria-label="Profil penilaian">
+                {JALUR.map((j) => (
+                  <Link key={j} href={`?jalur=${j}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
+                ))}
+              </nav>
+              <div className="rep-trio">
+                <div className="rep-cell">
+                  <b>{utama.nilai_akhir ?? "—"}</b>
+                  <span>Nilai akhir profil {JALUR_LABEL[jalur]} (1–85) · {JALUR_SETARA[jalur]}</span>
+                </div>
+              </div>
+              <ScoreRail score={utama.nilai_akhir} threshold={61} min={1} max={85} ticks={[1, 20, 40, 61, 85]} />
+              <div className="rep-status">
+                {utama.status ? (
+                  <span className={`pill ${utama.status === "MS" ? "ok" : "bad"}`}>{utama.status === "MS" ? "Memenuhi Syarat" : "Tidak Memenuhi Syarat"}</span>
+                ) : (
+                  <span className="pill warn-pill">Belum lengkap</span>
+                )}
+                <p className="tnum">Lulus bila minimal <b>61</b> dan tidak ada aspek Kurang Sekali</p>
+              </div>
+              {utama.aspek_ks.length > 0 && (
+                <p className="mt-4 rounded-md bg-white/10 px-4 py-3 text-sm text-[#ff9db1]">
+                  Kurang Sekali di {utama.aspek_ks.map((a) => ASPEK_LABEL[a]).join(", ")}. Satu aspek Kurang Sekali membuat hasil Tidak Memenuhi Syarat.
+                </p>
+              )}
+              {utama.belum_diuji.length > 0 && (
+                <p className="mt-4 rounded-md bg-white/10 px-4 py-3 text-sm">
+                  Belum diuji di sesi ini: {utama.belum_diuji.map((a) => ASPEK_LABEL[a]).join(", ")}. Kerjakan simulasi terbaru untuk nilai akhir profil ini.
+                </p>
+              )}
+            </section>
+            ) : (
             <section className="rep-hero" aria-label="Nilai akhir">
               <p className="rep-kicker">{isStandalone ? "Nilai sub-tes" : "Nilai akhir psikotes"}</p>
               <div className="rep-trio">
                 <div className="rep-cell">
                   <b>{round1(napScore)}</b>
-                  <span>Skor NAP (0–100)</span>
+                  <span>Nilai Akhir Psikotest (0–100)</span>
                 </div>
                 {predikat && (
                   <div className="rep-cell">
@@ -202,6 +247,7 @@ export default function ResultView({
                 </p>
               )}
             </section>
+            )}
 
             <div className="rep-acts">
               <p className="rep-kicker">Langkah berikutnya</p>
