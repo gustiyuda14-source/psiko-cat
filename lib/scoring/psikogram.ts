@@ -218,4 +218,11 @@ export function rsSikapKerja(ke: number | null, kt: number | null, kh: number | 
 export const wsSemua = (rs: RS, norma: Norma): Partial<Record<Aspek, number>> =>
   Object.fromEntries((Object.entries(rs) as [Aspek, number][]).map(([a, v]) => [a, wsDariNorma(a, v, norma)]));
 
-export const hitungSemuaJalur =(ws: Partial<Record<Aspek, number>>) => JALUR.map((jalur) => hitungPsikogram(jalur, ws));
+/** Kategori per aspek tanpa bobot jalur, untuk sesi satu sub-tes (mini tryout). Urut seperti ASPEK_LABEL. */
+export function aspekSesi(ws: Partial<Record<Aspek, number>>): { aspek: Aspek; ws: number; kategori: Kategori }[] {
+  return (Object.keys(ASPEK_LABEL) as Aspek[])
+    .filter((a) => ws[a] !== undefined && Number.isFinite(ws[a]))
+    .map((a) => ({ aspek: a, ws: round2(ws[a]!), kategori: kategoriWS(ws[a]!) }));
+}
+
+export const hitungSemuaJalur = (ws: Partial<Record<Aspek, number>>) => JALUR.map((jalur) => hitungPsikogram(jalur, ws));

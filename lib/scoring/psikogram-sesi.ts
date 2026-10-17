@@ -7,6 +7,10 @@ import { hitungSemuaJalur, wsSemua, type HasilPsikogram, type Norma } from "./ps
 import { rsSesi, type ModuleRow } from "./psikogram-rs";
 import norma from "./norma-psikogram.json";
 
+export async function wsSesi(modules: ModuleRow[]) {
+  return wsSemua(await rsSesi(supabaseAdmin, modules), (norma as { aspek: Norma }).aspek);
+}
+
 export async function psikogramSesi(modules: ModuleRow[]): Promise<HasilPsikogram[]> {
-  return hitungSemuaJalur(wsSemua(await rsSesi(supabaseAdmin, modules), (norma as { aspek: Norma }).aspek));
+  return hitungSemuaJalur(await wsSesi(modules));
 }

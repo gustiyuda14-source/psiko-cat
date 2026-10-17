@@ -9,7 +9,7 @@ import { Meter, buttonStyles } from "@/app/components/ui";
 import { ExamBar } from "@/app/components/ExamChrome";
 import { ChevronRight } from "@/app/components/icons";
 import { ASPEK_LABEL, JALUR, JALUR_LABEL, JALUR_SETARA, type HasilPsikogram, type Jalur } from "@/lib/scoring/psikogram";
-import PsikogramSection from "./PsikogramSection";
+import PsikogramSection, { AspekSubtesSection, type AspekSubtes } from "./PsikogramSection";
 
 function round1(n: number | null) {
   return n == null ? "—" : n.toFixed(1);
@@ -109,6 +109,7 @@ export type ResultViewProps = {
   kecermatanDetail: KecermatanColumnGroup[];
   psikogram: HasilPsikogram[] | null;
   jalur: Jalur;
+  aspekSubtes: AspekSubtes[] | null;
 };
 
 /* Tampilan hasil murni (tanpa akses data) — page.tsx yang mengambil sesi. */
@@ -131,11 +132,14 @@ export default function ResultView({
   kecermatanDetail,
   psikogram,
   jalur,
+  aspekSubtes,
 }: ResultViewProps) {
   const outcome = passed ? "Memenuhi Syarat" : "Tidak Memenuhi Syarat";
   const pill = disqualified ? "bad" : passed ? "ok" : "warn-pill";
   // Tryout lengkap: hasil utama = psikogram jalur terpilih (Peraturan As SDM Kapolri No. 3/2017).
   const utama = psikogram?.find((h) => h.jalur === jalur) ?? null;
+  const subtesNama = ks ? "Kecerdasan" : kp ? "Kepribadian" : "Sikap Kerja";
+  const ksSubtes = aspekSubtes?.filter((a) => a.kategori === "KS") ?? [];
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
@@ -153,7 +157,7 @@ export default function ResultView({
       <div className="rep-page mx-auto w-full max-w-[1160px] px-4 py-8 sm:px-8 sm:py-12">
         <div className="rep-grid">
           <div className="rep-main">
-            {psikogram ? <PsikogramSection hasil={psikogram} jalur={jalur} /> : <>
+            {psikogram ? <PsikogramSection hasil={psikogram} jalur={jalur} /> : aspekSubtes ? <AspekSubtesSection subtes={subtesNama} aspek={aspekSubtes} /> : <>
             <div>
               <span className="section-kicker">Rincian nilai</span>
               <h1 className="mt-1">Kontribusi per sub-tes</h1>
@@ -217,6 +221,26 @@ export default function ResultView({
                 </p>
               )}
             </section>
+            ) : aspekSubtes ? (
+            <section className="rep-hero" aria-label="Hasil mini tryout">
+              <p className="rep-kicker">Hasil mini tryout · {subtesNama}</p>
+              <div className="rep-trio">
+                <div className="rep-cell">
+                  <b>{aspekSubtes.length - ksSubtes.length}/{aspekSubtes.length}</b>
+                  <span>Aspek aman dari Kurang Sekali</span>
+                </div>
+              </div>
+              <div className="rep-status">
+                <span className={`pill ${ksSubtes.length ? "bad" : "ok"}`}>{ksSubtes.length ? "Ada aspek Kurang Sekali" : "Tidak ada aspek Kurang Sekali"}</span>
+                <p className="tnum">Di psikotes resmi, satu aspek Kurang Sekali langsung menggugurkan.</p>
+              </div>
+              {ksSubtes.length > 0 && (
+                <p className="mt-4 rounded-md bg-white/10 px-4 py-3 text-sm text-[#ff9db1]">
+                  Prioritas latihan: {ksSubtes.map((a) => ASPEK_LABEL[a.aspek]).join(", ")}.
+                </p>
+              )}
+              <p className="mt-4 text-sm opacity-80">Nilai akhir per profil (1–85) keluar setelah simulasi penuh tiga sub-tes.</p>
+            </section>
             ) : (
             <section className="rep-hero" aria-label="Nilai akhir">
               <p className="rep-kicker">{isStandalone ? "Nilai sub-tes" : "Nilai akhir psikotes"}</p>
@@ -243,7 +267,8 @@ export default function ResultView({
               </div>
               {disqualifiedReason && (
                 <p className="mt-4 rounded-md bg-white/10 px-4 py-3 text-sm text-[#ff9db1]">
-                  {disqualifiedReason}
+                  {/* Alasan lama di DB masih memuat "(raw_score=…)"; jangan tampilkan istilah teknis. */}
+                  {disqualifiedReason.replace(/\s*\(raw_score=[^)]*\)/, "")}
                 </p>
               )}
             </section>

@@ -113,3 +113,9 @@
 .psg-tabs a { padding: 4px var(--space-3); border: 1px solid rgba(255, 255, 255, .25); border-radius: 99px; color: inherit; font-size: .85rem; font-weight: 600; text-decoration: none }
 .psg-tabs a[aria-current="page"] { border-color: var(--gold-hi); background: rgba(232, 199, 102, .16); color: var(--gold-hi) }
 .psg-tabs a:focus-visible { outline: 3px solid var(--ring) }
+.psg-row.is-solo { border-left-width: 2px; padding-top: var(--space-3) }
+.psg-kat { display: inline-grid; place-items: center; min-width: 40px; padding: 2px 8px; border-radius: 99px; font-weight: 800; font-size: .8rem }
+.psg-kat.k-b { background: var(--success-soft); color: var(--success) }
+.psg-kat.k-cb, .psg-kat.k-c { background: var(--surface-inset); color: var(--foreground) }
+.psg-kat.k-k { background: rgba(232, 199, 102, .18); color: var(--gold) }
+.psg-kat.k-ks { background: var(--destructive); color: #fff }

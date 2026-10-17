@@ -1,5 +1,5 @@
 import { ChevronDown } from "@/app/components/icons";
-import { ASPEK_LABEL, JALUR_LABEL, JALUR_SETARA, type HasilPsikogram, type Jalur } from "@/lib/scoring/psikogram";
+import { ASPEK_LABEL, JALUR_LABEL, JALUR_SETARA, type Aspek, type HasilPsikogram, type Jalur, type Kategori } from "@/lib/scoring/psikogram";
 
 const STATUS: Record<"MS" | "TMS", { label: string; pill: string }> = {
   MS: { label: "Memenuhi Syarat", pill: "ok" },
@@ -69,6 +69,42 @@ export default function PsikogramSection({ hasil, jalur }: { hasil: HasilPsikogr
             </table>
           </details>
         ))}
+      </div>
+    </section>
+  );
+}
+
+const KATEGORI_LABEL: Record<Kategori, string> = { B: "Baik", CB: "Cukup Baik", C: "Cukup", K: "Kurang", KS: "Kurang Sekali" };
+export type AspekSubtes = { aspek: Aspek; ws: number; kategori: Kategori };
+
+/* Mini tryout (satu sub-tes): kategori tiap aspek tanpa bobot profil — nilai akhir 1–85 butuh ketiga sub-tes. */
+export function AspekSubtesSection({ subtes, aspek }: { subtes: string; aspek: AspekSubtes[] }) {
+  return (
+    <section className="psg is-main" aria-labelledby="psg-h">
+      <div>
+        <span className="section-kicker">Mini tryout · {subtes}</span>
+        <h1 id="psg-h" className="mt-1">Kategori per aspek</h1>
+        <p className="muted psg-note">
+          Setiap aspek dinilai seperti di psikotes resmi: B 16–20, CB 11,5–15,9, C 8,5–11,4, K 4–8,4, KS di bawah 4. Satu aspek
+          Kurang Sekali (KS) menggugurkan. <span className="psg-tag">Aturan latihan</span> Nilai baku dihitung dari posisimu
+          dibanding peserta platform. Nilai akhir per profil keluar di simulasi penuh.
+        </p>
+      </div>
+      <div className="psg-row is-solo">
+        <table className="psg-t">
+          <thead>
+            <tr><th>Aspek</th><th>Nilai baku</th><th>Kategori</th></tr>
+          </thead>
+          <tbody>
+            {aspek.map((a) => (
+              <tr key={a.aspek} className={a.kategori === "KS" ? "is-ks" : undefined}>
+                <td>{ASPEK_LABEL[a.aspek]}</td>
+                <td className="tnum">{a.ws.toFixed(1)}</td>
+                <td><span className={`psg-kat k-${a.kategori.toLowerCase()}`}>{a.kategori}</span> {KATEGORI_LABEL[a.kategori]}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </section>
   );

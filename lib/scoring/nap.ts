@@ -48,7 +48,7 @@ export function calculateNAP(input: ModuleContributions): NAPResult {
     return {
       nap_score,
       is_passed: false,
-      disqualified_reason: `Kecerdasan Kurang Sekali (raw_score=${modules.kecerdasan_raw.toFixed(1)})`,
+      disqualified_reason: `Kecerdasan di bawah batas minimum (nilai ${modules.kecerdasan_raw.toFixed(1)}, minimal 41)`,
       status: "DISQUALIFIED",
       predikat: null,
     };
@@ -57,7 +57,7 @@ export function calculateNAP(input: ModuleContributions): NAPResult {
     return {
       nap_score,
       is_passed: false,
-      disqualified_reason: `Kepribadian Kurang Sekali (raw_score=${modules.kepribadian_raw.toFixed(1)})`,
+      disqualified_reason: `Kepribadian di bawah batas minimum (nilai ${modules.kepribadian_raw.toFixed(1)}, minimal 41)`,
       status: "DISQUALIFIED",
       predikat: null,
     };
@@ -66,7 +66,7 @@ export function calculateNAP(input: ModuleContributions): NAPResult {
     return {
       nap_score,
       is_passed: false,
-      disqualified_reason: `Sikap Kerja Kurang Sekali (raw_score=${modules.kecermatan_raw.toFixed(1)})`,
+      disqualified_reason: `Sikap Kerja di bawah batas minimum (nilai ${modules.kecermatan_raw.toFixed(1)}, minimal 41)`,
       status: "DISQUALIFIED",
       predikat: null,
     };
@@ -108,7 +108,7 @@ export function calculateSingleModuleResult(raw: number): NAPResult {
   return {
     nap_score: raw_score,
     is_passed,
-    disqualified_reason: is_passed ? null : `Predikat ${predikat} (raw_score=${raw_score.toFixed(1)})`,
+    disqualified_reason: is_passed ? null : `Nilai ${raw_score.toFixed(1)} di bawah batas minimal 41`,
     status: is_passed ? "COMPLETED" : "DISQUALIFIED",
     predikat,
   };
