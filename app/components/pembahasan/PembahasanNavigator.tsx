@@ -173,8 +173,6 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan }: Pembaha
             ["Kecepatan (Ke)", r1(s.ke_index)],
             ["Ketelitian (Kt)", r1(s.kt_index)],
             ["Ketahanan (Kh)", r1(s.kh_index)],
-            ["Skor murni", r1(s.raw_score)],
-            ["Kontribusi ke Nilai Akhir Psikotest", `${r1(s.nap_contribution)} / 20`],
           ]
         : undefined,
       filters: [["all", "Semua"], ["bad", "Salah"], ["ok", "Benar"]],

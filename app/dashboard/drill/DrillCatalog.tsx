@@ -80,20 +80,28 @@ function MiniHexes({ fills }: { fills: (number | null)[] }) {
   );
 }
 
-export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
+export default function DrillCatalog({ cards, initialAspek, initialKartu }: { cards: CatalogCard[]; initialAspek?: string; initialKartu?: string }) {
   const router = useRouter();
   const progress = useDrillProgress();
   const ready = useDrillProgressReady();
   // Butir baru yang belum pernah dijawab peserta. Sebelum progres termuat semua butir tampak belum dikerjakan, jadi tunggu.
   const freshOf = (ids: string[]) => (ready ? ids.filter((id) => !progress[id]) : []);
-  const [filter, setFilter] = useState("all");
+  // Kembali dari sesi drill membawa ?aspek=&kartu= supaya peserta mendarat di kartu yang sama.
+  const [filter, setFilter] = useState(initialAspek && cards.some((c) => c.aspek === initialAspek) ? initialAspek : "all");
   const [query, setQuery] = useState("");
   const [findOpen, setFindOpen] = useState(false);
-  const [selected, setSelected] = useState(cards[0]?.kartu ?? "");
+  const [selected, setSelected] = useState(cards.some((c) => c.kartu === initialKartu) ? initialKartu! : cards[0]?.kartu ?? "");
   const [resetStep, setResetStep] = useState(0);
   const panelRef = useRef<HTMLElement>(null);
   const searchRef = useRef<HTMLInputElement>(null);
   const findBtnRef = useRef<HTMLButtonElement>(null);
+
+  // Kembali dari sesi drill: bawa layar ke dock kartu, bukan ke atas halaman.
+  useEffect(() => {
+    if (!initialKartu) return;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    document.querySelector(".hc-dock")?.scrollIntoView({ block: "start", behavior: reduce ? "auto" : "smooth" });
+  }, [initialKartu]);
 
   // "/" = buka kotak cari dan fokus ke kolomnya.
   useEffect(() => {
@@ -171,7 +179,7 @@ export default function DrillCatalog({ cards }: { cards: CatalogCard[] }) {
     };
   });
 
-  const start = (kartu: string) => router.push(`/latihan/drill/${kartu}`);
+  const start = (kartu: string) => router.push(`/latihan/drill/${kartu}${filter !== "all" ? `?aspek=${encodeURIComponent(filter)}` : ""}`);
   const onSelect = (kartu: string, again?: boolean) => {
     setSelected(kartu);
     // Ketuk kartu yang sudah terpilih = lanjut ke aksi utama di panel.

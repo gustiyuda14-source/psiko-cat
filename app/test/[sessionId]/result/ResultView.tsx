@@ -109,6 +109,7 @@ export type ResultViewProps = {
   kecermatanDetail: KecermatanColumnGroup[];
   psikogram: HasilPsikogram[] | null;
   jalur: Jalur;
+  kembali: { href: string; label: string };
   aspekSubtes: AspekSubtes[] | null;
 };
 
@@ -132,6 +133,7 @@ export default function ResultView({
   kecermatanDetail,
   psikogram,
   jalur,
+  kembali,
   aspekSubtes,
 }: ResultViewProps) {
   const outcome = passed ? "Memenuhi Syarat" : "Tidak Memenuhi Syarat";
@@ -147,9 +149,9 @@ export default function ResultView({
         title="Hasil psikotes"
         count={[user?.name, user?.email].filter(Boolean).join(" · ")}
         actions={
-          <Link href="/dashboard" className="mbtn">
+          <Link href={kembali.href} className="mbtn">
             <span aria-hidden="true">←</span>
-            Kembali ke beranda
+            {kembali.label}
           </Link>
         }
       />
@@ -192,7 +194,7 @@ export default function ResultView({
               <p className="rep-kicker">Nilai akhir psikotes</p>
               <nav className="psg-tabs" aria-label="Profil penilaian">
                 {JALUR.map((j) => (
-                  <Link key={j} href={`?jalur=${j}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
+                  <Link key={j} href={`?${new URLSearchParams({ jalur: j, ...(kembali.href !== "/dashboard" ? { dari: "review" } : {}) })}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
                 ))}
               </nav>
               <div className="rep-trio">

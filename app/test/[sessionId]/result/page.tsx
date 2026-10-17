@@ -35,10 +35,14 @@ export default async function ResultPage({
   searchParams,
 }: {
   params: Promise<{ sessionId: string }>;
-  searchParams: Promise<{ jalur?: string }>;
+  searchParams: Promise<{ jalur?: string; dari?: string }>;
 }) {
   const { sessionId } = await params;
-  const pilih = (await searchParams).jalur;
+  const { jalur: pilih, dari } = await searchParams;
+  // Dibuka dari Ruang Review: tombol kembali ke sesi yang sama di sana, bukan ke beranda.
+  const kembali = dari === "review"
+    ? { href: `/dashboard/review?sesi=${sessionId}`, label: "Kembali ke Ruang Review" }
+    : { href: "/dashboard", label: "Kembali ke beranda" };
   const jalur: Jalur = JALUR.includes(pilih as Jalur) ? (pilih as Jalur) : "BINTARA";
   const access = await getSessionAccess(sessionId);
   if (!access.ok) notFound();
@@ -112,6 +116,7 @@ export default async function ResultPage({
       kecermatanDetail={kecermatanDetail}
       psikogram={psikogram}
       jalur={jalur}
+      kembali={kembali}
       aspekSubtes={aspekSubtes?.length ? aspekSubtes : null}
     />
   );

@@ -30,7 +30,7 @@ function startIndex(items: SafeDrillItem[], progress: DrillProgress) {
   return Math.max(0, wrong);
 }
 
-export default function DrillSession({ label, items: raw }: { label: string; items: SafeDrillItem[] }) {
+export default function DrillSession({ label, items: raw, backHref }: { label: string; items: SafeDrillItem[]; backHref: string }) {
   // Semua soal kartu, dikelompokkan per kategori (lalu Dasar → Lanjut di dalamnya); nomor soal = posisi di daftar ini.
   const items = useMemo(
     () => [...raw].sort((a, b) => drillCategory(a.sub_type)[0] - drillCategory(b.sub_type)[0] || a.tier - b.tier),
@@ -150,7 +150,7 @@ export default function DrillSession({ label, items: raw }: { label: string; ite
   });
 
   const exit = (
-    <Link href="/dashboard/drill" className="mbtn">
+    <Link href={backHref} className="mbtn">
       <span aria-hidden="true">←</span>
       Keluar drilling
     </Link>

@@ -2,7 +2,8 @@ import { PageHeader } from "@/app/components/ui";
 import { drillCatalog } from "@/lib/drill-bank";
 import DrillCatalog from "./DrillCatalog";
 
-export default function DrillPage() {
+export default async function DrillPage({ searchParams }: { searchParams: Promise<{ aspek?: string; kartu?: string }> }) {
+  const { aspek, kartu } = await searchParams;
   return (
     <div className="app-page space-y-6">
       <PageHeader
@@ -10,7 +11,7 @@ export default function DrillPage() {
         title="Drilling per jenis soal"
         description="Latih satu jenis soal sampai lancar. Semua soal kartu tampil di panel nomor, dikelompokkan per kategori soal, dengan pembahasan langsung setelah menjawab. Progres tersimpan di akunmu."
       />
-      <DrillCatalog cards={drillCatalog()} />
+      <DrillCatalog cards={drillCatalog()} initialAspek={aspek} initialKartu={kartu} />
     </div>
   );
 }

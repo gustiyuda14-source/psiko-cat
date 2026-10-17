@@ -290,8 +290,8 @@ function kecermatan(item: KecermatanDetailItem, kolom: string, reveal: boolean):
       <>
         <AnswerLine
           items={[
-            ["Jawaban kamu", <>{item.selected_key} (<KecermatanSymbol symbol={sym(item.selected_key)} />)</>],
-            ["Kunci", <>{item.correct_key} (<KecermatanSymbol symbol={sym(item.correct_key)} />)</>, "text-success"],
+            ["Jawaban kamu", <SimbolJawaban key="jawab" k={item.selected_key} symbol={sym(item.selected_key)} />],
+            ["Kunci", <SimbolJawaban key="kunci" k={item.correct_key} symbol={sym(item.correct_key)} />, "text-success"],
           ]}
         />
         <p className="max-w-[72ch] leading-relaxed text-foreground">
@@ -301,6 +301,18 @@ function kecermatan(item: KecermatanDetailItem, kolom: string, reveal: boolean):
       </>
     ),
   };
+}
+
+/* Huruf + simbol sebaris. <img> default block (Tailwind preflight) memecah "C (" dan ")" ke baris berbeda. */
+function SimbolJawaban({ k, symbol }: { k: string; symbol: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5 align-middle">
+      {k}
+      <span className="inline-grid size-7 place-items-center rounded-md border border-border bg-card text-base">
+        <KecermatanSymbol symbol={symbol} />
+      </span>
+    </span>
+  );
 }
 
 export function cardView(card: CardData, reveal: boolean): CardView {
