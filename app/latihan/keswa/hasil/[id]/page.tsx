@@ -2,8 +2,11 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
 import { keswaAttempt } from "@/lib/keswa-attempts";
+import { keswaPaket } from "@/lib/keswa-bank";
+import { pembahasanKeswa } from "@/lib/keswa-pembahasan";
 import { cekBaris, durasiKeswa, tanggalKeswa } from "@/lib/keswa-teks";
 import { ExamBar } from "@/app/components/ExamChrome";
+import { KeswaCek } from "./KeswaCek";
 import "@/app/fundamental.css";
 import "@/app/keswa.css";
 
@@ -18,6 +21,8 @@ export default async function KeswaHasilPage({ params }: { params: Promise<{ id:
 
   const baris = cekBaris(a.hasil);
   const terjawab = a.hasil.pola.dari;
+  const bank = keswaPaket(a.paket);
+  const bahas = bank && a.jawaban?.length === bank.soal.length ? pembahasanKeswa(a.jawaban, bank.soal, bank.kunci) : [];
 
   return (
     <div className="min-h-[100dvh] bg-background">
@@ -46,18 +51,7 @@ export default async function KeswaHasilPage({ params }: { params: Promise<{ id:
             <div><dt>Waktu</dt><dd className="tnum">{durasiKeswa(a.durasi_detik)}</dd></div>
             <div><dt>Cek lolos</dt><dd className="tnum">{baris.filter((b) => b.lolos).length}<span>/5</span></dd></div>
           </dl>
-          <ul className="ksw-cek">
-            {baris.map((b) => (
-              <li key={b.judul} className={b.lolos ? "is-ok" : "is-bad"}>
-                <div className="ksw-cek-head">
-                  <span className="ksw-cek-tag">{b.lolos ? "Lolos" : "Tidak lolos"}</span>
-                  <b>{b.judul}</b>
-                  <span className="ksw-cek-angka tnum">{b.angka}</span>
-                </div>
-                <p>{b.arti}</p>
-              </li>
-            ))}
-          </ul>
+          <KeswaCek baris={baris} bahas={bahas} />
           <p className="ksw-disclaimer">
             Ini indikator latihan, bukan diagnosis, dan tidak menjamin hasil di tes Keswa yang sebenarnya. Ambang cek masih
             sementara. Cara paling aman tetap sama: jawab jujur, lengkap, dan konsisten.

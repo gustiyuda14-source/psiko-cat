@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
-import { KESWA_TOTAL, nilaiKeswa, type KeswaKunci } from "./keswa-scoring";
+import { KESWA_TOTAL, nilaiKeswa, pemicuKeswa, type KeswaKunci } from "./keswa-scoring";
+import { pembahasanKeswa, ringkasNomor } from "./keswa-pembahasan";
+import { cekBaris } from "./keswa-teks";
 
 // Jalankan: npx tsx lib/keswa-scoring.test.ts
 const kunci: KeswaKunci = {
@@ -50,5 +52,24 @@ for (const [x, y] of kunci.lawan.slice(0, 3)) c = set(c, y, c[x]);
 assert.equal(nilaiKeswa(c, kunci).konsistensi.nilai, 6);
 assert.equal(nilaiKeswa(c, kunci).konsistensi.lolos, false);
 assert.equal(nilaiKeswa(set(c, kunci.sama[0][1], "-"), kunci).konsistensi.nilai, 5);
+
+// Pemicu: indeks yang sama dengan hitungan skor.
+const pc = pemicuKeswa(set(c, 5, "-"), kunci);
+assert.deepEqual(pc.bentrok.map((x) => [x.a, x.jenis]), [[40, "sama"], [41, "sama"], [42, "sama"], [60, "lawan"], [61, "lawan"], [62, "lawan"]]);
+assert.deepEqual(pc.kosong, [5]);
+assert.deepEqual(pemicuKeswa(s, kunci).sok, kunci.sok.slice(0, 10).map(([i]) => i));
+assert.deepEqual(pemicuKeswa(a, kunci).acak, kunci.acak.slice(0, 6).map(([i]) => i));
+assert.equal(ringkasNomor([2, 3, 4, 8]), "3–5, 9");
+
+// Pembahasan: urutan sama dengan cekBaris, butir hanya soal validitas.
+const soal = Array.from({ length: KESWA_TOTAL }, (_, i) => `Soal ${i + 1}.`);
+const bahas = pembahasanKeswa(c, soal, kunci);
+assert.deepEqual(bahas.map((b) => b.judul), cekBaris(nilaiKeswa(c, kunci)).map((b) => b.judul));
+assert.equal(bahas[1].items.length, 6);
+assert.equal(pembahasanKeswa(jujur, soal, kunci).filter((b) => b.items.some((x) => x.butir.some((y) => y.tandai))).length, 0);
+
+// Penanda sorotan **...** selalu berpasangan.
+for (const b of [...bahas, ...pembahasanKeswa(a, soal, kunci), ...pembahasanKeswa(s, soal, kunci)])
+  for (const t of [b.diukur, b.alasan, b.analogi, ...b.saran, ...b.items.map((x) => x.catatan)]) assert.equal(t.split("**").length % 2, 1, t);
 
 console.log("keswa-scoring OK");

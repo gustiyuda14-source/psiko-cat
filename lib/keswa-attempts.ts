@@ -25,9 +25,9 @@ export async function keswaRiwayat(userId: string): Promise<Record<number, Keswa
   return out;
 }
 
-/** Satu percobaan, hanya bila milik userId. */
-export async function keswaAttempt(userId: string, id: number): Promise<KeswaAttempt | null> {
-  const { data, error } = await supabaseAdmin.from("keswa_attempts").select(COLS).eq("id", id).eq("user_id", userId).maybeSingle();
+/** Satu percobaan (plus jawaban untuk pembahasan), hanya bila milik userId. */
+export async function keswaAttempt(userId: string, id: number): Promise<(KeswaAttempt & { jawaban: string }) | null> {
+  const { data, error } = await supabaseAdmin.from("keswa_attempts").select(`${COLS}, jawaban`).eq("id", id).eq("user_id", userId).maybeSingle();
   if (error) console.error("keswa attempt", error);
-  return (data as KeswaAttempt | null) ?? null;
+  return (data as (KeswaAttempt & { jawaban: string }) | null) ?? null;
 }
