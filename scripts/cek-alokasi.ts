@@ -17,11 +17,15 @@ import { KEYS, checkA7 } from "./kecerdasan-teks-lib";
 //   tanya "paralel":  opsi = "HH.MM"; ia dan rekan mulai bersama di awal jendela, tiap tugas dikerjakan utuh oleh satu
 //                     orang (tugas `sendiri` hanya olehnya); sah bila sama dengan waktu selesai paling cepat.
 // `rekan_faktor` (mis. 1.5): rekan mengerjakan tugas delegasi faktor × lebih lama.
+//   tanya "poin": kombinasi kegiatan berulang; tepat satu opsi sah mencapai optimum unik (§1a latihan paket 5).
 
 type Tugas = { nama: string; menit: number; sendiri?: boolean; tenggat?: string };
 type Strategi = { hemat: number; delegasi: boolean; korban: boolean; tugas?: string };
 type Data = { jendela: [string, string]; jeda?: [string, string][]; rekan_mulai?: string; rekan_faktor?: number; tugas: Tugas[]; tanya: "delegasi" | "pas" | "strategi" | "terpendek" | "maks" | "paralel"; opsi: (string[] | Strategi | string)[] };
-export type Alokasi = { s: number; t: "CRT"; sub: "ALOKASI"; bentuk: string; d: 2 | 3; i: string; w: string; q: string; c: string[]; k: string; p: string; data: Data };
+type Kegiatan = { nama: string; menit: number; poin: number; maks?: number; wajib?: boolean };
+type TagPoin = "LEBIH" | "BATAS" | "RATE" | "ABS" | "PAS" | "RENDAH";
+type DataPoin = { tanya: "poin"; T: number; kegiatan: Kegiatan[]; opsi: Record<string, number>[]; kesalahan: (TagPoin | null)[] };
+export type Alokasi = { s: number; t: "CRT"; sub: "ALOKASI"; bentuk: string; d: 2 | 3; i: string; w: string; q: string; c: string[]; k: string; p: string; data: Data | DataPoin };
 type Paket = { wacana: Record<string, string>; soal: Alokasi[] };
 
 export const TANPA_BANTUAN = "Semua tugas dapat diselesaikan tanpa bantuan";
@@ -110,13 +114,97 @@ function sah(d: Data, o: string[] | Strategi | string) {
 const lower = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 const teksOpsi = (o: string[]) => (o.length ? [o[0], ...o.slice(1).map(lower)].join(" dan ") : TANPA_BANTUAN);
 
+// Fungsi kecil dari generate-k07-poin.ts; generator sumber tidak diimpor karena menulis bank saat dijalankan.
+const time = (a: Kegiatan[], s: number[]) => s.reduce((t, c, i) => t + c * a[i].menit, 0);
+const pts = (a: Kegiatan[], s: number[]) => s.reduce((t, c, i) => t + c * a[i].poin, 0);
+const langgar = (a: Kegiatan[], s: number[]) => a.some((x, i) =>
+  (x.maks !== undefined && s[i] > x.maks) || (x.wajib && s[i] < 1));
+const sahPoin = (d: DataPoin, s: number[]) => time(d.kegiatan, s) <= d.T && !langgar(d.kegiatan, s);
+const same = (x: number[], y: number[]) => x.every((c, i) => c === y[i]);
+const rate = (x: Kegiatan) => x.poin / x.menit;
+const unit = (a: Kegiatan[], i: number, n: number) => a.map((_, j) => j === i ? n : 0);
+const teksPoin = (a: Kegiatan[], s: number[]) => s.map((c, i) => c > 0 ? `${a[i].nama} ${c} kali` : "").filter(Boolean).join(" + ");
+
+function semua(T: number, a: Kegiatan[]): number[][] {
+  const out: number[][] = [];
+  const rec = (i: number, left: number, cur: number[]) => {
+    if (i === a.length) return void out.push(cur);
+    for (let c = 0; c * a[i].menit <= left; c++) rec(i + 1, left - c * a[i].menit, [...cur, c]);
+  };
+  rec(0, T, []);
+  return out;
+}
+
+function cekPoin(x: Alokasi, d: DataPoin) {
+  const tag = `alokasi poin #${x.s}`, a = d.kegiatan;
+  assert.ok(Number.isInteger(d.T) && d.T > 0, `${tag}: T positif bulat`);
+  assert.ok(a.length >= 3 && a.length <= 4, `${tag}: 3–4 kegiatan`);
+  assert.equal(new Set(a.map((t) => t.nama)).size, a.length, `${tag}: nama kegiatan kembar`);
+  for (const t of a) {
+    assert.match(t.nama, /^\S.*\S$/, `${tag}: nama kegiatan`);
+    assert.ok(Number.isInteger(t.menit) && t.menit > 0 && Number.isInteger(t.poin) && t.poin > 0, `${tag}: menit/poin positif bulat`);
+    if (t.maks !== undefined) assert.ok(Number.isInteger(t.maks) && t.maks >= 0, `${tag}: maks bulat nonnegatif`);
+    if (t.wajib !== undefined) assert.equal(typeof t.wajib, "boolean", `${tag}: wajib boolean`);
+  }
+  assert.equal(x.bentuk, "poin", `${tag}: bentuk poin`);
+  assert.equal(d.kesalahan.length, 5, `${tag}: 5 tag (null untuk kunci)`);
+  const parts = x.q.split("\n\n");
+  assert.equal(parts.length, 4, `${tag}: q harus 4 bagian`);
+  assert.ok(parts[0].includes(`memiliki waktu ${d.T} menit untuk `) && parts[0].endsWith("Kegiatan yang tersedia:"), `${tag}: konteks ≠ T`);
+  assert.equal(parts[1], a.map((t) => `• ${t.nama}: ${t.menit} menit → ${t.poin} poin${t.maks !== undefined ? ` (hanya tersedia ${t.maks} kali)` : ""}`).join("\n"), `${tag}: daftar kegiatan ≠ data`);
+  const wajib = a.filter((t) => t.wajib).map((t) => t.nama);
+  assert.equal(parts[2], `Poin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang${a.some((t) => t.maks !== undefined) ? " kecuali yang diberi batas" : ""}, urutannya bebas, dan total waktu tidak boleh melebihi ${d.T} menit.${wajib.length ? ` ${wajib.join(" dan ")} wajib dilakukan minimal satu kali.` : ""}`, `${tag}: aturan ≠ data`);
+  assert.equal(parts[3], "Pertanyaan: Strategi manakah yang menghasilkan poin paling banyak?", `${tag}: pertanyaan poin`);
+  const rank = semua(d.T, a).filter((s) => sahPoin(d, s)).sort((x, y) => pts(a, y) - pts(a, x));
+  assert.ok(rank.length && (!rank[1] || pts(a, rank[0]) > pts(a, rank[1])), `${tag}: optimum harus unik`);
+  const key = rank[0], optimum = pts(a, key);
+  const options = d.opsi.map((o, i) => {
+    assert.ok(Object.keys(o).every((n) => a.some((t) => t.nama === n)), `${tag}: opsi ${KEYS[i]} nama tidak dikenal`);
+    assert.ok(Object.values(o).every((c) => Number.isInteger(c) && c >= 0), `${tag}: kali bulat nonnegatif`);
+    const s = a.map((t) => o[t.nama] ?? 0);
+    assert.ok(s.some((c) => c > 0), `${tag}: opsi kosong`);
+    assert.equal(x.c[i], teksPoin(a, s), `${tag}: opsi ${KEYS[i]} ≠ data`);
+    return s;
+  });
+  const valid = options.flatMap((s, i) => sahPoin(d, s) && pts(a, s) === optimum ? [KEYS[i]] : []);
+  assert.equal(valid.length, 1, `${tag}: tepat satu opsi sah mencapai optimum`);
+  assert.equal(x.k, valid[0], `${tag}: kunci ≠ hitungan`);
+  const top = a.reduce((b, t, i) => rate(t) > rate(a[b]) ? i : b, 0);
+  const maxP = a.reduce((b, t, i) => t.poin > a[b].poin ? i : b, 0);
+  const abs = unit(a, maxP, Math.floor(d.T / a[maxP].menit));
+  let left = d.T - time(a, abs);
+  for (const i of a.map((_, i) => i).sort((x, y) => rate(a[y]) - rate(a[x]))) {
+    const n = Math.floor(left / a[i].menit); abs[i] += n; left -= n * a[i].menit;
+  }
+  options.forEach((s, i) => {
+    const error = d.kesalahan[i];
+    if (KEYS[i] === x.k) return assert.equal(error, null, `${tag}: kunci tanpa tag kesalahan`);
+    const cocok: Record<TagPoin, boolean> = {
+      LEBIH: time(a, s) > d.T,
+      BATAS: time(a, s) <= d.T && langgar(a, s),
+      RATE: same(s, unit(a, top, Math.floor(d.T / a[top].menit))),
+      ABS: same(s, abs),
+      PAS: sahPoin(d, s) && time(a, s) >= time(a, key) && pts(a, s) < optimum,
+      RENDAH: sahPoin(d, s) && pts(a, s) < optimum,
+    };
+    assert.ok(error && Object.hasOwn(cocok, error) && cocok[error], `${tag}: opsi ${KEYS[i]} tidak cocok tag ${error}`);
+    const bahas = x.p.split(`Opsi ${KEYS[i]} (`)[1]?.split(/Opsi [A-E] \(/)[0];
+    assert.ok(bahas?.includes(`[${error}]`), `${tag}: pengecoh/tag harus dibahas pada opsi ${KEYS[i]}`);
+  });
+  assert.equal(x.p.split("<br>").length, 2, `${tag}: pembahasan 2 paragraf`);
+  assert.ok(x.p.includes(`${time(a, key)} menit`) && x.p.includes(`${optimum} poin`), `${tag}: pembahasan waktu/poin optimum`);
+  assert.ok(x.p.includes(`Jawaban: ${x.c[KEYS.indexOf(x.k as never)]} (${x.k}).`) && x.p.includes("Tips: "), `${tag}: Jawaban + Tips`);
+  return valid[0];
+}
+
 /** Cek satu butir; mengembalikan huruf kunci hasil hitungan. */
 export function cekButir(x: Alokasi, wacana: Record<string, string>) {
   const tag = `alokasi #${x.s}`, d = x.data, body = wacana[x.w];
-  assert.ok(body, `${tag}: wacana ${x.w} tidak ada`);
   assert.equal(x.c.length, 5, `${tag}: 5 opsi`);
   assert.equal(new Set(x.c).size, 5, `${tag}: opsi kembar`);
   assert.equal(d.opsi.length, 5, `${tag}: data.opsi harus 5`);
+  if (d.tanya === "poin") return cekPoin(x, d);
+  assert.ok(body, `${tag}: wacana ${x.w} tidak ada`);
   // Susunan §2.4a: konteks (jendela "pukul A hingga B" + titik dua) / daftar "• Tugas: N menit" (spasi tak-putus sebelum "menit", supaya tidak terpotong di layar HP) / kendala / q "Pertanyaan: …?"
   const parts = body.split("\n\n");
   assert.equal(parts.length, 3, `${tag}: wacana harus 3 bagian (konteks, daftar, kendala) dipisah baris kosong`);
@@ -189,11 +277,14 @@ function cekBocor(all: { pkg: string; x: Alokasi }[]) {
   const seenNama = new Map<string, string>(), seenJendela = new Map<string, string>();
   for (const { pkg, x } of all) {
     const tag = `pkg ${pkg} #${x.s}`;
-    const j = x.data.jendela.join("–");
-    assert.ok(!drill.includes(j), `${tag}: jendela ${j} sudah dipakai drill`);
-    assert.ok(!seenJendela.has(j), `${tag}: jendela ${j} sama dengan ${seenJendela.get(j)}`);
-    seenJendela.set(j, tag);
-    for (const t of x.data.tugas) {
+    const d = x.data;
+    const j = d.tanya === "poin" ? undefined : d.jendela.join("–");
+    if (j) {
+      assert.ok(!drill.includes(j), `${tag}: jendela ${j} sudah dipakai drill`);
+      assert.ok(!seenJendela.has(j), `${tag}: jendela ${j} sama dengan ${seenJendela.get(j)}`);
+      seenJendela.set(j, tag);
+    }
+    for (const t of d.tanya === "poin" ? d.kegiatan : d.tugas) {
       const n = t.nama.toLowerCase();
       assert.ok(!drill.includes(n), `${tag}: tugas "${t.nama}" sudah dipakai drill`);
       assert.ok(!seenNama.has(n), `${tag}: tugas "${t.nama}" sama dengan ${seenNama.get(n)}`);

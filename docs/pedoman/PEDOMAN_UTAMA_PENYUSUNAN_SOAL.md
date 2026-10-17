@@ -187,6 +187,8 @@ Pembahasan wajib selengkap menu drill: **semua opsi ditampilkan**, kunci ditanda
 | Kecermatan | Hitam/putih/abu, `viewBox 0 0 100 100`, teks digambar sebagai SVG | LmpB §2 |
 | Figural Kecerdasan | Kelas `.box/.solid/.outline`, transform eksplisit | LmpE §1 |
 | Mosaik (deret ubin) | Hitam-putih (+ abu untuk papan/panel). Gaya **bervariasi per butir** (G-10); gaya lama (ubin kotak, bingkai ganda) hanya untuk paket live | PM 13-10; `scripts/figural-mosaik.ts`. Gaya baru pkg 20: topeng `tab` + bingkai tipis (butir 26), topeng `perisai` + papan abu (butir 27); ubin baru `tangga`, `panah` |
+| Mosaik pkg 6 | Butir 26: topeng baru `tiket` (sudut cekung) × bingkai tipis × celah 0,07 × panah kecil. Butir 27: topeng `bulat` × panel abu × celah 0,1, tanpa panah. Ubin seperempat diganti lolipop (ambigu di topeng bulat) | PM 17-10; `scripts/figural-mosaik-6.ts` |
+| Susun benda pkg 6 | Adegan benda nyata: truk molen (5 potong, butir 33) dan kereta gantung (grid 2×3, butir 34) | PM 17-10; `scripts/susun-benda-6.ts` |
 
 - **G-8** SVG yang ditempel langsung ke halaman (`pembahasan_svg`) **tidak boleh memakai `id`**, karena bisa bentrok antar-butir. SVG yang disajikan sebagai file atau `<img>` boleh memakai `id`/`<defs>`. [memory soal-pembahasan-gambar-rule; LmpE §1]
 - **G-9** Render dicek di lebar tampil asli (±520 px) dan di layar HP lewat headless Chrome dari salinan repo di scratchpad, sebelum gambar dipasang. [PM 13-10; memory local-ui-verification]

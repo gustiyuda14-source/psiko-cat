@@ -101,7 +101,7 @@ export const C = (tile: Tile, inv = false, deg = 0, mir = false): Cell => ({ til
 // Gaya (pkg 4/5, PEDOMAN G-10): tiap butir beda bentuk ubin × bingkai × celah. Topeng ubin digambar sebagai path evenodd berwarna
 // sama dengan bingkai, jadi tanpa id/clipPath (aman untuk pembahasan_svg, G-8).
 export type Overlay = (center: (i: number) => Pt, T: number) => string;
-export type Style = { mask: "kotak" | "bulat" | "lembut" | "oktagon" | "tab" | "perisai"; frame: "ganda" | "tipis" | "panel" | "papan"; gap?: number; chevron?: boolean };
+export type Style = { mask: "kotak" | "bulat" | "lembut" | "oktagon" | "tab" | "perisai" | "tiket"; frame: "ganda" | "tipis" | "panel" | "papan"; gap?: number; chevron?: boolean };
 const FRAME_BG = { ganda: "white", tipis: "white", panel: "#e8e8e8", papan: "#a8a8a8" } as const;
 const TILE_D: Record<Exclude<Style["mask"], "kotak">, string> = {
   bulat: "M0,-.485A.485,.485 0 1 0 0,.485A.485,.485 0 1 0 0,-.485Z",
@@ -110,6 +110,8 @@ const TILE_D: Record<Exclude<Style["mask"], "kotak">, string> = {
   // pkg 20: tab = dua sudut diagonal membulat besar, dua sudut lain nyaris siku; perisai = sisi atas datar, bawah melengkung
   tab: "M-.185,-.485H.455A.03,.03 0 0 1 .485,-.455V.185A.3,.3 0 0 1 .185,.485H-.455A.03,.03 0 0 1 -.485,.455V-.185A.3,.3 0 0 1 -.185,-.485Z",
   perisai: "M-.405,-.485H.405A.08,.08 0 0 1 .485,-.405V.05C.485,.3 .25,.485 0,.485C-.25,.485 -.485,.3 -.485,.05V-.405A.08,.08 0 0 1 -.405,-.485Z",
+  // pkg 6: tiket = keempat sudut cekung (seperempat lingkaran ke dalam)
+  tiket: "M-.345,-.485H.345A.14,.14 0 0 0 .485,-.345V.345A.14,.14 0 0 0 .345,.485H-.345A.14,.14 0 0 0 -.485,.345V-.345A.14,.14 0 0 0 -.345,-.485Z",
 };
 function frameSvg(f: Frame | null, n: number, x: number, y: number, size: number, label: string, mark?: { overlay?: Overlay; hl?: boolean }, st?: Style) {
   const pad = size * (st && st.frame !== "ganda" && st.frame !== "tipis" ? 0.06 : 0.04), grid = size - 2 * pad, gap = grid * (st?.gap ?? 0.02), T = (grid - (n - 1) * gap) / n;

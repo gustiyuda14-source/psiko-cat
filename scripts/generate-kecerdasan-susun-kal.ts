@@ -3,6 +3,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { kereta, feri, traktor, pinisi } from "./susun-benda-45";
 import { pesawat, busTingkat } from "./susun-benda-19";
+import { trukMolen, keretaGantung } from "./susun-benda-6";
 import { SUSUN20_ROWS } from "./generate-kecerdasan-susun-20";
 import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cutProfile, cutPuzzleSvg, cutPembahasanSvg } from "./susun-lib";
 
@@ -15,6 +16,7 @@ import { answerFor, enDash, verticalPuzzleSvg, cutLayout, cutBounds, cutArea, cu
 //   pkg 15: motor patroli (5), ekskavator (6, tingkat 3)   — Simulasi 3
 //   pkg 16: sepeda (4), mobil derek (6, tingkat 3)          — Simulasi 1 baru
 //   pkg 19: pesawat baling-baling, bus tingkat (grid 2×3, tingkat 3) — Simulasi 4; adegan di susun-benda-19.ts
+//   pkg 6:  truk molen (5), kereta gantung (grid 2×3, tingkat 3) — Latihan Paket 5; adegan di susun-benda-6.ts
 // Pkg 4/5: benda nyata yang dikenali dan asimetris (G-4), potongan memakai profil batas unik (cutLayout) dan tepi bersama tanpa celah.
 // Paket lainnya tetap memakai jalur lama.
 //   node --import tsx scripts/generate-kecerdasan-susun-kal.ts
@@ -195,6 +197,14 @@ const puzzles: Puzzle[] = [
     camouflage: "Bus tingkat tampak samping dengan dua dek jendela; atap, garis putih pemisah dek dan jalan melewati seluruh lebar, sehingga tiap batas memotong deretan jendela.",
     seams: ["jendela atas kedua dan ketiga serta atap", "jendela atas kelima dan atap", "jendela bawah ketiga dan badan di atas roda", "jendela bawah dekat pintu dan badan bawah", "garis putih pemisah dek dan tepi bawah jendela atas kiri", "garis putih pemisah dek", "bagian atas pintu lipat dan garis putih pemisah dek", "garis putih pemisah dek dan ujung garis putus-putus", "kaca depan bawah dan jendela pengemudi"],
     pembahasan: "Kenali bus tingkat dari samping: belakang di kiri, depan di kanan dengan kaca depan besar dan papan tujuan. Baris atas memuat dek atas: sudut atap belakang dengan jendela pertama (kiri), jendela-jendela dek atas yang lebar (tengah), serta papan tujuan dan jendela depan atas (kanan). Baris bawah memuat dek bawah: sudut belakang dengan dua roda belakang (kiri), pintu lipat di tengah, serta kaca depan, pengemudi, dan roda depan (kanan). Atap, garis putih pemisah dek, garis putus-putus, dan jalan harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 6, seq: 33, objek: "truk molen", pieces: 5, order: [2, 5, 1, 3, 4], key: "D", scene: trukMolen, tingkat: 2, cut: true,
+    camouflage: "Truk pengaduk semen tampak samping: corong dan perosotan di belakang, tabung miring bergaris spiral di tengah, kabin di depan; sasis dan garis jalan melewati seluruh lebar.",
+    seams: ["tangga di belakang tabung, corong pengisi dan perosotan", "garis spiral putih kedua pada tabung dan roda belakang kedua", "puncak tabung, garis spiral ketiga dan tangki air di bawah tabung", "ujung depan tabung, penyangga tabung dan bagian belakang kabin"],
+    pembahasan: "Kenali bendanya dulu: truk molen (pengaduk semen) tampak samping, menghadap ke kanan. Cari kedua ujung: ujung kiri adalah bagian belakang dengan corong pengisi di atas, perosotan miring, dan tangga; ujung kanan adalah kabin dengan kaca depan, lampu, dan roda depan. Potongan dengan mulut tabung, garis spiral pertama, dan roda belakang pertama menyusul ujung kiri; potongan dengan bagian tabung paling tinggi dan roda belakang kedua ada di tengah; potongan dengan ujung depan tabung yang meruncing dan tangki air berada sebelum kabin. Garis spiral putih, sasis, dan garis jalan harus menyambung pada tinggi yang sama di setiap batas." },
+  { pkg: 6, seq: 34, objek: "kereta gantung", pieces: 6, order: [4, 6, 2, 1, 3, 5], key: "E", scene: keretaGantung, tingkat: 3, cut: true,
+    camouflage: "Kereta gantung dari stasiun bawah di kiri ke stasiun atas di kanan; kabel ganda, dua menara rangka, tiga kabin, dan lereng gunung melewati batas antarbaris dan antarkolom.",
+    seams: ["kabin kecil dekat stasiun bawah dan kabel ganda yang naik", "kabin dekat menara kanan dan kabel ganda", "pohon cemara dan garis lereng di kaki gunung", "kaki menara kanan, jalan setapak dan pohon cemara", "atap stasiun bawah, roda kabel dan kabin kecil", "batang menara kiri", "kabin tengah dan lereng di bawah puncak", "batang menara kanan dan lereng di kanan puncak", "kaki menara kanan dan lereng menuju stasiun atas"],
+    pembahasan: "Kenali kereta gantung: stasiun bawah beratap segitiga di kiri bawah, stasiun atas di kanan atas, dan kabel ganda yang naik melewati dua menara rangka. Baris atas memuat kabel dan kabin: atap stasiun bawah dengan roda kabel dan kabin kecil (kiri), menara kiri dengan kabin tengah dan puncak gunung (tengah), serta kabin dekat menara kanan dengan stasiun atas (kanan). Baris bawah memuat dasar: stasiun bawah dengan pintu dan jendela (kiri), kaki menara kiri dengan pohon cemara di lereng (tengah), serta kaki menara kanan dengan hutan cemara dan jalan setapak (kanan). Kabel, batang menara, dan garis lereng harus menyambung tanpa patah di setiap batas." },
 ];
 
 
@@ -346,12 +356,16 @@ nextText = b19 ? nextText.slice(0, b19.index) + p19 + nextText.slice(b19.index +
 assert.deepEqual(SUSUN20_ROWS.map((r) => r.sequence_number), [33, 34], "pkg 20: susun 33-34");
 const p20 = `  "20": ${JSON.stringify(SUSUN20_ROWS, null, 2).replace(/\n/g, "\n  ")}`, b20 = /^  "20": \[[\s\S]*?^  \]/m.exec(nextText);
 nextText = b20 ? nextText.slice(0, b20.index) + p20 + nextText.slice(b20.index + b20[0].length) : nextText.replace(/\n  \]\n\}\s*$/, `\n  ],\n${p20}\n}\n`);
+// pkg 6 (Latihan Paket 5): blok ditambahkan di akhir, atau diganti utuh kalau sudah ada.
+const p6 = `  "6": ${JSON.stringify(out[6], null, 2).replace(/\n/g, "\n  ")}`, b6 = /^  "6": \[[\s\S]*?^  \]/m.exec(nextText);
+nextText = b6 ? nextText.slice(0, b6.index) + p6 + nextText.slice(b6.index + b6[0].length) : nextText.replace(/\n  \]\n\}\s*$/, `\n  ],\n${p6}\n}\n`);
 const next = JSON.parse(nextText);
+assert.deepEqual(next[6], out[6]);
 assert.deepEqual(next[19], out[19]);
 assert.deepEqual(next[20], JSON.parse(JSON.stringify(SUSUN20_ROWS)));
 const replaced = new Set(TARGETS.map(([k, q]) => `${k}/${q}`));
 for (const pkg of Object.keys(previous)) for (const row of previous[Number(pkg)]) {
-  if (pkg !== "20" && !replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);
+  if (pkg !== "20" && pkg !== "6" && !replaced.has(`${pkg}/${row.sequence_number}`)) assert.deepEqual(next[pkg].find((r: Row) => r.sequence_number === row.sequence_number), row);
 }
 fs.writeFileSync(dataPath, nextText);
 fs.mkdirSync(path.join(root, "output"), { recursive: true });

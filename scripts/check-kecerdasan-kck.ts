@@ -3,7 +3,7 @@ import * as fs from "node:fs";
 import * as path from "node:path";
 import { checkA7, checkNoLeak, data, root, type TeksFile } from "./kecerdasan-teks-lib";
 
-// Cek KCK 97–100 untuk paket v3 (4/5/19), dan 97–99 + butir lama #100 untuk paket 3/14/15/16.
+// Cek KCK 97–100 untuk paket v3 (4/5/6/19/20), dan 97–99 + butir lama #100 untuk paket 3/14/15/16.
 //   node --import tsx scripts/check-kecerdasan-kck.ts
 // Tiap butir punya model kecil: ruang nilai (brute force), predikat pernyataan (1)/(2), dan jawaban.
 // Klaim cukup/tidak cukup dibuktikan dua arah: brute force (jawaban tunggal ↔ cukup) dan contoh `bukti`
@@ -237,6 +237,25 @@ const MODEL: Record<string, Model[]> = {
       cukup1: false, cukup2: false, cukupGabung: true,
       bukti: { s1: [{ D: 0, B: 1, A: 2, C: 3 }, { A: 0, C: 1, D: 2, B: 3 }], s2: [{ A: 0, C: 1, D: 2, B: 3 }, { A: 0, B: 1, C: 2, D: 3 }] } },
   ],
+  "6": [ // Latihan Paket 5 (Codex C2, sesi 1 rencana kecerdasan-latihan-paket-5)
+    { // 97 TABEL: Melati p × q; Kenanga 13 × 24
+      ruang: () => grid({ p: steps(1, 60), q: steps(1, 60) }),
+      s1: (v) => v.p === 13 + 5, s2: (v) => 13 * 24 + v.p * v.q === 582, jawab: (v) => v.p * v.q,
+      cukup1: false, cukup2: true, cukupGabung: true, bukti: { s1: [{ p: 18, q: 10 }, { p: 18, q: 20 }] } },
+    { // 98 YATIDAK: Rabu n > 184? (Senin 146, Selasa 172)
+      ruang: () => grid({ n: steps(0, 400) }),
+      s1: (v) => v.n <= 146 + 28, s2: (v) => (172 + v.n) / 2 === 169, jawab: (v) => v.n > 184,
+      cukup1: true, cukup2: true, cukupGabung: true, bukti: {} },
+    { // 99 ALJABAR kelipatan: 12x + 3y = 3 × (4x + y)
+      ruang: () => grid({ x: steps(1, 67), y: steps(1, 204) }),
+      s1: (v) => 4 * v.x + v.y === 68, s2: (v) => 12 * v.x + 3 * v.y === 204, jawab: (v) => v.x + v.y,
+      cukup1: false, cukup2: false, cukupGabung: false,
+      bukti: { s1: [{ x: 5, y: 48 }, { x: 10, y: 28 }], s2: [{ x: 5, y: 48 }, { x: 10, y: 28 }], gabung: [{ x: 5, y: 48 }, { x: 10, y: 28 }] } },
+    { // 100 GABUNG: a > b, keliling 82, luas 378 → a = 27
+      ruang: () => grid({ a: steps(1, 400), b: steps(1, 400) }).filter((v) => v.a > v.b),
+      s1: (v) => 2 * (v.a + v.b) === 82, s2: (v) => v.a * v.b === 378, jawab: (v) => v.a,
+      cukup1: false, cukup2: false, cukupGabung: true, bukti: { s1: [{ a: 27, b: 14 }, { a: 25, b: 16 }], s2: [{ a: 27, b: 14 }, { a: 42, b: 9 }] } },
+  ],
 };
 
 // Jenis KCK lama #100 (dibaca dari stem; tidak ada field jenis di file teks).
@@ -290,7 +309,7 @@ function cekPembahasan(tag: string, x: Kck, m: Model, v3: boolean) {
 
 const file = data("kecerdasan_kck_kal.json") as Record<string, Kck[]>;
 assert.deepEqual(Object.keys(file).sort(), Object.keys(MODEL).sort(), "paket di file");
-const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE", "19": "DBAE", "20": "BDEC" };
+const V3: Record<string, string> = { "4": "DAEC", "5": "BDCE", "19": "DBAE", "20": "BDEC", "6": "BDEC" };
 const bankTeks = fs.readdirSync(path.join(root, "prisma/data")).filter((f) => /^kecerdasan_p\d+_teks\.json$/.test(f));
 bankTeks.push("kecerdasan_s2_teks.json");
 const stems = new Set<string>();

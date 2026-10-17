@@ -18,6 +18,7 @@ import { INSTRUKSI, LAYOUT_V3, LAYOUT_V4, checkA7, checkLayout, checkNoLeak, che
 //          cek A-7 tanpa unsur kepolisian). Rencana: docs/rencana/kecerdasan-latihan-paket-3-4.md
 //   19 = Simulasi 4 (v3 seperti 4/5; tingkat 20 sedang + 80 HOTS). Rencana: docs/rencana/simulasi-4.md
 //   20 = Simulasi 5 (layout v4: 73-75 Sebab-Akibat, 76-87 HIT, 88-92 CRT Alokasi, 93-96 CRT; tingkat 10 + 90). Rencana: docs/rencana/simulasi-5.md
+//    6 = Latihan Paket 5 (layout v4; 88-90 Alokasi Poin Maksimal + 91-92 Alokasi Waktu; tingkat 40 + 60). Rencana: docs/rencana/kecerdasan-latihan-paket-5.md
 //   --swap 15|19 = tukar di tempat ke layout v4 (73-75 Sebab-Akibat, 88-92 Alokasi). Rencana simulasi-5 §2.4, §2.5a; LOG sesi 1.
 // Sumber gambar baru: generate-kecerdasan-{figural,susun,denah}-kal.ts. Wacana pkg 3: cek-wacana-kal.ts.
 //   Validasi (baca DB saja):  npx tsx scripts/seed-kecerdasan-kal.ts
@@ -30,8 +31,8 @@ const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env
 type DbRow = Row & { id: string; is_active: boolean };
 type Tiered = Row & { tingkat: 2 | 3 };
 // V3 = aturan pedoman v3 (SIL_V3, A-7, KCK gabung, D-4); V4 = paket berlayout v4 (rencana simulasi-5).
-const V3 = new Set([4, 5, 19, 20]);
-const V4 = new Set([20]);
+const V3 = new Set([4, 5, 6, 19, 20]);
+const V4 = new Set([6, 20]);
 
 const range = (a: number, b: number) => Array.from({ length: b - a + 1 }, (_, i) => a + i);
 const strip = ({ sequence_number, options_payload, scoring_rule }: Row): Row => ({ sequence_number, options_payload, scoring_rule });
@@ -67,7 +68,7 @@ async function compose(pkg: number): Promise<{ rows: Row[]; reuse: Map<number, s
     let teks = data(`kecerdasan_p${pkg}_teks.json`) as TeksFile;
     const lama = ["kecerdasan_p2_teks.json", "kecerdasan_p3_teks.json", "kecerdasan_s2_teks.json"];
     checkNoLeak(teks, pkg === 3 ? lama.filter((f) => !f.includes("p3")) : V3.has(pkg)
-      ? [...lama, "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_kck_kal.json", ...range(4, pkg - 1).map((n) => `kecerdasan_p${n}_teks.json`).filter((f) => fs.existsSync(path.join(root, "prisma/data", f)))]
+      ? [...lama, "kecerdasan_p15_teks.json", "kecerdasan_p16_teks.json", "kecerdasan_kck_kal.json", ...[...range(4, pkg - 1), ...(pkg === 6 ? [19, 20] : [])].map((n) => `kecerdasan_p${n}_teks.json`).filter((f) => fs.existsSync(path.join(root, "prisma/data", f)))]
       : [...lama, ...(pkg === 16 ? ["kecerdasan_p15_teks.json"] : [])]);
     // V3: KCK 97–100 tinggal di kecerdasan_kck_kal.json (keunikan stem dicek check-kecerdasan-kck.ts), digabung setelah cek bocor.
     if (V3.has(pkg)) teks = { ...teks, soal: [...teks.soal, ...data("kecerdasan_kck_kal.json")[pkg]] };

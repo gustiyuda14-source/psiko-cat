@@ -332,6 +332,125 @@
       "svg": null
     }
   ],
+  "6": [
+    {
+      "s": 97,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "TABEL",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Kebun edukasi menyimpan bibit dalam baki. Semua baki pada kelompok yang sama berisi bibit sama banyak; p dan q bilangan bulat positif. Datanya ada pada tabel di bawah.\nPertanyaan: Berapa banyak bibit pada kelompok Melati?\nPernyataan (1): Kelompok Melati memiliki 5 baki lebih banyak daripada kelompok Kenanga.\nPernyataan (2): Total bibit kedua kelompok adalah 582.",
+      "tabel": {
+        "kolom": [
+          "Kelompok",
+          "Banyak baki",
+          "Bibit per baki"
+        ],
+        "baris": [
+          [
+            "Kenanga",
+            "13",
+            "24"
+          ],
+          [
+            "Melati",
+            "p",
+            "q"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "B",
+      "bukti": "(1): (p,q)=(18,10) memberi 180; (18,20) memberi 360. (2): p×q=582−312=270 selalu tunggal; gabungan (18,15) sah.",
+      "p": "Yang sebenarnya ditanya\nBanyak bibit kelompok Melati, yaitu p × q. Nilai p dan q tidak harus diketahui satu per satu bila hasil kalinya sudah pasti.\n\nCek pernyataan (1) saja\np = 13 + 5 = 18, tetapi q belum diketahui. Jika q = 10, bibit Melati 180; jika q = 20, bibit Melati 360. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\nBibit Kenanga = 13 × 24 = 312. Bibit Melati = 582 − 312 = 270, walaupun p dan q belum terpisah (bisa 18 × 15 atau 10 × 27). Pernyataan (2) cukup.\n\nJawaban: B\nHanya pernyataan (2) yang memberi satu nilai pasti, yaitu 270 bibit.\nOpsi A gugur karena pernyataan (1) masih memberi 180 atau 360 bibit.\nOpsi C gugur karena pernyataan (2) sudah cukup tanpa digabung.\nOpsi D gugur karena pernyataan (1) tidak cukup.\nOpsi E gugur karena pernyataan (2) memberi jawaban pasti.\n\nBiar gampang diingat\nJika total isi dua keranjang dan isi keranjang pertama diketahui, isi keranjang kedua langsung diketahui tanpa menghitung buahnya satu per satu.\n\nJebakan di soal ini\nMengira p dan q harus ditemukan masing-masing. Yang ditanya hanya hasil kalinya, dan pernyataan (2) langsung memberi hasil kali itu.",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 158\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Kelompok, Banyak baki, Bibit per baki\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"158\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"66.5\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Kelompok</text><text x=\"219.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Banyak baki</text><text x=\"413.2\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Bibit per baki</text><text x=\"66.5\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Kenanga</text><text x=\"219.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">13</text><text x=\"413.2\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">24</text><text x=\"66.5\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Melati</text><text x=\"219.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">p</text><text x=\"413.2\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">q</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"156\"/><line x1=\"133.0\" y1=\"0\" x2=\"133.0\" y2=\"156\"/><line x1=\"306.4\" y1=\"0\" x2=\"306.4\" y2=\"156\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"156\"/></g></svg>"
+    },
+    {
+      "s": 98,
+      "t": "KCK",
+      "d": 2,
+      "jenis": "YATIDAK",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Pusat daur ulang mencatat massa kertas masuk dalam kilogram bulat tak negatif pada tabel di bawah.\nPertanyaan: Apakah massa kertas hari Rabu lebih dari 184 kg?\nPernyataan (1): Massa kertas hari Rabu tidak melebihi massa hari Senin ditambah 28 kg.\nPernyataan (2): Rata-rata massa kertas hari Selasa dan Rabu adalah 169 kg.",
+      "tabel": {
+        "kolom": [
+          "Hari",
+          "Massa (kg)"
+        ],
+        "baris": [
+          [
+            "Senin",
+            "146"
+          ],
+          [
+            "Selasa",
+            "172"
+          ],
+          [
+            "Rabu",
+            "n"
+          ]
+        ]
+      },
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "D",
+      "bukti": "(1): n≤174<184, jadi pasti tidak. (2): n=338−172=166<184, jadi pasti tidak. Keduanya konsisten, misalnya n=166.",
+      "p": "Yang sebenarnya ditanya\nJawaban ya atau tidak: apakah massa kertas hari Rabu (n) lebih dari 184 kg. Nilai n tidak harus tepat; cukup bila semua kemungkinan memberi jawaban yang sama.\n\nCek pernyataan (1) saja\nn paling banyak 146 + 28 = 174 kg. Berapa pun n tepatnya, tidak mungkin lebih dari 184 kg, jadi jawabannya pasti tidak. Pernyataan (1) cukup.\n\nCek pernyataan (2) saja\n(172 + n) ÷ 2 = 169, jadi n = 338 − 172 = 166 kg. Nilai ini tidak lebih dari 184, jadi jawabannya pasti tidak. Pernyataan (2) cukup.\n\nJawaban: D\nMasing-masing pernyataan sudah memastikan jawaban tidak.\nOpsi A gugur karena pernyataan (2) juga cukup.\nOpsi B gugur karena pernyataan (1) juga cukup.\nOpsi C gugur karena jawaban sudah pasti tanpa menggabungkan keduanya.\nOpsi E gugur karena setiap pernyataan sudah memberi jawaban pasti.\n\nBiar gampang diingat\nJika sebuah ember paling banyak berisi 174 liter, ember itu pasti tidak berisi lebih dari 184 liter.\n\nJebakan di soal ini\nMenganggap pernyataan (1) belum cukup karena n belum tepat. Pertanyaan ya/tidak sudah terjawab oleh batas atas yang berada di bawah 184; jawaban \"pasti tidak\" sama sahnya dengan \"pasti ya\".",
+      "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"-1 -1 522 210\" width=\"522\" style=\"max-width:100%;height:auto\" role=\"img\" aria-label=\"Tabel: Hari, Massa (kg)\" font-family=\"system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif\" font-size=\"21\"><rect x=\"-1\" y=\"-1\" width=\"522\" height=\"210\" fill=\"#fff\"/><g fill=\"#111\"><text x=\"99.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Hari</text><text x=\"359.7\" y=\"26.0\" text-anchor=\"middle\" dominant-baseline=\"central\" font-weight=\"700\">Massa (kg)</text><text x=\"99.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">Senin</text><text x=\"359.7\" y=\"78\" text-anchor=\"middle\" dominant-baseline=\"central\">146</text><text x=\"99.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">Selasa</text><text x=\"359.7\" y=\"130\" text-anchor=\"middle\" dominant-baseline=\"central\">172</text><text x=\"99.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\">Rabu</text><text x=\"359.7\" y=\"182\" text-anchor=\"middle\" dominant-baseline=\"central\" font-style=\"italic\">n</text></g><g stroke=\"#111\" stroke-width=\"1\"><line x1=\"0\" y1=\"0\" x2=\"520\" y2=\"0\"/><line x1=\"0\" y1=\"52\" x2=\"520\" y2=\"52\" stroke-width=\"1.6\"/><line x1=\"0\" y1=\"104\" x2=\"520\" y2=\"104\"/><line x1=\"0\" y1=\"156\" x2=\"520\" y2=\"156\"/><line x1=\"0\" y1=\"208\" x2=\"520\" y2=\"208\"/><line x1=\"0.0\" y1=\"0\" x2=\"0.0\" y2=\"208\"/><line x1=\"199.4\" y1=\"0\" x2=\"199.4\" y2=\"208\"/><line x1=\"520.0\" y1=\"0\" x2=\"520.0\" y2=\"208\"/></g></svg>"
+    },
+    {
+      "s": 99,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "ALJABAR",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Dua jenis tali memiliki panjang x cm dan y cm, dengan x dan y bilangan real positif.\nPertanyaan: Berapa nilai x + y?\nPernyataan (1): 4x + y = 68.\nPernyataan (2): 12x + 3y = 204.",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "E",
+      "bukti": "(1), (2), dan gabungan: (x,y)=(5,48) memberi x+y=53; (10,28) memberi x+y=38. Kedua pasangan memenuhi kedua persamaan.",
+      "p": "Yang sebenarnya ditanya\nNilai x + y. Bila pernyataan masih memberi beberapa jumlah yang berbeda, pertanyaan belum terjawab.\n\nCek pernyataan (1) saja\nx = 5 dan y = 48 memenuhi 4x + y = 68, dengan x + y = 53. x = 10 dan y = 28 juga memenuhi, tetapi x + y = 38. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\n12x + 3y = 204 sama dengan 3 × (4x + y) = 3 × 68. Pasangan (5, 48) dan (10, 28) tetap sah, dengan jumlah 53 dan 38. Pernyataan (2) tidak cukup.\n\nCek gabungan\nPernyataan (2) hanyalah pernyataan (1) dikali 3, jadi gabungannya tetap satu persamaan. Pasangan (5, 48) dan (10, 28) memenuhi keduanya sekaligus, tetapi jumlahnya berbeda. Digabung pun tidak cukup.\n\nJawaban: E\nKedua pernyataan, sendiri maupun digabung, masih memberi lebih dari satu nilai x + y.\nOpsi A gugur karena pernyataan (1) memberi jumlah 53 atau 38.\nOpsi B gugur karena pernyataan (2) memberi jumlah 53 atau 38.\nOpsi C gugur karena gabungan tidak menambah informasi baru.\nOpsi D gugur karena tidak satu pun pernyataan cukup sendirian.\n\nBiar gampang diingat\nMenyalin resep yang sama tiga kali tidak memberi bahan baru; persamaan kelipatan juga tidak menambah informasi.\n\nJebakan di soal ini\nMelihat dua persamaan dengan dua variabel lalu langsung memilih C. Cek dulu apakah persamaan kedua hanya kelipatan persamaan pertama.",
+      "svg": null
+    },
+    {
+      "s": 100,
+      "t": "KCK",
+      "d": 3,
+      "jenis": "GABUNG",
+      "i": "Tentukan apakah pernyataan (1) dan (2) cukup untuk menjawab pertanyaan. Anda tidak perlu menghitung jawabannya.",
+      "q": "Sebuah bingkai persegi panjang memiliki panjang a cm dan lebar b cm, dengan a > b > 0.\nPertanyaan: Berapa panjang a?\nPernyataan (1): Keliling bingkai adalah 82 cm.\nPernyataan (2): Luas bingkai adalah 378 cm².",
+      "tabel": null,
+      "c": [
+        "Pernyataan (1) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (2) SAJA tidak cukup.",
+        "Pernyataan (2) SAJA cukup untuk menjawab pertanyaan, tetapi pernyataan (1) SAJA tidak cukup.",
+        "DUA pernyataan BERSAMA-SAMA cukup untuk menjawab pertanyaan, tetapi SATU pernyataan SAJA tidak cukup.",
+        "Pernyataan (1) SAJA cukup DAN pernyataan (2) SAJA cukup untuk menjawab pertanyaan.",
+        "Pernyataan (1) dan (2) TIDAK cukup untuk menjawab pertanyaan."
+      ],
+      "k": "C",
+      "bukti": "(1): (a,b)=(27,14) atau (25,16), panjang berbeda. (2): (27,14) atau (42,9), panjang berbeda. Gabungan: a+b=41 dan ab=378; (a−27)(a−14)=0. Karena a>b, a=27 saja.",
+      "p": "Yang sebenarnya ditanya\nPanjang a. Syarat a > b ikut menentukan sisi mana yang disebut panjang.\n\nCek pernyataan (1) saja\n2(a + b) = 82, jadi a + b = 41. Pasangan (27, 14) dan (25, 16) sama-sama memenuhi a > b, tetapi panjangnya 27 dan 25. Pernyataan (1) tidak cukup.\n\nCek pernyataan (2) saja\na × b = 378. Pasangan (27, 14) dan (42, 9) sama-sama sah, tetapi panjangnya 27 dan 42. Pernyataan (2) tidak cukup.\n\nCek gabungan\na + b = 41 dan a × b = 378, sehingga kedua sisi adalah 27 dan 14 (27 + 14 = 41, 27 × 14 = 378). Karena a > b, panjang a = 27. Digabung cukup.\n\nJawaban: C\nGabungan kedua pernyataan dan syarat a > b memberi satu panjang, yaitu 27 cm.\nOpsi A gugur karena pernyataan (1) masih memberi panjang 27 atau 25.\nOpsi B gugur karena pernyataan (2) masih memberi panjang 27 atau 42.\nOpsi D gugur karena tidak satu pun pernyataan cukup sendirian.\nOpsi E gugur karena gabungannya memberi satu panjang.\n\nBiar gampang diingat\nJika jumlah dan hasil kali dua bilangan diketahui, pasangan bilangannya ketemu; label \"panjang\" lalu memilih yang lebih besar.\n\nJebakan di soal ini\nMengira gabungan memberi dua jawaban (27 dan 14). Syarat a > b membuang 14 karena 14 adalah lebar.",
+      "svg": null
+    }
+  ],
   "14": [
     {
       "s": 97,

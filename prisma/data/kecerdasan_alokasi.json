@@ -1087,5 +1087,374 @@
         }
       }
     ]
+  },
+  "6": {
+    "wacana": {
+      "p6alok91": "Seorang koordinator panitia pentas boneka memiliki waktu persiapan dari pukul 13.02 hingga 16.03. Ia harus menyelesaikan pekerjaan berikut:\n\n• Menyambung rekaman dialog: 45 menit\n• Merakit panggung boneka: 49 menit\n• Mengecat latar pertunjukan: 43 menit\n• Menyortir boneka pemeran: 42 menit\n\nPukul 14.12 hingga 14.57 adalah waktu makan dan istirahatnya, sehingga ia tidak bekerja; pekerjaan yang terpotong jeda dilanjutkan sesudahnya. Pentas dimulai pukul 16.03 dan semua tugas harus selesai sebelum itu. Seorang rekan dapat mengambil alih satu tugas mulai pukul 13.02, bekerja dengan kecepatan yang sama, dan tidak mengikuti jeda koordinator. Semua tugas merupakan persiapan inti yang tidak boleh dilewatkan.",
+      "p6alok92": "Seorang pengelola klub panahan memiliki waktu kerja dari pukul 08.02 hingga 12.21 untuk menyiapkan latihan. Ia harus menyelesaikan pekerjaan berikut:\n\n• Menegakkan bantalan sasaran: 51 menit\n• Menandai jalur pemanah: 53 menit\n• Memeriksa tali busur: 54 menit\n• Menata pelindung lengan: 56 menit\n• Membersihkan tempat penyimpanan anak panah: 57 menit\n\nPukul 10.03 hingga 10.46 ia wajib mengikuti pengarahan pengelola lapangan, sehingga waktu itu tidak dapat dipakai bekerja; pekerjaan yang terpotong pengarahan dilanjutkan sesudahnya. Seorang rekan bersedia mengambil alih satu tugas mulai pukul 08.02 dengan kecepatan yang sama dan tidak mengikuti pengarahan tersebut. Semua tugas harus selesai sebelum latihan dimulai pukul 12.21."
+    },
+    "soal": [
+      {
+        "s": 88,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "poin",
+        "d": 2,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "",
+        "q": "Seorang pengelola ruang rapat kantor memiliki waktu 131 menit untuk mengumpulkan poin kesiapan perangkat. Kegiatan yang tersedia:\n\n• Menguji perangkat konferensi: 42 menit → 252 poin\n• Menata kabel presentasi: 45 menit → 255 poin\n• Membersihkan panel kendali: 49 menit → 196 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 131 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+        "c": [
+          "Menata kabel presentasi 3 kali",
+          "Menguji perangkat konferensi 3 kali",
+          "Menguji perangkat konferensi 2 kali + Menata kabel presentasi 1 kali",
+          "Menata kabel presentasi 2 kali",
+          "Membersihkan panel kendali 2 kali"
+        ],
+        "k": "C",
+        "p": "1. Hitung poin per menit: Menguji perangkat konferensi 252 ÷ 42 = 6,0 poin/menit; Menata kabel presentasi 255 ÷ 45 = 5,67 poin/menit (dibulatkan); Membersihkan panel kendali 196 ÷ 49 = 4,0 poin/menit.\n2. Bandingkan semua kombinasi yang selesai utuh dalam 131 menit; poin per kegiatan terbesar belum tentu menghasilkan total tertinggi. Kegiatan dengan rasio tertinggi hanya muat 3 kali, memakai 126 menit; sisa 5 menit tidak cukup untuk kegiatan lain. Mengganti satu kali kegiatan itu dengan kegiatan kedua menambah 3 poin.\n3. Susun waktu: Menguji perangkat konferensi 2 kali + Menata kabel presentasi 1 kali memakai 129 menit, sisa 2 menit.\n4. Hitung poin: 2 × 252 + 1 × 255 = 759 poin. Hasil ini merupakan optimum unik setelah semua kombinasi sah dibandingkan.<br>Opsi A (Menata kabel presentasi 3 kali) [LEBIH]: Membulatkan jumlah kegiatan ke atas tanpa mengecek waktu; 135 menit melebihi batas 131 menit; total 135 menit dan 765 poin. Opsi B (Menguji perangkat konferensi 3 kali) [RATE]: Hanya mengulang kegiatan berasio tertinggi; waktu menganggur membuat totalnya 3 poin lebih rendah; total 126 menit dan 756 poin. Opsi D (Menata kabel presentasi 2 kali) [ABS]: Mengutamakan poin per kegiatan terbesar; sisa 41 menit tidak cukup untuk kegiatan lain, sehingga susunan ini kalah 249 poin; total 90 menit dan 510 poin. Opsi E (Membersihkan panel kendali 2 kali) [RENDAH]: Memilih kegiatan berasio paling rendah; walaupun sah, totalnya kalah 367 poin; total 98 menit dan 392 poin. Jawaban: Menguji perangkat konferensi 2 kali + Menata kabel presentasi 1 kali (C). Tips: hitung poin per menit dulu, lalu cek sisa waktu; hormati batas kali dan kegiatan wajib sebelum membandingkan total poin.",
+        "data": {
+          "tanya": "poin",
+          "T": 131,
+          "kegiatan": [
+            {
+              "nama": "Menguji perangkat konferensi",
+              "menit": 42,
+              "poin": 252
+            },
+            {
+              "nama": "Menata kabel presentasi",
+              "menit": 45,
+              "poin": 255
+            },
+            {
+              "nama": "Membersihkan panel kendali",
+              "menit": 49,
+              "poin": 196
+            }
+          ],
+          "opsi": [
+            {
+              "Menata kabel presentasi": 3
+            },
+            {
+              "Menguji perangkat konferensi": 3
+            },
+            {
+              "Menguji perangkat konferensi": 2,
+              "Menata kabel presentasi": 1
+            },
+            {
+              "Menata kabel presentasi": 2
+            },
+            {
+              "Membersihkan panel kendali": 2
+            }
+          ],
+          "kesalahan": [
+            "LEBIH",
+            "RATE",
+            null,
+            "ABS",
+            "RENDAH"
+          ]
+        }
+      },
+      {
+        "s": 89,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "poin",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "",
+        "q": "Seorang siswa anggota klub astronomi sekolah memiliki waktu 158 menit untuk menambah poin praktik pengamatan. Kegiatan yang tersedia:\n\n• Merakit model orbit: 43 menit → 301 poin\n• Mengukur sudut teleskop: 51 menit → 310 poin\n• Menyusun peta bintang: 53 menit → 318 poin\n• Menggambar fase bulan: 54 menit → 270 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang, urutannya bebas, dan total waktu tidak boleh melebihi 158 menit.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+        "c": [
+          "Mengukur sudut teleskop 1 kali + Menyusun peta bintang 2 kali",
+          "Merakit model orbit 3 kali",
+          "Merakit model orbit 1 kali + Menyusun peta bintang 2 kali",
+          "Menyusun peta bintang 3 kali",
+          "Menggambar fase bulan 2 kali"
+        ],
+        "k": "A",
+        "p": "1. Hitung poin per menit: Merakit model orbit 301 ÷ 43 = 7,0 poin/menit; Mengukur sudut teleskop 310 ÷ 51 = 6,08 poin/menit (dibulatkan); Menyusun peta bintang 318 ÷ 53 = 6,0 poin/menit; Menggambar fase bulan 270 ÷ 54 = 5,0 poin/menit.\n2. Bandingkan semua kombinasi yang selesai utuh dalam 158 menit; poin per kegiatan terbesar belum tentu menghasilkan total tertinggi. Rasio tertinggi adalah merakit model orbit (7 poin/menit), sedangkan poin per kegiatan terbesar adalah menyusun peta bintang (318 poin). Tiga kali kegiatan berasio tertinggi menyisakan 29 menit; kombinasi dua jenis kegiatan memberi total lebih besar.\n3. Susun waktu: Mengukur sudut teleskop 1 kali + Menyusun peta bintang 2 kali memakai 157 menit, sisa 1 menit.\n4. Hitung poin: 1 × 310 + 2 × 318 = 946 poin. Hasil ini merupakan optimum unik setelah semua kombinasi sah dibandingkan.<br>Opsi B (Merakit model orbit 3 kali) [RATE]: Terpaku pada rasio 7 poin/menit dan membiarkan 29 menit menganggur; totalnya kalah 43 poin; total 129 menit dan 903 poin. Opsi C (Merakit model orbit 1 kali + Menyusun peta bintang 2 kali) [ABS]: Memilih peta bintang yang berpoin terbesar per kali, kemudian mengisi sisa dengan model orbit; kombinasi ini kalah 9 poin; total 149 menit dan 937 poin. Opsi D (Menyusun peta bintang 3 kali) [LEBIH]: Mengulang kegiatan berpoin terbesar tiga kali tanpa mengecek waktu; 159 menit melebihi batas 158 menit; total 159 menit dan 954 poin. Opsi E (Menggambar fase bulan 2 kali) [RENDAH]: Memilih kegiatan berasio paling rendah; sah tetapi totalnya kalah 406 poin; total 108 menit dan 540 poin. Jawaban: Mengukur sudut teleskop 1 kali + Menyusun peta bintang 2 kali (A). Tips: hitung poin per menit dulu, lalu cek sisa waktu; hormati batas kali dan kegiatan wajib sebelum membandingkan total poin.",
+        "data": {
+          "tanya": "poin",
+          "T": 158,
+          "kegiatan": [
+            {
+              "nama": "Merakit model orbit",
+              "menit": 43,
+              "poin": 301
+            },
+            {
+              "nama": "Mengukur sudut teleskop",
+              "menit": 51,
+              "poin": 310
+            },
+            {
+              "nama": "Menyusun peta bintang",
+              "menit": 53,
+              "poin": 318
+            },
+            {
+              "nama": "Menggambar fase bulan",
+              "menit": 54,
+              "poin": 270
+            }
+          ],
+          "opsi": [
+            {
+              "Mengukur sudut teleskop": 1,
+              "Menyusun peta bintang": 2
+            },
+            {
+              "Merakit model orbit": 3
+            },
+            {
+              "Merakit model orbit": 1,
+              "Menyusun peta bintang": 2
+            },
+            {
+              "Menyusun peta bintang": 3
+            },
+            {
+              "Menggambar fase bulan": 2
+            }
+          ],
+          "kesalahan": [
+            null,
+            "RATE",
+            "ABS",
+            "LEBIH",
+            "RENDAH"
+          ]
+        }
+      },
+      {
+        "s": 90,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "poin",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "",
+        "q": "Seorang anggota keluarga memiliki waktu 232 menit untuk mengumpulkan poin dalam tantangan pengelolaan koleksi digital di rumah. Kegiatan yang tersedia:\n\n• Memindai album keluarga: 56 menit → 448 poin (hanya tersedia 2 kali)\n• Menyunting rekaman liburan: 59 menit → 413 poin\n• Mencadangkan koleksi digital: 61 menit → 183 poin\n\nPoin diperoleh setiap kali satu kegiatan selesai utuh. Kegiatan boleh diulang kecuali yang diberi batas, urutannya bebas, dan total waktu tidak boleh melebihi 232 menit. Mencadangkan koleksi digital wajib dilakukan minimal satu kali.\n\nPertanyaan: Strategi manakah yang menghasilkan poin paling banyak?",
+        "c": [
+          "Memindai album keluarga 3 kali + Mencadangkan koleksi digital 1 kali",
+          "Memindai album keluarga 2 kali + Menyunting rekaman liburan 2 kali + Mencadangkan koleksi digital 1 kali",
+          "Memindai album keluarga 2 kali + Mencadangkan koleksi digital 1 kali",
+          "Menyunting rekaman liburan 2 kali + Mencadangkan koleksi digital 1 kali",
+          "Memindai album keluarga 2 kali + Menyunting rekaman liburan 1 kali + Mencadangkan koleksi digital 1 kali"
+        ],
+        "k": "E",
+        "p": "1. Hitung poin per menit: Memindai album keluarga 448 ÷ 56 = 8,0 poin/menit; Menyunting rekaman liburan 413 ÷ 59 = 7,0 poin/menit; Mencadangkan koleksi digital 183 ÷ 61 = 3,0 poin/menit.\n2. Bandingkan semua kombinasi yang selesai utuh dalam 232 menit; poin per kegiatan terbesar belum tentu menghasilkan total tertinggi. Cadangkan 61 menit untuk mencadangkan koleksi digital yang wajib; sisa 171 menit. Memindai album keluarga dibatasi 2 kali: 112 menit, sehingga tersisa 59 menit untuk satu kali menyunting rekaman liburan.\n3. Susun waktu: Memindai album keluarga 2 kali + Menyunting rekaman liburan 1 kali + Mencadangkan koleksi digital 1 kali memakai 232 menit, sisa 0 menit.\n4. Hitung poin: 2 × 448 + 1 × 413 + 1 × 183 = 1492 poin. Hasil ini merupakan optimum unik setelah semua kombinasi sah dibandingkan.<br>Opsi A (Memindai album keluarga 3 kali + Mencadangkan koleksi digital 1 kali) [BATAS]: Mengabaikan batas pemindaian paling banyak 2 kali; tiga kali pemindaian tidak sah meskipun waktunya muat; total 229 menit dan 1527 poin. Opsi B (Memindai album keluarga 2 kali + Menyunting rekaman liburan 2 kali + Mencadangkan koleksi digital 1 kali) [LEBIH]: Memenuhi batas kali dan kegiatan wajib, tetapi menambah penyuntingan yang tidak muat; melebihi batas waktu 59 menit; total 291 menit dan 1905 poin. Opsi C (Memindai album keluarga 2 kali + Mencadangkan koleksi digital 1 kali) [RENDAH]: Memenuhi syarat tetapi membiarkan 59 menit menganggur, padahal masih muat satu kali penyuntingan; kalah 413 poin; total 173 menit dan 1079 poin. Opsi D (Menyunting rekaman liburan 2 kali + Mencadangkan koleksi digital 1 kali) [RENDAH]: Memenuhi syarat tetapi memilih kegiatan berasio lebih rendah; totalnya kalah 483 poin; total 179 menit dan 1009 poin. Jawaban: Memindai album keluarga 2 kali + Menyunting rekaman liburan 1 kali + Mencadangkan koleksi digital 1 kali (E). Tips: hitung poin per menit dulu, lalu cek sisa waktu; hormati batas kali dan kegiatan wajib sebelum membandingkan total poin.",
+        "data": {
+          "tanya": "poin",
+          "T": 232,
+          "kegiatan": [
+            {
+              "nama": "Memindai album keluarga",
+              "menit": 56,
+              "poin": 448,
+              "maks": 2
+            },
+            {
+              "nama": "Menyunting rekaman liburan",
+              "menit": 59,
+              "poin": 413
+            },
+            {
+              "nama": "Mencadangkan koleksi digital",
+              "menit": 61,
+              "poin": 183,
+              "wajib": true
+            }
+          ],
+          "opsi": [
+            {
+              "Memindai album keluarga": 3,
+              "Mencadangkan koleksi digital": 1
+            },
+            {
+              "Memindai album keluarga": 2,
+              "Menyunting rekaman liburan": 2,
+              "Mencadangkan koleksi digital": 1
+            },
+            {
+              "Memindai album keluarga": 2,
+              "Mencadangkan koleksi digital": 1
+            },
+            {
+              "Menyunting rekaman liburan": 2,
+              "Mencadangkan koleksi digital": 1
+            },
+            {
+              "Memindai album keluarga": 2,
+              "Menyunting rekaman liburan": 1,
+              "Mencadangkan koleksi digital": 1
+            }
+          ],
+          "kesalahan": [
+            "BATAS",
+            "LEBIH",
+            "RENDAH",
+            "RENDAH",
+            null
+          ]
+        }
+      },
+      {
+        "s": 91,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "strategi",
+        "d": 3,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p6alok91",
+        "q": "Pertanyaan: Langkah delegasi manakah yang paling tepat agar semua persiapan selesai sebelum pentas dimulai?",
+        "c": [
+          "Meminta rekan menyortir boneka pemeran",
+          "Meminta rekan merakit panggung boneka",
+          "Memakai waktu makan dan istirahat untuk tetap bekerja",
+          "Melewatkan mengecat latar pertunjukan",
+          "Menyortir boneka pemeran setelah pentas dimulai"
+        ],
+        "k": "B",
+        "p": "1. Ubah waktu persiapan: pukul 13.02 hingga 16.03 = 181 menit. Jeda makan dan istirahat pukul 14.12 hingga 14.57 = 45 menit, sehingga waktu kerja = 181 − 45 = 136 menit.\n2. Jumlahkan tugas: 45 + 49 + 43 + 42 = 179 menit. Kelebihan = 179 − 136 = 43 menit.\n3. Saring strategi yang benar-benar meminta bantuan, menghemat minimal 43 menit, dan tetap menjaga kebutuhan dasar serta tujuan pentas. Merakit panggung boneka menghemat 49 menit; tugas lain memakai 130 menit, sehingga muat dalam 136 menit. Rekan mulai pukul 13.02 dan selesai pukul 13.51, sebelum pentas.<br>Opsi A (Meminta rekan menyortir boneka pemeran): delegasi tidak cukup; hemat 42 menit, sehingga sisa tugas 137 menit masih melebihi waktu kerja 1 menit. Opsi C (Memakai waktu makan dan istirahat untuk tetap bekerja): mengorbankan kebutuhan dasar makan dan istirahat; meskipun menambah 45 menit, tindakan ini bukan delegasi. Opsi D (Melewatkan mengecat latar pertunjukan): melewatkan tugas inti tanpa delegasi; hemat 43 menit tetapi latar pertunjukan tidak disiapkan. Opsi E (Menyortir boneka pemeran setelah pentas dimulai): menunda ke setelah tenggat, sehingga boneka belum siap saat pentas dimulai; juga tidak meminta bantuan. Jawaban: Meminta rekan merakit panggung boneka (B). Tips: hitung kelebihan dulu, lalu cari delegasi yang menutupinya tanpa melewatkan makan, istirahat, atau tugas inti.",
+        "data": {
+          "jendela": [
+            "13.02",
+            "16.03"
+          ],
+          "jeda": [
+            [
+              "14.12",
+              "14.57"
+            ]
+          ],
+          "tanya": "strategi",
+          "opsi": [
+            {
+              "hemat": 42,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Menyortir boneka pemeran"
+            },
+            {
+              "hemat": 49,
+              "delegasi": true,
+              "korban": false,
+              "tugas": "Merakit panggung boneka"
+            },
+            {
+              "hemat": 45,
+              "delegasi": false,
+              "korban": true
+            },
+            {
+              "hemat": 43,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Mengecat latar pertunjukan"
+            },
+            {
+              "hemat": 42,
+              "delegasi": false,
+              "korban": true,
+              "tugas": "Menyortir boneka pemeran"
+            }
+          ],
+          "tugas": [
+            {
+              "nama": "Menyambung rekaman dialog",
+              "menit": 45
+            },
+            {
+              "nama": "Merakit panggung boneka",
+              "menit": 49
+            },
+            {
+              "nama": "Mengecat latar pertunjukan",
+              "menit": 43
+            },
+            {
+              "nama": "Menyortir boneka pemeran",
+              "menit": 42
+            }
+          ]
+        }
+      },
+      {
+        "s": 92,
+        "t": "CRT",
+        "sub": "ALOKASI",
+        "bentuk": "terpendek-jeda",
+        "d": 2,
+        "i": "Bacalah keterangan berikut, lalu jawablah pertanyaannya.",
+        "w": "p6alok92",
+        "q": "Pertanyaan: Tugas terpendek manakah yang dapat diserahkan kepada rekan agar semua pekerjaan selesai sebelum latihan dimulai?",
+        "c": [
+          "Menegakkan bantalan sasaran",
+          "Menandai jalur pemanah",
+          "Memeriksa tali busur",
+          "Menata pelindung lengan",
+          "Membersihkan tempat penyimpanan anak panah"
+        ],
+        "k": "D",
+        "p": "1. Ubah jendela kerja: pukul 08.02 hingga 12.21 = 259 menit. Jeda pukul 10.03 hingga 10.46 = 43 menit, sehingga waktu kerja = 259 − 43 = 216 menit.\n2. Jumlahkan tugas: 51 + 53 + 54 + 56 + 57 = 271 menit. Kelebihan = 271 − 216 = 55 menit.\n3. Cari tugas terpendek yang durasinya minimal 55 menit: hanya menata pelindung lengan (56 menit) dan membersihkan tempat penyimpanan anak panah (57 menit) yang cukup. Pilih 56 menit; sisa tugas 51 + 53 + 54 + 57 = 215 menit, muat dalam 216 menit. Rekan menyelesaikannya pukul 08.58.<br>Opsi A (Menegakkan bantalan sasaran): memilih tugas paling pendek tanpa menghitung kecukupan bantuan; hemat 51 menit, sisa tugas 220 menit masih lebih 4 menit. Opsi B (Menandai jalur pemanah): menganggap selisih kecil dapat diabaikan; hemat 53 menit, sisa tugas 218 menit masih lebih 2 menit. Opsi C (Memeriksa tali busur): membulatkan kebutuhan bantuan ke bawah; hemat 54 menit, sisa tugas 217 menit masih lebih 1 menit. Opsi E (Membersihkan tempat penyimpanan anak panah): memilih tugas terpanjang yang memang cukup, tetapi bukan yang terpendek; 57 menit lebih lama daripada pilihan sah 56 menit. Jawaban: Menata pelindung lengan (D). Tips: kurangi jeda lebih dulu, hitung kelebihan, lalu pilih durasi terkecil yang tetap menutup kekurangan waktu.",
+        "data": {
+          "jendela": [
+            "08.02",
+            "12.21"
+          ],
+          "jeda": [
+            [
+              "10.03",
+              "10.46"
+            ]
+          ],
+          "tanya": "terpendek",
+          "opsi": [
+            [
+              "Menegakkan bantalan sasaran"
+            ],
+            [
+              "Menandai jalur pemanah"
+            ],
+            [
+              "Memeriksa tali busur"
+            ],
+            [
+              "Menata pelindung lengan"
+            ],
+            [
+              "Membersihkan tempat penyimpanan anak panah"
+            ]
+          ],
+          "tugas": [
+            {
+              "nama": "Menegakkan bantalan sasaran",
+              "menit": 51
+            },
+            {
+              "nama": "Menandai jalur pemanah",
+              "menit": 53
+            },
+            {
+              "nama": "Memeriksa tali busur",
+              "menit": 54
+            },
+            {
+              "nama": "Menata pelindung lengan",
+              "menit": 56
+            },
+            {
+              "nama": "Membersihkan tempat penyimpanan anak panah",
+              "menit": 57
+            }
+          ]
+        }
+      }
+    ]
   }
 }

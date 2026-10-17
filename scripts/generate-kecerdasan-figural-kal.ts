@@ -19,11 +19,16 @@ import { FIG20_ITEMS } from "./figural-kal-20";
 import { FIG20B_ITEMS } from "./figural-kal-20b";
 import { BUNDAR20_ITEMS } from "./figural-kal-bundar-20";
 import { MOSAIK20_ITEMS } from "./figural-mosaik-20";
+// Paket baru diimpor paling akhir: pie() memakai penghitung id global, urutan impor menentukan id panah paket live.
+import { BUNDAR6_ITEMS } from "./figural-kal-bundar-6";
+import { FIG6_ITEMS } from "./figural-kal-6";
+import { MOSAIK6_ITEMS } from "./figural-mosaik-6";
 
 // Figural kalibrasi Logis/Spasial 2026-10-12: 26-27 deret · 28-30 matriks · 31-32 rotasi · 33-34 susun · 35-36 analogi · 37 ikon
 // pkg 13 (Simulasi 1 baru): 28-30, 31-32, 37 (+ susun 34 dari generate-kecerdasan-susun-kal.ts)
 // pkg 2 (Latihan Paket 1): 31-32, 35-36, 37 (figural-kal-2.ts) · pkg 3 (Latihan Paket 2): 26-32, 35-37 (figural-kal-3.ts, + susun 33-34) + pola bundar 51-56 (figural-kal-bundar.ts)
 // pkg 15 (Simulasi 3): 26-27 mosaik (figural-mosaik.ts), 28-32 + 35-37 di sini (tata letak besar + gambar pembahasan), bundar 51-56 (figural-kal-bundar-15.ts)
+// pkg 6 (Latihan Paket 5): mosaik 26-27 (figural-mosaik-6.ts), 28-32 + 35-37 (figural-kal-6.ts), bundar 51-56 (figural-kal-bundar-6.ts, data Codex C2)
 // pkg 16 (Simulasi 1 baru): 26 mosaik, 27-32 + 35-37 (figural-kal-16.ts), bundar 51-56 (figural-kal-bundar-16.ts)
 // Primitif sama dengan s2 (figural-lib.ts): opsi kembar tertangkap oleh place().
 //   npx tsx scripts/generate-kecerdasan-figural-kal.ts → prisma/data/kecerdasan_figural_kal.json ({ [pkg]: Row[] }) + output/figural-kal-preview.html
@@ -289,7 +294,7 @@ type Row = {
   pembahasan: string;
   pembahasan_svg?: string;
 };
-const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS, ...FIG19_ITEMS, ...BUNDAR19_ITEMS, ...MOSAIK20_ITEMS, ...FIG20_ITEMS, ...FIG20B_ITEMS, ...BUNDAR20_ITEMS];
+const all: Built[] = [...items, ...FIG2_ITEMS, ...FIG3_ITEMS, ...BUNDAR_ITEMS.map((b) => ({ ...b, pkg: 3 })), ...buildMosaik(3), ...BUNDAR15_ITEMS, ...FIG16_ITEMS, ...BUNDAR16_ITEMS, ...BUNDAR4_ITEMS, ...FIG4_ITEMS, ...BUNDAR5_ITEMS, ...FIG5_ITEMS, ...FIG19_ITEMS, ...BUNDAR19_ITEMS, ...MOSAIK20_ITEMS, ...FIG20_ITEMS, ...FIG20B_ITEMS, ...BUNDAR20_ITEMS, ...BUNDAR6_ITEMS, ...MOSAIK6_ITEMS, ...FIG6_ITEMS];
 const out: Record<number, Row[]> = {};
 for (const it of all) {
   const choices = it.choices ?? ["a", "b", "c", "d", "e"];
@@ -317,6 +322,9 @@ assert.ok(out[19].every((r) => r.tingkat === 3), "pkg 19: semua gambar HOTS");
 assert.deepEqual(out[20].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
 assert.ok(out[20].every((r) => r.tingkat === 3 && r.pembahasan_svg), "pkg 20: semua gambar HOTS + pembahasan_svg");
 assert.equal(out[20].map((r) => r.scoring_rule.correct_key).join(""), "DBDCABEBAEDCAECE", "pkg 20: rencana huruf kunci");
+assert.deepEqual(out[6].map((r) => r.sequence_number), [26, 27, 28, 29, 30, 31, 32, 35, 36, 37, 51, 52, 53, 54, 55, 56]);
+assert.ok(out[6].every((r) => r.pembahasan_svg), "pkg 6: semua gambar punya pembahasan_svg");
+assert.equal(out[6].slice(0, 10).map((r) => `${r.scoring_rule.correct_key}${r.tingkat}`).join(" "), "D3 E3 E2 D3 A3 D2 B3 E3 C3 D2", "pkg 6: rencana kunci + tingkat gambar");
 for (const r of Object.values(out).flat()) {
   for (const svg of [r.options_payload.svg_content, r.pembahasan_svg ?? ""]) assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(svg), `SVG ${r.sequence_number} tidak aman`);
   // Gambar pembahasan dirender bersama butir lain di satu halaman review: tanpa id supaya tidak bentrok.

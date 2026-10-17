@@ -14,12 +14,15 @@ import { DENAH20_ROWS } from "./generate-kecerdasan-denah-20";
 // Output: prisma/data/kecerdasan_denah_kal.json ({ [package_number]: Row[] }) + output/denah-kal-preview.html
 
 const root = path.join(__dirname, "..");
-const PKGS = [13, 14, 2, 3, 15, 16, 4, 5, 19];
+const PKGS = [13, 14, 2, 3, 15, 16, 4, 5, 19, 6]; // pkg 6 di akhir: `seen` menumpuk, paket lama tetap
 // Paket yang membawa gambar pembahasan (pembahasan_svg) + pembahasan 2 paragraf. 13 tetap seperti semula.
 // Pkg 2/3/14 sudah live: soalnya (options_payload, scoring_rule) wajib identik byte, hanya pembahasan yang di-upgrade.
-const PB = new Set([2, 3, 14, 15, 16, 4, 5, 19, 20]);
+const PB = new Set([2, 3, 14, 15, 16, 4, 5, 19, 20, 6]);
 // Paket baru (bebas dibentuk ulang): wajib 2 sedang / 3 HOTS.
-const NEW = new Set([15, 16, 4, 5, 19]);
+const NEW = new Set([15, 16, 4, 5, 19, 6]);
+// A-7 (tanpa unsur kepolisian): peta yang memuat Kantor Polisi dilewati. Hanya paket baru; paket lama tidak dibentuk ulang.
+const A7 = new Set([6]);
+const polisi = (pkg: number, bw: Map2) => A7.has(pkg) && bw.objs.some((o) => o.kind === "polisi");
 const KEYS = ["A", "B", "C", "D", "E"] as const;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").replace(/[.…]+/g, "").trim();
 
@@ -127,6 +130,7 @@ PKGS.forEach((pkg, pi) => {
   for (let attempt = 0; ; attempt++) {
     reseed(41000 + pkg * 977 + attempt);
     const bw = makeMap2(), p = bw as unknown as Peta, used = new Set<string>();
+    if (polisi(pkg, bw)) continue;
     const walkers = shuffle(WALKERS);
     // pkg 19: arahArah maksimal tier 2, jadi 39 memakai arahBangunan kedua (HOTS bila ≥ 2 pengecoh dekat arah kunci).
     const set = [arahBangunan(p, pos[0], used), (pkg === 19 ? arahBangunan : arahArah)(p, pos[1], used), rute2(bw, pos[2], 2, walkers[0]), rute2(bw, pos[3], 3, walkers[1])];
@@ -144,7 +148,7 @@ PKGS.forEach((pkg, pi) => {
   for (let attempt = 0; ; attempt++) {
     reseed(43000 + pkg * 977 + attempt);
     const bw = makeMap2();
-    if (!clearOfCompass(bw)) continue;
+    if (!clearOfCompass(bw) || polisi(pkg, bw)) continue;
     const s = rotArah(bw, k, pos[4], new Set<string>(), "b");
     if (!fresh([s])) continue;
     rows.push(toRow(42, s!, inlineMap(bw, 2, k * 90, `dk${pkg}q42-`, pkg), PB.has(pkg) ? pembahasanSvg(bw, 2, k * 90, s!) : undefined));
@@ -167,6 +171,7 @@ for (const [pkg, rows] of Object.entries(out)) {
     const texts = r.options_payload.choices.map((c) => c.text);
     assert.equal(new Set(texts).size, 5, `pkg ${pkg} #${r.sequence_number}: opsi kembar`);
     assert.ok(!/<(?:script|image|style)\b|href="(?!#)/.test(r.options_payload.svg_content), `pkg ${pkg} #${r.sequence_number}: SVG tidak aman`);
+    if (A7.has(+pkg)) assert.ok(!/polisi|polri|patroli/i.test(JSON.stringify(r)), `pkg ${pkg} #${r.sequence_number}: A-7`);
     assert.ok(r.pembahasan.includes(+pkg === 20 ? `Jawaban: ${r.scoring_rule.correct_key.toLowerCase()}.` : `Jawaban: ${texts[KEYS.indexOf(r.scoring_rule.correct_key as (typeof KEYS)[number])]}.`), `pkg ${pkg} #${r.sequence_number}: pembahasan ≠ kunci`); // pkg 20 menyebut huruf opsi
   }
 }

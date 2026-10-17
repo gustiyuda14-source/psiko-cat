@@ -6,16 +6,16 @@ import { C, arrow, bits, finishMosaik, ham, md, type Cell, type Def, type Frame,
 // Tiap butir dibuktikan tunggal dengan enumerasi ruang hipotesis aturan: hanya hipotesis yang cocok dengan semua gambar soal
 // yang tersisa, dan semuanya meramalkan gambar yang sama untuk "?" (butir 26: `prove`; butir 27: `proveSeries`, ruang jauh lebih luas, "?" di gambar terakhir).
 
-type Gen<P> = (t: number, p: P) => Frame;
+export type Gen<P> = (t: number, p: P) => Frame;
 const cellOf = (b: string, i: number) => b.slice(i * 400, (i + 1) * 400);
 const sameVis = (a: Frame, b: Frame) => bits(a) === bits(b);
 /** Jumlah petak yang tampak berbeda (dua gambar harus beda minimal di 2 petak agar jelas terbedakan di layar HP). */
-const cellsDiff = (a: Frame, b: Frame) => { const x = bits(a), y = bits(b); let n = 0; for (let i = 0; i < a.length; i++) if (cellOf(x, i) !== cellOf(y, i)) n++; return n; };
+export const cellsDiff = (a: Frame, b: Frame) => { const x = bits(a), y = bits(b); let n = 0; for (let i = 0; i < a.length; i++) if (cellOf(x, i) !== cellOf(y, i)) n++; return n; };
 const product = <P extends Record<string, unknown[]>>(space: P): { [K in keyof P]: P[K][number] }[] =>
   Object.entries(space).reduce<Record<string, unknown>[]>((acc, [k, vs]) => acc.flatMap((a) => vs.map((v) => ({ ...a, [k]: v }))), [{}]) as never;
 
 /** Bukti D-1: hanya hipotesis yang mereproduksi semua gambar tampak yang lolos, dan semuanya meramalkan jawaban yang sama. */
-function prove<P extends Record<string, unknown>>(seq: number, gen: Gen<P>, truth: P, space: { [K in keyof P]: P[K][] }, shown: number[], hidden: number, distractors: P[]) {
+export function prove<P extends Record<string, unknown>>(seq: number, gen: Gen<P>, truth: P, space: { [K in keyof P]: P[K][] }, shown: number[], hidden: number, distractors: P[]) {
   const ok = product(space as never as Record<string, unknown[]>).filter((p) => shown.every((t) => sameVis(gen(t, p as P), gen(t, truth)))) as P[];
   assert.ok(ok.length >= 1, `mosaik ${seq}: kebenaran tidak konsisten dengan dirinya`);
   for (const p of ok) assert.ok(sameVis(gen(hidden, p), gen(hidden, truth)), `mosaik ${seq}: hipotesis lain cocok dengan gambar soal tetapi meramalkan jawaban berbeda ${JSON.stringify(p)}`);
