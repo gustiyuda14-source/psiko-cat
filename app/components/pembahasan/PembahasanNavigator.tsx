@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { buttonStyles } from "@/app/components/ui";
 import { ChevronDown, ChevronLeft, ChevronRight } from "@/app/components/icons";
-import { cardView, type CardData } from "@/app/components/pembahasan/cards";
+import { cardView, type CardData, type KeswaCekData } from "@/app/components/pembahasan/cards";
 import type {
   KecerdasanReviewItem,
   KecermatanColumnGroup,
@@ -26,11 +26,15 @@ import type { PribadiReviewItem } from "@/app/components/PribadiReview";
 type State = "ok" | "bad" | "mid" | "skip" | "plain";
 type Filter = "all" | State;
 type Entry = { id: string; no: number; state: State; pick: string | null; card: CardData };
+type Stat = { label: string; value: number; tone?: "ok" | "bad" | "mid" };
+/** tone = status grup di tab (cek Keswa lolos/tidak); empty = kartu bila grup tanpa butir. */
+type Group = { label: string; entries: Entry[]; tone?: "ok" | "bad"; empty?: CardData };
 type Section = {
   key: string;
   label: string;
-  groups: { label: string; entries: Entry[] }[];
-  stats: { label: string; value: number; tone?: "ok" | "bad" | "mid" }[];
+  groups: Group[];
+  stats: Stat[];
+  words?: Partial<Record<State, string>>;
   extra?: [string, string][];
   filters: [Filter, string][];
   legend: [State, string][];
@@ -41,6 +45,8 @@ export type PembahasanNavigatorProps = {
   kepribadian?: KepribadianReviewItem[];
   pribadi?: PribadiReviewItem[];
   kecermatan?: { summary: KecermatanSummary | null; groups: KecermatanColumnGroup[] };
+  /** Keswa: 5 cek validitas sebagai "kolom"; petak = hanya butir yang memicu cek. */
+  keswa?: { label: string; cek: KeswaCekData[]; stats: Stat[]; extra: [string, string][] };
 };
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
@@ -65,7 +71,9 @@ const r1 = (v: number | null) => (v == null ? "—" : v.toFixed(1));
 const count = (entries: Entry[], ...states: State[]) => entries.filter((e) => states.includes(e.state)).length;
 const matches = (e: Entry, f: Filter) => f === "all" || e.state === f || (f === "bad" && e.state === "mid");
 
-function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan }: PembahasanNavigatorProps): Section[] {
+const huruf = (jawab: string) => (jawab === "Ya" ? "Y" : jawab === "Tidak" ? "T" : "");
+
+function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: PembahasanNavigatorProps): Section[] {
   const out: Section[] = [];
 
   if (kecerdasan?.length) {
@@ -180,14 +188,42 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan }: Pembaha
     });
   }
 
+  if (keswa?.cek.length) {
+    out.push({
+      key: "keswa",
+      label: keswa.label,
+      groups: keswa.cek.map((cek) => ({
+        label: cek.tab,
+        tone: cek.lolos ? "ok" : "bad",
+        empty: { kind: "keswa", cek },
+        entries: cek.items
+          .map(
+            (item): Entry => ({
+              id: item.butir.map((b) => b.no).join("-"),
+              no: item.butir[0].no,
+              pick: item.butir.map((b) => huruf(b.jawab)).join("") || null,
+              state: "bad",
+              card: { kind: "keswa", cek, item },
+            })
+          )
+          .sort((a, b) => a.no - b.no),
+      })),
+      stats: keswa.stats,
+      extra: keswa.extra,
+      words: { bad: "terdeteksi" },
+      filters: [["all", "Semua"], ["bad", "Terdeteksi"]],
+      legend: [["bad", "Terdeteksi (memicu cek)"]],
+    });
+  }
+
   return out;
 }
 
 export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
-  const { kecerdasan, kepribadian, pribadi, kecermatan } = props;
+  const { kecerdasan, kepribadian, pribadi, kecermatan, keswa } = props;
   const sections = useMemo(
-    () => buildSections({ kecerdasan, kepribadian, pribadi, kecermatan }),
-    [kecerdasan, kepribadian, pribadi, kecermatan]
+    () => buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }),
+    [kecerdasan, kepribadian, pribadi, kecermatan, keswa]
   );
   const [si, setSi] = useState(0);
   const [gi, setGi] = useState(0);
@@ -198,8 +234,10 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
   const soalRef = useRef<HTMLElement>(null);
 
   const section = sections[Math.min(si, sections.length - 1)];
-  const entries = section?.groups[gi]?.entries ?? section?.groups[0]?.entries ?? [];
+  const group = section?.groups[gi] ?? section?.groups[0];
+  const entries = group?.entries ?? [];
   const entry = entries[idx] ?? entries[0];
+  const card = entry?.card ?? group?.empty;
   const visible = entries.flatMap((e, i) => (matches(e, filter) ? [i] : []));
   const prevIdx = visible.filter((i) => i < idx).at(-1);
   const nextIdx = visible.find((i) => i > idx);
@@ -236,16 +274,16 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
     return () => window.removeEventListener("keydown", onKey);
   }, []);
 
-  if (!section || !entry) {
+  if (!section || !card) {
     return <p className="text-sm text-muted-foreground">Tidak ada jawaban tersimpan.</p>;
   }
 
-  const view = cardView(entry.card, reveal);
+  const view = cardView(card, reveal);
   const pos = visible.indexOf(idx);
 
   function pickFilter(f: Filter) {
     setFilter(f);
-    if (f !== "all" && !matches(entry, f)) {
+    if (f !== "all" && entry && !matches(entry, f)) {
       const first = entries.findIndex((e) => matches(e, f));
       if (first >= 0) select(first);
     }
@@ -378,21 +416,23 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
 
             <div className={`${gridOpen ? "block" : "hidden"} mt-3 space-y-3 @3xl:block`}>
               {section.groups.length > 1 && (
-                <div className="grid grid-cols-5 gap-1" role="group" aria-label="Pilih kolom">
+                <div className={section.groups.some((g) => g.tone) ? "flex flex-wrap gap-1" : "grid grid-cols-5 gap-1"} role="group" aria-label="Pilih kolom">
                   {section.groups.map((g, i) => (
                     <button
                       key={g.label}
                       type="button"
                       aria-pressed={i === gi}
+                      aria-label={g.tone ? `${g.label}, ${g.tone === "ok" ? "lolos" : "tidak lolos"}` : undefined}
                       onClick={() => {
                         setGi(i);
                         setIdx(0);
                         setFilter("all");
                       }}
-                      className={`min-h-8 rounded-md border text-xs font-semibold ${
+                      className={`min-h-8 rounded-md border text-xs font-semibold ${g.tone ? "inline-flex items-center gap-1.5 px-2.5" : ""} ${
                         i === gi ? "border-primary bg-primary text-primary-foreground" : "border-border bg-card text-foreground hover:bg-surface-inset"
                       }`}
                     >
+                      {g.tone && <span className={`size-2 rounded-full ${CELL[g.tone]}`} aria-hidden="true" />}
                       {g.label}
                     </button>
                   ))}
@@ -426,7 +466,7 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
                     type="button"
                     onClick={() => select(i)}
                     aria-current={i === idx ? "true" : undefined}
-                    aria-label={`Nomor ${e.no}, ${STATE_WORD[e.state]}${e.pick ? `, jawaban ${e.pick}` : ""}`}
+                    aria-label={`Nomor ${e.no}, ${section.words?.[e.state] ?? STATE_WORD[e.state]}${e.pick ? `, jawaban ${e.pick}` : ""}`}
                     className={`tnum relative h-10 rounded-md text-sm font-bold transition-opacity ${CELL[e.state]} ${
                       matches(e, filter) ? "" : "opacity-20"
                     } ${i === idx ? "ring-2 ring-accent ring-offset-2 ring-offset-card" : ""}`}

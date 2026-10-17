@@ -9,6 +9,11 @@ import type {
 } from "@/app/components/PembahasanSection";
 import type { PribadiReviewItem } from "@/app/components/PribadiReview";
 import { MathText } from "@/app/components/MathText";
+import type { Bahas, BahasItem } from "@/lib/keswa-pembahasan";
+import type { CekBaris } from "@/lib/keswa-teks";
+
+/** Satu cek validitas Keswa, sudah diturunkan di server untuk percobaan ini (tanpa daftar kunci). */
+export type KeswaCekData = Bahas & CekBaris;
 
 /*
   Isi kartu soal + kartu pembahasan untuk satu nomor, per jenis butir.
@@ -19,7 +24,8 @@ export type CardData =
   | { kind: "ks"; item: KecerdasanReviewItem }
   | { kind: "kp"; item: KepribadianReviewItem }
   | { kind: "pribadi"; item: PribadiReviewItem; no: number; close: boolean }
-  | { kind: "kc"; item: KecermatanDetailItem; kolom: string };
+  | { kind: "kc"; item: KecermatanDetailItem; kolom: string }
+  | { kind: "keswa"; cek: KeswaCekData; item?: BahasItem };
 
 export type CardView = {
   title: string;
@@ -315,6 +321,78 @@ function SimbolJawaban({ k, symbol }: { k: string; symbol: string }) {
   );
 }
 
+// **kata** -> sorotan; dipakai untuk teks pembahasan Keswa, bukan kalimat soal.
+const sorot = (t: string) => t.split(/\*\*(.+?)\*\*/).map((x, i) => (i % 2 ? <mark key={i} className="ksw-kunci">{x}</mark> : x));
+const LABEL_KECIL = "text-xs font-semibold uppercase tracking-[0.08em] text-accent-ink";
+
+/* Keswa tidak punya kunci: hanya butir yang memicu cek yang tampil; baris jawaban ditandai "Jawaban kamu", tidak pernah "Kunci". */
+function keswa(cek: KeswaCekData, item?: BahasItem): CardView {
+  return {
+    title: item ? `${cek.tab} · nomor ${item.butir.map((b) => b.no).join(" & ")}` : cek.judul,
+    status: item ? (
+      <Badge tone="danger">
+        <Close className="size-3.5" strokeWidth={3} />
+        Terdeteksi
+      </Badge>
+    ) : null,
+    hasKey: false,
+    soal: item ? (
+      item.butir.map((b) => (
+        <div key={b.no} className="space-y-2">
+          <p className="max-w-[72ch] leading-relaxed text-foreground">
+            <span className="tnum font-bold text-muted-foreground">{b.no}.</span> {b.teks}
+          </p>
+          <Choices
+            rows={[
+              ["Y", "Ya"],
+              ["T", "Tidak"],
+            ].map(([k, text]) => (b.jawab === text ? { k, text, tone: "bad", tag: "Jawaban kamu" } : { k, text, tone: null }))}
+          />
+        </div>
+      ))
+    ) : (
+      <p className="text-sm text-muted-foreground">Tidak ada butir yang terdeteksi di cek ini.</p>
+    ),
+    pembahasan: (
+      <>
+        {item && (
+          <>
+            <AnswerLine
+              items={[
+                ["Jawaban kamu", item.butir.map((b) => b.jawab).join(" · ")],
+                ["Status", "Terdeteksi", "text-destructive"],
+              ]}
+            />
+            <p className="max-w-[72ch] leading-relaxed text-foreground">{sorot(item.catatan)}</p>
+          </>
+        )}
+        <div className={`max-w-[72ch] space-y-1.5 text-sm leading-relaxed text-foreground ${item ? "border-t border-border pt-3" : ""}`}>
+          <p className="flex flex-wrap items-center gap-2">
+            <b className="font-heading">Cek {cek.judul}</b>
+            <Badge tone={cek.lolos ? "success" : "danger"}>{cek.lolos ? "Lolos" : "Tidak lolos"}</Badge>
+            <span className="tnum text-muted-foreground">{cek.angka}</span>
+          </p>
+          <p>{cek.arti}</p>
+          <p className="text-muted-foreground">{cek.ringkas}</p>
+          <p className={`${LABEL_KECIL} pt-2`}>Apa yang diukur</p>
+          <p>{sorot(cek.diukur)}</p>
+          <p className={`${LABEL_KECIL} pt-2`}>Kenapa jawabanmu terdeteksi</p>
+          <p>{sorot(cek.alasan)}</p>
+          {cek.nomor && <p className="tnum break-words text-muted-foreground">Nomor: {cek.nomor}</p>}
+          <p className={`${LABEL_KECIL} pt-2`}>Analogi</p>
+          <blockquote className="border-l-2 border-accent/50 pl-4 italic">{sorot(cek.analogi)}</blockquote>
+          <p className={`${LABEL_KECIL} pt-2`}>Saran perbaikan</p>
+          <ul className="list-disc space-y-1 pl-5">
+            {cek.saran.map((x) => (
+              <li key={x}>{sorot(x)}</li>
+            ))}
+          </ul>
+        </div>
+      </>
+    ),
+  };
+}
+
 export function cardView(card: CardData, reveal: boolean): CardView {
   switch (card.kind) {
     case "ks":
@@ -325,5 +403,7 @@ export function cardView(card: CardData, reveal: boolean): CardView {
       return pribadi(card.item, card.no, card.close, reveal);
     case "kc":
       return kecermatan(card.item, card.kolom, reveal);
+    case "keswa":
+      return keswa(card.cek, card.item);
   }
 }
