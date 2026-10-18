@@ -123,7 +123,12 @@ export default function LatihanKecermatan({
     if (target >= 0) {
       setError("");
       if (q) timing.markNav(q.column_index ?? 1);
-      setIdx(target);
+      // Pindah ke kolom lain lewat tab: jeda 5 detik seperti ujian (jam analisis ikut berhenti).
+      if (colNum === q?.column_index) return setIdx(target);
+      pendingIdxRef.current = target;
+      setNextCol(colNum);
+      setIntroSeconds(INTRO_SECONDS);
+      setShowColIntro(true);
     }
   }
 
@@ -276,7 +281,7 @@ export default function LatihanKecermatan({
         <div className="surface-card space-y-2 px-6 py-12 text-center">
           <p className="text-sm text-muted-foreground">Kolom {ROMAN[(nextCol ?? 1) - 1]}</p>
           <p className="tnum font-heading text-6xl text-foreground">{introSeconds}</p>
-          <p className="text-sm text-muted-foreground">Kolom berikutnya akan dimulai…</p>
+          <p className="text-sm text-muted-foreground">Kolom akan dimulai…</p>
         </div>
       </div>
     );
