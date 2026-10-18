@@ -9,7 +9,10 @@ import {
   KECERMATAN_SPASIAL_DASAR_PACKAGE_LABELS,
   KECERMATAN_SIMBOL_PACKAGES,
   KECERMATAN_SIMBOL_PACKAGE_LABELS,
-  KECERMATAN_PACKAGES,
+  KECERMATAN_EMOJI_PACKAGES,
+  KECERMATAN_SILUET_PACKAGES,
+  KECERMATAN_SAINS_PACKAGES,
+  KECERMATAN_SAINS_PACKAGE_LABELS,
   KECERMATAN_PACKAGE_LABELS,
   KEPRIBADIAN_PACKAGES,
   KEPRIBADIAN_PACKAGE_LABELS,
@@ -29,15 +32,17 @@ const DESC = {
   KEPRIBADIAN: "Kepribadian + Integritas & Kejujuran, 111 butir per paket",
 } as const;
 
-// Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya lima aspek.
+// Kunci progres = rute sesi paket (lib/practice-progress.ts). Kecermatan punya tujuh aspek.
 const ROWS: { module: ModuleType; label: string; route: string; ids: number[]; labels: Record<number, string>; per: number }[] = [
   { module: "KECERDASAN", label: "Kecerdasan", route: "/latihan/kecerdasan", ids: KECERDASAN_PACKAGES, labels: KECERDASAN_PACKAGE_LABELS, per: 100 },
   { module: "KEPRIBADIAN", label: "Kepribadian", route: "/latihan/kepribadian", ids: KEPRIBADIAN_PACKAGES, labels: KEPRIBADIAN_PACKAGE_LABELS, per: PRIBADI_PACKAGE_SIZE },
-  { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Emoji & Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_EMOJI_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Angka & Huruf", route: "/latihan/kecermatan-angka", ids: KECERMATAN_ANGKA_PACKAGES, labels: KECERMATAN_ANGKA_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Spasial Dasar", route: "/latihan/kecermatan-spasial-dasar", ids: KECERMATAN_SPASIAL_DASAR_PACKAGES, labels: KECERMATAN_SPASIAL_DASAR_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Spasial", route: "/latihan/kecermatan-spasial", ids: KECERMATAN_SPASIAL_PACKAGES, labels: KECERMATAN_SPASIAL_PACKAGE_LABELS, per: 500 },
   { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Simbol Hilang", route: "/latihan/kecermatan-simbol", ids: KECERMATAN_SIMBOL_PACKAGES, labels: KECERMATAN_SIMBOL_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Siluet Gambar", route: "/latihan/kecermatan", ids: KECERMATAN_SILUET_PACKAGES, labels: KECERMATAN_PACKAGE_LABELS, per: 500 },
+  { module: "KECERMATAN", label: "Sikap Kerja / Kecermatan Simbol Sains", route: "/latihan/kecermatan-sains", ids: KECERMATAN_SAINS_PACKAGES, labels: KECERMATAN_SAINS_PACKAGE_LABELS, per: 500 },
 ];
 
 export default async function LatihanIndexPage() {

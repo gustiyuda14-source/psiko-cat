@@ -21,15 +21,22 @@ export function latihanHref(type: ModuleType): string {
   return `/dashboard/latihan/${MODULE_CONFIG[type].slug}`;
 }
 
-// Pool ujian/tryout Kecermatan. Paket 9 (siluet ikon, scripts/generate-kecermatan-simbol.ts)
-// latihan saja, jadi tidak ada di sini.
+// Pool ujian/tryout Kecermatan = tab Emoji & Gambar.
 const KECERMATAN_UJIAN_PACKAGES = [3, 4, 5, 6, 7, 8];
+export const KECERMATAN_EMOJI_PACKAGES = KECERMATAN_UJIAN_PACKAGES;
 
-export const KECERMATAN_PACKAGES = [...KECERMATAN_UJIAN_PACKAGES, 9];
+// Tab Siluet Gambar: paket 9 (dulu "Paket 7" Emoji & Gambar) + 601-604. Latihan
+// saja. Rute sesinya tetap /latihan/kecermatan/[package] supaya progres dan
+// pembahasan tersimpan paket 9 tidak hilang.
+export const KECERMATAN_SILUET_PACKAGES = [9, 601, 602, 603, 604];
 
-export const KECERMATAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
-  KECERMATAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
-);
+// Paket sah di rute /latihan/kecermatan/[package] (kedua tab di atas).
+export const KECERMATAN_PACKAGES = [...KECERMATAN_EMOJI_PACKAGES, ...KECERMATAN_SILUET_PACKAGES];
+
+export const KECERMATAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries([
+  ...KECERMATAN_EMOJI_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`]),
+  ...KECERMATAN_SILUET_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`]),
+]);
 
 export function pickRandomKecermatanPackage(): number {
   return KECERMATAN_UJIAN_PACKAGES[Math.floor(Math.random() * KECERMATAN_UJIAN_PACKAGES.length)];
@@ -71,6 +78,14 @@ export const KECERMATAN_SIMBOL_PACKAGES = [301, 302, 303, 304, 305];
 
 export const KECERMATAN_SIMBOL_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KECERMATAN_SIMBOL_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
+// Aspek Simbol Sains: huruf Yunani + lambang matematika/fisika
+// (scripts/generate-kecermatan-sains.ts). Latihan saja, tidak masuk pool ujian.
+export const KECERMATAN_SAINS_PACKAGES = [701, 702, 703, 704, 705];
+
+export const KECERMATAN_SAINS_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_SAINS_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
 // Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)

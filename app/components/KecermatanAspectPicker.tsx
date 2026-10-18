@@ -5,30 +5,36 @@ import { PackageCarousel, type PackageOption } from "@/app/components/PackageCar
 
 const ASPECTS = [
   { id: "emoji", label: "Emoji & Gambar", hrefBase: "/latihan/kecermatan" },
+  { id: "siluet", label: "Siluet Gambar", hrefBase: "/latihan/kecermatan" },
   { id: "angka", label: "Angka & Huruf", hrefBase: "/latihan/kecermatan-angka" },
   { id: "spasialDasar", label: "Spasial Dasar", hrefBase: "/latihan/kecermatan-spasial-dasar" },
   { id: "spasial", label: "Spasial", hrefBase: "/latihan/kecermatan-spasial" },
   { id: "simbol", label: "Simbol Hilang", hrefBase: "/latihan/kecermatan-simbol" },
+  { id: "sains", label: "Simbol Sains", hrefBase: "/latihan/kecermatan-sains" },
 ] as const;
 
-// Satu tile "Kecermatan" di sidebar, lima sub-tile aspek di dalamnya — bukan
+// Satu tile "Kecermatan" di sidebar, tujuh sub-tile aspek di dalamnya — bukan
 // tile latihan terpisah. package_number tiap aspek tidak overlap
-// (3-9, 101-105, 201-206, 301+, 501+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
+// (3-8, 9+601-604, 101-105, 201-206, 301+, 501+, 701+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
 export function KecermatanAspectPicker({
   emojiPackages,
   angkaPackages,
   spasialDasarPackages,
   spasialPackages,
   simbolPackages,
+  siluetPackages,
+  sainsPackages,
 }: {
   emojiPackages: PackageOption[];
   angkaPackages: PackageOption[];
   spasialDasarPackages: PackageOption[];
   spasialPackages: PackageOption[];
   simbolPackages: PackageOption[];
+  siluetPackages: PackageOption[];
+  sainsPackages: PackageOption[];
 }) {
   const [aspect, setAspect] = useState<(typeof ASPECTS)[number]["id"]>("emoji");
-  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasialDasar: spasialDasarPackages, spasial: spasialPackages, simbol: simbolPackages };
+  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasialDasar: spasialDasarPackages, spasial: spasialPackages, simbol: simbolPackages, siluet: siluetPackages, sains: sainsPackages };
   const active = ASPECTS.find((a) => a.id === aspect)!;
 
   return (

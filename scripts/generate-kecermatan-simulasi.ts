@@ -4,6 +4,7 @@ import { copyFileSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSy
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { PAKET as SAINS_PAKET } from "./generate-kecermatan-sains";
 import { downloadSiluet, glyphPool, makeColumn, maxAlternation, maxRun, mulberry32, shuffle } from "./generate-kecermatan-simbol";
 
 // Paket Kecermatan Simulasi Penuh: gabungan 5 jenis latihan, semua hitam-putih.
@@ -85,10 +86,12 @@ const textSvg = (text: string, size: number, weight: number) =>
 
 // Anti-bocor: kumpulan simbol semua bank latihan (+ bank simulasi lain) yang sudah ada.
 const latihanSymbols = new Set<string>();
-for (const id of [3, 4, 5, 6, 7, 8, 9, 10, 101, 102, 103, 104, 105, 301]) {
+for (const id of [3, 4, 5, 6, 7, 8, 9, 10, 101, 102, 103, 104, 105, 301, 701, 702, 703, 704, 705]) {
   const bank = JSON.parse(readFileSync(join(root, `prisma/data/bank_soal_p${id}.json`), "utf8"));
   for (const k of bank.kolom) for (const v of Object.values(k.simbol)) latihanSymbols.add(String(v));
 }
+
+const sainsGlyphs = new Set(SAINS_PAKET.flatMap((set) => [...set]));
 
 const donors = new Map<number, { dir: string; bank: { kolom: { simbol: Record<Key, string> }[] } }>();
 function donor(pkg: number) {
@@ -113,6 +116,8 @@ async function symbolsFor(k: Kolom, c: number): Promise<string[]> {
     case "ANGKA_HURUF":
       return save(k.token.map((t) => textSvg(t, t.length > 2 ? 40 : 52, 700)));
     case "SIMBOL":
+      // Simbol Sains 701-705 disimpan sebagai path SVG, jadi dicek per huruf di sini.
+      for (const h of k.huruf) assert.ok(!sainsGlyphs.has(h), `Kolom ${c + 1}: ${h} sudah dipakai paket latihan Simbol Sains`);
       return save(k.huruf.map((h) => textSvg(h, 72, 400)));
     case "AKSARA": {
       // glyphPool menulis 10 glyph (2 dasar x 5 varian beda 1 goresan) ke public/kecermatan-simbol/p<PKG>/;

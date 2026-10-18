@@ -1,0 +1,5138 @@
+{
+  "nomor": 705,
+  "nama": "Paket Simbol Sains 5",
+  "kategori": "SIMBOL_SAINS",
+  "total_soal": 500,
+  "kolom": [
+    {
+      "nomor": 1,
+      "roman": "I",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/himpunan-kosong.svg",
+        "B": "/kecermatan-sains/p705/gabungan-kotak.svg",
+        "C": "/kecermatan-sains/p705/irisan.svg",
+        "D": "/kecermatan-sains/p705/irisan-kotak.svg",
+        "E": "/kecermatan-sains/p705/gabungan.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/himpunan-kosong.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/irisan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan-kotak.svg",
+            "/kecermatan-sains/p705/gabungan.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 2,
+      "roman": "II",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/memuat.svg",
+        "B": "/kecermatan-sains/p705/epsilon.svg",
+        "C": "/kecermatan-sains/p705/ada.svg",
+        "D": "/kecermatan-sains/p705/elemen.svg",
+        "E": "/kecermatan-sains/p705/bukan-elemen.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/elemen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/epsilon.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg",
+            "/kecermatan-sains/p705/ada.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/ada.svg",
+            "/kecermatan-sains/p705/elemen.svg",
+            "/kecermatan-sains/p705/memuat.svg",
+            "/kecermatan-sains/p705/bukan-elemen.svg"
+          ],
+          "kunci": "B"
+        }
+      ]
+    },
+    {
+      "nomor": 3,
+      "roman": "III",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/bukan-subset.svg",
+        "B": "/kecermatan-sains/p705/subset-kotak.svg",
+        "C": "/kecermatan-sains/p705/subset-sama.svg",
+        "D": "/kecermatan-sains/p705/subset-sejati.svg",
+        "E": "/kecermatan-sains/p705/subset.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sama.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/subset-sejati.svg",
+            "/kecermatan-sains/p705/subset-sama.svg",
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/bukan-subset.svg",
+            "/kecermatan-sains/p705/subset-kotak.svg",
+            "/kecermatan-sains/p705/subset.svg",
+            "/kecermatan-sains/p705/subset-sejati.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 4,
+      "roman": "IV",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/hampir-sama.svg",
+        "B": "/kecermatan-sains/p705/identik.svg",
+        "C": "/kecermatan-sains/p705/tilde-garis.svg",
+        "D": "/kecermatan-sains/p705/tidak-identik.svg",
+        "E": "/kecermatan-sains/p705/kongruen.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/tilde-garis.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/tilde-garis.svg",
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg",
+            "/kecermatan-sains/p705/identik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/kongruen.svg",
+            "/kecermatan-sains/p705/identik.svg",
+            "/kecermatan-sains/p705/tidak-identik.svg",
+            "/kecermatan-sains/p705/hampir-sama.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 5,
+      "roman": "V",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/rho-ekor.svg",
+        "B": "/kecermatan-sains/p705/delta-kecil.svg",
+        "C": "/kecermatan-sains/p705/sigma-kecil.svg",
+        "D": "/kecermatan-sains/p705/parsial.svg",
+        "E": "/kecermatan-sains/p705/rho.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/rho.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/parsial.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/rho-ekor.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/parsial.svg",
+            "/kecermatan-sains/p705/rho.svg",
+            "/kecermatan-sains/p705/delta-kecil.svg",
+            "/kecermatan-sains/p705/sigma-kecil.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 6,
+      "roman": "VI",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/ekuivalen.svg",
+        "B": "/kecermatan-sains/p705/setimbang.svg",
+        "C": "/kecermatan-sains/p705/panah-bolak-balik.svg",
+        "D": "/kecermatan-sains/p705/panah-dua-arah.svg",
+        "E": "/kecermatan-sains/p705/setimbang-terbalik.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/panah-bolak-balik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/panah-dua-arah.svg",
+            "/kecermatan-sains/p705/setimbang-terbalik.svg",
+            "/kecermatan-sains/p705/ekuivalen.svg",
+            "/kecermatan-sains/p705/setimbang.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 7,
+      "roman": "VII",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/integral-permukaan.svg",
+        "B": "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+        "C": "/kecermatan-sains/p705/integral-ganda.svg",
+        "D": "/kecermatan-sains/p705/integral.svg",
+        "E": "/kecermatan-sains/p705/integral-tertutup.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/integral-permukaan.svg",
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/integral.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/integral-ganda.svg",
+            "/kecermatan-sains/p705/integral-lipat-tiga.svg",
+            "/kecermatan-sains/p705/integral-tertutup.svg",
+            "/kecermatan-sains/p705/integral-permukaan.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    },
+    {
+      "nomor": 8,
+      "roman": "VIII",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/omega-besar.svg",
+        "B": "/kecermatan-sains/p705/omega-terbalik.svg",
+        "C": "/kecermatan-sains/p705/irisan.svg",
+        "D": "/kecermatan-sains/p705/produk.svg",
+        "E": "/kecermatan-sains/p705/produk-terbalik.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg",
+            "/kecermatan-sains/p705/irisan.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/omega-besar.svg",
+            "/kecermatan-sains/p705/produk-terbalik.svg",
+            "/kecermatan-sains/p705/omega-terbalik.svg",
+            "/kecermatan-sains/p705/produk.svg"
+          ],
+          "kunci": "C"
+        }
+      ]
+    },
+    {
+      "nomor": 9,
+      "roman": "IX",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/titik-bulat.svg",
+        "B": "/kecermatan-sains/p705/minus-bulat.svg",
+        "C": "/kecermatan-sains/p705/plus-bulat.svg",
+        "D": "/kecermatan-sains/p705/garis-bulat.svg",
+        "E": "/kecermatan-sains/p705/kali-bulat.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/garis-bulat.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/titik-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/garis-bulat.svg",
+            "/kecermatan-sains/p705/minus-bulat.svg",
+            "/kecermatan-sains/p705/plus-bulat.svg",
+            "/kecermatan-sains/p705/kali-bulat.svg"
+          ],
+          "kunci": "A"
+        }
+      ]
+    },
+    {
+      "nomor": 10,
+      "roman": "X",
+      "simbol": {
+        "A": "/kecermatan-sains/p705/kurang-sama.svg",
+        "B": "/kecermatan-sains/p705/sudut.svg",
+        "C": "/kecermatan-sains/p705/jauh-kurang.svg",
+        "D": "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+        "E": "/kecermatan-sains/p705/mendahului.svg"
+      },
+      "soal": [
+        {
+          "nomor": 1,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 2,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 3,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 4,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 5,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 6,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 7,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 8,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 9,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 10,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 11,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 12,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 13,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 14,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 15,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 16,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 17,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 18,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 19,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 20,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 21,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 22,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 23,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 24,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 25,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 26,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 27,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 28,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 29,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 30,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 31,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 32,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 33,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 34,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 35,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 36,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 37,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 38,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 39,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 40,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 41,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 42,
+          "shown": [
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 43,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "B"
+        },
+        {
+          "nomor": 44,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 45,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "D"
+        },
+        {
+          "nomor": 46,
+          "shown": [
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "A"
+        },
+        {
+          "nomor": 47,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 48,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/mendahului.svg"
+          ],
+          "kunci": "C"
+        },
+        {
+          "nomor": 49,
+          "shown": [
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama-ganda.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg",
+            "/kecermatan-sains/p705/sudut.svg"
+          ],
+          "kunci": "E"
+        },
+        {
+          "nomor": 50,
+          "shown": [
+            "/kecermatan-sains/p705/sudut.svg",
+            "/kecermatan-sains/p705/mendahului.svg",
+            "/kecermatan-sains/p705/jauh-kurang.svg",
+            "/kecermatan-sains/p705/kurang-sama.svg"
+          ],
+          "kunci": "D"
+        }
+      ]
+    }
+  ]
+}
