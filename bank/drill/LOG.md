@@ -200,3 +200,12 @@ NEW aktif (tambahan): K07-N-021..040 (20 butir, `rilis` 2026-10-14).
 - **Keterangan jeda dipindah ke sesudah daftar** (AK-008 rapat, AK-009 ishoma, AK-012 apel siang, AK-013 istirahat), sama dengan format strategi.
 - Cek buta Codex ulang 8 butir yang berubah (001, 006, 008, 009, 012, 013, 015, 016): 8/8 huruf sama, tidak ambigu → tetap `ganda`. `cek-alokasi.ts` lolos.
 
+
+## Batch 24 — Debit & volume tabung: K07 NUM-CRT-DEBIT (30) · 2026-10-19
+
+Sumber `baru`. Bentuk dari pemilik ("PAKET 1 - Drum Air": volume drum tabung → waktu isi dengan debit → sisa belum terisi); kalimat dan angka sumber (r 35, t 100, debit 11, 20 menit) tidak dipakai. Sebelumnya bentuk ini hanya ada sepotong (K07-B3-064 volume saja, paket latihan 3 bak balok + debit) dan belum ada di simulasi penuh.
+- `K07-N-041`–`070`, tier 10/10/10, `rilis` 2026-10-19. Tier 1 volume liter; tier 2 waktu sampai penuh (diameter / tinggi dalam meter); tier 3 sisa setelah t menit (4), sudah terisi 1/3 (2), bocor (2), debit liter per detik (2). Semua wadah tabung, π = 22/7, jari-jari kelipatan 7.
+- **Generator** `scripts/generate-k07-debit.ts`: kunci dan pengecoh dihitung dari data. Pengecoh bernama (D-2): DIAMETER, DUAKALI, KONV100, KONV10000, KERUCUT, SELIMUT, KUADRAT, TERTUKAR (r dan t), METER, KALI (volume × debit), TERISI (jawab air masuk), SISAWAKTU (jawab sisa menit), TAMBAH, LUPAKALI, LUPAAWAL, AWALBALIK, ABAIBOCOR, BOCORTAMBAH, BOCORSAJA, DETIKMENIT. Pengecoh > 40× atau < 1/40 kunci dibuang (tidak masuk akal). Opsi urut naik; posisi kunci dicari agar ≤ 7 per huruf (hasil a5 b7 c7 d7 e4; pembagian 6 rata tidak mungkin karena tier 1–2 jarang punya 4 pengecoh di bawah kunci). Butir K07 lain identik byte.
+- **Cek buta** Codex (tanpa kunci, urutan diacak): 30/30 huruf sama, tidak ada soal ambigu. Semua `ganda`. Reviewer pembahasan terpisah (Q-7) tidak dijalankan.
+- Label kategori "Debit & volume" di `lib/drill-cards.ts`; taksonomi di `docs/rencana/drilling/02`. Tanpa gambar pembahasan.
+NEW aktif (tambahan): K07-N-041..070 (30 butir, `rilis` 2026-10-19).

@@ -3971,5 +3971,875 @@
     },
     "pembahasan": "1. Hitung poin per menit tiap kegiatan: Membangun gapura bambu 105 ÷ 15 = 7; Mencari jejak 80 ÷ 20 = 4; Mengikat tali pancang 25 ÷ 5 = 5; Membersihkan area kemah 24 ÷ 8 = 3.\n2. Poin per menit tertinggi: Membangun gapura bambu (7). Bandingkan dengan poin per kegiatan: kegiatan berpoin terbesar belum tentu paling menguntungkan.\n3. Syarat wajib dipenuhi dulu: Membersihkan area kemah satu kali memakai 8 menit, sisa 42 menit baru diisi kegiatan terbaik.\n4. Batas pemakaian dihormati: Membangun gapura bambu paling banyak 1 kali.\n5. Susun waktu 50 menit: Membangun gapura bambu 1 kali + Mengikat tali pancang 5 kali + Membersihkan area kemah 1 kali memakai 48 menit, sisa 2 menit tidak cukup untuk kegiatan mana pun yang masih boleh dipilih (terpendek 5 menit). Semua kombinasi yang muat dibandingkan dan susunan ini poinnya paling banyak.\n6. Hitung poin: 1 × 105 + 5 × 25 + 1 × 24 = 254 poin.<br>Opsi A (Membangun gapura bambu 3 kali) gugur karena syarat diabaikan: Membangun gapura bambu dilakukan 3 kali padahal hanya tersedia 1 kali; Membersihkan area kemah tidak dilakukan padahal wajib minimal satu kali, jadi strategi ini tidak sah walau totalnya tampak 315 poin. Opsi B (Mengikat tali pancang 11 kali) gugur karena waktunya tidak dicek: strategi ini memerlukan 55 menit, melebihi batas 50 menit (lebih 5 menit); selain itu Membersihkan area kemah tidak dilakukan padahal wajib minimal satu kali, jadi tidak sah walau totalnya tampak 275 poin. Opsi D (Membangun gapura bambu 1 kali + Mencari jejak 1 kali + Mengikat tali pancang 1 kali + Membersihkan area kemah 1 kali) gugur karena memakai waktu 48 dari 50 menit, tetapi komposisinya berpoin per menit lebih rendah; totalnya 234 poin, 20 poin lebih rendah dari kunci (254 poin). Opsi E (Membersihkan area kemah 6 kali) gugur karena sah dan muat dalam 48 menit, tetapi komposisinya kurang efisien; totalnya 144 poin, 110 poin lebih rendah dari kunci (254 poin). Jawaban: Membangun gapura bambu 1 kali + Mengikat tali pancang 5 kali + Membersihkan area kemah 1 kali (C). Tips: hitung poin per menit lebih dulu, bukan poin per kegiatan. Isi sisa waktu dengan kegiatan lain yang masih muat, karena waktu menganggur berarti poin hilang, tetapi pas waktu belum tentu poin terbanyak. Baca syarat (wajib / batas kali) lebih dulu dan gugurkan opsi yang melanggar sebelum membandingkan poin.",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-041",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum penampung air hujan di samping rumah berbentuk tabung dengan jari-jari alas 35 cm dan tinggi 80 cm. (π = 22/7)\n\nBerapa liter isi drum itu jika terisi penuh?",
+    "opsi": {
+      "a": "8,8 liter",
+      "b": "17,6 liter",
+      "c": "30,8 liter",
+      "d": "308 liter",
+      "e": "704 liter"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "308",
+    "nilai_opsi": {
+      "a": 8.8,
+      "b": 17.6,
+      "c": 30.8,
+      "d": 308,
+      "e": 704
+    },
+    "pembahasan": "1. Volume = 22/7 × 35 × 35 × 80 = 308.000 cm³ = 308 liter (1 liter = 1.000 cm³).<br>Opsi A (8,8 liter) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (17,6 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (30,8 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi E (704 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 308 liter (D). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-042",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di atap asrama berbentuk tabung dengan jari-jari alas 28 cm dan tinggi 250 cm. (π = 22/7)\n\nBerapa liter isi tandon itu jika terisi penuh?",
+    "opsi": {
+      "a": "22 liter",
+      "b": "44 liter",
+      "c": "61,6 liter",
+      "d": "616 liter",
+      "e": "2.464 liter"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "616",
+    "nilai_opsi": {
+      "a": 22,
+      "b": 44,
+      "c": 61.6,
+      "d": 616,
+      "e": 2464
+    },
+    "pembahasan": "1. Volume = 22/7 × 28 × 28 × 250 = 616.000 cm³ = 616 liter (1 liter = 1.000 cm³).<br>Opsi A (22 liter) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (44 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (61,6 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi E (2.464 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 616 liter (D). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-043",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah bak penampung air di kebun sayur berbentuk tabung dengan jari-jari alas 70 cm dan tinggi 50 cm. (π = 22/7)\n\nBerapa liter isi bak itu jika terisi penuh?",
+    "opsi": {
+      "a": "77 liter",
+      "b": "550 liter",
+      "c": "770 liter",
+      "d": "3.080 liter",
+      "e": "7.700 liter"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "770",
+    "nilai_opsi": {
+      "a": 77,
+      "b": 550,
+      "c": 770,
+      "d": 3080,
+      "e": 7700
+    },
+    "pembahasan": "1. Volume = 22/7 × 70 × 70 × 50 = 770.000 cm³ = 770 liter (1 liter = 1.000 cm³).<br>Opsi A (77 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi B (550 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi D (3.080 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi E (7.700 liter) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 770 liter (C). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-044",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air minum di halaman sekolah berbentuk tabung dengan jari-jari alas 42 cm dan tinggi 125 cm. (π = 22/7)\n\nBerapa liter isi tangki itu jika terisi penuh?",
+    "opsi": {
+      "a": "33 liter",
+      "b": "69,3 liter",
+      "c": "231 liter",
+      "d": "693 liter",
+      "e": "2.062,5 liter"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "693",
+    "nilai_opsi": {
+      "a": 33,
+      "b": 69.3,
+      "c": 231,
+      "d": 693,
+      "e": 2062.5
+    },
+    "pembahasan": "1. Volume = 22/7 × 42 × 42 × 125 = 693.000 cm³ = 693 liter (1 liter = 1.000 cm³).<br>Opsi A (33 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi B (69,3 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (231 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi E (2.062,5 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 693 liter (D). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-045",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di belakang puskesmas berbentuk tabung dengan jari-jari alas 56 cm dan tinggi 125 cm. (π = 22/7)\n\nBerapa liter isi tandon itu jika terisi penuh?",
+    "opsi": {
+      "a": "123,2 liter",
+      "b": "1.232 liter",
+      "c": "2.750 liter",
+      "d": "4.928 liter",
+      "e": "12.320 liter"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "1232",
+    "nilai_opsi": {
+      "a": 123.2,
+      "b": 1232,
+      "c": 2750,
+      "d": 4928,
+      "e": 12320
+    },
+    "pembahasan": "1. Volume = 22/7 × 56 × 56 × 125 = 1.232.000 cm³ = 1.232 liter (1 liter = 1.000 cm³).<br>Opsi A (123,2 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (2.750 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi D (4.928 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi E (12.320 liter) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 1.232 liter (B). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-046",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum minyak goreng di gudang warung berbentuk tabung dengan jari-jari alas 35 cm dan tinggi 60 cm. (π = 22/7)\n\nBerapa liter isi drum itu jika terisi penuh?",
+    "opsi": {
+      "a": "6,6 liter",
+      "b": "13,2 liter",
+      "c": "23,1 liter",
+      "d": "77 liter",
+      "e": "231 liter"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "231",
+    "nilai_opsi": {
+      "a": 6.6,
+      "b": 13.2,
+      "c": 23.1,
+      "d": 77,
+      "e": 231
+    },
+    "pembahasan": "1. Volume = 22/7 × 35 × 35 × 60 = 231.000 cm³ = 231 liter (1 liter = 1.000 cm³).<br>Opsi A (6,6 liter) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (13,2 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (23,1 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi D (77 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Jawaban: 231 liter (E). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-047",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah gentong air di teras rumah nenek berbentuk tabung dengan jari-jari alas 14 cm dan tinggi 125 cm. (π = 22/7)\n\nBerapa liter isi gentong itu jika terisi penuh?",
+    "opsi": {
+      "a": "5,5 liter",
+      "b": "7,7 liter",
+      "c": "11 liter",
+      "d": "77 liter",
+      "e": "308 liter"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "77",
+    "nilai_opsi": {
+      "a": 5.5,
+      "b": 7.7,
+      "c": 11,
+      "d": 77,
+      "e": 308
+    },
+    "pembahasan": "1. Volume = 22/7 × 14 × 14 × 125 = 77.000 cm³ = 77 liter (1 liter = 1.000 cm³).<br>Opsi A (5,5 liter) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (7,7 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (11 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi E (308 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 77 liter (D). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-048",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki penyiram tanaman di kebun bibit berbentuk tabung dengan jari-jari alas 42 cm dan tinggi 250 cm. (π = 22/7)\n\nBerapa liter isi tangki itu jika terisi penuh?",
+    "opsi": {
+      "a": "138,6 liter",
+      "b": "462 liter",
+      "c": "1.386 liter",
+      "d": "5.544 liter",
+      "e": "8.250 liter"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "1386",
+    "nilai_opsi": {
+      "a": 138.6,
+      "b": 462,
+      "c": 1386,
+      "d": 5544,
+      "e": 8250
+    },
+    "pembahasan": "1. Volume = 22/7 × 42 × 42 × 250 = 1.386.000 cm³ = 1.386 liter (1 liter = 1.000 cm³).<br>Opsi A (138,6 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi B (462 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi D (5.544 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi E (8.250 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 1.386 liter (C). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-049",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah kolam ikan bulat di halaman perpustakaan berbentuk tabung dengan jari-jari alas 70 cm dan tinggi 100 cm. (π = 22/7)\n\nBerapa liter isi kolam itu jika terisi penuh?",
+    "opsi": {
+      "a": "44 liter",
+      "b": "154 liter",
+      "c": "1.540 liter",
+      "d": "2.200 liter",
+      "e": "6.160 liter"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "1540",
+    "nilai_opsi": {
+      "a": 44,
+      "b": 154,
+      "c": 1540,
+      "d": 2200,
+      "e": 6160
+    },
+    "pembahasan": "1. Volume = 22/7 × 70 × 70 × 100 = 1.540.000 cm³ = 1.540 liter (1 liter = 1.000 cm³).<br>Opsi A (44 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi B (154 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi D (2.200 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi E (6.160 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 1.540 liter (C). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-050",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tong sampah organik untuk membuat kompos berbentuk tabung dengan jari-jari alas 35 cm dan tinggi 120 cm. (π = 22/7)\n\nBerapa liter isi tong itu jika terisi penuh?",
+    "opsi": {
+      "a": "13,2 liter",
+      "b": "26,4 liter",
+      "c": "46,2 liter",
+      "d": "154 liter",
+      "e": "462 liter"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "462",
+    "nilai_opsi": {
+      "a": 13.2,
+      "b": 26.4,
+      "c": 46.2,
+      "d": 154,
+      "e": 462
+    },
+    "pembahasan": "1. Volume = 22/7 × 35 × 35 × 120 = 462.000 cm³ = 462 liter (1 liter = 1.000 cm³).<br>Opsi A (13,2 liter) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (26,4 liter) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (46,2 liter) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi D (154 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Jawaban: 462 liter (E). Tips: jari-jari kelipatan 7 cocok dengan π = 22/7, jadi coret 7-nya dulu; terakhir bagi 1.000 untuk mengubah cm³ ke liter.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-051",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum air di dapur rumah makan berbentuk tabung dengan diameter alas 70 cm dan tinggi 120 cm. (π = 22/7) Drum itu kosong, lalu diisi air dari keran dengan debit 22 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai drum penuh?",
+    "opsi": {
+      "a": "0,6 menit",
+      "b": "1,2 menit",
+      "c": "2,1 menit",
+      "d": "7 menit",
+      "e": "21 menit"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "21",
+    "nilai_opsi": {
+      "a": 0.6,
+      "b": 1.2,
+      "c": 2.1,
+      "d": 7,
+      "e": 21
+    },
+    "pembahasan": "1. Jari-jari = 70 : 2 = 35 cm.\n2. Volume = 22/7 × 35 × 35 × 120 = 462.000 cm³ = 462 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 462 ÷ 22 = 21 menit.<br>Opsi A (0,6 menit) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (1,2 menit) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (2,1 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi D (7 menit) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Jawaban: 21 menit (E). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-052",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di atap kantor kelurahan berbentuk tabung dengan jari-jari alas 28 cm dan tinggi 1,25 m. (π = 22/7) Tandon itu kosong, lalu diisi air dari keran dengan debit 11 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "2,8 menit",
+      "b": "28 menit",
+      "c": "112 menit",
+      "d": "125 menit",
+      "e": "280 menit"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "28",
+    "nilai_opsi": {
+      "a": 2.8,
+      "b": 28,
+      "c": 112,
+      "d": 125,
+      "e": 280
+    },
+    "pembahasan": "1. Tinggi 1,25 m = 125 cm.\n2. Volume = 22/7 × 28 × 28 × 125 = 308.000 cm³ = 308 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 308 ÷ 11 = 28 menit.<br>Opsi A (2,8 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (112 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi D (125 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi E (280 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 28 menit (B). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-053",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah kolam ikan bulat di taman kota berbentuk tabung dengan diameter alas 140 cm dan tinggi 80 cm. (π = 22/7) Kolam itu kosong, lalu diisi air dari keran dengan debit 22 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai kolam penuh?",
+    "opsi": {
+      "a": "5,6 menit",
+      "b": "56 menit",
+      "c": "64 menit",
+      "d": "224 menit",
+      "e": "560 menit"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "56",
+    "nilai_opsi": {
+      "a": 5.6,
+      "b": 56,
+      "c": 64,
+      "d": 224,
+      "e": 560
+    },
+    "pembahasan": "1. Jari-jari = 140 : 2 = 70 cm.\n2. Volume = 22/7 × 70 × 70 × 80 = 1.232.000 cm³ = 1.232 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 1.232 ÷ 22 = 56 menit.<br>Opsi A (5,6 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (64 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi D (224 menit) gugur karena memakai diameter sebagai jari-jari, sehingga volumenya 4 kali terlalu besar. Opsi E (560 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 56 menit (B). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-054",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air di samping aula kampus berbentuk tabung dengan jari-jari alas 42 cm dan tinggi 1,25 m. (π = 22/7) Tangki itu kosong, lalu diisi air dari keran dengan debit 33 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tangki penuh?",
+    "opsi": {
+      "a": "1 menit",
+      "b": "2,1 menit",
+      "c": "7 menit",
+      "d": "21 menit",
+      "e": "62,5 menit"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "21",
+    "nilai_opsi": {
+      "a": 1,
+      "b": 2.1,
+      "c": 7,
+      "d": 21,
+      "e": 62.5
+    },
+    "pembahasan": "1. Tinggi 1,25 m = 125 cm.\n2. Volume = 22/7 × 42 × 42 × 125 = 693.000 cm³ = 693 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 693 ÷ 33 = 21 menit.<br>Opsi A (1 menit) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi B (2,1 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (7 menit) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi E (62,5 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 21 menit (D). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-055",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah ember besar untuk mencuci karpet berbentuk tabung dengan diameter alas 28 cm dan tinggi 125 cm. (π = 22/7) Ember itu kosong, lalu diisi air dari keran dengan debit 11 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai ember penuh?",
+    "opsi": {
+      "a": "0,7 menit",
+      "b": "1 menit",
+      "c": "7 menit",
+      "d": "28 menit",
+      "e": "62,5 menit"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "7",
+    "nilai_opsi": {
+      "a": 0.7,
+      "b": 1,
+      "c": 7,
+      "d": 28,
+      "e": 62.5
+    },
+    "pembahasan": "1. Jari-jari = 28 : 2 = 14 cm.\n2. Volume = 22/7 × 14 × 14 × 125 = 77.000 cm³ = 77 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 77 ÷ 11 = 7 menit.<br>Opsi A (0,7 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi B (1 menit) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi D (28 menit) gugur karena memakai diameter sebagai jari-jari, sehingga volumenya 4 kali terlalu besar. Opsi E (62,5 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 7 menit (C). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-056",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di belakang masjid berbentuk tabung dengan jari-jari alas 70 cm dan tinggi 1 m. (π = 22/7) Tandon itu kosong, lalu diisi air dari keran dengan debit 22 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "2 menit",
+      "b": "7 menit",
+      "c": "70 menit",
+      "d": "100 menit",
+      "e": "280 menit"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "70",
+    "nilai_opsi": {
+      "a": 2,
+      "b": 7,
+      "c": 70,
+      "d": 100,
+      "e": 280
+    },
+    "pembahasan": "1. Tinggi 1 m = 100 cm.\n2. Volume = 22/7 × 70 × 70 × 100 = 1.540.000 cm³ = 1.540 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 1.540 ÷ 22 = 70 menit.<br>Opsi A (2 menit) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi B (7 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi D (100 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi E (280 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 70 menit (C). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-057",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air di lahan pembibitan berbentuk tabung dengan diameter alas 84 cm dan tinggi 2,5 m. (π = 22/7) Tangki itu kosong, lalu diisi air dari keran dengan debit 66 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tangki penuh?",
+    "opsi": {
+      "a": "7 menit",
+      "b": "21 menit",
+      "c": "84 menit",
+      "d": "125 menit",
+      "e": "210 menit"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "21",
+    "nilai_opsi": {
+      "a": 7,
+      "b": 21,
+      "c": 84,
+      "d": 125,
+      "e": 210
+    },
+    "pembahasan": "1. Jari-jari = 84 : 2 = 42 cm.\n2. Tinggi 2,5 m = 250 cm.\n3. Volume = 22/7 × 42 × 42 × 250 = 1.386.000 cm³ = 1.386 liter (1 liter = 1.000 cm³).\n4. Waktu = volume ÷ debit = 1.386 ÷ 66 = 21 menit.<br>Opsi A (7 menit) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi C (84 menit) gugur karena memakai diameter sebagai jari-jari, sehingga volumenya 4 kali terlalu besar. Opsi D (125 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi E (210 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 21 menit (B). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-058",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum penampung air di bengkel cuci motor berbentuk tabung dengan jari-jari alas 35 cm dan tinggi 60 cm. (π = 22/7) Drum itu kosong, lalu diisi air dari keran dengan debit 3 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai drum penuh?",
+    "opsi": {
+      "a": "77 menit",
+      "b": "132 menit",
+      "c": "308 menit",
+      "d": "693 menit",
+      "e": "770 menit"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "77",
+    "nilai_opsi": {
+      "a": 77,
+      "b": 132,
+      "c": 308,
+      "d": 693,
+      "e": 770
+    },
+    "pembahasan": "1. Volume = 22/7 × 35 × 35 × 60 = 231.000 cm³ = 231 liter (1 liter = 1.000 cm³).\n2. Waktu = volume ÷ debit = 231 ÷ 3 = 77 menit.<br>Opsi B (132 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi C (308 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi D (693 menit) gugur karena volume dikali debit, padahal waktu = volume ÷ debit. Opsi E (770 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 77 menit (A). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-059",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di rumah susun berbentuk tabung dengan jari-jari alas 56 cm dan tinggi 1,25 m. (π = 22/7) Tandon itu kosong, lalu diisi air dari keran dengan debit 22 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "5,6 menit",
+      "b": "56 menit",
+      "c": "125 menit",
+      "d": "224 menit",
+      "e": "560 menit"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "56",
+    "nilai_opsi": {
+      "a": 5.6,
+      "b": 56,
+      "c": 125,
+      "d": 224,
+      "e": 560
+    },
+    "pembahasan": "1. Tinggi 1,25 m = 125 cm.\n2. Volume = 22/7 × 56 × 56 × 125 = 1.232.000 cm³ = 1.232 liter (1 liter = 1.000 cm³).\n3. Waktu = volume ÷ debit = 1.232 ÷ 22 = 56 menit.<br>Opsi A (5,6 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi C (125 menit) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi D (224 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi E (560 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 56 menit (B). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-060",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air di sebuah peternakan ayam berbentuk tabung dengan jari-jari alas 28 cm dan tinggi 250 cm. (π = 22/7) Tangki itu kosong, lalu diisi air dari keran dengan debit 22 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tangki penuh?",
+    "opsi": {
+      "a": "1 menit",
+      "b": "2 menit",
+      "c": "2,8 menit",
+      "d": "28 menit",
+      "e": "112 menit"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "28",
+    "nilai_opsi": {
+      "a": 1,
+      "b": 2,
+      "c": 2.8,
+      "d": 28,
+      "e": 112
+    },
+    "pembahasan": "1. Volume = 22/7 × 28 × 28 × 250 = 616.000 cm³ = 616 liter (1 liter = 1.000 cm³).\n2. Waktu = volume ÷ debit = 616 ÷ 22 = 28 menit.<br>Opsi A (1 menit) gugur karena jari-jari tidak dikuadratkan (π × r × t). Opsi B (2 menit) gugur karena memakai keliling alas × tinggi (luas selimut), bukan luas alas × tinggi. Opsi C (2,8 menit) gugur karena memakai 1 liter = 10.000 cm³, sehingga volumenya 10 kali terlalu kecil. Opsi E (112 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 28 menit (D). Tips: ubah dulu semua ukuran ke cm (diameter dibagi 2, meter dikali 100), hitung liter, baru bagi dengan debit.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-061",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum air di kamar mandi umum pasar berbentuk tabung dengan jari-jari alas 70 cm dan tinggi 60 cm. (π = 22/7) Drum itu kosong, lalu diisi air dari keran dengan debit 12 liter per menit.\n\nSetelah diisi 15 menit, berapa liter lagi yang diperlukan sampai drum penuh?",
+    "opsi": {
+      "a": "62 liter",
+      "b": "128 liter",
+      "c": "180 liter",
+      "d": "612 liter",
+      "e": "744 liter"
+    },
+    "kunci": [
+      "e"
+    ],
+    "hitung": "744",
+    "nilai_opsi": {
+      "a": 62,
+      "b": 128,
+      "c": 180,
+      "d": 612,
+      "e": 744
+    },
+    "pembahasan": "1. Volume = 22/7 × 70 × 70 × 60 = 924.000 cm³ = 924 liter (1 liter = 1.000 cm³).\n2. Air yang masuk dalam 15 menit = 12 × 15 = 180 liter.\n3. Sisa yang belum terisi = 924 − 180 = 744 liter.<br>Opsi A (62 liter) gugur karena yang dihitung sisa waktu (744 ÷ 12 menit), padahal yang ditanya sisa air dalam liter. Opsi B (128 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi C (180 liter) gugur karena yang dihitung air yang sudah masuk (12 × 15 = 180 liter), bukan sisa yang belum terisi. Opsi D (612 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 744 liter (E). Tips: kerjakan berantai: volume penuh → air yang sudah masuk (debit × waktu) → sisa = penuh − masuk. Cek opsi mana yang sebenarnya jawaban langkah tengah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-062",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah kolam renang anak berbentuk tabung dengan diameter alas 140 cm dan tinggi 75 cm. (π = 22/7) Kolam itu kosong, lalu diisi air dari keran dengan debit 25 liter per menit.\n\nSetelah diisi 10 menit, berapa liter lagi yang diperlukan sampai kolam penuh?",
+    "opsi": {
+      "a": "905 liter",
+      "b": "987,5 liter",
+      "c": "1.130 liter",
+      "d": "1.405 liter",
+      "e": "4.370 liter"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "905",
+    "nilai_opsi": {
+      "a": 905,
+      "b": 987.5,
+      "c": 1130,
+      "d": 1405,
+      "e": 4370
+    },
+    "pembahasan": "1. Jari-jari = 140 : 2 = 70 cm.\n2. Volume = 22/7 × 70 × 70 × 75 = 1.155.000 cm³ = 1.155 liter (1 liter = 1.000 cm³).\n3. Air yang masuk dalam 10 menit = 25 × 10 = 250 liter.\n4. Sisa yang belum terisi = 1.155 − 250 = 905 liter.<br>Opsi B (987,5 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi C (1.130 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 25 liter. Opsi D (1.405 liter) gugur karena air yang masuk malah ditambahkan ke volume, padahal sisa = penuh − masuk. Opsi E (4.370 liter) gugur karena memakai diameter sebagai jari-jari, sehingga volumenya 4 kali terlalu besar. Jawaban: 905 liter (A). Tips: kerjakan berantai: volume penuh → air yang sudah masuk (debit × waktu) → sisa = penuh − masuk. Cek opsi mana yang sebenarnya jawaban langkah tengah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-063",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air di stasiun kereta berbentuk tabung dengan jari-jari alas 42 cm dan tinggi 125 cm. (π = 22/7) Tangki itu kosong, lalu diisi air dari keran dengan debit 15 liter per menit.\n\nSetelah diisi 8 menit, berapa liter lagi yang diperlukan sampai tangki penuh?",
+    "opsi": {
+      "a": "573 liter",
+      "b": "678 liter",
+      "c": "813 liter",
+      "d": "1.942,5 liter",
+      "e": "2.652 liter"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "573",
+    "nilai_opsi": {
+      "a": 573,
+      "b": 678,
+      "c": 813,
+      "d": 1942.5,
+      "e": 2652
+    },
+    "pembahasan": "1. Volume = 22/7 × 42 × 42 × 125 = 693.000 cm³ = 693 liter (1 liter = 1.000 cm³).\n2. Air yang masuk dalam 8 menit = 15 × 8 = 120 liter.\n3. Sisa yang belum terisi = 693 − 120 = 573 liter.<br>Opsi B (678 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 15 liter. Opsi C (813 liter) gugur karena air yang masuk malah ditambahkan ke volume, padahal sisa = penuh − masuk. Opsi D (1.942,5 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Opsi E (2.652 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Jawaban: 573 liter (A). Tips: kerjakan berantai: volume penuh → air yang sudah masuk (debit × waktu) → sisa = penuh − masuk. Cek opsi mana yang sebenarnya jawaban langkah tengah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-064",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di pondok pesantren berbentuk tabung dengan jari-jari alas 28 cm dan tinggi 3,75 m. (π = 22/7) Tandon itu kosong, lalu diisi air dari keran dengan debit 16 liter per menit.\n\nSetelah diisi 12 menit, berapa liter lagi yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "732 liter",
+      "b": "908 liter",
+      "c": "1.116 liter",
+      "d": "3.504 liter",
+      "e": "9.048 liter"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "732",
+    "nilai_opsi": {
+      "a": 732,
+      "b": 908,
+      "c": 1116,
+      "d": 3504,
+      "e": 9048
+    },
+    "pembahasan": "1. Tinggi 3,75 m = 375 cm.\n2. Volume = 22/7 × 28 × 28 × 375 = 924.000 cm³ = 924 liter (1 liter = 1.000 cm³).\n3. Air yang masuk dalam 12 menit = 16 × 12 = 192 liter.\n4. Sisa yang belum terisi = 924 − 192 = 732 liter.<br>Opsi B (908 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 16 liter. Opsi C (1.116 liter) gugur karena air yang masuk malah ditambahkan ke volume, padahal sisa = penuh − masuk. Opsi D (3.504 liter) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi E (9.048 liter) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Jawaban: 732 liter (A). Tips: kerjakan berantai: volume penuh → air yang sudah masuk (debit × waktu) → sisa = penuh − masuk. Cek opsi mana yang sebenarnya jawaban langkah tengah.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-065",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di gedung serbaguna berbentuk tabung dengan jari-jari alas 35 cm dan tinggi 180 cm. (π = 22/7) Tandon itu sudah berisi air 1/3 bagian, lalu ditambah air dari keran dengan debit 14 liter per menit.\n\nSetelah ditambah 10 menit, berapa liter lagi yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "91 liter",
+      "b": "322 liter",
+      "c": "371 liter",
+      "d": "448 liter",
+      "e": "553 liter"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "322",
+    "nilai_opsi": {
+      "a": 91,
+      "b": 322,
+      "c": 371,
+      "d": 448,
+      "e": 553
+    },
+    "pembahasan": "1. Volume = 22/7 × 35 × 35 × 180 = 693.000 cm³ = 693 liter (1 liter = 1.000 cm³).\n2. Isi awal = 1/3 × 693 = 231 liter.\n3. Air yang masuk dalam 10 menit = 14 × 10 = 140 liter.\n4. Sisa yang belum terisi = 693 − 231 − 140 = 322 liter.<br>Opsi A (91 liter) gugur karena 1/3 dianggap bagian yang kosong, padahal itu bagian yang sudah berisi. Opsi C (371 liter) gugur karena yang dihitung isi tandon sekarang (isi awal + air masuk), bukan sisa yang belum terisi. Opsi D (448 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 14 liter. Opsi E (553 liter) gugur karena isi awal 1/3 bagian (231 liter) tidak dikurangkan. Jawaban: 322 liter (B). Tips: sisa = penuh − isi awal − air yang masuk. Pecahan isi awal adalah bagian yang sudah berisi, bukan yang kosong.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-066",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah drum air di dapur katering berbentuk tabung dengan diameter alas 70 cm dan tinggi 120 cm. (π = 22/7) Drum itu sudah berisi air 1/3 bagian, lalu ditambah air dari keran dengan debit 8 liter per menit.\n\nSetelah ditambah 10 menit, berapa liter lagi yang diperlukan sampai drum penuh?",
+    "opsi": {
+      "a": "228 liter",
+      "b": "234 liter",
+      "c": "300 liter",
+      "d": "382 liter",
+      "e": "976 liter"
+    },
+    "kunci": [
+      "a"
+    ],
+    "hitung": "228",
+    "nilai_opsi": {
+      "a": 228,
+      "b": 234,
+      "c": 300,
+      "d": 382,
+      "e": 976
+    },
+    "pembahasan": "1. Jari-jari = 70 : 2 = 35 cm.\n2. Volume = 22/7 × 35 × 35 × 120 = 462.000 cm³ = 462 liter (1 liter = 1.000 cm³).\n3. Isi awal = 1/3 × 462 = 154 liter.\n4. Air yang masuk dalam 10 menit = 8 × 10 = 80 liter.\n5. Sisa yang belum terisi = 462 − 154 − 80 = 228 liter.<br>Opsi B (234 liter) gugur karena yang dihitung isi drum sekarang (isi awal + air masuk), bukan sisa yang belum terisi. Opsi C (300 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 8 liter. Opsi D (382 liter) gugur karena isi awal 1/3 bagian (154 liter) tidak dikurangkan. Opsi E (976 liter) gugur karena jari-jari dan tinggi tertukar (yang dikuadratkan justru tingginya). Jawaban: 228 liter (A). Tips: sisa = penuh − isi awal − air yang masuk. Pecahan isi awal adalah bagian yang sudah berisi, bukan yang kosong.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-067",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tandon air di rumah kos berbentuk tabung dengan jari-jari alas 56 cm dan tinggi 125 cm. (π = 22/7) Tandon itu kosong, lalu diisi air dari keran dengan debit 30 liter per menit. Ternyata dasarnya bocor sehingga air keluar 2 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tandon penuh?",
+    "opsi": {
+      "a": "38,5 menit",
+      "b": "44 menit",
+      "c": "176 menit",
+      "d": "440 menit",
+      "e": "616 menit"
+    },
+    "kunci": [
+      "b"
+    ],
+    "hitung": "44",
+    "nilai_opsi": {
+      "a": 38.5,
+      "b": 44,
+      "c": 176,
+      "d": 440,
+      "e": 616
+    },
+    "pembahasan": "1. Volume = 22/7 × 56 × 56 × 125 = 1.232.000 cm³ = 1.232 liter (1 liter = 1.000 cm³).\n2. Air yang benar-benar bertambah = 30 − 2 = 28 liter per menit.\n3. Waktu = 1.232 ÷ 28 = 44 menit.<br>Opsi A (38,5 menit) gugur karena kebocoran dijumlahkan ke debit masuk, padahal bocor mengurangi air. Opsi C (176 menit) gugur karena jari-jari dikali dua sebelum dikuadratkan, sehingga volumenya 4 kali terlalu besar. Opsi D (440 menit) gugur karena memakai 1 liter = 100 cm³, sehingga volumenya 10 kali terlalu besar. Opsi E (616 menit) gugur karena volume dibagi debit bocor saja, padahal yang mengisi adalah selisih masuk dan bocor. Jawaban: 44 menit (B). Tips: hitung debit bersih dulu (masuk − bocor), baru bagi volume dengan debit bersih itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-068",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah tangki air di tempat cuci mobil berbentuk tabung dengan diameter alas 84 cm dan tinggi 2,5 m. (π = 22/7) Tangki itu kosong, lalu diisi air dari keran dengan debit 25 liter per menit. Ternyata dasarnya bocor sehingga air keluar 4 liter per menit.\n\nBerapa menit waktu yang diperlukan sampai tangki penuh?",
+    "opsi": {
+      "a": "22 menit",
+      "b": "55,44 menit",
+      "c": "66 menit",
+      "d": "264 menit",
+      "e": "346,5 menit"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "66",
+    "nilai_opsi": {
+      "a": 22,
+      "b": 55.44,
+      "c": 66,
+      "d": 264,
+      "e": 346.5
+    },
+    "pembahasan": "1. Jari-jari = 84 : 2 = 42 cm.\n2. Tinggi 2,5 m = 250 cm.\n3. Volume = 22/7 × 42 × 42 × 250 = 1.386.000 cm³ = 1.386 liter (1 liter = 1.000 cm³).\n4. Air yang benar-benar bertambah = 25 − 4 = 21 liter per menit.\n5. Waktu = 1.386 ÷ 21 = 66 menit.<br>Opsi A (22 menit) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi B (55,44 menit) gugur karena kebocoran diabaikan, padahal air yang benar-benar bertambah hanya debit masuk dikurangi bocor. Opsi D (264 menit) gugur karena memakai diameter sebagai jari-jari, sehingga volumenya 4 kali terlalu besar. Opsi E (346,5 menit) gugur karena volume dibagi debit bocor saja, padahal yang mengisi adalah selisih masuk dan bocor. Jawaban: 66 menit (C). Tips: hitung debit bersih dulu (masuk − bocor), baru bagi volume dengan debit bersih itu.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-069",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah bak air di kebun hidroponik berbentuk tabung dengan jari-jari alas 42 cm dan tinggi 2,5 m. (π = 22/7) Bak itu kosong, lalu diisi air dari keran dengan debit 0,25 liter per detik.\n\nSetelah diisi 20 menit, berapa liter lagi yang diperlukan sampai bak penuh?",
+    "opsi": {
+      "a": "72,4 liter",
+      "b": "162 liter",
+      "c": "300 liter",
+      "d": "1.086 liter",
+      "e": "1.371 liter"
+    },
+    "kunci": [
+      "d"
+    ],
+    "hitung": "1086",
+    "nilai_opsi": {
+      "a": 72.4,
+      "b": 162,
+      "c": 300,
+      "d": 1086,
+      "e": 1371
+    },
+    "pembahasan": "1. Tinggi 2,5 m = 250 cm.\n2. Volume = 22/7 × 42 × 42 × 250 = 1.386.000 cm³ = 1.386 liter (1 liter = 1.000 cm³).\n3. Debit 0,25 liter per detik = 0,25 × 60 = 15 liter per menit.\n4. Air yang masuk dalam 20 menit = 15 × 20 = 300 liter.\n5. Sisa yang belum terisi = 1.386 − 300 = 1.086 liter.<br>Opsi A (72,4 liter) gugur karena yang dihitung sisa waktu (1.086 ÷ 15 menit), padahal yang ditanya sisa air dalam liter. Opsi B (162 liter) gugur karena memakai rumus kerucut (⅓ × luas alas × tinggi), padahal wadahnya tabung. Opsi C (300 liter) gugur karena yang dihitung air yang sudah masuk (15 × 20 = 300 liter), bukan sisa yang belum terisi. Opsi E (1.371 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 15 liter. Jawaban: 1.086 liter (D). Tips: samakan satuan waktu lebih dulu: liter per detik dikali 60 menjadi liter per menit, baru dikali lama pengisian.",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K07-N-070",
+    "kartu": "K07",
+    "sub_type": "NUM-CRT-DEBIT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-19",
+    "stem": "Sebuah gentong air di bengkel las berbentuk tabung dengan jari-jari alas 14 cm dan tinggi 375 cm. (π = 22/7) Gentong itu kosong, lalu diisi air dari keran dengan debit 0,1 liter per detik.\n\nSetelah diisi 10 menit, berapa liter lagi yang diperlukan sampai gentong penuh?",
+    "opsi": {
+      "a": "28,5 liter",
+      "b": "60 liter",
+      "c": "171 liter",
+      "d": "225 liter",
+      "e": "230 liter"
+    },
+    "kunci": [
+      "c"
+    ],
+    "hitung": "171",
+    "nilai_opsi": {
+      "a": 28.5,
+      "b": 60,
+      "c": 171,
+      "d": 225,
+      "e": 230
+    },
+    "pembahasan": "1. Volume = 22/7 × 14 × 14 × 375 = 231.000 cm³ = 231 liter (1 liter = 1.000 cm³).\n2. Debit 0,1 liter per detik = 0,1 × 60 = 6 liter per menit.\n3. Air yang masuk dalam 10 menit = 6 × 10 = 60 liter.\n4. Sisa yang belum terisi = 231 − 60 = 171 liter.<br>Opsi A (28,5 liter) gugur karena yang dihitung sisa waktu (171 ÷ 6 menit), padahal yang ditanya sisa air dalam liter. Opsi B (60 liter) gugur karena yang dihitung air yang sudah masuk (6 × 10 = 60 liter), bukan sisa yang belum terisi. Opsi D (225 liter) gugur karena debit tidak dikali lama pengisian; yang dikurangkan hanya 6 liter. Opsi E (230 liter) gugur karena debit 0,1 liter per detik dipakai sebagai liter per menit (lupa dikali 60). Jawaban: 171 liter (C). Tips: samakan satuan waktu lebih dulu: liter per detik dikali 60 menjadi liter per menit, baru dikali lama pengisian.",
+    "status_kunci": "ganda"
   }
 ]
