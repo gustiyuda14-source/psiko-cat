@@ -13,12 +13,11 @@ import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { scoreLatihanKecermatan } from "./actions";
 import LatihanKecermatanHasil, { type LatihanFeedback } from "./LatihanKecermatanHasil";
 import AttemptSaver from "./AttemptSaver";
-import PELAFALAN from "@/data/kecermatan-pelafalan.json";
+import { useKecermatanTiming } from "./useKecermatanTiming";
+import { usePelafalan } from "./usePelafalan";
 
 const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const INTRO_SECONDS = 5;
-const PELAFALAN_PREF = "kecermatan-show-pelafalan";
-const pelafalanOf = (symbol: unknown) => (PELAFALAN as Record<string, string>)[String(symbol)];
 type Feedback = LatihanFeedback;
 
 export default function LatihanKecermatan({
@@ -80,33 +79,12 @@ export default function LatihanKecermatan({
   const shown = Array.isArray(payload?.shown) ? payload.shown.filter((symbol) => typeof symbol === "string") : [];
   const symbolMap = payload?.symbol_map ?? { A: "?", B: "?", C: "?", D: "?", E: "?" };
   const fb = q ? answers[q.id] : undefined;
-
-  // Bantuan pelafalan: kata per kunci (data/kecermatan-pelafalan.json). Angka/huruf
-  // tidak punya label, jadi toggle cuma muncul kalau paket ini punya label.
-  const hasPelafalan = useMemo(
-    () => sorted.some((s) => pelafalanOf((s.options_payload as unknown as KecermatanOptionsPayload)?.symbol_map?.A)),
-    [sorted]
+  const timing = useKecermatanTiming(
+    q ? { id: q.id, column: q.column_index ?? 1, first: q.sequence_number === sorted.find((s) => s.column_index === q.column_index)?.sequence_number } : null,
+    showColIntro || finished
   );
-  // Dirender setelah "Mulai" (LatihanGate), jadi selalu di browser.
-  const [showPelafalan, setShowPelafalan] = useState(() => {
-    try {
-      return localStorage.getItem(PELAFALAN_PREF) !== "0";
-    } catch {
-      return true;
-    }
-  });
-  const togglePelafalan = () => {
-    setShowPelafalan((v) => {
-      try {
-        localStorage.setItem(PELAFALAN_PREF, v ? "0" : "1");
-      } catch {}
-      return !v;
-    });
-  };
-  const labels =
-    showPelafalan && KECERMATAN_KEYS.some((k) => pelafalanOf(symbolMap[k]))
-      ? Object.fromEntries(KECERMATAN_KEYS.map((k) => [k, pelafalanOf(symbolMap[k]) ?? ""]))
-      : null;
+
+  const { hasPelafalan, showPelafalan, togglePelafalan, labels } = usePelafalan(sorted, symbolMap);
   const answeredCount = Object.keys(answers).length;
   const colIdx = (q?.column_index ?? 1) - 1;
   const rowInCol = q ? sorted.slice(0, idx).filter((s) => s.column_index === q.column_index).length : 0;
@@ -144,6 +122,7 @@ export default function LatihanKecermatan({
     const target = sorted.findIndex((s) => s.column_index === colNum);
     if (target >= 0) {
       setError("");
+      if (q) timing.markNav(q.column_index ?? 1);
       setIdx(target);
     }
   }
@@ -160,6 +139,7 @@ export default function LatihanKecermatan({
     setRemainingMs(COLUMN_DURATION_MS);
     setScore(null);
     setScoreFailed(false);
+    timing.reset();
   }
 
   const pick = useCallback(
@@ -172,6 +152,7 @@ export default function LatihanKecermatan({
         return;
       }
       answeredIds.current.add(q.id);
+      timing.markAnswer(q.id, q.column_index ?? 1);
       setAnswers((prev) => ({
         ...prev,
         [q.id]: { selected: key, is_correct: key === correctKey, correct_key: correctKey },
@@ -187,7 +168,7 @@ export default function LatihanKecermatan({
       if (timedMode && crossesColumn) advanceColumn();
       else setIdx(idx + 1);
     },
-    [q, finished, showFinish, showColIntro, idx, sorted, timedMode, advanceColumn]
+    [q, finished, showFinish, showColIntro, idx, sorted, timedMode, advanceColumn, timing]
   );
 
   useExamKeyboard({
@@ -267,8 +248,10 @@ export default function LatihanKecermatan({
   if (!q) return null;
 
   if (finished) {
+    const snap = timing.snapshot(showPelafalan);
     return (
       <LatihanKecermatanHasil
+        timing={snap}
         sorted={sorted}
         answers={answers}
         timedMode={timedMode}
@@ -280,6 +263,7 @@ export default function LatihanKecermatan({
             progressKey={progressKey}
             answers={Object.fromEntries(Object.entries(answers).map(([id, a]) => [id, a.selected]))}
             timed={timedMode}
+            timing={snap}
           />
         }
       />
@@ -468,6 +452,7 @@ export default function LatihanKecermatan({
                   variant="secondary"
                   onClick={() => {
                     setError("");
+                    timing.markNav(q.column_index ?? 1);
                     setIdx((i) => Math.max(0, i - 1));
                   }}
                   disabled={idx === 0}
@@ -479,6 +464,7 @@ export default function LatihanKecermatan({
               {!timedMode && (fb || error) && (
                 <Button variant="secondary" onClick={() => {
                   setError("");
+                  timing.markNav(q.column_index ?? 1);
                   if (idx >= sorted.length - 1) setFinished(true);
                   else setIdx(idx + 1);
                 }} className="flex-1">

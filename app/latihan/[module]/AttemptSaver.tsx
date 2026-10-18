@@ -3,7 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/app/components/ui-client";
 import { retryProgressLoad, saveLatihanAttempt, useLatihanAttempts } from "@/lib/practice-progress";
-import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
+import type { KecermatanTiming } from "@/lib/progress-rules";
+import { MAX_LATIHAN_ATTEMPTS, maxLatihanAttempts } from "@/lib/progress-rules";
 
 /*
   Baris status di layar selesai latihan: menyimpan jawaban yang baru dikumpulkan
@@ -19,10 +20,12 @@ export default function AttemptSaver({
   progressKey,
   answers,
   timed = false,
+  timing,
 }: {
   progressKey?: string;
   answers: Record<string, string | null>;
   timed?: boolean;
+  timing?: KecermatanTiming;
 }) {
   const { attempts, ready } = useLatihanAttempts();
   // Data percobaan belum termuat (sinyal putus): coba lagi terus, jangan diam-diam tidak menyimpan.
@@ -42,21 +45,37 @@ export default function AttemptSaver({
   const existing = attempts[progressKey] ?? [];
   // Keputusan awal diambil sekali saat daftar percobaan dari server termuat; setelah itu
   // daftar boleh berubah (termasuk karena simpanan ini sendiri) tanpa mengubah keputusan.
-  return <Saver progressKey={progressKey} answers={answers} timed={timed} oldestAt={existing.at(-1)?.at} full={existing.length >= MAX_LATIHAN_ATTEMPTS} />;
+  // Batas 1 per mode (Kecermatan): langsung mengganti percobaan mode yang sama tanpa bertanya.
+  const max = maxLatihanAttempts(progressKey);
+  return (
+    <Saver
+      progressKey={progressKey}
+      answers={answers}
+      timed={timed}
+      timing={timing}
+      oldestAt={existing.at(-1)?.at}
+      full={max > 1 && existing.length >= max}
+      replaces={max === 1 && existing.some((a) => a.timed === timed)}
+    />
+  );
 }
 
 function Saver({
   progressKey,
   answers,
   timed,
+  timing,
   oldestAt,
   full,
+  replaces,
 }: {
   progressKey: string;
   answers: Record<string, string | null>;
   timed: boolean;
+  timing?: KecermatanTiming;
   oldestAt?: string;
   full: boolean;
+  replaces: boolean;
 }) {
   const [status, setStatus] = useState<"ask" | "saving" | "saved" | "failed" | "declined">(() => (full ? "ask" : "saving"));
   const [oldest] = useState(oldestAt);
@@ -64,13 +83,13 @@ function Saver({
 
   function save() {
     setStatus("saving");
-    void saveLatihanAttempt(progressKey, answers, timed).then((ok) => setStatus(ok ? "saved" : "failed"));
+    void saveLatihanAttempt(progressKey, answers, timed, timing).then((ok) => setStatus(ok ? "saved" : "failed"));
   }
 
   useEffect(() => {
     if (started.current || full) return;
     started.current = true;
-    void saveLatihanAttempt(progressKey, answers, timed).then((ok) => setStatus(ok ? "saved" : "failed"));
+    void saveLatihanAttempt(progressKey, answers, timed, timing).then((ok) => setStatus(ok ? "saved" : "failed"));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- sekali saat layar selesai tampil
   }, []);
 
@@ -79,7 +98,8 @@ function Saver({
       {status === "saving" && <p className="text-muted-foreground">Menyimpan pembahasan…</p>}
       {status === "saved" && (
         <p className="text-foreground">
-          Pembahasan tersimpan. Buka lagi kapan saja lewat <b>Pembahasan tersimpan</b> di halaman paket.
+          Pembahasan tersimpan{replaces ? ` dan menggantikan pembahasan ${timed ? "dengan waktu" : "tanpa waktu"} sebelumnya` : ""}. Buka lagi kapan saja lewat{" "}
+          <b>Pembahasan tersimpan</b> di halaman paket.
         </p>
       )}
       {status === "failed" && (

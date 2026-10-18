@@ -49,3 +49,8 @@ GRANT EXECUTE ON FUNCTION record_latihan_attempt(text, text, jsonb, boolean) TO 
 -- Cek:
 -- SELECT u.username, a.item_key, count(*), max(a.submitted_at)
 -- FROM latihan_attempts a JOIN users u ON u.id = a.user_id GROUP BY 1, 2 ORDER BY 1, 2;
+
+-- 2026-10-19: waktu Kecermatan per percobaan untuk analisis pembahasan
+-- (docs/rencana/kecermatan-latihan-analisis.md). Diisi server lewat UPDATE setelah
+-- record_latihan_attempt; NULL untuk modul lain dan percobaan lama.
+ALTER TABLE latihan_attempts ADD COLUMN IF NOT EXISTS timing jsonb;

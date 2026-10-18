@@ -71,11 +71,49 @@ export function cleanAttemptAnswers(input: unknown, max: number): Record<string,
   return out;
 }
 
+/** Waktu latihan Kecermatan per percobaan (docs/rencana/kecermatan-latihan-analisis.md). */
+export type KecermatanTiming = {
+  v: 1;
+  /** Bantuan pelafalan aktif di akhir sesi. */
+  pel: boolean;
+  /** Per kolom: o = urutan kunjungan, clean = dikerjakan urut dari butir 1 tanpa navigasi di 60 detik pertama. */
+  cols: Record<number, { o: number; clean: boolean }>;
+  /** Per soal: [ms aktif sejak kolom mulai, ms aktif sejak butir tampil]. */
+  t: Record<string, [number, number]>;
+};
+
+const MAX_TIMING_MS = 86_400_000;
+
+/** Waktu dari browser → bentuk sah untuk soal yang dijawab saja; null = rusak. */
+export function cleanAttemptTiming(input: unknown, answeredIds: Set<string>): KecermatanTiming | null {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return null;
+  const { v, pel, cols, t } = input as Record<string, unknown>;
+  if (v !== 1 || typeof pel !== "boolean" || !cols || typeof cols !== "object" || !t || typeof t !== "object") return null;
+  const outCols: KecermatanTiming["cols"] = {};
+  for (const [k, c] of Object.entries(cols)) {
+    const col = Number(k);
+    const { o, clean } = (c ?? {}) as Record<string, unknown>;
+    if (!isInt(col, 1, 10) || !isInt(o, 1, 10) || typeof clean !== "boolean") return null;
+    outCols[col] = { o, clean };
+  }
+  const outT: KecermatanTiming["t"] = {};
+  for (const [id, pair] of Object.entries(t)) {
+    if (!answeredIds.has(id)) continue;
+    if (!Array.isArray(pair) || pair.length !== 2 || !isInt(pair[0], 0, MAX_TIMING_MS) || !isInt(pair[1], 0, MAX_TIMING_MS)) return null;
+    outT[id] = [pair[0], pair[1]];
+  }
+  return { v: 1, pel, cols: outCols, t: outT };
+}
+
 /** Batas pembahasan latihan tersimpan per paket; sama dengan LIMIT di record_latihan_attempt. */
 export const MAX_LATIHAN_ATTEMPTS = 2;
 
+/** Kecermatan: 1 per mode (dengan waktu / tanpa waktu) per paket; mengulang langsung menggantikan
+    percobaan mode yang sama (keputusan pemilik 19-10). */
+export const maxLatihanAttempts = (key: string) => (latihanPackageOf(key)?.module === "KECERMATAN" ? 1 : MAX_LATIHAN_ATTEMPTS);
+
 /** Rute paket → percobaan latihan tersimpan (terbaru dulu, maks 2), tabel latihan_attempts. */
-export type AttemptList = Record<string, { id: number; at: string }[]>;
+export type AttemptList = Record<string, { id: number; at: string; timed: boolean }[]>;
 
 export type DrillRow = [correct: number, attempts: number, ms: number];
 export const MAX_DRILL_ATTEMPTS = 1000;

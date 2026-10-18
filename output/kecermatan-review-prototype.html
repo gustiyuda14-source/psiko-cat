@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hasil Kecermatan Tanpa Timer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* =====================================================================
+   PROTOTIPE STATIS. Data tiruan. Tidak ada kode aplikasi yang diubah.
+   Bagian 1-3 = salinan apa adanya dari app/globals.css, honey.css,
+   progress.css, catalog.css (yang dipakai layar ini saja).
+   Bagian 4 = KELAS BARU, ini satu-satunya CSS yang perlu ditambahkan
+   ke app/honey.css (di bawah blok "Hasil latihan Kecermatan").
+   Bagian 5 = bilah kontrol prototipe, jangan disalin.
+   ===================================================================== */
+
+/* ── 1. Token (globals.css + honey.css + progress.css) ── */
+:root {
+  color-scheme: light;
+  --font-sans-src: "Source Sans 3"; --font-display-src: "Lexend";
+  --surface-page: #ffffff; --surface-card: #ffffff; --surface-inset: #faf6ec; --surface-nav: #16224a; --surface-nav-deep: #0f1838;
+  --foreground: #172a35; --muted-foreground: #526772; --faint-foreground: #6b7f88;
+  --border: #ddd3c0; --border-strong: #877d66;
+  --brand-ink: #1b2a5c; --navy: #1b2a5c;
+  --gold: #9a6f12; --gold-hi: #e8c766; --on-gold: #16224a;
+  --gold-grad: linear-gradient(120deg, #b8892b, #dcc272 48%, #c0983a);
+  --primary: #1b2a5c; --accent: #d4af4f; --accent-strong: #b8892b; --accent-soft: #f6edd6; --accent-ink: #7a5710;
+  --success: #087453; --success-soft: #eaf6f0; --destructive: #b42342; --destructive-soft: #fdf2f4; --ring: #2f4ea8;
+  --gr-n-head: var(--brand-ink); --gr-n-mid: rgba(27, 42, 92, .4); --gr-n-track: rgba(27, 42, 92, .14); --glow-n: 0 0 26px -2px rgba(27, 42, 92, .32);
+  --elev-2: 0 2px 4px rgb(27 42 92 / 0.04), 0 6px 14px -6px rgb(27 42 92 / 0.12);
+  --r-sm: 6px; --r-md: 8px; --r-lg: 14px; --r-xl: 22px;
+  --e-out: cubic-bezier(0.16, 1, 0.3, 1); --motion: 180ms;
+  --honey-top: #f3dd8e; --honey-bot: var(--accent); --hatch: #ece4d2; --hc-glow: rgb(184 137 43 / 0.28);
+  --pg-track: #f1ece1; --pg-rule: #ece5d6; --pg-ink2: #2c4384; --pg-weak: #a63d2a; --pg-weak-bg: #fbeae5;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-page: #0a0f20; --surface-card: #121a34; --surface-inset: #0e1630; --surface-nav: #0d1636; --surface-nav-deep: #070b1b;
+    --foreground: #e8ebf6; --muted-foreground: #a4aeca; --faint-foreground: #7f8bab;
+    --border: #27325a; --border-strong: #56628b; --brand-ink: #c8d3f7; --gold: #e8c766;
+    --accent-soft: #2a2512; --accent-ink: #efd88f; --success: #1f9d74; --success-soft: #10302a; --destructive: #e8607c; --destructive-soft: #3a1722; --ring: #93a9f2;
+    --pg-track: #1a2346; --pg-rule: #222d55; --pg-ink2: #8fa5ec; --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20; --hatch: #18214a;
+    --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16); --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-page: #0a0f20; --surface-card: #121a34; --surface-inset: #0e1630; --surface-nav: #0d1636; --surface-nav-deep: #070b1b;
+  --foreground: #e8ebf6; --muted-foreground: #a4aeca; --faint-foreground: #7f8bab;
+  --border: #27325a; --border-strong: #56628b; --brand-ink: #c8d3f7; --gold: #e8c766;
+  --accent-soft: #2a2512; --accent-ink: #efd88f; --success: #1f9d74; --success-soft: #10302a; --destructive: #e8607c; --destructive-soft: #3a1722; --ring: #93a9f2;
+  --pg-track: #1a2346; --pg-rule: #222d55; --pg-ink2: #8fa5ec; --pg-weak: #f08a7a; --pg-weak-bg: #3a1a20; --hatch: #18214a;
+  --gr-n-head: #a9bcff; --gr-n-mid: rgba(147, 169, 242, .42); --gr-n-track: rgba(147, 169, 242, .16); --glow-n: 0 0 30px -2px rgba(120, 150, 255, .34);
+}
+
+/* ── 2. Dasar (globals.css) ── */
+*, *::before, *::after { box-sizing: border-box }
+html { -webkit-text-size-adjust: 100%; scrollbar-gutter: stable }
+body { margin: 0; background: var(--surface-page); color: var(--foreground); font-family: var(--font-sans-src), ui-sans-serif, system-ui, sans-serif; line-height: 1.5; -webkit-font-smoothing: antialiased }
+h1, h2, h3, strong, b { font-family: var(--font-display-src), ui-sans-serif, system-ui, sans-serif }
+h1, h2, h3 { text-wrap: balance } p { text-wrap: pretty }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; touch-action: manipulation; -webkit-tap-highlight-color: transparent }
+summary { cursor: pointer }
+:where(a, button, summary, [tabindex]):focus-visible { outline: 2px solid var(--ring); outline-offset: 2px }
+::selection { background: color-mix(in srgb, var(--accent) 34%, white); color: var(--foreground) }
+.tnum { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1 }
+.app-page { margin-inline: auto; width: 100%; max-width: 72.5rem; padding: 1.5rem 1rem }
+@media (min-width: 640px) { .app-page { padding: 3rem clamp(1.5rem, 4vw, 4rem) } }
+.notice { border: 1px solid var(--border); border-radius: var(--r-md); padding: 16px; background: var(--surface-inset); font-size: .875rem }
+.notice p { margin: 0 }
+/* buttonStyles({variant:"primary"|"ghost", size:"lg", block:true}) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; width: 100%; min-height: 44px; padding: 0 16px; border: 1px solid transparent; border-radius: var(--r-md); font: 600 .875rem var(--font-display-src), sans-serif; text-decoration: none; transition: background-color 200ms ease-out, color 200ms ease-out, box-shadow 200ms ease-out, transform 200ms ease-out }
+.btn:active { transform: translateY(1px) }
+.btn-gold { min-height: 48px; background: var(--gold-grad); color: var(--on-gold) }
+.btn-gold:hover { filter: brightness(1.06); box-shadow: var(--elev-2) }
+.btn-ghost { color: var(--muted-foreground) }
+.btn-ghost:hover { background: var(--surface-inset); color: var(--foreground) }
+.btn svg { width: 16px; height: 16px }
+
+/* ── 3. Salinan honey.css / progress.css yang dipakai (tidak diubah) ── */
+.hc-panel { position: relative; isolation: isolate; min-width: 0; padding: 24px; border: 1px solid var(--border); border-radius: var(--r-xl);
+  background: radial-gradient(120% 80% at 100% 100%, color-mix(in oklab, var(--honey-top) 16%, transparent), transparent 62%), linear-gradient(180deg, var(--surface-card), var(--surface-inset));
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .75), 0 18px 40px -24px rgb(122 87 16 / .38) }
+.hc-panel::before { content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; padding: 1px; pointer-events: none; background: var(--gold-grad);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0); animation: hc-trace 900ms var(--e-out) both }
+@keyframes hc-trace { from { clip-path: inset(0 0 100% 0) } }
+.hc-panel > * { animation: hc-swap 320ms var(--e-out) both }
+.hc-panel > :nth-child(2) { animation-delay: 30ms } .hc-panel > :nth-child(3) { animation-delay: 60ms } .hc-panel > :nth-child(n+4) { animation-delay: 90ms }
+@keyframes hc-swap { from { opacity: 0; transform: translateY(8px) } }
+.hc-panel-top { display: flex; flex-wrap: wrap; align-items: center; gap: 8px }
+.hc-tag { padding: 7px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font: 600 .72rem/1 var(--font-display-src), sans-serif; letter-spacing: .16em; text-transform: uppercase }
+.hc-code { font: 600 .8rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.hc-panel-title { margin: 14px 0 6px; font: 700 1.6rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground) }
+.hc-panel-desc { margin: 0; color: var(--muted-foreground) }
+.hc-meter { display: flex; align-items: center; gap: 14px; margin: 20px 0 6px }
+.hc-meter-hex { width: 54px; height: 62px; flex: none; overflow: visible; filter: drop-shadow(0 6px 10px rgb(122 87 16 / .18)) }
+.hc-meter-pct { font: 700 2rem/1 var(--font-display-src), sans-serif; letter-spacing: -.03em; color: var(--foreground) }
+.hc-meter-of { font-size: .875rem; line-height: 1.35; color: var(--muted-foreground) }
+.hc-core-base { fill: var(--surface-card) }
+.hc-core-line { fill: none; stroke: var(--border-strong); stroke-width: 1; vector-effect: non-scaling-stroke }
+.hc-honey { stroke: #fff6d6; stroke-width: 1.3; vector-effect: non-scaling-stroke }
+.hc-honey-y { transition: transform 1100ms var(--e-out) }
+.hc-honey-x.is-live { animation: hc-wave 3.4s linear 2 }
+@keyframes hc-wave { to { transform: translateX(-50px) } }
+.hc-actions { display: grid; gap: 8px; margin-top: 20px }
+.pk-hex { position: relative; display: grid; place-items: center; width: 34px; height: 40px; flex: none }
+.pk-hex svg { position: absolute; inset: 0; width: 100%; height: 100% }
+.pk-hex polygon { fill: var(--surface-card); stroke: var(--border-strong); stroke-width: 4 }
+.pk-hex.is-part polygon { fill: var(--accent-soft); stroke: var(--accent-strong) }
+.pk-hex.is-full polygon { fill: var(--accent); stroke: var(--accent-strong) }
+.pk-hex b { position: relative; font: 700 11px var(--font-display-src), sans-serif; color: var(--brand-ink) }
+.lr-stage { display: grid; gap: 20px; align-items: start; max-width: 1080px; margin: 0 auto }
+@media (min-width: 960px) {
+  .lr-stage { grid-template-columns: minmax(0, 1fr) 360px; gap: 28px }
+  .lr-stage > .lr-panel { grid-column: 2; grid-row: 1; position: sticky; top: 24px }
+  .lr-stage > .lr-main { grid-column: 1; grid-row: 1 }
+}
+.lr-panel { padding: 22px }
+.lr-panel .hc-panel-title { margin-top: 12px }
+.lr-meter { margin: 18px 0 4px }
+.lr-meter > div { display: grid; gap: 2px }
+.lr-meter-lab { font: 600 .72rem/1 var(--font-display-src), sans-serif; letter-spacing: .16em; text-transform: uppercase; color: var(--accent-ink) }
+.lr-meter .hc-meter-pct { font-size: 2.25rem }
+.lr-meter .hc-meter-of { font-size: .8rem }
+.lr-idx { display: grid; gap: 10px; margin: 16px 0 0 }
+.lr-idx > div { display: grid; grid-template-columns: 1fr auto; align-items: baseline; gap: 5px 10px }
+.lr-idx dt { font-size: .82rem; color: var(--muted-foreground) }
+.lr-idx dd { margin: 0; font: 700 .95rem/1 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-idx i { grid-column: 1 / -1; height: 6px; overflow: hidden; border-radius: 3px; background: var(--border) }
+.lr-idx i span { display: block; height: 100%; background: linear-gradient(90deg, var(--honey-top), var(--honey-bot)); transform-origin: left; transition: transform 1100ms var(--e-out) }
+.lr-chart { margin: 18px 0 0; padding: 12px 12px 10px; border: 1px solid var(--border); border-radius: 14px; background: var(--surface-card) }
+.lr-chart figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .75rem; color: var(--muted-foreground) }
+.lr-chart figcaption b { font: 600 .8rem var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-chart figcaption span { display: inline-flex; align-items: center; gap: 4px }
+.lr-chart figcaption i { width: 8px; height: 8px; margin-left: 6px; border-radius: 2px }
+.lr-chart ol { display: grid; grid-template-columns: repeat(10, 1fr); gap: 4px; height: 112px; margin: 10px 0 0; padding: 0; list-style: none }
+.lr-chart li { display: flex; flex-direction: column; gap: 4px; min-width: 0 }
+.lr-chart-track { display: flex; flex: 1; flex-direction: column; justify-content: flex-end; gap: 3px; min-height: 0 }
+.lr-chart-n { text-align: center; font: 600 10px/1 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-chart-bar { display: flex; flex-direction: column; min-height: 2px; overflow: hidden; border-radius: 4px 4px 2px 2px; background: var(--border); transform-origin: bottom; animation: lr-grow 700ms var(--e-out) both }
+@keyframes lr-grow { from { transform: scaleY(0) } }
+.lr-chart-x { text-align: center; font: 600 10px/1 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-chart .is-ok { background: linear-gradient(180deg, var(--honey-top), var(--honey-bot)) }
+.lr-chart .is-bad { background: color-mix(in oklab, var(--destructive) 70%, var(--surface-card)) }
+.lr-chart p { margin: 8px 0 0; font-size: .75rem; color: var(--muted-foreground) }
+.lr-cols { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none }
+.lr-col { overflow: hidden; border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); transition: border-color var(--motion), box-shadow 260ms }
+.lr-col[open] { border-color: var(--border-strong); box-shadow: 0 12px 28px -20px rgb(27 42 92 / .4) }
+.lr-col summary { display: flex; align-items: center; gap: 12px; min-height: 60px; padding: 10px 14px; list-style: none; transition: background-color var(--motion) }
+.lr-col summary::-webkit-details-marker { display: none }
+.lr-col summary:hover { background: var(--surface-inset) }
+.lr-col-main { display: grid; flex: 1; min-width: 0; gap: 7px }
+.lr-col-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px }
+.lr-col-top b { font: 600 .95rem/1.2 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-col-top span { font-size: .82rem; font-weight: 600; color: var(--muted-foreground) }
+.lr-col-bar { display: flex; height: 5px; overflow: hidden; border-radius: 3px; background: var(--border) }
+.lr-col-bar .is-ok { background: var(--honey-bot) }
+.lr-col-bar .is-bad { background: color-mix(in oklab, var(--destructive) 70%, var(--surface-card)) }
+.lr-pill { flex: none; padding: 4px 9px; border-radius: 999px; background: var(--destructive-soft); font: 600 .75rem/1.2 var(--font-display-src), sans-serif; color: var(--destructive) }
+.lr-pill.is-clean { background: var(--success-soft); color: var(--success) }
+.lr-chev { flex: none; width: 16px; height: 16px; color: var(--border-strong); transition: transform 240ms var(--e-out) }
+.lr-col[open] .lr-chev { transform: rotate(90deg); color: var(--brand-ink) }
+.lr-clean { margin: 0; padding: 12px 16px; border-top: 1px solid var(--border); font-size: .875rem; color: var(--success) }
+.lr-wrong { display: grid; gap: 6px; margin: 0; padding: 10px; border-top: 1px solid var(--border); background: var(--surface-inset); list-style: none }
+.lr-wrong li { display: grid; grid-template-columns: 4.25rem auto 1fr; align-items: center; gap: 12px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-card) }
+.lr-no { font: 600 .75rem/1.2 var(--font-display-src), sans-serif; color: var(--muted-foreground) }
+.lr-sym { display: grid; grid-template-columns: repeat(4, 2.5rem); gap: 4px }
+.lr-sym span { display: grid; place-items: center; height: 2.5rem; border-radius: 7px; background: var(--surface-inset); font-size: 1.25rem }
+.lr-ans { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; font-size: .8rem; font-weight: 600 }
+.lr-ans span { display: inline-flex; align-items: center; gap: 5px; padding: 3px 8px; border-radius: 999px; font-size: .8rem }
+.lr-ans .is-bad { background: var(--destructive-soft); color: var(--destructive) }
+.lr-ans .is-ok { background: var(--success-soft); color: var(--success) }
+@media (max-width: 559px) { .lr-wrong li { grid-template-columns: 1fr auto } .lr-wrong .lr-sym { grid-column: 1 / -1; grid-row: 2 } }
+.pg-sec-h { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 14px }
+.pg-sec-h h3 { margin: 0; font: 600 1rem var(--font-display-src), sans-serif }
+.pg-sec-h > span { color: var(--muted-foreground); font-size: .82rem }
+.pg-legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--muted-foreground) }
+.pg-legend i { display: inline-block; width: 10px; height: 10px; margin-right: 5px; border-radius: 3px; vertical-align: -1px }
+.pg-empty { margin: 0; color: var(--muted-foreground); font-size: .92rem }
+@media (prefers-reduced-motion: reduce) {
+  .hc-honey-y { transition-duration: 1ms !important } .hc-honey-x.is-live { animation: none }
+  .hc-panel > *, .hc-panel::before { animation: none }
+  .lr-chart-bar { animation: none } .lr-idx i span, .lr-chev { transition: none }
+}
+
+/* =====================================================================
+   ── 4. KELAS BARU (salin ke app/honey.css) ──
+   Hasil Kecermatan tanpa timer: Nilai 60 detik, tab profil + analisis.
+   Grafik garis = SVG viewBox 0 0 100 100 preserveAspectRatio="none" dengan
+   garis non-scaling; titik = path panjang nol (ujung bulat) supaya tetap
+   bulat; teks label = HTML di atas SVG (persen), jadi ukuran huruf tidak
+   ikut menyusut di HP atau membengkak di desktop.
+   ===================================================================== */
+.lr-say { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .92rem; line-height: 1.5; color: var(--foreground) }
+.lr-say b { color: var(--brand-ink) }
+.lr-gate { display: grid; gap: 4px; margin: 14px 0 0; padding: 12px 14px; border: 1px dashed var(--border-strong); border-radius: 12px; background: var(--surface-card) }
+.lr-gate b { font: 600 .95rem/1.3 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-gate p { margin: 0; font-size: .875rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-why { margin: 6px 0 0 }
+.lr-why summary { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font: 600 .85rem var(--font-display-src), sans-serif; color: var(--brand-ink); list-style: none }
+.lr-why summary::-webkit-details-marker { display: none }
+.lr-why summary svg { width: 16px; height: 16px; transition: transform 200ms var(--e-out) }
+.lr-why[open] summary svg { transform: rotate(180deg) }
+.lr-why > p { margin: 0 0 10px; font-size: .85rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-why dl { display: grid; gap: 10px; margin: 0 }
+.lr-why dt { font: 600 .85rem var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-why dd { margin: 2px 0 0; font-size: .85rem; line-height: 1.45; color: var(--muted-foreground) }
+/* Kolom yang tidak dikerjakan urut dari butir 1: slot berarsir, tidak ikut dihitung. */
+.lr-chart-bar.is-skip { height: calc(100% - 14px); border: 1px dashed var(--border-strong); background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--border) 70%, transparent) 0 1px, transparent 1px 6px); opacity: .7; animation: none }
+
+/* Tab di kolom kiri (desktop) / di bawah panel (HP). */
+.lr-tabs { display: flex; gap: 3px; margin: 0 0 12px; padding: 3px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-card) }
+.lr-tabs button { flex: 1 1 auto; min-height: 44px; padding: 4px 10px; white-space: nowrap; border-radius: 7px; font: 600 .82rem/1.15 var(--font-display-src), sans-serif; color: var(--muted-foreground); transition: background-color var(--motion), color var(--motion), transform 160ms var(--e-out) }
+.lr-tabs button:hover { color: var(--foreground) }
+.lr-tabs button:active { transform: scale(.97) }
+.lr-tabs button[aria-selected="true"] { background: var(--gold-grad); color: var(--on-gold) }
+.lr-tabs button:focus-visible { outline: 2px solid var(--ring); outline-offset: 1px }
+.lr-pane { border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); animation: lr-fade 160ms ease-out }
+.lr-pane.is-bare { border: 0; background: none }
+@keyframes lr-fade { from { opacity: 0 } }
+.lr-sec { padding: 18px 16px }
+.lr-sec + .lr-sec { border-top: 1px dashed var(--border) }
+@media (min-width: 640px) { .lr-sec { padding: 22px 24px } }
+.lr-big { margin: 0; font: 700 1.15rem/1.3 var(--font-display-src), sans-serif; letter-spacing: -.01em; color: var(--foreground); text-wrap: balance }
+.lr-big em { font-style: normal; color: var(--accent-ink) }
+.lr-sub { margin: 4px 0 0; font-size: .875rem; color: var(--muted-foreground) }
+.lr-like { margin: 12px 0 0; font-size: .875rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-note { margin: 12px 0 0; font-size: .875rem; line-height: 1.5; color: var(--foreground) }
+
+/* Profil angka: 2 kolom, analogi di bawah tiap angka. */
+.lr-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; margin: 0 }
+.lr-stats dt { font-size: .82rem; color: var(--muted-foreground) }
+.lr-stats dd { margin: 2px 0 0 }
+.lr-stats dd > b { display: block; font: 700 1.5rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground) }
+.lr-stats dd > b small { font-size: .78rem; font-weight: 600; letter-spacing: 0; color: var(--muted-foreground) }
+.lr-stats .lr-like { margin-top: 4px; font-size: .8rem; line-height: 1.4 }
+.lr-stats .is-up { color: var(--success) } .lr-stats .is-down { color: var(--pg-weak) }
+
+/* Plot: kotak = area data; label sumbu di luar kotak (y kiri, x bawah). */
+.lr-plot { position: relative; height: var(--h, 168px); margin: 8px 4px 26px 30px; isolation: isolate }
+.lr-plot > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible }
+.lr-plot .grid { stroke: var(--pg-rule); stroke-width: 1; vector-effect: non-scaling-stroke }
+.lr-plot .line { fill: none; stroke: var(--brand-ink); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot .line.is-thin { stroke-width: 1.75 }
+.lr-plot .lvl { fill: none; stroke: var(--accent-strong); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke }
+.lr-plot .mark { stroke: var(--accent-strong); stroke-width: 1.5; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke }
+.lr-plot .dot-o { stroke: var(--brand-ink); stroke-width: 10px; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot .dot-i { stroke: var(--surface-card); stroke-width: 5px; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot-y, .lr-plot-x, .lr-plot-v, .lr-plot-t { position: absolute; font: 500 11px/1 var(--font-sans-src), sans-serif; color: var(--muted-foreground); white-space: nowrap; font-variant-numeric: tabular-nums }
+.lr-plot-y { right: calc(100% + 6px); transform: translateY(-50%) }
+.lr-plot-x { top: calc(100% + 8px); transform: translateX(-50%); font: 600 10.5px/1 var(--font-display-src), sans-serif }
+.lr-plot-v { transform: translate(-50%, -150%) } .lr-plot-v.is-below { transform: translate(-50%, 70%) }
+.lr-plot-v { font: 600 11.5px/1 var(--font-display-src), sans-serif; color: var(--brand-ink) }
+.lr-plot-t { font: 600 11px/1.2 var(--font-display-src), sans-serif; color: var(--accent-ink) }
+.lr-plot-zone { position: absolute; inset: 0 auto 0 0; z-index: -1; border-radius: 6px 0 0 6px; background: repeating-linear-gradient(135deg, var(--accent-soft) 0 5px, transparent 5px 10px) }
+.lr-plot.is-draw > svg { animation: lr-reveal 700ms var(--e-out) both }
+@keyframes lr-reveal { from { clip-path: inset(0 100% 0 0) } }
+/* Baris akurasi di bawah grafik kecepatan, sejajar dengan titik. */
+.lr-accrow { position: relative; height: 34px; margin: 0 4px 0 30px }
+.lr-accrow span { position: absolute; top: 0; display: grid; justify-items: center; gap: 3px; transform: translateX(-50%); font: 600 10.5px/1 var(--font-display-src), sans-serif; color: var(--foreground); font-variant-numeric: tabular-nums }
+.lr-accrow span::before { content: ""; width: 10px; height: 11px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+.lr-accrow span.is-low { color: var(--destructive) }
+.lr-accrow span.is-low::before { background: var(--destructive) }
+.pg-legend .lr-key { display: inline-block; width: 14px; height: 3px; margin-right: 6px; border-radius: 2px; vertical-align: 3px; background: var(--brand-ink) }
+.pg-legend .lr-key.is-hex { width: 10px; height: 11px; border-radius: 0; vertical-align: -1px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+.pg-legend .lr-key.is-dash { width: 16px; height: 0; border-radius: 0; border-top: 2px dashed var(--accent-strong); background: none; vertical-align: 4px }
+
+/* Pasangan simbol yang tertukar. */
+.lr-pairs { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none }
+.lr-pairs li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-inset) }
+.lr-pair-sym { display: flex; gap: 4px }
+.lr-pair-sym span { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-card); font-size: 1.5rem; line-height: 1; color: var(--foreground) }
+.lr-pair-txt { display: grid; gap: 2px; min-width: 0 }
+.lr-pair-txt b { font: 600 .9rem/1.25 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-pair-txt small { font-size: .78rem; color: var(--muted-foreground) }
+.lr-pair-n { font: 700 1rem/1 var(--font-display-src), sans-serif; color: var(--destructive); white-space: nowrap }
+.lr-pair-n small { font-size: .72rem; font-weight: 600 }
+
+/* Gaya kerja: tiga posisi, yang aktif berlatar emas. */
+.lr-scale { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; margin: 0; padding: 3px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-inset); list-style: none }
+.lr-scale li { display: grid; place-items: center; min-height: 40px; padding: 4px; border-radius: 7px; font: 600 .82rem/1.15 var(--font-display-src), sans-serif; text-align: center; color: var(--muted-foreground) }
+.lr-scale li[aria-current="true"] { background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 6px 14px -10px var(--hc-glow) }
+
+/* Saran: penanda heksagon madu, bukan nomor. */
+.lr-tips { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none }
+.lr-tips li { display: grid; grid-template-columns: 12px minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: .92rem; line-height: 1.5; color: var(--foreground) }
+.lr-tips li::before { content: ""; width: 10px; height: 11px; translate: 0 1px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+
+@media (prefers-reduced-motion: reduce) {
+  .lr-pane, .lr-plot.is-draw > svg { animation: none }
+  .lr-tabs button, .lr-why summary svg { transition: none }
+}
+
+/* ── 5. Bilah kontrol prototipe (JANGAN disalin) ── */
+.proto { position: sticky; top: 0; z-index: 9; display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 8px 16px; border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--surface-page) 92%, transparent); backdrop-filter: blur(8px); font-size: .78rem; color: var(--muted-foreground) }
+.proto > b { font: 600 .78rem var(--font-display-src), sans-serif; color: var(--foreground) }
+.proto [role="group"] { display: inline-flex; gap: 2px; padding: 2px; border: 1px solid var(--border); border-radius: 8px }
+.proto button { min-height: 32px; padding: 0 9px; border-radius: 6px; font-size: .78rem; color: var(--muted-foreground) }
+.proto button[aria-pressed="true"] { background: var(--navy); color: #fff }
+</style>
+</head>
+<body>
+
+<div class="proto" aria-label="Kontrol prototipe">
+  <b>Prototipe</b>
+  <div role="group" aria-label="Kondisi data" data-k="s">
+    <button data-v="a">a. Normal</button><button data-v="b">b. Bayangan rendah</button><button data-v="c">c. Data kurang</button>
+  </div>
+  <div role="group" aria-label="Halaman" data-k="ctx">
+    <button data-v="selesai">Layar selesai</button><button data-v="bahas">Pembahasan</button><button data-v="lama">Pembahasan lama</button>
+  </div>
+  <div role="group" aria-label="Tema" data-k="theme">
+    <button data-v="auto">Auto</button><button data-v="light">Terang</button><button data-v="dark">Gelap</button>
+  </div>
+</div>
+
+<main class="app-page" id="app"></main>
+
+<script>
+/* ---------- Data tiruan (konsisten dengan rumus v2, lib/scoring/kecermatan.ts) ---------- */
+const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+const KOLOM_III = { A: "◐", B: "◑", C: "◒", D: "◓", E: "●" };
+
+const STATES = {
+  a: {
+    valid: true, answered: 500, correct: 481,
+    // 60 detik pertama per kolom (urut kolom I..X); kolom IV tidak urut dari butir 1.
+    k60: [16, 19, 20, 22, 22, 22, 24, 24, 22, 25], b60: [16, 17, 19, 20, 21, 19, 23, 24, 22, 23], skip: [4],
+    score: { raw: 72.4, ke: 40.2, kt: 94.4, kh: 75.1 },
+    say: "Kamu teliti dan makin lancar, tinggal kecepatan: dalam 60 detik rata-rata kamu sampai butir ke-22 dari 50.",
+    // Tanpa batas waktu, menurut urutan kolom dikerjakan.
+    visit: [1, 2, 3, 5, 6, 7, 8, 9, 10, 4],
+    bpm: [20.2, 21.8, 25.0, 26.2, 24.7, 26.3, 26.1, 26.3, 26.4, 24.1],
+    acc: [98, 96, 98, 96, 94, 94, 96, 100, 96, 94],
+    prof: { acc: "96,2", bpm: "24,5", tren: "naik", jeda: 3 },
+    speedNote: "Kamu mulai pelan di kolom I (20,2 benar per menit), lalu naik dan ajeg di sekitar 26 sampai kolom terakhir.",
+    med: [3.6,3.67,3.43,3.17,3.05,3.54,2.93,3.63,3.45,2.98,2.73,2.78,2.35,2.3,2.19,1.95,2.1,2.03,2.06,2.14,2.26,2.21,1.99,2.11,2.15,2.17,2.01,2.18,2.19,2.07,2.02,2.04,2.09,2.17,2.04,2.23,1.73,1.9,2.03,2.03,1.97,2.2,2.14,1.83,2.09,2.07,1.8,2.03,1.84,1.91],
+    hafal: 12, pre: 3.3, post: 2.1, faster: 37,
+    pairs: [
+      { a: "◐", an: "hitam kiri", b: "◑", bn: "hitam kanan", n: 5, col: "III" },
+      { a: "⇇", an: "dua kiri", b: "⇉", bn: "dua kanan", n: 3, col: "VII" },
+    ],
+    pola: "seimbang", koreksi: true,
+    tips: [
+      "Di 10 butir pertama tiap kolom, sebut nama simbolnya dalam hati, misalnya “hitam kiri”. Kunci jadi lebih cepat nempel.",
+      "Bedakan ◐ dan ◑ dari sisi yang hitam: kiri atau kanan. Lihat sisi itu dulu, baru tekan.",
+      "Sesekali coba dengan timer 60 detik supaya terbiasa dengan tempo aslinya.",
+    ],
+    cols: [49, 48, 49, 47, 48, 47, 47, 48, 50, 48],
+  },
+  b: {
+    valid: true, answered: 500, correct: 499,
+    k60: [11, 12, 12, 12, 11, 11, 11, 12, 11, 11], b60: [11, 12, 12, 12, 11, 11, 11, 12, 11, 11], skip: [],
+    score: { raw: 58.1, ke: 22.8, kt: 76.0, kh: 69.5 },
+    say: "<b>Hampir semua jawabanmu benar, keren.</b> Tapi dalam 60 detik kamu baru sampai butir ke-11 dari 50, jadi latihan tanpa waktu jangan dianggap remeh, ya.",
+    visit: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    bpm: [13.8, 16.0, 16.4, 16.1, 17.0, 15.8, 16.3, 15.9, 15.8, 15.8],
+    acc: [98, 100, 100, 100, 100, 100, 100, 100, 100, 100],
+    prof: { acc: "99,8", bpm: "15,9", tren: "stabil", jeda: 1 },
+    speedNote: "Kecepatanmu ajeg di sekitar 16 benar per menit dari awal sampai akhir. Ajeg itu modal bagus, tinggal dinaikkan.",
+    med: [4.36,5.52,4.57,4.59,5.41,4.59,5.12,5.33,5.11,4.97,5.45,5.21,4.54,4.84,4.22,3.3,2.92,2.99,3.14,3.07,3.03,3.15,3.17,3.29,3.55,3.35,3.12,3.21,3.29,3.24,3.19,3.38,3.51,3.15,3.48,3.33,3.14,3.47,3.0,3.08,3.37,3.35,2.9,3.57,3.34,3.39,3.27,3.06,3.62,3.19],
+    hafal: 15, pre: 5.0, post: 3.2, faster: 35,
+    pairs: [],
+    pola: "ragu", koreksi: false,
+    tips: [
+      "Pakai timer 60 detik minimal sekali sehari, supaya tempo cepat jadi kebiasaan.",
+      "Kalau sudah yakin, langsung tekan. Mengecek ulang jawaban yang sudah benar cuma makan waktu.",
+      "Target kecil dulu: dari 11 jadi 14 butir per kolom dalam 60 detik.",
+    ],
+    cols: [49, 50, 50, 50, 50, 50, 50, 50, 50, 50],
+  },
+  c: {
+    valid: false, answered: 100, correct: 93,
+    gate: ["Nilai 60 detik belum bisa dihitung", "Baru 2 kolom yang kamu kerjakan dari butir 1. Kerjakan minimal 3 kolom supaya Nilai 60 detik bisa diperkirakan."],
+    cols: [46, 47], total: [50, 50, 0, 0, 0, 0, 0, 0, 0, 0],
+  },
+};
+const LEGACY_GATE = ["Nilai 60 detik tidak tersedia", "Percobaan ini tersimpan sebelum waktu pengerjaan dicatat. Ulangi latihan untuk melihat Nilai 60 detik dan analisisnya."];
+
+const POLA = {
+  impulsif: "Kamu cenderung buru-buru. Seperti menyeberang tanpa lihat kanan-kiri: cepat, tapi gampang salah.",
+  seimbang: "Cepat dan teliti seimbang. Seperti menyeberang yang benar: tengok kanan-kiri sebentar, lalu jalan mantap.",
+  ragu: "Kamu sering lama di butir yang sebenarnya sudah kamu tahu. Seperti berdiri lama di tepi jalan padahal jalanan sudah sepi: aman, tapi waktunya habis.",
+};
+const TREN = {
+  naik: ["Naik", "is-up", "Seperti mesin motor yang sudah panas: makin lama makin enak jalannya."],
+  stabil: ["Stabil", "", "Seperti jalan di tol: kecepatanmu sama terus dari awal sampai akhir."],
+  turun: ["Turun", "is-down", "Seperti baterai HP yang mulai habis: di kolom akhir tenagamu menurun."],
+};
+
+/* ---------- Pembantu ---------- */
+const r1 = (n) => (Math.round(n * 10) / 10).toLocaleString("id-ID");
+const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
+function wavePath(period, amp, x0, x1, bottom) { let d = `M${x0} 0`; for (let x = x0; x < x1; x += period) d += ` Q${x + period / 4} ${-amp} ${x + period / 2} 0 T${x + period} 0`; return `${d} V${bottom} H${x0} Z`; }
+const fillY = (y0, h, p) => (p >= 1 ? y0 - 6 : y0 + h * (1 - p) + (p <= 0 ? 8 : 0));
+const I_REPEAT = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11V9a4 4 0 0 1 4-4h9"/><path d="m14 2 3 3-3 3"/><path d="M20 13v2a4 4 0 0 1-4 4H7"/><path d="m10 22-3-3 3-3"/></svg>';
+const I_DOWN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 9 7 7 7-7"/></svg>';
+const I_RIGHT = '<svg class="lr-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg>';
+
+function hexMeter(value, label, note) {
+  return `<div class="hc-meter lr-meter">
+    <svg viewBox="0 0 100 115.47" class="hc-meter-hex" aria-hidden="true">
+      <defs><clipPath id="lr-hex"><polygon points="${HEX}"/></clipPath>
+      <linearGradient id="lr-honey" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--honey-top)"/><stop offset="1" stop-color="var(--honey-bot)"/></linearGradient></defs>
+      <polygon points="${HEX}" class="hc-core-base"/>
+      <g clip-path="url(#lr-hex)"><g class="hc-honey-y" data-fill="${fillY(0, 115.47, Math.max(value, 0.04))}" style="transform:translateY(${fillY(0, 115.47, 0.04)}px)">
+        <g class="hc-honey-x is-live"><path d="${wavePath(50, 4.5, -100, 200, 140)}" fill="url(#lr-honey)" class="hc-honey"/></g></g></g>
+      <polygon points="${HEX}" class="hc-core-line"/>
+    </svg>
+    <div><span class="lr-meter-lab">${label}</span><span class="hc-meter-pct tnum">${r1(value * 100)}</span><span class="hc-meter-of">${note}</span></div>
+  </div>`;
+}
+
+/* Grafik batang panel (komponen lama). bars: [{n, ok, bad, skip}] skala 50 butir. */
+function barChart(title, bars, notes) {
+  return `<figure class="lr-chart">
+    <figcaption><b>${title}</b><span><i class="is-ok"></i> benar <i class="is-bad"></i> salah</span></figcaption>
+    <ol aria-label="${title}">${bars.map((c, i) => `<li aria-label="Kolom ${ROMAN[i]}: ${c.skip ? "tidak dihitung" : `${c.n} butir, ${c.ok} benar`}">
+      <span class="lr-chart-track"><span class="lr-chart-n tnum">${c.skip ? "-" : c.n || ""}</span>
+      ${c.skip ? `<span class="lr-chart-bar is-skip"></span>` : `<span class="lr-chart-bar" style="height:calc((100% - 14px) * ${c.n / 50});animation-delay:${i * 40}ms"><span class="is-bad" style="flex-grow:${c.bad}"></span><span class="is-ok" style="flex-grow:${c.ok}"></span></span>`}
+      </span><span class="lr-chart-x">${ROMAN[i]}</span></li>`).join("")}</ol>
+    ${notes.map((t) => `<p>${t}</p>`).join("")}
+  </figure>`;
+}
+
+/* Plot garis: xs/ys dalam 0..100 (persen kotak). */
+function plot({ h, xs, ys, lo, hi, yTicks, yFmt, xLabels, values, zone, mark, markT, levels, thin, label }) {
+  const X = (x) => x, Y = (v) => ((hi - v) / (hi - lo)) * 100;
+  const pts = xs.map((x, i) => `${X(x).toFixed(2)},${Y(ys[i]).toFixed(2)}`);
+  return `<div class="lr-plot is-draw" style="--h:${h}px" role="img" aria-label="${label}">
+    ${zone != null ? `<div class="lr-plot-zone" style="width:${zone}%"></div>` : ""}
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      ${yTicks.map((v) => `<line class="grid" x1="0" x2="100" y1="${Y(v)}" y2="${Y(v)}"/>`).join("")}
+      ${mark != null ? `<line class="mark" x1="${mark}" x2="${mark}" y1="0" y2="100"/>` : ""}
+      ${(levels || []).map((l) => `<line class="lvl" x1="${l.x0}" x2="${l.x1}" y1="${Y(l.v)}" y2="${Y(l.v)}"/>`).join("")}
+      <polyline class="line${thin ? " is-thin" : ""}" points="${pts.join(" ")}"/>
+      ${values ? xs.map((x, i) => `<path class="dot-o" d="M${X(x)} ${Y(ys[i])}h0"/><path class="dot-i" d="M${X(x)} ${Y(ys[i])}h0"/>`).join("") : ""}
+    </svg>
+    ${yTicks.map((v) => `<span class="lr-plot-y" style="top:${Y(v)}%">${yFmt(v)}</span>`).join("")}
+    ${xLabels.map((l) => `<span class="lr-plot-x" style="left:${l.x}%">${l.t}</span>`).join("")}
+    ${(values || []).map((v) => `<span class="lr-plot-v${v.below ? " is-below" : ""}" style="left:${v.x}%;top:${Y(v.v)}%">${v.t}</span>`).join("")}
+    ${mark != null ? `<span class="lr-plot-t" style="left:calc(${mark}% + 6px);top:4px">${markT}</span>` : ""}
+  </div>`;
+}
+
+function speedChart(s) {
+  const n = s.bpm.length, xs = s.bpm.map((_, i) => 5 + (i * 90) / (n - 1));
+  const lo = Math.floor((Math.min(...s.bpm) - 4) / 5) * 5, hi = Math.ceil((Math.max(...s.bpm) + 3) / 5) * 5;
+  const ticks = []; for (let v = lo; v <= hi; v += 5) ticks.push(v);
+  const max = s.bpm.indexOf(Math.max(...s.bpm));
+  const show = [...new Set([0, max, n - 1])];
+  return plot({
+    h: 150, xs, ys: s.bpm, lo, hi, yTicks: ticks, yFmt: (v) => v,
+    xLabels: s.visit.map((c, i) => ({ x: xs[i], t: ROMAN[c - 1] })),
+    values: show.map((i) => ({ x: xs[i], v: s.bpm[i], t: r1(s.bpm[i]), below: i > 0 && s.bpm[i - 1] > s.bpm[i] })),
+    label: `Benar per menit per kolom, urut dikerjakan: ${s.visit.map((c, i) => `kolom ${ROMAN[c - 1]} ${r1(s.bpm[i])}`).join(", ")}.`,
+  }) + `<div class="lr-accrow" aria-label="Akurasi per kolom: ${s.acc.map((a, i) => `kolom ${ROMAN[s.visit[i] - 1]} ${a}%`).join(", ")}">${s.acc.map((a, i) => `<span class="${a < 90 ? "is-low" : ""}" style="left:${xs[i]}%">${a}</span>`).join("")}</div>`;
+}
+
+function adaptChart(s) {
+  const xs = s.med.map((_, i) => (i * 100) / 49), hi = Math.ceil(Math.max(...s.med) + 0.4);
+  const ticks = []; for (let v = 0; v <= hi; v += 1) ticks.push(v);
+  const m = ((s.hafal - 0.5) * 100) / 49;
+  return plot({
+    h: 170, xs, ys: s.med, lo: 0, hi, yTicks: ticks, yFmt: (v) => v, thin: true,
+    xLabels: [1, 10, 20, 30, 40, 50].map((b) => ({ x: ((b - 1) * 100) / 49, t: b })),
+    zone: m, mark: m, markT: `hafal di butir ke-${s.hafal}`,
+    levels: [
+      { x0: 0, x1: m, v: s.pre },
+      { x0: m, x1: 100, v: s.post },
+    ],
+    label: `Detik per butir menurut urutan butir 1 sampai 50. Sekitar ${r1(s.pre)} detik sebelum butir ke-${s.hafal}, sekitar ${r1(s.post)} detik sesudahnya.`,
+  });
+}
+
+/* ---------- Render ---------- */
+const view = { s: "a", ctx: "selesai", theme: "auto", tab: 0 };
+
+function panel(s, ctx) {
+  const title = ctx === "selesai" ? "Latihan selesai" : "Percobaan terbaru";
+  const gate = ctx === "lama" ? LEGACY_GATE : s.gate;
+  let body;
+  if (s.valid && ctx !== "lama") {
+    const sc = s.score;
+    body = hexMeter(sc.raw / 100, "Nilai 60 detik", "Perkiraan latihan, bukan nilai ujian")
+      + `<p class="lr-say">${s.say}</p>`
+      + `<dl class="lr-idx">${[["Kecepatan", sc.ke], ["Ketelitian", sc.kt], ["Ketahanan", sc.kh]].map(([l, v]) => `<div><dt>${l}</dt><dd class="tnum">${r1(v)}</dd><i aria-hidden="true"><span data-w="${v / 100}" style="transform:scaleX(0)"></span></i></div>`).join("")}</dl>`
+      + `<details class="lr-why"><summary>Apa arti angka-angka ini? ${I_DOWN}</summary>
+          <p>Nilai 60 detik dihitung dari butir yang kamu jawab di 60 detik pertama tiap kolom, dengan rumus yang sama seperti latihan bertimer. Anggap saja intipan: kalau waktunya dibatasi, segini kira-kira hasilmu.</p>
+          <dl>
+            <div><dt>Kecepatan</dt><dd>Seperti lomba makan kerupuk: yang dihitung kerupuk yang habis, bukan yang cuma digigit.</dd></div>
+            <div><dt>Ketelitian</dt><dd>Seperti mencari rumah teman: jalan cepat boleh, asal tidak salah ketuk pintu. Nilainya baru penuh kalau jumlah butirmu juga cukup.</dd></div>
+            <div><dt>Ketahanan</dt><dd>Seperti lari jauh: yang penting larinya ajeg sampai garis akhir.</dd></div>
+          </dl></details>`
+      + barChart("Dalam 60 detik pertama", s.k60.map((n, i) => ({ n, ok: s.b60[i], bad: n - s.b60[i], skip: s.skip.includes(i + 1) })),
+          [s.skip.length ? `Kolom ${s.skip.map((c) => ROMAN[c - 1]).join(", ")} tidak dihitung karena tidak dikerjakan urut dari butir 1.` : "", "Tinggi penuh = 50 butir. Batang yang sama tinggi berarti kamu ajeg."].filter(Boolean));
+  } else {
+    const acc = s.correct / s.answered;
+    const total = s.total || s.cols.map(() => 50);
+    const okc = s.cols;
+    body = hexMeter(acc, "Ketepatan", "Dari butir yang sudah kamu jawab")
+      + `<div class="lr-gate" role="status"><b>${gate[0]}</b><p>${gate[1]}</p></div>`
+      + barChart("Jawaban per kolom", total.map((n, i) => ({ n, ok: okc[i] ?? 0, bad: n - (okc[i] ?? 0) })), []);
+  }
+  return `<aside class="hc-panel lr-panel" aria-label="Hasil latihan">
+    <div class="hc-panel-top"><span class="hc-tag">Sikap Kerja</span><span class="hc-code">Tanpa batas waktu</span></div>
+    <h2 class="hc-panel-title">${title}</h2>
+    <p class="hc-panel-desc tnum">${s.answered} dari 500 butir dicoba · ${s.correct} benar</p>
+    ${body}
+    ${ctx === "selesai" ? `<div class="notice" role="status" style="margin-top:16px"><p>Pembahasan tersimpan. Buka lagi kapan saja lewat <b>Pembahasan tersimpan</b> di halaman paket.</p></div>` : ""}
+    <div class="hc-actions">
+      <a class="btn btn-gold" href="#">${I_REPEAT} Ulangi latihan</a>
+      <a class="btn btn-ghost" href="#">Pilih paket lain</a>
+    </div>
+  </aside>`;
+}
+
+function tabProfil(s) {
+  const t = TREN[s.prof.tren];
+  return `<div class="lr-pane">
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Profil tanpa batas waktu</h3><span>semua 50 butir tiap kolom</span></div>
+      <dl class="lr-stats">
+        <div><dt>Akurasi</dt><dd><b class="tnum">${s.prof.acc}<small>%</small></b><p class="lr-like">Seperti melempar 100 bola ke keranjang: ${Math.floor(parseFloat(s.prof.acc.replace(",", ".")))} masuk.</p></dd></div>
+        <div><dt>Benar per menit</dt><dd><b class="tnum">${s.prof.bpm}</b><p class="lr-like">Seperti speedometer motor: menunjukkan seberapa kencang kamu melaju.</p></dd></div>
+        <div><dt>Tren kecepatan</dt><dd><b class="${t[1]}">${t[0]}</b><p class="lr-like">${t[2]}</p></dd></div>
+        <div><dt>Jeda panjang dibuang</dt><dd><b class="tnum">${s.prof.jeda} <small>kali</small></b><p class="lr-like">Seperti stopwatch yang di-pause saat kamu berhenti sebentar.</p></dd></div>
+      </dl>
+    </section>
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Kecepatan per kolom</h3><span>urut sesuai yang kamu kerjakan</span></div>
+      <div class="pg-legend"><span><i class="lr-key"></i>benar per menit</span><span><i class="lr-key is-hex"></i>akurasi (%)</span></div>
+      ${speedChart(s)}
+      <p class="lr-note">${s.speedNote}</p>
+    </section>
+  </div>`;
+}
+
+function tabAnalisis(s) {
+  return `<div class="lr-pane">
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Kapan kunci mulai hafal?</h3></div>
+      <p class="lr-big">±${s.hafal} butir untuk hafal kunci, setelah itu <em>${s.faster}% lebih cepat</em>.</p>
+      <p class="lr-sub">Dari sekitar ${r1(s.pre)} detik jadi ${r1(s.post)} detik per butir.</p>
+      <div class="pg-legend" style="margin-top:14px"><span><i class="lr-key"></i>detik per butir (biasanya)</span><span><i class="lr-key is-dash"></i>rata-rata sebelum dan sesudah hafal</span></div>
+      ${adaptChart(s)}
+      <p class="lr-like">Seperti menghafal nomor HP teman: awalnya lihat catatan, lama-lama langsung ingat. Bagian berarsir adalah saat kamu masih sering melirik kunci.</p>
+    </section>
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Simbol yang sering tertukar</h3></div>
+      ${s.pairs.length ? `<ul class="lr-pairs">${s.pairs.map((p) => `<li>
+          <span class="lr-pair-sym" aria-hidden="true"><span>${p.a}</span><span>${p.b}</span></span>
+          <span class="lr-pair-txt"><b>${p.an} dan ${p.bn}</b><small>kolom ${p.col}</small></span>
+          <span class="lr-pair-n tnum">${p.n}<small> kali</small></span></li>`).join("")}</ul>
+        <p class="lr-like">Seperti anak kembar: sekilas sama, bedanya di satu detail kecil. Cari detail itu dulu sebelum menekan.</p>`
+      : `<p class="pg-empty">Tidak ada pasangan simbol yang sering tertukar. Matamu jeli.</p>`}
+    </section>
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Gaya kerjamu</h3></div>
+      <ol class="lr-scale" aria-label="Gaya kerja">${[["impulsif", "Impulsif"], ["seimbang", "Seimbang"], ["ragu", "Ragu-ragu"]].map(([k, l]) => `<li${k === s.pola ? ' aria-current="true"' : ""}>${l}</li>`).join("")}</ol>
+      <p class="lr-note">${POLA[s.pola]}</p>
+      ${s.koreksi ? `<p class="lr-like">Setelah salah, kamu melambat sebentar lalu kembali normal. Itu tanda bagus: kamu belajar dari salah.</p>` : ""}
+    </section>
+    <section class="lr-sec">
+      <div class="pg-sec-h"><h3>Coba ini di latihan berikutnya</h3></div>
+      <ul class="lr-tips">${s.tips.map((t) => `<li>${t}</li>`).join("")}</ul>
+    </section>
+  </div>`;
+}
+
+function tabEmpty(gateText) {
+  return `<div class="lr-pane"><section class="lr-sec"><p class="pg-empty">${gateText}</p></section></div>`;
+}
+
+function tabRincian(s) {
+  return `<div class="lr-pane is-bare"><ul class="lr-cols">${s.cols.map((ok, i) => {
+    const bad = 50 - ok, clean = bad === 0, open = i === 2 && view.s === "a";
+    const wrong = open ? `<ul class="lr-wrong"><li><span class="lr-no tnum">Butir 118</span>
+        <span class="lr-sym" aria-label="Simbol yang tampil">${["◑", "◒", "◓", "●"].map((x) => `<span>${x}</span>`).join("")}</span>
+        <span class="lr-ans"><span class="is-bad">Pilih B ${KOLOM_III.B}</span><span class="is-ok">Kunci A ${KOLOM_III.A}</span></span></li></ul>` : `<p class="lr-clean">${clean ? "Semua jawaban di kolom ini benar." : "Buka untuk melihat butir yang salah."}</p>`;
+    return `<li><details class="lr-col"${open ? " open" : ""}><summary>
+      <span class="pk-hex${clean ? " is-full" : " is-part"}" aria-hidden="true"><svg viewBox="0 0 100 115.47"><polygon points="50,2 98,29.9 98,85.6 50,113.5 2,85.6 2,29.9"/></svg><b>${ROMAN[i]}</b></span>
+      <span class="lr-col-main"><span class="lr-col-top"><b>Kolom ${ROMAN[i]}</b><span class="tnum">${ok}/50 benar</span></span>
+      <span class="lr-col-bar" aria-hidden="true"><span class="is-ok" style="width:${ok * 2}%"></span><span class="is-bad" style="width:${bad * 2}%"></span></span></span>
+      <span class="lr-pill${clean ? " is-clean" : ""}">${clean ? "Bersih" : `${bad} salah`}</span>${I_RIGHT}</summary>${wrong}</details></li>`;
+  }).join("")}</ul></div>`;
+}
+
+const TABS = ["Tanpa batas waktu", "Analisis", "Per kolom"];
+function main(s, ctx) {
+  const ok = s.valid && ctx !== "lama";
+  const empty = ctx === "lama" ? "Grafik dan analisis muncul untuk percobaan baru." : "Grafik dan analisis muncul setelah minimal 3 kolom dikerjakan dari butir 1.";
+  const panes = [ok ? tabProfil(s) : tabEmpty(empty), ok ? tabAnalisis(s) : tabEmpty(empty), tabRincian(s)];
+  return `<section class="lr-main" aria-label="Rincian hasil">
+    <div class="lr-tabs" role="tablist" aria-label="Rincian hasil">${TABS.map((t, i) => `<button role="tab" id="lr-t${i}" aria-controls="lr-p${i}" aria-selected="${i === view.tab}" tabindex="${i === view.tab ? 0 : -1}">${t}</button>`).join("")}</div>
+    <div role="tabpanel" id="lr-p${view.tab}" aria-labelledby="lr-t${view.tab}">${panes[view.tab]}</div>
+  </section>`;
+}
+
+function render() {
+  const s = STATES[view.s];
+  document.getElementById("app").innerHTML = `<div class="lr-stage">${panel(s, view.ctx)}${main(s, view.ctx)}</div>`;
+  if (view.theme === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", view.theme);
+  document.querySelectorAll(".proto [data-k]").forEach((g) => g.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.v === view[g.dataset.k]))));
+  // Satu momen gerak: madu naik + bar indeks terisi (sekali, lalu diam).
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    document.querySelectorAll("[data-fill]").forEach((g) => (g.style.transform = `translateY(${g.dataset.fill}px)`));
+    document.querySelectorAll("[data-w]").forEach((el) => (el.style.transform = `scaleX(${el.dataset.w})`));
+  }));
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  tabs.forEach((b, i) => {
+    b.onclick = () => { view.tab = i; sync(); render(); document.getElementById(`lr-t${i}`).focus(); };
+    b.onkeydown = (e) => {
+      const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (d) { e.preventDefault(); view.tab = (i + d + 3) % 3; sync(); render(); document.getElementById(`lr-t${view.tab}`).focus(); }
+    };
+  });
+}
+
+function sync() { history.replaceState(null, "", `#${view.s}&ctx=${view.ctx}&theme=${view.theme}&tab=${view.tab + 1}`); }
+function readHash() {
+  const p = new URLSearchParams(location.hash.slice(1).replace(/^([abc])(&|$)/, "s=$1$2"));
+  if (STATES[p.get("s")]) view.s = p.get("s");
+  if (["selesai", "bahas", "lama"].includes(p.get("ctx"))) view.ctx = p.get("ctx");
+  if (["auto", "light", "dark"].includes(p.get("theme"))) view.theme = p.get("theme");
+  const t = parseInt(p.get("tab"), 10); if (t >= 1 && t <= 3) view.tab = t - 1;
+}
+document.querySelectorAll(".proto [data-k]").forEach((g) => g.addEventListener("click", (e) => {
+  const b = e.target.closest("button"); if (!b) return;
+  view[g.dataset.k] = b.dataset.v; sync(); render();
+}));
+readHash(); render();
+</script>
+</body>
+</html>

@@ -40,6 +40,8 @@ export type KecermatanDetailItem = {
   selected_key: string;
   correct_key: string;
   is_correct: boolean;
+  /** Milidetik sejak klik butir sebelumnya di kolom ini (tidak ada untuk butir pertama). */
+  ms?: number;
 };
 
 export type KecermatanColumnGroup = {

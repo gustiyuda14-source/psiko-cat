@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getSession } from "@/lib/auth";
 import { getDrillItem } from "@/lib/drill-bank";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { cleanAttemptAnswers, cleanDrill, cleanLatihan, latihanKeyMax, latihanPackageOf, type AttemptList, type DrillRow } from "@/lib/progress-rules";
+import { cleanAttemptAnswers, cleanAttemptTiming, cleanDrill, maxLatihanAttempts, cleanLatihan, latihanKeyMax, latihanPackageOf, type AttemptList, type DrillRow } from "@/lib/progress-rules";
 import { packageQuestions } from "@/lib/latihan-review";
 
 // Progres drill + latihan per peserta (tabel practice_progress, docs/rencana/sql/practice-progress.sql).
@@ -28,12 +28,12 @@ async function readAll(userId: string) {
 }
 
 async function readAttempts(userId: string, key?: string): Promise<AttemptList> {
-  let query = supabaseAdmin.from("latihan_attempts").select("id, item_key, submitted_at").eq("user_id", userId);
+  let query = supabaseAdmin.from("latihan_attempts").select("id, item_key, timed, submitted_at").eq("user_id", userId);
   if (key) query = query.eq("item_key", key);
   const { data, error } = await query.order("submitted_at", { ascending: false });
   if (error) throw error;
   const out: AttemptList = {};
-  for (const r of data ?? []) (out[r.item_key] ??= []).push({ id: r.id, at: r.submitted_at });
+  for (const r of data ?? []) (out[r.item_key] ??= []).push({ id: r.id, at: r.submitted_at, timed: r.timed });
   return out;
 }
 
@@ -68,7 +68,7 @@ export async function GET() {
   { action: "latihan", items: { "/latihan/kecerdasan/2": 37 } }   capaian sesi, hanya naik
   { action: "reset", kind: "drill" | "latihan", keys: string[] }  hapus progres kartu/paket
   { action: "import", drill: {...}, latihan: {...} }               sekali, dari localStorage lama
-  { action: "attempt", key, answers: { id soal: pilihan | null }, timed }  jawaban yang dikumpulkan;
+  { action: "attempt", key, answers: { id soal: pilihan | null }, timed, timing? }  jawaban yang dikumpulkan;
     server menyisakan 2 percobaan terbaru per paket (peserta setuju di layar selesai)
 */
 export async function POST(req: NextRequest) {
@@ -99,13 +99,28 @@ export async function POST(req: NextRequest) {
       if (Object.keys(answers).some((id) => !bank.has(id))) {
         return NextResponse.json({ error: "Soal tidak cocok dengan paket" }, { status: 400 });
       }
-      const { error } = await supabaseAdmin.rpc("record_latihan_attempt", {
+      const { data: attemptId, error } = await supabaseAdmin.rpc("record_latihan_attempt", {
         p_user: userId,
         p_key: key,
         p_answers: answers,
         p_timed: body.timed === true,
       });
       if (error) throw error;
+      // Waktu Kecermatan untuk analisis pembahasan; gagal simpan tidak menggagalkan percobaan.
+      const timing = route.module === "KECERMATAN" && body.timing !== undefined
+        ? cleanAttemptTiming(body.timing, new Set(Object.keys(answers)))
+        : null;
+      // Kecermatan: 1 percobaan per mode per paket. Hanya id lebih lama dengan mode yang sama yang
+      // dihapus, jadi dua kiriman bersamaan tidak bisa saling menghapus (yang terbaru selalu tersisa).
+      if (maxLatihanAttempts(key) === 1) {
+        const { error: trimError } = await supabaseAdmin.from("latihan_attempts").delete()
+          .eq("user_id", userId).eq("item_key", key).eq("timed", body.timed === true).lt("id", attemptId);
+        if (trimError) console.error("progress attempt trim", trimError);
+      }
+      if (timing) {
+        const { error: timingError } = await supabaseAdmin.from("latihan_attempts").update({ timing }).eq("id", attemptId).eq("user_id", userId);
+        if (timingError) console.error("progress attempt timing", timingError);
+      }
       return NextResponse.json({ ok: true, attempts: (await readAttempts(userId, key))[key] ?? [] });
     }
 

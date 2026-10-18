@@ -3,7 +3,7 @@ import "server-only";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { isModuleExpired } from "@/lib/session-access";
 import { isSimulasiPackage, type ModuleType } from "@/lib/test-config";
-import { latihanPackageOf } from "@/lib/progress-rules";
+import { cleanAttemptTiming, latihanPackageOf, type KecermatanTiming } from "@/lib/progress-rules";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { calculateKecermatan, type KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { itemScore, summarize, type PribadiRule, type PribadiSummary } from "@/lib/scoring/pribadi";
@@ -80,9 +80,9 @@ export type LatihanReview =
       submittedAt: string;
       timed: boolean;
       /** Percobaan lain yang masih tersimpan untuk paket ini, terbaru dulu. */
-      siblings: { id: number; at: string }[];
+      siblings: { id: number; at: string; timed: boolean }[];
       kecerdasan?: KecerdasanReviewItem[];
-      kecermatan?: { questions: SafeQuestion[]; answers: KecermatanFeedback; score: KecermatanScoreResult | null };
+      kecermatan?: { questions: SafeQuestion[]; answers: KecermatanFeedback; score: KecermatanScoreResult | null; timing: KecermatanTiming | null };
       pribadi?: { summary: PribadiSummary; items: PribadiReviewItem[] };
     };
 
@@ -106,7 +106,7 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
     packageQuestions(route.module, route.pkg),
     supabaseAdmin
       .from("latihan_attempts")
-      .select("id, submitted_at")
+      .select("id, submitted_at, timed")
       .eq("user_id", userId)
       .eq("item_key", attempt.item_key)
       .order("submitted_at", { ascending: false }),
@@ -122,7 +122,7 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
     pkg: route.pkg,
     submittedAt: attempt.submitted_at as string,
     timed: Boolean(attempt.timed),
-    siblings: (siblings ?? []).map((s) => ({ id: s.id as number, at: s.submitted_at as string })),
+    siblings: (siblings ?? []).map((s) => ({ id: s.id as number, at: s.submitted_at as string, timed: s.timed as boolean })),
   };
 
   if (route.module === "KECERDASAN") {
@@ -169,7 +169,10 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
         score = null;
       }
     }
-    return { ...base, kecermatan: { questions: questions.map(strip), answers, score } };
+    // Query terpisah: sebelum kolom timing dimigrasi, pembahasan tetap terbuka (tanpa analisis waktu).
+    const { data: timingRow } = await supabaseAdmin.from("latihan_attempts").select("timing").eq("id", attempt.id).maybeSingle();
+    const timing = cleanAttemptTiming(timingRow?.timing, new Set(Object.keys(answers)));
+    return { ...base, kecermatan: { questions: questions.map(strip), answers, score, timing } };
   }
 
   const scored = questions.flatMap((q) => {

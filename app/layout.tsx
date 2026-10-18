@@ -7,6 +7,7 @@ import "./paket.css";
 import "./exam.css";
 import "./report.css";
 import "./progress.css";
+import "./latihan-analisis.css";
 import VersionWatcher from "./components/VersionWatcher";
 
 // Nama variabel diberi sufiks -src supaya @theme inline di globals.css bisa

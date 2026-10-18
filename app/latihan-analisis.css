@@ -1,0 +1,105 @@
+/* Hasil latihan Kecermatan: Nilai 60 detik, tab profil + analisis, kurva titik hafal
+   (juga di pembahasan Simulasi Penuh). Dari bagian 4 output/kecermatan-review-prototype.html.
+   Komponen: app/latihan/[module]/LatihanKecermatanHasil.tsx + LatihanKecermatanAnalisis.tsx. */
+.lr-say { margin: 14px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--accent-soft); font-size: .92rem; line-height: 1.5; color: var(--foreground) }
+.lr-say b { color: var(--brand-ink) }
+.lr-gate { display: grid; gap: 4px; margin: 14px 0 0; padding: 12px 14px; border: 1px dashed var(--border-strong); border-radius: 12px; background: var(--surface-card) }
+.lr-gate b { font: 600 .95rem/1.3 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-gate p { margin: 0; font-size: .875rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-why { margin: 6px 0 0 }
+.lr-why summary { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; font: 600 .85rem var(--font-display-src), sans-serif; color: var(--brand-ink); list-style: none }
+.lr-why summary::-webkit-details-marker { display: none }
+.lr-why summary svg { width: 16px; height: 16px; transition: transform 200ms var(--e-out) }
+.lr-why[open] summary svg { transform: rotate(180deg) }
+.lr-why > p { margin: 0 0 10px; font-size: .85rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-why dl { display: grid; gap: 10px; margin: 0 }
+.lr-why dt { font: 600 .85rem var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-why dd { margin: 2px 0 0; font-size: .85rem; line-height: 1.45; color: var(--muted-foreground) }
+/* Kolom yang belum dikerjakan: slot berarsir (dihitung 0). */
+.lr-chart-bar.is-skip { height: calc(100% - 14px); border: 1px dashed var(--border-strong); background: repeating-linear-gradient(135deg, color-mix(in oklab, var(--border) 70%, transparent) 0 1px, transparent 1px 6px); opacity: .7; animation: none }
+
+/* Tab di kolom kiri (desktop) / di bawah panel (HP). */
+.lr-tabs { display: flex; gap: 3px; margin: 0 0 12px; padding: 3px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-card) }
+.lr-tabs button { flex: 1 1 auto; min-height: 44px; padding: 4px 10px; white-space: nowrap; border-radius: 7px; font: 600 .82rem/1.15 var(--font-display-src), sans-serif; color: var(--muted-foreground); transition: background-color var(--motion), color var(--motion), transform 160ms var(--e-out) }
+.lr-tabs button:hover { color: var(--foreground) }
+.lr-tabs button:active { transform: scale(.97) }
+.lr-tabs button[aria-selected="true"] { background: var(--gold-grad); color: var(--on-gold) }
+.lr-tabs button:focus-visible { outline: 2px solid var(--ring); outline-offset: 1px }
+.lr-pane { border: 1px solid var(--border); border-radius: var(--r-lg); background: var(--surface-card); animation: lr-fade 160ms ease-out }
+.lr-pane.is-bare { border: 0; background: none }
+@keyframes lr-fade { from { opacity: 0 } }
+.lr-sec { padding: 18px 16px }
+.lr-sec + .lr-sec { border-top: 1px dashed var(--border) }
+@media (min-width: 640px) { .lr-sec { padding: 22px 24px } }
+.lr-big { margin: 0; font: 700 1.15rem/1.3 var(--font-display-src), sans-serif; letter-spacing: -.01em; color: var(--foreground); text-wrap: balance }
+.lr-big em { font-style: normal; color: var(--accent-ink) }
+.lr-sub { margin: 4px 0 0; font-size: .875rem; color: var(--muted-foreground) }
+.lr-like { margin: 12px 0 0; font-size: .875rem; line-height: 1.5; color: var(--muted-foreground) }
+.lr-note { margin: 12px 0 0; font-size: .875rem; line-height: 1.5; color: var(--foreground) }
+
+/* Profil angka: 2 kolom, analogi di bawah tiap angka. */
+.lr-stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px 20px; margin: 0 }
+.lr-stats dt { font-size: .82rem; color: var(--muted-foreground) }
+.lr-stats dd { margin: 2px 0 0 }
+.lr-stats dd > b { display: block; font: 700 1.5rem/1.15 var(--font-display-src), sans-serif; letter-spacing: -.02em; color: var(--foreground) }
+.lr-stats dd > b small { font-size: .78rem; font-weight: 600; letter-spacing: 0; color: var(--muted-foreground) }
+.lr-stats .lr-like { margin-top: 4px; font-size: .8rem; line-height: 1.4 }
+.lr-stats .is-up { color: var(--success) } .lr-stats .is-down { color: var(--pg-weak) }
+
+/* Plot: kotak = area data; label sumbu di luar kotak (y kiri, x bawah). */
+.lr-plot { position: relative; height: var(--h, 168px); margin: 8px 4px 26px 30px; isolation: isolate }
+.lr-plot > svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible }
+.lr-plot .grid { stroke: var(--pg-rule); stroke-width: 1; vector-effect: non-scaling-stroke }
+.lr-plot .line { fill: none; stroke: var(--brand-ink); stroke-width: 2.5; stroke-linejoin: round; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot .line.is-thin { stroke-width: 1.75 }
+.lr-plot .lvl { fill: none; stroke: var(--accent-strong); stroke-width: 2; stroke-dasharray: 6 4; vector-effect: non-scaling-stroke }
+.lr-plot .mark { stroke: var(--accent-strong); stroke-width: 1.5; stroke-dasharray: 3 3; vector-effect: non-scaling-stroke }
+.lr-plot .dot-o { stroke: var(--brand-ink); stroke-width: 10px; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot .dot-i { stroke: var(--surface-card); stroke-width: 5px; stroke-linecap: round; vector-effect: non-scaling-stroke }
+.lr-plot-y, .lr-plot-x, .lr-plot-v, .lr-plot-t { position: absolute; font: 500 11px/1 var(--font-sans-src), sans-serif; color: var(--muted-foreground); white-space: nowrap; font-variant-numeric: tabular-nums }
+.lr-plot-y { right: calc(100% + 6px); transform: translateY(-50%) }
+.lr-plot-x { top: calc(100% + 8px); transform: translateX(-50%); font: 600 10.5px/1 var(--font-display-src), sans-serif }
+.lr-plot-v { transform: translate(-50%, -150%) } .lr-plot-v.is-below { transform: translate(-50%, 70%) }
+.lr-plot-v { font: 600 11.5px/1 var(--font-display-src), sans-serif; color: var(--brand-ink) }
+.lr-plot-t { font: 600 11px/1.2 var(--font-display-src), sans-serif; color: var(--accent-ink) }
+.lr-plot-zone { position: absolute; inset: 0 auto 0 0; z-index: -1; border-radius: 6px 0 0 6px; background: repeating-linear-gradient(135deg, var(--accent-soft) 0 5px, transparent 5px 10px) }
+.lr-plot.is-draw > svg { animation: lr-reveal 700ms var(--e-out) both }
+@keyframes lr-reveal { from { clip-path: inset(0 100% 0 0) } }
+/* Baris akurasi di bawah grafik kecepatan, sejajar dengan titik. */
+.lr-accrow { position: relative; height: 34px; margin: 0 4px 0 30px }
+.lr-accrow span { position: absolute; top: 0; display: grid; justify-items: center; gap: 3px; transform: translateX(-50%); font: 600 10.5px/1 var(--font-display-src), sans-serif; color: var(--foreground); font-variant-numeric: tabular-nums }
+.lr-accrow span::before { content: ""; width: 10px; height: 11px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+.lr-accrow span.is-low { color: var(--destructive) }
+.lr-accrow span.is-low::before { background: var(--destructive) }
+.pg-legend .lr-key { display: inline-block; width: 14px; height: 3px; margin-right: 6px; border-radius: 2px; vertical-align: 3px; background: var(--brand-ink) }
+.pg-legend .lr-key.is-hex { width: 10px; height: 11px; border-radius: 0; vertical-align: -1px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+.pg-legend .lr-key.is-dash { width: 16px; height: 0; border-radius: 0; border-top: 2px dashed var(--accent-strong); background: none; vertical-align: 4px }
+
+/* Pasangan simbol yang tertukar. */
+.lr-pairs { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none }
+.lr-pairs li { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface-inset) }
+.lr-pair-sym { display: flex; gap: 4px }
+.lr-pair-sym span { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 1px solid var(--border); border-radius: 8px; background: var(--surface-card); font-size: 1.5rem; line-height: 1; color: var(--foreground) }
+.lr-pair-txt { display: grid; gap: 2px; min-width: 0 }
+.lr-pair-txt b { font: 600 .9rem/1.25 var(--font-display-src), sans-serif; color: var(--foreground) }
+.lr-pair-txt small { font-size: .78rem; color: var(--muted-foreground) }
+.lr-pair-n { font: 700 1rem/1 var(--font-display-src), sans-serif; color: var(--destructive); white-space: nowrap }
+.lr-pair-n small { font-size: .72rem; font-weight: 600 }
+
+/* Gaya kerja: tiga posisi, yang aktif berlatar emas. */
+.lr-scale { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 3px; margin: 0; padding: 3px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-inset); list-style: none }
+.lr-scale li { display: grid; place-items: center; min-height: 40px; padding: 4px; border-radius: 7px; font: 600 .82rem/1.15 var(--font-display-src), sans-serif; text-align: center; color: var(--muted-foreground) }
+.lr-scale li[aria-current="true"] { background: var(--gold-grad); color: var(--on-gold); box-shadow: 0 6px 14px -10px var(--hc-glow) }
+
+/* Saran: penanda heksagon madu, bukan nomor. */
+.lr-tips { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none }
+.lr-tips li { display: grid; grid-template-columns: 12px minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: .92rem; line-height: 1.5; color: var(--foreground) }
+.lr-tips li::before { content: ""; width: 10px; height: 11px; translate: 0 1px; clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%); background: var(--honey-bot) }
+
+@media (prefers-reduced-motion: reduce) {
+  .lr-pane, .lr-plot.is-draw > svg { animation: none }
+  .lr-tabs button, .lr-why summary svg { transition: none }
+}
+
+/* Panel lebih tinggi dari layar: lepas sticky supaya bagian bawahnya terbaca. */
+@media (min-width: 960px) { .lr-stage > .lr-panel.is-tall { position: static } }

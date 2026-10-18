@@ -149,6 +149,7 @@ export async function fetchKecermatanDetailReview(moduleSessionId: string): Prom
 
   type ReviewLog = {
     question_id: string;
+    clicked_at_ms: number;
     response_value: string;
     question: {
       sequence_number: number;
@@ -160,6 +161,7 @@ export async function fetchKecermatanDetailReview(moduleSessionId: string): Prom
     (logs as unknown as ReviewLog[]).map((log) => [log.question_id, log])
   ).values()];
 
+  const at = new Map(uniqueLogs.map((log) => [log.question_id, log.clicked_at_ms]));
   const groups = new Map<number, KecermatanDetailItem[]>();
   for (const log of uniqueLogs) {
     const columnIndex = log.question?.column_index;
@@ -184,7 +186,10 @@ export async function fetchKecermatanDetailReview(moduleSessionId: string): Prom
       column_index,
       total: items.length,
       correct: items.filter((item) => item.is_correct).length,
-      items: items.sort((a, b) => a.sequence_number - b.sequence_number),
+      // ms = jeda dari klik butir sebelumnya di kolom yang sama (kurva titik hafal); butir pertama tanpa jam mulai kolom.
+      items: items
+        .sort((a, b) => a.sequence_number - b.sequence_number)
+        .map((item, i, xs) => (i ? { ...item, ms: at.get(item.question_id)! - at.get(xs[i - 1].question_id)! } : item)),
     }))
     .sort((a, b) => a.column_index - b.column_index);
 }

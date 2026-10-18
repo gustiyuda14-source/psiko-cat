@@ -6,7 +6,7 @@
 // perangkat yang sama tidak melihat progres akun sebelumnya.
 
 import { useSyncExternalStore } from "react";
-import type { AttemptList, DrillRow } from "@/lib/progress-rules";
+import type { AttemptList, DrillRow, KecermatanTiming } from "@/lib/progress-rules";
 
 /** id soal → [benar, percobaan, ms terakhir]. */
 export type DrillProgress = Record<string, DrillRow>;
@@ -126,13 +126,13 @@ export function useLatihanAttempts(): { attempts: AttemptList; ready: boolean } 
   Server menyisakan 2 percobaan terbaru per paket; pemanggil wajib minta persetujuan
   peserta dulu bila sudah ada 2 (lihat AttemptSaver).
 */
-export async function saveLatihanAttempt(key: string, answers: Record<string, string | null>, timed = false): Promise<boolean> {
+export async function saveLatihanAttempt(key: string, answers: Record<string, string | null>, timed = false, timing?: KecermatanTiming): Promise<boolean> {
   const gen = generation;
   // Tiga kali dengan jeda: sinyal yang putus sesaat tidak boleh menghilangkan pembahasan.
   let res: Response | null = null;
   for (let attempt = 0; attempt < 3 && !res?.ok; attempt++) {
     if (attempt) await new Promise((resolve) => setTimeout(resolve, 2000 * attempt));
-    res = await post({ action: "attempt", key, answers, timed }).catch(() => null);
+    res = await post({ action: "attempt", key, answers, timed, timing }).catch(() => null);
     if (res && res.status >= 400 && res.status < 500) break; // ditolak server: mengulang tidak membantu
   }
   if (!res?.ok) return false;

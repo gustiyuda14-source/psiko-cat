@@ -10,7 +10,7 @@ import { fillY, wavePath } from "@/lib/honey";
 import { MODULE_CONFIG } from "@/lib/test-config";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
-import { MAX_LATIHAN_ATTEMPTS } from "@/lib/progress-rules";
+import { maxLatihanAttempts } from "@/lib/progress-rules";
 import { NewBadge } from "@/app/components/NewBadge";
 
 /*
@@ -278,12 +278,14 @@ export function PackageCarousel({
               <p className="text-sm font-semibold text-foreground">Pembahasan tersimpan</p>
               {attempts[current.key].map((a, k) => (
                 <Link key={a.id} href={`/latihan/pembahasan/${a.id}`} className={buttonStyles({ variant: "secondary", block: true })}>
-                  {k === 0 ? "Terbaru" : "Sebelumnya"} ·{" "}
+                  {maxLatihanAttempts(current.key) === 1 ? (a.timed ? "Dengan waktu" : "Tanpa waktu") : k === 0 ? "Terbaru" : "Sebelumnya"} ·{" "}
                   {new Date(a.at).toLocaleDateString("id-ID", { day: "numeric", month: "short" })}
                 </Link>
               ))}
               <p className="text-xs text-muted-foreground">
-                Maksimal {MAX_LATIHAN_ATTEMPTS} pembahasan tersimpan per paket. Menyimpan percobaan berikutnya menghapus yang paling lama, setelah kamu setujui.
+                {maxLatihanAttempts(current.key) === 1
+                  ? "Tersimpan satu pembahasan dengan waktu dan satu tanpa waktu per paket. Mengulang dengan mode yang sama menggantinya dengan percobaan terbaru."
+                  : "Maksimal 2 pembahasan tersimpan per paket. Menyimpan percobaan berikutnya menghapus yang paling lama, setelah kamu setujui."}
               </p>
             </div>
           )}

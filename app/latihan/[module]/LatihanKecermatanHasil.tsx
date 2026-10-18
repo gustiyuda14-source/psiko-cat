@@ -1,29 +1,37 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { SafeQuestion, KecermatanOptionsPayload } from "@/lib/types/safe-question";
 import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import { buttonStyles } from "@/app/components/ui";
-import { ChevronRight, Repeat } from "@/app/components/icons";
+import { ChevronDown, ChevronRight, Repeat } from "@/app/components/icons";
 import { fillY, wavePath } from "@/lib/honey";
+import { analyzeKecermatan } from "@/lib/kecermatan-analisis";
+import type { KecermatanTiming } from "@/lib/progress-rules";
+import { scoreLatihanKecermatan } from "./actions";
+import { AnalisisPane, ProfilPane, ROMAN, r1 } from "./LatihanKecermatanAnalisis";
 
 /*
   Layar selesai latihan Kecermatan, bahasa visual sama dengan pemilih paket
   (app/honey.css): panel madu di kanan (sticky di desktop, paling atas di HP)
-  berisi meter heksagon, indeks Ke/Kt/Kh (mode timer), dan grafik klik per kolom —
-  batang yang rata = Ketahanan tinggi. Kiri: rincian per kolom, tiap kolom
-  <details> yang bisa dibuka untuk melihat butir yang salah.
+  berisi meter heksagon, indeks Ke/Kt/Kh, dan grafik klik per kolom — batang yang
+  rata = Ketahanan tinggi. Tanpa timer: "Nilai 60 detik" bayangan dari 60 detik
+  pertama tiap kolom (docs/rencana/kecermatan-latihan-analisis.md), tidak disimpan
+  ke tren. Kiri: tab profil + analisis (LatihanKecermatanAnalisis.tsx) dan rincian
+  per kolom, tiap kolom <details> yang bisa dibuka untuk melihat butir yang salah.
 */
 
 export type LatihanFeedback = { selected: string; is_correct: boolean; correct_key: string };
 
-const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
 const PER_COLUMN = 50;
-const r1 = (n: number) => (Math.round(n * 10) / 10).toLocaleString("id-ID");
+// ponytail: ambang "nilai 60 detik rendah" sementara = 15 butir per kolom (Keterlibatan penuh engine v2); kalibrasi F4.
+const BUTIR_60_RENDAH = 15;
+const LEGACY_GATE = ["Nilai 60 detik tidak tersedia", "Percobaan ini tersimpan sebelum waktu pengerjaan dicatat. Ulangi latihan untuk melihat Nilai 60 detik dan analisisnya."];
 
 type Wrong = { id: string; no: number; shown: string[]; selected: string; selectedSym: string; key: string; keySym: string };
 type Column = { index: number; total: number; correct: number; wrong: Wrong[] };
@@ -92,6 +100,58 @@ function HexMeter({ value, label, note }: { value: number; label: string; note: 
   );
 }
 
+function Indeks({ score }: { score: KecermatanScoreResult }) {
+  return (
+    <dl className="lr-idx">
+      {[
+        { label: "Kecepatan", value: score.ke_index },
+        { label: "Ketelitian", value: score.kt_index },
+        { label: "Ketahanan", value: score.kh_index },
+      ].map((s) => (
+        <div key={s.label}>
+          <dt>{s.label}</dt>
+          <dd className="tnum">{r1(s.value)}</dd>
+          <Bar value={s.value} />
+        </div>
+      ))}
+    </dl>
+  );
+}
+
+/** Grafik batang per kolom; skip = kolom tak dikerjakan (slot berarsir). */
+function BarChart({ title, bars, notes }: { title: string; bars: { n: number; ok: number; skip?: boolean }[]; notes: (string | false)[] }) {
+  const peak = Math.max(PER_COLUMN, ...bars.map((c) => c.n));
+  return (
+    <figure className="lr-chart">
+      <figcaption>
+        <b>{title}</b>
+        <span>
+          <i className="is-ok" /> benar <i className="is-bad" /> salah
+        </span>
+      </figcaption>
+      <ol aria-label={title}>
+        {bars.map((c, i) => (
+          <li key={i} aria-label={`Kolom ${ROMAN[i]}: ${c.skip ? "belum dikerjakan" : `${c.n} dijawab, ${c.ok} benar`}`}>
+            <span className="lr-chart-track">
+              <span className="lr-chart-n tnum">{c.skip ? "-" : c.n || ""}</span>
+              {c.skip ? (
+                <span className="lr-chart-bar is-skip" />
+              ) : (
+                <span className="lr-chart-bar" style={{ height: `calc((100% - 14px) * ${c.n / peak})`, animationDelay: `${i * 40}ms` }}>
+                  <span className="is-bad" style={{ flexGrow: c.n - c.ok }} />
+                  <span className="is-ok" style={{ flexGrow: c.ok }} />
+                </span>
+              )}
+            </span>
+            <span className="lr-chart-x">{ROMAN[i]}</span>
+          </li>
+        ))}
+      </ol>
+      {notes.map((t) => t && <p key={t}>{t}</p>)}
+    </figure>
+  );
+}
+
 function Bar({ value }: { value: number }) {
   const [w, setW] = useState(0);
   useEffect(() => {
@@ -115,12 +175,15 @@ export default function LatihanKecermatanHasil({
   restartHref,
   title = "Latihan selesai",
   notice,
+  timing,
 }: {
   sorted: SafeQuestion[];
   answers: Record<string, LatihanFeedback>;
   timedMode: boolean;
   score: KecermatanScoreResult | null;
   scoreFailed: boolean;
+  /** Waktu pengerjaan; null = percobaan lama sebelum waktu dicatat. */
+  timing: KecermatanTiming | null;
   /** Layar selesai latihan: ulang di tempat. Halaman pembahasan memakai restartHref. */
   onRestart?: () => void;
   restartHref?: string;
@@ -133,10 +196,74 @@ export default function LatihanKecermatanHasil({
   const correct = cols.reduce((s, c) => s + c.correct, 0);
   const accuracy = answered ? correct / answered : 0;
   const touched = cols.filter((c) => c.total > 0);
-  const peak = Math.max(PER_COLUMN, ...cols.map((c) => c.total));
+  const pathname = usePathname();
+
+  const a = useMemo(
+    () =>
+      analyzeKecermatan(
+        // Butir yang belum dijawab ikut supaya posisi butir dihitung dari butir pertama kolom.
+        sorted.map((q) => {
+          const fb = answers[q.id];
+          return {
+            id: q.id,
+            column: q.column_index ?? 1,
+            seq: q.sequence_number,
+            correct: Boolean(fb?.is_correct),
+            selected: fb?.selected ?? "",
+            correctKey: fb?.correct_key ?? "",
+            symbols: (q.options_payload as unknown as KecermatanOptionsPayload).symbol_map ?? {},
+          };
+        }),
+        timing
+      ),
+    [sorted, answers, timing]
+  );
+
+  // Nilai 60 detik bayangan (tanpa timer): engine v2 di server, tanpa progressKey = tidak masuk tren Beranda.
+  const [bay, setBay] = useState<KecermatanScoreResult | null | false>(null);
+  const bayKey = !timedMode && a.valid ? JSON.stringify(a.bayangan) : "";
+  useEffect(() => {
+    if (!bayKey) return;
+    let cancelled = false;
+    scoreLatihanKecermatan(JSON.parse(bayKey))
+      .then((r) => !cancelled && setBay(r ?? false))
+      .catch(() => !cancelled && setBay(false));
+    return () => {
+      cancelled = true;
+    };
+  }, [bayKey]);
+  const butir60 = a.valid ? Math.round(a.bayangan.reduce((s, c) => s + c.total_klik, 0) / a.kolomDikunjungi) : 0;
+  const low = Boolean(bayKey) && butir60 < BUTIR_60_RENDAH;
+  const gate = timing ? ["Nilai 60 detik belum bisa dihitung", a.valid ? "" : a.alasan] : LEGACY_GATE;
+  const unordered = timing ? Object.keys(timing.cols).filter((c) => !timing.cols[Number(c)].clean).map((c) => ROMAN[Number(c) - 1]) : [];
+
+  // Panel sticky di desktop, dilepas bila lebih tinggi dari layar supaya bagian bawahnya terbaca.
+  const panelRef = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const el = panelRef.current;
+    if (!el) return;
+    const fit = () => el.classList.toggle("is-tall", el.offsetHeight > window.innerHeight - 48);
+    const ro = new ResizeObserver(fit);
+    ro.observe(el);
+    window.addEventListener("resize", fit);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", fit);
+    };
+  }, []);
+
+  const tabs = timedMode ? ["Analisis", "Per kolom"] : ["Tanpa batas waktu", "Analisis", "Per kolom"];
+  const [tab, setTab] = useState(0);
+  const empty = (
+    <div className="lr-pane">
+      <section className="lr-sec">
+        <p className="pg-empty">{!timing ? "Grafik dan analisis muncul untuk percobaan baru." : !a.valid && a.alasan}</p>
+      </section>
+    </div>
+  );
 
   const panel = (
-    <aside className="hc-panel lr-panel" aria-label="Hasil latihan" aria-live="polite">
+    <aside ref={panelRef} className="hc-panel lr-panel" aria-label="Hasil latihan" aria-live="polite">
       <div className="hc-panel-top">
         <span className="hc-tag">Sikap Kerja</span>
         <span className="hc-code">{timedMode ? "60 detik per kolom" : "Tanpa batas waktu"}</span>
@@ -150,19 +277,7 @@ export default function LatihanKecermatanHasil({
         score ? (
           <>
             <HexMeter value={score.raw_score / 100} label="Skor murni" note="Dihitung dengan rumus ujian resmi" />
-            <dl className="lr-idx">
-              {[
-                { label: "Kecepatan", value: score.ke_index },
-                { label: "Ketelitian", value: score.kt_index },
-                { label: "Ketahanan", value: score.kh_index },
-              ].map((s) => (
-                <div key={s.label}>
-                  <dt>{s.label}</dt>
-                  <dd className="tnum">{r1(s.value)}</dd>
-                  <Bar value={s.value} />
-                </div>
-              ))}
-            </dl>
+            <Indeks score={score} />
             <dl className="lr-sum">
               <div>
                 <dt>Kontribusi ke Nilai Akhir Psikotest</dt>
@@ -178,48 +293,94 @@ export default function LatihanKecermatanHasil({
         ) : (
           <p className="lr-wait">{scoreFailed ? "Skor belum bisa dihitung. Coba ulangi latihan." : "Menghitung skor…"}</p>
         )
+      ) : a.valid ? (
+        bay ? (
+          <>
+            <HexMeter value={bay.raw_score / 100} label="Nilai 60 detik" note="Perkiraan latihan, bukan nilai ujian" />
+            <p className="lr-say">
+              {low ? (
+                <>
+                  <b>{a.penuh.akurasi >= 95 ? "Hampir semua jawabanmu benar, keren." : "Jawabanmu sudah lumayan tepat."}</b> Tapi dalam 60 detik
+                  kamu baru sampai butir ke-{butir60} dari 50, jadi latihan tanpa waktu jangan dianggap remeh, ya.
+                </>
+              ) : (
+                `${a.penuh.akurasi >= 95 ? "Kamu teliti" : "Ketelitianmu masih bisa naik"}, dan kecepatanmu ${
+                  { naik: "makin lancar", stabil: "ajeg", turun: "menurun di kolom akhir" }[a.penuh.tren]
+                }. Dalam 60 detik rata-rata kamu sampai butir ke-${butir60} dari 50.`
+              )}
+            </p>
+            <Indeks score={bay} />
+            <details className="lr-why">
+              <summary>
+                Apa arti angka-angka ini? <ChevronDown />
+              </summary>
+              <p>
+                Nilai 60 detik dihitung dari butir yang kamu jawab di 60 detik pertama tiap kolom, dengan rumus yang sama seperti latihan
+                bertimer. Anggap saja intipan: kalau waktunya dibatasi, segini kira-kira hasilmu.
+              </p>
+              <dl>
+                <div>
+                  <dt>Kecepatan</dt>
+                  <dd>Seperti lomba makan kerupuk: yang dihitung kerupuk yang habis, bukan yang cuma digigit.</dd>
+                </div>
+                <div>
+                  <dt>Ketelitian</dt>
+                  <dd>Seperti mencari rumah teman: jalan cepat boleh, asal tidak salah ketuk pintu. Nilainya baru penuh kalau jumlah butirmu juga cukup.</dd>
+                </div>
+                <div>
+                  <dt>Ketahanan</dt>
+                  <dd>Seperti lari jauh: yang penting larinya ajeg sampai garis akhir.</dd>
+                </div>
+              </dl>
+            </details>
+          </>
+        ) : (
+          <p className="lr-wait">{bay === false ? "Nilai 60 detik belum bisa dihitung. Coba ulangi latihan." : "Menghitung Nilai 60 detik…"}</p>
+        )
       ) : (
-        <HexMeter
-          value={accuracy}
-          label="Ketepatan"
-          note="Skor rumus ujian muncul kalau latihan memakai timer per kolom."
-        />
+        <>
+          <HexMeter value={accuracy} label="Ketepatan" note="Dari butir yang sudah kamu jawab" />
+          <div className="lr-gate" role="status">
+            <b>{gate[0]}</b>
+            <p>{gate[1]}</p>
+          </div>
+        </>
       )}
 
-      <figure className="lr-chart">
-        <figcaption>
-          <b>Jawaban per kolom</b>
-          <span>
-            <i className="is-ok" /> benar <i className="is-bad" /> salah
-          </span>
-        </figcaption>
-        <ol aria-label="Jumlah jawaban tiap kolom">
-          {cols.map((c, i) => (
-            <li key={c.index} aria-label={`Kolom ${ROMAN[i]}: ${c.total} dijawab, ${c.correct} benar`}>
-              <span className="lr-chart-track">
-                <span className="lr-chart-n tnum">{c.total || ""}</span>
-                <span className="lr-chart-bar" style={{ height: `calc((100% - 14px) * ${c.total / peak})`, animationDelay: `${i * 40}ms` }}>
-                  <span className="is-bad" style={{ flexGrow: c.total - c.correct }} />
-                  <span className="is-ok" style={{ flexGrow: c.correct }} />
-                </span>
-              </span>
-              <span className="lr-chart-x">{ROMAN[i]}</span>
-            </li>
-          ))}
-        </ol>
-        {timedMode && <p>Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi.</p>}
-      </figure>
+      {!timedMode && a.valid ? (
+        <BarChart
+          title="Dalam 60 detik pertama"
+          bars={a.bayangan.map((c) => ({ n: c.total_klik, ok: c.total_benar, skip: !timing?.cols[c.column_index] }))}
+          notes={[
+            unordered.length > 0 && `Kolom ${unordered.join(", ")} dikerjakan tidak urut dari butir 1, tetap dihitung.`,
+            a.kolomDikunjungi < 10 && "Kolom berarsir belum dikerjakan, dihitung 0 seperti di ujian.",
+            "Tinggi penuh = 50 butir. Batang yang sama tinggi berarti kamu ajeg.",
+          ]}
+        />
+      ) : (
+        <BarChart
+          title="Jawaban per kolom"
+          bars={cols.map((c) => ({ n: c.total, ok: c.correct }))}
+          notes={[timedMode && "Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi."]}
+        />
+      )}
 
       {notice}
 
       <div className="hc-actions">
+        {low && (
+          <a href={`${restartHref ?? pathname}?timed=1&autostart=1`} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+            <Repeat className="size-4" />
+            Ulangi pakai timer
+          </a>
+        )}
         {restartHref ? (
-          <Link href={restartHref} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+          <Link href={restartHref} className={buttonStyles({ variant: low ? "secondary" : "primary", size: "lg", block: true })}>
             <Repeat className="size-4" />
             Ulangi latihan
           </Link>
         ) : (
-          <button type="button" onClick={onRestart} className={buttonStyles({ variant: "primary", size: "lg", block: true })}>
+          <button type="button" onClick={onRestart} className={buttonStyles({ variant: low ? "secondary" : "primary", size: "lg", block: true })}>
             <Repeat className="size-4" />
             Ulangi latihan
           </button>
@@ -234,74 +395,103 @@ export default function LatihanKecermatanHasil({
   return (
     <div className="lr-stage">
       {panel}
-      <section className="lr-main" aria-labelledby="lr-cols-title">
-        <h2 id="lr-cols-title" className="lr-title">
-          Rincian per kolom
-        </h2>
-        {touched.length === 0 ? (
-          <p className="lr-empty">Belum ada butir yang dijawab.</p>
-        ) : (
-          <ul className="lr-cols">
-            {touched.map((c) => {
-              const i = c.index - 1;
-              const clean = c.wrong.length === 0;
-              return (
-                <li key={c.index}>
-                  <details className="lr-col">
-                    <summary>
-                      <span className={`pk-hex${clean ? " is-full" : " is-part"}`} aria-hidden="true">
-                        <svg viewBox="0 0 100 115.47">
-                          <polygon points="50,2 98,29.9 98,85.6 50,113.5 2,85.6 2,29.9" />
-                        </svg>
-                        <b>{ROMAN[i]}</b>
-                      </span>
-                      <span className="lr-col-main">
-                        <span className="lr-col-top">
-                          <b>Kolom {ROMAN[i]}</b>
-                          <span className="tnum">
-                            {c.correct}/{c.total} benar
+      <section className="lr-main" aria-label="Rincian hasil">
+        <div className="lr-tabs" role="tablist" aria-label="Rincian hasil">
+          {tabs.map((t, i) => (
+            <button
+              key={t}
+              type="button"
+              role="tab"
+              id={`lr-t${i}`}
+              aria-controls="lr-p"
+              aria-selected={i === tab}
+              tabIndex={i === tab ? 0 : -1}
+              onClick={() => setTab(i)}
+              onKeyDown={(e) => {
+                const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+                if (!d) return;
+                e.preventDefault();
+                const next = (i + d + tabs.length) % tabs.length;
+                (e.currentTarget.parentElement?.children[next] as HTMLElement | undefined)?.focus();
+                setTab(next);
+              }}
+            >
+              {t}
+            </button>
+          ))}
+        </div>
+        <div role="tabpanel" id="lr-p" aria-labelledby={`lr-t${tab}`}>
+          {tabs[tab] === "Tanpa batas waktu" ? (
+            a.valid ? <ProfilPane a={a} /> : empty
+          ) : tabs[tab] === "Analisis" ? (
+            a.valid ? <AnalisisPane a={a} timedMode={timedMode} /> : empty
+          ) : touched.length === 0 ? (
+            <p className="lr-empty">Belum ada butir yang dijawab.</p>
+          ) : (
+            <div className="lr-pane is-bare">
+              <ul className="lr-cols">
+                {touched.map((c) => {
+                  const i = c.index - 1;
+                  const clean = c.wrong.length === 0;
+                  return (
+                    <li key={c.index}>
+                      <details className="lr-col">
+                        <summary>
+                          <span className={`pk-hex${clean ? " is-full" : " is-part"}`} aria-hidden="true">
+                            <svg viewBox="0 0 100 115.47">
+                              <polygon points="50,2 98,29.9 98,85.6 50,113.5 2,85.6 2,29.9" />
+                            </svg>
+                            <b>{ROMAN[i]}</b>
                           </span>
-                        </span>
-                        <span className="lr-col-bar" aria-hidden="true">
-                          <span style={{ width: `${(c.correct / PER_COLUMN) * 100}%` }} className="is-ok" />
-                          <span style={{ width: `${(c.wrong.length / PER_COLUMN) * 100}%` }} className="is-bad" />
-                        </span>
-                      </span>
-                      <span className={`lr-pill${clean ? " is-clean" : ""}`}>{clean ? "Bersih" : `${c.wrong.length} salah`}</span>
-                      <ChevronRight className="lr-chev size-4" />
-                    </summary>
-                    {clean ? (
-                      <p className="lr-clean">Semua jawaban di kolom ini benar.</p>
-                    ) : (
-                      <ul className="lr-wrong">
-                        {c.wrong.map((w) => (
-                          <li key={w.id}>
-                            <span className="lr-no tnum">Butir {w.no}</span>
-                            <span className="lr-sym" aria-label="Simbol yang tampil">
-                              {w.shown.map((s, k) => (
-                                <span key={k}>
-                                  <KecermatanSymbol symbol={s} />
+                          <span className="lr-col-main">
+                            <span className="lr-col-top">
+                              <b>Kolom {ROMAN[i]}</b>
+                              <span className="tnum">
+                                {c.correct}/{c.total} benar
+                              </span>
+                            </span>
+                            <span className="lr-col-bar" aria-hidden="true">
+                              <span style={{ width: `${(c.correct / PER_COLUMN) * 100}%` }} className="is-ok" />
+                              <span style={{ width: `${(c.wrong.length / PER_COLUMN) * 100}%` }} className="is-bad" />
+                            </span>
+                          </span>
+                          <span className={`lr-pill${clean ? " is-clean" : ""}`}>{clean ? "Bersih" : `${c.wrong.length} salah`}</span>
+                          <ChevronRight className="lr-chev size-4" />
+                        </summary>
+                        {clean ? (
+                          <p className="lr-clean">Semua jawaban di kolom ini benar.</p>
+                        ) : (
+                          <ul className="lr-wrong">
+                            {c.wrong.map((w) => (
+                              <li key={w.id}>
+                                <span className="lr-no tnum">Butir {w.no}</span>
+                                <span className="lr-sym" aria-label="Simbol yang tampil">
+                                  {w.shown.map((s, k) => (
+                                    <span key={k}>
+                                      <KecermatanSymbol symbol={s} />
+                                    </span>
+                                  ))}
                                 </span>
-                              ))}
-                            </span>
-                            <span className="lr-ans">
-                              <span className="is-bad">
-                                Pilih {w.selected} <KecermatanSymbol symbol={w.selectedSym} />
-                              </span>
-                              <span className="is-ok">
-                                Kunci {w.key} <KecermatanSymbol symbol={w.keySym} />
-                              </span>
-                            </span>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </details>
-                </li>
-              );
-            })}
-          </ul>
-        )}
+                                <span className="lr-ans">
+                                  <span className="is-bad">
+                                    Pilih {w.selected} <KecermatanSymbol symbol={w.selectedSym} />
+                                  </span>
+                                  <span className="is-ok">
+                                    Kunci {w.key} <KecermatanSymbol symbol={w.keySym} />
+                                  </span>
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </details>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
+        </div>
       </section>
     </div>
   );

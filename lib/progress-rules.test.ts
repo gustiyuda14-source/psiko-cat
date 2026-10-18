@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { cleanAttemptAnswers, cleanDrill, cleanLatihan, latihanKeyMax, latihanPackageOf } from "./progress-rules";
+import { cleanAttemptAnswers, cleanAttemptTiming, maxLatihanAttempts, cleanDrill, cleanLatihan, latihanKeyMax, latihanPackageOf } from "./progress-rules";
 
 assert.equal(latihanKeyMax("/latihan/kecerdasan/2"), 100);
 assert.equal(latihanKeyMax("/latihan/kepribadian/10"), 111);
@@ -25,6 +25,20 @@ assert.deepEqual(
   { "K01-001": [1, 2, 900], "K01-004": [1, 1, 0] }
 );
 assert.deepEqual(cleanDrill({ "K01-001": [0, 5000, 0] }, (id) => bank.has(id)), {});
+
+const answered = new Set(["q1", "q2"]);
+assert.deepEqual(
+  cleanAttemptTiming({ v: 1, pel: true, cols: { 1: { o: 1, clean: true } }, t: { q1: [1200, 1200], q2: [2500, 1300], zz: [1, 1] } }, answered),
+  { v: 1, pel: true, cols: { 1: { o: 1, clean: true } }, t: { q1: [1200, 1200], q2: [2500, 1300] } }
+);
+assert.equal(cleanAttemptTiming({ v: 1, pel: true, cols: { 11: { o: 1, clean: true } }, t: {} }, answered), null);
+assert.equal(cleanAttemptTiming({ v: 1, pel: true, cols: {}, t: { q1: [-1, 0] } }, answered), null);
+assert.equal(cleanAttemptTiming({ v: 2, pel: true, cols: {}, t: {} }, answered), null);
+assert.equal(cleanAttemptTiming(null, answered), null);
+
+assert.equal(maxLatihanAttempts("/latihan/kecermatan-sains/701"), 1);
+assert.equal(maxLatihanAttempts("/latihan/kecermatan/9"), 1);
+assert.equal(maxLatihanAttempts("/latihan/kecerdasan/2"), 2);
 
 console.log("progress-rules ok");
 

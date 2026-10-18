@@ -11,6 +11,7 @@ import type {
   KepribadianReviewItem,
 } from "@/app/components/PembahasanSection";
 import type { PribadiReviewItem } from "@/app/components/PribadiReview";
+import { HafalSimulasi } from "@/app/latihan/[module]/LatihanKecermatanAnalisis";
 
 /*
   Pembahasan satu nomor per layar: kartu soal + kartu pembahasan di kiri, panel
@@ -348,6 +349,7 @@ export default function PembahasanNavigator(props: PembahasanNavigatorProps) {
               <ChevronRight className="size-4" />
             </button>
           </nav>
+          {section.key === "kc" && kecermatan && <HafalSimulasi groups={kecermatan.groups} />}
         </div>
 
         <aside className="order-1 min-w-0 space-y-4 @3xl:sticky @3xl:top-24 @3xl:order-2 @3xl:max-h-[calc(100dvh-7rem)] @3xl:overflow-y-auto">

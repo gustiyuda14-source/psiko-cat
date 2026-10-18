@@ -92,7 +92,7 @@ export default async function LatihanPembahasanPage({ params }: { params: Promis
                 aria-current={s.id === id ? "page" : undefined}
                 className={buttonStyles({ variant: s.id === id ? "primary" : "secondary", size: "sm" })}
               >
-                {i === 0 ? "Terbaru" : "Sebelumnya"} · {tanggal(s.at)}
+                {review.module === "KECERMATAN" ? (s.timed ? "Dengan waktu" : "Tanpa waktu") : i === 0 ? "Terbaru" : "Sebelumnya"} · {tanggal(s.at)}
               </Link>
             ))}
           </div>
@@ -106,6 +106,7 @@ export default async function LatihanPembahasanPage({ params }: { params: Promis
             answers={review.kecermatan.answers}
             timedMode={review.timed}
             score={review.kecermatan.score}
+            timing={review.kecermatan.timing}
             scoreFailed={review.timed && !review.kecermatan.score}
             restartHref={review.key}
             title={nth === 0 ? "Percobaan terbaru" : "Percobaan sebelumnya"}
