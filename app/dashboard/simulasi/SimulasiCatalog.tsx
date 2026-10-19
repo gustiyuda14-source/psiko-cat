@@ -10,7 +10,8 @@ import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
   Katalog Simulasi: tiap tes = kubus isometrik. Tiga sisi kubus = tiga sub-tes
   (kiri Kecerdasan, kanan Kecermatan, atas Kepribadian), madu = nilai murni
   terakhir (0-100) dari riwayat. Tryout lengkap menyalakan ketiga sisi; kartu
-  sub-tes hanya menyalakan sisinya sendiri. Memulai tes tetap lewat server action
+  sub-tes hanya menyalakan sisinya sendiri dan cuma pratinjau (tombol tetap memulai
+  tryout lengkap, server menolak modul selain "ALL"). Memulai tes tetap lewat server action
   `startSession` (buat sesi lalu redirect). CSS di app/honey.css.
   Langkah 1 = pilih paket simulasi: timeline hexagon, semua paket siap = kartu navy yang sama.
   Hexagon emas = paket terpilih (awal: paket siap terkecil yang belum pernah ditryout-kan);
@@ -231,7 +232,7 @@ export default function SimulasiCatalog({
                   </li>
                 ))}
               </ul>
-              <p className="sp-prev-note">Timer berjalan dan hasil masuk riwayat. Di langkah berikutnya pilih tryout lengkap atau satu sub-tes.</p>
+              <p className="sp-prev-note">Timer berjalan dan hasil masuk riwayat. Di langkah berikutnya mulai tryout lengkap; kubus sub-tes hanya pratinjau.</p>
               <div className="mt-6 flex flex-col-reverse gap-2.5 sm:flex-row sm:justify-end">
                 <Button variant="secondary" onClick={() => setPreview(null)}>
                   Batal
@@ -257,7 +258,7 @@ export default function SimulasiCatalog({
 
   function start() {
     const fd = new FormData();
-    fd.set("module", item.id);
+    fd.set("module", "ALL");
     fd.set("paket", String(pkg));
     startTransition(() => action(fd));
   }
@@ -336,8 +337,11 @@ export default function SimulasiCatalog({
             })}
           </ul>
           <div className="hc-actions">
+            {item.faces.length === 1 && (
+              <p className="text-sm text-muted-foreground">Sub-tes tidak dimulai terpisah di sini. Tombol di bawah memulai Tryout Lengkap Paket {pkg}.</p>
+            )}
             <Button id="sim-start" variant="primary" size="lg" block disabled={pending} onClick={start}>
-              {pending ? "Membuat sesi…" : item.faces.length > 1 ? "Mulai tryout lengkap" : "Mulai sub-tes"}
+              {pending ? "Membuat sesi…" : "Mulai tryout lengkap"}
               {!pending && <ArrowRight className="size-4" />}
             </Button>
           </div>

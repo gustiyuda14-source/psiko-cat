@@ -26,15 +26,11 @@ async function startSession(formData: FormData) {
   "use server";
   const session = await getSession();
   if (!session) return;
-  const requested = formData.get("module");
-  const moduleTypes = requested === "ALL"
-    ? MODULE_ORDER
-    : MODULE_ORDER.includes(requested as ModuleType)
-      ? [requested as ModuleType]
-      : [];
+  // Simulasi Penuh hanya tryout lengkap; mini tryout per sub-tes lewat menu Latihan/Mini Tryout.
+  if (formData.get("module") !== "ALL") return;
   const paket = Number(formData.get("paket"));
-  if (!moduleTypes.length || !SIMULASI_PAKET[paket]) return;
-  await createTestSessionAndRedirect(session.sub, moduleTypes, paket);
+  if (!SIMULASI_PAKET[paket]) return;
+  await createTestSessionAndRedirect(session.sub, MODULE_ORDER, paket);
 }
 
 // Hapus sesi PENDING/IN_PROGRESS milik peserta yang login (user id dari cookie,
@@ -201,7 +197,7 @@ export default async function SimulasiPage() {
         id: type,
         title: meta.label,
         meta: `${countsOf(paket)[type]} butir · ${meta.time_limit_seconds / 60} menit`,
-        desc: `Satu sub-tes (${meta.shortDesc}) dengan timer berjalan. Hasil masuk riwayat.`,
+        desc: `Pratinjau sub-tes (${meta.shortDesc}). Sub-tes ini dikerjakan di dalam Tryout Lengkap; mini tryout per sub-tes ada di menu Latihan/Mini Tryout.`,
         faces: [type],
       };
     }),
