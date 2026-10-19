@@ -22,13 +22,12 @@ export default async function PengecohPage({ searchParams }: { searchParams: Pro
   const flagged = items.filter((i) => rank(i.tanda) === 0).length;
 
   return (
-    <div className="min-h-[100dvh] bg-background text-foreground">
-      <div className="mx-auto w-full max-w-4xl px-4 py-6 sm:px-6 sm:py-10">
+    <div className="app-page">
         <PageHeader
           kicker="Admin"
           title="Analisis pengecoh"
           description={`Sebaran pilihan peserta pada percobaan pertama tiap soal drill. Tanda kualitas dipasang setelah ${MIN_N} jawaban.`}
-          actions={<Link href="/admin" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Dashboard admin</Link>}
+          actions={<Link href="/admin" className={buttonStyles({ variant: "secondary", size: "sm" })}>← Hasil peserta</Link>}
         />
 
         <nav className="mt-6 flex flex-wrap gap-2" aria-label="Pilih kartu drill">
@@ -86,7 +85,6 @@ export default async function PengecohPage({ searchParams }: { searchParams: Pro
             ))
           )}
         </section>
-      </div>
     </div>
   );
 }

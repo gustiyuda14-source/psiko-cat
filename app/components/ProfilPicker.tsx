@@ -12,7 +12,7 @@ export default function ProfilPicker({ value, className = "" }: { value: Jalur |
   const router = useRouter();
   const [pending, start] = useTransition();
   return (
-    <label className={`inline-flex flex-col gap-1 text-xs font-semibold text-muted-foreground ${className}`}>
+    <label className={`inline-flex max-w-full flex-col gap-1 text-xs font-semibold text-muted-foreground ${className}`}>
       Profil tujuan
       <select
         value={value ?? ""}
@@ -21,7 +21,7 @@ export default function ProfilPicker({ value, className = "" }: { value: Jalur |
           document.cookie = `psg_profil=${e.target.value}; path=/; max-age=31536000; samesite=lax`;
           start(() => router.refresh());
         }}
-        className="min-h-11 rounded-md border border-border-strong bg-card px-3 text-sm font-semibold text-foreground focus-visible:outline-3 focus-visible:outline-ring disabled:opacity-60"
+        className="min-h-11 max-w-full rounded-md border border-border-strong bg-card px-3 text-sm font-semibold text-foreground focus-visible:outline-3 focus-visible:outline-ring disabled:opacity-60"
       >
         {!value && <option value="" disabled>Pilih profil…</option>}
         {JALUR.map((j) => (

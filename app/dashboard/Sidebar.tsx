@@ -52,7 +52,7 @@ const SUB_ICON: Record<ModuleType, (props: { className?: string }) => React.Reac
 };
 
 function isActive(pathname: string, href: string): boolean {
-  return href === "/dashboard" ? pathname === href : pathname.startsWith(href);
+  return href === "/dashboard" || href === "/admin" ? pathname === href : pathname.startsWith(href);
 }
 
 /* Tujuan tombol Kembali: induk halaman, bukan riwayat browser (peserta yang
