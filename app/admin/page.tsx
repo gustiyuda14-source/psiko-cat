@@ -21,10 +21,12 @@ function formatDate(iso: string | null) {
   });
 }
 
-export default async function AdminPage() {
+export default async function AdminPage({ searchParams }: { searchParams: Promise<{ buka?: string }> }) {
   const session = await getSession();
   if (!session) redirect("/login");
   if (session.role !== "admin") redirect("/dashboard");
+  // Kembali dari Detail hasil: peserta yang tadi dibuka langsung terbuka lagi (#peserta-<id> untuk scroll).
+  const { buka } = await searchParams;
 
   const { data: users } = await supabaseAdmin
     .from("users")
@@ -136,6 +138,8 @@ export default async function AdminPage() {
             return (
               <Accordion
                 key={u.id}
+                id={`peserta-${u.id}`}
+                defaultOpen={u.id === buka}
                 label={u.name}
                 summary={
                   <span className="tnum">
@@ -209,7 +213,7 @@ export default async function AdminPage() {
                                     )}
                                     {needsKecermatanReview(s) && <Badge tone="accent">Cek manual: Sikap Kerja</Badge>}
                                     <Link
-                                      href={`/test/${s.id}/result`}
+                                      href={`/test/${s.id}/result?dari=admin`}
                                       className="flex items-center gap-0.5 text-xs font-semibold text-brand-ink hover:underline"
                                     >
                                       Detail

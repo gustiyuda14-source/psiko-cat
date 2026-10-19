@@ -38,10 +38,6 @@ export default async function ResultPage({
 }) {
   const { sessionId } = await params;
   const { jalur: pilih, dari } = await searchParams;
-  // Dibuka dari Ruang Review: tombol kembali ke sesi yang sama di sana, bukan ke beranda.
-  const kembali = dari === "review"
-    ? { href: `/dashboard/review?sesi=${sessionId}`, label: "Kembali ke Ruang Review" }
-    : { href: "/dashboard", label: "Kembali ke beranda" };
   const jalur: Jalur = JALUR.includes(pilih as Jalur) ? (pilih as Jalur) : "BINTARA";
   const access = await getSessionAccess(sessionId);
   if (!access.ok) notFound();
@@ -49,7 +45,7 @@ export default async function ResultPage({
   const { data: session } = await supabaseAdmin
     .from("test_sessions")
     .select(
-      "id, status, nap_score, kecerdasan_contribution, kepribadian_contribution, kecermatan_contribution, is_passed, disqualified_reason, users(name, email), module_sessions(*)"
+      "id, user_id, status, nap_score, kecerdasan_contribution, kepribadian_contribution, kecermatan_contribution, is_passed, disqualified_reason, users(name, email), module_sessions(*)"
     )
     .eq("id", sessionId)
     .single();
@@ -59,6 +55,13 @@ export default async function ResultPage({
   if (session.status !== "COMPLETED" && session.status !== "DISQUALIFIED") {
     redirect(`/test/${sessionId}`);
   }
+
+  // Dibuka dari Ruang Review / Hasil peserta: tombol kembali ke tempat asal (sesi/peserta yang sama), bukan ke beranda.
+  const kembali = dari === "review"
+    ? { href: `/dashboard/review?sesi=${sessionId}`, label: "Kembali ke Ruang Review", dari }
+    : dari === "admin"
+      ? { href: `/admin?buka=${session.user_id}#peserta-${session.user_id}`, label: "Kembali ke Hasil peserta", dari }
+      : { href: "/dashboard", label: "Kembali ke beranda" };
 
   const passed = session.is_passed === true;
   const disqualified = session.status === "DISQUALIFIED";

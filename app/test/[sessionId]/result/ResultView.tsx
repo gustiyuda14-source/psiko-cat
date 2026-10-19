@@ -109,7 +109,7 @@ export type ResultViewProps = {
   kecermatanDetail: KecermatanColumnGroup[];
   psikogram: HasilPsikogram[] | null;
   jalur: Jalur;
-  kembali: { href: string; label: string };
+  kembali: { href: string; label: string; dari?: string };
   aspekSubtes: AspekSubtes[] | null;
 };
 
@@ -194,7 +194,7 @@ export default function ResultView({
               <p className="rep-kicker">Nilai akhir psikotes</p>
               <nav className="psg-tabs" aria-label="Profil penilaian">
                 {JALUR.map((j) => (
-                  <Link key={j} href={`?${new URLSearchParams({ jalur: j, ...(kembali.href !== "/dashboard" ? { dari: "review" } : {}) })}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
+                  <Link key={j} href={`?${new URLSearchParams({ jalur: j, ...(kembali.dari ? { dari: kembali.dari } : {}) })}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
                 ))}
               </nav>
               <div className="rep-trio">

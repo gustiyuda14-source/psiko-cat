@@ -137,12 +137,14 @@ export function PageHeader({
 */
 
 export function Accordion({
+  id,
   label,
   summary,
   trailing,
   defaultOpen = false,
   children,
 }: {
+  id?: string;
   label: string;
   summary?: React.ReactNode;
   trailing?: React.ReactNode;
@@ -150,7 +152,7 @@ export function Accordion({
   children: React.ReactNode;
 }) {
   return (
-    <details className="surface-card group/acc overflow-hidden" open={defaultOpen}>
+    <details id={id} className="surface-card group/acc scroll-mt-24 overflow-hidden" open={defaultOpen}>
       <summary className="flex min-h-14 list-none items-center gap-3 px-4 py-3 transition-colors duration-200 hover:bg-surface-inset sm:px-5 [&::-webkit-details-marker]:hidden">
         <ChevronDown className="size-4 shrink-0 text-faint-foreground transition-transform duration-200 ease-out group-open/acc:rotate-180" />
         <span className="min-w-0 flex-1">
