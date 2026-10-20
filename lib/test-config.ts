@@ -88,6 +88,15 @@ export const KECERMATAN_SAINS_PACKAGE_LABELS: Record<number, string> = Object.fr
   KECERMATAN_SAINS_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
+// Aspek Simbol Komposisi Majemuk (tab "Komposisi Majemuk"): gambar berisi bentuk
+// utama + hiasan pojok + tanda kecil, kesulitan naik dari kolom I ke X
+// (scripts/generate-kecermatan-komposisi.ts). Latihan saja, tidak masuk pool ujian.
+export const KECERMATAN_KOMPOSISI_PACKAGES = [801, 802, 803, 804, 805];
+
+export const KECERMATAN_KOMPOSISI_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_KOMPOSISI_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
 // Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)
 // khusus simulasi (SIMULASI_PACKAGE) dan TIDAK boleh muncul di sini, supaya
 // soal simulasi tidak bocor lewat latihan (pola dajiks-cest). Slot 2-11 tampil
