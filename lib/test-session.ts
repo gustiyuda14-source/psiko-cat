@@ -15,6 +15,24 @@ import {
 export async function createTestSessionAndRedirect(userId: string, moduleTypes: ModuleType[], paket = 1) {
   const bank = SIMULASI_PAKET[paket];
   if (!bank) redirect("/dashboard/simulasi");
+
+  // Masih ada sesi terbuka untuk paket ini (mis. login ulang setelah sinyal putus): buka sesi itu,
+  // jangan buat sesi kosong baru yang membuat peserta mengira jawabannya hilang. Paket dikenali dari
+  // bank Kecerdasan (unik per kartu). Sesi dengan sub-tes terbanyak yang sudah dimulai menang;
+  // seri = terbaru. Mulai ulang dari nol tetap lewat "Reset sesi" di panel Sesi belum selesai.
+  const { data: open } = await supabaseAdmin
+    .from("test_sessions")
+    .select("id, kc:module_sessions!inner(module_type, package_number), mods:module_sessions(status)")
+    .eq("user_id", userId)
+    .in("status", ["PENDING", "IN_PROGRESS"])
+    .eq("kc.module_type", "KECERDASAN")
+    .eq("kc.package_number", bank.KECERDASAN)
+    .order("created_at", { ascending: false });
+  const started = (s: { mods: { status: string }[] }) => s.mods.filter((m) => m.status !== "NOT_STARTED").length;
+  let resume: { id: string; mods: { status: string }[] } | null = null;
+  for (const s of open ?? []) if (!resume || started(s) > started(resume)) resume = s;
+  if (resume) redirect(`/test/${resume.id}`);
+
   const { data: testSession, error: sessionError } = await supabaseAdmin
     .from("test_sessions")
     .insert({ user_id: userId, status: "PENDING" })

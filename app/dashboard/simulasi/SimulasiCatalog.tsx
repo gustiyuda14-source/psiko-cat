@@ -272,7 +272,7 @@ export default function SimulasiCatalog({
       <div className="hc-stage">
         <div className="hc-field hc-frame hc-cubefield">
           <p className="hc-hud" aria-hidden="true">
-            Nilai terakhir <b>per sub-tes</b>
+            Nilai terakhir <b>per sub-tes</b> · dari sesi mana pun, bukan nilai paket ini
           </p>
           <div className="hc-cubes" role="group" aria-label="Pilih tes">
             {list.map((it, i) => (
@@ -308,6 +308,16 @@ export default function SimulasiCatalog({
           </div>
           <h2 className="hc-panel-title">{item.title}</h2>
           <p className="hc-panel-desc">{item.desc}</p>
+          {item.faces.length > 1 && (() => {
+            const cur = packages.find((p) => p.id === pkg);
+            return (
+              <p className="mt-3 text-sm font-medium text-foreground">
+                {cur?.runs && cur.nap !== undefined
+                  ? `Nilai akhir paket ini: ${Math.round(cur.nap)}/85 · terakhir ${cur.at}`
+                  : "Tryout lengkap paket ini belum pernah selesai. Angka di bawah adalah nilai sub-tes terakhir dari sesi mana pun."}
+              </p>
+            );
+          })()}
           <ul className="hc-scores">
             {FACES.map((f) => {
               const on = item.faces.includes(f.type);

@@ -192,18 +192,24 @@ export default async function SessionOverviewPage({
             <p className="text-center text-xs text-muted-foreground">
               Selesaikan ketiga sub-tes secara berurutan untuk menghitung nilai NAP.
             </p>
-            <form action={calculateSession}>
-              <input type="hidden" name="sessionId" value={sessionId} />
-              <ConfirmSubmitButton
-                title="Paksa hitung nilai sekarang?"
-                confirmLabel="Ya, paksa hitung"
-                tone="danger"
-                message="Masih ada sub-tes yang belum selesai. Butir yang belum dikerjakan dihitung sebagai tidak dijawab, dan sesi ini tidak bisa dibuka lagi setelahnya."
-                className={buttonStyles({ variant: "danger", size: "md", block: true })}
-              >
-                Paksa submit dan hitung sekarang
-              </ConfirmSubmitButton>
-            </form>
+            {/* Dilipat: peserta yang baru login ulang mengira ini tombol lanjut lalu kehilangan sisa sesi. */}
+            <details className="text-center">
+              <summary className="cursor-pointer text-xs text-muted-foreground underline underline-offset-2">
+                Akhiri sesi lebih awal
+              </summary>
+              <form action={calculateSession} className="mt-3">
+                <input type="hidden" name="sessionId" value={sessionId} />
+                <ConfirmSubmitButton
+                  title="Paksa hitung nilai sekarang?"
+                  confirmLabel="Ya, paksa hitung"
+                  tone="danger"
+                  message="Masih ada sub-tes yang belum selesai. Butir yang belum dikerjakan dihitung sebagai tidak dijawab, dan sesi ini tidak bisa dibuka lagi setelahnya."
+                  className={buttonStyles({ variant: "danger", size: "md", block: true })}
+                >
+                  Paksa submit dan hitung sekarang
+                </ConfirmSubmitButton>
+              </form>
+            </details>
           </div>
         )}
       </div>
