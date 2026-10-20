@@ -86,7 +86,7 @@
 .voc-sticky { position: sticky; top: 76px; z-index: 5; padding: var(--space-3) 0; background: var(--surface-page); box-shadow: 0 10px 14px -12px rgba(27, 42, 92, .25) }
 .voc-tools { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-3); margin-top: var(--space-4) }.voc-tools p { margin: 0 }
 .voc-hide { min-height: 44px; padding: 0 var(--space-4); border: 1.5px solid var(--border); border-radius: 10px; background: var(--surface-card); color: var(--foreground); font: 600 .85rem var(--font-display-src), sans-serif }
-.voc-hide[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff }
+.voc-hide[aria-pressed="true"] { background: var(--gold-grad); border-color: transparent; color: var(--on-gold) }
 .voc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: var(--space-4); margin-top: var(--space-4) }
 .voc { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border: 1.5px solid var(--border); border-radius: 14px; background: var(--surface-card) }
 .voc.is-known { border-color: rgba(27, 42, 92, .4); background: linear-gradient(var(--surface-inset), var(--surface-card) 70%) }
@@ -101,7 +101,7 @@
 .voc-grid.is-hide .voc-reveal { cursor: pointer }.voc-grid.is-hide .voc:not(.is-shown) .voc-reveal > * { filter: blur(6px); user-select: none }
 .voc-ex { margin: 0; color: var(--muted-foreground); font-size: .875rem; font-style: italic }
 .voc-known { align-self: flex-start; min-height: 40px; margin-top: auto; padding: 0 var(--space-3); border: 1.5px solid var(--border); border-radius: 10px; background: var(--surface-card); color: var(--foreground); font: 600 .85rem var(--font-display-src), sans-serif }
-.voc-known:hover { border-color: var(--ok) }.voc-known[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff }
+.voc-known:hover { border-color: var(--ok) }.voc-known[aria-pressed="true"] { background: var(--gold-grad); border-color: transparent; color: var(--on-gold) }
 @media (max-width: 600px) { .voc-tools p { display: none }.voc-tools { margin-top: var(--space-2) } }
 /* Emas Prada (tema D AJIKS): angka skor metalik + bingkai emas tipis pada panel progres. */
 :root[data-theme="ajiks"] .prog-num strong { background: var(--gold-metal); -webkit-background-clip: text; background-clip: text; color: transparent }

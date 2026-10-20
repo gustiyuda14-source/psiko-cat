@@ -253,7 +253,11 @@
 .hc-timer span { font-size: .78rem; color: var(--muted-foreground) }
 .hc-seg { display: inline-flex; gap: 4px; padding: 3px; border: 1px solid var(--border); border-radius: 8px }
 .hc-seg button { min-height: 36px; padding: 0 14px; border-radius: 6px; font: 600 .875rem var(--font-display-src), sans-serif; color: var(--muted-foreground) }
-.hc-seg button[aria-checked="true"] { background: var(--navy); color: #fff }
+.hc-seg button { transition: background-color var(--t-1) ease, color var(--t-1) ease, scale var(--t-1) var(--e-out) }
+.hc-seg button:active { scale: .97 }
+.hc-seg button[aria-checked="false"]:hover { background: var(--surface-inset); color: var(--foreground) }
+/* Terpilih = konvensi emas (.chip, .lr-tabs, .hc-views); navy tenggelam di kartu tema gelap. */
+.hc-seg button[aria-checked="true"] { background: var(--gold-grad); color: var(--on-gold) }
 @media (max-width: 760px) { .hc-rack { grid-template-columns: repeat(3, minmax(0, 1fr)) } }
 
 /* ── Daftar paket Latihan (PackageCarousel) ──

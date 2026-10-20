@@ -17,8 +17,9 @@
 .fd-tabs button { display: inline-flex; flex: none; align-items: center; gap: 10px; min-height: 46px; padding: 0 16px; border: 1.5px solid var(--border); border-radius: 12px; background: var(--surface-card); color: var(--foreground); font: 600 .94rem var(--font-display-src), sans-serif; white-space: nowrap; transition: border-color var(--motion), background var(--motion) }
 .fd-tabs button:hover { border-color: var(--ok) }
 .fd-tabs button span { display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 7px; background: var(--surface-inset); color: var(--muted-foreground); font: 700 .75rem var(--font-display-src), sans-serif }
-.fd-tabs button[aria-pressed="true"] { border-color: var(--surface-nav); background: var(--surface-nav); color: #fff }
-.fd-tabs button[aria-pressed="true"] span { background: var(--gold-hi); color: var(--on-gold) }
+/* Terpilih = konvensi emas; --surface-nav nyaris sama dengan kartu di tema gelap. */
+.fd-tabs button[aria-pressed="true"] { border-color: transparent; background: var(--gold-grad); color: var(--on-gold) }
+.fd-tabs button[aria-pressed="true"] span { background: var(--on-gold); color: var(--gold-hi) }
 
 /* Area kerja: soal/deret kiri, numpad kanan; bertumpuk di layar sempit. */
 .fd-work { display: grid; gap: var(--space-5); align-items: start }
@@ -125,8 +126,8 @@
 .kp-op { display: inline-flex; width: fit-content; padding: 4px; border: 1.5px solid var(--border); border-radius: 14px; background: var(--surface-inset) }
 .kp-op button { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 18px; border: 0; border-radius: 10px; background: transparent; color: var(--muted-foreground); font: 600 .95rem var(--font-display-src), sans-serif; transition: background var(--motion), color var(--motion) }
 .kp-op button b { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: var(--surface-card); color: var(--brand-ink); font: 800 1.05rem var(--font-display-src), sans-serif }
-.kp-op button[aria-pressed="true"] { background: var(--surface-nav); color: #fff }
-.kp-op button[aria-pressed="true"] b { background: var(--gold-grad); color: var(--on-gold) }
+.kp-op button[aria-pressed="true"] { background: var(--gold-grad); color: var(--on-gold) }
+.kp-op button[aria-pressed="true"] b { background: var(--on-gold); color: var(--gold-hi) }
 
 /* Tes Pauli: garis tanda periode di posisi terakhir + kilasan "Garis!" sekali putar. */
 .kp-col li.pl-mark { position: relative }
