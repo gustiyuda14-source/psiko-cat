@@ -1,0 +1,1407 @@
+{
+  "batch": "sjt-03",
+  "status": "review",
+  "catatan": "48 butir Kepribadian format situasional (SJT, 5 opsi berbobot 1-5) untuk Latihan/Mini Tryout Kepribadian SJT Paket 3 (package_number 23). 8 butir per aspek, 3 pasang kembar (PD, KD, MB). Konteks kampus, organisasi, olahraga; netral sesuai pedoman A-7. Belum di-seed.",
+  "definisi_aspek": {
+    "Prososial": "tulus membantu, aktif di masyarakat, tidak mengharap imbalan, dan tidak menutupi kesalahan.",
+    "Pengambilan Keputusan": "cepat, yakin, berani menanggung risiko, dan memutuskan sendiri berdasarkan informasi.",
+    "Penyesuaian Diri": "cepat akrab, langsung terlibat, luwes di lingkungan baru, dan tidak menarik diri.",
+    "Kepercayaan Diri": "berani tampil dan bicara, yakin pada pendapat sendiri, dan tidak bergantung pada nasib.",
+    "Stabilitas Emosi": "emosi terkendali, menerima kritik, berpikir positif, dan tidak meledak.",
+    "Motif Berprestasi": "tekun, ingin unggul, suka tantangan, serta tuntas dan berkualitas."
+  },
+  "items": [
+    {
+      "id": "SJT-PRO-201",
+      "aspek": "Prososial",
+      "konteks": "olahraga",
+      "situasi": "Anda sedang mengejar catatan waktu terbaik dalam lomba lari 10 kilometer. Di kilometer ketujuh, pelari di depan Anda terjatuh dan memegangi pergelangan kakinya. Petugas medis belum terlihat di sekitar jalur. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Melaporkan kejadian itu kepada panitia di pos minum berikutnya yang jaraknya masih dua kilometer",
+        "B": "Melambai kepada marshal terdekat sambil menunjuk pelari itu, lalu kembali berlari mengejar waktu",
+        "C": "Berhenti, membantunya menepi, dan menemaninya sampai petugas medis datang",
+        "D": "Terus berlari karena yakin petugas medis lomba akan segera menemukannya sendiri",
+        "E": "Menyalipnya sambil menggerutu karena jalur lari menjadi terhalang"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "jalur prosedural yang menunda bantuan, padahal korban butuh pertolongan sekarang.",
+        "B": "tetap peduli, tetapi pertolongannya dilemparkan kepada orang lain dan korban ditinggal.",
+        "C": "menolong langsung dan memastikan orang yang cedera tidak ditinggal sendirian, walaupun catatan waktu Anda dikorbankan.",
+        "D": "pasif dan menyerahkan nasib korban pada kebetulan.",
+        "E": "mementingkan diri dan kesal pada orang yang sedang celaka. Ini kebalikan dari sikap prososial."
+      },
+      "tips": "Pada soal prososial, cari tindakan menolong yang langsung dan dituntaskan sendiri, walaupun ada kepentingan pribadi yang dikorbankan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-202",
+      "aspek": "Prososial",
+      "konteks": "kampus",
+      "situasi": "Seorang mahasiswa baru dari luar pulau di kelas Anda tampak bingung mengisi kartu rencana studi secara daring. Batas pengisian tinggal besok, dan ia belum mengenal siapa pun di kelas. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menghampirinya dan menemaninya mengisi sampai rencana studinya tersimpan",
+        "B": "Mengirimkan tautan panduan pengisian kepadanya lewat pesan singkat",
+        "C": "Mengabaikannya karena urusan rencana studi adalah tanggung jawab masing-masing",
+        "D": "Menyarankannya datang ke bagian akademik besok pagi sebelum batas waktu habis",
+        "E": "Menunggu ia bertanya lebih dulu sebelum menawarkan bantuan apa pun"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 4,
+        "C": 1,
+        "D": 3,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "membantu secara langsung dan tuntas tanpa menunggu diminta.",
+        "B": "membantu, tetapi setengah jalan; ia tetap harus berjuang sendiri memahami panduan.",
+        "C": "tidak peduli pada kesulitan orang lain. Ini berlawanan dengan sikap prososial.",
+        "D": "mengarahkan ke jalur prosedural yang berisiko terlambat, belum ada bantuan nyata dari Anda.",
+        "E": "pasif; orang baru yang belum kenal siapa pun biasanya sungkan bertanya."
+      },
+      "tips": "Bantuan prososial bersifat aktif: Anda yang mendekat dan menuntaskan, bukan menunggu diminta atau hanya mengirim petunjuk.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-203",
+      "aspek": "Prososial",
+      "konteks": "olahraga",
+      "situasi": "Dalam pertandingan persahabatan bola voli antar-UKM, bola sempat menyentuh ujung jari Anda sebelum keluar lapangan. Wasit tidak melihatnya dan memberi poin kepada tim Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Memberi tahu kapten agar dialah yang menyampaikan sentuhan itu kepada wasit",
+        "B": "Ikut merayakan poin itu dan menyangkal ketika tim lawan memprotes",
+        "C": "Menunggu set selesai, baru mengaku kepada wasit tentang sentuhan tadi",
+        "D": "Diam saja karena keputusan wasit di lapangan dianggap sudah final",
+        "E": "Langsung memberi tahu wasit bahwa bola sempat menyentuh tangan Anda"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 1,
+        "C": 3,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "niatnya jujur, tetapi pengakuannya dilemparkan kepada orang lain.",
+        "B": "menutupi kesalahan secara aktif. Ini kebalikan dari sikap prososial.",
+        "C": "menunda pengakuan sampai poinnya sulit dikoreksi.",
+        "D": "pasif dan berlindung di balik keputusan wasit.",
+        "E": "jujur saat itu juga dan tidak menutupi kesalahan, walaupun tim Anda kehilangan poin."
+      },
+      "tips": "Prososial juga berarti tidak menutupi kesalahan. Pilih pengakuan yang langsung dan disampaikan sendiri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-204",
+      "aspek": "Prososial",
+      "konteks": "organisasi",
+      "situasi": "Organisasi relawan di kampus Anda membuka pendaftaran pengajar sukarela untuk anak-anak di kampung nelayan setiap Sabtu pagi. Sabtu pagi biasanya Anda pakai untuk bersantai. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunggu laporan kegiatan pertama sebelum memutuskan ikut atau tidak",
+        "B": "Mendaftar sebagai pengajar dan mengatur jadwal agar bisa hadir rutin",
+        "C": "Menyukai unggahan pengumumannya di media sosial tanpa ikut mendaftar",
+        "D": "Menyumbangkan buku bacaan bekas untuk kegiatan itu tanpa ikut mengajar",
+        "E": "Menganggap kegiatan itu urusan mahasiswa jurusan pendidikan, bukan urusan Anda"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 5,
+        "C": 2,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menunda keterlibatan sampai ada kepastian dari orang lain.",
+        "B": "terlibat langsung dan berkelanjutan dalam kegiatan masyarakat tanpa imbalan.",
+        "C": "dukungan pasif yang tidak menghasilkan bantuan nyata.",
+        "D": "membantu, tetapi tidak langsung; yang paling dibutuhkan adalah tenaga pengajar.",
+        "E": "menolak terlibat di masyarakat. Ini berlawanan dengan sikap prososial."
+      },
+      "tips": "Aktif di masyarakat berarti menyumbangkan tenaga dan waktu secara langsung, bukan sekadar mendukung dari jauh.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-205",
+      "aspek": "Prososial",
+      "konteks": "kampus",
+      "situasi": "Teman sekelas Anda belum bisa membeli buku penuntun praktikum karena kiriman uang dari orang tuanya terlambat, padahal praktikum dimulai lusa. Di rumah Anda ada buku yang sama milik kakak Anda yang sudah lulus. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Diam saja karena ia tidak meminta bantuan kepada Anda",
+        "B": "Menawarkan buku kakak Anda dengan biaya sewa setiap minggu",
+        "C": "Mengizinkannya memotret halaman yang diperlukan dari buku Anda sebelum setiap praktikum dimulai",
+        "D": "Meminjamkan buku kakak Anda sampai ia mampu membeli sendiri",
+        "E": "Menyarankannya mengajukan permohonan keringanan biaya ke pengelola laboratorium"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 4,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "pasif dan menunggu diminta, padahal kebutuhannya sudah jelas.",
+        "B": "bantuan disertai imbalan. Ini berlawanan dengan sikap prososial yang tulus.",
+        "C": "membantu, tetapi hanya sebagian dan merepotkan, padahal ada buku yang bisa langsung dipinjamkan.",
+        "D": "menolong langsung dengan apa yang Anda punya, tanpa syarat.",
+        "E": "jalur prosedural yang belum tentu selesai sebelum praktikum dimulai."
+      },
+      "tips": "Bantuan prososial tidak meminta imbalan. Pilih opsi yang menolong langsung dengan sumber daya yang Anda miliki.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-206",
+      "aspek": "Prososial",
+      "konteks": "organisasi",
+      "situasi": "Seminar himpunan yang Anda bantu baru saja selesai. Seorang petugas kebersihan gedung membereskan ratusan kursi dan sampah sendirian, sementara panitia lain mulai bersiap pulang. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut membereskan kursi dan sampah bersama petugas itu sampai selesai",
+        "B": "Pulang bersama panitia lain tanpa berkomentar apa pun",
+        "C": "Mencatat masalah ini agar panitia tahun depan menganggarkan petugas tambahan",
+        "D": "Meninggalkan sisa konsumsi panitia di meja karena nanti juga dibereskan petugas",
+        "E": "Meminta anggota seksi perlengkapan yang masih ada untuk membantu petugas itu"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 2,
+        "C": 3,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menolong langsung dan tuntas tanpa memandang bahwa itu bukan tugas resmi Anda.",
+        "B": "pasif dan membiarkan beban ditanggung satu orang.",
+        "C": "solusi prosedural untuk masa depan, tidak membantu petugas yang sedang bekerja sekarang.",
+        "D": "menambah beban orang lain. Ini berlawanan dengan sikap prososial.",
+        "E": "peduli, tetapi tenaganya dilemparkan kepada orang lain."
+      },
+      "tips": "Saat ada orang kewalahan di depan mata, opsi prososial terkuat adalah ikut turun tangan, bukan menyuruh atau mencatat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-207",
+      "aspek": "Prososial",
+      "konteks": "olahraga",
+      "situasi": "Klub lari Anda mengadakan lari amal untuk membiayai operasi anak salah seorang anggota. Anda diminta menjadi relawan pos minum, sehingga tidak bisa ikut berlari dan tidak mendapat medali finisher. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Bersedia menjaga pos hanya bila sampai hari H tidak ada relawan lain yang mendaftar",
+        "B": "Menolak karena tidak mendapat medali dan foto di garis finis",
+        "C": "Menerima tugas pos minum dan menjalankannya sampai pelari terakhir lewat",
+        "D": "Tetap ikut berlari tetapi menyumbang uang lebih besar sebagai ganti tidak menjaga pos",
+        "E": "Tidak membalas permintaan itu sampai acara berlalu"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 1,
+        "C": 5,
+        "D": 4,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "menunda dan menjadikan bantuan sebagai pilihan terakhir.",
+        "B": "menimbang bantuan dari imbalannya. Ini berlawanan dengan sikap prososial.",
+        "C": "membantu dengan tulus di posisi yang dibutuhkan, tanpa mengharap medali.",
+        "D": "tetap membantu, tetapi bukan bantuan yang sedang dibutuhkan panitia.",
+        "E": "menghindar secara diam-diam dari permintaan tolong."
+      },
+      "tips": "Ciri prososial: mau membantu di posisi yang dibutuhkan walaupun tidak mendapat hadiah atau sorotan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-208",
+      "aspek": "Prososial",
+      "konteks": "kampus",
+      "situasi": "Banjir merendam asrama mahasiswa di sebelah kampus. Posko BEM kekurangan orang untuk mengangkut barang mahasiswa yang terdampak ke tempat aman. Sore itu Anda tidak ada jadwal kuliah. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Memotret mahasiswa yang terdampak untuk diunggah tanpa menawarkan bantuan",
+        "B": "Mentransfer uang ke rekening posko untuk membeli makanan para relawan",
+        "C": "Pulang ke tempat kos dan mengikuti kabar banjir lewat media sosial",
+        "D": "Mendaftar sebagai relawan cadangan bila posko nanti kembali kekurangan orang",
+        "E": "Datang ke posko dan ikut mengangkut barang sampai pekerjaan selesai"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 2,
+        "D": 3,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "memanfaatkan kesusahan orang lain. Ini berlawanan dengan sikap prososial.",
+        "B": "tetap membantu, tetapi tidak langsung; yang kurang saat itu adalah tenaga.",
+        "C": "pasif; hanya menjadi penonton.",
+        "D": "menunda bantuan padahal kekurangan orang terjadi sekarang.",
+        "E": "terlibat langsung saat bantuan tenaga paling dibutuhkan."
+      },
+      "tips": "Cocokkan bantuan dengan kebutuhan saat itu. Bila yang kurang adalah tenaga, datang dan bekerja langsung adalah jawaban terkuat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-201",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "olahraga",
+      "situasi": "Anda kapten tim futsal. Dua menit lagi pertandingan berakhir dan tim Anda tertinggal satu gol. Pelatih sedang di ruang medis dan sudah berpesan keputusan di lapangan ada di tangan Anda. Anda melihat pertahanan kiri lawan mulai kelelahan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tetap memakai pola semula sambil berharap ada peluang datang sendiri",
+        "B": "Bertanya kepada pemain senior apakah pola perlu diubah sebelum memberi aba-aba",
+        "C": "Meminta tim memutuskan sendiri karena Anda tidak ingin disalahkan bila kalah",
+        "D": "Segera mengubah pola serangan lewat sisi kiri dan memberi aba-aba kepada tim",
+        "E": "Menyuruh pemain cadangan berlari ke ruang medis untuk menanyakan pendapat pelatih"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 4,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "pasif dan membiarkan informasi penting tidak dipakai.",
+        "B": "keputusannya baik, tetapi bergantung pada orang lain saat waktu sangat sempit.",
+        "C": "menghindari tanggung jawab dan risiko. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "D": "cepat, yakin, dan memutuskan sendiri berdasarkan pengamatan di lapangan.",
+        "E": "prosedural dan menunda, padahal wewenang sudah diberikan kepada Anda."
+      },
+      "tips": "Bila wewenang sudah di tangan Anda dan informasinya cukup, opsi terkuat adalah memutuskan saat itu juga lalu menjalankannya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-202",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "kampus",
+      "situasi": "Anda ketua kelompok praktikum kimia. Hasil titrasi kelompok menyimpang jauh dari teori, dan Anda sudah memastikan larutan pertama tercemar. Waktu praktikum tersisa 40 menit, cukup untuk mengulang satu kali. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta asisten praktikum menentukan perlu atau tidaknya titrasi itu diulang",
+        "B": "Memutuskan mengulang titrasi dengan larutan baru dan langsung membagi tugas",
+        "C": "Mencatat penyimpangan itu dan berencana menanyakannya pada pertemuan berikutnya",
+        "D": "Bimbang antara mengulang atau tidak sampai waktu praktikum habis",
+        "E": "Mengumpulkan hasil apa adanya tanpa membahasnya dengan anggota kelompok"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 3,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "keputusan diserahkan kepada orang lain padahal penyebabnya sudah Anda ketahui.",
+        "B": "memakai informasi yang sudah dipastikan untuk memutuskan dengan cepat dan yakin.",
+        "C": "menunda sampai kesempatan mengulang habis.",
+        "D": "ragu-ragu dan tidak berani memutuskan. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "E": "pasif; masalahnya diketahui tetapi dibiarkan."
+      },
+      "tips": "Pengambilan keputusan yang baik memakai informasi yang sudah ada. Bila penyebab sudah jelas dan waktu cukup, putuskan dan bergerak.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-203",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "organisasi",
+      "situasi": "Anda ketua panitia pentas seni fakultas. Dua jam sebelum acara, penyedia pengeras suara membatalkan pesanan. Anda sudah memegang penawaran penyedia lain yang 20% lebih mahal, tetapi masih masuk anggaran cadangan yang menjadi wewenang Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Langsung memesan penyedia pengganti dengan anggaran cadangan dan mencatat alasannya",
+        "B": "Membatalkan pentas seni agar panitia tidak menanggung risiko biaya tambahan",
+        "C": "Terus mencoba menghubungi ketua BEM sebelum memutuskan apa pun",
+        "D": "Menjalankan acara dengan pengeras suara seadanya milik kampus tanpa mencari pengganti",
+        "E": "Memesan penyedia pengganti setelah bendahara menyetujuinya lewat telepon"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 1,
+        "C": 3,
+        "D": 2,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "cepat, berani menanggung risiko biaya, dan berdasar pada informasi anggaran yang jelas.",
+        "B": "lari dari risiko. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "C": "prosedural dan menunda di saat waktu tinggal dua jam.",
+        "D": "pasif dan menerima keadaan tanpa memakai pilihan yang tersedia.",
+        "E": "hasilnya baik, tetapi keputusan yang menjadi wewenang Anda digantungkan pada orang lain."
+      },
+      "tips": "Kata kunci aspek ini: cepat, yakin, berani menanggung risiko, dan sesuai wewenang. Opsi yang menunggu orang lain kalah satu tingkat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-204",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "olahraga",
+      "situasi": "Dalam lomba lari lintas alam, Anda tiba di persimpangan yang penanda jalurnya hilang. Anda sudah mempelajari peta rute, dan kompas menunjukkan pos berikutnya ada di arah kanan. Pelari lain di belakang belum terlihat. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menelepon panitia dan menunggu jawaban mereka sebelum bergerak",
+        "B": "Menunggu pelari lain tiba supaya bisa menentukan arah bersama-sama",
+        "C": "Memilih jalur kanan sesuai peta dan kompas, lalu terus berlari sambil mengamati penanda",
+        "D": "Kembali ke pos sebelumnya dan mundur dari lomba karena takut salah jalan",
+        "E": "Mengikuti jalur yang paling banyak jejak sepatunya tanpa memeriksa peta"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "prosedural dan menunda, padahal informasi di tangan sudah cukup.",
+        "B": "aman, tetapi keputusan bergantung pada orang lain dan membuang waktu.",
+        "C": "memutuskan sendiri berdasarkan informasi yang ada, lalu tetap waspada.",
+        "D": "takut menanggung risiko. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "E": "ikut arus tanpa menimbang informasi sendiri."
+      },
+      "tips": "Bila informasinya cukup (peta dan kompas), opsi terkuat adalah memutuskan sendiri dengan yakin, bukan menunggu atau ikut-ikutan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-205",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "kampus",
+      "situasi": "Dua mata kuliah pilihan yang Anda minati jadwalnya bentrok. Anda sudah membaca silabus keduanya: satu sesuai rencana karier Anda, satu lagi diambil sebagian besar teman dekat Anda. Batas pengisian kartu rencana studi nanti malam. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunda pengisian sampai menit terakhir sambil memantau sisa kuota kelas",
+        "B": "Memilih yang sesuai rencana karier setelah dosen wali menyetujui pilihan itu lewat pesan",
+        "C": "Tidak memilih sampai batas waktu lewat sehingga mendapat kelas sisa",
+        "D": "Mengikuti pilihan teman-teman agar ada yang bisa diajak belajar bersama",
+        "E": "Memilih mata kuliah yang sesuai rencana karier berdasarkan silabus yang sudah dibaca"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 1,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "menunda keputusan tanpa tambahan informasi yang berarti.",
+        "B": "pilihannya tepat, tetapi keyakinannya masih bergantung pada persetujuan orang lain.",
+        "C": "menghindari keputusan sama sekali. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "D": "ikut-ikutan dan mengabaikan informasi yang sudah dimiliki.",
+        "E": "memutuskan sendiri, cepat, dan berdasarkan informasi yang relevan."
+      },
+      "tips": "Ciri keputusan yang kuat: berdasar informasi, diambil sendiri, dan tepat waktu. Persetujuan orang lain yang tidak diperlukan menurunkan nilainya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-206",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "organisasi",
+      "situasi": "Anda koordinator lomba esai yang diadakan himpunan dan berwenang mengatur teknis lomba. Jumlah naskah yang masuk dua kali lipat dari perkiraan, sehingga juri tidak akan sanggup menilai tepat waktu. Anda sudah memegang data jumlah naskah dan kapasitas juri. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyusun dua pilihan solusi lalu meminta ketua himpunan memilih salah satunya",
+        "B": "Menambah babak seleksi abstrak sesuai kapasitas juri dan mengumumkannya hari itu",
+        "C": "Menunggu rapat pengurus minggu depan untuk membahas masalah itu bersama-sama",
+        "D": "Menyerahkan semua naskah kepada juri sambil berkata keputusannya bukan urusan Anda",
+        "E": "Membiarkan juri bekerja sebisanya walaupun pengumuman pemenang menjadi terlambat"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 3,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "sudah ada solusi, tetapi keputusan yang menjadi wewenang Anda dilempar ke atas.",
+        "B": "memutuskan cepat dengan dasar data dan sesuai wewenang.",
+        "C": "prosedural dan menunda, padahal jadwal penilaian terus berjalan.",
+        "D": "melepas tanggung jawab. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "E": "pasif dan membiarkan masalah membesar."
+      },
+      "tips": "Saat Anda berwenang dan datanya lengkap, keputusan terbaik diambil sendiri dan segera diumumkan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-207",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "olahraga",
+      "situasi": "Anda perenang yang terdaftar di dua nomor lomba yang ternyata hanya berselang 15 menit. Catatan waktu Anda menunjukkan peluang medali lebih besar di nomor 100 meter gaya bebas. Panitia meminta Anda memilih satu nomor dalam 10 menit. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membiarkan panitia yang memilihkan nomor lomba untuk Anda",
+        "B": "Menelepon pelatih yang sedang dalam perjalanan dan mengikuti pilihannya",
+        "C": "Mundur dari kedua nomor karena takut salah memilih",
+        "D": "Memilih nomor 100 meter gaya bebas sesuai data catatan waktu dan segera melapor",
+        "E": "Meminta panitia memberi waktu tambahan supaya Anda bisa berpikir lebih lama dan tenang"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 4,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "pasif dan menyerahkan keputusan pribadi kepada pihak lain.",
+        "B": "masuk akal, tetapi keputusan bergantung pada orang lain di saat waktu sempit.",
+        "C": "takut risiko sampai kehilangan semua kesempatan. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "D": "cepat, yakin, dan berdasar data sendiri.",
+        "E": "menunda keputusan yang datanya sudah tersedia."
+      },
+      "tips": "Waktu sempit dan data sudah ada adalah sinyal untuk memutuskan sendiri saat itu juga.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-208",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "kampus",
+      "situasi": "Survei kelompok Anda baru mengumpulkan 60 dari target 100 responden, sementara tenggat analisis tinggal empat hari. Sebagai ketua kelompok, Anda sudah memeriksa bahwa 60 responden masih memenuhi syarat minimal dari dosen. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Memutuskan menutup survei hari ini dan memulai analisis dengan 60 responden",
+        "B": "Memperpanjang survei dua hari lagi sambil melihat perkembangan jumlah responden",
+        "C": "Mengganti topik survei supaya tidak perlu menanggung risiko data yang kurang",
+        "D": "Menanyakan persetujuan anggota di grup sebelum survei ditutup dan analisis dimulai",
+        "E": "Menunggu anggota lain mengusulkan langkah berikutnya"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 1,
+        "D": 4,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "memakai informasi syarat minimal untuk memutuskan cepat dan berani.",
+        "B": "menunda dan mempersempit waktu analisis.",
+        "C": "menghindari risiko dengan mengulang dari nol. Ini berlawanan dengan aspek pengambilan keputusan.",
+        "D": "melibatkan anggota itu baik, tetapi keputusan yang jelas menjadi tertahan.",
+        "E": "pasif sebagai ketua."
+      },
+      "tips": "Cek dulu informasi yang Anda punya. Bila syarat sudah terpenuhi, keputusan yang cepat dan yakin adalah jawaban terkuat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-201",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "olahraga",
+      "situasi": "Anda baru bergabung dengan UKM bola voli. Pada latihan pertama, pelatih menempatkan Anda sebagai libero, padahal sejak SMA Anda selalu bermain sebagai pengumpan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menjalani posisi libero sambil berharap minggu depan pelatih mengembalikan Anda menjadi pengumpan",
+        "B": "Menjalani posisi libero dengan sungguh-sungguh dan bertanya teknik kepada libero senior",
+        "C": "Meminta pelatih menjelaskan alasan penempatan itu sebelum mulai berlatih",
+        "D": "Menolak berlatih dan meminta segera dikembalikan ke posisi pengumpan",
+        "E": "Berlatih setengah hati karena merasa itu bukan posisi Anda"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 3,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "mau menjalani, tetapi hatinya belum menerima perubahan.",
+        "B": "luwes menerima peran baru dan langsung terlibat untuk menguasainya.",
+        "C": "prosedural dan menunda keterlibatan.",
+        "D": "kaku dan menuntut lingkungan yang menyesuaikan. Ini berlawanan dengan aspek penyesuaian diri.",
+        "E": "pasif dan menarik diri dari latihan."
+      },
+      "tips": "Penyesuaian diri terlihat dari kesediaan menjalani hal baru dengan sepenuh hati, bukan sekadar menurut sambil menunggu keadaan kembali seperti dulu.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-202",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "kampus",
+      "situasi": "Anda mengikuti pertukaran mahasiswa satu semester di kampus lain. Di sana perkuliahan memakai diskusi kasus dan hampir tanpa ceramah, berbeda dari kebiasaan di kampus asal Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut berbicara dalam diskusi setiap kali dosen menunjuk nama Anda",
+        "B": "Meminta dosen mengubah kelas menjadi ceramah seperti di kampus asal",
+        "C": "Mengamati beberapa pertemuan dulu sebelum mulai ikut berbicara",
+        "D": "Belajar sendiri dari buku di perpustakaan karena merasa cara ceramah lebih cocok untuk Anda",
+        "E": "Langsung ikut berdiskusi sejak pertemuan pertama dan menyesuaikan cara belajar"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 1,
+        "C": 3,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "terlibat, tetapi bergantung pada dorongan orang lain.",
+        "B": "kaku dan menuntut lingkungan menyesuaikan diri dengan Anda. Ini berlawanan dengan aspek penyesuaian diri.",
+        "C": "menunda keterlibatan.",
+        "D": "menarik diri dari cara belajar lingkungan baru.",
+        "E": "cepat terlibat dan luwes terhadap cara belajar baru."
+      },
+      "tips": "Di lingkungan baru, opsi terkuat adalah ikut cara setempat sejak awal, bukan menunggu ditunjuk atau meminta lingkungan berubah.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-203",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "organisasi",
+      "situasi": "Anda bergabung dengan organisasi relawan lingkungan di kota tempat Anda kuliah. Sebagian besar anggotanya pekerja yang lebih tua dan sering memakai bahasa daerah setempat saat rapat. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Duduk di belakang dan memainkan ponsel selama rapat berlangsung",
+        "B": "Keluar dari organisasi karena merasa tidak cocok dengan anggotanya",
+        "C": "Aktif memperkenalkan diri dan mulai belajar kosakata daerah dari anggota lain",
+        "D": "Tetap hadir dan meminta seorang anggota menerjemahkan bagian rapat yang tidak Anda pahami",
+        "E": "Hadir, tetapi baru ikut berpendapat setelah lebih paham bahasanya"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 5,
+        "D": 4,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "menarik diri dari kelompok.",
+        "B": "menyerah pada lingkungan baru. Ini berlawanan dengan aspek penyesuaian diri.",
+        "C": "cepat akrab, langsung terlibat, dan luwes terhadap kebiasaan baru.",
+        "D": "tetap terlibat, tetapi bergantung pada bantuan orang lain.",
+        "E": "menunda keterlibatan."
+      },
+      "tips": "Perbedaan usia atau bahasa bukan alasan menarik diri. Cari opsi yang mendekat dan belajar dari lingkungan baru.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-204",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "olahraga",
+      "situasi": "Anda mengikuti pemusatan latihan atletik selama sebulan di kota lain dan sekamar dengan atlet dari daerah berbeda. Ia biasa tidur cepat lalu bangun subuh untuk lari pagi, sedangkan Anda terbiasa tidur larut. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyesuaikan jam tidur dan ikut lari pagi bersamanya sambil saling mengenal",
+        "B": "Menyesuaikan jam tidur, tetapi tetap berlatih sendiri pada jam yang biasa Anda pakai",
+        "C": "Menunggu beberapa hari untuk melihat apakah kebiasaannya akan berubah",
+        "D": "Meminta pengelola memindahkan Anda ke kamar atlet dari daerah sendiri",
+        "E": "Tetap begadang dengan lampu menyala karena itu kebiasaan Anda"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 4,
+        "C": 3,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "luwes mengikuti ritme lingkungan baru sekaligus cepat akrab.",
+        "B": "sudah menyesuaikan sebagian, tetapi belum terlibat dan akrab.",
+        "C": "menunda dan berharap orang lain yang menyesuaikan.",
+        "D": "menghindari perbedaan dengan cara pindah.",
+        "E": "kaku dan mengganggu orang lain. Ini berlawanan dengan aspek penyesuaian diri."
+      },
+      "tips": "Penyesuaian diri yang kuat = mau mengubah kebiasaan sendiri dan sekaligus mendekat ke orang baru.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-205",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "kampus",
+      "situasi": "Anda ditempatkan untuk kuliah kerja nyata di desa terpencil bersama mahasiswa fakultas lain yang belum Anda kenal. Pada hari pertama, mereka langsung membagi tugas memasak, membersihkan posko, dan mendata warga. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Lebih banyak berdiam di kamar dan berkirim pesan dengan teman satu fakultas",
+        "B": "Meminta dipindahkan ke lokasi yang anggotanya berasal dari fakultas Anda",
+        "C": "Menunggu koordinator desa memberi tugas kepada Anda, lalu mengerjakannya dengan baik",
+        "D": "Langsung mengambil satu tugas dan berkenalan dengan anggota lain sambil bekerja",
+        "E": "Mengusulkan pembagian tugas ditunda sampai semua anggota saling mengenal"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 4,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "menarik diri dari kelompok baru.",
+        "B": "menolak lingkungan baru. Ini berlawanan dengan aspek penyesuaian diri.",
+        "C": "mau bekerja, tetapi keterlibatannya bergantung pada perintah.",
+        "D": "cepat terlibat dan cepat akrab di lingkungan baru.",
+        "E": "menunda kegiatan yang sudah berjalan."
+      },
+      "tips": "Kata kunci penyesuaian diri: langsung terlibat. Opsi yang menunggu perintah atau menunda kalah dari yang langsung bergerak.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-206",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "organisasi",
+      "situasi": "Tiga hari sebelum wisuda fakultas, Anda diminta menggantikan anggota seksi konsumsi yang mengundurkan diri. Anggota seksi itu sudah lama bekerja sama dan punya cara kerja sendiri. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta waktu sehari untuk membaca catatan seksi sebelum ikut bekerja",
+        "B": "Mengerjakan tugas yang diberikan dengan rapi, tetapi jarang ikut berdiskusi",
+        "C": "Langsung ikut rapat seksi konsumsi dan menyesuaikan diri dengan cara kerja mereka",
+        "D": "Mengerjakan bagian Anda sendiri tanpa berkoordinasi dengan anggota lain",
+        "E": "Mengganti seluruh cara kerja seksi itu dengan cara yang biasa Anda pakai di kepanitiaan lain"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 5,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menunda keterlibatan di saat waktu sangat sempit.",
+        "B": "bekerja, tetapi belum membaur dengan tim.",
+        "C": "cepat terlibat dan luwes terhadap kebiasaan tim yang sudah berjalan.",
+        "D": "menarik diri dan berjalan sendiri.",
+        "E": "tidak luwes dan memaksa tim menyesuaikan diri dengan Anda. Ini berlawanan dengan aspek penyesuaian diri."
+      },
+      "tips": "Masuk ke tim yang sudah berjalan menuntut keluwesan: ikut cara mereka dan langsung terlibat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-207",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "olahraga",
+      "situasi": "Anda baru pindah dari tim futsal fakultas ke tim futsal kampus. Setelah latihan pertama, para pemain berkumpul di pinggir lapangan sambil merencanakan nonton bareng pertandingan liga akhir pekan ini. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut nonton bareng bila ada pemain yang secara khusus mengajak Anda",
+        "B": "Menghampiri mereka, ikut mengobrol, dan menyatakan ingin ikut nonton bareng",
+        "C": "Menanyakan tempat dan jamnya lewat grup, lalu memutuskan ikut atau tidak belakangan",
+        "D": "Bersikap dingin agar tidak dianggap sok akrab oleh pemain lama",
+        "E": "Langsung pulang karena merasa belum dekat dengan siapa pun di tim"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 3,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "mau terlibat, tetapi bergantung pada ajakan orang lain.",
+        "B": "cepat akrab dan langsung terlibat tanpa menunggu diajak.",
+        "C": "menunda keterlibatan.",
+        "D": "sengaja menjaga jarak. Ini berlawanan dengan aspek penyesuaian diri.",
+        "E": "menarik diri dari lingkungan baru."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu mendekat dan ikut terlibat tanpa menunggu diajak.",
+      "kembar_dengan": "SJT-PD-208"
+    },
+    {
+      "id": "SJT-PD-208",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "organisasi",
+      "situasi": "Anda baru diterima sebagai anggota organisasi relawan donor darah. Selesai rapat perdana, anggota lama berkumpul di kantin sambil merencanakan kunjungan ke panti werdha akhir pekan nanti. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Pulang lebih dulu karena merasa canggung di antara anggota lama",
+        "B": "Menunggu informasi resmi di grup sebelum memutuskan ikut atau tidak",
+        "C": "Ikut kunjungan bila ada anggota lama yang secara khusus mengajak Anda",
+        "D": "Bersikap dingin agar tidak dianggap sok akrab oleh anggota lama",
+        "E": "Bergabung ke meja mereka, memperkenalkan diri, dan mendaftar ikut kunjungan"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 3,
+        "C": 4,
+        "D": 1,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "menarik diri dari lingkungan baru.",
+        "B": "menunda keterlibatan.",
+        "C": "mau terlibat, tetapi bergantung pada ajakan orang lain.",
+        "D": "sengaja menjaga jarak. Ini berlawanan dengan aspek penyesuaian diri.",
+        "E": "cepat akrab dan langsung terlibat tanpa menunggu diajak."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu mendekat dan ikut terlibat tanpa menunggu diajak.",
+      "kembar_dengan": "SJT-PD-207"
+    },
+    {
+      "id": "SJT-KD-201",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "kampus",
+      "situasi": "Dalam kuliah umum dengan pembicara tamu, moderator membuka sesi tanya jawab untuk ratusan peserta. Anda punya pertanyaan yang relevan, tetapi belum ada seorang pun yang mengangkat tangan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengangkat tangan lebih dulu dan menyampaikan pertanyaan dengan jelas",
+        "B": "Menyimpan pertanyaan itu untuk dicari sendiri jawabannya di internet",
+        "C": "Menuliskan pertanyaan, lalu meminta teman di sebelah yang membacakannya",
+        "D": "Diam karena yakin pertanyaan Anda akan dianggap remeh oleh peserta lain",
+        "E": "Menunggu beberapa penanya lain dulu supaya tidak menjadi yang pertama"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 2,
+        "C": 4,
+        "D": 1,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berani tampil dan berbicara di depan banyak orang tanpa menunggu orang lain.",
+        "B": "menghindari tampil di depan umum.",
+        "C": "pertanyaannya tersampaikan, tetapi Anda bersembunyi di balik orang lain.",
+        "D": "meragukan diri sendiri. Ini berlawanan dengan aspek kepercayaan diri.",
+        "E": "menunda karena belum cukup berani."
+      },
+      "tips": "Kepercayaan diri tampak dari keberanian tampil lebih dulu. Opsi yang meminjam suara orang lain atau menunggu giliran aman kalah satu tingkat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-202",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "olahraga",
+      "situasi": "Pelatih memilih Anda sebagai pelari terakhir tim estafet pada final kejuaraan antaruniversitas. Kemarin Anda sempat kalah dari pelari lawan yang sama di nomor perorangan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengusulkan pelari lain sebagai pelari terakhir supaya beban tidak di pundak Anda",
+        "B": "Menerima sambil berkata hasil final hanya bergantung pada keberuntungan",
+        "C": "Menerima tugas itu setelah teman-teman setim meyakinkan bahwa Anda mampu",
+        "D": "Menerima tugas itu dengan yakin dan fokus menyiapkan teknik penerimaan tongkat",
+        "E": "Meminta pelatih menunda keputusan sampai latihan sore nanti"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 4,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "menghindari tampil di posisi penentu.",
+        "B": "menyerahkan hasil pada nasib. Ini berlawanan dengan aspek kepercayaan diri.",
+        "C": "akhirnya maju, tetapi keyakinannya bergantung pada dukungan orang lain.",
+        "D": "yakin pada kemampuan sendiri dan mengubah kekalahan kemarin menjadi persiapan.",
+        "E": "menunda karena ragu."
+      },
+      "tips": "Kepercayaan diri bersumber dari diri sendiri dan persiapan, bukan dari bujukan orang lain atau keberuntungan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-203",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "organisasi",
+      "situasi": "UKM Anda diundang beraudiensi dengan pimpinan kampus untuk mengajukan perbaikan ruang sekretariat. Anda yang menyusun proposalnya, sehingga ketua UKM meminta Anda memaparkannya. Anda belum pernah berbicara di depan pimpinan kampus. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta audiensi diundur sampai Anda merasa benar-benar siap",
+        "B": "Menerima permintaan itu dan memaparkan sendiri proposal di depan pimpinan kampus",
+        "C": "Menolak karena merasa mahasiswa biasa tidak pantas berbicara kepada pimpinan",
+        "D": "Menolak dengan alasan sedang sibuk kuliah",
+        "E": "Menerima, tetapi meminta ketua UKM yang berbicara sementara Anda menyiapkan bahan"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 5,
+        "C": 1,
+        "D": 2,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menunda karena kurang percaya diri.",
+        "B": "berani tampil dan yakin pada gagasan yang Anda susun sendiri.",
+        "C": "merendahkan diri sendiri. Ini berlawanan dengan aspek kepercayaan diri.",
+        "D": "menghindar dengan alasan lain.",
+        "E": "berkontribusi, tetapi menghindari panggung dan bergantung pada orang lain."
+      },
+      "tips": "Orang yang paling memahami gagasan seharusnya berani memaparkannya sendiri. Itu inti aspek kepercayaan diri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-204",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "kampus",
+      "situasi": "Saat ujian presentasi, dosen penguji menanggapi kesimpulan Anda dengan berkata, \"Yakin? Coba pikirkan lagi.\" Anda sudah memeriksa data dan perhitungannya dua kali sebelum ujian. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tetap pada kesimpulan, tetapi meminta rekan kelompok yang menjelaskan datanya",
+        "B": "Meminta waktu memeriksa ulang dan berjanji mengirim jawabannya lewat surel",
+        "C": "Langsung mengubah kesimpulan karena mengira dosen pasti tahu jawaban yang benar",
+        "D": "Diam sambil menunggu dosen memberi petunjuk tambahan",
+        "E": "Menjelaskan kembali dasar perhitungan dan tetap mempertahankan kesimpulan Anda"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 3,
+        "C": 1,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "pendiriannya benar, tetapi bergantung pada orang lain untuk membelanya.",
+        "B": "menunda dan mulai meragukan hasil sendiri tanpa alasan baru.",
+        "C": "tidak yakin pada pendapat sendiri. Ini berlawanan dengan aspek kepercayaan diri.",
+        "D": "pasif dan tidak berani bersuara.",
+        "E": "yakin pada pendapat sendiri karena didukung data yang sudah diperiksa."
+      },
+      "tips": "Pertanyaan \"yakin?\" sering menguji keteguhan. Bila dasar Anda kuat, pertahankan dan jelaskan sendiri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-205",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "olahraga",
+      "situasi": "Tahun lalu Anda gagal dalam seleksi atlet panahan yang mewakili kampus. Tahun ini seleksi dibuka lagi, dan sejak itu Anda berlatih rutin tiga kali seminggu. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mendaftar setelah pelatih klub memastikan bahwa Anda sudah layak ikut seleksi",
+        "B": "Tidak mendaftar karena takut mengalami kegagalan yang sama",
+        "C": "Mendaftar lagi dengan yakin karena kemampuan Anda sudah meningkat lewat latihan",
+        "D": "Menunggu pengumuman jumlah pendaftar dulu sebelum memutuskan mendaftar",
+        "E": "Mendaftar dengan persiapan seadanya karena lolos atau tidak hanya soal untung-untungan"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 5,
+        "D": 3,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "maju, tetapi keyakinannya bergantung pada penilaian orang lain.",
+        "B": "menghindar karena takut gagal.",
+        "C": "percaya pada hasil usaha sendiri dan berani mencoba lagi.",
+        "D": "menunda dan mengukur diri dari orang lain.",
+        "E": "bergantung pada nasib. Ini berlawanan dengan aspek kepercayaan diri."
+      },
+      "tips": "Kepercayaan diri yang sehat bersandar pada usaha dan kemampuan sendiri, bukan pada nasib atau restu orang lain.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-206",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "organisasi",
+      "situasi": "Teman-teman mencalonkan Anda sebagai ketua pelaksana festival budaya kampus. Saat pemilihan, setiap calon diminta menyampaikan visinya selama tiga menit di depan seluruh panitia. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membuka penyampaian dengan mengatakan bahwa Anda sebenarnya tidak yakin mampu memimpin",
+        "B": "Maju dan membacakan visi dari kertas sambil menghindari tatapan para panitia",
+        "C": "Meminta giliran paling akhir supaya bisa meniru cara calon lain berbicara",
+        "D": "Maju dan menyampaikan visi dengan suara lantang sambil menatap para panitia",
+        "E": "Mengundurkan diri dari pencalonan sebelum giliran Anda tiba"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 3,
+        "D": 5,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "meragukan diri di depan umum. Ini berlawanan dengan aspek kepercayaan diri.",
+        "B": "tetap tampil, tetapi belum menunjukkan keyakinan.",
+        "C": "menunda dan mengandalkan contoh orang lain.",
+        "D": "berani tampil dan berbicara dengan yakin di depan umum.",
+        "E": "menghindari kesempatan tampil."
+      },
+      "tips": "Perhatikan cara tampil, bukan hanya mau tampil. Opsi terkuat menunjukkan keberanian dan keyakinan sekaligus.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-207",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "olahraga",
+      "situasi": "Dalam rapat strategi tim futsal menjelang final, Anda yang mengamati rekaman pertandingan lawan melihat bahwa kiper mereka lemah menghadapi tembakan rendah. Pelatih meminta masukan pemain, tetapi belum ada yang berbicara. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyampaikan temuan Anda kepada pelatih beserta contoh dari rekaman",
+        "B": "Diam karena merasa pemain cadangan tidak perlu ikut memberi masukan",
+        "C": "Membisikkan temuan Anda kepada kapten supaya dia yang menyampaikannya",
+        "D": "Menunggu rapat selesai untuk menyampaikannya kepada pelatih secara pribadi",
+        "E": "Mengikuti pendapat pemain senior walaupun berbeda dengan pengamatan Anda"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 2,
+        "C": 4,
+        "D": 3,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "berani bicara dan yakin pada hasil pengamatan sendiri.",
+        "B": "menarik diri dan merendahkan peran sendiri.",
+        "C": "temuannya sampai, tetapi Anda bersembunyi di balik orang lain.",
+        "D": "menunda dan menghindari berbicara di forum.",
+        "E": "tidak yakin pada pendapat sendiri. Ini berlawanan dengan aspek kepercayaan diri."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu menyampaikan pendapat sendiri secara langsung di forum.",
+      "kembar_dengan": "SJT-KD-208"
+    },
+    {
+      "id": "SJT-KD-208",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "kampus",
+      "situasi": "Dalam evaluasi proyek kelompok, dosen bertanya mengapa skor kuesioner turun. Anda yang mengolah data menemukan bahwa penyebabnya beberapa pertanyaan yang membingungkan responden. Anggota lain hanya saling pandang. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengikuti saja jawaban anggota lain walaupun berbeda dengan hasil analisis yang Anda olah",
+        "B": "Diam karena merasa bukan ketua kelompok yang berhak menjawab",
+        "C": "Menyampaikan analisis Anda kepada dosen beserta contoh pertanyaan yang membingungkan",
+        "D": "Mengirim analisis itu lewat surel kepada dosen setelah kelas selesai",
+        "E": "Meminta ketua kelompok yang menyampaikan hasil analisis Anda"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 2,
+        "C": 5,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "tidak yakin pada pendapat sendiri. Ini berlawanan dengan aspek kepercayaan diri.",
+        "B": "menarik diri dan merendahkan peran sendiri.",
+        "C": "berani bicara dan yakin pada hasil analisis sendiri.",
+        "D": "menunda dan menghindari berbicara di forum.",
+        "E": "analisisnya sampai, tetapi Anda bersembunyi di balik orang lain."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu menyampaikan pendapat sendiri secara langsung di forum.",
+      "kembar_dengan": "SJT-KD-207"
+    },
+    {
+      "id": "SJT-SE-201",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "olahraga",
+      "situasi": "Dalam pertandingan futsal antarfakultas, seorang pemain lawan berkali-kali menarik baju Anda dan menyindir Anda setiap kali wasit tidak melihat. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membalas menarik bajunya lalu membentaknya di tengah lapangan",
+        "B": "Meminta kapten tim menyampaikan keberatan atas ulah pemain itu kepada wasit",
+        "C": "Bermain setengah hati dan menghindari setiap duel dengan pemain itu",
+        "D": "Mencatat nomor punggungnya untuk dilaporkan kepada panitia setelah pertandingan",
+        "E": "Tetap tenang dan fokus pada permainan tanpa membalas tarikan maupun sindirannya"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 2,
+        "D": 3,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "emosi meledak. Ini berlawanan dengan aspek stabilitas emosi.",
+        "B": "tidak meledak, tetapi pengendalian masalah diserahkan kepada orang lain.",
+        "C": "menghindar karena terganggu secara emosi.",
+        "D": "prosedural dan menunda, belum menunjukkan pengendalian diri di lapangan.",
+        "E": "emosi terkendali dan tidak terpancing provokasi."
+      },
+      "tips": "Pada soal stabilitas emosi, cari opsi yang menunjukkan Anda sendiri tetap tenang, bukan yang melempar masalah atau membalas.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-202",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "kampus",
+      "situasi": "Dalam seminar proposal penelitian, dosen pembanding menyatakan metode Anda lemah dan menyarankan mengganti sebagian besar rancangan penelitian. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunda revisi sampai suasana hati Anda membaik",
+        "B": "Membantah dengan nada tinggi bahwa dosen tidak memahami penelitian Anda",
+        "C": "Mencatat semua masukan, berterima kasih, lalu merevisi rancangan sesuai saran",
+        "D": "Diam selama seminar lalu mengabaikan masukan itu",
+        "E": "Menerima masukan, tetapi meminta pembimbing yang memilihkan bagian mana yang direvisi"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 1,
+        "C": 5,
+        "D": 2,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menunda karena masih terbawa perasaan.",
+        "B": "emosi meledak dan menolak kritik. Ini berlawanan dengan aspek stabilitas emosi.",
+        "C": "menerima kritik dengan tenang dan mengubahnya menjadi perbaikan.",
+        "D": "pasif dan menolak kritik secara diam-diam.",
+        "E": "menerima kritik, tetapi tindak lanjutnya bergantung pada orang lain."
+      },
+      "tips": "Ciri stabilitas emosi: menerima kritik dengan tenang lalu menindaklanjutinya sendiri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-203",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "organisasi",
+      "situasi": "Bazar yang Anda pimpin sepi pengunjung. Di grup obrolan panitia, beberapa anggota menyalahkan Anda karena memilih tanggal yang bertepatan dengan pekan ujian. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menjanjikan pembahasan di rapat evaluasi minggu depan tanpa menanggapi isinya",
+        "B": "Meminta wakil ketua menenangkan suasana grup sementara Anda tidak menanggapi apa pun lebih dulu",
+        "C": "Keluar dari grup obrolan supaya tidak perlu membaca komentar mereka",
+        "D": "Menanggapi dengan tenang, mengakui pertimbangan yang kurang, dan mengajak membahas perbaikan",
+        "E": "Membalas dengan menyebut kesalahan setiap anggota satu per satu"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 2,
+        "D": 5,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menunda tanggapan.",
+        "B": "tidak meledak, tetapi menghadapi kritik lewat orang lain.",
+        "C": "menghindar dari kritik.",
+        "D": "emosi terkendali, menerima kritik, dan berpikir ke depan.",
+        "E": "emosi meledak dan membalas kritik dengan serangan. Ini berlawanan dengan aspek stabilitas emosi."
+      },
+      "tips": "Saat disalahkan, opsi terkuat adalah tenang, mengakui bagian yang benar dari kritik, dan mengajak mencari perbaikan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-204",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "olahraga",
+      "situasi": "Dua minggu sebelum kejuaraan lari, engkel Anda cedera. Dokter melarang Anda berlari selama tiga minggu, sehingga Anda batal ikut kejuaraan yang sudah lama dipersiapkan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Baru bisa menerima keadaan setelah pelatih dan teman-teman menghibur Anda berhari-hari",
+        "B": "Menerima keadaan, menjalani terapi dengan disiplin, dan menyusun target kejuaraan berikutnya",
+        "C": "Mengurung diri dan berhenti datang ke tempat latihan",
+        "D": "Marah-marah kepada pelatih karena merasa program latihannya terlalu berat",
+        "E": "Menunggu hasil pemeriksaan kedua sebelum memikirkan rencana apa pun"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 2,
+        "D": 1,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "akhirnya tenang, tetapi pemulihan emosinya bergantung pada orang lain.",
+        "B": "berpikir positif dan mengelola kekecewaan menjadi rencana.",
+        "C": "menarik diri karena larut dalam kekecewaan.",
+        "D": "melampiaskan emosi kepada orang lain. Ini berlawanan dengan aspek stabilitas emosi.",
+        "E": "menunda dan menggantung perasaan pada kepastian dari luar."
+      },
+      "tips": "Stabilitas emosi bukan berarti tidak kecewa, melainkan mampu mengelola kekecewaan menjadi langkah positif sendiri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-205",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "kampus",
+      "situasi": "Teman satu kelompok mengunggah tugas versi lama tanpa memeriksanya, sehingga nilai kelompok Anda dipotong. Padahal Anda sudah mengirim versi akhir ke grup sehari sebelumnya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menahan kesal, membicarakannya baik-baik, dan menyepakati cara pengecekan bersama",
+        "B": "Mengirim surel kepada dosen untuk meminta penilaian ulang sebelum membahasnya dengan teman",
+        "C": "Meminta ketua kelompok yang menegur teman itu atas kelalaiannya",
+        "D": "Memarahinya di grup kelas sehingga semua orang membacanya",
+        "E": "Diam, tetapi menjauhinya pada tugas-tugas berikutnya"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 4,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "emosi terkendali dan fokus mencegah kejadian serupa.",
+        "B": "prosedural dan menunda pembicaraan dengan teman.",
+        "C": "tidak meledak, tetapi penyelesaian diserahkan kepada orang lain.",
+        "D": "emosi meledak di depan umum. Ini berlawanan dengan aspek stabilitas emosi.",
+        "E": "menghindar sambil menyimpan kesal."
+      },
+      "tips": "Saat dirugikan orang lain, opsi stabilitas emosi terkuat adalah menahan diri lalu menyelesaikannya baik-baik secara langsung.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-206",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "organisasi",
+      "situasi": "Dalam rapat evaluasi kepanitiaan, koordinator menyebut laporan dokumentasi Anda terlambat dan kurang lengkap. Menurut Anda, keterlambatan itu terjadi karena kamera pinjaman rusak di tengah acara. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membela diri dengan keras dan menyalahkan pemilik kamera di depan semua panitia",
+        "B": "Meminta pembahasan itu dipindahkan ke pertemuan pribadi agar tidak dibahas di forum",
+        "C": "Diam saja sambil menahan kesal sampai rapat selesai",
+        "D": "Menerima kritik dan meminta koordinator menentukan sendiri bagian yang perlu dilengkapi",
+        "E": "Menerima kritik dengan tenang, menjelaskan kendala kamera secara singkat, dan menyampaikan rencana perbaikan"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 3,
+        "C": 2,
+        "D": 4,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "defensif dan meledak. Ini berlawanan dengan aspek stabilitas emosi.",
+        "B": "menunda dan menghindari kritik di depan orang lain.",
+        "C": "pasif; emosi ditahan, bukan dikelola.",
+        "D": "tenang, tetapi tindak lanjutnya bergantung pada orang lain.",
+        "E": "menerima kritik tanpa defensif sambil tetap jujur tentang kendala."
+      },
+      "tips": "Menerima kritik bukan berarti diam. Opsi terkuat tenang, mengakui, dan langsung menawarkan perbaikan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-207",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "olahraga",
+      "situasi": "Tim bola voli Anda kalah di set penentuan setelah Anda melakukan tiga kesalahan servis beruntun. Seusai pertandingan, sekelompok penonton dari kampus lawan mengejek Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membalas ejekan penonton dan membanting bola ke lantai",
+        "B": "Tetap tenang, menyalami tim lawan, lalu mencatat kesalahan servis untuk dilatih",
+        "C": "Langsung masuk ruang ganti dan baru memikirkan pertandingan itu beberapa hari kemudian",
+        "D": "Meminta teman setim menemani Anda supaya tidak terpancing ejekan penonton",
+        "E": "Menghindari latihan servis pada minggu berikutnya karena malu"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 5,
+        "C": 3,
+        "D": 4,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "emosi meledak. Ini berlawanan dengan aspek stabilitas emosi.",
+        "B": "emosi terkendali dan berpikir positif tentang perbaikan.",
+        "C": "menunda menghadapi kekecewaan.",
+        "D": "tidak meledak, tetapi kendali emosinya bergantung pada orang lain.",
+        "E": "menghindar dari sumber kekecewaan."
+      },
+      "tips": "Ejekan dan kekalahan menguji kendali diri. Pilih opsi yang tenang sekaligus langsung berpikir tentang perbaikan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-208",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "kampus",
+      "situasi": "Hasil seleksi asisten laboratorium diumumkan. Anda tidak lolos, sementara teman yang menurut Anda kurang menguasai materi justru lolos. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta teman dekat menanyakan kepada panitia alasan Anda tidak lolos",
+        "B": "Menghindari teman itu beberapa minggu karena masih kesal",
+        "C": "Mengajukan keberatan resmi agar nilai seleksi diperiksa ulang",
+        "D": "Mengucapkan selamat kepadanya dan menanyakan kepada panitia hal yang perlu Anda tingkatkan",
+        "E": "Menulis status sindiran di media sosial bahwa seleksi itu tidak adil"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 3,
+        "D": 5,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "tenang, tetapi tindak lanjutnya diserahkan kepada orang lain.",
+        "B": "menghindar dan memendam perasaan negatif.",
+        "C": "prosedural dan masih berfokus pada rasa tidak terima.",
+        "D": "berpikir positif, menerima hasil, dan mengubah kekecewaan menjadi bahan belajar.",
+        "E": "emosi meledak di depan umum. Ini berlawanan dengan aspek stabilitas emosi."
+      },
+      "tips": "Kekalahan dalam seleksi menguji sikap positif. Opsi terkuat menerima hasil dengan lapang dan langsung mencari bahan perbaikan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-201",
+      "aspek": "Motif Berprestasi",
+      "konteks": "olahraga",
+      "situasi": "Catatan waktu lari 5 kilometer Anda tidak membaik selama dua bulan, padahal Anda berlatih rutin. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunggu musim lomba berikutnya untuk melihat apakah catatan waktu membaik sendiri",
+        "B": "Mengevaluasi catatan latihan, menambah latihan interval, dan memantau kemajuan setiap minggu",
+        "C": "Berhenti berlatih lari karena merasa usahanya sia-sia",
+        "D": "Menerima bahwa kemampuan lari Anda memang sudah mentok",
+        "E": "Meminta pelatih menyusunkan program latihan baru, lalu menjalankannya"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 5,
+        "C": 1,
+        "D": 2,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menunda dan berharap perubahan tanpa usaha baru.",
+        "B": "tekun, terukur, dan berusaha sendiri untuk unggul.",
+        "C": "menyerah. Ini berlawanan dengan aspek motif berprestasi.",
+        "D": "pasif dan cepat puas.",
+        "E": "tetap berusaha, tetapi bergantung pada orang lain untuk menemukan jalan keluar."
+      },
+      "tips": "Motif berprestasi tampak dari ketekunan mencari cara baru sendiri saat hasil mandek.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-202",
+      "aspek": "Motif Berprestasi",
+      "konteks": "kampus",
+      "situasi": "Laporan praktikum Anda mendapat nilai A. Dosen lalu menawarkan agar laporan itu dikembangkan menjadi artikel untuk jurnal mahasiswa yang seleksinya ketat. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menerima tawaran dan menyusun jadwal kerja untuk menyempurnakan artikel itu",
+        "B": "Menolak karena nilai A sudah cukup bagi Anda",
+        "C": "Menunda keputusan sampai libur semester tiba",
+        "D": "Menerima tawaran, lalu mengirim draf laporan apa adanya tanpa perbaikan apa pun",
+        "E": "Menerima tawaran asalkan ada teman yang mau menulis bersama Anda"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 2,
+        "C": 3,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "suka tantangan dan ingin hasil yang lebih berkualitas.",
+        "B": "cepat puas dengan hasil yang ada.",
+        "C": "menunda kesempatan berprestasi.",
+        "D": "asal jadi dan tidak peduli mutu. Ini berlawanan dengan aspek motif berprestasi.",
+        "E": "mau maju, tetapi bergantung pada kehadiran orang lain."
+      },
+      "tips": "Saat sudah berhasil, motif berprestasi terlihat dari kemauan naik ke tantangan yang lebih tinggi dengan hasil berkualitas.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-203",
+      "aspek": "Motif Berprestasi",
+      "konteks": "organisasi",
+      "situasi": "Setiap tahun seminar UKM Anda dihadiri sekitar 100 peserta. Tahun ini Anda ditunjuk menjadi ketua panitia. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengecilkan skala acara supaya kerja panitia menjadi lebih ringan",
+        "B": "Memasang target jumlah peserta yang sama seperti biasa supaya aman",
+        "C": "Menetapkan target 300 peserta dan menyusun strategi publikasi baru untuk mencapainya",
+        "D": "Menjalankan target dan rencana kerja yang disusun pembina UKM",
+        "E": "Memakai rencana tahun lalu lebih dulu, lalu memikirkan target baru bila masih ada waktu tersisa"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 2,
+        "C": 5,
+        "D": 4,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "menurunkan standar. Ini berlawanan dengan aspek motif berprestasi.",
+        "B": "puas dengan capaian lama.",
+        "C": "ingin unggul dan berani memasang target yang menantang.",
+        "D": "bekerja baik, tetapi targetnya bergantung pada orang lain.",
+        "E": "menunda keinginan untuk unggul."
+      },
+      "tips": "Ciri motif berprestasi: memasang target lebih tinggi dari biasanya dan menyiapkan cara sendiri untuk mencapainya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-204",
+      "aspek": "Motif Berprestasi",
+      "konteks": "olahraga",
+      "situasi": "Pelatih renang menawarkan Anda naik ke kelompok latihan senior yang jauh lebih berat. Risikonya, Anda mungkin tertinggal pada sesi-sesi awal. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta pelatih menunda kenaikan Anda sampai musim depan",
+        "B": "Menerima tawaran bila teman satu kelompok juga ikut naik bersama Anda",
+        "C": "Menolak karena sudah nyaman menjadi yang terbaik di kelompok sekarang",
+        "D": "Menerima tawaran dan menambah latihan mandiri agar bisa mengejar ritme kelompok senior",
+        "E": "Menerima tawaran, tetapi sering melewatkan sesi berat supaya tidak kelelahan"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 2,
+        "D": 5,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menunda tantangan.",
+        "B": "mau maju, tetapi bergantung pada orang lain.",
+        "C": "puas di zona nyaman.",
+        "D": "suka tantangan, tekun, dan ingin unggul.",
+        "E": "tidak tekun. Ini berlawanan dengan aspek motif berprestasi."
+      },
+      "tips": "Pada soal motif berprestasi, pilih opsi yang menyambut tantangan dan menyiapkan usaha tambahan sendiri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-205",
+      "aspek": "Motif Berprestasi",
+      "konteks": "kampus",
+      "situasi": "Anda mengerjakan tugas statistika yang sangat sulit. Setelah tiga jam, Anda belum juga menemukan caranya. Seorang teman menawarkan jawabannya yang sudah jadi untuk Anda salin. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunda pengerjaan sampai dosen membahas soal serupa di kelas",
+        "B": "Meminta teman itu menjelaskan langkah awalnya, lalu menyelesaikan sisanya sendiri",
+        "C": "Mengumpulkan jawaban yang belum selesai apa adanya",
+        "D": "Menyalin jawaban teman itu supaya tugas cepat selesai",
+        "E": "Menolak salinan itu dan mempelajari ulang materinya sampai menemukan cara sendiri"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 4,
+        "C": 2,
+        "D": 1,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "menunda dan menunggu jalan keluar dari luar.",
+        "B": "tetap belajar, tetapi sebagian bergantung pada bantuan orang lain.",
+        "C": "pasif dan cepat menyerah.",
+        "D": "mengambil jalan pintas tanpa usaha. Ini berlawanan dengan aspek motif berprestasi.",
+        "E": "tekun dan ingin menguasai materi dengan usaha sendiri."
+      },
+      "tips": "Motif berprestasi = tekun. Opsi yang menolak jalan pintas dan berjuang sendiri sampai paham adalah jawaban terkuat.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-206",
+      "aspek": "Motif Berprestasi",
+      "konteks": "organisasi",
+      "situasi": "Anda editor buletin organisasi relawan. Edisi bulan ini dijadwalkan naik cetak besok pagi, tetapi Anda menemukan beberapa foto yang buram dan dua data kegiatan yang belum diperiksa kebenarannya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta tim dokumentasi mencarikan foto pengganti, lalu menunggu kiriman mereka",
+        "B": "Mencetak apa adanya karena pembaca jarang memperhatikan detail",
+        "C": "Mengganti foto dan memeriksa ulang data malam ini agar buletin tetap terbit tepat waktu dan rapi",
+        "D": "Mencetak sesuai jadwal dan berencana memperbaikinya pada edisi berikutnya",
+        "E": "Menghapus halaman yang bermasalah supaya tidak perlu repot memperbaikinya"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 5,
+        "D": 3,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "peduli mutu, tetapi bergantung pada orang lain.",
+        "B": "puas dengan hasil seadanya.",
+        "C": "tuntas dan berkualitas walaupun harus bekerja ekstra.",
+        "D": "menunda perbaikan mutu.",
+        "E": "mengorbankan isi demi menghindari kerja. Ini berlawanan dengan aspek motif berprestasi."
+      },
+      "tips": "Motif berprestasi menuntut hasil yang tuntas dan berkualitas, bukan sekadar tepat waktu.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-207",
+      "aspek": "Motif Berprestasi",
+      "konteks": "olahraga",
+      "situasi": "Turnamen bulu tangkis antarkampus membuka dua kategori: kategori pemula yang hampir pasti Anda menangi, dan kategori terbuka yang diikuti pemain-pemain berpengalaman. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mendaftar di kategori terbuka dan berlatih untuk menghadapi lawan yang lebih kuat",
+        "B": "Mendaftar di kategori terbuka bila pelatih menyarankannya",
+        "C": "Menunggu daftar peserta keluar sebelum memilih kategori",
+        "D": "Mendaftar di kategori pemula supaya pasti membawa pulang piala",
+        "E": "Tidak mendaftar sama sekali karena takut kalah"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 4,
+        "C": 3,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "memilih tantangan dan bersiap untuk unggul.",
+        "B": "pilihannya menantang, tetapi bergantung pada dorongan orang lain.",
+        "C": "menunda dan mencari posisi yang aman.",
+        "D": "memilih yang aman dan mudah.",
+        "E": "menghindari persaingan. Ini berlawanan dengan aspek motif berprestasi."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu memilih tantangan yang lebih tinggi dan menyiapkan diri sendiri.",
+      "kembar_dengan": "SJT-MB-208"
+    },
+    {
+      "id": "SJT-MB-208",
+      "aspek": "Motif Berprestasi",
+      "konteks": "kampus",
+      "situasi": "Dosen membuka dua posisi asisten riset: membantu entri data yang sudah rutin, atau ikut merancang eksperimen baru yang belum pasti berhasil. Anda memenuhi syarat untuk keduanya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunggu melihat posisi mana yang lebih sedikit peminatnya sebelum memilih",
+        "B": "Memilih entri data supaya tugasnya pasti selesai tanpa kendala",
+        "C": "Tidak mendaftar keduanya karena takut tidak mampu",
+        "D": "Memilih ikut merancang eksperimen baru dan mempelajari teorinya sejak awal",
+        "E": "Memilih eksperimen baru bila ada teman yang mau bergabung bersama Anda"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 2,
+        "C": 1,
+        "D": 5,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menunda dan mencari posisi yang aman.",
+        "B": "memilih yang aman dan mudah.",
+        "C": "menghindari tantangan. Ini berlawanan dengan aspek motif berprestasi.",
+        "D": "memilih tantangan dan bersiap untuk unggul.",
+        "E": "pilihannya menantang, tetapi bergantung pada orang lain."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu memilih tantangan yang lebih tinggi dan menyiapkan diri sendiri.",
+      "kembar_dengan": "SJT-MB-207"
+    }
+  ]
+}

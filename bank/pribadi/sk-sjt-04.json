@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sjt-04",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran (Pass Hand A/B) baru untuk Kepribadian SJT Paket 4 (package_number 24). Komposisi = SK_SLOT compose-pribadi-paket.ts, 4 pasang kembar (D1, D2, D3, D5). Konteks kantor, kelurahan, dan pelayanan publik. Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur resmi yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-1001",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menyusun berita acara rapat warga di kantor kelurahan",
+      "opsi": {
+        "A": "Isi rapat sesuai yang benar-benar dibicarakan peserta",
+        "B": "Isi rapat yang dirangkum agar tidak menyinggung pihak mana pun"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Isi rapat sesuai yang benar-benar dibicarakan peserta menjaga kebenaran catatan sesuai kejadian. Isi rapat yang dirangkum agar tidak menyinggung pihak mana pun juga bernilai: menjaga perasaan pihak lain itu baik, tetapi tidak boleh mengubah isi yang sebenarnya. Tips: berita acara mencatat yang benar-benar terjadi."
+    },
+    {
+      "id": "SK-D1-1002",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika mengisi laporan kehadiran peserta magang yang sering terlambat",
+      "opsi": {
+        "A": "Catatan longgar agar penilaian magangnya tetap baik",
+        "B": "Catatan jam datang sesuai kenyataan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Catatan jam datang sesuai kenyataan mengutamakan kebenaran data di atas kebaikan hati. Catatan longgar agar penilaian magangnya tetap baik juga bernilai: niat menolong peserta magang itu baik, tetapi catatan yang dilonggarkan tidak lagi benar. Tips: laporan kehadiran harus sama dengan kenyataan."
+    },
+    {
+      "id": "SK-D1-1003",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menjawab pertanyaan warga tentang lamanya proses izin usaha di loket dinas",
+      "opsi": {
+        "A": "Perkiraan waktu yang sesuai kenyataan proses",
+        "B": "Perkiraan waktu yang lebih singkat agar warga tidak kecewa"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-1004",
+      "pembahasan": "Perkiraan waktu yang sesuai kenyataan proses mengutamakan kebenaran informasi. Perkiraan waktu yang lebih singkat agar warga tidak kecewa juga bernilai: menjaga perasaan warga itu baik, tetapi perkiraan yang dipersingkat tidak benar. Tips: informasi yang benar lebih penting daripada jawaban yang menyenangkan."
+    },
+    {
+      "id": "SK-D1-1004",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika memberi tahu pasien puskesmas berapa lama hasil laboratoriumnya keluar",
+      "opsi": {
+        "A": "Perkiraan waktu yang lebih singkat agar pasien tidak kecewa",
+        "B": "Perkiraan waktu yang sesuai kenyataan proses"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-1003",
+      "pembahasan": "Perkiraan waktu yang sesuai kenyataan proses mengutamakan kebenaran informasi. Perkiraan waktu yang lebih singkat agar pasien tidak kecewa juga bernilai: menjaga perasaan pasien itu baik, tetapi perkiraan yang dipersingkat tidak benar. Tips: informasi yang benar lebih penting daripada jawaban yang menyenangkan."
+    },
+    {
+      "id": "SK-D2-1001",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika kelurahan menerima dana hibah untuk perbaikan jalan lingkungan",
+      "opsi": {
+        "A": "Memasang papan rincian anggaran di lokasi pekerjaan",
+        "B": "Menyimpan rincian anggaran untuk diperiksa inspektorat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memasang papan rincian anggaran di lokasi pekerjaan membuka informasi penggunaan dana kepada warga. Menyimpan rincian anggaran untuk diperiksa inspektorat juga bernilai: menyiapkan rincian untuk pemeriksa itu tertib, tetapi informasinya hanya beredar di kalangan terbatas. Tips: dana publik sebaiknya diketahui publik."
+    },
+    {
+      "id": "SK-D2-1002",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika kantor menetapkan syarat baru bagi pemohon surat keterangan usaha",
+      "opsi": {
+        "A": "Syarat baru dijelaskan petugas kepada pemohon yang bertanya",
+        "B": "Syarat baru dipasang di papan informasi dan laman resmi kantor"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Syarat baru dipasang di papan informasi dan laman resmi kantor membuka informasi kepada semua calon pemohon. Syarat baru dijelaskan petugas kepada pemohon yang bertanya juga bernilai: penjelasan petugas itu membantu, tetapi hanya sampai kepada orang yang kebetulan bertanya. Tips: pilih cara yang membuat informasi terbuka bagi semua orang."
+    },
+    {
+      "id": "SK-D2-1003",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika panitia seleksi pegawai kontrak di kantor dinas menetapkan hasil kelulusan",
+      "opsi": {
+        "A": "Nilai setiap peserta diumumkan secara terbuka",
+        "B": "Nilai peserta cukup diketahui panitia seleksi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai setiap peserta diumumkan secara terbuka mengutamakan keterbukaan hasil seleksi. Nilai peserta cukup diketahui panitia seleksi juga bernilai: menjaga kerahasiaan nilai itu bisa dimaklumi, tetapi peserta tidak bisa memeriksa keadilan hasilnya. Tips: seleksi yang terbuka lebih dipercaya."
+    },
+    {
+      "id": "SK-D2-1004",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika jadwal perekaman KTP elektronik di kecamatan berubah karena alat rusak",
+      "opsi": {
+        "A": "Perubahan jadwal diumumkan kepada seluruh pengguna layanan",
+        "B": "Perubahan jadwal dicatat oleh petugas perekaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-1005",
+      "pembahasan": "Perubahan jadwal diumumkan kepada seluruh pengguna layanan membuka informasi kepada semua pihak yang terdampak. Perubahan jadwal dicatat oleh petugas perekaman juga bernilai: pencatatan oleh petugas itu tertib, tetapi warga tidak ikut mengetahuinya. Tips: perubahan layanan wajib diketahui semua penggunanya."
+    },
+    {
+      "id": "SK-D2-1005",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika jam buka kantor pos cabang berkurang karena gedungnya direnovasi",
+      "opsi": {
+        "A": "Perubahan jadwal dicatat oleh kepala kantor dan petugas loket",
+        "B": "Perubahan jadwal diumumkan kepada seluruh pengguna layanan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-1004",
+      "pembahasan": "Perubahan jadwal diumumkan kepada seluruh pengguna layanan membuka informasi kepada semua pihak yang terdampak. Perubahan jadwal dicatat oleh kepala kantor dan petugas loket juga bernilai: pencatatan oleh kepala kantor dan petugas itu tertib, tetapi pelanggan tidak ikut mengetahuinya. Tips: perubahan layanan wajib diketahui semua penggunanya."
+    },
+    {
+      "id": "SK-D3-1001",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi kepala seksi dan ada pegawai yang berulang kali mengisi daftar hadir untuk rekannya",
+      "opsi": {
+        "A": "Menjatuhkan sanksi disiplin sesuai peraturan kepegawaian",
+        "B": "Menasihati pegawai itu secara pribadi agar tidak mengulangi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menjatuhkan sanksi disiplin sesuai peraturan kepegawaian menegakkan aturan atas pelanggaran yang berulang. Menasihati pegawai itu secara pribadi agar tidak mengulangi juga bernilai: nasihat pribadi itu baik, tetapi pelanggaran berulang perlu ditangani dengan aturan. Tips: pelanggaran yang berulang dijawab dengan sanksi sesuai aturan."
+    },
+    {
+      "id": "SK-D3-1002",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika mengelola ruang baca perpustakaan daerah dan ada pengunjung yang makan di dalam ruangan",
+      "opsi": {
+        "A": "Imbauan ramah tentang menjaga kebersihan buku",
+        "B": "Penerapan tata tertib dengan meminta pengunjung keluar ruangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penerapan tata tertib dengan meminta pengunjung keluar ruangan menegakkan tata tertib ruang baca. Imbauan ramah tentang menjaga kebersihan buku juga bernilai: imbauan ramah itu sopan, tetapi belum menegakkan aturan yang sudah jelas. Tips: aturan yang tertulis dijalankan, bukan hanya diingatkan."
+    },
+    {
+      "id": "SK-D3-1003",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menjadi pengelola pasar dan ada pedagang yang tidak membayar retribusi tiga bulan",
+      "opsi": {
+        "A": "Pendekatan kekeluargaan agar pedagang sadar kewajibannya",
+        "B": "Penagihan dan sanksi sesuai peraturan retribusi daerah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penagihan dan sanksi sesuai peraturan retribusi daerah menegakkan peraturan beserta sanksinya. Pendekatan kekeluargaan agar pedagang sadar kewajibannya juga bernilai: pendekatan kekeluargaan itu baik, tetapi kewajiban yang dilanggar perlu ditegakkan dengan aturan. Tips: kewajiban resmi ditegakkan dengan aturan resmi."
+    },
+    {
+      "id": "SK-D3-1004",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi petugas loket dan ada pemohon yang menyerobot antrean",
+      "opsi": {
+        "A": "Mengembalikan pemohon itu ke urutan antrean sesuai aturan",
+        "B": "Memberi pengertian kepada pemohon itu tentang pentingnya antre"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengembalikan pemohon itu ke urutan antrean sesuai aturan menegakkan aturan antrean saat itu juga. Memberi pengertian kepada pemohon itu tentang pentingnya antre juga bernilai: memberi pengertian itu baik, tetapi tidak memulihkan hak pemohon lain yang sudah antre. Tips: tegakkan aturan dulu, penjelasan menyusul."
+    },
+    {
+      "id": "SK-D3-1005",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi koordinator piket kantor dan ada pegawai yang berkali-kali meninggalkan tugas jaga",
+      "opsi": {
+        "A": "Pemberian sanksi sesuai tata tertib yang berlaku",
+        "B": "Teguran ringan agar pegawai itu menyadari kewajibannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-1006",
+      "pembahasan": "Pemberian sanksi sesuai tata tertib yang berlaku menegakkan aturan atas pelanggaran yang berulang. Teguran ringan agar pegawai itu menyadari kewajibannya juga bernilai: teguran ringan itu baik, tetapi pelanggaran berulang perlu sanksi sesuai aturan. Tips: pelanggaran berulang dijawab dengan sanksi yang sudah ditetapkan."
+    },
+    {
+      "id": "SK-D3-1006",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengelola aula kelurahan dan ada penyewa yang berulang kali melewati batas jam pakai",
+      "opsi": {
+        "A": "Teguran ringan agar penyewa itu menyadari kesalahannya",
+        "B": "Pemberian sanksi sesuai tata tertib yang berlaku"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-1005",
+      "pembahasan": "Pemberian sanksi sesuai tata tertib yang berlaku menegakkan aturan atas pelanggaran yang berulang. Teguran ringan agar penyewa itu menyadari kesalahannya juga bernilai: teguran ringan itu baik, tetapi pelanggaran berulang perlu sanksi sesuai aturan. Tips: pelanggaran berulang dijawab dengan sanksi yang sudah ditetapkan."
+    },
+    {
+      "id": "SK-D4-1001",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika menerbitkan surat keterangan tidak mampu bagi warga",
+      "opsi": {
+        "A": "Verifikasi data sesuai persyaratan yang ditetapkan",
+        "B": "Penerbitan cepat karena warga tampak benar-benar kesulitan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Verifikasi data sesuai persyaratan yang ditetapkan patuh pada persyaratan resmi penerbitan surat. Penerbitan cepat karena warga tampak benar-benar kesulitan juga bernilai: keinginan membantu cepat itu baik, tetapi persyaratan resmi tidak boleh dilewati. Tips: untuk dokumen resmi, ikuti persyaratan yang berlaku."
+    },
+    {
+      "id": "SK-D4-1002",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika menyimpan vaksin di posyandu",
+      "opsi": {
+        "A": "Penyimpanan praktis di lemari yang mudah dijangkau kader",
+        "B": "Suhu penyimpanan sesuai standar rantai dingin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Suhu penyimpanan sesuai standar rantai dingin patuh pada standar kesehatan. Penyimpanan praktis di lemari yang mudah dijangkau kader juga bernilai: kepraktisan itu memudahkan kader, tetapi standar penyimpanan vaksin wajib diikuti. Tips: standar keselamatan dan kesehatan dipatuhi, bukan diakali."
+    },
+    {
+      "id": "SK-D4-1003",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika memakai uang kas kantor untuk membeli alat tulis",
+      "opsi": {
+        "A": "Pembelian sesuai prosedur pengadaan dan bukti pembayaran",
+        "B": "Pembelian langsung di toko langganan agar lebih hemat waktu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pembelian sesuai prosedur pengadaan dan bukti pembayaran patuh pada prosedur keuangan resmi. Pembelian langsung di toko langganan agar lebih hemat waktu juga bernilai: hemat waktu itu baik, tetapi uang kantor harus dipakai sesuai prosedur. Tips: uang kantor selalu mengikuti prosedur pengadaan."
+    },
+    {
+      "id": "SK-D4-1004",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dilakukan ketika memusnahkan dokumen kependudukan yang sudah melewati masa simpan",
+      "opsi": {
+        "A": "Membakar sendiri dokumen itu di halaman belakang agar cepat bersih",
+        "B": "Memusnahkan dokumen sesuai tata cara penyusutan arsip"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memusnahkan dokumen sesuai tata cara penyusutan arsip patuh pada ketentuan resmi pengelolaan arsip. Membakar sendiri dokumen itu di halaman belakang agar cepat bersih juga bernilai: cara cepat itu praktis, tetapi dokumen negara punya tata cara pemusnahan yang wajib diikuti. Tips: dokumen resmi dimusnahkan sesuai tata caranya."
+    },
+    {
+      "id": "SK-D4-1005",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipikirkan ketika merenovasi ruang tunggu puskesmas",
+      "opsi": {
+        "A": "Akses kursi roda sesuai standar bangunan layanan publik",
+        "B": "Tampilan ruang yang modern dan menarik bagi pengunjung"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Akses kursi roda sesuai standar bangunan layanan publik patuh pada standar bangunan pelayanan publik. Tampilan ruang yang modern dan menarik bagi pengunjung juga bernilai: tampilan modern itu menyenangkan, tetapi standar akses wajib dipenuhi lebih dulu. Tips: standar resmi didahulukan sebelum keindahan."
+    },
+    {
+      "id": "SK-D4-1006",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika menjadi petugas kantor pos dan pelanggan ingin mengirim paket berisi cairan mudah terbakar",
+      "opsi": {
+        "A": "Kepuasan pelanggan yang sudah lama berlangganan",
+        "B": "Ketentuan larangan pengiriman barang berbahaya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketentuan larangan pengiriman barang berbahaya patuh pada regulasi keselamatan pengiriman. Kepuasan pelanggan yang sudah lama berlangganan juga bernilai: kepuasan pelanggan itu penting, tetapi tidak boleh melanggar ketentuan keselamatan. Tips: regulasi keselamatan berlaku untuk semua pelanggan."
+    },
+    {
+      "id": "SK-D4-1007",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika warga sering bolak-balik ke kelurahan karena berkasnya kurang",
+      "opsi": {
+        "A": "Membuat daftar periksa syarat yang bisa diakses warga lewat pesan singkat",
+        "B": "Menjelaskan syarat secara lisan setiap kali warga datang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Membuat daftar periksa syarat yang bisa diakses warga lewat pesan singkat berinovasi pada cara pelayanan. Menjelaskan syarat secara lisan setiap kali warga datang juga bernilai: penjelasan lisan itu ramah, tetapi cara lama itu yang membuat warga terus bolak-balik. Tips: untuk cara kerja yang bermasalah, pilih cara baru yang lebih baik."
+    },
+    {
+      "id": "SK-D4-1008",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika rapat bulanan kantor selalu molor dan jarang menghasilkan keputusan",
+      "opsi": {
+        "A": "Menjalankan rapat dengan susunan acara seperti biasa",
+        "B": "Mencoba format rapat singkat dengan batas waktu tiap topik"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba format rapat singkat dengan batas waktu tiap topik berinovasi pada cara kerja yang tidak efektif. Menjalankan rapat dengan susunan acara seperti biasa juga bernilai: susunan acara yang biasa itu rapi, tetapi terbukti tidak menghasilkan keputusan. Tips: cara kerja yang tidak efektif diganti dengan cara baru."
+    },
+    {
+      "id": "SK-D4-1009",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika merancang program peningkatan minat baca di perpustakaan daerah",
+      "opsi": {
+        "A": "Kelas mendongeng keliling ke sekolah-sekolah",
+        "B": "Pameran buku tahunan di aula perpustakaan seperti biasanya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kelas mendongeng keliling ke sekolah-sekolah berinovasi pada program. Pameran buku tahunan di aula perpustakaan seperti biasanya juga bernilai: pameran tahunan itu baik, tetapi hanya mengulang program lama. Tips: untuk program, pilih konsep yang baru."
+    },
+    {
+      "id": "SK-D4-1010",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika posyandu kesulitan mengingatkan jadwal imunisasi kepada orang tua",
+      "opsi": {
+        "A": "Menempelkan pengumuman di papan balai warga seperti selama ini",
+        "B": "Membuat pengingat otomatis lewat grup pesan berdasarkan tanggal lahir bayi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membuat pengingat otomatis lewat grup pesan berdasarkan tanggal lahir bayi berinovasi pada cara menyampaikan informasi. Menempelkan pengumuman di papan balai warga seperti selama ini juga bernilai: pengumuman di papan itu tetap berguna, tetapi cara itu yang terbukti kurang menjangkau orang tua. Tips: masalah lama butuh cara baru."
+    },
+    {
+      "id": "SK-D4-1011",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika arsip surat masuk di kantor sering sulit ditemukan",
+      "opsi": {
+        "A": "Menyusun sistem kode warna dan pindaian digital untuk setiap surat",
+        "B": "Menyimpan surat di lemari sesuai urutan kedatangan seperti biasa"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyusun sistem kode warna dan pindaian digital untuk setiap surat berinovasi pada cara kerja pengarsipan. Menyimpan surat di lemari sesuai urutan kedatangan seperti biasa juga bernilai: urutan kedatangan itu sederhana, tetapi terbukti menyulitkan pencarian. Tips: cara kerja yang bermasalah diperbaiki dengan cara baru."
+    },
+    {
+      "id": "SK-D4-1012",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika pelatihan pegawai baru di kantor dinas terasa membosankan",
+      "opsi": {
+        "A": "Modul ceramah yang sudah dipakai bertahun-tahun",
+        "B": "Pelatihan bermain peran dari kasus pelayanan nyata"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pelatihan bermain peran dari kasus pelayanan nyata berinovasi pada metode pelatihan. Modul ceramah yang sudah dipakai bertahun-tahun juga bernilai: modul lama itu sudah teruji, tetapi justru membuat pelatihan membosankan. Tips: untuk metode dan program, pilih yang baru."
+    },
+    {
+      "id": "SK-D5-1001",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika warga meminta staf kelurahan menandatangani surat atas nama lurah yang sedang cuti",
+      "opsi": {
+        "A": "Penandatanganan oleh pejabat pelaksana tugas yang ditunjuk",
+        "B": "Penandatanganan oleh staf itu agar urusan warga tidak tertunda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penandatanganan oleh pejabat pelaksana tugas yang ditunjuk menjaga kewenangan penandatanganan. Penandatanganan oleh staf itu agar urusan warga tidak tertunda juga bernilai: kecepatan layanan itu baik, tetapi staf tidak berwenang menandatangani atas nama lurah. Tips: tanda tangan resmi hanya oleh pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D5-1002",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi pegawai baru dan rekan senior meminta Anda menyetujui pengeluaran anggaran",
+      "opsi": {
+        "A": "Menyetujui karena rekan senior lebih memahami kebutuhan kantor",
+        "B": "Mengarahkan persetujuan kepada pejabat yang berwenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan persetujuan kepada pejabat yang berwenang bertindak sesuai kewenangan. Menyetujui karena rekan senior lebih memahami kebutuhan kantor juga bernilai: percaya kepada rekan senior itu wajar, tetapi persetujuan anggaran bukan wewenang Anda. Tips: kepercayaan tidak menggantikan kewenangan."
+    },
+    {
+      "id": "SK-D5-1003",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika atasan sedang dinas luar dan ada rekanan yang menawarkan kerja sama kepada kantor",
+      "opsi": {
+        "A": "Penawaran diteruskan kepada atasan yang berwenang memutuskan",
+        "B": "Penawaran langsung diterima karena harganya menguntungkan kantor"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penawaran diteruskan kepada atasan yang berwenang memutuskan menjaga jalur keputusan yang sah. Penawaran langsung diterima karena harganya menguntungkan kantor juga bernilai: keuntungan bagi kantor itu menarik, tetapi keputusan kerja sama bukan wewenang Anda. Tips: keputusan penting diambil oleh yang berwenang."
+    },
+    {
+      "id": "SK-D5-1004",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi kader posyandu dan seorang ibu meminta obat penurun panas untuk bayinya",
+      "opsi": {
+        "A": "Memberikan obat dari persediaan karena bayi itu tampak demam",
+        "B": "Merujuk ibu itu kepada bidan yang berwenang memberi obat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Merujuk ibu itu kepada bidan yang berwenang memberi obat bertindak sesuai kewenangan. Memberikan obat dari persediaan karena bayi itu tampak demam juga bernilai: niat menolong itu baik, tetapi memberi obat bayi adalah wewenang tenaga kesehatan. Tips: kenali batas wewenang, lalu rujuk ke pihak yang berwenang."
+    },
+    {
+      "id": "SK-D5-1005",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi petugas perpustakaan dan anggota meminta denda keterlambatannya dihapus",
+      "opsi": {
+        "A": "Permintaan diteruskan kepada pejabat yang berwenang",
+        "B": "Permintaan dikabulkan sendiri agar anggota tetap setia"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-1006",
+      "pembahasan": "Permintaan diteruskan kepada pejabat yang berwenang bertindak sesuai kewenangan. Permintaan dikabulkan sendiri agar anggota tetap setia juga bernilai: menjaga kesetiaan anggota itu baik, tetapi menghapus denda bukan wewenang petugas. Tips: pengecualian aturan diputuskan oleh pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D5-1006",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi staf pelayanan dan warga meminta biaya legalisir dokumennya dibebaskan",
+      "opsi": {
+        "A": "Permintaan dikabulkan sendiri agar warga merasa dibantu",
+        "B": "Permintaan diteruskan kepada pejabat yang berwenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-1005",
+      "pembahasan": "Permintaan diteruskan kepada pejabat yang berwenang bertindak sesuai kewenangan. Permintaan dikabulkan sendiri agar warga merasa dibantu juga bernilai: membantu warga itu baik, tetapi membebaskan biaya bukan wewenang staf. Tips: pengecualian aturan diputuskan oleh pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D6-1001",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika kantor membuka pos layanan di daerah terpencil dan mencari pegawai untuk merintisnya",
+      "opsi": {
+        "A": "Mendaftar menjadi perintis pos layanan itu",
+        "B": "Mendukung dari kantor pusat sampai pos itu berjalan stabil"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mendaftar menjadi perintis pos layanan itu berani mengambil peran baru. Mendukung dari kantor pusat sampai pos itu berjalan stabil juga bernilai: dukungan dari pusat itu berguna, tetapi menunggu keadaan stabil berarti menunda keberanian. Tips: pilih keberanian bertindak daripada menunggu aman."
+    },
+    {
+      "id": "SK-D6-1002",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika kantor ditugaskan memakai aplikasi pelayanan yang belum pernah dicoba kantor lain di kota",
+      "opsi": {
+        "A": "Menunggu kantor lain membuktikan aplikasinya lebih dulu",
+        "B": "Kesiapan menjadi kantor pertama yang menjalankannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesiapan menjadi kantor pertama yang menjalankannya berani menjadi yang pertama berubah. Menunggu kantor lain membuktikan aplikasinya lebih dulu juga bernilai: menunggu bukti itu hati-hati, tetapi menunda keberanian untuk berubah. Tips: dalam perubahan, pilih berani memulai."
+    },
+    {
+      "id": "SK-D6-1003",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika diminta mengubah alur loket yang sudah berjalan sepuluh tahun",
+      "opsi": {
+        "A": "Menjalankan perubahan sambil memperbaiki kendala yang muncul",
+        "B": "Mempertahankan cara lama sampai semua pegawai benar-benar siap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menjalankan perubahan sambil memperbaiki kendala yang muncul berani berubah dan bertindak. Mempertahankan cara lama sampai semua pegawai benar-benar siap juga bernilai: menunggu semua siap itu hati-hati, tetapi bisa membuat perubahan tidak pernah dimulai. Tips: perubahan dimulai dengan berani, lalu disempurnakan sambil jalan."
+    },
+    {
+      "id": "SK-D6-1004",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika mendapat kesempatan dimutasi ke bagian yang jauh berbeda dari keahlian Anda",
+      "opsi": {
+        "A": "Bertahan di bagian lama yang sudah dikuasai",
+        "B": "Menerima mutasi dan mempelajari bidang barunya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menerima mutasi dan mempelajari bidang barunya berani menghadapi tantangan baru. Bertahan di bagian lama yang sudah dikuasai juga bernilai: bertahan di bidang yang dikuasai itu aman, tetapi menghindari kesempatan berkembang. Tips: pilih berani berubah daripada tetap nyaman."
+    },
+    {
+      "id": "SK-D6-1005",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika kelurahan ditawari menjadi tuan rumah lomba tingkat provinsi dengan waktu persiapan singkat",
+      "opsi": {
+        "A": "Kesiapan anggaran dan tenaga sebelum menyanggupi",
+        "B": "Kebanggaan menjadi tuan rumah acara besar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesiapan anggaran dan tenaga sebelum menyanggupi mengukur kemampuan sebelum mengambil peluang besar. Kebanggaan menjadi tuan rumah acara besar juga bernilai: kebanggaan itu wajar, tetapi peluang besar perlu dihitung dulu. Tips: saat menghadapi peluang, hitung kemampuan sebelum menyanggupi."
+    },
+    {
+      "id": "SK-D6-1006",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika koperasi pegawai berencana bersaing membuka kantin di gedung dinas",
+      "opsi": {
+        "A": "Semangat untuk segera mengungguli kantin yang sudah ada",
+        "B": "Perhitungan modal dan peluang pembeli sebelum membuka kantin"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Perhitungan modal dan peluang pembeli sebelum membuka kantin mengukur risiko saat bersaing. Semangat untuk segera mengungguli kantin yang sudah ada juga bernilai: semangat bersaing itu baik, tetapi persaingan tanpa perhitungan berisiko. Tips: dalam persaingan, utamakan perhitungan."
+    },
+    {
+      "id": "SK-D7-1001",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin rapat persiapan layanan KTP keliling dan waktu hampir habis tanpa kesepakatan jadwal",
+      "opsi": {
+        "A": "Memutuskan jadwal layanan saat itu juga dan membagi petugasnya",
+        "B": "Menjadwalkan rapat lanjutan agar semua usulan sempat dibahas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memutuskan jadwal layanan saat itu juga dan membagi petugasnya tegas dalam tindakan memimpin. Menjadwalkan rapat lanjutan agar semua usulan sempat dibahas juga bernilai: menampung usulan itu baik, tetapi menunda keputusan membuat persiapan layanan tertahan. Tips: pemimpin yang tegas mengambil keputusan saat rapat buntu."
+    },
+    {
+      "id": "SK-D7-1002",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin rapat koordinasi dan seorang peserta terus menyela pembicara lain",
+      "opsi": {
+        "A": "Membiarkannya agar rapat tetap terasa santai",
+        "B": "Menghentikan selaan itu dan mengatur giliran bicara secara tertib"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menghentikan selaan itu dan mengatur giliran bicara secara tertib tegas dalam tindakan memimpin rapat. Membiarkannya agar rapat tetap terasa santai juga bernilai: suasana santai itu nyaman, tetapi membiarkan selaan merugikan peserta lain. Tips: pimpinan rapat menertibkan jalannya rapat dengan tegas."
+    },
+    {
+      "id": "SK-D7-1003",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika antrean warga di loket mendadak memanjang menjelang jam tutup",
+      "opsi": {
+        "A": "Ketenangan untuk melayani satu per satu",
+        "B": "Dorongan untuk mempercepat layanan secepat mungkin"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan untuk melayani satu per satu tenang dalam perasaan. Dorongan untuk mempercepat layanan secepat mungkin juga bernilai: dorongan untuk cepat itu wajar, tetapi perasaan terburu-buru mudah membuat layanan keliru. Tips: dalam soal perasaan, pilih yang tenang."
+    },
+    {
+      "id": "SK-D7-1004",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika atasan mendadak memeriksa meja kerja Anda tanpa pemberitahuan",
+      "opsi": {
+        "A": "Kewaspadaan untuk segera membereskan berkas yang berserakan",
+        "B": "Ketenangan karena pekerjaan sudah dijalankan sebagaimana mestinya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan karena pekerjaan sudah dijalankan sebagaimana mestinya tenang dalam perasaan. Kewaspadaan untuk segera membereskan berkas yang berserakan juga bernilai: waspada itu wajar, tetapi rasa terburu-buru menandakan kurang tenang. Tips: dalam soal perasaan, pilih yang tenang."
+    },
+    {
+      "id": "SK-D8-1001",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika printer kantor macet dan teknisi baru datang besok",
+      "opsi": {
+        "A": "Membuka buku panduan dan memperbaiki macetnya sendiri",
+        "B": "Menunggu teknisi sambil mengerjakan tugas lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Membuka buku panduan dan memperbaiki macetnya sendiri menyelesaikan masalah sendiri dengan inisiatif. Menunggu teknisi sambil mengerjakan tugas lain juga bernilai: mengerjakan tugas lain itu produktif, tetapi masalahnya tetap menunggu orang lain. Tips: masalah yang bisa diatasi sendiri, atasi sendiri."
+    },
+    {
+      "id": "SK-D8-1002",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika selokan di depan kantor kelurahan tersumbat setiap kali hujan",
+      "opsi": {
+        "A": "Melapor ke dinas terkait agar dijadwalkan pembersihan",
+        "B": "Mengajak rekan kantor dan warga sekitar membersihkannya bersama"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak rekan kantor dan warga sekitar membersihkannya bersama proaktif dan menggerakkan partisipasi. Melapor ke dinas terkait agar dijadwalkan pembersihan juga bernilai: melapor itu tertib, tetapi penyelesaiannya bergantung pada pihak lain. Tips: pilih inisiatif yang menggerakkan orang sekitar."
+    },
+    {
+      "id": "SK-D8-1003",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika formulir layanan kantor sering diisi keliru oleh warga",
+      "opsi": {
+        "A": "Merancang contoh pengisian dan memasangnya di meja layanan",
+        "B": "Menunggu atasan memutuskan perlu tidaknya formulir diubah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Merancang contoh pengisian dan memasangnya di meja layanan proaktif menyelesaikan masalah. Menunggu atasan memutuskan perlu tidaknya formulir diubah juga bernilai: menunggu keputusan atasan itu tertib, tetapi tidak ada inisiatif untuk masalah yang bisa Anda atasi. Tips: ambil inisiatif kecil yang langsung mengatasi masalah."
+    },
+    {
+      "id": "SK-D8-1004",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika diberi tugas yang belum pernah Anda kerjakan sementara pembimbing sedang sibuk",
+      "opsi": {
+        "A": "Meminta pembimbing menjelaskan langkahnya setelah ia senggang",
+        "B": "Mempelajari contoh berkas lama dan mulai mengerjakannya sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mempelajari contoh berkas lama dan mulai mengerjakannya sendiri mandiri dan proaktif. Meminta pembimbing menjelaskan langkahnya setelah ia senggang juga bernilai: bertanya kepada pembimbing itu wajar, tetapi menunggu membuat pekerjaan tertunda. Tips: mulai sendiri dari bahan yang ada."
+    },
+    {
+      "id": "SK-D8-1005",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika target pendaftaran peserta jaminan kesehatan di kelurahan belum tercapai",
+      "opsi": {
+        "A": "Mendatangi warga dari rumah ke rumah untuk mendaftarkan mereka",
+        "B": "Memperpanjang jam buka loket pendaftaran di kantor"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mendatangi warga dari rumah ke rumah untuk mendaftarkan mereka proaktif dan ulet menjemput sasaran. Memperpanjang jam buka loket pendaftaran di kantor juga bernilai: memperpanjang jam loket itu membantu, tetapi masih menunggu warga datang. Tips: inisiatif berarti menjemput, bukan menunggu."
+    },
+    {
+      "id": "SK-D8-1006",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika ada keluhan warga yang belum ditangani bagian mana pun di kantor",
+      "opsi": {
+        "A": "Memastikan keluhan itu dibahas dalam rapat pembagian tugas berikutnya",
+        "B": "Mengambil alih penanganan dan menuntaskannya sampai selesai"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengambil alih penanganan dan menuntaskannya sampai selesai proaktif dan menyelesaikan sendiri. Memastikan keluhan itu dibahas dalam rapat pembagian tugas berikutnya juga bernilai: membawa ke rapat itu tertib, tetapi keluhan warga tertunda lebih lama. Tips: masalah yang tidak bertuan diselesaikan oleh yang mau bergerak lebih dulu."
+    },
+    {
+      "id": "SK-D8-1007",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika usulan Anda untuk memperbaiki alur layanan ditolak satu kali",
+      "opsi": {
+        "A": "Memperbaiki usulan dan mengajukannya kembali dengan data baru",
+        "B": "Menerima keputusan dan kembali ke tugas rutin"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memperbaiki usulan dan mengajukannya kembali dengan data baru ulet dan tidak mudah menyerah. Menerima keputusan dan kembali ke tugas rutin juga bernilai: menerima keputusan itu sopan, tetapi berhenti berusaha setelah satu penolakan. Tips: inisiatif yang baik diperjuangkan dengan data yang lebih kuat."
+    },
+    {
+      "id": "SK-D8-1008",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika taman bacaan di balai warga sepi pengunjung",
+      "opsi": {
+        "A": "Mengusulkan kepada pengurus agar mencari relawan pengelola baru",
+        "B": "Menggerakkan remaja sekitar menjadi pengelola dan mengadakan kegiatan membaca"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menggerakkan remaja sekitar menjadi pengelola dan mengadakan kegiatan membaca proaktif dan menggerakkan partisipasi warga. Mengusulkan kepada pengurus agar mencari relawan pengelola baru juga bernilai: mengusulkan kepada pengurus itu baik, tetapi penyelesaiannya diserahkan kepada orang lain. Tips: pilih inisiatif yang Anda gerakkan sendiri."
+    },
+    {
+      "id": "SK-D9-1001",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika mendapat kenaikan pangkat setelah bertahun-tahun bekerja",
+      "opsi": {
+        "A": "Kepuasan karena kerja keras akhirnya dihargai",
+        "B": "Syukur kepada Tuhan atas amanah yang diberikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur kepada Tuhan atas amanah yang diberikan mengutamakan makna spiritual dan rasa syukur. Kepuasan karena kerja keras akhirnya dihargai juga bernilai: kepuasan atas kerja keras itu wajar, tetapi berpusat pada diri sendiri. Tips: dalam keberhasilan, utamakan rasa syukur."
+    },
+    {
+      "id": "SK-D9-1002",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika gagal dalam seleksi jabatan yang sangat diharapkan",
+      "opsi": {
+        "A": "Ketetapan Tuhan pasti mengandung kebaikan",
+        "B": "Persiapan yang lebih matang akan membawa hasil berbeda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketetapan Tuhan pasti mengandung kebaikan mengutamakan keyakinan spiritual. Persiapan yang lebih matang akan membawa hasil berbeda juga bernilai: persiapan yang lebih matang itu penting, tetapi dimensi ini mengutamakan makna spiritual. Tips: saat gagal, dimensi ini mengutamakan sikap berserah dan berprasangka baik kepada Tuhan."
+    },
+    {
+      "id": "SK-D9-1003",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika menerima gaji pertama sebagai pegawai",
+      "opsi": {
+        "A": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur",
+        "B": "Membeli perlengkapan kerja yang selama ini dibutuhkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur mengutamakan rasa syukur di atas kebutuhan material. Membeli perlengkapan kerja yang selama ini dibutuhkan juga bernilai: perlengkapan kerja itu berguna, tetapi bersifat material. Tips: rezeki pertama disyukuri dengan berbagi."
+    },
+    {
+      "id": "SK-D9-1004",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika memulai rapat penting di kantor",
+      "opsi": {
+        "A": "Memastikan bahan rapat sudah lengkap",
+        "B": "Berdoa bersama memohon kelancaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Berdoa bersama memohon kelancaran mengutamakan makna spiritual. Memastikan bahan rapat sudah lengkap juga bernilai: kelengkapan bahan itu penting, tetapi dimensi ini mengutamakan nilai spiritual. Tips: dalam dimensi religiusitas, pilih sisi spiritual."
+    },
+    {
+      "id": "SK-D9-1005",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipegang ketika menjalankan tugas tanpa ada atasan yang mengawasi",
+      "opsi": {
+        "A": "Keyakinan bahwa Tuhan selalu menyaksikan setiap perbuatan",
+        "B": "Kesadaran bahwa hasil kerja tetap akan dinilai atasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keyakinan bahwa Tuhan selalu menyaksikan setiap perbuatan mengutamakan kesadaran spiritual. Kesadaran bahwa hasil kerja tetap akan dinilai atasan juga bernilai: kesadaran akan penilaian atasan itu baik, tetapi bersandar pada pengawasan manusia. Tips: integritas paling kuat berakar pada keyakinan, bukan pengawasan."
+    },
+    {
+      "id": "SK-D9-1006",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika pelayanan Anda membantu banyak warga yang kesulitan",
+      "opsi": {
+        "A": "Pekerjaan ini menambah nilai kinerja Anda",
+        "B": "Pekerjaan ini bernilai ibadah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Pekerjaan ini bernilai ibadah mengutamakan makna spiritual pekerjaan. Pekerjaan ini menambah nilai kinerja Anda juga bernilai: nilai kinerja itu bermanfaat, tetapi bersifat duniawi. Tips: pilih makna ibadah di atas imbalan kerja."
+    },
+    {
+      "id": "SK-D10-1001",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika menilai keberhasilan program percepatan pembuatan akta kelahiran",
+      "opsi": {
+        "A": "Jumlah akta yang terbit tepat waktu",
+        "B": "Kekompakan petugas selama program berjalan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah akta yang terbit tepat waktu mengukur keberhasilan dari hasil. Kekompakan petugas selama program berjalan juga bernilai: kekompakan itu penting, tetapi bukan ukuran tercapainya tujuan program. Tips: keberhasilan program diukur dari hasilnya."
+    },
+    {
+      "id": "SK-D10-1002",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika mengevaluasi layanan antrean daring di puskesmas",
+      "opsi": {
+        "A": "Kemudahan petugas menjalankan aplikasi",
+        "B": "Berkurangnya waktu tunggu pasien"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Berkurangnya waktu tunggu pasien mengukur keberhasilan dari hasil bagi penerima layanan. Kemudahan petugas menjalankan aplikasi juga bernilai: kemudahan petugas itu membantu, tetapi hanya sarana menuju hasil. Tips: nilai layanan dari hasil yang dirasakan penggunanya."
+    },
+    {
+      "id": "SK-D11-1001",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika survei menunjukkan warga tidak puas dengan layanan Anda",
+      "opsi": {
+        "A": "Menelusuri keluhan warga dan memperbaiki bagian yang lemah",
+        "B": "Menjelaskan kepada warga bahwa beban kerja sedang tinggi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menelusuri keluhan warga dan memperbaiki bagian yang lemah mengenali kelemahan dan memperbaikinya. Menjelaskan kepada warga bahwa beban kerja sedang tinggi juga bernilai: penjelasan itu bisa membuat warga memahami, tetapi tidak mengubah kelemahan layanan. Tips: masukan buruk adalah bahan perbaikan, bukan bahan pembelaan."
+    },
+    {
+      "id": "SK-D11-1002",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini ketika program kerja tim Anda tidak mencapai target tahun ini",
+      "opsi": {
+        "A": "Faktor di luar kendali tim ikut memengaruhi hasil",
+        "B": "Kegagalan ini bahan evaluasi untuk rencana tahun depan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kegagalan ini bahan evaluasi untuk rencana tahun depan belajar dari kegagalan. Faktor di luar kendali tim ikut memengaruhi hasil juga bernilai: faktor luar memang ada, tetapi berfokus ke sana tidak memperbaiki kerja tim. Tips: kegagalan dijadikan bahan evaluasi."
+    },
+    {
+      "id": "SK-D11-1003",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika rekan menunjukkan kesalahan hitung dalam laporan Anda",
+      "opsi": {
+        "A": "Berterima kasih dan memperbaiki laporan itu",
+        "B": "Menjelaskan bahwa laporan itu disusun dalam waktu terbatas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Berterima kasih dan memperbaiki laporan itu menerima masukan. Menjelaskan bahwa laporan itu disusun dalam waktu terbatas juga bernilai: penjelasan itu jujur, tetapi terdengar membela diri dan belum memperbaiki. Tips: terima masukan, lalu perbaiki."
+    },
+    {
+      "id": "SK-D11-1004",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika sosialisasi program lewat spanduk ternyata tidak menarik perhatian warga",
+      "opsi": {
+        "A": "Menambah jumlah spanduk di lebih banyak tempat",
+        "B": "Mengganti cara sosialisasi sesuai kebiasaan warga"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengganti cara sosialisasi sesuai kebiasaan warga menyesuaikan strategi setelah evaluasi. Menambah jumlah spanduk di lebih banyak tempat juga bernilai: menambah spanduk itu bentuk usaha, tetapi mengulang strategi yang sudah tidak berhasil. Tips: strategi yang gagal diganti, bukan diperbanyak."
+    }
+  ]
+}

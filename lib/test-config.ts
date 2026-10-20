@@ -106,7 +106,7 @@ export const KEPRIBADIAN_PACKAGES = [2, 3, 4, 5, 6, 7, 8, 9, 10];
 export const PRIBADI_PACKAGE_SIZE = 48 + 63;
 // Sub-tes Kepribadian format situasional (SJT): 48 butir 5 opsi berbobot 1–5 + 63 Pass Hand
 // (Integritas & Kejujuran A/B), bank/pribadi/sjt-*.json + sk-sjt-*.json. Tab sendiri di pemilih paket.
-export const KEPRIBADIAN_SJT_PACKAGES = [21];
+export const KEPRIBADIAN_SJT_PACKAGES = [21, 22, 23, 24, 25];
 export const KEPRIBADIAN_SJT_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KEPRIBADIAN_SJT_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );

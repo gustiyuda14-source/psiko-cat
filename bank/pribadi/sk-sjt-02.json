@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sjt-02",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran (Pass Hand A/B) baru untuk Kepribadian SJT Paket 2 (package_number 22). Komposisi = SK_SLOT compose-pribadi-paket.ts, 4 pasang kembar (D1, D2, D3, D5). Konteks sekolah, asrama, keluarga. Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur resmi yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-801",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menulis notulen rapat OSIS yang ternyata berjalan kurang lancar",
+      "opsi": {
+        "A": "Catatan yang menonjolkan sisi baik agar OSIS tampak kompak",
+        "B": "Catatan jalannya rapat sesuai kejadian sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Catatan jalannya rapat sesuai kejadian sebenarnya menjaga kebenaran isi notulen. Catatan yang menonjolkan sisi baik agar OSIS tampak kompak juga terdengar positif: citra OSIS yang kompak tidak boleh dibangun dengan mengorbankan kebenaran catatan. Tips: notulen yang baik mencatat apa yang benar-benar terjadi."
+    },
+    {
+      "id": "SK-D1-802",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika ibu asrama bertanya siapa saja yang tidak ikut kerja bakti kamar",
+      "opsi": {
+        "A": "Jawaban sesuai kenyataan tentang siapa yang tidak hadir",
+        "B": "Jawaban yang menjaga kerukunan sesama penghuni kamar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Jawaban sesuai kenyataan tentang siapa yang tidak hadir mendahulukan kebenaran di atas perasaan teman. Jawaban yang menjaga kerukunan sesama penghuni kamar juga terdengar positif: kerukunan itu penting, tetapi tidak boleh dijaga dengan keterangan yang tidak benar. Tips: saat ditanya fakta, sampaikan yang benar."
+    },
+    {
+      "id": "SK-D1-803",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika nenek meminta pendapat tentang masakan barunya yang terasa terlalu asin",
+      "opsi": {
+        "A": "Pujian agar nenek tetap senang memasak untuk keluarga",
+        "B": "Pendapat jujur sesuai kenyataan yang dirasakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-804",
+      "pembahasan": "Pendapat jujur sesuai kenyataan yang dirasakan menempatkan kebenaran di atas perasaan. Pujian agar nenek tetap senang memasak untuk keluarga juga terdengar positif: menyenangkan hati nenek itu baik, tetapi pujian yang tidak sesuai rasa mengorbankan kebenaran. Tips: kebenaran disampaikan dengan sopan, bukan disembunyikan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D1-804",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika teman sekelas meminta pendapat tentang naskah cerpennya untuk lomba",
+      "opsi": {
+        "A": "Pendapat jujur sesuai kenyataan yang dirasakan",
+        "B": "Pujian agar teman tetap percaya diri mengikuti lomba"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-803",
+      "pembahasan": "Pendapat jujur sesuai kenyataan yang dirasakan menempatkan kebenaran di atas perasaan. Pujian agar teman tetap percaya diri mengikuti lomba juga terdengar positif: menjaga semangat teman itu baik, tetapi pujian yang tidak sesuai kenyataan mengorbankan kebenaran. Tips: kebenaran disampaikan dengan sopan, bukan disembunyikan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-801",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika menjadi bendahara kelas yang menerima sumbangan untuk teman yang terkena musibah",
+      "opsi": {
+        "A": "Mengumumkan jumlah sumbangan dan penggunaannya kepada seluruh kelas",
+        "B": "Menyimpan rincian sumbangan agar tidak ada siswa yang merasa dibandingkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengumumkan jumlah sumbangan dan penggunaannya kepada seluruh kelas membuka informasi keuangan kepada semua yang berhak tahu. Menyimpan rincian sumbangan agar tidak ada siswa yang merasa dibandingkan juga terdengar positif: menjaga perasaan penyumbang itu baik, tetapi uang bersama perlu dipertanggungjawabkan secara terbuka. Tips: uang bersama dilaporkan terbuka kepada semua penyumbang."
+    },
+    {
+      "id": "SK-D2-802",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika pengurus asrama mengubah aturan jam berkunjung keluarga",
+      "opsi": {
+        "A": "Pemberitahuan tertulis kepada semua penghuni dan keluarga",
+        "B": "Keputusan cukup diketahui oleh pengurus yang berwenang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pemberitahuan tertulis kepada semua penghuni dan keluarga membuka perubahan aturan kepada semua pihak yang terdampak. Keputusan cukup diketahui oleh pengurus yang berwenang juga terdengar positif: pengurus memang berwenang, tetapi kewenangan tidak menggantikan kewajiban memberi tahu. Tips: perubahan aturan diumumkan kepada semua yang terkena."
+    },
+    {
+      "id": "SK-D2-803",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika panitia seleksi lomba sains sekolah memilih wakil sekolah",
+      "opsi": {
+        "A": "Hasil seleksi cukup diumumkan berupa nama siswa yang terpilih",
+        "B": "Nilai dan kriteria seleksi diumumkan kepada semua peserta"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai dan kriteria seleksi diumumkan kepada semua peserta membuat proses seleksi terbuka dan bisa diperiksa. Hasil seleksi cukup diumumkan berupa nama siswa yang terpilih juga terdengar positif: pengumuman singkat itu praktis, tetapi peserta tidak bisa melihat dasar keputusannya. Tips: seleksi yang adil membuka kriteria dan nilainya."
+    },
+    {
+      "id": "SK-D2-804",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika mengelola uang patungan keluarga besar untuk syukuran ulang tahun pernikahan kakek",
+      "opsi": {
+        "A": "Rincian penggunaan uang dibuka kepada semua yang ikut iuran",
+        "B": "Rincian penggunaan uang cukup dipegang paman yang dipercaya keluarga"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-805",
+      "pembahasan": "Rincian penggunaan uang dibuka kepada semua yang ikut iuran membuka informasi kepada semua yang ikut iuran. Rincian penggunaan uang cukup dipegang paman yang dipercaya keluarga juga terdengar positif: paman memang dipercaya, tetapi kepercayaan tidak menggantikan keterbukaan. Tips: uang patungan dilaporkan terbuka. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-805",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika mengelola iuran penghuni asrama untuk membeli dispenser baru",
+      "opsi": {
+        "A": "Rincian penggunaan uang disimpan pengurus agar tidak menimbulkan perdebatan",
+        "B": "Rincian penggunaan uang dibuka kepada semua yang ikut iuran"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-804",
+      "pembahasan": "Rincian penggunaan uang dibuka kepada semua yang ikut iuran membuka informasi kepada semua yang ikut iuran. Rincian penggunaan uang disimpan pengurus agar tidak menimbulkan perdebatan juga terdengar positif: menghindari perdebatan itu baik, tetapi kerahasiaan justru menimbulkan curiga. Tips: uang iuran dilaporkan terbuka. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-801",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika menjadi wasit lomba lari antarkelas dan seorang pelari memotong lintasan",
+      "opsi": {
+        "A": "Peringatan agar pelari itu tidak mengulanginya",
+        "B": "Diskualifikasi sesuai peraturan lomba"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Diskualifikasi sesuai peraturan lomba menegakkan peraturan lomba secara tegas. Peringatan agar pelari itu tidak mengulanginya juga terdengar positif: peringatan itu mendidik, tetapi pelanggaran yang jelas diatur sanksinya. Tips: pelanggaran yang sudah diatur sanksinya diberi sanksi."
+    },
+    {
+      "id": "SK-D3-802",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus kantin kejujuran dan ada siswa yang ketahuan mengambil makanan tanpa membayar",
+      "opsi": {
+        "A": "Menerapkan sanksi yang tertulis dalam tata tertib kantin",
+        "B": "Mengajak siswa itu berbicara agar menyadari kesalahannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menerapkan sanksi yang tertulis dalam tata tertib kantin menegakkan tata tertib yang berlaku. Mengajak siswa itu berbicara agar menyadari kesalahannya juga terdengar positif: penyadaran itu baik, tetapi aturan kantin kehilangan wibawa kalau sanksinya tidak dijalankan. Tips: tata tertib dijalankan sesuai yang tertulis."
+    },
+    {
+      "id": "SK-D3-803",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menjadi pengurus asrama dan ada penghuni memasak dengan kompor listrik di kamar meski dilarang",
+      "opsi": {
+        "A": "Penyitaan kompor sesuai aturan asrama",
+        "B": "Nasihat tentang bahaya kebakaran agar ia sadar sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Penyitaan kompor sesuai aturan asrama menegakkan aturan keselamatan asrama. Nasihat tentang bahaya kebakaran agar ia sadar sendiri juga terdengar positif: nasihat itu bermanfaat, tetapi larangan yang dilanggar perlu ditegakkan. Tips: aturan keselamatan ditegakkan, bukan hanya dinasihatkan."
+    },
+    {
+      "id": "SK-D3-804",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika menjadi ketua kelas dan ada teman yang berkali-kali tidak membayar uang kas yang sudah disepakati",
+      "opsi": {
+        "A": "Pendekatan pribadi agar ia mau membayar dengan sukarela",
+        "B": "Ketentuan denda yang sudah disepakati bersama"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketentuan denda yang sudah disepakati bersama menjalankan aturan yang disepakati bersama. Pendekatan pribadi agar ia mau membayar dengan sukarela juga terdengar positif: pendekatan pribadi itu ramah, tetapi kesepakatan kelas kehilangan arti kalau tidak dijalankan. Tips: kesepakatan bersama dijalankan sama untuk semua."
+    },
+    {
+      "id": "SK-D3-805",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus OSIS dan ada siswa yang berulang kali terlambat mengikuti upacara",
+      "opsi": {
+        "A": "Sanksi sesuai tata tertib yang berlaku",
+        "B": "Bimbingan agar siswa itu menyadari pentingnya disiplin"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-806",
+      "pembahasan": "Sanksi sesuai tata tertib yang berlaku menegakkan tata tertib sekolah. Bimbingan agar siswa itu menyadari pentingnya disiplin juga terdengar positif: bimbingan itu baik, tetapi pelanggaran berulang perlu ditangani sesuai aturan. Tips: pelanggaran berulang ditangani dengan aturan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-806",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi ketua ekstrakurikuler dan ada anggota yang sering membolos latihan tanpa izin",
+      "opsi": {
+        "A": "Teguran ramah agar anggota itu kembali bersemangat",
+        "B": "Sanksi sesuai tata tertib yang berlaku"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-805",
+      "pembahasan": "Sanksi sesuai tata tertib yang berlaku menegakkan tata tertib ekstrakurikuler. Teguran ramah agar anggota itu kembali bersemangat juga terdengar positif: teguran ramah itu baik, tetapi pelanggaran berulang perlu ditangani sesuai aturan. Tips: pelanggaran berulang ditangani dengan aturan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D4-801",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika membuat jajanan untuk dijual di koperasi sekolah",
+      "opsi": {
+        "A": "Kemasan unik yang menarik perhatian pembeli",
+        "B": "Label komposisi dan tanggal kedaluwarsa sesuai ketentuan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Label komposisi dan tanggal kedaluwarsa sesuai ketentuan mematuhi ketentuan pangan yang berlaku. Kemasan unik yang menarik perhatian pembeli juga terdengar positif: kemasan yang menarik itu kreatif, tetapi bukan pengganti ketentuan yang wajib. Tips: untuk ketentuan pangan, pilih kepatuhan."
+    },
+    {
+      "id": "SK-D4-802",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika memasang tabung gas baru di dapur asrama",
+      "opsi": {
+        "A": "Pemasangan regulator sesuai petunjuk keamanan",
+        "B": "Cara pemasangan cepat yang biasa dipakai teman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pemasangan regulator sesuai petunjuk keamanan mematuhi standar keamanan pemasangan. Cara pemasangan cepat yang biasa dipakai teman juga terdengar positif: cara cepat itu praktis, tetapi tidak menjamin keamanan. Tips: pekerjaan yang menyangkut keselamatan mengikuti standar."
+    },
+    {
+      "id": "SK-D4-803",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika membonceng adik dengan sepeda motor ke sekolah",
+      "opsi": {
+        "A": "Helm berstandar untuk pengendara dan penumpang",
+        "B": "Jalur alternatif yang lebih cepat dan tidak macet"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Helm berstandar untuk pengendara dan penumpang mematuhi aturan keselamatan berkendara. Jalur alternatif yang lebih cepat dan tidak macet juga terdengar positif: jalur cepat itu menghemat waktu, tetapi keselamatan sesuai aturan lebih utama. Tips: aturan lalu lintas dipatuhi lebih dulu."
+    },
+    {
+      "id": "SK-D4-804",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika menyusun laporan keuangan koperasi siswa",
+      "opsi": {
+        "A": "Format ringkas buatan sendiri yang lebih mudah dibaca",
+        "B": "Format pembukuan sesuai pedoman koperasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Format pembukuan sesuai pedoman koperasi mengikuti standar pembukuan yang ditetapkan. Format ringkas buatan sendiri yang lebih mudah dibaca juga terdengar positif: format ringkas itu kreatif, tetapi laporan resmi harus mengikuti pedoman. Tips: laporan resmi mengikuti format standar."
+    },
+    {
+      "id": "SK-D4-805",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dilakukan ketika keluarga membangun kanopi rumah yang berbatasan dengan jalan umum",
+      "opsi": {
+        "A": "Memperlebar kanopi agar teras lebih teduh dan luas",
+        "B": "Mengurus izin sesuai aturan bangunan dari kelurahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengurus izin sesuai aturan bangunan dari kelurahan mematuhi aturan bangunan yang berlaku. Memperlebar kanopi agar teras lebih teduh dan luas juga terdengar positif: teras yang teduh itu bermanfaat, tetapi bangunan di dekat jalan umum terikat aturan. Tips: bangunan mengikuti aturan, bukan selera."
+    },
+    {
+      "id": "SK-D4-806",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika memakai foto karya orang lain untuk poster kegiatan sekolah",
+      "opsi": {
+        "A": "Foto paling menarik dari internet agar poster memikat",
+        "B": "Izin dan pencantuman sumber sesuai aturan hak cipta"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Izin dan pencantuman sumber sesuai aturan hak cipta mematuhi aturan hak cipta. Foto paling menarik dari internet agar poster memikat juga terdengar positif: poster yang memikat itu bagus, tetapi karya orang lain dilindungi aturan. Tips: karya orang lain dipakai dengan izin dan sumber."
+    },
+    {
+      "id": "SK-D4-807",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika menyusun program pengenalan lingkungan sekolah untuk siswa baru",
+      "opsi": {
+        "A": "Kegiatan jelajah sekolah dengan konsep permainan",
+        "B": "Susunan ceramah seperti tahun lalu yang sudah teruji"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kegiatan jelajah sekolah dengan konsep permainan memperbarui konsep program agar lebih hidup. Susunan ceramah seperti tahun lalu yang sudah teruji juga terdengar positif: cara lama itu aman, tetapi program bisa dibuat lebih menarik dengan cara baru. Tips: untuk program dan cara kerja, pilih inovasi."
+    },
+    {
+      "id": "SK-D4-808",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika jadwal piket dapur asrama sering kacau",
+      "opsi": {
+        "A": "Mengingatkan ulang jadwal lama setiap pagi",
+        "B": "Mencoba papan piket bergambar yang diputar setiap minggu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba papan piket bergambar yang diputar setiap minggu mencari cara kerja baru yang lebih jelas. Mengingatkan ulang jadwal lama setiap pagi juga terdengar positif: mengingatkan itu baik, tetapi cara lama sudah terbukti tidak berjalan. Tips: cara kerja yang gagal diganti dengan cara baru."
+    },
+    {
+      "id": "SK-D4-809",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika merancang arisan keluarga yang mulai sepi peminat",
+      "opsi": {
+        "A": "Format baru berupa lomba masak antarkeluarga",
+        "B": "Susunan acara yang sudah biasa dijalankan bertahun-tahun"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Format baru berupa lomba masak antarkeluarga menghidupkan acara dengan konsep baru. Susunan acara yang sudah biasa dijalankan bertahun-tahun juga terdengar positif: susunan lama itu akrab, tetapi justru membuat acara sepi. Tips: acara yang mulai sepi butuh konsep baru."
+    },
+    {
+      "id": "SK-D4-810",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika minat siswa membaca di perpustakaan sekolah terus menurun",
+      "opsi": {
+        "A": "Menambah koleksi buku dengan jenis yang sama",
+        "B": "Membuat tantangan membaca dengan papan peringkat antarkelas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membuat tantangan membaca dengan papan peringkat antarkelas menghadirkan program baru untuk menarik minat. Menambah koleksi buku dengan jenis yang sama juga terdengar positif: menambah koleksi itu baik, tetapi belum mengubah cara menarik pembaca. Tips: masalah minat diatasi dengan cara baru."
+    },
+    {
+      "id": "SK-D4-811",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika jam belajar malam di asrama terasa membosankan",
+      "opsi": {
+        "A": "Mengganti cara belajar menjadi diskusi kelompok bergilir",
+        "B": "Mempertahankan belajar mandiri yang sudah tertib"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengganti cara belajar menjadi diskusi kelompok bergilir memperbarui cara belajar agar lebih hidup. Mempertahankan belajar mandiri yang sudah tertib juga terdengar positif: belajar mandiri itu tertib, tetapi kebosanan menandakan caranya perlu diperbarui. Tips: cara belajar boleh diubah agar lebih efektif."
+    },
+    {
+      "id": "SK-D4-812",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika merencanakan cara mengumpulkan sampah plastik di lingkungan rumah",
+      "opsi": {
+        "A": "Mengumpulkan sampah seminggu sekali seperti biasa",
+        "B": "Mencoba bank sampah yang ditukar dengan poin belanja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba bank sampah yang ditukar dengan poin belanja mencoba cara baru yang mendorong partisipasi. Mengumpulkan sampah seminggu sekali seperti biasa juga terdengar positif: cara biasa itu sederhana, tetapi belum menambah minat warga. Tips: untuk cara kerja, pilih gagasan baru yang lebih efektif."
+    },
+    {
+      "id": "SK-D5-801",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi petugas perpustakaan sekolah dan seorang guru ingin membawa pulang buku referensi yang tidak boleh dipinjam",
+      "opsi": {
+        "A": "Kelonggaran karena guru itu dapat dipercaya",
+        "B": "Aturan peminjaman yang ditetapkan kepala perpustakaan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aturan peminjaman yang ditetapkan kepala perpustakaan bertindak sesuai kewenangan petugas. Kelonggaran karena guru itu dapat dipercaya juga terdengar positif: kepercayaan itu bernilai, tetapi petugas tidak berwenang membuat pengecualian. Tips: petugas menjalankan aturan, bukan membuat pengecualian."
+    },
+    {
+      "id": "SK-D5-802",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi ketua kamar dan teman meminta kunci ruang belajar di luar jam yang diizinkan",
+      "opsi": {
+        "A": "Mengarahkan teman meminta izin kepada pengurus asrama",
+        "B": "Meminjamkan kunci karena teman itu sedang belajar untuk ujian"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan teman meminta izin kepada pengurus asrama menghormati kewenangan pengurus asrama. Meminjamkan kunci karena teman itu sedang belajar untuk ujian juga terdengar positif: membantu teman belajar itu baik, tetapi izin di luar jam bukan wewenang ketua kamar. Tips: kalau bukan wewenang Anda, arahkan ke pihak yang berwenang."
+    },
+    {
+      "id": "SK-D5-803",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menjadi panitia penerimaan anggota ekstrakurikuler dan sahabat meminta diloloskan tanpa tes",
+      "opsi": {
+        "A": "Keputusan sesuai hasil tes yang ditetapkan pembina",
+        "B": "Pertimbangan bahwa sahabat Anda memang mampu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keputusan sesuai hasil tes yang ditetapkan pembina bertindak sesuai ketentuan yang ditetapkan pihak berwenang. Pertimbangan bahwa sahabat Anda memang mampu juga terdengar positif: kemampuan sahabat mungkin nyata, tetapi panitia tidak berwenang meloloskan tanpa tes. Tips: panitia bekerja dalam batas aturan yang ditetapkan."
+    },
+    {
+      "id": "SK-D5-804",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika kakak meminta Anda menandatangani surat izin sekolahnya atas nama orang tua",
+      "opsi": {
+        "A": "Tanda tangan hanya oleh orang tua yang berhak",
+        "B": "Bantuan agar kakak tidak terlambat mengumpulkan surat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Tanda tangan hanya oleh orang tua yang berhak menghormati pihak yang berwenang menandatangani. Bantuan agar kakak tidak terlambat mengumpulkan surat juga terdengar positif: membantu kakak itu baik, tetapi Anda tidak berhak menandatangani atas nama orang tua. Tips: tanda tangan hanya oleh orang yang berhak."
+    },
+    {
+      "id": "SK-D5-805",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjaga kantin koperasi sekolah dan pembeli meminta harga di luar daftar harga",
+      "opsi": {
+        "A": "Potongan harga diberikan agar pembeli tetap senang",
+        "B": "Keputusan dikembalikan kepada pengurus yang berhak memutuskan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-806",
+      "pembahasan": "Keputusan dikembalikan kepada pengurus yang berhak memutuskan bertindak sesuai batas kewenangan. Potongan harga diberikan agar pembeli tetap senang juga terdengar positif: menyenangkan pembeli itu baik, tetapi penjaga tidak berwenang mengubah harga. Tips: di luar ketentuan, serahkan kepada yang berwenang. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D5-806",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi petugas dapur asrama dan penghuni meminta jatah makan tambahan di luar ketentuan",
+      "opsi": {
+        "A": "Keputusan dikembalikan kepada pengurus yang berhak memutuskan",
+        "B": "Jatah tambahan diberikan agar penghuni merasa diperhatikan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-805",
+      "pembahasan": "Keputusan dikembalikan kepada pengurus yang berhak memutuskan bertindak sesuai batas kewenangan. Jatah tambahan diberikan agar penghuni merasa diperhatikan juga terdengar positif: perhatian kepada penghuni itu baik, tetapi petugas dapur tidak berwenang mengubah jatah. Tips: di luar ketentuan, serahkan kepada yang berwenang. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D6-801",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari menjadi ketua panitia lomba tujuh belasan di lingkungan rumah untuk pertama kali",
+      "opsi": {
+        "A": "Menjadi anggota dulu sampai cukup berpengalaman",
+        "B": "Menerima tawaran dan belajar memimpin sambil bekerja"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menerima tawaran dan belajar memimpin sambil bekerja berani mengambil peran baru. Menjadi anggota dulu sampai cukup berpengalaman juga terdengar positif: menunggu pengalaman itu aman, tetapi menunda keberanian bertindak. Tips: pilih keberanian mengambil peran dibandingkan menunggu siap."
+    },
+    {
+      "id": "SK-D6-802",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika sekolah membuka kelas bahasa asing yang belum pernah dipelajari siapa pun di kelas Anda",
+      "opsi": {
+        "A": "Kelas lama yang nilainya sudah pasti baik",
+        "B": "Kesempatan menjadi angkatan pertama yang mencobanya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan menjadi angkatan pertama yang mencobanya berani mencoba hal baru. Kelas lama yang nilainya sudah pasti baik juga terdengar positif: nilai yang pasti itu nyaman, tetapi menutup kesempatan berkembang. Tips: keberanian berubah lebih diutamakan daripada rasa aman."
+    },
+    {
+      "id": "SK-D6-803",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika keluarga berencana membuka usaha warung makan untuk pertama kali",
+      "opsi": {
+        "A": "Membantu setelah usahanya berjalan stabil",
+        "B": "Ikut merintis usaha itu sejak awal"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ikut merintis usaha itu sejak awal berani terlibat sejak tahap paling sulit. Membantu setelah usahanya berjalan stabil juga terdengar positif: membantu belakangan itu tetap baik, tetapi menghindari risiko awal. Tips: keberanian terlihat saat ikut merintis."
+    },
+    {
+      "id": "SK-D6-804",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ada kesempatan mengikuti cabang lomba yang belum pernah diikuti sekolah",
+      "opsi": {
+        "A": "Mendaftar dan mempersiapkan diri sebagai perintis",
+        "B": "Tetap di cabang lomba lama yang sudah dikuasai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mendaftar dan mempersiapkan diri sebagai perintis berani membuka jalan baru. Tetap di cabang lomba lama yang sudah dikuasai juga terdengar positif: cabang lama itu aman, tetapi tidak ada keberanian mencoba. Tips: pilih keberanian membuka jalan baru."
+    },
+    {
+      "id": "SK-D6-805",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika diajak teman membuka usaha jual beli daring dengan modal tabungan",
+      "opsi": {
+        "A": "Perhitungan modal, risiko, dan pasar sebelum memulai",
+        "B": "Semangat untuk segera mencoba peluang yang ada"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perhitungan modal, risiko, dan pasar sebelum memulai mengukur risiko sebelum masuk ke peluang usaha. Semangat untuk segera mencoba peluang yang ada juga terdengar positif: semangat itu baik, tetapi peluang usaha perlu dihitung dulu. Tips: saat menghadapi peluang dan persaingan, hitung dulu."
+    },
+    {
+      "id": "SK-D6-806",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika kelas ditantang mengikuti lomba drama tingkat kota dengan persiapan tiga minggu",
+      "opsi": {
+        "A": "Perhitungan kesiapan pemain dan waktu sebelum mendaftar",
+        "B": "Keberanian langsung mendaftar agar kelas punya pengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perhitungan kesiapan pemain dan waktu sebelum mendaftar mengukur kemampuan sebelum masuk persaingan. Keberanian langsung mendaftar agar kelas punya pengalaman juga terdengar positif: keberanian itu baik, tetapi persaingan ketat menuntut perhitungan. Tips: di persaingan, ukur kesiapan sebelum melangkah."
+    },
+    {
+      "id": "SK-D7-801",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin kerja kelompok dan dua anggota terus berdebat tanpa hasil",
+      "opsi": {
+        "A": "Membiarkan keduanya berdiskusi sampai menemukan titik temu",
+        "B": "Menetapkan pembagian tugas dan meminta semua menjalankannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menetapkan pembagian tugas dan meminta semua menjalankannya tegas dalam tindakan memimpin. Membiarkan keduanya berdiskusi sampai menemukan titik temu juga terdengar positif: memberi ruang diskusi itu baik, tetapi kelompok butuh keputusan. Tips: pemimpin tegas mengambil keputusan saat diskusi buntu."
+    },
+    {
+      "id": "SK-D7-802",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika menjadi ketua regu kebersihan dan waktu kerja bakti hampir habis, tetapi anggota masih bersantai",
+      "opsi": {
+        "A": "Memberi arahan jelas dan membagi area kerja saat itu juga",
+        "B": "Mengajak anggota beristirahat dulu agar semangat kembali"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memberi arahan jelas dan membagi area kerja saat itu juga tegas mengarahkan saat waktu terbatas. Mengajak anggota beristirahat dulu agar semangat kembali juga terdengar positif: menjaga semangat itu baik, tetapi tugas tidak selesai tanpa arahan tegas. Tips: saat waktu mendesak, pemimpin bertindak tegas."
+    },
+    {
+      "id": "SK-D7-803",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika orang tua terlambat menjemput dari asrama saat libur panjang",
+      "opsi": {
+        "A": "Ketenangan sambil menunggu kabar dari orang tua",
+        "B": "Kepedulian yang mendorong untuk terus menelepon mereka"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan sambil menunggu kabar dari orang tua menjaga perasaan tetap tenang. Kepedulian yang mendorong untuk terus menelepon mereka juga terdengar positif: kepedulian itu baik, tetapi rasa cemas tidak membuat orang tua datang lebih cepat. Tips: dalam perasaan, ketenangan diutamakan."
+    },
+    {
+      "id": "SK-D7-804",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika naskah pidato yang sudah dihafal hilang menjelang tampil di acara sekolah",
+      "opsi": {
+        "A": "Semangat mencari naskah sampai ketemu sebelum tampil",
+        "B": "Ketenangan untuk berbicara dari ingatan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan untuk berbicara dari ingatan menjaga hati tetap tenang di saat genting. Semangat mencari naskah sampai ketemu sebelum tampil juga terdengar positif: semangat mencari itu baik, tetapi kepanikan bisa membuat penampilan berantakan. Tips: rasa tenang membantu Anda tetap tampil baik."
+    },
+    {
+      "id": "SK-D8-801",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika keran air di kamar mandi asrama bocor pada malam hari",
+      "opsi": {
+        "A": "Menutup katup utama dan mengganti karet keran sendiri",
+        "B": "Melaporkan kepada pengurus asrama untuk diperbaiki besok"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menutup katup utama dan mengganti karet keran sendiri menyelesaikan masalah sendiri dengan cepat. Melaporkan kepada pengurus asrama untuk diperbaiki besok juga terdengar positif: melapor itu benar, tetapi menunggu besok membuat air terbuang semalaman. Tips: kalau bisa ditangani sendiri, selesaikan sendiri."
+    },
+    {
+      "id": "SK-D8-802",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika belum memahami materi pelajaran yang dijelaskan guru hari itu",
+      "opsi": {
+        "A": "Menunggu guru menjelaskan ulang pada pertemuan berikutnya",
+        "B": "Mempelajari ulang dari buku dan mencari contoh soal sendiri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mempelajari ulang dari buku dan mencari contoh soal sendiri mandiri dan proaktif dalam belajar. Menunggu guru menjelaskan ulang pada pertemuan berikutnya juga terdengar positif: penjelasan ulang guru itu membantu, tetapi menunggu membuat Anda pasif. Tips: belajar mandiri lebih diutamakan daripada menunggu."
+    },
+    {
+      "id": "SK-D8-803",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika memenangkan lomba karya tulis tingkat kabupaten",
+      "opsi": {
+        "A": "Hasil yang disempurnakan dengan banyak masukan pembimbing",
+        "B": "Hasil yang diteliti dan ditulis sendiri dari awal"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Hasil yang diteliti dan ditulis sendiri dari awal menunjukkan kemandirian dalam berprestasi. Hasil yang disempurnakan dengan banyak masukan pembimbing juga terdengar positif: masukan pembimbing itu bernilai, tetapi kebanggaan utama ada pada usaha sendiri. Tips: banggalah pada hasil kerja mandiri."
+    },
+    {
+      "id": "SK-D8-804",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika selokan di depan rumah tersumbat sampah dan menimbulkan bau",
+      "opsi": {
+        "A": "Mengajak tetangga membersihkannya bersama hari itu",
+        "B": "Menghubungi petugas kebersihan kelurahan untuk menanganinya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak tetangga membersihkannya bersama hari itu proaktif dan menggerakkan partisipasi warga. Menghubungi petugas kebersihan kelurahan untuk menanganinya juga terdengar positif: menghubungi petugas itu benar, tetapi masalah bisa ditangani lebih cepat bersama. Tips: inisiatif bersama warga lebih diutamakan."
+    },
+    {
+      "id": "SK-D8-805",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika ekstrakurikuler jurnalistik kehabisan dana untuk mencetak buletin",
+      "opsi": {
+        "A": "Mengajukan permohonan tambahan dana kepada sekolah",
+        "B": "Mencari sponsor sendiri dari usaha di sekitar sekolah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencari sponsor sendiri dari usaha di sekitar sekolah mandiri dan ulet mencari jalan keluar. Mengajukan permohonan tambahan dana kepada sekolah juga terdengar positif: mengajukan dana itu sah, tetapi bergantung pada pihak lain. Tips: cari jalan keluar sendiri lebih dulu."
+    },
+    {
+      "id": "SK-D8-806",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika ingin menguasai keterampilan memasak sebelum tinggal di asrama",
+      "opsi": {
+        "A": "Ikut kursus memasak yang dijadwalkan orang tua",
+        "B": "Belajar dari resep dan mencoba memasak sendiri setiap hari"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Belajar dari resep dan mencoba memasak sendiri setiap hari proaktif dan mandiri dalam belajar keterampilan. Ikut kursus memasak yang dijadwalkan orang tua juga terdengar positif: kursus itu bermanfaat, tetapi inisiatifnya datang dari orang lain. Tips: keterampilan dikuasai lewat inisiatif sendiri."
+    },
+    {
+      "id": "SK-D8-807",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika dua kali gagal mendaftar beasiswa prestasi",
+      "opsi": {
+        "A": "Memperbaiki berkas dan mendaftar lagi pada gelombang berikutnya",
+        "B": "Menerima hasilnya dan fokus pada pelajaran sekolah"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memperbaiki berkas dan mendaftar lagi pada gelombang berikutnya ulet dan tidak mudah menyerah. Menerima hasilnya dan fokus pada pelajaran sekolah juga terdengar positif: fokus belajar itu baik, tetapi kesempatan beasiswa dilepas begitu saja. Tips: keuletan berarti mencoba lagi dengan perbaikan."
+    },
+    {
+      "id": "SK-D8-808",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika asrama belum memiliki rak buku bersama",
+      "opsi": {
+        "A": "Mengajak penghuni membuat rak dari bahan bekas bersama-sama",
+        "B": "Mengusulkan pengadaan rak kepada pengelola asrama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak penghuni membuat rak dari bahan bekas bersama-sama proaktif dan menggerakkan partisipasi. Mengusulkan pengadaan rak kepada pengelola asrama juga terdengar positif: usulan itu sah, tetapi bergantung pada pengelola. Tips: gerakkan teman untuk menyelesaikan kebutuhan bersama."
+    },
+    {
+      "id": "SK-D9-801",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika naik kelas dengan nilai yang memuaskan",
+      "opsi": {
+        "A": "Syukur kepada Tuhan atas kemudahan selama belajar",
+        "B": "Bangga atas kerja keras belajar setiap malam"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur kepada Tuhan atas kemudahan selama belajar mengutamakan makna spiritual. Bangga atas kerja keras belajar setiap malam juga terdengar positif: bangga atas usaha itu wajar, tetapi rasa syukur diutamakan. Tips: keberhasilan disambut dengan syukur."
+    },
+    {
+      "id": "SK-D9-802",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika keluarga mengalami kesulitan ekonomi karena ayah sakit",
+      "opsi": {
+        "A": "Rencana penghematan akan membuat keuangan keluarga pulih",
+        "B": "Keyakinan bahwa setiap kesulitan membawa hikmah dari Tuhan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keyakinan bahwa setiap kesulitan membawa hikmah dari Tuhan mengutamakan keyakinan spiritual. Rencana penghematan akan membuat keuangan keluarga pulih juga terdengar positif: rencana penghematan itu penting, tetapi bersifat usaha material. Tips: dalam kesulitan, pegang keyakinan spiritual."
+    },
+    {
+      "id": "SK-D9-803",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika menerima uang hadiah lomba pertama kali",
+      "opsi": {
+        "A": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur",
+        "B": "Membeli buku penunjang untuk lomba berikutnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur mengutamakan makna spiritual dari rezeki. Membeli buku penunjang untuk lomba berikutnya juga terdengar positif: membeli buku itu bermanfaat, tetapi bersifat material. Tips: rezeki disyukuri dengan berbagi."
+    },
+    {
+      "id": "SK-D9-804",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipegang ketika tinggal jauh dari keluarga di asrama",
+      "opsi": {
+        "A": "Ibadah rutin sebagai sumber ketenangan batin",
+        "B": "Jadwal kegiatan padat agar tidak sempat merasa rindu"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ibadah rutin sebagai sumber ketenangan batin mengutamakan sumber ketenangan spiritual. Jadwal kegiatan padat agar tidak sempat merasa rindu juga terdengar positif: kegiatan padat itu bermanfaat, tetapi hanya mengalihkan perasaan. Tips: ketenangan batin dicari lewat ibadah."
+    },
+    {
+      "id": "SK-D9-805",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika keluarga selamat dari kecelakaan kecil dalam perjalanan mudik",
+      "opsi": {
+        "A": "Lega karena kendaraan dalam keadaan terawat",
+        "B": "Syukur atas perlindungan Tuhan selama perjalanan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur atas perlindungan Tuhan selama perjalanan mengutamakan makna spiritual dari keselamatan. Lega karena kendaraan dalam keadaan terawat juga terdengar positif: kendaraan yang terawat itu penting, tetapi bersifat material. Tips: keselamatan disambut dengan syukur kepada Tuhan."
+    },
+    {
+      "id": "SK-D9-806",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika memulai hari ujian akhir sekolah",
+      "opsi": {
+        "A": "Mengulang rumus penting sebelum masuk ruang ujian",
+        "B": "Berdoa memohon kelancaran sebelum mengerjakan soal"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Berdoa memohon kelancaran sebelum mengerjakan soal mengutamakan sisi spiritual sebelum berusaha. Mengulang rumus penting sebelum masuk ruang ujian juga terdengar positif: mengulang rumus itu baik, tetapi bersifat usaha. Tips: awali kegiatan penting dengan doa."
+    },
+    {
+      "id": "SK-D10-801",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika menilai keberhasilan lomba kebersihan kelas yang Anda pimpin",
+      "opsi": {
+        "A": "Kelas benar-benar bersih dan meraih peringkat",
+        "B": "Semua anggota kelas ikut terlibat dengan gembira"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kelas benar-benar bersih dan meraih peringkat mengutamakan ketercapaian hasil. Semua anggota kelas ikut terlibat dengan gembira juga terdengar positif: keterlibatan itu bernilai, tetapi ukuran keberhasilan lomba adalah hasilnya. Tips: keberhasilan tugas diukur dari hasil."
+    },
+    {
+      "id": "SK-D10-802",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika mengevaluasi kegiatan penggalangan buku untuk perpustakaan asrama",
+      "opsi": {
+        "A": "Pengalaman berharga yang didapat panitia selama kegiatan",
+        "B": "Jumlah dan mutu buku yang berhasil terkumpul"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah dan mutu buku yang berhasil terkumpul mengutamakan hasil yang dicapai. Pengalaman berharga yang didapat panitia selama kegiatan juga terdengar positif: pengalaman panitia itu bernilai, tetapi tujuan kegiatan adalah buku yang terkumpul. Tips: evaluasi kegiatan berpijak pada hasil."
+    },
+    {
+      "id": "SK-D11-801",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika nilai ulangan bahasa Inggris turun dari biasanya",
+      "opsi": {
+        "A": "Menjaga semangat dengan mengingat nilai-nilai baik sebelumnya",
+        "B": "Memeriksa soal yang salah untuk mengenali kelemahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Memeriksa soal yang salah untuk mengenali kelemahan belajar dari kegagalan dan mengenali kelemahan. Menjaga semangat dengan mengingat nilai-nilai baik sebelumnya juga terdengar positif: menjaga semangat itu baik, tetapi tidak menunjukkan apa yang perlu diperbaiki. Tips: kegagalan adalah bahan belajar."
+    },
+    {
+      "id": "SK-D11-802",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini ketika teman sekamar berkata cara Anda membagi waktu belajar kurang efektif",
+      "opsi": {
+        "A": "Cara belajar yang sudah lama dipakai pasti paling cocok",
+        "B": "Masukan teman bisa membantu memperbaiki cara belajar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan teman bisa membantu memperbaiki cara belajar menerima masukan dengan terbuka. Cara belajar yang sudah lama dipakai pasti paling cocok juga terdengar positif: keyakinan pada cara sendiri itu wajar, tetapi menutup kesempatan memperbaiki diri. Tips: masukan adalah bahan perbaikan."
+    },
+    {
+      "id": "SK-D11-803",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika usaha menabung untuk membeli sepeda selalu gagal di tengah bulan",
+      "opsi": {
+        "A": "Mengubah strategi dengan menyisihkan uang di awal bulan",
+        "B": "Menabung dengan cara yang sama sambil lebih menahan keinginan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengubah strategi dengan menyisihkan uang di awal bulan menyesuaikan strategi setelah gagal. Menabung dengan cara yang sama sambil lebih menahan keinginan juga terdengar positif: tekad itu baik, tetapi cara yang sama cenderung memberi hasil yang sama. Tips: kalau gagal berulang, ubah strateginya."
+    },
+    {
+      "id": "SK-D11-804",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika kue buatan Anda untuk acara keluarga tidak mengembang",
+      "opsi": {
+        "A": "Mencari tahu kesalahan resep untuk diperbaiki lain kali",
+        "B": "Menyajikan kue itu dengan hiasan agar tetap menarik"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mencari tahu kesalahan resep untuk diperbaiki lain kali belajar dari kegagalan. Menyajikan kue itu dengan hiasan agar tetap menarik juga terdengar positif: menyelamatkan tampilan kue itu kreatif, tetapi kesalahannya tidak dipelajari. Tips: kegagalan dicari penyebabnya agar tidak terulang."
+    }
+  ]
+}

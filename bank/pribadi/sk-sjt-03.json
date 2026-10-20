@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sjt-03",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran (Pass Hand A/B) baru untuk Kepribadian SJT Paket 3 (package_number 23). Komposisi = SK_SLOT compose-pribadi-paket.ts, 4 pasang kembar (D1, D2, D3, D5). Konteks kampus, organisasi, olahraga. Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur resmi yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-901",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika mencatat waktu tempuh anggota klub lari untuk papan peringkat bulanan",
+      "opsi": {
+        "A": "Waktu tempuh sesuai catatan stopwatch",
+        "B": "Waktu tempuh yang dibulatkan agar anggota baru tetap semangat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu tempuh sesuai catatan stopwatch menjaga kebenaran data sesuai yang benar-benar terukur. Waktu tempuh yang dibulatkan agar anggota baru tetap semangat juga bernilai; menjaga semangat anggota tidak boleh mengorbankan kebenaran catatan. Tips: papan peringkat hanya berarti bila angkanya benar."
+    },
+    {
+      "id": "SK-D1-902",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menulis notula rapat himpunan yang berjalan alot",
+      "opsi": {
+        "A": "Isi pembicaraan yang diperhalus agar hubungan antarpengurus tetap rukun",
+        "B": "Isi pembicaraan sesuai yang benar-benar disampaikan peserta"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Isi pembicaraan sesuai yang benar-benar disampaikan peserta mengutamakan kebenaran catatan di atas perasaan. Isi pembicaraan yang diperhalus agar hubungan antarpengurus tetap rukun juga bernilai; kerukunan itu baik, tetapi notula yang diperhalus tidak lagi mencatat kebenaran. Tips: notula adalah catatan kebenaran, bukan alat menjaga suasana."
+    },
+    {
+      "id": "SK-D1-903",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika menjadi juri seleksi anggota baru UKM tari",
+      "opsi": {
+        "A": "Penilaian jujur sesuai penampilan yang sebenarnya",
+        "B": "Penilaian lunak agar peserta tidak kecewa"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-904",
+      "pembahasan": "Penilaian jujur sesuai penampilan yang sebenarnya mengutamakan kebenaran hasil di atas perasaan peserta. Penilaian lunak agar peserta tidak kecewa juga bernilai; menjaga perasaan peserta memang baik, tetapi penilaian yang dilunakkan tidak lagi benar. Tips: penilaian yang benar sesuai kenyataan, bukan sesuai perasaan."
+    },
+    {
+      "id": "SK-D1-904",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika diminta pelatih menilai tes menggiring bola calon pemain tim basket kampus",
+      "opsi": {
+        "A": "Penilaian lunak agar peserta tidak kecewa",
+        "B": "Penilaian jujur sesuai penampilan yang sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-903",
+      "pembahasan": "Penilaian jujur sesuai penampilan yang sebenarnya mengutamakan kebenaran hasil di atas perasaan peserta. Penilaian lunak agar peserta tidak kecewa juga bernilai; menjaga perasaan peserta memang baik, tetapi penilaian yang dilunakkan tidak lagi benar. Tips: penilaian yang benar sesuai kenyataan, bukan sesuai perasaan."
+    },
+    {
+      "id": "SK-D2-901",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika menjadi bendahara panitia turnamen futsal antarjurusan yang menerima dana sponsor",
+      "opsi": {
+        "A": "Mempublikasikan rincian penggunaan dana sponsor kepada semua tim peserta",
+        "B": "Menyerahkan rincian penggunaan dana sponsor kepada ketua panitia"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mempublikasikan rincian penggunaan dana sponsor kepada semua tim peserta membuka informasi keuangan kepada semua pihak yang berkepentingan. Menyerahkan rincian penggunaan dana sponsor kepada ketua panitia juga bernilai; menyerahkan kepada ketua itu tertib, tetapi informasinya hanya berhenti di satu orang. Tips: dana bersama dilaporkan terbuka kepada semua yang berkepentingan."
+    },
+    {
+      "id": "SK-D2-902",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika himpunan mahasiswa mengubah syarat penerima beasiswa internal",
+      "opsi": {
+        "A": "Syarat baru dipegang pengurus agar tidak menimbulkan perdebatan",
+        "B": "Syarat baru diumumkan terbuka kepada seluruh anggota himpunan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Syarat baru diumumkan terbuka kepada seluruh anggota himpunan menjamin semua anggota tahu aturan yang menyangkut mereka. Syarat baru dipegang pengurus agar tidak menimbulkan perdebatan juga bernilai; menghindari perdebatan itu wajar, tetapi menyimpan syarat membuat anggota tidak tahu haknya. Tips: aturan yang menyangkut banyak orang wajib diumumkan terbuka."
+    },
+    {
+      "id": "SK-D2-903",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipikirkan ketika panitia seleksi atlet kampus menetapkan pemain yang lolos",
+      "opsi": {
+        "A": "Nilai tes setiap calon atlet dapat dilihat oleh semua peserta seleksi",
+        "B": "Nilai tes disimpan pelatih sebagai bahan pertimbangan internal"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai tes setiap calon atlet dapat dilihat oleh semua peserta seleksi membuat proses seleksi terbuka dan bisa diperiksa. Nilai tes disimpan pelatih sebagai bahan pertimbangan internal juga bernilai; pertimbangan internal pelatih itu sah, tetapi nilai yang disimpan membuat seleksi tertutup. Tips: hasil seleksi yang terbuka lebih dipercaya peserta."
+    },
+    {
+      "id": "SK-D2-904",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika UKM selesai mengevaluasi kinerja kepengurusan selama setahun",
+      "opsi": {
+        "A": "Hasil evaluasi disampaikan terbuka kepada seluruh anggota",
+        "B": "Hasil evaluasi cukup diketahui oleh pengurus inti"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-905",
+      "pembahasan": "Hasil evaluasi disampaikan terbuka kepada seluruh anggota mengutamakan keterbukaan informasi kepada semua anggota. Hasil evaluasi cukup diketahui oleh pengurus inti juga bernilai; pengurus inti memang perlu tahu, tetapi anggota lain juga berhak mengetahuinya. Tips: informasi yang menyangkut semua anggota dibuka kepada semua anggota."
+    },
+    {
+      "id": "SK-D2-905",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika klub bola voli selesai mengevaluasi program latihan semester ini",
+      "opsi": {
+        "A": "Hasil evaluasi cukup diketahui oleh pengurus inti",
+        "B": "Hasil evaluasi disampaikan terbuka kepada seluruh anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-904",
+      "pembahasan": "Hasil evaluasi disampaikan terbuka kepada seluruh anggota mengutamakan keterbukaan informasi kepada semua anggota. Hasil evaluasi cukup diketahui oleh pengurus inti juga bernilai; pengurus inti memang perlu tahu, tetapi anggota lain juga berhak mengetahuinya. Tips: informasi yang menyangkut semua anggota dibuka kepada semua anggota."
+    },
+    {
+      "id": "SK-D3-901",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi wasit pertandingan basket antarkelas dan seorang pemain melakukan pelanggaran kelima",
+      "opsi": {
+        "A": "Mengeluarkan pemain itu sesuai peraturan pertandingan",
+        "B": "Memberi peringatan agar pemain itu bermain lebih hati-hati"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengeluarkan pemain itu sesuai peraturan pertandingan menegakkan aturan pertandingan secara konsisten. Memberi peringatan agar pemain itu bermain lebih hati-hati juga bernilai; peringatan itu mendidik, tetapi aturan sudah menetapkan sanksinya. Tips: bila aturan sudah menetapkan sanksi, jalankan sanksinya."
+    },
+    {
+      "id": "SK-D3-902",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menjadi koordinator laboratorium dan ada praktikan yang tiga kali tidak memakai jas laboratorium",
+      "opsi": {
+        "A": "Nasihat tentang bahaya bahan kimia bagi keselamatan diri",
+        "B": "Larangan mengikuti praktikum sesuai tata tertib laboratorium"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Larangan mengikuti praktikum sesuai tata tertib laboratorium menegakkan tata tertib yang sudah berlaku. Nasihat tentang bahaya bahan kimia bagi keselamatan diri juga bernilai; nasihat itu bermanfaat, tetapi pelanggaran berulang perlu ditindak sesuai aturan. Tips: pelanggaran berulang dijawab dengan aturan, bukan nasihat lagi."
+    },
+    {
+      "id": "SK-D3-903",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi panitia lomba lari dan ada peserta yang memotong jalur",
+      "opsi": {
+        "A": "Mengingatkan peserta itu agar tidak mengulanginya",
+        "B": "Mendiskualifikasi peserta itu sesuai ketentuan lomba"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mendiskualifikasi peserta itu sesuai ketentuan lomba menegakkan ketentuan lomba demi keadilan bagi peserta lain. Mengingatkan peserta itu agar tidak mengulanginya juga bernilai; mengingatkan itu baik, tetapi tidak adil bagi peserta yang berlari sesuai jalur. Tips: keadilan lomba dijaga dengan menegakkan ketentuan."
+    },
+    {
+      "id": "SK-D3-904",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika menjadi pengurus organisasi dan ada anggota yang tiga kali absen rapat tanpa izin",
+      "opsi": {
+        "A": "Sanksi keanggotaan sesuai anggaran rumah tangga organisasi",
+        "B": "Pendekatan pribadi untuk memahami alasan ketidakhadirannya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sanksi keanggotaan sesuai anggaran rumah tangga organisasi menegakkan aturan organisasi yang sudah disepakati. Pendekatan pribadi untuk memahami alasan ketidakhadirannya juga bernilai; pendekatan pribadi itu bijak, tetapi aturan organisasi tetap harus dijalankan. Tips: aturan yang disepakati bersama berlaku untuk semua anggota."
+    },
+    {
+      "id": "SK-D3-905",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi kapten tim dan ada pemain yang berulang kali datang terlambat latihan",
+      "opsi": {
+        "A": "Penerapan sanksi sesuai peraturan yang telah disepakati",
+        "B": "Teguran ramah agar ia sadar dan berubah sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-906",
+      "pembahasan": "Penerapan sanksi sesuai peraturan yang telah disepakati mengutamakan penegakan aturan di atas penyadaran. Teguran ramah agar ia sadar dan berubah sendiri juga bernilai; teguran ramah itu baik, tetapi pelanggaran berulang perlu sanksi sesuai aturan. Tips: pelanggaran berulang ditangani dengan aturan yang berlaku."
+    },
+    {
+      "id": "SK-D3-906",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengelola ruang baca himpunan dan ada anggota berulang kali membawa makanan ke dalam ruangan",
+      "opsi": {
+        "A": "Teguran ramah agar ia sadar dan berubah sendiri",
+        "B": "Penerapan sanksi sesuai peraturan yang telah disepakati"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-905",
+      "pembahasan": "Penerapan sanksi sesuai peraturan yang telah disepakati mengutamakan penegakan aturan di atas penyadaran. Teguran ramah agar ia sadar dan berubah sendiri juga bernilai; teguran ramah itu baik, tetapi pelanggaran berulang perlu sanksi sesuai aturan. Tips: pelanggaran berulang ditangani dengan aturan yang berlaku."
+    },
+    {
+      "id": "SK-D4-901",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika menyiapkan panggung untuk festival kampus",
+      "opsi": {
+        "A": "Beban panggung sesuai ketentuan teknis gedung",
+        "B": "Ukuran panggung terbesar agar penampil leluasa bergerak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Beban panggung sesuai ketentuan teknis gedung mematuhi standar teknis demi keselamatan. Ukuran panggung terbesar agar penampil leluasa bergerak juga bernilai; kenyamanan penampil itu penting, tetapi tidak boleh melampaui standar keselamatan. Tips: untuk urusan keselamatan, standar teknis didahulukan."
+    },
+    {
+      "id": "SK-D4-902",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengelola akun media sosial UKM dan ingin memakai lagu populer di video promosi",
+      "opsi": {
+        "A": "Lagu yang paling disukai calon anggota",
+        "B": "Ketentuan hak cipta atas penggunaan lagu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ketentuan hak cipta atas penggunaan lagu mematuhi hukum hak cipta. Lagu yang paling disukai calon anggota juga bernilai; selera calon anggota memang menarik perhatian, tetapi tidak boleh melanggar hak cipta. Tips: karya orang lain dipakai sesuai ketentuan hukum."
+    },
+    {
+      "id": "SK-D4-903",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika menyelenggarakan lomba renang antarkampus",
+      "opsi": {
+        "A": "Jumlah penjaga keselamatan sesuai standar kolam renang",
+        "B": "Jadwal lomba yang padat agar acara cepat selesai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah penjaga keselamatan sesuai standar kolam renang mematuhi standar keselamatan yang berlaku. Jadwal lomba yang padat agar acara cepat selesai juga bernilai; efisiensi jadwal itu baik, tetapi tidak boleh mengurangi standar keselamatan. Tips: dalam kegiatan berisiko, patuhi standar keselamatan lebih dulu."
+    },
+    {
+      "id": "SK-D4-904",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipikirkan ketika mengutip pendapat ahli dalam makalah kuliah",
+      "opsi": {
+        "A": "Alur tulisan yang lancar dibaca tanpa banyak catatan kaki",
+        "B": "Penulisan sumber sesuai pedoman sitasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Penulisan sumber sesuai pedoman sitasi mematuhi standar penulisan ilmiah. Alur tulisan yang lancar dibaca tanpa banyak catatan kaki juga bernilai; tulisan yang lancar memang enak dibaca, tetapi sumber wajib dicantumkan sesuai pedoman. Tips: dalam karya ilmiah, patuhi pedoman sitasi."
+    },
+    {
+      "id": "SK-D4-905",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengurus perjalanan tim futsal ke turnamen di luar kota dengan bus sewaan",
+      "opsi": {
+        "A": "Jumlah penumpang sesuai kapasitas kursi yang diizinkan",
+        "B": "Semua pendukung tim ikut dalam satu bus agar kompak"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah penumpang sesuai kapasitas kursi yang diizinkan mematuhi ketentuan keselamatan angkutan. Semua pendukung tim ikut dalam satu bus agar kompak juga bernilai; kekompakan itu bernilai, tetapi kapasitas angkutan diatur demi keselamatan. Tips: batas kapasitas kendaraan adalah aturan keselamatan, bukan pilihan."
+    },
+    {
+      "id": "SK-D4-906",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengadakan penggalangan dana terbuka untuk korban bencana atas nama organisasi",
+      "opsi": {
+        "A": "Kecepatan menghimpun dana selagi kepedulian masyarakat tinggi",
+        "B": "Izin pengumpulan sumbangan sesuai ketentuan pemerintah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Izin pengumpulan sumbangan sesuai ketentuan pemerintah mematuhi regulasi pengumpulan sumbangan. Kecepatan menghimpun dana selagi kepedulian masyarakat tinggi juga bernilai; kecepatan itu bermanfaat, tetapi penggalangan dana terbuka tetap wajib sesuai ketentuan. Tips: kegiatan yang diatur regulasi dijalankan sesuai izinnya."
+    },
+    {
+      "id": "SK-D4-907",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika peserta latihan rutin klub lari makin sedikit",
+      "opsi": {
+        "A": "Menambah sesi lari tematik dengan rute yang berganti setiap minggu",
+        "B": "Mempertahankan rute dan jam latihan yang sudah dikenal anggota"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menambah sesi lari tematik dengan rute yang berganti setiap minggu memperbarui cara kegiatan agar kembali menarik. Mempertahankan rute dan jam latihan yang sudah dikenal anggota juga bernilai; konsistensi jadwal itu baik, tetapi cara lama terbukti tidak lagi menarik peserta. Tips: bila program mulai sepi, perbarui caranya."
+    },
+    {
+      "id": "SK-D4-908",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika merancang masa orientasi anggota baru BEM",
+      "opsi": {
+        "A": "Format penyampaian materi organisasi seperti tahun-tahun sebelumnya",
+        "B": "Format proyek kelompok yang langsung menghasilkan kegiatan nyata"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Format proyek kelompok yang langsung menghasilkan kegiatan nyata berinovasi pada konsep program. Format penyampaian materi organisasi seperti tahun-tahun sebelumnya juga bernilai; format lama memang sudah teruji, tetapi program boleh dan perlu diperbarui. Tips: untuk program dan konsep, pilih cara yang baru dan lebih bermakna."
+    },
+    {
+      "id": "SK-D4-909",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika mencatat kehadiran latihan tim bola voli yang anggotanya puluhan orang",
+      "opsi": {
+        "A": "Daftar hadir kertas yang ditandatangani di pinggir lapangan",
+        "B": "Presensi dengan memindai kode lewat ponsel setiap anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Presensi dengan memindai kode lewat ponsel setiap anggota memperbarui cara kerja agar lebih cepat dan rapi. Daftar hadir kertas yang ditandatangani di pinggir lapangan juga bernilai; daftar hadir kertas memang sederhana, tetapi kurang efisien untuk anggota sebanyak itu. Tips: cara kerja boleh diperbarui bila ada cara yang lebih baik."
+    },
+    {
+      "id": "SK-D4-910",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika menjadi ketua kelas dan diskusi mingguan selalu sepi peserta",
+      "opsi": {
+        "A": "Mengganti format diskusi menjadi debat dua kubu",
+        "B": "Melanjutkan format diskusi yang sudah berjalan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengganti format diskusi menjadi debat dua kubu berinovasi pada cara agar peserta lebih terlibat. Melanjutkan format diskusi yang sudah berjalan juga bernilai; format yang sudah berjalan itu tertib, tetapi terbukti tidak menghidupkan diskusi. Tips: cara yang tidak berhasil perlu diganti dengan cara baru."
+    },
+    {
+      "id": "SK-D4-911",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika UKM kesulitan mendapat sponsor untuk kegiatan tahunan",
+      "opsi": {
+        "A": "Mengirim proposal sponsor ke perusahaan yang sama seperti biasanya",
+        "B": "Merintis penggalangan dana lewat penjualan produk karya anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Merintis penggalangan dana lewat penjualan produk karya anggota mencari cara baru untuk membiayai program. Mengirim proposal sponsor ke perusahaan yang sama seperti biasanya juga bernilai; mengirim proposal itu wajar, tetapi cara yang sama sudah terbukti sulit berhasil. Tips: saat cara lama mentok, cari cara baru."
+    },
+    {
+      "id": "SK-D4-912",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika menyusun cara baru merekrut relawan untuk organisasi",
+      "opsi": {
+        "A": "Kampanye kisah relawan lewat video pendek",
+        "B": "Pengumuman pendaftaran di papan informasi kampus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kampanye kisah relawan lewat video pendek memperbarui konsep perekrutan agar menjangkau lebih banyak orang. Pengumuman pendaftaran di papan informasi kampus juga bernilai; papan informasi itu masih berguna, tetapi caranya tidak baru. Tips: konsep program dirancang dengan cara yang segar."
+    },
+    {
+      "id": "SK-D5-901",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi asisten praktikum dan praktikan meminta tambahan waktu ujian di luar ketentuan",
+      "opsi": {
+        "A": "Mengarahkan permintaan itu kepada dosen pengampu",
+        "B": "Memberi tambahan waktu karena praktikan sedang kesulitan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengarahkan permintaan itu kepada dosen pengampu bertindak sesuai kewenangan; keputusan itu milik dosen. Memberi tambahan waktu karena praktikan sedang kesulitan juga bernilai; kepedulian itu baik, tetapi asisten tidak berwenang mengubah ketentuan ujian. Tips: bila di luar wewenang Anda, arahkan kepada yang berwenang."
+    },
+    {
+      "id": "SK-D5-902",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menjadi anggota panitia dan sponsor meminta logo mereka dipasang lebih besar dari kesepakatan",
+      "opsi": {
+        "A": "Kepuasan sponsor agar mau mendukung lagi tahun depan",
+        "B": "Keputusan ukuran logo oleh ketua panitia sesuai kontrak"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keputusan ukuran logo oleh ketua panitia sesuai kontrak menyerahkan perubahan kesepakatan kepada pihak yang berwenang. Kepuasan sponsor agar mau mendukung lagi tahun depan juga bernilai; menjaga hubungan sponsor itu penting, tetapi anggota panitia tidak berwenang mengubah kesepakatan. Tips: perubahan kesepakatan diputuskan oleh pemegang wewenang."
+    },
+    {
+      "id": "SK-D5-903",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi pencatat skor dan pelatih salah satu tim meminta skor dikoreksi",
+      "opsi": {
+        "A": "Koreksi skor hanya atas keputusan wasit utama",
+        "B": "Koreksi skor segera agar pertandingan tidak tertunda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Koreksi skor hanya atas keputusan wasit utama bertindak sesuai kewenangan wasit utama. Koreksi skor segera agar pertandingan tidak tertunda juga bernilai; kelancaran pertandingan itu penting, tetapi pencatat skor tidak berwenang mengoreksi sendiri. Tips: dalam pertandingan, keputusan skor ada di tangan wasit."
+    },
+    {
+      "id": "SK-D5-904",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipikirkan ketika menjadi anggota tim medis turnamen dan pemain cedera ingin kembali bertanding",
+      "opsi": {
+        "A": "Semangat pemain yang ingin membantu timnya",
+        "B": "Izin bermain hanya dari dokter turnamen"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Izin bermain hanya dari dokter turnamen menghormati kewenangan dokter. Semangat pemain yang ingin membantu timnya juga bernilai; semangat pemain itu baik, tetapi izin bermain adalah kewenangan dokter. Tips: keputusan yang ada pemegang wewenangnya diserahkan kepadanya."
+    },
+    {
+      "id": "SK-D5-905",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi penjaga gedung olahraga kampus dan sebuah tim meminta memakai lapangan di luar jadwal",
+      "opsi": {
+        "A": "Persetujuan diminta dari pejabat yang berwenang",
+        "B": "Persetujuan diberikan sendiri demi kelancaran kegiatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-906",
+      "pembahasan": "Persetujuan diminta dari pejabat yang berwenang bertindak sesuai kewenangan dan jalur resmi. Persetujuan diberikan sendiri demi kelancaran kegiatan juga bernilai; kelancaran kegiatan itu baik, tetapi memberi izin sendiri melampaui wewenang. Tips: di luar wewenang Anda, mintalah persetujuan pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D5-906",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus laboratorium komputer dan mahasiswa meminta memakai ruangan di luar jam layanan",
+      "opsi": {
+        "A": "Persetujuan diberikan sendiri demi kelancaran kegiatan",
+        "B": "Persetujuan diminta dari pejabat yang berwenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-905",
+      "pembahasan": "Persetujuan diminta dari pejabat yang berwenang bertindak sesuai kewenangan dan jalur resmi. Persetujuan diberikan sendiri demi kelancaran kegiatan juga bernilai; kelancaran kegiatan itu baik, tetapi memberi izin sendiri melampaui wewenang. Tips: di luar wewenang Anda, mintalah persetujuan pejabat yang berwenang."
+    },
+    {
+      "id": "SK-D6-901",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari menjadi kapten tim bola voli yang baru dibentuk",
+      "opsi": {
+        "A": "Menerima peran itu dan membangun tim dari awal",
+        "B": "Menjadi pemain biasa sampai tim lebih stabil"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menerima peran itu dan membangun tim dari awal berani mengambil tanggung jawab baru. Menjadi pemain biasa sampai tim lebih stabil juga bernilai; menunggu tim stabil itu hati-hati, tetapi melewatkan kesempatan untuk berani memimpin. Tips: saat ditawari peran baru, beranilah menerimanya."
+    },
+    {
+      "id": "SK-D6-902",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika dosen membuka kesempatan menjadi kelompok pertama yang mencoba metode praktikum baru",
+      "opsi": {
+        "A": "Menunggu laporan kelompok pertama sebelum ikut",
+        "B": "Mendaftar menjadi kelompok pertama yang mencobanya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mendaftar menjadi kelompok pertama yang mencobanya berani mencoba dan berubah lebih dulu. Menunggu laporan kelompok pertama sebelum ikut juga bernilai; menunggu bukti itu hati-hati, tetapi tidak menunjukkan keberanian. Tips: pilih keberanian untuk mencoba hal baru."
+    },
+    {
+      "id": "SK-D6-903",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika diminta berpindah posisi dari bek ke penyerang menjelang musim kompetisi",
+      "opsi": {
+        "A": "Kesiapan menantang diri di posisi baru",
+        "B": "Keamanan bermain di posisi yang sudah dikuasai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesiapan menantang diri di posisi baru berani berubah dan menerima tantangan. Keamanan bermain di posisi yang sudah dikuasai juga bernilai; rasa aman itu wajar, tetapi menahan diri dari perubahan. Tips: perubahan peran adalah kesempatan untuk berani."
+    },
+    {
+      "id": "SK-D6-904",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika organisasi relawan membutuhkan seseorang memimpin posko di daerah yang belum pernah didatangi",
+      "opsi": {
+        "A": "Mendukung dari sekretariat sampai situasi lebih jelas",
+        "B": "Mengajukan diri untuk memimpin posko itu"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajukan diri untuk memimpin posko itu berani bertindak di situasi baru. Mendukung dari sekretariat sampai situasi lebih jelas juga bernilai; mendukung dari sekretariat itu berguna, tetapi tidak menunjukkan keberanian bertindak. Tips: saat dibutuhkan orang yang maju, beranilah mengajukan diri."
+    },
+    {
+      "id": "SK-D6-905",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika UKM diajak bekerja sama menyelenggarakan konser berbayar dengan modal besar",
+      "opsi": {
+        "A": "Perhitungan modal dan peluang penjualan tiket sebelum menyetujui",
+        "B": "Kesempatan menaikkan nama UKM di mata kampus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perhitungan modal dan peluang penjualan tiket sebelum menyetujui mengukur risiko sebelum mengambil peluang. Kesempatan menaikkan nama UKM di mata kampus juga bernilai; nama baik UKM itu menarik, tetapi peluang bermodal besar harus diukur dulu. Tips: menghadapi peluang berisiko, hitung dulu kemampuannya."
+    },
+    {
+      "id": "SK-D6-906",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika ditawari menjadi agen penjualan kaus olahraga sambil kuliah",
+      "opsi": {
+        "A": "Peluang penghasilan tambahan yang menjanjikan",
+        "B": "Waktu kuliah dan modal yang tersedia sebelum menerima tawaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu kuliah dan modal yang tersedia sebelum menerima tawaran mengukur kemampuan sebelum menerima peluang. Peluang penghasilan tambahan yang menjanjikan juga bernilai; penghasilan tambahan itu menarik, tetapi belum memperhitungkan waktu dan modal. Tips: peluang yang menggiurkan tetap diukur dengan kemampuan."
+    },
+    {
+      "id": "SK-D7-901",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin pemanasan tim dan beberapa pemain masih bercanda di pinggir lapangan",
+      "opsi": {
+        "A": "Meminta mereka segera masuk barisan dan memulai pemanasan",
+        "B": "Menunggu mereka selesai bercanda agar suasana tetap akrab"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Meminta mereka segera masuk barisan dan memulai pemanasan tegas dalam tindakan memimpin. Menunggu mereka selesai bercanda agar suasana tetap akrab juga bernilai; suasana akrab itu baik, tetapi pemimpin perlu tegas menjalankan agenda. Tips: saat memimpin, tegas dalam tindakan."
+    },
+    {
+      "id": "SK-D7-902",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika menjadi ketua panitia dan dua seksi saling melempar tanggung jawab dekorasi",
+      "opsi": {
+        "A": "Memberi waktu kedua seksi untuk bermusyawarah sendiri",
+        "B": "Menetapkan seksi penanggung jawab dan tenggat penyelesaiannya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menetapkan seksi penanggung jawab dan tenggat penyelesaiannya tegas mengambil keputusan sebagai pemimpin. Memberi waktu kedua seksi untuk bermusyawarah sendiri juga bernilai; musyawarah itu baik, tetapi perselisihan yang berlarut butuh ketegasan pemimpin. Tips: pemimpin yang tegas menetapkan siapa mengerjakan apa."
+    },
+    {
+      "id": "SK-D7-903",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika berdiri di garis start final lari 400 meter",
+      "opsi": {
+        "A": "Ketenangan menjalani lomba apa pun hasilnya",
+        "B": "Ketegangan yang memacu semangat untuk menang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan menjalani lomba apa pun hasilnya menjaga perasaan tetap tenang. Ketegangan yang memacu semangat untuk menang juga bernilai; ketegangan memang bisa memacu, tetapi dalam perasaan yang diutamakan adalah ketenangan. Tips: dalam urusan perasaan, pilih ketenangan."
+    },
+    {
+      "id": "SK-D7-904",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika pengumuman kelulusan seleksi pertukaran mahasiswa diundur sebulan",
+      "opsi": {
+        "A": "Kegelisahan wajar karena rencana menjadi tertunda",
+        "B": "Hati yang tenang menunggu kepastian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Hati yang tenang menunggu kepastian menjaga perasaan tetap tenang. Kegelisahan wajar karena rencana menjadi tertunda juga bernilai; kegelisahan itu wajar, tetapi ketenangan lebih diutamakan. Tips: saat menunggu kepastian, pilih ketenangan hati."
+    },
+    {
+      "id": "SK-D8-901",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika belum menguasai teknik servis atas dalam bola voli",
+      "opsi": {
+        "A": "Berlatih sendiri setiap sore sampai servis masuk dengan konsisten",
+        "B": "Menunggu pelatih punya waktu untuk melatih secara khusus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Berlatih sendiri setiap sore sampai servis masuk dengan konsisten mandiri dan ulet memperbaiki kemampuan. Menunggu pelatih punya waktu untuk melatih secara khusus juga bernilai; dilatih pelatih itu baik, tetapi menunggu membuat Anda bergantung. Tips: kemampuan yang kurang dikejar dengan latihan mandiri."
+    },
+    {
+      "id": "SK-D8-902",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika saluran air di depan sekretariat UKM tersumbat sampah",
+      "opsi": {
+        "A": "Melaporkan sumbatan itu kepada bagian sarana kampus",
+        "B": "Mengajak anggota UKM membersihkannya bersama"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak anggota UKM membersihkannya bersama proaktif dan menggerakkan partisipasi. Melaporkan sumbatan itu kepada bagian sarana kampus juga bernilai; melapor itu benar, tetapi masalah kecil bisa diselesaikan sendiri bersama-sama. Tips: masalah di sekitar Anda diselesaikan dengan menggerakkan orang."
+    },
+    {
+      "id": "SK-D8-903",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika lulus mata kuliah yang terkenal sulit",
+      "opsi": {
+        "A": "Nilai yang diraih dari belajar mandiri setiap malam",
+        "B": "Nilai yang diraih berkat ringkasan materi dari teman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Nilai yang diraih dari belajar mandiri setiap malam menghargai hasil usaha sendiri. Nilai yang diraih berkat ringkasan materi dari teman juga bernilai; bantuan teman itu bernilai, tetapi yang lebih dibanggakan adalah hasil kemandirian. Tips: kebanggaan terbesar datang dari usaha sendiri."
+    },
+    {
+      "id": "SK-D8-904",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika kelompok belajar tidak kunjung menentukan jadwal pertemuan",
+      "opsi": {
+        "A": "Menunggu ketua kelompok menetapkan jadwal",
+        "B": "Mengusulkan jadwal sendiri lalu mengirimkannya ke grup"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengusulkan jadwal sendiri lalu mengirimkannya ke grup proaktif mengambil inisiatif. Menunggu ketua kelompok menetapkan jadwal juga bernilai; menghormati ketua itu baik, tetapi menunggu membuat kelompok tidak bergerak. Tips: saat kelompok macet, ambil inisiatif."
+    },
+    {
+      "id": "SK-D8-905",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika tim futsal kampus belum punya sponsor kaus untuk turnamen",
+      "opsi": {
+        "A": "Mendatangi usaha di sekitar kampus untuk menawarkan kerja sama",
+        "B": "Menunggu bagian kemahasiswaan menyediakan dana kaus"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mendatangi usaha di sekitar kampus untuk menawarkan kerja sama proaktif mencari jalan keluar sendiri. Menunggu bagian kemahasiswaan menyediakan dana kaus juga bernilai; dukungan kampus itu wajar, tetapi menunggu membuat tim bergantung. Tips: kebutuhan tim dikejar dengan inisiatif sendiri."
+    },
+    {
+      "id": "SK-D8-906",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika gagal dua kali dalam seleksi tim debat kampus",
+      "opsi": {
+        "A": "Beralih ke kegiatan lain yang lebih sesuai kemampuan",
+        "B": "Terus berlatih dan mendaftar lagi pada seleksi berikutnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Terus berlatih dan mendaftar lagi pada seleksi berikutnya ulet dan tidak mudah menyerah. Beralih ke kegiatan lain yang lebih sesuai kemampuan juga bernilai; mencari kegiatan yang cocok itu wajar, tetapi aturan dimensi ini mengutamakan keuletan. Tips: kegagalan dijawab dengan keuletan."
+    },
+    {
+      "id": "SK-D8-907",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika jumlah pendonor di acara donor darah organisasi masih sedikit",
+      "opsi": {
+        "A": "Mengajak langsung mahasiswa yang lewat untuk ikut mendonor",
+        "B": "Mengandalkan pengumuman yang sudah disebar di media sosial"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak langsung mahasiswa yang lewat untuk ikut mendonor proaktif menggerakkan partisipasi. Mengandalkan pengumuman yang sudah disebar di media sosial juga bernilai; pengumuman itu sudah usaha, tetapi mengandalkannya saja tidak proaktif. Tips: partisipasi digerakkan dengan ajakan langsung."
+    },
+    {
+      "id": "SK-D8-908",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika lapangan latihan klub tidak bisa dipakai selama renovasi",
+      "opsi": {
+        "A": "Mengisi waktu dengan latihan teori di sekretariat",
+        "B": "Mencari sendiri lapangan pengganti dan mengatur latihan di sana"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencari sendiri lapangan pengganti dan mengatur latihan di sana proaktif dan mandiri mencari jalan keluar. Mengisi waktu dengan latihan teori di sekretariat juga bernilai; latihan teori itu berguna, tetapi belum menyelesaikan kebutuhan latihan fisik. Tips: hambatan diatasi dengan inisiatif mencari jalan keluar."
+    },
+    {
+      "id": "SK-D9-901",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika tim Anda menjuarai turnamen bola voli antarkampus",
+      "opsi": {
+        "A": "Ucapan syukur atas karunia Tuhan",
+        "B": "Rasa puas melihat hasil latihan berbulan-bulan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ucapan syukur atas karunia Tuhan mengutamakan makna spiritual atas keberhasilan. Rasa puas melihat hasil latihan berbulan-bulan juga bernilai; rasa puas itu wajar, tetapi aturan dimensi ini mendahulukan syukur. Tips: saat berhasil, dahulukan rasa syukur."
+    },
+    {
+      "id": "SK-D9-902",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika tim futsal Anda lolos ke final setelah hampir tersingkir di babak grup",
+      "opsi": {
+        "A": "Bangga karena pola latihan baru terbukti berhasil",
+        "B": "Bersyukur kepada Tuhan atas kesempatan yang masih diberikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Bersyukur kepada Tuhan atas kesempatan yang masih diberikan memaknai keberhasilan secara spiritual. Bangga karena pola latihan baru terbukti berhasil juga bernilai; kerja keras memang patut dihargai, tetapi rasa bangga itu berhenti pada hasil usaha. Tips: dimensi ini mendahulukan rasa syukur di atas kebanggaan atas hasil."
+    },
+    {
+      "id": "SK-D9-903",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipegang ketika gagal lolos seleksi beasiswa unggulan",
+      "opsi": {
+        "A": "Keyakinan bahwa ada hikmah di balik ketentuan Tuhan",
+        "B": "Keyakinan bahwa nilai yang lebih tinggi akan membuka peluang"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keyakinan bahwa ada hikmah di balik ketentuan Tuhan mengutamakan makna spiritual dalam menghadapi kegagalan. Keyakinan bahwa nilai yang lebih tinggi akan membuka peluang juga bernilai; memperbaiki nilai itu baik, tetapi aturan dimensi ini mendahulukan makna spiritual. Tips: dalam kegagalan, temukan hikmahnya."
+    },
+    {
+      "id": "SK-D9-904",
+      "dimensi": "D9",
+      "situasi": "Hal yang dilakukan sebelum memulai pertandingan final",
+      "opsi": {
+        "A": "Mengulang strategi permainan bersama pelatih",
+        "B": "Berdoa bersama tim memohon kelancaran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Berdoa bersama tim memohon kelancaran mendahulukan nilai spiritual. Mengulang strategi permainan bersama pelatih juga bernilai; menyiapkan strategi itu penting, tetapi aturan dimensi ini mendahulukan doa. Tips: awali hal penting dengan doa."
+    },
+    {
+      "id": "SK-D9-905",
+      "dimensi": "D9",
+      "situasi": "Hal yang diyakini ketika kegiatan bakti sosial organisasi berjalan lancar meski dana terbatas",
+      "opsi": {
+        "A": "Kemudahan itu datang dari pertolongan Tuhan",
+        "B": "Kemudahan itu hasil perencanaan anggaran yang cermat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kemudahan itu datang dari pertolongan Tuhan mengakui peran Tuhan dalam keberhasilan. Kemudahan itu hasil perencanaan anggaran yang cermat juga bernilai; perencanaan yang cermat itu benar, tetapi aturan dimensi ini mendahulukan makna spiritual. Tips: kelancaran kegiatan disyukuri sebagai pertolongan Tuhan."
+    },
+    {
+      "id": "SK-D9-906",
+      "dimensi": "D9",
+      "situasi": "Hal yang dijaga ketika pekan ujian akhir sangat padat",
+      "opsi": {
+        "A": "Waktu belajar ditambah hingga larut malam",
+        "B": "Waktu ibadah tetap dijalankan dengan tertib"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Waktu ibadah tetap dijalankan dengan tertib menjaga kewajiban spiritual di tengah kesibukan. Waktu belajar ditambah hingga larut malam juga bernilai; belajar lebih lama itu tekun, tetapi ibadah tetap didahulukan. Tips: sesibuk apa pun, ibadah tetap dijaga."
+    },
+    {
+      "id": "SK-D10-901",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika menilai keberhasilan program latihan fisik tim selama tiga bulan",
+      "opsi": {
+        "A": "Peningkatan hasil tes kebugaran para pemain",
+        "B": "Kehadiran pemain yang rajin di setiap sesi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Peningkatan hasil tes kebugaran para pemain menilai keberhasilan dari hasil yang dicapai. Kehadiran pemain yang rajin di setiap sesi juga bernilai; kehadiran itu penting, tetapi belum menunjukkan hasil program. Tips: keberhasilan program diukur dari hasilnya."
+    },
+    {
+      "id": "SK-D10-902",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika mengevaluasi kampanye penerimaan anggota baru UKM",
+      "opsi": {
+        "A": "Kemeriahan stan promosi selama pekan orientasi",
+        "B": "Jumlah anggota baru yang benar-benar mendaftar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah anggota baru yang benar-benar mendaftar menilai keberhasilan dari hasil nyata. Kemeriahan stan promosi selama pekan orientasi juga bernilai; kemeriahan stan itu menarik, tetapi bukan ukuran hasil kampanye. Tips: ukur kampanye dari hasil yang tercapai."
+    },
+    {
+      "id": "SK-D11-901",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika tim futsal kalah telak di babak penyisihan",
+      "opsi": {
+        "A": "Menonton ulang rekaman pertandingan untuk menemukan kesalahan",
+        "B": "Membangkitkan semangat tim dengan acara makan bersama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menonton ulang rekaman pertandingan untuk menemukan kesalahan belajar dari kegagalan. Membangkitkan semangat tim dengan acara makan bersama juga bernilai; menjaga semangat itu baik, tetapi tidak memperbaiki penyebab kekalahan. Tips: setelah kalah, cari pelajarannya."
+    },
+    {
+      "id": "SK-D11-902",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini ketika dosen pembimbing mencoret banyak bagian draf laporan",
+      "opsi": {
+        "A": "Draf itu sudah sesuai panduan penulisan dari jurusan",
+        "B": "Coretan itu menunjukkan bagian yang perlu diperbaiki"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Coretan itu menunjukkan bagian yang perlu diperbaiki menerima masukan sebagai bahan perbaikan. Draf itu sudah sesuai panduan penulisan dari jurusan juga bernilai; mengikuti panduan itu baik, tetapi menutup diri dari masukan. Tips: coretan adalah masukan, bukan serangan."
+    },
+    {
+      "id": "SK-D11-903",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika program kerja organisasi yang Anda pimpin gagal mencapai target",
+      "opsi": {
+        "A": "Mengakui kelemahan perencanaan dan menyusun ulang langkahnya",
+        "B": "Menjelaskan faktor luar yang membuat target sulit dicapai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengakui kelemahan perencanaan dan menyusun ulang langkahnya mengenali kelemahan sendiri dan menyesuaikan strategi. Menjelaskan faktor luar yang membuat target sulit dicapai juga bernilai; faktor luar mungkin ada, tetapi fokus padanya tidak memperbaiki diri. Tips: dalam kegagalan, cari kelemahan sendiri lebih dulu."
+    },
+    {
+      "id": "SK-D11-904",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika pola latihan lama tidak lagi menaikkan catatan waktu renang",
+      "opsi": {
+        "A": "Mempertahankan pola latihan dengan menambah jam berlatih",
+        "B": "Mengubah pola latihan sesuai hasil evaluasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengubah pola latihan sesuai hasil evaluasi menyesuaikan strategi berdasarkan evaluasi. Mempertahankan pola latihan dengan menambah jam berlatih juga bernilai; menambah jam itu tekun, tetapi mengulang cara yang sudah tidak berhasil. Tips: bila cara lama mentok, sesuaikan strateginya."
+    }
+  ]
+}

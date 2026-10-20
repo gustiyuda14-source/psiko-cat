@@ -11,13 +11,28 @@ Sub-tes Kepribadian format situasional: 48 situasi 5 opsi berbobot 1–5 (kunci 
 - Review: `output/pribadi-sjt-p1-review.html`.
 - Seed (pemilik): `cd "/Users/gustiputuyudawirashana/Downloads/PROJECT SISTEM PSIKO TERINTEGRASI/psiko-cat" && npx tsx scripts/seed-pribadi-paket.ts 21 --apply`.
 
-## Prompt lanjutan (paket 2–5)
+## 2026-10-20 · Paket 2–5 (pkg 22–25) — disetujui pemilik, di-seed, live
 
-```
-Lanjutkan Kepribadian SJT: buat Paket 2 (pkg 22) mengikuti docs/rencana/kepribadian-sjt-LOG.md.
-Baca dulu PEDOMAN_UTAMA_PENYUSUNAN_SOAL.md + PEDOMAN_ENGINE_PRIBADI.md dan contoh bank/pribadi/sjt-01.json.
-Tulis sjt-02.json (48 baru, 8/aspek, 3 pasang kembar, situasi dan konteks berbeda dari sjt-01) dan
-sk-sjt-02.json (63 SK baru, id lanjut dari sk-sjt-01, komposisi SK_SLOT, 4 pasang kembar, kunci A 31–32).
-Validasi check-bank-pribadi.ts, compose-pribadi-sjt.ts 22 sjt-02 sk-sjt-02, cek buta Codex, review HTML,
-tambah 22 ke KEPRIBADIAN_SJT_PACKAGES setelah pemilik setuju. Stop ±120k context dan catat di LOG ini.
-```
+Disusun 4 subagent paralel (satu per paket, brief bersama), QA oleh orchestrator.
+
+| Paket | Bank | Konteks | Id | Kunci SJT A/B/C/D/E | Kunci = terpanjang | Kunci A SK |
+|---|---|---|---|---|---|---|
+| 2 (pkg 22) | `sjt-02` + `sk-sjt-02` | sekolah, asrama, keluarga | SJT-xx-101+, SK-Dx-801+ | 10/10/10/9/9 | 8/48 | 32/63 |
+| 3 (pkg 23) | `sjt-03` + `sk-sjt-03` | kampus, organisasi, olahraga | SJT-xx-201+, SK-Dx-901+ | 10/9/10/10/9 | 9/48 | 32/63 |
+| 4 (pkg 24) | `sjt-04` + `sk-sjt-04` | kantor, kelurahan, pelayanan publik | SJT-xx-301+, SK-Dx-1001+ | 10/10/10/9/9 | 8/48 | 32/63 |
+| 5 (pkg 25) | `sjt-05` + `sk-sjt-05` | komunitas, usaha kecil, transportasi umum | SJT-xx-401+, SK-Dx-1101+ | 10/10/9/10/9 | 6/48 | 32/63 |
+
+- Tiap paket: 48 SJT (8 per aspek), kembar SJT xx7↔xx8 di PD, KD, MB (keempat paket memakai set aspek kembar yang sama; sjt-01 memakai PRO/PK/SE). 63 SK komposisi seperti sk-sjt-01, kembar D1/D2/D3/D5 (xx03↔04, xx04↔05, xx05↔06, xx05↔06). Grep unsur kepolisian 0.
+- Manifest `paket-22..25.json` (`compose-pribadi-sjt.ts`), dry-run `seed-pribadi-paket.ts 22..25` lolos komposisi + jawaban ideal 100.
+- `check-bank-pribadi.ts` semua file sekaligus: lolos (816 KP, 240 SJT, 1197 SK, 32 file) setelah dua perbaikan kemiripan lintas paket: SK-D7-1001 (mirip SK-D7-801) ditulis ulang; SK-D9-902 (setelah dipertegas jadi mirip SK-D9-803) diganti situasi lain.
+- Cek buta Codex putaran 1 (tanpa bobot/kunci/dimensi; aturan aspek §7.3 + aturan D1–D11 diberikan): keempat paket 111/111 kunci cocok. Urutan 5 opsi persis sama dengan bobot: P2 35/48, P3 37/48, P4 34/48, P5 44/48; dua teratas sama: 41, 42, 47, 46 dari 48. Tidak ada urutan yang menyimpang jauh.
+- Catatan ambigu Codex hanya di SK: SK-D9-902, SK-D9-1102, SK-D9-1105, SK-D4-1112, SK-D8-1108 (kunci tetap cocok). Diperbaiki: 902 diganti situasi, 1102 "diyakini" → "direnungkan", 1105 "dilakukan" → "didahulukan", 1112 opsi A diganti "Mempertahankan menu dan jam buka…" (A lama juga terbaca inovasi), 1108 stem ditambah "kedua loket masih sanggup Anda layani bergantian". Putaran 2 pemeriksa Codex baru (6 butir termasuk SK-D7-1001 baru): 6/6 cocok, tanpa catatan ambigu.
+- Perbaikan bahasa: 63 pembahasan sk-sjt-05 berpola "juga baik, tetapi X, tetapi Y" → "juga baik: X, tetapi Y". **Utang:** sk-sjt-01 (sudah disetujui) masih punya pola ini di 52 butir; belum disentuh.
+- Butir yang dinilai paling rawan ambigu oleh penyusun (Codex tetap cocok): SJT-SE-103, SJT-PD-105, SJT-PRO-108, SK-D6-806 (P2); SJT-MB-205, SJT-PK-208, SJT-PRO-201, SJT-SE-201, SJT-PK-203 (P3); SJT-SE-306, SJT-PD-303, SJT-MB-302, SJT-PK-304, SK-D9-1002 (P4); SJT-PK-406, SJT-PK-408, SJT-PK-407, SJT-SE-406, SJT-KD-403/406 (P5). Pantau di `/admin/pengecoh` setelah rilis.
+- Review: `output/pribadi-sjt-p2-review.html` … `p5-review.html`.
+- Seed (pemilik): `seed-pribadi-paket.ts 22..25 --apply`, tiap paket 111 baris, jawaban ideal 100. Verifikasi DB: 111 baris/paket, 48 `sjt5`, pembahasan 111/111, aktif, urutan = manifest. `KEPRIBADIAN_SJT_PACKAGES = [21, 22, 23, 24, 25]`. Build diverifikasi di salinan `git archive` (build di repo crash di webpack karena state lokal, lihat memory git-push-workflow).
+- Generator subagent (bisa dijalankan ulang) di scratchpad sesi, tidak masuk repo; JSON di `bank/pribadi/` adalah sumber kebenaran.
+
+## Prompt lanjutan
+
+Target 5 paket SJT Latihan/Mini Tryout tercapai. Sisa utang: rapikan pola "juga baik, tetapi …, tetapi …" di 52 pembahasan `sk-sjt-01` (pkg 21 sudah di DB, jadi perlu update baris DB juga), dan variasikan aspek kembar SJT di paket berikutnya (P2–P5 semua PD/KD/MB).

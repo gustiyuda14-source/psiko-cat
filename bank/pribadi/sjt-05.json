@@ -1,0 +1,1407 @@
+{
+  "batch": "sjt-05",
+  "status": "review",
+  "catatan": "48 butir Kepribadian format situasional (SJT, 5 opsi berbobot 1-5) untuk Latihan/Mini Tryout Kepribadian SJT Paket 5 (package_number 25). 8 butir per aspek, 3 pasang kembar (PD, KD, MB). Konteks komunitas, usaha kecil, dan transportasi umum; netral sesuai pedoman A-7. Belum di-seed.",
+  "definisi_aspek": {
+    "Prososial": "tulus membantu, aktif di masyarakat, tidak mengharap imbalan, dan tidak menutupi kesalahan.",
+    "Pengambilan Keputusan": "cepat, yakin, berani menanggung risiko, dan memutuskan sendiri berdasarkan informasi.",
+    "Penyesuaian Diri": "cepat akrab, langsung terlibat, luwes di lingkungan baru, dan tidak menarik diri.",
+    "Kepercayaan Diri": "berani tampil dan bicara, yakin pada pendapat sendiri, dan tidak bergantung pada nasib.",
+    "Stabilitas Emosi": "emosi terkendali, menerima kritik, berpikir positif, dan tidak meledak.",
+    "Motif Berprestasi": "tekun, ingin unggul, suka tantangan, serta tuntas dan berkualitas."
+  },
+  "items": [
+    {
+      "id": "SJT-PRO-401",
+      "aspek": "Prososial",
+      "konteks": "transportasi umum",
+      "situasi": "Di KRL pada jam sibuk, seorang penumpang tunanetra tampak kebingungan mencari pintu keluar karena pengumuman stasiun tidak terdengar jelas. Ternyata ia akan turun di stasiun yang sama dengan Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Bergeser menjauh agar tidak dimintai tolong di tengah kerumunan",
+        "B": "Menunggu kereta tiba, lalu mencari petugas stasiun untuk mengantarnya",
+        "C": "Menyapanya, lalu menuntunnya turun dari kereta sampai ke gerbang keluar stasiun",
+        "D": "Menyebutkan nama setiap stasiun yang dilewati agar ia tahu kapan harus bersiap turun",
+        "E": "Diam saja karena yakin ada penumpang lain yang akan membantunya"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 3,
+        "C": 5,
+        "D": 4,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan prososial — sengaja menghindari kesempatan menolong.",
+        "B": "prosedural dan menunda — bantuan dialihkan kepada petugas padahal Anda sudah berada di dekatnya.",
+        "C": "menolong langsung dan tuntas sampai kebutuhannya terpenuhi, tanpa menunggu diminta.",
+        "D": "setengah tuntas — ia terbantu mengetahui stasiun, tetapi masih harus mencari jalan keluar sendiri di tengah keramaian.",
+        "E": "pasif — menyerahkan kepedulian kepada orang lain yang belum tentu bergerak."
+      },
+      "tips": "Pada soal prososial, cari bantuan yang Anda lakukan sendiri sampai tuntas, bukan yang diserahkan kepada petugas atau orang lain.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-402",
+      "aspek": "Prososial",
+      "konteks": "usaha kecil",
+      "situasi": "Anda pemilik warung makan. Seorang pembeli lanjut usia ternyata kekurangan Rp5.000 untuk membayar nasi bungkus yang sudah dibungkuskan untuknya. Ia tampak malu dan hendak mengembalikan bungkusannya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengatakan kekurangannya tidak usah dibayar dan tetap memberikan nasi bungkusnya",
+        "B": "Menawarkan mengganti lauknya dengan yang lebih murah sesuai uang yang ia bawa",
+        "C": "Memberikan nasi bungkusnya dan mencatat kekurangannya sebagai utang yang boleh dibayar kapan saja",
+        "D": "Diam dan menunggu pembeli itu memutuskan sendiri",
+        "E": "Mengambil kembali bungkusannya dan segera melayani pembeli berikutnya"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 4,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menolong dengan tulus tanpa mengharap balasan dan tetap menjaga perasaannya.",
+        "B": "jalan keluar prosedural — urusan jual beli selesai, tetapi belum ada pertolongan.",
+        "C": "tetap menolong, tetapi bantuannya masih disertai harapan dibayar kembali.",
+        "D": "pasif — membiarkan orang yang kesulitan tanpa uluran tangan.",
+        "E": "berlawanan dengan prososial — tidak peduli pada kesulitan orang lain."
+      },
+      "tips": "Prososial menghargai bantuan yang tidak menuntut balasan. Bantuan yang dicatat sebagai utang masih kalah dari bantuan yang tulus.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-403",
+      "aspek": "Prososial",
+      "konteks": "komunitas",
+      "situasi": "Anda pengurus bank sampah RW. Hari ini Anda sadar timbangan yang Anda pakai sebulan terakhir ternyata kurang satu kilogram, sehingga tabungan nasabah tercatat lebih kecil. Belum ada nasabah yang protes. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengganti timbangan dan memakai angka yang benar mulai bulan depan saja",
+        "B": "Menunggu sampai ada nasabah yang protes sebelum memperbaiki catatan",
+        "C": "Merahasiakannya karena selisih itu justru menambah kas bank sampah",
+        "D": "Menambahkan selisihnya ke tabungan setiap nasabah secara diam-diam tanpa menjelaskan penyebabnya",
+        "E": "Mengakui kekeliruan itu kepada nasabah dan menambahkan selisih ke tabungan mereka"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 2,
+        "C": 1,
+        "D": 4,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "prosedural — mencegah kesalahan baru, tetapi kerugian sebulan terakhir dibiarkan.",
+        "B": "menunda dan berharap kesalahan tidak ketahuan.",
+        "C": "berlawanan dengan prososial — menutupi kesalahan demi keuntungan sendiri.",
+        "D": "setengah jujur — hak nasabah dipulihkan, tetapi kesalahannya tetap ditutupi.",
+        "E": "mengakui kesalahan secara terbuka dan langsung memulihkan hak nasabah. Prososial termasuk tidak menutupi kesalahan."
+      },
+      "tips": "Kalau situasi menyebut kesalahan Anda sendiri, opsi terbaik mengakui secara terbuka lalu memulihkan kerugian orang lain.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-404",
+      "aspek": "Prososial",
+      "konteks": "komunitas",
+      "situasi": "Komunitas relawan lingkungan di daerah Anda kekurangan orang untuk menanam bibit bakau di pesisir pada Sabtu pagi. Anda tidak punya acara, tetapi sudah berencana bersantai di rumah seharian. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mendaftar sebagai cadangan dan baru datang bila panitia benar-benar kekurangan orang",
+        "B": "Datang sejak pagi dan ikut menanam sampai bibit terakhir selesai ditanam",
+        "C": "Tetap bersantai karena kegiatan itu bukan kewajiban Anda",
+        "D": "Menyebarkan ajakan di media sosial agar lebih banyak orang lain yang datang menanam",
+        "E": "Menulis di grup warga bahwa kegiatan menanam bakau hanya membuang waktu"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 5,
+        "C": 2,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "menunda — keterlibatan digantungkan pada keadaan.",
+        "B": "terlibat langsung dan tuntas dalam kegiatan masyarakat tanpa mengharap imbalan.",
+        "C": "pasif — mendahulukan kenyamanan sendiri di atas kepentingan bersama.",
+        "D": "baik, tetapi kurang langsung — Anda menggerakkan orang lain tanpa ikut turun tangan.",
+        "E": "berlawanan dengan prososial — meremehkan kegiatan bersama dan melemahkan semangat orang lain."
+      },
+      "tips": "Prososial berarti aktif di masyarakat. Hadir dan bekerja langsung lebih tinggi daripada sekadar menyebarkan ajakan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-405",
+      "aspek": "Prososial",
+      "konteks": "transportasi umum",
+      "situasi": "Di ruang tunggu terminal bus antarkota, seorang ibu dengan dua anak kecil menangis karena dompet berisi tiket dan ongkos pulangnya hilang. Orang-orang di sekitar hanya memandang. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut memandang sambil menunggu orang lain bergerak lebih dulu",
+        "B": "Mengantarnya ke loket informasi agar petugas terminal yang membantu mencarikan jalan keluar",
+        "C": "Memberinya nomor layanan pengaduan terminal agar ia menghubunginya sendiri",
+        "D": "Menghampiri dan menenangkannya, lalu membantu membelikan tiket pulang tanpa meminta uangnya diganti",
+        "E": "Pindah tempat duduk karena tangisannya mengganggu"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 4,
+        "C": 3,
+        "D": 5,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "pasif — kepedulian ditunda sampai ada orang lain yang memulai.",
+        "B": "peduli, tetapi penyelesaiannya bergantung pada petugas.",
+        "C": "prosedural — memberi petunjuk, tetapi tidak ada bantuan nyata.",
+        "D": "menolong langsung, memenuhi kebutuhan utamanya, dan tidak mengharap balasan.",
+        "E": "berlawanan dengan prososial — menjauh dari orang yang membutuhkan."
+      },
+      "tips": "Pilih bantuan yang langsung menjawab kebutuhan utama orang yang ditolong, tanpa syarat dan tanpa dialihkan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-406",
+      "aspek": "Prososial",
+      "konteks": "usaha kecil",
+      "situasi": "Kedai kopi Anda sedang sepi. Pemilik warung bakso di sebelah kewalahan membungkus pesanan untuk sebuah acara, padahal pesanan harus diambil satu jam lagi. Ia tidak meminta bantuan siapa pun. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Datang menawarkan diri ikut membungkus pesanan sampai selesai tanpa meminta bayaran",
+        "B": "Menyarankan agar ia meminta pemesan mengundur waktu pengambilan",
+        "C": "Tetap mengurus kedai sendiri karena itu bukan urusan Anda",
+        "D": "Menawarkan bantuan dengan meminta bayaran yang cukup tinggi",
+        "E": "Mengirim pegawai Anda yang sedang senggang untuk membantunya membungkus pesanan sampai selesai"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 2,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menolong langsung tanpa diminta dan tanpa mengharap imbalan.",
+        "B": "memberi saran prosedural, tetapi tidak ada bantuan nyata.",
+        "C": "pasif — tidak peduli pada kesulitan tetangga usaha.",
+        "D": "berlawanan dengan prososial — memanfaatkan kesulitan orang lain untuk keuntungan.",
+        "E": "baik, tetapi kurang langsung — pertolongan diwakilkan kepada orang lain."
+      },
+      "tips": "Prososial menghargai bantuan yang tulus dan dilakukan sendiri. Bantuan yang dibayar mahal bukan lagi pertolongan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-407",
+      "aspek": "Prososial",
+      "konteks": "komunitas",
+      "situasi": "Seorang anggota arisan RT baru pulang dari rumah sakit dan tinggal sendirian. Ia belum boleh banyak bergerak, sementara bahan makanan di rumahnya sudah habis. Anda kebetulan akan ke pasar sore ini. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengusulkan di grup arisan agar anggota lain bergiliran membantunya berbelanja",
+        "B": "Menghindari rumahnya agar tidak dimintai tolong",
+        "C": "Menawarkan diri membelanjakan kebutuhannya dan mengantarkannya sampai ke rumah",
+        "D": "Mendoakan kesembuhannya lewat grup tanpa berbuat apa-apa",
+        "E": "Menyarankan ia memesan belanjaan lewat aplikasi agar diantar kurir"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 1,
+        "C": 5,
+        "D": 2,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "peduli, tetapi pertolongannya diserahkan kepada orang lain.",
+        "B": "berlawanan dengan prososial — sengaja menjauhi orang yang membutuhkan.",
+        "C": "menolong langsung dan memenuhi kebutuhan utamanya tanpa menunggu diminta.",
+        "D": "pasif — kepedulian berhenti pada ucapan.",
+        "E": "memberi jalan keluar prosedural, belum ada bantuan dari Anda sendiri."
+      },
+      "tips": "Saat Anda punya kesempatan menolong langsung, opsi terbaik memakai kesempatan itu, bukan mengalihkannya kepada orang lain.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PRO-408",
+      "aspek": "Prososial",
+      "konteks": "transportasi umum",
+      "situasi": "Saat antre naik kapal di pelabuhan, seorang kakek di depan Anda kesulitan mengangkat dua kardus besar menaiki tangga kapal. Penumpang di belakang mulai menggerutu karena antrean tertahan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut menggerutu agar kakek itu segera menyingkir dari antrean",
+        "B": "Menyarankan kakek itu menitipkan kardusnya ke bagian bagasi agar tidak perlu dibawa menaiki tangga",
+        "C": "Menunggu dengan sabar sampai kakek itu berhasil sendiri",
+        "D": "Memanggil petugas pelabuhan agar membantu mengangkat kardus kakek itu",
+        "E": "Mengangkatkan kardusnya naik ke kapal sambil memastikan kakek itu naik dengan aman"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 3,
+        "C": 2,
+        "D": 4,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan prososial — menekan orang yang sedang kesulitan.",
+        "B": "prosedural — memberi petunjuk tanpa menolong secara nyata.",
+        "C": "pasif — tidak mengganggu, tetapi juga tidak menolong.",
+        "D": "peduli, tetapi pertolongannya bergantung pada petugas.",
+        "E": "menolong langsung dan tuntas di saat yang dibutuhkan."
+      },
+      "tips": "Pada aspek prososial, tindakan menolong yang langsung dan dilakukan sendiri selalu lebih tinggi daripada memanggil orang lain.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-401",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "usaha kecil",
+      "situasi": "Anda menjalankan usaha kue rumahan. Pukul 05.00 oven utama rusak, padahal 100 kotak kue harus diantar pukul 10.00. Tetangga Anda punya oven yang bisa disewa pagi itu juga. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membatalkan seluruh pesanan karena takut hasil kuenya tidak sempurna",
+        "B": "Langsung menyewa oven tetangga dan membagi waktu memanggang sesuai sisa waktu",
+        "C": "Menunggu anggota keluarga bangun agar mereka yang memutuskan",
+        "D": "Menelepon pemesan dulu untuk menanyakan apakah kue boleh terlambat, baru memutuskan langkah",
+        "E": "Mencoba memperbaiki oven sendiri dulu dan baru mencari cara lain bila gagal"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 5,
+        "C": 2,
+        "D": 4,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — menghindari risiko dan mengabaikan jalan keluar yang ada.",
+        "B": "cepat, yakin, dan berdasarkan informasi bahwa oven tetangga tersedia.",
+        "C": "pasif — tidak memutuskan sendiri padahal Anda pemilik usaha.",
+        "D": "tidak keliru, tetapi lebih lambat dan menggantungkan keputusan pada jawaban orang lain.",
+        "E": "menunda keputusan padahal waktu sangat mendesak."
+      },
+      "tips": "Pengambilan keputusan yang baik itu cepat, diambil sendiri, dan memakai informasi yang sudah tersedia.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-402",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "transportasi umum",
+      "situasi": "Anda menuju wawancara kerja pukul 09.00. Di stasiun transit, papan informasi menyebut KRL tertunda 40 menit karena gangguan sinyal. Aplikasi menunjukkan bus kota ke arah yang sama berangkat lima menit lagi dari halte depan stasiun dan tiba pukul 08.45. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengabari pewawancara tentang kemungkinan terlambat, lalu menunggu balasannya sebelum memilih kendaraan",
+        "B": "Tetap menunggu KRL karena sudah telanjur masuk stasiun",
+        "C": "Bertanya kepada petugas stasiun apakah tundaannya bisa lebih singkat, baru memutuskan",
+        "D": "Segera keluar stasiun dan naik bus kota tersebut",
+        "E": "Pulang saja karena yakin sudah tidak mungkin tiba tepat waktu"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 3,
+        "D": 5,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "sopan, tetapi keputusan ditunda sampai ada jawaban orang lain.",
+        "B": "pasif — bertahan pada rencana lama tanpa menimbang informasi baru.",
+        "C": "menunda padahal informasi yang dibutuhkan sudah cukup.",
+        "D": "cepat dan yakin, berdasarkan informasi jadwal yang sudah jelas.",
+        "E": "berlawanan dengan aspek — menyerah tanpa melihat pilihan yang tersedia."
+      },
+      "tips": "Bila informasi sudah cukup dan waktu mendesak, putuskan sekarang. Menunggu jawaban orang lain membuat kesempatan hilang.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-403",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "komunitas",
+      "situasi": "Anda penanggung jawab acara bersepeda 40 km komunitas pada Minggu pagi. Sabtu malam, prakiraan cuaca resmi menyebut hujan lebat disertai angin pada jam keberangkatan. Tiga puluh anggota menunggu kepastian di grup. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Malam itu juga memutuskan menunda acara ke minggu depan dan mengumumkannya beserta alasannya",
+        "B": "Menunggu sampai Minggu subuh untuk melihat langit sebelum memutuskan",
+        "C": "Tidak mengumumkan apa pun dan membiarkan anggota memutuskan sendiri",
+        "D": "Membuat jajak pendapat di grup dan mengikuti suara terbanyak besok pagi",
+        "E": "Tetap berangkat sesuai rencana tanpa menimbang prakiraan cuaca"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 2,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "cepat dan berdasarkan informasi cuaca, sekaligus berani menanggung keputusan sendiri.",
+        "B": "menunda padahal anggota butuh kepastian dan informasinya sudah ada.",
+        "C": "pasif — menghindari tanggung jawab sebagai penanggung jawab acara.",
+        "D": "melibatkan anggota, tetapi lambat dan keputusan diserahkan kepada orang lain.",
+        "E": "berlawanan dengan aspek — keputusan diambil dengan mengabaikan informasi penting."
+      },
+      "tips": "Keputusan yang baik diambil oleh orang yang bertanggung jawab, tepat waktu, dan berdasarkan informasi yang tersedia.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-404",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "usaha kecil",
+      "situasi": "Anda pemilik toko daring kerajinan. Jasa kirim baru menawarkan ongkos kirim 20% lebih murah. Anda sudah menguji 10 paket dengan jasa itu dan semuanya tiba tepat waktu dalam keadaan utuh. Beberapa penjual lain masih ragu karena jasa itu baru. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membatalkan rencana karena takut disalahkan bila kelak ada paket rusak",
+        "B": "Memakai jasa baru untuk separuh paket dulu sambil menunggu pendapat penjual lain tentang jasa itu",
+        "C": "Menambah uji coba sebulan lagi sebelum memutuskan",
+        "D": "Tetap memakai jasa lama karena penjual lain juga belum pindah",
+        "E": "Memutuskan beralih ke jasa kirim baru mulai minggu ini berdasarkan hasil uji coba"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 3,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — takut menanggung risiko dan mengabaikan data.",
+        "B": "setengah langkah — keputusan masih bergantung pada penilaian orang lain.",
+        "C": "menunda padahal hasil uji coba sudah jelas.",
+        "D": "pasif — ikut-ikutan tanpa menimbang informasi sendiri.",
+        "E": "yakin dan berani memutuskan sendiri berdasarkan data yang Anda kumpulkan."
+      },
+      "tips": "Aspek pengambilan keputusan menghargai keyakinan pada informasi sendiri, bukan menunggu orang lain lebih dulu.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-405",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "transportasi umum",
+      "situasi": "Anda memimpin rombongan 12 orang yang harus tiba di pulau seberang hari ini untuk sebuah acara. Kapal cepat dibatalkan karena gelombang tinggi. Kapal feri berangkat 30 menit lagi dan masih tersisa 15 kursi. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyerahkan kepada setiap anggota untuk mencari kapal sendiri-sendiri",
+        "B": "Membatalkan perjalanan dan memulangkan rombongan tanpa melihat pilihan lain",
+        "C": "Segera membeli 12 tiket feri dan mengumpulkan rombongan di dermaga",
+        "D": "Menunggu pengumuman berikutnya, siapa tahu kapal cepat jadi berangkat",
+        "E": "Menanyakan pendapat anggota rombongan satu per satu sebelum membeli tiket feri"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 5,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "pasif — melepas tanggung jawab sebagai pemimpin rombongan.",
+        "B": "berlawanan dengan aspek — keputusan tergesa yang mengabaikan informasi.",
+        "C": "cepat, yakin, dan sesuai informasi kursi yang tersisa.",
+        "D": "menunda dan berharap pada kemungkinan yang belum pasti.",
+        "E": "tidak salah, tetapi lambat saat kursi terbatas dan waktu sempit."
+      },
+      "tips": "Saat ada pilihan yang jelas dan kesempatan terbatas, keputusan cepat lebih bernilai daripada menunggu.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-406",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "komunitas",
+      "situasi": "Anda koordinator bazar amal komunitas dan memegang anggaran acara. Sehari sebelum acara, satu penyewa tenda membatalkan pesanan, padahal ada enam pedagang yang membutuhkannya. Penyewa lain punya tenda dengan harga sedikit di atas anggaran, dan sisa kas masih cukup. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membiarkan keenam pedagang mencari tenda sendiri",
+        "B": "Langsung menyewa tenda pengganti dengan sisa kas dan mencatat alasannya di laporan",
+        "C": "Membatalkan keikutsertaan enam pedagang tanpa mencari pengganti",
+        "D": "Menunggu kabar dari penyewa lama, siapa tahu tendanya tersedia lagi",
+        "E": "Meminta persetujuan seluruh panitia lewat grup dulu, lalu menyewa setelah mereka setuju"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 5,
+        "C": 1,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "pasif — menghindari tanggung jawab sebagai koordinator.",
+        "B": "cepat, sesuai wewenang Anda, dan berdasarkan informasi bahwa kas masih cukup.",
+        "C": "berlawanan dengan aspek — keputusan tergesa yang mengabaikan jalan keluar.",
+        "D": "menunda dan berharap pada kemungkinan kecil.",
+        "E": "masih bisa berhasil, tetapi menggantungkan keputusan yang menjadi wewenang Anda kepada orang lain."
+      },
+      "tips": "Bila keputusan ada dalam wewenang Anda dan informasinya lengkap, putuskan sendiri dan catat alasannya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-407",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "usaha kecil",
+      "situasi": "Anda pemilik warung sembako. Pemasok mengabarkan harga minyak goreng naik 15% mulai besok. Stok Anda tinggal untuk tiga hari, dan uang kas cukup untuk membeli stok dua minggu hari ini. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Langsung menaikkan harga semua barang di warung tanpa menghitung",
+        "B": "Berbelanja seperti biasa ketika stok sudah habis",
+        "C": "Membeli stok untuk seminggu dulu dan memutuskan sisanya setelah melihat harga besok",
+        "D": "Hari ini juga membeli stok untuk dua minggu dengan harga lama",
+        "E": "Menanyakan dulu kepada pemilik warung lain apakah harga benar-benar akan naik"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 2,
+        "C": 4,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — keputusan tergesa tanpa dasar perhitungan.",
+        "B": "pasif — mengabaikan informasi yang bisa menguntungkan usaha.",
+        "C": "setengah langkah — sebagian manfaat hilang karena ragu.",
+        "D": "cepat, berani, dan sesuai informasi kenaikan harga serta kas yang tersedia.",
+        "E": "menunda padahal informasi datang langsung dari pemasok."
+      },
+      "tips": "Keputusan yang baik memakai informasi yang ada untuk bertindak sekarang, bukan setengah-setengah.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PK-408",
+      "aspek": "Pengambilan Keputusan",
+      "konteks": "transportasi umum",
+      "situasi": "Anda naik angkot terakhir pada malam hari. Sopir mengumumkan angkot hanya sampai pasar karena sudah larut, padahal rumah Anda masih 3 km lagi. Di depan pasar ada pangkalan ojek, dan baterai ponsel Anda tinggal 5%. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Turun di pasar dan langsung naik ojek dari pangkalan sambil mengabari keluarga",
+        "B": "Berjalan kaki 3 km lewat jalan gelap tanpa memberi kabar siapa pun",
+        "C": "Menelepon keluarga untuk minta dijemput, lalu menunggu di pasar sampai mereka datang",
+        "D": "Bertahan di dalam angkot sambil berharap sopir berubah pikiran",
+        "E": "Mencari warung untuk mengisi daya ponsel dulu sebelum memutuskan pulang naik apa"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 1,
+        "C": 4,
+        "D": 2,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "cepat dan sesuai informasi yang ada sebelum ponsel mati.",
+        "B": "berlawanan dengan aspek — keputusan gegabah yang mengabaikan risiko dan pilihan yang lebih baik.",
+        "C": "aman, tetapi bergantung pada orang lain dan lebih lama di tempat sepi.",
+        "D": "pasif — menunggu keadaan berubah tanpa bertindak.",
+        "E": "menunda keputusan padahal pilihan sudah ada di depan mata."
+      },
+      "tips": "Berani memutuskan bukan berarti nekat. Pilih keputusan cepat yang memakai informasi dan pilihan yang tersedia.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-401",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "komunitas",
+      "situasi": "Anda baru pindah kota dan bergabung dengan komunitas pencinta tanaman hias. Pada pertemuan pertama, anggota langsung sibuk menata stan pameran, dan belum ada yang memperkenalkan Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Memperkenalkan diri kepada ketua, lalu menunggu ia memberi Anda tugas",
+        "B": "Mengamati cara kerja mereka dulu dan baru ikut membantu pada pertemuan berikutnya",
+        "C": "Pulang lebih awal dan tidak datang lagi karena merasa tidak disambut",
+        "D": "Duduk di pinggir sambil memainkan ponsel sampai acara selesai",
+        "E": "Memperkenalkan diri kepada anggota di dekat Anda dan langsung ikut menata stan"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 3,
+        "C": 1,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "sudah membuka diri, tetapi keterlibatannya masih menunggu arahan orang lain.",
+        "B": "menunda keterlibatan.",
+        "C": "berlawanan dengan aspek — menyerah sebelum mencoba berbaur.",
+        "D": "menarik diri dari lingkungan baru.",
+        "E": "cepat akrab dan langsung terlibat di lingkungan baru."
+      },
+      "tips": "Penyesuaian diri dinilai dari seberapa cepat Anda berbaur dan ikut bekerja tanpa menunggu diajak.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-402",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "usaha kecil",
+      "situasi": "Anda baru bekerja di sebuah kedai kopi. Para pegawai lama sering bercanda memakai bahasa daerah setempat yang belum Anda kuasai, sehingga Anda kadang tidak mengerti obrolan mereka. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Diam dan fokus bekerja saja setiap kali mereka bercanda",
+        "B": "Meminta mereka berhenti memakai bahasa daerah selama di kedai",
+        "C": "Ikut bergabung dalam obrolan, menanyakan arti kata-kata baru, dan mencoba memakainya",
+        "D": "Belajar bahasa itu sendiri dari internet dulu sebelum ikut mengobrol",
+        "E": "Ikut tersenyum dalam obrolan mereka dan meminta satu rekan menerjemahkan setiap kali Anda tidak paham"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 1,
+        "C": 5,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menarik diri dari pergaulan di tempat kerja.",
+        "B": "berlawanan dengan aspek — menuntut lingkungan menyesuaikan diri dengan Anda.",
+        "C": "luwes, cepat akrab, dan aktif mempelajari kebiasaan lingkungan baru.",
+        "D": "menunda keterlibatan sampai merasa siap.",
+        "E": "tetap ramah, tetapi pemahaman Anda bergantung pada orang lain."
+      },
+      "tips": "Orang yang mudah menyesuaikan diri belajar dari lingkungan barunya, bukan meminta lingkungan berubah.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-403",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Kantor Anda pindah ke pusat kota. Kini Anda harus naik KRL pada jam sibuk, lengkap dengan aturan gerbong dan perpindahan jalur di stasiun transit yang belum pernah Anda alami. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Berangkat jauh lebih pagi agar tidak perlu bertemu keramaian, walau harus menunggu kantor buka",
+        "B": "Mempelajari peta rute, mencoba jalurnya sehari sebelumnya, dan bertanya kepada penumpang tetap",
+        "C": "Meminta teman yang biasa naik KRL menemani Anda selama minggu pertama",
+        "D": "Mengajukan permintaan kembali ke kantor lama karena tidak mau mengubah kebiasaan",
+        "E": "Tetap naik taksi daring yang mahal sampai merasa benar-benar siap mencoba KRL"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 5,
+        "C": 4,
+        "D": 1,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "menghindari situasi baru alih-alih menyesuaikan diri.",
+        "B": "luwes dan langsung terlibat dengan kebiasaan baru.",
+        "C": "mau mencoba, tetapi masih bergantung pada pendamping.",
+        "D": "berlawanan dengan aspek — menolak perubahan lingkungan.",
+        "E": "menunda penyesuaian."
+      },
+      "tips": "Penyesuaian diri berarti langsung mencoba dan mempelajari kebiasaan baru, bukan menunda atau menghindarinya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-404",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "komunitas",
+      "situasi": "Anda menjadi relawan dapur umum untuk korban banjir di desa lain. Cara memasak, jadwal tidur, dan tempat istirahat di sana jauh berbeda dari kebiasaan Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Bersikeras memasak dengan cara Anda sendiri karena menurut Anda lebih benar",
+        "B": "Ikut bekerja dengan cara mereka, tetapi beristirahat terpisah bersama rombongan dari daerah Anda",
+        "C": "Meminta waktu sehari untuk mengamati keadaan sebelum mulai bekerja",
+        "D": "Langsung bekerja mengikuti cara mereka dan ikut berbaur dengan relawan setempat saat istirahat",
+        "E": "Memilih tugas yang tidak perlu berinteraksi dengan relawan lain"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 3,
+        "D": 5,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — kaku dan menuntut lingkungan mengikuti Anda.",
+        "B": "setengah menyesuaikan — mau bekerja, tetapi masih menjaga jarak.",
+        "C": "menunda keterlibatan saat tenaga sangat dibutuhkan.",
+        "D": "luwes dan langsung terlibat di lingkungan baru.",
+        "E": "menarik diri dari lingkungan baru."
+      },
+      "tips": "Di lingkungan baru, pilih sikap yang langsung ikut cara setempat dan berbaur dengan orang di sana.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-405",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "usaha kecil",
+      "situasi": "Anda baru membuka lapak di pasar pagi. Para pedagang di sekitar sudah saling akrab dan terbiasa saling menjaga lapak ketika ada yang pergi sebentar. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyapa pedagang di kiri dan kanan, memperkenalkan diri, dan ikut saling menjaga lapak",
+        "B": "Menganggap pedagang lain sebagai pesaing dan sengaja menjaga jarak",
+        "C": "Menutup lapak setiap kali harus pergi agar tidak perlu menitipkan kepada siapa pun",
+        "D": "Mengamati kebiasaan mereka selama seminggu sebelum mulai menyapa",
+        "E": "Memperkenalkan diri kepada satu pedagang terdekat saja dan menitipkan lapak bila perlu"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 1,
+        "C": 2,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "cepat akrab dan langsung terlibat dalam kebiasaan baik di lingkungan baru.",
+        "B": "berlawanan dengan aspek — menutup diri dari lingkungan.",
+        "C": "menghindari interaksi dengan lingkungan baru.",
+        "D": "menunda keakraban.",
+        "E": "sudah membuka diri, tetapi baru sebagian dan masih sempit."
+      },
+      "tips": "Penyesuaian diri tampak dari keberanian menyapa lebih dulu dan ikut dalam kebiasaan lingkungan baru.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-406",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Anda baru bekerja sebagai kondektur bus antarkota. Sopir dan kru lama punya kebiasaan, istilah, dan pembagian tugas yang belum Anda kenal. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Bekerja sesuai arahan sopir saja dan menunggu kru lain mengajak berbincang",
+        "B": "Bekerja dengan cara sendiri dan mengabaikan kebiasaan kru lama",
+        "C": "Langsung bekerja sambil menanyakan istilah dan kebiasaan mereka di sela perjalanan",
+        "D": "Meminta kepada pengatur jadwal agar dipasangkan dengan kru yang sudah Anda kenal dari tempat kerja lama",
+        "E": "Diam sepanjang perjalanan dan hanya bicara bila ditanya"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 1,
+        "C": 5,
+        "D": 3,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "bekerja, tetapi keakraban masih menunggu orang lain.",
+        "B": "berlawanan dengan aspek — tidak mau menyesuaikan diri.",
+        "C": "luwes, cepat akrab, dan belajar langsung dari lingkungan baru.",
+        "D": "menghindari lingkungan baru lewat jalur prosedural.",
+        "E": "menarik diri dari rekan kerja baru."
+      },
+      "tips": "Pilih opsi yang membuat Anda cepat masuk ke kebiasaan tim baru, bukan yang membuat Anda tetap di zona lama.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-PD-407",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "komunitas",
+      "situasi": "Anda baru pindah ke sebuah perumahan dan datang ke arisan RT untuk pertama kalinya. Para warga sudah saling kenal dan langsung ramai membahas rencana lomba tujuh belasan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut mengobrol dengan ramah, tetapi baru mau membantu kalau ada yang meminta",
+        "B": "Mencatat rencana lomba dan berjanji ikut membantu tahun depan setelah lebih kenal",
+        "C": "Memutuskan tidak datang ke arisan lagi karena merasa asing",
+        "D": "Duduk di sudut dan pulang setelah undian arisan selesai",
+        "E": "Memperkenalkan diri dan menawarkan diri membantu panitia lomba"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 3,
+        "C": 1,
+        "D": 2,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "sudah berbaur, tetapi keterlibatannya masih menunggu diajak.",
+        "B": "menunda keterlibatan.",
+        "C": "berlawanan dengan aspek — menutup diri dari lingkungan baru.",
+        "D": "menarik diri dari lingkungan baru.",
+        "E": "cepat akrab dan langsung terlibat dalam kegiatan lingkungan baru."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu langsung berbaur dan ikut terlibat tanpa menunggu diajak.",
+      "kembar_dengan": "SJT-PD-408"
+    },
+    {
+      "id": "SJT-PD-408",
+      "aspek": "Penyesuaian Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Anda baru bergabung dengan pangkalan ojek daring dekat stasiun. Para pengemudi lama punya posko bersama dan kas kecil, dan mereka sedang merencanakan bersih-bersih posko akhir pekan ini. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menunggu beberapa minggu sampai lebih dikenal sebelum ikut kegiatan posko",
+        "B": "Menyapa mereka, ikut mengisi kas, dan datang membantu bersih-bersih akhir pekan itu",
+        "C": "Mangkal di tempat lain yang lebih sepi agar tidak perlu banyak bergaul",
+        "D": "Menolak ikut terlibat karena menganggap kegiatan posko bukan urusan pengemudi yang baru bergabung",
+        "E": "Ikut mengisi kas, tetapi menunggu diajak sebelum ikut bersih-bersih"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 5,
+        "C": 2,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "menunda keterlibatan.",
+        "B": "cepat akrab dan langsung terlibat dalam kegiatan lingkungan baru.",
+        "C": "menghindari lingkungan baru.",
+        "D": "berlawanan dengan aspek — menutup diri dari lingkungan baru.",
+        "E": "sudah berbaur sebagian, tetapi keterlibatannya masih menunggu orang lain."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu langsung berbaur dan ikut terlibat tanpa menunggu diajak.",
+      "kembar_dengan": "SJT-PD-407"
+    },
+    {
+      "id": "SJT-KD-401",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "usaha kecil",
+      "situasi": "Panitia bazar kuliner kota menawari Anda, pemilik usaha kue rumahan, kesempatan memperkenalkan produk selama lima menit di panggung di depan ratusan pengunjung. Anda belum pernah berbicara di depan umum. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menerima tawaran bila adik Anda yang lebih pandai bicara boleh ikut naik panggung",
+        "B": "Menunda jawaban sampai panitia akhirnya menawarkan kesempatan itu kepada orang lain",
+        "C": "Menolak karena yakin produk Anda belum cukup bagus untuk dipamerkan",
+        "D": "Menerima tawaran itu dan berlatih presentasi beberapa kali di depan keluarga",
+        "E": "Meminta panitia mengganti presentasi dengan brosur yang dibagikan kepada pengunjung"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berani tampil, tetapi masih bergantung pada pendamping.",
+        "B": "pasif — membiarkan kesempatan hilang.",
+        "C": "berlawanan dengan aspek — meremehkan kemampuan sendiri.",
+        "D": "berani tampil dan menyiapkan diri dengan sungguh-sungguh.",
+        "E": "memilih jalan prosedural untuk menghindari tampil."
+      },
+      "tips": "Kepercayaan diri dinilai dari keberanian tampil. Belum berpengalaman bukan alasan mundur bila Anda mau bersiap.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-402",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "komunitas",
+      "situasi": "Dalam rapat komunitas pencinta sungai, para anggota senior menyimpulkan bahwa sampah plastik di sungai berasal dari pengunjung taman. Dari tiga kali pengamatan, Anda tahu sebagian besar sampah justru datang dari saluran pembuangan pasar di hulu. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Ikut menyetujui kesimpulan senior walaupun Anda tahu kesimpulan itu keliru",
+        "B": "Mengangkat tangan dan memaparkan hasil pengamatan Anda beserta foto-fotonya",
+        "C": "Mengusulkan agar dibentuk tim pengamat dulu sebelum rapat menyimpulkan apa pun",
+        "D": "Menyampaikan temuan itu kepada ketua setelah rapat agar ia yang menyampaikannya",
+        "E": "Diam saja karena merasa tidak pantas membantah anggota senior"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 5,
+        "C": 3,
+        "D": 4,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — mengingkari pendapat sendiri.",
+        "B": "berani bicara dan yakin pada pendapat yang didukung bukti.",
+        "C": "prosedural — menunda tanpa menyampaikan bukti yang sudah Anda punya.",
+        "D": "pendapat tetap sampai, tetapi Anda tidak berani menyampaikannya sendiri.",
+        "E": "pasif — tidak berani bersuara."
+      },
+      "tips": "Kepercayaan diri berarti berani menyampaikan pendapat sendiri, apalagi bila didukung bukti.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-403",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Kondektur bus antarkota menagih ongkos Rp20.000 lebih mahal daripada tarif resmi yang tertempel di kaca bus. Anda yakin tarif itu masih berlaku. Penumpang lain membayar tanpa bertanya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membayar penuh, lalu melapor ke layanan pengaduan perusahaan bus setelah tiba",
+        "B": "Membayar penuh tanpa bertanya, sama seperti penumpang lain",
+        "C": "Menunjukkan tarif di kaca dan dengan sopan membayar sesuai tarif itu",
+        "D": "Membayar sesuai tarif resmi asalkan ada penumpang lain yang mau ikut protes bersama",
+        "E": "Membayar penuh sambil menganggap Anda sendiri yang salah membaca tarif"
+      },
+      "bobot": {
+        "A": 3,
+        "B": 2,
+        "C": 5,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "prosedural dan menunda — tidak berani menyampaikannya saat itu.",
+        "B": "pasif — mengikuti arus walau yakin ada yang keliru.",
+        "C": "yakin pada pendapat sendiri dan berani menyampaikannya dengan sopan.",
+        "D": "pendapat sudah ada, tetapi keberanian bergantung pada dukungan orang lain.",
+        "E": "berlawanan dengan aspek — tidak yakin pada penilaian sendiri."
+      },
+      "tips": "Pilih opsi yang menunjukkan keyakinan pada pendapat sendiri dan keberanian menyampaikannya secara sopan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-404",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "usaha kecil",
+      "situasi": "Anda membuka warung nasi dengan sambal khas daerah asal sebagai menu andalan. Catatan penjualan dua minggu pertama menunjukkan sambal itu paling laris. Seorang kerabat menyarankan mengganti semua menu dengan makanan yang sedang tren di media sosial. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tetap mempertahankan menu andalan dan menjelaskan alasannya kepada kerabat dengan data penjualan",
+        "B": "Mengganti semua menu karena merasa selera Anda pasti kalah oleh tren",
+        "C": "Mempertahankan menu, tetapi menunggu pendapat pelanggan tetap sebelum menanggapi kerabat",
+        "D": "Mengikuti saran kerabat agar tidak terjadi perselisihan",
+        "E": "Menunda tanggapan sampai catatan penjualan satu bulan penuh terkumpul"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 1,
+        "C": 4,
+        "D": 2,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "yakin pada pendapat sendiri yang didukung data dan berani menyampaikannya.",
+        "B": "berlawanan dengan aspek — meremehkan pendapat sendiri.",
+        "C": "keyakinan masih bergantung pada penilaian orang lain.",
+        "D": "pasif — mengalah pada pendapat orang lain.",
+        "E": "menunda padahal data sudah cukup jelas."
+      },
+      "tips": "Kepercayaan diri bukan keras kepala: yakin pada pendapat sendiri karena ada dasarnya, lalu berani menjelaskannya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-405",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "komunitas",
+      "situasi": "Komunitas teater kampung Anda mengadakan audisi pemeran utama untuk pentas tujuh belasan. Anda hafal naskahnya dan rajin berlatih, tetapi salah satu peserta audisi adalah pemain senior yang sudah tiga kali menjadi pemeran utama. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mendaftar audisi hanya bila sutradara menyarankan Anda ikut",
+        "B": "Tidak mendaftar dan menunggu kesempatan tahun depan",
+        "C": "Berhenti berlatih karena yakin peran utama pasti jatuh kepada pemain senior",
+        "D": "Mendaftar sebagai pemeran pengganti saja agar tetap terlibat tanpa bersaing",
+        "E": "Mendaftar audisi pemeran utama dan menampilkan kemampuan terbaik Anda"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 3,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "mau tampil, tetapi keberaniannya bergantung pada dorongan orang lain.",
+        "B": "pasif — membiarkan kesempatan lewat.",
+        "C": "berlawanan dengan aspek — menyerahkan hasil pada anggapan dan nasib.",
+        "D": "memilih jalur aman untuk menghindari persaingan.",
+        "E": "berani tampil dan yakin pada kemampuan sendiri."
+      },
+      "tips": "Kepercayaan diri berarti berani bersaing dengan kemampuan sendiri, bukan menyerah sebelum mencoba.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-406",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Anda pengemudi ojek daring. Penumpang menuduh Anda sengaja memutar jalan dan mengancam memberi penilaian rendah. Sebenarnya Anda mengikuti rute aplikasi karena jalan utama ditutup untuk perbaikan. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta maaf berulang kali walaupun Anda tidak bersalah",
+        "B": "Meminta penumpang menghubungi layanan aplikasi agar petugas yang menjelaskannya",
+        "C": "Mengaku salah dan menawarkan potongan ongkos agar penumpang tidak memberi penilaian rendah kepada Anda",
+        "D": "Menjelaskan dengan yakin sambil menunjukkan rute di aplikasi dan pemberitahuan penutupan jalan",
+        "E": "Diam saja dan berencana mengajukan keberatan atas penilaian itu nanti"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 4,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "pasif — mengalah agar urusan cepat selesai.",
+        "B": "penjelasan diserahkan kepada pihak lain.",
+        "C": "berlawanan dengan aspek — mengingkari keyakinan sendiri karena takut.",
+        "D": "yakin pada kebenaran tindakan sendiri dan berani menjelaskannya dengan bukti.",
+        "E": "menunda — tidak menyampaikan pendapat saat dibutuhkan."
+      },
+      "tips": "Bila Anda yakin benar dan punya bukti, sampaikan sendiri dengan tenang. Itu ciri kepercayaan diri.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-KD-407",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "usaha kecil",
+      "situasi": "Dalam rapat koperasi pedagang pasar, mayoritas anggota setuju membeli mesin pendingin bersama dari penjual yang paling murah. Anda pernah memakai merek itu dan tahu mesinnya cepat rusak serta suku cadangnya sulit dicari. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyampaikan pengalaman Anda di forum dan mengusulkan merek lain beserta alasannya",
+        "B": "Diam karena mayoritas sudah setuju",
+        "C": "Ikut mendukung pilihan mayoritas walaupun Anda yakin pilihan itu keliru",
+        "D": "Membisikkan pengalaman itu kepada ketua koperasi agar ia yang mempertimbangkan dan menyampaikannya",
+        "E": "Mengusulkan keputusan ditunda sampai ada survei harga lagi"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 2,
+        "C": 1,
+        "D": 4,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berani bicara dan yakin pada pendapat sendiri walau berbeda dari mayoritas.",
+        "B": "pasif — tidak berani berbeda pendapat.",
+        "C": "berlawanan dengan aspek — mengingkari pendapat sendiri.",
+        "D": "pendapat tersampaikan, tetapi Anda tidak berani menyuarakannya sendiri.",
+        "E": "prosedural — menunda tanpa menyampaikan alasan yang Anda ketahui."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu berani menyampaikan pendapat sendiri di forum walau berbeda dari mayoritas.",
+      "kembar_dengan": "SJT-KD-408"
+    },
+    {
+      "id": "SJT-KD-408",
+      "aspek": "Kepercayaan Diri",
+      "konteks": "transportasi umum",
+      "situasi": "Dalam rapat paguyuban sopir angkot, sebagian besar anggota setuju memindahkan titik tunggu penumpang ke depan sekolah. Anda tahu titik itu membuat angkot menghalangi jalur antar-jemput siswa dan pernah memicu kemacetan panjang. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tidak berkomentar karena kebanyakan anggota sudah setuju",
+        "B": "Meminta keputusan ditunda sampai ada pengamatan kepadatan jalan di depan sekolah selama seminggu",
+        "C": "Berdiri menyampaikan kekhawatiran Anda di rapat dan mengusulkan titik tunggu lain",
+        "D": "Menitipkan keberatan itu kepada ketua paguyuban agar ia yang menyampaikannya",
+        "E": "Ikut menyetujui usulan itu agar tidak dianggap berbeda sendiri"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 3,
+        "C": 5,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "pasif — tidak berani berbeda pendapat.",
+        "B": "prosedural — menunda tanpa menyampaikan alasan yang Anda ketahui.",
+        "C": "berani bicara dan yakin pada pendapat sendiri walau berbeda dari mayoritas.",
+        "D": "pendapat tersampaikan, tetapi Anda tidak berani menyuarakannya sendiri.",
+        "E": "berlawanan dengan aspek — mengingkari pendapat sendiri."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu berani menyampaikan pendapat sendiri di forum walau berbeda dari mayoritas.",
+      "kembar_dengan": "SJT-KD-407"
+    },
+    {
+      "id": "SJT-SE-401",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "transportasi umum",
+      "situasi": "Angkot yang Anda tumpangi berhenti lama untuk menunggu penumpang, padahal Anda hampir terlambat masuk kerja. Saat Anda bertanya kapan berangkat, sopir menjawab dengan ketus. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menahan kesal, menyampaikan dengan sopan bahwa Anda terburu-buru, lalu berganti kendaraan",
+        "B": "Turun tanpa berkata apa-apa dan berganti kendaraan sambil memendam kesal",
+        "C": "Tetap duduk sambil terus menggerutu dalam hati",
+        "D": "Membentak sopir dan membanting pintu ketika turun",
+        "E": "Mencatat nomor angkot itu untuk diadukan ke paguyuban sopir setelah Anda tiba di kantor nanti"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 4,
+        "C": 2,
+        "D": 1,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "emosi terkendali dan tetap mencari jalan keluar.",
+        "B": "tidak meledak, tetapi kekesalannya belum benar-benar terkendali.",
+        "C": "pasif — larut dalam kekesalan tanpa berbuat apa-apa.",
+        "D": "berlawanan dengan aspek — emosi meledak.",
+        "E": "prosedural — urusan perasaan ditunda dan dialihkan ke pengaduan."
+      },
+      "tips": "Stabilitas emosi berarti kesal boleh, tetapi tetap tenang, sopan, dan mencari jalan keluar.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-402",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "usaha kecil",
+      "situasi": "Seorang pelanggan menulis ulasan di media sosial bahwa kopi di kedai Anda terlalu asam dan pelayanannya lambat. Ulasan itu dibaca dan dikomentari banyak orang. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengabaikan ulasan itu dan tidak membalasnya",
+        "B": "Meminta pegawai yang membalas ulasan itu agar Anda tidak terbawa perasaan",
+        "C": "Membalas dengan marah dan menuduh pelanggan itu suruhan pesaing",
+        "D": "Membalas dengan ucapan terima kasih, tetapi menunggu ada ulasan serupa sebelum memperbaiki apa pun",
+        "E": "Membalas dengan sopan, berterima kasih atas masukannya, lalu memperbaiki resep dan alur pelayanan"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 3,
+        "C": 1,
+        "D": 4,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "pasif — menghindari kritik.",
+        "B": "menghindari kritik dengan mengalihkannya kepada orang lain.",
+        "C": "berlawanan dengan aspek — tidak menerima kritik dan emosi meledak.",
+        "D": "menerima kritik dengan tenang, tetapi belum sepenuhnya menindaklanjutinya.",
+        "E": "emosi terkendali, menerima kritik, dan menjadikannya bahan perbaikan."
+      },
+      "tips": "Pada aspek stabilitas emosi, kritik ditanggapi dengan tenang lalu dijadikan bahan perbaikan.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-403",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "komunitas",
+      "situasi": "Pameran karya komunitas lukis yang Anda siapkan selama tiga bulan ternyata sepi pengunjung karena bersamaan dengan konser besar di kota. Rekan-rekan panitia mulai saling menyalahkan soal pemilihan tanggal. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tetap tersenyum menyambut pengunjung, tetapi menyerahkan urusan evaluasi sepenuhnya kepada ketua",
+        "B": "Diam dengan wajah murung sampai pameran selesai",
+        "C": "Ikut menyalahkan panitia yang memilih tanggal dengan nada tinggi",
+        "D": "Tetap bersemangat menyambut pengunjung yang datang dan mengajak panitia mencatat pelajaran untuk acara berikutnya",
+        "E": "Mengusulkan stan ditutup lebih awal dan masalahnya dibahas di rapat minggu depan"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "tenang, tetapi tidak ikut meredakan suasana panitia.",
+        "B": "pasif — larut dalam kekecewaan.",
+        "C": "berlawanan dengan aspek — emosi meledak dan berpikir negatif.",
+        "D": "berpikir positif, emosi terkendali, dan meredakan suasana.",
+        "E": "menunda masalah lewat jalur prosedural."
+      },
+      "tips": "Stabilitas emosi tampak dari kemampuan berpikir positif saat kecewa dan tidak ikut terbawa suasana panas.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-404",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "transportasi umum",
+      "situasi": "Bus antarkota yang Anda tumpangi mogok di tengah perjalanan malam hari. Sopir mengabarkan bus pengganti baru datang dua jam lagi. Beberapa penumpang mulai berteriak marah kepada kru. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mengurung diri dalam kesal dan menolak bicara dengan siapa pun",
+        "B": "Tetap tenang, mengabari keluarga, lalu beristirahat sambil menunggu bus pengganti",
+        "C": "Menelepon layanan pengaduan perusahaan bus untuk menuntut ganti rugi saat itu juga",
+        "D": "Menahan diri, tetapi berulang kali mendesak kru menanyakan kepastian bus pengganti",
+        "E": "Ikut berteriak memarahi kru bersama penumpang lain"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 5,
+        "C": 3,
+        "D": 4,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "pasif — larut dalam perasaan negatif.",
+        "B": "emosi terkendali dan tetap berpikir jernih dalam situasi tidak nyaman.",
+        "C": "prosedural — kekesalan disalurkan lewat tuntutan, bukan diredakan.",
+        "D": "tidak meledak, tetapi kecemasan masih mengendalikan tindakan.",
+        "E": "berlawanan dengan aspek — emosi meledak."
+      },
+      "tips": "Saat orang lain marah, opsi terbaik tetap tenang dan memakai waktu dengan cara yang berguna.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-405",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "usaha kecil",
+      "situasi": "Anda pengelola toko daring. Seorang pembeli grosir menelepon dan memaki Anda karena barang yang dikirim salah warna, lalu mengancam membatalkan semua pesanannya. Setelah dicek, kesalahan memang terjadi di toko Anda. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Tetap sopan, lalu menyerahkan penyelesaian keluhan itu kepada admin toko",
+        "B": "Menutup telepon tanpa menanggapi makiannya",
+        "C": "Meminta waktu untuk memeriksa ulang semua catatan pesanan sebelum menanggapi",
+        "D": "Balas memaki dan menyebutnya pelanggan yang menyusahkan",
+        "E": "Tetap tenang, mengakui kesalahan, dan menawarkan penukaran barang secepatnya"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 3,
+        "D": 1,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "tenang, tetapi menghindari tekanan dengan mengalihkannya kepada orang lain.",
+        "B": "menghindar dari situasi yang menekan.",
+        "C": "menunda tanggapan padahal kesalahannya sudah jelas.",
+        "D": "berlawanan dengan aspek — emosi meledak.",
+        "E": "emosi terkendali, menerima keluhan, dan langsung memperbaiki."
+      },
+      "tips": "Saat dimaki karena kesalahan sendiri, tetap tenang, akui, lalu perbaiki. Itu ciri emosi yang stabil.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-406",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "komunitas",
+      "situasi": "Dalam pertemuan arisan, seorang anggota menyindir di depan semua orang bahwa Anda selalu terlambat menyetor uang arisan. Padahal Anda baru sekali terlambat karena anak Anda sakit. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Diam saat itu, lalu meminta ketua arisan yang meluruskannya kepada anggota lain",
+        "B": "Menanggapi dengan tenang, meluruskan bahwa baru sekali terlambat beserta alasannya, dan meminta maaf atas keterlambatan itu",
+        "C": "Tidak menanggapi dan berencana membahasnya di pertemuan bulan depan",
+        "D": "Pulang lebih awal dengan perasaan tersinggung",
+        "E": "Membalas sindiran itu dengan membongkar kesalahan anggota tersebut di depan semua orang"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 5,
+        "C": 3,
+        "D": 2,
+        "E": 1
+      },
+      "alasan_opsi": {
+        "A": "tidak meledak, tetapi penyelesaiannya diserahkan kepada orang lain.",
+        "B": "emosi terkendali, meluruskan dengan sopan, dan tetap menerima bagian yang memang salah.",
+        "C": "menunda penyelesaian masalah.",
+        "D": "pasif — menghindar dan larut dalam perasaan.",
+        "E": "berlawanan dengan aspek — emosi meledak dan membalas."
+      },
+      "tips": "Disindir tidak harus dibalas. Tanggapi dengan tenang, luruskan fakta, dan akui bagian yang memang keliru.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-407",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "transportasi umum",
+      "situasi": "Setelah antre tiga jam di loket pelabuhan, Anda tidak kebagian tiket kapal karena kuota habis tepat sebelum giliran Anda. Kapal berikutnya baru berangkat besok pagi. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Memukul meja loket dan memarahi petugas tiket",
+        "B": "Menulis keluhan resmi kepada pengelola pelabuhan sebelum memikirkan rencana lain",
+        "C": "Duduk termenung di ruang tunggu sampai malam tanpa melakukan apa pun",
+        "D": "Menerima dengan tenang, mencari penginapan dekat pelabuhan, dan memesan tiket besok sejak awal",
+        "E": "Menerima keadaan dengan tenang, lalu menunggu keluarga di rumah memutuskan langkah apa yang harus diambil"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 3,
+        "C": 2,
+        "D": 5,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — emosi meledak.",
+        "B": "prosedural — kekecewaan disalurkan lebih dulu, rencana ditunda.",
+        "C": "pasif — larut dalam kekecewaan.",
+        "D": "emosi terkendali, berpikir positif, dan langsung menyusun rencana baru.",
+        "E": "tenang, tetapi langkah selanjutnya bergantung pada orang lain."
+      },
+      "tips": "Stabilitas emosi berarti cepat menerima keadaan yang tidak bisa diubah lalu berpikir positif tentang langkah berikutnya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-SE-408",
+      "aspek": "Stabilitas Emosi",
+      "konteks": "usaha kecil",
+      "situasi": "Anda mengikuti lomba kue tingkat kecamatan. Di depan peserta lain, juri menilai kue Anda terlalu manis dan teksturnya keras. Beberapa peserta tampak tersenyum mendengarnya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Membantah juri dengan suara keras bahwa selera juri yang salah",
+        "B": "Menerima masukan juri dengan sopan, tetapi baru akan memikirkannya bila pelanggan juga mengeluh",
+        "C": "Mendengarkan dengan tenang, berterima kasih, dan mencatat masukan juri untuk memperbaiki resep",
+        "D": "Menunduk diam dan langsung pulang setelah penilaian",
+        "E": "Meminta lembar penilaian tertulis untuk dibaca nanti di rumah"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 4,
+        "C": 5,
+        "D": 2,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — menolak kritik dan emosi meledak.",
+        "B": "tenang, tetapi kritiknya belum benar-benar diterima.",
+        "C": "menerima kritik dengan emosi terkendali dan menjadikannya bahan belajar.",
+        "D": "pasif — terbawa rasa malu.",
+        "E": "menunda menanggapi kritik."
+      },
+      "tips": "Kritik di depan umum menguji emosi. Opsi terbaik mendengarkan dengan tenang lalu memanfaatkan masukannya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-401",
+      "aspek": "Motif Berprestasi",
+      "konteks": "usaha kecil",
+      "situasi": "Usaha kue rumahan Anda sudah punya pelanggan tetap. Sebuah kafe ternama menawarkan kerja sama bila Anda bisa membuat kue lapis sesuai standar mereka, padahal Anda belum pernah membuatnya. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menerima tawaran itu asalkan kafe bersedia mengirim juru masaknya untuk mengajari Anda sampai bisa",
+        "B": "Meminta waktu tiga bulan dulu sebelum mulai mencoba resepnya",
+        "C": "Menerima tantangan itu, berlatih resep sampai memenuhi standar, lalu mengirim contoh ke kafe",
+        "D": "Mengirim contoh kue biasa yang sudah dikuasai dengan harapan tetap diterima",
+        "E": "Menolak karena pesanan dari pelanggan tetap sudah cukup"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 3,
+        "C": 5,
+        "D": 1,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "mau menerima tantangan, tetapi bergantung pada bantuan orang lain.",
+        "B": "menunda tantangan.",
+        "C": "suka tantangan, tekun, dan mengejar hasil berkualitas.",
+        "D": "berlawanan dengan aspek — asal-asalan dan tidak mengejar standar.",
+        "E": "pasif — puas dengan yang ada dan menghindari tantangan."
+      },
+      "tips": "Motif berprestasi menghargai keberanian mengambil tantangan baru dan ketekunan sampai hasilnya berkualitas.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-402",
+      "aspek": "Motif Berprestasi",
+      "konteks": "komunitas",
+      "situasi": "Anda dipercaya mengurus pencatatan bank sampah RW. Cara lama dengan buku tulis sering menimbulkan salah hitung. Tidak ada yang menuntut perbaikan, tetapi Anda tahu pencatatannya bisa dibuat lebih rapi. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menyusun tabel pencatatan baru, mengujinya sebulan, dan memperbaikinya sampai tidak ada selisih",
+        "B": "Menunggu awal tahun buku baru untuk mulai memperbaiki pencatatan",
+        "C": "Tetap memakai cara lama karena tidak ada yang mengeluh",
+        "D": "Mencatat seadanya karena menganggap pekerjaan sukarela tidak perlu sempurna",
+        "E": "Mengusulkan perbaikan kepada pengurus, lalu menunggu mereka yang menyusun cara barunya"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 2,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "ingin unggul, tekun, dan tuntas sampai hasilnya berkualitas.",
+        "B": "menunda perbaikan.",
+        "C": "pasif — puas dengan hasil seadanya.",
+        "D": "berlawanan dengan aspek — tidak peduli pada mutu.",
+        "E": "punya keinginan memperbaiki, tetapi pelaksanaannya diserahkan kepada orang lain."
+      },
+      "tips": "Pada motif berprestasi, cari opsi yang memperbaiki mutu atas kemauan sendiri dan menuntaskannya.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-403",
+      "aspek": "Motif Berprestasi",
+      "konteks": "transportasi umum",
+      "situasi": "Anda pengemudi ojek daring. Aplikasi memberi bonus bila penilaian Anda bertahan di atas 4,9 selama sebulan penuh. Penilaian Anda sekarang 4,7, dan beberapa penumpang mengeluhkan helm yang kotor serta keterlambatan menjemput. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Bekerja seperti biasa karena bonus itu tidak wajib",
+        "B": "Membersihkan helm setiap hari, memperbaiki ketepatan waktu, dan memantau penilaian setiap pekan",
+        "C": "Bertanya kepada pengemudi yang penilaiannya tinggi lalu meniru sebagian kebiasaannya",
+        "D": "Berhenti mengejar bonus dan mengurangi jam kerja karena merasa target penilaian itu mustahil dicapai",
+        "E": "Menunggu awal bulan depan untuk mulai berbenah agar penilaian dihitung dari awal"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 5,
+        "C": 4,
+        "D": 1,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "pasif — tidak tertarik mengejar target yang lebih tinggi.",
+        "B": "ingin unggul, tekun, dan memperbaiki mutu layanan secara terukur.",
+        "C": "mau maju, tetapi perbaikannya setengah dan bergantung pada orang lain.",
+        "D": "berlawanan dengan aspek — menyerah pada tantangan.",
+        "E": "menunda perbaikan."
+      },
+      "tips": "Motif berprestasi tampak dari usaha terukur untuk memperbaiki mutu sampai target tercapai.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-404",
+      "aspek": "Motif Berprestasi",
+      "konteks": "komunitas",
+      "situasi": "Taman baca komunitas yang Anda kelola mendapat target dari donatur: 100 anak aktif membaca dalam enam bulan. Memasuki bulan ketiga, baru 40 anak yang aktif. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Meminta relawan lain mencari ide kegiatan baru untuk menarik anak-anak",
+        "B": "Menjalankan kegiatan seperti biasa sambil berharap jumlah anak naik sendiri",
+        "C": "Memasukkan nama anak yang tidak aktif ke daftar agar target terlihat tercapai",
+        "D": "Mencari penyebabnya, menambah kegiatan dongeng mingguan, dan memantau jumlah anak setiap pekan",
+        "E": "Melapor ke donatur bahwa target terlalu sulit dicapai dan meminta agar target itu diturunkan saja"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 2,
+        "C": 1,
+        "D": 5,
+        "E": 3
+      },
+      "alasan_opsi": {
+        "A": "punya keinginan mencapai target, tetapi usahanya diserahkan kepada orang lain.",
+        "B": "pasif — tidak ada usaha tambahan untuk mencapai target.",
+        "C": "berlawanan dengan aspek — mengejar angka dengan cara curang, bukan prestasi nyata.",
+        "D": "tekun, ingin mencapai target, dan bekerja dengan rencana yang terukur.",
+        "E": "prosedural — menurunkan standar sebelum berusaha lebih keras."
+      },
+      "tips": "Saat target tertinggal, opsi terbaik mencari penyebab lalu menambah usaha secara terukur.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-405",
+      "aspek": "Motif Berprestasi",
+      "konteks": "usaha kecil",
+      "situasi": "Anda harus mengirim pesanan 200 tas rajut ke pembeli luar kota besok pagi. Saat memeriksa, Anda menemukan 15 tas dengan jahitan kurang rapi. Pembeli kemungkinan tidak akan memeriksa tas satu per satu. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Lembur memperbaiki jahitan ke-15 tas itu sampai rapi sebelum semua tas dikirim",
+        "B": "Mengirim 185 tas dulu dan menunda pengiriman 15 tas sisanya sampai minggu depan tanpa memberi kabar",
+        "C": "Mengirim semua tas apa adanya karena pembeli tidak akan memeriksa",
+        "D": "Menyelipkan tas yang cacat di dasar kardus agar tidak terlihat",
+        "E": "Memperbaiki tas yang paling parah saja dan mengirim sisanya apa adanya"
+      },
+      "bobot": {
+        "A": 5,
+        "B": 3,
+        "C": 2,
+        "D": 1,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "tuntas dan menjaga mutu walau tidak ada yang memeriksa.",
+        "B": "menunda penyelesaian pesanan.",
+        "C": "pasif — puas dengan hasil seadanya.",
+        "D": "berlawanan dengan aspek — sengaja mengorbankan mutu.",
+        "E": "setengah tuntas — mutu dijaga sebagian."
+      },
+      "tips": "Motif berprestasi berarti hasil kerja tuntas dan berkualitas, bahkan ketika tidak ada yang memeriksa.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-406",
+      "aspek": "Motif Berprestasi",
+      "konteks": "transportasi umum",
+      "situasi": "Anda petugas layanan penumpang di stasiun KRL. Ada pelatihan bahasa isyarat sukarela setiap Sabtu selama dua bulan, yang akan membuat Anda mampu melayani penumpang tunarungu dengan lebih baik. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Mendaftar bila ada rekan kerja yang mau ikut menemani pelatihan",
+        "B": "Menunggu pelatihan berikutnya tahun depan karena Sabtu Anda kadang sibuk",
+        "C": "Mendaftar pelatihan, lalu berhenti setelah pertemuan pertama karena materinya terasa terlalu sulit",
+        "D": "Mendaftar, mengikuti pelatihan sampai selesai, dan mempraktikkannya di loket layanan",
+        "E": "Tidak ikut karena pelatihan itu tidak diwajibkan"
+      },
+      "bobot": {
+        "A": 4,
+        "B": 3,
+        "C": 1,
+        "D": 5,
+        "E": 2
+      },
+      "alasan_opsi": {
+        "A": "mau belajar, tetapi semangatnya bergantung pada orang lain.",
+        "B": "menunda kesempatan berkembang.",
+        "C": "berlawanan dengan aspek — tidak tekun dan mundur dari tantangan.",
+        "D": "ingin unggul, tekun, dan menuntaskan pelatihan sampai terpakai.",
+        "E": "pasif — hanya mengerjakan yang diwajibkan."
+      },
+      "tips": "Pilih opsi yang mengambil kesempatan berkembang dan menyelesaikannya sampai tuntas.",
+      "kembar_dengan": null
+    },
+    {
+      "id": "SJT-MB-407",
+      "aspek": "Motif Berprestasi",
+      "konteks": "komunitas",
+      "situasi": "Grup tari daerah komunitas Anda gagal lolos seleksi festival budaya provinsi karena gerakan dinilai kurang kompak. Seleksi berikutnya dibuka enam bulan lagi. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Kembali berlatih seperti biasa tanpa target festival",
+        "B": "Menunggu pengumuman seleksi berikutnya keluar dulu untuk memutuskan grup ikut mendaftar atau tidak",
+        "C": "Mendaftar lagi bila pelatih bersedia menambah jadwal latihan",
+        "D": "Mengusulkan grup berhenti ikut seleksi karena juri dianggap tidak adil",
+        "E": "Menyusun jadwal latihan tambahan, merekam latihan untuk dievaluasi, lalu mendaftar lagi"
+      },
+      "bobot": {
+        "A": 2,
+        "B": 3,
+        "C": 4,
+        "D": 1,
+        "E": 5
+      },
+      "alasan_opsi": {
+        "A": "pasif — tidak mengejar keunggulan.",
+        "B": "menunda keputusan untuk berusaha.",
+        "C": "mau mencoba lagi, tetapi usahanya bergantung pada orang lain.",
+        "D": "berlawanan dengan aspek — menyalahkan pihak lain dan mundur dari tantangan.",
+        "E": "tekun, ingin unggul, dan memperbaiki kekurangan secara terencana."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu bangkit setelah gagal dengan memperbaiki kekurangan lalu mencoba lagi.",
+      "kembar_dengan": "SJT-MB-408"
+    },
+    {
+      "id": "SJT-MB-408",
+      "aspek": "Motif Berprestasi",
+      "konteks": "usaha kecil",
+      "situasi": "Sambal kemasan buatan Anda gagal lolos kurasi untuk dijual di toko oleh-oleh bandara karena label dan daya tahan kemasan dinilai kurang. Kurasi berikutnya dibuka tiga bulan lagi. Apa yang Anda lakukan?",
+      "opsi": {
+        "A": "Menganggap kurator pilih kasih dan berhenti mengembangkan produk",
+        "B": "Memperbaiki label, menguji daya tahan kemasan berulang kali, lalu mendaftar lagi",
+        "C": "Kembali berjualan di pasar saja tanpa mencoba kurasi lagi",
+        "D": "Menunggu kurasi tahun depan agar persiapannya lebih longgar",
+        "E": "Mendaftar lagi bila ada pendamping usaha kecil yang bersedia memperbaiki label dan kemasannya"
+      },
+      "bobot": {
+        "A": 1,
+        "B": 5,
+        "C": 2,
+        "D": 3,
+        "E": 4
+      },
+      "alasan_opsi": {
+        "A": "berlawanan dengan aspek — menyalahkan pihak lain dan mundur dari tantangan.",
+        "B": "tekun, ingin unggul, dan memperbaiki kekurangan secara terencana.",
+        "C": "pasif — puas dengan yang sudah ada.",
+        "D": "menunda usaha perbaikan.",
+        "E": "mau mencoba lagi, tetapi perbaikannya bergantung pada orang lain."
+      },
+      "tips": "Butir kembar: soal ini muncul lagi dengan cerita lain. Jawab konsisten, yaitu bangkit setelah gagal dengan memperbaiki kekurangan lalu mencoba lagi.",
+      "kembar_dengan": "SJT-MB-407"
+    }
+  ]
+}

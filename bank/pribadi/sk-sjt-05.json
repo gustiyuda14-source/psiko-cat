@@ -1,0 +1,831 @@
+{
+  "batch": "sk-sjt-05",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran (Pass Hand A/B) baru untuk Kepribadian SJT Paket 5 (package_number 25). Komposisi = SK_SLOT compose-pribadi-paket.ts, 4 pasang kembar (D1, D2, D3, D5). Belum di-seed.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur resmi yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-1101",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika mencatat hasil timbangan sampah warga di bank sampah",
+      "opsi": {
+        "A": "Angka yang dibulatkan ke atas agar warga makin rajin menabung",
+        "B": "Angka sesuai yang tertera di timbangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Angka sesuai yang tertera di timbangan menjaga kebenaran data sesuai hasil timbangan yang sebenarnya. Angka yang dibulatkan ke atas agar warga makin rajin menabung juga baik: menyemangati warga itu niat baik, tetapi angka yang dibulatkan tidak lagi benar. Tips: dalam pencatatan, kebenaran angka diutamakan di atas niat baik."
+    },
+    {
+      "id": "SK-D1-1102",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika menulis keterangan produk di toko daring milik sendiri",
+      "opsi": {
+        "A": "Keterangan bahan dan ukuran sesuai barang aslinya",
+        "B": "Keterangan yang menarik agar produk cepat laku"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Keterangan bahan dan ukuran sesuai barang aslinya mengutamakan kebenaran informasi kepada pembeli. Keterangan yang menarik agar produk cepat laku juga baik: keterangan yang menarik bermanfaat bagi penjualan, tetapi belum tentu benar. Tips: kebenaran diutamakan di atas kemanfaatan."
+    },
+    {
+      "id": "SK-D1-1103",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika calon penumpang menanyakan lama perjalanan bus antarkota yang Anda kelola",
+      "opsi": {
+        "A": "Jawaban apa adanya sesuai keadaan sebenarnya",
+        "B": "Jawaban yang meyakinkan agar penumpang tidak beralih ke bus lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-1104",
+      "pembahasan": "Jawaban apa adanya sesuai keadaan sebenarnya menempatkan kebenaran informasi di atas kepentingan usaha. Jawaban yang meyakinkan agar penumpang tidak beralih ke bus lain juga baik: menjaga penumpang tetap memilih bus Anda bermanfaat, tetapi mengorbankan kebenaran. Tips: kebenaran diutamakan di atas kemanfaatan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D1-1104",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika pembeli bertanya tentang kesegaran kue kemarin yang masih ada di etalase toko Anda",
+      "opsi": {
+        "A": "Jawaban yang menenangkan agar pembeli tetap jadi membeli",
+        "B": "Jawaban apa adanya sesuai keadaan sebenarnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-1103",
+      "pembahasan": "Jawaban apa adanya sesuai keadaan sebenarnya menempatkan kebenaran di atas perasaan pembeli. Jawaban yang menenangkan agar pembeli tetap jadi membeli juga baik: menenangkan pembeli itu baik, tetapi tidak menjamin keterangannya benar. Tips: kebenaran diutamakan di atas perasaan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-1101",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika uang kas arisan RT dipakai untuk membeli tenda bersama",
+      "opsi": {
+        "A": "Melaporkan rincian harga kepada ketua arisan",
+        "B": "Mengumumkan rincian harga dan sisa uang kepada semua anggota"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengumumkan rincian harga dan sisa uang kepada semua anggota membuka informasi penggunaan uang kepada semua pemiliknya. Melaporkan rincian harga kepada ketua arisan juga baik: melapor kepada ketua itu tertib, tetapi informasinya tidak sampai kepada semua anggota. Tips: uang bersama dilaporkan secara terbuka kepada semua anggota."
+    },
+    {
+      "id": "SK-D2-1102",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika koperasi pedagang pasar menaikkan iuran bulanan",
+      "opsi": {
+        "A": "Menjelaskan alasan kenaikan dan penggunaan dananya kepada semua anggota",
+        "B": "Menetapkan kenaikan sesuai keputusan pengurus agar rapat tidak berlarut"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menjelaskan alasan kenaikan dan penggunaan dananya kepada semua anggota mengutamakan keterbukaan alasan dan penggunaan dana. Menetapkan kenaikan sesuai keputusan pengurus agar rapat tidak berlarut juga baik: rapat yang ringkas itu efisien, tetapi anggota tidak mendapat penjelasan. Tips: keterbukaan diutamakan di atas kewenangan pengurus."
+    },
+    {
+      "id": "SK-D2-1103",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika jadwal kapal penyeberangan berubah mendadak karena cuaca",
+      "opsi": {
+        "A": "Mengumumkan perubahan jadwal dan penyebabnya di papan informasi serta media sosial",
+        "B": "Menjelaskan perubahan kepada penumpang yang datang bertanya ke loket"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengumumkan perubahan jadwal dan penyebabnya di papan informasi serta media sosial membuka informasi kepada semua penumpang tanpa menunggu ditanya. Menjelaskan perubahan kepada penumpang yang datang bertanya ke loket juga baik: melayani pertanyaan di loket itu baik, tetapi informasinya hanya sampai kepada yang bertanya. Tips: pilih cara yang membuat informasi sampai kepada semua orang."
+    },
+    {
+      "id": "SK-D2-1104",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika harga menu kedai kopi Anda naik karena harga biji kopi melonjak",
+      "opsi": {
+        "A": "Mengumumkan perubahan beserta alasannya secara terbuka",
+        "B": "Menyesuaikan harga di daftar menu tanpa pengumuman khusus"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-1105",
+      "pembahasan": "Mengumumkan perubahan beserta alasannya secara terbuka memberi informasi yang jelas kepada pelanggan tentang perubahan dan alasannya. Menyesuaikan harga di daftar menu tanpa pengumuman khusus juga baik: mengganti daftar menu itu rapi, tetapi pelanggan tidak tahu alasan perubahannya. Tips: perubahan yang menyangkut orang banyak diumumkan secara terbuka. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D2-1105",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika rute angkot paguyuban Anda dialihkan sementara karena perbaikan jalan",
+      "opsi": {
+        "A": "Meminta sopir menjelaskan kepada penumpang yang bertanya",
+        "B": "Mengumumkan perubahan beserta alasannya secara terbuka"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-1104",
+      "pembahasan": "Mengumumkan perubahan beserta alasannya secara terbuka memberi informasi yang jelas kepada penumpang tentang perubahan dan alasannya. Meminta sopir menjelaskan kepada penumpang yang bertanya juga baik: penjelasan sopir itu membantu, tetapi hanya sampai kepada penumpang yang bertanya. Tips: perubahan yang menyangkut orang banyak diumumkan secara terbuka. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-1101",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus komunitas sepeda dan ada anggota berulang kali ikut gowes bersama tanpa helm",
+      "opsi": {
+        "A": "Menerapkan aturan bahwa anggota tanpa helm tidak boleh ikut gowes",
+        "B": "Mengingatkannya dengan ramah setiap kali akan berangkat"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menerapkan aturan bahwa anggota tanpa helm tidak boleh ikut gowes menegakkan aturan keselamatan yang sudah disepakati. Mengingatkannya dengan ramah setiap kali akan berangkat juga baik: mengingatkan dengan ramah itu baik, tetapi tidak mengubah kebiasaan yang terus berulang. Tips: pelanggaran berulang ditangani dengan aturan, bukan sekadar nasihat."
+    },
+    {
+      "id": "SK-D3-1102",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipegang ketika menjadi pengelola pasar malam dan ada pedagang yang terus berjualan melewati jam tutup",
+      "opsi": {
+        "A": "Imbauan agar ia lebih menghargai pedagang lain",
+        "B": "Sanksi sesuai tata tertib pasar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Sanksi sesuai tata tertib pasar menegakkan tata tertib yang berlaku untuk semua pedagang. Imbauan agar ia lebih menghargai pedagang lain juga baik: imbauan itu santun, tetapi hanya penyadaran tanpa penegakan aturan. Tips: aturan dan sanksi diutamakan di atas imbauan."
+    },
+    {
+      "id": "SK-D3-1103",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika menjadi koordinator bank sampah dan ada nasabah yang tetap mencampur sampah basah dengan plastik",
+      "opsi": {
+        "A": "Menerima setoran sambil menjelaskan cara memilah",
+        "B": "Menolak setoran sesuai ketentuan pemilahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menolak setoran sesuai ketentuan pemilahan menjalankan ketentuan pemilahan secara konsisten. Menerima setoran sambil menjelaskan cara memilah juga baik: menjelaskan cara memilah itu mendidik, tetapi ketentuannya tidak ditegakkan. Tips: ketentuan dijalankan secara konsisten, penjelasan menyusul."
+    },
+    {
+      "id": "SK-D3-1104",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi kepala terminal kecil dan ada sopir menaikkan penumpang di luar jalur keberangkatan",
+      "opsi": {
+        "A": "Memberi sanksi sesuai peraturan terminal",
+        "B": "Mengajak sopir itu berdiskusi agar sadar sendiri"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memberi sanksi sesuai peraturan terminal menegakkan peraturan terminal yang berlaku. Mengajak sopir itu berdiskusi agar sadar sendiri juga baik: diskusi itu baik, tetapi termasuk penyadaran, bukan penegakan aturan. Tips: untuk pelanggaran aturan, pilih penegakan aturan."
+    },
+    {
+      "id": "SK-D3-1105",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus perumahan dan ada warga yang terus membuang sampah di lahan kosong",
+      "opsi": {
+        "A": "Menjatuhkan sanksi sesuai aturan yang disepakati",
+        "B": "Menasihatinya baik-baik agar tidak mengulang"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-1106",
+      "pembahasan": "Menjatuhkan sanksi sesuai aturan yang disepakati menegakkan aturan bersama terhadap pelanggaran yang berulang. Menasihatinya baik-baik agar tidak mengulang juga baik: nasihat itu santun, tetapi tidak menegakkan aturan. Tips: pelanggaran berulang ditangani dengan sanksi. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D3-1106",
+      "dimensi": "D3",
+      "situasi": "Hal yang dilakukan ketika menjadi pengelola dermaga perahu wisata dan ada pemilik perahu berulang kali mengangkut penumpang melebihi kapasitas",
+      "opsi": {
+        "A": "Mengajaknya berbincang tentang bahaya muatan berlebih",
+        "B": "Menjatuhkan sanksi sesuai aturan yang disepakati"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-1105",
+      "pembahasan": "Menjatuhkan sanksi sesuai aturan yang disepakati menegakkan aturan bersama terhadap pelanggaran yang berulang. Mengajaknya berbincang tentang bahaya muatan berlebih juga baik: berbincang tentang bahaya itu mendidik, tetapi termasuk penyadaran, bukan penegakan aturan. Tips: pelanggaran berulang ditangani dengan sanksi. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D4-1101",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika ingin menjual makanan kemasan buatan rumah yang wajib memiliki izin produksi pangan",
+      "opsi": {
+        "A": "Mengurus izin sesuai ketentuan sebelum menjual",
+        "B": "Menjual dulu ke tetangga sambil menunggu izin selesai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengurus izin sesuai ketentuan sebelum menjual menunjukkan sikap patuh pada ketentuan yang berlaku untuk pangan olahan. Menjual dulu ke tetangga sambil menunggu izin selesai juga baik: berjualan ke tetangga itu langkah awal yang wajar, tetapi mendahului izin yang diwajibkan. Tips: untuk hal yang diatur ketentuan, pilih kepatuhan."
+    },
+    {
+      "id": "SK-D4-1102",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengemudikan bus antarkota yang wajib beristirahat setiap empat jam",
+      "opsi": {
+        "A": "Menyesuaikan waktu istirahat dengan keinginan penumpang",
+        "B": "Beristirahat sesuai ketentuan jam kerja pengemudi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Beristirahat sesuai ketentuan jam kerja pengemudi menunjukkan sikap patuh pada ketentuan keselamatan jam kerja pengemudi. Menyesuaikan waktu istirahat dengan keinginan penumpang juga baik: memperhatikan keinginan penumpang itu ramah, tetapi ketentuan istirahat tidak boleh ditawar. Tips: aturan keselamatan dipatuhi, bukan disesuaikan dengan selera."
+    },
+    {
+      "id": "SK-D4-1103",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diutamakan ketika membuka kedai kopi di ruko yang memiliki aturan keselamatan kebakaran",
+      "opsi": {
+        "A": "Memasang alat pemadam api sesuai standar gedung",
+        "B": "Menata ruangan agar nyaman bagi banyak pengunjung"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Memasang alat pemadam api sesuai standar gedung memenuhi standar keselamatan yang diwajibkan. Menata ruangan agar nyaman bagi banyak pengunjung juga baik: kenyamanan pengunjung itu penting, tetapi standar keselamatan didahulukan. Tips: standar keselamatan selalu dipenuhi lebih dulu."
+    },
+    {
+      "id": "SK-D4-1104",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dilakukan ketika mengelola penyewaan perahu wisata yang wajib menyediakan pelampung",
+      "opsi": {
+        "A": "Menyediakan pelampung bagi penumpang yang memintanya",
+        "B": "Menyediakan pelampung untuk setiap penumpang sesuai aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menyediakan pelampung untuk setiap penumpang sesuai aturan menjalankan aturan keselamatan untuk semua penumpang. Menyediakan pelampung bagi penumpang yang memintanya juga baik: melayani permintaan penumpang itu baik, tetapi aturan mewajibkan pelampung untuk semua. Tips: kewajiban dari aturan berlaku untuk semua, bukan hanya yang meminta."
+    },
+    {
+      "id": "SK-D4-1105",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengemas kiriman toko daring berisi barang yang mudah terbakar",
+      "opsi": {
+        "A": "Mengikuti ketentuan pengiriman barang berbahaya dari jasa kirim",
+        "B": "Mengemas serapat mungkin dengan cara yang biasa Anda pakai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengikuti ketentuan pengiriman barang berbahaya dari jasa kirim menunjukkan sikap patuh pada standar pengiriman yang ditetapkan. Mengemas serapat mungkin dengan cara yang biasa Anda pakai juga baik: kemasan rapat itu teliti, tetapi tidak menggantikan ketentuan resmi. Tips: untuk barang yang diatur, ikuti ketentuannya."
+    },
+    {
+      "id": "SK-D4-1106",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipikirkan ketika hendak mendirikan tenda bazar di trotoar yang memerlukan izin kelurahan",
+      "opsi": {
+        "A": "Kesepakatan dengan pemilik toko di sekitar trotoar",
+        "B": "Izin kelurahan sebelum tenda didirikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Izin kelurahan sebelum tenda didirikan mematuhi ketentuan izin dari pihak berwenang. Kesepakatan dengan pemilik toko di sekitar trotoar juga baik: kesepakatan dengan tetangga itu santun, tetapi tidak menggantikan izin resmi. Tips: izin resmi didahulukan sebelum kegiatan."
+    },
+    {
+      "id": "SK-D4-1107",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika merancang acara ulang tahun komunitas pencinta kucing",
+      "opsi": {
+        "A": "Kelas merawat kucing yang terbuka untuk warga sekitar",
+        "B": "Makan bersama anggota seperti tahun-tahun sebelumnya"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kelas merawat kucing yang terbuka untuk warga sekitar menawarkan konsep acara baru yang lebih bermanfaat. Makan bersama anggota seperti tahun-tahun sebelumnya juga baik: makan bersama itu mengakrabkan, tetapi mengulang pola lama. Tips: untuk program dan acara, pilih pembaruan."
+    },
+    {
+      "id": "SK-D4-1108",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika pembeli di warung makan Anda mulai berkurang pada jam makan siang",
+      "opsi": {
+        "A": "Mempertahankan menu dan cara berjualan yang sudah dikenal",
+        "B": "Mencoba layanan pesan-antar dengan paket menu baru"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba layanan pesan-antar dengan paket menu baru mencari cara baru untuk menjangkau pembeli. Mempertahankan menu dan cara berjualan yang sudah dikenal juga baik: cara lama itu aman, tetapi tidak menjawab penurunan pembeli. Tips: untuk cara kerja, pilih pembaruan."
+    },
+    {
+      "id": "SK-D4-1109",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika menyusun program pengumpulan sampah plastik warga",
+      "opsi": {
+        "A": "Sistem tukar sampah dengan poin belanja di warung",
+        "B": "Jadwal pengambilan rutin seperti yang selama ini berjalan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Sistem tukar sampah dengan poin belanja di warung menghadirkan konsep program baru yang menarik warga. Jadwal pengambilan rutin seperti yang selama ini berjalan juga baik: jadwal rutin itu tertib, tetapi mengulang cara lama. Tips: untuk program, pilih konsep baru."
+    },
+    {
+      "id": "SK-D4-1110",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika antrean pembeli tiket di loket terminal bus selalu panjang menjelang libur panjang",
+      "opsi": {
+        "A": "Menambah jam buka loket seperti tahun lalu",
+        "B": "Membuka pemesanan tiket lewat pesan singkat dengan pembayaran nontunai"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membuka pemesanan tiket lewat pesan singkat dengan pembayaran nontunai membuat cara pelayanan baru yang memangkas antrean. Menambah jam buka loket seperti tahun lalu juga baik: menambah jam buka itu membantu, tetapi mengulang cara lama. Tips: untuk cara pelayanan, pilih pembaruan."
+    },
+    {
+      "id": "SK-D4-1111",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipikirkan ketika jumlah peserta kelas merajut komunitas terus menurun",
+      "opsi": {
+        "A": "Format kelas baru berbasis proyek yang hasilnya bisa dijual",
+        "B": "Jadwal kelas yang lebih teratur dengan materi yang sama"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Format kelas baru berbasis proyek yang hasilnya bisa dijual menawarkan konsep kelas baru yang lebih menarik. Jadwal kelas yang lebih teratur dengan materi yang sama juga baik: jadwal teratur itu tertib, tetapi materinya tetap sama. Tips: untuk program, pilih konsep baru."
+    },
+    {
+      "id": "SK-D4-1112",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dilakukan ketika kedai kopi Anda selalu sepi pada pagi hari",
+      "opsi": {
+        "A": "Mempertahankan menu dan jam buka yang sudah dikenal pelanggan",
+        "B": "Merancang paket sarapan kopi untuk pekerja yang lewat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Merancang paket sarapan kopi untuk pekerja yang lewat menciptakan produk baru untuk peluang yang belum tergarap. Mempertahankan menu dan jam buka yang sudah dikenal pelanggan juga baik: menjaga kebiasaan pelanggan itu bijak, tetapi tidak mencari cara baru. Tips: untuk cara berusaha, pilih pembaruan."
+    },
+    {
+      "id": "SK-D5-1101",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika menjadi kasir bank sampah dan seorang nasabah meminta tabungannya dicairkan sebelum jadwal",
+      "opsi": {
+        "A": "Pencairan sesuai jadwal yang ditetapkan pengurus",
+        "B": "Kebutuhan mendesak nasabah yang sudah lama menabung"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Pencairan sesuai jadwal yang ditetapkan pengurus bertindak sesuai ketentuan dan kewenangan kasir. Kebutuhan mendesak nasabah yang sudah lama menabung juga baik: memperhatikan kebutuhan nasabah itu peduli, tetapi di luar kewenangan kasir. Tips: bertindak sesuai kewenangan yang Anda pegang."
+    },
+    {
+      "id": "SK-D5-1102",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi kernet bus dan penumpang meminta turun di tempat yang bukan titik pemberhentian",
+      "opsi": {
+        "A": "Menurunkannya di tempat yang paling dekat dengan tujuannya",
+        "B": "Menurunkan penumpang di titik pemberhentian terdekat yang ditentukan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menurunkan penumpang di titik pemberhentian terdekat yang ditentukan bertindak sesuai ketentuan yang berlaku bagi kru bus. Menurunkannya di tempat yang paling dekat dengan tujuannya juga baik: membantu penumpang itu ramah, tetapi di luar ketentuan yang ada. Tips: pelayanan tetap berada dalam batas ketentuan."
+    },
+    {
+      "id": "SK-D5-1103",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika menjadi pegawai toko dan pembeli langganan meminta potongan harga yang hanya boleh diberikan pemilik",
+      "opsi": {
+        "A": "Menyampaikan permintaan itu kepada pemilik toko",
+        "B": "Memberi potongan kecil demi menjaga langganan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyampaikan permintaan itu kepada pemilik toko menghormati batas kewenangan dan meneruskan kepada yang berhak. Memberi potongan kecil demi menjaga langganan juga baik: menjaga langganan itu penting, tetapi potongan harga bukan wewenang pegawai. Tips: keputusan di luar wewenang diteruskan kepada yang berwenang."
+    },
+    {
+      "id": "SK-D5-1104",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi relawan dapur umum dan seorang warga meminta jatah makanan tambahan untuk dibawa pulang",
+      "opsi": {
+        "A": "Memberi tambahan karena warga itu tampak sangat membutuhkan",
+        "B": "Membagikan sesuai ketentuan koordinator dapur umum"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membagikan sesuai ketentuan koordinator dapur umum bertindak sesuai pembagian yang ditetapkan pihak berwenang. Memberi tambahan karena warga itu tampak sangat membutuhkan juga baik: kepedulian itu baik, tetapi relawan tidak berwenang mengubah jatah. Tips: ikuti ketentuan dari pihak yang berwenang."
+    },
+    {
+      "id": "SK-D5-1105",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi petugas loket kapal dan seorang kenalan meminta didahulukan tanpa antre",
+      "opsi": {
+        "A": "Bertindak sesuai aturan dan kewenangan yang berlaku",
+        "B": "Mendahulukannya karena ia sedang terburu-buru mengejar kapal"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-1106",
+      "pembahasan": "Bertindak sesuai aturan dan kewenangan yang berlaku menjalankan tugas dalam batas aturan dan kewenangan. Mendahulukannya karena ia sedang terburu-buru mengejar kapal juga baik: memahami keadaan kenalan itu manusiawi, tetapi melanggar aturan antrean. Tips: kedekatan pribadi tidak mengubah aturan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D5-1106",
+      "dimensi": "D5",
+      "situasi": "Hal yang dilakukan ketika menjadi pengurus koperasi dan seorang teman meminta pinjamannya dicairkan tanpa persetujuan rapat",
+      "opsi": {
+        "A": "Mencairkannya karena teman itu selalu tepat waktu membayar",
+        "B": "Bertindak sesuai aturan dan kewenangan yang berlaku"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-1105",
+      "pembahasan": "Bertindak sesuai aturan dan kewenangan yang berlaku menjalankan tugas dalam batas aturan dan kewenangan. Mencairkannya karena teman itu selalu tepat waktu membayar juga baik: rekam jejak teman itu baik, tetapi pencairan tanpa rapat di luar kewenangan. Tips: kepercayaan pribadi tidak mengubah aturan. Butir kembar: jawab konsisten dengan pasangannya."
+    },
+    {
+      "id": "SK-D6-1101",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari mengelola cabang baru kedai kopi di kota lain",
+      "opsi": {
+        "A": "Berangkat dan membangun cabang itu bersama tim baru",
+        "B": "Tetap mengelola cabang lama yang sudah Anda kuasai"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Berangkat dan membangun cabang itu bersama tim baru menunjukkan sikap berani mengambil peran baru dan berubah. Tetap mengelola cabang lama yang sudah Anda kuasai juga baik: cabang lama itu aman, tetapi menolak kesempatan berkembang. Tips: pilih keberanian bertindak dibanding bertahan di zona aman."
+    },
+    {
+      "id": "SK-D6-1102",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika komunitas kerajinan Anda diajak mulai berjualan di pasar daring yang belum pernah dicoba",
+      "opsi": {
+        "A": "Memantapkan penjualan di pameran yang sudah berjalan",
+        "B": "Membuka lapak daring dan belajar sambil berjalan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membuka lapak daring dan belajar sambil berjalan menunjukkan sikap berani mencoba cara baru. Memantapkan penjualan di pameran yang sudah berjalan juga baik: memantapkan yang ada itu bijak, tetapi menunda keberanian berubah. Tips: pilih keberanian mencoba hal baru."
+    },
+    {
+      "id": "SK-D6-1103",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipikirkan ketika diminta menjadi pembawa acara festival kampung untuk pertama kali",
+      "opsi": {
+        "A": "Kesempatan mencoba peran baru di depan banyak orang",
+        "B": "Kesiapan pembawa acara lain yang lebih berpengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Kesempatan mencoba peran baru di depan banyak orang menunjukkan sikap berani mengambil tantangan baru. Kesiapan pembawa acara lain yang lebih berpengalaman juga baik: memikirkan orang yang lebih berpengalaman itu rendah hati, tetapi menghindari kesempatan. Tips: pilih keberanian mengambil kesempatan."
+    },
+    {
+      "id": "SK-D6-1104",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika usaha angkot keluarga diajak beralih ke sistem pembayaran nontunai yang baru",
+      "opsi": {
+        "A": "Tetap menerima uang tunai yang sudah dipahami penumpang",
+        "B": "Mencoba sistem baru itu mulai bulan ini"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mencoba sistem baru itu mulai bulan ini menunjukkan sikap berani berubah mengikuti cara baru. Tetap menerima uang tunai yang sudah dipahami penumpang juga baik: uang tunai itu memudahkan penumpang lama, tetapi menunda perubahan. Tips: pilih keberanian berubah."
+    },
+    {
+      "id": "SK-D6-1105",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang diutamakan ketika ada peluang membuka trayek angkot baru yang sudah dilayani tiga pengusaha lain",
+      "opsi": {
+        "A": "Perhitungan jumlah penumpang dan biaya sebelum masuk trayek",
+        "B": "Keberanian mengambil peluang sebelum didahului orang lain"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Perhitungan jumlah penumpang dan biaya sebelum masuk trayek mengukur risiko sebelum masuk ke persaingan. Keberanian mengambil peluang sebelum didahului orang lain juga baik: keberanian itu penting, tetapi saat bersaing perlu dihitung lebih dulu. Tips: saat bersaing atau ada peluang, ukur dulu kemampuan dan risikonya."
+    },
+    {
+      "id": "SK-D6-1106",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipikirkan ketika toko daring Anda bersaing harga dengan banyak penjual menjelang hari belanja nasional",
+      "opsi": {
+        "A": "Diskon terbesar agar toko paling menonjol",
+        "B": "Batas diskon yang masih menguntungkan usaha"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Batas diskon yang masih menguntungkan usaha menimbang kemampuan usaha di tengah persaingan. Diskon terbesar agar toko paling menonjol juga baik: diskon besar itu menarik pembeli, tetapi belum memperhitungkan untung-rugi. Tips: di tengah persaingan, pilih langkah yang terukur."
+    },
+    {
+      "id": "SK-D7-1101",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin kerja bakti komunitas dan sebagian anggota hanya mengobrol",
+      "opsi": {
+        "A": "Membagi tugas dengan jelas dan meminta semua mulai bekerja",
+        "B": "Memberi contoh bekerja lebih dulu sambil menunggu mereka ikut"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Membagi tugas dengan jelas dan meminta semua mulai bekerja menunjukkan sikap tegas dalam memimpin tindakan. Memberi contoh bekerja lebih dulu sambil menunggu mereka ikut juga baik: memberi contoh itu baik, tetapi tidak tegas mengarahkan anggota. Tips: dalam memimpin tindakan, pilih ketegasan."
+    },
+    {
+      "id": "SK-D7-1102",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika memimpin pegawai kedai yang berulang kali terlambat membuka kedai",
+      "opsi": {
+        "A": "Memaklumi karena rumahnya jauh dari kedai",
+        "B": "Menetapkan batas waktu dan konsekuensi yang jelas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menetapkan batas waktu dan konsekuensi yang jelas menunjukkan sikap tegas dalam mengarahkan anak buah. Memaklumi karena rumahnya jauh dari kedai juga baik: memaklumi itu pengertian, tetapi tidak menyelesaikan masalah yang berulang. Tips: pemimpin bersikap tegas pada masalah yang berulang."
+    },
+    {
+      "id": "SK-D7-1103",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika bus yang Anda tumpangi terjebak macet panjang menjelang acara penting",
+      "opsi": {
+        "A": "Ketenangan karena sudah memberi kabar lebih awal",
+        "B": "Rasa gelisah yang mendorong terus memeriksa peta"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Ketenangan karena sudah memberi kabar lebih awal menunjukkan sikap tenang dalam perasaan. Rasa gelisah yang mendorong terus memeriksa peta juga baik: gelisah itu wajar, tetapi menandakan perasaan yang belum tenang. Tips: bila yang ditanya perasaan, pilih ketenangan."
+    },
+    {
+      "id": "SK-D7-1104",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika menunggu pengumuman hibah modal untuk usaha kecil Anda",
+      "opsi": {
+        "A": "Harapan besar yang membuat terus memeriksa pengumuman",
+        "B": "Hati yang tenang dan siap dengan rencana lain"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Hati yang tenang dan siap dengan rencana lain menunjukkan sikap tenang dalam perasaan. Harapan besar yang membuat terus memeriksa pengumuman juga baik: berharap itu wajar, tetapi membuat perasaan tidak tenang. Tips: bila yang ditanya perasaan, pilih ketenangan."
+    },
+    {
+      "id": "SK-D8-1101",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika atap halte bus di depan kampung Anda bocor dan sudah lama tidak diperbaiki",
+      "opsi": {
+        "A": "Mengajak warga menambal atapnya sementara sambil mengajukan perbaikan resmi",
+        "B": "Mempercayakan perbaikan kepada dinas yang mengelola halte"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak warga menambal atapnya sementara sambil mengajukan perbaikan resmi menunjukkan sikap proaktif dan menggerakkan partisipasi warga. Mempercayakan perbaikan kepada dinas yang mengelola halte juga baik: mempercayakan kepada dinas itu tertib, tetapi tidak menunjukkan inisiatif sendiri. Tips: pilih inisiatif yang menggerakkan orang lain."
+    },
+    {
+      "id": "SK-D8-1102",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika mesin penggiling kopi di kedai Anda macet saat pengunjung ramai",
+      "opsi": {
+        "A": "Memanggil teknisi langganan untuk memperbaikinya",
+        "B": "Membongkar dan membersihkannya sendiri sesuai buku petunjuk"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Membongkar dan membersihkannya sendiri sesuai buku petunjuk menunjukkan sikap mandiri menyelesaikan masalah sendiri. Memanggil teknisi langganan untuk memperbaikinya juga baik: teknisi itu andal, tetapi Anda bergantung pada orang lain. Tips: selesaikan sendiri bila Anda mampu."
+    },
+    {
+      "id": "SK-D8-1103",
+      "dimensi": "D8",
+      "situasi": "Hal yang dibanggakan ketika usaha kue Anda berhasil mendapat pesanan rutin dari katering kantor",
+      "opsi": {
+        "A": "Hasil kerja keras sendiri dari dapur kecil",
+        "B": "Dukungan pelanggan yang merekomendasikan usaha Anda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Hasil kerja keras sendiri dari dapur kecil menghargai keuletan dan usaha mandiri. Dukungan pelanggan yang merekomendasikan usaha Anda juga baik: dukungan pelanggan itu berharga, tetapi bukan hasil usaha sendiri. Tips: dimensi ini menghargai keuletan dan kemandirian."
+    },
+    {
+      "id": "SK-D8-1104",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika saluran air di depan pasar tersumbat sampah dan berbau",
+      "opsi": {
+        "A": "Melaporkannya kepada pengelola pasar",
+        "B": "Mengajak sesama pedagang membersihkannya bersama"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengajak sesama pedagang membersihkannya bersama menunjukkan sikap proaktif dan menggerakkan partisipasi. Melaporkannya kepada pengelola pasar juga baik: melapor itu tertib, tetapi menunggu orang lain bertindak. Tips: pilih inisiatif yang langsung bergerak."
+    },
+    {
+      "id": "SK-D8-1105",
+      "dimensi": "D8",
+      "situasi": "Hal yang diutamakan ketika ingin bisa merawat sendiri sepeda motor yang dipakai untuk mengojek",
+      "opsi": {
+        "A": "Belajar perawatan dasar dan mempraktikkannya sendiri",
+        "B": "Rutin membawanya ke bengkel langganan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Belajar perawatan dasar dan mempraktikkannya sendiri menunjukkan sikap mandiri dan mau belajar. Rutin membawanya ke bengkel langganan juga baik: bengkel langganan itu praktis, tetapi Anda tetap bergantung pada orang lain. Tips: pilih langkah yang membuat Anda mandiri."
+    },
+    {
+      "id": "SK-D8-1106",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika taman baca komunitas Anda kehabisan buku bacaan baru",
+      "opsi": {
+        "A": "Menunggu kiriman buku dari perpustakaan daerah",
+        "B": "Menggalang donasi buku dari warga dan kantor sekitar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menggalang donasi buku dari warga dan kantor sekitar menunjukkan sikap proaktif mencari jalan keluar dan menggerakkan partisipasi. Menunggu kiriman buku dari perpustakaan daerah juga baik: kiriman perpustakaan itu bantuan resmi, tetapi menunggu tanpa inisiatif. Tips: pilih inisiatif yang menggerakkan masyarakat."
+    },
+    {
+      "id": "SK-D8-1107",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika penjualan kerupuk rumahan Anda menurun di warung-warung langganan",
+      "opsi": {
+        "A": "Mencari pasar baru dengan menawarkan langsung ke kantin dan katering",
+        "B": "Meminta pemilik warung lebih sering menawarkan kerupuk Anda"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mencari pasar baru dengan menawarkan langsung ke kantin dan katering menunjukkan sikap ulet dan proaktif mencari peluang sendiri. Meminta pemilik warung lebih sering menawarkan kerupuk Anda juga baik: meminta bantuan pemilik warung itu wajar, tetapi bergantung pada orang lain. Tips: pilih keuletan yang Anda jalankan sendiri."
+    },
+    {
+      "id": "SK-D8-1108",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika rekan satu giliran di loket tiket pelabuhan tidak masuk, sementara kedua loket masih sanggup Anda layani bergantian",
+      "opsi": {
+        "A": "Menutup satu loket dan meminta atasan mengirim pengganti",
+        "B": "Melayani kedua loket sendiri sampai pengganti datang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Melayani kedua loket sendiri sampai pengganti datang menunjukkan sikap ulet dan menyelesaikan tugas sendiri. Menutup satu loket dan meminta atasan mengirim pengganti juga baik: meminta pengganti itu prosedural, tetapi pelayanan berkurang sambil menunggu orang lain. Tips: pilih keuletan menyelesaikan tugas."
+    },
+    {
+      "id": "SK-D9-1101",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika warung Anda kembali ramai setelah lama sepi pembeli",
+      "opsi": {
+        "A": "Syukur kepada Tuhan atas rezeki yang datang",
+        "B": "Bangga karena strategi baru Anda berhasil"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur kepada Tuhan atas rezeki yang datang mengutamakan rasa syukur secara spiritual. Bangga karena strategi baru Anda berhasil juga baik: bangga atas usaha itu wajar, tetapi menekankan usaha, bukan makna spiritual. Tips: aturan dimensi ini mendahulukan makna spiritual. Usaha tetap penting dalam kehidupan nyata."
+    },
+    {
+      "id": "SK-D9-1102",
+      "dimensi": "D9",
+      "situasi": "Hal yang direnungkan ketika perjalanan kapal Anda dibatalkan karena badai",
+      "opsi": {
+        "A": "Pembatalan itu keputusan teknis yang tepat demi keselamatan",
+        "B": "Ada hikmah dari setiap kejadian yang diatur Tuhan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Ada hikmah dari setiap kejadian yang diatur Tuhan memaknai kejadian secara spiritual. Pembatalan itu keputusan teknis yang tepat demi keselamatan juga baik: alasan teknis itu benar, tetapi tidak menyentuh makna spiritual. Tips: dimensi ini mendahulukan makna spiritual."
+    },
+    {
+      "id": "SK-D9-1103",
+      "dimensi": "D9",
+      "situasi": "Hal yang diutamakan ketika mendapat keuntungan besar dari bazar komunitas",
+      "opsi": {
+        "A": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur",
+        "B": "Menambah modal agar bazar berikutnya lebih besar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Menyisihkan sebagian untuk sedekah sebagai rasa syukur mendahulukan nilai spiritual di atas material. Menambah modal agar bazar berikutnya lebih besar juga baik: menambah modal itu cermat, tetapi berorientasi material. Tips: dimensi ini mendahulukan rasa syukur di atas hal material."
+    },
+    {
+      "id": "SK-D9-1104",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipegang ketika usaha kue Anda harus bersaing dengan toko roti besar",
+      "opsi": {
+        "A": "Strategi harga yang mampu bersaing",
+        "B": "Keyakinan bahwa rezeki setiap orang sudah ada yang mengatur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Keyakinan bahwa rezeki setiap orang sudah ada yang mengatur mengutamakan keyakinan spiritual. Strategi harga yang mampu bersaing juga baik: strategi harga itu penting, tetapi menekankan usaha, bukan makna spiritual. Tips: dimensi ini mendahulukan keyakinan spiritual. Usaha tetap penting dalam kehidupan nyata."
+    },
+    {
+      "id": "SK-D9-1105",
+      "dimensi": "D9",
+      "situasi": "Hal yang didahulukan sebelum memulai perjalanan jauh dengan bus antarkota",
+      "opsi": {
+        "A": "Berdoa memohon keselamatan perjalanan",
+        "B": "Memeriksa ulang barang bawaan dan tiket"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Berdoa memohon keselamatan perjalanan mengutamakan sikap spiritual. Memeriksa ulang barang bawaan dan tiket juga baik: memeriksa barang itu teliti, tetapi bersifat teknis. Tips: dimensi ini mendahulukan sikap spiritual."
+    },
+    {
+      "id": "SK-D9-1106",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika selamat dari kecelakaan kecil saat mengojek",
+      "opsi": {
+        "A": "Lega karena sepeda motor hanya rusak ringan",
+        "B": "Syukur atas perlindungan Tuhan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Syukur atas perlindungan Tuhan mengutamakan rasa syukur secara spiritual. Lega karena sepeda motor hanya rusak ringan juga baik: lega itu wajar, tetapi berpusat pada keadaan barang. Tips: dimensi ini mendahulukan rasa syukur di atas hal material."
+    },
+    {
+      "id": "SK-D10-1101",
+      "dimensi": "D10",
+      "situasi": "Hal yang diutamakan ketika menilai keberhasilan pelatihan usaha bagi ibu-ibu komunitas",
+      "opsi": {
+        "A": "Jumlah peserta yang benar-benar mulai berjualan",
+        "B": "Kelengkapan materi dan daftar hadir setiap sesi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah peserta yang benar-benar mulai berjualan menilai keberhasilan dari hasil nyata. Kelengkapan materi dan daftar hadir setiap sesi juga baik: kelengkapan materi itu rapi, tetapi menggambarkan proses, bukan hasil. Tips: untuk menilai keberhasilan, lihat hasil akhirnya."
+    },
+    {
+      "id": "SK-D10-1102",
+      "dimensi": "D10",
+      "situasi": "Hal yang dipikirkan ketika mengevaluasi kinerja armada angkot paguyuban selama sebulan",
+      "opsi": {
+        "A": "Kerapian jadwal keberangkatan setiap armada",
+        "B": "Jumlah penumpang terangkut dan pendapatan yang tercapai"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Jumlah penumpang terangkut dan pendapatan yang tercapai menilai keberhasilan dari hasil yang dicapai. Kerapian jadwal keberangkatan setiap armada juga baik: jadwal rapi itu penting, tetapi menggambarkan proses, bukan hasil. Tips: untuk menilai keberhasilan, lihat hasil akhirnya."
+    },
+    {
+      "id": "SK-D11-1101",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika stan Anda paling sepi pembeli di bazar komunitas",
+      "opsi": {
+        "A": "Tetap bersyukur atas pembeli yang sempat datang",
+        "B": "Mengamati stan yang ramai untuk memperbaiki cara berjualan berikutnya"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Mengamati stan yang ramai untuk memperbaiki cara berjualan berikutnya belajar dari kegagalan dan menyesuaikan strategi. Tetap bersyukur atas pembeli yang sempat datang juga baik: bersyukur itu baik, tetapi belum mengambil pelajaran. Tips: kegagalan dijadikan bahan belajar."
+    },
+    {
+      "id": "SK-D11-1102",
+      "dimensi": "D11",
+      "situasi": "Hal yang diyakini ketika penumpang mengeluhkan cara Anda mengemudi yang sering mengerem mendadak",
+      "opsi": {
+        "A": "Masukan itu berguna untuk memperbaiki cara mengemudi",
+        "B": "Setiap pengemudi punya gaya mengemudi masing-masing"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Masukan itu berguna untuk memperbaiki cara mengemudi menerima masukan untuk memperbaiki diri. Setiap pengemudi punya gaya mengemudi masing-masing juga baik: gaya pribadi itu wajar, tetapi menolak belajar dari masukan. Tips: terima masukan sebagai bahan perbaikan."
+    },
+    {
+      "id": "SK-D11-1103",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika target penjualan toko daring bulan ini tidak tercapai",
+      "opsi": {
+        "A": "Mencari penyebab kegagalan dan menyesuaikan strategi promosi",
+        "B": "Menjalankan rencana yang sama dengan semangat lebih besar"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Mencari penyebab kegagalan dan menyesuaikan strategi promosi belajar dari kegagalan dan menyesuaikan strategi. Menjalankan rencana yang sama dengan semangat lebih besar juga baik: semangat itu baik, tetapi mengulang rencana yang belum berhasil. Tips: sesuaikan strategi setelah gagal."
+    },
+    {
+      "id": "SK-D11-1104",
+      "dimensi": "D11",
+      "situasi": "Hal yang diutamakan ketika rekan relawan menyebut cara Anda membagi tugas kurang adil",
+      "opsi": {
+        "A": "Menjelaskan alasan pembagian tugas yang sudah dibuat",
+        "B": "Menerima masukan dan menata ulang pembagian tugas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Menerima masukan dan menata ulang pembagian tugas menerima masukan dan mengenali kelemahan sendiri. Menjelaskan alasan pembagian tugas yang sudah dibuat juga baik: menjelaskan alasan itu wajar, tetapi belum menerima masukan. Tips: terima masukan, lalu perbaiki."
+    }
+  ]
+}
