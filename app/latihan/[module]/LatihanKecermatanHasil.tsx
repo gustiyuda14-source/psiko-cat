@@ -329,7 +329,11 @@ export default function LatihanKecermatanHasil({
         <BarChart
           title="Jawaban per kolom"
           bars={cols.map((c) => ({ n: c.total, ok: c.correct }))}
-          notes={[timedMode && "Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi."]}
+          notes={[
+            ajiks
+              ? "Di mode ini kolom awal memang lebih pendek, jadi grafik naik itu wajar dan nilainya lebih rendah daripada mode 60 detik. Bandingkan dengan latihan D'AJIKS-mu sebelumnya, bukan dengan mode 60 detik."
+              : timedMode && "Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi.",
+          ]}
         />
       )}
 

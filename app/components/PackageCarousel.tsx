@@ -276,7 +276,7 @@ export function PackageCarousel({
                 "Timer per kolom",
                 "60 detik per kolom, urutan terkunci, persis mode ujian.",
                 "Tanpa batas waktu, bebas pindah kolom.",
-                `Rahasia D'AJIKS Akademi: target waktu bertahap ${AJIKS_COLUMN_SECONDS.join(", ")} detik untuk kolom I sampai X, supaya grafik per kolom terus naik. Urutan terkunci.`
+                `Rahasia D'AJIKS Akademi: waktu kolom bertahap ${AJIKS_COLUMN_SECONDS.join(", ")} detik untuk kolom I sampai X. Kolom awal yang sempit memaksamu cepat sejak awal, kolom akhir melatihmu menjaga tempo. Di ujian asli (60 detik tiap kolom), bawa tempo ini dari kolom I. Jangan menahan diri supaya grafik naik. Urutan terkunci.`
               )}
             </>
           )}
