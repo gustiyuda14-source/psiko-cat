@@ -65,7 +65,7 @@ export default async function SimulasiPage() {
   // supaya angka yang ditampilkan cocok dengan jumlah soal yang benar-benar didapat user.
   // Hitung per type+paket (head count): select baris dipotong PostgREST di 1000, bank simulasi sudah > 1000.
   const bankKeys = [...new Set(Object.values(SIMULASI_PAKET).flatMap((p) => [`KECERDASAN:${p.KECERDASAN}`, `KEPRIBADIAN:${p.KEPRIBADIAN}`]))];
-  const [bankCounts, { count: kecermatanCount }, { data: openSessions }, { data: scoredRows }, { data: doneSessions }] =
+  const [bankCounts, { count: kecermatanCount }, { data: openSessions }, { data: doneSessions }] =
     await Promise.all([
       Promise.all(bankKeys.map(async (k) => {
         const [type, pkg] = k.split(":");
@@ -85,19 +85,10 @@ export default async function SimulasiPage() {
         .eq("user_id", session.sub)
         .in("status", ["PENDING", "IN_PROGRESS"])
         .order("created_at", { ascending: false }),
-      // Nilai murni terakhir per sub-tes (isi madu di sisi kubus). Urut terbaru dulu;
-      // baris pertama per module_type yang dipakai.
-      supabaseAdmin
-        .from("module_sessions")
-        .select("module_type, raw_score, completed_at, test_sessions!inner(user_id)")
-        .eq("test_sessions.user_id", session.sub)
-        .not("raw_score", "is", null)
-        .order("completed_at", { ascending: false })
-        .limit(60),
       // Tren Nilai Akhir Psikotest: sesi selesai milik peserta ini, sama dengan Beranda.
       supabaseAdmin
         .from("test_sessions")
-        .select("id, nap_score, completed_at, created_at, status, module_sessions(id, module_type, package_number, ke_index, kt_index, kh_index)")
+        .select("id, nap_score, completed_at, created_at, status, module_sessions(id, module_type, package_number, ke_index, kt_index, kh_index, raw_score)")
         .eq("user_id", session.sub)
         .in("status", ["COMPLETED", "DISQUALIFIED"])
         .order("created_at", { ascending: true }),
@@ -117,23 +108,7 @@ export default async function SimulasiPage() {
 
   const running = openSessions ?? [];
 
-  const last: LastScores = {};
-  for (const row of scoredRows ?? []) {
-    const type = row.module_type as ModuleType;
-    if (row.raw_score == null) continue;
-    if (last[type]) {
-      last[type].prev ??= row.raw_score;
-      continue;
-    }
-    last[type] = {
-      score: row.raw_score,
-      at: row.completed_at
-        ? new Date(row.completed_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" })
-        : "-",
-    };
-  }
-
-  type Done = { id: string; completed_at: string | null; created_at: string; module_sessions: ModuleRow[] };
+  type Done = { id: string; completed_at: string | null; created_at: string; module_sessions: (ModuleRow & { raw_score: number | null })[] };
   const done = (doneSessions ?? []) as unknown as Done[];
   const isFull = (s: Done) => MODULE_ORDER.every((t) => s.module_sessions.some((m) => m.module_type === t));
   const full = done.filter(isFull);
@@ -164,6 +139,19 @@ export default async function SimulasiPage() {
   // (null = sesi lama = Paket 1). `done` urut lama → baru.
   const paketOf = (s: Done) => simulasiKartuOf(s.module_sessions.find((m) => m.module_type === "KECERDASAN")?.package_number);
   const runsOf = (id: number) => full.filter((s) => paketOf(s) === id);
+  const tanggal = (s: Done) => new Date(s.completed_at ?? s.created_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" });
+
+  // Nilai murni sub-tes (isi madu di sisi kubus) dari tryout lengkap paket ini saja,
+  // supaya kubus paket baru tidak terisi nilai paket lain. `runs` urut lama → baru.
+  const lastOf = (id: number): LastScores => {
+    const out: LastScores = {};
+    for (const s of runsOf(id)) for (const m of s.module_sessions) {
+      if (m.raw_score == null) continue;
+      const t = m.module_type as ModuleType;
+      out[t] = { score: m.raw_score, prev: out[t]?.score, at: tanggal(s) };
+    }
+    return out;
+  };
 
   // 5 slot paket simulasi penuh. Kartu terbuka otomatis begitu paketnya terdaftar di
   // SIMULASI_PAKET dan bank soal Kecerdasan + Kepribadiannya sudah ada di DB.
@@ -178,7 +166,7 @@ export default async function SimulasiPage() {
         runs: runs.length,
         nap: (last && nilaiOf(last)?.nilai_akhir) ?? undefined,
         prev: (runs.at(-2) && nilaiOf(runs.at(-2)!)?.nilai_akhir) ?? undefined,
-        at: last ? new Date(last.completed_at ?? last.created_at).toLocaleDateString("id-ID", { day: "numeric", month: "short" }) : undefined,
+        at: last ? tanggal(last) : undefined,
       };
     })(),
   }));
@@ -208,7 +196,7 @@ export default async function SimulasiPage() {
       <PageHeader
         kicker="Simulasi"
         title="Simulasi"
-        description="Tes resmi dengan timer berjalan. Tryout lengkap dinilai dengan psikogram Peraturan As SDM Kapolri No. 3/2017 (nilai akhir 1–85) sesuai profil tujuanmu. Sisi kubus menunjukkan nilai terakhir tiap sub-tes."
+        description="Tes resmi dengan timer berjalan. Tryout lengkap dinilai dengan psikogram Peraturan As SDM Kapolri No. 3/2017 (nilai akhir 1–85) sesuai profil tujuanmu. Sisi kubus menunjukkan nilai terakhir tiap sub-tes di paket itu."
       />
 
       <SimulasiProgress tryouts={tryouts} aspekTerakhir={aspekTerakhir} single={single} profil={profil} belumLengkap={belumLengkap} />
@@ -253,7 +241,7 @@ export default async function SimulasiPage() {
           <span className="section-kicker">Katalog simulasi</span>
           <h2 className="mt-1 font-heading text-2xl">Pilih paket simulasi</h2>
         </div>
-        <SimulasiCatalog packages={packages} items={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, itemsOf(p.id)]))} last={last} action={startSession} />
+        <SimulasiCatalog packages={packages} items={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, itemsOf(p.id)]))} last={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, lastOf(p.id)]))} action={startSession} />
       </section>
     </div>
   );

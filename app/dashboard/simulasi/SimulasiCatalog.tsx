@@ -86,13 +86,15 @@ export default function SimulasiCatalog({
   packages: SimulasiPackage[];
   /** Kubus per kartu paket yang sudah tersedia. */
   items: Record<number, SimulasiItem[]>;
-  last: LastScores;
+  /** Nilai sub-tes per kartu paket, hanya dari tryout lengkap paket itu. */
+  last: Record<number, LastScores>;
   action: (formData: FormData) => Promise<void>;
 }) {
   const [pkg, setPkg] = useState<number | null>(null);
   const [selected, setSelected] = useState(0);
   const [pending, startTransition] = useTransition();
   const list = pkg === null ? [] : items[pkg] ?? [];
+  const lastPkg: LastScores = pkg === null ? {} : last[pkg] ?? {};
   const item = list[selected];
   const ready = packages.filter((p) => p.ready);
   const [sel, setSel] = useState(() => (ready.find((p) => p.runs === 0) ?? ready.at(-1))?.id);
@@ -272,7 +274,7 @@ export default function SimulasiCatalog({
       <div className="hc-stage">
         <div className="hc-field hc-frame hc-cubefield">
           <p className="hc-hud" aria-hidden="true">
-            Nilai terakhir <b>per sub-tes</b> · dari sesi mana pun, bukan nilai paket ini
+            Nilai terakhir <b>per sub-tes</b> · Paket {pkg}
           </p>
           <div className="hc-cubes" role="group" aria-label="Pilih tes">
             {list.map((it, i) => (
@@ -284,7 +286,7 @@ export default function SimulasiCatalog({
                 style={{ animationDelay: `${i * 70}ms` }}
                 onClick={() => (i === selected ? document.getElementById("sim-start")?.focus() : setSelected(i))}
               >
-                <Cube item={it} last={last} idx={i} />
+                <Cube item={it} last={lastPkg} idx={i} />
                 <span className="hc-cube-shadow" aria-hidden="true" />
                 <span className="hc-cube-title">{it.title}</span>
                 <span className="hc-cube-meta tnum">{it.meta}</span>
@@ -314,21 +316,21 @@ export default function SimulasiCatalog({
               <p className="mt-3 text-sm font-medium text-foreground">
                 {cur?.runs && cur.nap !== undefined
                   ? `Nilai akhir paket ini: ${Math.round(cur.nap)}/85 · terakhir ${cur.at}`
-                  : "Tryout lengkap paket ini belum pernah selesai. Angka di bawah adalah nilai sub-tes terakhir dari sesi mana pun."}
+                  : "Tryout lengkap paket ini belum pernah selesai."}
               </p>
             );
           })()}
           <ul className="hc-scores">
             {FACES.map((f) => {
               const on = item.faces.includes(f.type);
-              const l = last[f.type];
+              const l = lastPkg[f.type];
               return (
                 <li key={f.type}>
                   <i className={on ? "" : "is-off"} aria-hidden="true" />
                   <div>
                     <b>{f.label}</b>
                     <span>
-                      {!on ? "Tidak termasuk tes ini" : l ? `Sisi ${f.side} · terakhir ${l.at}` : `Sisi ${f.side} · belum pernah dikerjakan`}
+                      {!on ? "Tidak termasuk tes ini" : l ? `Sisi ${f.side} · terakhir ${l.at}` : `Sisi ${f.side} · belum ada nilai di paket ini`}
                       {on && l && l.prev !== undefined && Math.round(l.score) !== Math.round(l.prev) && (
                         <span className={l.score > l.prev ? "pg-up" : "pg-down"}>
                           {" "}· {l.score > l.prev ? "naik" : "turun"} {Math.abs(Math.round(l.score) - Math.round(l.prev))}
