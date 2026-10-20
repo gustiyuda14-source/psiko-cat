@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
-import { readFileSync } from "node:fs";
-import { getMissingSymbolKey, KECERMATAN_KEYS } from "./kecermatan-symbols";
+import { existsSync, readFileSync } from "node:fs";
+import { emojiSrc, getMissingSymbolKey, KECERMATAN_KEYS } from "./kecermatan-symbols";
 import type { KecermatanOptionsPayload } from "./types/safe-question";
 
 const symbol_map = { A: "◆", B: "🍀", C: "♫", D: "✦", E: "☂" };
@@ -40,4 +40,22 @@ for (const id of [3, 4, 5, 6, 7, 8, 9, 201, 202, 203, 204, 205, 206, 301, 501, 5
   }
 }
 assert.equal(labelled, 379);
+// Emoji wajib punya SVG lokal (Windows 7 tanpa font emoji = kotak kosong). Paket emoji baru: unduh SVG-nya ke public/emoji.
+assert.equal(emojiSrc("🐶"), "/emoji/1f436.svg");
+assert.equal(emojiSrc("☀️"), "/emoji/2600.svg");
+assert.equal(emojiSrc("🕵️‍♂️"), "/emoji/1f575-fe0f-200d-2642-fe0f.svg");
+for (const plain of ["▲", "♠", "↔", "7X", "ξ", "/kecermatan-spasial/p201/a.svg"]) assert.equal(emojiSrc(plain), null);
+let emojiFiles = 0;
+for (const id of [3, 4, 5, 6, 7, 8]) {
+  const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
+    kolom: { nomor: number; simbol: KecermatanOptionsPayload["symbol_map"] }[];
+  };
+  for (const col of bank.kolom) for (const s of Object.values(col.simbol)) {
+    const src = emojiSrc(s);
+    if (!src) continue;
+    assert.ok(existsSync(new URL(`../public${src}`, import.meta.url)), `p${id} kolom ${col.nomor}: ${s} tanpa ${src}`);
+    emojiFiles++;
+  }
+}
+assert.ok(emojiFiles > 0);
 console.log(`Kecermatan: ${verified} source answers, all keys, emoji, ordering, and malformed payload checks passed.`);

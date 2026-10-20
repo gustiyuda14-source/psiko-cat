@@ -1,9 +1,13 @@
-import { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
+import { emojiSrc, KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 export { KECERMATAN_KEYS, type KecermatanKey } from "@/lib/kecermatan-symbols";
 
 // Aspek Spasial & sebagian Simbol Hilang menyimpan simbol sebagai path SVG di
-// public/, aspek lain menyimpan glyph teks. Ukuran gambar ikut font-size wadahnya (em).
+// public/, aspek lain menyimpan glyph teks. Emoji juga jadi SVG (lihat emojiSrc).
+// Ukuran gambar ikut font-size wadahnya (em).
 export function KecermatanSymbol({ symbol }: { symbol: string }) {
+  const emoji = emojiSrc(symbol);
+  // eslint-disable-next-line @next/next/no-img-element
+  if (emoji) return <img src={emoji} alt={symbol} draggable={false} className="inline-block h-[1.15em] w-[1.15em] align-[-0.15em]" />;
   if (!symbol.endsWith(".svg")) return <>{symbol}</>;
   // eslint-disable-next-line @next/next/no-img-element
   return <img src={symbol} alt="" draggable={false} className="h-[1.5em] w-[1.5em]" />;
