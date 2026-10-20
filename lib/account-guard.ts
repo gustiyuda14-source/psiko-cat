@@ -5,7 +5,7 @@
 import { sessionVersion } from "@/lib/account-rules";
 
 const TTL = 60_000, MIN_FORCE = 5_000, BACKOFF = 10_000, TIMEOUT = 4_000, PAGE = 1000;
-type Entry = { aktif: boolean; pv: string };
+type Entry = { aktif: boolean; pv: string; profil: boolean };
 let cache: Map<string, Entry> | null = null, at = 0, forcedAt = 0, failUntil = 0;
 let inflight: Promise<Map<string, Entry> | null> | null = null;
 
@@ -21,8 +21,8 @@ async function fetchAll(): Promise<Map<string, Entry>> {
       // select=* supaya tetap jalan sebelum kolom aktif dibuat (kolom hilang = aktif).
       const res = await fetch(`${url}/rest/v1/users?select=*&order=id.asc`, { headers: { ...headers, Range: `${from}-${from + PAGE - 1}` }, signal: ctl.signal });
       if (!res.ok) throw new Error(`Supabase ${res.status}`);
-      const rows = (await res.json()) as { id: string; aktif?: boolean | null; password_hash?: string | null }[];
-      for (const r of rows) map.set(r.id, { aktif: r.aktif !== false, pv: r.password_hash ? sessionVersion(r.password_hash) : "" });
+      const rows = (await res.json()) as { id: string; aktif?: boolean | null; password_hash?: string | null; profil_tujuan?: string | null }[];
+      for (const r of rows) map.set(r.id, { aktif: r.aktif !== false, pv: r.password_hash ? sessionVersion(r.password_hash) : "", profil: !!r.profil_tujuan });
       if (rows.length < PAGE) return map;
     } finally {
       clearTimeout(timer);
@@ -62,4 +62,9 @@ export async function sessionBlocked(sub: string, pv: string | undefined): Promi
     u = (await accounts(true))?.get(sub) ?? u;
   }
   return !u.aktif || (!!pv && pv !== u.pv);
+}
+
+/** false = akun belum memilih profil tujuan. Supabase gagal / akun tak ada di cache = dianggap punya (lolos). */
+export async function punyaProfil(sub: string): Promise<boolean> {
+  return (await accounts(false))?.get(sub)?.profil ?? true;
 }

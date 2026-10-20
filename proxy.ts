@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { jwtVerify } from "jose";
-import { sessionBlocked } from "@/lib/account-guard";
+import { punyaProfil, sessionBlocked } from "@/lib/account-guard";
 
 const COOKIE_NAME = "psiko_session";
 
@@ -11,6 +11,7 @@ function getJwtSecret(): Uint8Array {
 }
 
 const PUBLIC_PATHS = ["/login", "/api/auth/login"];
+const PROFIL_PATH = "/dashboard/profil";
 
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
@@ -47,6 +48,19 @@ export async function proxy(req: NextRequest) {
 
     if (pathname.startsWith("/admin") && payload.role !== "admin") {
       return NextResponse.redirect(new URL("/dashboard", req.url));
+    }
+
+    // Peserta tanpa profil tujuan wajib memilih dulu (saat login maupun navigasi berikutnya).
+    // Cookie psg_profil diset saat memilih, jadi tidak terpental lagi selama cache akun (60 dtk) belum segar.
+    // Ujian (/test) tidak disela; memulai simulasi sudah dikunci di halaman Simulasi.
+    if (
+      payload.role !== "admin" &&
+      (pathname.startsWith("/dashboard") || pathname.startsWith("/latihan")) &&
+      pathname !== PROFIL_PATH &&
+      !req.cookies.get("psg_profil")?.value &&
+      !(await punyaProfil(String(payload.sub ?? "")))
+    ) {
+      return NextResponse.redirect(new URL(PROFIL_PATH, req.url));
     }
 
     return NextResponse.next();
