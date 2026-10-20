@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from "react";
-import { kurvaDari, titikHafalDari, type Analisis } from "@/lib/kecermatan-analisis";
+import { analyzeKecermatan, titikHafalDari, type Analisis } from "@/lib/kecermatan-analisis";
+import type { KecermatanTiming } from "@/lib/progress-rules";
 import type { KecermatanColumnGroup } from "@/app/components/PembahasanSection";
 import { KecermatanSymbol } from "@/app/components/KecermatanKeyStrip";
 import PELAFALAN from "@/data/kecermatan-pelafalan.json";
@@ -7,11 +8,12 @@ import PELAFALAN from "@/data/kecermatan-pelafalan.json";
 /*
   Isi tab "Tanpa batas waktu" dan "Analisis" di hasil latihan Kecermatan
   (prototipe output/kecermatan-review-prototype.html, CSS app/latihan-analisis.css).
-  HafalSection juga dipakai pembahasan Simulasi Penuh (PembahasanNavigator).
+  AnalisisSimulasi = versi pembahasan Simulasi Penuh (PembahasanNavigator).
   Grafik garis = SVG viewBox 0 0 100 100 tanpa rasio; label = HTML di atasnya (persen).
 */
 
 export const ROMAN = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"];
+export const PER_COLUMN = 50;
 export const r1 = (n: number) => (Math.round(n * 10) / 10).toLocaleString("id-ID");
 const nama = (sym: string) => (PELAFALAN as Record<string, string>)[sym];
 type Valid = Extract<Analisis, { valid: true }>;
@@ -68,6 +70,40 @@ function Plot({ h, xs, ys, hi, lo, yTicks, xLabels, values, mark, markT, levels,
       ))}
       {mark !== undefined && <span className="lr-plot-t" style={{ left: `calc(${mark}% + 6px)`, top: 4 }}>{markT}</span>}
     </div>
+  );
+}
+
+/** Grafik batang per kolom; skip = kolom tak dikerjakan (slot berarsir). */
+export function BarChart({ title, bars, notes }: { title: string; bars: { n: number; ok: number; skip?: boolean }[]; notes: (string | false)[] }) {
+  const peak = Math.max(PER_COLUMN, ...bars.map((c) => c.n));
+  return (
+    <figure className="lr-chart">
+      <figcaption>
+        <b>{title}</b>
+        <span>
+          <i className="is-ok" /> benar <i className="is-bad" /> salah
+        </span>
+      </figcaption>
+      <ol aria-label={title}>
+        {bars.map((c, i) => (
+          <li key={i} aria-label={`Kolom ${ROMAN[i]}: ${c.skip ? "belum dikerjakan" : `${c.n} dijawab, ${c.ok} benar`}`}>
+            <span className="lr-chart-track">
+              <span className="lr-chart-n tnum">{c.skip ? "-" : c.n || ""}</span>
+              {c.skip ? (
+                <span className="lr-chart-bar is-skip" />
+              ) : (
+                <span className="lr-chart-bar" style={{ height: `calc((100% - 14px) * ${c.n / peak})`, animationDelay: `${i * 40}ms` }}>
+                  <span className="is-bad" style={{ flexGrow: c.n - c.ok }} />
+                  <span className="is-ok" style={{ flexGrow: c.ok }} />
+                </span>
+              )}
+            </span>
+            <span className="lr-chart-x">{ROMAN[i]}</span>
+          </li>
+        ))}
+      </ol>
+      {notes.map((t) => t && <p key={t}>{t}</p>)}
+    </figure>
   );
 }
 
@@ -128,28 +164,58 @@ export function HafalSection({ kurva }: { kurva: (number | null)[] }) {
   );
 }
 
-/** Pembahasan Simulasi Penuh: waktu per butir = jeda dari klik sebelumnya di kolom yang sama (lib/review.ts). */
-export function HafalSimulasi({ groups }: { groups: KecermatanColumnGroup[] }) {
-  const pts = groups.flatMap((g) => {
-    const s0 = Math.min(...g.items.map((it) => it.sequence_number));
-    return g.items.flatMap((it) => (it.ms && it.ms > 0 ? [{ p: it.sequence_number - s0, ms: it.ms }] : []));
+/**
+  Pembahasan Simulasi Penuh: grafik + analisis yang sama dengan latihan bertimer. Waktu per butir = jeda dari klik
+  sebelumnya di kolom yang sama (lib/review.ts); butir pertama kolom tanpa waktu, jadi tidak ikut dianalisis.
+  Kolom ujian selalu urut I-X, maka urutan kunjungan = nomor kolom.
+*/
+export function AnalisisSimulasi({ groups }: { groups: KecermatanColumnGroup[] }) {
+  const items = groups.flatMap((g) =>
+    g.items.map((it) => ({
+      id: it.question_id,
+      column: g.column_index,
+      seq: it.sequence_number,
+      correct: it.is_correct,
+      selected: it.selected_key,
+      correctKey: it.correct_key,
+      symbols: it.symbol_map as Record<string, string>,
+    }))
+  );
+  const timing: KecermatanTiming = { v: 1, pel: false, cols: {}, t: {} };
+  for (const g of groups) {
+    timing.cols[g.column_index] = { o: g.column_index, clean: true };
+    let sejakMulai = 0;
+    for (const it of g.items) if (it.ms && it.ms > 0) timing.t[it.question_id] = [(sejakMulai += it.ms), it.ms];
+  }
+  const a = analyzeKecermatan(items, timing);
+  const bars = ROMAN.map((_, i) => {
+    const g = groups.find((x) => x.column_index === i + 1);
+    return { n: g?.total ?? 0, ok: g?.correct ?? 0 };
   });
   return (
-    <div className="lr-pane">
-      <HafalSection kurva={kurvaDari(pts)} />
+    <div className="space-y-4">
+      <div className="lr-pane">
+        <section className="lr-sec">
+          <BarChart title="Jawaban per kolom" bars={bars} notes={["Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi."]} />
+        </section>
+        {a.valid && <KecepatanPerKolom a={a} />}
+      </div>
+      {a.valid ? (
+        <AnalisisPane a={a} timedMode />
+      ) : (
+        <div className="lr-pane">
+          <section className="lr-sec">
+            <p className="pg-empty">{a.alasan}</p>
+          </section>
+        </div>
+      )}
     </div>
   );
 }
 
 export function ProfilPane({ a }: { a: Valid }) {
-  const { akurasi, benarPerMenit, perKolom, tren, jeda } = a.penuh;
+  const { akurasi, benarPerMenit, tren, jeda } = a.penuh;
   const t = TREN[tren];
-  const bpm = perKolom.map((k) => k.benarPerMenit);
-  const xs = bpm.map((_, i) => 5 + (i * 90) / (bpm.length - 1));
-  const lo = Math.max(0, Math.floor((Math.min(...bpm) - 4) / 5) * 5);
-  const hi = Math.ceil((Math.max(...bpm) + 3) / 5) * 5;
-  const max = bpm.indexOf(Math.max(...bpm));
-  const min = bpm.indexOf(Math.min(...bpm));
   return (
     <div className="lr-pane">
       <section className="lr-sec">
@@ -188,37 +254,50 @@ export function ProfilPane({ a }: { a: Valid }) {
           </div>
         </dl>
       </section>
-      <section className="lr-sec">
-        <div className="pg-sec-h">
-          <h3>Kecepatan per kolom</h3>
-          <span>urut sesuai yang kamu kerjakan</span>
-        </div>
-        <div className="pg-legend">
-          <span><i className="lr-key" />benar per menit</span>
-          <span><i className="lr-key is-hex" />akurasi (%)</span>
-        </div>
-        <Plot
-          h={150}
-          xs={xs}
-          ys={bpm}
-          lo={lo}
-          hi={hi}
-          yTicks={Array.from({ length: (hi - lo) / 5 + 1 }, (_, i) => lo + i * 5)}
-          xLabels={perKolom.map((k, i) => ({ x: xs[i], t: ROMAN[k.column - 1] }))}
-          values={[...new Set([0, max, bpm.length - 1])].map((i) => ({ x: xs[i], v: bpm[i], t: r1(bpm[i]), below: i > 0 && bpm[i - 1] > bpm[i] }))}
-          label={`Benar per menit per kolom, urut dikerjakan: ${perKolom.map((k) => `kolom ${ROMAN[k.column - 1]} ${r1(k.benarPerMenit)}`).join(", ")}.`}
-        />
-        <div className="lr-accrow" aria-label={`Akurasi per kolom: ${perKolom.map((k) => `kolom ${ROMAN[k.column - 1]} ${r1(k.akurasi)}%`).join(", ")}`}>
-          {perKolom.map((k, i) => (
-            <span key={k.column} className={k.akurasi < 90 ? "is-low" : ""} style={{ left: `${xs[i]}%` }}>{Math.round(k.akurasi)}</span>
-          ))}
-        </div>
-        <p className="lr-note">
-          Paling kencang di kolom {ROMAN[perKolom[max].column - 1]} ({r1(bpm[max])} benar per menit), paling pelan di kolom{" "}
-          {ROMAN[perKolom[min].column - 1]} ({r1(bpm[min])}).
-        </p>
-      </section>
+      <KecepatanPerKolom a={a} />
     </div>
+  );
+}
+
+function KecepatanPerKolom({ a }: { a: Valid }) {
+  const { perKolom } = a.penuh;
+  const bpm = perKolom.map((k) => k.benarPerMenit);
+  const xs = bpm.map((_, i) => 5 + (i * 90) / (bpm.length - 1));
+  const lo = Math.max(0, Math.floor((Math.min(...bpm) - 4) / 5) * 5);
+  const hi = Math.ceil((Math.max(...bpm) + 3) / 5) * 5;
+  const max = bpm.indexOf(Math.max(...bpm));
+  const min = bpm.indexOf(Math.min(...bpm));
+  return (
+    <section className="lr-sec">
+      <div className="pg-sec-h">
+        <h3>Kecepatan per kolom</h3>
+        <span>urut sesuai yang kamu kerjakan</span>
+      </div>
+      <div className="pg-legend">
+        <span><i className="lr-key" />benar per menit</span>
+        <span><i className="lr-key is-hex" />akurasi (%)</span>
+      </div>
+      <Plot
+        h={150}
+        xs={xs}
+        ys={bpm}
+        lo={lo}
+        hi={hi}
+        yTicks={Array.from({ length: (hi - lo) / 5 + 1 }, (_, i) => lo + i * 5)}
+        xLabels={perKolom.map((k, i) => ({ x: xs[i], t: ROMAN[k.column - 1] }))}
+        values={[...new Set([0, max, bpm.length - 1])].map((i) => ({ x: xs[i], v: bpm[i], t: r1(bpm[i]), below: i > 0 && bpm[i - 1] > bpm[i] }))}
+        label={`Benar per menit per kolom, urut dikerjakan: ${perKolom.map((k) => `kolom ${ROMAN[k.column - 1]} ${r1(k.benarPerMenit)}`).join(", ")}.`}
+      />
+      <div className="lr-accrow" aria-label={`Akurasi per kolom: ${perKolom.map((k) => `kolom ${ROMAN[k.column - 1]} ${r1(k.akurasi)}%`).join(", ")}`}>
+        {perKolom.map((k, i) => (
+          <span key={k.column} className={k.akurasi < 90 ? "is-low" : ""} style={{ left: `${xs[i]}%` }}>{Math.round(k.akurasi)}</span>
+        ))}
+      </div>
+      <p className="lr-note">
+        Paling kencang di kolom {ROMAN[perKolom[max].column - 1]} ({r1(bpm[max])} benar per menit), paling pelan di kolom{" "}
+        {ROMAN[perKolom[min].column - 1]} ({r1(bpm[min])}).
+      </p>
+    </section>
   );
 }
 

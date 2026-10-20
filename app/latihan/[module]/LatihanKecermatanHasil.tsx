@@ -12,7 +12,7 @@ import { fillY, wavePath } from "@/lib/honey";
 import { analyzeKecermatan } from "@/lib/kecermatan-analisis";
 import type { KecermatanTiming } from "@/lib/progress-rules";
 import { scoreLatihanKecermatan } from "./actions";
-import { AnalisisPane, ProfilPane, ROMAN, r1 } from "./LatihanKecermatanAnalisis";
+import { AnalisisPane, BarChart, PER_COLUMN, ProfilPane, ROMAN, r1 } from "./LatihanKecermatanAnalisis";
 
 /*
   Layar selesai latihan Kecermatan, bahasa visual sama dengan pemilih paket
@@ -28,7 +28,6 @@ export type LatihanFeedback = { selected: string; is_correct: boolean; correct_k
 
 const HEX = "50,0 100,28.87 100,86.6 50,115.47 0,86.6 0,28.87";
 const WAVE = wavePath(50, 4.5, -100, 200, 140);
-const PER_COLUMN = 50;
 // ponytail: ambang "nilai 60 detik rendah" sementara = 15 butir per kolom (Keterlibatan penuh engine v2); kalibrasi F4.
 const BUTIR_60_RENDAH = 15;
 const LEGACY_GATE = ["Nilai 60 detik tidak tersedia", "Percobaan ini tersimpan sebelum waktu pengerjaan dicatat. Ulangi latihan untuk melihat Nilai 60 detik dan analisisnya."];
@@ -115,40 +114,6 @@ function Indeks({ score }: { score: KecermatanScoreResult }) {
         </div>
       ))}
     </dl>
-  );
-}
-
-/** Grafik batang per kolom; skip = kolom tak dikerjakan (slot berarsir). */
-function BarChart({ title, bars, notes }: { title: string; bars: { n: number; ok: number; skip?: boolean }[]; notes: (string | false)[] }) {
-  const peak = Math.max(PER_COLUMN, ...bars.map((c) => c.n));
-  return (
-    <figure className="lr-chart">
-      <figcaption>
-        <b>{title}</b>
-        <span>
-          <i className="is-ok" /> benar <i className="is-bad" /> salah
-        </span>
-      </figcaption>
-      <ol aria-label={title}>
-        {bars.map((c, i) => (
-          <li key={i} aria-label={`Kolom ${ROMAN[i]}: ${c.skip ? "belum dikerjakan" : `${c.n} dijawab, ${c.ok} benar`}`}>
-            <span className="lr-chart-track">
-              <span className="lr-chart-n tnum">{c.skip ? "-" : c.n || ""}</span>
-              {c.skip ? (
-                <span className="lr-chart-bar is-skip" />
-              ) : (
-                <span className="lr-chart-bar" style={{ height: `calc((100% - 14px) * ${c.n / peak})`, animationDelay: `${i * 40}ms` }}>
-                  <span className="is-bad" style={{ flexGrow: c.n - c.ok }} />
-                  <span className="is-ok" style={{ flexGrow: c.ok }} />
-                </span>
-              )}
-            </span>
-            <span className="lr-chart-x">{ROMAN[i]}</span>
-          </li>
-        ))}
-      </ol>
-      {notes.map((t) => t && <p key={t}>{t}</p>)}
-    </figure>
   );
 }
 
