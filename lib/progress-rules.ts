@@ -9,14 +9,14 @@ import {
   KECERMATAN_SPASIAL_DASAR_PACKAGES,
   KECERMATAN_SIMBOL_PACKAGES,
   KECERMATAN_SAINS_PACKAGES,
-  KEPRIBADIAN_PACKAGES,
+  KEPRIBADIAN_LATIHAN_PACKAGES,
   PRIBADI_PACKAGE_SIZE,
   type ModuleType,
 } from "@/lib/test-config";
 
 const LATIHAN_ROUTES: [string, number[], number][] = [
   ["/latihan/kecerdasan/", KECERDASAN_PACKAGES, 100],
-  ["/latihan/kepribadian/", KEPRIBADIAN_PACKAGES, PRIBADI_PACKAGE_SIZE],
+  ["/latihan/kepribadian/", KEPRIBADIAN_LATIHAN_PACKAGES, PRIBADI_PACKAGE_SIZE],
   ["/latihan/kecermatan/", KECERMATAN_PACKAGES, 500],
   ["/latihan/kecermatan-angka/", KECERMATAN_ANGKA_PACKAGES, 500],
   ["/latihan/kecermatan-spasial/", KECERMATAN_SPASIAL_PACKAGES, 500],

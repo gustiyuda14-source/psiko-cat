@@ -5,7 +5,7 @@
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { calculateKecerdasan } from "./kecerdasan";
 import { calculateKepribadian } from "./kepribadian";
-import { pribadiModuleScore, type PribadiRule } from "./pribadi";
+import { isPribadiRule, pribadiModuleScore, type PribadiRule } from "./pribadi";
 import { kepribadianPackageOf, modulePackageOf } from "@/lib/review";
 import { calculateKecermatan, withinColumnWindow, type KecermatanColumnStats } from "./kecermatan";
 import { calculateNAP, calculateSingleModuleResult } from "./nap";
@@ -51,7 +51,7 @@ async function scoreKepribadian(module_session_id: string) {
 
   const answerMap = new Map((answers ?? []).map((a) => [a.question_id, a.selected_key]));
   const rules = (questions ?? []).map((q) => ({ id: q.id, rule: q.scoring_rule as unknown as PribadiRule | KepribadianScoringRule }));
-  const isPribadi = rules.length > 0 && rules.every(({ rule }) => rule.type === "likert4" || rule.type === "forced_choice");
+  const isPribadi = rules.length > 0 && rules.every(({ rule }) => isPribadiRule(rule));
 
   if (isPribadi) {
     return pribadiModuleScore(rules.map(({ id, rule }) => ({ rule: rule as PribadiRule, selected: answerMap.get(id) ?? null })));

@@ -127,7 +127,7 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: 
 
   if (pribadi?.length) {
     const entries: Entry[] = pribadi.map((item, i) => {
-      const close = item.skor === item.max - 1 && item.subtes === "KP";
+      const close = item.skor === item.max - 1 && item.subtes !== "SK";
       return {
         id: item.question_id,
         no: i + 1,

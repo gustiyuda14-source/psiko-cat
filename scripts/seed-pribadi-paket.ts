@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
-import { aspekIntegritas, summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/pribadi";
+import { aspekIntegritas, itemScore, summarize, type KpPembahasan, type PribadiRule } from "../lib/scoring/pribadi";
 
 // Seed satu paket latihan PRIBADI dari bank file ke tabel questions.
 //   npx tsx scripts/seed-pribadi-paket.ts 2          → cek komposisi saja (dry run)
@@ -14,7 +14,7 @@ process.loadEnvFile(path.join(__dirname, "../.env.local"));
 
 const PKG = Number(process.argv[2]);
 const APPLY = process.argv.includes("--apply");
-assert.ok(Number.isInteger(PKG) && PKG >= 2, "Nomor paket latihan wajib (2-11)");
+assert.ok(Number.isInteger(PKG) && PKG >= 2, "Nomor paket latihan wajib (Likert 2-10, SJT 21+)");
 
 const dir = path.join(__dirname, "../bank/pribadi");
 const read = (f: string) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
@@ -22,12 +22,17 @@ const manifest = read(`paket-${String(PKG).padStart(2, "0")}.json`) as { urutan:
 
 type Kp = { id: string; aspek: string; arah: "favorable" | "unfavorable"; pernyataan: string; alasan: string; catatan_psikologi?: string; bedah?: KpPembahasan["bedah"] };
 type Sk = { id: string; dimensi: string; sub?: string; situasi: string; opsi: { A: string; B: string }; kunci: "A" | "B"; kembar_dengan: string | null; pembahasan: string };
+type Sjt = { id: string; aspek: string; situasi: string; opsi: Record<string, string>; bobot: Record<string, number>; alasan_opsi: Record<string, string>; tips: string };
 const kp = new Map<string, Kp & { definisi: string }>();
+const sjt = new Map<string, Sjt & { definisi: string }>();
 const sk = new Map<string, Sk & { nama: string; aturan: string }>();
 for (const f of fs.readdirSync(dir)) {
   if (/^kp-.*\.json$/.test(f)) {
     const b = read(f) as { definisi_aspek: Record<string, string>; items: Kp[] };
     for (const it of b.items) kp.set(it.id, { ...it, definisi: b.definisi_aspek[it.aspek] });
+  } else if (/^sjt-.*\.json$/.test(f)) {
+    const b = read(f) as { definisi_aspek: Record<string, string>; items: Sjt[] };
+    for (const it of b.items) sjt.set(it.id, { ...it, definisi: b.definisi_aspek[it.aspek] });
   } else if (/^sk-.*\.json$/.test(f)) {
     const b = read(f) as { dimensi: Record<string, { nama: string; aturan: string }>; items: Sk[] };
     for (const it of b.items) sk.set(it.id, { ...it, ...b.dimensi[it.dimensi] });
@@ -37,20 +42,21 @@ for (const f of fs.readdirSync(dir)) {
 // Komposisi paket (pedoman §4.1, §4.2)
 const ids = manifest.urutan;
 assert.equal(new Set(ids).size, ids.length, "ada butir ganda di manifest");
-const kpIds = ids.filter((id) => kp.has(id)), skIds = ids.filter((id) => sk.has(id));
-assert.equal(kpIds.length + skIds.length, ids.length, "ada id yang tidak ada di bank");
+const sjtIds = ids.filter((id) => sjt.has(id));
+const kpIds = sjtIds.length ? sjtIds : ids.filter((id) => kp.has(id)), skIds = ids.filter((id) => sk.has(id));
+assert.equal(kpIds.length + skIds.length, ids.length, "ada id yang tidak ada di bank, atau Likert dan SJT tercampur");
 assert.ok(kpIds.length === 48 || kpIds.length === 64, "Kepribadian harus 48 butir (64 bila + Loyalitas & Kerja Sama)");
 assert.equal(skIds.length, 63, "Substansi Khusus harus 63 butir");
 assert.deepEqual(ids.slice(0, kpIds.length), kpIds, "Kepribadian harus di Bagian 1");
 const perAspek = new Map<string, number[]>();
 for (const id of kpIds) {
-  const it = kp.get(id)!;
+  const it = kp.get(id) ?? sjt.get(id)!;
   const c = perAspek.get(it.aspek) ?? [0, 0];
-  c[it.arah === "favorable" ? 0 : 1]++;
+  c["arah" in it && it.arah === "unfavorable" ? 1 : 0]++;
   perAspek.set(it.aspek, c);
 }
 assert.equal(perAspek.size, kpIds.length / 8, "tiap aspek 8 butir");
-for (const [a, [f, u]] of perAspek) assert.ok(f === 4 && u === 4, `${a}: harus 4 favorable + 4 unfavorable, dapat ${f}:${u}`);
+if (!sjtIds.length) for (const [a, [f, u]] of perAspek) assert.ok(f === 4 && u === 4, `${a}: harus 4 favorable + 4 unfavorable, dapat ${f}:${u}`);
 for (const id of skIds) {
   const t = sk.get(id)!.kembar_dengan;
   if (t) assert.ok(Math.abs(ids.indexOf(id) - ids.indexOf(t)) >= 10, `${id}: kembar terlalu dekat`);
@@ -64,6 +70,14 @@ const CHOICES_KP = [
 ];
 const rows = ids.map((id, i) => {
   const base = { type: "KEPRIBADIAN" as const, sequence_number: i + 1, package_number: PKG, is_active: true };
+  const j = sjt.get(id);
+  if (j) {
+    return {
+      ...base,
+      options_payload: { subtes: "SJT", statement: j.situasi, aspect: j.aspek, choices: Object.keys(j.opsi).map((key) => ({ key, text: j.opsi[key] })), bank_id: id },
+      scoring_rule: { type: "sjt5", aspect: j.aspek, bobot: j.bobot, pembahasan: { definisi_aspek: j.definisi, opsi: j.alasan_opsi, tips: j.tips } } satisfies PribadiRule,
+    };
+  }
   const k = kp.get(id);
   if (k) {
     return {
@@ -82,7 +96,9 @@ const rows = ids.map((id, i) => {
     scoring_rule: { type: "forced_choice", dimensi: s.nama, correct_key: s.kunci, pembahasan: `Aturan: ${s.aturan} ${s.pembahasan}` } satisfies PribadiRule,
   };
 });
-console.log(`Paket ${PKG}: komposisi lolos (${kpIds.length} Kepribadian + 63 Integritas & Kejujuran).`);
+const idealOf = (rule: PribadiRule) => itemScore(rule, null).ideal;
+assert.equal(summarize(rows.map((r) => ({ rule: r.scoring_rule, selected: idealOf(r.scoring_rule) }))).pribadi, 100, "jawaban ideal harus 100");
+console.log(`Paket ${PKG}: komposisi lolos (${kpIds.length} Kepribadian${sjtIds.length ? " SJT" : ""} + 63 Integritas & Kejujuran).`);
 if (!APPLY) process.exit(0);
 
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });
@@ -98,9 +114,10 @@ async function main() {
     .eq("type", "KEPRIBADIAN").eq("package_number", PKG).order("sequence_number");
   assert.equal(data?.length, ids.length);
   const rules = data!.map((r) => r.scoring_rule as unknown as PribadiRule);
-  const ideal = summarize(rules.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? rule.correct_key : rule.polarity === "favorable" ? "D" : "A" })));
+  const ideal = summarize(rules.map((rule) => ({ rule, selected: idealOf(rule) })));
   assert.equal(ideal.pribadi, 100);
   const allC = summarize(rules.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? "A" : "C" })));
+  assert.equal(data!.filter((r) => (r.scoring_rule as unknown as PribadiRule)?.pembahasan).length, ids.length, "pembahasan harus 100%");
   console.log(`Paket ${PKG}: ${ids.length} baris tertulis. Jawaban ideal = ${ideal.pribadi}; semua "Sesuai" + semua A = ${allC.pribadi} (KP ${allC.kp?.nilai}, SK ${allC.sk?.nilai}).`);
 }
 main().catch((err) => {

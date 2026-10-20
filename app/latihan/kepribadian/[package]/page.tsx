@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS } from "@/lib/test-config";
+import { KEPRIBADIAN_LATIHAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS } from "@/lib/test-config";
 import type { SafeQuestion } from "@/lib/types/safe-question";
 import LatihanGate from "@/app/latihan/[module]/LatihanGate";
 
@@ -13,7 +13,7 @@ export default async function LatihanKepribadianPackagePage({
 }) {
   const { package: packageParam } = await params;
   const pkg = Number(packageParam);
-  if (!KEPRIBADIAN_PACKAGES.includes(pkg)) notFound();
+  if (!KEPRIBADIAN_LATIHAN_PACKAGES.includes(pkg)) notFound();
 
   const { data: questions } = await supabaseAdmin
     .from("questions")

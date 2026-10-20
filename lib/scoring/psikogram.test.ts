@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { BOBOT, JALUR, hitungPsikogram, kategoriWS, posisiDariTotal, rsKecerdasan, rsKepribadian, rsSikapKerja, wsDariNorma, normaDari, NORMA_MIN, type Aspek } from "./psikogram";
+import { BOBOT, JALUR, hitungPsikogram, kategoriWS, posisiDariTotal, rsKecerdasan, rsKepribadian, rsSikapKerja, wsDariNorma, normaDari, kunciNorma, NORMA_MIN, type Aspek } from "./psikogram";
 
 for (const j of JALUR) assert.equal(Object.values(BOBOT[j]).reduce((a, b) => a + b, 0), 20, `${j} bobot ≠ 20`);
 
@@ -54,9 +54,13 @@ const kec = rsKecerdasan([
 ]);
 assert.deepEqual(kec, { verbal: 0.8, praktis: 0 });
 assert.deepEqual(rsKepribadian([
-  { aspect: "Prososial", skor: 4 }, { aspect: "Prososial", skor: 1 }, { aspect: "Prososial", skor: 0 },
-  { aspect: "Kerja Sama", skor: 4 }, { aspect: "Bukan Aspek", skor: 4 },
+  { aspect: "Prososial", skor: 4, max: 4 }, { aspect: "Prososial", skor: 1, max: 4 }, { aspect: "Prososial", skor: 0, max: 4 },
+  { aspect: "Kerja Sama", skor: 4, max: 4 }, { aspect: "Bukan Aspek", skor: 4, max: 4 },
 ]), { prososial: 0.3333, kerja_sama: 1 });
+// SJT bobot 1–5: (bobot − 1) / 4 → 5 = 1, 3 = 0,5, 1 = 0.
+assert.deepEqual(rsKepribadian([
+  { aspect: "Stabilitas Emosi", skor: 5, max: 5 }, { aspect: "Stabilitas Emosi", skor: 3, max: 5 }, { aspect: "Stabilitas Emosi", skor: 1, max: 5 },
+]), { stabilitas_emosi: 0.5 });
 assert.deepEqual(rsSikapKerja(50, 100, null), { kecepatan: 0.5, ketelitian: 1 });
 
 // Norma kelompok: WS = 10 + 3z. Rata-rata → 10 (C), +2 SD → 16 (B), −2 SD → 4 (K), < −2 SD → KS.
@@ -67,5 +71,11 @@ assert.equal(wsDariNorma("ketahanan", 0, norma), 4);
 assert.equal(kategoriWS(wsDariNorma("ketahanan", -0.01, norma)), "KS");
 assert.equal(wsDariNorma("ketahanan", 0.2, { ketahanan: { n: NORMA_MIN - 1, mean: 0.2, sd: 0.1 } }), 4); // cadangan proporsi
 assert.deepEqual(normaDari([{ verbal: 0.2 }, { verbal: 0.4 }]), { verbal: { n: 2, mean: 0.3, sd: 0.1 } });
+// Norma SJT terpisah: kunci "sjt:<aspek>" hanya untuk aspek Kepribadian.
+const normaKp = { prososial: { n: NORMA_MIN, mean: 0.5, sd: 0.1 }, "sjt:prososial": { n: NORMA_MIN, mean: 0.8, sd: 0.1 } };
+assert.equal(wsDariNorma("prososial", 0.8, normaKp), 19);
+assert.equal(wsDariNorma("prososial", 0.8, normaKp, true), 10);
+assert.equal(kunciNorma("verbal", true), "verbal");
+assert.equal(wsDariNorma("prososial", 0.5, { prososial: normaKp.prososial }, true), 10); // tanpa norma SJT → proporsi × 20
 
 console.log("psikogram.test ok");

@@ -3,9 +3,10 @@ import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { isSimulasiPackage } from "@/lib/test-config";
 import type { KepribadianOptionsPayload } from "@/lib/types/safe-question";
-import { itemScore, summarize, type PribadiRule } from "@/lib/scoring/pribadi";
+import { isPribadiRule, itemScore, reviewFields, summarize, type PribadiRule } from "@/lib/scoring/pribadi";
+import { psikogramPribadi } from "@/lib/scoring/psikogram-sesi";
 
-// Latihan PRIBADI (Kepribadian + Substansi Khusus) dikumpulkan sekali di akhir:
+// Latihan PRIBADI (Kepribadian Likert/SJT + Substansi Khusus) dikumpulkan sekali di akhir:
 // satu request untuk seluruh paket, kunci + pembahasan dibaca server-side.
 // Stateless, tidak menulis ke DB. Butir paket simulasi selalu ditolak.
 const MAX_ITEMS = 200;
@@ -38,8 +39,8 @@ export async function POST(req: NextRequest) {
     const byId = new Map(rows.map((r) => [r.id, r]));
     const scored = answers.map((a) => {
       const row = byId.get(a.question_id as string)!;
-      const rule = row.scoring_rule as unknown as PribadiRule;
-      if (rule?.type !== "likert4" && rule?.type !== "forced_choice") return null;
+      const rule = row.scoring_rule;
+      if (!isPribadiRule(rule)) return null;
       const payload = row.options_payload as unknown as KepribadianOptionsPayload;
       const allowed = (payload.choices ?? []).map((c) => c.key as string);
       const selected = typeof a.selected_key === "string" && allowed.includes(a.selected_key) ? a.selected_key : null;
@@ -55,11 +56,9 @@ export async function POST(req: NextRequest) {
         question_id: id,
         selected_key: selected,
         ...itemScore(rule, selected),
-        ...(rule.type === "likert4"
-          ? { subtes: "KP", aspect: rule.aspect, polarity: rule.polarity, pembahasan: rule.pembahasan }
-          : { subtes: "SK", dimensi: rule.dimensi, pembahasan: rule.pembahasan }),
+        ...reviewFields(rule),
       })),
-      summary: summarize(valid),
+      summary: { ...summarize(valid), psikogram: psikogramPribadi(valid) },
     });
   } catch (err) {
     console.error("[POST /api/practice/pribadi]", err);

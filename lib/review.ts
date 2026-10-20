@@ -15,7 +15,7 @@ import type {
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { simulasiPackageOf } from "@/lib/test-config";
 import { pickReviewRows } from "@/lib/review-pick";
-import { itemScore, type PribadiRule } from "@/lib/scoring/pribadi";
+import { isPribadiRule, itemScore, reviewFields, type PribadiRule } from "@/lib/scoring/pribadi";
 import type { PribadiReviewItem } from "@/app/components/PribadiReview";
 
 /** Paket bank soal yang dipakai sebuah module simulasi (null di sesi lama = Paket 1). */
@@ -101,11 +101,7 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
   const answerMap = new Map((answers ?? []).map((answer) => [answer.question_id, answer.selected_key]));
   // Butir yang dinonaktifkan setelah dijawab tetap tampil.
   const rows = (questions ?? []).filter((q) => q.is_active || answerMap.has(q.id));
-  const isPribadi = (r: unknown) => {
-    const t = (r as PribadiRule | null)?.type;
-    return t === "likert4" || t === "forced_choice";
-  };
-  if (rows.length && rows.every((q) => isPribadi(q.scoring_rule))) {
+  if (rows.length && rows.every((q) => isPribadiRule(q.scoring_rule))) {
     return {
       kepribadian: [],
       pribadi: rows.map((q) => {
@@ -116,9 +112,7 @@ export async function fetchKepribadianReview(moduleSessionId: string): Promise<K
           selected_key: selected,
           payload: q.options_payload as unknown as KepribadianOptionsPayload,
           ...itemScore(rule, selected),
-          ...(rule.type === "likert4"
-            ? { subtes: "KP", aspect: rule.aspect, polarity: rule.polarity, pembahasan: rule.pembahasan }
-            : { subtes: "SK", dimensi: rule.dimensi, pembahasan: rule.pembahasan }),
+          ...reviewFields(rule),
         };
       }) as PribadiReviewItem[],
     };

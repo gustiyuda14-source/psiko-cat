@@ -403,3 +403,38 @@ Di ujian asli, nama aspek kemungkinan tidak ditampilkan. Label dikurangi bertaha
 3. Waktu per sub-tes (§4).
 4. Nasib Paket 1 simulasi yang sekarang (100 butir, Likert 5 dengan Netral): diganti format 48 KP + 63 SK, atau dipertahankan sementara.
 5. Hipotesis 8 butir per aspek: konfirmasi dari peserta tes 2026 kalau ada.
+
+---
+
+## 10. Format situasional (SJT) — keputusan pemilik 2026-10-20
+
+SJT (*Situational Judgment Test*) = satu situasi + 5 pilihan tindakan A–E, tiap pilihan berbobot 1–5 (model TKP). Format ini dipakai untuk bagian Kepribadian; Pass Hand (= Substansi Khusus / Integritas & Kejujuran A/B) tetap ada di setiap paket. Integritas dinilai lewat kedua bagian (Pass Hand + soal situasi bertema integritas).
+
+### 10.1 Butir
+- Aspek dan definisi sama dengan §7.3. **Bobot 5 = pilihan yang paling kuat mencerminkan aspek butir** (aturan §1.1a diperluas dari satu kunci menjadi urutan bobot).
+- Tangga bobot: 5 tindakan inti aspek · 4 baik tetapi kurang langsung/bergantung orang lain · 3 prosedural atau menunda · 2 pasif/menghindar · 1 berlawanan dengan aspek. Setiap bobot punya alasan bernama di pembahasan.
+- Kunci tersebar rata (maks 24% per huruf) dan tidak boleh ketebak dari panjang opsi (kunci = opsi terpanjang maks 24%). Validator: `scripts/check-bank-pribadi.ts`.
+- Butir kembar: situasi berbeda, sikap yang diukur sama, huruf kunci berbeda, jarak ≥ 10 nomor.
+- Bank `bank/pribadi/sjt-*.json`, rule DB `scoring_rule.type = "sjt5"` (`aspect`, `bobot`, `pembahasan { definisi_aspek, opsi, tips }`), `options_payload.subtes = "SJT"`.
+
+### 10.2 Komposisi paket
+| Pemakaian | Bagian 1 | Bagian 2 |
+|---|---|---|
+| Latihan/Mini Tryout (pkg 21–25) | 48 SJT = 6 aspek × 8, acak lintas aspek | 63 Pass Hand |
+| Simulasi Penuh | 64 SJT = 8 aspek × 8 (+ Loyalitas, Kerja Sama untuk psikogram Bintara/Tamtama) | 63 Pass Hand |
+
+Manifest: `scripts/compose-pribadi-sjt.ts <pkg> <sjt> <sk> [label]`; seed: `scripts/seed-pribadi-paket.ts <pkg> --apply` (Likert dan SJT tidak boleh tercampur dalam satu paket).
+
+### 10.3 Penilaian
+| Tingkat | Rumus |
+|---|---|
+| Skor butir | bobot pilihan (1–5); kosong 0 |
+| Nilai aspek / Nilai KP (0–100) | Σ skor / (5 × butir) × 100, digabung dengan aturan §5.1 bila format dicampur |
+| Nilai PRIBADI (Nilai Akhir Psikotest, 20%) | tetap (Nilai KP + Nilai SK) / 2, §5.3 |
+| RS psikogram per aspek | (bobot − 1) / 4 → 0–1 (Likert: (skor − 1) / 3), kosong 0 |
+| WS psikogram | 10 + 3z terhadap **norma SJT sendiri** (kunci `sjt:<aspek>` di `norma-psikogram.json`); selama n < 30 memakai RS × 20 |
+| Kategori | B/CB/C/K/KS dari WS, lalu bobot jalur dan tabel posisi 1–85 seperti aspek lain |
+
+- Norma dipisah karena sebaran skor SJT berbeda dari Likert (pilihan terbaik lebih mudah dikenali); mencampur keduanya membuat kategori bias. `npm run build:norma` membangun keduanya otomatis.
+- Pass Hand tidak punya baris di tabel psikogram, jadi tampil sebagai persentase sesuai kunci di samping kategori aspek.
+- Latihan/Mini Tryout Kepribadian (Likert dan SJT) menampilkan kategori psikogram per aspek (`psikogramPribadi`, `lib/scoring/psikogram-sesi.ts`), sama dengan mini tryout di menu tes.

@@ -105,4 +105,46 @@ for (const f of skFiles) {
   }
 }
 
-console.log(`Bank PRIBADI: ${total} butir KP dan ${skTotal} butir SK dari ${files.length + skFiles.length} file lolos semua cek.`);
+// --- Kepribadian situasional (bank/pribadi/sjt-*.json): 5 opsi berbobot 1–5, kunci = bobot 5 ---
+type SjtItem = { id: string; aspek: string; situasi: string; opsi: Record<string, string>; bobot: Record<string, number>; alasan_opsi: Record<string, string>; tips: string; kembar_dengan: string | null };
+const POLISI = /polisi|polri|polres|polsek|polda|bhayangkara|brimob|bintara|taruna|akpol|patroli|tilang|razia|\bTKP\b/i;
+const L5 = ["A", "B", "C", "D", "E"];
+let sjtTotal = 0;
+const sjtSeen: { id: string; w: string[] }[] = [];
+const sjtFiles = fs.readdirSync(dir).filter((f) => /^sjt-.*\.json$/.test(f));
+for (const f of sjtFiles) {
+  const bank = JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")) as { definisi_aspek: Record<string, string>; items: SjtItem[] };
+  const byId = new Map(bank.items.map((it) => [it.id, it]));
+  const kunci = new Map<string, number>();
+  let terpanjang = 0;
+  for (const it of bank.items) {
+    const at = `${f} ${it.id}`;
+    assert.ok(!seenId.has(it.id), `${at}: id ganda`);
+    seenId.add(it.id);
+    assert.ok(bank.definisi_aspek[it.aspek], `${at}: aspek tanpa definisi`);
+    assert.deepEqual(Object.keys(it.opsi), L5, `${at}: opsi harus A–E`);
+    assert.equal(new Set(L5.map((k) => it.opsi[k].trim())).size, 5, `${at}: ada opsi kosong/kembar`);
+    assert.deepEqual(L5.map((k) => it.bobot[k]).sort(), [1, 2, 3, 4, 5], `${at}: bobot harus 1–5 masing-masing sekali`);
+    assert.ok(L5.every((k) => it.alasan_opsi[k]?.trim()) && it.tips.trim(), `${at}: alasan tiap opsi dan tips wajib`);
+    const text = [it.situasi, ...Object.values(it.opsi), ...Object.values(it.alasan_opsi), it.tips].join(" ");
+    assert.ok(!POLISI.test(text), `${at}: memuat unsur kepolisian (pedoman A-7)`);
+    assert.ok(it.situasi.split(/\s+/).length <= 60, `${at}: situasi lebih dari 60 kata`);
+    const k = L5.find((x) => it.bobot[x] === 5)!;
+    kunci.set(k, (kunci.get(k) ?? 0) + 1);
+    if (L5.every((x) => x === k || it.opsi[x].length < it.opsi[k].length)) terpanjang++;
+    if (it.kembar_dengan) {
+      const t = byId.get(it.kembar_dengan);
+      assert.ok(t && t.kembar_dengan === it.id && t.aspek === it.aspek, `${at}: kembar tidak timbal balik / beda aspek`);
+      assert.notEqual(L5.find((x) => t.bobot[x] === 5), k, `${at}: kembar harus beda huruf kunci`);
+    }
+    const w = words(`${it.situasi} ${Object.values(it.opsi).join(" ")}`);
+    for (const o of sjtSeen) if (o.id !== it.kembar_dengan) assert.ok(jaccard(w, o.w) < 0.6, `${at}: terlalu mirip ${o.id}`);
+    sjtSeen.push({ id: it.id, w });
+    sjtTotal++;
+  }
+  const n = bank.items.length;
+  for (const [h, c] of kunci) assert.ok(c <= Math.ceil(n * 0.24), `${f}: kunci ${h} ${c} dari ${n} (maks 24%)`);
+  assert.ok(terpanjang <= Math.ceil(n * 0.24), `${f}: kunci = opsi terpanjang di ${terpanjang} butir (pedoman D-3)`);
+}
+
+console.log(`Bank PRIBADI: ${total} butir KP, ${sjtTotal} butir SJT, dan ${skTotal} butir SK dari ${files.length + sjtFiles.length + skFiles.length} file lolos semua cek.`);

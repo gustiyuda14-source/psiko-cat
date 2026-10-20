@@ -4,6 +4,8 @@
  *
  *   KP (Likert 4): favorable A1 B2 C3 D4, unfavorable dibalik, kosong 0.
  *      Nilai KP / aspek = Σ skor / (4 × jumlah butir) × 100
+ *   KP situasional (SJT, 5 opsi): skor = bobot opsi terpilih 1–5, kosong 0; masuk
+ *      Nilai KP / aspek bersama Likert, maks 5 per butir.
  *   SK (pilihan paksa): sesuai kunci 1, lainnya 0. Nilai SK = benar / butir × 100
  *   Nilai PRIBADI = (Nilai KP + Nilai SK) / 2 — kalau salah satu tidak ada di
  *   paket, pakai yang ada saja.
@@ -26,6 +28,21 @@ export type PribadiKpRule = {
   pembahasan: KpPembahasan;
 };
 
+export type SjtPembahasan = {
+  definisi_aspek: string;
+  /** Alasan bobot tiap opsi A–E. */
+  opsi: Record<string, string>;
+  tips: string;
+};
+
+/** Kepribadian format situasional: 5 opsi, tiap opsi berbobot 1–5 (kunci = bobot 5). */
+export type PribadiSjtRule = {
+  type: "sjt5";
+  aspect: string;
+  bobot: Record<string, number>;
+  pembahasan: SjtPembahasan;
+};
+
 export type PribadiSkRule = {
   type: "forced_choice";
   dimensi: string;
@@ -33,7 +50,7 @@ export type PribadiSkRule = {
   pembahasan: string;
 };
 
-export type PribadiRule = PribadiKpRule | PribadiSkRule;
+export type PribadiRule = PribadiKpRule | PribadiSjtRule | PribadiSkRule;
 
 // Substansi Khusus = Aspek Integritas dan Kejujuran, pedoman SPCP 2026 butir 6.b (7 aspek).
 // Butir bank memakai 11 dimensi aturan kunci (pedoman engine §3.1); D4 dibelah lewat `sub`.
@@ -51,6 +68,19 @@ export function aspekIntegritas(dimensi: string, sub?: string | null): string {
 
 const FAV: Record<string, number> = { A: 1, B: 2, C: 3, D: 4 };
 
+/** scoring_rule format PRIBADI (Likert 4, SJT, atau SK); paket lama Likert 5 = false. */
+export function isPribadiRule(rule: unknown): rule is PribadiRule {
+  const t = (rule as PribadiRule | null)?.type;
+  return t === "likert4" || t === "sjt5" || t === "forced_choice";
+}
+
+/** Field pembahasan per jenis butir untuk PribadiReviewItem (latihan, review simulasi, pembahasan tersimpan). */
+export function reviewFields(rule: PribadiRule) {
+  if (rule.type === "likert4") return { subtes: "KP" as const, aspect: rule.aspect, polarity: rule.polarity, pembahasan: rule.pembahasan };
+  if (rule.type === "sjt5") return { subtes: "SJT" as const, aspect: rule.aspect, bobot: rule.bobot, pembahasan: rule.pembahasan };
+  return { subtes: "SK" as const, dimensi: rule.dimensi, pembahasan: rule.pembahasan };
+}
+
 /** Nilai sub-tes PRIBADI di simulasi (§5.3): 20% ke Nilai Akhir Psikotest, gugur bila ≤ 40. */
 export function pribadiModuleScore(items: { rule: PribadiRule; selected: string | null }[]) {
   const raw_score = round2(summarize(items).pribadi);
@@ -61,6 +91,10 @@ export function pribadiModuleScore(items: { rule: PribadiRule; selected: string 
 export function itemScore(rule: PribadiRule, selected: string | null): { skor: number; max: number; ideal: string } {
   if (rule.type === "forced_choice") {
     return { skor: selected === rule.correct_key ? 1 : 0, max: 1, ideal: rule.correct_key };
+  }
+  if (rule.type === "sjt5") {
+    const ideal = Object.keys(rule.bobot).find((k) => rule.bobot[k] === 5) ?? "";
+    return { skor: selected ? rule.bobot[selected] ?? 0 : 0, max: 5, ideal };
   }
   const base = selected ? FAV[selected] ?? 0 : 0;
   const skor = base && rule.polarity === "unfavorable" ? 5 - base : base;
@@ -76,13 +110,14 @@ export type PribadiSummary = {
 };
 
 export function summarize(items: { rule: PribadiRule; selected: string | null }[]): PribadiSummary {
-  let kpSkor = 0, kpMax = 0, skBenar = 0, skButir = 0;
+  let kpSkor = 0, kpMax = 0, kpButir = 0, skBenar = 0, skButir = 0;
   const aspek = new Map<string, { skor: number; max: number; butir: number }>();
   for (const { rule, selected } of items) {
     const s = itemScore(rule, selected);
-    if (rule.type === "likert4") {
+    if (rule.type !== "forced_choice") {
       kpSkor += s.skor;
       kpMax += s.max;
+      kpButir += 1;
       const a = aspek.get(rule.aspect) ?? { skor: 0, max: 0, butir: 0 };
       aspek.set(rule.aspect, { skor: a.skor + s.skor, max: a.max + s.max, butir: a.butir + 1 });
     } else {
@@ -91,7 +126,7 @@ export function summarize(items: { rule: PribadiRule; selected: string | null }[
     }
   }
   const kp = kpMax
-    ? { nilai: pct(kpSkor, kpMax), butir: kpMax / 4, aspek: [...aspek].map(([nama, a]) => ({ aspek: nama, nilai: pct(a.skor, a.max), butir: a.butir })) }
+    ? { nilai: pct(kpSkor, kpMax), butir: kpButir, aspek: [...aspek].map(([nama, a]) => ({ aspek: nama, nilai: pct(a.skor, a.max), butir: a.butir })) }
     : null;
   const sk = skButir ? { nilai: pct(skBenar, skButir), benar: skBenar, butir: skButir } : null;
   const parts = [kp?.nilai, sk?.nilai].filter((n): n is number => n !== undefined);

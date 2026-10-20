@@ -49,7 +49,7 @@ const pb = { definisi_aspek: "", alasan: "" };
 const kpRules: PribadiRule[] = Array.from({ length: 48 }, (_, i) => ({ type: "likert4", aspect: `a${i % 6}`, polarity: i % 2 ? "favorable" : "unfavorable", pembahasan: pb }));
 const skRules: PribadiRule[] = Array.from({ length: 63 }, (_, i) => ({ type: "forced_choice", dimensi: "d", correct_key: i % 2 ? "A" : "B", pembahasan: "" }));
 const all = [...kpRules, ...skRules];
-const ideal = pribadiModuleScore(all.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? rule.correct_key : rule.polarity === "favorable" ? "D" : "A" })));
+const ideal = pribadiModuleScore(all.map((rule) => ({ rule, selected: rule.type === "forced_choice" ? rule.correct_key : rule.type === "likert4" && rule.polarity === "favorable" ? "D" : "A" })));
 assert.deepEqual([ideal.raw_score, ideal.nap_contribution, ideal.is_disqualifying], [100, 20, false]);
 const blank = pribadiModuleScore(all.map((rule) => ({ rule, selected: null })));
 assert.deepEqual([blank.raw_score, blank.nap_contribution, blank.is_disqualifying], [0, 0, true]);

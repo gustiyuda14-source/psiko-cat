@@ -197,6 +197,45 @@ function pribadi(item: PribadiReviewItem, no: number, close: boolean, reveal: bo
   );
   const status = item.selected_key === null ? skipped : <Badge tone={full ? "success" : close ? "accent" : "danger"}>Skor {item.skor}/{item.max}</Badge>;
 
+  if (item.subtes === "SJT") {
+    // Situasional: tiap opsi berbobot 1–5; pembahasan mengurutkan opsi dari bobot tertinggi.
+    const { bobot, pembahasan: p } = item;
+    const urut = Object.keys(bobot).sort((a, b) => bobot[b] - bobot[a]);
+    return {
+      title: `Situasi ${no}`,
+      badges: <Badge tone="info">{item.aspect}</Badge>,
+      status,
+      hasKey: true,
+      soal: (
+        <>
+          <p className="max-w-[72ch] leading-relaxed text-foreground">{item.payload.statement}</p>
+          <Choices rows={rows.map((r) => (reveal ? { ...r, tag: r.tag ? `${r.tag} · bobot ${bobot[r.k]}` : `Bobot ${bobot[r.k]}` } : r))} />
+        </>
+      ),
+      pembahasan: (
+        <>
+          {answer}
+          <ol className="max-w-[72ch] space-y-1.5 border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">
+            <li>
+              <b className="text-foreground">Aspek:</b> {item.aspect} — {p.definisi_aspek}
+            </li>
+            {urut.map((k) => (
+              <li key={k}>
+                <b className="text-foreground">{k} · bobot {bobot[k]}:</b> {text(k)}, {p.opsi[k]}
+              </li>
+            ))}
+            <li>
+              <b className="text-foreground">Jawaban:</b> {text(item.ideal)} ({item.ideal})
+            </li>
+            <li>
+              <b className="text-foreground">Tips:</b> {p.tips}
+            </li>
+          </ol>
+          <p className="text-xs text-muted-foreground">Skor menunjukkan kesesuaian dengan kunci latihan, bukan penilaian kepribadian kamu.</p>
+        </>
+      ),
+    };
+  }
   if (item.subtes === "KP") {
     const p = item.pembahasan;
     return {

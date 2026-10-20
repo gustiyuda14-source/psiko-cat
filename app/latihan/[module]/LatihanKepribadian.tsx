@@ -12,7 +12,7 @@ import { PribadiReview, type PribadiReviewItem, type PribadiReviewSummary } from
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { MODULE_CONFIG } from "@/lib/test-config";
 
-// Latihan PRIBADI: butir Kepribadian (Likert 4) dan Substansi Khusus (A/B) dalam
+// Latihan PRIBADI: butir Kepribadian (Likert 4 atau situasi SJT 5 opsi) dan Substansi Khusus (A/B) dalam
 // satu paket, urut sequence_number. Label aspek bisa disembunyikan peserta
 // (pedoman §7.1, tahap tryout mini); preferensinya disimpan per browser.
 const ASPECT_PREF = "pribadi-show-aspect";
@@ -267,14 +267,18 @@ export default function LatihanKepribadian({
           </div>
 
           <div className="q-card mx-auto w-full max-w-2xl">
-            <p className="mx-auto max-w-[46ch] py-4 text-center text-xl font-semibold leading-relaxed text-foreground sm:py-6 sm:text-2xl">
-              {payload?.statement}
-            </p>
+            {payload?.subtes === "SJT" ? (
+              <p className="py-2 text-lg leading-relaxed text-foreground sm:py-3">{payload.statement}</p>
+            ) : (
+              <p className="mx-auto max-w-[46ch] py-4 text-center text-xl font-semibold leading-relaxed text-foreground sm:py-6 sm:text-2xl">
+                {payload?.statement}
+              </p>
+            )}
           </div>
 
           <fieldset className="opts mx-auto max-w-2xl">
             <legend className="sr-only">
-              {payload?.subtes === "SK" ? "Pilih yang paling sesuai" : "Seberapa sesuai pernyataan ini dengan Anda"}
+              {payload?.subtes === "SK" ? "Pilih yang paling sesuai" : payload?.subtes === "SJT" ? "Pilih tindakan yang paling tepat" : "Seberapa sesuai pernyataan ini dengan Anda"}
             </legend>
             {payload?.choices?.map((c) => {
               const isSelected = picked === c.key;

@@ -29,4 +29,14 @@ assert.deepEqual(s.sk, { nilai: 50, benar: 1, butir: 2 });
 assert.equal(s.pribadi, 58.4); // (66.7 + 50) / 2 = 58.35
 assert.equal(summarize([{ rule: sk, selected: "A" }]).pribadi, 100);
 assert.equal(summarize([]).pribadi, 0);
+
+// SJT: bobot opsi terpilih, maks 5, digabung ke Kepribadian per aspek.
+const sjt: PribadiRule = { type: "sjt5", aspect: "Prososial", bobot: { A: 3, B: 5, C: 1, D: 4, E: 2 }, pembahasan: { definisi_aspek: "", opsi: {}, tips: "" } };
+assert.deepEqual(["A", "B", "C", "D", "E"].map((k) => itemScore(sjt, k).skor), [3, 5, 1, 4, 2]);
+assert.equal(itemScore(sjt, null).skor, 0);
+assert.equal(itemScore(sjt, "X").skor, 0);
+assert.deepEqual(itemScore(sjt, "D"), { skor: 4, max: 5, ideal: "B" });
+const j = summarize([{ rule: sjt, selected: "B" }, { rule: sjt, selected: "D" }, { rule: sk, selected: "A" }]);
+assert.deepEqual(j.kp, { nilai: 90, butir: 2, aspek: [{ aspek: "Prososial", nilai: 90, butir: 2 }] });
+assert.equal(j.pribadi, 95);
 console.log("Pribadi scoring: all checks passed.");

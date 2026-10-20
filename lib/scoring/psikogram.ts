@@ -11,6 +11,8 @@
  * Rumus skala 20 tidak tertulis di peraturan; WS = 10 + 3z dipilih karena batas kategori
  * tepat simetris di sekitar 10: C 8,5–11,4 = ±0,5 SD dan K/CB berakhir di 4 dan 16 = ±2 SD (inferensi).
  * Aspek tanpa norma cukup (n < NORMA_MIN) jatuh ke proporsi × 20.
+ * Kepribadian format situasional (SJT) punya norma sendiri berkunci "sjt:<aspek>": sebaran skornya
+ * berbeda dari Likert, jadi kedua format tidak dicampur dalam satu kelompok pembanding.
  * Murni tanpa data/kunci, jadi label & tipe boleh dipakai komponen.
  */
 
@@ -91,19 +93,23 @@ const clamp20 = (v: number) => round2(Math.min(20, Math.max(0, v)));
 /** Cadangan tanpa norma: proporsi 0–1 dikali 20. */
 export const wsDariProporsi = (p: number) => clamp20(p * 20);
 
-export type Norma = Partial<Record<Aspek, { n: number; mean: number; sd: number }>>;
+/** Kunci norma: nama aspek, atau "sjt:<aspek>" untuk Kepribadian format situasional. */
+export type Norma = Partial<Record<string, { n: number; mean: number; sd: number }>>;
 export const NORMA_MIN = 30;
 
+export const kunciNorma = (aspek: Aspek, sjt = false) => (sjt && ASPEK_KEPRIBADIAN_SET.has(aspek) ? `sjt:${aspek}` : aspek);
+
 /** WS = 10 + 3z terhadap norma kelompok, batas 0–20. */
-export function wsDariNorma(aspek: Aspek, rs: number, norma: Norma): number {
-  const g = norma[aspek];
+export function wsDariNorma(aspek: Aspek, rs: number, norma: Norma, sjt = false): number {
+  const g = norma[kunciNorma(aspek, sjt)];
   if (!g || g.n < NORMA_MIN || g.sd <= 0) return wsDariProporsi(rs);
   return clamp20(10 + (3 * (rs - g.mean)) / g.sd);
 }
 
-export function normaDari(sampel: Partial<Record<Aspek, number>>[]): Norma {
-  const per = new Map<Aspek, number[]>();
-  for (const s of sampel) for (const [a, v] of Object.entries(s) as [Aspek, number][]) per.set(a, [...(per.get(a) ?? []), v]);
+/** Sampel berkunci kunciNorma (lihat rsNormaSesi). */
+export function normaDari(sampel: Record<string, number>[]): Norma {
+  const per = new Map<string, number[]>();
+  for (const s of sampel) for (const [a, v] of Object.entries(s)) per.set(a, [...(per.get(a) ?? []), v]);
   return Object.fromEntries([...per].map(([a, xs]) => {
     const mean = xs.reduce((x, y) => x + y, 0) / xs.length;
     const sd = Math.sqrt(xs.reduce((x, y) => x + (y - mean) ** 2, 0) / xs.length);
@@ -194,14 +200,19 @@ const ASPEK_KEPRIBADIAN: Record<string, Aspek> = {
   "Pengambilan Keputusan": "pengambilan_keputusan", Loyalitas: "loyalitas", "Kerja Sama": "kerja_sama",
 };
 
-/** RS per aspek Kepribadian dari skor Likert 1–4 (kosong 0), digeser ke 0–1: (skor − 1) / 3, kosong = 0. */
-export function rsKepribadian(items: { aspect: string; skor: number }[]): RS {
+const ASPEK_KEPRIBADIAN_SET = new Set(Object.values(ASPEK_KEPRIBADIAN));
+
+/**
+ * RS per aspek Kepribadian, skor butir digeser ke 0–1: (skor − 1) / (maks − 1), kosong = 0.
+ * Likert 1–4 → (skor − 1) / 3; SJT bobot 1–5 → (bobot − 1) / 4.
+ */
+export function rsKepribadian(items: { aspect: string; skor: number; max: number }[]): RS {
   const acc = new Map<Aspek, { sum: number; n: number }>();
-  for (const { aspect, skor } of items) {
+  for (const { aspect, skor, max } of items) {
     const aspek = ASPEK_KEPRIBADIAN[aspect];
     if (!aspek) continue;
     const a = acc.get(aspek) ?? { sum: 0, n: 0 };
-    acc.set(aspek, { sum: a.sum + (skor ? (skor - 1) / 3 : 0), n: a.n + 1 });
+    acc.set(aspek, { sum: a.sum + (skor ? (skor - 1) / (max - 1) : 0), n: a.n + 1 });
   }
   return Object.fromEntries([...acc].map(([aspek, a]) => [aspek, round4(a.sum / a.n)]));
 }
@@ -215,11 +226,12 @@ export function rsSikapKerja(ke: number | null, kt: number | null, kh: number | 
   return rs;
 }
 
-export const wsSemua = (rs: RS, norma: Norma): Partial<Record<Aspek, number>> =>
-  Object.fromEntries((Object.entries(rs) as [Aspek, number][]).map(([a, v]) => [a, wsDariNorma(a, v, norma)]));
+export const wsSemua = (rs: RS, norma: Norma, sjt = false): Partial<Record<Aspek, number>> =>
+  Object.fromEntries((Object.entries(rs) as [Aspek, number][]).map(([a, v]) => [a, wsDariNorma(a, v, norma, sjt)]));
 
 /** Kategori per aspek tanpa bobot jalur, untuk sesi satu sub-tes (mini tryout). Urut seperti ASPEK_LABEL. */
-export function aspekSesi(ws: Partial<Record<Aspek, number>>): { aspek: Aspek; ws: number; kategori: Kategori }[] {
+export type AspekSubtes = { aspek: Aspek; ws: number; kategori: Kategori };
+export function aspekSesi(ws: Partial<Record<Aspek, number>>): AspekSubtes[] {
   return (Object.keys(ASPEK_LABEL) as Aspek[])
     .filter((a) => ws[a] !== undefined && Number.isFinite(ws[a]))
     .map((a) => ({ aspek: a, ws: round2(ws[a]!), kategori: kategoriWS(ws[a]!) }));

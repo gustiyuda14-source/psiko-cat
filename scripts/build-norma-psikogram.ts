@@ -6,8 +6,8 @@
 import { createClient } from "@supabase/supabase-js";
 import * as fs from "fs";
 import * as path from "path";
-import { normaDari, type RS } from "../lib/scoring/psikogram";
-import { rsSesi, type ModuleRow } from "../lib/scoring/psikogram-rs";
+import { normaDari } from "../lib/scoring/psikogram";
+import { rsNormaSesi, type ModuleRow } from "../lib/scoring/psikogram-rs";
 
 const db = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });
 
@@ -21,10 +21,10 @@ async function main() {
     sesi.push(...(data as unknown as { module_sessions: ModuleRow[] }[]));
     if (data.length < 500) break;
   }
-  const sampel: RS[] = [];
+  const sampel: Record<string, number>[] = [];
   for (const s of sesi) {
     const modules = s.module_sessions.filter((m) => m.module_type !== "KECERMATAN" || (m.ke_index ?? 0) > 0);
-    sampel.push(await rsSesi(db, modules));
+    sampel.push(await rsNormaSesi(db, modules));
   }
   const out = { dibangun: new Date().toISOString().slice(0, 10), sesi: sesi.length, aspek: normaDari(sampel) };
   fs.writeFileSync(path.join(__dirname, "../lib/scoring/norma-psikogram.json"), JSON.stringify(out, null, 2) + "\n");

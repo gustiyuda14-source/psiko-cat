@@ -175,7 +175,7 @@ export default function EngineKepribadian({
       >
         <article key={q?.id} data-active-question tabIndex={-1} className="enter-rise space-y-5">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <p className="qnum tnum">Pernyataan {idx + 1}</p>
+            <p className="qnum tnum">{payload?.subtes === "SJT" ? "Situasi" : "Pernyataan"} {idx + 1}</p>
             <div className="flex flex-wrap items-center gap-2">
               {payload?.subtes === "SK" && <Badge tone="accent">Integritas &amp; Kejujuran</Badge>}
               {payload?.aspect && <Badge tone="info">{payload.aspect}</Badge>}
@@ -185,14 +185,18 @@ export default function EngineKepribadian({
           {/* Pernyataan berdiri sendiri sebagai satu-satunya hal yang dibaca,
               jadi ukurannya naik dan lebar barisnya dikunci ke ukuran nyaman baca. */}
           <div className="q-card mx-auto w-full max-w-2xl">
-            <p className="mx-auto max-w-[46ch] py-4 text-center text-xl font-semibold leading-relaxed text-foreground sm:py-6 sm:text-2xl">
-              {payload?.statement}
-            </p>
+            {payload?.subtes === "SJT" ? (
+              <p className="py-2 text-lg leading-relaxed text-foreground sm:py-3">{payload.statement}</p>
+            ) : (
+              <p className="mx-auto max-w-[46ch] py-4 text-center text-xl font-semibold leading-relaxed text-foreground sm:py-6 sm:text-2xl">
+                {payload?.statement}
+              </p>
+            )}
           </div>
 
           <fieldset className="opts mx-auto max-w-2xl">
             <legend className="sr-only">
-              {payload?.subtes === "SK" ? "Pilih yang paling tepat" : "Seberapa sesuai pernyataan ini dengan Anda"}
+              {payload?.subtes === "SK" ? "Pilih yang paling tepat" : payload?.subtes === "SJT" ? "Pilih tindakan yang paling tepat" : "Seberapa sesuai pernyataan ini dengan Anda"}
             </legend>
             {payload?.choices?.map((c) => {
               const isSelected = picked === c.key;
