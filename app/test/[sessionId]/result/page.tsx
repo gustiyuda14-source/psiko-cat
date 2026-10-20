@@ -13,7 +13,7 @@ import {
 } from "@/app/components/PembahasanSection";
 import ResultView from "./ResultView";
 import { getSessionAccess } from "@/lib/session-access";
-import { psikogramSesi, wsSesi } from "@/lib/scoring/psikogram-sesi";
+import { profilAkun, psikogramSesi, wsSesi } from "@/lib/scoring/psikogram-sesi";
 import { JALUR, aspekSesi, type Jalur } from "@/lib/scoring/psikogram";
 
 const PASSING_NAP = 61;
@@ -38,7 +38,6 @@ export default async function ResultPage({
 }) {
   const { sessionId } = await params;
   const { jalur: pilih, dari } = await searchParams;
-  const jalur: Jalur = JALUR.includes(pilih as Jalur) ? (pilih as Jalur) : "BINTARA";
   const access = await getSessionAccess(sessionId);
   if (!access.ok) notFound();
 
@@ -51,6 +50,11 @@ export default async function ResultPage({
     .single();
 
   if (!session) notFound();
+
+  // Profil tujuan pemilik sesi (bukan yang membuka: admin melihat hasil dengan profil peserta).
+  // Belum memilih = tab keempat profil seperti dulu (?jalur=, default Pelaksana).
+  const profil = await profilAkun(session.user_id);
+  const jalur: Jalur = profil ?? (JALUR.includes(pilih as Jalur) ? (pilih as Jalur) : "BINTARA");
 
   if (session.status !== "COMPLETED" && session.status !== "DISQUALIFIED") {
     redirect(`/test/${sessionId}`);
@@ -118,6 +122,7 @@ export default async function ResultPage({
       kecermatanDetail={kecermatanDetail}
       psikogram={psikogram}
       jalur={jalur}
+      profilTetap={profil !== null}
       kembali={kembali}
       aspekSubtes={aspekSubtes?.length ? aspekSubtes : null}
     />

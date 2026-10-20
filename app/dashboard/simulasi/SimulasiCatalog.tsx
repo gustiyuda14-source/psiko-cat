@@ -5,6 +5,8 @@ import { MODULE_CONFIG, MODULE_ORDER, type ModuleType } from "@/lib/test-config"
 import { fillY, wavePath } from "@/lib/honey";
 import { Button, Dialog } from "@/app/components/ui-client";
 import { ArrowRight, Check, ChevronLeft } from "@/app/components/icons";
+import ProfilPicker from "@/app/components/ProfilPicker";
+import type { Jalur } from "@/lib/scoring/psikogram";
 
 /*
   Katalog Simulasi: tiap tes = kubus isometrik. Tiga sisi kubus = tiga sub-tes
@@ -81,6 +83,7 @@ export default function SimulasiCatalog({
   packages,
   items,
   last,
+  profil,
   action,
 }: {
   packages: SimulasiPackage[];
@@ -88,6 +91,8 @@ export default function SimulasiCatalog({
   items: Record<number, SimulasiItem[]>;
   /** Nilai sub-tes per kartu paket, hanya dari tryout lengkap paket itu. */
   last: Record<number, LastScores>;
+  /** Profil tujuan akun; null = tombol mulai terkunci sampai profil dipilih. */
+  profil: Jalur | null;
   action: (formData: FormData) => Promise<void>;
 }) {
   const [pkg, setPkg] = useState<number | null>(null);
@@ -352,7 +357,13 @@ export default function SimulasiCatalog({
             {item.faces.length === 1 && (
               <p className="text-sm text-muted-foreground">Sub-tes tidak dimulai terpisah di sini. Tombol di bawah memulai Tryout Lengkap Paket {pkg}.</p>
             )}
-            <Button id="sim-start" variant="primary" size="lg" block disabled={pending} onClick={start}>
+            {!profil && (
+              <>
+                <p className="text-sm font-medium text-foreground">Pilih profil tujuanmu dulu. Nilai akhir dihitung dengan bobot profil ini.</p>
+                <ProfilPicker value={null} />
+              </>
+            )}
+            <Button id="sim-start" variant="primary" size="lg" block disabled={pending || !profil} onClick={start}>
               {pending ? "Membuat sesi…" : "Mulai tryout lengkap"}
               {!pending && <ArrowRight className="size-4" />}
             </Button>

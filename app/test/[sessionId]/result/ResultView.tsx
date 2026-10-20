@@ -109,6 +109,8 @@ export type ResultViewProps = {
   kecermatanDetail: KecermatanColumnGroup[];
   psikogram: HasilPsikogram[] | null;
   jalur: Jalur;
+  /** Jalur dari profil akun pemilik sesi: tanpa tab ganti profil, profil lain dilipat. */
+  profilTetap: boolean;
   kembali: { href: string; label: string; dari?: string };
   aspekSubtes: AspekSubtes[] | null;
 };
@@ -133,6 +135,7 @@ export default function ResultView({
   kecermatanDetail,
   psikogram,
   jalur,
+  profilTetap,
   kembali,
   aspekSubtes,
 }: ResultViewProps) {
@@ -159,7 +162,7 @@ export default function ResultView({
       <div className="rep-page mx-auto w-full max-w-[1160px] px-4 py-8 sm:px-8 sm:py-12">
         <div className="rep-grid">
           <div className="rep-main">
-            {psikogram ? <PsikogramSection hasil={psikogram} jalur={jalur} /> : aspekSubtes ? <AspekSubtesSection subtes={subtesNama} aspek={aspekSubtes} /> : <>
+            {psikogram ? <PsikogramSection hasil={psikogram} jalur={jalur} tetap={profilTetap} /> : aspekSubtes ? <AspekSubtesSection subtes={subtesNama} aspek={aspekSubtes} /> : <>
             <div>
               <span className="section-kicker">Rincian nilai</span>
               <h1 className="mt-1">Kontribusi per sub-tes</h1>
@@ -192,11 +195,13 @@ export default function ResultView({
             {utama ? (
             <section className="rep-hero" aria-label="Nilai akhir">
               <p className="rep-kicker">Nilai akhir psikotes</p>
+              {!profilTetap && (
               <nav className="psg-tabs" aria-label="Profil penilaian">
                 {JALUR.map((j) => (
                   <Link key={j} href={`?${new URLSearchParams({ jalur: j, ...(kembali.dari ? { dari: kembali.dari } : {}) })}`} scroll={false} aria-current={j === jalur ? "page" : undefined}>{JALUR_LABEL[j]}</Link>
                 ))}
               </nav>
+              )}
               <div className="rep-trio">
                 <div className="rep-cell">
                   <b>{utama.nilai_akhir ?? "—"}</b>

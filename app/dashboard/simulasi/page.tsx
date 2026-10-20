@@ -30,6 +30,8 @@ async function startSession(formData: FormData) {
   if (formData.get("module") !== "ALL") return;
   const paket = Number(formData.get("paket"));
   if (!SIMULASI_PAKET[paket]) return;
+  // Nilai akhir dihitung dengan bobot profil tujuan, jadi profil wajib dipilih sebelum mulai.
+  if (!(await profilPilihan())) return;
   await createTestSessionAndRedirect(session.sub, MODULE_ORDER, paket);
 }
 
@@ -241,7 +243,7 @@ export default async function SimulasiPage() {
           <span className="section-kicker">Katalog simulasi</span>
           <h2 className="mt-1 font-heading text-2xl">Pilih paket simulasi</h2>
         </div>
-        <SimulasiCatalog packages={packages} items={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, itemsOf(p.id)]))} last={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, lastOf(p.id)]))} action={startSession} />
+        <SimulasiCatalog packages={packages} items={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, itemsOf(p.id)]))} last={Object.fromEntries(packages.filter((p) => p.ready).map((p) => [p.id, lastOf(p.id)]))} profil={profil} action={startSession} />
       </section>
     </div>
   );

@@ -63,6 +63,8 @@ model User {
   password_hash String?
   role          String  @default("peserta")
   gender        String?
+  /// Profil tujuan psikogram: BINTARA, TAMTAMA, AKPOL, SIPSS (null = belum memilih)
+  profil_tujuan String?
 
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt

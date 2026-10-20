@@ -14,7 +14,7 @@ import PembahasanSection, {
 import { EmptyState, PageHeader, buttonStyles } from "@/app/components/ui";
 import { ArrowRight } from "@/app/components/icons";
 import { MODULE_CONFIG, simulasiKartuOf, type ModuleType } from "@/lib/test-config";
-import { psikogramSesi, wsSesi } from "@/lib/scoring/psikogram-sesi";
+import { profilPilihan, psikogramSesi, wsSesi } from "@/lib/scoring/psikogram-sesi";
 import { ASPEK_LABEL, JALUR_LABEL, aspekSesi } from "@/lib/scoring/psikogram";
 
 type ModuleSessionRow = {
@@ -135,13 +135,16 @@ export default async function ReviewPage({
   const kp = moduleSessions.find((m) => m.module_type === "KEPRIBADIAN");
   const kc = moduleSessions.find((m) => m.module_type === "KECERMATAN");
 
-  const [kecerdasanItems, kepribadianItems, kecermatanDetail, profil, aspek] = await Promise.all([
+  const [kecerdasanItems, kepribadianItems, kecermatanDetail, profil, aspek, tujuan] = await Promise.all([
     ks ? fetchKecerdasanReview(ks.id) : Promise.resolve([] as KecerdasanReviewItem[]),
     kp ? fetchKepribadianReview(kp.id) : Promise.resolve({ kepribadian: [], pribadi: [] }),
     kc ? fetchKecermatanDetailReview(kc.id) : Promise.resolve([] as KecermatanColumnGroup[]),
     info.jenis === "simulasi" ? psikogramSesi(moduleSessions) : Promise.resolve(null),
     info.jenis === "mini" ? wsSesi(moduleSessions).then(aspekSesi) : Promise.resolve(null),
+    profilPilihan(),
   ]);
+  // Sudah memilih profil tujuan: hanya profil itu yang tampil; profil lain ada di halaman hasil (dilipat).
+  const profilTampil = profil && tujuan ? profil.filter((h) => h.jalur === tujuan) : profil;
   const aspekKs = aspek?.filter((a) => a.kategori === "KS") ?? [];
 
   const kecermatanSummary: KecermatanSummary | null = kc
@@ -172,9 +175,9 @@ export default async function ReviewPage({
             </Link>
           </div>
 
-          {profil && (
-            <ul className="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border sm:grid-cols-4" aria-label="Nilai akhir per profil">
-              {profil.map((h) => (
+          {profilTampil && (
+            <ul className={`grid gap-px overflow-hidden rounded-lg border border-border bg-border ${tujuan ? "grid-cols-1" : "grid-cols-2 sm:grid-cols-4"}`} aria-label="Nilai akhir per profil">
+              {profilTampil.map((h) => (
                 <li key={h.jalur} className="bg-card">
                   <Link
                     href={`/test/${selected.id}/result?jalur=${h.jalur}&dari=review`}

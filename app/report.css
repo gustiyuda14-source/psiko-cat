@@ -119,3 +119,9 @@
 .psg-kat.k-cb, .psg-kat.k-c { background: var(--surface-inset); color: var(--foreground) }
 .psg-kat.k-k { background: rgba(232, 199, 102, .18); color: var(--gold) }
 .psg-kat.k-ks { background: var(--destructive); color: #fff }
+/* Profil tujuan dari akun: profil lain dilipat di bawah profil utama. */
+.psg-more { margin-top: var(--space-2) }
+.psg-more > summary { width: fit-content; min-height: 44px; display: flex; align-items: center; padding: 0 var(--space-3); border-radius: var(--r-md); color: var(--muted-foreground); font-weight: 600; cursor: pointer }
+.psg-more > summary:hover { background: var(--surface-inset); color: var(--foreground) }
+.psg-more > summary:focus-visible { outline: 3px solid var(--ring) }
+.psg-more > .psg-list { margin-top: var(--space-2) }
