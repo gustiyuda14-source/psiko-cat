@@ -220,3 +220,15 @@ Sumber `baru`. Kartu baru K19 "Jaring-Jaring Kubus" (aspek analitis). Dua model 
 - **Cek buta** Codex (`--blind` → deskripsi teks tanpa kunci; arah motif ditulis dalam bentuk kanonik supaya kata "cermin" hanya muncul pada huruf L yang benar-benar tercermin): 50/50 huruf sama, tidak ada soal ambigu. Semua `ganda`.
 - Label kategori di `lib/drill-cards.ts`, taksonomi di `docs/rencana/drilling/02`.
 NEW aktif (tambahan): K19-N-001..050 (50 butir, `rilis` 2026-10-20).
+
+
+## Batch 26 — Pola & Matriks Gambar spasial: K12 FIG-SERI/MTX/ANALOGI (30) · 2026-10-20
+
+Sumber `baru`. Atas permintaan pemilik (referensi menghadapi tes 2026-10-22): soal seperti contoh gambar pemilik (deret titik di grid, deret bangun, matriks 3×3 simbol dalam kotak, analogi A : B = C : ?). Kubus/jaring-jaring tidak termasuk (kartu K19, sesi lain).
+- `K12-N-001`–`030`, tier 2/3 = 12/18 (40/60, K-2), `rilis` 2026-10-20. Deret 10 (`FIG-SERI-GRID` 6, `FIG-SERI` 4), matriks 10 (`FIG-MTX-OVERLAY` 2, `-LATIN` 2, `-KURANG` 2, `-XOR` 2, `-HITUNG` 1, `-PUTAR` 1), analogi 10 (`FIG-ANALOGI`). Kunci a–e masing-masing 6. Tier 3 = 3–4 aturan bersamaan, tier 2 = 2 aturan (G-4).
+- **Prototipe** 3 butir disetujui pemilik 2026-10-20 (G-5); ketiganya masuk sebagai N-003, N-015, N-021. Satu perubahan dari prototipe: pengecoh analogi "titik di kanan atas" diganti "titik di kiri atas", karena tafsir "titik selalu di kanan atas" (sama dengan B) bisa membelanya (D-1).
+- **Generator** `scripts/generate-k12-spasial.ts` + `scripts/k12-spasial-{core,seri,mtx,analogi}.ts`, SVG parametrik sendiri (G-1), soal + opsi + gambar pembahasan dari satu generator (G-6). Bukti: setiap pengecoh melanggar tepat satu aturan (D-2); matriks: semua operasi himpunan/rumus langkah/operasi hitung lain yang cocok dengan 8 sel terlihat memberi jawaban sama; analogi: semua tafsir A → B per kelompok (tetap, tukar, ±n sisi, ×2, ÷2, balik/selalu warna, putar, cermin) dicoba, tidak ada pengecoh yang bisa dibela; deret grid: posisi awal dicari otomatis tanpa tabrakan benda. Isi tengah dicek tetap di dalam bingkai.
+- Pembahasan: langkah bernomor per aturan → `Opsi X (isi): alasan` → Jawaban → Tips (urutan cek termurah, opsi yang digugurkan tiap aturan, target waktu). Gambar pembahasan: jawaban hijau, keterangan merah; deret grid + peta lintasan bernomor per benda.
+- **Cek buta** Codex (soal + opsi tanpa kunci, baca SVG): 30/30 huruf sama, tidak ada soal ambigu; alasan cocok dengan aturan generator (N-013 dibaca XOR = kurang karena kolom 2 ⊂ kolom 1; N-019 dibaca "persegi selalu hitam", setara). Semua `ganda`. Reviewer pembahasan terpisah (Q-7) tidak dijalankan.
+- Sub_type baru masuk label yang sudah ada lewat awalan (`FIG-SERI` → "Deret gambar", `FIG-MTX` → "Matriks gambar"); `FIG-SERI-GRID` dicatat di `docs/rencana/drilling/02`. 23 butir K12 lama identik byte.
+NEW aktif (tambahan): K12-N-001..030 (30 butir, `rilis` 2026-10-20).

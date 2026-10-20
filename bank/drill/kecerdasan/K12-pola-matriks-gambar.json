@@ -688,5 +688,935 @@
     "pembahasan": "Kolom 3 adalah tumpukan kolom 1 dan kolom 2. Di baris 3, kolom 2 kosong, sehingga kolom 3 sama dengan kolom 1: satu garis datar.<br>Opsi B gugur karena menambah titik yang tidak ada di baris 3; Opsi C gugur karena garisnya harus datar, bukan tegak; Opsi D gugur karena kolom 1 tidak boleh hilang; kolom 2 yang kosong; Opsi E gugur karena menambah garis miring yang tidak ada di baris 3. Jawaban: Opsi A. Tips: kotak kosong bukan jebakan; tumpukan dengan kotak kosong = gambar aslinya.",
     "gambar_pembahasan": "K12-P1-036.svg",
     "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-001",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-001.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-001-a.svg",
+      "b": "drill/img/K12-N-001-b.svg",
+      "c": "drill/img/K12-N-001-c.svg",
+      "d": "drill/img/K12-N-001-d.svg",
+      "e": "drill/img/K12-N-001-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Lacak 2 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Kotak hitam bergerak di kotak pinggir searah jarum jam, maju 1 kotak tiap langkah: (1,1) → (1,2) → (1,3) → (2,3) → (3,3) [?].\n2. Lingkaran putih bergerak di kotak pinggir berlawanan arah jarum jam, maju 2 kotak tiap langkah: (1,3) → (1,1) → (3,1) → (3,3) → (1,3) [?].<br>Opsi B (kotak hitam di (2,3)): kotak hitam tidak digeser dari gambar sebelumnya.\nOpsi C (kotak hitam di (3,2)): kotak hitam maju 2 kotak, padahal seharusnya 1 kotak.\nOpsi D (lingkaran putih di (2,3)): lingkaran putih hanya maju 1 kotak, padahal tiap langkah maju 2 kotak.\nOpsi E (lingkaran putih di (3,1)): lingkaran putih bergerak ke arah sebaliknya.\nJawaban: Opsi A.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Kotak hitam menggugurkan opsi B dan C; lingkaran putih menggugurkan opsi D dan E. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-001.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-002",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-002.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-002-a.svg",
+      "b": "drill/img/K12-N-002-b.svg",
+      "c": "drill/img/K12-N-002-c.svg",
+      "d": "drill/img/K12-N-002-d.svg",
+      "e": "drill/img/K12-N-002-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Lacak 2 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Titik hitam bergerak zig-zag per baris (kiri ke kanan, turun, lalu kanan ke kiri), maju 1 kotak tiap langkah: (1,2) → (1,3) → (1,4) → (2,4) → (2,3) [?].\n2. Tanda silang bergerak di kotak pinggir berlawanan arah jarum jam, maju 1 kotak tiap langkah: (4,4) → (3,4) → (2,4) → (1,4) → (1,3) [?].<br>Opsi A (titik hitam di (2,4)): titik hitam tidak digeser dari gambar sebelumnya.\nOpsi B (titik hitam di (2,2)): titik hitam maju 2 kotak, padahal seharusnya 1 kotak.\nOpsi C (tanda silang di (2,4)): tanda silang bergerak ke arah sebaliknya.\nOpsi E (tanda silang di (1,4)): tanda silang tidak digeser dari gambar sebelumnya.\nJawaban: Opsi D.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Titik hitam menggugurkan opsi A dan B; tanda silang menggugurkan opsi C dan E. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-002.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-003",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-003.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-003-a.svg",
+      "b": "drill/img/K12-N-003-b.svg",
+      "c": "drill/img/K12-N-003-c.svg",
+      "d": "drill/img/K12-N-003-d.svg",
+      "e": "drill/img/K12-N-003-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Lacak 3 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Titik hitam bergerak di kotak pinggir searah jarum jam, maju 2 kotak tiap langkah: (1,1) → (1,3) → (2,4) → (4,4) → (4,2) [?].\n2. Lingkaran putih bergerak di 4 kotak tengah berlawanan arah jarum jam, maju 1 kotak tiap langkah: (2,2) → (3,2) → (3,3) → (2,3) → (2,2) [?].\n3. Kotak hitam bergerak di kotak pinggir berlawanan arah jarum jam, maju 1 kotak tiap langkah: (3,1) → (4,1) → (4,2) → (4,3) → (4,4) [?].<br>Opsi A (titik hitam di (4,3)): titik hitam hanya maju 1 kotak, padahal tiap langkah maju 2 kotak.\nOpsi B (lingkaran putih di (3,3)): lingkaran putih bergerak ke arah sebaliknya.\nOpsi D (kotak hitam di (4,3)): kotak hitam tidak digeser dari gambar sebelumnya.\nOpsi E (titik hitam di (2,4)): titik hitam bergerak ke arah sebaliknya.\nJawaban: Opsi C.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Titik hitam menggugurkan opsi A dan E; lingkaran putih menggugurkan opsi B; kotak hitam menggugurkan opsi D. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-003.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-004",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-004.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-004-a.svg",
+      "b": "drill/img/K12-N-004-b.svg",
+      "c": "drill/img/K12-N-004-c.svg",
+      "d": "drill/img/K12-N-004-d.svg",
+      "e": "drill/img/K12-N-004-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Lacak 3 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Titik hitam bergerak bolak-balik di diagonal kiri atas–kanan bawah, maju 1 kotak tiap langkah: (5,5) → (4,4) → (3,3) → (2,2) → (1,1) [?].\n2. Kotak hitam bergerak di kotak pinggir searah jarum jam, maju 3 kotak tiap langkah: (4,5) → (5,3) → (4,1) → (1,1) → (1,4) [?].\n3. Lingkaran putih bergerak di lingkar kotak di sekeliling pusat berlawanan arah jarum jam, maju 2 kotak tiap langkah: (2,3) → (3,2) → (4,3) → (3,4) → (2,3) [?].<br>Opsi A (titik hitam di (3,3)): titik hitam bergerak ke arah sebaliknya.\nOpsi B (kotak hitam di (1,3)): kotak hitam hanya maju 2 kotak, padahal tiap langkah maju 3 kotak.\nOpsi C (lingkaran putih di (2,4)): lingkaran putih hanya maju 1 kotak, padahal tiap langkah maju 2 kotak.\nOpsi D (titik hitam di (2,2)): titik hitam tidak digeser dari gambar sebelumnya.\nJawaban: Opsi E.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Titik hitam menggugurkan opsi A dan D; kotak hitam menggugurkan opsi B; lingkaran putih menggugurkan opsi C. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-004.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-005",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-005.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-005-a.svg",
+      "b": "drill/img/K12-N-005-b.svg",
+      "c": "drill/img/K12-N-005-c.svg",
+      "d": "drill/img/K12-N-005-d.svg",
+      "e": "drill/img/K12-N-005-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Lacak 3 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Segitiga hitam bergerak di kotak pinggir searah jarum jam, langkahnya bertambah: maju 1, 2, 3, … kotak: (1,1) → (1,2) → (1,4) → (4,4) [?] → (3,1).\n2. Titik hitam bergerak di 4 kotak tengah searah jarum jam, maju 1 kotak tiap langkah: (2,3) → (3,3) → (3,2) → (2,2) [?] → (2,3).\n3. Tanda silang bergerak turun di kolom 2, lalu kembali ke atas setelah baris terakhir, maju 1 kotak tiap langkah: (2,2) → (3,2) → (4,2) → (1,2) [?] → (2,2).\nTanda tanya ada di gambar ke-4, jadi jawaban harus cocok dengan gambar sebelum DAN sesudahnya.<br>Opsi A (segitiga hitam di (3,4)): segitiga hitam maju 2 kotak lagi, sama seperti langkah sebelumnya, padahal langkahnya selalu bertambah 1.\nOpsi C (titik hitam di (3,3)): titik hitam bergerak ke arah sebaliknya.\nOpsi D (tanda silang di (3,2)): tanda silang bergerak ke arah sebaliknya.\nOpsi E (segitiga hitam di (1,1)): segitiga hitam bergerak ke arah sebaliknya.\nJawaban: Opsi B.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Segitiga hitam menggugurkan opsi A dan E; titik hitam menggugurkan opsi C; tanda silang menggugurkan opsi D. Untuk langkah yang bertambah, tulis besar langkahnya (1, 2, 3, …) di atas tiap perpindahan. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-005.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-006",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI-GRID",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-006.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-006-a.svg",
+      "b": "drill/img/K12-N-006-b.svg",
+      "c": "drill/img/K12-N-006-c.svg",
+      "d": "drill/img/K12-N-006-d.svg",
+      "e": "drill/img/K12-N-006-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Lacak 3 benda satu per satu, jangan sekaligus. Tulis posisinya sebagai (baris, kolom).\n1. Lingkaran putih bergerak zig-zag per baris (kiri ke kanan, turun, lalu kanan ke kiri), maju 2 kotak tiap langkah: (4,5) → (4,3) → (4,1) → (5,2) → (5,4) [?].\n2. Kotak hitam bergerak di kotak pinggir berlawanan arah jarum jam, langkahnya bertambah: maju 1, 2, 3, … kotak: (1,5) → (1,4) → (1,2) → (3,1) → (5,3) [?].\n3. Tanda silang bergerak turun di kolom 3, lalu kembali ke atas setelah baris terakhir, maju 1 kotak tiap langkah: (4,3) → (5,3) → (1,3) → (2,3) → (3,3) [?].<br>Opsi B (lingkaran putih di (5,2)): lingkaran putih tidak digeser dari gambar sebelumnya.\nOpsi C (kotak hitam di (5,2)): kotak hitam maju 3 kotak lagi, sama seperti langkah sebelumnya, padahal langkahnya selalu bertambah 1.\nOpsi D (tanda silang di (1,3)): tanda silang bergerak ke arah sebaliknya.\nOpsi E (lingkaran putih di (5,5)): lingkaran putih maju 3 kotak, padahal seharusnya 2 kotak.\nJawaban: Opsi A.\nTips: kerjakan satu benda, coret opsi, baru pindah ke benda berikutnya. Lingkaran putih menggugurkan opsi B dan E; kotak hitam menggugurkan opsi C; tanda silang menggugurkan opsi D. Untuk langkah yang bertambah, tulis besar langkahnya (1, 2, 3, …) di atas tiap perpindahan. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-006.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-007",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-007.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-007-a.svg",
+      "b": "drill/img/K12-N-007-b.svg",
+      "c": "drill/img/K12-N-007-c.svg",
+      "d": "drill/img/K12-N-007-d.svg",
+      "e": "drill/img/K12-N-007-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek satu per satu dari gambar 1 sampai 5.\n1. Jumlah sisi bertambah 1 tiap langkah: persegi → segi lima → segi enam → segi tujuh [?] → segi delapan.\n2. Jarum di dalam berputar 90° searah jarum jam tiap langkah: ke atas → kanan → bawah → kiri [?] → atas.\nTanda tanya ada di gambar ke-4, jadi jawaban harus cocok dengan gambar sebelum DAN sesudahnya.<br>Opsi A (segi enam): jumlah sisi tidak berubah dari gambar sebelumnya.\nOpsi B (segi delapan): jumlah sisi bertambah 2, padahal tiap langkah hanya 1.\nOpsi C (jarum ke kanan): jarum diputar ke arah sebaliknya.\nOpsi D (jarum ke bawah): jarum tidak diputar dari gambar sebelumnya.\nJawaban: Opsi E.\nTips: hitung sisi dengan jari mulai dari pojok atas supaya tidak terhitung dua kali, lalu cek arah jarum. Setiap aturan langsung menggugurkan opsi yang melanggarnya. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-007.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-008",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-008.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-008-a.svg",
+      "b": "drill/img/K12-N-008-b.svg",
+      "c": "drill/img/K12-N-008-c.svg",
+      "d": "drill/img/K12-N-008-d.svg",
+      "e": "drill/img/K12-N-008-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek satu per satu dari gambar 1 sampai 5.\n1. Jumlah sisi berkurang 1 tiap langkah: segi delapan → segi tujuh → segi enam → segi lima → persegi [?].\n2. Titik kecil di pojok pindah 1 pojok berlawanan arah jarum jam tiap langkah: kiri atas → kiri bawah → kanan bawah → kanan atas → kiri atas [?].<br>Opsi A (segi lima): jumlah sisi tidak berubah dari gambar sebelumnya.\nOpsi C (segitiga): jumlah sisi berkurang 2, padahal tiap langkah hanya 1.\nOpsi D (titik di kanan bawah): titik dipindah ke arah sebaliknya.\nOpsi E (titik di kanan atas): titik tidak dipindah dari gambar sebelumnya.\nJawaban: Opsi B.\nTips: hitung sisi dengan jari mulai dari pojok atas supaya tidak terhitung dua kali, lalu cek titik pojok. Setiap aturan langsung menggugurkan opsi yang melanggarnya. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-008.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-009",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-009.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-009-a.svg",
+      "b": "drill/img/K12-N-009-b.svg",
+      "c": "drill/img/K12-N-009-c.svg",
+      "d": "drill/img/K12-N-009-d.svg",
+      "e": "drill/img/K12-N-009-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek satu per satu dari gambar 1 sampai 5.\n1. Jumlah sisi bertambah 1 tiap langkah: segitiga → persegi → segi lima → segi enam → segi tujuh [?].\n2. Warna bangun berganti-ganti: putih → hitam → putih → hitam → putih [?].\n3. Titik kecil di pojok pindah 1 pojok searah jarum jam tiap langkah: kanan atas → kanan bawah → kiri bawah → kiri atas → kanan atas [?].<br>Opsi A (segi enam): jumlah sisi tidak berubah dari gambar sebelumnya.\nOpsi B (bangun hitam): warnanya tidak berganti dari gambar sebelumnya.\nOpsi C (titik di kiri bawah): titik dipindah ke arah sebaliknya.\nOpsi E (titik di kiri atas): titik tidak dipindah dari gambar sebelumnya.\nJawaban: Opsi D.\nTips: hitung sisi dengan jari mulai dari pojok atas supaya tidak terhitung dua kali, lalu cek warna dan titik pojok. Setiap aturan langsung menggugurkan opsi yang melanggarnya. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-009.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-010",
+    "kartu": "K12",
+    "sub_type": "FIG-SERI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan urutan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-010.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-010-a.svg",
+      "b": "drill/img/K12-N-010-b.svg",
+      "c": "drill/img/K12-N-010-c.svg",
+      "d": "drill/img/K12-N-010-d.svg",
+      "e": "drill/img/K12-N-010-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ada 4 aturan yang berjalan bersamaan. Cek satu per satu dari gambar 1 sampai 5.\n1. Jumlah sisi bertambah 1 tiap langkah: persegi → segi lima → segi enam [?] → segi tujuh → segi delapan.\n2. Warna bangun berganti-ganti: hitam → putih → hitam [?] → putih → hitam.\n3. Jarum di dalam berputar 45° berlawanan arah jarum jam tiap langkah: ke kanan → kanan atas → atas [?] → kiri atas → kiri.\n4. Titik kecil di pojok lompat ke pojok seberang tiap langkah: kiri atas → kanan bawah → kiri atas [?] → kanan bawah → kiri atas.\nTanda tanya ada di gambar ke-3, jadi jawaban harus cocok dengan gambar sebelum DAN sesudahnya.<br>Opsi A (segi tujuh): jumlah sisi bertambah 2, padahal tiap langkah hanya 1.\nOpsi B (bangun putih): warnanya tidak berganti dari gambar sebelumnya.\nOpsi D (jarum ke kanan): jarum diputar ke arah sebaliknya.\nOpsi E (titik di kanan bawah): titik tidak dipindah dari gambar sebelumnya.\nJawaban: Opsi C.\nTips: hitung sisi dengan jari mulai dari pojok atas supaya tidak terhitung dua kali, lalu cek warna dan arah jarum dan titik pojok. Setiap aturan langsung menggugurkan opsi yang melanggarnya. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-010.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-011",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-011.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-011-a.svg",
+      "b": "drill/img/K12-N-011-b.svg",
+      "c": "drill/img/K12-N-011-c.svg",
+      "d": "drill/img/K12-N-011-d.svg",
+      "e": "drill/img/K12-N-011-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, persegi, segi enam muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi enam dan lingkaran, jadi sel kosong persegi.\n2. Garis di kolom 3 = gabungan garis kolom 1 dan kolom 2. Baris 3: garis / + garis \\ digabung dengan garis \\ + garis tegak menjadi garis / + garis \\ + garis tegak.<br>Opsi A (lingkaran): lingkaran sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi C (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi D (garis / + garis tegak): bagian yang sama di kolom 1 dan 2 dibuang, padahal aturannya semua bagian kolom 1 dan 2 digabung.\nOpsi E (garis tegak): kolom 2 dikurangi kolom 1, padahal aturannya semua bagian kolom 1 dan 2 digabung.\nJawaban: Opsi B.\nTips: urutkan cek dari yang paling murah: bingkai, lalu garis di dalam. Bingkai menggugurkan opsi A dan C; garis di dalam menggugurkan opsi D dan E. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-011.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-012",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-LATIN",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-012.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-012-a.svg",
+      "b": "drill/img/K12-N-012-b.svg",
+      "c": "drill/img/K12-N-012-c.svg",
+      "d": "drill/img/K12-N-012-d.svg",
+      "e": "drill/img/K12-N-012-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: persegi, segi enam, segi delapan muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya persegi dan segi enam, jadi sel kosong segi delapan.\n2. Arah jarum: jarum ke atas, jarum ke kanan, jarum ke kiri muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya jarum ke kanan dan jarum ke kiri, jadi sel kosong jarum ke atas.<br>Opsi A (persegi): persegi sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi C (jarum ke kanan): jarum ke kanan sudah ada di baris 3, padahal tiap arah jarum muncul tepat sekali per baris.\nOpsi D (jarum ke kiri): jarum ke kiri sudah ada di baris 3, padahal tiap arah jarum muncul tepat sekali per baris.\nJawaban: Opsi E.\nTips: urutkan cek dari yang paling murah: bingkai, lalu arah jarum. Bingkai menggugurkan opsi A dan B; arah jarum menggugurkan opsi C dan D. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-012.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-013",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-KURANG",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-013.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-013-a.svg",
+      "b": "drill/img/K12-N-013-b.svg",
+      "c": "drill/img/K12-N-013-c.svg",
+      "d": "drill/img/K12-N-013-d.svg",
+      "e": "drill/img/K12-N-013-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Titik pojok: di setiap baris, titik pindah 1 pojok searah jarum jam dari kolom ke kolom. Baris 3: kanan bawah → kiri bawah → kiri atas.\n2. Segitiga hitam di kolom 3 = segitiga hitam kolom 1 dikurangi segitiga hitam yang ada di kolom 2. Baris 3: segitiga kanan + bawah + kiri dikurangi segitiga bawah, tersisa segitiga kanan + kiri.<br>Opsi B (titik di kiri bawah): titik pojok tidak bergeser dari kolom 2.\nOpsi C (titik di kanan bawah): titik pojok bergeser 1 pojok ke arah sebaliknya.\nOpsi D (segitiga kanan + bawah + kiri): semua bagian kolom 1 dan 2 digabung, padahal aturannya kolom 1 dikurangi kolom 2.\nOpsi E (segitiga bawah): hanya bagian yang sama di kolom 1 dan 2 yang disimpan, padahal aturannya kolom 1 dikurangi kolom 2.\nJawaban: Opsi A.\nTips: urutkan cek dari yang paling murah: titik pojok, lalu segitiga hitam di dalam. Titik pojok menggugurkan opsi B dan C; segitiga hitam di dalam menggugurkan opsi D dan E. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-013.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-014",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-HITUNG",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-014.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-014-a.svg",
+      "b": "drill/img/K12-N-014-b.svg",
+      "c": "drill/img/K12-N-014-c.svg",
+      "d": "drill/img/K12-N-014-d.svg",
+      "e": "drill/img/K12-N-014-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ada 2 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, persegi, segi enam muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi enam dan lingkaran, jadi sel kosong persegi.\n2. Jumlah titik di bawah bangun: kolom 3 = kolom 1 + kolom 2. Baris 3: 1 + 1 = 2 titik.<br>Opsi A (lingkaran): lingkaran sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi D (1 titik): jumlah titik 1, padahal 1 + 1 = 2.\nOpsi E (3 titik): jumlah titik 3, padahal 1 + 1 = 2.\nJawaban: Opsi C.\nTips: urutkan cek dari yang paling murah: bingkai, lalu jumlah titik di bawah bangun. Bingkai menggugurkan opsi A dan B; jumlah titik di bawah bangun menggugurkan opsi D dan E. Target ≤ 45 detik.",
+    "gambar_pembahasan": "K12-N-014.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-015",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-XOR",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-015.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-015-a.svg",
+      "b": "drill/img/K12-N-015-b.svg",
+      "c": "drill/img/K12-N-015-c.svg",
+      "d": "drill/img/K12-N-015-d.svg",
+      "e": "drill/img/K12-N-015-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, persegi, segi enam muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi enam dan lingkaran, jadi sel kosong persegi.\n2. Titik pojok: di setiap baris, titik pindah 1 pojok searah jarum jam dari kolom ke kolom. Baris 3: kanan bawah → kiri bawah → kiri atas.\n3. Garis di kolom 3 berisi garis yang muncul di kolom 1 saja atau di kolom 2 saja; yang ada di keduanya hilang. Baris 3: garis \\ ada di kedua kolom sehingga hilang, tersisa garis / + garis datar.<br>Opsi A (lingkaran): lingkaran sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (garis / + garis \\ + garis datar): semua bagian kolom 1 dan 2 digabung, padahal aturannya bagian yang sama di kolom 1 dan 2 dibuang.\nOpsi C (garis /): kolom 2 dikurangi kolom 1, padahal aturannya bagian yang sama di kolom 1 dan 2 dibuang.\nOpsi D (titik di kiri bawah): titik pojok tidak bergeser dari kolom 2.\nJawaban: Opsi E.\nTips: urutkan cek dari yang paling murah: bingkai, lalu titik pojok, lalu garis di dalam. Bingkai menggugurkan opsi A; titik pojok menggugurkan opsi D; garis di dalam menggugurkan opsi B dan C. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-015.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-016",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-OVERLAY",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-016.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-016-a.svg",
+      "b": "drill/img/K12-N-016-b.svg",
+      "c": "drill/img/K12-N-016-c.svg",
+      "d": "drill/img/K12-N-016-d.svg",
+      "e": "drill/img/K12-N-016-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, segi enam, segi delapan muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi enam dan segi delapan, jadi sel kosong lingkaran.\n2. Titik pojok: di setiap baris, titik pindah 1 pojok berlawanan arah jarum jam dari kolom ke kolom. Baris 3: kiri bawah → kanan bawah → kanan atas.\n3. Segitiga hitam di kolom 3 = gabungan segitiga hitam kolom 1 dan kolom 2. Baris 3: segitiga atas + kiri digabung dengan segitiga bawah menjadi segitiga atas + bawah + kiri.<br>Opsi A (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (titik di kanan bawah): titik pojok tidak bergeser dari kolom 2.\nOpsi C (segitiga bawah): kolom 2 dikurangi kolom 1, padahal aturannya semua bagian kolom 1 dan 2 digabung.\nOpsi E (segi delapan): segi delapan sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nJawaban: Opsi D.\nTips: urutkan cek dari yang paling murah: bingkai, lalu titik pojok, lalu segitiga hitam di dalam. Bingkai menggugurkan opsi A dan E; titik pojok menggugurkan opsi B; segitiga hitam di dalam menggugurkan opsi C. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-016.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-017",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-LATIN",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-017.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-017-a.svg",
+      "b": "drill/img/K12-N-017-b.svg",
+      "c": "drill/img/K12-N-017-c.svg",
+      "d": "drill/img/K12-N-017-d.svg",
+      "e": "drill/img/K12-N-017-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: persegi, segi enam, segi delapan muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi enam dan segi delapan, jadi sel kosong persegi.\n2. Jumlah titik di bawah bangun: 1 titik, 2 titik, 3 titik muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya 2 titik dan 3 titik, jadi sel kosong 1 titik.\n3. Titik pojok: di setiap baris, titik pindah 1 pojok searah jarum jam dari kolom ke kolom. Baris 3: kanan atas → kanan bawah → kiri bawah.<br>Opsi B (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi C (2 titik): 2 titik sudah ada di baris 3, padahal tiap jumlah titik di bawah bangun muncul tepat sekali per baris.\nOpsi D (titik di kanan bawah): titik pojok tidak bergeser dari kolom 2.\nOpsi E (segi delapan): segi delapan sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nJawaban: Opsi A.\nTips: urutkan cek dari yang paling murah: bingkai, lalu jumlah titik di bawah bangun, lalu titik pojok. Bingkai menggugurkan opsi B dan E; jumlah titik di bawah bangun menggugurkan opsi C; titik pojok menggugurkan opsi D. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-017.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-018",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-XOR",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-018.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-018-a.svg",
+      "b": "drill/img/K12-N-018-b.svg",
+      "c": "drill/img/K12-N-018-c.svg",
+      "d": "drill/img/K12-N-018-d.svg",
+      "e": "drill/img/K12-N-018-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, segi enam, segi delapan muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya lingkaran dan segi enam, jadi sel kosong segi delapan.\n2. Jumlah titik di bawah bangun: kolom 3 = kolom 1 + kolom 2. Baris 3: 2 + 1 = 3 titik.\n3. Segitiga hitam di kolom 3 berisi segitiga hitam yang muncul di kolom 1 saja atau di kolom 2 saja; yang ada di keduanya hilang. Baris 3: segitiga bawah + kiri ada di kedua kolom sehingga hilang, tersisa segitiga atas.<br>Opsi A (lingkaran): lingkaran sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi C (2 titik): jumlah titik 2, padahal 2 + 1 = 3.\nOpsi D (segitiga atas + bawah + kiri): semua bagian kolom 1 dan 2 digabung, padahal aturannya bagian yang sama di kolom 1 dan 2 dibuang.\nOpsi E (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nJawaban: Opsi B.\nTips: urutkan cek dari yang paling murah: bingkai, lalu jumlah titik di bawah bangun, lalu segitiga hitam di dalam. Bingkai menggugurkan opsi A dan E; jumlah titik di bawah bangun menggugurkan opsi C; segitiga hitam di dalam menggugurkan opsi D. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-018.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-019",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-PUTAR",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-019.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-019-a.svg",
+      "b": "drill/img/K12-N-019-b.svg",
+      "c": "drill/img/K12-N-019-c.svg",
+      "d": "drill/img/K12-N-019-d.svg",
+      "e": "drill/img/K12-N-019-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ada 3 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, persegi, segi enam muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya persegi dan segi enam, jadi sel kosong lingkaran.\n2. Warna bingkai: setiap baris dan setiap kolom punya tepat satu bingkai hitam. Baris 3 sudah punya bingkai hitam di kolom 1, jadi sel kosong putih.\n3. Arah jarum: di setiap baris, jarum berputar 45° searah jarum jam dari kolom ke kolom. Baris 3: bawah → kiri bawah → kiri.<br>Opsi A (persegi): persegi sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (bingkai hitam): baris 3 sudah punya bingkai hitam, jadi tidak boleh hitam lagi.\nOpsi D (jarum ke kiri bawah): arah jarum tidak bergeser dari kolom 2.\nOpsi E (segi enam): segi enam sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nJawaban: Opsi C.\nTips: urutkan cek dari yang paling murah: bingkai, lalu warna bingkai, lalu arah jarum. Bingkai menggugurkan opsi A dan E; warna bingkai menggugurkan opsi B; arah jarum menggugurkan opsi D. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-019.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-020",
+    "kartu": "K12",
+    "sub_type": "FIG-MTX-KURANG",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan pola gambar pada matriks berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-020.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-020-a.svg",
+      "b": "drill/img/K12-N-020-b.svg",
+      "c": "drill/img/K12-N-020-c.svg",
+      "d": "drill/img/K12-N-020-d.svg",
+      "e": "drill/img/K12-N-020-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ada 4 aturan yang berjalan bersamaan. Cek dari yang paling cepat terlihat.\n1. Bingkai: lingkaran, segi enam, segi delapan muncul tepat sekali di setiap baris dan setiap kolom. Baris 3 sudah punya segi delapan dan lingkaran, jadi sel kosong segi enam.\n2. Titik pojok: di setiap baris, titik pindah 1 pojok searah jarum jam dari kolom ke kolom. Baris 3: kiri atas → kanan atas → kanan bawah.\n3. Jumlah titik di bawah bangun: kolom 3 = kolom 1 + kolom 2. Baris 3: 2 + 2 = 4 titik.\n4. Segitiga hitam di kolom 3 = segitiga hitam kolom 1 dikurangi segitiga hitam yang ada di kolom 2. Baris 3: segitiga kanan + bawah + kiri dikurangi segitiga kanan + kiri, tersisa segitiga bawah.<br>Opsi A (lingkaran): lingkaran sudah ada di baris 3, padahal tiap bingkai muncul tepat sekali per baris.\nOpsi B (titik di kanan atas): titik pojok tidak bergeser dari kolom 2.\nOpsi C (3 titik): jumlah titik 3, padahal 2 + 2 = 4.\nOpsi E (segitiga kanan + bawah + kiri): semua bagian kolom 1 dan 2 digabung, padahal aturannya kolom 1 dikurangi kolom 2.\nJawaban: Opsi D.\nTips: urutkan cek dari yang paling murah: bingkai, lalu titik pojok, lalu jumlah titik di bawah bangun, lalu segitiga hitam di dalam. Bingkai menggugurkan opsi A; titik pojok menggugurkan opsi B; jumlah titik di bawah bangun menggugurkan opsi C; segitiga hitam di dalam menggugurkan opsi E. Untuk isi tengah, tutup bagian yang sama di kolom 1 dan 2 dengan jari, lalu bandingkan sisanya. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K12-N-020.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-021",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-021.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-021-a.svg",
+      "b": "drill/img/K12-N-021-b.svg",
+      "c": "drill/img/K12-N-021-c.svg",
+      "d": "drill/img/K12-N-021-d.svg",
+      "e": "drill/img/K12-N-021-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Dalam dan luar bertukar: segitiga kecil di dalam menjadi bingkai besar, segi enam menjadi kecil di dalamnya. Warna ikut bangunnya (segitiga tetap hitam, segi enam tetap putih).\n2. Titik kecil pindah satu pojok searah jarum jam: kiri atas → kanan atas.\nTerapkan ke C: lingkaran menjadi bingkai dan persegi masuk ke dalam (lingkaran tetap hitam); titik di kanan bawah pindah ke kiri bawah.<br>Opsi A (lingkaran putih, persegi hitam): bangunnya bertukar tetapi warnanya tertinggal di tempat lama.\nOpsi C (persegi tetap di luar): dalam dan luar lupa ditukar; hanya titiknya yang dipindah.\nOpsi D (titik di kiri atas): titik dipindah dua pojok (ke pojok seberang), padahal hanya satu pojok.\nOpsi E (titik masih di kanan bawah): titik lupa dipindah.\nJawaban: Opsi B.\nTips: tulis aturan A → B dalam beberapa kata (dalam ↔ luar bertukar, warna ikut bangunnya; titik pindah satu pojok searah jarum jam), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"dalam ↔ luar bertukar, warna ikut bangunnya\" menggugurkan opsi A dan C; aturan \"titik pindah satu pojok searah jarum jam\" menggugurkan opsi D dan E. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-021.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-022",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-022.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-022-a.svg",
+      "b": "drill/img/K12-N-022-b.svg",
+      "c": "drill/img/K12-N-022-c.svg",
+      "d": "drill/img/K12-N-022-d.svg",
+      "e": "drill/img/K12-N-022-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jumlah sisi bingkai bertambah 1: persegi → segi lima.\n2. Warna bingkai dibalik: putih → hitam.\n3. Jumlah titik di bawah bangun tidak berubah (2 → 2).\nTerapkan ke C: segi enam menjadi segi tujuh; bingkai menjadi hitam.<br>Opsi A (segi enam hitam): jumlah sisi tidak ditambah.\nOpsi B (segi delapan hitam): jumlah sisi ditambah 2, padahal dari A ke B hanya bertambah 1.\nOpsi C (segi tujuh putih): warna bingkai tidak dibalik.\nOpsi E (4 titik di bawah): titik di bawah ikut ditambah, padahal dari A ke B jumlahnya tetap.\nJawaban: Opsi D.\nTips: tulis aturan A → B dalam beberapa kata (sisi bingkai +1; warna bingkai dibalik; titik bawah tetap), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"sisi bingkai +1\" menggugurkan opsi A dan B; aturan \"warna bingkai dibalik\" menggugurkan opsi C; aturan \"titik bawah tetap\" menggugurkan opsi E. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-022.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-023",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-023.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-023-a.svg",
+      "b": "drill/img/K12-N-023-b.svg",
+      "c": "drill/img/K12-N-023-c.svg",
+      "d": "drill/img/K12-N-023-d.svg",
+      "e": "drill/img/K12-N-023-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jarum berputar 90° searah jarum jam: ke atas → ke kanan.\n2. Titik di bawah bangun bertambah 1: 2 → 3.\nTerapkan ke C: jarum ke kanan bawah menjadi ke kiri bawah; 2 titik menjadi 3 titik.<br>Opsi B (jarum ke kanan atas): jarum diputar 90° berlawanan arah jarum jam.\nOpsi C (jarum ke kanan bawah): jarum tidak diputar.\nOpsi D (2 titik di bawah): titik di bawah tidak ditambah.\nOpsi E (4 titik di bawah): titik ditambah 2, padahal dari A ke B hanya bertambah 1.\nJawaban: Opsi A.\nTips: tulis aturan A → B dalam beberapa kata (jarum 90° searah jarum jam; titik bawah +1), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"jarum 90° searah jarum jam\" menggugurkan opsi B dan C; aturan \"titik bawah +1\" menggugurkan opsi D dan E. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-023.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-024",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-024.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-024-a.svg",
+      "b": "drill/img/K12-N-024-b.svg",
+      "c": "drill/img/K12-N-024-c.svg",
+      "d": "drill/img/K12-N-024-d.svg",
+      "e": "drill/img/K12-N-024-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jumlah sisi bingkai berkurang 2: segi delapan → segi enam.\n2. Titik kecil pindah ke pojok seberang: kiri atas → kanan bawah.\nTerapkan ke C: segi enam menjadi persegi; titik di kiri atas pindah ke kanan bawah.<br>Opsi A (segi lima): jumlah sisi hanya dikurangi 1, padahal dari A ke B berkurang 2.\nOpsi B (segitiga): jumlah sisi dikurangi 3, padahal dari A ke B berkurang 2.\nOpsi C (titik di kanan atas): titik hanya pindah satu pojok, padahal pindah ke pojok seberang.\nOpsi D (titik di kiri atas): titik tidak dipindah.\nJawaban: Opsi E.\nTips: tulis aturan A → B dalam beberapa kata (sisi bingkai −2; titik pindah ke pojok seberang), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"sisi bingkai −2\" menggugurkan opsi A dan B; aturan \"titik pindah ke pojok seberang\" menggugurkan opsi C dan D. Target ≤ 40 detik.",
+    "gambar_pembahasan": "K12-N-024.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-025",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-025.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-025-a.svg",
+      "b": "drill/img/K12-N-025-b.svg",
+      "c": "drill/img/K12-N-025-c.svg",
+      "d": "drill/img/K12-N-025-d.svg",
+      "e": "drill/img/K12-N-025-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Dalam dan luar bertukar: lingkaran kecil di dalam menjadi bingkai besar, segi enam menjadi kecil di dalamnya. Warna ikut bangunnya (lingkaran tetap hitam, segi enam tetap putih).\n2. Titik di bawah bangun bertambah 1: 1 → 2.\n3. Titik kecil pindah satu pojok searah jarum jam: kiri atas → kanan atas.\nTerapkan ke C: segitiga menjadi bingkai dan persegi masuk ke dalam (segitiga tetap hitam); 2 titik menjadi 3 titik; titik di kiri bawah pindah ke kiri atas.<br>Opsi A (persegi tetap di luar): dalam dan luar lupa ditukar.\nOpsi B (segitiga putih, persegi hitam): bangunnya bertukar tetapi warnanya tertinggal di tempat lama.\nOpsi D (1 titik di bawah): titik di bawah dikurangi, padahal dari A ke B bertambah 1.\nOpsi E (titik di kiri bawah): titik pojok lupa dipindah.\nJawaban: Opsi C.\nTips: tulis aturan A → B dalam beberapa kata (dalam ↔ luar bertukar, warna ikut bangunnya; titik bawah +1; titik pindah satu pojok searah jarum jam), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"dalam ↔ luar bertukar, warna ikut bangunnya\" menggugurkan opsi A dan B; aturan \"titik bawah +1\" menggugurkan opsi D; aturan \"titik pindah satu pojok searah jarum jam\" menggugurkan opsi E. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-025.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-026",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-026.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-026-a.svg",
+      "b": "drill/img/K12-N-026-b.svg",
+      "c": "drill/img/K12-N-026-c.svg",
+      "d": "drill/img/K12-N-026-d.svg",
+      "e": "drill/img/K12-N-026-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jumlah sisi bingkai bertambah 1: persegi → segi lima.\n2. Warna bingkai dibalik: putih → hitam.\n3. Jarum berputar 45° berlawanan arah jarum jam: ke atas → ke kiri atas.\nTerapkan ke C: segi enam menjadi segi tujuh; bingkai menjadi hitam; jarum ke kanan menjadi ke kanan atas.<br>Opsi A (segi enam): jumlah sisi tidak ditambah.\nOpsi C (segi tujuh putih): warna bingkai tidak dibalik.\nOpsi D (jarum ke kanan bawah): jarum diputar 45° searah jarum jam, padahal dari A ke B berputar berlawanan arah.\nOpsi E (jarum ke kanan): jarum tidak diputar.\nJawaban: Opsi B.\nTips: tulis aturan A → B dalam beberapa kata (sisi bingkai +1; warna bingkai dibalik; jarum 45° berlawanan arah jarum jam), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"sisi bingkai +1\" menggugurkan opsi A; aturan \"warna bingkai dibalik\" menggugurkan opsi C; aturan \"jarum 45° berlawanan arah jarum jam\" menggugurkan opsi D dan E. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-026.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-027",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-027.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-027-a.svg",
+      "b": "drill/img/K12-N-027-b.svg",
+      "c": "drill/img/K12-N-027-c.svg",
+      "d": "drill/img/K12-N-027-d.svg",
+      "e": "drill/img/K12-N-027-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Dalam dan luar bertukar, tetapi warnanya tetap di tempat: bingkai luar tetap putih, bangun dalam tetap hitam.\n2. Titik kecil pindah satu pojok berlawanan arah jarum jam: kanan atas → kiri atas.\n3. Titik di bawah bangun berkurang 1: 3 → 2.\nTerapkan ke C: persegi menjadi bingkai dan segi delapan masuk ke dalam (bingkai tetap putih); titik di kanan bawah pindah ke kanan atas; 4 titik menjadi 3 titik.<br>Opsi A (segi delapan tetap di luar): dalam dan luar lupa ditukar.\nOpsi B (persegi hitam, segi delapan putih): warna ikut pindah bersama bangunnya, padahal di A → B warna tetap di tempat (luar putih, dalam hitam).\nOpsi C (titik di kanan bawah): titik pojok lupa dipindah.\nOpsi D (4 titik di bawah): titik di bawah tidak dikurangi.\nJawaban: Opsi E.\nTips: tulis aturan A → B dalam beberapa kata (dalam ↔ luar bertukar, warna tetap di tempat; titik pindah satu pojok berlawanan arah jarum jam; titik bawah −1), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"dalam ↔ luar bertukar, warna tetap di tempat\" menggugurkan opsi A dan B; aturan \"titik pindah satu pojok berlawanan arah jarum jam\" menggugurkan opsi C; aturan \"titik bawah −1\" menggugurkan opsi D. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-027.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-028",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-028.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-028-a.svg",
+      "b": "drill/img/K12-N-028-b.svg",
+      "c": "drill/img/K12-N-028-c.svg",
+      "d": "drill/img/K12-N-028-d.svg",
+      "e": "drill/img/K12-N-028-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jumlah sisi bingkai bertambah 1: persegi → segi lima.\n2. Warna bingkai dibalik: putih → hitam.\n3. Jarum berputar 135° searah jarum jam: ke atas → ke kanan bawah.\n4. Titik di bawah bangun berkurang 1: 3 → 2.\nTerapkan ke C: segi lima menjadi segi enam; bingkai menjadi hitam; jarum ke kanan menjadi ke kiri bawah; 4 titik menjadi 3 titik.<br>Opsi B (segi tujuh): jumlah sisi ditambah 2, padahal dari A ke B hanya bertambah 1.\nOpsi C (segi enam putih): warna bingkai tidak dibalik.\nOpsi D (jarum ke kiri atas): jarum diputar 135° berlawanan arah jarum jam, arahnya terbalik.\nOpsi E (4 titik di bawah): titik di bawah tidak dikurangi.\nJawaban: Opsi A.\nTips: tulis aturan A → B dalam beberapa kata (sisi bingkai +1; warna bingkai dibalik; jarum 135° searah jarum jam; titik bawah −1), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"sisi bingkai +1\" menggugurkan opsi B; aturan \"warna bingkai dibalik\" menggugurkan opsi C; aturan \"jarum 135° searah jarum jam\" menggugurkan opsi D; aturan \"titik bawah −1\" menggugurkan opsi E. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-028.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-029",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-029.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-029-a.svg",
+      "b": "drill/img/K12-N-029-b.svg",
+      "c": "drill/img/K12-N-029-c.svg",
+      "d": "drill/img/K12-N-029-d.svg",
+      "e": "drill/img/K12-N-029-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Dalam dan luar bertukar: lingkaran kecil di dalam menjadi bingkai besar, segitiga menjadi kecil di dalamnya. Warna ikut bangunnya (lingkaran tetap hitam, segitiga tetap putih).\n2. Titik kecil pindah ke pojok seberang: kiri atas → kanan bawah.\n3. Titik di bawah bangun bertambah 2: 1 → 3.\nTerapkan ke C: segi lima menjadi bingkai dan segi delapan masuk ke dalam (segi lima tetap hitam); titik di kanan atas pindah ke kiri bawah; 2 titik menjadi 4 titik.<br>Opsi A (segi delapan tetap di luar): dalam dan luar lupa ditukar.\nOpsi B (segi lima putih, segi delapan hitam): bangunnya bertukar tetapi warnanya tertinggal di tempat lama.\nOpsi C (titik di kiri atas): titik hanya pindah satu pojok, padahal pindah ke pojok seberang.\nOpsi E (2 titik di bawah): titik di bawah tidak ditambah.\nJawaban: Opsi D.\nTips: tulis aturan A → B dalam beberapa kata (dalam ↔ luar bertukar, warna ikut bangunnya; titik pindah ke pojok seberang; titik bawah +2), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"dalam ↔ luar bertukar, warna ikut bangunnya\" menggugurkan opsi A dan B; aturan \"titik pindah ke pojok seberang\" menggugurkan opsi C; aturan \"titik bawah +2\" menggugurkan opsi E. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-029.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K12-N-030",
+    "kartu": "K12",
+    "sub_type": "FIG-ANALOGI",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "instruksi": "Perhatikan hubungan gambar berikut.",
+    "stem": "Gambar manakah pengganti tanda tanya?",
+    "gambar": "drill/img/K12-N-030.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K12-N-030-a.svg",
+      "b": "drill/img/K12-N-030-b.svg",
+      "c": "drill/img/K12-N-030-c.svg",
+      "d": "drill/img/K12-N-030-d.svg",
+      "e": "drill/img/K12-N-030-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "Ubah hubungan A → B menjadi kalimat pendek, lalu terapkan ke C.\n1. Jumlah sisi bingkai bertambah 1: segitiga → persegi.\n2. Warna bingkai dibalik: putih → hitam.\n3. Titik kecil pindah ke pojok seberang: kiri bawah → kanan atas.\n4. Titik di bawah bangun bertambah 2: 1 → 3.\nTerapkan ke C: segi enam menjadi segi tujuh; bingkai menjadi hitam; titik di kanan bawah pindah ke kiri atas; 2 titik menjadi 4 titik.<br>Opsi A (segi enam): jumlah sisi tidak ditambah.\nOpsi B (segi tujuh putih): warna bingkai tidak dibalik.\nOpsi D (titik di kiri bawah): titik hanya pindah satu pojok, padahal pindah ke pojok seberang.\nOpsi E (2 titik di bawah): titik di bawah tidak ditambah.\nJawaban: Opsi C.\nTips: tulis aturan A → B dalam beberapa kata (sisi bingkai +1; warna bingkai dibalik; titik pindah ke pojok seberang; titik bawah +2), lalu cek satu aturan per putaran sambil mencoret opsi. Aturan \"sisi bingkai +1\" menggugurkan opsi A; aturan \"warna bingkai dibalik\" menggugurkan opsi B; aturan \"titik pindah ke pojok seberang\" menggugurkan opsi D; aturan \"titik bawah +2\" menggugurkan opsi E. Target ≤ 50 detik.",
+    "gambar_pembahasan": "K12-N-030.svg",
+    "status_kunci": "ganda"
   }
 ]
