@@ -54,8 +54,8 @@ export function buttonStyles({
 } = {}) {
   return [
     "inline-flex items-center justify-center rounded-md font-heading font-semibold",
-    "transition-[background-color,border-color,color,box-shadow,transform] duration-200 ease-out",
-    "active:translate-y-px",
+    "transition-[background-color,border-color,color,box-shadow,scale] duration-150 ease-out",
+    "active:scale-[0.97]",
     "disabled:pointer-events-none disabled:opacity-45 disabled:shadow-none",
     VARIANT[variant],
     SIZE[size],

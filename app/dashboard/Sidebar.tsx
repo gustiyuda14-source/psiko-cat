@@ -69,7 +69,9 @@ function backTarget(pathname: string): { href: string; label: string } | null {
 function navItemClass(active: boolean): string {
   return [
     "flex min-h-10 items-center gap-3 rounded-lg px-3 text-[0.9375rem]",
-    "transition-colors duration-150 ease-out max-lg:min-h-12 max-lg:text-base",
+    "transition-[color,background-color,scale] duration-150 ease-out max-lg:min-h-12 max-lg:text-base",
+    // Efek terpencet: sedikit mengecil + latar menggelap (HP tidak punya hover, tap highlight dimatikan).
+    "active:scale-[0.98] active:bg-foreground/[0.08]",
     active
       ? "nav-active bg-brand-ink/[0.07] font-semibold text-brand-ink"
       : "font-medium text-muted-foreground hover:bg-foreground/[0.04] hover:text-foreground",
@@ -216,7 +218,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
             aria-label={latihanOpen ? "Tutup pilihan latihan" : "Buka pilihan latihan"}
             aria-expanded={latihanOpen}
             aria-controls={`${navigationId}-latihan-submenu`}
-            className="flex size-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-colors duration-150 hover:bg-foreground/[0.04] hover:text-foreground max-lg:size-12"
+            className="flex size-10 shrink-0 items-center justify-center rounded-lg text-muted-foreground transition-[color,background-color,scale] duration-150 ease-out hover:bg-foreground/[0.04] hover:text-foreground active:scale-95 active:bg-foreground/[0.08] max-lg:size-12"
           >
             <ChevronDown
               className={`size-4 transition-transform duration-200 ease-out ${
@@ -242,7 +244,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
                     href={href}
                     onClick={() => setOpen(false)}
                     aria-current={active ? "page" : undefined}
-                    className={`-ml-px flex min-h-9 items-center gap-2.5 border-l-2 pl-[19px] pr-3 text-sm transition-colors duration-150 max-lg:min-h-11 ${
+                    className={`-ml-px flex min-h-9 items-center gap-2.5 border-l-2 pl-[19px] pr-3 text-sm transition-[color,background-color,scale] duration-150 ease-out active:scale-[0.98] active:bg-foreground/[0.06] max-lg:min-h-11 ${
                       active
                         ? "border-brand-ink font-semibold text-brand-ink"
                         : "border-transparent text-muted-foreground hover:text-foreground"
@@ -289,7 +291,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
           aria-label="Menu"
           aria-expanded={open}
           aria-controls="mobile-navigation"
-          className="group grid size-[46px] shrink-0 place-items-center rounded-xl bg-navy text-gold-hi shadow-[inset_0_0_0_1px_rgb(232_199_102/0.35)] transition-shadow duration-200 hover:shadow-[inset_0_0_0_1.5px_var(--gold-hi)] lg:hidden"
+          className="group grid size-[46px] shrink-0 place-items-center rounded-xl bg-navy text-gold-hi shadow-[inset_0_0_0_1px_rgb(232_199_102/0.35)] transition-[box-shadow,scale] duration-150 ease-out hover:shadow-[inset_0_0_0_1.5px_var(--gold-hi)] active:scale-95 lg:hidden"
         >
           <span className="relative block h-3.5 w-5" aria-hidden="true">
             <i className={`absolute left-0 top-0 h-[2.25px] w-full rounded-sm bg-current transition-transform duration-200 ${open ? "translate-y-[6px] rotate-45" : ""}`} />
@@ -302,7 +304,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
           <Link
             href={back.href}
             aria-label={back.label}
-            className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset max-lg:px-3"
+            className="inline-flex items-center gap-2 rounded-md border border-border bg-card px-3 py-2 text-sm font-semibold text-foreground transition-[color,background-color,border-color,scale] duration-150 ease-out hover:border-accent hover:bg-surface-inset active:scale-[0.97] max-lg:px-3"
           >
             <span aria-hidden="true" className="font-bold text-gold">←</span>
             <span className="max-lg:sr-only">{back.label}</span>
@@ -320,7 +322,7 @@ export default function Sidebar({ name, username, isAdmin = false }: { name: str
 
         <ThemeToggle className="max-lg:ml-auto" />
 
-        <LogoutButton className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-foreground transition-colors duration-200 hover:border-accent hover:bg-surface-inset" />
+        <LogoutButton className="inline-flex min-h-11 items-center justify-center gap-2 rounded-md border border-border bg-card px-4 text-sm font-semibold text-foreground transition-[color,background-color,border-color,scale] duration-150 ease-out hover:border-accent hover:bg-surface-inset active:scale-[0.97]" />
       </header>
 
       {open && (

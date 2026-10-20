@@ -8,7 +8,9 @@ import "./exam.css";
 import "./report.css";
 import "./progress.css";
 import "./latihan-analisis.css";
+import { Suspense } from "react";
 import VersionWatcher from "./components/VersionWatcher";
+import NavProgress from "./components/NavProgress";
 
 // Nama variabel diberi sufiks -src supaya @theme inline di globals.css bisa
 // memetakannya ke --font-sans / --font-display tanpa referensi melingkar
@@ -70,6 +72,9 @@ export default function RootLayout({
       </head>
       <body className="flex min-h-full flex-col">
         {children}
+        <Suspense fallback={null}>
+          <NavProgress />
+        </Suspense>
         <VersionWatcher />
       </body>
     </html>

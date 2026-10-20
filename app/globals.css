@@ -843,6 +843,30 @@ dialog[open]::backdrop { animation: backdrop-in 200ms ease-out }
   }
 }
 
+/* Bilah pindah halaman (NavProgress): tumbuh melambat sampai 90% selama menunggu (sekali jalan,
+   bukan infinite), lalu penuh dan memudar saat halaman baru tampil. Muncul setelah 120ms supaya
+   navigasi instan tidak berkedip. */
+.nav-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 60;
+  height: 3px;
+  background: var(--gold-grad);
+  transform-origin: left;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--t-3) var(--e-out) 80ms;
+}
+.nav-progress.is-loading {
+  opacity: 1;
+  transition: opacity var(--t-1) var(--e-out) 120ms;
+  animation: nav-progress-grow 10s var(--e-out) both;
+}
+@keyframes nav-progress-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(0.9); }
+}
+
 /* Satu momen gerak yang diotorisasi: konten soal berganti, dan panel modal
    masuk. Bukan entrance identik di tiap section. */
 .enter-rise {
