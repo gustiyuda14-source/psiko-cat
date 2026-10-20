@@ -76,6 +76,18 @@ const normaKp = { prososial: { n: NORMA_MIN, mean: 0.5, sd: 0.1 }, "sjt:prososia
 assert.equal(wsDariNorma("prososial", 0.8, normaKp), 19);
 assert.equal(wsDariNorma("prososial", 0.8, normaKp, true), 10);
 assert.equal(kunciNorma("verbal", true), "verbal");
+// Norma berplafon (rata-rata tinggi, mis. prososial 20 Okt): 10 + 3z mentok 13,6 di RS 1; lantai garis lurus → 20 (B).
+const normaTinggi = { prososial: { n: NORMA_MIN, mean: 0.783, sd: 0.181 } };
+assert.equal(wsDariNorma("prososial", 1, normaTinggi), 20);
+assert.equal(kategoriWS(wsDariNorma("prososial", 1, normaTinggi)), "B");
+assert.equal(wsDariNorma("prososial", 0.783, normaTinggi), 10);
+assert.equal(wsDariNorma("prososial", 0.9, normaTinggi), 15.39); // 10 + 10 × 0,117 / 0,217
+assert.equal(wsDariNorma("prososial", 0.6, normaTinggi), 6.97); // di bawah rata-rata tetap 10 + 3z
+for (let rs = 0, prev = -1; rs <= 1.0001; rs += 0.01) {
+  const ws = wsDariNorma("prososial", rs, normaTinggi);
+  assert.ok(ws >= prev, `WS tidak boleh turun saat RS naik (rs ${rs.toFixed(2)})`);
+  prev = ws;
+}
 assert.equal(wsDariNorma("prososial", 0.5, { prososial: normaKp.prososial }, true), 10); // tanpa norma SJT → proporsi × 20
 
 console.log("psikogram.test ok");

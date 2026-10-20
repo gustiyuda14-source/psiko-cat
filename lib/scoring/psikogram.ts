@@ -10,6 +10,7 @@
  * Kelompok = peserta platform (norma-psikogram.json, dibangun scripts/build-norma-psikogram.ts).
  * Rumus skala 20 tidak tertulis di peraturan; WS = 10 + 3z dipilih karena batas kategori
  * tepat simetris di sekitar 10: C 8,5–11,4 = ±0,5 SD dan K/CB berakhir di 4 dan 16 = ±2 SD (inferensi).
+ * Di atas rata-rata ada lantai garis lurus ke RS 1 = 20 supaya jawaban sempurna selalu B (lihat wsDariNorma).
  * Aspek tanpa norma cukup (n < NORMA_MIN) jatuh ke proporsi × 20.
  * Kepribadian format situasional (SJT) punya norma sendiri berkunci "sjt:<aspek>": sebaran skornya
  * berbeda dari Likert, jadi kedua format tidak dicampur dalam satu kelompok pembanding.
@@ -99,11 +100,18 @@ export const NORMA_MIN = 30;
 
 export const kunciNorma = (aspek: Aspek, sjt = false) => (sjt && ASPEK_KEPRIBADIAN_SET.has(aspek) ? `sjt:${aspek}` : aspek);
 
-/** WS = 10 + 3z terhadap norma kelompok, batas 0–20. */
+/**
+ * WS = 10 + 3z terhadap norma kelompok, batas 0–20.
+ * Di atas rata-rata diambil yang lebih besar dari 10 + 3z dan garis lurus rata-rata (10) → RS 1 (20):
+ * bila rata-rata kelompok sudah tinggi (Kepribadian ±80%), RS 1 hanya ±1 SD di atasnya sehingga 10 + 3z
+ * mentok di CB dan B mustahil walau jawaban sempurna (laporan peserta 20 Okt 2026). Di bawah rata-rata tetap 10 + 3z.
+ */
 export function wsDariNorma(aspek: Aspek, rs: number, norma: Norma, sjt = false): number {
   const g = norma[kunciNorma(aspek, sjt)];
   if (!g || g.n < NORMA_MIN || g.sd <= 0) return wsDariProporsi(rs);
-  return clamp20(10 + (3 * (rs - g.mean)) / g.sd);
+  const z = 10 + (3 * (rs - g.mean)) / g.sd;
+  if (rs <= g.mean || g.mean >= 1) return clamp20(z);
+  return clamp20(Math.max(z, 10 + (10 * (rs - g.mean)) / (1 - g.mean)));
 }
 
 /** Sampel berkunci kunciNorma (lihat rsNormaSesi). */
