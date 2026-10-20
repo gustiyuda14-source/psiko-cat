@@ -9,7 +9,7 @@ import ThemeToggle from "@/app/components/ThemeToggle";
 import { MODULE_CONFIG, MODULE_ORDER, latihanHref, type ModuleType } from "@/lib/test-config";
 import { ChevronDown, Close } from "@/app/components/icons";
 import {
-  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKeswa, NavKosakata, NavKraepelin, NavLatihan, NavReview, NavSimulasi, UserGlyph,
+  NavAdmin, NavDrill, NavFundamental, NavHasil, NavHome, NavKecerdasan, NavKecermatan, NavKepribadian, NavKeswa, NavKosakata, NavKraepelin, NavLatihan, NavPenilaian, NavReview, NavSimulasi, UserGlyph,
 } from "@/app/components/nav-icons";
 
 /*
@@ -37,6 +37,7 @@ const SECONDARY_NAV: NavItem[] = [
   { label: "Kraepelin / Tes Koran", href: "/dashboard/kraepelin", icon: NavKraepelin },
   { label: "Kosakata", href: "/dashboard/kosakata", icon: NavKosakata },
   { label: "Review Soal", href: "/dashboard/review", icon: NavReview },
+  { label: "Cara Penilaian", href: "/dashboard/penilaian", icon: NavPenilaian },
 ];
 
 // Hanya untuk akun admin (seperti tautan "Admin: akun peserta" di dajiks-cest); akses dicek ulang di server.
