@@ -12,7 +12,7 @@ export type ModuleConfigEntry = {
 export const MODULE_CONFIG: Record<ModuleType, ModuleConfigEntry> = {
   KECERDASAN: { slug: "kecerdasan", time_limit_seconds: 5400, label: "Kecerdasan", shortDesc: "kognitif & spasial" },
   KECERMATAN: { slug: "kecermatan", time_limit_seconds: 600, label: "Sikap Kerja", menuLabel: "Sikap Kerja / Kecermatan", shortDesc: "10 kolom simbol" },
-  KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert" },
+  KEPRIBADIAN: { slug: "kepribadian", time_limit_seconds: 3600, label: "Kepribadian", shortDesc: "skala Likert atau situasional" },
 };
 
 export const MODULE_ORDER: ModuleType[] = ["KECERDASAN", "KECERMATAN", "KEPRIBADIAN"];
@@ -141,19 +141,21 @@ export const SIMULASI_PACKAGE = { KECERDASAN: 1, KEPRIBADIAN: 11 } as const;
 // acaknya di kecermatan_package_number); kartu 3 tetap paket 10.
 // Sejak 2026-10-17 Kepribadian tiap kartu = paket lama + Loyalitas & Kerja Sama (psikogram Bintara/Tamtama,
 // scripts/extend-pribadi-paket.ts): 11→16, 13→18, 12→17, 14→19, 15→20. Paket 11–15 menjadi bank lama.
+// Sejak 2026-10-20 Kepribadian kartu 4/5 = format situasional (SJT, 64 + Pass Hand yang sama): 19→26, 20→27.
 export const SIMULASI_PAKET: Record<number, { KECERDASAN: number; KEPRIBADIAN: number; KECERMATAN?: number }> = {
   1: { KECERDASAN: 18, KEPRIBADIAN: 16, KECERMATAN: 11 },
   2: { KECERDASAN: 17, KEPRIBADIAN: 18, KECERMATAN: 401 },
   3: { KECERDASAN: 15, KEPRIBADIAN: 17, KECERMATAN: 10 },
-  4: { KECERDASAN: 19, KEPRIBADIAN: 19, KECERMATAN: 12 },
-  5: { KECERDASAN: 20, KEPRIBADIAN: 20, KECERMATAN: 13 },
+  4: { KECERDASAN: 19, KEPRIBADIAN: 26, KECERMATAN: 12 },
+  5: { KECERDASAN: 20, KEPRIBADIAN: 27, KECERMATAN: 13 },
 
 };
 // Bank Kecerdasan simulasi sebelum kalibrasi (package_number → kartu). Tidak dipakai sesi baru,
 // tetap aktif supaya review dan nilai sesi lama terbaca, dan tetap terlarang dibuka lewat latihan.
 const SIMULASI_KECERDASAN_LAMA: Record<number, number> = { 1: 1, 12: 2, 13: 1, 14: 2, 16: 1 };
-// Bank Kepribadian simulasi sebelum Loyalitas & Kerja Sama: tetap aktif untuk sesi lama, tetap terlarang di latihan.
-const SIMULASI_KEPRIBADIAN_LAMA = [11, 12, 13, 14, 15];
+// Bank Kepribadian simulasi lama (sebelum Loyalitas & Kerja Sama; 19/20 = Likert kartu 4/5 sebelum SJT):
+// tetap aktif untuk sesi lama, tetap terlarang di latihan.
+const SIMULASI_KEPRIBADIAN_LAMA = [11, 12, 13, 14, 15, 19, 20];
 
 /** Kartu Simulasi Penuh dari package_number Kecerdasan sebuah sesi (null = sesi lama = kartu 1). */
 export function simulasiKartuOf(kecerdasanPackage: number | null | undefined): number {

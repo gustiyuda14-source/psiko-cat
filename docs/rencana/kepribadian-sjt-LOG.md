@@ -33,6 +33,20 @@ Disusun 4 subagent paralel (satu per paket, brief bersama), QA oleh orchestrator
 - Seed (pemilik): `seed-pribadi-paket.ts 22..25 --apply`, tiap paket 111 baris, jawaban ideal 100. Verifikasi DB: 111 baris/paket, 48 `sjt5`, pembahasan 111/111, aktif, urutan = manifest. `KEPRIBADIAN_SJT_PACKAGES = [21, 22, 23, 24, 25]`. Build diverifikasi di salinan `git archive` (build di repo crash di webpack karena state lokal, lihat memory git-push-workflow).
 - Generator subagent (bisa dijalankan ulang) di scratchpad sesi, tidak masuk repo; JSON di `bank/pribadi/` adalah sumber kebenaran.
 
+## 2026-10-20 · Simulasi Penuh 4 dan 5 → Kepribadian SJT (pkg 26, 27) — disetujui pemilik, di-seed, live
+
+Keputusan pemilik: Kepribadian Simulasi 4 dan 5 diganti SJT, Pass Hand tetap. Pkg 19/20 (Likert) tidak ditimpa karena sudah dipakai sesi lama (42 dan 9 sesi Kepribadian); bank SJT masuk paket baru.
+
+- Bank: `sjt-sim4-01.json` (SJT-xx-501+) dan `sjt-sim5-01.json` (SJT-xx-601+), masing-masing 64 butir = 8 aspek × 8 (6 aspek SPCP + Loyalitas `LOY` + Kerja Sama `KS`, definisi dari kp-loy-01/kp-ks-01). Kembar: Sim 4 PRO/PK/LOY/KS, Sim 5 SE/MB/LOY/KS. Sim 5 disusun lebih sulit dari Sim 4 (dilema berlapis, pengecoh 4/3 lebih masuk akal).
+- Manifest: `paket-26.json` = sjt-sim4-01 + sk-sim4-01 (Pass Hand sama dengan pkg 19), `paket-27.json` = sjt-sim5-01 + sk-sim5-01 (sama dengan pkg 20). Dry-run seed lolos (64 + 63).
+- Sebaran kunci: Sim 4 A13 B13 C13 D13 E12, Sim 5 A13 B13 C13 D13 E12. Peringkat panjang kunci (1 = terpanjang) setelah perbaikan: Sim 4 r1 11 · r2 16 · r3 19 · r4 9 · r5 9; Sim 5 10 · 16 · 17 · 13 · 8.
+- **Temuan D-3 baru:** validator hanya mengecek kunci = opsi terpanjang, padahal kunci menumpuk di opsi terpanjang KEDUA (versi awal Sim 4 52%, Sim 5 48%). Sudah diratakan di kedua bank simulasi (Sim 4 19 butir, Sim 5 30 butir; teks saja, bobot/kunci tetap). Bank latihan yang sudah live juga kena: kunci = terpanjang kedua di sjt-03 25/48 (52%) dan sjt-05 30/48 (62%); sjt-01/02/04 ≤ 31%. **Utang:** ratakan sjt-03/05 (perlu update baris DB) dan tambahkan cek peringkat panjang ke `check-bank-pribadi.ts`.
+- Cek buta Codex (pemeriksa baru setelah revisi panjang): Sim 4 127/127 (urutan bobot persis 58/64), Sim 5 127/127 (58/64), tanpa beda. Ambigu yang diperbaiki: SJT-PRO-501 (opsi E diganti, stem dipertegas "perawat sudah memastikan…"), SJT-PK-503 (stem: pelanggan bersedia menerima sisa besok); dicek ulang pemeriksa baru, cocok.
+- Validator penuh lolos: 816 KP, 368 SJT, 1197 SK (34 file). Grep unsur kepolisian 0.
+- Review: `output/pribadi-sjt-sim4-review.html`, `output/pribadi-sjt-sim5-review.html`.
+- Seed (pemilik): `seed-pribadi-paket.ts 26 --apply` dan `27 --apply`, 127 baris per paket, jawaban ideal 100. Verifikasi DB: 127 baris, 64 `sjt5`, pembahasan 127/127, aktif, urutan = manifest.
+- Config: `SIMULASI_PAKET` 4 → KEPRIBADIAN 26, 5 → 27; 19 dan 20 masuk `SIMULASI_KEPRIBADIAN_LAMA` (sesi lama tetap terbaca dan tetap terlarang di latihan); `shortDesc` Kepribadian = "skala Likert atau situasional".
+
 ## Prompt lanjutan
 
-Target 5 paket SJT Latihan/Mini Tryout tercapai. Sisa utang: rapikan pola "juga baik, tetapi …, tetapi …" di 52 pembahasan `sk-sjt-01` (pkg 21 sudah di DB, jadi perlu update baris DB juga), dan variasikan aspek kembar SJT di paket berikutnya (P2–P5 semua PD/KD/MB).
+Target 5 paket SJT Latihan/Mini Tryout tercapai. Sisa utang: ratakan peringkat panjang kunci sjt-03/sjt-05 (terpanjang kedua 52%/62%) + tambah cek ini ke validator; rapikan pola "juga baik, tetapi …, tetapi …" di 52 pembahasan `sk-sjt-01` (pkg 21 sudah di DB, jadi perlu update baris DB juga), dan variasikan aspek kembar SJT di paket berikutnya (P2–P5 semua PD/KD/MB).
