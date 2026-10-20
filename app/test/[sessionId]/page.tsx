@@ -8,6 +8,7 @@ import { ExamBar } from "@/app/components/ExamChrome";
 import { ArrowRight, Check } from "@/app/components/icons";
 import { getSessionAccess } from "@/lib/session-access";
 import { runSessionCalculate } from "@/lib/scoring/runner";
+import RefreshOnMount from "./RefreshOnMount";
 
 type ModuleStatus = "NOT_STARTED" | "IN_PROGRESS" | "COMPLETED" | "TIMED_OUT";
 
@@ -88,6 +89,7 @@ export default async function SessionOverviewPage({
 
   return (
     <div className="min-h-[100dvh] bg-background text-foreground">
+      <RefreshOnMount />
       <ExamBar
         title="Sesi ujian"
         count={`Psiko CAT · ${user?.name ?? ""}${user?.email ? ` · ${user.email}` : ""}`}
