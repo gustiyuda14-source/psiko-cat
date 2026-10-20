@@ -1,4 +1,4 @@
-import type { CSSProperties, ReactNode } from "react";
+import { useState, type CSSProperties, type ReactNode } from "react";
 import { analyzeKecermatan, titikHafalDari, type Analisis } from "@/lib/kecermatan-analisis";
 import type { KecermatanTiming } from "@/lib/progress-rules";
 import type { KecermatanColumnGroup } from "@/app/components/PembahasanSection";
@@ -107,6 +107,36 @@ export function BarChart({ title, bars, notes }: { title: string; bars: { n: num
   );
 }
 
+/** Tab rincian hasil (latihan dan pembahasan simulasi); panel memakai id "lr-p". */
+export function Tabs({ tabs, tab, setTab }: { tabs: string[]; tab: number; setTab: (i: number) => void }) {
+  return (
+    <div className="lr-tabs" role="tablist" aria-label="Rincian hasil">
+      {tabs.map((t, i) => (
+        <button
+          key={t}
+          type="button"
+          role="tab"
+          id={`lr-t${i}`}
+          aria-controls="lr-p"
+          aria-selected={i === tab}
+          tabIndex={i === tab ? 0 : -1}
+          onClick={() => setTab(i)}
+          onKeyDown={(e) => {
+            const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+            if (!d) return;
+            e.preventDefault();
+            const next = (i + d + tabs.length) % tabs.length;
+            (e.currentTarget.parentElement?.children[next] as HTMLElement | undefined)?.focus();
+            setTab(next);
+          }}
+        >
+          {t}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 /** "Kapan kunci mulai hafal?": kurva detik per butir menurut posisi dalam kolom (lib/kecermatan-analisis kurvaDari). */
 export function HafalSection({ kurva }: { kurva: (number | null)[] }) {
   const pts = kurva.flatMap((y, i) => (y === null ? [] : [{ i, y }]));
@@ -192,35 +222,40 @@ export function AnalisisSimulasi({ groups }: { groups: KecermatanColumnGroup[] }
     const g = groups.find((x) => x.column_index === i + 1);
     return { n: g?.total ?? 0, ok: g?.correct ?? 0 };
   });
-  return (
-    <div className="space-y-4">
+  const [tab, setTab] = useState(0);
+  const batang = (
+    <section className="lr-sec">
+      <BarChart title="Jawaban per kolom" bars={bars} notes={["Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi."]} />
+    </section>
+  );
+  if (!a.valid)
+    return (
       <div className="lr-pane">
+        {batang}
         <section className="lr-sec">
-          <BarChart title="Jawaban per kolom" bars={bars} notes={["Bagian emas yang sama tinggi di tiap kolom berarti Ketahanan tinggi."]} />
+          <p className="pg-empty">{a.alasan}</p>
         </section>
-        {a.valid && <KecepatanPerKolom a={a} />}
       </div>
-      {a.valid ? (
-        <AnalisisPane a={a} timedMode />
-      ) : (
-        <div className="lr-pane">
-          <section className="lr-sec">
-            <p className="pg-empty">{a.alasan}</p>
-          </section>
-        </div>
-      )}
+    );
+  const tabs = ["Profil", "Analisis"];
+  return (
+    <div>
+      <Tabs tabs={tabs} tab={tab} setTab={setTab} />
+      <div role="tabpanel" id="lr-p" aria-labelledby={`lr-t${tab}`}>
+        {tab === 0 ? <ProfilPane a={a} title="Profil pengerjaan" extra={batang} /> : <AnalisisPane a={a} timedMode />}
+      </div>
     </div>
   );
 }
 
-export function ProfilPane({ a }: { a: Valid }) {
+export function ProfilPane({ a, title = "Profil tanpa batas waktu", extra }: { a: Valid; title?: string; extra?: ReactNode }) {
   const { akurasi, benarPerMenit, tren, jeda } = a.penuh;
   const t = TREN[tren];
   return (
     <div className="lr-pane">
       <section className="lr-sec">
         <div className="pg-sec-h">
-          <h3>Profil tanpa batas waktu</h3>
+          <h3>{title}</h3>
           <span>semua butir yang kamu jawab</span>
         </div>
         <dl className="lr-stats">
@@ -255,6 +290,7 @@ export function ProfilPane({ a }: { a: Valid }) {
         </dl>
       </section>
       <KecepatanPerKolom a={a} />
+      {extra}
     </div>
   );
 }

@@ -12,7 +12,7 @@ import { fillY, wavePath } from "@/lib/honey";
 import { analyzeKecermatan } from "@/lib/kecermatan-analisis";
 import type { KecermatanTiming } from "@/lib/progress-rules";
 import { scoreLatihanKecermatan } from "./actions";
-import { AnalisisPane, BarChart, PER_COLUMN, ProfilPane, ROMAN, r1 } from "./LatihanKecermatanAnalisis";
+import { AnalisisPane, BarChart, PER_COLUMN, ProfilPane, ROMAN, Tabs, r1 } from "./LatihanKecermatanAnalisis";
 
 /*
   Layar selesai latihan Kecermatan, bahasa visual sama dengan pemilih paket
@@ -364,30 +364,7 @@ export default function LatihanKecermatanHasil({
     <div className="lr-stage">
       {panel}
       <section className="lr-main" aria-label="Rincian hasil">
-        <div className="lr-tabs" role="tablist" aria-label="Rincian hasil">
-          {tabs.map((t, i) => (
-            <button
-              key={t}
-              type="button"
-              role="tab"
-              id={`lr-t${i}`}
-              aria-controls="lr-p"
-              aria-selected={i === tab}
-              tabIndex={i === tab ? 0 : -1}
-              onClick={() => setTab(i)}
-              onKeyDown={(e) => {
-                const d = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-                if (!d) return;
-                e.preventDefault();
-                const next = (i + d + tabs.length) % tabs.length;
-                (e.currentTarget.parentElement?.children[next] as HTMLElement | undefined)?.focus();
-                setTab(next);
-              }}
-            >
-              {t}
-            </button>
-          ))}
-        </div>
+        <Tabs tabs={tabs} tab={tab} setTab={setTab} />
         <div role="tabpanel" id="lr-p" aria-labelledby={`lr-t${tab}`}>
           {tabs[tab] === "Tanpa batas waktu" ? (
             a.valid ? <ProfilPane a={a} /> : empty
