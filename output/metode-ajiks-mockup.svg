@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1350" viewBox="0 0 1080 1350">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1430"/><stop offset="1" stop-color="#070b1c"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2c878"/><stop offset="1" stop-color="#b8892b"/></linearGradient>
+<linearGradient id="navy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a5bb0"/><stop offset="1" stop-color="#26336f"/></linearGradient>
+<style>
+text{font-family:Inter,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif}
+.k{font-size:24px;font-weight:700;letter-spacing:5px;fill:#d6b766}
+.t{font-size:64px;font-weight:800;fill:#f2f4fb}
+.s{font-size:28px;fill:#a3abcb}
+.h{font-size:32px;font-weight:700;fill:#f2f4fb}
+.m{font-size:23px;fill:#a3abcb}
+.seg{font-size:24px;font-weight:600;fill:#a3abcb}
+.on{font-size:24px;font-weight:700;fill:#ffffff}
+.v{font-size:22px;font-weight:700;fill:#e9edf8}
+.r{font-size:22px;font-weight:600;fill:#a3abcb}
+</style>
+</defs>
+<rect width="1080" height="1350" fill="url(#bg)"/>
+<text x="80" y="110" class="k">METODE D'AJIKS AKADEMI</text>
+<text x="80" y="200" class="t">Kerjakan per kolom,</text>
+<text x="80" y="275" class="t">grafik terus naik.</text>
+<text x="80" y="330" class="s">Target waktu bertahap untuk latihan Kecermatan.</text>
+
+<rect x="80" y="385" width="920" height="200" rx="24" fill="#111938" stroke="#2b3666" stroke-width="2"/>
+<text x="116" y="443" class="h">Timer per kolom</text>
+<text x="116" y="481" class="m">25 sampai 60 detik per kolom, urutan kolom terkunci.</text>
+<rect x="116" y="505" width="520" height="56" rx="12" fill="none" stroke="#2b3666" stroke-width="2"/>
+<text x="176" y="541" text-anchor="middle" class="seg">Tidak</text>
+<text x="271" y="541" text-anchor="middle" class="seg">Ya</text>
+<rect x="320" y="510" width="311" height="46" rx="9" fill="#1f2c74"/>
+<text x="475" y="541" text-anchor="middle" class="on">Metode D'AJIKS</text>
+
+<rect x="80" y="625" width="920" height="560" rx="24" fill="#111938" stroke="#2b3666" stroke-width="2"/>
+<text x="116" y="685" class="h">Target waktu per kolom</text>
+<rect x="808" y="652" width="160" height="46" rx="23" fill="none" stroke="#d6b766" stroke-width="2"/>
+<text x="888" y="683" text-anchor="middle" class="m" style="fill:#d6b766;font-weight:700">Total 8 menit</text>
+<line x1="104" y1="1050" x2="976" y2="1050" stroke="#2b3666" stroke-width="2"/>
+<rect x="114" y="933.3" width="60" height="116.7" rx="10" fill="url(#gold)"/>
+<text x="144" y="919.3" text-anchor="middle" class="v">25d</text>
+<text x="144" y="1090" text-anchor="middle" class="r">I</text>
+<rect x="202" y="910.0" width="60" height="140.0" rx="10" fill="url(#gold)"/>
+<text x="232" y="896.0" text-anchor="middle" class="v">30d</text>
+<text x="232" y="1090" text-anchor="middle" class="r">II</text>
+<rect x="290" y="886.7" width="60" height="163.3" rx="10" fill="url(#gold)"/>
+<text x="320" y="872.7" text-anchor="middle" class="v">35d</text>
+<text x="320" y="1090" text-anchor="middle" class="r">III</text>
+<rect x="378" y="863.3" width="60" height="186.7" rx="10" fill="url(#gold)"/>
+<text x="408" y="849.3" text-anchor="middle" class="v">40d</text>
+<text x="408" y="1090" text-anchor="middle" class="r">IV</text>
+<rect x="466" y="816.7" width="60" height="233.3" rx="10" fill="url(#gold)"/>
+<text x="496" y="802.7" text-anchor="middle" class="v">50d</text>
+<text x="496" y="1090" text-anchor="middle" class="r">V</text>
+<rect x="554" y="770.0" width="60" height="280.0" rx="10" fill="url(#navy)"/>
+<text x="584" y="756.0" text-anchor="middle" class="v">60d</text>
+<text x="584" y="1090" text-anchor="middle" class="r">VI</text>
+<rect x="642" y="770.0" width="60" height="280.0" rx="10" fill="url(#navy)"/>
+<text x="672" y="756.0" text-anchor="middle" class="v">60d</text>
+<text x="672" y="1090" text-anchor="middle" class="r">VII</text>
+<rect x="730" y="770.0" width="60" height="280.0" rx="10" fill="url(#navy)"/>
+<text x="760" y="756.0" text-anchor="middle" class="v">60d</text>
+<text x="760" y="1090" text-anchor="middle" class="r">VIII</text>
+<rect x="818" y="770.0" width="60" height="280.0" rx="10" fill="url(#navy)"/>
+<text x="848" y="756.0" text-anchor="middle" class="v">60d</text>
+<text x="848" y="1090" text-anchor="middle" class="r">IX</text>
+<rect x="906" y="770.0" width="60" height="280.0" rx="10" fill="url(#navy)"/>
+<text x="936" y="756.0" text-anchor="middle" class="v">60d</text>
+<text x="936" y="1090" text-anchor="middle" class="r">X</text>
+<rect x="116" y="1128" width="18" height="18" rx="4" fill="url(#gold)"/>
+<text x="144" y="1145" class="m">Kolom I sampai V: waktu naik bertahap</text>
+<rect x="590" y="1128" width="18" height="18" rx="4" fill="url(#navy)"/>
+<text x="618" y="1145" class="m">Kolom VI sampai X: 60 detik</text>
+
+<text x="80" y="1250" class="m">Latihan  ›  Kecermatan  ›  pilih paket  ›  Timer per kolom  ›  Metode D'AJIKS</text>
+<text x="80" y="1300" class="k" style="letter-spacing:2px">D'AJIKS AKADEMI</text>
+</svg>

@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lembar Soal Prototipe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+/* Prototipe kartu "Potongan Lembar": tiap kartu paket = potongan lembar soal aslinya. Token = salinan app/globals.css. */
+:root {
+  color-scheme: light;
+  --surface-page: #ffffff; --surface-card: #ffffff; --surface-inset: #faf6ec; --paper: #fdfbf6;
+  --foreground: #172a35; --muted-foreground: #526772; --faint-foreground: #6b7f88;
+  --border: #ddd3c0; --border-strong: #877d66;
+  --brand-ink: #1b2a5c; --gold: #9a6f12; --on-gold: #16224a;
+  --gold-grad: linear-gradient(120deg, #b8892b, #dcc272 48%, #c0983a);
+  --accent-soft: #f6edd6; --accent-ink: #7a5710; --rule: rgb(27 42 92 / .09); --digit: rgb(27 42 92 / .78);
+  --success: #087453; --success-soft: #eaf6f0; --destructive: #b42342; --destructive-soft: #fdf2f4;
+  --ring: #2f4ea8; --lift: 0 2px 4px rgb(27 42 92 / .05), 0 14px 28px -14px rgb(27 42 92 / .28);
+  --e-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --display: "Lexend", ui-sans-serif, system-ui, sans-serif;
+  --sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --surface-page: #0a0f20; --surface-card: #121a34; --surface-inset: #0e1630; --paper: #111933;
+    --foreground: #e8ebf6; --muted-foreground: #a4aeca; --faint-foreground: #7f8bab;
+    --border: #27325a; --border-strong: #56628b; --brand-ink: #c8d3f7; --gold: #e8c766;
+    --accent-soft: #2a2512; --accent-ink: #efd88f; --rule: rgb(200 211 247 / .08); --digit: rgb(200 211 247 / .8);
+    --success: #1f9d74; --success-soft: #10302a; --destructive: #e8607c; --destructive-soft: #3a1722;
+    --ring: #93a9f2; --lift: 0 2px 4px rgb(0 0 0 / .3), 0 16px 30px -14px rgb(0 0 0 / .7);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --surface-page: #0a0f20; --surface-card: #121a34; --surface-inset: #0e1630; --paper: #111933;
+  --foreground: #e8ebf6; --muted-foreground: #a4aeca; --faint-foreground: #7f8bab;
+  --border: #27325a; --border-strong: #56628b; --brand-ink: #c8d3f7; --gold: #e8c766;
+  --accent-soft: #2a2512; --accent-ink: #efd88f; --rule: rgb(200 211 247 / .08); --digit: rgb(200 211 247 / .8);
+  --success: #1f9d74; --success-soft: #10302a; --destructive: #e8607c; --destructive-soft: #3a1722;
+  --ring: #93a9f2; --lift: 0 2px 4px rgb(0 0 0 / .3), 0 16px 30px -14px rgb(0 0 0 / .7);
+}
+
+*, *::before, *::after { box-sizing: border-box }
+body { margin: 0; background: var(--surface-page); color: var(--foreground); font: 400 1rem/1.6 var(--sans); -webkit-font-smoothing: antialiased; overflow-x: hidden }
+h1, h2, h3, b, strong { font-family: var(--display) }
+::selection { background: var(--accent-soft); color: var(--foreground) }
+:focus-visible { outline: 2px solid var(--ring); outline-offset: 3px }
+.tnum { font-variant-numeric: tabular-nums }
+button { font: inherit; color: inherit; cursor: pointer }
+a { color: var(--brand-ink); text-underline-offset: 3px }
+
+/* ---------- Kendali prototipe ---------- */
+.proto { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--surface-page) }
+.proto-name { font: 600 .8rem var(--display); color: var(--muted-foreground); margin-right: auto }
+.seg { display: inline-flex; padding: 3px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-inset) }
+.seg button { min-height: 32px; padding: 0 12px; border: 0; border-radius: 7px; background: none; font: 500 .85rem var(--display); color: var(--muted-foreground); transition: background-color 160ms ease, color 160ms ease }
+.seg button[aria-pressed="true"] { background: var(--surface-card); color: var(--foreground); box-shadow: 0 1px 2px rgb(27 42 92 / .12) }
+.seg-label { font: 500 .75rem var(--display); color: var(--faint-foreground) }
+.proto-group { display: inline-flex; align-items: center; gap: 6px }
+@media (max-width: 560px) { .proto { position: static; padding: 8px 12px; gap: 6px 10px } .proto-name { width: 100% } .seg button { padding: 0 9px } }
+
+.page { max-width: 1180px; margin: 0 auto; padding: 40px 32px 96px }
+@media (max-width: 600px) { .page { padding: 24px 16px 72px } }
+.head h1 { margin: 0; font: 700 clamp(2rem, 4.2vw, 3rem)/1.05 var(--display); letter-spacing: -.03em; color: var(--brand-ink) }
+.head p { margin: 12px 0 0; max-width: 64ch; color: var(--muted-foreground); font-size: 1.06rem }
+.head-meta { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-top: 14px; font: 500 .9rem var(--display) }
+.head-meta span { color: var(--muted-foreground); font-weight: 400 }
+
+/* ---------- Lembar (kartu paket) ----------
+   Bagian atas = potongan materi tes asli (spesimen), garis sobek, bagian bawah = identitas paket.
+   Seluruh lembar satu tautan; hover/fokus memperlihatkan kunci spesimen. */
+.sheets { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 20px; margin-top: 36px }
+@media (max-width: 760px) { .sheets { grid-template-columns: minmax(0, 1fr) } .sheets > * { grid-column: auto !important; grid-row: auto !important } }
+.sheet { position: relative; display: flex; flex-direction: column; min-width: 0; border: 1px solid var(--border); border-radius: 4px; background: var(--paper); color: var(--foreground); text-decoration: none; transition: transform 220ms var(--e-out), box-shadow 220ms var(--e-out), border-color 220ms ease }
+.sheet:active { transform: scale(.985) }
+@media (hover: hover) and (pointer: fine) { .sheet:hover { transform: translateY(-3px); box-shadow: var(--lift); border-color: var(--border-strong) } }
+.sheet:focus-visible { box-shadow: var(--lift) }
+.spec { position: relative; flex: 1; padding: 22px 22px 18px; overflow: hidden; background-image: linear-gradient(var(--rule) 1px, transparent 1px); background-size: 100% 28px; background-position: 0 21px }
+.tear { position: relative; height: 0; border-top: 1.5px dashed var(--border-strong); margin: 0 14px }
+.tear::before, .tear::after { content: ""; position: absolute; top: -9px; width: 16px; height: 16px; border-radius: 50%; background: var(--surface-page); border: 1px solid var(--border) }
+.tear::before { left: -23px; clip-path: inset(0 0 0 50%) }
+.tear::after { right: -23px; clip-path: inset(0 50% 0 0) }
+.id { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 16px; align-items: end; padding: 16px 22px 18px }
+.id-code { grid-column: 1 / -1; display: flex; justify-content: space-between; gap: 12px; font: 500 .78rem var(--display); color: var(--faint-foreground); font-variant-numeric: tabular-nums }
+.id h3 { margin: 6px 0 0; font: 700 1.18rem/1.25 var(--display); letter-spacing: -.01em; text-wrap: balance }
+.id p { grid-column: 1; margin: 4px 0 0; font-size: .93rem; color: var(--muted-foreground) }
+.go { grid-column: 2; grid-row: 2 / span 2; align-self: end; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 999px; background: var(--gold-grad); color: var(--on-gold); font: 600 .9rem var(--display); white-space: nowrap }
+.go svg { width: 15px; height: 15px; transition: transform 220ms var(--e-out) }
+@media (hover: hover) and (pointer: fine) { .sheet:hover .go svg { transform: translateX(3px) } }
+.sheet.is-quiet .go { background: none; box-shadow: inset 0 0 0 1.5px var(--border-strong); color: var(--foreground) }
+@media (max-width: 420px) { .id { grid-template-columns: minmax(0, 1fr) } .go { grid-column: 1; grid-row: auto; justify-self: start; margin-top: 12px } }
+
+/* Kunci spesimen: muncul saat hover/fokus (sekali transisi, tidak berulang). */
+.key { color: var(--gold); opacity: 0; transform: translateY(4px); transition: opacity 200ms ease, transform 220ms var(--e-out) }
+.sheet:hover .key, .sheet:focus-visible .key { opacity: 1; transform: none }
+@media (hover: none) { .key { opacity: 1; transform: none } }
+
+/* Spesimen Fundamental: angka contoh sebagai jangkar visual */
+.big { font: 600 clamp(3.4rem, 9vw, 6.2rem)/1 var(--display); letter-spacing: -.04em; color: var(--brand-ink); font-variant-numeric: tabular-nums }
+.big.md { font-size: clamp(2.8rem, 6vw, 4.2rem) }
+.row-sm { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 14px; font: 500 1.25rem var(--display); color: var(--digit); font-variant-numeric: tabular-nums }
+.sheet[style*="span 2"] .spec { display: flex; flex-direction: column; justify-content: space-between; gap: 28px }
+.stem { display: grid; font: 500 clamp(1.3rem, 2.4vw, 1.75rem)/1.45 var(--display); color: var(--foreground); font-variant-numeric: tabular-nums }
+.spec .stem .key { display: inline; margin: 0; font: inherit; font-weight: 700 }
+.spec .key { display: block; margin-top: 10px; font: 500 1rem var(--display) }
+.frac { display: inline-grid; justify-items: center; font: 600 clamp(2.4rem, 5vw, 3.4rem)/1 var(--display); color: var(--brand-ink); font-variant-numeric: tabular-nums }
+.frac i { width: 100%; height: 3px; margin: 6px 0; background: currentColor; border-radius: 2px }
+.frac-wrap { display: flex; align-items: center; gap: 22px }
+.frac-wrap .key { margin: 0; font: 600 clamp(1.6rem, 3vw, 2.2rem)/1 var(--display) }
+
+/* Spesimen Tes Koran: kolom-kolom angka */
+.cols { display: flex; gap: clamp(10px, 2.4vw, 22px); font: 500 1.05rem/28px var(--display); color: var(--digit); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 70%, transparent); mask-image: linear-gradient(#000 70%, transparent) }
+.col { display: grid; justify-items: center; position: relative }
+.col.is-on { color: var(--brand-ink); font-weight: 700; margin-right: 12px }
+.spec .col .key { position: absolute; top: 0; margin: 0; left: calc(100% + 1px); font-size: .8rem; line-height: 28px }
+.col .key span { display: block; transform: translateY(14px) }
+.pauli { display: grid; grid-template-columns: auto 1fr; gap: 0 14px; font: 500 1.05rem/26px var(--display); color: var(--digit); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 78%, transparent); mask-image: linear-gradient(#000 78%, transparent) }
+.pauli .d { display: block; text-align: center; width: 1.4em }
+.pauli .mk { display: block; height: 0; border-top: 2px solid var(--gold); margin: 3px 0 2px -6px; position: relative }
+.pauli .mk::after { content: attr(data-t); position: absolute; right: 0; top: -17px; font: 500 .72rem var(--display); color: var(--gold); white-space: nowrap }
+
+/* Spesimen Keswa: lembar jawab Y/T */
+.ans { display: grid; gap: 0; font: 500 .9rem/28px var(--display); color: var(--faint-foreground); font-variant-numeric: tabular-nums; -webkit-mask-image: linear-gradient(#000 72%, transparent); mask-image: linear-gradient(#000 72%, transparent) }
+.ans div { display: grid; grid-template-columns: 2.6em auto auto 1fr; align-items: center; gap: 10px }
+.bub { display: inline-grid; place-items: center; width: 22px; height: 22px; border: 1.5px solid var(--border-strong); border-radius: 50%; font: 600 .66rem var(--display); color: var(--muted-foreground) }
+.bub.f { background: var(--brand-ink); border-color: var(--brand-ink); color: var(--surface-page) }
+.stamp { position: absolute; right: 18px; top: 18px; padding: 4px 10px; border: 2px solid currentColor; border-radius: 4px; font: 700 .8rem var(--display); letter-spacing: .08em; transform: rotate(-6deg) }
+.stamp.ok { color: var(--success) } .stamp.no { color: var(--destructive) }
+
+/* ---------- Keswa: tab berkas ---------- */
+.ftabs { display: flex; gap: 4px; margin-top: 32px; border-bottom: 1px solid var(--border-strong); overflow-x: auto; scrollbar-width: none }
+.ftabs button { min-height: 46px; padding: 0 18px; border: 1px solid transparent; border-bottom: 0; border-radius: 8px 8px 0 0; background: none; font: 600 .95rem var(--display); color: var(--muted-foreground); margin-bottom: -1px; white-space: nowrap; transition: color 160ms ease, background-color 160ms ease }
+.ftabs button[aria-selected="true"] { border-color: var(--border-strong); background: var(--paper); color: var(--brand-ink) }
+.ftabs small { margin-left: 8px; font: 500 .78rem var(--display); color: var(--faint-foreground) }
+@media (max-width: 480px) { .ftabs small { display: none } .ftabs button { padding: 0 14px } }
+.fbody { padding-top: 32px }
+
+.prose { max-width: 720px }
+.prose h2 { margin: 40px 0 0; font: 700 1.2rem/1.3 var(--display); color: var(--brand-ink) }
+.prose h2:first-child { margin-top: 0 }
+.prose p { margin: 8px 0 0; line-height: 1.7 }
+.tanda { margin: 18px 0 0; padding: 0; list-style: none; display: grid; gap: 18px }
+.tanda li { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 4px 24px }
+.tanda span { color: var(--muted-foreground); line-height: 1.6 }
+@media (max-width: 600px) { .tanda li { grid-template-columns: minmax(0, 1fr) } }
+.callout { margin-top: 40px; padding: 20px 22px; border-radius: 4px; background: var(--accent-soft) }
+.callout h2 { margin: 0; color: var(--accent-ink) }
+.langkah { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 48px; max-width: 920px }
+@media (max-width: 760px) { .langkah { grid-template-columns: minmax(0, 1fr); gap: 22px } }
+.langkah li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0 12px }
+.langkah .no { font: 600 1.35rem/1.2 var(--display); color: var(--gold); font-variant-numeric: tabular-nums }
+.langkah p { margin: 4px 0 0; color: var(--muted-foreground); font-size: .96rem; line-height: 1.6 }
+.howto { margin: 12px 0 0; padding-left: 1.2rem; display: grid; gap: 8px; line-height: 1.6 }
+kbd { padding: 1px 7px; border: 1px solid var(--border); border-bottom-width: 2px; border-radius: 6px; background: var(--surface-inset); font: 600 .85rem var(--display) }
+.next { margin-top: 36px; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; border: 0; border-radius: 999px; box-shadow: inset 0 0 0 1.5px var(--border-strong); background: none; font: 600 .92rem var(--display) }
+.next:active, .chip:active { transform: scale(.97) }
+
+/* Riwayat Keswa di bawah lembar */
+.slots { display: grid; gap: 6px; margin: 0; padding: 0 22px 18px; list-style: none }
+.slot { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 4px; background: var(--surface-inset); color: var(--foreground); font-size: .9rem; text-decoration: none }
+.slot.is-empty { background: none; border: 1.5px dashed var(--border); color: var(--faint-foreground) }
+.badge { font: 700 .7rem var(--display); letter-spacing: .06em; padding: 3px 7px; border-radius: 4px }
+.badge.ok { background: var(--success-soft); color: var(--success) } .badge.no { background: var(--destructive-soft); color: var(--destructive) }
+.slots-h { margin: 0; padding: 0 22px 8px; font: 500 .8rem var(--display); color: var(--muted-foreground) }
+.wrap { display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 4px; background: var(--paper); min-width: 0 }
+.wrap .sheet { border: 0; background: none }
+@media (hover: hover) and (pointer: fine) { .wrap .sheet:hover { box-shadow: none; transform: none } .wrap:has(.sheet:hover) { box-shadow: var(--lift); border-color: var(--border-strong) } }
+
+/* ---------- Tes Koran: perkembangan ---------- */
+.sect { margin-top: 64px; padding-top: 28px; border-top: 1px solid var(--border) }
+.sect-h { margin: 0; font: 700 1.35rem/1.2 var(--display); color: var(--brand-ink) }
+.sect-p { margin: 8px 0 0; max-width: 64ch; color: var(--muted-foreground) }
+.grp { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 22px }
+.chip { min-height: 44px; padding: 0 14px; border: 1px solid var(--border); border-radius: 999px; background: none; font: 500 .88rem var(--display); color: var(--muted-foreground); transition: border-color 160ms ease, color 160ms ease, transform 120ms ease }
+.chip[aria-pressed="true"] { border-color: var(--brand-ink); color: var(--brand-ink); background: var(--surface-inset) }
+.prog { display: grid; grid-template-columns: minmax(0, 260px) minmax(0, 1fr); gap: 24px 48px; margin-top: 28px; align-items: start }
+@media (max-width: 760px) { .prog { grid-template-columns: minmax(0, 1fr) } }
+.prog-val { font: 700 3.4rem/1 var(--display); letter-spacing: -.03em; font-variant-numeric: tabular-nums }
+.prog-unit { margin-top: 6px; color: var(--muted-foreground) }
+.prog-meta { margin-top: 4px; font-size: .9rem; color: var(--faint-foreground) }
+.prog-dl { display: grid; gap: 18px; margin: 26px 0 0 }
+.prog-dl dt { font: 500 .85rem var(--display); color: var(--muted-foreground) }
+.prog-dl dd { margin: 2px 0 0; font: 600 1.4rem/1.2 var(--display); color: var(--brand-ink); font-variant-numeric: tabular-nums }
+.prog-dl dd span { display: block; font: 400 .85rem/1.4 var(--sans); color: var(--muted-foreground) }
+.chart { width: 100%; height: auto; overflow: visible }
+.chart-title { margin: 0 0 8px; font: 500 .9rem var(--display); color: var(--muted-foreground) }
+.c-grid { stroke: var(--border); stroke-width: 1 }
+.c-ax { fill: var(--faint-foreground); font: 400 12px var(--sans); font-variant-numeric: tabular-nums }
+.c-line { fill: none; stroke: var(--brand-ink); stroke-width: 2.2; stroke-linejoin: round; stroke-dasharray: 1; animation: draw 700ms var(--e-out) 1 both }
+@keyframes draw { from { stroke-dashoffset: 1 } }
+.c-dot { fill: var(--surface-page); stroke: var(--brand-ink); stroke-width: 2 }
+.c-dot.is-last { fill: var(--gold); stroke: var(--gold) }
+.c-last { fill: var(--foreground); font: 600 13px var(--display) }
+.empty { margin-top: 26px; max-width: 52ch }
+.empty p { margin: 6px 0 0; color: var(--muted-foreground) }
+
+/* Masuk halaman: lembar diletakkan satu per satu (sekali). */
+.sheets > * { animation: lay 420ms var(--e-out) both; animation-delay: calc(var(--i, 0) * 60ms) }
+@keyframes lay { from { opacity: 0; transform: translateY(10px) } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sheets > * { animation: fade 160ms ease both }
+  @keyframes fade { from { opacity: 0 } }
+  .sheet, .key, .go svg { transition: opacity 160ms ease }
+  .sheet:hover, .sheet:active { transform: none !important }
+  .key { transform: none }
+  .c-line { animation: none }
+}
+</style>
+</head>
+<body>
+<div class="proto" role="region" aria-label="Kendali prototipe">
+  <span class="proto-name">Prototipe kartu Potongan Lembar</span>
+  <span class="proto-group"><span class="seg-label">Menu</span>
+    <span class="seg" id="sw-page"><button data-v="fundamental" aria-pressed="true">Fundamental</button><button data-v="keswa">Keswa</button><button data-v="kraepelin">Tes Koran</button></span></span>
+  <span class="proto-group"><span class="seg-label">Tema</span>
+    <span class="seg" id="sw-theme"><button data-v="light">Terang</button><button data-v="dark">Gelap</button></span></span>
+  <span class="proto-group"><span class="seg-label">Riwayat</span>
+    <span class="seg" id="sw-data"><button data-v="ada" aria-pressed="true">Ada</button><button data-v="kosong">Kosong</button></span></span>
+</div>
+<main class="page" id="page"></main>
+
+<script>
+/* Isi = salinan lib/fundamental.ts, lib/keswa-scoring.ts, app/dashboard/keswa/KeswaKonten.tsx. Riwayat = data contoh. */
+const ARROW = '<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg>';
+const KESWA_TOTAL = 567, KESWA_MENIT = 90;
+const state = { page: "fundamental", data: "ada", grup: 0, tab: 0 };
+const fmt = (x) => (Math.round(x * 10) / 10).toLocaleString("id-ID");
+// Angka spesimen tetap (seed), supaya lembar tidak berubah tiap render.
+let seed = 7; const rnd = () => (seed = (seed * 9301 + 49297) % 233280, 1 + Math.floor(seed / 233280 * 9));
+const digits = (n) => Array.from({ length: n }, rnd);
+
+function sheet({ code, side, title, line, cta, spec, quiet, i, style = "", label }) {
+  return `<a class="sheet${quiet ? " is-quiet" : ""}" href="#mulai" style="--i:${i};${style}" aria-label="${label || title}. ${cta}">
+    <div class="spec" aria-hidden="true">${spec}</div><div class="tear" aria-hidden="true"></div>
+    <div class="id"><span class="id-code"><span>${code}</span><span>${side}</span></span><h3>${title}</h3><p>${line}</p><span class="go">${cta}${ARROW}</span></div></a>`;
+}
+
+function koranCols(n, rows, onIdx) {
+  seed = 11;
+  return `<div class="cols">${Array.from({ length: n }, (_, c) => {
+    const d = digits(rows);
+    const keys = c === onIdx ? `<span class="key">${d.slice(1).map((v, r) => `<span>${(v + d[r]) % 10}</span>`).join("")}</span>` : "";
+    return `<span class="col${c === onIdx ? " is-on" : ""}">${d.map((v) => `<span>${v}</span>`).join("")}${keys}</span>`;
+  }).join("")}</div>`;
+}
+function pauliStrip() {
+  seed = 23;
+  const a = digits(14), b = digits(14);
+  const col = (d, lab) => `<span>${d.map((v, r) => `${r && r % 5 === 0 ? `<span class="mk"${lab ? ` data-t="${r / 5 * 3} mnt"` : ""}></span>` : ""}<span class="d">${v}</span>`).join("")}</span>`;
+  return `<div class="pauli">${col(a, false)}${col(b, true)}</div>`;
+}
+function ansSheet(n, filled) {
+  seed = 31 + n;
+  return `<div class="ans">${Array.from({ length: 7 }, (_, r) => { const y = rnd() > 4; const f = r < filled;
+    return `<div><span>${r + 1}.</span><span class="bub${f && y ? " f" : ""}">Y</span><span class="bub${f && !y ? " f" : ""}">T</span><span></span></div>`; }).join("")}</div>`;
+}
+
+const KORAN_GRUP = [
+  { label: "Rekening Koran · Tambah", koran: true, v: [17.4, 18.9, 18.2, 20.1, 21.3, 21.8], d: ["24 Sep", "28 Sep", "2 Okt", "6 Okt", "11 Okt", "15 Okt"], last: "15 Oktober 2026", s1: 6, s2: 1.4 },
+  { label: "Rekening Koran · Kali", koran: true, v: [12.6, 14.1, 15], d: ["3 Okt", "9 Okt", "14 Okt"], last: "14 Oktober 2026", s1: 9, s2: -0.8 },
+  { label: "Tes Pauli · 60 menit", koran: false, v: [1712, 1840], d: ["5 Okt", "12 Okt"], last: "12 Oktober 2026", s1: 5.1, pct: 5.5, peak: 13, naik: 18.2, per: 20 },
+  { label: "Tes Pauli · Latihan", koran: false, v: [402, 431, 455, 448], d: ["1 Okt", "4 Okt", "8 Okt", "13 Okt"], last: "13 Oktober 2026", s1: 6.2, pct: 6.9, peak: 2, naik: 14.1, per: 5 },
+];
+const KESWA_RIWAYAT = { 1: [{ valid: true, tgl: "12 Oktober 2026", dur: "1 jam 11 mnt" }], 2: [{ valid: false, tgl: "16 Oktober 2026", dur: "38 mnt" }] };
+const TANDA = [
+  ["Banyak soal kosong", "Soal yang dilewati membuat profil tidak lengkap. Lewat batas tertentu, hasil tidak bisa dibaca sama sekali."],
+  ["Tidak konsisten", "Beberapa pernyataan muncul dua kali, atau muncul lagi dengan kalimat kebalikannya. Jawaban yang saling bertentangan menandakan soal tidak dibaca sungguh-sungguh."],
+  ["Ya semua atau Tidak semua", "Pernyataan disusun dua arah: sebagian bernada positif, sebagian negatif. Pola seragam langsung terlihat."],
+  ["Sok sempurna", "Ada pernyataan tentang kekurangan kecil yang dimiliki hampir semua orang, misalnya pernah kesal atau pernah terlambat. Menyangkal terlalu banyak dibaca sebagai berusaha tampil terlalu baik."],
+  ["Jawaban asal", "Ada pernyataan yang jawabannya hampir pasti sama untuk semua orang. Menjawab sebaliknya berkali-kali adalah tanda menjawab acak atau terburu-buru."],
+];
+const LANGKAH = [
+  ["Siapkan badan", "Tidur cukup dan makan sebelum tes. Badan yang lelah membuat jawaban terburu-buru dan tidak konsisten."],
+  ["Jawab keadaanmu yang biasa", "Pikirkan dirimu sehari-hari, bukan hari ini saja dan bukan dirimu yang ideal."],
+  ["Jangan terlalu lama", `${KESWA_TOTAL} soal dalam ${KESWA_MENIT} menit berarti sekitar ${Math.round(KESWA_MENIT * 60 / KESWA_TOTAL)} detik per soal. Jawaban pertama yang muncul biasanya yang paling jujur.`],
+  ["Jawab semua soal", "Soal kosong mengurangi kelengkapan profil. Di simulasi ini, 30 soal kosong atau lebih sudah dianggap tidak valid."],
+  ["Bila ragu, pilih yang lebih sering benar", "Tidak ada pilihan \"kadang-kadang\". Pilih Ya bila pernyataan itu lebih sering benar tentang dirimu, Tidak bila lebih sering salah."],
+  ["Baca kalimatnya sampai habis", "Perhatikan kata seperti tidak, jarang, belum pernah. Salah baca satu kata membalik arti jawabanmu."],
+  ["Akui kekurangan kecil", "Semua orang pernah kesal, lupa, atau menunda pekerjaan. Mengakuinya adalah tanda jujur, bukan tanda buruk."],
+  ["Tidak ada pola aman", "Menjawab Ya semua atau Tidak semua tidak membuatmu terlihat baik. Pola seperti itu langsung terdeteksi."],
+];
+
+const head = (t, d, m) => `<header class="head"><h1>${t}</h1><p>${d}</p><div class="head-meta tnum">${m[0]} <span>${m[1]}</span></div></header>`;
+
+function fundamental() {
+  return head("Drilling fundamental", "Latihan hitung dasar sebelum masuk Berpikir Praktis dan Sikap Kerja: perkalian cepat dan pecahan. Soal dibuat ulang setiap sesi, jawab dengan numpad atau keyboard.", ["3 paket", "Penguatan Dasar"]) +
+  `<div class="sheets">
+  ${sheet({ i: 0, style: "grid-column:span 7;grid-row:span 2", code: "Paket 01", side: "Tingkat 1, 50 soal", title: "Pasangan Cermin Perkalian", line: "Pakai pasangan jumlah 10 (3↔7, 2↔8, 1↔9, 4↔6) untuk menghitung cepat.", cta: "Mulai latihan",
+     spec: `<div><div class="big">3↔7</div><div class="row-sm"><span>2↔8</span><span>1↔9</span><span>4↔6</span></div></div><div class="stem"><span>Jika 3 × n = 87,</span><span>maka 7 × n = <b class="key">203</b></span></div>` })}
+  ${sheet({ i: 1, style: "grid-column:span 5", code: "Paket 02", side: "Tingkat 2, 50 soal", title: "Dekomposisi Perkalian", line: "Pecah perkalian besar jadi bagian kecil yang mudah dihitung di kepala.", cta: "Mulai latihan",
+     spec: `<div class="big md">8×92</div><span class="key">8 × (90 + 2) = 720 + 16 = 736</span>` })}
+  ${sheet({ i: 2, style: "grid-column:span 5", code: "Paket 03", side: "Tingkat 2, 50 soal", title: "Sederhanakan Pecahan", line: "Cari FPB lalu tulis pecahan dalam bentuk paling sederhana.", cta: "Mulai latihan",
+     spec: `<div class="frac-wrap"><span class="frac">12<i></i>18</span><span class="key">= 2/3</span></div>` })}
+  ${sheet({ i: 3, style: "grid-column:span 12", quiet: true, code: "Menu Tes Koran", side: "Tingkat 3, 2 paket", title: "Rekening Koran dan Tes Pauli", line: "Lanjutan setelah Penguatan Dasar, dengan riwayat perkembangan di akunmu.", cta: "Buka Tes Koran", label: "Buka menu Tes Koran",
+     spec: koranCols(12, 3, -1) })}
+  </div>`;
+}
+
+function kraepelin() {
+  const k = KORAN_GRUP[state.grup];
+  const prog = state.data === "kosong"
+    ? `<div class="empty"><b>Belum ada riwayat Tes Koran</b><p>Selesaikan Rekening Koran Mode Tes atau Tes Pauli (Tes maupun Latihan). Hasilnya tercatat di sini supaya perkembanganmu terlihat.</p></div>`
+    : `<div class="grp" role="group" aria-label="Kelompok hasil">${KORAN_GRUP.map((g, i) => `<button class="chip" data-g="${i}" aria-pressed="${i === state.grup}">${g.label}</button>`).join("")}</div>
+      <div class="prog"><div><div class="prog-val">${fmt(k.v.at(-1))}</div><div class="prog-unit">${k.koran ? "benar per kolom, rata-rata" : `jawaban benar dari ${k.per} periode`}</div><div class="prog-meta">Terakhir ${k.last}, ${k.v.length} sesi</div>
+      <dl class="prog-dl">${k.koran
+        ? `<div><dt>Keajegan</dt><dd>${fmt(k.s1)}<span>selisih kolom, makin kecil makin stabil</span></dd></div><div><dt>Ketahanan</dt><dd>${k.s2 > 0 ? "+" : ""}${fmt(k.s2)}<span>paruh akhir − awal, positif = makin cepat</span></dd></div>`
+        : `<div><dt>Schwankung</dt><dd>±${fmt(k.s1)} (${fmt(k.pct)}%)<span>makin kecil makin stabil</span></dd></div><div><dt>Puncak</dt><dd>P${k.peak}<span>periode benar terbanyak, naik ${fmt(k.naik)}%</span></dd></div>`}</dl></div>
+      <div><p class="chart-title">${k.koran ? "Tren rata-rata benar per kolom" : "Tren jumlah benar"}</p>${chart(k)}</div></div>`;
+  return head("Tes Koran", "Latihan tes koran: jumlahkan dua angka berdekatan, tulis angka satuannya. Kraepelin pindah kolom tiap beberapa detik, Pauli dikerjakan tanpa henti 60 menit dengan tanda garis tiap 3 menit. Grid dibuat ulang setiap sesi, jawab dengan numpad atau keyboard.", ["2 paket", "Kraepelin dan Pauli"]) +
+  `<div class="sheets">
+  ${sheet({ i: 0, style: "grid-column:span 8", code: "Paket 01", side: "Tambah atau Kali", title: "Rekening Koran", line: "Grid 20 kolom × 30 angka, dikerjakan per kolom dari atas ke bawah. Mode Tes 20 detik per kolom, Mode Latihan tanpa batas waktu.", cta: "Mulai latihan",
+     spec: koranCols(20, 13, 2) })}
+  ${sheet({ i: 1, style: "grid-column:span 4", code: "Paket 02", side: "Tambah, 60 menit", title: "Tes Pauli", line: "20 periode × 3 menit tanpa henti. Kurva kerja per periode.", cta: "Mulai latihan",
+     spec: pauliStrip() })}
+  </div>
+  <section class="sect" aria-labelledby="ph"><h2 class="sect-h" id="ph">Perkembangan</h2><p class="sect-p">Nilai mentah, tanpa norma: untuk membandingkan dirimu dengan sesi sebelumnya, bukan tanda lulus atau tidak.</p>${prog}</section>`;
+}
+
+function chart(g) {
+  const sm = innerWidth < 600, W = sm ? 340 : 600, H = sm ? 190 : 210, L = 44, B = 28, T = 16, Rt = 40;
+  const max = g.koran ? 29 : Math.max(...g.v) * 1.15, n = g.v.length;
+  const X = (i) => L + i * (W - L - Rt) / Math.max(1, n - 1), Y = (v) => T + (H - T - B) * (1 - v / max);
+  const grid = [0, .5, 1].map((f) => `<line class="c-grid" x1="${L}" x2="${W - Rt}" y1="${Y(max * f)}" y2="${Y(max * f)}"/><text class="c-ax" x="${L - 8}" y="${Y(max * f) + 4}" text-anchor="end">${fmt(g.koran ? max * f : Math.round(max * f))}</text>`).join("");
+  const d = g.v.map((v, i) => `${i ? "L" : "M"}${X(i).toFixed(1)} ${Y(v).toFixed(1)}`).join(" ");
+  return `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Tren, ${n} sesi">${grid}<path class="c-line" d="${d}" pathLength="1"/>${g.v.map((v, i) => `<circle class="c-dot${i === n - 1 ? " is-last" : ""}" cx="${X(i)}" cy="${Y(v)}" r="${i === n - 1 ? 5 : 3.5}"/>`).join("")}${g.d.map((t, i) => `<text class="c-ax" x="${X(i)}" y="${H - 6}" text-anchor="middle">${t}</text>`).join("")}<text class="c-last" x="${X(n - 1) + 10}" y="${Y(g.v[n - 1]) - 10}">${fmt(g.v[n - 1])}</text></svg>`;
+}
+
+const TABS = [["Edukasi", "Bentuk tesnya"], ["Panduan", "8 langkah"], ["Simulasi", "2 paket"]];
+function keswaBody() {
+  if (state.tab === 0) return `<div class="prose">
+    <h2>Apa itu tes Keswa?</h2><p>Tes kesehatan jiwa (Keswa) adalah tes kepribadian berbentuk ratusan pernyataan tentang diri sendiri, dijawab Ya atau Tidak. Isinya beragam: kesehatan badan, perasaan, keluarga, pergaulan, minat, keyakinan, sikap terhadap aturan, dan pengalaman sehari-hari. Tujuannya menyaring kondisi kejiwaan yang tidak sesuai dengan tuntutan tugas.</p>
+    <h2>Tidak ada jawaban benar atau salah</h2><p>Berbeda dengan tes kecerdasan, Keswa tidak dinilai dengan menghitung jawaban benar. Setiap jawaban masuk ke beberapa skala, lalu psikolog membaca <b>pola</b> dari semua skala itu. Satu jawaban tidak menentukan apa pun. Karena itu tidak ada "kunci jawaban" yang berlaku.</p>
+    <h2>Sebelum dibaca, jawabanmu dicek dulu</h2><p>Hasil tes hanya dibaca bila pola jawabannya bisa dipercaya (valid). Ada 5 tanda yang membuat hasil dianggap tidak valid:</p>
+    <ol class="tanda">${TANDA.map(([j, t]) => `<li><b>${j}</b><span>${t}</span></li>`).join("")}</ol>
+    <div class="callout"><h2>Hati-hati dengan "kunci jawaban" yang beredar</h2><p>Kunci yang beredar biasanya menyuruh menjawab serba baik di semua soal. Justru pola itulah yang ditangkap cek "sok sempurna". Peserta yang mengikutinya berisiko mendapat hasil tidak valid.</p></div>
+    <h2>Jadi, cara paling aman?</h2><p>Jawab jujur sesuai keadaanmu sehari-hari, jawab semua soal, dan jangan terlalu lama memikirkan satu pernyataan.</p>
+    <button class="next" data-tab="1">Lanjut ke Panduan${ARROW}</button></div>`;
+  if (state.tab === 1) return `<ol class="langkah">${LANGKAH.map(([j, t], i) => `<li><span class="no">${i + 1}</span><div><b>${j}</b><p>${t}</p></div></li>`).join("")}</ol>
+    <div class="prose" style="margin-top:48px"><h2>Cara mengerjakan simulasi di sini</h2><ul class="howto">
+    <li>Satu pernyataan per layar. Klik Ya/Tidak atau tekan <kbd>Y</kbd> / <kbd>T</kbd>; soal berikutnya muncul otomatis.</li>
+    <li>Panah kiri/kanan atau nomor soal di panel kanan untuk kembali dan mengubah jawaban.</li>
+    <li>Jawaban tersimpan di perangkat ini selama mengerjakan, jadi halaman yang tertutup bisa dilanjutkan.</li>
+    <li>Setelah dikirim, hasil (VALID / TIDAK VALID + rincian 5 cek) tersimpan di akunmu. Maksimal 2 hasil per paket.</li></ul>
+    <button class="next" data-tab="2">Lanjut ke Simulasi${ARROW}</button></div>`;
+  return `<div class="sheets" style="margin-top:0">${[1, 2].map((n, i) => {
+    const r = state.data === "kosong" ? [] : KESWA_RIWAYAT[n] || [];
+    const last = r[0] ? `<span class="stamp ${r[0].valid ? "ok" : "no"}">${r[0].valid ? "VALID" : "TIDAK VALID"}</span>` : "";
+    const slots = [0, 1].map((s) => r[s]
+      ? `<li><a class="slot" href="#hasil"><span class="badge ${r[s].valid ? "ok" : "no"}">${r[s].valid ? "VALID" : "TIDAK VALID"}</span><span>${r[s].tgl}</span><span class="tnum">${r[s].dur}</span></a></li>`
+      : `<li class="slot is-empty"><span>Slot ${s + 1}</span><span>Belum ada hasil</span><span></span></li>`).join("");
+    return `<div class="wrap" style="grid-column:span 6;--i:${i}">${sheet({ i, code: `Paket 0${n}`, side: `${KESWA_TOTAL} soal, ${KESWA_MENIT} menit`, title: `Simulasi Keswa Paket ${n}`, line: "Hasil VALID / TIDAK VALID dari 5 cek: soal kosong, konsistensi, pola Ya/Tidak, sok sempurna, jawaban acak.", cta: "Mulai simulasi", spec: ansSheet(n, r[0] ? 7 : 0) + last })}
+      <p class="slots-h">Hasil tersimpan, maksimal 2</p><ul class="slots">${slots}</ul></div>`;
+  }).join("")}</div>`;
+}
+function keswa() {
+  return head("Keswa", `Kenali bentuk tes kesehatan jiwa, pelajari cara mengerjakannya, lalu coba simulasi ${KESWA_TOTAL} pernyataan Ya/Tidak dengan cek validitas jawaban.`, ["2 paket simulasi", `${KESWA_TOTAL} soal per paket`]) +
+  `<div class="ftabs" role="tablist" aria-label="Bagian Keswa">${TABS.map(([t, s], i) => `<button role="tab" id="tb${i}" aria-controls="fb" aria-selected="${i === state.tab}" tabindex="${i === state.tab ? 0 : -1}" data-tab="${i}">${t}<small>${s}</small></button>`).join("")}</div>
+   <div class="fbody" id="fb" role="tabpanel" aria-labelledby="tb${state.tab}">${keswaBody()}</div>`;
+}
+
+const PAGES = { fundamental, kraepelin, keswa };
+const render = () => { document.getElementById("page").innerHTML = PAGES[state.page](); };
+const seg = (id, v) => document.querySelectorAll(`#${id} button`).forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === v));
+
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("button, a"); if (!t) return;
+  if (t.matches('a[href^="#"]')) e.preventDefault();
+  if (t.closest("#sw-page")) { state.page = t.dataset.v; state.grup = 0; state.tab = 0; seg("sw-page", t.dataset.v); render(); return scrollTo({ top: 0 }); }
+  if (t.closest("#sw-theme")) { document.documentElement.dataset.theme = t.dataset.v; return seg("sw-theme", t.dataset.v); }
+  if (t.closest("#sw-data")) { state.data = t.dataset.v; seg("sw-data", t.dataset.v); return render(); }
+  if (t.dataset.g != null) { state.grup = +t.dataset.g; render(); return document.querySelector(`[data-g="${state.grup}"]`).focus(); }
+  if (t.dataset.tab != null) { state.tab = +t.dataset.tab; render(); document.getElementById("tb" + state.tab).focus(); }
+});
+document.addEventListener("keydown", (e) => {
+  if (e.target.getAttribute?.("role") !== "tab") return;
+  const k = { ArrowRight: 1, ArrowLeft: -1 }[e.key]; if (!k) return;
+  e.preventDefault(); state.tab = (state.tab + k + 3) % 3; render(); document.getElementById("tb" + state.tab).focus();
+});
+const dark = matchMedia("(prefers-color-scheme: dark)");
+seg("sw-theme", dark.matches ? "dark" : "light");
+dark.addEventListener("change", (e) => { if (!document.documentElement.dataset.theme) seg("sw-theme", e.matches ? "dark" : "light"); });
+render();
+</script>
+</body>
+</html>

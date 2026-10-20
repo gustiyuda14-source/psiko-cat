@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="id"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prototipe: kotak nomor aktif</title>
+<style>
+:root{--card:#121a34;--nav:#0d1636;--border:#27325a;--fg:#e8ebf6;--ink:#c8d3f7;--gold:#e8c766;--gold-rgb:232,199,102;--ok:#1f9d74;--ok-soft:#10302a;--bg:#080f2b;--muted:#8d98c4;--r:8px}
+body.light{--card:#fff;--nav:#16224a;--border:#ddd3c0;--fg:#172a35;--ink:#1b2a5c;--gold:#b8892b;--gold-rgb:184,137,43;--ok:#087453;--ok-soft:#eaf6f0;--bg:#f5f0e4;--muted:#6b6a60}
+*{box-sizing:border-box}body{margin:0;padding:24px;background:var(--bg);color:var(--fg);font:14px/1.4 system-ui,sans-serif}
+h1{font-size:16px;margin:0 0 4px}p.s{margin:0 0 18px;color:var(--muted)}
+.row{display:flex;gap:28px;flex-wrap:wrap}.col{width:260px}
+.col h2{font-size:13px;margin:0 0 2px;color:var(--ink)}.col small{display:block;margin-bottom:10px;color:var(--muted);min-height:32px}
+.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px}
+.dnum{position:relative;height:44px;border:1px solid var(--border);border-radius:var(--r);background:var(--card);color:var(--fg);font:600 .9rem system-ui;font-variant-numeric:tabular-nums;transition:border-color .18s,background .18s,box-shadow .18s,transform .18s}
+.dnum:hover{border-color:var(--ok);transform:translateY(-1px)}
+.dnum.is-answered{border-color:var(--ok);background:var(--ok-soft);color:var(--ok)}
+/* sekarang */
+.cur0 .dnum[aria-current]{box-shadow:0 0 0 2px var(--card),0 0 0 4px var(--nav);transform:none}
+/* A: cincin emas + sinar bernapas */
+.curA .dnum[aria-current]{border-color:var(--gold);color:var(--gold);background:rgba(var(--gold-rgb),.10);transform:none;animation:glowA 2.4s ease-in-out infinite}
+@keyframes glowA{0%,100%{box-shadow:0 0 0 1px rgba(var(--gold-rgb),.55),0 0 10px 1px rgba(var(--gold-rgb),.28)}50%{box-shadow:0 0 0 1px rgba(var(--gold-rgb),.9),0 0 18px 4px rgba(var(--gold-rgb),.45)}}
+/* B: lampu sorot dari atas, statis */
+.curB .dnum[aria-current]{border-color:var(--gold);color:var(--gold);transform:none;background:radial-gradient(120% 90% at 50% 0%,rgba(var(--gold-rgb),.34),rgba(var(--gold-rgb),.06) 62%,transparent),var(--card);box-shadow:0 0 0 1px rgba(var(--gold-rgb),.5),0 6px 16px -4px rgba(var(--gold-rgb),.5),inset 0 1px 0 rgba(255,255,255,.18)}
+/* C: kilau lewat tiap beberapa detik */
+.curC .dnum[aria-current]{border-color:var(--gold);color:var(--gold);transform:none;overflow:hidden;background:rgba(var(--gold-rgb),.08);box-shadow:0 0 0 1px rgba(var(--gold-rgb),.5),0 0 14px 1px rgba(var(--gold-rgb),.3)}
+.curC .dnum[aria-current]::after{content:"";position:absolute;inset:-2px;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.38) 50%,transparent 65%);transform:translateX(-120%);animation:sweepC 3.2s ease-in-out infinite;pointer-events:none}
+@keyframes sweepC{0%,55%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@media(prefers-reduced-motion:reduce){.curA .dnum[aria-current]{animation:none;box-shadow:0 0 0 1px rgba(var(--gold-rgb),.8),0 0 14px 2px rgba(var(--gold-rgb),.4)}.curC .dnum[aria-current]::after{animation:none;display:none}}
+button.t{margin:0 0 16px;padding:6px 12px;border-radius:8px;border:1px solid var(--border);background:var(--card);color:var(--fg);cursor:pointer}
+</style>
+<body>
+<h1>Kotak nomor yang sedang dikerjakan (soal 27)</h1>
+<p class="s">Hover biasa tetap seperti sekarang; yang berubah hanya kotak aktif. Pilih A, B, atau C.</p>
+<button class="t" onclick="document.body.classList.toggle('light')">Ganti tema gelap / terang</button>
+<div class="row" id="r"></div>
+<script>
+const v=[["cur0","Sekarang","Cincin dua lapis (surface-card + nav): hampir tak terlihat di mode gelap."],["curA","A · Sinar emas bernapas","Border emas, latar emas tipis, sinar berdenyut pelan (2,4 dtk)."],["curB","B · Lampu sorot","Statis. Cahaya emas jatuh dari atas kotak + garis terang di tepi atas."],["curC","C · Kilau lewat","Border emas + kilau putih menyapu tiap 3,2 dtk."]];
+const ans=new Set([1,2,3,4,5,6,8,9,10,12,15,16,17,20,21,22,23,24,25,26]);
+document.getElementById("r").innerHTML=v.map(([c,t,d])=>`<div class="col ${c}"><h2>${t}</h2><small>${d}</small><div class="grid">${Array.from({length:30},(_,i)=>i+1).map(n=>`<button class="dnum${ans.has(n)?" is-answered":""}"${n===27?" aria-current=\"step\"":""}>${n}</button>`).join("")}</div></div>`).join("");
+</script></body></html>
