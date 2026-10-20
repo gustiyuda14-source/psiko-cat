@@ -9,6 +9,7 @@ import { Timer } from "@/app/components/icons";
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { COLUMN_DURATION_MS } from "@/lib/stores/kecermatan-store";
+import { AJIKS_COLUMN_SECONDS } from "@/lib/progress-rules";
 import type { KecermatanScoreResult } from "@/lib/scoring/kecermatan";
 import { scoreLatihanKecermatan } from "./actions";
 import LatihanKecermatanHasil, { type LatihanFeedback } from "./LatihanKecermatanHasil";
@@ -23,6 +24,7 @@ type Feedback = LatihanFeedback;
 export default function LatihanKecermatan({
   questions,
   timedMode = false,
+  ajiks = false,
   progressKey,
   onActiveChange,
 }: {
@@ -33,6 +35,8 @@ export default function LatihanKecermatan({
   /** Ya di modal "Aktifkan timer per kolom?" — kunci navigasi sekuensial,
       60 detik/kolom, jeda 5 detik tiap ganti kolom. Default bebas navigasi. */
   timedMode?: boolean;
+  /** Metode D'AJIKS (bersama timedMode): batas kolom AJIKS_COLUMN_SECONDS, bukan 60 detik. */
+  ajiks?: boolean;
 }) {
   const sorted = useMemo(
     () =>
@@ -60,7 +64,8 @@ export default function LatihanKecermatan({
   // Timer per kolom — cuma aktif kalau timedMode. Pola deadline-based sama
   // persis EngineKecermatan.tsx (wall-clock, tahan tab-throttling), tapi
   // murni lokal: tidak nyentuh module_sessions/kecermatan_logs sama sekali.
-  const [remainingMs, setRemainingMs] = useState(COLUMN_DURATION_MS);
+  const columnMs = (col: number) => (ajiks ? AJIKS_COLUMN_SECONDS[col] * 1000 : COLUMN_DURATION_MS);
+  const [remainingMs, setRemainingMs] = useState(columnMs(0));
   const [showColIntro, setShowColIntro] = useState(false);
   const [introSeconds, setIntroSeconds] = useState(INTRO_SECONDS);
   const [showSkip, setShowSkip] = useState(false);
@@ -141,7 +146,7 @@ export default function LatihanKecermatan({
     setAnswers({});
     setFinished(false);
     setShowColIntro(false);
-    setRemainingMs(COLUMN_DURATION_MS);
+    setRemainingMs(columnMs(0));
     setScore(null);
     setScoreFailed(false);
     timing.reset();
@@ -211,7 +216,7 @@ export default function LatihanKecermatan({
   // ganti (`colIdx`), gak peduli lagi di butir keberapa di kolom itu.
   useEffect(() => {
     if (!timedMode || finished || showColIntro || sorted.length === 0) return;
-    const deadline = Date.now() + COLUMN_DURATION_MS;
+    const deadline = Date.now() + (ajiks ? AJIKS_COLUMN_SECONDS[colIdx] * 1000 : COLUMN_DURATION_MS);
     const tick = () => {
       const remaining = Math.max(0, deadline - Date.now());
       setRemainingMs(remaining);
@@ -223,7 +228,7 @@ export default function LatihanKecermatan({
     tick();
     const interval = setInterval(tick, 250);
     return () => clearInterval(interval);
-  }, [timedMode, colIdx, showColIntro, finished, sorted.length]);
+  }, [timedMode, ajiks, colIdx, showColIntro, finished, sorted.length]);
 
   // Statistik per kolom sama seperti scoreKecermatan di lib/scoring/runner.ts:
   // klik = butir yang dijawab di kolom itu, kolom yang tak tersentuh = 0.
@@ -260,6 +265,7 @@ export default function LatihanKecermatan({
         sorted={sorted}
         answers={answers}
         timedMode={timedMode}
+        ajiks={ajiks}
         score={score}
         scoreFailed={scoreFailed}
         onRestart={resetPractice}
@@ -268,6 +274,7 @@ export default function LatihanKecermatan({
             progressKey={progressKey}
             answers={Object.fromEntries(Object.entries(answers).map(([id, a]) => [id, a.selected]))}
             timed={timedMode}
+            ajiks={ajiks}
             timing={snap}
           />
         }

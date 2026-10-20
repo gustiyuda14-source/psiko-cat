@@ -62,7 +62,9 @@ export default function LatihanGate({
   const autoStart = searchParams.get("autostart") === "1";
   // Kecermatan: 60 detik/kolom. Kepribadian: 60 menit total seperti ujian.
   // Kecerdasan selalu berwaktu, param ini diabaikan.
-  const timedMode = searchParams.get("timed") === "1";
+  // timed=ajiks: Metode D'AJIKS, timer per kolom bertahap (AJIKS_COLUMN_SECONDS), Kecermatan saja.
+  const ajiks = moduleType === "KECERMATAN" && searchParams.get("timed") === "ajiks";
+  const timedMode = searchParams.get("timed") === "1" || ajiks;
   const [started, setStarted] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(autoStart ? 5 : null);
   const meta = MODULE_CONFIG[moduleType];
@@ -74,7 +76,9 @@ export default function LatihanGate({
       : timedMode
         ? moduleType === "KEPRIBADIAN"
           ? `${meta.time_limit_seconds / 60} menit`
-          : "60 detik/kolom"
+          : ajiks
+            ? "Metode D'AJIKS"
+            : "60 detik/kolom"
         : "Tanpa batas waktu";
   const practiceRef = useRef<HTMLDivElement>(null);
   const noun = "butir";
@@ -133,7 +137,7 @@ export default function LatihanGate({
           ) : moduleType === "KEPRIBADIAN" ? (
             <LatihanKepribadian questions={questions} timedMode={timedMode} progressKey={progressKey} onSecondsLeft={setSecondsLeft} onActiveChange={setActive} />
           ) : (
-            <LatihanKecermatan questions={questions} timedMode={timedMode} progressKey={progressKey} onActiveChange={setActive} />
+            <LatihanKecermatan questions={questions} timedMode={timedMode} ajiks={ajiks} progressKey={progressKey} onActiveChange={setActive} />
           )}
         </div>
       ) : countdown !== null ? (

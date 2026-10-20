@@ -10,7 +10,7 @@ import { fillY, wavePath } from "@/lib/honey";
 import { MODULE_CONFIG } from "@/lib/test-config";
 import { useWide } from "@/app/dashboard/drill/DrillWheel";
 import { resetProgress, useLatihanAttempts, useLatihanProgress } from "@/lib/practice-progress";
-import { maxLatihanAttempts } from "@/lib/progress-rules";
+import { AJIKS_COLUMN_SECONDS, attemptModeLabel, maxLatihanAttempts } from "@/lib/progress-rules";
 import { NewBadge } from "@/app/components/NewBadge";
 
 /*
@@ -99,7 +99,8 @@ export function PackageCarousel({
   const { attempts } = useLatihanAttempts();
   const firstReady = packages.find((p) => p.questionCount === expectedCount);
   const [selected, setSelected] = useState(firstReady?.id ?? packages[0]?.id);
-  const [timedMode, setTimedMode] = useState(false);
+  // "ajiks" = Metode D'AJIKS (Kecermatan saja): timer per kolom bertahap, lihat AJIKS_COLUMN_SECONDS.
+  const [timedMode, setTimedMode] = useState<boolean | "ajiks">(false);
   const [confirmReset, setConfirmReset] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
   const wide = useWide();
@@ -126,9 +127,9 @@ export function PackageCarousel({
       ))}
     </span>
   );
-  const hrefOf = (id: number, timed: boolean) =>
+  const hrefOf = (id: number, timed: boolean | "ajiks") =>
     pkg.sections
-      ? `${hrefBase}/${id}?autostart=1${timed ? "&timed=1" : ""}`
+      ? `${hrefBase}/${id}?autostart=1${timed ? `&timed=${timed === "ajiks" ? "ajiks" : "1"}` : ""}`
       : pkg.parts && timed
         ? `${hrefBase}/${id}?timed=1`
         : `${hrefBase}/${id}`;
@@ -141,20 +142,22 @@ export function PackageCarousel({
       : !timedMode
         ? "tanpa timer"
         : pkg.sections
-          ? "60 detik/kolom"
+          ? timedMode === "ajiks"
+            ? "Metode D'AJIKS"
+            : "60 detik/kolom"
           : pkg.parts
             ? `${pribadiMinutes} menit`
             : "tanpa timer";
-  const timerToggle = (title: string, on: string, off: string) => (
+  const timerToggle = (title: string, on: string, off: string, ajiks?: string) => (
     <div className="hc-timer">
       <div>
         <b>{title}</b>
-        <span>{timedMode ? on : off}</span>
+        <span>{timedMode === "ajiks" ? ajiks : timedMode ? on : off}</span>
       </div>
       <div role="radiogroup" aria-label={`Aktifkan ${title.toLowerCase()}`} className="hc-seg">
-        {[false, true].map((v) => (
+        {(ajiks ? [false, true, "ajiks" as const] : [false, true]).map((v) => (
           <button key={String(v)} type="button" role="radio" aria-checked={timedMode === v} onClick={() => setTimedMode(v)}>
-            {v ? "Ya" : "Tidak"}
+            {v === "ajiks" ? "Metode D'AJIKS" : v ? "Ya" : "Tidak"}
           </button>
         ))}
       </div>
@@ -269,7 +272,12 @@ export function PackageCarousel({
                   ))}
                 </ul>
               </details>
-              {timerToggle("Timer per kolom", "60 detik per kolom, urutan terkunci, persis mode ujian.", "Tanpa batas waktu, bebas pindah kolom.")}
+              {timerToggle(
+                "Timer per kolom",
+                "60 detik per kolom, urutan terkunci, persis mode ujian.",
+                "Tanpa batas waktu, bebas pindah kolom.",
+                `Rahasia D'AJIKS Akademi: target waktu bertahap ${AJIKS_COLUMN_SECONDS.join(", ")} detik untuk kolom I sampai X, supaya grafik per kolom terus naik. Urutan terkunci.`
+              )}
             </>
           )}
 
@@ -278,13 +286,13 @@ export function PackageCarousel({
               <p className="text-sm font-semibold text-foreground">Pembahasan tersimpan</p>
               {attempts[current.key].map((a, k) => (
                 <Link key={a.id} href={`/latihan/pembahasan/${a.id}`} className={buttonStyles({ variant: "secondary", block: true })}>
-                  {maxLatihanAttempts(current.key) === 1 ? (a.timed ? "Dengan waktu" : "Tanpa waktu") : k === 0 ? "Terbaru" : "Sebelumnya"} ·{" "}
+                  {maxLatihanAttempts(current.key) === 1 ? attemptModeLabel(a) : k === 0 ? "Terbaru" : "Sebelumnya"} ·{" "}
                   {new Date(a.at).toLocaleDateString("id-ID", { day: "numeric", month: "short" })}
                 </Link>
               ))}
               <p className="text-xs text-muted-foreground">
                 {maxLatihanAttempts(current.key) === 1
-                  ? "Tersimpan satu pembahasan dengan waktu dan satu tanpa waktu per paket. Mengulang dengan mode yang sama menggantinya dengan percobaan terbaru."
+                  ? "Tersimpan satu pembahasan per mode (tanpa waktu, dengan waktu, Metode D'AJIKS) per paket. Mengulang dengan mode yang sama menggantinya dengan percobaan terbaru."
                   : "Maksimal 2 pembahasan tersimpan per paket. Menyimpan percobaan berikutnya menghapus yang paling lama, setelah kamu setujui."}
               </p>
             </div>

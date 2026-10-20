@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { getSession } from "@/lib/auth";
 import { loadLatihanReview } from "@/lib/latihan-review";
+import { attemptModeLabel } from "@/lib/progress-rules";
 import {
   KECERDASAN_PACKAGE_LABELS,
   KECERMATAN_ANGKA_PACKAGE_LABELS,
@@ -92,7 +93,7 @@ export default async function LatihanPembahasanPage({ params }: { params: Promis
                 aria-current={s.id === id ? "page" : undefined}
                 className={buttonStyles({ variant: s.id === id ? "primary" : "secondary", size: "sm" })}
               >
-                {review.module === "KECERMATAN" ? (s.timed ? "Dengan waktu" : "Tanpa waktu") : i === 0 ? "Terbaru" : "Sebelumnya"} · {tanggal(s.at)}
+                {review.module === "KECERMATAN" ? attemptModeLabel(s) : i === 0 ? "Terbaru" : "Sebelumnya"} · {tanggal(s.at)}
               </Link>
             ))}
           </div>
@@ -105,6 +106,7 @@ export default async function LatihanPembahasanPage({ params }: { params: Promis
             sorted={review.kecermatan.questions}
             answers={review.kecermatan.answers}
             timedMode={review.timed}
+            ajiks={review.ajiks}
             score={review.kecermatan.score}
             timing={review.kecermatan.timing}
             scoreFailed={review.timed && !review.kecermatan.score}

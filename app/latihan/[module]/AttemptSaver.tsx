@@ -20,11 +20,14 @@ export default function AttemptSaver({
   progressKey,
   answers,
   timed = false,
+  ajiks = false,
   timing,
 }: {
   progressKey?: string;
   answers: Record<string, string | null>;
   timed?: boolean;
+  /** Metode D'AJIKS (Kecermatan, bersama timed): slot pembahasan sendiri. */
+  ajiks?: boolean;
   timing?: KecermatanTiming;
 }) {
   const { attempts, ready } = useLatihanAttempts();
@@ -52,10 +55,11 @@ export default function AttemptSaver({
       progressKey={progressKey}
       answers={answers}
       timed={timed}
+      ajiks={ajiks}
       timing={timing}
       oldestAt={existing.at(-1)?.at}
       full={max > 1 && existing.length >= max}
-      replaces={max === 1 && existing.some((a) => a.timed === timed)}
+      replaces={max === 1 && existing.some((a) => a.timed === timed && a.ajiks === ajiks)}
     />
   );
 }
@@ -64,6 +68,7 @@ function Saver({
   progressKey,
   answers,
   timed,
+  ajiks,
   timing,
   oldestAt,
   full,
@@ -72,6 +77,7 @@ function Saver({
   progressKey: string;
   answers: Record<string, string | null>;
   timed: boolean;
+  ajiks: boolean;
   timing?: KecermatanTiming;
   oldestAt?: string;
   full: boolean;
@@ -83,13 +89,13 @@ function Saver({
 
   function save() {
     setStatus("saving");
-    void saveLatihanAttempt(progressKey, answers, timed, timing).then((ok) => setStatus(ok ? "saved" : "failed"));
+    void saveLatihanAttempt(progressKey, answers, timed, timing, ajiks).then((ok) => setStatus(ok ? "saved" : "failed"));
   }
 
   useEffect(() => {
     if (started.current || full) return;
     started.current = true;
-    void saveLatihanAttempt(progressKey, answers, timed, timing).then((ok) => setStatus(ok ? "saved" : "failed"));
+    void saveLatihanAttempt(progressKey, answers, timed, timing, ajiks).then((ok) => setStatus(ok ? "saved" : "failed"));
     // eslint-disable-next-line react-hooks/exhaustive-deps -- sekali saat layar selesai tampil
   }, []);
 
@@ -98,7 +104,7 @@ function Saver({
       {status === "saving" && <p className="text-muted-foreground">Menyimpan pembahasan…</p>}
       {status === "saved" && (
         <p className="text-foreground">
-          Pembahasan tersimpan{replaces ? ` dan menggantikan pembahasan ${timed ? "dengan waktu" : "tanpa waktu"} sebelumnya` : ""}. Buka lagi kapan saja lewat{" "}
+          Pembahasan tersimpan{replaces ? ` dan menggantikan pembahasan ${ajiks ? "Metode D'AJIKS" : timed ? "dengan waktu" : "tanpa waktu"} sebelumnya` : ""}. Buka lagi kapan saja lewat{" "}
           <b>Pembahasan tersimpan</b> di halaman paket.
         </p>
       )}

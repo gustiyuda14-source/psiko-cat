@@ -79,8 +79,9 @@ export type LatihanReview =
       pkg: number;
       submittedAt: string;
       timed: boolean;
+      ajiks: boolean;
       /** Percobaan lain yang masih tersimpan untuk paket ini, terbaru dulu. */
-      siblings: { id: number; at: string; timed: boolean }[];
+      siblings: { id: number; at: string; timed: boolean; ajiks: boolean }[];
       kecerdasan?: KecerdasanReviewItem[];
       kecermatan?: { questions: SafeQuestion[]; answers: KecermatanFeedback; score: KecermatanScoreResult | null; timing: KecermatanTiming | null };
       pribadi?: { summary: PribadiSummary; items: PribadiReviewItem[] };
@@ -92,7 +93,7 @@ const strip = (q: QuestionRow) => Object.fromEntries(Object.entries(q).filter(([
 export async function loadLatihanReview(userId: string, attemptId: number): Promise<LatihanReview> {
   const { data: attempt } = await supabaseAdmin
     .from("latihan_attempts")
-    .select("id, item_key, answers, timed, submitted_at")
+    .select("id, item_key, answers, timed, ajiks, submitted_at")
     .eq("id", attemptId)
     .eq("user_id", userId)
     .maybeSingle();
@@ -106,7 +107,7 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
     packageQuestions(route.module, route.pkg),
     supabaseAdmin
       .from("latihan_attempts")
-      .select("id, submitted_at, timed")
+      .select("id, submitted_at, timed, ajiks")
       .eq("user_id", userId)
       .eq("item_key", attempt.item_key)
       .order("submitted_at", { ascending: false }),
@@ -122,7 +123,8 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
     pkg: route.pkg,
     submittedAt: attempt.submitted_at as string,
     timed: Boolean(attempt.timed),
-    siblings: (siblings ?? []).map((s) => ({ id: s.id as number, at: s.submitted_at as string, timed: s.timed as boolean })),
+    ajiks: Boolean(attempt.ajiks),
+    siblings: (siblings ?? []).map((s) => ({ id: s.id as number, at: s.submitted_at as string, timed: s.timed as boolean, ajiks: Boolean(s.ajiks) })),
   };
 
   if (route.module === "KECERDASAN") {

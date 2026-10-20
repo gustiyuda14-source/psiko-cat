@@ -28,12 +28,12 @@ async function readAll(userId: string) {
 }
 
 async function readAttempts(userId: string, key?: string): Promise<AttemptList> {
-  let query = supabaseAdmin.from("latihan_attempts").select("id, item_key, timed, submitted_at").eq("user_id", userId);
+  let query = supabaseAdmin.from("latihan_attempts").select("id, item_key, timed, ajiks, submitted_at").eq("user_id", userId);
   if (key) query = query.eq("item_key", key);
   const { data, error } = await query.order("submitted_at", { ascending: false });
   if (error) throw error;
   const out: AttemptList = {};
-  for (const r of data ?? []) (out[r.item_key] ??= []).push({ id: r.id, at: r.submitted_at, timed: r.timed });
+  for (const r of data ?? []) (out[r.item_key] ??= []).push({ id: r.id, at: r.submitted_at, timed: r.timed, ajiks: r.ajiks });
   return out;
 }
 
@@ -68,7 +68,7 @@ export async function GET() {
   { action: "latihan", items: { "/latihan/kecerdasan/2": 37 } }   capaian sesi, hanya naik
   { action: "reset", kind: "drill" | "latihan", keys: string[] }  hapus progres kartu/paket
   { action: "import", drill: {...}, latihan: {...} }               sekali, dari localStorage lama
-  { action: "attempt", key, answers: { id soal: pilihan | null }, timed, timing? }  jawaban yang dikumpulkan;
+  { action: "attempt", key, answers: { id soal: pilihan | null }, timed, ajiks?, timing? }  jawaban yang dikumpulkan;
     server menyisakan 2 percobaan terbaru per paket (peserta setuju di layar selesai)
 */
 export async function POST(req: NextRequest) {
@@ -99,11 +99,15 @@ export async function POST(req: NextRequest) {
       if (Object.keys(answers).some((id) => !bank.has(id))) {
         return NextResponse.json({ error: "Soal tidak cocok dengan paket" }, { status: 400 });
       }
+      const timed = body.timed === true;
+      // Metode D'AJIKS: mode timer Kecermatan dengan slot pembahasan sendiri.
+      const ajiks = timed && route.module === "KECERMATAN" && body.ajiks === true;
       const { data: attemptId, error } = await supabaseAdmin.rpc("record_latihan_attempt", {
         p_user: userId,
         p_key: key,
         p_answers: answers,
-        p_timed: body.timed === true,
+        p_timed: timed,
+        p_ajiks: ajiks,
       });
       if (error) throw error;
       // Waktu Kecermatan untuk analisis pembahasan; gagal simpan tidak menggagalkan percobaan.
@@ -114,7 +118,7 @@ export async function POST(req: NextRequest) {
       // dihapus, jadi dua kiriman bersamaan tidak bisa saling menghapus (yang terbaru selalu tersisa).
       if (maxLatihanAttempts(key) === 1) {
         const { error: trimError } = await supabaseAdmin.from("latihan_attempts").delete()
-          .eq("user_id", userId).eq("item_key", key).eq("timed", body.timed === true).lt("id", attemptId);
+          .eq("user_id", userId).eq("item_key", key).eq("timed", timed).eq("ajiks", ajiks).lt("id", attemptId);
         if (trimError) console.error("progress attempt trim", trimError);
       }
       if (timing) {

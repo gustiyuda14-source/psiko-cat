@@ -169,6 +169,7 @@ export default function LatihanKecermatanHasil({
   sorted,
   answers,
   timedMode,
+  ajiks = false,
   score,
   scoreFailed,
   onRestart,
@@ -180,6 +181,8 @@ export default function LatihanKecermatanHasil({
   sorted: SafeQuestion[];
   answers: Record<string, LatihanFeedback>;
   timedMode: boolean;
+  /** Metode D'AJIKS: timer per kolom bertahap, bukan 60 detik. */
+  ajiks?: boolean;
   score: KecermatanScoreResult | null;
   scoreFailed: boolean;
   /** Waktu pengerjaan; null = percobaan lama sebelum waktu dicatat. */
@@ -266,7 +269,7 @@ export default function LatihanKecermatanHasil({
     <aside ref={panelRef} className="hc-panel lr-panel" aria-label="Hasil latihan" aria-live="polite">
       <div className="hc-panel-top">
         <span className="hc-tag">Sikap Kerja</span>
-        <span className="hc-code">{timedMode ? "60 detik per kolom" : "Tanpa batas waktu"}</span>
+        <span className="hc-code">{ajiks ? "Metode D'AJIKS" : timedMode ? "60 detik per kolom" : "Tanpa batas waktu"}</span>
       </div>
       <h2 className="hc-panel-title">{title}</h2>
       <p className="hc-panel-desc tnum">
