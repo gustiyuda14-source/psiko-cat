@@ -11,8 +11,8 @@ const FAQ: [string, [string, string][]][] = [
   ]],
   ["Nilai & kategori", [
     ["Kenapa nilaiku dibandingkan dengan peserta lain, bukan persentase benar?", "Peraturan mendefinisikan nilai baku sebagai posisi individu dalam kelompok. Jadi 70% benar bisa berarti Baik di kelompok yang rata-ratanya 40%, dan hanya Cukup di kelompok yang rata-ratanya 70%."],
-    ["Aku benar 70% tapi kategorinya cuma Cukup. Kenapa?", "Kemungkinan besar rata-rata peserta di aspek itu juga sekitar 70%. Tepat di rata-rata berarti nilai baku 10, yaitu Cukup. Untuk naik ke Cukup Baik kamu perlu sekitar satu simpangan baku di atas rata-rata teman latihanmu."],
-    ["Kalau jawabanku sempurna, pasti Baik?", "Ya. Kami menambahkan pengaman supaya jawaban sempurna selalu mencapai B, walaupun rata-rata kelompok sudah sangat tinggi."],
+    ["Aku benar 70% tapi kategorinya cuma Cukup. Kenapa?", "Kemungkinan besar sekitar separuh teman latihanmu juga mendapat 70% atau lebih di aspek itu. Posisi di tengah kelompok berarti nilai baku sekitar 10, yaitu Cukup. Untuk naik ke Cukup Baik kamu perlu masuk kira-kira sepertiga teratas."],
+    ["Kalau jawabanku sempurna, pasti Baik?", "Belum tentu. Nilai baku mengukur posisimu di antara peserta, bukan persentase benar. Di Kepribadian banyak peserta menjawab sempurna, jadi jawaban sempurna di sana umumnya Cukup Baik. Di aspek yang jarang dijawab sempurna, kamu mendapat Baik."],
     ["Kenapa kategori sesi lamaku bisa berubah padahal jawabannya sama?", "Nilai baku dihitung ulang setiap kali halaman hasil dibuka, memakai norma terbaru. Saat peserta platform bertambah, rata-rata kelompok bisa bergeser, jadi posisimu juga bisa bergeser sedikit. Jawabanmu tidak berubah. Yang berubah adalah pembandingnya."],
     ["Apakah jawaban salah mengurangi nilai?", "Di Kecerdasan tidak: benar 1, salah 0, jadi isi semua soal. Di Sikap Kerja ada pengurangan kecil, yaitu seperempat jumlah salah, supaya klik asal tidak menguntungkan. Di Kepribadian, soal kosong mendapat skor terendah."],
   ]],

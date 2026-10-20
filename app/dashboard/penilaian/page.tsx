@@ -173,8 +173,8 @@ export default async function PenilaianPage() {
               ))}
             </div>
             <div className="pnl-card" style={{ maxWidth: "74ch" }}><span><Latihan /></span>
-              <p>Polri membandingkan peserta per Polda (Bintara, Tamtama) atau nasional (Akpol, SIPSS). Kelompok itu tidak bisa kami akses, jadi pembandingmu adalah <b>peserta platform</b>. Peserta yang tepat di rata-rata mendapat nilai baku 10, di tengah kategori Cukup. Setiap satu simpangan baku di atas rata-rata menambah 3 poin, dan di bawahnya mengurangi 3 poin.</p>
-              <p>Jadi KS kira-kira berarti tertinggal lebih dari dua simpangan baku dari kebanyakan teman latihanmu. Supaya adil, jawaban sempurna selalu bisa mencapai B walaupun rata-rata kelompok sudah tinggi.</p></div>
+              <p>Polri membandingkan peserta per Polda (Bintara, Tamtama) atau nasional (Akpol, SIPSS). Kelompok itu tidak bisa kami akses, jadi pembandingmu adalah <b>peserta platform</b>. Nilai mentahmu diurutkan di antara mereka (persentil), lalu diubah ke skala 20. Posisi tepat di tengah mendapat nilai baku 10, kategori Cukup. Kira-kira sepertiga teratas mendapat Cukup Baik, 2 dari 100 teratas mendapat Baik, dan 2 dari 100 terbawah mendapat Kurang Sekali.</p>
+              <p>Karena yang dinilai posisi, jawaban sempurna belum tentu B. Kalau banyak teman latihanmu juga menjawab sempurna, posisimu tidak istimewa dan nilainya tertahan di Cukup Baik. Di aspek yang jarang dijawab sempurna, kamu mendapat Baik.</p></div>
           </Bagian>
 
           <Bagian id="ks" no={6} judul="Kenapa satu KS bisa menggugurkan">

@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { BOBOT, JALUR, hitungPsikogram, kategoriWS, posisiDariTotal, rsKecerdasan, rsKepribadian, rsSikapKerja, wsDariNorma, normaDari, kunciNorma, NORMA_MIN, type Aspek } from "./psikogram";
+import { BOBOT, JALUR, hitungPsikogram, kategoriWS, posisiDariTotal, rsKecerdasan, rsKepribadian, rsSikapKerja, wsDariNorma, normaDari, kunciNorma, persentil, zDariPersentil, NORMA_MIN, type Aspek } from "./psikogram";
 
 for (const j of JALUR) assert.equal(Object.values(BOBOT[j]).reduce((a, b) => a + b, 0), 20, `${j} bobot ≠ 20`);
 
@@ -70,21 +70,33 @@ assert.equal(wsDariNorma("ketahanan", 0.4, norma), 16);
 assert.equal(wsDariNorma("ketahanan", 0, norma), 4);
 assert.equal(kategoriWS(wsDariNorma("ketahanan", -0.01, norma)), "KS");
 assert.equal(wsDariNorma("ketahanan", 0.2, { ketahanan: { n: NORMA_MIN - 1, mean: 0.2, sd: 0.1 } }), 4); // cadangan proporsi
-assert.deepEqual(normaDari([{ verbal: 0.2 }, { verbal: 0.4 }]), { verbal: { n: 2, mean: 0.3, sd: 0.1 } });
+assert.deepEqual(normaDari([{ verbal: 0.4 }, { verbal: 0.2 }]), { verbal: { n: 2, mean: 0.3, sd: 0.1, sampel: [0.2, 0.4] } });
 // Norma SJT terpisah: kunci "sjt:<aspek>" hanya untuk aspek Kepribadian.
 const normaKp = { prososial: { n: NORMA_MIN, mean: 0.5, sd: 0.1 }, "sjt:prososial": { n: NORMA_MIN, mean: 0.8, sd: 0.1 } };
 assert.equal(wsDariNorma("prososial", 0.8, normaKp), 19);
 assert.equal(wsDariNorma("prososial", 0.8, normaKp, true), 10);
 assert.equal(kunciNorma("verbal", true), "verbal");
-// Norma berplafon (rata-rata tinggi, mis. prososial 20 Okt): 10 + 3z mentok 13,6 di RS 1; lantai garis lurus → 20 (B).
-const normaTinggi = { prososial: { n: NORMA_MIN, mean: 0.783, sd: 0.181 } };
-assert.equal(wsDariNorma("prososial", 1, normaTinggi), 20);
-assert.equal(kategoriWS(wsDariNorma("prososial", 1, normaTinggi)), "B");
-assert.equal(wsDariNorma("prososial", 0.783, normaTinggi), 10);
-assert.equal(wsDariNorma("prososial", 0.9, normaTinggi), 15.39); // 10 + 10 × 0,117 / 0,217
-assert.equal(wsDariNorma("prososial", 0.6, normaTinggi), 6.97); // di bawah rata-rata tetap 10 + 3z
+// Persentil yang dinormalkan (Pasal 1 angka 9: WS = persentil, posisi dalam kelompok).
+assert.ok(Math.abs(zDariPersentil(0.5)) < 1e-9);
+assert.ok(Math.abs(zDariPersentil(0.975) - 1.959964) < 1e-5);
+assert.ok(Math.abs(zDariPersentil(0.01) + 2.326348) < 1e-5);
+const seratus = Array.from({ length: 100 }, (_, i) => i / 100); // 0,00 … 0,99, satu per nilai
+assert.equal(persentil(0.5, seratus), 0.505); // 50 di bawah + ½ sama
+assert.equal(persentil(-1, seratus), 0.005); // di bawah semua → ½ / n
+assert.equal(persentil(2, seratus), 0.995); // di atas semua → 1 − ½ / n
+const normaS = { verbal: { n: 100, mean: 0.495, sd: 0.2887, sampel: seratus } };
+assert.equal(kategoriWS(wsDariNorma("verbal", 0.5, normaS)), "C"); // median → ±10
+assert.equal(kategoriWS(wsDariNorma("verbal", 0.99, normaS)), "B"); // teratas
+assert.equal(kategoriWS(wsDariNorma("verbal", 0, normaS)), "KS"); // terbawah
+// Sebaran berplafon: 30% peserta sempurna → RS 1 di persentil 85 → CB, bukan B (posisi, bukan persentase benar).
+const plafon = [...Array.from({ length: 70 }, (_, i) => 0.5 + i * 0.006), ...Array(30).fill(1)];
+const normaPlafon = { prososial: { n: 100, mean: 0.8, sd: 0.2, sampel: plafon } };
+assert.equal(kategoriWS(wsDariNorma("prososial", 1, normaPlafon)), "CB");
+// Sempurna yang jarang (1 dari 100) → B.
+const jarang = [...Array.from({ length: 99 }, (_, i) => 0.5 + i * 0.004), 1];
+assert.equal(kategoriWS(wsDariNorma("prososial", 1, { prososial: { n: 100, mean: 0.7, sd: 0.12, sampel: jarang } })), "B");
 for (let rs = 0, prev = -1; rs <= 1.0001; rs += 0.01) {
-  const ws = wsDariNorma("prososial", rs, normaTinggi);
+  const ws = wsDariNorma("prososial", rs, normaPlafon);
   assert.ok(ws >= prev, `WS tidak boleh turun saat RS naik (rs ${rs.toFixed(2)})`);
   prev = ws;
 }

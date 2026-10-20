@@ -6,12 +6,16 @@
  *   Jumlah aspek = bobot × nilai kategori (B 4 · CB 3 · C 2 · K 1 · KS −76)
  *   Total psikogram → tabel posisi 1–85 → MS bila ≥ 61. KS di aspek mana pun = TMS.
  *
- * RS → WS memakai norma kelompok (Pasal 1 angka 9: WS "menunjukkan posisi individu dalam kelompok").
- * Kelompok = peserta platform (norma-psikogram.json, dibangun scripts/build-norma-psikogram.ts).
- * Rumus skala 20 tidak tertulis di peraturan; WS = 10 + 3z dipilih karena batas kategori
- * tepat simetris di sekitar 10: C 8,5–11,4 = ±0,5 SD dan K/CB berakhir di 4 dan 16 = ±2 SD (inferensi).
- * Di atas rata-rata ada lantai garis lurus ke RS 1 = 20 supaya jawaban sempurna selalu B (lihat wsDariNorma).
- * Aspek tanpa norma cukup (n < NORMA_MIN) jatuh ke proporsi × 20.
+ * RS → WS memakai norma kelompok (Pasal 1 angka 9: WS = skala 20 atau skala 100 "(persentil) yang
+ * menunjukkan posisi individu dalam kelompok"). Kelompok = peserta platform (norma-psikogram.json,
+ * dibangun scripts/build-norma-psikogram.ts).
+ * WS = persentil yang dinormalkan: persentil posisi RS di sampel kelompok → z normal baku → 10 + 3z.
+ * Skala 10 + 3z dipilih karena batas kategori tepat simetris di sekitar 10: C 8,5–11,4 = ±0,5 SD dan
+ * K/CB berakhir di 4 dan 16 = ±2 SD (inferensi). Lewat persentil, sebaran yang menumpuk di atas
+ * (Kepribadian rata-rata ±80%) tidak lagi membuat RS 1 mentok; jawaban sempurna jadi B bila memang
+ * jarang dicapai kelompok, dan tertahan bila banyak peserta juga sempurna.
+ * Norma lama tanpa sampel memakai 10 + 3z dari rata-rata & SD. Aspek tanpa norma cukup (n < NORMA_MIN)
+ * jatuh ke proporsi × 20.
  * Kepribadian format situasional (SJT) punya norma sendiri berkunci "sjt:<aspek>": sebaran skornya
  * berbeda dari Likert, jadi kedua format tidak dicampur dalam satu kelompok pembanding.
  * Murni tanpa data/kunci, jadi label & tipe boleh dipakai komponen.
@@ -94,24 +98,43 @@ const clamp20 = (v: number) => round2(Math.min(20, Math.max(0, v)));
 /** Cadangan tanpa norma: proporsi 0–1 dikali 20. */
 export const wsDariProporsi = (p: number) => clamp20(p * 20);
 
-/** Kunci norma: nama aspek, atau "sjt:<aspek>" untuk Kepribadian format situasional. */
-export type Norma = Partial<Record<string, { n: number; mean: number; sd: number }>>;
+/** Kunci norma: nama aspek, atau "sjt:<aspek>" untuk Kepribadian format situasional. sampel = RS kelompok, urut naik. */
+export type Norma = Partial<Record<string, { n: number; mean: number; sd: number; sampel?: number[] }>>;
 export const NORMA_MIN = 30;
 
 export const kunciNorma = (aspek: Aspek, sjt = false) => (sjt && ASPEK_KEPRIBADIAN_SET.has(aspek) ? `sjt:${aspek}` : aspek);
 
 /**
- * WS = 10 + 3z terhadap norma kelompok, batas 0–20.
- * Di atas rata-rata diambil yang lebih besar dari 10 + 3z dan garis lurus rata-rata (10) → RS 1 (20):
- * bila rata-rata kelompok sudah tinggi (Kepribadian ±80%), RS 1 hanya ±1 SD di atasnya sehingga 10 + 3z
- * mentok di CB dan B mustahil walau jawaban sempurna (laporan peserta 20 Okt 2026). Di bawah rata-rata tetap 10 + 3z.
+ * Persentil RS di sampel (0–1): (di bawah + ½ × sama) / n, nilai sama dibagi rata (midrank).
+ * Dibatasi ½/n … 1 − ½/n supaya z tetap hingga, juga untuk RS di luar rentang sampel.
  */
+export function persentil(rs: number, sampel: number[]): number {
+  const n = sampel.length;
+  const bawah = sampel.filter((x) => x < rs - 1e-9).length;
+  const sama = sampel.filter((x) => Math.abs(x - rs) <= 1e-9).length;
+  return Math.min(1 - 0.5 / n, Math.max(0.5 / n, (bawah + sama / 2) / n));
+}
+
+/** Invers distribusi normal baku (Acklam; galat relatif < 1,2e-9). p di (0, 1). */
+export function zDariPersentil(p: number): number {
+  const a = [-39.69683028665376, 220.9460984245205, -275.9285104469687, 138.357751867269, -30.66479806614716, 2.506628277459239];
+  const b = [-54.47609879822406, 161.5858368580409, -155.6989798598866, 66.80131188771972, -13.28068155288572];
+  const c = [-0.007784894002430293, -0.3223964580411365, -2.400758277161838, -2.549732539343734, 4.374664141464968, 2.938163982698783];
+  const d = [0.007784695709041462, 0.3224671290700398, 2.445134137142996, 3.754408661907416];
+  const ekor = (q: number) => (((((c[0] * q + c[1]) * q + c[2]) * q + c[3]) * q + c[4]) * q + c[5]) / ((((d[0] * q + d[1]) * q + d[2]) * q + d[3]) * q + 1);
+  if (p < 0.02425) return ekor(Math.sqrt(-2 * Math.log(p)));
+  if (p > 1 - 0.02425) return -ekor(Math.sqrt(-2 * Math.log(1 - p)));
+  const q = p - 0.5, r = q * q;
+  return ((((((a[0] * r + a[1]) * r + a[2]) * r + a[3]) * r + a[4]) * r + a[5]) * q) / (((((b[0] * r + b[1]) * r + b[2]) * r + b[3]) * r + b[4]) * r + 1);
+}
+
+/** WS = 10 + 3z, z dari persentil RS di sampel kelompok; norma lama tanpa sampel: z = (RS − rata-rata) / SD. Batas 0–20. */
 export function wsDariNorma(aspek: Aspek, rs: number, norma: Norma, sjt = false): number {
   const g = norma[kunciNorma(aspek, sjt)];
-  if (!g || g.n < NORMA_MIN || g.sd <= 0) return wsDariProporsi(rs);
-  const z = 10 + (3 * (rs - g.mean)) / g.sd;
-  if (rs <= g.mean || g.mean >= 1) return clamp20(z);
-  return clamp20(Math.max(z, 10 + (10 * (rs - g.mean)) / (1 - g.mean)));
+  if (!g || g.n < NORMA_MIN) return wsDariProporsi(rs);
+  if (g.sampel?.length) return clamp20(10 + 3 * zDariPersentil(persentil(rs, g.sampel)));
+  if (g.sd <= 0) return wsDariProporsi(rs);
+  return clamp20(10 + (3 * (rs - g.mean)) / g.sd);
 }
 
 /** Sampel berkunci kunciNorma (lihat rsNormaSesi). */
@@ -121,7 +144,7 @@ export function normaDari(sampel: Record<string, number>[]): Norma {
   return Object.fromEntries([...per].map(([a, xs]) => {
     const mean = xs.reduce((x, y) => x + y, 0) / xs.length;
     const sd = Math.sqrt(xs.reduce((x, y) => x + (y - mean) ** 2, 0) / xs.length);
-    return [a, { n: xs.length, mean: round4(mean), sd: round4(sd) }];
+    return [a, { n: xs.length, mean: round4(mean), sd: round4(sd), sampel: xs.map(round4).sort((x, y) => x - y) }];
   }));
 }
 const round4 = (n: number) => Math.round(n * 10000) / 10000;
