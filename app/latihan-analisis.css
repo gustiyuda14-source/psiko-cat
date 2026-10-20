@@ -101,5 +101,6 @@
   .lr-tabs button, .lr-why summary svg { transition: none }
 }
 
-/* Panel lebih tinggi dari layar: lepas sticky supaya bagian bawahnya terbaca. */
-@media (min-width: 960px) { .lr-stage > .lr-panel.is-tall { position: static } }
+/* Panel lebih tinggi dari layar: lepas sticky supaya bagian bawahnya terbaca. Tetap relative,
+   bukan static: bingkai emas & sarang (::before/::after absolut) harus menempel ke panel. */
+@media (min-width: 960px) { .lr-stage > .lr-panel.is-tall { position: relative } }
