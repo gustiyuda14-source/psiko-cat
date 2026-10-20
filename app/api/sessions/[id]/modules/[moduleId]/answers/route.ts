@@ -105,12 +105,8 @@ export async function POST(
 
     const { error: upsertError } = await supabaseAdmin
       .from("answers")
-      // Kepribadian: jawaban terkunci begitu dipilih (pedoman PRIBADI §4), jadi
-      // jawaban pertama yang tersimpan berlaku. Kecerdasan masih boleh diganti.
-      .upsert(rows, {
-        onConflict: "module_session_id,question_id",
-        ignoreDuplicates: access.moduleSession.module_type === "KEPRIBADIAN",
-      });
+      // Jawaban terakhir berlaku untuk semua modul (Kepribadian boleh diganti sejak 2026-10-20).
+      .upsert(rows, { onConflict: "module_session_id,question_id" });
     if (upsertError) throw upsertError;
     return NextResponse.json({ saved: rows.length });
   } catch (err) {

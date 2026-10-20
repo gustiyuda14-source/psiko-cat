@@ -76,12 +76,11 @@ export default function EngineKepribadian({
     []
   );
 
-  // Aturan ujian PRIBADI (pedoman §4): maju saja, jawaban terkunci begitu
-  // dipilih, tidak bisa kembali ke nomor sebelumnya. Server ikut menolak
-  // jawaban kedua (answers route, ignoreDuplicates untuk Kepribadian).
+  // Sejak 2026-10-20 peserta boleh kembali ke nomor sebelumnya dan mengganti
+  // jawaban (permintaan pemilik); pindah otomatis setelah menjawab tetap ada.
   const choose = useCallback(
     (key: string) => {
-      if (!q || state.answers[q.id]) return;
+      if (!q) return;
       engine.handleAnswer(q.id, key);
       if (idx < sorted.length - 1) {
         if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
@@ -91,7 +90,15 @@ export default function EngineKepribadian({
         );
       }
     },
-    [engine, q, idx, sorted.length, store, state.answers]
+    [engine, q, idx, sorted.length, store]
+  );
+
+  const goTo = useCallback(
+    (index: number) => {
+      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
+      store.getState().goTo(Math.min(sorted.length - 1, Math.max(0, index)));
+    },
+    [sorted.length, store]
   );
 
   const choiceKeys = useMemo(() => payload?.choices?.map((c) => c.key) ?? [], [payload]);
@@ -100,10 +107,8 @@ export default function EngineKepribadian({
     enabled: mounted && !showResume && !showConfirm && state.status === "running",
     choiceKeys,
     onChoose: choose,
-    onNext: () => {
-      if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-      store.getState().next(sorted.length - 1);
-    },
+    onPrev: () => goTo(idx - 1),
+    onNext: () => goTo(idx + 1),
   });
 
   if (!mounted) return <ExamLoading label="Menyiapkan pernyataan" />;
@@ -165,11 +170,7 @@ export default function EngineKepribadian({
             answers={state.answers}
             currentIndex={idx}
             secondsLeft={secondsLeft}
-            onGoTo={(index) => {
-              if (index < idx) return;
-              if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-              store.getState().goTo(index);
-            }}
+            onGoTo={goTo}
           />
         }
       >
@@ -205,7 +206,6 @@ export default function EngineKepribadian({
                   key={c.key}
                   type="button"
                   onClick={() => choose(c.key)}
-                  disabled={Boolean(picked) && !isSelected}
                   aria-pressed={isSelected}
                   className={`opt ${isSelected ? "sel" : ""}`}
                 >
@@ -220,12 +220,9 @@ export default function EngineKepribadian({
       </ExamBody>
 
       <ExamDock
-        onPrev={() => {}}
-        onNext={() => {
-          if (advanceTimer.current) window.clearTimeout(advanceTimer.current);
-          store.getState().next(sorted.length - 1);
-        }}
-        prevDisabled
+        onPrev={() => goTo(idx - 1)}
+        onNext={() => goTo(idx + 1)}
+        prevDisabled={idx === 0}
         nextDisabled={idx >= sorted.length - 1}
         prevLabel="Pernyataan sebelumnya"
         nextLabel="Pernyataan berikutnya"
