@@ -31,6 +31,7 @@ export const DRILL_CARDS: Record<string, DrillCard> = {
   K12: { label: "Pola & Matriks Gambar", aspek: "analitis", desc: "Matriks 3×3, deret, dan analogi gambar", prefix: ["FIG-MTX-", "FIG-SERI", "FIG-ANALOGI", "FIG-ROTASI-"] },
   K13: { label: "Ikon Kategori", aspek: "analitis", desc: "Kelompok gambar berdasarkan kategori", prefix: ["FIG-IKON-"] },
   K14: { label: "Susun Potongan Gambar", aspek: "analitis", desc: "Urutkan potongan menjadi gambar utuh", prefix: ["FIG-SUSUN-"] },
+  K19: { label: "Jaring-Jaring Kubus", aspek: "analitis", desc: "Lipat jaring menjadi kubus dan cari jaring asal kubus, termasuk soal HOTS", prefix: ["FIG-KUBUS-"] },
   K17: { label: "Denah & Arah Mata Angin", aspek: "analitis", desc: "Arah 8 mata angin, rute belok kiri/kanan, bangunan yang dilalui, pojok & di antara jalan, peta diputar, ingat denah", prefix: ["FIG-DENAH-"] },
   K16: { label: "Kecukupan Data", aspek: "logis", desc: "Menilai apakah pernyataan cukup untuk menjawab", prefix: ["LOG-KCK-"] },
   K18: { label: "Sebab-Akibat", aspek: "logis", desc: "Hubungan sebab-akibat dua pernyataan: sebab lebih dulu, akibat lebih dulu, satu sebab bersama", prefix: ["LOG-SBA-"] },
@@ -58,6 +59,8 @@ const DRILL_CATEGORIES: [string, string][] = [
   ["ANL-WCN-URUTAN", "Urutan"], ["ANL-WCN-JADWAL", "Jadwal"],
   ["FIG-MTX", "Matriks gambar"], ["FIG-SERI", "Deret gambar"], ["FIG-ANALOGI", "Analogi gambar"], ["FIG-ROTASI", "Rotasi & cermin"],
   ["FIG-IKON", "Ikon kategori"], ["FIG-SUSUN", "Susun potongan"],
+  ["FIG-KUBUS-LIPAT", "Jaring → kubus"], ["FIG-KUBUS-BUKA", "Kubus → jaring"],
+  ["FIG-KUBUS-HOTS-LIPAT", "HOTS · Jaring → kubus"], ["FIG-KUBUS-HOTS-BUKA", "HOTS · Kubus → jaring"],
   // K15 diurutkan per 7 aspek Integritas dan Kejujuran (pedoman SPCP 6.b).
   ["SKJ-KEBENARAN", "Integritas · Kebenaran"], ["SKJ-ATURAN", "Integritas · Penegakan aturan"],
   ["SKJ-INOVASI", "Inovasi · Pembaruan"], ["SKJ-RISIKO", "Inovasi · Keberanian bertindak"],

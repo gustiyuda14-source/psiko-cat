@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "K19-N-001",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-001.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-001-a.svg",
+      "b": "drill/img/K19-N-001-b.svg",
+      "c": "drill/img/K19-N-001-c.svg",
+      "d": "drill/img/K19-N-001-d.svg",
+      "e": "drill/img/K19-N-001-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi D memperlihatkan depan = sisi 2 (tanda tambah), atas = sisi 1 (garis tebal), kanan = sisi 3 (tanda silang). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 2 di depan dan sisi 1 di atas, sisi kanan memang sisi 3, dan arah motifnya cocok: garis tebal di atas, membujur depan–belakang ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 2 (tanda tambah) di kiri dan sisi 3 (tanda silang) di atas, sisi depan seharusnya sisi 6 (kotak berbingkai), bukan garis tebal (tegak atas–bawah).\nOpsi B (letak sisi tertukar): Kalau sisi 4 (lingkaran hitam) di kiri dan sisi 5 (cincin) di atas, sisi depan seharusnya sisi 6 (kotak berbingkai), bukan garis tebal (tegak atas–bawah).\nOpsi C (sisi berseberangan tampil bersamaan): sisi 2 (tanda tambah) dan sisi 4 (lingkaran hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi E (sisi berseberangan tampil bersamaan): sisi 1 (garis tebal) dan sisi 6 (kotak berbingkai) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: D\nTips: Kunci satu sisi sebagai depan, lalu lipat tetangganya satu per satu. Jangan membayangkan seluruh kubus sekaligus.",
+    "gambar_pembahasan": "K19-N-001.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-002",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-002.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-002-a.svg",
+      "b": "drill/img/K19-N-002-b.svg",
+      "c": "drill/img/K19-N-002-c.svg",
+      "d": "drill/img/K19-N-002-d.svg",
+      "e": "drill/img/K19-N-002-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 5 (lingkaran hitam), atas = sisi 4 (setengah hitam), kiri = sisi 6 (abu-abu penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 5 di depan dan sisi 4 di atas, sisi kiri memang sisi 6, dan arah motifnya cocok: setengah hitam di atas, bagian hitamnya di sisi depan ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 2 (kotak berbingkai) di depan dan sisi 1 (hitam penuh) di atas, sisi kanan seharusnya sisi 3 (tanda tambah), bukan lingkaran hitam.\nOpsi B (letak sisi tertukar): Kalau sisi 3 (tanda tambah) di depan dan sisi 4 (setengah hitam) di atas, sisi kiri seharusnya sisi 1 (hitam penuh), bukan abu-abu penuh.\nOpsi C (sisi berseberangan tampil bersamaan): sisi 6 (abu-abu penuh) dan sisi 1 (hitam penuh) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi D (letak sisi tertukar): Kalau sisi 6 (abu-abu penuh) di depan dan sisi 2 (kotak berbingkai) di atas, sisi kiri seharusnya sisi 5 (lingkaran hitam), bukan tanda tambah.\nJawaban: E\nTips: Untuk motif berarah (segitiga, panah, garis), lihat tepi yang menempel ke kotak tetangga. Setelah dilipat, tepi itu tetap bertemu sisi yang sama.",
+    "gambar_pembahasan": "K19-N-002.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-003",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-003.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-003-a.svg",
+      "b": "drill/img/K19-N-003-b.svg",
+      "c": "drill/img/K19-N-003-c.svg",
+      "d": "drill/img/K19-N-003-d.svg",
+      "e": "drill/img/K19-N-003-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan tanda silang, atas hitam penuh, kanan setengah hitam (bagian hitamnya di sisi belakang).\n2. Pada jaring C (nomor kotak di gambar pembahasan), jadikan sisi 4 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 5 menjadi kanan.\n3. Arah motif ikut cocok: setengah hitam di kanan, bagian hitamnya di sisi belakang ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini tanda silang dan hitam penuh berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi B (sisi berseberangan tampil bersamaan): Pada jaring ini tanda silang dan setengah hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini hitam penuh dan setengah hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan tanda silang di depan dan hitam penuh di atas, setengah hitam di sisi kanan menjadi bagian hitamnya di sisi depan, padahal di kubus bagian hitamnya di sisi belakang.\nJawaban: C\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-003.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-004",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-004.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-004-a.svg",
+      "b": "drill/img/K19-N-004-b.svg",
+      "c": "drill/img/K19-N-004-c.svg",
+      "d": "drill/img/K19-N-004-d.svg",
+      "e": "drill/img/K19-N-004-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 5 (lingkaran hitam), atas = sisi 2 (hitam penuh), kiri = sisi 1 (abu-abu penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 5 di depan dan sisi 2 di atas, sisi kiri memang sisi 1 ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 2 (hitam penuh) di depan dan sisi 3 (tanda silang) di atas, sisi kanan seharusnya sisi 6 (kosong), bukan abu-abu penuh.\nOpsi B (sisi berseberangan tampil bersamaan): sisi 5 (lingkaran hitam) dan sisi 3 (tanda silang) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (letak sisi tertukar): Kalau sisi 5 (lingkaran hitam) di kiri dan sisi 4 (tanda tambah) di atas, sisi depan seharusnya sisi 1 (abu-abu penuh), bukan kosong.\nOpsi D (sisi berseberangan tampil bersamaan): sisi 2 (hitam penuh) dan sisi 4 (tanda tambah) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: E\nTips: Cari pasangan berseberangan dulu (pada satu baris lurus, kotak yang selang satu). Opsi yang menampilkan pasangan itu bersamaan langsung gugur. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K19-N-004.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-005",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-005.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-005-a.svg",
+      "b": "drill/img/K19-N-005-b.svg",
+      "c": "drill/img/K19-N-005-c.svg",
+      "d": "drill/img/K19-N-005-d.svg",
+      "e": "drill/img/K19-N-005-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 3 (kotak berbingkai), atas = sisi 6 (setengah hitam), kiri = sisi 2 (cincin). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 3 di depan dan sisi 6 di atas, sisi kiri memang sisi 2, dan arah motifnya cocok: setengah hitam di atas, bagian hitamnya di sisi belakang ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): sisi 4 (abu-abu penuh) dan sisi 2 (cincin) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi B (sisi berseberangan tampil bersamaan): sisi 4 (abu-abu penuh) dan sisi 2 (cincin) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi D (letak sisi tertukar): Kalau sisi 5 (tanda tambah) di depan dan sisi 1 (tanda silang) di atas, sisi kanan seharusnya sisi 4 (abu-abu penuh), bukan cincin.\nOpsi E (letak sisi tertukar): Kalau sisi 2 (cincin) di depan dan sisi 6 (setengah hitam) di atas, sisi kanan seharusnya sisi 3 (kotak berbingkai), bukan tanda tambah.\nJawaban: C\nTips: Kunci satu sisi sebagai depan, lalu lipat tetangganya satu per satu. Jangan membayangkan seluruh kubus sekaligus.",
+    "gambar_pembahasan": "K19-N-005.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-006",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-006.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-006-a.svg",
+      "b": "drill/img/K19-N-006-b.svg",
+      "c": "drill/img/K19-N-006-c.svg",
+      "d": "drill/img/K19-N-006-d.svg",
+      "e": "drill/img/K19-N-006-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan tanda silang, atas hitam penuh, kiri garis tebal (tegak atas–bawah).\n2. Pada jaring A (nomor kotak di gambar pembahasan), jadikan sisi 4 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 5 menjadi kiri.\n3. Arah motif ikut cocok: garis tebal di kiri, tegak atas–bawah ✓.<br>Opsi B (sisi berseberangan tampil bersamaan): Pada jaring ini hitam penuh dan garis tebal berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi C (letak sisi tertukar): Jika dilipat dengan tanda silang di depan dan hitam penuh di atas, sisi kiri menjadi kosong, padahal di kubus garis tebal (tegak atas–bawah).\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini tanda silang dan garis tebal berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan tanda silang di depan dan hitam penuh di atas, garis tebal di sisi kiri menjadi membujur depan–belakang, padahal di kubus tegak atas–bawah.\nJawaban: A\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-006.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-007",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-007.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-007-a.svg",
+      "b": "drill/img/K19-N-007-b.svg",
+      "c": "drill/img/K19-N-007-c.svg",
+      "d": "drill/img/K19-N-007-d.svg",
+      "e": "drill/img/K19-N-007-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 2 (hitam penuh), atas = sisi 6 (kotak berbingkai), kanan = sisi 5 (kosong). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 2 di depan dan sisi 6 di atas, sisi kanan memang sisi 5 ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 3 (abu-abu penuh) di depan dan sisi 2 (hitam penuh) di atas, sisi kiri seharusnya sisi 6 (kotak berbingkai), bukan tanda tambah.\nOpsi B (sisi berseberangan tampil bersamaan): sisi 2 (hitam penuh) dan sisi 4 (lingkaran hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (letak sisi tertukar): Kalau sisi 3 (abu-abu penuh) di depan dan sisi 4 (lingkaran hitam) di atas, sisi kiri seharusnya sisi 1 (tanda tambah), bukan kotak berbingkai.\nOpsi D (sisi berseberangan tampil bersamaan): sisi 1 (tanda tambah) dan sisi 6 (kotak berbingkai) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: E\nTips: Kalau tinggal dua opsi, bandingkan urutan tiga sisi di satu pojok. Urutan searah jarum jam di jaring dan di kubus selalu sama.",
+    "gambar_pembahasan": "K19-N-007.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-008",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-008.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-008-a.svg",
+      "b": "drill/img/K19-N-008-b.svg",
+      "c": "drill/img/K19-N-008-c.svg",
+      "d": "drill/img/K19-N-008-d.svg",
+      "e": "drill/img/K19-N-008-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–6, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 6 (lingkaran hitam), atas = sisi 3 (abu-abu penuh), kanan = sisi 1 (tanda silang). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 6 di depan dan sisi 3 di atas, sisi kanan memang sisi 1 ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): sisi 6 (lingkaran hitam) dan sisi 2 (kotak berbingkai) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi B (sisi berseberangan tampil bersamaan): sisi 4 (garis tebal) dan sisi 1 (tanda silang) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi D (letak sisi tertukar): Kalau sisi 6 (lingkaran hitam) di kanan dan sisi 5 (hitam penuh) di atas, sisi depan seharusnya sisi 1 (tanda silang), bukan garis tebal (tegak atas–bawah).\nOpsi E (letak sisi tertukar): Kalau sisi 1 (tanda silang) di depan dan sisi 2 (kotak berbingkai) di atas, sisi kanan seharusnya sisi 5 (hitam penuh), bukan abu-abu penuh.\nJawaban: C\nTips: Cari pasangan berseberangan dulu (pada satu baris lurus, kotak yang selang satu). Opsi yang menampilkan pasangan itu bersamaan langsung gugur. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K19-N-008.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-009",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-009.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-009-a.svg",
+      "b": "drill/img/K19-N-009-b.svg",
+      "c": "drill/img/K19-N-009-c.svg",
+      "d": "drill/img/K19-N-009-d.svg",
+      "e": "drill/img/K19-N-009-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan lingkaran hitam, atas abu-abu penuh, kiri panah (ujungnya menunjuk ke belakang).\n2. Pada jaring A (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 5 menjadi atas dan sisi 2 menjadi kiri.\n3. Arah motif ikut cocok: panah di kiri, ujungnya menunjuk ke belakang ✓.<br>Opsi B (arah motif terputar): Jika dilipat dengan lingkaran hitam di depan dan abu-abu penuh di atas, panah di sisi kiri menjadi ujungnya menunjuk ke bawah, padahal di kubus ujungnya menunjuk ke belakang.\nOpsi C (sisi berseberangan tampil bersamaan): Pada jaring ini lingkaran hitam dan panah berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini lingkaran hitam dan panah berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (sisi berseberangan tampil bersamaan): Pada jaring ini lingkaran hitam dan panah berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nJawaban: A\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-009.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-010",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 1,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-010.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-010-a.svg",
+      "b": "drill/img/K19-N-010-b.svg",
+      "c": "drill/img/K19-N-010-c.svg",
+      "d": "drill/img/K19-N-010-d.svg",
+      "e": "drill/img/K19-N-010-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi B memperlihatkan depan = sisi 5 (tanda silang), atas = sisi 3 (hitam penuh), kiri = sisi 4 (abu-abu penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 5 di depan dan sisi 3 di atas, sisi kiri memang sisi 4 ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): sisi 5 (tanda silang) dan sisi 2 (lingkaran hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (letak sisi tertukar): Kalau sisi 2 (lingkaran hitam) di depan dan sisi 4 (abu-abu penuh) di atas, sisi kanan seharusnya sisi 6 (cincin), bukan hitam penuh.\nOpsi D (letak sisi tertukar): Kalau sisi 3 (hitam penuh) di depan dan sisi 4 (abu-abu penuh) di atas, sisi kanan seharusnya sisi 2 (lingkaran hitam), bukan tanda silang.\nOpsi E (sisi berseberangan tampil bersamaan): sisi 6 (cincin) dan sisi 3 (hitam penuh) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: B\nTips: Untuk motif berarah (segitiga, panah, garis), lihat tepi yang menempel ke kotak tetangga. Setelah dilipat, tepi itu tetap bertemu sisi yang sama.",
+    "gambar_pembahasan": "K19-N-010.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-011",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-011.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-011-a.svg",
+      "b": "drill/img/K19-N-011-b.svg",
+      "c": "drill/img/K19-N-011-c.svg",
+      "d": "drill/img/K19-N-011-d.svg",
+      "e": "drill/img/K19-N-011-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–5, 2–6, 3–4. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi D memperlihatkan depan = sisi 1 (garis tebal), atas = sisi 3 (setengah hitam), kiri = sisi 6 (segitiga). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 1 di depan dan sisi 3 di atas, sisi kiri memang sisi 6, dan arah motifnya cocok: garis tebal di depan, melintang kiri–kanan; setengah hitam di atas, bagian hitamnya di sisi depan; segitiga di kiri, alasnya menempel di tepi belakang ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): sisi 4 (cincin) dan sisi 3 (setengah hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi B (arah motif terputar): Kalau sisi 6 (segitiga) di depan dan sisi 4 (cincin) di kanan, segitiga di sisi depan seharusnya alasnya menempel di tepi bawah, bukan alasnya menempel di tepi atas; sisi atas seharusnya sisi 1 (garis tebal), membujur depan–belakang, bukan kosong.\nOpsi C (arah motif terputar): Kalau sisi 6 (segitiga) di depan dan sisi 1 (garis tebal) di atas, segitiga di sisi depan seharusnya alasnya menempel di tepi bawah, bukan alasnya menempel di tepi kiri; garis tebal di sisi atas seharusnya membujur depan–belakang, bukan melintang kiri–kanan; sisi kanan seharusnya sisi 4 (cincin), bukan setengah hitam (bagian hitamnya di sisi belakang).\nOpsi E (arah motif terputar): Kalau sisi 3 (setengah hitam) di depan dan sisi 1 (garis tebal) di atas, setengah hitam di sisi depan seharusnya bagian hitamnya di sisi atas, bukan bagian hitamnya di sisi bawah.\nJawaban: D\nTips: Kalau tinggal dua opsi, bandingkan urutan tiga sisi di satu pojok. Urutan searah jarum jam di jaring dan di kubus selalu sama.",
+    "gambar_pembahasan": "K19-N-011.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-012",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-012.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-012-a.svg",
+      "b": "drill/img/K19-N-012-b.svg",
+      "c": "drill/img/K19-N-012-c.svg",
+      "d": "drill/img/K19-N-012-d.svg",
+      "e": "drill/img/K19-N-012-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan garis tebal (melintang kiri–kanan), atas lingkaran hitam, kanan panah (ujungnya menunjuk ke depan).\n2. Pada jaring C (nomor kotak di gambar pembahasan), jadikan sisi 3 sebagai depan. Setelah dilipat, sisi 5 menjadi atas dan sisi 4 menjadi kanan.\n3. Arah motif ikut cocok: garis tebal di depan, melintang kiri–kanan; panah di kanan, ujungnya menunjuk ke depan ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini garis tebal dan lingkaran hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi B (sisi berseberangan tampil bersamaan): Pada jaring ini garis tebal dan lingkaran hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi D (arah motif terputar): Jika dilipat dengan garis tebal di depan dan lingkaran hitam di atas, garis tebal di sisi depan menjadi tegak atas–bawah, padahal di kubus melintang kiri–kanan.\nOpsi E (arah motif terputar): Jika dilipat dengan garis tebal di depan dan lingkaran hitam di atas, garis tebal di sisi depan menjadi tegak atas–bawah, padahal di kubus melintang kiri–kanan; sisi kanan menjadi kosong, padahal di kubus panah (ujungnya menunjuk ke depan).\nJawaban: C\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-012.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-013",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-013.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-013-a.svg",
+      "b": "drill/img/K19-N-013-b.svg",
+      "c": "drill/img/K19-N-013-c.svg",
+      "d": "drill/img/K19-N-013-d.svg",
+      "e": "drill/img/K19-N-013-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–5, 2–4, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi D memperlihatkan depan = sisi 3 (setengah hitam), atas = sisi 1 (hitam penuh), kiri = sisi 4 (tanda tambah). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 3 di depan dan sisi 1 di atas, sisi kiri memang sisi 4, dan arah motifnya cocok: setengah hitam di depan, bagian hitamnya di sisi atas ✓.<br>Opsi A (arah motif terputar): Kalau sisi 6 (panah) di depan dan sisi 1 (hitam penuh) di kanan, panah di sisi depan seharusnya ujungnya menunjuk ke kiri, bukan ujungnya menunjuk ke kanan.\nOpsi B (sisi berseberangan tampil bersamaan): sisi 3 (setengah hitam) dan sisi 6 (panah) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (letak sisi tertukar): Kalau sisi 3 (setengah hitam) di depan dan sisi 1 (hitam penuh) di atas, sisi kiri seharusnya sisi 4 (tanda tambah), bukan kosong.\nOpsi E (letak sisi tertukar): Kalau sisi 6 (panah) di depan dan sisi 5 (garis tebal) di atas, sisi kanan seharusnya sisi 2 (kosong), bukan tanda tambah.\nJawaban: D\nTips: Kunci satu sisi sebagai depan, lalu lipat tetangganya satu per satu. Jangan membayangkan seluruh kubus sekaligus.",
+    "gambar_pembahasan": "K19-N-013.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-014",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-014.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-014-a.svg",
+      "b": "drill/img/K19-N-014-b.svg",
+      "c": "drill/img/K19-N-014-c.svg",
+      "d": "drill/img/K19-N-014-d.svg",
+      "e": "drill/img/K19-N-014-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan setengah hitam (bagian hitamnya di sisi kiri), atas panah (ujungnya menunjuk ke belakang), kiri cincin.\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 4 menjadi kiri.\n3. Arah motif ikut cocok: setengah hitam di depan, bagian hitamnya di sisi kiri; panah di atas, ujungnya menunjuk ke belakang ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini setengah hitam dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi C (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan panah di atas, setengah hitam di sisi depan menjadi bagian hitamnya di sisi atas, padahal di kubus bagian hitamnya di sisi kiri; sisi kiri menjadi kosong, padahal di kubus cincin.\nOpsi D (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan panah di atas, panah di sisi atas menjadi ujungnya menunjuk ke kanan, padahal di kubus ujungnya menunjuk ke belakang.\nOpsi E (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan panah di atas, setengah hitam di sisi depan menjadi bagian hitamnya di sisi bawah, padahal di kubus bagian hitamnya di sisi kiri.\nJawaban: B\nTips: Coret dulu jaring yang menaruh dua motif kubus di posisi berseberangan, baru cek arah. Target ≤ 75 detik.",
+    "gambar_pembahasan": "K19-N-014.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-015",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-015.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-015-a.svg",
+      "b": "drill/img/K19-N-015-b.svg",
+      "c": "drill/img/K19-N-015-c.svg",
+      "d": "drill/img/K19-N-015-d.svg",
+      "e": "drill/img/K19-N-015-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan garis tebal (melintang kiri–kanan), atas setengah hitam (bagian hitamnya di sisi depan), kiri abu-abu penuh.\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 4 menjadi kiri.\n3. Arah motif ikut cocok: garis tebal di depan, melintang kiri–kanan; setengah hitam di atas, bagian hitamnya di sisi depan ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini garis tebal dan abu-abu penuh berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi B (sisi berseberangan tampil bersamaan): Pada jaring ini garis tebal dan abu-abu penuh berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi C (sisi berseberangan tampil bersamaan): Pada jaring ini garis tebal dan setengah hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan garis tebal di depan dan setengah hitam di atas, setengah hitam di sisi atas menjadi bagian hitamnya di sisi kanan, padahal di kubus bagian hitamnya di sisi depan.\nJawaban: D\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-015.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-016",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-016.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-016-a.svg",
+      "b": "drill/img/K19-N-016-b.svg",
+      "c": "drill/img/K19-N-016-c.svg",
+      "d": "drill/img/K19-N-016-d.svg",
+      "e": "drill/img/K19-N-016-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–6, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi B memperlihatkan depan = sisi 3 (tanda tambah), atas = sisi 2 (panah), kanan = sisi 1 (setengah hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 3 di depan dan sisi 2 di atas, sisi kanan memang sisi 1, dan arah motifnya cocok: panah di atas, ujungnya menunjuk ke depan; setengah hitam di kanan, bagian hitamnya di sisi belakang ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): sisi 6 (garis tebal) dan sisi 2 (panah) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (letak sisi tertukar): Kalau sisi 4 (hitam penuh) di kanan dan sisi 6 (garis tebal) di atas, sisi depan seharusnya sisi 3 (tanda tambah), bukan kosong; garis tebal di sisi atas seharusnya membujur depan–belakang, bukan melintang kiri–kanan.\nOpsi D (arah motif terputar): Kalau sisi 1 (setengah hitam) di depan dan sisi 2 (panah) di atas, panah di sisi atas seharusnya ujungnya menunjuk ke kiri, bukan ujungnya menunjuk ke belakang.\nOpsi E (letak sisi tertukar): Kalau sisi 4 (hitam penuh) di depan dan sisi 3 (tanda tambah) di kiri, sisi atas seharusnya sisi 6 (garis tebal), melintang kiri–kanan, bukan panah (ujungnya menunjuk ke kiri).\nJawaban: B\nTips: Cari pasangan berseberangan dulu (pada satu baris lurus, kotak yang selang satu). Opsi yang menampilkan pasangan itu bersamaan langsung gugur. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K19-N-016.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-017",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-017.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-017-a.svg",
+      "b": "drill/img/K19-N-017-b.svg",
+      "c": "drill/img/K19-N-017-c.svg",
+      "d": "drill/img/K19-N-017-d.svg",
+      "e": "drill/img/K19-N-017-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan segitiga (alasnya menempel di tepi kiri), atas cincin, kiri panah (ujungnya menunjuk ke depan).\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 3 sebagai depan. Setelah dilipat, sisi 4 menjadi atas dan sisi 1 menjadi kiri.\n3. Arah motif ikut cocok: segitiga di depan, alasnya menempel di tepi kiri; panah di kiri, ujungnya menunjuk ke depan ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini segitiga dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi B (sisi berseberangan tampil bersamaan): Pada jaring ini segitiga dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi C (sisi berseberangan tampil bersamaan): Pada jaring ini segitiga dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan segitiga di depan dan cincin di atas, segitiga di sisi depan menjadi alasnya menempel di tepi atas, padahal di kubus alasnya menempel di tepi kiri.\nJawaban: D\nTips: Coret dulu jaring yang menaruh dua motif kubus di posisi berseberangan, baru cek arah. Target ≤ 75 detik.",
+    "gambar_pembahasan": "K19-N-017.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-018",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-018.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-018-a.svg",
+      "b": "drill/img/K19-N-018-b.svg",
+      "c": "drill/img/K19-N-018-c.svg",
+      "d": "drill/img/K19-N-018-d.svg",
+      "e": "drill/img/K19-N-018-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 2 (tanda tambah), atas = sisi 3 (hitam penuh), kiri = sisi 4 (garis tebal). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 2 di depan dan sisi 3 di atas, sisi kiri memang sisi 4, dan arah motifnya cocok: garis tebal di kiri, tegak atas–bawah ✓.<br>Opsi B (arah motif terputar): Kalau sisi 5 (segitiga) di depan dan sisi 1 (setengah hitam) di kanan, setengah hitam di sisi kanan seharusnya bagian hitamnya di sisi bawah, bukan bagian hitamnya di sisi depan.\nOpsi C (letak sisi tertukar): Kalau sisi 1 (setengah hitam) di depan dan sisi 3 (hitam penuh) di atas, sisi kiri seharusnya sisi 2 (tanda tambah), bukan segitiga (alasnya menempel di tepi atas).\nOpsi D (sisi berseberangan tampil bersamaan): sisi 1 (setengah hitam) dan sisi 4 (garis tebal) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi E (letak sisi tertukar): Kalau sisi 2 (tanda tambah) di depan dan sisi 3 (hitam penuh) di atas, sisi kanan seharusnya sisi 1 (setengah hitam), bagian hitamnya di sisi atas, bukan garis tebal (tegak atas–bawah).\nJawaban: A\nTips: Untuk motif berarah (segitiga, panah, garis), lihat tepi yang menempel ke kotak tetangga. Setelah dilipat, tepi itu tetap bertemu sisi yang sama.",
+    "gambar_pembahasan": "K19-N-018.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-019",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-019.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-019-a.svg",
+      "b": "drill/img/K19-N-019-b.svg",
+      "c": "drill/img/K19-N-019-c.svg",
+      "d": "drill/img/K19-N-019-d.svg",
+      "e": "drill/img/K19-N-019-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan panah (ujungnya menunjuk ke kanan), atas hitam penuh, kiri segitiga (alasnya menempel di tepi depan).\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 6 menjadi kiri.\n3. Arah motif ikut cocok: panah di depan, ujungnya menunjuk ke kanan; segitiga di kiri, alasnya menempel di tepi depan ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan segitiga berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi C (arah motif terputar): Jika dilipat dengan panah di depan dan hitam penuh di atas, panah di sisi depan menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke kanan.\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan segitiga berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan panah di depan dan hitam penuh di atas, panah di sisi depan menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke kanan.\nJawaban: B\nTips: Garis yang sejajar dengan lipatan tetap sejajar dengan tepi itu setelah dilipat. Cek arah motif paling akhir.",
+    "gambar_pembahasan": "K19-N-019.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-020",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 2,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-020.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-020-a.svg",
+      "b": "drill/img/K19-N-020-b.svg",
+      "c": "drill/img/K19-N-020-c.svg",
+      "d": "drill/img/K19-N-020-d.svg",
+      "e": "drill/img/K19-N-020-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 3 (lingkaran hitam), atas = sisi 6 (kosong), kiri = sisi 4 (setengah hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 3 di depan dan sisi 6 di atas, sisi kiri memang sisi 4, dan arah motifnya cocok: setengah hitam di kiri, bagian hitamnya di sisi depan ✓.<br>Opsi A (arah motif terputar): Kalau sisi 4 (setengah hitam) di depan dan sisi 1 (garis tebal) di atas, garis tebal di sisi atas seharusnya melintang kiri–kanan, bukan membujur depan–belakang; sisi kanan seharusnya sisi 5 (abu-abu penuh), bukan lingkaran hitam.\nOpsi B (arah motif terputar): Kalau sisi 4 (setengah hitam) di depan dan sisi 3 (lingkaran hitam) di atas, setengah hitam di sisi depan seharusnya bagian hitamnya di sisi atas, bukan bagian hitamnya di sisi kanan.\nOpsi C (letak sisi tertukar): Kalau sisi 1 (garis tebal) di depan dan sisi 5 (abu-abu penuh) di atas, sisi kiri seharusnya sisi 2 (segitiga), alasnya menempel di tepi belakang, bukan setengah hitam (bagian hitamnya di sisi bawah).\nOpsi D (sisi berseberangan tampil bersamaan): sisi 3 (lingkaran hitam) dan sisi 5 (abu-abu penuh) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: E\nTips: Cari pasangan berseberangan dulu (pada satu baris lurus, kotak yang selang satu). Opsi yang menampilkan pasangan itu bersamaan langsung gugur. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K19-N-020.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-021",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-021.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-021-a.svg",
+      "b": "drill/img/K19-N-021-b.svg",
+      "c": "drill/img/K19-N-021-c.svg",
+      "d": "drill/img/K19-N-021-d.svg",
+      "e": "drill/img/K19-N-021-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan cincin, atas tanda silang, kiri segitiga siku hitam (sudut sikunya di pojok belakang-bawah).\n2. Pada jaring E (nomor kotak di gambar pembahasan), jadikan sisi 5 sebagai depan. Setelah dilipat, sisi 1 menjadi atas dan sisi 4 menjadi kiri.\n3. Arah motif ikut cocok: segitiga siku hitam di kiri, sudut sikunya di pojok belakang-bawah ✓.<br>Opsi A (sisi berseberangan tampil bersamaan): Pada jaring ini cincin dan segitiga siku hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi B (arah motif terputar): Jika dilipat dengan cincin di depan dan tanda silang di atas, segitiga siku hitam di sisi kiri menjadi sudut sikunya di pojok belakang-atas, padahal di kubus sudut sikunya di pojok belakang-bawah.\nOpsi C (letak sisi tertukar): Jika dilipat dengan cincin di depan dan tanda silang di atas, sisi kiri menjadi kosong, padahal di kubus segitiga siku hitam (sudut sikunya di pojok belakang-bawah).\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini tanda silang dan segitiga siku hitam berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nJawaban: E\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-021.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-022",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-022.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-022-a.svg",
+      "b": "drill/img/K19-N-022-b.svg",
+      "c": "drill/img/K19-N-022-c.svg",
+      "d": "drill/img/K19-N-022-d.svg",
+      "e": "drill/img/K19-N-022-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–3, 2–5, 4–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 3 (segitiga siku hitam), atas = sisi 4 (tanda tambah), kanan = sisi 5 (dua titik). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 3 di depan dan sisi 4 di atas, sisi kanan memang sisi 5, dan arah motifnya cocok: segitiga siku hitam di depan, sudut sikunya di pojok kanan-bawah; dua titik di kanan, titiknya di pojok belakang-atas dan depan-bawah ✓.<br>Opsi B (arah motif terputar): Kalau sisi 3 (segitiga siku hitam) di depan dan sisi 2 (segitiga) di atas, segitiga di sisi atas seharusnya alasnya menempel di tepi kiri, bukan alasnya menempel di tepi kanan.\nOpsi C (arah motif terputar): Kalau sisi 2 (segitiga) di depan dan sisi 1 (seperempat lingkaran) di atas, seperempat lingkaran di sisi atas seharusnya menempel di pojok kiri-belakang, bukan menempel di pojok kiri-depan; sisi kanan seharusnya sisi 4 (tanda tambah), bukan cincin.\nOpsi D (letak sisi tertukar): Kalau sisi 2 (segitiga) di depan dan sisi 4 (tanda tambah) di atas, sisi kiri seharusnya sisi 1 (seperempat lingkaran), menempel di pojok belakang-bawah, bukan segitiga siku hitam (sudut sikunya di pojok belakang-bawah).\nOpsi E (sisi berseberangan tampil bersamaan): sisi 3 (segitiga siku hitam) dan sisi 1 (seperempat lingkaran) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: A\nTips: Untuk motif berarah (segitiga, panah, garis), lihat tepi yang menempel ke kotak tetangga. Setelah dilipat, tepi itu tetap bertemu sisi yang sama.",
+    "gambar_pembahasan": "K19-N-022.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-023",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-023.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-023-a.svg",
+      "b": "drill/img/K19-N-023-b.svg",
+      "c": "drill/img/K19-N-023-c.svg",
+      "d": "drill/img/K19-N-023-d.svg",
+      "e": "drill/img/K19-N-023-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 4 (segitiga siku hitam), atas = sisi 5 (huruf L), kanan = sisi 6 (segitiga). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 4 di depan dan sisi 5 di atas, sisi kanan memang sisi 6, dan arah motifnya cocok: segitiga siku hitam di depan, sudut sikunya di pojok kiri-bawah; huruf L di atas, kaki panjangnya ke arah depan, kaki pendeknya ke kiri; segitiga di kanan, alasnya menempel di tepi belakang ✓.<br>Opsi A (arah motif terputar): Kalau sisi 3 (kotak berbingkai) di depan dan sisi 2 (lingkaran hitam) di atas, dua titik di sisi kanan seharusnya titiknya di pojok belakang-bawah dan depan-atas, bukan titiknya di pojok depan-bawah dan belakang-atas.\nOpsi B (arah motif terputar): Kalau sisi 1 (dua titik) di depan dan sisi 6 (segitiga) di atas, dua titik di sisi depan seharusnya titiknya di pojok kanan-atas dan kiri-bawah, bukan titiknya di pojok kiri-atas dan kanan-bawah; sisi kiri seharusnya sisi 2 (lingkaran hitam), bukan huruf L (kaki panjangnya ke arah belakang, kaki pendeknya ke bawah).\nOpsi D (sisi berseberangan tampil bersamaan): sisi 5 (huruf L) dan sisi 2 (lingkaran hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi E (arah motif terputar): Kalau sisi 2 (lingkaran hitam) di depan dan sisi 6 (segitiga) di atas, segitiga di sisi atas seharusnya alasnya menempel di tepi kanan, bukan alasnya menempel di tepi kiri; sisi kanan seharusnya sisi 1 (dua titik), titiknya di pojok belakang-atas dan depan-bawah, bukan segitiga siku hitam (sudut sikunya di pojok belakang-atas).\nJawaban: C\nTips: Kalau tinggal dua opsi, bandingkan urutan tiga sisi di satu pojok. Urutan searah jarum jam di jaring dan di kubus selalu sama.",
+    "gambar_pembahasan": "K19-N-023.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-024",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-024.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-024-a.svg",
+      "b": "drill/img/K19-N-024-b.svg",
+      "c": "drill/img/K19-N-024-c.svg",
+      "d": "drill/img/K19-N-024-d.svg",
+      "e": "drill/img/K19-N-024-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan panah (ujungnya menunjuk ke bawah), atas huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke depan), kiri segitiga (alasnya menempel di tepi belakang).\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 4 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 6 menjadi kiri.\n3. Arah motif ikut cocok: panah di depan, ujungnya menunjuk ke bawah; huruf L di atas, kaki panjangnya ke arah kanan, kaki pendeknya ke depan; segitiga di kiri, alasnya menempel di tepi belakang ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan panah di depan dan huruf L di atas, panah di sisi depan menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke bawah; sisi kiri menjadi kosong, padahal di kubus segitiga (alasnya menempel di tepi belakang).\nOpsi C (sisi berseberangan tampil bersamaan): Pada jaring ini huruf L dan segitiga berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi D (arah motif terputar): Jika dilipat dengan panah di depan dan huruf L di atas, panah di sisi depan menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke bawah.\nOpsi E (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan segitiga berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nJawaban: B\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-024.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-025",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-025.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-025-a.svg",
+      "b": "drill/img/K19-N-025-b.svg",
+      "c": "drill/img/K19-N-025-c.svg",
+      "d": "drill/img/K19-N-025-d.svg",
+      "e": "drill/img/K19-N-025-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–6, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi D memperlihatkan depan = sisi 2 (dua titik), atas = sisi 5 (panah), kanan = sisi 4 (lingkaran hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 2 di depan dan sisi 5 di atas, sisi kanan memang sisi 4, dan arah motifnya cocok: dua titik di depan, titiknya di pojok kanan-bawah dan kiri-atas; panah di atas, ujungnya menunjuk ke belakang ✓.<br>Opsi A (arah motif terputar): Kalau sisi 2 (dua titik) di depan dan sisi 1 (tanda tambah) di kiri, dua titik di sisi depan seharusnya titiknya di pojok kanan-bawah dan kiri-atas, bukan titiknya di pojok kiri-bawah dan kanan-atas; sisi atas seharusnya sisi 5 (panah), ujungnya menunjuk ke belakang, bukan segitiga siku hitam (sudut sikunya di pojok kiri-depan).\nOpsi B (sisi berseberangan tampil bersamaan): sisi 2 (dua titik) dan sisi 6 (huruf L) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi C (arah motif terputar): Kalau sisi 3 (segitiga siku hitam) di depan dan sisi 6 (huruf L) di atas, segitiga siku hitam di sisi depan seharusnya sudut sikunya di pojok kanan-bawah, bukan sudut sikunya di pojok kiri-bawah.\nOpsi E (motif tercermin (kiri-kanan terbalik)): Kalau sisi 4 (lingkaran hitam) di depan dan sisi 6 (huruf L) di atas, huruf L di sisi atas seharusnya kaki panjangnya ke arah belakang, kaki pendeknya ke kanan, bukan kaki panjangnya ke arah belakang, kaki pendeknya ke kiri; sisi kiri seharusnya sisi 5 (panah), ujungnya menunjuk ke atas, bukan segitiga siku hitam (sudut sikunya di pojok belakang-bawah).\nJawaban: D\nTips: Kunci satu sisi sebagai depan, lalu lipat tetangganya satu per satu. Jangan membayangkan seluruh kubus sekaligus.",
+    "gambar_pembahasan": "K19-N-025.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-026",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-026.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-026-a.svg",
+      "b": "drill/img/K19-N-026-b.svg",
+      "c": "drill/img/K19-N-026-c.svg",
+      "d": "drill/img/K19-N-026-d.svg",
+      "e": "drill/img/K19-N-026-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan segitiga siku hitam (sudut sikunya di pojok kiri-bawah), atas panah (ujungnya menunjuk ke belakang), kanan dua titik (titiknya di pojok depan-bawah dan belakang-atas).\n2. Pada jaring A (nomor kotak di gambar pembahasan), jadikan sisi 2 sebagai depan. Setelah dilipat, sisi 1 menjadi atas dan sisi 3 menjadi kanan.\n3. Arah motif ikut cocok: segitiga siku hitam di depan, sudut sikunya di pojok kiri-bawah; panah di atas, ujungnya menunjuk ke belakang; dua titik di kanan, titiknya di pojok depan-bawah dan belakang-atas ✓.<br>Opsi B (arah motif terputar): Jika dilipat dengan segitiga siku hitam di depan dan panah di atas, dua titik di sisi kanan menjadi titiknya di pojok belakang-bawah dan depan-atas, padahal di kubus titiknya di pojok depan-bawah dan belakang-atas.\nOpsi C (arah motif terputar): Jika dilipat dengan segitiga siku hitam di depan dan panah di atas, segitiga siku hitam di sisi depan menjadi sudut sikunya di pojok kanan-bawah, padahal di kubus sudut sikunya di pojok kiri-bawah; panah di sisi atas menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke belakang; sisi kanan menjadi kosong, padahal di kubus dua titik (titiknya di pojok depan-bawah dan belakang-atas).\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini segitiga siku hitam dan panah berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan dua titik berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nJawaban: A\nTips: Coret dulu jaring yang menaruh dua motif kubus di posisi berseberangan, baru cek arah. Target ≤ 75 detik.",
+    "gambar_pembahasan": "K19-N-026.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-027",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-027.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-027-a.svg",
+      "b": "drill/img/K19-N-027-b.svg",
+      "c": "drill/img/K19-N-027-c.svg",
+      "d": "drill/img/K19-N-027-d.svg",
+      "e": "drill/img/K19-N-027-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan tanda tambah, atas seperempat lingkaran (menempel di pojok kanan-belakang), kanan huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke atas).\n2. Pada jaring C (nomor kotak di gambar pembahasan), jadikan sisi 6 sebagai depan. Setelah dilipat, sisi 5 menjadi atas dan sisi 2 menjadi kanan.\n3. Arah motif ikut cocok: seperempat lingkaran di atas, menempel di pojok kanan-belakang; huruf L di kanan, kaki panjangnya ke arah depan, kaki pendeknya ke atas ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan tanda tambah di depan dan seperempat lingkaran di atas, huruf L di sisi kanan menjadi kaki panjangnya ke arah belakang, kaki pendeknya ke bawah, padahal di kubus kaki panjangnya ke arah depan, kaki pendeknya ke atas.\nOpsi B (arah motif terputar): Jika dilipat dengan tanda tambah di depan dan seperempat lingkaran di atas, seperempat lingkaran di sisi atas menjadi menempel di pojok kiri-depan, padahal di kubus menempel di pojok kanan-belakang; sisi kanan menjadi kosong, padahal di kubus huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke atas).\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini seperempat lingkaran dan huruf L berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan tanda tambah di depan dan seperempat lingkaran di atas, seperempat lingkaran di sisi atas menjadi menempel di pojok kiri-depan, padahal di kubus menempel di pojok kanan-belakang; sisi kanan menjadi kosong, padahal di kubus huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke atas).\nJawaban: C\nTips: Mulai dari motif paling khas di kubus. Cari kotaknya di tiap jaring, lalu cek dua tetangganya.",
+    "gambar_pembahasan": "K19-N-027.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-028",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-028.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-028-a.svg",
+      "b": "drill/img/K19-N-028-b.svg",
+      "c": "drill/img/K19-N-028-c.svg",
+      "d": "drill/img/K19-N-028-d.svg",
+      "e": "drill/img/K19-N-028-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–6, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 4 (segitiga), atas = sisi 3 (dua titik), kanan = sisi 2 (hitam penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 4 di depan dan sisi 3 di atas, sisi kanan memang sisi 2, dan arah motifnya cocok: segitiga di depan, alasnya menempel di tepi bawah; dua titik di atas, titiknya di pojok kanan-belakang dan kiri-depan ✓.<br>Opsi A (arah motif terputar): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 5 (kotak berbingkai) di atas, segitiga siku hitam di sisi depan seharusnya sudut sikunya di pojok kanan-atas, bukan sudut sikunya di pojok kiri-atas.\nOpsi B (letak sisi tertukar): Kalau sisi 1 (panah) di depan dan sisi 5 (kotak berbingkai) di atas, sisi kanan seharusnya sisi 2 (hitam penuh), bukan segitiga siku hitam (sudut sikunya di pojok depan-bawah).\nOpsi C (letak sisi tertukar): Kalau sisi 1 (panah) di depan dan sisi 2 (hitam penuh) di kanan, sisi atas seharusnya sisi 5 (kotak berbingkai), bukan dua titik (titiknya di pojok kanan-depan dan kiri-belakang).\nOpsi D (sisi berseberangan tampil bersamaan): sisi 2 (hitam penuh) dan sisi 6 (segitiga siku hitam) berseberangan, jadi tidak mungkin terlihat bersamaan.\nJawaban: E\nTips: Cari pasangan berseberangan dulu (pada satu baris lurus, kotak yang selang satu). Opsi yang menampilkan pasangan itu bersamaan langsung gugur. Target ≤ 60 detik.",
+    "gambar_pembahasan": "K19-N-028.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-029",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-029.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-029-a.svg",
+      "b": "drill/img/K19-N-029-b.svg",
+      "c": "drill/img/K19-N-029-c.svg",
+      "d": "drill/img/K19-N-029-d.svg",
+      "e": "drill/img/K19-N-029-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan panah (ujungnya menunjuk ke kanan), atas tanda silang, kiri cincin.\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 3 sebagai depan. Setelah dilipat, sisi 1 menjadi atas dan sisi 6 menjadi kiri.\n3. Arah motif ikut cocok: panah di depan, ujungnya menunjuk ke kanan ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan panah di depan dan tanda silang di atas, panah di sisi depan menjadi ujungnya menunjuk ke kiri, padahal di kubus ujungnya menunjuk ke kanan.\nOpsi C (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi D (sisi berseberangan tampil bersamaan): Pada jaring ini panah dan cincin berseberangan setelah dilipat, padahal di kubus keduanya bersebelahan.\nOpsi E (arah motif terputar): Jika dilipat dengan panah di depan dan tanda silang di atas, panah di sisi depan menjadi ujungnya menunjuk ke bawah, padahal di kubus ujungnya menunjuk ke kanan.\nJawaban: B\nTips: Coret dulu jaring yang menaruh dua motif kubus di posisi berseberangan, baru cek arah. Target ≤ 75 detik.",
+    "gambar_pembahasan": "K19-N-029.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-030",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-030.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-030-a.svg",
+      "b": "drill/img/K19-N-030-b.svg",
+      "c": "drill/img/K19-N-030-c.svg",
+      "d": "drill/img/K19-N-030-d.svg",
+      "e": "drill/img/K19-N-030-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 6 (dua titik), atas = sisi 4 (seperempat lingkaran), kanan = sisi 5 (huruf L). Tidak ada pasangan berseberangan di antara ketiganya ✓.\n3. Kalau sisi 6 di depan dan sisi 4 di atas, sisi kanan memang sisi 5, dan arah motifnya cocok: dua titik di depan, titiknya di pojok kiri-atas dan kanan-bawah; seperempat lingkaran di atas, menempel di pojok kanan-belakang; huruf L di kanan, kaki panjangnya ke arah atas, kaki pendeknya ke belakang ✓.<br>Opsi B (letak sisi tertukar): Kalau sisi 1 (lingkaran hitam) di kiri dan sisi 3 (kotak berbingkai) di atas, sisi depan seharusnya sisi 2 (segitiga siku hitam), sudut sikunya di pojok kanan-bawah, bukan seperempat lingkaran (menempel di pojok kiri-bawah).\nOpsi C (arah motif terputar): Kalau sisi 6 (dua titik) di depan dan sisi 4 (seperempat lingkaran) di atas, seperempat lingkaran di sisi atas seharusnya menempel di pojok kanan-belakang, bukan menempel di pojok kiri-belakang.\nOpsi D (sisi berseberangan tampil bersamaan): sisi 2 (segitiga siku hitam) dan sisi 4 (seperempat lingkaran) berseberangan, jadi tidak mungkin terlihat bersamaan.\nOpsi E (arah motif terputar): Kalau sisi 4 (seperempat lingkaran) di depan dan sisi 6 (dua titik) di atas, huruf L di sisi kiri seharusnya kaki panjangnya ke arah depan, kaki pendeknya ke bawah, bukan kaki panjangnya ke arah bawah, kaki pendeknya ke belakang.\nJawaban: A\nTips: Untuk motif berarah (segitiga, panah, garis), lihat tepi yang menempel ke kotak tetangga. Setelah dilipat, tepi itu tetap bertemu sisi yang sama.",
+    "gambar_pembahasan": "K19-N-030.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-031",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-031.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-031-a.svg",
+      "b": "drill/img/K19-N-031-b.svg",
+      "c": "drill/img/K19-N-031-c.svg",
+      "d": "drill/img/K19-N-031-d.svg",
+      "e": "drill/img/K19-N-031-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 3 (setengah hitam), atas = sisi 4 (garis tebal), kiri = sisi 2 (huruf L). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 3 (depan) dan sisi 2 (kiri) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 3 di depan dan sisi 4 di atas, sisi kiri memang sisi 2, dan arah motifnya cocok: setengah hitam di depan, bagian hitamnya di sisi atas; garis tebal di atas, membujur depan–belakang; huruf L di kiri, kaki panjangnya ke arah bawah, kaki pendeknya ke belakang ✓.<br>Opsi B (arah motif terputar): Kalau sisi 1 (dua titik) di depan dan sisi 3 (setengah hitam) di atas, dua titik di sisi depan seharusnya titiknya di pojok kanan-atas dan kiri-bawah, bukan titiknya di pojok kiri-atas dan kanan-bawah.\nOpsi C (motif tercermin (kiri-kanan terbalik)): Kalau sisi 2 (huruf L) di depan dan sisi 1 (dua titik) di atas, huruf L di sisi depan seharusnya kaki panjangnya ke arah atas, kaki pendeknya ke kanan, bukan kaki panjangnya ke arah atas, kaki pendeknya ke kiri.\nOpsi D (letak sisi tertukar): Kalau sisi 5 (hitam penuh) di depan dan sisi 4 (garis tebal) di atas, sisi kanan seharusnya sisi 6 (panah), ujungnya menunjuk ke belakang, bukan setengah hitam (bagian hitamnya di sisi atas).\nOpsi E (arah motif terputar): Kalau sisi 2 (huruf L) di depan dan sisi 1 (dua titik) di atas, setengah hitam di sisi kiri seharusnya bagian hitamnya di sisi bawah, bukan bagian hitamnya di sisi atas.\nJawaban: A\nTips: Untuk huruf L, cek dua kakinya sekaligus. Kalau kaki panjang cocok tapi kaki pendek ke arah sebaliknya, motifnya tercermin.",
+    "gambar_pembahasan": "K19-N-031.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-032",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-032.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-032-a.svg",
+      "b": "drill/img/K19-N-032-b.svg",
+      "c": "drill/img/K19-N-032-c.svg",
+      "d": "drill/img/K19-N-032-d.svg",
+      "e": "drill/img/K19-N-032-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan panah (ujungnya menunjuk ke bawah), atas segitiga siku hitam (sudut sikunya di pojok kanan-depan), kiri huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke bawah).\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 6 sebagai depan. Setelah dilipat, sisi 1 menjadi atas dan sisi 5 menjadi kiri.\n3. Arah motif ikut cocok: panah di depan, ujungnya menunjuk ke bawah; segitiga siku hitam di atas, sudut sikunya di pojok kanan-depan; huruf L di kiri, kaki panjangnya ke arah depan, kaki pendeknya ke bawah ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan panah di depan dan segitiga siku hitam di atas, segitiga siku hitam di sisi atas menjadi sudut sikunya di pojok kiri-depan, padahal di kubus sudut sikunya di pojok kanan-depan.\nOpsi C (letak sisi tertukar): Jika dilipat dengan panah di depan dan huruf L di kiri, sisi atas menjadi segitiga (alasnya menempel di tepi kiri), padahal di kubus segitiga siku hitam (sudut sikunya di pojok kanan-depan).\nOpsi D (letak sisi tertukar): Jika dilipat dengan panah di depan dan segitiga siku hitam di atas, sisi kiri menjadi dua titik (titiknya di pojok belakang-atas dan depan-bawah), padahal di kubus huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke bawah).\nOpsi E (arah motif terputar): Jika dilipat dengan panah di depan dan segitiga siku hitam di atas, huruf L di sisi kiri menjadi kaki panjangnya ke arah atas, kaki pendeknya ke depan, padahal di kubus kaki panjangnya ke arah depan, kaki pendeknya ke bawah.\nJawaban: B\nTips: Jaring 2-2-2 dan 3-3 sulit dibayangkan sekaligus. Lipat dua kotak dulu, baru kotak ketiga. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-032.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-033",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-033.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-033-a.svg",
+      "b": "drill/img/K19-N-033-b.svg",
+      "c": "drill/img/K19-N-033-c.svg",
+      "d": "drill/img/K19-N-033-d.svg",
+      "e": "drill/img/K19-N-033-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 5 (huruf L), atas = sisi 6 (dua titik), kanan = sisi 1 (segitiga). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 5 (depan) dan sisi 1 (kanan), juga sisi 6 (atas) dan sisi 1 (kanan) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 5 di depan dan sisi 6 di atas, sisi kanan memang sisi 1, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah kanan, kaki pendeknya ke bawah; dua titik di atas, titiknya di pojok kanan-depan dan kiri-belakang; segitiga di kanan, alasnya menempel di tepi belakang ✓.<br>Opsi B (letak sisi tertukar): Kalau sisi 2 (setengah hitam) di depan dan sisi 1 (segitiga) di kiri, sisi atas seharusnya sisi 6 (dua titik), titiknya di pojok kiri-belakang dan kanan-depan, bukan abu-abu penuh.\nOpsi C (motif tercermin (kiri-kanan terbalik)): Kalau sisi 3 (abu-abu penuh) di depan dan sisi 5 (huruf L) di atas, huruf L di sisi atas seharusnya kaki panjangnya ke arah kanan, kaki pendeknya ke depan, bukan kaki panjangnya ke arah kanan, kaki pendeknya ke belakang.\nOpsi D (arah motif terputar): Kalau sisi 1 (segitiga) di depan dan sisi 3 (abu-abu penuh) di atas, setengah hitam di sisi kiri seharusnya bagian hitamnya di sisi bawah, bukan bagian hitamnya di sisi atas.\nOpsi E (arah motif terputar): Kalau sisi 3 (abu-abu penuh) di depan dan sisi 1 (segitiga) di atas, segitiga di sisi atas seharusnya alasnya menempel di tepi kanan, bukan alasnya menempel di tepi depan.\nJawaban: A\nTips: Opsi salah di soal HOTS biasanya hanya beda satu detail. Tetapkan dua sisi sebagai jangkar (depan dan atas), lalu cek sisi ketiga dan arah ketiga motif satu per satu.",
+    "gambar_pembahasan": "K19-N-033.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-034",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-034.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-034-a.svg",
+      "b": "drill/img/K19-N-034-b.svg",
+      "c": "drill/img/K19-N-034-c.svg",
+      "d": "drill/img/K19-N-034-d.svg",
+      "e": "drill/img/K19-N-034-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan garis tebal (tegak atas–bawah), atas huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke depan), kanan cincin.\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 2 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 6 menjadi kanan.\n3. Arah motif ikut cocok: garis tebal di depan, tegak atas–bawah; huruf L di atas, kaki panjangnya ke arah kanan, kaki pendeknya ke depan ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan garis tebal di depan dan huruf L di atas, garis tebal di sisi depan menjadi melintang kiri–kanan, padahal di kubus tegak atas–bawah.\nOpsi C (letak sisi tertukar): Jika dilipat dengan garis tebal di depan dan cincin di kanan, sisi atas menjadi segitiga siku hitam (sudut sikunya di pojok kanan-belakang), padahal di kubus huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke depan).\nOpsi D (letak sisi tertukar): Jika dilipat dengan garis tebal di depan dan cincin di kanan, sisi atas menjadi segitiga siku hitam (sudut sikunya di pojok kanan-belakang), padahal di kubus huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke depan).\nOpsi E (letak sisi tertukar): Jika dilipat dengan cincin di kanan dan huruf L di atas, sisi depan menjadi seperempat lingkaran (menempel di pojok kanan-atas), padahal di kubus garis tebal (tegak atas–bawah).\nJawaban: B\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-034.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-035",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-035.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-035-a.svg",
+      "b": "drill/img/K19-N-035-b.svg",
+      "c": "drill/img/K19-N-035-c.svg",
+      "d": "drill/img/K19-N-035-d.svg",
+      "e": "drill/img/K19-N-035-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan dua titik (titiknya di pojok kiri-bawah dan kanan-atas), atas setengah hitam (bagian hitamnya di sisi kanan), kanan huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke atas).\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 2 menjadi atas dan sisi 4 menjadi kanan.\n3. Arah motif ikut cocok: dua titik di depan, titiknya di pojok kiri-bawah dan kanan-atas; setengah hitam di atas, bagian hitamnya di sisi kanan; huruf L di kanan, kaki panjangnya ke arah depan, kaki pendeknya ke atas ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan dua titik di depan dan setengah hitam di atas, setengah hitam di sisi atas menjadi bagian hitamnya di sisi kiri, padahal di kubus bagian hitamnya di sisi kanan.\nOpsi B (letak sisi tertukar): Jika dilipat dengan huruf L di kanan dan setengah hitam di atas, sisi depan menjadi seperempat lingkaran (menempel di pojok kanan-atas), padahal di kubus dua titik (titiknya di pojok kiri-bawah dan kanan-atas).\nOpsi C (arah motif terputar): Jika dilipat dengan dua titik di depan dan setengah hitam di atas, huruf L di sisi kanan menjadi kaki panjangnya ke arah belakang, kaki pendeknya ke bawah, padahal di kubus kaki panjangnya ke arah depan, kaki pendeknya ke atas.\nOpsi E (arah motif terputar): Jika dilipat dengan dua titik di depan dan setengah hitam di atas, dua titik di sisi depan menjadi titiknya di pojok kiri-atas dan kanan-bawah, padahal di kubus titiknya di pojok kiri-bawah dan kanan-atas.\nJawaban: D\nTips: Jaring 2-2-2 dan 3-3 sulit dibayangkan sekaligus. Lipat dua kotak dulu, baru kotak ketiga. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-035.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-036",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-036.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-036-a.svg",
+      "b": "drill/img/K19-N-036-b.svg",
+      "c": "drill/img/K19-N-036-c.svg",
+      "d": "drill/img/K19-N-036-d.svg",
+      "e": "drill/img/K19-N-036-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–5, 2–4, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 3 (huruf L), atas = sisi 5 (lingkaran hitam), kiri = sisi 4 (segitiga siku hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 3 (depan) dan sisi 5 (atas) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 3 di depan dan sisi 5 di atas, sisi kiri memang sisi 4, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah bawah, kaki pendeknya ke kiri; segitiga siku hitam di kiri, sudut sikunya di pojok belakang-bawah ✓.<br>Opsi A (motif tercermin (kiri-kanan terbalik)): Kalau sisi 2 (setengah hitam) di depan dan sisi 5 (lingkaran hitam) di atas, huruf L di sisi kiri seharusnya kaki panjangnya ke arah bawah, kaki pendeknya ke belakang, bukan kaki panjangnya ke arah bawah, kaki pendeknya ke depan.\nOpsi B (arah motif terputar): Kalau sisi 2 (setengah hitam) di depan dan sisi 1 (dua titik) di atas, dua titik di sisi atas seharusnya titiknya di pojok kanan-depan dan kiri-belakang, bukan titiknya di pojok kiri-depan dan kanan-belakang.\nOpsi D (arah motif terputar): Kalau sisi 2 (setengah hitam) di depan dan sisi 3 (huruf L) di atas, huruf L di sisi atas seharusnya kaki panjangnya ke arah kiri, kaki pendeknya ke belakang, bukan kaki panjangnya ke arah kanan, kaki pendeknya ke depan.\nOpsi E (letak sisi tertukar): Kalau sisi 2 (setengah hitam) di depan dan sisi 1 (dua titik) di kiri, sisi atas seharusnya sisi 3 (huruf L), kaki panjangnya ke arah kiri, kaki pendeknya ke belakang, bukan garis tebal (membujur depan–belakang).\nJawaban: C\nTips: Opsi salah di soal HOTS biasanya hanya beda satu detail. Tetapkan dua sisi sebagai jangkar (depan dan atas), lalu cek sisi ketiga dan arah ketiga motif satu per satu.",
+    "gambar_pembahasan": "K19-N-036.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-037",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-037.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-037-a.svg",
+      "b": "drill/img/K19-N-037-b.svg",
+      "c": "drill/img/K19-N-037-c.svg",
+      "d": "drill/img/K19-N-037-d.svg",
+      "e": "drill/img/K19-N-037-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan tanda tambah, atas huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke depan), kanan panah (ujungnya menunjuk ke depan).\n2. Pada jaring E (nomor kotak di gambar pembahasan), jadikan sisi 5 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 2 menjadi kanan.\n3. Arah motif ikut cocok: huruf L di atas, kaki panjangnya ke arah kanan, kaki pendeknya ke depan; panah di kanan, ujungnya menunjuk ke depan ✓.<br>Opsi A (letak sisi tertukar): Jika dilipat dengan tanda tambah di depan dan huruf L di atas, sisi kanan menjadi garis tebal (tegak atas–bawah), padahal di kubus panah (ujungnya menunjuk ke depan).\nOpsi B (letak sisi tertukar): Jika dilipat dengan panah di kanan dan huruf L di atas, sisi depan menjadi setengah hitam (bagian hitamnya di sisi kanan), padahal di kubus tanda tambah.\nOpsi C (letak sisi tertukar): Jika dilipat dengan tanda tambah di depan dan huruf L di atas, sisi kanan menjadi garis tebal (membujur depan–belakang), padahal di kubus panah (ujungnya menunjuk ke depan).\nOpsi D (arah motif terputar): Jika dilipat dengan tanda tambah di depan dan huruf L di atas, huruf L di sisi atas menjadi kaki panjangnya ke arah depan, kaki pendeknya ke kiri, padahal di kubus kaki panjangnya ke arah kanan, kaki pendeknya ke depan.\nJawaban: E\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-037.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-038",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-038.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-038-a.svg",
+      "b": "drill/img/K19-N-038-b.svg",
+      "c": "drill/img/K19-N-038-c.svg",
+      "d": "drill/img/K19-N-038-d.svg",
+      "e": "drill/img/K19-N-038-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 5 (segitiga siku hitam), atas = sisi 3 (huruf L), kiri = sisi 1 (hitam penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 5 (depan) dan sisi 3 (atas), juga sisi 5 (depan) dan sisi 1 (kiri), juga sisi 3 (atas) dan sisi 1 (kiri) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 5 di depan dan sisi 3 di atas, sisi kiri memang sisi 1, dan arah motifnya cocok: segitiga siku hitam di depan, sudut sikunya di pojok kanan-atas; huruf L di atas, kaki panjangnya ke arah depan, kaki pendeknya ke kiri ✓.<br>Opsi B (letak sisi tertukar): Kalau sisi 1 (hitam penuh) di kanan dan sisi 6 (seperempat lingkaran) di atas, sisi depan seharusnya sisi 5 (segitiga siku hitam), sudut sikunya di pojok kiri-bawah, bukan setengah hitam (bagian hitamnya di sisi bawah).\nOpsi C (arah motif terputar): Kalau sisi 2 (setengah hitam) di depan dan sisi 6 (seperempat lingkaran) di atas, setengah hitam di sisi depan seharusnya bagian hitamnya di sisi kiri, bukan bagian hitamnya di sisi atas.\nOpsi D (motif tercermin (kiri-kanan terbalik)): Kalau sisi 5 (segitiga siku hitam) di depan dan sisi 1 (hitam penuh) di atas, huruf L di sisi kanan seharusnya kaki panjangnya ke arah depan, kaki pendeknya ke atas, bukan kaki panjangnya ke arah depan, kaki pendeknya ke bawah.\nOpsi E (arah motif terputar): Kalau sisi 3 (huruf L) di depan dan sisi 2 (setengah hitam) di atas, setengah hitam di sisi atas seharusnya bagian hitamnya di sisi kiri, bukan bagian hitamnya di sisi belakang.\nJawaban: A\nTips: Sisi yang tidak bersebelahan di jaring bisa bertemu setelah dilipat. Lipat bertahap dari sisi jangkar, jangan menebak dari jarak di jaring. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-038.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-039",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-039.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-039-a.svg",
+      "b": "drill/img/K19-N-039-b.svg",
+      "c": "drill/img/K19-N-039-c.svg",
+      "d": "drill/img/K19-N-039-d.svg",
+      "e": "drill/img/K19-N-039-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–3, 4–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 3 (garis tebal), atas = sisi 6 (segitiga siku hitam), kiri = sisi 4 (huruf L). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 6 (atas) dan sisi 4 (kiri) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 3 di depan dan sisi 6 di atas, sisi kiri memang sisi 4, dan arah motifnya cocok: garis tebal di depan, melintang kiri–kanan; segitiga siku hitam di atas, sudut sikunya di pojok kanan-belakang; huruf L di kiri, kaki panjangnya ke arah bawah, kaki pendeknya ke belakang ✓.<br>Opsi A (motif tercermin (kiri-kanan terbalik)): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 2 (seperempat lingkaran) di atas, huruf L di sisi kiri seharusnya kaki panjangnya ke arah belakang, kaki pendeknya ke atas, bukan kaki panjangnya ke arah belakang, kaki pendeknya ke bawah.\nOpsi B (arah motif terputar): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 4 (huruf L) di atas, huruf L di sisi atas seharusnya kaki panjangnya ke arah belakang, kaki pendeknya ke kanan, bukan kaki panjangnya ke arah depan, kaki pendeknya ke kiri.\nOpsi C (letak sisi tertukar): Kalau sisi 3 (garis tebal) di depan dan sisi 5 (cincin) di atas, sisi kanan seharusnya sisi 1 (dua titik), titiknya di pojok depan-atas dan belakang-bawah, bukan segitiga siku hitam (sudut sikunya di pojok belakang-atas).\nOpsi D (arah motif terputar): Kalau sisi 4 (huruf L) di depan dan sisi 1 (dua titik) di atas, huruf L di sisi depan seharusnya kaki panjangnya ke arah atas, kaki pendeknya ke kanan, bukan kaki panjangnya ke arah kanan, kaki pendeknya ke bawah.\nJawaban: E\nTips: Opsi salah di soal HOTS biasanya hanya beda satu detail. Tetapkan dua sisi sebagai jangkar (depan dan atas), lalu cek sisi ketiga dan arah ketiga motif satu per satu.",
+    "gambar_pembahasan": "K19-N-039.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-040",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-040.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-040-a.svg",
+      "b": "drill/img/K19-N-040-b.svg",
+      "c": "drill/img/K19-N-040-c.svg",
+      "d": "drill/img/K19-N-040-d.svg",
+      "e": "drill/img/K19-N-040-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan setengah hitam (bagian hitamnya di sisi bawah), atas huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke kiri), kiri garis tebal (tegak atas–bawah).\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 5 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 1 menjadi kiri.\n3. Arah motif ikut cocok: setengah hitam di depan, bagian hitamnya di sisi bawah; huruf L di atas, kaki panjangnya ke arah depan, kaki pendeknya ke kiri; garis tebal di kiri, tegak atas–bawah ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan huruf L di atas, huruf L di sisi atas menjadi kaki panjangnya ke arah kanan, kaki pendeknya ke depan, padahal di kubus kaki panjangnya ke arah depan, kaki pendeknya ke kiri.\nOpsi B (letak sisi tertukar): Jika dilipat dengan setengah hitam di depan dan garis tebal di kiri, sisi atas menjadi tanda silang, padahal di kubus huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke kiri).\nOpsi C (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan huruf L di atas, setengah hitam di sisi depan menjadi bagian hitamnya di sisi atas, padahal di kubus bagian hitamnya di sisi bawah.\nOpsi E (arah motif terputar): Jika dilipat dengan setengah hitam di depan dan huruf L di atas, garis tebal di sisi kiri menjadi membujur depan–belakang, padahal di kubus tegak atas–bawah.\nJawaban: D\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-040.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-041",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-041.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-041-a.svg",
+      "b": "drill/img/K19-N-041-b.svg",
+      "c": "drill/img/K19-N-041-c.svg",
+      "d": "drill/img/K19-N-041-d.svg",
+      "e": "drill/img/K19-N-041-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan huruf L (kaki panjangnya ke arah kiri, kaki pendeknya ke atas), atas seperempat lingkaran (menempel di pojok kanan-belakang), kanan panah (ujungnya menunjuk ke bawah).\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 2 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 5 menjadi kanan.\n3. Arah motif ikut cocok: huruf L di depan, kaki panjangnya ke arah kiri, kaki pendeknya ke atas; seperempat lingkaran di atas, menempel di pojok kanan-belakang; panah di kanan, ujungnya menunjuk ke bawah ✓.<br>Opsi A (letak sisi tertukar): Jika dilipat dengan huruf L di depan dan seperempat lingkaran di atas, sisi kanan menjadi cincin, padahal di kubus panah (ujungnya menunjuk ke bawah).\nOpsi B (letak sisi tertukar): Jika dilipat dengan huruf L di depan dan seperempat lingkaran di atas, sisi kanan menjadi cincin, padahal di kubus panah (ujungnya menunjuk ke bawah).\nOpsi C (arah motif terputar): Jika dilipat dengan huruf L di depan dan seperempat lingkaran di atas, seperempat lingkaran di sisi atas menjadi menempel di pojok kiri-belakang, padahal di kubus menempel di pojok kanan-belakang.\nOpsi E (arah motif terputar): Jika dilipat dengan huruf L di depan dan seperempat lingkaran di atas, panah di sisi kanan menjadi ujungnya menunjuk ke depan, padahal di kubus ujungnya menunjuk ke bawah.\nJawaban: D\nTips: Jaring 2-2-2 dan 3-3 sulit dibayangkan sekaligus. Lipat dua kotak dulu, baru kotak ketiga. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-041.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-042",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-042.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-042-a.svg",
+      "b": "drill/img/K19-N-042-b.svg",
+      "c": "drill/img/K19-N-042-c.svg",
+      "d": "drill/img/K19-N-042-d.svg",
+      "e": "drill/img/K19-N-042-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–5, 2–4, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 4 (huruf L), atas = sisi 1 (tanda tambah), kanan = sisi 6 (segitiga siku hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 4 (depan) dan sisi 1 (atas), juga sisi 4 (depan) dan sisi 6 (kanan), juga sisi 1 (atas) dan sisi 6 (kanan) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 4 di depan dan sisi 1 di atas, sisi kanan memang sisi 6, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah kiri, kaki pendeknya ke atas; segitiga siku hitam di kanan, sudut sikunya di pojok depan-bawah ✓.<br>Opsi A (motif tercermin (kiri-kanan terbalik)): Kalau sisi 1 (tanda tambah) di depan dan sisi 6 (segitiga siku hitam) di atas, huruf L di sisi kanan seharusnya kaki panjangnya ke arah bawah, kaki pendeknya ke depan, bukan kaki panjangnya ke arah bawah, kaki pendeknya ke belakang.\nOpsi B (arah motif terputar): Kalau sisi 2 (dua titik) di depan dan sisi 3 (seperempat lingkaran) di atas, dua titik di sisi depan seharusnya titiknya di pojok kanan-bawah dan kiri-atas, bukan titiknya di pojok kanan-atas dan kiri-bawah.\nOpsi D (letak sisi tertukar): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 5 (panah) di atas, sisi kanan seharusnya sisi 4 (huruf L), kaki panjangnya ke arah belakang, kaki pendeknya ke bawah, bukan dua titik (titiknya di pojok depan-bawah dan belakang-atas).\nOpsi E (arah motif terputar): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 1 (tanda tambah) di atas, segitiga siku hitam di sisi depan seharusnya sudut sikunya di pojok kiri-bawah, bukan sudut sikunya di pojok kiri-atas.\nJawaban: C\nTips: Opsi salah di soal HOTS biasanya hanya beda satu detail. Tetapkan dua sisi sebagai jangkar (depan dan atas), lalu cek sisi ketiga dan arah ketiga motif satu per satu.",
+    "gambar_pembahasan": "K19-N-042.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-043",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-043.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-043-a.svg",
+      "b": "drill/img/K19-N-043-b.svg",
+      "c": "drill/img/K19-N-043-c.svg",
+      "d": "drill/img/K19-N-043-d.svg",
+      "e": "drill/img/K19-N-043-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan huruf L (kaki panjangnya ke arah bawah, kaki pendeknya ke kiri), atas dua titik (titiknya di pojok kiri-depan dan kanan-belakang), kanan abu-abu penuh.\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 6 sebagai depan. Setelah dilipat, sisi 1 menjadi atas dan sisi 5 menjadi kanan.\n3. Arah motif ikut cocok: huruf L di depan, kaki panjangnya ke arah bawah, kaki pendeknya ke kiri; dua titik di atas, titiknya di pojok kiri-depan dan kanan-belakang ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan huruf L di depan dan dua titik di atas, dua titik di sisi atas menjadi titiknya di pojok kiri-belakang dan kanan-depan, padahal di kubus titiknya di pojok kiri-depan dan kanan-belakang.\nOpsi C (letak sisi tertukar): Jika dilipat dengan huruf L di depan dan abu-abu penuh di kanan, sisi atas menjadi segitiga (alasnya menempel di tepi depan), padahal di kubus dua titik (titiknya di pojok kiri-depan dan kanan-belakang).\nOpsi D (arah motif terputar): Jika dilipat dengan huruf L di depan dan dua titik di atas, huruf L di sisi depan menjadi kaki panjangnya ke arah kanan, kaki pendeknya ke bawah, padahal di kubus kaki panjangnya ke arah bawah, kaki pendeknya ke kiri.\nOpsi E (arah motif terputar): Jika dilipat dengan huruf L di depan dan dua titik di atas, dua titik di sisi atas menjadi titiknya di pojok kiri-belakang dan kanan-depan, padahal di kubus titiknya di pojok kiri-depan dan kanan-belakang.\nJawaban: B\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-043.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-044",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-044.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-044-a.svg",
+      "b": "drill/img/K19-N-044-b.svg",
+      "c": "drill/img/K19-N-044-c.svg",
+      "d": "drill/img/K19-N-044-d.svg",
+      "e": "drill/img/K19-N-044-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–6, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi C memperlihatkan depan = sisi 1 (huruf L), atas = sisi 6 (segitiga siku hitam), kanan = sisi 5 (garis tebal). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 1 (depan) dan sisi 6 (atas), juga sisi 1 (depan) dan sisi 5 (kanan) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 1 di depan dan sisi 6 di atas, sisi kanan memang sisi 5, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah kiri, kaki pendeknya ke atas; segitiga siku hitam di atas, sudut sikunya di pojok kanan-belakang; garis tebal di kanan, tegak atas–bawah ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 4 (segitiga) di kiri dan sisi 3 (lingkaran hitam) di atas, sisi depan seharusnya sisi 2 (dua titik), titiknya di pojok kiri-atas dan kanan-bawah, bukan segitiga siku hitam (sudut sikunya di pojok kiri-bawah).\nOpsi B (letak sisi tertukar): Kalau sisi 5 (garis tebal) di kanan dan sisi 4 (segitiga) di atas, sisi depan seharusnya sisi 6 (segitiga siku hitam), sudut sikunya di pojok kanan-atas, bukan dua titik (titiknya di pojok kiri-atas dan kanan-bawah).\nOpsi D (motif tercermin (kiri-kanan terbalik)): Kalau sisi 3 (lingkaran hitam) di depan dan sisi 6 (segitiga siku hitam) di atas, huruf L di sisi kanan seharusnya kaki panjangnya ke arah depan, kaki pendeknya ke atas, bukan kaki panjangnya ke arah depan, kaki pendeknya ke bawah.\nOpsi E (arah motif terputar): Kalau sisi 6 (segitiga siku hitam) di depan dan sisi 3 (lingkaran hitam) di atas, segitiga siku hitam di sisi depan seharusnya sudut sikunya di pojok kanan-bawah, bukan sudut sikunya di pojok kanan-atas.\nJawaban: C\nTips: Sisi yang tidak bersebelahan di jaring bisa bertemu setelah dilipat. Lipat bertahap dari sisi jangkar, jangan menebak dari jarak di jaring. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-044.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-045",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-045.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-045-a.svg",
+      "b": "drill/img/K19-N-045-b.svg",
+      "c": "drill/img/K19-N-045-c.svg",
+      "d": "drill/img/K19-N-045-d.svg",
+      "e": "drill/img/K19-N-045-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 3 (huruf L), atas = sisi 4 (panah), kanan = sisi 6 (setengah hitam). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 3 (depan) dan sisi 6 (kanan), juga sisi 4 (atas) dan sisi 6 (kanan) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 3 di depan dan sisi 4 di atas, sisi kanan memang sisi 6, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah kiri, kaki pendeknya ke atas; panah di atas, ujungnya menunjuk ke belakang; setengah hitam di kanan, bagian hitamnya di sisi atas ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 2 (hitam penuh) di depan dan sisi 6 (setengah hitam) di kiri, sisi atas seharusnya sisi 5 (dua titik), titiknya di pojok kiri-depan dan kanan-belakang, bukan huruf L (kaki panjangnya ke arah kanan, kaki pendeknya ke belakang).\nOpsi B (letak sisi tertukar): Kalau sisi 6 (setengah hitam) di depan dan sisi 3 (huruf L) di kiri, sisi atas seharusnya sisi 4 (panah), ujungnya menunjuk ke kanan, bukan hitam penuh.\nOpsi C (arah motif terputar): Kalau sisi 2 (hitam penuh) di depan dan sisi 6 (setengah hitam) di atas, dua titik di sisi kanan seharusnya titiknya di pojok depan-atas dan belakang-bawah, bukan titiknya di pojok belakang-atas dan depan-bawah.\nOpsi D (motif tercermin (kiri-kanan terbalik)): Kalau sisi 1 (garis tebal) di depan dan sisi 4 (panah) di atas, huruf L di sisi kanan seharusnya kaki panjangnya ke arah depan, kaki pendeknya ke atas, bukan kaki panjangnya ke arah depan, kaki pendeknya ke bawah.\nJawaban: E\nTips: Opsi salah di soal HOTS biasanya hanya beda satu detail. Tetapkan dua sisi sebagai jangkar (depan dan atas), lalu cek sisi ketiga dan arah ketiga motif satu per satu.",
+    "gambar_pembahasan": "K19-N-045.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-046",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-046.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-046-a.svg",
+      "b": "drill/img/K19-N-046-b.svg",
+      "c": "drill/img/K19-N-046-c.svg",
+      "d": "drill/img/K19-N-046-d.svg",
+      "e": "drill/img/K19-N-046-e.svg"
+    },
+    "kunci": [
+      "c"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan kotak berbingkai, atas seperempat lingkaran (menempel di pojok kiri-belakang), kanan huruf L (kaki panjangnya ke arah belakang, kaki pendeknya ke bawah).\n2. Pada jaring C (nomor kotak di gambar pembahasan), jadikan sisi 5 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 3 menjadi kanan.\n3. Arah motif ikut cocok: seperempat lingkaran di atas, menempel di pojok kiri-belakang; huruf L di kanan, kaki panjangnya ke arah belakang, kaki pendeknya ke bawah ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan kotak berbingkai di depan dan seperempat lingkaran di atas, huruf L di sisi kanan menjadi kaki panjangnya ke arah bawah, kaki pendeknya ke depan, padahal di kubus kaki panjangnya ke arah belakang, kaki pendeknya ke bawah.\nOpsi B (letak sisi tertukar): Jika dilipat dengan kotak berbingkai di depan dan seperempat lingkaran di atas, sisi kanan menjadi segitiga (alasnya menempel di tepi bawah), padahal di kubus huruf L (kaki panjangnya ke arah belakang, kaki pendeknya ke bawah).\nOpsi D (arah motif terputar): Jika dilipat dengan kotak berbingkai di depan dan seperempat lingkaran di atas, seperempat lingkaran di sisi atas menjadi menempel di pojok kanan-belakang, padahal di kubus menempel di pojok kiri-belakang.\nOpsi E (arah motif terputar): Jika dilipat dengan kotak berbingkai di depan dan seperempat lingkaran di atas, huruf L di sisi kanan menjadi kaki panjangnya ke arah bawah, kaki pendeknya ke depan, padahal di kubus kaki panjangnya ke arah belakang, kaki pendeknya ke bawah.\nJawaban: C\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-046.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-047",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-047.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-047-a.svg",
+      "b": "drill/img/K19-N-047-b.svg",
+      "c": "drill/img/K19-N-047-c.svg",
+      "d": "drill/img/K19-N-047-d.svg",
+      "e": "drill/img/K19-N-047-e.svg"
+    },
+    "kunci": [
+      "a"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–4, 2–5, 3–6. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi A memperlihatkan depan = sisi 2 (huruf L), atas = sisi 1 (garis tebal), kiri = sisi 3 (segitiga). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 1 (atas) dan sisi 3 (kiri) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 2 di depan dan sisi 1 di atas, sisi kiri memang sisi 3, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah atas, kaki pendeknya ke kanan; garis tebal di atas, membujur depan–belakang; segitiga di kiri, alasnya menempel di tepi bawah ✓.<br>Opsi B (letak sisi tertukar): Kalau sisi 5 (kotak berbingkai) di depan dan sisi 1 (garis tebal) di kanan, sisi atas seharusnya sisi 6 (setengah hitam), bagian hitamnya di sisi kanan, bukan segitiga (alasnya menempel di tepi kiri).\nOpsi C (arah motif terputar): Kalau sisi 4 (panah) di depan dan sisi 6 (setengah hitam) di atas, huruf L di sisi kiri seharusnya kaki panjangnya ke arah belakang, kaki pendeknya ke atas, bukan kaki panjangnya ke arah atas, kaki pendeknya ke depan.\nOpsi D (arah motif terputar): Kalau sisi 3 (segitiga) di depan dan sisi 5 (kotak berbingkai) di atas, segitiga di sisi depan seharusnya alasnya menempel di tepi kiri, bukan alasnya menempel di tepi kanan.\nOpsi E (arah motif terputar): Kalau sisi 1 (garis tebal) di depan dan sisi 2 (huruf L) di atas, garis tebal di sisi depan seharusnya tegak atas–bawah, bukan melintang kiri–kanan.\nJawaban: A\nTips: Sisi yang tidak bersebelahan di jaring bisa bertemu setelah dilipat. Lipat bertahap dari sisi jangkar, jangan menebak dari jarak di jaring. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-047.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-048",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-048.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-048-a.svg",
+      "b": "drill/img/K19-N-048-b.svg",
+      "c": "drill/img/K19-N-048-c.svg",
+      "d": "drill/img/K19-N-048-d.svg",
+      "e": "drill/img/K19-N-048-e.svg"
+    },
+    "kunci": [
+      "d"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan seperempat lingkaran (menempel di pojok kiri-bawah), atas lingkaran hitam, kiri huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke bawah).\n2. Pada jaring D (nomor kotak di gambar pembahasan), jadikan sisi 5 sebagai depan. Setelah dilipat, sisi 6 menjadi atas dan sisi 2 menjadi kiri.\n3. Arah motif ikut cocok: seperempat lingkaran di depan, menempel di pojok kiri-bawah; huruf L di kiri, kaki panjangnya ke arah depan, kaki pendeknya ke bawah ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan seperempat lingkaran di depan dan lingkaran hitam di atas, seperempat lingkaran di sisi depan menjadi menempel di pojok kanan-atas, padahal di kubus menempel di pojok kiri-bawah.\nOpsi B (letak sisi tertukar): Jika dilipat dengan seperempat lingkaran di depan dan huruf L di kiri, sisi atas menjadi dua titik (titiknya di pojok kanan-depan dan kiri-belakang), padahal di kubus lingkaran hitam.\nOpsi C (arah motif terputar): Jika dilipat dengan seperempat lingkaran di depan dan lingkaran hitam di atas, seperempat lingkaran di sisi depan menjadi menempel di pojok kanan-atas, padahal di kubus menempel di pojok kiri-bawah.\nOpsi E (arah motif terputar): Jika dilipat dengan seperempat lingkaran di depan dan lingkaran hitam di atas, seperempat lingkaran di sisi depan menjadi menempel di pojok kiri-atas, padahal di kubus menempel di pojok kiri-bawah.\nJawaban: D\nTips: Kunci dua motif kubus sebagai jangkar, cari keduanya di tiap jaring, lalu lipat bertahap. Opsi salah hanya beda satu detail, jadi cek arah motif paling akhir.",
+    "gambar_pembahasan": "K19-N-048.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-049",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-BUKA",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Kubus berikut dapat dibentuk dari jaring-jaring yang mana?",
+    "gambar": "drill/img/K19-N-049.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-049-a.svg",
+      "b": "drill/img/K19-N-049-b.svg",
+      "c": "drill/img/K19-N-049-c.svg",
+      "d": "drill/img/K19-N-049-d.svg",
+      "e": "drill/img/K19-N-049-e.svg"
+    },
+    "kunci": [
+      "b"
+    ],
+    "pembahasan": "1. Catat isi kubus: depan segitiga siku hitam (sudut sikunya di pojok kanan-atas), atas segitiga (alasnya menempel di tepi belakang), kanan huruf L (kaki panjangnya ke arah depan, kaki pendeknya ke atas).\n2. Pada jaring B (nomor kotak di gambar pembahasan), jadikan sisi 1 sebagai depan. Setelah dilipat, sisi 3 menjadi atas dan sisi 4 menjadi kanan.\n3. Arah motif ikut cocok: segitiga siku hitam di depan, sudut sikunya di pojok kanan-atas; segitiga di atas, alasnya menempel di tepi belakang; huruf L di kanan, kaki panjangnya ke arah depan, kaki pendeknya ke atas ✓.<br>Opsi A (arah motif terputar): Jika dilipat dengan segitiga siku hitam di depan dan segitiga di atas, segitiga di sisi atas menjadi alasnya menempel di tepi kiri, padahal di kubus alasnya menempel di tepi belakang.\nOpsi C (arah motif terputar): Jika dilipat dengan segitiga siku hitam di depan dan segitiga di atas, huruf L di sisi kanan menjadi kaki panjangnya ke arah atas, kaki pendeknya ke belakang, padahal di kubus kaki panjangnya ke arah depan, kaki pendeknya ke atas.\nOpsi D (arah motif terputar): Jika dilipat dengan segitiga siku hitam di depan dan segitiga di atas, segitiga di sisi atas menjadi alasnya menempel di tepi depan, padahal di kubus alasnya menempel di tepi belakang.\nOpsi E (letak sisi tertukar): Jika dilipat dengan segitiga siku hitam di depan dan huruf L di kanan, sisi atas menjadi seperempat lingkaran (menempel di pojok kiri-depan), padahal di kubus segitiga (alasnya menempel di tepi belakang).\nJawaban: B\nTips: Untuk huruf L, lihat kaki pendeknya. Kaki panjang ke arah benar belum cukup, karena cermin L tetap punya kaki panjang ke arah yang sama.",
+    "gambar_pembahasan": "K19-N-049.svg",
+    "status_kunci": "ganda"
+  },
+  {
+    "id": "K19-N-050",
+    "kartu": "K19",
+    "sub_type": "FIG-KUBUS-HOTS-LIPAT",
+    "tier": 3,
+    "sumber": "baru",
+    "rilis": "2026-10-20",
+    "stem": "Jaring-jaring berikut dilipat menjadi kubus. Kubus manakah yang dapat dibentuk?",
+    "gambar": "drill/img/K19-N-050.svg",
+    "opsi": {
+      "a": "Gambar A",
+      "b": "Gambar B",
+      "c": "Gambar C",
+      "d": "Gambar D",
+      "e": "Gambar E"
+    },
+    "opsi_gambar": {
+      "a": "drill/img/K19-N-050-a.svg",
+      "b": "drill/img/K19-N-050-b.svg",
+      "c": "drill/img/K19-N-050-c.svg",
+      "d": "drill/img/K19-N-050-d.svg",
+      "e": "drill/img/K19-N-050-e.svg"
+    },
+    "kunci": [
+      "e"
+    ],
+    "pembahasan": "1. Beri nomor kotak jaring seperti pada gambar pembahasan. Pasangan berseberangan: 1–6, 2–4, 3–5. Dua sisi berseberangan tidak pernah terlihat bersamaan.\n2. Opsi E memperlihatkan depan = sisi 2 (huruf L), atas = sisi 1 (seperempat lingkaran), kiri = sisi 5 (hitam penuh). Tidak ada pasangan berseberangan di antara ketiganya ✓. Perhatikan: sisi 2 (depan) dan sisi 1 (atas), juga sisi 2 (depan) dan sisi 5 (kiri), juga sisi 1 (atas) dan sisi 5 (kiri) tidak bersebelahan di jaring, tetapi bertemu di satu rusuk setelah dilipat.\n3. Kalau sisi 2 di depan dan sisi 1 di atas, sisi kiri memang sisi 5, dan arah motifnya cocok: huruf L di depan, kaki panjangnya ke arah bawah, kaki pendeknya ke kiri; seperempat lingkaran di atas, menempel di pojok kiri-belakang ✓.<br>Opsi A (letak sisi tertukar): Kalau sisi 6 (segitiga siku hitam) di kiri dan sisi 3 (setengah hitam) di atas, sisi depan seharusnya sisi 4 (segitiga), alasnya menempel di tepi atas, bukan huruf L (kaki panjangnya ke arah atas, kaki pendeknya ke kanan).\nOpsi B (motif tercermin (kiri-kanan terbalik)): Kalau sisi 3 (setengah hitam) di depan dan sisi 6 (segitiga siku hitam) di atas, huruf L di sisi kanan seharusnya kaki panjangnya ke arah atas, kaki pendeknya ke belakang, bukan kaki panjangnya ke arah atas, kaki pendeknya ke depan.\nOpsi C (arah motif terputar): Kalau sisi 2 (huruf L) di depan dan sisi 5 (hitam penuh) di atas, huruf L di sisi depan seharusnya kaki panjangnya ke arah kiri, kaki pendeknya ke atas, bukan kaki panjangnya ke arah bawah, kaki pendeknya ke kiri.\nOpsi D (arah motif terputar): Kalau sisi 4 (segitiga) di depan dan sisi 3 (setengah hitam) di atas, segitiga di sisi depan seharusnya alasnya menempel di tepi atas, bukan alasnya menempel di tepi bawah.\nJawaban: E\nTips: Sisi yang tidak bersebelahan di jaring bisa bertemu setelah dilipat. Lipat bertahap dari sisi jangkar, jangan menebak dari jarak di jaring. Target ≤ 90 detik.",
+    "gambar_pembahasan": "K19-N-050.svg",
+    "status_kunci": "ganda"
+  }
+]

@@ -166,6 +166,9 @@ So the "level" column in the tables means **which package family uses the format
 | FIG-SUSUN-PITA | Susun potongan → equal framed vertical strips of line art | Portrait, cake + piping bag, teapot + cup | PERM | A98,99,100=KD22 (3) |
 | FIG-SUSUN-SILUET | Susun potongan → uneven unframed slices of a solid silhouette | Bat, sailing ship (6 slices, two of them tiny), witch on broom | PERM | P29,34,37 (3) |
 | FIG-SUSUN-LENGKUNG | Susun potongan → curved/tilted cuts of an icon | Fork + spoon in a ring | PERM | P30 (1) |
+| FIG-KUBUS-LIPAT | Jaring-jaring kubus → pilih kubus yang dapat dibentuk (tampak depan-atas-kanan/kiri) | Tier 1 motif simetris (bertetangga/berseberangan); tier 2 motif berarah; tier 3 huruf L, pojok, jaring 2-3-1/2-2-2/3-3 | baru (17), K19-N | Generator `scripts/generate-k19-kubus.ts`, kunci brute force 24 rotasi; pengecoh bernama: berseberangan, tertukar, terputar, tercermin |
+| FIG-KUBUS-BUKA | Kubus → pilih jaring asal | Sama dengan LIPAT, arah dibalik | baru (13), K19-N | Opsi jaring berbeda bentuk; pengecoh dari mutasi jaring kunci |
+| FIG-KUBUS-HOTS-* | HOTS LIPAT (10) / BUKA (10), tier 3 | 6 sisi bermotif (5 berarah + huruf L), jaring sulit saja, pengecoh tepat satu selisih, LIPAT memperlihatkan sisi yang tidak bersebelahan di jaring | baru (20), K19-N-031..050 | `scripts/kubus-hots.ts` |
 
 Totals I classified: P 100, B 100, A 100, KD 25, R 10 = **335 items**.
 

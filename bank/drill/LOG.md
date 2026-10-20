@@ -209,3 +209,14 @@ Sumber `baru`. Bentuk dari pemilik ("PAKET 1 - Drum Air": volume drum tabung →
 - **Cek buta** Codex (tanpa kunci, urutan diacak): 30/30 huruf sama, tidak ada soal ambigu. Semua `ganda`. Reviewer pembahasan terpisah (Q-7) tidak dijalankan.
 - Label kategori "Debit & volume" di `lib/drill-cards.ts`; taksonomi di `docs/rencana/drilling/02`. Tanpa gambar pembahasan.
 NEW aktif (tambahan): K07-N-041..070 (30 butir, `rilis` 2026-10-19).
+
+
+## Batch 25 — Jaring-Jaring Kubus: K19 FIG-KUBUS-* (50) · 2026-10-20
+
+Sumber `baru`. Kartu baru K19 "Jaring-Jaring Kubus" (aspek analitis). Dua model dari contoh pemilik: jaring → pilih kubus (LIPAT) dan kubus → pilih jaring (BUKA).
+- `K19-N-001`–`030`: reguler, tier 10/10/10, LIPAT 17 / BUKA 13. Mockup disetujui pemilik 2026-10-20 (artifact LPBwFMjfjmxRaoxgDNj6bM) sebelum produksi (G-5); bank identik byte dengan mockup.
+- `K19-N-031`–`050`: HOTS, tier 3, LIPAT 10 / BUKA 10. Aturan simultan: 6 sisi bermotif (5 berarah, selalu huruf L), jaring 2-3-1/2-2-2/3-3, pengecoh tepat satu selisih (tanpa "berseberangan"), LIPAT memperlihatkan sisi yang tidak bersebelahan di jaring.
+- **Generator** `scripts/generate-k19-kubus.ts` + `scripts/kubus-{core,render,explain,items,hots,blind}.ts`. SVG parametrik sendiri (G-1), soal + gambar pembahasan dari satu generator (G-6), seed tetap. Kunci dibuktikan brute force 24 rotasi × tanda tangan bitmap motif: tepat satu opsi sah per butir. Pengecoh bernama (D-2) dan teks "kenapa salah" diturunkan dari hitungan: sisi berseberangan tampil bersamaan, letak sisi tertukar, arah motif terputar, motif tercermin. Kunci a–e masing-masing 10.
+- **Cek buta** Codex (`--blind` → deskripsi teks tanpa kunci; arah motif ditulis dalam bentuk kanonik supaya kata "cermin" hanya muncul pada huruf L yang benar-benar tercermin): 50/50 huruf sama, tidak ada soal ambigu. Semua `ganda`.
+- Label kategori di `lib/drill-cards.ts`, taksonomi di `docs/rencana/drilling/02`.
+NEW aktif (tambahan): K19-N-001..050 (50 butir, `rilis` 2026-10-20).
