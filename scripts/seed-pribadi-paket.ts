@@ -14,7 +14,7 @@ process.loadEnvFile(path.join(__dirname, "../.env.local"));
 
 const PKG = Number(process.argv[2]);
 const APPLY = process.argv.includes("--apply");
-assert.ok(Number.isInteger(PKG) && PKG >= 2, "Nomor paket latihan wajib (Likert 2-10, SJT 21+, Ya/Tidak 31+)");
+assert.ok(Number.isInteger(PKG) && PKG >= 2, "Nomor paket latihan wajib (Likert 2-10, SJT 21+, Integritas 28, Ya/Tidak 31+)");
 
 const dir = path.join(__dirname, "../bank/pribadi");
 const read = (f: string) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8"));
@@ -76,7 +76,8 @@ const kpIds = sjtIds.length ? sjtIds : ids.filter((id) => kp.has(id)), skIds = i
 if (!ytIds.length) checkKpSk();
 function checkKpSk() {
 assert.equal(kpIds.length + skIds.length, ids.length, "ada id yang tidak ada di bank, atau Likert dan SJT tercampur");
-assert.ok(kpIds.length === 48 || kpIds.length === 64, "Kepribadian harus 48 butir (64 bila + Loyalitas & Kerja Sama)");
+// 0 = paket Integritas & Kejujuran saja (KEPRIBADIAN_SK_PACKAGES).
+assert.ok(kpIds.length === 48 || kpIds.length === 64 || kpIds.length === 0, "Kepribadian harus 48 butir (64 bila + Loyalitas & Kerja Sama), atau 0 untuk paket Integritas saja");
 assert.equal(skIds.length, 63, "Substansi Khusus harus 63 butir");
 assert.deepEqual(ids.slice(0, kpIds.length), kpIds, "Kepribadian harus di Bagian 1");
 const perAspek = new Map<string, number[]>();
@@ -141,7 +142,8 @@ const rows = ids.map((id, i) => {
   return {
     ...base,
     options_payload: { subtes: "SK", statement: s.situasi, aspect: aspekIntegritas(s.dimensi, s.sub), choices: [{ key: "A", text: s.opsi.A }, { key: "B", text: s.opsi.B }], bank_id: id },
-    scoring_rule: { type: "forced_choice", dimensi: s.nama, correct_key: s.kunci, pembahasan: `Aturan: ${s.aturan} ${s.pembahasan}` } satisfies PribadiRule,
+    // Pembahasan bertingkat (sk-r-01) sudah memuat aspek dan aturannya sendiri.
+    scoring_rule: { type: "forced_choice", dimensi: s.nama, correct_key: s.kunci, pembahasan: s.pembahasan.startsWith("Aspek ") ? s.pembahasan : `Aturan: ${s.aturan} ${s.pembahasan}` } satisfies PribadiRule,
   };
 });
 const idealOf = (rule: PribadiRule) => itemScore(rule, null).ideal;
@@ -150,7 +152,9 @@ assert.equal(idealSum.pribadi, 100, "jawaban ideal harus 100");
 if (ytIds.length) assert.equal(idealSum.validitas?.sesuai, 10, "jawaban ideal: Validitas harus 10/10");
 console.log(ytIds.length
   ? `Paket ${PKG}: komposisi lolos (Ya/Tidak ${ids.length - 10} butir aspek + 10 Validitas).`
-  : `Paket ${PKG}: komposisi lolos (${kpIds.length} Kepribadian${sjtIds.length ? " SJT" : ""} + 63 Integritas & Kejujuran).`);
+  : kpIds.length
+    ? `Paket ${PKG}: komposisi lolos (${kpIds.length} Kepribadian${sjtIds.length ? " SJT" : ""} + 63 Integritas & Kejujuran).`
+    : `Paket ${PKG}: komposisi lolos (63 Integritas & Kejujuran saja).`);
 if (!APPLY) process.exit(0);
 
 const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL!, process.env.SUPABASE_SERVICE_ROLE_KEY!, { auth: { persistSession: false } });

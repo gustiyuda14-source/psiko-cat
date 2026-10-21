@@ -1,0 +1,831 @@
+{
+  "batch": "sk-r-03",
+  "status": "review",
+  "catatan": "63 butir Integritas & Kejujuran gaya ringkas tingkat HOTS lanjut: situasi memadukan dua tekanan (atasan + aturan, kerabat + kebenaran, mufakat + aturan, kenyamanan + perubahan) dan pengecoh memakai kata kunci dimensi lain. Pembahasan bertingkat per aspek + baris Jebakan. Komposisi SK_SLOT + 4 pasang kembar (D1, D2, D3, D5). Cek buta 2026-10-21: Codex 62/63 sepakat; D6-1437 (pengecoh Mempertimbangkan) diganti Mendahulukan, D2-1406 (Ralat/Perbaikan tumpang tindih) diganti Ralat/Kehati-hatian, D9-1457 Doa/Logika dua kali dinilai ambigu lalu diganti pola syukur. Pemeriksa kedua sepakat pada butir yang diubah. Dipakai paket latihan 30.",
+  "dimensi": {
+    "D1": {
+      "nama": "Kebenaran",
+      "aturan": "Kebenaran diutamakan di atas kebaikan, kemanfaatan, atau perasaan."
+    },
+    "D2": {
+      "nama": "Keterbukaan informasi",
+      "aturan": "Keterbukaan dan transparansi diutamakan di atas kerahasiaan."
+    },
+    "D3": {
+      "nama": "Penegakan aturan",
+      "aturan": "Aturan, sanksi, dan kepatuhan diutamakan di atas nasihat atau penyadaran."
+    },
+    "D4": {
+      "nama": "Patuh dan inovasi",
+      "aturan": "Patuh untuk hukum, standar, dan regulasi; berinovasi untuk program, konsep, dan cara kerja."
+    },
+    "D5": {
+      "nama": "Kewenangan",
+      "aturan": "Bertindak sesuai kewenangan dan jalur komando yang sah."
+    },
+    "D6": {
+      "nama": "Keberanian dan perhitungan",
+      "aturan": "Berani bertindak dan berubah; mengukur risiko saat bersaing atau menghadapi peluang."
+    },
+    "D7": {
+      "nama": "Ketegasan dan ketenangan",
+      "aturan": "Tegas dalam tindakan memimpin; tenang dalam perasaan."
+    },
+    "D8": {
+      "nama": "Kemandirian dan inisiatif",
+      "aturan": "Menyelesaikan sendiri, proaktif, ulet, dan menggerakkan partisipasi."
+    },
+    "D9": {
+      "nama": "Religiusitas dan makna",
+      "aturan": "Makna spiritual dan rasa syukur diutamakan di atas hal material."
+    },
+    "D10": {
+      "nama": "Orientasi hasil",
+      "aturan": "Ketercapaian hasil diutamakan dalam menilai keberhasilan tugas."
+    },
+    "D11": {
+      "nama": "Refleksi dan belajar",
+      "aturan": "Belajar dari kegagalan, mengenali kelemahan, menerima masukan, dan menyesuaikan strategi."
+    }
+  },
+  "items": [
+    {
+      "id": "SK-D1-1401",
+      "dimensi": "D1",
+      "situasi": "Hal yang dipegang ketika kebohongan kecil bisa menyelamatkan acara dari kekacauan",
+      "opsi": {
+        "A": "Kemanfaatan",
+        "B": "Kejujuran"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Kebenaran. Aturannya: kebenaran diutamakan di atas perasaan, kebaikan, atau kemanfaatan.\n\nBedah pilihan:\nA. Kemanfaatan: memilih yang paling berguna untuk acara.\nB. Kejujuran: tetap menyampaikan yang benar.\n\nJawaban: B. Kejujuran, karena kejujuran tidak ditukar dengan manfaat, sekecil apa pun kebohongannya.\nKenapa A. Kemanfaatan kurang tepat: kemanfaatan terdengar rasional, tetapi membenarkan kebohongan.\nJebakan: kata kecil dan menyelamatkan dipasang agar kebohongan terlihat bijak.\n\nPola cepat: kebenaran di atas kemanfaatan, tanpa pengecualian."
+    },
+    {
+      "id": "SK-D1-1402",
+      "dimensi": "D1",
+      "situasi": "Hal yang diutamakan ketika mengoreksi nilai ujian keponakan sendiri",
+      "opsi": {
+        "A": "Kekeluargaan",
+        "B": "Objektivitas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Kebenaran. Aturannya: kebenaran diutamakan di atas perasaan, kebaikan, atau kemanfaatan.\n\nBedah pilihan:\nA. Kekeluargaan: mempertimbangkan hubungan keluarga.\nB. Objektivitas: menilai sesuai jawaban.\n\nJawaban: B. Objektivitas, karena nilai diberikan objektif, siapa pun pesertanya.\nKenapa A. Kekeluargaan kurang tepat: kekeluargaan nilai yang hangat, tetapi membuat penilaian berat sebelah.\nJebakan: kekeluargaan terdengar seperti nilai budaya yang dijunjung.\n\nPola cepat: hubungan dekat tidak mengubah penilaian."
+    },
+    {
+      "id": "SK-D1-1403",
+      "dimensi": "D1",
+      "situasi": "Hal yang disampaikan kepada pimpinan ketika proyek kesayangannya ternyata gagal",
+      "opsi": {
+        "A": "Keadaan",
+        "B": "Harapan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D1-1404",
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Kebenaran. Aturannya: kebenaran diutamakan di atas perasaan, kebaikan, atau kemanfaatan.\n\nBedah pilihan:\nA. Keadaan: keadaan sebenarnya.\nB. Harapan: hal yang masih bisa diharapkan.\n\nJawaban: A. Keadaan, karena pimpinan perlu tahu keadaan sebenarnya untuk memutuskan langkah.\nKenapa B. Harapan kurang tepat: harapan terdengar optimis, tetapi menutupi kegagalan.\nJebakan: kata kesayangannya membuat kabar optimis terasa lebih sopan.\n\nPola cepat: soal ini punya pasangan kembar. Jawab konsisten: keadaan."
+    },
+    {
+      "id": "SK-D1-1404",
+      "dimensi": "D1",
+      "situasi": "Hal yang dilaporkan ketika program unggulan atasan tidak mencapai sasaran",
+      "opsi": {
+        "A": "Harapan",
+        "B": "Keadaan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D1-1403",
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Kebenaran. Aturannya: kebenaran diutamakan di atas perasaan, kebaikan, atau kemanfaatan.\n\nBedah pilihan:\nA. Harapan: hal yang masih bisa diharapkan.\nB. Keadaan: keadaan sebenarnya.\n\nJawaban: B. Keadaan, karena laporan memuat keadaan sebenarnya walaupun mengecewakan.\nKenapa A. Harapan kurang tepat: harapan menjaga semangat, tetapi bukan isi laporan.\nJebakan: posisi ditukar dari soal sebelumnya.\n\nPola cepat: kembaran soal sebelumnya. Jawaban tetap keadaan."
+    },
+    {
+      "id": "SK-D2-1405",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika pemohon menanyakan alasan berkasnya lama diproses",
+      "opsi": {
+        "A": "Menjelaskan",
+        "B": "Menenangkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Transparansi: terbuka soal informasi dan siap mempertanggungjawabkannya.\nDimensi yang diukur: Keterbukaan informasi. Aturannya: keterbukaan diutamakan di atas kerahasiaan, bahkan di atas alasan kewenangan.\n\nBedah pilihan:\nA. Menjelaskan: memberi tahu penyebab dan perkiraan waktunya.\nB. Menenangkan: menenangkan pemohon agar bersabar.\n\nJawaban: A. Menjelaskan, karena pemohon berhak tahu penyebab keterlambatan.\nKenapa B. Menenangkan kurang tepat: menenangkan terdengar ramah, tetapi pemohon tidak mendapat informasi.\nJebakan: menenangkan terdengar seperti pelayanan prima.\n\nPola cepat: ditanya alasan = jelaskan, jangan hanya ditenangkan."
+    },
+    {
+      "id": "SK-D2-1406",
+      "dimensi": "D2",
+      "situasi": "Hal yang dipegang ketika ada kesalahan data yang sudah terlanjur diumumkan",
+      "opsi": {
+        "A": "Kehati-hatian",
+        "B": "Ralat"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Transparansi: terbuka soal informasi dan siap mempertanggungjawabkannya.\nDimensi yang diukur: Keterbukaan informasi. Aturannya: keterbukaan diutamakan di atas kerahasiaan, bahkan di atas alasan kewenangan.\n\nBedah pilihan:\nA. Kehati-hatian: lebih teliti untuk data berikutnya tanpa mengumumkan koreksi.\nB. Ralat: mengumumkan koreksinya kepada publik.\n\nJawaban: B. Ralat, karena kesalahan yang sudah diumumkan dikoreksi secara terbuka.\nKenapa A. Kehati-hatian kurang tepat: kehati-hatian penting untuk ke depan, tetapi publik tetap memegang data yang salah.\nJebakan: kehati-hatian terdengar seperti sikap belajar dari kesalahan.\n\nPola cepat: yang salah di depan umum, dikoreksi di depan umum."
+    },
+    {
+      "id": "SK-D2-1407",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan dalam membagikan hasil rapat kepada seluruh anggota",
+      "opsi": {
+        "A": "Kelengkapan",
+        "B": "Kesederhanaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Transparansi: terbuka soal informasi dan siap mempertanggungjawabkannya.\nDimensi yang diukur: Keterbukaan informasi. Aturannya: keterbukaan diutamakan di atas kerahasiaan, bahkan di atas alasan kewenangan.\n\nBedah pilihan:\nA. Kelengkapan: semua keputusan dan alasannya disampaikan.\nB. Kesederhanaan: hanya pokok-pokoknya.\n\nJawaban: A. Kelengkapan, karena anggota berhak tahu hasil rapat secara lengkap.\nKenapa B. Kesederhanaan kurang tepat: kesederhanaan memudahkan, tetapi ada informasi yang tidak sampai.\nJebakan: kesederhanaan terdengar efisien dan mudah dipahami.\n\nPola cepat: informasi untuk semua anggota dibagikan lengkap."
+    },
+    {
+      "id": "SK-D2-1408",
+      "dimensi": "D2",
+      "situasi": "Hal yang diutamakan ketika dana sumbangan warga terpaksa dialihkan untuk kebutuhan lain",
+      "opsi": {
+        "A": "Pemberitahuan",
+        "B": "Kebijaksanaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D2-1409",
+      "pembahasan": "Aspek Transparansi: terbuka soal informasi dan siap mempertanggungjawabkannya.\nDimensi yang diukur: Keterbukaan informasi. Aturannya: keterbukaan diutamakan di atas kerahasiaan, bahkan di atas alasan kewenangan.\n\nBedah pilihan:\nA. Pemberitahuan: memberi tahu warga ke mana dananya dialihkan.\nB. Kebijaksanaan: memutuskan sendiri dengan bijak tanpa mengumumkan.\n\nJawaban: A. Pemberitahuan, karena warga penyumbang berhak tahu penggunaan dananya.\nKenapa B. Kebijaksanaan kurang tepat: kebijaksanaan terdengar matang, tetapi keputusannya tertutup.\nJebakan: kebijaksanaan terdengar seperti sifat pemimpin yang baik.\n\nPola cepat: soal ini punya pasangan kembar. Jawab konsisten: pemberitahuan."
+    },
+    {
+      "id": "SK-D2-1409",
+      "dimensi": "D2",
+      "situasi": "Hal yang dilakukan ketika uang donasi dipakai untuk keperluan yang berbeda dari rencana",
+      "opsi": {
+        "A": "Kebijaksanaan",
+        "B": "Pemberitahuan"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D2-1408",
+      "pembahasan": "Aspek Transparansi: terbuka soal informasi dan siap mempertanggungjawabkannya.\nDimensi yang diukur: Keterbukaan informasi. Aturannya: keterbukaan diutamakan di atas kerahasiaan, bahkan di atas alasan kewenangan.\n\nBedah pilihan:\nA. Kebijaksanaan: memutuskan sendiri tanpa mengumumkan.\nB. Pemberitahuan: memberi tahu para donatur.\n\nJawaban: B. Pemberitahuan, karena donatur berhak tahu perubahan penggunaan donasi.\nKenapa A. Kebijaksanaan kurang tepat: kebijaksanaan tanpa keterbukaan menimbulkan curiga.\nJebakan: posisi pilihan ditukar.\n\nPola cepat: kembaran soal sebelumnya. Jawaban tetap pemberitahuan."
+    },
+    {
+      "id": "SK-D3-1410",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipilih ketika pelanggaran dilakukan sahabat dekat sendiri",
+      "opsi": {
+        "A": "Konsekuensi",
+        "B": "Kelonggaran"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Konsekuensi: menerapkan akibat sesuai aturan.\nB. Kelonggaran: memberi keringanan karena dekat.\n\nJawaban: A. Konsekuensi, karena aturan berlaku sama, termasuk untuk sahabat.\nKenapa B. Kelonggaran kurang tepat: kelonggaran terdengar setia kawan, tetapi pilih kasih.\nJebakan: kedekatan membuat kelonggaran terasa manusiawi.\n\nPola cepat: kedekatan tidak mengubah aturan."
+    },
+    {
+      "id": "SK-D3-1411",
+      "dimensi": "D3",
+      "situasi": "Hal yang diterapkan ketika semua anggota sepakat memaklumi pelanggaran ketua",
+      "opsi": {
+        "A": "Mufakat",
+        "B": "Aturan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Mufakat: mengikuti kesepakatan anggota.\nB. Aturan: menegakkan aturan organisasi.\n\nJawaban: B. Aturan, karena kesepakatan memaklumi pelanggaran tidak menghapus aturan.\nKenapa A. Mufakat kurang tepat: mufakat terdengar demokratis, tetapi di sini dipakai untuk membebaskan pelanggaran.\nJebakan: mufakat adalah nilai yang sangat dijunjung, sehingga sulit ditolak.\n\nPola cepat: mufakat untuk membuat aturan, bukan untuk membatalkan pelanggaran."
+    },
+    {
+      "id": "SK-D3-1412",
+      "dimensi": "D3",
+      "situasi": "Hal yang diberikan kepada atlet unggulan yang melanggar jam malam asrama",
+      "opsi": {
+        "A": "Hukuman",
+        "B": "Pemakluman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Hukuman: tindakan sesuai aturan asrama.\nB. Pemakluman: memaklumi karena atletnya penting.\n\nJawaban: A. Hukuman, karena aturan asrama berlaku untuk semua penghuni.\nKenapa B. Pemakluman kurang tepat: pemakluman terdengar strategis, tetapi membuat aturan pilih kasih.\nJebakan: kata unggulan memancing perlakuan khusus.\n\nPola cepat: status unggulan tidak membebaskan dari aturan."
+    },
+    {
+      "id": "SK-D3-1413",
+      "dimensi": "D3",
+      "situasi": "Hal yang diutamakan ketika aturan yang dilanggar terasa terlalu kaku",
+      "opsi": {
+        "A": "Penegakan",
+        "B": "Penyesuaian"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Penegakan: menegakkan aturan yang berlaku.\nB. Penyesuaian: melonggarkan aturan saat itu juga.\n\nJawaban: A. Penegakan, karena selama belum diubah resmi, aturan tetap ditegakkan.\nKenapa B. Penyesuaian kurang tepat: penyesuaian terdengar fleksibel, tetapi mengubah aturan secara sepihak.\nJebakan: kata terlalu kaku membuat penyesuaian terlihat masuk akal.\n\nPola cepat: aturan diubah lewat jalurnya; sebelum itu, ditegakkan."
+    },
+    {
+      "id": "SK-D3-1414",
+      "dimensi": "D3",
+      "situasi": "Hal yang dipilih untuk pegawai yang memalsukan daftar hadir",
+      "opsi": {
+        "A": "Sanksi",
+        "B": "Pembinaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D3-1415",
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Sanksi: tindakan sesuai aturan.\nB. Pembinaan: bimbingan agar tidak mengulang.\n\nJawaban: A. Sanksi, karena memalsukan daftar hadir adalah pelanggaran yang ada sanksinya.\nKenapa B. Pembinaan kurang tepat: pembinaan baik untuk kesalahan ringan, bukan untuk pemalsuan.\nJebakan: pembinaan terdengar seperti pendekatan atasan yang modern.\n\nPola cepat: soal ini punya pasangan kembar. Jawab konsisten: sanksi."
+    },
+    {
+      "id": "SK-D3-1415",
+      "dimensi": "D3",
+      "situasi": "Hal yang diberikan kepada staf yang mengisi absensi untuk rekannya",
+      "opsi": {
+        "A": "Pembinaan",
+        "B": "Sanksi"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D3-1414",
+      "pembahasan": "Aspek Integritas: jujur dan memegang aturan walaupun tidak ada yang mengawasi.\nDimensi yang diukur: Penegakan aturan. Aturannya: aturan, ketentuan, dan sanksi diutamakan di atas nasihat, musyawarah, atau pemakluman.\n\nBedah pilihan:\nA. Pembinaan: bimbingan agar tidak mengulang.\nB. Sanksi: tindakan sesuai aturan.\n\nJawaban: B. Sanksi, karena titip absen adalah pemalsuan kehadiran yang diberi sanksi.\nKenapa A. Pembinaan kurang tepat: pembinaan saja membuat pelanggaran terlihat ringan.\nJebakan: posisi pilihan ditukar.\n\nPola cepat: kembaran soal sebelumnya. Jawaban tetap sanksi."
+    },
+    {
+      "id": "SK-D4-1416",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diikuti ketika atasan menyarankan jalan pintas dalam pengadaan barang",
+      "opsi": {
+        "A": "Saran",
+        "B": "Regulasi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Saran: mengikuti arahan atasan.\nB. Regulasi: mengikuti aturan pengadaan.\n\nJawaban: B. Regulasi, karena pengadaan barang wajib mengikuti regulasi, termasuk bila atasan menyarankan lain.\nKenapa A. Saran kurang tepat: saran atasan biasanya diikuti, tetapi tidak bila melanggar regulasi.\nJebakan: taat pada atasan terdengar seperti loyalitas.\n\nPola cepat: aturan di atas arahan perorangan."
+    },
+    {
+      "id": "SK-D4-1417",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika format laporan pertanggungjawaban dana dianggap kuno",
+      "opsi": {
+        "A": "Ketentuan",
+        "B": "Kreasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Ketentuan: tetap memakai format yang ditetapkan.\nB. Kreasi: membuat format sendiri yang lebih modern.\n\nJawaban: A. Ketentuan, karena laporan pertanggungjawaban dana mengikuti format yang ditetapkan.\nKenapa B. Kreasi kurang tepat: kreasi cocok untuk program, tetapi tidak untuk laporan keuangan resmi.\nJebakan: kata kuno memancing ke sisi pembaruan.\n\nPola cepat: laporan dana resmi = ketentuan."
+    },
+    {
+      "id": "SK-D4-1418",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diikuti ketika pengalaman lapangan bertentangan dengan standar keselamatan kerja",
+      "opsi": {
+        "A": "Standar",
+        "B": "Pengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Standar: mengikuti standar keselamatan.\nB. Pengalaman: mengikuti cara yang terbukti di lapangan.\n\nJawaban: A. Standar, karena standar keselamatan dipatuhi walaupun pengalaman berkata lain.\nKenapa B. Pengalaman kurang tepat: pengalaman berharga, tetapi bukan pegangan resmi untuk keselamatan.\nJebakan: pengalaman lapangan terdengar lebih nyata daripada aturan tertulis.\n\nPola cepat: keselamatan selalu ikut standar."
+    },
+    {
+      "id": "SK-D4-1419",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang dalam memilih penyedia barang untuk kantor",
+      "opsi": {
+        "A": "Rekomendasi",
+        "B": "Prosedur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Rekomendasi: memilih yang direkomendasikan kenalan.\nB. Prosedur: memilih lewat tahapan resmi.\n\nJawaban: B. Prosedur, karena pemilihan penyedia barang mengikuti prosedur resmi.\nKenapa A. Rekomendasi kurang tepat: rekomendasi terdengar praktis dan terpercaya, tetapi melewati prosedur.\nJebakan: rekomendasi terdengar seperti jaringan kerja yang baik.\n\nPola cepat: pengadaan = prosedur."
+    },
+    {
+      "id": "SK-D4-1420",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang diikuti ketika aturan baru terasa memperlambat pekerjaan",
+      "opsi": {
+        "A": "Kepatuhan",
+        "B": "Kecepatan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Kepatuhan: menjalankan aturan baru.\nB. Kecepatan: tetap memakai cara lama yang lebih cepat.\n\nJawaban: A. Kepatuhan, karena aturan baru wajib dijalankan sejak berlaku.\nKenapa B. Kecepatan kurang tepat: kecepatan penting, tetapi tidak membenarkan mengabaikan aturan.\nJebakan: kata memperlambat membuat kecepatan terasa seperti profesionalisme.\n\nPola cepat: aturan yang berlaku dijalankan; usul perbaikan disampaikan lewat jalurnya."
+    },
+    {
+      "id": "SK-D4-1421",
+      "dimensi": "D4",
+      "sub": "patuh",
+      "situasi": "Hal yang dipegang ketika mengubah data kependudukan warga",
+      "opsi": {
+        "A": "Persyaratan",
+        "B": "Kemudahan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Patuh pada aturan. Aturannya: untuk hukum, standar, prosedur, keuangan, dan data resmi, pilih yang patuh, walaupun soalnya memakai kata memperbarui atau efisien.\n\nBedah pilihan:\nA. Persyaratan: memenuhi semua syarat resmi.\nB. Kemudahan: mempermudah warga.\n\nJawaban: A. Persyaratan, karena data kependudukan diubah hanya bila persyaratannya lengkap.\nKenapa B. Kemudahan kurang tepat: kemudahan terdengar melayani, tetapi data resmi bisa salah.\nJebakan: mempermudah warga terdengar seperti pelayanan prima.\n\nPola cepat: data resmi = persyaratan."
+    },
+    {
+      "id": "SK-D4-1422",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dibutuhkan ketika cara promosi koperasi yang sudah baku tidak menarik pembeli",
+      "opsi": {
+        "A": "Ketentuan",
+        "B": "Gebrakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Ketentuan: tetap memakai cara promosi baku.\nB. Gebrakan: mencoba cara promosi baru.\n\nJawaban: B. Gebrakan, karena promosi yang tidak menarik pembeli butuh cara baru.\nKenapa A. Ketentuan kurang tepat: ketentuan cocok untuk keuangan, bukan untuk cara promosi.\nJebakan: kata baku memancing ke sisi patuh, padahal objeknya cara promosi.\n\nPola cepat: cara menarik orang = ranah inovasi."
+    },
+    {
+      "id": "SK-D4-1423",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipegang ketika menyusun program kerja tahun depan setelah hasil tahun ini stagnan",
+      "opsi": {
+        "A": "Kelanjutan",
+        "B": "Perombakan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Kelanjutan: melanjutkan program yang sama.\nB. Perombakan: menyusun ulang program dengan cara baru.\n\nJawaban: B. Perombakan, karena program yang stagnan perlu dirombak.\nKenapa A. Kelanjutan kurang tepat: kelanjutan menjaga kesinambungan, tetapi mengulang hasil yang stagnan.\nJebakan: kelanjutan terdengar seperti konsistensi.\n\nPola cepat: hasil stagnan = cara baru."
+    },
+    {
+      "id": "SK-D4-1424",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dipilih untuk membuat kelas belajar warga lebih hidup",
+      "opsi": {
+        "A": "Variasi",
+        "B": "Keteraturan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Variasi: menghadirkan cara belajar yang beragam.\nB. Keteraturan: menjaga urutan belajar yang tetap.\n\nJawaban: A. Variasi, karena kelas yang ingin lebih hidup butuh variasi.\nKenapa B. Keteraturan kurang tepat: keteraturan penting, tetapi tidak membuat kelas lebih hidup.\nJebakan: keteraturan terdengar disiplin.\n\nPola cepat: metode belajar = ranah inovasi."
+    },
+    {
+      "id": "SK-D4-1425",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang diutamakan ketika pedoman acara lama membuat peserta bosan",
+      "opsi": {
+        "A": "Pedoman",
+        "B": "Kreativitas"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Pedoman: tetap mengikuti pedoman acara.\nB. Kreativitas: membuat konsep acara baru.\n\nJawaban: B. Kreativitas, karena acara yang membosankan butuh kreativitas.\nKenapa A. Pedoman kurang tepat: pedoman acara bukan aturan hukum, jadi boleh diperbarui.\nJebakan: kata pedoman dipasang agar terlihat seperti soal patuh.\n\nPola cepat: pedoman acara bukan regulasi; pilih kreativitas."
+    },
+    {
+      "id": "SK-D4-1426",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dikembangkan untuk mempercepat layanan perpustakaan",
+      "opsi": {
+        "A": "Kedisiplinan",
+        "B": "Teknologi"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Kedisiplinan: menegakkan disiplin petugas.\nB. Teknologi: memakai cara kerja berbasis teknologi.\n\nJawaban: B. Teknologi, karena mempercepat layanan dilakukan dengan cara baru.\nKenapa A. Kedisiplinan kurang tepat: kedisiplinan perlu, tetapi tidak mengubah cara layanan.\nJebakan: kedisiplinan adalah kata kunci aturan, dipasang sebagai umpan.\n\nPola cepat: mempercepat layanan = memperbarui cara."
+    },
+    {
+      "id": "SK-D4-1427",
+      "dimensi": "D4",
+      "sub": "inovasi",
+      "situasi": "Hal yang dibawa ketika ditugaskan menghidupkan kembali organisasi yang vakum",
+      "opsi": {
+        "A": "Ide",
+        "B": "Tradisi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Pembaruan cara. Aturannya: untuk program, konsep, kegiatan, metode, dan cara melayani, pilih yang membawa hal baru, walaupun soalnya menyebut pedoman atau kebiasaan.\n\nBedah pilihan:\nA. Ide: gagasan baru.\nB. Tradisi: cara lama organisasi.\n\nJawaban: A. Ide, karena organisasi yang vakum butuh ide baru.\nKenapa B. Tradisi kurang tepat: tradisi menjaga identitas, tetapi organisasinya sudah berhenti.\nJebakan: tradisi terdengar seperti menghormati pendiri.\n\nPola cepat: menghidupkan kembali = ide baru."
+    },
+    {
+      "id": "SK-D5-1428",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika warga meminta dibantu mengurus izin di luar tugas sendiri",
+      "opsi": {
+        "A": "Keramahan",
+        "B": "Kewenangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Keramahan: membantu karena ingin ramah.\nB. Kewenangan: mengarahkan ke bagian yang berwenang.\n\nJawaban: B. Kewenangan, karena izin diurus oleh bagian yang berwenang.\nKenapa A. Keramahan kurang tepat: keramahan baik, tetapi tidak membuat urusan di luar tugas menjadi sah.\nJebakan: keramahan terdengar seperti pelayanan yang baik.\n\nPola cepat: bantu dengan mengarahkan, bukan mengambil alih."
+    },
+    {
+      "id": "SK-D5-1429",
+      "dimensi": "D5",
+      "situasi": "Hal yang dijadikan dasar ketika memberi keputusan atas permohonan warga",
+      "opsi": {
+        "A": "Kewenangan",
+        "B": "Pengalaman"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Kewenangan: keputusan sesuai wewenang jabatan.\nB. Pengalaman: keputusan berdasarkan pengalaman.\n\nJawaban: A. Kewenangan, karena keputusan resmi hanya sah bila diambil sesuai kewenangan.\nKenapa B. Pengalaman kurang tepat: pengalaman membantu menimbang, tetapi bukan dasar sahnya keputusan.\nJebakan: pengalaman terdengar matang dan bijak.\n\nPola cepat: dasar keputusan resmi = kewenangan."
+    },
+    {
+      "id": "SK-D5-1430",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika atasan sedang cuti dan ada surat yang harus ditandatangani",
+      "opsi": {
+        "A": "Kewenangan",
+        "B": "Inisiatif"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Kewenangan: menunggu pejabat yang diberi wewenang.\nB. Inisiatif: menandatangani sendiri agar tidak tertunda.\n\nJawaban: A. Kewenangan, karena surat ditandatangani oleh pejabat pelaksana yang berwenang.\nKenapa B. Inisiatif kurang tepat: inisiatif terdengar proaktif, tetapi melampaui wewenang.\nJebakan: inisiatif adalah kunci produktivitas, dipasang sebagai umpan.\n\nPola cepat: tanda tangan resmi = wewenang."
+    },
+    {
+      "id": "SK-D5-1431",
+      "dimensi": "D5",
+      "situasi": "Hal yang menjadi batas ketika merasa lebih paham daripada bagian yang berwenang",
+      "opsi": {
+        "A": "Keahlian",
+        "B": "Wewenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Keahlian: bertindak karena lebih paham.\nB. Wewenang: bertindak sebatas wewenang.\n\nJawaban: B. Wewenang, karena lebih paham tidak memberi hak mengambil alih.\nKenapa A. Keahlian kurang tepat: keahlian bisa disumbangkan lewat saran, bukan mengambil alih.\nJebakan: keahlian terdengar seperti alasan profesional.\n\nPola cepat: paham belum tentu berwenang; sampaikan sebagai saran."
+    },
+    {
+      "id": "SK-D5-1432",
+      "dimensi": "D5",
+      "situasi": "Hal yang dipegang ketika rekan mempercayakan aksesnya untuk menyetujui pengajuan",
+      "opsi": {
+        "A": "Wewenang",
+        "B": "Kepercayaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": "SK-D5-1433",
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Wewenang: menolak karena bukan wewenangnya.\nB. Kepercayaan: memakai akses itu karena dipercaya.\n\nJawaban: A. Wewenang, karena akses persetujuan hanya dipakai oleh yang berwenang.\nKenapa B. Kepercayaan kurang tepat: kepercayaan rekan tidak sama dengan wewenang.\nJebakan: dipercaya rekan terasa seperti izin resmi.\n\nPola cepat: soal ini punya pasangan kembar. Jawab konsisten: wewenang."
+    },
+    {
+      "id": "SK-D5-1433",
+      "dimensi": "D5",
+      "situasi": "Hal yang diutamakan ketika teman meminjamkan akun untuk menyetujui berkas",
+      "opsi": {
+        "A": "Kepercayaan",
+        "B": "Wewenang"
+      },
+      "kunci": "B",
+      "kembar_dengan": "SK-D5-1432",
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Kewenangan. Aturannya: bertindak sesuai wewenang diutamakan di atas kepercayaan, kemampuan, target, kecepatan, atau solidaritas.\n\nBedah pilihan:\nA. Kepercayaan: memakai akun itu karena dipercaya.\nB. Wewenang: menolak karena bukan wewenangnya.\n\nJawaban: B. Wewenang, karena persetujuan berkas hanya oleh pemilik wewenang.\nKenapa A. Kepercayaan kurang tepat: kepercayaan tidak membuat persetujuan menjadi sah.\nJebakan: posisi pilihan ditukar.\n\nPola cepat: kembaran soal sebelumnya. Jawaban tetap wewenang."
+    },
+    {
+      "id": "SK-D6-1434",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika diberi kesempatan presentasi di depan pimpinan tertinggi",
+      "opsi": {
+        "A": "Mengambil",
+        "B": "Mewakilkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Keberanian. Aturannya: untuk kesempatan, tantangan pribadi, dan perubahan, pilih yang berani bertindak.\n\nBedah pilihan:\nA. Mengambil: maju presentasi sendiri.\nB. Mewakilkan: meminta rekan yang lebih senior.\n\nJawaban: A. Mengambil, karena kesempatan tampil diambil dengan berani.\nKenapa B. Mewakilkan kurang tepat: mewakilkan terdengar rendah hati, tetapi melewatkan kesempatan.\nJebakan: mewakilkan kepada senior terdengar sopan.\n\nPola cepat: kesempatan = ambil."
+    },
+    {
+      "id": "SK-D6-1435",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dipilih ketika sistem kerja lama nyaman tetapi tidak lagi efektif",
+      "opsi": {
+        "A": "Kenyamanan",
+        "B": "Perubahan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Keberanian. Aturannya: untuk kesempatan, tantangan pribadi, dan perubahan, pilih yang berani bertindak.\n\nBedah pilihan:\nA. Kenyamanan: bertahan pada cara yang nyaman.\nB. Perubahan: berani mengubah cara kerja.\n\nJawaban: B. Perubahan, karena sistem yang tidak efektif harus berani diubah.\nKenapa A. Kenyamanan kurang tepat: kenyamanan wajar, tetapi menghambat hasil.\nJebakan: kata nyaman membuat bertahan terasa wajar.\n\nPola cepat: tidak efektif = berubah."
+    },
+    {
+      "id": "SK-D6-1436",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dibutuhkan ketika harus menolak permintaan keliru dari senior",
+      "opsi": {
+        "A": "Kesopanan",
+        "B": "Keberanian"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Keberanian. Aturannya: untuk kesempatan, tantangan pribadi, dan perubahan, pilih yang berani bertindak.\n\nBedah pilihan:\nA. Kesopanan: menjaga sopan santun.\nB. Keberanian: berani berkata tidak.\n\nJawaban: B. Keberanian, karena menolak permintaan keliru dari senior membutuhkan keberanian.\nKenapa A. Kesopanan kurang tepat: kesopanan tetap perlu dalam cara menolak, tetapi tanpa keberanian penolakan tidak terjadi.\nJebakan: kesopanan pada senior terdengar seperti budaya yang benar.\n\nPola cepat: yang ditanya modal untuk menolak = keberanian."
+    },
+    {
+      "id": "SK-D6-1437",
+      "dimensi": "D6",
+      "sub": "berani",
+      "situasi": "Hal yang dilakukan ketika ditawari tugas di daerah terpencil untuk pengembangan karier",
+      "opsi": {
+        "A": "Menerima",
+        "B": "Mendahulukan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Keberanian. Aturannya: untuk kesempatan, tantangan pribadi, dan perubahan, pilih yang berani bertindak.\n\nBedah pilihan:\nA. Menerima: mengambil tugas itu.\nB. Mendahulukan: memberi kesempatan itu kepada rekan lebih dulu.\n\nJawaban: A. Menerima, karena kesempatan berkembang diambil dengan berani.\nKenapa B. Mendahulukan kurang tepat: mendahulukan rekan terdengar mulia, tetapi menghindari tantangan.\nJebakan: mendahulukan orang lain terdengar seperti sikap tidak egois.\n\nPola cepat: kesempatan pribadi = berani; peluang usaha = berhitung."
+    },
+    {
+      "id": "SK-D6-1438",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dipegang ketika usaha pesaing berkembang lebih cepat",
+      "opsi": {
+        "A": "Analisis",
+        "B": "Spontanitas"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Perhitungan. Aturannya: untuk persaingan dan peluang usaha, pilih yang menghitung lebih dulu.\n\nBedah pilihan:\nA. Analisis: mempelajari keadaan sebelum bertindak.\nB. Spontanitas: langsung bergerak mengejar.\n\nJawaban: A. Analisis, karena persaingan dihadapi dengan analisis.\nKenapa B. Spontanitas kurang tepat: spontanitas terdengar gesit, tetapi berisiko.\nJebakan: di soal persaingan, pilihan yang gesit dan berani adalah umpan.\n\nPola cepat: persaingan = analisis."
+    },
+    {
+      "id": "SK-D6-1439",
+      "dimensi": "D6",
+      "sub": "mengukur",
+      "situasi": "Hal yang dilakukan ketika ada tawaran kerja sama usaha dari orang yang baru dikenal",
+      "opsi": {
+        "A": "Menyetujui",
+        "B": "Mengkaji"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Inovasi: berani membawa cara baru dan mengambil langkah yang terukur.\nDimensi yang diukur: Perhitungan. Aturannya: untuk persaingan dan peluang usaha, pilih yang menghitung lebih dulu.\n\nBedah pilihan:\nA. Menyetujui: langsung setuju agar tidak kehilangan peluang.\nB. Mengkaji: memeriksa tawaran itu dulu.\n\nJawaban: B. Mengkaji, karena peluang usaha dikaji sebelum diambil.\nKenapa A. Menyetujui kurang tepat: menyetujui terdengar berani, tetapi rawan tertipu.\nJebakan: kata peluang memancing keberanian.\n\nPola cepat: peluang usaha = kaji dulu."
+    },
+    {
+      "id": "SK-D7-1440",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang dilakukan ketika peserta rapat terus memotong pembicaraan orang lain",
+      "opsi": {
+        "A": "Menertibkan",
+        "B": "Mendengarkan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Ketegasan. Aturannya: kalau yang ditanya tindakan atau yang ditunjukkan, pilih yang tegas.\n\nBedah pilihan:\nA. Menertibkan: menertibkan jalannya rapat.\nB. Mendengarkan: mendengarkan semua yang bicara.\n\nJawaban: A. Menertibkan, karena pemimpin rapat menertibkan peserta yang mengganggu.\nKenapa B. Mendengarkan kurang tepat: mendengarkan baik, tetapi rapat menjadi kacau.\nJebakan: mendengarkan terdengar seperti pemimpin yang demokratis.\n\nPola cepat: tindakan = tegas."
+    },
+    {
+      "id": "SK-D7-1441",
+      "dimensi": "D7",
+      "sub": "tegas",
+      "situasi": "Hal yang ditunjukkan ketika anggota menolak menjalankan keputusan bersama",
+      "opsi": {
+        "A": "Ketegasan",
+        "B": "Kelembutan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Ketegasan. Aturannya: kalau yang ditanya tindakan atau yang ditunjukkan, pilih yang tegas.\n\nBedah pilihan:\nA. Ketegasan: menegakkan keputusan bersama.\nB. Kelembutan: membujuk dengan halus.\n\nJawaban: A. Ketegasan, karena keputusan bersama ditegakkan dengan tegas.\nKenapa B. Kelembutan kurang tepat: kelembutan berguna dalam cara bicara, tetapi keputusan tetap harus dijalankan.\nJebakan: kelembutan terdengar seperti kepemimpinan yang merangkul.\n\nPola cepat: ditunjukkan = tindakan = tegas."
+    },
+    {
+      "id": "SK-D7-1442",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dijaga ketika menghadapi warga yang marah di loket",
+      "opsi": {
+        "A": "Ketegasan",
+        "B": "Ketenangan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Ketenangan. Aturannya: kalau yang ditanya perasaan atau hal yang dijaga, pilih yang tenang.\n\nBedah pilihan:\nA. Ketegasan: bersikap tegas kepada warga.\nB. Ketenangan: tetap tenang.\n\nJawaban: B. Ketenangan, karena yang dijaga saat menghadapi orang marah adalah ketenangan.\nKenapa A. Ketegasan kurang tepat: ketegasan adalah kunci soal tindakan, bukan soal yang dijaga.\nJebakan: ketegasan dari dimensi yang sama dipasang sebagai umpan; kata dijaga mengarah ke tenang.\n\nPola cepat: dijaga atau dirasakan = tenang."
+    },
+    {
+      "id": "SK-D7-1443",
+      "dimensi": "D7",
+      "sub": "tenang",
+      "situasi": "Hal yang dirasakan ketika menunggu keputusan pimpinan atas usulan sendiri",
+      "opsi": {
+        "A": "Tenang",
+        "B": "Berharap"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Kepemimpinan: bertindak sesuai wewenang, tegas dalam tindakan, tenang dalam sikap.\nDimensi yang diukur: Ketenangan. Aturannya: kalau yang ditanya perasaan atau hal yang dijaga, pilih yang tenang.\n\nBedah pilihan:\nA. Tenang: tetap tenang apa pun hasilnya.\nB. Berharap: berharap usulannya diterima.\n\nJawaban: A. Tenang, karena perasaan yang tepat saat menunggu keputusan adalah tenang.\nKenapa B. Berharap kurang tepat: berharap wajar, tetapi mudah berubah menjadi cemas.\nJebakan: berharap terdengar optimis dan positif.\n\nPola cepat: menunggu hasil = tenang."
+    },
+    {
+      "id": "SK-D8-1444",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika target tim tercapai tetapi target pribadi belum",
+      "opsi": {
+        "A": "Merayakan",
+        "B": "Mengejar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Merayakan: ikut merayakan keberhasilan tim.\nB. Mengejar: mengejar target pribadi yang tertinggal.\n\nJawaban: B. Mengejar, karena target pribadi yang belum tercapai tetap dikejar.\nKenapa A. Merayakan kurang tepat: merayakan keberhasilan tim wajar, tetapi target sendiri tertinggal.\nJebakan: keberhasilan tim membuat merayakan terasa pantas.\n\nPola cepat: target sendiri belum tercapai = kejar."
+    },
+    {
+      "id": "SK-D8-1445",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika arahan tugas kurang jelas padahal atasan sedang sibuk",
+      "opsi": {
+        "A": "Menunggu",
+        "B": "Menelusuri"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Menunggu: menunggu atasan senggang.\nB. Menelusuri: mencari tahu sendiri dari dokumen atau rekan.\n\nJawaban: B. Menelusuri, karena proaktif berarti mencari tahu sendiri tanpa menunggu.\nKenapa A. Menunggu kurang tepat: menunggu terdengar sopan, tetapi pekerjaan tertunda.\nJebakan: atasan yang sibuk membuat menunggu terasa menghormati.\n\nPola cepat: bisa dicari sendiri = cari sendiri."
+    },
+    {
+      "id": "SK-D8-1446",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika warga acuh terhadap program bank sampah yang dipimpin",
+      "opsi": {
+        "A": "Merangkul",
+        "B": "Mengerjakan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Merangkul: mendekati dan mengajak warga ikut.\nB. Mengerjakan: mengerjakan program sendiri.\n\nJawaban: A. Merangkul, karena program bersama yang dipimpin berhasil kalau warga terlibat.\nKenapa B. Mengerjakan kurang tepat: mengerjakan sendiri terdengar mandiri, tetapi programnya bukan program pribadi.\nJebakan: mandiri biasanya kunci di dimensi ini; di program bersama justru kalah.\n\nPola cepat: program bersama yang dipimpin = gerakkan orang lain."
+    },
+    {
+      "id": "SK-D8-1447",
+      "dimensi": "D8",
+      "situasi": "Hal yang dikejar ketika sudah menjadi juara bertahan",
+      "opsi": {
+        "A": "Mempertahankan",
+        "B": "Meningkatkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Mempertahankan: menjaga posisi juara.\nB. Meningkatkan: meningkatkan kemampuan lebih jauh.\n\nJawaban: B. Meningkatkan, karena berprestasi berarti terus meningkat, bukan hanya bertahan.\nKenapa A. Mempertahankan kurang tepat: mempertahankan terdengar realistis, tetapi berhenti berkembang.\nJebakan: mempertahankan gelar terdengar sudah cukup ambisius.\n\nPola cepat: pilih yang terus naik."
+    },
+    {
+      "id": "SK-D8-1448",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika mendapat waktu luang di tengah masa persiapan seleksi",
+      "opsi": {
+        "A": "Bersantai",
+        "B": "Berlatih"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Bersantai: memakai waktu untuk santai.\nB. Berlatih: memakai waktu untuk berlatih.\n\nJawaban: B. Berlatih, karena waktu luang dipakai untuk mengejar target seleksi.\nKenapa A. Bersantai kurang tepat: bersantai wajar, tetapi tidak menunjukkan dorongan berprestasi.\nJebakan: bersantai terdengar seperti menjaga keseimbangan.\n\nPola cepat: waktu luang menjelang target = berlatih."
+    },
+    {
+      "id": "SK-D8-1449",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika menemukan cara kerja yang bisa menghemat waktu tim",
+      "opsi": {
+        "A": "Mengusulkan",
+        "B": "Menyimpan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Mengusulkan: menyampaikan cara itu kepada tim.\nB. Menyimpan: menyimpan untuk dipakai sendiri.\n\nJawaban: A. Mengusulkan, karena temuan yang bermanfaat diusulkan tanpa menunggu diminta.\nKenapa B. Menyimpan kurang tepat: menyimpan terdengar rendah hati, tetapi tim tidak mendapat manfaatnya.\nJebakan: menyimpan bisa terdengar seperti tidak mau menonjolkan diri.\n\nPola cepat: inisiatif = sampaikan."
+    },
+    {
+      "id": "SK-D8-1450",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika mengerjakan tugas berat sendirian di akhir pekan",
+      "opsi": {
+        "A": "Menuntaskan",
+        "B": "Membagi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Menuntaskan: menyelesaikan sampai tuntas.\nB. Membagi: membagi tugas kepada orang lain.\n\nJawaban: A. Menuntaskan, karena tugas sendiri dituntaskan walaupun berat.\nKenapa B. Membagi kurang tepat: membagi terdengar seperti kerja sama, tetapi tugas ini tanggung jawab sendiri.\nJebakan: membagi tugas terdengar seperti manajemen yang baik.\n\nPola cepat: tugas sendiri = tuntaskan sendiri."
+    },
+    {
+      "id": "SK-D8-1451",
+      "dimensi": "D8",
+      "situasi": "Hal yang dilakukan ketika diberi tanggung jawab baru tanpa pelatihan",
+      "opsi": {
+        "A": "Menunggu",
+        "B": "Belajar"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Kemandirian dan inisiatif. Aturannya: mandiri, proaktif, ulet, berprestasi; untuk program bersama, menggerakkan orang lain.\n\nBedah pilihan:\nA. Menunggu: menunggu ada pelatihan.\nB. Belajar: mempelajari sendiri.\n\nJawaban: B. Belajar, karena tanggung jawab baru dijawab dengan belajar mandiri.\nKenapa A. Menunggu kurang tepat: menunggu pelatihan terdengar prosedural, tetapi pekerjaan tertunda.\nJebakan: menunggu pelatihan terdengar seperti mengikuti prosedur.\n\nPola cepat: mandiri = belajar sendiri."
+    },
+    {
+      "id": "SK-D9-1452",
+      "dimensi": "D9",
+      "situasi": "Hal yang diingat ketika menerima pujian atas keberhasilan besar",
+      "opsi": {
+        "A": "Kemampuan",
+        "B": "Karunia"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Kemampuan: hasil kemampuan sendiri.\nB. Karunia: karunia dari Tuhan.\n\nJawaban: B. Karunia, karena keberhasilan dimaknai sebagai karunia.\nKenapa A. Kemampuan kurang tepat: kemampuan memang berperan, tetapi bukan makna spiritualnya.\nJebakan: kemampuan terdengar seperti percaya diri yang sehat.\n\nPola cepat: keberhasilan = karunia."
+    },
+    {
+      "id": "SK-D9-1453",
+      "dimensi": "D9",
+      "situasi": "Hal yang mendasari kejujuran saat tidak ada yang mengawasi",
+      "opsi": {
+        "A": "Ketakwaan",
+        "B": "Reputasi"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Ketakwaan: takut kepada Tuhan.\nB. Reputasi: menjaga nama baik.\n\nJawaban: A. Ketakwaan, karena kejujuran tanpa pengawasan bersumber dari ketakwaan.\nKenapa B. Reputasi kurang tepat: reputasi baru berarti kalau ada yang melihat.\nJebakan: reputasi terdengar profesional.\n\nPola cepat: tidak ada yang mengawasi = alasan dari Tuhan."
+    },
+    {
+      "id": "SK-D9-1454",
+      "dimensi": "D9",
+      "situasi": "Hal yang dipandang dari kekayaan yang dimiliki",
+      "opsi": {
+        "A": "Pencapaian",
+        "B": "Amanah"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Pencapaian: hasil kerja keras.\nB. Amanah: titipan yang dipertanggungjawabkan.\n\nJawaban: B. Amanah, karena kekayaan dimaknai sebagai amanah.\nKenapa A. Pencapaian kurang tepat: pencapaian benar, tetapi tidak menunjukkan makna spiritual.\nJebakan: pencapaian terdengar seperti motivasi berprestasi.\n\nPola cepat: harta = amanah."
+    },
+    {
+      "id": "SK-D9-1455",
+      "dimensi": "D9",
+      "situasi": "Hal yang menjadi tujuan utama dalam bekerja",
+      "opsi": {
+        "A": "Ibadah",
+        "B": "Penghasilan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Ibadah: bekerja sebagai bentuk ibadah.\nB. Penghasilan: bekerja untuk mencukupi kebutuhan.\n\nJawaban: A. Ibadah, karena religiusitas tampak dari memaknai kerja sebagai ibadah.\nKenapa B. Penghasilan kurang tepat: penghasilan wajar, tetapi tujuannya duniawi.\nJebakan: penghasilan terdengar paling jujur dan realistis.\n\nPola cepat: makna kerja = ibadah."
+    },
+    {
+      "id": "SK-D9-1456",
+      "dimensi": "D9",
+      "situasi": "Hal yang ditunjukkan ketika usaha keluarga akhirnya bangkit dari kerugian",
+      "opsi": {
+        "A": "Syukur",
+        "B": "Kebanggaan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Syukur: berterima kasih kepada Tuhan.\nB. Kebanggaan: bangga atas kerja keras keluarga.\n\nJawaban: A. Syukur, karena bangkit dari kerugian disambut dengan syukur.\nKenapa B. Kebanggaan kurang tepat: kebanggaan wajar, tetapi berpusat pada usaha sendiri.\nJebakan: kebanggaan atas kerja keras terdengar seperti motivasi berprestasi.\n\nPola cepat: keberhasilan setelah masa sulit = syukur."
+    },
+    {
+      "id": "SK-D9-1457",
+      "dimensi": "D9",
+      "situasi": "Hal yang dirasakan ketika rezeki datang dari arah yang tidak terduga",
+      "opsi": {
+        "A": "Untung",
+        "B": "Syukur"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Religiusitas: menjadikan nilai ketuhanan dasar sikap dan keputusan.\nDimensi yang diukur: Religiusitas. Aturannya: makna spiritual dan rasa syukur diutamakan di atas hal duniawi.\n\nBedah pilihan:\nA. Untung: merasa sedang beruntung.\nB. Syukur: berterima kasih kepada Tuhan.\n\nJawaban: B. Syukur, karena rezeki tak terduga dimaknai sebagai pemberian Tuhan yang disyukuri.\nKenapa A. Untung kurang tepat: merasa beruntung wajar, tetapi tidak menunjukkan makna spiritual.\nJebakan: untung adalah perasaan paling spontan, sehingga terasa jujur.\n\nPola cepat: rezeki = syukur."
+    },
+    {
+      "id": "SK-D10-1458",
+      "dimensi": "D10",
+      "situasi": "Hal yang menjadi ukuran keberhasilan kampanye kesehatan di kampung",
+      "opsi": {
+        "A": "Kegiatan",
+        "B": "Dampak"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Orientasi hasil. Aturannya: keberhasilan diukur dari hasil dan dampak nyata, bukan dari lamanya usaha atau banyaknya kegiatan.\n\nBedah pilihan:\nA. Kegiatan: banyaknya kegiatan kampanye.\nB. Dampak: perubahan perilaku warga.\n\nJawaban: B. Dampak, karena kampanye berhasil kalau perilaku warga berubah.\nKenapa A. Kegiatan kurang tepat: banyak kegiatan belum tentu mengubah perilaku.\nJebakan: jumlah kegiatan terlihat seperti bukti kerja keras.\n\nPola cepat: ukuran keberhasilan = dampak."
+    },
+    {
+      "id": "SK-D10-1459",
+      "dimensi": "D10",
+      "situasi": "Hal yang dilihat dari kerja lembur tim selama sebulan",
+      "opsi": {
+        "A": "Hasil",
+        "B": "Pengorbanan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Produktivitas: mandiri, proaktif, ulet, dan berorientasi pada hasil.\nDimensi yang diukur: Orientasi hasil. Aturannya: keberhasilan diukur dari hasil dan dampak nyata, bukan dari lamanya usaha atau banyaknya kegiatan.\n\nBedah pilihan:\nA. Hasil: apa yang berhasil dicapai.\nB. Pengorbanan: besarnya waktu dan tenaga yang dikorbankan.\n\nJawaban: A. Hasil, karena kerja keras dinilai dari hasilnya.\nKenapa B. Pengorbanan kurang tepat: pengorbanan patut dihargai, tetapi bukan ukuran keberhasilan.\nJebakan: pengorbanan terdengar mulia dan patut dipuji.\n\nPola cepat: ukuran = hasil, bukan lamanya usaha."
+    },
+    {
+      "id": "SK-D11-1460",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika saran bawahan ternyata lebih baik",
+      "opsi": {
+        "A": "Mempertahankan",
+        "B": "Menerapkan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Refleksi dan belajar. Aturannya: menerima masukan, mengenali kelemahan, mengevaluasi kegagalan, dan mengganti strategi.\n\nBedah pilihan:\nA. Mempertahankan: tetap pada rencana sendiri.\nB. Menerapkan: memakai saran bawahan.\n\nJawaban: B. Menerapkan, karena saran yang lebih baik diterapkan, dari siapa pun.\nKenapa A. Mempertahankan kurang tepat: mempertahankan terdengar konsisten, tetapi menolak perbaikan.\nJebakan: posisi sebagai atasan membuat mempertahankan terasa wajar.\n\nPola cepat: masukan yang lebih baik = terapkan."
+    },
+    {
+      "id": "SK-D11-1461",
+      "dimensi": "D11",
+      "situasi": "Hal yang dicari setelah tim kalah dalam lomba",
+      "opsi": {
+        "A": "Penyebab",
+        "B": "Hiburan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Refleksi dan belajar. Aturannya: menerima masukan, mengenali kelemahan, mengevaluasi kegagalan, dan mengganti strategi.\n\nBedah pilihan:\nA. Penyebab: mencari sebab kekalahan.\nB. Hiburan: menghibur anggota tim.\n\nJawaban: A. Penyebab, karena kekalahan dijadikan bahan evaluasi.\nKenapa B. Hiburan kurang tepat: hiburan perlu untuk semangat, tetapi tidak memperbaiki apa pun.\nJebakan: menghibur tim terdengar seperti pemimpin yang peduli.\n\nPola cepat: setelah kalah = cari penyebab."
+    },
+    {
+      "id": "SK-D11-1462",
+      "dimensi": "D11",
+      "situasi": "Hal yang diakui ketika hasil penilaian menunjukkan kelemahan sendiri",
+      "opsi": {
+        "A": "Kekurangan",
+        "B": "Alasan"
+      },
+      "kunci": "A",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Refleksi dan belajar. Aturannya: menerima masukan, mengenali kelemahan, mengevaluasi kegagalan, dan mengganti strategi.\n\nBedah pilihan:\nA. Kekurangan: mengakui kekurangan.\nB. Alasan: menjelaskan alasan di baliknya.\n\nJawaban: A. Kekurangan, karena perbaikan diri dimulai dari mengakui kekurangan.\nKenapa B. Alasan kurang tepat: alasan bisa benar, tetapi cenderung membela diri.\nJebakan: alasan terdengar seperti klarifikasi yang wajar.\n\nPola cepat: akui dulu, baru perbaiki."
+    },
+    {
+      "id": "SK-D11-1463",
+      "dimensi": "D11",
+      "situasi": "Hal yang dilakukan ketika metode belajar teman terbukti lebih berhasil",
+      "opsi": {
+        "A": "Bertahan",
+        "B": "Menyesuaikan"
+      },
+      "kunci": "B",
+      "kembar_dengan": null,
+      "pembahasan": "Aspek Profesionalisme: bekerja sesuai standar dan aturan, serta terus memperbaiki diri.\nDimensi yang diukur: Refleksi dan belajar. Aturannya: menerima masukan, mengenali kelemahan, mengevaluasi kegagalan, dan mengganti strategi.\n\nBedah pilihan:\nA. Bertahan: tetap pada metode sendiri.\nB. Menyesuaikan: mencoba menyesuaikan metode.\n\nJawaban: B. Menyesuaikan, karena strategi yang kurang berhasil disesuaikan dengan yang terbukti.\nKenapa A. Bertahan kurang tepat: bertahan terdengar teguh, tetapi menolak belajar.\nJebakan: bertahan terdengar seperti percaya diri.\n\nPola cepat: strategi yang lebih baik = tiru dan sesuaikan."
+    }
+  ]
+}

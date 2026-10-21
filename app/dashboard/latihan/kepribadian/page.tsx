@@ -3,6 +3,8 @@ import {
   KEPRIBADIAN_PACKAGE_LABELS,
   KEPRIBADIAN_SJT_PACKAGES,
   KEPRIBADIAN_SJT_PACKAGE_LABELS,
+  KEPRIBADIAN_SK_PACKAGES,
+  KEPRIBADIAN_SK_PACKAGE_LABELS,
   KEPRIBADIAN_YT_PACKAGES,
   KEPRIBADIAN_YT_PACKAGE_LABELS,
 } from "@/lib/test-config";
@@ -35,7 +37,7 @@ function toParts(list: { subtes: string | null; aspect: string | null }[]): Pack
       parts.push({
         label,
         short: sk ? "PASS HAND" : sjt ? "SJT" : yt ? "YA/TIDAK" : SHORT[label] ?? label.slice(0, 3).toUpperCase(),
-        part: sk ? "Bagian 2 · pilih A/B" : sjt ? "Bagian 1 · 5 pilihan tindakan" : yt ? "Jawab Ya atau Tidak" : "Bagian 1 · Kepribadian",
+        part: sk ? (parts.length ? "Bagian 2 · pilih A/B" : "Pilih A/B") : sjt ? "Bagian 1 · 5 pilihan tindakan" : yt ? "Jawab Ya atau Tidak" : "Bagian 1 · Kepribadian",
         count: 1,
       });
   }
@@ -65,20 +67,21 @@ export default async function LatihanKepribadianPackagesPage() {
         return { id: pkg, label: labels[pkg], questionCount: list.length, parts: toParts(list) };
       })
     );
-  const [likertPackages, sjtPackages, ytPackages] = await Promise.all([
+  const [likertPackages, sjtPackages, ytPackages, skPackages] = await Promise.all([
     build(KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS),
     build(KEPRIBADIAN_SJT_PACKAGES, KEPRIBADIAN_SJT_PACKAGE_LABELS),
     build(KEPRIBADIAN_YT_PACKAGES, KEPRIBADIAN_YT_PACKAGE_LABELS),
+    build(KEPRIBADIAN_SK_PACKAGES, KEPRIBADIAN_SK_PACKAGE_LABELS),
   ]);
 
   return (
     <div className="app-page space-y-6">
       <PageHeader
         title="Latihan Kepribadian"
-        description="Pilih format dan paket untuk berlatih. Paket skala dan situasional berisi 48 butir Kepribadian dan 63 butir Pass Hand (Integritas & Kejujuran); paket Ya/Tidak berisi 70 pernyataan."
+        description="Pilih format dan paket untuk berlatih. Paket skala dan situasional berisi 48 butir Kepribadian dan 63 butir Pass Hand (Integritas & Kejujuran); paket Ya/Tidak berisi 70 pernyataan; paket Integritas & Kejujuran berisi 63 butir Pass Hand saja."
       />
 
-      <KepribadianFormatPicker likertPackages={likertPackages} sjtPackages={sjtPackages} ytPackages={ytPackages} />
+      <KepribadianFormatPicker likertPackages={likertPackages} sjtPackages={sjtPackages} ytPackages={ytPackages} skPackages={skPackages} />
     </div>
   );
 }

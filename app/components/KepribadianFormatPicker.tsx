@@ -7,20 +7,23 @@ const FORMATS = [
   { id: "likert", label: "Skala Pernyataan", desc: "48 pernyataan skala 4 tingkat + 63 butir Pass Hand (Integritas & Kejujuran, pilih A/B)." },
   { id: "sjt", label: "Situasional (SJT)", desc: "48 situasi dengan 5 pilihan tindakan berbobot 1–5 + 63 butir Pass Hand (Integritas & Kejujuran, pilih A/B). Integritas dinilai lewat kedua bagian." },
   { id: "yt", label: "Ya / Tidak", desc: "60 pernyataan Ya/Tidak dari 6 aspek + 10 butir validitas. Ada pasangan pernyataan serupa untuk cek konsistensi." },
+  { id: "sk", label: "Integritas & Kejujuran", desc: "63 butir Pass Hand gaya ringkas: pilih A/B, pilihannya satu kata seperti soal asli. Paket 2 dan 3 tingkat HOTS: pengecohnya memakai kata kunci aspek lain. Pembahasan per aspek di setiap butir." },
 ] as const;
 
-const SIZE = { likert: [48 + 63, "48 + 63 butir"], sjt: [48 + 63, "48 + 63 butir"], yt: [70, "70 butir"] } as const;
+const SIZE = { likert: [48 + 63, "48 + 63 butir"], sjt: [48 + 63, "48 + 63 butir"], yt: [70, "70 butir"], sk: [63, "63 butir"] } as const;
 
 // Satu tile "Kepribadian", dua sub-tab format (pola KecermatanAspectPicker). Sesi keduanya di /latihan/kepribadian/[pkg];
-// package_number tidak overlap (Likert 2-10, SJT 21+, Ya/Tidak 31+).
+// package_number tidak overlap (Likert 2-10, SJT 21+, Integritas 28-30, Ya/Tidak 31+).
 export function KepribadianFormatPicker({
   likertPackages,
   sjtPackages,
   ytPackages,
+  skPackages,
 }: {
   likertPackages: PackageOption[];
   sjtPackages: PackageOption[];
   ytPackages: PackageOption[];
+  skPackages: PackageOption[];
 }) {
   const [format, setFormat] = useState<(typeof FORMATS)[number]["id"]>("likert");
   const active = FORMATS.find((f) => f.id === format)!;
@@ -47,12 +50,12 @@ export function KepribadianFormatPicker({
 
       <PackageCarousel
         key={active.id}
-        packages={{ likert: likertPackages, sjt: sjtPackages, yt: ytPackages }[format]}
+        packages={{ likert: likertPackages, sjt: sjtPackages, yt: ytPackages, sk: skPackages }[format]}
         expectedCount={SIZE[format][0]}
         unitLabel="butir"
         completeLabel={SIZE[format][1]}
         hrefBase="/latihan/kepribadian"
-        moduleLabel={{ likert: "kepribadian", sjt: "kepribadian situasional", yt: "kepribadian ya/tidak" }[format]}
+        moduleLabel={{ likert: "kepribadian", sjt: "kepribadian situasional", yt: "kepribadian ya/tidak", sk: "integritas & kejujuran" }[format]}
       />
     </div>
   );

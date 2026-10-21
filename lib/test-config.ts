@@ -135,12 +135,21 @@ export const KEPRIBADIAN_YT_PACKAGE_SIZE = 70;
 export const KEPRIBADIAN_YT_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KEPRIBADIAN_YT_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
-/** Semua paket latihan Kepribadian (Likert + SJT + Ya/Tidak); sesinya sama-sama di /latihan/kepribadian/[pkg]. */
-export const KEPRIBADIAN_LATIHAN_PACKAGES = [...KEPRIBADIAN_PACKAGES, ...KEPRIBADIAN_SJT_PACKAGES, ...KEPRIBADIAN_YT_PACKAGES];
+// Paket Integritas & Kejujuran saja: 63 butir Pass Hand gaya ringkas (opsi satu kata), bank/pribadi/sk-r-01..03.json
+// (28 dasar, 29 HOTS, 30 HOTS lanjut: pengecoh memakai kata kunci dimensi lain).
+// Tanpa bagian Kepribadian, jadi nilainya = nilai Integritas & Kejujuran.
+export const KEPRIBADIAN_SK_PACKAGES = [28, 29, 30];
+export const KEPRIBADIAN_SK_PACKAGE_SIZE = 63;
+export const KEPRIBADIAN_SK_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KEPRIBADIAN_SK_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+/** Semua paket latihan Kepribadian (Likert + SJT + Ya/Tidak + Integritas); sesinya sama-sama di /latihan/kepribadian/[pkg]. */
+export const KEPRIBADIAN_LATIHAN_PACKAGES = [...KEPRIBADIAN_PACKAGES, ...KEPRIBADIAN_SJT_PACKAGES, ...KEPRIBADIAN_YT_PACKAGES, ...KEPRIBADIAN_SK_PACKAGES];
 export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries([
   ...KEPRIBADIAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`]),
   ...KEPRIBADIAN_SJT_PACKAGES.map((id, index) => [id, `SJT Paket ${index + 1}`]),
   ...KEPRIBADIAN_YT_PACKAGES.map((id, index) => [id, `Ya/Tidak Paket ${index + 1}`]),
+  ...KEPRIBADIAN_SK_PACKAGES.map((id, index) => [id, `Integritas Paket ${index + 1}`]),
 ]);
 
 // Simulasi/tryout membaca SATU paket per module, tidak pernah semua soal aktif
