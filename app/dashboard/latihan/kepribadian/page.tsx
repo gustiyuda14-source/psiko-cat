@@ -1,4 +1,11 @@
-import { KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS, KEPRIBADIAN_SJT_PACKAGES, KEPRIBADIAN_SJT_PACKAGE_LABELS } from "@/lib/test-config";
+import {
+  KEPRIBADIAN_PACKAGES,
+  KEPRIBADIAN_PACKAGE_LABELS,
+  KEPRIBADIAN_SJT_PACKAGES,
+  KEPRIBADIAN_SJT_PACKAGE_LABELS,
+  KEPRIBADIAN_YT_PACKAGES,
+  KEPRIBADIAN_YT_PACKAGE_LABELS,
+} from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import type { PackageOption, PackagePart } from "@/app/components/PackageCarousel";
@@ -14,16 +21,23 @@ const SHORT: Record<string, string> = {
 };
 
 // Kelompokkan butir berurutan: aspek Kepribadian satu per satu, Integritas & Kejujuran satu bagian (aspeknya acak).
-// Situasi SJT diacak lintas aspek, jadi satu bagian juga.
+// Situasi SJT diacak lintas aspek, jadi satu bagian juga; begitu pula pernyataan Ya/Tidak.
 function toParts(list: { subtes: string | null; aspect: string | null }[]): PackagePart[] {
   const parts: PackagePart[] = [];
   for (const row of list) {
     const sk = row.subtes === "SK";
     const sjt = row.subtes === "SJT";
-    const label = sk ? "Integritas & Kejujuran" : sjt ? "Kepribadian situasional" : row.aspect ?? "Kepribadian";
+    const yt = row.subtes === "YT";
+    const label = sk ? "Integritas & Kejujuran" : sjt ? "Kepribadian situasional" : yt ? "Pernyataan Ya/Tidak" : row.aspect ?? "Kepribadian";
     const last = parts.at(-1);
     if (last?.label === label) last.count++;
-    else parts.push({ label, short: sk ? "PASS HAND" : sjt ? "SJT" : SHORT[label] ?? label.slice(0, 3).toUpperCase(), part: sk ? "Bagian 2 · pilih A/B" : sjt ? "Bagian 1 · 5 pilihan tindakan" : "Bagian 1 · Kepribadian", count: 1 });
+    else
+      parts.push({
+        label,
+        short: sk ? "PASS HAND" : sjt ? "SJT" : yt ? "YA/TIDAK" : SHORT[label] ?? label.slice(0, 3).toUpperCase(),
+        part: sk ? "Bagian 2 · pilih A/B" : sjt ? "Bagian 1 · 5 pilihan tindakan" : yt ? "Jawab Ya atau Tidak" : "Bagian 1 · Kepribadian",
+        count: 1,
+      });
   }
   return parts;
 }
@@ -51,19 +65,20 @@ export default async function LatihanKepribadianPackagesPage() {
         return { id: pkg, label: labels[pkg], questionCount: list.length, parts: toParts(list) };
       })
     );
-  const [likertPackages, sjtPackages] = await Promise.all([
+  const [likertPackages, sjtPackages, ytPackages] = await Promise.all([
     build(KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS),
     build(KEPRIBADIAN_SJT_PACKAGES, KEPRIBADIAN_SJT_PACKAGE_LABELS),
+    build(KEPRIBADIAN_YT_PACKAGES, KEPRIBADIAN_YT_PACKAGE_LABELS),
   ]);
 
   return (
     <div className="app-page space-y-6">
       <PageHeader
         title="Latihan Kepribadian"
-        description="Pilih format dan paket untuk berlatih. Setiap paket berisi 48 butir Kepribadian dan 63 butir Pass Hand (Integritas & Kejujuran)."
+        description="Pilih format dan paket untuk berlatih. Paket skala dan situasional berisi 48 butir Kepribadian dan 63 butir Pass Hand (Integritas & Kejujuran); paket Ya/Tidak berisi 70 pernyataan."
       />
 
-      <KepribadianFormatPicker likertPackages={likertPackages} sjtPackages={sjtPackages} />
+      <KepribadianFormatPicker likertPackages={likertPackages} sjtPackages={sjtPackages} ytPackages={ytPackages} />
     </div>
   );
 }

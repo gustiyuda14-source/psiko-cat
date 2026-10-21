@@ -12,7 +12,7 @@ import { PribadiReview, type PribadiReviewItem, type PribadiReviewSummary } from
 import { useExamKeyboard } from "@/lib/hooks/use-exam-keyboard";
 import { MODULE_CONFIG } from "@/lib/test-config";
 
-// Latihan PRIBADI: butir Kepribadian (Likert 4 atau situasi SJT 5 opsi) dan Substansi Khusus (A/B) dalam
+// Latihan PRIBADI: butir Kepribadian (Likert 4, situasi SJT 5 opsi, atau pernyataan Ya/Tidak) dan Substansi Khusus (A/B) dalam
 // satu paket, urut sequence_number. Label aspek bisa disembunyikan peserta
 // (pedoman §7.1, tahap tryout mini); preferensinya disimpan per browser.
 const ASPECT_PREF = "pribadi-show-aspect";
@@ -78,6 +78,10 @@ export default function LatihanKepribadian({
   const q = sorted[idx];
   const payload = q?.options_payload as unknown as KepribadianOptionsPayload | undefined;
   const picked = q ? answers[q.id] : undefined;
+  // Ya/Tidak: tanpa label aspek saat mengerjakan, supaya butir Validitas tidak tertandai lewat
+  // bedanya badge; aspek dan Validitas baru tampil di pembahasan.
+  const isYt = payload?.subtes === "YT";
+  const aspectLabel = isYt ? null : payload?.aspect;
   const answeredCount = Object.keys(answers).length;
 
   useEffect(() => () => {
@@ -250,19 +254,21 @@ export default function LatihanKepribadian({
             <p className="qnum tnum">Butir {idx + 1}</p>
             <div className="flex flex-wrap items-center gap-2">
               {payload?.subtes === "SK" && <Badge tone="accent">Integritas &amp; Kejujuran</Badge>}
-              {showAspect && payload?.aspect ? (
-                <Badge tone="info">{payload.aspect}</Badge>
+              {showAspect && aspectLabel ? (
+                <Badge tone="info">{aspectLabel}</Badge>
               ) : (
                 payload?.subtes !== "SK" && <Badge tone="neutral">Kepribadian</Badge>
               )}
-              <button
-                type="button"
-                onClick={toggleAspect}
-                aria-pressed={showAspect}
-                className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
-              >
-                {showAspect ? "Sembunyikan aspek" : "Tampilkan aspek"}
-              </button>
+              {!isYt && (
+                <button
+                  type="button"
+                  onClick={toggleAspect}
+                  aria-pressed={showAspect}
+                  className="text-xs font-semibold text-muted-foreground underline underline-offset-2 hover:text-foreground"
+                >
+                  {showAspect ? "Sembunyikan aspek" : "Tampilkan aspek"}
+                </button>
+              )}
             </div>
           </div>
 
@@ -278,7 +284,13 @@ export default function LatihanKepribadian({
 
           <fieldset className="opts mx-auto max-w-2xl">
             <legend className="sr-only">
-              {payload?.subtes === "SK" ? "Pilih yang paling sesuai" : payload?.subtes === "SJT" ? "Pilih tindakan yang paling tepat" : "Seberapa sesuai pernyataan ini dengan Anda"}
+              {payload?.subtes === "SK"
+                ? "Pilih yang paling sesuai"
+                : payload?.subtes === "SJT"
+                  ? "Pilih tindakan yang paling tepat"
+                  : payload?.subtes === "YT"
+                    ? "Apakah pernyataan ini sesuai dengan diri Anda"
+                    : "Seberapa sesuai pernyataan ini dengan Anda"}
             </legend>
             {payload?.choices?.map((c) => {
               const isSelected = picked === c.key;

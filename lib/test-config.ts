@@ -119,11 +119,19 @@ export const KEPRIBADIAN_SJT_PACKAGES = [21, 22, 23, 24, 25];
 export const KEPRIBADIAN_SJT_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
   KEPRIBADIAN_SJT_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
-/** Semua paket latihan Kepribadian (Likert + SJT); sesinya sama-sama di /latihan/kepribadian/[pkg]. */
-export const KEPRIBADIAN_LATIHAN_PACKAGES = [...KEPRIBADIAN_PACKAGES, ...KEPRIBADIAN_SJT_PACKAGES];
+// Sub-tes Kepribadian format pernyataan Ya/Tidak: 60 butir 6 aspek + 10 Validitas, 6 pasangan konsistensi,
+// bank/pribadi/yt-*.json (scripts/compose-pribadi-yt.ts). Tanpa Pass Hand.
+export const KEPRIBADIAN_YT_PACKAGES = [31, 32, 33];
+export const KEPRIBADIAN_YT_PACKAGE_SIZE = 70;
+export const KEPRIBADIAN_YT_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KEPRIBADIAN_YT_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+/** Semua paket latihan Kepribadian (Likert + SJT + Ya/Tidak); sesinya sama-sama di /latihan/kepribadian/[pkg]. */
+export const KEPRIBADIAN_LATIHAN_PACKAGES = [...KEPRIBADIAN_PACKAGES, ...KEPRIBADIAN_SJT_PACKAGES, ...KEPRIBADIAN_YT_PACKAGES];
 export const KEPRIBADIAN_PACKAGE_LABELS: Record<number, string> = Object.fromEntries([
   ...KEPRIBADIAN_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`]),
   ...KEPRIBADIAN_SJT_PACKAGES.map((id, index) => [id, `SJT Paket ${index + 1}`]),
+  ...KEPRIBADIAN_YT_PACKAGES.map((id, index) => [id, `Ya/Tidak Paket ${index + 1}`]),
 ]);
 
 // Simulasi/tryout membaca SATU paket per module, tidak pernah semua soal aktif

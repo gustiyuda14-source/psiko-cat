@@ -279,6 +279,56 @@ function pribadi(item: PribadiReviewItem, no: number, close: boolean, reveal: bo
       ),
     };
   }
+  const pasangan = item.pasangan && (
+    <p className="text-xs text-muted-foreground">
+      Berpasangan dengan <b className="text-foreground">no. {item.pasangan.no}</b>:{" "}
+      {{ konsisten: "jawabanmu konsisten.", berbeda: "jawabanmu berbeda.", kosong: "salah satunya belum dijawab." }[item.pasangan.status]}
+    </p>
+  );
+  if (item.subtes === "YT") {
+    const p = item.pembahasan;
+    return {
+      title: `Pernyataan ${no}`,
+      badges: item.validitas ? <Badge tone="accent">Validitas</Badge> : <Badge tone="info">{item.aspect}</Badge>,
+      status: item.selected_key === null ? skipped : full ? ok : bad,
+      hasKey: true,
+      soal: (
+        <>
+          <p className="max-w-[72ch] leading-relaxed text-foreground">{item.payload.statement}</p>
+          <Choices rows={rows} />
+        </>
+      ),
+      pembahasan: (
+        <>
+          <AnswerLine
+            items={[
+              ["Jawaban kamu", text(item.selected_key) ?? "Dilewati", full ? "text-success" : undefined],
+              ["Kunci", text(item.ideal), "text-success"],
+            ]}
+          />
+          <ol className="max-w-[72ch] space-y-1.5 border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">
+            <li>
+              <b className="text-foreground">{item.validitas ? "Validitas" : `Aspek: ${item.aspect}`}</b> — {p.definisi_aspek}
+            </li>
+            <li>
+              <b className="text-foreground">Alasan:</b> {p.alasan}
+            </li>
+            <li>
+              <b className="text-foreground">Jika menjawab sebaliknya:</b> {p.jika_sebaliknya}
+            </li>
+            <li>
+              <b className="text-foreground">Jawaban:</b> {text(item.ideal)}
+            </li>
+            <li>
+              <b className="text-foreground">Tips:</b> {p.tips}
+            </li>
+          </ol>
+          {pasangan}
+          <p className="text-xs text-muted-foreground">Skor menunjukkan kesesuaian dengan kunci latihan, bukan penilaian kepribadian kamu.</p>
+        </>
+      ),
+    };
+  }
   return {
     title: `Butir ${no}`,
     badges: (
@@ -299,6 +349,7 @@ function pribadi(item: PribadiReviewItem, no: number, close: boolean, reveal: bo
       <>
         {answer}
         <p className="max-w-[72ch] border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">{item.pembahasan}</p>
+        {pasangan}
       </>
     ),
   };

@@ -6,7 +6,7 @@ import { isSimulasiPackage, type ModuleType } from "@/lib/test-config";
 import { cleanAttemptTiming, latihanPackageOf, type KecermatanTiming } from "@/lib/progress-rules";
 import { getMissingSymbolKey } from "@/lib/kecermatan-symbols";
 import { calculateKecermatan, type KecermatanScoreResult } from "@/lib/scoring/kecermatan";
-import { isPribadiRule, itemScore, reviewFields, summarize, type PribadiRule, type PribadiSummary } from "@/lib/scoring/pribadi";
+import { isPribadiRule, itemScore, konsistensiPaket, reviewFields, summarize, type KonsistensiBaris, type PribadiRule, type PribadiSummary } from "@/lib/scoring/pribadi";
 import { psikogramPribadi } from "@/lib/scoring/psikogram-sesi";
 import type { AspekSubtes } from "@/lib/scoring/psikogram";
 import type { KecerdasanReviewItem } from "@/app/components/PembahasanSection";
@@ -86,7 +86,7 @@ export type LatihanReview =
       siblings: { id: number; at: string; timed: boolean; ajiks: boolean }[];
       kecerdasan?: KecerdasanReviewItem[];
       kecermatan?: { questions: SafeQuestion[]; answers: KecermatanFeedback; score: KecermatanScoreResult | null; timing: KecermatanTiming | null };
-      pribadi?: { summary: PribadiSummary & { psikogram: AspekSubtes[] }; items: PribadiReviewItem[] };
+      pribadi?: { summary: PribadiSummary & { psikogram: AspekSubtes[]; konsistensi: KonsistensiBaris[] }; items: PribadiReviewItem[] };
     };
 
 // Kunci tidak boleh ikut terkirim ke komponen klien.
@@ -182,18 +182,20 @@ export async function loadLatihanReview(userId: string, attemptId: number): Prom
   const scored = questions.flatMap((q) => {
     const rule = q.scoring_rule;
     if (!isPribadiRule(rule)) return [];
-    return [{ q, rule: rule as PribadiRule, selected: picks[q.id] ?? null }];
+    return [{ q, id: q.id, rule: rule as PribadiRule, selected: picks[q.id] ?? null, payload: q.options_payload as unknown as KepribadianOptionsPayload }];
   });
+  const { baris, pasanganOf } = konsistensiPaket(scored);
   return {
     ...base,
     pribadi: {
-      summary: { ...summarize(scored), psikogram: psikogramPribadi(scored) },
-      items: scored.map(({ q, rule, selected }) => ({
+      summary: { ...summarize(scored), psikogram: psikogramPribadi(scored), konsistensi: baris },
+      items: scored.map(({ q, rule, selected, payload }) => ({
         question_id: q.id,
         selected_key: selected,
-        payload: q.options_payload as unknown as KepribadianOptionsPayload,
+        payload,
         ...itemScore(rule, selected),
         ...reviewFields(rule),
+        pasangan: pasanganOf[q.id] ?? null,
       })) as PribadiReviewItem[],
     },
   };

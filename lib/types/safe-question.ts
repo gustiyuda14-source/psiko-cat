@@ -39,9 +39,13 @@ export type KepribadianOptionsPayload = {
   statement: string;
   aspect?: string;
   // Paket PRIBADI (latihan 2-10, simulasi 11): "KP" = Likert 4 tingkat, "SK" = Substansi
-  // Khusus pilihan paksa A/B, "SJT" = situasi 5 opsi berbobot (latihan pkg 21+).
+  // Khusus pilihan paksa A/B, "SJT" = situasi 5 opsi berbobot (latihan pkg 21+),
+  // "YT" = pernyataan Ya/Tidak, A = Ya, B = Tidak (latihan pkg 31+).
   // Kosong = butir lama Likert 5 (simulasi Paket 1).
-  subtes?: "KP" | "SK" | "SJT";
+  subtes?: "KP" | "SK" | "SJT" | "YT";
+  /** Butir YT: bank id pasangan konsistensi (butir serupa di paket yang sama). */
+  pasangan?: string | null;
+  bank_id?: string;
   choices: Array<{ key: "A" | "B" | "C" | "D" | "E"; text: string }>;
 };
 

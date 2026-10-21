@@ -127,7 +127,8 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: 
 
   if (pribadi?.length) {
     const entries: Entry[] = pribadi.map((item, i) => {
-      const close = item.skor === item.max - 1 && item.subtes !== "SK";
+      // Selisih 1 hanya bermakna untuk skala bertingkat (Likert/SJT), bukan pilihan dua (Pass Hand, Ya/Tidak).
+      const close = item.max > 1 && item.skor === item.max - 1;
       return {
         id: item.question_id,
         no: i + 1,
@@ -136,17 +137,18 @@ function buildSections({ kecerdasan, kepribadian, pribadi, kecermatan, keswa }: 
         card: { kind: "pribadi", item, no: i + 1, close },
       };
     });
+    const bertingkat = pribadi.some((i) => i.max > 1);
     out.push({
       key: "pribadi",
       label: pribadi.some((i) => i.subtes === "SK") ? "Kepribadian · Integritas & Kejujuran" : "Kepribadian",
       groups: [{ label: "", entries }],
       stats: [
         { label: "Sesuai kunci", value: count(entries, "ok"), tone: "ok" },
-        { label: "Selisih 1", value: count(entries, "mid"), tone: "mid" },
+        ...(bertingkat ? [{ label: "Selisih 1", value: count(entries, "mid"), tone: "mid" as const }] : []),
         { label: "Tidak sesuai", value: count(entries, "bad"), tone: "bad" },
       ],
       filters: [["all", "Semua"], ["bad", "Belum sesuai"], ["skip", "Dilewati"], ["ok", "Sesuai kunci"]],
-      legend: [["ok", "Sesuai kunci"], ["mid", "Selisih 1 tingkat"], ["bad", "Tidak sesuai kunci"], ["skip", "Dilewati"]],
+      legend: [["ok", "Sesuai kunci"], ...(bertingkat ? [["mid", "Selisih 1 tingkat"] as [State, string]] : []), ["bad", "Tidak sesuai kunci"], ["skip", "Dilewati"]],
     });
   }
 

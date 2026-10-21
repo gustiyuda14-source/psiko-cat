@@ -1,0 +1,857 @@
+{
+  "batch": "yt-03",
+  "format": "ya_tidak",
+  "status": "draft",
+  "catatan": "Mini tryout Kepribadian Ya/Tidak (60 butir aspek + 10 validitas) berkonteks tempat kerja, pelayanan publik, kegiatan masyarakat, dan transportasi umum; kunci mengikuti aturan aspek latihan D'AJIKS, bukan kunci resmi.",
+  "definisi_aspek": {
+    "Prososial": "Tulus membantu, aktif di masyarakat, tidak mengharap imbalan, dan tidak menutupi kesalahan.",
+    "Pengambilan Keputusan": "Cepat, yakin, berani menanggung risiko, dan memutuskan sendiri berdasarkan informasi.",
+    "Penyesuaian Diri": "Cepat akrab, langsung terlibat, luwes di lingkungan baru, dan tidak menarik diri.",
+    "Kepercayaan Diri": "Berani tampil dan bicara, yakin pada pendapat sendiri, dan tidak bergantung pada nasib.",
+    "Stabilitas Emosi": "Emosi terkendali, menerima kritik, berpikir positif, dan tidak meledak.",
+    "Motif Berprestasi": "Tekun, ingin unggul, suka tantangan, serta tuntas dan berkualitas.",
+    "Validitas": "Jujur mengakui kelemahan wajar yang dimiliki hampir semua orang dan tidak menampilkan diri secara terlalu sempurna."
+  },
+  "items": [
+    {
+      "id": "YT3-PRO-01",
+      "aspek": "Prososial",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya menawarkan diri mengantar pasien lansia yang kebingungan mencari ruang pemeriksaan di puskesmas.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesediaan menolong orang asing yang sedang kesulitan di tempat layanan umum. Menawarkan diri tanpa diminta adalah bentuk paling nyata dari sikap prososial: tulus membantu dan peka pada kebutuhan orang lain. Karena itu jawaban Ya paling mengekspresikan aspek Prososial.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung membiarkan orang lain menyelesaikan kesulitannya sendiri.",
+        "tips": "Bayangkan situasi nyata yang pernah Anda alami di tempat umum, lalu jawab sesuai kebiasaan Anda."
+      }
+    },
+    {
+      "id": "YT3-PRO-02",
+      "aspek": "Prososial",
+      "kunci": "Tidak",
+      "pasangan": "YT3-PRO-09",
+      "pernyataan": "Saya menanyakan dulu ada atau tidaknya uang lelah sebelum setuju ikut membersihkan selokan bersama warga.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca apakah keterlibatan dalam kegiatan warga bergantung pada imbalan. Prososial menuntut bantuan yang tidak mengharap balasan, sehingga memastikan dulu adanya uang lelah sebelum mau ikut kegiatan warga justru berlawanan dengan aspek. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kesediaan membantu tanpa imbalan, dengan arah kalimat dibalik.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan bantuan Anda bersifat transaksional, hanya muncul bila ada keuntungan.",
+        "tips": "Perhatikan syarat yang dipasang sebelum membantu, karena syarat itulah yang menentukan perilaku yang dinilai."
+      }
+    },
+    {
+      "id": "YT3-PRO-03",
+      "aspek": "Prososial",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya membantu menjelaskan cara mengisi formulir kepada warga yang kesulitan membaca di kantor kelurahan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca inisiatif membantu sesama pengunjung layanan publik yang mengalami hambatan. Meluangkan waktu menjelaskan formulir adalah bantuan konkret yang tidak memberi keuntungan pribadi. Jawaban Ya paling mencerminkan sikap tulus membantu.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kurang peduli pada kesulitan orang di sekitar Anda.",
+        "tips": "Jawab berdasarkan apa yang biasanya Anda lakukan, bukan apa yang menurut Anda paling baik terdengar."
+      }
+    },
+    {
+      "id": "YT3-PRO-04",
+      "aspek": "Prososial",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya memilih diam ketika rekan kerja salah menghitung uang kas agar suasana kantor tetap nyaman.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca sikap terhadap kesalahan orang lain yang berdampak pada kepentingan bersama. Definisi Prososial mencakup tidak menutupi kesalahan; diam demi suasana nyaman berarti membiarkan kesalahan berlanjut. Karena itu jawaban yang mengekspresikan aspek adalah Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda lebih menjaga kenyamanan daripada kebenaran dan kepentingan bersama.",
+        "tips": "Bedakan antara menjaga perasaan rekan dan menutupi kesalahan; yang dinilai adalah sikap terhadap kesalahannya."
+      }
+    },
+    {
+      "id": "YT3-PRO-05",
+      "aspek": "Prososial",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tetap membantu rekan menyelesaikan laporannya meskipun nama saya tidak dicantumkan di laporan itu.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesediaan membantu walaupun tidak mendapat pengakuan. Bantuan yang tetap diberikan tanpa nama atau pujian menunjukkan ketulusan, inti aspek Prososial. Kata \"tidak\" di kalimat hanya menjelaskan situasinya, bukan menolak perilaku membantu, sehingga kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda membantu hanya bila kontribusi Anda diakui.",
+        "tips": "Jangan terkecoh oleh kata \"tidak\" di tengah kalimat; tangkap dulu perilaku utamanya."
+      }
+    },
+    {
+      "id": "YT3-PRO-06",
+      "aspek": "Prososial",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya merasa urusan penumpang yang kebingungan mencari peron bukan tanggung jawab saya sebagai sesama penumpang.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kepedulian terhadap orang asing di transportasi umum. Menganggap kesulitan orang lain bukan urusan sendiri menunjukkan sikap menarik diri dari kepedulian sosial. Aspek Prososial menuntut sebaliknya, sehingga kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda membatasi kepedulian hanya pada urusan pribadi.",
+        "tips": "Baca kalimat sampai akhir; frasa \"bukan tanggung jawab saya\" adalah penentu arah butir."
+      }
+    },
+    {
+      "id": "YT3-PRO-07",
+      "aspek": "Prososial",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya menolak menjadi panitia kegiatan warga karena menurut saya kegiatan itu hanya membuang waktu libur.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keaktifan di masyarakat. Menolak terlibat karena menganggap kegiatan warga membuang waktu menunjukkan rendahnya minat berkontribusi bagi lingkungan. Aspek Prososial menuntut keaktifan di masyarakat, sehingga kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda kurang tertarik terlibat dalam kehidupan bersama di lingkungan.",
+        "tips": "Tanyakan pada diri sendiri seberapa sering Anda benar-benar ikut kegiatan warga, lalu jawab jujur."
+      }
+    },
+    {
+      "id": "YT3-PRO-08",
+      "aspek": "Prososial",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya pura-pura sibuk ketika rekan kerja baru kesulitan membawa tumpukan berkas ke ruang arsip.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca respons saat melihat rekan membutuhkan bantuan sederhana. Pura-pura sibuk adalah cara menghindar dari menolong, berlawanan dengan sikap tulus membantu. Karena itu jawaban yang mengekspresikan Prososial adalah Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda sengaja menghindari kesempatan membantu orang lain.",
+        "tips": "Perhatikan kata kerja yang menunjukkan menghindar, seperti \"pura-pura\" atau \"memilih diam\"."
+      }
+    },
+    {
+      "id": "YT3-PRO-09",
+      "aspek": "Prososial",
+      "kunci": "Ya",
+      "pasangan": "YT3-PRO-02",
+      "pernyataan": "Saya bersedia menjadi relawan pendaftaran vaksin di puskesmas meskipun tidak menerima honor.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesediaan menyumbang tenaga untuk layanan masyarakat tanpa bayaran. Tetap bersedia walau tanpa honor menunjukkan bantuan yang tidak mengharap imbalan, inti aspek Prososial. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kesediaan membantu tanpa imbalan, dengan arah kalimat dibalik, jadi jawaban Anda di kedua butir sebaiknya konsisten.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan kesediaan Anda membantu bergantung pada ada atau tidaknya bayaran.",
+        "tips": "Jawab konsisten dengan sikap Anda pada situasi serupa, karena butir sejenis bisa muncul dengan kalimat berbeda."
+      }
+    },
+    {
+      "id": "YT3-PRO-10",
+      "aspek": "Prososial",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya mengakui kepada atasan bahwa keterlambatan pengiriman berkas tim terjadi karena kelalaian saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keterbukaan mengakui kesalahan sendiri yang berdampak pada tim. Prososial mencakup tidak menutupi kesalahan, termasuk kesalahan diri sendiri, demi kejelasan bersama. Jawaban Ya paling mencerminkan aspek ini.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung menutupi kesalahan agar tidak terlihat buruk.",
+        "tips": "Ingat bahwa mengakui kesalahan dinilai sebagai sikap bertanggung jawab, bukan kelemahan."
+      }
+    },
+    {
+      "id": "YT3-PK-01",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Ya",
+      "pasangan": "YT3-PK-04",
+      "pernyataan": "Saat kereta yang saya tunggu dibatalkan, saya segera memilih rute pengganti setelah melihat papan jadwal.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kecepatan memutuskan ketika rencana perjalanan terganggu. Memilih rute pengganti segera setelah mendapat informasi menunjukkan keputusan yang cepat, yakin, dan berdasarkan data. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kecepatan memutuskan saat perjalanan terganggu, dengan arah kalimat dibalik.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda mudah terhenti dan ragu ketika rencana berubah mendadak.",
+        "tips": "Fokus pada urutan \"lihat informasi lalu segera memilih\"; itulah pola keputusan yang dinilai."
+      }
+    },
+    {
+      "id": "YT3-PK-02",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya menunda memilih menu makan siang di kantin kantor sampai rekan-rekan memutuskan lebih dulu.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketergantungan pada orang lain untuk pilihan pribadi yang sederhana. Aspek Pengambilan Keputusan menuntut keberanian memutuskan sendiri, apalagi untuk hal yang sepenuhnya urusan pribadi. Karena itu kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda sulit menentukan pilihan tanpa menunggu orang lain.",
+        "tips": "Bedakan menghargai pendapat orang lain dengan menyerahkan pilihan pribadi kepada mereka."
+      }
+    },
+    {
+      "id": "YT3-PK-03",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya berani mengambil tanggung jawab atas keputusan pembagian tugas yang saya buat sebagai ketua panitia.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesiapan menanggung akibat dari keputusan sendiri. Berani menanggung risiko adalah bagian definisi aspek Pengambilan Keputusan. Jawaban Ya paling mengekspresikan aspek ini.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menghindari tanggung jawab bila keputusan Anda ternyata keliru.",
+        "tips": "Jawab berdasarkan pengalaman nyata memimpin atau mengatur kegiatan, sekecil apa pun."
+      }
+    },
+    {
+      "id": "YT3-PK-04",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Tidak",
+      "pasangan": "YT3-PK-01",
+      "pernyataan": "Kalau bus yang saya tumpangi mogok di tengah jalan, saya bingung lama sebelum memutuskan cara melanjutkan perjalanan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kelambanan memutuskan saat situasi perjalanan berubah. Bingung lama menunjukkan keraguan, kebalikan dari keputusan yang cepat dan yakin. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kecepatan memutuskan saat perjalanan terganggu, dengan arah kalimat dibalik, jadi kunci butir ini Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda mudah terpaku dan sulit bertindak ketika keadaan berubah.",
+        "tips": "Jawab konsisten dengan butir serupa; perilaku yang sama bisa ditanyakan dari arah berlawanan."
+      }
+    },
+    {
+      "id": "YT3-PK-05",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Ketika ada warga pingsan di ruang tunggu puskesmas, saya langsung memanggil petugas tanpa menunggu orang lain bergerak.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keputusan cepat dalam keadaan darurat. Bertindak langsung tanpa menunggu orang lain menunjukkan keyakinan dan kesigapan memutuskan, tepat seperti tuntutan aspek. Kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung menunggu orang lain bertindak lebih dulu dalam situasi genting.",
+        "tips": "Pada situasi darurat, perhatikan apakah kalimat menggambarkan bertindak segera atau menunggu."
+      }
+    },
+    {
+      "id": "YT3-PK-06",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya meminta pendapat banyak orang dulu sebelum memutuskan hal kecil seperti warna map berkas pekerjaan saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keraguan berlebihan pada keputusan kecil. Mengumpulkan pendapat banyak orang untuk hal sepele menandakan kurang yakin memutuskan sendiri. Aspek Pengambilan Keputusan menuntut kemandirian, sehingga kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda bergantung pada persetujuan orang lain bahkan untuk hal kecil.",
+        "tips": "Perhatikan kata \"hal kecil\"; meminta pendapat untuk perkara besar berbeda dengan untuk perkara sepele."
+      }
+    },
+    {
+      "id": "YT3-PK-07",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Setelah membandingkan harga dan waktu tempuh, saya memutuskan sendiri moda transportasi untuk perjalanan ke luar kota.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keputusan mandiri yang didasarkan pada informasi. Membandingkan data lalu memutuskan sendiri adalah gambaran utuh aspek Pengambilan Keputusan. Jawaban Ya paling mengekspresikan aspek ini.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kurang terbiasa menimbang informasi lalu menetapkan pilihan sendiri.",
+        "tips": "Ingat dua unsur yang dinilai: berdasarkan informasi dan diputuskan sendiri."
+      }
+    },
+    {
+      "id": "YT3-PK-08",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya cenderung membatalkan rencana yang sudah saya putuskan begitu ada sedikit keraguan dari orang lain.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keteguhan pada keputusan yang sudah diambil. Membatalkan rencana hanya karena sedikit keraguan dari orang lain menunjukkan keyakinan yang rapuh. Kuncinya Tidak karena aspek menuntut keputusan yang yakin.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan keputusan Anda mudah goyah oleh komentar orang lain.",
+        "tips": "Bedakan antara mengubah keputusan karena informasi baru dan karena sekadar keraguan orang lain."
+      }
+    },
+    {
+      "id": "YT3-PK-09",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya bersedia menanggung risiko mencoba cara kerja baru yang sudah saya pertimbangkan untuk tugas saya sendiri.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keberanian mengambil risiko yang terukur pada tugas yang menjadi tanggung jawab sendiri. Mencoba cara baru setelah dipertimbangkan menunjukkan keberanian sekaligus dasar pertimbangan. Jawaban Ya paling sesuai dengan aspek.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menghindari risiko meskipun sudah memiliki pertimbangan yang cukup.",
+        "tips": "Perhatikan frasa \"sudah saya pertimbangkan\"; risiko yang dinilai adalah risiko yang terukur, bukan nekat."
+      }
+    },
+    {
+      "id": "YT3-PK-10",
+      "aspek": "Pengambilan Keputusan",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Ketika diminta memilih lokasi acara kantor, saya menyerahkan keputusannya kepada orang lain agar tidak disalahkan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca penghindaran keputusan karena takut menanggung akibat. Menyerahkan keputusan agar tidak disalahkan berlawanan dengan keberanian menanggung risiko. Karena itu kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menghindari keputusan supaya terlindung dari kesalahan.",
+        "tips": "Cari alasan di balik perilaku, misalnya \"agar tidak disalahkan\", karena alasan itu sering menentukan arah butir."
+      }
+    },
+    {
+      "id": "YT3-PD-01",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Pada minggu pertama di kantor baru, saya sudah mengenal nama sebagian besar rekan satu ruangan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kecepatan menjalin keakraban di lingkungan kerja baru. Mengenal banyak rekan dalam waktu singkat menunjukkan sikap terbuka dan cepat akrab. Jawaban Ya paling mencerminkan aspek Penyesuaian Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda membutuhkan waktu lama untuk membaur di tempat baru.",
+        "tips": "Ingat pengalaman nyata saat Anda masuk lingkungan baru, lalu jawab sesuai yang terjadi."
+      }
+    },
+    {
+      "id": "YT3-PD-02",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya lebih banyak menyendiri di meja kerja ketika ada acara makan bersama untuk menyambut pegawai baru.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kecenderungan menarik diri dari kegiatan sosial di kantor. Menyendiri saat acara kebersamaan berlawanan dengan sikap langsung terlibat. Kuncinya Tidak karena aspek menuntut tidak menarik diri.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menjaga jarak dari kegiatan bersama rekan kerja.",
+        "tips": "Fokus pada perilaku utama di kalimat, yaitu menyendiri atau ikut berbaur."
+      }
+    },
+    {
+      "id": "YT3-PD-03",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya cepat terbiasa dengan jam layanan dan alur kerja yang berbeda ketika dipindahkan ke kantor kelurahan lain.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keluwesan menghadapi aturan dan kebiasaan kerja yang baru. Cepat terbiasa dengan sistem berbeda adalah ciri utama penyesuaian diri yang baik. Jawaban Ya paling mengekspresikan aspek ini.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kesulitan bila aturan dan kebiasaan kerja berubah.",
+        "tips": "Bayangkan pengalaman pindah kelas, tempat kerja, atau tempat tinggal, lalu nilai seberapa cepat Anda terbiasa."
+      }
+    },
+    {
+      "id": "YT3-PD-04",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Tidak",
+      "pasangan": "YT3-PD-07",
+      "pernyataan": "Saya merasa canggung dan memilih pulang lebih awal saat menghadiri rapat warga di lingkungan yang baru saya tinggali.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca reaksi ketika berada di kegiatan warga yang masih asing. Canggung lalu pulang lebih awal adalah bentuk menarik diri, kebalikan dari luwes di lingkungan baru. Butir ini punya kembaran di paket yang sama: keduanya membandingkan keterlibatan di kegiatan warga lingkungan baru, dengan arah kalimat dibalik, jadi kunci butir ini Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda memilih menjauh ketika belum mengenal orang-orang di sekitar.",
+        "tips": "Jawab konsisten dengan sikap Anda di kegiatan warga; butir sejenis bisa muncul dengan arah kalimat berbeda."
+      }
+    },
+    {
+      "id": "YT3-PD-05",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Dalam perjalanan kereta jarak jauh, saya biasanya mudah memulai obrolan ringan dengan penumpang di sebelah.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kemudahan menjalin interaksi dengan orang yang baru ditemui. Memulai obrolan ringan menunjukkan sikap terbuka dan cepat akrab. Jawaban Ya paling mencerminkan aspek Penyesuaian Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung menutup diri dari orang yang belum dikenal.",
+        "tips": "Kata \"biasanya\" mengajak Anda menilai kebiasaan, bukan satu kejadian; jawab sesuai pola umum Anda."
+      }
+    },
+    {
+      "id": "YT3-PD-06",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya sulit bekerja dengan nyaman selama berminggu-minggu setelah sistem absensi kantor diganti.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kelambanan beradaptasi terhadap perubahan sistem kerja. Butuh berminggu-minggu untuk nyaman kembali menandakan kurang luwes menghadapi hal baru. Kuncinya Tidak karena aspek menuntut cepat menyesuaikan diri.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan perubahan kecil di tempat kerja cukup lama mengganggu Anda.",
+        "tips": "Perhatikan keterangan waktu seperti \"berminggu-minggu\", karena itu menunjukkan seberapa lambat penyesuaiannya."
+      }
+    },
+    {
+      "id": "YT3-PD-07",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Ya",
+      "pasangan": "YT3-PD-04",
+      "pernyataan": "Saya langsung ikut membantu menata kursi saat pertama kali datang ke kegiatan pemuda di lingkungan baru.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesiapan langsung terlibat walaupun lingkungannya masih baru. Ikut membantu sejak kedatangan pertama menunjukkan keluwesan dan keberanian membaur. Butir ini punya kembaran di paket yang sama: keduanya membandingkan keterlibatan di kegiatan warga lingkungan baru, dengan arah kalimat dibalik.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menunggu lama sebelum mau terlibat di lingkungan baru.",
+        "tips": "Jawab konsisten dengan butir serupa tentang kegiatan warga, karena keduanya membaca perilaku yang sama."
+      }
+    },
+    {
+      "id": "YT3-PD-08",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya menunggu rekan kerja menyapa saya lebih dulu sebelum saya mau mengajak mereka berbincang.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca inisiatif membuka interaksi sosial. Menunggu disapa lebih dulu menunjukkan sikap pasif dalam membangun hubungan. Kuncinya Tidak karena aspek Penyesuaian Diri menuntut cepat akrab dan aktif membaur.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda kurang berinisiatif mendekati orang lain.",
+        "tips": "Perhatikan siapa yang memulai di kalimat; inisiatif adalah kunci aspek ini."
+      }
+    },
+    {
+      "id": "YT3-PD-09",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tidak kesulitan menyesuaikan cara berbicara saat melayani warga lansia maupun remaja di loket pelayanan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keluwesan menyesuaikan gaya komunikasi dengan lawan bicara yang berbeda. Mampu berganti cara bicara sesuai usia warga menunjukkan penyesuaian diri yang baik. Frasa \"tidak kesulitan\" bermakna mudah, sehingga kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kaku dalam berkomunikasi dengan orang yang berbeda latar.",
+        "tips": "Ubah frasa \"tidak kesulitan\" menjadi \"mudah\" di kepala agar arah kalimat lebih cepat terbaca."
+      }
+    },
+    {
+      "id": "YT3-PD-10",
+      "aspek": "Penyesuaian Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya merasa tidak betah dan ingin segera pindah ketika ditempatkan di unit kerja yang suasananya asing.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca reaksi terhadap penempatan di lingkungan kerja yang belum dikenal. Ingin segera pindah karena suasana asing menunjukkan sulit beradaptasi. Kuncinya Tidak karena aspek menuntut luwes di lingkungan baru.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda sulit bertahan di tempat yang belum akrab.",
+        "tips": "Jawab jujur sesuai kebiasaan Anda; pola jawaban yang konsisten lebih bernilai daripada menebak."
+      }
+    },
+    {
+      "id": "YT3-KD-01",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya berani menyampaikan usulan perbaikan alur pelayanan dalam rapat kantor meskipun peserta rapat lebih senior.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keberanian berbicara dan menyampaikan pendapat di forum resmi. Tetap bersuara di depan peserta yang lebih senior menunjukkan keyakinan pada gagasan sendiri. Jawaban Ya paling mengekspresikan aspek Kepercayaan Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menahan pendapat ketika berhadapan dengan orang yang lebih senior.",
+        "tips": "Ingat bahwa menyampaikan usulan dengan sopan tetap termasuk berani bicara."
+      }
+    },
+    {
+      "id": "YT3-KD-02",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Tidak",
+      "pasangan": "YT3-KD-07",
+      "pernyataan": "Saya lebih suka rekan lain yang memaparkan hasil kerja tim saya di depan pimpinan karena saya takut salah bicara.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca penghindaran tampil di depan orang karena rasa takut. Menyerahkan pemaparan kepada orang lain karena takut salah bicara menunjukkan kepercayaan diri yang rendah. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kebiasaan menghindari bicara di depan orang karena takut, dengan arah kalimat sama, jadi kunci keduanya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda cenderung menghindari kesempatan tampil karena takut keliru.",
+        "tips": "Jawab kedua butir yang mirip dengan konsisten, karena keduanya membaca rasa takut tampil yang sama."
+      }
+    },
+    {
+      "id": "YT3-KD-03",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tidak ragu menjawab pertanyaan warga tentang prosedur pelayanan yang sudah saya pelajari dengan baik.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keyakinan pada pengetahuan dan kemampuan sendiri. Tidak ragu menjawab hal yang sudah dikuasai menunjukkan rasa yakin pada diri. Frasa \"tidak ragu\" bermakna yakin, sehingga kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda meragukan diri sendiri meskipun sudah menguasai materinya.",
+        "tips": "Ubah \"tidak ragu\" menjadi \"yakin\" di kepala agar arah kalimat cepat terbaca."
+      }
+    },
+    {
+      "id": "YT3-KD-04",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya merasa hasil wawancara kerja saya lebih ditentukan oleh keberuntungan daripada oleh persiapan saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keyakinan apakah hasil ditentukan oleh usaha sendiri atau oleh nasib. Aspek Kepercayaan Diri menuntut tidak bergantung pada nasib. Karena itu jawaban yang mengekspresikan aspek adalah Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda kurang yakin bahwa usaha dan persiapan Anda menentukan hasil.",
+        "tips": "Perhatikan sisi mana yang diunggulkan kalimat, keberuntungan atau persiapan, sebelum menjawab."
+      }
+    },
+    {
+      "id": "YT3-KD-05",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya bersedia menjadi pembawa acara pada kegiatan peringatan hari besar di lingkungan rumah saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kesediaan tampil di depan banyak orang. Menjadi pembawa acara menuntut keberanian tampil dan berbicara di depan umum. Jawaban Ya paling mencerminkan aspek Kepercayaan Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menghindari peran yang membuat Anda menjadi pusat perhatian.",
+        "tips": "Jawab berdasarkan kesediaan Anda, bukan berdasarkan pengalaman yang sudah atau belum pernah Anda miliki."
+      }
+    },
+    {
+      "id": "YT3-KD-06",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya menarik kembali usulan saya di grup kerja hanya karena satu rekan membalasnya dengan nada ragu.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keteguhan pada pendapat sendiri. Menarik usulan hanya karena satu tanggapan ragu menunjukkan kurang yakin pada pandangan sendiri. Kuncinya Tidak karena aspek menuntut yakin pada pendapat sendiri.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan pendapat Anda mudah goyah oleh bantahan kecil.",
+        "tips": "Bedakan antara terbuka pada masukan dan mundur dari pendapat hanya karena ada yang ragu."
+      }
+    },
+    {
+      "id": "YT3-KD-07",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Tidak",
+      "pasangan": "YT3-KD-02",
+      "pernyataan": "Saya meminta teman menggantikan saya membawakan sambutan di acara warga karena takut ditertawakan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca penghindaran tampil di depan umum karena takut penilaian orang lain. Meminta digantikan karena takut ditertawakan berlawanan dengan keberanian tampil. Butir ini punya kembaran di paket yang sama: keduanya membandingkan kebiasaan menghindari bicara di depan orang karena takut, dengan arah kalimat sama, jadi kunci keduanya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan rasa takut dinilai orang lain menghalangi Anda untuk tampil.",
+        "tips": "Jawab konsisten dengan butir serupa tentang tampil di depan orang, walau situasinya berbeda."
+      }
+    },
+    {
+      "id": "YT3-KD-08",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya percaya kemampuan saya cukup untuk menangani tugas baru dari atasan meskipun belum pernah mengerjakannya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca keyakinan pada kemampuan diri ketika menghadapi hal yang belum dikenal. Percaya mampu walau belum berpengalaman menunjukkan rasa yakin yang sehat. Jawaban Ya paling mengekspresikan aspek Kepercayaan Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda meragukan kemampuan sendiri setiap kali menghadapi tugas baru.",
+        "tips": "Nilai keyakinan Anda saat mulai mengerjakan sesuatu yang baru, lalu jawab jujur."
+      }
+    },
+    {
+      "id": "YT3-KD-09",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya mematikan kamera dan diam sepanjang rapat daring kantor agar tidak diminta menyampaikan pendapat.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca strategi menghindari kesempatan bicara di depan orang. Sengaja mematikan kamera dan diam agar tidak diminta bicara menunjukkan keengganan tampil. Kuncinya Tidak karena aspek menuntut berani tampil dan bicara.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda sengaja menghindari situasi yang menuntut Anda berbicara.",
+        "tips": "Perhatikan tujuan perilaku di kalimat, misalnya \"agar tidak diminta\", karena tujuan itu menentukan arah butir."
+      }
+    },
+    {
+      "id": "YT3-KD-10",
+      "aspek": "Kepercayaan Diri",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya memperkenalkan diri dengan suara jelas ketika diminta berdiri di depan peserta rapat koordinasi.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca cara menampilkan diri di depan forum. Berbicara dengan suara jelas saat memperkenalkan diri menunjukkan rasa aman dan yakin pada diri sendiri. Jawaban Ya paling mencerminkan aspek Kepercayaan Diri.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung gugup atau mengecil saat menjadi perhatian.",
+        "tips": "Bayangkan saat terakhir Anda memperkenalkan diri di depan orang banyak, lalu jawab sesuai kenyataan."
+      }
+    },
+    {
+      "id": "YT3-SE-01",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tetap berbicara dengan nada wajar ketika ada warga yang membentak saya di loket pelayanan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca pengendalian emosi saat diperlakukan kasar. Tetap bernada wajar ketika dibentak menunjukkan emosi yang terkendali dan tidak meledak. Jawaban Ya paling mengekspresikan aspek Stabilitas Emosi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan emosi Anda mudah terpancing oleh perlakuan kasar orang lain.",
+        "tips": "Jawab sesuai reaksi Anda yang sebenarnya, karena butir pengendalian emosi muncul dalam beberapa bentuk."
+      }
+    },
+    {
+      "id": "YT3-SE-02",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya mudah membanting barang ketika pekerjaan di komputer kantor hilang karena listrik padam.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ledakan emosi saat menghadapi kejadian yang tidak terduga. Membanting barang adalah bentuk emosi meledak yang berlawanan dengan aspek. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda melampiaskan kekesalan secara fisik saat frustrasi.",
+        "tips": "Fokus pada bentuk reaksinya; yang dinilai adalah cara Anda menyalurkan kesal, bukan rasa kesalnya."
+      }
+    },
+    {
+      "id": "YT3-SE-03",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya menerima catatan perbaikan dari atasan atas laporan saya tanpa merasa tersinggung.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca cara menanggapi kritik terhadap hasil kerja. Menerima catatan perbaikan tanpa tersinggung menunjukkan kemampuan menerima kritik, bagian dari definisi Stabilitas Emosi. Kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan kritik mudah melukai perasaan Anda.",
+        "tips": "Ingat bahwa menerima kritik bukan berarti setuju semuanya, tetapi menanggapinya dengan tenang."
+      }
+    },
+    {
+      "id": "YT3-SE-04",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Tidak",
+      "pasangan": "YT3-SE-05",
+      "pernyataan": "Saya terbawa kesal sepanjang hari kalau pagi-pagi sudah terjebak macet dalam perjalanan ke kantor.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca seberapa lama suasana hati terganggu oleh hambatan perjalanan. Kesal yang terbawa sepanjang hari menunjukkan emosi yang sulit dipulihkan. Butir ini punya kembaran di paket yang sama: keduanya membandingkan reaksi emosi saat perjalanan tertunda, dengan arah kalimat dibalik, jadi kunci butir ini Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan kejadian kecil di pagi hari bisa merusak suasana hati Anda seharian.",
+        "tips": "Jawab konsisten dengan butir lain tentang perjalanan yang tertunda, karena keduanya membaca reaksi emosi yang sama."
+      }
+    },
+    {
+      "id": "YT3-SE-05",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Ya",
+      "pasangan": "YT3-SE-04",
+      "pernyataan": "Ketika jadwal kereta terlambat lama, saya memanfaatkan waktu menunggu dengan membaca atau beristirahat.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca cara mengelola emosi saat menghadapi keterlambatan. Mengisi waktu menunggu dengan kegiatan yang tenang menunjukkan pikiran positif dan emosi terkendali. Butir ini punya kembaran di paket yang sama: keduanya membandingkan reaksi emosi saat perjalanan tertunda, dengan arah kalimat dibalik.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan keterlambatan membuat Anda gelisah dan sulit menenangkan diri.",
+        "tips": "Jawab konsisten dengan sikap Anda pada hambatan perjalanan lain; butir sejenis bisa muncul dari arah berlawanan."
+      }
+    },
+    {
+      "id": "YT3-SE-06",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya membalas dengan kata-kata kasar ketika rekan panitia mengkritik cara saya mengatur acara.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca reaksi terhadap kritik dalam kegiatan bersama. Membalas kritik dengan kata kasar menunjukkan emosi yang meledak dan sulit menerima masukan. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda bereaksi keras ketika merasa dikritik.",
+        "tips": "Perhatikan bentuk tanggapan di kalimat; tanggapan kasar selalu berlawanan dengan pengendalian emosi."
+      }
+    },
+    {
+      "id": "YT3-SE-07",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya menunda membalas pesan bernada marah dari rekan kerja sampai pikiran saya kembali jernih.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kemampuan menunda reaksi saat menerima pesan yang memancing emosi. Menunggu pikiran jernih sebelum membalas menunjukkan emosi yang terkendali. Jawaban Ya paling mencerminkan aspek Stabilitas Emosi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung langsung membalas saat sedang terpancing.",
+        "tips": "Ingat kebiasaan Anda saat menerima pesan yang menyinggung, lalu jawab jujur."
+      }
+    },
+    {
+      "id": "YT3-SE-08",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya langsung merasa semua usaha saya sia-sia ketika satu berkas pengajuan saya dikembalikan untuk diperbaiki.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca pola pikir saat menghadapi kegagalan kecil. Menganggap seluruh usaha sia-sia karena satu berkas dikembalikan adalah pikiran negatif yang berlebihan. Kuncinya Tidak karena aspek menuntut berpikir positif.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan kegagalan kecil mudah membuat Anda patah semangat.",
+        "tips": "Perhatikan apakah reaksi di kalimat sebanding dengan kejadiannya; reaksi berlebihan menunjukkan arah unfavorable."
+      }
+    },
+    {
+      "id": "YT3-SE-09",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tidak mudah terpancing marah ketika ada penumpang lain menyerobot antrean naik bus.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketahanan emosi menghadapi perilaku tidak tertib orang lain. Tidak mudah terpancing marah menunjukkan emosi yang stabil. Frasa \"tidak mudah terpancing\" bermakna tenang, sehingga kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cepat marah ketika orang lain berbuat tidak tertib.",
+        "tips": "Ubah \"tidak mudah terpancing\" menjadi \"tenang\" di kepala agar arah kalimat cepat terbaca."
+      }
+    },
+    {
+      "id": "YT3-SE-10",
+      "aspek": "Stabilitas Emosi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya mudah berubah suasana hati sehingga rekan kerja sering bingung cara mengajak saya bicara.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kestabilan suasana hati dalam keseharian kerja. Suasana hati yang mudah berubah sampai membingungkan rekan menunjukkan emosi yang kurang stabil. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan suasana hati Anda sulit ditebak oleh orang di sekitar.",
+        "tips": "Jawab berdasarkan cara orang lain biasanya menanggapi Anda; itu sering menjadi cermin yang jujur."
+      }
+    },
+    {
+      "id": "YT3-MB-01",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya menetapkan target pribadi agar jumlah warga yang saya layani per hari meningkat tanpa mengurangi ketelitian.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca dorongan untuk terus meningkatkan hasil kerja. Menetapkan target sendiri sambil menjaga ketelitian menunjukkan keinginan unggul sekaligus hasil yang berkualitas. Jawaban Ya paling mengekspresikan aspek Motif Berprestasi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cukup puas dengan hasil kerja yang ada tanpa dorongan untuk meningkat.",
+        "tips": "Ingat apakah Anda biasa memasang target untuk diri sendiri, lalu jawab sesuai kenyataan."
+      }
+    },
+    {
+      "id": "YT3-MB-02",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya merasa cukup bekerja sesuai batas minimal asalkan tidak mendapat teguran dari atasan.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca standar kerja yang dipasang untuk diri sendiri. Bekerja sebatas minimal agar tidak ditegur menunjukkan dorongan berprestasi yang rendah. Kuncinya Tidak karena aspek menuntut ingin unggul dan berkualitas.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda bekerja hanya untuk menghindari teguran, bukan untuk hasil terbaik.",
+        "tips": "Perhatikan ukuran keberhasilan di kalimat; \"asal tidak ditegur\" adalah standar minimal."
+      }
+    },
+    {
+      "id": "YT3-MB-03",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Ya",
+      "pasangan": "YT3-MB-06",
+      "pernyataan": "Saya mengajukan diri untuk tugas yang lebih sulit di kantor karena ingin mengasah kemampuan saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketertarikan pada tantangan. Mengajukan diri untuk tugas sulit demi berkembang adalah ciri utama motif berprestasi. Butir ini punya kembaran di paket yang sama: keduanya membandingkan pilihan antara tugas menantang dan tugas mudah, dengan arah kalimat dibalik.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda cenderung menghindari tugas yang menuntut kemampuan lebih.",
+        "tips": "Jawab konsisten dengan butir serupa tentang pembagian tugas, karena keduanya membaca sikap pada tantangan."
+      }
+    },
+    {
+      "id": "YT3-MB-04",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya meninggalkan pekerjaan setengah jadi ketika hasilnya ternyata lebih sulit dicapai daripada perkiraan saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketekunan saat pekerjaan ternyata sulit. Meninggalkan pekerjaan setengah jadi berlawanan dengan tuntutan tekun dan tuntas. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda mudah berhenti ketika menghadapi kesulitan.",
+        "tips": "Fokus pada kata \"setengah jadi\"; aspek ini menilai apakah pekerjaan dituntaskan."
+      }
+    },
+    {
+      "id": "YT3-MB-05",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya memeriksa ulang laporan kegiatan warga sampai rapi sebelum menyerahkannya kepada pengurus.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kepedulian pada mutu hasil kerja. Memeriksa ulang sampai rapi menunjukkan keinginan menghasilkan pekerjaan yang tuntas dan berkualitas. Jawaban Ya paling mencerminkan aspek Motif Berprestasi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kurang memperhatikan kualitas akhir pekerjaan.",
+        "tips": "Jawab sesuai kebiasaan nyata Anda saat menyerahkan tugas, bukan kebiasaan yang Anda harapkan."
+      }
+    },
+    {
+      "id": "YT3-MB-06",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Tidak",
+      "pasangan": "YT3-MB-03",
+      "pernyataan": "Saya memilih tugas yang paling mudah saat pembagian kerja di kantor agar cepat selesai dan bisa santai.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca kecenderungan menghindari tantangan. Memilih tugas termudah demi bisa santai berlawanan dengan suka tantangan dan ingin unggul. Butir ini punya kembaran di paket yang sama: keduanya membandingkan pilihan antara tugas menantang dan tugas mudah, dengan arah kalimat dibalik, jadi kunci butir ini Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda lebih mengutamakan kenyamanan daripada perkembangan diri.",
+        "tips": "Jawab konsisten dengan butir lain tentang pilihan tugas; arah kalimat yang berbeda tidak mengubah sikap Anda."
+      }
+    },
+    {
+      "id": "YT3-MB-07",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya tidak menyia-nyiakan waktu perjalanan di kereta dan memakainya untuk belajar materi seleksi.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketekunan memanfaatkan waktu untuk tujuan yang ingin dicapai. Memakai waktu perjalanan untuk belajar menunjukkan dorongan kuat untuk berhasil. Frasa \"tidak menyia-nyiakan\" bermakna memanfaatkan, sehingga kuncinya Ya.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda kurang memanfaatkan waktu luang untuk mengejar target.",
+        "tips": "Ubah \"tidak menyia-nyiakan\" menjadi \"memanfaatkan\" di kepala agar arah kalimat cepat terbaca."
+      }
+    },
+    {
+      "id": "YT3-MB-08",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya cepat puas dengan hasil kerja yang biasa saja meskipun masih ada waktu untuk memperbaikinya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca standar kepuasan terhadap hasil kerja. Puas dengan hasil biasa padahal masih bisa diperbaiki menunjukkan dorongan unggul yang rendah. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda berhenti berusaha sebelum hasilnya maksimal.",
+        "tips": "Perhatikan keterangan \"masih ada waktu\"; itu menunjukkan peluang memperbaiki yang dilewatkan."
+      }
+    },
+    {
+      "id": "YT3-MB-09",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya mencari cara yang lebih efisien untuk mengurus antrean berkas di kantor agar hasil kerja tim makin baik.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca dorongan memperbaiki cara kerja demi hasil yang lebih baik. Mencari cara lebih efisien menunjukkan keinginan unggul dan berkualitas. Jawaban Ya paling mengekspresikan aspek Motif Berprestasi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda puas dengan cara kerja lama walaupun hasilnya bisa ditingkatkan.",
+        "tips": "Ingat apakah Anda pernah mencoba memperbaiki cara kerja sendiri, lalu jawab jujur."
+      }
+    },
+    {
+      "id": "YT3-MB-10",
+      "aspek": "Motif Berprestasi",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya kehilangan semangat berlatih begitu tahu ada peserta lain yang jauh lebih pintar dari saya.",
+      "pembahasan": {
+        "alasan": "Butir ini membaca ketahanan motivasi saat bertemu pesaing yang lebih kuat. Kehilangan semangat karena ada yang lebih pintar berlawanan dengan ketekunan dan keinginan unggul. Kuncinya Tidak.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan semangat Anda mudah padam ketika ada pesaing yang lebih unggul.",
+        "tips": "Jawab sesuai reaksi Anda yang sebenarnya; konsistensi jawaban lebih penting daripada terlihat sempurna."
+      }
+    },
+    {
+      "id": "YT3-VAL-01",
+      "aspek": "Validitas",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya pernah datang terlambat ke kantor karena bangun kesiangan.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji apakah peserta mengakui kelemahan yang sangat wajar. Hampir semua orang pernah terlambat karena bangun kesiangan, sehingga mengakuinya adalah jawaban yang realistis dan jujur. Jawaban Ya menunjukkan Anda tidak sedang menampilkan diri secara berlebihan.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda sedang berusaha tampil sempurna, sehingga kejujuran jawaban lain ikut diragukan.",
+        "tips": "Jawab apa adanya; mengakui kelemahan kecil yang wajar justru membuat profil jawaban Anda lebih dipercaya."
+      }
+    },
+    {
+      "id": "YT3-VAL-02",
+      "aspek": "Validitas",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya pernah merasa kesal kepada petugas loket meskipun tidak saya tunjukkan.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji kejujuran mengakui perasaan negatif yang manusiawi. Merasa kesal sesekali adalah hal normal, apalagi bila tidak dilampiaskan. Jawaban Ya realistis dan tidak bertentangan dengan stabilitas emosi.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menyangkal perasaan wajar demi terlihat sempurna.",
+        "tips": "Bedakan merasakan emosi dengan meluapkannya; mengakui perasaan bukan berarti kehilangan kendali."
+      }
+    },
+    {
+      "id": "YT3-VAL-03",
+      "aspek": "Validitas",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya kadang menunda membalas pesan grup kerja karena malas membacanya saat itu juga.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji pengakuan atas kebiasaan menunda yang kecil dan umum. Kebanyakan orang sesekali menunda membalas pesan karena malas. Jawaban Ya realistis dan jujur.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menggambarkan diri bebas dari kebiasaan kecil yang dimiliki hampir semua orang.",
+        "tips": "Kata \"kadang\" berarti sesekali; jawab Ya bila hal itu memang pernah terjadi pada Anda."
+      }
+    },
+    {
+      "id": "YT3-VAL-04",
+      "aspek": "Validitas",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya sesekali ikut membicarakan kekurangan rekan kerja ketika sedang berkumpul dengan teman.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji keterbukaan mengakui perilaku kurang ideal yang lazim. Sesekali terbawa obrolan tentang kekurangan orang lain adalah hal yang dialami banyak orang. Jawaban Ya menunjukkan kejujuran, bukan kelemahan karakter yang berat.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menampilkan citra diri yang terlalu bersih.",
+        "tips": "Jangan takut mengakui hal kecil yang manusiawi; yang dinilai di sini adalah kejujuran Anda."
+      }
+    },
+    {
+      "id": "YT3-VAL-05",
+      "aspek": "Validitas",
+      "kunci": "Ya",
+      "pasangan": null,
+      "pernyataan": "Saya pernah mengaku sudah punya acara supaya tidak diajak lembur membantu teman.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji pengakuan atas alasan kecil yang pernah dibuat untuk menghindari permintaan. Perilaku seperti ini cukup umum dan wajar terjadi sesekali. Jawaban Ya realistis dan jujur.",
+        "jika_sebaliknya": "Menjawab Tidak memberi kesan Anda menyangkal perilaku yang sangat lazim agar terlihat selalu baik.",
+        "tips": "Jawab berdasarkan ingatan nyata, bukan berdasarkan citra yang ingin Anda tampilkan."
+      }
+    },
+    {
+      "id": "YT3-VAL-06",
+      "aspek": "Validitas",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya selalu menyukai setiap orang yang saya temui di tempat kerja tanpa kecuali.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji kecenderungan mengklaim sikap yang mustahil sempurna. Menyukai setiap orang tanpa kecuali hampir tidak mungkin terjadi pada siapa pun. Jawaban Tidak adalah pengakuan jujur bahwa Anda manusia biasa.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menampilkan diri secara berlebihan sehingga jawaban lain ikut diragukan.",
+        "tips": "Waspadai klaim yang terlalu menyeluruh; jawab sesuai kenyataan, bukan sesuai harapan."
+      }
+    },
+    {
+      "id": "YT3-VAL-07",
+      "aspek": "Validitas",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya tidak pernah sekali pun merasa malas berangkat kerja.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji klaim bebas dari rasa malas yang sangat umum. Hampir setiap orang pernah merasa malas berangkat kerja atau sekolah, walau tetap berangkat. Jawaban Tidak adalah pengakuan yang realistis.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menyangkal perasaan wajar demi tampil sempurna.",
+        "tips": "Ingat bahwa merasa malas berbeda dengan benar-benar membolos; akui perasaannya dengan jujur."
+      }
+    },
+    {
+      "id": "YT3-VAL-08",
+      "aspek": "Validitas",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya menaati semua aturan lalu lintas dalam setiap perjalanan, sekecil apa pun aturannya.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji klaim kepatuhan yang sempurna tanpa celah. Kebanyakan orang pernah sesekali lalai pada aturan kecil, seperti menyeberang bukan di tempatnya. Jawaban Tidak adalah pengakuan jujur yang realistis.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menggambarkan diri tanpa cela, yang sulit dipercaya.",
+        "tips": "Bedakan antara berusaha taat dan mengklaim tidak pernah lalai sama sekali."
+      }
+    },
+    {
+      "id": "YT3-VAL-09",
+      "aspek": "Validitas",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya tetap sabar dan ramah dalam keadaan apa pun, termasuk saat sangat lelah dan lapar.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji klaim kesabaran yang tidak terpengaruh kondisi apa pun. Rasa lelah dan lapar wajar menurunkan kesabaran siapa saja, jadi klaim ini terlalu sempurna. Jawaban Tidak adalah pengakuan yang realistis.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menampilkan kesabaran tanpa batas yang sulit dipercaya.",
+        "tips": "Perhatikan frasa seperti \"dalam keadaan apa pun\"; klaim tanpa batas jarang sesuai kenyataan."
+      }
+    },
+    {
+      "id": "YT3-VAL-10",
+      "aspek": "Validitas",
+      "kunci": "Tidak",
+      "pasangan": null,
+      "pernyataan": "Saya belum sekali pun lupa mengembalikan barang yang saya pinjam dari rekan kerja.",
+      "pembahasan": {
+        "alasan": "Butir ini menguji klaim bebas dari kelupaan kecil yang dialami hampir semua orang. Lupa mengembalikan pulpen atau barang kecil adalah hal yang sangat lazim. Jawaban Tidak adalah pengakuan yang jujur.",
+        "jika_sebaliknya": "Menjawab Ya memberi kesan Anda menggambarkan diri terlalu sempurna.",
+        "tips": "Jawab berdasarkan ingatan nyata; kelupaan kecil yang diakui tidak menurunkan nilai Anda."
+      }
+    }
+  ]
+}

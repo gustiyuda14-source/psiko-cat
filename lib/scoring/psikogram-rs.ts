@@ -40,15 +40,20 @@ async function soalOf(db: SupabaseClient, type: string, pkgs: number[]): Promise
   return map;
 }
 
-/** RS satu module; sjt = Kepribadian format situasional (norma terpisah, lib/scoring/psikogram.ts). */
-export type RSModul = { rs: RS; sjt: boolean };
+/** RS satu module; sjt = Kepribadian format situasional (norma terpisah, lib/scoring/psikogram.ts); yt = format Ya/Tidak. */
+export type RSModul = { rs: RS; sjt: boolean; yt?: boolean };
 
-/** RS per aspek Kepribadian dari butir Likert 4 dan SJT; butir SK (Integritas) tidak masuk psikogram. */
+/** RS per aspek Kepribadian dari butir Likert 4, SJT, dan Ya/Tidak; butir SK (Integritas) dan Validitas tidak masuk psikogram. */
 export function rsPribadi(items: { rule: PribadiRule; selected: string | null }[]): RSModul {
-  const kp = items.filter(({ rule }) => rule.type !== "forced_choice") as { rule: Exclude<PribadiRule, { type: "forced_choice" }>; selected: string | null }[];
+  const kp = items.filter(({ rule }) => rule.type !== "forced_choice" && !(rule.type === "ya_tidak" && rule.validitas)) as {
+    rule: Exclude<PribadiRule, { type: "forced_choice" }>;
+    selected: string | null;
+  }[];
+  const yt = items.some(({ rule }) => rule.type === "ya_tidak");
   return {
     rs: rsKepribadian(kp.map(({ rule, selected }) => ({ aspect: rule.aspect, ...itemScore(rule, selected) }))),
     sjt: kp.some(({ rule }) => rule.type === "sjt5"),
+    ...(yt && { yt }),
   };
 }
 

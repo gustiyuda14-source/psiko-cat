@@ -5,14 +5,16 @@
 import { cookies } from "next/headers";
 import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
-import { JALUR, aspekSesi, hitungSemuaJalur, wsSemua, type AspekSubtes, type HasilPsikogram, type Jalur, type Norma } from "./psikogram";
+import { JALUR, aspekSesi, hitungSemuaJalur, wsDariProporsi, wsSemua, type AspekSubtes, type HasilPsikogram, type Jalur, type Norma } from "./psikogram";
 import { rsModul, rsPribadi, type ModuleRow, type RSModul } from "./psikogram-rs";
 import type { PribadiRule } from "./pribadi";
 import norma from "./norma-psikogram.json";
 
 const NORMA = (norma as { aspek: Norma }).aspek;
 
-const wsDari = (r: RSModul | undefined) => (r ? wsSemua(r.rs, NORMA, r.sjt) : {});
+// ponytail: Ya/Tidak belum punya norma sampel; pakai proporsi × 20 sampai sesi cukup (NORMA_MIN), lalu tambah norma "yt:".
+const wsDari = (r: RSModul | undefined) =>
+  !r ? {} : r.yt ? Object.fromEntries(Object.entries(r.rs).map(([a, v]) => [a, wsDariProporsi(v)])) : wsSemua(r.rs, NORMA, r.sjt);
 
 export async function wsSesi(modules: ModuleRow[]) {
   const per = await rsModul(supabaseAdmin, modules);

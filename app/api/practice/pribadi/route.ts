@@ -3,7 +3,7 @@ import { getSession } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { isSimulasiPackage } from "@/lib/test-config";
 import type { KepribadianOptionsPayload } from "@/lib/types/safe-question";
-import { isPribadiRule, itemScore, reviewFields, summarize, type PribadiRule } from "@/lib/scoring/pribadi";
+import { isPribadiRule, itemScore, konsistensiPaket, reviewFields, summarize, type PribadiRule } from "@/lib/scoring/pribadi";
 import { psikogramPribadi } from "@/lib/scoring/psikogram-sesi";
 
 // Latihan PRIBADI (Kepribadian Likert/SJT + Substansi Khusus) dikumpulkan sekali di akhir:
@@ -44,12 +44,13 @@ export async function POST(req: NextRequest) {
       const payload = row.options_payload as unknown as KepribadianOptionsPayload;
       const allowed = (payload.choices ?? []).map((c) => c.key as string);
       const selected = typeof a.selected_key === "string" && allowed.includes(a.selected_key) ? a.selected_key : null;
-      return { id: row.id, rule, selected };
+      return { id: row.id, rule, selected, payload };
     });
     if (scored.some((s) => !s)) {
       return NextResponse.json({ error: "Paket ini belum memakai format PRIBADI" }, { status: 422 });
     }
-    const valid = scored as { id: string; rule: PribadiRule; selected: string | null }[];
+    const valid = scored as { id: string; rule: PribadiRule; selected: string | null; payload: KepribadianOptionsPayload }[];
+    const { baris, pasanganOf } = konsistensiPaket(valid);
 
     return NextResponse.json({
       items: valid.map(({ id, rule, selected }) => ({
@@ -57,8 +58,9 @@ export async function POST(req: NextRequest) {
         selected_key: selected,
         ...itemScore(rule, selected),
         ...reviewFields(rule),
+        pasangan: pasanganOf[id] ?? null,
       })),
-      summary: { ...summarize(valid), psikogram: psikogramPribadi(valid) },
+      summary: { ...summarize(valid), psikogram: psikogramPribadi(valid), konsistensi: baris },
     });
   } catch (err) {
     console.error("[POST /api/practice/pribadi]", err);

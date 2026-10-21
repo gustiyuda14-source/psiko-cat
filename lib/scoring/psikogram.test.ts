@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
 import { BOBOT, JALUR, hitungPsikogram, kategoriWS, posisiDariTotal, rsKecerdasan, rsKepribadian, rsSikapKerja, wsDariNorma, normaDari, kunciNorma, persentil, zDariPersentil, NORMA_MIN, type Aspek } from "./psikogram";
+import { rsPribadi } from "./psikogram-rs";
+import type { PribadiRule } from "./pribadi";
 
 for (const j of JALUR) assert.equal(Object.values(BOBOT[j]).reduce((a, b) => a + b, 0), 20, `${j} bobot ≠ 20`);
 
@@ -61,6 +63,12 @@ assert.deepEqual(rsKepribadian([
 assert.deepEqual(rsKepribadian([
   { aspect: "Stabilitas Emosi", skor: 5, max: 5 }, { aspect: "Stabilitas Emosi", skor: 3, max: 5 }, { aspect: "Stabilitas Emosi", skor: 1, max: 5 },
 ]), { stabilitas_emosi: 0.5 });
+// Ya/Tidak maks 1: RS = proporsi sesuai kunci (bukan (skor − 1) / 0).
+assert.deepEqual(rsKepribadian([{ aspect: "Prososial", skor: 1, max: 1 }, { aspect: "Prososial", skor: 0, max: 1 }]), { prososial: 0.5 });
+const ytRule = (aspect: string, validitas: boolean): PribadiRule =>
+  ({ type: "ya_tidak", aspect, validitas, correct_key: "A", pembahasan: { definisi_aspek: "", alasan: "", jika_sebaliknya: "", tips: "" } });
+assert.deepEqual(rsPribadi([{ rule: ytRule("Validitas", true), selected: "A" }]), { rs: {}, sjt: false, yt: true });
+assert.deepEqual(rsPribadi([{ rule: ytRule("Prososial", false), selected: "A" }, { rule: ytRule("Validitas", true), selected: "B" }]).rs, { prososial: 1 });
 assert.deepEqual(rsSikapKerja(50, 100, null), { kecepatan: 0.5, ketelitian: 1 });
 
 // Norma kelompok: WS = 10 + 3z. Rata-rata → 10 (C), +2 SD → 16 (B), −2 SD → 4 (K), < −2 SD → KS.

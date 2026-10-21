@@ -243,7 +243,7 @@ export function rsKepribadian(items: { aspect: string; skor: number; max: number
     const aspek = ASPEK_KEPRIBADIAN[aspect];
     if (!aspek) continue;
     const a = acc.get(aspek) ?? { sum: 0, n: 0 };
-    acc.set(aspek, { sum: a.sum + (skor ? (skor - 1) / (max - 1) : 0), n: a.n + 1 });
+    acc.set(aspek, { sum: a.sum + (max === 1 ? skor : skor ? (skor - 1) / (max - 1) : 0), n: a.n + 1 });
   }
   return Object.fromEntries([...acc].map(([aspek, a]) => [aspek, round4(a.sum / a.n)]));
 }
