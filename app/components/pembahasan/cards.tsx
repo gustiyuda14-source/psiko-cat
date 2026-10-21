@@ -348,11 +348,58 @@ function pribadi(item: PribadiReviewItem, no: number, close: boolean, reveal: bo
     pembahasan: (
       <>
         {answer}
-        <p className="max-w-[72ch] border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground">{item.pembahasan}</p>
+        <SkPembahasan text={item.pembahasan} />
         {pasangan}
       </>
     ),
   };
+}
+
+/*
+  Pembahasan Pass Hand bertingkat (bank sk-r-*): satu bagian per baris "Label: isi",
+  baris "A. …"/"B. …" milik bagian sebelumnya (Bedah pilihan). Ditampilkan bernomor
+  supaya mudah diikuti; pembahasan lama satu paragraf tetap paragraf biasa.
+*/
+function SkPembahasan({ text }: { text: string }) {
+  const box = "max-w-[72ch] border-l-2 border-accent/50 pl-4 text-sm leading-relaxed text-muted-foreground";
+  if (!text.includes("\n")) return <p className={box}>{text}</p>;
+  const parts: { label: string; body: string; sub: string[] }[] = [];
+  for (const line of text.split("\n").map((l) => l.trim()).filter(Boolean)) {
+    if (/^[AB]\. /.test(line) && parts.length) {
+      parts.at(-1)!.sub.push(line);
+      continue;
+    }
+    const i = line.indexOf(":");
+    parts.push(i > 0 && i < 60 ? { label: line.slice(0, i), body: line.slice(i + 1).trim(), sub: [] } : { label: "", body: line, sub: [] });
+  }
+  return (
+    <ol className={`${box} space-y-3`}>
+      {parts.map((p, n) => (
+        <li key={n} className="flex gap-2.5">
+          <span className="tnum mt-px flex size-5 shrink-0 items-center justify-center rounded-full bg-surface-inset text-[11px] font-bold text-foreground">{n + 1}</span>
+          <div className="min-w-0 space-y-1">
+            <p>
+              {p.label && <b className={p.label === "Jebakan" ? "text-accent-ink" : "text-foreground"}>{p.label}:</b>} {p.body}
+            </p>
+            {p.sub.map((s) => {
+              const j = s.indexOf(":");
+              return (
+                <p key={s} className="pl-1">
+                  {j > 0 ? (
+                    <>
+                      <b className="text-foreground">{s.slice(0, j)}:</b> {s.slice(j + 1).trim()}
+                    </>
+                  ) : (
+                    s
+                  )}
+                </p>
+              );
+            })}
+          </div>
+        </li>
+      ))}
+    </ol>
+  );
 }
 
 function kecermatan(item: KecermatanDetailItem, kolom: string, reveal: boolean): CardView {
