@@ -97,6 +97,15 @@ export const KECERMATAN_KOMPOSISI_PACKAGE_LABELS: Record<number, string> = Objec
   KECERMATAN_KOMPOSISI_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
 );
 
+// Aspek Aksara Asing (tab "Aksara Asing"): Hangeul Korea dan Kana Jepang, kolom selang-seling,
+// kesulitan menengah (901) sampai HOTS (905) (scripts/generate-kecermatan-aksara.ts).
+// Latihan saja, tidak masuk pool ujian.
+export const KECERMATAN_AKSARA_PACKAGES = [901, 902, 903, 904, 905];
+
+export const KECERMATAN_AKSARA_PACKAGE_LABELS: Record<number, string> = Object.fromEntries(
+  KECERMATAN_AKSARA_PACKAGES.map((id, index) => [id, `Paket ${index + 1}`])
+);
+
 // Paket latihan/drilling Kecerdasan & Kepribadian. Paket 1 (package_number=1)
 // khusus simulasi (SIMULASI_PACKAGE) dan TIDAK boleh muncul di sini, supaya
 // soal simulasi tidak bocor lewat latihan (pola dajiks-cest). Slot 2-11 tampil

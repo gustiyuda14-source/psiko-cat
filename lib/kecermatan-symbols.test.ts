@@ -14,7 +14,7 @@ for (const shown of [["◆", "◆", "♫", "✦"], ["◆", "🍀", "♫"], ["◆
 assert.equal(getMissingSymbolKey({ symbol_map: { ...symbol_map, E: "◆" }, shown: ["◆", "🍀", "♫", "✦"], choices: [...KECERMATAN_KEYS] }), null);
 assert.equal(getMissingSymbolKey(null as unknown as KecermatanOptionsPayload), null);
 let verified = 0;
-for (const id of [3, 4, 5, 6, 7, 8, 11, 12, 13, 201, 202, 203, 204, 205, 206, 401, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 601, 602, 603, 604, 701, 702, 703, 704, 705, 801, 802, 803, 804, 805]) {
+for (const id of [3, 4, 5, 6, 7, 8, 11, 12, 13, 201, 202, 203, 204, 205, 206, 401, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 601, 602, 603, 604, 701, 702, 703, 704, 705, 801, 802, 803, 804, 805, 901, 902, 903, 904, 905]) {
   const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
     kolom: { simbol: KecermatanOptionsPayload["symbol_map"]; soal: { shown: string[]; kunci: string }[] }[];
   };
@@ -23,12 +23,12 @@ for (const id of [3, 4, 5, 6, 7, 8, 11, 12, 13, 201, 202, 203, 204, 205, 206, 40
     verified++;
   }
 }
-assert.equal(verified, 20000);
+assert.equal(verified, 22500);
 
 // Bantuan pelafalan latihan: kolom yang berlabel wajib 5 kata unik (kolom tanpa label, mis. angka/huruf, dilewati).
 const pelafalan = JSON.parse(readFileSync(new URL("../data/kecermatan-pelafalan.json", import.meta.url), "utf8")) as Record<string, string>;
 let labelled = 0;
-for (const id of [3, 4, 5, 6, 7, 8, 9, 201, 202, 203, 204, 205, 206, 301, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 601, 602, 603, 604, 701, 702, 703, 704, 705, 801, 802, 803, 804, 805]) {
+for (const id of [3, 4, 5, 6, 7, 8, 9, 201, 202, 203, 204, 205, 206, 301, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 601, 602, 603, 604, 701, 702, 703, 704, 705, 801, 802, 803, 804, 805, 901, 902, 903, 904, 905]) {
   const bank = JSON.parse(readFileSync(new URL(`../prisma/data/bank_soal_p${id}.json`, import.meta.url), "utf8")) as {
     kolom: { nomor: number; simbol: KecermatanOptionsPayload["symbol_map"] }[];
   };
@@ -39,7 +39,7 @@ for (const id of [3, 4, 5, 6, 7, 8, 9, 201, 202, 203, 204, 205, 206, 301, 501, 5
     labelled++;
   }
 }
-assert.equal(labelled, 379);
+assert.equal(labelled, 429);
 // Emoji wajib punya SVG lokal (Windows 7 tanpa font emoji = kotak kosong). Paket emoji baru: unduh SVG-nya ke public/emoji.
 assert.equal(emojiSrc("🐶"), "/emoji/1f436.svg");
 assert.equal(emojiSrc("☀️"), "/emoji/2600.svg");

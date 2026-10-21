@@ -12,11 +12,12 @@ const ASPECTS = [
   { id: "simbol", label: "Simbol Hilang", hrefBase: "/latihan/kecermatan-simbol" },
   { id: "sains", label: "Simbol Sains", hrefBase: "/latihan/kecermatan-sains" },
   { id: "komposisi", label: "Komposisi Majemuk", hrefBase: "/latihan/kecermatan-komposisi" },
+  { id: "aksara", label: "Aksara Asing", hrefBase: "/latihan/kecermatan-aksara" },
 ] as const;
 
-// Satu tile "Kecermatan" di sidebar, delapan sub-tile aspek di dalamnya — bukan
+// Satu tile "Kecermatan" di sidebar, sembilan sub-tile aspek di dalamnya — bukan
 // tile latihan terpisah. package_number tiap aspek tidak overlap
-// (3-8, 9+601-604, 101-105, 201-206, 301+, 501+, 701+, 801+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
+// (3-8, 9+601-604, 101-105, 201-206, 301+, 501+, 701+, 801+, 901+) jadi carousel-nya independen, cuma dipilih lewat toggle ini.
 export function KecermatanAspectPicker({
   emojiPackages,
   angkaPackages,
@@ -26,6 +27,7 @@ export function KecermatanAspectPicker({
   siluetPackages,
   sainsPackages,
   komposisiPackages,
+  aksaraPackages,
 }: {
   emojiPackages: PackageOption[];
   angkaPackages: PackageOption[];
@@ -35,9 +37,10 @@ export function KecermatanAspectPicker({
   siluetPackages: PackageOption[];
   sainsPackages: PackageOption[];
   komposisiPackages: PackageOption[];
+  aksaraPackages: PackageOption[];
 }) {
   const [aspect, setAspect] = useState<(typeof ASPECTS)[number]["id"]>("emoji");
-  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasialDasar: spasialDasarPackages, spasial: spasialPackages, simbol: simbolPackages, siluet: siluetPackages, sains: sainsPackages, komposisi: komposisiPackages };
+  const packagesByAspect = { emoji: emojiPackages, angka: angkaPackages, spasialDasar: spasialDasarPackages, spasial: spasialPackages, simbol: simbolPackages, siluet: siluetPackages, sains: sainsPackages, komposisi: komposisiPackages, aksara: aksaraPackages };
   const active = ASPECTS.find((a) => a.id === aspect)!;
 
   return (

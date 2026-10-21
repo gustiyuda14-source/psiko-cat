@@ -39,6 +39,8 @@ assert.equal(cleanAttemptTiming(null, answered), null);
 assert.equal(maxLatihanAttempts("/latihan/kecermatan-sains/701"), 1);
 assert.equal(maxLatihanAttempts("/latihan/kecermatan-komposisi/805"), 1);
 assert.equal(latihanKeyMax("/latihan/kecermatan-komposisi/806"), null);
+assert.equal(maxLatihanAttempts("/latihan/kecermatan-aksara/905"), 1);
+assert.equal(latihanKeyMax("/latihan/kecermatan-aksara/906"), null);
 assert.equal(maxLatihanAttempts("/latihan/kecermatan/9"), 1);
 assert.equal(maxLatihanAttempts("/latihan/kecerdasan/2"), 2);
 

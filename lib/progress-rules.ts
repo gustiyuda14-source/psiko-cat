@@ -10,6 +10,7 @@ import {
   KECERMATAN_SIMBOL_PACKAGES,
   KECERMATAN_SAINS_PACKAGES,
   KECERMATAN_KOMPOSISI_PACKAGES,
+  KECERMATAN_AKSARA_PACKAGES,
   KEPRIBADIAN_LATIHAN_PACKAGES,
   PRIBADI_PACKAGE_SIZE,
   type ModuleType,
@@ -25,6 +26,7 @@ const LATIHAN_ROUTES: [string, number[], number][] = [
   ["/latihan/kecermatan-simbol/", KECERMATAN_SIMBOL_PACKAGES, 500],
   ["/latihan/kecermatan-sains/", KECERMATAN_SAINS_PACKAGES, 500],
   ["/latihan/kecermatan-komposisi/", KECERMATAN_KOMPOSISI_PACKAGES, 500],
+  ["/latihan/kecermatan-aksara/", KECERMATAN_AKSARA_PACKAGES, 500],
 ];
 
 /** Batas butir untuk kunci latihan yang dikenal; null = kunci tidak sah. */
