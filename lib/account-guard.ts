@@ -18,8 +18,7 @@ async function fetchAll(): Promise<Map<string, Entry>> {
   for (let from = 0; ; from += PAGE) {
     const ctl = new AbortController(), timer = setTimeout(() => ctl.abort(), TIMEOUT);
     try {
-      // select=* supaya tetap jalan sebelum kolom aktif dibuat (kolom hilang = aktif).
-      const res = await fetch(`${url}/rest/v1/users?select=*&order=id.asc`, { headers: { ...headers, Range: `${from}-${from + PAGE - 1}` }, signal: ctl.signal });
+      const res = await fetch(`${url}/rest/v1/users?select=id,aktif,password_hash,profil_tujuan&order=id.asc`, { headers: { ...headers, Range: `${from}-${from + PAGE - 1}` }, signal: ctl.signal });
       if (!res.ok) throw new Error(`Supabase ${res.status}`);
       const rows = (await res.json()) as { id: string; aktif?: boolean | null; password_hash?: string | null; profil_tujuan?: string | null }[];
       for (const r of rows) map.set(r.id, { aktif: r.aktif !== false, pv: r.password_hash ? sessionVersion(r.password_hash) : "", profil: !!r.profil_tujuan });

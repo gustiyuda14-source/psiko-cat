@@ -5,6 +5,8 @@ import { NextResponse } from "next/server";
 export function GET() {
   return NextResponse.json(
     { version: process.env.VERCEL_GIT_COMMIT_SHA ?? null },
-    { headers: { "Cache-Control": "no-store" } }
+    // Browser tidak menyimpan; CDN Vercel menyimpan 60 dtk per deploy, jadi cek versi peserta
+    // dilayani CDN tanpa memanggil function. Rute ini dikecualikan dari proxy (proxy.ts).
+    { headers: { "Cache-Control": "no-store", "Vercel-CDN-Cache-Control": "max-age=60" } }
   );
 }

@@ -81,10 +81,12 @@ export async function POST(req: NextRequest) {
   try {
     if (body.action === "latihan") {
       const items = cleanLatihan(body.items);
-      for (const [key, n] of Object.entries(items)) {
-        const { error } = await supabaseAdmin.rpc("record_latihan_progress", { p_user: userId, p_key: key, p_answered: n });
-        if (error) throw error;
-      }
+      // Paralel, bukan berurutan: tiap paket baris sendiri, function tidak menunggu N kali bolak-balik.
+      const results = await Promise.all(
+        Object.entries(items).map(([key, n]) => supabaseAdmin.rpc("record_latihan_progress", { p_user: userId, p_key: key, p_answered: n }))
+      );
+      const failed = results.find((r) => r.error);
+      if (failed) throw failed.error;
       return NextResponse.json({ ok: true });
     }
 

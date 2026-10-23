@@ -19,6 +19,8 @@ const EMPTY: State = { drill: {}, latihan: {}, attempts: {}, ready: false };
 // Kunci localStorage versi lama (sebelum progres pindah ke server); diimpor sekali lalu dihapus.
 const LEGACY = { drill: "psiko_drill_res", latihan: "psiko_latihan_res" } as const;
 const FLUSH_MS = 3000;
+// Kembali ke tab (mis. dari WhatsApp) memuat ulang progres paling cepat tiap 2 menit, bukan tiap fokus.
+const FOCUS_REFRESH_MS = 2 * 60_000;
 
 let state: State = EMPTY;
 let loading: Promise<void> | null = null;
@@ -26,6 +28,7 @@ let generation = 0; // naik saat logout: respons fetch lama tidak boleh menimpa 
 const listeners = new Set<() => void>();
 const pending = new Map<string, number>();
 let timer: ReturnType<typeof setTimeout> | undefined;
+let loadedAt = 0;
 
 function emit(next: State) {
   state = next;
@@ -70,6 +73,7 @@ function load() {
       const latihan = { ...data.latihan };
       for (const [k, n] of pending) latihan[k] = Math.max(latihan[k] ?? 0, n);
       emit({ drill: data.drill ?? {}, latihan, attempts: data.attempts ?? {}, ready: true });
+      loadedAt = Date.now();
     } catch {
       // offline: tampil kosong, coba lagi saat tab difokuskan
     } finally {
@@ -80,7 +84,7 @@ function load() {
 }
 
 function onFocus() {
-  if (!pending.size) void load();
+  if (!pending.size && Date.now() - loadedAt >= FOCUS_REFRESH_MS) void load();
 }
 
 function subscribe(onChange: () => void) {
@@ -187,6 +191,7 @@ export async function resetProgress(kind: "drill" | "latihan", keys: string[]) {
 export function clearProgressCache() {
   generation++;
   loading = null;
+  loadedAt = 0;
   pending.clear();
   clearTimeout(timer);
   timer = undefined;

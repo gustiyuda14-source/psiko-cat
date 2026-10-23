@@ -72,5 +72,8 @@ export async function proxy(req: NextRequest) {
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|favicon.ico|api/auth/login).*)"],
+  // Aset gambar public/ (simbol kecermatan, emoji, drill) tidak lewat proxy: tiap gambar = 1 invocation.
+  // Gambar pembahasan tetap terlindungi lewat /api/drill/gambar (cek sesi sendiri, di luar public/).
+  // /api/version hanya berisi sha commit (tanpa data peserta) supaya bisa dilayani cache CDN.
+  matcher: ["/((?!_next/static|_next/image|favicon.ico|api/auth/login|api/version$|.*\\.(?:svg|png|jpg|jpeg|webp|gif|ico)$).*)"],
 };

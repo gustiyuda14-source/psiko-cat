@@ -13,8 +13,7 @@ export async function POST(req: NextRequest) {
 
     const { data: user, error } = await supabaseAdmin
       .from("users")
-      // select("*") supaya tetap jalan sebelum kolom aktif dibuat (kolom hilang = aktif).
-      .select("*")
+      .select("id, username, name, role, password_hash, aktif")
       .eq("username", username.toLowerCase().trim())
       .single();
 

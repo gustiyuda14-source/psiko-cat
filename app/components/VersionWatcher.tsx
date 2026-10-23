@@ -10,6 +10,8 @@ const CHECK_MS = 5 * 60_000;
 // Halaman sesi latihan/ujian: tidak pernah ada pop-up atau muat ulang di tengahnya.
 const SESSION = /^\/(latihan|test)\//;
 const RELOADED_KEY = "psiko_reloaded_for";
+// Pindah halaman / fokus tab berulang dalam 1 menit memakai hasil cek terakhir, bukan request baru.
+const MIN_GAP_MS = 60_000;
 
 function reloadOnce(version: string): boolean {
   try {
@@ -35,10 +37,13 @@ export default function VersionWatcher() {
   const pathname = usePathname();
   const firstPath = useRef(pathname);
   const stale = useRef<string | null>(null);
+  const checkedAt = useRef(0);
   const [notice, setNotice] = useState(false);
 
   const check = useCallback(async (): Promise<string | null> => {
     if (!BUILD) return null;
+    if (stale.current || Date.now() - checkedAt.current < MIN_GAP_MS) return stale.current;
+    checkedAt.current = Date.now();
     try {
       const res = await fetch("/api/version", { cache: "no-store" });
       const data = res.ok ? ((await res.json()) as { version?: string | null }) : null;

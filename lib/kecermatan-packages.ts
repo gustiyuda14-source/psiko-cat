@@ -1,3 +1,4 @@
+import { unstable_cache } from "next/cache";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { KECERMATAN_KEYS } from "@/lib/kecermatan-symbols";
 import type { PackageOption, PackageSection } from "@/app/components/PackageCarousel";
@@ -26,11 +27,11 @@ type SymbolRow = {
 // jadi tetap jauh lebih ringan dari versi awal yang narik options_payload di
 // tiap query count. Section/symbol tetap 1 query gabungan (aman, dibatasi
 // COLUMN_STARTS, maks ~10 baris/paket).
-export async function buildKecermatanPackages(
+async function loadKecermatanPackages(
   packageNumbers: number[],
   labels: Record<number, string>
 ): Promise<PackageOption[]> {
-  const [counts, { data: symbolRows }] = await Promise.all([
+  const [counts, { data: symbolRows, error: symbolError }] = await Promise.all([
     Promise.all(packageNumbers.map((pkg) =>
       supabaseAdmin.from("questions")
         .select("id", { count: "exact", head: true })
@@ -42,6 +43,10 @@ export async function buildKecermatanPackages(
       .in("package_number", packageNumbers)
       .in("sequence_number", COLUMN_STARTS),
   ]);
+
+  // Error dilempar, bukan dibaca 0 butir: hasil gagal tidak boleh ikut di-cache.
+  const failed = symbolError ?? counts.find((c) => c.error)?.error;
+  if (failed) throw failed;
 
   const countByPkg = new Map(packageNumbers.map((pkg, i) => [pkg, counts[i].count ?? 0]));
 
@@ -76,3 +81,12 @@ export async function buildKecermatanPackages(
     };
   });
 }
+
+// Isi bank soal hampir statis: hasil di-cache 1 jam per deploy (sha di kunci), supaya ~50 query
+// Supabase di atas tidak diulang tiap peserta membuka halaman picker.
+// ponytail: soal baru yang di-seed tanpa deploy baru terlihat setelah maks 1 jam.
+export const buildKecermatanPackages = unstable_cache(
+  loadKecermatanPackages,
+  ["kecermatan-packages", process.env.VERCEL_GIT_COMMIT_SHA ?? "dev"],
+  { revalidate: 3600 }
+);

@@ -9,6 +9,7 @@ import {
   KEPRIBADIAN_YT_PACKAGE_LABELS,
 } from "@/lib/test-config";
 import { PageHeader } from "@/app/components/ui";
+import { unstable_cache } from "next/cache";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import type { PackageOption, PackagePart } from "@/app/components/PackageCarousel";
 import { KepribadianFormatPicker } from "@/app/components/KepribadianFormatPicker";
@@ -47,10 +48,12 @@ function toParts(list: { subtes: string | null; aspect: string | null }[]): Pack
 // Sama seperti pemilih paket Kecermatan (app/dashboard/latihan/kecermatan/page.tsx):
 // picker tinggal di app/dashboard (masih ada sidebar), sesinya di app/latihan/kepribadian/[package]
 // yang di luar shell.
-export default async function LatihanKepribadianPackagesPage() {
-  // Satu query kecil per paket (111 baris, jauh di bawah batas 1000 baris
-  // PostgREST): jumlah butir + komposisi berurutan untuk bar pratinjau di panel.
-  const build = (ids: number[], labels: Record<number, string>) =>
+// Satu query kecil per paket (111 baris, jauh di bawah batas 1000 baris
+// PostgREST): jumlah butir + komposisi berurutan untuk bar pratinjau di panel.
+// Isi bank hampir statis: di-cache 1 jam per deploy, bukan ~20 query tiap halaman dibuka.
+// ponytail: soal baru yang di-seed tanpa deploy baru terlihat setelah maks 1 jam.
+const build = unstable_cache(
+  (ids: number[], labels: Record<number, string>) =>
     Promise.all(
       ids.map((pkg) =>
         supabaseAdmin
@@ -61,12 +64,20 @@ export default async function LatihanKepribadianPackagesPage() {
           .eq("package_number", pkg)
           .order("sequence_number", { ascending: true })
       )
-    ).then((rows) =>
-      ids.map((pkg, index): PackageOption => {
+    ).then((rows) => {
+      // Error dilempar, bukan dibaca 0 butir: hasil gagal tidak boleh ikut di-cache.
+      const failed = rows.find((r) => r.error);
+      if (failed) throw failed.error;
+      return ids.map((pkg, index): PackageOption => {
         const list = (rows[index].data ?? []) as { subtes: string | null; aspect: string | null }[];
         return { id: pkg, label: labels[pkg], questionCount: list.length, parts: toParts(list) };
-      })
-    );
+      });
+    }),
+  ["kepribadian-packages", process.env.VERCEL_GIT_COMMIT_SHA ?? "dev"],
+  { revalidate: 3600 }
+);
+
+export default async function LatihanKepribadianPackagesPage() {
   const [likertPackages, sjtPackages, ytPackages, skPackages] = await Promise.all([
     build(KEPRIBADIAN_PACKAGES, KEPRIBADIAN_PACKAGE_LABELS),
     build(KEPRIBADIAN_SJT_PACKAGES, KEPRIBADIAN_SJT_PACKAGE_LABELS),
